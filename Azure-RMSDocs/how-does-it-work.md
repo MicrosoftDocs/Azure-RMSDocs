@@ -40,7 +40,7 @@ At a high level, you can see how this process works in the following picture. A 
 
 Throughout the protection process when Azure RMS is encrypting and decrypting, authorizing, and enforcing restrictions, the secret formula is never sent to Azure.
 
-![How Azure RMS protects a file](../media/AzRMS_SecretColaFormula_final.png)
+![How Azure RMS protects a file](./media/AzRMS_SecretColaFormula_final.png)
 
 For a detailed description of what’s happening, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in this article.
 
@@ -78,13 +78,13 @@ For each document or email that is protected by Azure RMS, Azure RMS creates a s
 
 The content key is protected with the organization’s RSA key (the "Azure Information Protection tenant key") as part of the policy in the document, and the policy is also signed by the author of the document. This tenant key is common to all documents and emails that are protected by the Azure Rights Management service for the organization and this key can only be changed by an Azure Information Protection administrator if the organization is using a tenant key that is customer-managed (known as "bring your own key", or BYOK). 
 
-This tenant key is protected in Microsoft’s online services, in a highly controlled environment and under close monitoring. When you use a customer-managed tenant key (BYOK), this security is enhanced by the use of an array of high-end hardware security modules (HSMs) in each Azure region, without the ability for the keys to be extracted, exported, or shared under any circumstances. For more information about the tenant key and BYOK, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
+This tenant key is protected in Microsoft’s online services, in a highly controlled environment and under close monitoring. When you use a customer-managed tenant key (BYOK), this security is enhanced by the use of an array of high-end hardware security modules (HSMs) in each Azure region, without the ability for the keys to be extracted, exported, or shared under any circumstances. For more information about the tenant key and BYOK, see [Planning and implementing your Azure Information Protection tenant key](./plan-design/plan-implement-tenant-key.md).
 
 Licenses and certificates that are sent to a Windows device are protected with the client’s device private key, which is created the first time a user on the device uses Azure RMS. This private key, in turn, is protected with DPAPI on the client, which protects these secrets by using a key derived from the user’s password. On mobile devices, the keys are used only one time, so because they are not stored on the clients, these keys don’t need to be protected on the device. 
 
 
 ## Walkthrough of how Azure RMS works: First use, content protection, content consumption
-To understand in more detail how Azure RMS works, let's walk through a typical flow after the [Azure Rights Management service is activated](../deploy-use/activate-service.md) and when a user first uses the Rights Management service on their Windows computer (a process sometimes known as **initializing the user environment** or bootstrapping), **protects content** (a document or email), and then **consumes**  (opens and uses) content that has been protected by somebody else.
+To understand in more detail how Azure RMS works, let's walk through a typical flow after the [Azure Rights Management service is activated](./deploy-use/activate-service.md) and when a user first uses the Rights Management service on their Windows computer (a process sometimes known as **initializing the user environment** or bootstrapping), **protects content** (a document or email), and then **consumes**  (opens and uses) content that has been protected by somebody else.
 
 After the user environment is initialized, that user can then protect documents or consume protected documents on that computer.
 
@@ -94,13 +94,13 @@ After the user environment is initialized, that user can then protect documents 
 ### Initializing the user environment
 Before a user can protect content or consume protected content on a Windows computer, the user environment must be prepared on the device. This is a one-time process and happens automatically without user intervention when a user tries to protect or consume protected content:
 
-![RMS Client activation flow - step 1, authenticating the client](../media/AzRMS.png)
+![RMS Client activation flow - step 1, authenticating the client](./media/AzRMS.png)
 
 **What's happening in step 1**: The RMS client on the computer first connects to the Azure Rights Management service, and authenticates the user by using their Azure Active Directory account.
 
 When the user’s account is federated with Azure Active Directory, this authentication is automatic and the user is not prompted for credentials.
 
-![RMS Client activation - step 2, certificates are downloaded to the client](../media/AzRMS_useractivation2.png)
+![RMS Client activation - step 2, certificates are downloaded to the client](./media/AzRMS_useractivation2.png)
 
 **What's happening in step 2**: After the user is authenticated, the connection is automatically redirected to the organization’s Azure Information Protection tenant, which issues certificates that let the user authenticate to the Azure Rights Management service in order to consume protected content and to protect content offline.
 
@@ -111,19 +111,19 @@ A copy of this certificate is stored in Azure so that if the user moves to anoth
 ### Content protection
 When a user protects a document, the RMS client takes the following actions on an unprotected document:
 
-![RMS document protection - step 1, document is encrypted](../media/AzRMS_documentprotection1.png)
+![RMS document protection - step 1, document is encrypted](./media/AzRMS_documentprotection1.png)
 
 **What's happening in step 1**: The RMS client creates a random key (the content key) and encrypts the document using this key with the AES symmetric encryption algorithm.
 
-![RMS document protection - step 2, policy is created](../media/AzRMS_documentprotection2.png)
+![RMS document protection - step 2, policy is created](./media/AzRMS_documentprotection2.png)
 
-**What's happening in step 2**: The RMS client then creates a certificate that includes a policy for the document that includes the [usage rights](../deploy-use/configure-usage-rights.md) for users or groups, and other restrictions, such as an expiration date. These settings can be defined in a template that an administrator previously configured, or specified at the time the content is protected (sometimes referred to as an "ad hoc policy").   
+**What's happening in step 2**: The RMS client then creates a certificate that includes a policy for the document that includes the [usage rights](./deploy-use/configure-usage-rights.md) for users or groups, and other restrictions, such as an expiration date. These settings can be defined in a template that an administrator previously configured, or specified at the time the content is protected (sometimes referred to as an "ad hoc policy").   
 
 The main Azure AD attribute used to identify the selected users and groups is the Azure AD ProxyAddresses attribute, which stores all the email addresses for a user or group. However, if a user account doesn't have any values in the AD ProxyAddresses attribute, the user's UserPrincipalName value is used instead.
 
 The RMS client then uses the organization’s key that was obtained when the user environment was initialized and uses this key to encrypt the policy and the symmetric content key. The RMS client also signs the policy with the user’s certificate that was obtained when the user environment was initialized.
 
-![RMS document protection - step 3, policy is embedded in the document](../media/AzRMS_documentprotection3.png)
+![RMS document protection - step 3, policy is embedded in the document](./media/AzRMS_documentprotection3.png)
 
 **What's happening in step 3**: Finally, the RMs client embeds the policy into a file with the body of the document encrypted previously, which together comprise a protected document.
 
@@ -132,24 +132,24 @@ This document can be stored anywhere or shared by using any method, and the poli
 ### Content consumption
 When a user wants to consume a protected document, the RMS client starts by requesting access to the Azure Rights Management service:
 
-![RMS document consumption - step 1, user is authenticated and gets the list of rights](../media/AzRMS_documentconsumption1.png)
+![RMS document consumption - step 1, user is authenticated and gets the list of rights](./media/AzRMS_documentconsumption1.png)
 
-**What's happening in step 1**: The authenticated user sends the document policy and the user’s certificates to the Azure Rights Management service. The service decrypts and evaluates the policy, and builds a list of rights (if any) the user has for the document. To identify the user, the Azure AD ProxyAddresses attribute is used for the user's account and groups to which the user is a member. For performance reasons, group membership is [cached](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). If the user account has no values for the Azure AD ProxyAddresses attribute, the value in the Azure AD UserPrincipalName is used instead.
+**What's happening in step 1**: The authenticated user sends the document policy and the user’s certificates to the Azure Rights Management service. The service decrypts and evaluates the policy, and builds a list of rights (if any) the user has for the document. To identify the user, the Azure AD ProxyAddresses attribute is used for the user's account and groups to which the user is a member. For performance reasons, group membership is [cached](./plan-design/prepare.md#group-membership-caching-by-azure-information-protection). If the user account has no values for the Azure AD ProxyAddresses attribute, the value in the Azure AD UserPrincipalName is used instead.
 
-![RMS document consumption - step 2, use license is returned to the client](../media/AzRMS_documentconsumption2.png)
+![RMS document consumption - step 2, use license is returned to the client](./media/AzRMS_documentconsumption2.png)
 
 **What's happening in step 2**: The service then extracts the AES content key from the decrypted policy. This key is then encrypted with the user’s public RSA key that was obtained with the request.
 
 The re-encrypted content key is then embedded into an encrypted use license with the list of user rights, which is then returned to the RMS client.
 
-![RMS document consumption - step 3, document is decrypted and rights are enforced](../media/AzRMS_documentconsumption3.png)
+![RMS document consumption - step 3, document is decrypted and rights are enforced](./media/AzRMS_documentconsumption3.png)
 
 **What's happening in step 3**: Finally, the RMS client takes the encrypted use license and decrypts it with its own user private key. This lets the RMS client decrypt the document’s body as it is needed and render it on the screen.
 
 The client also decrypts the rights list and passes them to the application, which enforces those rights in the application’s user interface.
 
 > [!NOTE]
-> When users who are external to your organization consume content that you've protected, the consumption flow is the same. What changes for this scenario, is how the user is authenticated. For more information, see [When I share a protected document with somebody outside my company, how does that user get authenticated?](../get-started/faqs-rms.md#when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated)
+> When users who are external to your organization consume content that you've protected, the consumption flow is the same. What changes for this scenario, is how the user is authenticated. For more information, see [When I share a protected document with somebody outside my company, how does that user get authenticated?](./get-started/faqs-rms.md#when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated)
 
 
 ### Variations
@@ -165,15 +165,15 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 
 - **Protected PDF (.ppdf)**: When the Azure Rights Management service natively protects an Office file, it also creates a copy of that file and protects it in the same way. The only difference is that the file copy is in PPDF file format, which the Azure Information Protection client viewer and the RMS sharing application knows how to open for viewing only. This scenario lets you send protected attachments via email, knowing that the recipient on a mobile device can always read them even if the mobile device doesn’t have an app that natively supports protected Office files.
 
-- **Microsoft accounts**: Azure Information Protection can authorize email addresses for consumption when they are authenticated with a Microsoft account. However, not all applications can open protected content when a Microsoft account is used for authentication. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
+- **Microsoft accounts**: Azure Information Protection can authorize email addresses for consumption when they are authenticated with a Microsoft account. However, not all applications can open protected content when a Microsoft account is used for authentication. [More information](./get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
 
 ## Next steps
 
 To learn more about the Azure Rights Management service, use the other articles in the **Understand & Explore** section, such as [How applications support the Azure Rights Management service](applications-support.md) to learn how your existing applications can integrate with Azure Rights Management to provide an information protection solution. 
 
-Review [Terminology for Azure Information Protection](../get-started/terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using the Azure Rights Management service, and be sure to also check [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
+Review [Terminology for Azure Information Protection](./get-started/terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using the Azure Rights Management service, and be sure to also check [Requirements for Azure Information Protection](./get-started/requirements-azure-rms.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Quick start tutorial for Azure Information Protection](./get-started/infoprotect-quick-start-tutorial.md).
 
-If you’re ready to start deploying data protection for your organization, use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
+If you’re ready to start deploying data protection for your organization, use the [Azure Information Protection deployment roadmap](./plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
 > [!TIP]
-> For additional information and help, use the resources and links in [Information and support for Azure Information Protection](../get-started/information-support.md).
+> For additional information and help, use the resources and links in [Information and support for Azure Information Protection](./get-started/information-support.md).
