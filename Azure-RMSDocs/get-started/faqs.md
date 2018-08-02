@@ -83,7 +83,7 @@ Yes. Although Azure Information Protection is a cloud-based solution, it can cla
 
 If you have Exchange Server, SharePoint Server, and Windows file servers, you can deploy the [Rights Management connector](../deploy-use/deploy-rms-connector.md) so that these on-premises servers can use the Azure Rights Management service to protect your emails and documents. You can also synchronize and federate your Active Directory domain controllers with Azure AD for a more seamless authentication experience for users, for example, by using [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
 
-The Azure Rights Management service automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure Rights Management uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in the [How does Azure RMS work?](../understand-explore/how-does-it-work.md) article.
+The Azure Rights Management service automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure Rights Management uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](../how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in the [How does Azure RMS work?](../how-does-it-work.md) article.
 
 ## What types of data can Azure Information Protection classify and protect?
 
@@ -101,7 +101,7 @@ For more information and some walk-through examples, see the following blog post
 
 Additional information:
 
-- For Windows computers: For the current preview release, the conditional access policies for Azure Information Protection are evaluated when the [user environment is initialized](../understand-explore/how-does-it-work.md#initializing-the-user-environment) (this process is also known as bootstrapping), and then every 30 days.
+- For Windows computers: For the current preview release, the conditional access policies for Azure Information Protection are evaluated when the [user environment is initialized](../how-does-it-work.md#initializing-the-user-environment) (this process is also known as bootstrapping), and then every 30 days.
 
 - You might want to fine-tune how often your conditional access policies get evaluated. You can do this by configuring the token lifetime. For more information, see [Configurable token lifetimes in Azure Active Directory](/azure/active-directory/active-directory-configurable-token-lifetimes).
 
@@ -143,14 +143,14 @@ The technical documentation does not contain information about upcoming releases
 
 ## Is Azure Information Protection suitable for my country?
 
-Different countries have different requirements and regulations. To help you answer this question for your organization, see [Suitability for different countries](../understand-explore/compliance.md#suitability-for-different-countries).
+Different countries have different requirements and regulations. To help you answer this question for your organization, see [Suitability for different countries](../compliance.md#suitability-for-different-countries).
 
 ## How can Azure Information Protection help with GDPR?
 
 To see how Azure Information Protection can help you meet the General Data Protection Regulation (GDPR), see the following blog post announcement, with video: [Microsoft 365 provides an information protection strategy to help with the GDPR](https://blogs.office.com/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr).
 
 ## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
-See [Compliance and supporting information for Azure Information Protection](../understand-explore/compliance.md).
+See [Compliance and supporting information for Azure Information Protection](../compliance.md).
 
 ## How can I report a problem or send feedback for Azure Information Protection?
 

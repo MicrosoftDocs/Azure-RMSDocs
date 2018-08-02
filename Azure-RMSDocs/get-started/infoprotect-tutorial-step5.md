@@ -124,7 +124,7 @@ You can return to this site to track further activity for your protected documen
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
 |Full instructions for protecting files that you can then safely share|[Classify and protect a file or email](../rms-client/client-classify-protect.md)|
-|About the free account for others users to sign up|[RMS for individuals and Azure Rights Managmenet](../understand-explore/rms-for-individuals.md)|
+|About the free account for others users to sign up|[RMS for individuals and Azure Rights Managmenet](../rms-for-individuals.md)|
 |About using the document tracking site|[Track and revoke your documents](../rms-client/client-track-revoke.md)
 
 
