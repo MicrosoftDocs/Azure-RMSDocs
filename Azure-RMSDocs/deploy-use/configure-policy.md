@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/28/2018
+ms.date: 08/02/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -30,6 +30,12 @@ ms.suite: ems
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. This policy is then downloaded to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+The policy contains labels and settings:
+
+- Labels apply a classification value to documents and emails, and can optionally protect this content. The Azure Information Protection client displays these labels for your users in Office apps and when users right-click from File Explorer. These labels can also be applied by using PowerShell and the Azure Information Protection scanner.
+
+- The settings change the default behavior of the Azure Information Protection client. For example, you can select a default label, whether all documents and emails must have a label, and whether the Azure Information Protection bar is displayed in Office apps.
 
 ## Subscription support
 
@@ -93,27 +99,30 @@ Next time you access the **Azure Information Protection** blade, it automaticall
 
 3. To view and edit the policies, select **Policies** from the menu options. To view and edit the policy that all users get, select the **Global** policy. To create a custom policy for selected users, select **Add a new policy**.
     
-    An Azure Information Protection policy contains the following elements that you can configure:
-    
-    - Which labels are included that let administrators and users classify documents and emails.
-    
-    - Title and tooltip for the Information Protection bar that users see in their Office applications.
-    
-    - The option to set a default label as a starting point for classifying documents and emails.
-     
-    - The option to enforce classification when users save documents and send emails.
-    
-    - The option to prompt users to provide a reason when they select a label that has a lower sensitivity level than the original.
-    
-    - The option to automatically label an email message, based on its attachments.
 
-    - The option to control whether the the Information Protection bar is displayed in Office applications.
+### Overview of the policy
 
-    - The option to control whether the Do Not Forward button is displayed in Outlook.
+An Azure Information Protection policy contains the following elements that you can configure:
     
-    - The option to let users specify their own permissions for documents.
-    
-    - The option to provide a custom help link for users.
+- Which labels are included that let administrators and users classify (and optionally, protect) documents and emails.
+
+- Title and tooltip for the Information Protection bar that users see in their Office applications.
+
+- The option to set a default label as a starting point for classifying documents and emails.
+
+- The option to enforce classification when users save documents and send emails.
+
+- The option to prompt users to provide a reason when they select a label that has a lower sensitivity level than the original.
+
+- The option to automatically label an email message, based on its attachments.
+
+- The option to control whether the the Information Protection bar is displayed in Office applications.
+
+- The option to control whether the Do Not Forward button is displayed in Outlook.
+
+- The option to let users specify their own permissions for documents.
+
+- The option to provide a custom help link for users.
 
 Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. Two of these labels contain sublabels to provide subcategories, when needed. When a label is configured for sublabels, users cannot select the main label but must select one of the sublabels.
 
@@ -141,7 +150,7 @@ The Azure Information Protection client checks for any changes whenever a suppor
 
 ### Configuring your organization's policy
 
-Use the following information to help you configure your Azure Information Protection policy:
+Use the following information to help you configure the Azure Information Protection policy:
 
 - [The default Information Protection policy](configure-policy-default.md)
 
