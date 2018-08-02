@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/31/2018
+ms.date: 08/02/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -33,11 +33,12 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 |To do this ...|...do this:|
 |----------------|---------------|
-|See the most frequently used documentation|Read the top five pages:<br /><br /> - [What is Azure Information Protection?](./what-is-information-protection.md)<br /> - [Install the Azure Information Protection client for users](./rms-client/client-admin-guide-install.md)<br />- [Requirements for Azure Information Protection](requirements.md) <br />- [Deploy the Azure Information Protection scanner](./deploy-use/deploy-aip-scanner.md)<br />- [The default Azure Information Protection policy](./deploy-use/configure-policy-default.md)|
+|See the most frequently referenced documentation|Read the top five pages:<br /><br /> - [What is Azure Information Protection?](./what-is-information-protection.md)<br /> - [Install the Azure Information Protection client for users](./rms-client/client-admin-guide-install.md)<br />- [Requirements for Azure Information Protection](requirements.md) <br />- [Deploy the Azure Information Protection scanner](./deploy-use/deploy-aip-scanner.md)<br />- [The default Azure Information Protection policy](./deploy-use/configure-policy-default.md)|
 |Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
 |Request a new feature or change of functionality|Visit the [UserVoice](https://msip.uservoice.com) site for Azure Information Protection, and use your company email address to sign in.|
 |Receive tweets from the product group|Follow [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter.|
 |Check subscription information and what features are supported|Use the subscription information and feature list from the [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection) page.|
+|Understand a specific Azure Information Protection term|Search for the term or abbreviation on the [terminology page](terminology.md).|
 
 
 ## Information about new releases and updates
