@@ -1,3 +1,5 @@
+- name: Microsoft Information Protection SDK
+  href: index.yml
 - name: Overview
   items:
   - name: About Microsoft Information Protection SDK
