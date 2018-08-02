@@ -117,7 +117,7 @@ Other authentication methods:
 
 - If you protect an email with an Office document attachment to a user who doesn't have an account in Azure AD, the authentication method changes. The Azure Rights Management service is federated with some popular social identity providers, such as Gmail. If the user's email provider is supported, the user can sign in to that service and their email provider is responsible for authenticating them. If the user's email provider is not supported, or as a preference, the user can apply for a one-time passcode that authenticates them and displays the email with the protected document in a web browser.
 
-- Azure Information Protection can use Microsoft accounts for supported applications. Currently, not all applications can open protected content when a Microsoft account is used for authentication. [More information](./get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Azure Information Protection can use Microsoft accounts for supported applications. Currently, not all applications can open protected content when a Microsoft account is used for authentication. [More information](./secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## Can I add external users (people from outside my company) to custom templates?
 
@@ -147,7 +147,7 @@ To support this scenario, Exchange Online must be enabled for the Azure Rights M
 For more information about the new capabilities that include supporting all email accounts on all devices, see the following blog post: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 ## What devices and which file types are supported by Azure RMS?
-For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](./get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table for [RMS-enlighted applications](./get-started/requirements-applications.md#rms-enlightened-applications).
+For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](./requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table for [RMS-enlighted applications](./requirements-applications.md#rms-enlightened-applications).
 
 The Azure Rights Management service can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure Rights Management provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 

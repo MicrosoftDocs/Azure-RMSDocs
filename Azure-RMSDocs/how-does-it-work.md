@@ -149,7 +149,7 @@ The re-encrypted content key is then embedded into an encrypted use license with
 The client also decrypts the rights list and passes them to the application, which enforces those rights in the application’s user interface.
 
 > [!NOTE]
-> When users who are external to your organization consume content that you've protected, the consumption flow is the same. What changes for this scenario, is how the user is authenticated. For more information, see [When I share a protected document with somebody outside my company, how does that user get authenticated?](./get-started/faqs-rms.md#when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated)
+> When users who are external to your organization consume content that you've protected, the consumption flow is the same. What changes for this scenario, is how the user is authenticated. For more information, see [When I share a protected document with somebody outside my company, how does that user get authenticated?](./faqs-rms.md#when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated)
 
 
 ### Variations
@@ -165,15 +165,15 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 
 - **Protected PDF (.ppdf)**: When the Azure Rights Management service natively protects an Office file, it also creates a copy of that file and protects it in the same way. The only difference is that the file copy is in PPDF file format, which the Azure Information Protection client viewer and the RMS sharing application knows how to open for viewing only. This scenario lets you send protected attachments via email, knowing that the recipient on a mobile device can always read them even if the mobile device doesn’t have an app that natively supports protected Office files.
 
-- **Microsoft accounts**: Azure Information Protection can authorize email addresses for consumption when they are authenticated with a Microsoft account. However, not all applications can open protected content when a Microsoft account is used for authentication. [More information](./get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
+- **Microsoft accounts**: Azure Information Protection can authorize email addresses for consumption when they are authenticated with a Microsoft account. However, not all applications can open protected content when a Microsoft account is used for authentication. [More information](./secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
 
 ## Next steps
 
 To learn more about the Azure Rights Management service, use the other articles in the **Understand & Explore** section, such as [How applications support the Azure Rights Management service](applications-support.md) to learn how your existing applications can integrate with Azure Rights Management to provide an information protection solution. 
 
-Review [Terminology for Azure Information Protection](./get-started/terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using the Azure Rights Management service, and be sure to also check [Requirements for Azure Information Protection](./get-started/requirements.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Quick start tutorial for Azure Information Protection](./get-started/infoprotect-quick-start-tutorial.md).
+Review [Terminology for Azure Information Protection](./terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using the Azure Rights Management service, and be sure to also check [Requirements for Azure Information Protection](./requirements.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Quick start tutorial for Azure Information Protection](./infoprotect-quick-start-tutorial.md).
 
 If you’re ready to start deploying data protection for your organization, use the [Azure Information Protection deployment roadmap](./plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
 > [!TIP]
-> For additional information and help, use the resources and links in [Information and support for Azure Information Protection](./get-started/information-support.md).
+> For additional information and help, use the resources and links in [Information and support for Azure Information Protection](./information-support.md).
