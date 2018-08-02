@@ -133,7 +133,7 @@ For your cloud data stores, use Microsoft Cloud App Security to apply your label
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
-- Additional resources: [Information and support for Azure Information Protection](information-support.md)
+Additional resources: [Information and support for Azure Information Protection](information-support.md)
 
 ### Microsoft Ignite
 
