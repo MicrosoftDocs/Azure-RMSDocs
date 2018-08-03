@@ -69,8 +69,8 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |.ppdf|The file name extension that a rights management service creates when it automatically creates a PDF copy of a file (Word, Excel, PowerPoint, or PDF) that you share by email, so that the file can be read (but not edited) on all devices.|
 |permissions level|A logical grouping of usage rights that make it easier for end-users and administrators to choose configuration options that are role-based. For example, Reviewer and Co-Author.|
 |protect|Apply rights management controls to files or email messages by using encryption, identity, and access control policies to help secure your data.|
-|publish|To protect a file in order to safeguard it from unauthorized access and use.|
 |protection template|Also known as a *rights policy template*, *Rights Management template*, and *RMS template*.<br /><br />A group of protection settings that are managed by an administrator and that include the defined usage rights for authorized users, and access controls for expiry and offline access. |
+|publish|To protect a file in order to safeguard it from unauthorized access and use.|
 |publish|To protect a file in order to safeguard it from unauthorized access and use.|
 |Rights Management connector|An outbound proxy relay that you can deploy for on-premises services such as Exchange Server and SharePoint, to protect data by using the Azure Rights Management service.|
 |Rights Management issuer|The account that protected a document or email.|
@@ -80,8 +80,8 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |RMS|See *Rights Management services*.|
 |RMS connector|See *Rights Management connector*.|
 |RMS for individuals|A free subscription for a user to use Rights Management when their organization does not have a subscription to Office 365 or Azure Active Directory.|
-|RMS template|See *protection template*.|
 |RMS sharing app|See *Rights Management sharing application*.|
+|RMS template|See *protection template*.|
 |protection-only mode|An operational mode for the Azure Information Protection client when there is no Azure Information Protection policy to apply labels. In this mode, classification labels are not displayed but users can still apply Rights Management protection.|
 |scanner|See *Azure Information Protection scanner*.|
 |super user|A group of highly trusted administrators who can decrypt and access files that the organization has protected by using a rights management service. Typically, this level of access is required for legal eDiscovery and by auditing teams.|
