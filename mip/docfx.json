@@ -37,7 +37,7 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/informationprotection/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
+      "extendBreadcrumb": false,
       "feedback_system": "None"
     },
     "fileMetadata": {},
