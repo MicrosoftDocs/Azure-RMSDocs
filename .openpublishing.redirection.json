@@ -394,6 +394,351 @@
             "source_path": "Azure-RMSDocs/understand-explore/what-is-information-protection.md",
             "redirect_url": "/information-protection/what-is-information-protection",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/Add-AadrmKey.md",
+            "redirect_url": "/information-protection/Add-AadrmKey",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/activate-azure-classic.md",
+            "redirect_url": "/information-protection/activate-azure-classic",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/activate-azure.md",
+            "redirect_url": "/information-protection/activate-azure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/activate-office365-classic.md",
+            "redirect_url": "/information-protection/activate-office365-classic",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/activate-office365.md",
+            "redirect_url": "/information-protection/activate-office365",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/activate-service.md",
+            "redirect_url": "/information-protection/activate-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/administer-powershell.md",
+            "redirect_url": "/information-protection/administer-powershell",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-adrms-restrictions.md",
+            "redirect_url": "/information-protection/configure-adrms-restrictions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-applications.md",
+            "redirect_url": "/information-protection/configure-applications",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-client.md",
+            "redirect_url": "/information-protection/configure-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-custom-templates.md",
+            "redirect_url": "/information-protection/configure-custom-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-exchange-with-imported-tpd.md",
+            "redirect_url": "/information-protection/configure-exchange-with-imported-tpd",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-exo-rules.md",
+            "redirect_url": "/information-protection/configure-exo-rules",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-office-apps.md",
+            "redirect_url": "/information-protection/configure-office-apps",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-office365.md",
+            "redirect_url": "/information-protection/configure-office365",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy-add-remove-label.md",
+            "redirect_url": "/information-protection/configure-policy-add-remove-label",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy-change-label.md",
+            "redirect_url": "/information-protection/configure-policy-change-label",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy-classification.md",
+            "redirect_url": "/information-protection/configure-policy-classification",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy-default.md",
+            "redirect_url": "/information-protection/configure-policy-default",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy-delete-reorder.md",
+            "redirect_url": "/information-protection/configure-policy-delete-reorder",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy-languages.md",
+            "redirect_url": "/information-protection/configure-policy-languages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy-markings.md",
+            "redirect_url": "/information-protection/configure-policy-markings",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy-new-label.md",
+            "redirect_url": "/information-protection/configure-policy-new-label",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy-protection.md",
+            "redirect_url": "/information-protection/configure-policy-protection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy-scope.md",
+            "redirect_url": "/information-protection/configure-policy-scope",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy-settings.md",
+            "redirect_url": "/information-protection/configure-policy-settings",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy-templates.md",
+            "redirect_url": "/information-protection/configure-policy-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-policy.md",
+            "redirect_url": "/information-protection/configure-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-servers-rms-connector.md",
+            "redirect_url": "/information-protection/configure-servers-rms-connector",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-sharing-app.md",
+            "redirect_url": "/information-protection/configure-sharing-app",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-super-users.md",
+            "redirect_url": "/information-protection/configure-super-users",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-templates-with-powershell.md",
+            "redirect_url": "/information-protection/configure-templates-with-powershell",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/configure-usage-rights.md",
+            "redirect_url": "/information-protection/configure-usage-rights",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/copy-template.md",
+            "redirect_url": "/information-protection/copy-template",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/create-template.md",
+            "redirect_url": "/information-protection/create-template",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/decommission-deactivate.md",
+            "redirect_url": "/information-protection/decommission-deactivate",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/deploy-aip-scanner.md",
+            "redirect_url": "/information-protection/deploy-aip-scanner",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/deploy-rms-connector.md",
+            "redirect_url": "/information-protection/deploy-rms-connector",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/help-users.md",
+            "redirect_url": "/information-protection/help-users",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/infoprotect-configure-policy.md",
+            "redirect_url": "/information-protection/infoprotect-configure-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/install-configure-rms-connector.md",
+            "redirect_url": "/information-protection/install-configure-rms-connector",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/install-powershell.md",
+            "redirect_url": "/information-protection/install-powershell",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/log-analyze-usage.md",
+            "redirect_url": "/information-protection/log-analyze-usage",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/manage-personal-data.md",
+            "redirect_url": "/information-protection/manage-personal-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/migrate-portal.md",
+            "redirect_url": "/information-protection/migrate-portal",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/monitor-rms-connector.md",
+            "redirect_url": "/information-protection/monitor-rms-connector",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/operations-customer-managed-tenant-key.md",
+            "redirect_url": "/information-protection/operations-customer-managed-tenant-key",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/operations-microsoft-managed-tenant-key.md",
+            "redirect_url": "/information-protection/operations-microsoft-managed-tenant-key",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/operations-tenant-key.md",
+            "redirect_url": "/information-protection/operations-tenant-key",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/prepare-environment-adrms.md",
+            "redirect_url": "/information-protection/prepare-environment-adrms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/refresh-templates.md",
+            "redirect_url": "/information-protection/refresh-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/remove-template.md",
+            "redirect_url": "/information-protection/remove-template",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/rms-connector-registry-settings.md",
+            "redirect_url": "/information-protection/rms-connector-registry-settings",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/byok-price-restrictions.md",
+            "redirect_url": "/information-protection/byok-price-restrictions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/deployment-roadmap.md",
+            "redirect_url": "/information-protection/deployment-roadmap",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/generate-tenant-key-in-person.md",
+            "redirect_url": "/information-protection/generate-tenant-key-in-person",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/generate-tenant-key-internet.md",
+            "redirect_url": "/information-protection/generate-tenant-key-internet",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase1.md",
+            "redirect_url": "/information-protection/migrate-from-ad-rms-phase1",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase2.md",
+            "redirect_url": "/information-protection/migrate-from-ad-rms-phase2",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase3.md",
+            "redirect_url": "/information-protection/migrate-from-ad-rms-phase3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase4.md",
+            "redirect_url": "/information-protection/migrate-from-ad-rms-phase4",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase5.md",
+            "redirect_url": "/information-protection/migrate-from-ad-rms-phase5",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/migrate-from-ad-rms-to-azure-rms.md",
+            "redirect_url": "/information-protection/migrate-from-ad-rms-to-azure-rms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/migrate-hsmkey-to-hsmkey.md",
+            "redirect_url": "/information-protection/migrate-hsmkey-to-hsmkey",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/migrate-softwarekey-to-hsmkey.md",
+            "redirect_url": "/information-protection/migrate-softwarekey-to-hsmkey",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/migrate-softwarekey-to-softwarekey.md",
+            "redirect_url": "/information-protection/migrate-softwarekey-to-softwarekey",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/plan-implement-tenant-key.md",
+            "redirect_url": "/information-protection/plan-implement-tenant-key",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/prepare.md",
+            "redirect_url": "/information-protection/prepare",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/plan-design/thales-hsm.md",
+            "redirect_url": "/information-protection/thales-hsm",
+            "redirect_document_id": false
         }
     ]
 }
