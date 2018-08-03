@@ -60,7 +60,7 @@ Azure Rights Management supports the following security, compliance and regulat
 
 √ Certified for the following:
 
--   ISO/IEC 27001:2013 (includes [ISO/IEC 27018](http://azure.microsoft.com/blog/2015/02/16/azure-first-cloud-computing-platform-to-conform-to-isoiec-27018-only-international-set-of-privacy-controls-in-the-cloud/))
+-   ISO/IEC 27001:2013 (./includes [ISO/IEC 27018](http://azure.microsoft.com/blog/2015/02/16/azure-first-cloud-computing-platform-to-conform-to-isoiec-27018-only-international-set-of-privacy-controls-in-the-cloud/))
 
 -   SOC 2 SSAE 16/ISAE 3402 attestations
 

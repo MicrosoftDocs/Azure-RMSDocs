@@ -154,7 +154,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
 1. From a PowerShell session, first run [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
-    If you haven’t already installed the PowerShell module for the Azure Rights Management service, see [Installing the AADRM PowerShell module](../deploy-use/install-powershell.md).
+    If you haven’t already installed the PowerShell module for the Azure Rights Management service, see [Installing the AADRM PowerShell module]install-powershell.md).
 
 2. From the output, identify the **LicensingIntranetDistributionPointUrl** value.
 
@@ -209,7 +209,7 @@ If you use Intune for your software deployment method, use these instructions to
 
 The PowerShell module that is included with the Azure Information Protection client has cmdlets to install and configure the scanner. However, to use the scanner, you must install the full version of the client and cannot install just the PowerShell module.
 
-To install the client for the scanner, follow the same instructions in the preceding sections. You're then ready to install the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md).
+To install the client for the scanner, follow the same instructions in the preceding sections. You're then ready to install the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files]deploy-aip-scanner.md).
 
 ## Next steps
 Now that you've installed the Azure Information Protection client, see the following for additional information that you might need to support this client:
