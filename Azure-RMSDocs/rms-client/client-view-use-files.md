@@ -46,7 +46,7 @@ The viewer automatically installs as part of the Azure Information Protection cl
 > 
 > Install the viewer if you have been sent a protected document by somebody from another organization or if you do not have local administrator permissions to your PC.
 
-To be able to open a protected document, the application must be "RMS-enlightened". Office apps and the Azure Information Protection Viewer are examples of RMS-enlightened applications. To see a list of applications by type and supported devices, see the [RMS-enlightened applications](../get-started/requirements-applications.md#rms-enlightened-applications) table.  
+To be able to open a protected document, the application must be "RMS-enlightened". Office apps and the Azure Information Protection Viewer are examples of RMS-enlightened applications. To see a list of applications by type and supported devices, see the [RMS-enlightened applications](../requirements-applications.md#rms-enlightened-applications) table.  
 ## Message.rpmsg as an email attachment
 
 If you see **message.rpmsg** as a file attachment in an email, this file is not a protected document but a protected email message that displays as an attachment. You can't use the Azure Information Protection Viewer for Windows to view this protected email message on your Windows PC. Instead, you need an email application for Windows that supports Rights Management protection, such as Office Outlook. Or you can use Outlook on the web.
@@ -75,7 +75,7 @@ If your organization does not have a cloud-based account for you to use (for Off
 
     You can check your permissions for the file by clicking **Permissions**. From the **Permissions** dialog box, you can also identify the file owner to contact if you want to request a new version of the file with additional permissions.
     
-    For more detailed information about the permissions and the usage rights that each contains, see [Rights included in permissions levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels).
+    For more detailed information about the permissions and the usage rights that each contains, see [Rights included in permissions levels]configure-usage-rights.md#rights-included-in-permissions-levels).
 
 4. To edit the file, click **Save As**, which lets you save the file without the label and with no protection to its original file name extension. You can then edit the file by using the application that's associated with that file type. 
     

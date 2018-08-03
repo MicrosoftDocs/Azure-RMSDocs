@@ -30,7 +30,7 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
-Before you install the Azure Information Protection client on your enterprise network, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md). 
+Before you install the Azure Information Protection client on your enterprise network, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../requirements.md). 
 
 Then check the additional prerequisites that might be needed for the Azure Information Protection client, as documented in the next section. Not all the prerequisites are checked by the installation program.
 
@@ -124,7 +124,7 @@ Use the following instructions to install the client when you're not using the M
 
     - If your computer runs Office 2010, restart your computer. 
         
-        If the client was not installed with the ServiceLocation parameter, when you first open one of the Office applications that use the Azure Information Protection bar (for example, Word), you must confirm any prompts to update the registry for this first-time use. [Service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys. 
+        If the client was not installed with the ServiceLocation parameter, when you first open one of the Office applications that use the Azure Information Protection bar (for example, Word), you must confirm any prompts to update the registry for this first-time use. [Service discovery](client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys. 
     
     - For other versions of Office, restart any Office applications and all instances of File Explorer. 
         
@@ -154,7 +154,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
 1. From a PowerShell session, first run [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
-    If you haven’t already installed the PowerShell module for the Azure Rights Management service, see [Installing the AADRM PowerShell module](../deploy-use/install-powershell.md).
+    If you haven’t already installed the PowerShell module for the Azure Rights Management service, see [Installing the AADRM PowerShell module]install-powershell.md).
 
 2. From the output, identify the **LicensingIntranetDistributionPointUrl** value.
 
@@ -209,7 +209,7 @@ If you use Intune for your software deployment method, use these instructions to
 
 The PowerShell module that is included with the Azure Information Protection client has cmdlets to install and configure the scanner. However, to use the scanner, you must install the full version of the client and cannot install just the PowerShell module.
 
-To install the client for the scanner, follow the same instructions in the preceding sections. You're then ready to install the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md).
+To install the client for the scanner, follow the same instructions in the preceding sections. You're then ready to install the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files]deploy-aip-scanner.md).
 
 ## Next steps
 Now that you've installed the Azure Information Protection client, see the following for additional information that you might need to support this client:

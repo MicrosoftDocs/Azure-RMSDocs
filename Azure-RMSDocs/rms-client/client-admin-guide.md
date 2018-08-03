@@ -62,13 +62,13 @@ The Azure Information Protection client includes the following:
 
 - A PowerShell module to apply and remove classification labels and protection from files. 
     
-    This module includes cmdlets to install and configure the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) that runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries.
+    This module includes cmdlets to install and configure the [Azure Information Protection scanner]deploy-aip-scanner.md) that runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries.
 
 - The Rights Management client that communicates with Azure Rights Management (Azure RMS) or Active Directory Rights Management Services (AD RMS).
 
-The Azure Information Protection client is best suited to work with its Azure services; Azure Information Protection and its data protection service, Azure Rights Management. However, with some limitations, the Azure Information Protection client also works with the on-premises version of Rights Management, AD RMS. For a comprehensive comparison of features that are supported by Azure Information Protection and AD RMS, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). 
+The Azure Information Protection client is best suited to work with its Azure services; Azure Information Protection and its data protection service, Azure Rights Management. However, with some limitations, the Azure Information Protection client also works with the on-premises version of Rights Management, AD RMS. For a comprehensive comparison of features that are supported by Azure Information Protection and AD RMS, see [Comparing Azure Information Protection and AD RMS](../compare-on-premise.md). 
 
-If you have AD RMS and want to migrate to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+If you have AD RMS and want to migrate to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md).
 
 
 ## Should you deploy the Azure Information Protection client?
@@ -113,9 +113,9 @@ When the client is installed, use the **Help and Feedback** option to open the *
 
 #### **Help and Feedback** section
 
-The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website but you can configure it for a custom URL as one of the [policy settings](../deploy-use/configure-policy-settings.md) in the Azure Information Protection policy.
+The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website but you can configure it for a custom URL as one of the [policy settings]configure-policy-settings.md) in the Azure Information Protection policy.
 
-Use the **Send Us Feedback** link to send suggestions or requests to the Information Protection team. Do not use this option for technical support but instead, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources). 
+Use the **Send Us Feedback** link to send suggestions or requests to the Information Protection team. Do not use this option for technical support but instead, see the [Support options and community resources](../information-support.md#support-options-and-community-resources). 
 
 The **Export Logs** automatically collects and attaches log files for the Azure Information Protection client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk.
 
@@ -169,7 +169,7 @@ The Azure Information Protection client supports the same languages that Office 
 
 For these languages, menu options, dialog boxes, and messages from the Azure Information Protection client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection client for different languages. 
 
-However, label names and descriptions that you specify are not automatically translated when you configure labels in the Azure Information Protection policy. Beginning with August 30, 2017, the current [default policy](../deploy-use/configure-policy-default.md) includes support for some languages. For users to see labels in their preferred language, provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md). Visual markings are not translated and do not support more than one language.
+However, label names and descriptions that you specify are not automatically translated when you configure labels in the Azure Information Protection policy. Beginning with August 30, 2017, the current [default policy]configure-policy-default.md) includes support for some languages. For users to see labels in their preferred language, provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection]configure-policy-languages.md). Visual markings are not translated and do not support more than one language.
 
 ## Post installation tasks
 
@@ -203,7 +203,7 @@ Alternatively, you can manually upgrade the client by downloading the new releas
 
 When you manually upgrade, uninstall the previous version first only if you're changing the installation method. For example, you change from the executable (.exe) version of the client to the Windows installer (.msi) version of the client. Or, if you need to install a previous version of the client. For example, you have the current preview version installed for testing and now need to revert to the current general availability version.
 
-Use the [Version release history and support policy](../rms-client/client-version-release-history.md) to understand the support policy for the Azure Information Protection client, which versions are currently supported, and what's new and changed for the supported releases. 
+Use the [Version release history and support policy](client-version-release-history.md) to understand the support policy for the Azure Information Protection client, which versions are currently supported, and what's new and changed for the supported releases. 
 
 ### Upgrading the Azure Information Protection scanner
 

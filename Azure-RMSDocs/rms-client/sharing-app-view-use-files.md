@@ -39,7 +39,7 @@ When the [Rights Management (RMS) sharing application is installed on your compu
 > -   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
-> -   For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> -   For more information, see [RMS for individuals and Azure Rights Management](../rms-for-individuals.md).
 
 ## To view a protected file
 By using File Explorer or the email message that contains the attachment, double-click the protected file, and enter your credentials if prompted to do so.

@@ -39,7 +39,7 @@ When a file has been protected by Rights Management, you can change the permissi
 >
 > Similarly, if you want to add or remove a permission, you cannot just specify that permission to add or remove but must specify all the permissions that you want the specified people to have.
 
-If you are the owner of the file you want to re-protect (for example, you originally protected it by using the sharing application), you will automatically have permissions to re-protect the file. If are not the owner, you might or might not have permissions to re-protect the file, depending on the permissions that the protected file currently has. You need the [Full Control usage right](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) to re-protect a file.
+If you are the owner of the file you want to re-protect (for example, you originally protected it by using the sharing application), you will automatically have permissions to re-protect the file. If are not the owner, you might or might not have permissions to re-protect the file, depending on the permissions that the protected file currently has. You need the [Full Control usage right]configure-usage-rights.md#usage-rights-and-descriptions) to re-protect a file.
 
 For example, if somebody else protected the file by using the Rights Management sharing application, and they specified a group that you belong to and **Co-Owner** as the custom permission, you will be able to re-protect the file. However, if they didn't specify your name or a group that you belong to, or if they selected **Reviewer - View and Edit**, or a template that does not let you remove permissions, you will not be able to re-protect the file. The easiest way to find out, is to try re-protecting the file.
 
@@ -76,7 +76,7 @@ If you want to completely remove all permissions so that the file is no longer p
 > -   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
-> -   For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> -   For more information, see [RMS for individuals and Azure Rights Management](../rms-for-individuals.md).
 
 ## To re-protect a file that you have emailed
 
