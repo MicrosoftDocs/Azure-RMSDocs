@@ -41,7 +41,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |Azure Information Protection label|An item that applies a classification value to documents and emails, and can optionally protect them. The Azure Information Protection client displays these labels for your users in Office apps and when users right-click from File Explorer. These labels can also be applied by using PowerShell and the Azure Information Protection scanner.|
 |Azure Information Protection policy|Administrator-defined configuration for clients and services that use Azure Information Protection labels and policy settings.|
 |Azure Information Protection scanner|A service that runs on Windows Server and lets you discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries.|
-|Azure Information Protection viewer|An app that runs on Windows computers and iOS and Android, to display protected files.|
+|Azure Information Protection viewer|An app that runs on Windows computers and iOS and Android mobile devices, to display protected files.|
 |Azure Rights Management|Frequently abbreviated to *Azure RMS*.<br /><br />An Azure service used by Azure Information Protection that uses encryption and policy to help secure documents, files, and email.  Also known as *Azure Rights Management service*. Previous names have included:<br /><br />- *Windows Azure Active Directory Rights Management*: Frequently abbreviated to Windows Azure AD Rights Management Service.<br /><br />- *RMS Online*: The original, proposed name, which you might sometimes see in error messages and log file entries.|
 |Azure RMS|See *Azure Rights Management*.|
 |BYOK|See *bring your own key*.|
@@ -70,7 +70,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |permissions level|A logical grouping of usage rights that make it easier for end-users and administrators to choose configuration options that are role-based. For example, Reviewer and Co-Author.|
 |protect|Apply rights management controls to files or email messages by using encryption, identity, and access control policies to help secure your data.|
 |publish|To protect a file in order to safeguard it from unauthorized access and use.|
-|protection template|A group of protection settings that are managed by an administrator and that include the defined usage rights for authorized users, and access controls for expiry and offline access. Also known as a *rights policy template*, *Rights Management template*, and *RMS template*.|
+|protection template|Also known as a *rights policy template*, *Rights Management template*, and *RMS template*.<br /><br />A group of protection settings that are managed by an administrator and that include the defined usage rights for authorized users, and access controls for expiry and offline access. |
 |publish|To protect a file in order to safeguard it from unauthorized access and use.|
 |Rights Management connector|An outbound proxy relay that you can deploy for on-premises services such as Exchange Server and SharePoint, to protect data by using the Azure Rights Management service.|
 |Rights Management issuer|The account that protected a document or email.|
@@ -80,6 +80,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |RMS|See *Rights Management services*.|
 |RMS connector|See *Rights Management connector*.|
 |RMS for individuals|A free subscription for a user to use Rights Management when their organization does not have a subscription to Office 365 or Azure Active Directory.|
+|RMS template|See *protection template*.|
 |RMS sharing app|See *Rights Management sharing application*.|
 |protection-only mode|An operational mode for the Azure Information Protection client when there is no Azure Information Protection policy to apply labels. In this mode, classification labels are not displayed but users can still apply Rights Management protection.|
 |scanner|See *Azure Information Protection scanner*.|
