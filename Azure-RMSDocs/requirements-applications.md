@@ -217,5 +217,5 @@ To check for other requirements, see [Requirements for Azure Information Protect
 
 For more information about how the most commonly used applications support Azure RMS, see [How applications support the Azure Rights Management service](./applications-support.md).
 
-For information about how to configure the most commonly used  applications for Azure RMS, see [Configuring applications for Azure Rights Management](./deploy-use/configure-applications.md).
+For information about how to configure the most commonly used  applications for Azure RMS, see [Configuring applications for Azure Rights Management](configure-applications.md).
 

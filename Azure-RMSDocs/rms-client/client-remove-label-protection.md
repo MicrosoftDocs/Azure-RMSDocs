@@ -84,7 +84,7 @@ More how-to instructions from the Azure Information Protection user guide:
 - [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-For configuration instructions to enable the policy setting **Make the custom permissions option available to users**, see [Configuring the Azure Information Protection policy settings](../deploy-use/configure-policy-settings.md).
+For configuration instructions to enable the policy setting **Make the custom permissions option available to users**, see [Configuring the Azure Information Protection policy settings]configure-policy-settings.md).
 
-Other configuration instructions: [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
+Other configuration instructions: [Configuring the Azure Information Protection policy]configure-policy.md).
 

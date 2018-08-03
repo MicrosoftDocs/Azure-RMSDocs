@@ -62,7 +62,7 @@ Conditional access is supported in preview for documents protected by Azure Info
 
 For more information about authentication requirements, see [Azure Active Directory requirements for Azure Information Protection](requirements-azure-ad.md). 
 
-For more information about the requirements for user and group accounts for authorization, see [Preparing users and groups for Azure Information Protection](./plan-design/prepare.md).
+For more information about the requirements for user and group accounts for authorization, see [Preparing users and groups for Azure Information Protection](prepare.md).
 
 ## Client devices
 
@@ -148,11 +148,11 @@ For information about the additional requirements for this scenario, see [On-pre
 
 ### Coexistence of AD RMS with Azure RMS
 
-The following deployment scenario is not supported unless you are using AD RMS for [HYOK protection](./deploy-use/configure-adrms-restrictions.md) with Azure Information Protection (the "hold your own key" configuration):
+The following deployment scenario is not supported unless you are using AD RMS for [HYOK protection](configure-adrms-restrictions.md) with Azure Information Protection (the "hold your own key" configuration):
 
-- Running AD RMS and Azure RMS side by side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](./plan-design/migrate-from-ad-rms-to-azure-rms.md).
+- Running AD RMS and Azure RMS side by side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-There is a supported migration path [from AD RMS to Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](./deploy-use/decommission-deactivate.md).
+There is a supported migration path [from AD RMS to Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](decommission-deactivate.md).
 
 
 
