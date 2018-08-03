@@ -61,7 +61,7 @@ When you use sublabels, don't configure visual markings, protection, and conditi
 
 ## How do I prevent somebody from removing or changing a label?
 
-Although there’s a [policy setting](./deploy-use/configure-policy-settings.md) that requires users to state why they are lowering a classification label, removing a label, or removing protection, this setting does not prevent these actions. To prevent users from removing or changing a label, the content must already be protected and the protection permissions do not grant the user the Export or Full Control [usage right](./deploy-use/configure-usage-rights.md). 
+Although there’s a [policy setting](configure-policy-settings.md) that requires users to state why they are lowering a classification label, removing a label, or removing protection, this setting does not prevent these actions. To prevent users from removing or changing a label, the content must already be protected and the protection permissions do not grant the user the Export or Full Control [usage right](configure-usage-rights.md). 
 
 ## When an email is labeled, do any attachments automatically get the same labeling?
 
@@ -71,7 +71,7 @@ No. When you label an email message that has attachments, those attachments do n
 
 Because Azure Information Protection uses persistent metadata for classification, which includes a clear-text label, this information can be read by DLP solutions and other applications. 
 
-For more information and examples of using this metadata with Exchange Online mail flow rules, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](./deploy-use/configure-exo-rules.md).
+For more information and examples of using this metadata with Exchange Online mail flow rules, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).
 
 ## How is Azure Information Protection classification for emails different from Exchange message classification?
 

@@ -46,7 +46,7 @@ The cmdlets are installed with the PowerShell module **AzureInformationProtectio
 > 
 > For Windows Server 2016, you can use the same group policy setting when you install the latest Administrative Templates (.admx) for Windows 10.
 
-The [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) uses cmdlets from the AzureInformationProtection module to install and configure a service on Windows Server. This scanner then lets you discover, classify, and protect files on data stores.
+The [Azure Information Protection scanner]deploy-aip-scanner.md) uses cmdlets from the AzureInformationProtection module to install and configure a service on Windows Server. This scanner then lets you discover, classify, and protect files on data stores.
 
 For a list of all the cmdlets and their corresponding help, see [AzureInformationProtection Module](/powershell/module/azureinformationprotection). Within a PowerShell session, type `Get-Help <cmdlet name> -online` to see the latest help.  
 
@@ -99,13 +99,13 @@ In addition to the prerequisites for installing the AzureInformationProtection m
 
 This prerequisite applies whether you apply the data protection by using labels or by directly connecting to the Azure Rights Management service to apply the data protection.
 
-If your Azure Information Protection tenant is not activated, see the instructions for [Activating Azure Rights Management](../deploy-use/activate-service.md).
+If your Azure Information Protection tenant is not activated, see the instructions for [Activating Azure Rights Management]activate-service.md).
 
 #### Prerequisite 2: To remove protection from files for others using your own account
 
 Typical scenarios for removing protection from files for others include data discovery or data recovery. If you are using labels to apply the protection, you could remove the protection by setting a new label that doesn't apply protection or by removing the label. But you will more likely connect directly to the Azure Rights Management service to remove the protection.
 
-You must have a Rights Management usage right to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../deploy-use/configure-super-users.md).
+You must have a Rights Management usage right to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery]configure-super-users.md).
 
 #### Prerequisite 3: To protect or unprotect files without user interaction
 
@@ -149,7 +149,7 @@ Run the Get-AadrmConfiguration cmdlet from the Azure RMS
 Windows PowerShell module:
 
 1. If this module is not already installed on your computer, see
-[Installing the AADRM PowerShell module](../deploy-use/install-powershell.md).
+[Installing the AADRM PowerShell module]install-powershell.md).
 
 2. Start Windows PowerShell with the **Run as Administrator** option.
 
@@ -243,7 +243,7 @@ As shown in the previous command, you can supply the values with a single comman
 
 Consider making this service principal account a super user: To ensure that this service principal account can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), but specify the **ServicePrincipalId** parameter with your AppPrincipalId value.
 
-For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
+For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery]configure-super-users.md).
 
 > [!NOTE]
 > To use your own account to authenticate to the Azure Rights Management service, there's no need to run Set-RMSServerAuthentication before you protect or unprotect files, or get templates.
@@ -475,7 +475,7 @@ You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthent
 By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account for this purpose. Then, in the context of that user, run the Set-AIPAuthentication cmdlet to set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the Azure Rights Management service. The account downloads the Azure Information Protection policy and any Rights Management templates that the labels use.
 
 > [!NOTE]
-> If you use [scoped policies](../deploy-use/configure-policy-scope.md), remember that you might need to add this account to your scoped policies.
+> If you use [scoped policies]configure-policy-scope.md), remember that you might need to add this account to your scoped policies.
 
 The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. 
 

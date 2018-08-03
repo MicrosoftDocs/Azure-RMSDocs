@@ -39,7 +39,7 @@ When a file has been protected by Rights Management, you can change the permissi
 >
 > Similarly, if you want to add or remove a permission, you cannot just specify that permission to add or remove but must specify all the permissions that you want the specified people to have.
 
-If you are the owner of the file you want to re-protect (for example, you originally protected it by using the sharing application), you will automatically have permissions to re-protect the file. If are not the owner, you might or might not have permissions to re-protect the file, depending on the permissions that the protected file currently has. You need the [Full Control usage right](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) to re-protect a file.
+If you are the owner of the file you want to re-protect (for example, you originally protected it by using the sharing application), you will automatically have permissions to re-protect the file. If are not the owner, you might or might not have permissions to re-protect the file, depending on the permissions that the protected file currently has. You need the [Full Control usage right]configure-usage-rights.md#usage-rights-and-descriptions) to re-protect a file.
 
 For example, if somebody else protected the file by using the Rights Management sharing application, and they specified a group that you belong to and **Co-Owner** as the custom permission, you will be able to re-protect the file. However, if they didn't specify your name or a group that you belong to, or if they selected **Reviewer - View and Edit**, or a template that does not let you remove permissions, you will not be able to re-protect the file. The easiest way to find out, is to try re-protecting the file.
 

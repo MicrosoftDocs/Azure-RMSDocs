@@ -134,4 +134,4 @@ Now you've seen the default Azure Information Protection policy and how to custo
 
 Try sharing more documents and track how they are being used, and confirm how document revocation works.
 
-You might then find it useful to return to the **Quick start** page in the Azure portal, read some of the [frequently asked questions](faqs.md) for Azure Information Protection, and explore some of the other documentation articles. But if you're ready to start deploying Azure Information Protection for your organization, your next stop should be the [Azure Information Protection deployment roadmap](./plan-design/deployment-roadmap.md). 
+You might then find it useful to return to the **Quick start** page in the Azure portal, read some of the [frequently asked questions](faqs.md) for Azure Information Protection, and explore some of the other documentation articles. But if you're ready to start deploying Azure Information Protection for your organization, your next stop should be the [Azure Information Protection deployment roadmap](deployment-roadmap.md). 
