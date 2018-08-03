@@ -9,5 +9,9 @@
     - name: Microsoft Information Protection
       tocHref: /informationprotection/
       topicHref: /informationprotection
+      items:
+      - name: MIP SDK
+        tocHref: /develop/
+        topicHref: /develop
 
 
