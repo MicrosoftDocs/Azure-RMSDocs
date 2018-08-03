@@ -49,7 +49,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |content key|A unique key that is created by RMS-enlightened applications for each document or email that is protected by using Rights Management and that helps to limit the risk of information disclosure.|
 |consume|To open a document or email to read or use it when that content has been protected by Rights Management. For a document, consuming includes editing and adding new content to a protected document. For an email message, consuming includes replying to a protected message.|
 |deactivate|To disable the Rights Management service so that the organization can no longer use Azure Information Protection.|
-|departmental template|A protection template that you create (a custom template) and that is configured to be visible for selected users rather than all users in your organization. Also known as a *scoped template*.|
+|departmental template|A protection template that you create and that is configured to be visible for selected users rather than all users in your organization. Also known as a *scoped template*.|
 |enlightened applications|Applications that natively support Rights Management, which includes Office applications, such as Word and Excel. Independent software vendors (ISVs) and developers can also write applications that natively support Rights Management.|
 |enterprise rights management|An industry-standard, generic term that is often used to describe products and solutions that help organizations protect sensitive or valuable information by using a combination of encryption and policy authorization tools. Azure Information Protection is an example of an enterprise rights management (ERM) solution.|
 |ERM|See *enterprise rights management*.|
