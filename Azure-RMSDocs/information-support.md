@@ -33,7 +33,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 |To do this ...|...do this:|
 |----------------|---------------|
-|See the most frequently referenced documentation|Read the top five pages:<br /><br /> - [What is Azure Information Protection?](./what-is-information-protection.md)<br /> - [Install the Azure Information Protection client for users](./rms-client/client-admin-guide-install.md)<br />- [Requirements for Azure Information Protection](requirements.md) <br />- [Deploy the Azure Information Protection scanner](./deploy-use/deploy-aip-scanner.md)<br />- [The default Azure Information Protection policy](./deploy-use/configure-policy-default.md)|
+|See the most frequently referenced documentation|Read the top five pages:<br /><br /> - [What is Azure Information Protection?](./what-is-information-protection.md)<br /> - [Install the Azure Information Protection client for users](./rms-client/client-admin-guide-install.md)<br />- [Requirements for Azure Information Protection](requirements.md) <br />- [Deploy the Azure Information Protection scanner](deploy-aip-scanner.md)<br />- [The default Azure Information Protection policy](configure-policy-default.md)|
 |Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
 |Request a new feature or change of functionality|Visit the [UserVoice](https://msip.uservoice.com) site for Azure Information Protection, and use your company email address to sign in.|
 |Receive tweets from the product group|Follow [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter.|
@@ -83,9 +83,9 @@ Troubleshooting:
 
 - If you have a question about a support statement for Azure Information Protection: See the [Requirements](requirements.md) information, which is regularly updated.
 
-- For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure Information Protection: See [Helping users to protect files](./deploy-use/help-users.md).
+- For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure Information Protection: See [Helping users to protect files](help-users.md).
 
-- If you have deployed the Rights Management connector for your on-premises servers: See the [monitoring](./deploy-use/monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
+- If you have deployed the Rights Management connector for your on-premises servers: See the [monitoring](monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
 
 - For the Azure Information Protection client for Windows: See the [Installation checks and troubleshooting](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) section from the administrator guide, and check that you're using a [supported version](./rms-client/client-version-release-history.md#servicing-information-and-timelines).
 
