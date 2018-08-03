@@ -31,7 +31,7 @@ ms.suite: ems
 
 When you use Azure Information Protection, you can protect your documents without sacrificing collaboration for authorized users. The majority of documents that one user creates and then shares with others to view and edit will be Office documents from Word, Excel, and PowerPoint. These documents support native protection, which means that in addition to the protection features of authorization and encryption, they also support restricted permission for more fine-grained control. 
 
-These permissions are called usage rights, and include permissions such as view, edit, print. You can define individual usage rights when a document is protected, or you can define a grouping of usage rights, called permission levels. Permission levels make it easier to select usage rights that are typically used together, for example, Reviewer and Co-Author. For more information about usage rights and permission levels, see [Configuring usage rights for Azure Rights Management](./deploy-use/configure-usage-rights.md).
+These permissions are called usage rights, and include permissions such as view, edit, print. You can define individual usage rights when a document is protected, or you can define a grouping of usage rights, called permission levels. Permission levels make it easier to select usage rights that are typically used together, for example, Reviewer and Co-Author. For more information about usage rights and permission levels, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md).
 
 When you configure these permissions, you can specify which users they are for:
 
@@ -50,7 +50,7 @@ As an administrator, you can configure an Azure Information Protection label to 
 
 This example walks through configuring an existing label to apply protection so that users from your organization can collaborate on documents with all users from another organization that has Office 365 or Azure AD, a group from a different organization that has Office 365 or Azure AD, and a user who doesn't have an account in Azure AD and instead will use their Gmail email address.
 
-Because the scenario restricts access to specific people, it does not include the setting for any authenticated users. For an example of how you can configure a label with this setting, see [Example 5: Label that encrypts content but doesn't restrict who can access it](./deploy-use/configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
+Because the scenario restricts access to specific people, it does not include the setting for any authenticated users. For an example of how you can configure a label with this setting, see [Example 5: Label that encrypts content but doesn't restrict who can access it](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
 1. Select your label that's already in the global policy or a scoped policy. On the **Protection** blade, make sure **Azure (cloud key)** is selected.
     
@@ -85,10 +85,10 @@ Now that this label is configured, it can be applied to documents in a number of
 |Different ways to apply the label|More information|
 |---------------|----------|
 |A user manually selects the label when the document is created in their Office application.|Users select the label from the **Protect** button on the Office ribbon, or from the Azure Information Protection bar.|
-|Users are prompted to select a label when a new document is saved.|You've configured the Azure Information Protection [policy setting](./deploy-use/configure-policy-settings.md) named **All documents and emails must have a label**.|
+|Users are prompted to select a label when a new document is saved.|You've configured the Azure Information Protection [policy setting](configure-policy-settings.md) named **All documents and emails must have a label**.|
 |A user shares the document by email and manually selects the label in Outlook.|Users select the label from the **Protect** button on the Office ribbon, or from the Azure Information Protection bar, and the attached document is automatically protected with the same settings.|
 |An administrator applies the label to the document by using PowerShell.|Use the [Set-AIPFile​Label](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet to apply the label to a specific document or all documents in a folder.|
-|You have additionally configured the label to apply automatic classification that can now be applied by using the Azure Information Protection scanner, or PowerShell.|See [How to configure conditions for automatic and recommended classification for Azure Information Protection](./deploy-use/configure-policy-classification.md).|
+|You have additionally configured the label to apply automatic classification that can now be applied by using the Azure Information Protection scanner, or PowerShell.|See [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md).|
 
 To complete this walkthrough, manually apply the label when you create the document in your Office application: 
 
@@ -155,9 +155,9 @@ Currently supported by Office 2016 Click-to-Run only.
 
 ## Next steps
 
-See other [example configurations](./deploy-use/configure-policy-protection.md#example-configurations) for labels to apply protection for common scenarios. This article also contains more details about the protection settings.
+See other [example configurations](configure-policy-protection.md#example-configurations) for labels to apply protection for common scenarios. This article also contains more details about the protection settings.
 
-For more information about the other options and settings that you can configure for your label, see [Configuring Azure Information Protection policy](./deploy-use/configure-policy.md). 
+For more information about the other options and settings that you can configure for your label, see [Configuring Azure Information Protection policy](configure-policy.md). 
 
 The label that was configured in this article also creates a protection template by the same name. If you have applications and services that integrate with protection templates from Azure Information Protection, they can apply this template. For example, DLP solutions and mail flow rules. Outlook on the web automatically displays protection templates from the Azure Information Protection global policy. 
 

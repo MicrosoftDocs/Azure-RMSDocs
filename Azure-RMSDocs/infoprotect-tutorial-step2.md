@@ -40,7 +40,7 @@ Although Azure Information Protection comes with a default policy that you can u
        > [!NOTE]
        > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. Maybe you do not have the sublabels named **Recipients Only**, or you don't have any labels at all. These changes are because there are different versions of the default policy, depending on when it was created for your tenant. Or, you might have edited it yourself, before you started the tutorial.
        > 
-       > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](./deploy-use/configure-policy-default.md).
+       > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](configure-policy-default.md).
     
     - With the default configuration, some labels do not have visual markings configured. The visual markers are a footer, header, and watermark. Depending on your default policy, some labels might also have protection set. For example: 
     
@@ -159,10 +159,10 @@ Now that you've had a look at the default policy and made some changes, the next
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About the default policy and different versions|[The default Azure Information Protection policy](./deploy-use/configure-policy-default.md)|
-|About configuring the policy|[Configuring Azure Information Protection policy](./deploy-use/configure-policy.md)|
-|Detailed instructions for configuring a label for protection|[How to configure a label for Rights Management protection](./deploy-use/configure-policy-protection.md)|
-|Detailed information about the permissions|[Configuring usage rights for Azure Rights Management](./deploy-use/configure-usage-rights.md)|
+|About the default policy and different versions|[The default Azure Information Protection policy](configure-policy-default.md)|
+|About configuring the policy|[Configuring Azure Information Protection policy](configure-policy.md)|
+|Detailed instructions for configuring a label for protection|[How to configure a label for Rights Management protection](configure-policy-protection.md)|
+|Detailed information about the permissions|[Configuring usage rights for Azure Rights Management](configure-usage-rights.md)|
 
 
 

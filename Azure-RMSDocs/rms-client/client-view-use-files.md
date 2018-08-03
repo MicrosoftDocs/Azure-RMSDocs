@@ -75,7 +75,7 @@ If your organization does not have a cloud-based account for you to use (for Off
 
     You can check your permissions for the file by clicking **Permissions**. From the **Permissions** dialog box, you can also identify the file owner to contact if you want to request a new version of the file with additional permissions.
     
-    For more detailed information about the permissions and the usage rights that each contains, see [Rights included in permissions levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels).
+    For more detailed information about the permissions and the usage rights that each contains, see [Rights included in permissions levels]configure-usage-rights.md#rights-included-in-permissions-levels).
 
 4. To edit the file, click **Save As**, which lets you save the file without the label and with no protection to its original file name extension. You can then edit the file by using the application that's associated with that file type. 
     

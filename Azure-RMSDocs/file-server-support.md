@@ -37,7 +37,7 @@ To protect all file types, do not use the RMS connector, but instead, run a Wind
 
 The classification policies are fully configurable and highly extensible so that you can prevent potential data leakage from unauthorized and authorized users. It can even help to reduce the risk of data leakage by network administrators because you can configure policies that don’t require these administrators to have access to the files.
 
-For instructions to deploy and configure the RMS connector for Office files, see [Deploying the Azure Rights Management connector](./deploy-use/deploy-rms-connector.md).
+For instructions to deploy and configure the RMS connector for Office files, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
 For instructions to use the Windows PowerShell script for all file types, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](./rms-client/configure-fci.md).
 

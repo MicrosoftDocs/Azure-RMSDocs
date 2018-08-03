@@ -60,7 +60,7 @@ Actions you can take in the document tracking site:
 If you do not see these options for RMS, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](install-sharing-app.md).
 
 > [!NOTE] 
-> If you have installed the [Azure Information Protection client](../rms-client/info-protect-client.md), you can also access the document tracking site by using the **Protect** button: 
+> If you have installed the [Azure Information Protection client](info-protect-client.md), you can also access the document tracking site by using the **Protect** button: 
 > 
 > - In an Office application, on the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**. 
 

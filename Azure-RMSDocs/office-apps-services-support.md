@@ -41,9 +41,9 @@ In addition to native Office support for Azure Rights Management, these applicat
 
 If you are ready to configure Office apps and the Azure Information Protection client:
 
-- To configure Office apps, see [Office apps: Configuration for clients](./deploy-use/configure-office-apps.md).
+- To configure Office apps, see [Office apps: Configuration for clients](configure-office-apps.md).
 
-- To install and configure the Azure Information Protection client, see [Azure Information Protection client: Installation and configuration for clients](./deploy-use/configure-client.md).
+- To install and configure the Azure Information Protection client, see [Azure Information Protection client: Installation and configuration for clients](configure-client.md).
 
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can configure information rights management (IRM) options that support Azure Rights Management. This configuration lets Exchange provide the following protection solutions:
@@ -64,9 +64,9 @@ If you use Exchange on-premises, you can use the IRM features with the Azure Rig
 
 If you are ready to configure Exchange for IRM:
 
-- For Exchange Online, see [Exchange Online: IRM Configuration](./deploy-use/configure-office365.md#exchange-online-irm-configuration).
+- For Exchange Online, see [Exchange Online: IRM Configuration](configure-office365.md#exchange-online-irm-configuration).
 
-- For Exchange on-premises, see [Deploying the Azure Rights Management connector](./deploy-use/deploy-rms-connector.md).
+- For Exchange on-premises, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
 
 ## SharePoint Online and SharePoint Server
@@ -81,7 +81,7 @@ For more fine-grained control, you can configure a list or library in the site t
 
 The IRM service must first be enabled for SharePoint. Then, you specify IRM permissions for a library. For SharePoint Online and OneDrive for Business, users can also specify IRM permissions for their OneDrive for Business library. SharePoint does not use rights policy templates, although there are SharePoint configuration settings that you can select that match some settings that you can specify in the templates.
 
-If you use SharePoint Server, you can use this IRM protection by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Azure Rights Management connector](./deploy-use/deploy-rms-connector.md).
+If you use SharePoint Server, you can use this IRM protection by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
 > [!NOTE]
 > Currently, there are some limitations when you use SharePoint IRM:
@@ -100,9 +100,9 @@ Although no longer new, the following post from the Office 365 blog has some add
 
 If you are ready to configure SharePoint for IRM:
 
-- For SharePoint Online, see [SharePoint Online and OneDrive for Business: IRM Configuration](./deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration).
+- For SharePoint Online, see [SharePoint Online and OneDrive for Business: IRM Configuration](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration).
 
-- For Sharepoint Server, see [Deploying the Azure Rights Management connector](./deploy-use/deploy-rms-connector.md).
+- For Sharepoint Server, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
 
 ## Next steps
@@ -111,4 +111,4 @@ If you have Office 365, you might be interested in reviewing [File Protection So
 
 To see how other applications and services support the Azure Rights Management service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
 
-If you are ready to start deployment, which includes configuring these applications and services, see the [Azure Information Protection deployment roadmap](./plan-design/deployment-roadmap.md).
+If you are ready to start deployment, which includes configuring these applications and services, see the [Azure Information Protection deployment roadmap](deployment-roadmap.md).
