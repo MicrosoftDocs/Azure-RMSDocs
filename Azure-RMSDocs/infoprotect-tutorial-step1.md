@@ -71,7 +71,7 @@ That's all you need to do for this first step to complete this tutorial. You're 
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About activating protection|[Activating Azure Rights Management](./deploy-use/activate-service.md)|
+|About activating protection|[Activating Azure Rights Management](activate-service.md)|
 
 
 >[!div class="step-by-step"]

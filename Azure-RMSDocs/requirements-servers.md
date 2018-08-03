@@ -65,7 +65,7 @@ To use this connector, you must configure directory synchronization between your
 
 The Rights Management connector is supported on Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2.
 
-For more information about how to configure the Rights Management connector for these on-premises servers, see [Deploying the Azure Rights Management connector](./deploy-use/deploy-rms-connector.md).
+For more information about how to configure the Rights Management connector for these on-premises servers, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
 ## Next steps
 To check for other requirements, see [Requirements for Azure Rights Management](requirements.md).
