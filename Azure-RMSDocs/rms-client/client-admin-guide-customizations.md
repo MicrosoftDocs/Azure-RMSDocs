@@ -57,7 +57,7 @@ Locate the following value name, and then set the value data to **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Regardless of this setting, the Azure Information Protection client follows the standard [RMS service discovery process](../rms-client/client-deployment-notes.md#rms-service-discovery) to find its AD RMS cluster.
+Regardless of this setting, the Azure Information Protection client follows the standard [RMS service discovery process](client-deployment-notes.md#rms-service-discovery) to find its AD RMS cluster.
 
 ## Sign in as a different user
 
@@ -84,7 +84,7 @@ Additionally:
 
 ## Enforce protection-only mode when your organization has a mix of licenses
 
-If your organization does not have any licenses for Azure Information Protection, but does have licenses for Office 365 that include the Azure Rights Management service for data protection, the Azure Information Protection client for Windows automatically runs in [protection-only mode](../rms-client/client-protection-only-mode.md).
+If your organization does not have any licenses for Azure Information Protection, but does have licenses for Office 365 that include the Azure Rights Management service for data protection, the Azure Information Protection client for Windows automatically runs in [protection-only mode](client-protection-only-mode.md).
 
 However, if your organization has a subscription for Azure Information Protection, by default all Windows computers can download the Azure Information Protection policy. The Azure Information Protection client does not do license checking and enforcement. 
 
