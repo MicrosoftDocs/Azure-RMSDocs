@@ -137,5 +137,5 @@ Each of the following topics presents specific guidance for an aspect of impleme
 ### See also
 
 - [Developer terminology](terms.md)
-- [Terminology for Azure Information Protection - ITPro](./terminology.md)
+- [Terminology for Azure Information Protection - ITPro](../terminology.md)
 
