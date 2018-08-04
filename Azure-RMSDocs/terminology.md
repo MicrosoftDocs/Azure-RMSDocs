@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2018
+ms.date: 08/04/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -70,8 +70,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |permissions level|A logical grouping of usage rights that make it easier for end-users and administrators to choose configuration options that are role-based. For example, Reviewer and Co-Author.|
 |protect|Apply rights management controls to files or email messages by using encryption, identity, and access control policies to help secure your data.|
 |protection template|Also known as a *rights policy template*, *Rights Management template*, and *RMS template*.<br /><br />A group of protection settings that are managed by an administrator and that include the defined usage rights for authorized users, and access controls for expiry and offline access. |
-|publish|To protect a file in order to safeguard it from unauthorized access and use.|
-|publish|To protect a file in order to safeguard it from unauthorized access and use.|
+|publish|To protect a file in order to safeguard it from unauthorized access and use. Also used as a term in conjunction with protection templates and the Azure Information Protection policy, to make these items available for use by clients and services.|
 |Rights Management connector|An outbound proxy relay that you can deploy for on-premises services such as Exchange Server and SharePoint, to protect data by using the Azure Rights Management service.|
 |Rights Management issuer|The account that protected a document or email.|
 |Rights Management owner|The account that retains full control of a protected document or email by being automatically granted the Rights Management Full Control usage right and is exempt from any expiry date or offline setting.|
