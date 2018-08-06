@@ -33,11 +33,13 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 
 |Term|Definition|
 |--------|--------------|
-|AADRM|The name of the Windows PowerShell module for the Azure Rights Management service, which was derived from the unofficial abbreviation for Azure Rights Management when it was previously named (Windows) Azure Active Directory Rights Management.|
+|AADRM|The name of the PowerShell module for the Azure Rights Management service, which was derived from the unofficial abbreviation for Azure Rights Management when it was previously named (Windows) Azure Active Directory Rights Management.|
 |activate|To enable the Azure Rights Management service so that an organization can protect their documents and email. This action also enables IRM features in Exchange Online and SharePoint Online.|
 |Active Directory Rights Management Services|Frequently abbreviated to *AD RMS*.<br /><br />A Windows Server role that that provides rights management protection by using encryption and policy to help secure documents, files, and email.|
 |AD RMS|See *Active Directory Rights Management Services*.|
+AzureInformationProtection|The name of the PowerShell module for the Azure Information Protection client.
 |Azure Information Protection|A cloud-based service that uses labels to classify and protect documents and emails. Azure Rights Management provides the protection by using encryption, identity, and authorization policies.|
+Azure Information Protection client|The client side of Azure Information Protection that lets users, administrators, and services use the labels and settings from your Azure Information Protection policy.|
 |Azure Information Protection label|An item that applies a classification value to documents and emails, and can optionally protect them.|
 |Azure Information Protection policy|Administrator-defined configuration for clients and services that use Azure Information Protection labels and policy settings.|
 |Azure Information Protection scanner|A service that runs on Windows Server and lets you discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries.|
@@ -75,7 +77,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |Rights Management issuer|The account that protected a document or email.|
 |Rights Management owner|The account that retains full control of a protected document or email by being automatically granted the Rights Management Full Control usage right and is exempt from any expiry date or offline setting.|
 |Rights Management services|The generic term that applies to both the cloud version of Rights Management (Azure Rights Management) and the on-premises version of Rights Management (AD RMS).|
-|Rights Management sharing application|Now replaced by the Azure Information Protection client, an optional application for Windows and most popular mobile devices, which supports safely sharing files in-place and by email.|
+|Rights Management sharing application|Now replaced by the Azure Information Protection client, an optional application for Windows and mobile devices, which supports safely sharing files in-place and by email.|
 |RMS|See *Rights Management services*.|
 |RMS connector|See *Rights Management connector*.|
 |RMS for individuals|A free subscription for a user to use Rights Management when their organization does not have a subscription to Office 365 or Azure Active Directory.|
