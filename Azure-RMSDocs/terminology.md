@@ -39,7 +39,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |AD RMS|See *Active Directory Rights Management Services*.|
 AzureInformationProtection|The name of the PowerShell module for the Azure Information Protection client.
 |Azure Information Protection|Azure Information Protection|A cloud-based service that uses labels to classify and protect documents and emails. Azure Rights Management provides the protection by using encryption, identity, and authorization policies.|
-Azure Information Protection client|The client side of Azure Information Protection that lets users, administrators, and services use the labels from your Azure Information Protection policy. This client includes an add-in for Office apps, an extension for File Explorer, a viewer for protected files, a scanner for on-premises data stores, a PowerShell module to automate and script client operations, the RMS client to protect documents and emails, and the Microsoft Sign-in Assistant to support Office 2010.|
+Azure Information Protection client|The client side of Azure Information Protection that lets users, administrators, and services use the labels from your Azure Information Protection policy.|
 |Azure Information Protection label|An item that applies a classification value to documents and emails, and can optionally protect them.|
 |Azure Information Protection policy|Administrator-defined configuration for clients and services that use Azure Information Protection labels and policy settings.|
 |Azure Information Protection scanner|A service that runs on Windows Server and lets you discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries.|
