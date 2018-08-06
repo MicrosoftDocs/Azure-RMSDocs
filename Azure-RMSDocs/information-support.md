@@ -82,7 +82,7 @@ Troubleshooting:
 
 - If you have a question about a support statement for Azure Information Protection: See the [Requirements](requirements.md) information, which is regularly updated.
 
-- For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure Information Protection: See [Helping users to protect files](help-users.md).
+- For information to support your end users, help desk, and administrators who are configuring services and applications that use the protection service from Azure Information Protection: See [Helping users to protect files](help-users.md).
 
 - If you have deployed the Rights Management connector for your on-premises servers: See the [monitoring](monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
 
