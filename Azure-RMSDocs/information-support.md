@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Admin info & support for Azure Information Protection
+title: Information & support for Azure Information Protection
 description: Resources for administrators, which includes information about new releases, support options, and how to contact Microsoft to report a problem. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2018
+ms.date: 08/06/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -42,7 +42,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 
 ## Information about new releases and updates
-The Azure Information Protection product team posts announcements about new releases and updates to the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). These blog posts supplement the product documentation and support information.
+The Azure Information Protection product team posts announcements about major new releases to the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). Smaller releases are also announced on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam), and you might also find it useful to check the [UserVoice site](https://msip.uservoice.com) for the status of requested features.
 
 In addition, a summary of documentation changes is published each month to the [Azure Information Protection technical blog](https://aka.ms/AIPblog). These documentation updates include information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
 
