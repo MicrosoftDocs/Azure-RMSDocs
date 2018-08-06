@@ -34,15 +34,15 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |To do this ...|...do this:|
 |----------------|---------------|
 |Learn about new and upcoming releases|See the [Information about new releases and updates](#information-about-new-releases-and-updates) section on this page.|
-|Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
-|Request a new feature or change of functionality|Visit the [UserVoice](https://msip.uservoice.com) site for Azure Information Protection, and use your company email address to sign in.|
-|Receive tweets from the product group|Follow [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter.|
+|Get help with the product|See the [Support options and community resources](#support-options-and-community-resources) section on this page.|
 |Check subscription information and what features are supported|Use the subscription information and feature list from the [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection) page.|
+|Request a new feature or change of functionality|Visit the [UserVoice](https://msip.uservoice.com) site for Azure Information Protection, and use your company email address to sign in.|
+|Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
+|Receive tweets from the product group|Follow [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter.|
 |Understand a specific Azure Information Protection term|Search for the term or abbreviation on the [terminology](terminology.md) page.|
 
-
 ## Information about new releases and updates
-The Azure Information Protection product team posts announcements about major new releases to the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). Smaller releases are also announced on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam), and you might also find it useful to check the [UserVoice site](https://msip.uservoice.com) for the status of requested features.
+The Azure Information Protection product team posts announcements about major new releases on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). Smaller releases are also announced on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam), and you might also find it useful to check the [UserVoice site](https://msip.uservoice.com) for the status of requested features.
 
 In addition, a summary of documentation changes is published each month to the [Azure Information Protection technical blog](https://aka.ms/AIPblog). These documentation updates include information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
 
