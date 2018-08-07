@@ -110,9 +110,9 @@ Locate the following value name and set the value data to **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Make sure that the client has a valid policy file named **Policy.msip**, in the **%LocalAppData%\Microsoft\MSIP** folder. If necessary, you can export the global policy or a scoped policy from the Azure portal, and copy the exported file to the client computer. You can also use this method to replace an-out-of-date policy file with the latest, published policy. However, exporting the policy does not support the scenario where a user belongs to more than one scoped policy.
+Make sure that the client has a valid policy file named **Policy.msip**, in the **%LocalAppData%\Microsoft\MSIP** folder. If necessary, you can export the global policy or a scoped policy from the Azure portal, and copy the exported file to the client computer. You can also use this method to replace an-out-of-date policy file with the latest, published policy. However, exporting the policy does not support the scenario where a user belongs to more than one scoped policy. Also be aware that if users select the **Reset Settings** option from [Help and feedback](client-admin-guide.md#help-and-feedback-section), this action deletes the policy file and renders the client inoperable until you manually replace the policy file or the client connects to the service to download the policy.
 
-When you export the policy, this action downloads a zipped file with multiple versions of the policy that corresponds to different versions of the Azure Information Protection client:
+When you export the policy from the Azure portal, a zipped file is downloaded that contains multiple versions of the policy. These policy versions correspond to different versions of the Azure Information Protection client:
 
 1. Unzip the file and use the following table to identify which policy file you need. 
     
