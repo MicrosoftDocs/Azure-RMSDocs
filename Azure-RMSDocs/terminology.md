@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2018
+ms.date: 08/04/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -33,17 +33,20 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 
 |Term|Definition|
 |--------|--------------|
-|AADRM|The name of the Windows PowerShell module for the Azure Rights Management service, which was derived from the unofficial abbreviation for Azure Rights Management when it was previously named (Windows) Azure Active Directory Rights Management.|
+|AADRM|The name of the PowerShell module for the Azure Rights Management service, which was derived from the unofficial abbreviation for Azure Rights Management when it was previously named (Windows) Azure Active Directory Rights Management.|
 |activate|To enable the Azure Rights Management service so that an organization can protect their documents and email. This action also enables IRM features in Exchange Online and SharePoint Online.|
 |Active Directory Rights Management Services|Frequently abbreviated to *AD RMS*.<br /><br />A Windows Server role that that provides rights management protection by using encryption and policy to help secure documents, files, and email.|
 |AD RMS|See *Active Directory Rights Management Services*.|
+AzureInformationProtection|The name of the PowerShell module for the Azure Information Protection client.
 |Azure Information Protection|A cloud-based service that uses labels to classify and protect documents and emails. Azure Rights Management provides the protection by using encryption, identity, and authorization policies.|
+Azure Information Protection client|The client side of Azure Information Protection that lets users, administrators, and services use the labels and settings from your Azure Information Protection policy.|
 |Azure Information Protection label|An item that applies a classification value to documents and emails, and can optionally protect them.|
 |Azure Information Protection policy|Administrator-defined configuration for clients and services that use Azure Information Protection labels and policy settings.|
 |Azure Information Protection scanner|A service that runs on Windows Server and lets you discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries.|
 |Azure Information Protection viewer|An app that runs on Windows computers and mobile devices, to display protected files.|
 |Azure Rights Management|Frequently abbreviated to *Azure RMS*.<br /><br />An Azure service used by Azure Information Protection that uses encryption and policy to help secure documents, files, and email.  Also known as *Azure Rights Management service*. Previous names have included:<br /><br />- *Windows Azure Active Directory Rights Management*: Frequently abbreviated to Windows Azure AD Rights Management Service.<br /><br />- *RMS Online*: The original, proposed name, which you might sometimes see in error messages and log file entries.|
 |Azure RMS|See *Azure Rights Management*.|
+|default template|A protection template that is automatically created for you when you obtain a subscription for Azure Information Protection, so that you can immediately start protecting documents and emails that contain sensitive information.|
 |BYOK|See *bring your own key*.|
 |bring your own key|Frequently abbreviated to *BYOK*.<br /><br />A configuration and topology option chosen by an organization that wants to generate and manage their own tenant key for Azure Information Protection.|
 |content key|A unique key that is created by RMS-enlightened applications for each document or email that is protected by using Rights Management and that helps to limit the risk of information disclosure.|
@@ -66,17 +69,15 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |MSIPC|Sometimes seen as references for the RMS client 2.0, which replaced the older RMS client, MSDRM. This later client supports applications that are developed with the RMS SDK 2.0 and supports Office 2016 and Office 2013, SharePoint 2013, the RMS sharing application, and the Azure Information Protection client.|
 |native protection|A level of protection available in all enlightened applications that prevents unauthorized people from opening a file and that can also enforce more stringent policies, such as read-only, and do not print. In addition, this protection stays with the file, even when the file is forwarded to other people or saved in a public location that others can access.|
 |.pfile|The file name extension that is appended to all files that a rights management service generically protects.|
-|.ppdf|The file name extension that a rights management service creates when it automatically creates a PDF copy of a file (Word, Excel, PowerPoint, or PDF) that you share by email, so that the file can be read (but not edited) on all devices.|
 |permissions level|A logical grouping of usage rights that make it easier for end-users and administrators to choose configuration options that are role-based. For example, Reviewer and Co-Author.|
 |protect|Apply rights management controls to files or email messages by using encryption, identity, and access control policies to help secure your data.|
 |protection template|Also known as a *rights policy template*, *Rights Management template*, and *RMS template*.<br /><br />A group of protection settings that are managed by an administrator and that include the defined usage rights for authorized users, and access controls for expiry and offline access. |
-|publish|To protect a file in order to safeguard it from unauthorized access and use.|
-|publish|To protect a file in order to safeguard it from unauthorized access and use.|
+|publish|To protect a file in order to safeguard it from unauthorized access and use. Also used as a term in conjunction with protection templates and the Azure Information Protection policy, to make these items available for use by clients and services.|
 |Rights Management connector|An outbound proxy relay that you can deploy for on-premises services such as Exchange Server and SharePoint, to protect data by using the Azure Rights Management service.|
 |Rights Management issuer|The account that protected a document or email.|
 |Rights Management owner|The account that retains full control of a protected document or email by being automatically granted the Rights Management Full Control usage right and is exempt from any expiry date or offline setting.|
 |Rights Management services|The generic term that applies to both the cloud version of Rights Management (Azure Rights Management) and the on-premises version of Rights Management (AD RMS).|
-|Rights Management sharing application|Now replaced by the Azure Information Protection client, an optional application for Windows and most popular mobile devices, which supports safely sharing files in-place and by email.|
+|Rights Management sharing application|Now replaced by the Azure Information Protection client, an optional application for Windows and mobile devices, which supports safely sharing files in-place and by email.|
 |RMS|See *Rights Management services*.|
 |RMS connector|See *Rights Management connector*.|
 |RMS for individuals|A free subscription for a user to use Rights Management when their organization does not have a subscription to Office 365 or Azure Active Directory.|
@@ -86,6 +87,6 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |scanner|See *Azure Information Protection scanner*.|
 |super user|A group of highly trusted administrators who can decrypt and access files that the organization has protected by using a rights management service. Typically, this level of access is required for legal eDiscovery and by auditing teams.|
 |tenant key|Also known as the server licensor certificate (SLC) key.<br /><br />The key that is unique to an organization and ultimately secures all Rights Management cryptographic functions that chain to this tenant key.|
-|unprotect|Remove rights management controls from files or email messages, which used encryption, identity, and access control policies to help secure your data.|
+|unprotect|Remove protection controls from files or email messages, which used encryption, identity, usage rights, and access control policies to help secure your data.|
 |use license|A per-document certificate that is granted to a user who opens a file or email message that has been protected by a rights management service. This certificate contains that user’s rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document’s policy.|
 

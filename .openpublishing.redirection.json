@@ -736,6 +736,10 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "Azure-RMSDocs/houserules.md",
+            "redirect_url": "/information-protection/information-support",
+            "redirect_document_id": false
+        },        {
             "source_path": "Azure-RMSDocs/plan-design/thales-hsm.md",
             "redirect_url": "/information-protection/thales-hsm",
             "redirect_document_id": false
