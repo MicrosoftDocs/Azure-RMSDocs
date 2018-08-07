@@ -6,7 +6,7 @@ description: Instructions and information for admins to configure and use docume
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ If you have a [subscription that supports document tracking](https://www.microso
 
 ## Using PowerShell to manage the document tracking site
 
-The following sections contain information about how you can manage the document tracking site by using PowerShell. For installation instructions for the PowerShell module, see [Installing the AADRM PowerShell module]install-powershell.md). If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm –ListAvailable).Version`
+The following sections contain information about how you can manage the document tracking site by using PowerShell. For installation instructions for the PowerShell module, see [Installing the AADRM PowerShell module](../install-powershell.md). If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm –ListAvailable).Version`
 
 For more information about each of the cmdlets, use the links provided.
 
@@ -114,7 +114,7 @@ Two fields in the usage log files are applicable to document tracking: **AdminAc
 There are also request types that log how users and administrators are using the document tracking site. For example, **RevokeAccess** is the request type when a user or an administrator on behalf of a user has revoked a document in the document tracking site. Use this request type in combination with the AdminAction field to determine whether the user revoked their own document (the AdminAction field is empty) or an administrator revoked a document on behalf of a user (the AdminAction is true).
 
 
-For more information about usage logging, see [Logging and analyzing usage of the Azure Rights Management service]log-analyze-usage.md)
+For more information about usage logging, see [Logging and analyzing usage of the Azure Rights Management service](../log-analyze-usage.md)
 
 
 
