@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -221,9 +221,9 @@ When you configure this setting, it changes the [default behavior](../configure-
     
     You cannot use automatic classification for documents that were previously manually labeled, or previously automatically labeled with a higher classification. The exception to this behavior is if you use the Azure Information Protection scanner with the OverrideLabel parameter set to on.
 
-- Recommended classification applies to Word, Excel, and PowerPoint. For these documents, recommended classification runs continuously in the background. You cannot use recommended classification for Outlook.
+- Recommended classification applies to Word, Excel, and PowerPoint. For these documents, recommended classification runs continuously in the background. You cannot use recommended classification for Outlook unless you have configured an [advanced client setting](#enable-recommended-classification-in-outlook) for this behavior. If you have, recommended classification runs when emails are sent.
     
-    You can use recommended classification for documents that were previously labeled, with or without a higher classification. 
+    You can use recommended classification for documents and emails that were previously labeled, with or without a higher classification. 
 
 When the Azure Information Protection client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint Online. Large files also save more quickly because the condition rules have already run. 
 
