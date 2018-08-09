@@ -236,7 +236,7 @@ As a workaround to protect these files, you could generically protect them by fo
 
 If protecting these files are important, you could temporarily copy them to another computer to generically protect them, and then copy them back again. Or, use the preview version of the Azure Information Protection client.
 
-When you use the preview version of the Azure Information Protection client and it is configured to [protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), you can natively protect and unprotect PDF files in both of the following circumstances:
+When you use the current preview version of the Azure Information Protection client, [by default](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), you can natively protect and unprotect PDF files in both of the following circumstances:
 
 - A PDF file that is form-based.
 
