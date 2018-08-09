@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -54,7 +54,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 If you have a version of the client that is later than 1.29.5.0, it is a preview build for testing and evaluation purposes.
 
-This version includes the MSIPC version 1.0.3557.524 of the RMS client.
+This version includes the MSIPC version 1.0.xxxx.xxx of the RMS client.
 
 **New features**: 
 
@@ -62,7 +62,7 @@ This version includes the MSIPC version 1.0.3557.524 of the RMS client.
 
 - Labeling support for **Strict Open XML Document** format in Word, Excel, and PowerPoint files. For more information about the Open XML formats, see the Office blog post, [New file format options in the new Office](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
 
-- Support for the ISO standard for PDF encryption, by configuring a new [advanced client configuration](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this option is configured, PDF documents that you protect retain their .pdf file name extension (rather than change to .ppdf) and can be opened by PDF readers that support this ISO standard. 
+- Support for the ISO standard for PDF encryption PDF, so that documents that you protect retain their .pdf file name extension and can be opened by PDF readers that support this ISO standard. If you do not want this behavior and instead, require parity with the general availability version of the Azure Information Protection client, you can configure an [advanced client configuration](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
 - Support for files that have been protected by Secure Islands when those files are other than PDF and Office documents. For example, protected text and picture files. Or, files that have a .pfile file name extension. This support enables new scenarios, such as the Azure Information Protection scanner being able to inspect these files for sensitive information, and automatically relabeling them for Azure Information Protection. [More information](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
 
