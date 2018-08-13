@@ -215,7 +215,9 @@ For the current GA version:
 
 For the preview version: 
 
-- Run [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) after installing the client. Your configuration settings for the scanner and repositories will be retained. Running this cmdlet is required to update the database schema for the scanner and if required, the scanner service account is also granted delete permissions for the scanner database. Until you run this update cmdlet, the scanner does not run.
+- Run [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) after installing the client. Your configuration settings for the scanner and repositories will be retained. Running this cmdlet is required to update the database schema for the scanner and if required, the scanner service account is also granted delete permissions for the scanner database. 
+    
+    Until you run this update cmdlet, the scanner does not run and you typically see Event ID **1000** in the Windows event log, with the following error message: **Invalid object name 'ScannerStatus'**.
 
 ## Uninstalling the Azure Information Protection client
 
