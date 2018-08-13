@@ -5,7 +5,7 @@
       href: /enterprise-mobility-security/
       items:
       - name: Microsoft Information Protection
-        href: /informationprotection/
+        href: /information-protection/
         items:
         - name: SDK
-          href: /informationprotection/develop/
+          href: /information-protection/develop/
