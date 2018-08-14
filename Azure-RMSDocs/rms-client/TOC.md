@@ -1,5 +1,5 @@
 # [Understand & Explore](/azure/information-protection/what-is-information-protection)
-# [Get Started](/azure/information-protection/requirements-azure-rms)
+# [Get Started](/azure/information-protection/requirements)
 # [Plan & Design](/azure/information-protection/deployment-roadmap)
 # [Deploy & Use the Service](/azure/information-protection/activate-service)
 # [Deploy & Use the Client](use-client.md)
