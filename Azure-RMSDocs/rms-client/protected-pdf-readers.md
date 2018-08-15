@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Protected PDF readers for Azure Information Protection & MIP
+title: Protected PDF readers for Microsoft Information Protection
 description:
 keywords: 
 author: cabailey
@@ -40,7 +40,7 @@ This native integration has the following benefits:
 
 - Support for the ISO standard for PDF encryption.
     
-    This protected PDF file format is the default for the current preview version of the Azure Information Protection client. The file name extension remains as .pdf and does not change to .ppdf.
+    This protected PDF file format is the default for the [current preview version of the Azure Information Protection client](client-version-release-history.md#versions-later-than-12950). The file name extension remains as .pdf and does not change to .ppdf.
 
 For more information, see the following blog post: [blog post](https://aka.ms/AIPblog)
 
