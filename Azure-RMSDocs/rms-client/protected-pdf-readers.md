@@ -28,8 +28,6 @@ ms.suite: ems
 
 # Supported PDF readers for Microsoft Information Protection and Azure Information Protection
 
-*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
 Use the following information to learn more about protected PDF documents and how to view them.
 
 A collaboration between Microsoft and Adobe brings you a more simplified and consistent experience for PDF documents that contain sensitive information. This collaboration provides support for Adobe Acrobat native integration with Microsoft Information Protection solutions, such as Azure Information Protection. Native integration means that the file name extension for a protected PDF document remains as .pd instead of .pppdf. In addition, the file format adheres to the ISO standard for PDF encryption.
