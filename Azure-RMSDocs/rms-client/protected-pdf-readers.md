@@ -40,16 +40,16 @@ The following PDF readers can open these protected PDF documents:
 
 |Operating system|Supported readers and download link|
 |----------------|-----------------------------------|
-|Windows 10 and previous versions through Windows 7|Adobe Acrobat Reader (preferred):[Download](https://go.microsoft.com/fwlink/?linkid=838993) <br /><br /> Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader[Download](https://go.microsoft.com/fwlink/?linkid=838993)[Download](https://go.microsoft.com/fwlink/?linkid=838993)|
+|Windows 10 and previous versions through Windows 7|Adobe Acrobat Reader (preferred): [Download](https://go.microsoft.com/fwlink/?linkid=838993) <br /><br /> Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
 |Android|Azure Information Protection app: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
 |iOS|Azure Information Protection app: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
 
-### Support for previous format
+### Support for previous formats
 
 The following PDF readers support protected PDF documents that have a .ppdf file name extension (now deprecated) and older formats:
 
 |Operating system|Supported readers and download link|
 |----------------|-----------------------------------|
-|Windows 10 and previous versions through Windows 7|Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://go.microsoft.com/fwlink/?linkid=838993)[Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Nitro PDF: [Download](https://go.microsoft.com/fwlink/?linkid=838993)[Download](https://go.microsoft.com/fwlink/?linkid=838993)|
+|Windows 10 and previous versions through Windows 7|Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Nitro PDF: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
 |Android|Azure Information Protection app: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit MobilePDF with RMS: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
 |iOS|Azure Information Protection app: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
