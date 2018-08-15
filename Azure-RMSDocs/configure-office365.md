@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure Office 365 to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/01/2018
+ms.date: 08/15/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -87,7 +87,7 @@ For information about how SharePoint Online IRM works with the Azure Rights Mana
 To configure SharePoint Online and OneDrive for Business to support the Azure Rights Management service, you must first enable the information rights management (IRM) service for SharePoint Online by using the SharePoint admin center. Then, site owners can  IRM-protect their SharePoint lists and document libraries, and users can IRM-protect their OneDrive for Business library so that documents that are saved there, and shared with others, are automatically protected by the Azure Rights Management service.
 
 > [!NOTE]
-> IRM-protected libraries for SharePoint and OneDrive for Business require the latest version of the new OneDrive sync client (OneDrive.exe). For more information, see [Deploy the new OneDrive sync client in an enterprise environment](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668).
+> IRM-protected libraries for SharePoint and OneDrive for Business require the latest version of the new OneDrive sync client (OneDrive.exe), and the version of the [RMS client from the Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=38396). Install this version of the RMS client even if you have installed the Azure Information Protection client. For more information about this deployment scenario, see [Deploy the new OneDrive sync client in an enterprise environment](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668).
 
 To enable the information rights management (IRM) service for SharePoint Online, see the following instructions from the Office website:
 
