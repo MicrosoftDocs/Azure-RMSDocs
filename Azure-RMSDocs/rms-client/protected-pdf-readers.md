@@ -32,7 +32,7 @@ ms.suite: ems
 
 Use the following information to learn more about protected PDF documents and how to view them.
 
-A collaboration between Microsoft and Adobe brings you a more simplified and consistent experience for PDF documents that contain sensitive information. This collaboration provides support for Adobe Acrobat native integration with Microsoft Information Protection solutions, such as Azure Information Protection. Native integration means that the file name extension for protected PDF documents remains as .pdf and the format adheres to the ISO standard for PDF encryption.
+A collaboration between Microsoft and Adobe brings you a more simplified and consistent experience for PDF documents that contain sensitive information. This collaboration provides support for Adobe Acrobat native integration with Microsoft Information Protection solutions, such as Azure Information Protection. Native integration means that the file name extension for a protected PDF document remains as .pd instead of .pppdf. In addition, the file format adheres to the ISO standard for PDF encryption.
 
 On Windows, our preferred PDF reader is Adobe Acrobat Reader.
 
