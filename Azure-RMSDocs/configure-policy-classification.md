@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2018
+ms.date: 08/16/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -91,7 +91,7 @@ You can change this behavior so that the Azure Information Protection client per
     
     - For **Custom**: Specify a name and phrase to match, which must exclude quotation marks and special characters. Then specify whether to match as a regular expression, use case sensitivity, and the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
-        The regular expressions use the Office 365 regex patterns. To help you specify regular expressions for your custom conditions, see [Perl Regular Expression Syntax](http://www.boost.org/doc/libs/1_66_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) from Boost.
+        The regular expressions use the Office 365 regex patterns. To help you specify regular expressions for your custom conditions, see the following specific version number for [Perl Regular Expression Syntax](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) from Boost.
         
 5. Decide whether you need to change the **Minimum number of occurrences** and the **Count occurrence with unique value only**, and then select **Save**. 
     
