@@ -19,4 +19,4 @@ Parameters:
 
   
 **Returns**: A Consent enum with the user's decision.
-When the SDK requests user consent with this method, the client application should present the URL to the user. Client applications should provide some means of obtaining user consent and return the appropriate Consent enum that corresponds to the user's decision.
+When the SDK requests user consent with this method, the client application should present the URL to the user. Client applications should provide some means of obtaining user consent and return the appropriate Consent enum that corresponds to the user's decision. 
