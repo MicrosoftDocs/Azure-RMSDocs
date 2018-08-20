@@ -6,7 +6,7 @@ description: Configure and manage rights management templates from the Azure por
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2018
+ms.date: 08/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,19 +29,18 @@ ms.suite: ems
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
->[!NOTE]
->This functionality replaces configuring custom templates in the Azure classic portal. The classic portal is now retired, so you must use the Azure portal. For a quick how-to mapping, see [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
-
-
-Rights Management templates are now integrated with the Azure Information Protection policy. 
+Protection templates, also known as Rights Management templates, are a grouping of administrator-defined protection settings. These settings include your chosen [usage rights](configure-usage-rights.md) for authorized users, and access controls for expiry and offline access. These templates are integrated with the Azure Information Protection policy: 
 
 **When you have a subscription that includes classification, labeling, and protection (Azure Information Protection P1 or P2):**
 
-- Rights Management templates that are not integrated with your labels for your tenant are displayed in the **Protection templates** section after your labels on the **Azure Information Protection - Labels** blade. To navigate to this blade, select the **CLASSIFICATIONS** > **Labels** menu option. You can convert these templates to labels, or you can link to them when you configure protection for your labels. 
+- Templates that are not integrated with your labels for your tenant are displayed in the **Protection templates** section after your labels on the **Azure Information Protection - Labels** blade. To navigate to this blade, select the **CLASSIFICATIONS** > **Labels** menu option. You can convert these templates to labels, or you can link to them when you configure protection for your labels. 
 
 **When you have a subscription that includes protection only (an Office 365 subscription that includes the Azure Rights Management service):**
 
-- Rights Management templates for your tenant are displayed in the **Protection templates** section on the **Azure Information Protection - Labels** blade. To navigate to this blade, select the **CLASSIFICATIONS** > **Labels** menu option. No labels are displayed. You also see configuration settings that are specific to classification and labeling, but these settings either have no effect on your templates or cannot be configured. 
+- Templates for your tenant are displayed in the **Protection templates** section on the **Azure Information Protection - Labels** blade. To navigate to this blade, select the **CLASSIFICATIONS** > **Labels** menu option. No labels are displayed. You also see configuration settings that are specific to classification and labeling, but these settings either have no effect on your templates or cannot be configured. 
+
+>[!NOTE]
+>In some applications and services, you might see [Do Not Forward](configure-usage-rights.md#do-not-forward-option-for-emails) and [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails) (or **Encrypt**) displayed as a template. These are not templates that you can edit or delete, but options that come by default with the Exchange service.
 
 ## Default templates
 
@@ -55,6 +54,7 @@ In addition, the templates are configured to allow offline access for seven days
 These default templates make it easy for you and others to immediately start protecting your organization's sensitive data. These templates can be used with Azure Information Protection labels, or by themselves with [applications and services](applications-support.md) that can use Rights Management templates.
 
 You can also create your own custom templates. Although you probably require only a few templates, you can have a maximum of 500 custom templates saved in Azure.
+
 
 ### Default template names
 
