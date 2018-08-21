@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -98,9 +98,9 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     - **Set user-defined permissions (Preview)**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only, or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and does not work, when a label is configured for [automatic classification](configure-policy-classification.md).
         
-        If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the Do Not Forward option.
+        If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the [Do Not Forward](configure-usage-rights.md#do-not-forward-option-for-emails) option.
         
-        If you choose the option for Word, Excel, PowerPoint, and File Explorer: When this option is set, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users must specify the permissions, the users or groups, and any expiry date. Make sure that users have instructions and guidance how to supply these values.
+        If you choose the option for Word, Excel, PowerPoint, and File Explorer: When this option is set, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users choose one of the [predefined permissions levels](configure-usage-rights.md#rights-included-in-permissions-levels), browse to or specify the users or groups, and optionally, set an expiry date. Make sure that users have instructions and guidance how to supply these values.
     
     - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. Note that this option does not display for new labels, or if you are editing a label that previously used the **Set permissions** option.
     
@@ -118,11 +118,11 @@ Exchange does not have to be configured for Azure Information Protection before 
         
         ###### More information about **Add any authenticated users** 
         This setting doesn't restrict who can access the content that the label protects, while still encrypting the content and providing you with options to restrict how the content can be used (permissions), and accessed (expiry and offline access). However, the application opening the protected content must be able to support the authentication being used. For this reason, federated social providers such as Google, and onetime passcode authentication should be used for email only, and only when you use Exchange Online and the new capabilities from Office 365 Message Encryption. Microsoft accounts can be used with the Azure Information Protection viewer and Office 2016 Click-to-Run. 
-        
-        Some typical scenarios for the any authenticated users setting:
-            - You don't mind who views the content, but you want to restrict how it is used. For example, you do not want the content to be edited, copied, or printed.
-            - You don't need to restrict who accesses the content, but you want to be able to track who opens it and potentially, revoke it.
-            - You have a requirement that the content must be encrypted at rest and in transit, but it doesn't require access controls.     
+          
+        Some typical scenarios for the any authenticated users setting:  
+                - You don't mind who views the content, but you want to restrict how it is used. For example, you do not want the content to be edited, copied, or printed.  
+                - You don't need to restrict who accesses the content, but you want to be able to track who opens it and potentially, revoke it.  
+                - You have a requirement that the content must be encrypted at rest and in transit, but it doesn't require access controls.  
         
     - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, use this option to specify all users in another organization by entering any domain name from that organization. You can also use this option for social providers, by entering their domain name such as **gmail.com**, **hotmail.com**, or **outlook.com**.
         
@@ -165,9 +165,9 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     The user-defined permissions option lets users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only (the default), or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and does not work, when a label is configured for [automatic classification](configure-policy-classification.md).
     
-    If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the Do Not Forward option.
+    If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the [Do Not Forward](configure-usage-rights.md#do-not-forward-option-for-emails) option.
     
-    If you choose the option for Word, Excel, PowerPoint, and File Explorer: The label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users must specify the permissions, the users or groups, and any expiry date. Make sure that users have instructions and guidance how to supply these values.
+    If you choose the option for Word, Excel, PowerPoint, and File Explorer: When this option is set, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users choose one of the [predefined permissions levels](configure-usage-rights.md#rights-included-in-permissions-levels), browse to or specify the users or groups, and optionally, set an expiry date. Make sure that users have instructions and guidance how to supply these values.
 
 10. Click **OK** to close the **Protection** blade and see your choice of **User defined** or your chosen template display for the **Protection** option in the **Label** blade.
 
