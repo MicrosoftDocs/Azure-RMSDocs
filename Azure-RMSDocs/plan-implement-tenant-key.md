@@ -49,7 +49,6 @@ If required, you can change your tenant key topology after deployment, by using 
 
 
 ## Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)
-Decide which tenant key topology is best for your organization. By default, Azure Information Protection generates your tenant key and manages most aspects of the tenant key lifecycle. This is the simplest option with the lowest administrative overheads. In most cases, you do not even need to know that you have a tenant key. You just sign up for Azure Information Protection and the rest of the key management process is handled by Microsoft.
 
 Decide which tenant key topology is best for your organization:
 
