@@ -34,7 +34,7 @@ When the [Azure Information Protection client is installed on your computer](ins
 When the label that you remove is configured to apply protection, this action also removes protection from the file. You might be prompted to record why you are removing the label.
 
 > [!IMPORTANT]
-> You must be the owner of the file to remove protection, or been granted permissions to remove protection (the Rights Management permission of Export, or Full Control).
+> You must be the owner of the file to remove protection, or been granted permissions to remove protection (the Rights Management permission of **Export** or **Full Control**).
 
 If you want to choose a different label or a different set of protection settings, you do not need to remove the label or protection. Instead, choose a new label and if necessary, you can define custom permissions if your administrator allows this configuration. 
 
