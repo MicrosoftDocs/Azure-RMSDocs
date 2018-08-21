@@ -6,7 +6,7 @@ description: How end-user Office applications such as Word and Outlook, and Offi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/17/2018
+ms.date: 08/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -73,7 +73,7 @@ If you are ready to configure Exchange for IRM:
 
 When you use SharePoint Online or SharePoint Server, you can protect documents by using the SharePoint information rights management (IRM) feature. This feature lets administrators protect lists or libraries so that when a user checks out a document, the downloaded file is protected so that only authorized people can view and use the file according to the information protection policies that you specify. For example, the file might be read-only, disable the copying of text, prevent saving a local copy, and prevent printing the file.
 
-Word, PowerPoint, Excel, and PDF documents support this SharePoint IRM protection. By default, the protection is restricted to the person who downloads the document. You can change this default with a configuration option that extends the protection to all users who have access to the document on SharePoint, or to a group that you specify.
+Word, PowerPoint, Excel, and PDF documents support this SharePoint IRM protection. By default, the protection is restricted to the person who downloads the document. You can change this default with a configuration option named **Allow group protection**, which extends the protection to a group that you specify. For example, if a single group has permission to edit documents in the library, you could specify this group so that the same users can edit the document outside SharePoint, but it's still protected from other users. Or, you might specify a group that isn't granted permissions in SharePoint but need to collaborate on the document outside SharePoint.
 
 For SharePoint lists and libraries, this protection is always configured by an administrator, never an end user. You set the permissions at the site level, and these permissions, by default, are inherited by any list or library in that site. If you use SharePoint Online, users can also configure their OneDrive for Business library for IRM protection.
 
