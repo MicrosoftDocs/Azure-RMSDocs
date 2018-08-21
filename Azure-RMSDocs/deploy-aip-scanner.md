@@ -257,9 +257,9 @@ Then the scanner uses Windows iFilter to scan the following file types. For thes
 
 By default, only Office file types are protected by the scanner, so PDF and text files are not protected unless you [edit the registry](develop/file-api-configuration.md) to specify the file types:
 
-- If you do not manually add the file type of .pdf to the registry: Files that have this file name extension will be labeled but if the label is configured for protection, the protection is not applied.
+- If you do not add the file type of .pdf to the registry: Files that have this file name extension will be labeled but if the label is configured for protection, the protection is not applied.
 
-- If you do not manually add the file types of .txt, .xml, or .csv to the registry: Files that have these file name extensions will not be labeled because these file types do not support classification-only.
+- If you do not add the file types of .txt, .xml, or .csv to the registry: Files that have these file name extensions will not be labeled because these file types do not support classification-only.
 
 Finally, for the remaining file types, the scanner applies the default label in the Azure Information Protection policy, or the default label that you configure for the scanner.
 
