@@ -139,7 +139,7 @@ Alternatively, you can change this encryption inheritance of documents by using 
 
 - To always remove encryption for a consistent experience for all recipients: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. When recipients download the document from the browser or save it from their email client, the protection is removed from the attachment.
 
-For more information about removing protection only for recipients who view the document in their browser, see the Office blog post, [Admin control for attachments now available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). If you do need the document to retain the original protection, see [Secure document collaboration by using Azure Information Protection](secure-collaboration-documents.md).      
+For more information about removing protection only for recipients who view the document in their browser, see the Office blog post, [Admin control for attachments now available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). If you do need an attached document to retain the original protection, see [Secure document collaboration by using Azure Information Protection](secure-collaboration-documents.md).
 
 ## Rights Management issuer and Rights Management owner
 
