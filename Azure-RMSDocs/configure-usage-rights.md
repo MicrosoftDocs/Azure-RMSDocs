@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -137,7 +137,7 @@ Alternatively, you can change this encryption inheritance of documents by using 
 
 - To remove encryption only for recipients who view the document in their browser (typically because it is sent to a social provider address, such as Gmail): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. When these recipients download the document, the protection is removed from the attachment.
 
-- To always remove encryption for a consistent experience for all recipients: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. When recipients download the document from the browser or save it from their email client, the protection is removed from the attachment.
+- To always remove encryption for a consistent experience for all recipients: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. When these recipients open the email message, the document is not protected.
 
 For more information about removing protection only for recipients who view the document in their browser, see the Office blog post, [Admin control for attachments now available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). If you do need an attached document to retain the original protection, see [Secure document collaboration by using Azure Information Protection](secure-collaboration-documents.md).
 
