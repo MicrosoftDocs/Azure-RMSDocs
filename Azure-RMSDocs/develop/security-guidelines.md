@@ -8,7 +8,6 @@ ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod:
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems

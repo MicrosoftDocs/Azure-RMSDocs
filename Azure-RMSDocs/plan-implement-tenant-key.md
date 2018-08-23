@@ -8,7 +8,6 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/21/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 
