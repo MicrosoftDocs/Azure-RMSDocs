@@ -9,7 +9,6 @@ ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod:
 ms.service: information-protection
 ms.assetid: F7145090-C2EB-405A-A4CF-0240D57A36DA
 # optional metadata
