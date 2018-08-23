@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/15/2018
+ms.date: 08/23/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -50,7 +50,7 @@ The following PDF readers can open protected PDF files that adhere to the ISO st
 
 |Operating system|Supported readers and download link|
 |----------------|-----------------------------------|
-|Windows 10 and previous versions through Windows 7 Service Pack 1|Adobe Acrobat Reader (preferred): [Download](https://go.microsoft.com/fwlink/?linkid=838993) <br /><br /> Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
+|Windows 10 and previous versions<br />through Windows 7 Service Pack 1|Adobe Acrobat Reader (preferred): [Download](https://go.microsoft.com/fwlink/?linkid=838993) <br /><br /> Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
 |Android|Azure Information Protection app: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
 |iOS|Azure Information Protection app: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
 
@@ -61,11 +61,11 @@ The PDF readers in the next table support protected PDF documents that have a .p
 Currently, SharePoint Online and SharePoint on-premises use an older format for PDF documents in IRM-protected libraries.
 
 
-|Operating system|Supported readers and download link|
+|Operating system|Supported readers|
 |----------------|-----------------------------------|
-|Windows 10 and previous versions through Windows 7 Service Pack 1|Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Gaaiho Doc: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />GigaTrust Desktop PDF Client for Adobe: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Nitro PDF Reader: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />RMS sharing app: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
-|Android|Azure Information Protection app: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit MobilePDF with RMS: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />GigaTrust App for Android: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
-|iOS|Azure Information Protection app: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit MobilePDF with RMS: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />TITUS Docs: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
+|Windows 10 and previous versions through Windows 7 Service Pack 1|Azure Information Protection viewer<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS sharing app|
+|Android|Azure Information Protection app<br /><br />Foxit MobilePDF with RMS<br /><br />GigaTrust App for Android|
+|iOS|Azure Information Protection app<br /><br />Foxit MobilePDF with RMS<br /><br />TITUS Docs|
 
 
 > [!NOTE]
