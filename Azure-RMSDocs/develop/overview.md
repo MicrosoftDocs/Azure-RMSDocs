@@ -11,7 +11,6 @@ ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 8A13494E-C1D7-407D-BCD1-A406915EA578
 # optional metadata
 

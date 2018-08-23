@@ -11,7 +11,6 @@ ms.date: 05/01/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 
 # optional metadata
