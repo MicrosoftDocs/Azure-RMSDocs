@@ -9,7 +9,6 @@ manager: mbaldwin
 ms.date: 09/25/2017
 ms.topic: article
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
