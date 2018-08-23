@@ -7,7 +7,6 @@ manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: article
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
