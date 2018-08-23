@@ -6,11 +6,9 @@ description: Instructions to use the Rights Management (RMS) client with the Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 08/06/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 
 # optional metadata
@@ -34,7 +32,7 @@ Use this article for instructions and a script to use the Azure Information Prot
 This solution lets you automatically protect all files in a folder on a file server running Windows Server, or automatically protect files that meet a specific criteria. For example, files that have been classified as containing confidential or sensitive information. This solution connects directly to the Azure Rights Management service from Azure Information Protection to protect the files, so you must have this service deployed for your organization.
 
 > [!NOTE]
-> Although Azure Information Protection includes a [connector]deploy-rms-connector.md) that supports File Classification Infrastructure, that solution supports native protection only—for example, Office files.
+> Although Azure Information Protection includes a [connector](../deploy-rms-connector.md) that supports File Classification Infrastructure, that solution supports native protection only—for example, Office files.
 > 
 > To support multiple file types with Windows Server file classification infrastructure, you must use the PowerShell **AzureInformationProtection** module, as documented in this article. The Azure Information Protection cmdlets, like the Azure Information Protection client, support generic protection as well as native protection, which means that file types other than Office documents can be protected. For more information, see [File types supported by the Azure Information Protection client](client-admin-guide-file-types.md) from the Azure Information Protection client admin guide.
 

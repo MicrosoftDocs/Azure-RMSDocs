@@ -6,11 +6,9 @@ description: Overview of HYOK (AD RMS) protection with Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2018
+ms.date: 08/16/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 
 
@@ -101,7 +99,7 @@ The following table lists the supported scenarios for protecting content by usin
 
 Additionally, using HYOK protection with Azure Information Protection labels has the following limitations:
 
-- Does not support Office 2010 or Office 2007.
+- Does not support versions of Office earlier than Office 2013.
 
 - Office 365 services and other online services will not be able to decrypt HYOK-protected documents and emails to inspect the content and take action on them. This limitation extends to HYOK-protected documents and emails that have been protected with the Rights Management connector. 
     

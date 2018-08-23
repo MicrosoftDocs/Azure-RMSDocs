@@ -9,9 +9,7 @@ ms.author: alleonar
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 # optional metadata
 
@@ -115,7 +113,7 @@ In order for your end-user to take advantage of Information Protection services,
 
 
 > [!IMPORTANT]
-> If you will be running your client application with Azure based RMS, you'll need to create your own tenants. For more information, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](./requirements-subscriptions.md).
+> If you will be running your client application with Azure based RMS, you'll need to create your own tenants. For more information, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../requirements.md).
 > For more information on running with Azure RMS see, [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
 -   Download the [Microsoft Online Services Sign-In Assistant](http://www.microsoft.com/download/details.aspx?id=28177) from the Microsoft Download Center.

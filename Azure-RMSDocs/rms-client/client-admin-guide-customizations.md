@@ -6,11 +6,9 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/08/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 
 # optional metadata
@@ -35,7 +33,7 @@ Some of these settings require editing the registry and some use advanced settin
 
 ### How to configure advanced client configuration settings in the portal
 
-1. If you haven't already done so, in a new browser window, [sign in to the Azure portal]configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** blade.
 
 2. From the **CLASSIFICATIONS** > **Labels** menu option: Select **Policies**.
 
@@ -110,9 +108,9 @@ Locate the following value name and set the value data to **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Make sure that the client has a valid policy file named **Policy.msip**, in the **%LocalAppData%\Microsoft\MSIP** folder. If necessary, you can export the global policy or a scoped policy from the Azure portal, and copy the exported file to the client computer. You can also use this method to replace an-out-of-date policy file with the latest, published policy. However, exporting the policy does not support the scenario where a user belongs to more than one scoped policy.
+Make sure that the client has a valid policy file named **Policy.msip**, in the **%LocalAppData%\Microsoft\MSIP** folder. If necessary, you can export the global policy or a scoped policy from the Azure portal, and copy the exported file to the client computer. You can also use this method to replace an-out-of-date policy file with the latest, published policy. However, exporting the policy does not support the scenario where a user belongs to more than one scoped policy. Also be aware that if users select the **Reset Settings** option from [Help and feedback](client-admin-guide.md#help-and-feedback-section), this action deletes the policy file and renders the client inoperable until you manually replace the policy file or the client connects to the service to download the policy.
 
-When you export the policy, this action downloads a zipped file with multiple versions of the policy that corresponds to different versions of the Azure Information Protection client:
+When you export the policy from the Azure portal, a zipped file is downloaded that contains multiple versions of the policy. These policy versions correspond to different versions of the Azure Information Protection client:
 
 1. Unzip the file and use the following table to identify which policy file you need. 
     
@@ -128,7 +126,7 @@ When you export the policy, this action downloads a zipped file with multiple ve
 
 ## Hide or show the Do Not Forward button in Outlook
 
-The recommended method to configure this option is by using the [policy setting]configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon**. However, you can also configure this option by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you configure in the Azure portal.
+The recommended method to configure this option is by using the [policy setting](../configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon**. However, you can also configure this option by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you configure in the Azure portal.
 
 When you configure this setting, it hides or shows the **Do Not Forward** button on the ribbon in Outlook. This setting has no effect on the Do Not Forward option from Office menus.
 
@@ -140,7 +138,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Make the custom permissions options available or unavailable to users
 
-The recommended method to configure this option is by using the [policy setting]configure-policy-settings.md) **Make the custom permissions option available for users**. However, you can also configure this option by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you configure in the Azure portal. 
+The recommended method to configure this option is by using the [policy setting](../configure-policy-settings.md) **Make the custom permissions option available for users**. However, you can also configure this option by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you configure in the Azure portal. 
 
 When you configure this setting and publish the policy for users, the custom permissions options become visible for users to select their own protection settings, or they are hidden so that users can't select their own protection settings unless prompted.
 
@@ -153,7 +151,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Permanently hide the Azure Information Protection bar
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. Use it only when the [policy setting]configure-policy-settings.md) **Display the Information Protection bar in Office apps** is set to **On**.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. Use it only when the [policy setting](../configure-policy-settings.md) **Display the Information Protection bar in Office apps** is set to **On**.
 
 When you configure this setting and publish the policy for users, and a user chooses to not show the Azure Information Protection bar in their Office applications, the bar remains hidden. This happens when the user clears the  **Show Bar** option from the **Home** tab, **Protection** group, **Protect** button. This setting has no effect if the user closes the bar by using the **Close this bar** icon.
 
@@ -199,7 +197,7 @@ To configure this advanced setting, enter the following strings:
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When you use the [policy setting]configure-policy-settings.md) of **All documents and emails must have a label**, users are prompted to select a label when they first save an Office document and when they send an email. For documents, users can select **Not now** to temporarily dismiss the prompt to select a label and return to the document. However, they cannot close the saved document without labeling it. 
+When you use the [policy setting](../configure-policy-settings.md) of **All documents and emails must have a label**, users are prompted to select a label when they first save an Office document and when they send an email. For documents, users can select **Not now** to temporarily dismiss the prompt to select a label and return to the document. However, they cannot close the saved document without labeling it. 
 
 When you configure this setting, it removes the **Not now** option so that users must select a label when the document is first saved.
 
@@ -215,15 +213,11 @@ This configuration option is currently in preview and is subject to change.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When you configure this setting, it changes the [default behavior]configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) of how the Azure Information Protection client applies automatic and recommended labels as follows:
+When you configure this setting, it changes the [default behavior](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) of how the Azure Information Protection client applies automatic and recommended labels to documents: 
 
-- Automatic classification applies to Word, Excel, PowerPoint, and Outlook. For documents, automatic classification runs continuously in the background. For Outlook, automatic classification runs when emails are sent. 
-    
-    You cannot use automatic classification for documents that were previously manually labeled, or previously automatically labeled with a higher classification. The exception to this behavior is if you use the Azure Information Protection scanner with the OverrideLabel parameter set to on.
+- For Word, Excel, and PowerPoint, automatic classification runs continuously in the background.  
 
-- Recommended classification applies to Word, Excel, and PowerPoint. For these documents, recommended classification runs continuously in the background. You cannot use recommended classification for Outlook.
-    
-    You can use recommended classification for documents that were previously labeled, with or without a higher classification. 
+The behavior does not change for Outlook.
 
 When the Azure Information Protection client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint Online. Large files also save more quickly because the condition rules have already run. 
 
@@ -399,7 +393,7 @@ This configuration uses an [advanced client setting](#how-to-configure-advanced-
 
 By default, the Azure Information Protection scanner runs with a low integrity level. This setting provides higher security isolation but at the cost of performance. A low integrity level is suitable if you run the scanner with an account that has privileged rights (such as a local administrator account) because this setting helps to protect the computer running the scanner.
 
-However, when the service account that runs the scanner has only the rights documented in the [scanner prerequisites]deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), the low integrity level is not necessary and is not recommended because it negatively affects performance. 
+However, when the service account that runs the scanner has only the rights documented in the [scanner prerequisites](../deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), the low integrity level is not necessary and is not recommended because it negatively affects performance. 
 
 For more information about the Windows integrity levels, see [What is the Windows Integrity Mechanism?](https://msdn.microsoft.com/library/bb625957.aspx)
 

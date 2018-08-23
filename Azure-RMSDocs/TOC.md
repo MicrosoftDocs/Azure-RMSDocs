@@ -95,6 +95,6 @@
 ## [Administering with PowerShell](administer-powershell.md)
 ### [Installing the AADRM PowerShell module](install-powershell.md)
 
-# [Deploy & Use the Client](/information-protection/rms-client/use-client)
+# [Deploy & Use the Client](/azure/information-protection/rms-client/use-client)
 
-# [Develop & Customize apps](/information-protection/develop/developers-guide)
+# [Develop & Customize apps](/azure/information-protection/develop/developers-guide)

@@ -6,11 +6,9 @@ description: Information to help you plan for and manage your Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 
 # optional metadata
@@ -42,14 +40,13 @@ What is the Azure Information Protection tenant key?
 |Business requirement|Recommended tenant key topology|
 |------------------------|-----------------------------------|
 |Deploy Azure Information Protection quickly and without special hardware, additional software, or an Azure subscription.<br /><br />For example: Testing environments and when your organization does not have regulatory requirements for key management.|Managed by Microsoft|
-|Compliance regulations, additional security, and control over all life cycle operations. <br /><br />For example: Your key must be protected by a hardware security module (HSM).|BYOK [[1]](#footnote-1)|
+|Compliance regulations, additional security, and control over all life cycle operations. <br /><br />For example: Your key must be protected by a hardware security module (HSM).|BYOK|
 
 
 If required, you can change your tenant key topology after deployment, by using the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet.
 
 
 ## Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)
-Decide which tenant key topology is best for your organization. By default, Azure Information Protection generates your tenant key and manages most aspects of the tenant key lifecycle. This is the simplest option with the lowest administrative overheads. In most cases, you do not even need to know that you have a tenant key. You just sign up for Azure Information Protection and the rest of the key management process is handled by Microsoft.
 
 Decide which tenant key topology is best for your organization:
 
@@ -99,7 +96,7 @@ If you decide to let Microsoft manage your tenant key:
 
 - Unless you are migrating from AD RMS, no further action is required for you to generate the key for your tenant and you can go straight to [Next steps](plan-implement-tenant-key.md#next-steps).
 
-- If you currently have AD RMS and want to migrate to Azure Information Protection, use the migration instructions: Migrating from AD RMS to Azure Information Protection. 
+- If you currently have AD RMS and want to migrate to Azure Information Protection, use the migration instructions: [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). 
 
 If you decide to manage your tenant key yourself, read the following sections for more information.
 
@@ -178,7 +175,7 @@ Then run the [Use-AadrmKeyVaultKey cmdlet](/powershell/module/aadrm/use-aadrmkey
 
 If you need to confirm that the key URL is set correctly for Azure Information Protection: In Azure Key Vault, run [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) to see the key URL.
 
-Finally, if the Azure Rights Management service is already activated, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to tell Azure Information Protection to use this key as the active tenant key for the Azure Rights Management service. If you do not do this step, Azure Information Protection will continue to use the default Microsoft-managed key, that was automatically created for your tenant.
+Finally, if the Azure Rights Management service is already activated, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to tell Azure Information Protection to use this key as the active tenant key for the Azure Rights Management service. If you do not do this step, Azure Information Protection will continue to use the default Microsoft-managed key that was automatically created for your tenant.
 
 
 ## Next steps
@@ -187,11 +184,11 @@ Now that you've planned for and if necessary, created and configured your tenant
 
 1.  Start to use your tenant key:
     
-    - If you haven’t already done so, you must now activate the Rights Management service so that your organization can start to use Azure Information Protection. Users immediately start to use your tenant key (managed by Microsoft, or managed by you in Azure Key Vault).
+    - If the protection service isn't alreay activated, you must now activate the Rights Management service so that your organization can start to use Azure Information Protection. Users immediately start to use your tenant key (managed by Microsoft, or managed by you in Azure Key Vault).
     
         For more information about activation, see [Activating Azure Rights Management](./activate-service.md).
         
-    - If you had already activated the Rights Management service and then decided to manage your own tenant key, users gradually transition from the old tenant key to the new tenant key, and this staggered transition can take a few weeks to complete. Documents and files that were protected with the old tenant key remains accessible to authorized users.
+    - If the Rights Management service was already activated and then you decided to manage your own tenant key, users gradually transition from the old tenant key to the new tenant key. This staggered transition can take a few weeks to complete. Documents and files that were protected with the old tenant key remains accessible to authorized users.
         
 2. Consider using usage logging, which logs every transaction that the Azure Rights Management service performs.
     

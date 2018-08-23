@@ -6,11 +6,9 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 
 # optional metadata
@@ -88,13 +86,13 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
 ## Options to install the Azure Information Protection client for users
 
-There are three options for installing the client for users:
-
-**Windows Update**: The Azure Information Protection client is included in the Microsoft Update catalog, so that you can install and update this client by using any software update service that uses the catalog.
+There are two options for installing the client for users:
 
 **Run the executable (.exe) version of the client**: The recommended installation method that you can run interactively, or silently. This method has the most flexibility and it is recommended because the installer checks for many of the prerequisites, and can automatically install missing prerequisites. [Instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
 
 **Deploy the Windows installer (.msi) version of the client**: Supported for silent installs only that use a central deployment mechanism, such as group policy, Configuration Manager, and Microsoft Intune. This method is necessary for Windows 10 PCs that are managed by Intune and mobile device management (MDM) because for these computers, executable files are not supported for installation. However, when you use this installation method, you must manually check and install or uninstall the dependent software that the installer for the executable would perform for each computer. [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)
+
+After the Azure Information Protection client is installed, you can update this client by repeating your chosen installation method, or use Windows Update to keep the client automatically upgraded. For more information about upgrading, see the [Upgrading and maintaining the Azure Information Protection client](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client) section.
 
 ### To install the Azure Information Protection client by using the executable installer
 
@@ -154,7 +152,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
 1. From a PowerShell session, first run [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
-    If you haven’t already installed the PowerShell module for the Azure Rights Management service, see [Installing the AADRM PowerShell module]install-powershell.md).
+    If you haven’t already installed the PowerShell module for the Azure Rights Management service, see [Installing the AADRM PowerShell module](../install-powershell.md).
 
 2. From the output, identify the **LicensingIntranetDistributionPointUrl** value.
 
@@ -209,7 +207,7 @@ If you use Intune for your software deployment method, use these instructions to
 
 The PowerShell module that is included with the Azure Information Protection client has cmdlets to install and configure the scanner. However, to use the scanner, you must install the full version of the client and cannot install just the PowerShell module.
 
-To install the client for the scanner, follow the same instructions in the preceding sections. You're then ready to install the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files]deploy-aip-scanner.md).
+To install the client for the scanner, follow the same instructions in the preceding sections. You're then ready to install the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
 
 ## Next steps
 Now that you've installed the Azure Information Protection client, see the following for additional information that you might need to support this client:

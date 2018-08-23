@@ -6,11 +6,9 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 
 # optional metadata
@@ -255,9 +253,14 @@ Then the scanner uses Windows iFilter to scan the following file types. For thes
 |Word|.docx; .docm; .dotm; .dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
-|PDF|.pdf|
+|PDF |.pdf|
 |Text|.txt; .xml; .csv|
 
+By default, only Office file types are protected by the scanner, so PDF and text files are not protected unless you [edit the registry](develop/file-api-configuration.md) to specify the file types:
+
+- If you do not add the file type of .pdf to the registry: Files that have this file name extension will be labeled but if the label is configured for protection, the protection is not applied.
+
+- If you do not add the file types of .txt, .xml, or .csv to the registry: Files that have these file name extensions will not be labeled because these file types do not support classification-only.
 
 Finally, for the remaining file types, the scanner applies the default label in the Azure Information Protection policy, or the default label that you configure for the scanner.
 
@@ -279,7 +282,11 @@ Finally, for the remaining file types, the scanner applies the default label in 
 
 When the scanner applies a label with protection, by default, only Office file types are protected. You can change this behavior so that additional file types are protected. However, when a label applies generic protection to documents, the file name extension changes to .pfile. In addition, the file becomes read-only until it is opened by an authorized user and saved in its native format. Text and images files can also change their file name extension and become read-only. 
 
-To change the default scanner behavior, for example, to generically protect other file types, you must manually edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". For the scanner, you must specify specific file name extensions and cannot use the `*` wildcard.
+To change the default scanner behavior, for example, to generically protect other file types, you must manually edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". In addition, specific for the scanner:
+
+- You must specify specific file name extensions and cannot use the `*` wildcard.
+
+- The scanner has its own default behavior: Only Office file formats are protected by default. Any other file format not added to the registry will not be protected by the scanner.
 
 ## When files are rescanned
 
