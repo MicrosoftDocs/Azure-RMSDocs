@@ -104,7 +104,7 @@ Exchange clients and services (for example, the Outlook client, the Outlook Web 
 
 Although this option appears to users (and Exchange administrators) as if it's a default Rights Management template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure portal when you view and manage protection templates. Instead, the **Do Not Forward** option is a set of usage rights that is dynamically applied by users to their email recipients.
 
-When the **Do Not Forward** option is applied to an email, the email is encrypted and recipients must be authenticated. Then, the recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. For example, in the Outlook client, the Forward button is not available, the **Save As**, **Save Attachment**, and **Print** menu options are not available, and you cannot add or change recipients in the **To**, **Cc**, or **Bcc** boxes.
+When the **Do Not Forward** option is applied to an email, the email is encrypted and recipients must be authenticated. Then, the recipients cannot forward it, print it, or copy from it. For example, in the Outlook client, the Forward button is not available, the  **Save As** and **Print** menu options are not available, and you cannot add or change recipients in the **To**, **Cc**, or **Bcc** boxes.
 
 Unprotected [Office documents](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) that are attached to the email automatically inherit the same restrictions. The usage rights applied to these documents are **Edit Content, Edit**; **Save**; **View, Open, Read**; and **Allow Macros**. If you want different usage rights for an attachment, or your attachment is not an Office document that supports this inherited protection, protect the file before you attach it to the email. You can then assign the specific usage rights that you need for the file. 
 
@@ -133,9 +133,9 @@ Similarly, by default, unprotected [Office documents](https://support.office.com
 
 Alternatively, you can change this protection inheritance of documents by using either of the following configuration parameters that you set with the [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps) command, **Set-IRMConfiguration**. Use these options when you don't need to retain the original protection for the document after the user is authenticated:
 
-- To remove the document's protection only for recipients who view the document in their browser (typically because it is sent to a social provider address, such as Gmail): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. When these recipients download the document, the protection is removed.
+- To remove the document's protection for all recipients: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. When these recipients open the email message, the document is not protected.
 
-- To always remove the document's protection for all recipients: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. When these recipients open the email message, the document is not protected.
+- To remove the document's protection only for recipients who view the document in their browser (typically because it is sent to a social provider address, such as Gmail): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. When these recipients download the document, the protection is removed.
 
 For more information about removing protection only for recipients who view the document in their browser, see the Office blog post, [Admin control for attachments now available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). If you do need an attached document to retain the original protection, see [Secure document collaboration by using Azure Information Protection](secure-collaboration-documents.md).
 
