@@ -11,8 +11,6 @@ ms.date: 08/23/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
-ms.technology: techgroup-identity
-ms.custom: askipteam
 ms.assetid: xxxxx
 
 # optional metadata
