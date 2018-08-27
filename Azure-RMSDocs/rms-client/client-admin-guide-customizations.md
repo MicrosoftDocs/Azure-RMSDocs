@@ -94,6 +94,20 @@ Locate the following value name and set the value data to **0**:
 
 In addition, check that these computers do not have a file named **Policy.msip** in the **%LocalAppData%\Microsoft\MSIP** folder. If this file exists, delete it. This file contains the Azure Information Protection policy and might have downloaded before you edited the registry, or if the Azure Information Protection client was installed with the demo option.
 
+## Modify the email address for the Report an Issue link
+
+This configuration option is currently in preview and is subject to change. It also requires the preview version of the Azure Information Protection client.
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When users select the **Report an Issue** link from the **Help and Feedback** client dialog box, by default, a Microsoft address is populated in an email message. Use the following advanced client setting to modify that address. For example, specify `mailto:helpdesk@contoso.com` for the email address of your help desk. 
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **ReportAnIssueLink**
+
+- Value: **\<HTTP string>**
+
 ## Hide the Classify and Protect menu option in Windows File Explorer
 
 Create the following DWORD value name (with any value data):
