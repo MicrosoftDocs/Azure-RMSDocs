@@ -94,7 +94,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - When you use the client for right-click in File Explorer, PowerShell, or the scanner, labeling is blocked for files in WebDav locations because this is an unsupported scenario.
 
-- The Delete Label icon is unavailable in client apps (Word, Excel, PowerPoint, and Outlook) when you configure the [policy setting](../configure-policy-settings.md) **All documents and emails must have a label**. 
+- The Delete Label icon does not display in client apps (Word, Excel, PowerPoint, and Outlook) when you configure the [policy setting](../configure-policy-settings.md) **All documents and emails must have a label**.
 
 **Additional changes**:
    
@@ -106,7 +106,9 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     
 - For the scanner, the default exclusion list now includes .rtf files. [More information](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
 
-- The policy version is changed to 1.4. Identifying the version number is required for [configuring disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers). 
+- The policy version is changed to 1.4. Identifying the version number is required for [configuring disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
+
+- The **Send Us Feedback** link in the **Help and Feedback** dialog box is replaced with **Report an issue**, that by default, sends an email to Microsoft. You can change this email address by using an [advanced client setting](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
 
 
 ## Version 1.29.5.0 
