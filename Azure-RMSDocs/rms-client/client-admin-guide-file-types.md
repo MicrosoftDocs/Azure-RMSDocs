@@ -203,7 +203,7 @@ To help prevent users from changing files that are critical for computer operati
 
 ### File types that are excluded from classification and protection by the Azure Information Protection scanner
 
-By default, the scanner also excludes the same file types as the Azure Information Protection client with one exception for the preview version of the scanner: .rtf is also excluded. 
+By default, the scanner also excludes the same file types as the Azure Information Protection client with the following exceptions for the preview version of the scanner: .rar, .rtf, .msg and .zip. 
 
 You can change the file types included or excluded for file inspection by the scanner when you use the following PowerShell cmdlets:
 
