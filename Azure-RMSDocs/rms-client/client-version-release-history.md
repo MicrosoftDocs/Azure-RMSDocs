@@ -52,7 +52,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 If you have a version of the client that is later than 1.29.5.0, it is a preview build for testing and evaluation purposes.
 
-This version includes the MSIPC version 1.0.xxxx.xxx of the RMS client.
+This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **New features**: 
 
