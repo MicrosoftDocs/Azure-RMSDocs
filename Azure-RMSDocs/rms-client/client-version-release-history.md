@@ -94,7 +94,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - When you use the client for right-click in File Explorer, PowerShell, or the scanner, labeling is blocked for files in WebDav locations because this is an unsupported scenario.
 
-- The Delete Label icon does not display in client apps (Word, Excel, PowerPoint, and Outlook) when you configure the [policy setting](../configure-policy-settings.md) **All documents and emails must have a label**.
+- The Delete Label icon does not display in client apps (Word, Excel, PowerPoint, and Outlook) when you configure the [policy setting](../configure-policy-settings.md) of **All documents and emails must have a label**.
 
 **Additional changes**:
    
