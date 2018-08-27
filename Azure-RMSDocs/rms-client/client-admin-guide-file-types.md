@@ -38,6 +38,8 @@ The Azure Information Protection client can apply the following to documents and
 
 Use the following information to check which file types the Azure Information Protection client supports, understand the different levels of protection and how to change the default protection level, and to identify which files are automatically excluded (skipped) from classification and protection.
 
+For the listed file types supported, WebDav locations are not supported.
+
 ## File types supported for classification only
 
 The following file types can be classified even when they are not protected.
