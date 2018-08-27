@@ -6,11 +6,9 @@ description: Information to help you plan for and manage your Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/24/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 
 # optional metadata
@@ -155,6 +153,8 @@ Use the Azure Key Vault documentation to create a key vault and the key that you
 Make sure that the key length is 2048 bits (recommended) or 1024 bits. Other key lengths are not supported by Azure Information Protection.
 
 To create an HSM-protected key on-premises and transfer it to your key vault as an HSM-protected key, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
+
+For Azure Information Protection to use the key, all Key Vault operations must be permitted for the key. This is the default configuration and the operations are encrypt, decrypt, wrap, unwrap, sign, and verify.
 
 A key that is stored in Key Vault has a key ID. This key ID is a URL that contains the name of the key vault, the keys container, the name of the key, and the key version. For example: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. You must configure Azure Information Protection to use this key, by specifying its Key Vault URL.
 

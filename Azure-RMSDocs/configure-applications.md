@@ -8,9 +8,7 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 04/26/2017
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 
 # optional metadata

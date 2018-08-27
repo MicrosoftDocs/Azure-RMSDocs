@@ -9,9 +9,7 @@ ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
 # optional metadata
 
