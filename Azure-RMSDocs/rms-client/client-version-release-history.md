@@ -80,7 +80,9 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     
     - For documents that are protected in SharePoint libraries, if the *DefaultOwner* parameter is not used for the data repository, the SharePoint Editor value is now used as the default value instead of the Author value.
     
-    - Scanner reports include "Last modified by" for Office documents. 
+    - Scanner reports include "Last modified by" for Office documents.
+    
+    - File types excluded by default include .zip, .rar, and .msg.
 
 - When you classify and protect by using PowerShell or the scanner, the Office document metadata is not removed or encrypted.
 
@@ -88,7 +90,11 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - Custom permissions supports recipient email addresses that contain an apostrophe.
 
-- The computer environment will successfully initialize (bootstrap) when this action is initiated by opening a protected document that's stored in SharePoint Online. 
+- The computer environment will successfully initialize (bootstrap) when this action is initiated by opening a protected document that's stored in SharePoint Online.
+
+- When you use the client for right-click in File Explorer, PowerShell, or the scanner, labeling is blocked for files in WebDav locations because this is an unsupported scenario.
+
+- The Delete Label icon is unavailable in client apps (Word, Excel, PowerPoint, and Outlook) when you configure the [policy setting](../configure-policy-settings.md) **All documents and emails must have a label**. 
 
 **Additional changes**:
    
