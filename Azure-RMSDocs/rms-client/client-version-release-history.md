@@ -104,11 +104,11 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
         
     - The *Type* parameter is removed, so it is also removed from the output when you run [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration). By default, only new or modified files are inspected after the first scan cycle. If you previously set the *Type* parameter to **Full** to rescan all files, now run [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) with the *Reset* parameter. The scanner must also be configured for a manual schedule, which requires the *Schedule* parameter to be set to **Manual** with [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
     
-- For the scanner, the default exclusion list now includes .rtf files. [More information](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
+- For the scanner, the default exclusion list now includes .msg, .rar, .rtf, and .zip files. [More information](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
+
+- The **Send Us Feedback** link in the **Help and Feedback** dialog box is replaced with **Report an issue**, that by default, sends an email to Microsoft. You can change this email address so that when your users select this option, it uses an HTTP string that you specify. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk. To modify this address, use an [advanced client setting](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
 
 - The policy version is changed to 1.4. Identifying the version number is required for [configuring disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
-
-- The **Send Us Feedback** link in the **Help and Feedback** dialog box is replaced with **Report an issue**, that by default, sends an email to Microsoft. You can change this email address by using an [advanced client setting](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
 
 
 ## Version 1.29.5.0 
