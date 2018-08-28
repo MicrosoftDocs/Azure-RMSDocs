@@ -24,7 +24,7 @@
     * [C++ Example*](authentication/simple-authentication.md)
     * [Python Example](authentication/python.md)
     * [Node Example](authentication/node.md)
-  * File API - [Implement Observers*](tutorial-file/observers.md)
+  * File API - [Implement Observers*](tutorial-file/observer.md)
   * File API - [Create a Profile](tutorial-file/profile.md)
   * File API - [Create an Engine (and list labels*)](tutorial-file/engine.md)
   * File API - List Labels
