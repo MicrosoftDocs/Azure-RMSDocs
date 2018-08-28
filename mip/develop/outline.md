@@ -6,7 +6,7 @@
   * Supported platforms
   * How to configure VS/Code
 * Concepts
-  * The [APIs](concepts/apis.md)
+  * The [APIs (and use cases*)](concepts/apis.md)
   * [Authentication](concepts/authdelegate.md)
   * [Profile](concepts/profile.md)
   * [Engine](concepts/engine.md)
