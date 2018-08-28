@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
@@ -281,9 +281,9 @@ When the scanner applies a label with protection, by default, only Office file t
 
 To change the default scanner behavior, for example, to generically protect other file types, you must manually edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". In addition, specific for the scanner:
 
-- You must specify specific file name extensions and cannot use the `*` wildcard.
+- The scanner has its own default behavior: Only Office file formats are protected by default. If the registry is not modified, any other file types will not be protected by the scanner.
 
-- The scanner has its own default behavior: Only Office file formats are protected by default. Any other file format not added to the registry will not be protected by the scanner.
+- Unless you use the current preview version of the scanner, you must specify specific file name extensions and cannot use the `*` wildcard. The preview version of the scanner does support this wildcard.
 
 ## When files are rescanned
 
