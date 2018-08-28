@@ -48,7 +48,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 - Protection templates:
     
-    -Templates that use a cloud-based key and that are part of a label configuration are also migrated with the label. Other protection templates are not migrated. 
+    - Templates that use a cloud-based key and that are part of a label configuration are also migrated with the label. Other protection templates are not migrated. 
         
     - If you migrate a label that is configured for HYOK protection, the label is migrated without the protection settings.
     
@@ -64,7 +64,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 - Any localized strings for the labels are not migrated. You must define new localized strings for the migrated labels in the Security & Compliance Center.
 
-- After the migration, when you edit a migrated label in the Azure portal, the same change is automatically reflected in the Security & Compliance Center. However, when you edit a migrated label in the Security & Compliance Center, you must then update the label in some way in the Azure portal for the label to reflect the change. For example, edit the **Add notes for administrator use** box on the **Label** blade. 
+- After the migration, when you edit a migrated label in the Azure portal, the same change is automatically reflected in the Security & Compliance Center. However, when you edit a migrated label in the Security & Compliance Center, you must then update the label in the Azure portal for the label to pick up the change. For example, edit the **Add notes for administrator use** box on the **Label** blade. 
 
 - Unified labeling is still rolling out to tenants. If it's not yet supported for your tenant, the migration will not succeed and gracefully undo any changes. Until it's supported for all tenants, you must use a special link to access the option to migrate your tenant and labels. This link is provided in the instructions that follow.
 
