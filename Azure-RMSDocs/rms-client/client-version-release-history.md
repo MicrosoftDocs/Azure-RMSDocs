@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/13/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
@@ -52,21 +52,23 @@ Use the following information to see what’s new or changed for a supported rel
 
 If you have a version of the client that is later than 1.29.5.0, it is a preview build for testing and evaluation purposes.
 
-This version includes the MSIPC version 1.0.3557.524 of the RMS client.
+This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **New features**: 
+
+- Support for the ISO standard for PDF encryption so that documents that you protect retain their .pdf file name extension by default, and can be opened by PDF readers that support this ISO standard. Currently, you must instruct users to open these protected PDFs manually by using the Azure Information Protection viewer. To help users do this, when they open one of these protected PDFs, they see a page with icons to select for their operating system. If you do not want this behavior and instead, require parity with the general availability version of the Azure Information Protection client, you can configure an [advanced client configuration](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
 - Support for new sensitive information types to help you classify documents that contain personal information. [More information](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
 - Labeling support for **Strict Open XML Document** format in Word, Excel, and PowerPoint files. For more information about the Open XML formats, see the Office blog post, [New file format options in the new Office](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
 
-- Support for the ISO standard for PDF encryption, by configuring a new [advanced client configuration](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this option is configured, PDF documents that you protect retain their .pdf file name extension (rather than change to .ppdf) and can be opened by PDF readers that support this ISO standard. 
-
 - Support for files that have been protected by Secure Islands when those files are other than PDF and Office documents. For example, protected text and picture files. Or, files that have a .pfile file name extension. This support enables new scenarios, such as the Azure Information Protection scanner being able to inspect these files for sensitive information, and automatically relabeling them for Azure Information Protection. [More information](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
+
+- The **Send Us Feedback** link in the **Help and Feedback** dialog box is replaced with **Report an issue**, which you can customize. By default, this option sends an email to Microsoft. You can change this email address so that when your users select this option, it uses an HTTP string that you specify. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk. To modify this address, use an [advanced client setting](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
 
 - For the Azure Information Protection scanner:
 
-    - New cmdlet, [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): Required to run once after upgrading from all previous versions.
+    - New cmdlet, [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): Required to run once after upgrading from the current GA version (1.29.5.0) or earlier.
     
     - New cmdlet, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): Gets the current status of the service for the scanner.  
     
@@ -80,7 +82,7 @@ This version includes the MSIPC version 1.0.3557.524 of the RMS client.
     
     - For documents that are protected in SharePoint libraries, if the *DefaultOwner* parameter is not used for the data repository, the SharePoint Editor value is now used as the default value instead of the Author value.
     
-    - Scanner reports include "Last modified by" for Office documents. 
+    - Scanner reports include "Last modified by" for Office documents.
 
 - When you classify and protect by using PowerShell or the scanner, the Office document metadata is not removed or encrypted.
 
@@ -88,7 +90,11 @@ This version includes the MSIPC version 1.0.3557.524 of the RMS client.
 
 - Custom permissions supports recipient email addresses that contain an apostrophe.
 
-- The computer environment will successfully initialize (bootstrap) when this action is initiated by opening a protected document that's stored in SharePoint Online. 
+- The computer environment will successfully initialize (bootstrap) when this action is initiated by opening a protected document that's stored in SharePoint Online.
+
+- When you use the client for right-click in File Explorer, PowerShell, or the scanner, labeling is blocked for files in WebDav locations because this is an unsupported scenario.
+
+- The Delete Label icon does not display in client apps (Word, Excel, PowerPoint, and Outlook) when you configure the [policy setting](../configure-policy-settings.md) of **All documents and emails must have a label**.
 
 **Additional changes**:
    
@@ -98,10 +104,9 @@ This version includes the MSIPC version 1.0.3557.524 of the RMS client.
         
     - The *Type* parameter is removed, so it is also removed from the output when you run [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration). By default, only new or modified files are inspected after the first scan cycle. If you previously set the *Type* parameter to **Full** to rescan all files, now run [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) with the *Reset* parameter. The scanner must also be configured for a manual schedule, which requires the *Schedule* parameter to be set to **Manual** with [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
     
-- For the scanner, the default exclusion list now includes .rtf files. [More information](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
+- For the scanner, the default exclusion list now includes .msg, .rar, .rtf, and .zip files. [More information](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
 
-- The policy version is changed to 1.4. Identifying the version number is required for [configuring disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers). 
-
+- The policy version is changed to 1.4. Identifying the version number is required for [configuring disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
 
 ## Version 1.29.5.0 
 
