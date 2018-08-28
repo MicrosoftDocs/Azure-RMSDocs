@@ -56,11 +56,11 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **New features**: 
 
+- Support for the ISO standard for PDF encryption so that documents that you protect retain their .pdf file name extension and can be opened by PDF readers that support this ISO standard. Currently, you must instruct users to open these protected PDFs manually by using the preview version of the Azure Information Protection client. If you do not want this behavior and instead, require parity with the general availability version of the Azure Information Protection client, you can configure an [advanced client configuration](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
+
 - Support for new sensitive information types to help you classify documents that contain personal information. [More information](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
 - Labeling support for **Strict Open XML Document** format in Word, Excel, and PowerPoint files. For more information about the Open XML formats, see the Office blog post, [New file format options in the new Office](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
-
-- Support for the ISO standard for PDF encryption PDF, so that documents that you protect retain their .pdf file name extension and can be opened by PDF readers that support this ISO standard. If you do not want this behavior and instead, require parity with the general availability version of the Azure Information Protection client, you can configure an [advanced client configuration](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
 - Support for files that have been protected by Secure Islands when those files are other than PDF and Office documents. For example, protected text and picture files. Or, files that have a .pfile file name extension. This support enables new scenarios, such as the Azure Information Protection scanner being able to inspect these files for sensitive information, and automatically relabeling them for Azure Information Protection. [More information](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
 
