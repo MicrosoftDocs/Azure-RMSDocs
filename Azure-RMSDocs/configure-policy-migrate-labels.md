@@ -85,7 +85,7 @@ Microsoft Information Protection (MIP) clients currently include:
 
 - MacOS computers that use Office for Mac 2016 (public preview)
 
-- Clients from software vendors and developers that use the [MIP SDK](mip-sdk-reference.md)
+- Clients from software vendors and developers that use the [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference)
 
 
 ## Next steps
