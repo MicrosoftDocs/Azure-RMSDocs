@@ -8,9 +8,10 @@
 * Concepts
   * The [APIs (and use cases*)](concepts/apis.md)
   * [Authentication](concepts/authdelegate.md)
+  * [Consent*](concepts/consent.md)
   * [Profile](concepts/profile.md)
   * [Engine](concepts/engine.md)
-  * [Handler](concepts/handler.md)
+  * [Handler](concepts/observers.md)
   * [Labels](concepts/labels.md)
   * [Async](concepts/observers.md)
   * Use Cases
