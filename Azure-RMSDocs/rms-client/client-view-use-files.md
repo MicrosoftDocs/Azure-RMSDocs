@@ -34,7 +34,7 @@ If the files don't immediately open, the **Azure Information Protection viewer**
 The viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
 
 > [!NOTE]
-> Although installing the client provides more functionality, it requires local administrator permissions and the full functionality requires a corresponding service for your organization, such as Azure Information Protection or Active Directory Rights Management Services.
+> Although installing the client provides more functionality, it requires local administrator permissions and the full functionality requires a corresponding service for your organization. For example, Azure Information Protection or Active Directory Rights Management Services.
 > 
 > Install the viewer if you have been sent a protected document by somebody from another organization or if you do not have local administrator permissions to your PC.
 
