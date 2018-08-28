@@ -13,7 +13,7 @@
   * [Engine](concepts/engine.md)
   * Handler
   * [Labels](concepts/labels.md)
-  * [Async](concepts/observers.md)
+  * [Async (observers*)](concepts/observers.md)
   * Use Cases
   * Enums*
     * [ActionSource](concepts/actionsource.md)
