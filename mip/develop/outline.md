@@ -1,28 +1,30 @@
 # MIP SDK Docs Outline
 
 * [Overview and Value Prop](concepts/overview.md)
-* Getting Started
+* [Getting Started](concepts/getting-started.md)
   * Getting the Binaries
   * Supported platforms
   * How to configure VS/Code
 * Concepts
-  * The APIs
-  * Auth
-  * Profile
-  * Engine
-  * Handler
-  * Labels
-  * Async
+  * The [APIs](concepts/apis.md)
+  * [Authentication](concepts/authdelegate.md)
+  * [Profile](concepts/profile.md)
+  * [Engine](concepts/engine.md)
+  * [Handler](concepts/handler.md)
+  * [Labels](concepts/labels.md)
+  * [Async](concepts/observers.md)
   * Use Cases
 * Quickstarts
   * Authentication
-    * Authentication Delegate
-    * Python Example
-    * Node Example
-  * File API - Create a Profile
-  * File API - Create an Engine
+    * [Authentication Delegate](authentication/authdelegate.md)
+    * [C++ Example](authentication/simple-authentication.md)
+    * [Python Example](authentication/python.md)
+    * [Node Example](authentication/node.md)
+  * File API - [Implement Observers*](tutorial-file/observers.md)
+  * File API - [Create a Profile](tutorial-file/profile.md)
+  * File API - [Create an Engine (and list labels*)](tutorial-file/engine.md)
   * File API - List Labels
-  * File API - Create a Handler
+  * File API - [Create a Handler (and read/set labels*)](tutorial-file/file-handler.md)
   * File API - Read a Label
   * File API - Set a Label
 * Tutorials
