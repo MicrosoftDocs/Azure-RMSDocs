@@ -68,6 +68,11 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 Use the following instructions to migrate your tenant and labels.
 
+1. Open a new browser window and sign in to the Azure portal by using the following link: https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade 
+
+2. On the **Azure Information Protection - Unified MIP labeling** blade, select **Activate** and follow the online instructions.
+
+For the labels that successfully migrate, they can now be used by [MIP clients](#mip-clients) when these labels are published in the Security & Compliance Center.
 
 
 ### MIP clients
@@ -76,7 +81,7 @@ Microsoft Information Protection (MIP) clients currently include:
 
 - MacOS computers that use Office for Mac 2016 (public preview)
 
-- Clients from software vendors and developers that use the [MIP SDK](../develop/mip/mip-sdk-reference.md).
+- Clients from software vendors and developers that use the [MIP SDK](mip-sdk-reference.md).
 
 
 ## Next steps
