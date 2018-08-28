@@ -11,10 +11,13 @@
   * [Consent*](concepts/consent.md)
   * [Profile](concepts/profile.md)
   * [Engine](concepts/engine.md)
-  * [Handler](concepts/observers.md)
+  * Handler
   * [Labels](concepts/labels.md)
   * [Async](concepts/observers.md)
   * Use Cases
+  * Enums*
+    * [ActionSource](concepts/actionsource.md)
+    * [AssignmentMethod](concepts/assignmentmethod.md)
 * Quickstarts
   * Authentication
     * [Authentication Delegate](authentication/authdelegate.md)
