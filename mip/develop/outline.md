@@ -1,6 +1,6 @@
 # MIP SDK Docs Outline
 
-* Overview and Value Prop 
+* [Overview and Value Prop](concepts/overview.md)
 * Getting Started
   * Getting the Binaries
   * Supported platforms
