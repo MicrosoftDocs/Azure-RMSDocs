@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Migrate Azure Information Protection labels to Office 365 Security & Compliance Center
-description: Migrate Azure Information Protection labels to Office 365 Security & Compliance Center for unified labeling with MIP clients. 
+title: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center
+description: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center for unified labeling with MIP clients. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -23,7 +23,7 @@ ms.suite: ems
 
 ---
 
-# How to migrate Azure Information Protection labels to Office 365 Security & Compliance Center
+# How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
