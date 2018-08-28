@@ -17,7 +17,7 @@
 * Quickstarts
   * Authentication
     * [Authentication Delegate](authentication/authdelegate.md)
-    * [C++ Example](authentication/simple-authentication.md)
+    * [C++ Example*](authentication/simple-authentication.md)
     * [Python Example](authentication/python.md)
     * [Node Example](authentication/node.md)
   * File API - [Implement Observers*](tutorial-file/observers.md)
