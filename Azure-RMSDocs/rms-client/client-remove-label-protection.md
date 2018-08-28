@@ -50,7 +50,7 @@ If the **Delete Label** icon is not immediately available, first click the **Edi
 
 ![Azure Information Protection bar - Edit Label](../media/edit-label.png)
 
-If you still do not see the Delete Label icon, your administrator does not allow you to use this option.
+If you still do not see the **Delete Label** icon, your administrator does not allow you to use this option.
 
 > [!NOTE]
 > If you don't see this Information Protection bar in your Office apps:
