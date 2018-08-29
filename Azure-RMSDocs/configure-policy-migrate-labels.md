@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center
-description: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center for unified labeling with MIP clients. 
+title: Migrate Azure Information Protection labels to the Security & Compliance Center
+description: Migrate Azure Information Protection labels to the Security & Compliance Center for unified labeling with MIP clients. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -23,14 +23,14 @@ ms.suite: ems
 
 ---
 
-# How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center
+# How to migrate Azure Information Protection labels to the Security & Compliance Center
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > This feature is in preview, and migrates your tenant to a new platform that is also in preview. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by multiple clients and services.
 
-Migrate your labels if you want to be able to use them in the Office 365 Security & Compliance Center, where they can be published and then downloaded by [clients that support unified labeling](#clients-that-support-unified-labeling). The Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
+Migrate your labels if you want to be able to use them in the Security & Compliance Center, where they can be published and then downloaded by [clients that support unified labeling](#clients-that-support-unified-labeling). The Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
 
 After you have migrated your labels, you can then make changes to them in the Azure portal or the Security & Compliance Center, and the respective clients will download the same change.
 
@@ -42,15 +42,15 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 - If you are in the middle of defining and configuring the labels that you want to use, we recommend that you complete this process by using the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in the Security & Compliance Center.
 
-- All the configuration of a label is migrated, except for conditions and protection settings that use [HYOK protection](configure-adrms-restrictions.md). Policies, including policy settings and who has access to them (scoped policies) are not migrated. For the changes that are not migrated, you will need to configure the relevant options in the Security & Compliance Center after the labels are migrated.
+- Policies, including policy settings and who has access to them (scoped policies) are not migrated. For these changes that are not migrated, you will need to configure the relevant options in the Security & Compliance Center after the labels are migrated.
     
     For a more consistent user experience, we recommend you publish the same labels in the same scopes in the Security & Compliance Center.
+
+- Not all settings from a label's configuration is migrated. For those settings, see the table in the [Label configuration migration details](#label-configuration-migration-details) section to help you understand the impact of these settings post migration and our recommendation of whether to publish the migrated label.
 
 - Protection templates:
     
     - Templates that use a cloud-based key and that are part of a label configuration are also migrated with the label. Other protection templates are not migrated. 
-        
-    - If you migrate a label that is configured for HYOK protection, the label is migrated without the protection settings.
     
     - After a label with cloud-based protection settings has been migrated, the resulting scope of the protection template is the scoped that is defined in the Azure portal (or by using the ADDRM PowerShell module) and the scope that is defined in the Security & Compliance Center. 
 
@@ -58,7 +58,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
     - When a label is created, you must then publish it in the Security & Compliance Center to make it available to applications and services.
     
-    - When a label is renamed, you must then edit it in the Security & Compliance Center. 
+    - When a label is renamed, you must then edit it, which you can do in the Security & Compliance Center or the Azure portal. 
 
 - For each label, the Azure portal displays only the label display name, which you can edit. The Security & Compliance Center shows both this display name for a label, and the label name. The label name is the initial name that you specified when the label was first created and this property is used by the back-end service for identification purposes.
 
@@ -67,6 +67,26 @@ Before you migrate your labels, make sure that you are aware of the following ch
 - After the migration, when you edit a migrated label in the Azure portal, the same change is automatically reflected in the Security & Compliance Center. However, when you edit a migrated label in the Security & Compliance Center, you must then update the label in the Azure portal for the label to pick up the change. For example, edit the **Add notes for administrator use** box on the **Label** blade. 
 
 - Unified labeling is still rolling out to tenants. If it's not yet supported for your tenant, the migration will not succeed and gracefully undo any changes. Until it's supported for all tenants, you must use a special link to access the option to migrate your tenant and labels. This link is provided in the instructions that follow.
+
+### Label configuration migration details
+
+Use the following table to identify which configuration settings of a label can be migrated with the label, and whether you should publish the migrated label in the Security & Compliance Center.
+
+|Label configuration|Supported in the Security & Compliance Center|Recommendation to publish|
+|-------------------|---------------------------------------------|-------------------------|
+|Status of enabled or disabled<br /><br />Not synchronized to the Security & Compliance Center |Not applicable|Not applicable|
+|Label color: Select from list or specify by using RGB code<br /><br />Label colors are not shown and not used in the Security & Compliance Center |Not applicable|Not applicable|
+|Cloud-based protection using a predefined template |No|No|
+|Cloud-based protection using user-defined permissions in Word, Excel, and PowerPoint |No|No|
+|HYOK-based protection using a predefined template |No|No|
+|HYOK-based protection using user-defined permissions in Word, Excel, and PowerPoint |No|No|
+|Remove protection |No|No|
+|Visual markings (footer, header, watermark): Custom font|No|Yes|
+|Visual markings (footer, header, watermark): Custom font color by RGB code|No|No|
+|Visual markings per app<br /><br />Variables will display as text|No|Yes|
+|Conditions and associated settings <br /><br />Includes automatic and recommended labeling, and tooltips|Not applicable|Yes|
+
+
 
 ## To migrate Azure Information Protection labels
 
@@ -84,6 +104,8 @@ For the labels that successfully migrate, they can now be used by [clients that 
 The clients that currently support unified labeling include:
 
 - MacOS computers that use Office for Mac 2016 (public preview)
+
+- iOS and Android devices that use Word, Excel, and PowerPoint from Office Mobile.
 
 - Clients from software vendors and developers that use the [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference)
 
