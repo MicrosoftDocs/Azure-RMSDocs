@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Migrate Azure Information Protection labels to the Security & Compliance Center
-description: Migrate Azure Information Protection labels to the Security & Compliance Center for unified labeling with MIP clients. 
+title: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center
+description: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center for unified labeling with MIP clients. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -23,16 +23,16 @@ ms.suite: ems
 
 ---
 
-# How to migrate Azure Information Protection labels to the Security & Compliance Center
+# How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > This feature is in preview, and migrates your tenant to a new platform that is also in preview. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by multiple clients and services.
 
-Migrate your labels if you want to be able to use them in the Security & Compliance Center, where they can be published and then downloaded by [clients that support unified labeling](#clients-that-support-unified-labeling). The Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
+Migrate your labels if you want to be able to use them in the Office 365 Security & Compliance Center, where they can be published and then downloaded by [clients that support unified labeling](#clients-that-support-unified-labeling). The Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
 
-After you have migrated your labels, you can then make changes to them in the Azure portal or the Security & Compliance Center, and the respective clients will download the same change.
+After you have migrated your labels, you can then make changes to them in the Azure portal or the Office 365 Security & Compliance Center, and the respective clients will download the same change.
 
 ## Considerations for unified labels
 
