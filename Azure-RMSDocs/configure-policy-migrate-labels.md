@@ -81,7 +81,7 @@ Use the following table to identify which configuration settings of a label cann
 |HYOK-based protection using user-defined permissions in Outlook for Do Not Forward |No|No|
 |Remove protection |No|No|
 |Visual markings (header, footer, watermark): Custom font and custom font color by RGB code|No|Yes|
-|Visual markings per app<br /><br />Notes: Variables will display as text|No|Yes|
+|Visual markings per app<br /><br />Notes: Variables will display as text rather than the dynamic values|No|Yes|
 |Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and their tooltips|Not applicable|Yes|
 
 
