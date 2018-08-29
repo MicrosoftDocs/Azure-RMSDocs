@@ -74,7 +74,7 @@ Use the following instructions to migrate your tenant and labels.
 
 1. Open a new browser window and sign in to the Azure portal by using the following link: https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade 
 
-2. On the **Azure Information Protection - Unified MIP labeling** blade, select **Activate** and follow the online instructions.
+2. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
 
 For the labels that successfully migrate, they can now be used by [clients that support unified labeling](#clients-that-support-unified-labeling) when these labels are published in the Security & Compliance Center.
 
