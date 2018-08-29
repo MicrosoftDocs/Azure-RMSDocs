@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.custom: askipteam
@@ -79,7 +79,7 @@ For more information about templates in the Azure portal, see [Configuring and m
 
 ## I've protected a document and now want to change the usage rights or add users—do I need to reprotect the document?
 
-If the document was protected by using a label or template, there's no need to reprotect the document. Modify the label or template by making your changes to the usage rights or add new groups (or users), and then save and publish these changes:
+If the document was protected by using a label or template, there's no need to reprotect the document. Modify the label or template by making your changes to the usage rights or add new groups (or users), and then save these changes:
 
 - When a user hasn't accessed the document before you made the changes, the changes take effect as soon as the user opens the document.
 
