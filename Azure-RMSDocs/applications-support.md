@@ -46,11 +46,11 @@ Search services can integrate with Rights Management in different ways. For exam
 
 - SharePoint Online and SharePoint Server apply Rights Management protection to files only on download. This implementation means that indexing and search results on SharePoint are not affected by this document protection solution. However, if you have a document that you want to store in SharePoint and this document should not be returned in search results, protect the document before uploading it to SharePoint.
 
-- Windows desktop search uses a shared index between different users of the device, so to keep the data in the protected documents secure, it does not index protected files. This means that although your search results don’t include files that you have protected, you can be assured that your files that contain sensitive data are not be displayed in search results for other users who might sign in to your PC, or connect to your PC. 
+- Windows desktop search uses a shared index between different users of the device, so to keep the data in the protected documents secure, it does not index protected files. This means that although your search results don’t include files that you have protected, you can be assured that your files that contain sensitive data are not displayed in search results for other users who might sign in to your PC, or connect to your PC. 
 
 ## Next steps
 
-Learn more about how each of the following applications and services support the Azure Rights Management service:
+Learn more about how each of the following applications and services supports the Azure Rights Management service:
 
 -   [RMS sharing application for Windows and mobile platforms](sharing-app-support.md)
 
