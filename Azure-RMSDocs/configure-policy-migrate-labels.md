@@ -70,7 +70,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 ### Label configuration migration details
 
-Use the following table to identify which configuration settings of a label can be migrated with the label, and whether you should publish the migrated label in the Security & Compliance Center.
+Use the following table to identify which configuration settings of a label cannot be migrated with the label, and whether you should publish the migrated label in the Security & Compliance Center.
 
 |Label configuration|Supported in the Security & Compliance Center|Recommendation to publish|
 |-------------------|---------------------------------------------|-------------------------|
