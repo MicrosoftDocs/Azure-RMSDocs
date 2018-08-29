@@ -74,17 +74,16 @@ Use the following table to identify which configuration settings of a label can 
 
 |Label configuration|Supported in the Security & Compliance Center|Recommendation to publish|
 |-------------------|---------------------------------------------|-------------------------|
-|Status of enabled or disabled<br /><br />Not synchronized to the Security & Compliance Center |Not applicable|Not applicable|
-|Label color: Select from list or specify by using RGB code<br /><br />Label colors are not shown and not used in the Security & Compliance Center |Not applicable|Not applicable|
+|Status of enabled or disabled<br /><br />Notes: Not synchronized to the Security & Compliance Center |Not applicable|Not applicable|
+|Label color: Select from list or specify by using RGB code<br /><br />Notes: Label colors are not shown and not used in the Security & Compliance Center |Not applicable|Not applicable|
 |Cloud-based protection using a predefined template |No|No|
 |Cloud-based protection using user-defined permissions in Word, Excel, and PowerPoint |No|No|
 |HYOK-based protection using a predefined template |No|No|
-|HYOK-based protection using user-defined permissions in Word, Excel, and PowerPoint |No|No|
+|HYOK-based protection using user-defined permissions in Outlook for Do Not Forward |No|No|
 |Remove protection |No|No|
-|Visual markings (footer, header, watermark): Custom font|No|Yes|
-|Visual markings (footer, header, watermark): Custom font color by RGB code|No|No|
-|Visual markings per app<br /><br />Variables will display as text|No|Yes|
-|Conditions and associated settings <br /><br />Includes automatic and recommended labeling, and tooltips|Not applicable|Yes|
+|Visual markings (header, footer, watermark): Custom font and Custom font color by RGB code|No|Yes|
+|Visual markings per app<br /><br />Notes: Variables will display as text|No|Yes|
+|Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and tooltips|Not applicable|Yes|
 
 
 
