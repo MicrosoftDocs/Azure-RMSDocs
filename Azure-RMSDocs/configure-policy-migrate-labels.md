@@ -83,7 +83,7 @@ Use the following table to identify which configuration settings of a label can 
 |Remove protection |No|No|
 |Visual markings (header, footer, watermark): Custom font and Custom font color by RGB code|No|Yes|
 |Visual markings per app<br /><br />Notes: Variables will display as text|No|Yes|
-|Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and tooltips|Not applicable|Yes|
+|Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and their tooltips|Not applicable|Yes|
 
 
 
