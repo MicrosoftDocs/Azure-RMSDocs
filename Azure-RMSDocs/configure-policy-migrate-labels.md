@@ -30,7 +30,7 @@ ms.suite: ems
 > [!IMPORTANT]
 > This feature is in preview, and migrates your tenant to a new platform that is also in preview. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by multiple clients and services.
 
-Migrate your labels if you want to be able to use them in the Office 365 Security & Compliance Center, where they can be published and then downloaded by [Microsoft Information Protection (MIP) clients](#mip-clients). The Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
+Migrate your labels if you want to be able to use them in the Office 365 Security & Compliance Center, where they can be published and then downloaded by [clients that support unified labeling](#clients-that-support-unified-labeling). The Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
 
 After you have migrated your labels, you can then make changes to them in the Azure portal or the Security & Compliance Center, and the respective clients will download the same change.
 
@@ -38,7 +38,7 @@ After you have migrated your labels, you can then make changes to them in the Az
 
 Before you migrate your labels, make sure that you are aware of the following changes and considerations:
 
-- Not all clients currently support unified labels. Make sure that you have [supported clients](#mip-clients) and be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the Security & Compliance Center (for client that do support unified labels).
+- Not all clients currently support unified labels. Make sure that you have [supported clients](#clients-that-support-unified-labeling) and be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the Security & Compliance Center (for client that do support unified labels).
 
 - If you are in the middle of defining and configuring the labels that you want to use, we recommend that you complete this process by using the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in the Security & Compliance Center.
 
@@ -76,12 +76,12 @@ Use the following instructions to migrate your tenant and labels.
 
 2. On the **Azure Information Protection - Unified MIP labeling** blade, select **Activate** and follow the online instructions.
 
-For the labels that successfully migrate, they can now be used by [MIP clients](#mip-clients) when these labels are published in the Security & Compliance Center.
+For the labels that successfully migrate, they can now be used by [clients that support unified labeling](#clients-that-support-unified-labeling) when these labels are published in the Security & Compliance Center.
 
 
-### MIP clients
+### Clients that support unified labeling
 
-Microsoft Information Protection (MIP) clients currently include:
+The clients that currently support unified labeling include:
 
 - MacOS computers that use Office for Mac 2016 (public preview)
 
