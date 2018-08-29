@@ -42,7 +42,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 - If you are in the middle of defining and configuring the labels that you want to use, we recommend that you complete this process by using the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in the Security & Compliance Center.
 
-- Policies, including policy settings and who has access to them (scoped policies) are not migrated. For these changes that are not migrated, you will need to configure the relevant options in the Security & Compliance Center after the labels are migrated.
+- Policies, including policy settings and who has access to them (scoped policies), and all advanced client settings are not migrated. For these changes that are not migrated, you will need to configure the relevant options in the Security & Compliance Center after the labels are migrated.
     
     For a more consistent user experience, we recommend you publish the same labels in the same scopes in the Security & Compliance Center.
 
@@ -75,12 +75,12 @@ Use the following table to identify which configuration settings of a label cann
 |Label configuration|Supported in the Security & Compliance Center|Recommendation to publish|
 |-------------------|---------------------------------------------|-------------------------|
 |Status of enabled or disabled<br /><br />Notes: Not synchronized to the Security & Compliance Center |Not applicable|Not applicable|
-|Label color: Select from list or specify by using RGB code<br /><br />Notes: Label colors are not shown and not used in the Security & Compliance Center |Not applicable|Not applicable|
+|Label color: Select from list or specify by using RGB code<br /><br />Notes: Label colors are not supported by the Security & Compliance Center |Not applicable|Not applicable|
 |Cloud-based protection or HYOK-based protection using a predefined template |No|No|
 |Cloud-based protection using user-defined permissions in Word, Excel, and PowerPoint |No|No|
 |HYOK-based protection using user-defined permissions in Outlook for Do Not Forward |No|No|
 |Remove protection |No|No|
-|Visual markings (header, footer, watermark): Custom font and custom font color by RGB code|No|Yes|
+|Visual markings (header, footer, watermark): Custom font and custom font color by RGB code<br /><br />Notes: Variables will display as text rather than the dynamic values|No|Yes|
 |Visual markings per app<br /><br />Notes: Variables will display as text rather than the dynamic values|No|Yes|
 |Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and their tooltips|Not applicable|Yes|
 
