@@ -70,7 +70,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 ### Label settings that are not supported in the Security & Compliance Center
 
-Use the following table to identify which configuration settings of a migrated label are not supported for clients that use these labels, and whether you should publish the migrated label in the Security & Compliance Center. If you publish labels that are identified as to be excluded from publishing, no labels display for the clients that support unified labeling.
+Use the following table to identify which configuration settings of a migrated label are not supported for clients that use these labels, and whether you should publish the migrated label in the Security & Compliance Center. If you publish labels that are identified to be excluded from publishing, no labels display for the clients that support unified labeling.
 
 |Label configuration|Supported in the Security & Compliance Center|Exclude from publishing|
 |-------------------|---------------------------------------------|-------------------------|
@@ -80,7 +80,7 @@ Use the following table to identify which configuration settings of a migrated l
 |Cloud-based protection using user-defined permissions in Word, Excel, and PowerPoint |No|Yes|
 |HYOK-based protection using user-defined permissions in Outlook for Do Not Forward |No|Yes|
 |Remove protection |No|Yes|
-|Visual markings (header, footer, watermark): Custom font and custom font color by RGB code|No|Recommended if you use variables<br /><br />- Variables display as text rather than the dynamic values|
+|Visual markings (header, footer, watermark): Custom font and custom font color by RGB code|No|No|
 |Visual markings per app|No|Recommended if you use variables<br /><br />- Variables display as text rather than the dynamic values|
 |Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and their tooltips|Not applicable|No|
 
