@@ -46,7 +46,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
     
     For a more consistent user experience, we recommend you publish the same labels in the same scopes in the Security & Compliance Center.
 
-- Not all settings from a label's configuration is migrated. For those settings, see the table in the [Label settings that do not migrate](#label-settings-that-do-not-migrate) section to help you understand the impact of these settings post migration and our recommendation of whether to publish the migrated label.
+- Not all settings from a migrated label are supported by the clients that will use these labels. Use the table in the [Label settings that are not supported post migration](#label-settings-that-are-not-supported-post-migration) section to help you identify these settings and whether we recommend you publish the migrated label.
 
 - Protection templates:
     
@@ -68,9 +68,9 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 - Unified labeling is still rolling out to tenants. If it's not yet supported for your tenant, the migration will not succeed and gracefully undo any changes. Until it's supported for all tenants, you must use a special link to access the option to migrate your tenant and labels. This link is provided in the instructions that follow.
 
-### Label settings that do not migrate
+### Label settings that are not supported post migration
 
-Use the following table to identify which configuration settings of a label cannot be migrated with the label, and whether you should publish the migrated label in the Security & Compliance Center.
+Use the following table to identify which configuration settings of a migrated label are not supported for clients that use these labels, and whether you should publish the migrated label in the Security & Compliance Center.
 
 |Label configuration|Supported in the Security & Compliance Center|Recommendation to publish|
 |-------------------|---------------------------------------------|-------------------------|
