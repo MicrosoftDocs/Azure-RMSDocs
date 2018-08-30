@@ -68,21 +68,21 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 - Unified labeling is still rolling out to tenants. If it's not yet supported for your tenant, the migration will not succeed and gracefully undo any changes. Until it's supported for all tenants, you must use a special link to access the option to migrate your tenant and labels. This link is provided in the instructions that follow.
 
-### Label settings that are not supported post migration
+### Label settings that are not supported in the Security & Compliance Center
 
 Use the following table to identify which configuration settings of a migrated label are not supported for clients that use these labels, and whether you should publish the migrated label in the Security & Compliance Center.
 
-|Label configuration|Supported in the Security & Compliance Center|Recommendation to publish|
+|Label configuration|Supported in the Security & Compliance Center|Exclude from publishing|
 |-------------------|---------------------------------------------|-------------------------|
 |Status of enabled or disabled<br /><br />Notes: Not synchronized to the Security & Compliance Center |Not applicable|Not applicable|
 |Label color: Select from list or specify by using RGB code<br /><br />Notes: Label colors are not supported by the Security & Compliance Center |Not applicable|Not applicable|
-|Cloud-based protection or HYOK-based protection using a predefined template |No|No|
-|Cloud-based protection using user-defined permissions in Word, Excel, and PowerPoint |No|No|
-|HYOK-based protection using user-defined permissions in Outlook for Do Not Forward |No|No|
-|Remove protection |No|No|
-|Visual markings (header, footer, watermark): Custom font and custom font color by RGB code<br /><br />Notes: Variables will display as text rather than the dynamic values|No|Yes|
-|Visual markings per app<br /><br />Notes: Variables will display as text rather than the dynamic values|No|Yes|
-|Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and their tooltips|Not applicable|Yes|
+|Cloud-based protection or HYOK-based protection using a predefined template |No|Yes|
+|Cloud-based protection using user-defined permissions in Word, Excel, and PowerPoint |No|Yes|
+|HYOK-based protection using user-defined permissions in Outlook for Do Not Forward |No|Yes|
+|Remove protection |No|Yes|
+|Visual markings (header, footer, watermark): Custom font and custom font color by RGB code|No|No|
+|Visual markings per app|No|Recommended if you use variables<br /><br />Notes: Variables will display as text rather than the dynamic values|
+|Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and their tooltips|Not applicable|No|
 
 
 
