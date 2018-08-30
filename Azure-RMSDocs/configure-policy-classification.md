@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/16/2018
+ms.date: 08/20/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
@@ -104,9 +104,6 @@ You can change this behavior so that the Azure Information Protection client per
 When you click **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
 
 ### Sensitive information types that require a minimum version of the client
-
-> [!NOTE]
-> The following sensitivity information types are now rolling out to tenants but might not yet be displayed for you to select. However, if you configure the Azure Information Protection scanner to [identify all custom conditions and known sensitive information types](deploy-aip-scanner.md#using-the-scanner-with-alternative-configurations), the preview version of the scanner can detect these new information types even if you can't select them in the Azure portal.
 
 The following sensitive information types currently require the preview version of the Azure Information Protection client:
 
