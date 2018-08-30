@@ -120,7 +120,7 @@ By default, the Azure Information Protection client automatically tries to conne
 
 Note that without an Internet connection, the client cannot apply protection (or remove protection) by using your organization's cloud-based key. Instead, the client is limited to using labels that apply classification only, or protection that uses [HYOK](../configure-adrms-restrictions.md).
 
-Locate the following value name and set the value data to **0**:
+To configure this setting, locate the following value name in the registry and set the value data to **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
