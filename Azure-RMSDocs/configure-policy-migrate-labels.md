@@ -46,7 +46,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
     
     For a more consistent user experience, we recommend you publish the same labels in the same scopes in the Security & Compliance Center.
 
-- Not all settings from a migrated label are supported by the clients that will use these labels. Use the table in the [Label settings that are not supported post migration](#label-settings-that-are-not-supported-in-the-security--compliance-center) section to help you identify these settings and whether you should exclude the migrated labels from publishing in the Security & Compliance Center.
+- Not all settings from a migrated label are supported by the Security & Compliance Center. Use the table in the [Label settings that are not supported in the Security & Compliance Center](#label-settings-that-are-not-supported-in-the-security--compliance-center) section to help you identify these settings and whether you should exclude the migrated labels from publishing in the Security & Compliance Center.
 
 - Protection templates:
     
