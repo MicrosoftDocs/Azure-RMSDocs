@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/20/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
