@@ -118,7 +118,9 @@ Create the following DWORD value name (with any value data):
 
 By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service to download the latest Azure Information Protection policy. If you have computers that you know will not be able to connect to the Internet for a period of time, you can prevent the client from attempting to connect to the service by editing the registry. 
 
-Locate the following value name and set the value data to **0**:
+Note that without an Internet connection, the client cannot apply protection (or remove protection) by using your organization's cloud-based key. Instead, the client is limited to using labels that apply classification only, or protection that uses [HYOK](../configure-adrms-restrictions.md).
+
+To configure this setting, locate the following value name in the registry and set the value data to **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
