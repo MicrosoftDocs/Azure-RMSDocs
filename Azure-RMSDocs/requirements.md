@@ -96,7 +96,7 @@ The Azure Information Protection client can label and protect documents and emai
 
 - Office 365 ProPlus with 2016 apps or 2013 apps (Click-to-Run or Windows Installer-based installation)
     
-    These editions of Office are included with most but not all Office 365 subscriptions that include data protection from Azure Information Protection. Check your subscription information to see if Office 365 ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+    These editions of Office are included with most but not all Office 365 subscriptions that include protecting data from Azure Information Protection. Check your subscription information to see if Office 365 ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professional Plus 2016
 
@@ -108,7 +108,7 @@ Other editions of Office cannot protect documents and emails by using a Rights M
 
 The Azure Information Protection client does not support multiple versions of Office on the same computer. This client also does not support switching user accounts in Office.
 
-For information about which Office editions support the data protection service, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
+For information about which Office editions support the protection service, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
 
 ## Firewalls and network infrastructure
 
