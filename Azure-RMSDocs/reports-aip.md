@@ -6,7 +6,7 @@ description: How to use reports to see how your Azure Information Protection lab
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/00/2018
+ms.date: 09/00/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
