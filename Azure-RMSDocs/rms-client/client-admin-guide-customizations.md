@@ -453,7 +453,7 @@ To find the name of the shape that you're using as a header or footer:
 
 Use the name of the shape to specify a string value for the **PowerPointShapeNameToRemove** key. 
 
-Example: The shape name is **fc**. To remove the shape with this name, you specify the value: `"fc"`.
+Example: The shape name is **fc**. To remove the shape with this name, you specify the value: `fc`.
 
 - Key: **PowerPointShapeNameToRemove**
 
