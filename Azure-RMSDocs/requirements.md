@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2018
+ms.date: 08/31/2018
 ms.topic: get-started-article
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
@@ -116,7 +116,7 @@ If you have a firewall or similar intervening network devices that are configure
 
 In addition to the information in the Office article, specific to Azure Information Protection:
 
-- Allow HTTPS traffic on TCP 443 to **api.informationprotection.azure.com**.
+- Allow HTTPS traffic on TCP 443 to **informationprotection.hosting.portal.azure.net**.
 
 - If you use a web proxy that requires authentication, you must configure it to use integrated Windows authentication with the user's Active Directory logon credentials.
 
