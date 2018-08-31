@@ -376,11 +376,11 @@ This configuration option is currently in preview and is subject to change. It a
 
 This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
-This configuration lets you remove or replace headers or footers from documents when those visual markings have been applied by another labeling solution. For example, the old footer contains the name of an old label that you have now migrated to Azure Information Protection with a new label name and its own footer.
+These settings let you remove or replace headers or footers from documents when those visual markings have been applied by another labeling solution. For example, the old footer contains the name of an old label that you have now migrated to Azure Information Protection with a new label name and its own footer.
 
 When the client gets this configuration in its policy, the old headers and footers are removed or replaced when the document is saved. 
 
-This configuration is not supported for Outlook, and be aware that when you use it with Word, Excel, and PowerPoint, it can negatively affect the performance of these apps for users. Documents will take a long time to close. The configuration lets you define settings per application, for example, search for text in the headers and footers of Word documents but not Excel spreadsheets or PowerPoint presentations.
+This configuration is not supported for Outlook, and be aware that when you use it with Word, Excel, and PowerPoint, it can negatively affect the performance of these apps for users. The configuration lets you define settings per application, for example, search for text in the headers and footers of Word documents but not Excel spreadsheets or PowerPoint presentations.
 
 Because the pattern matching affects the performance for users, we recommend that you limit the Office application types (**W**ord, **E**xcel, **P**owerPoint) to just those that need to be searched:
 
@@ -439,7 +439,6 @@ To remove this multline footer, you create the following two entries:
 
 - Key Value 2: **\*Label applied*** 
 
-
 #### Optimization for PowerPoint
 
 Footers in PowerPoint are implemented as shapes. To avoid removing shapes that contain the text that you have specified but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process.
@@ -454,7 +453,7 @@ To find the name of the shape that you're using as a header or footer:
 
 Use the name of the shape to specify a string value for the **PowerPointShapeNameToRemove** key. 
 
-Example: The shape name is **fc**. To remove the shape with this name, you specify the value: `"fc"`.
+Example: The shape name is **fc**. To remove the shape with this name, you specify the value: `fc`.
 
 - Key: **PowerPointShapeNameToRemove**
 
