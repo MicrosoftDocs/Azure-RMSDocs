@@ -402,15 +402,15 @@ When you specify the string value for the **ExternalContentMarkingToRemove** key
 
 - Partial match to remove everything in the header or footer.
     
-    Example: Headers or footers contain the string **TEXT TO REMOVE**. You want to completely remove these headers or footers. You specify the value: `"*TEXT*"`.
+    Example: Headers or footers contain the string **TEXT TO REMOVE**. You want to completely remove these headers or footers. You specify the value: `*TEXT*`.
 
 - Complete match to remove just specific words in the header or footer.
     
-    Example: Headers or footers contain the string **TEXT TO REMOVE**. You want to remove the word **TEXT** only, which leaves the header or footer string as **TO REMOVE**. You specify the value: `"TEXT "`.
+    Example: Headers or footers contain the string **TEXT TO REMOVE**. You want to remove the word **TEXT** only, which leaves the header or footer string as **TO REMOVE**. You specify the value: `TEXT `.
 
 - Complete match to remove everything in the header or footer.
     
-    Example: Headers or footers have the string **TEXT TO REMOVE**. You want to remove headers or footers that have exactly this string. You specify the value: `"^TEXT TO REMOVE$"`.
+    Example: Headers or footers have the string **TEXT TO REMOVE**. You want to remove headers or footers that have exactly this string. You specify the value: `^TEXT TO REMOVE$`.
     
 
 The pattern matching for the string that you specify is case-insensitive. The maximum string length is 255 characters.
@@ -433,11 +433,11 @@ To remove this multline footer, you create the following two entries:
 
 - Key 1: **ExternalContentMarkingToRemove**
 
-- Key Value 1: **"\*Confidential*"**
+- Key Value 1: **\*Confidential***
 
 - Key 2: **ExternalContentMarkingToRemove**
 
-- Key Value 2: **"\*Label applied*"** 
+- Key Value 2: **\*Label applied*** 
 
 
 #### Optimization for PowerPoint
