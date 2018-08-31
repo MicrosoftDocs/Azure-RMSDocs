@@ -54,6 +54,7 @@ In addition to this usage logging, you also have the following logging options:
 |Client event logs|Usage activity for the Azure Information Protection client, logged in the local Windows **Applications and Services** event log, **Azure Information Protection**. <br /><br />For more information, see [Usage logging for the Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Client log files|Troubleshooting logs for the Azure Information Protection client, located in **%localappdata%\Microsoft\MSIP**. <br /><br />These files are designed for Microsoft Support.|
 
+In addition, information from the Azure Information Protection client usage logs and the Azure Information Protection scanner is collected and aggregated to create reports in the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md).
 
 Use the following sections for more information about the usage logging for the Azure Rights Management service. 
 
@@ -64,8 +65,6 @@ Starting February 2016, Azure Rights Management usage logging is enabled by def
 > There is no extra cost for the log storage or for the logging feature functionality.
 > 
 > If you used usage logging for Azure Rights Management prior to February 2016, you needed a subscription to Azure and sufficient storage on Azure, which is no longer the case.
-
-
 
 ## How to access and use your Azure Rights Management usage logs
 The Azure Rights Management service writes logs to your Azure storage account as a series of blobs. Each blob contains one or more log records, in W3C extended log format. The blob names are numbers, in the order in which they were created. The [How to interpret your Azure Rights Management usage logs](#how-to-interpret-your-azure-rights-management-usage-logs) section later in this document contains more information about the log contents and their creation.

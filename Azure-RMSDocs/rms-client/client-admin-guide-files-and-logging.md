@@ -94,7 +94,7 @@ The client logs user activity to the local Windows event log **Applications and 
     
 For information about usage logging for the protection service, see [Logging and analyzing usage of the Azure Rights Management service](../log-analyze-usage.md)
 
-
+For information about usage logging for the protection service, see [Logging and analyzing usage of the Azure Rights Management service](../log-analyze-usage.md)
 
 ## Next steps
 Now that you've identified all the log files associated with the Azure Information Protection client, see the following for additional information that you might need to support this client:
