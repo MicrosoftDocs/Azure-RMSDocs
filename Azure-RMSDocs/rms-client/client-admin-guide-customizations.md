@@ -439,7 +439,6 @@ To remove this multline footer, you create the following two entries:
 
 - Key Value 2: **\*Label applied*** 
 
-
 #### Optimization for PowerPoint
 
 Footers in PowerPoint are implemented as shapes. To avoid removing shapes that contain the text that you have specified but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process.
