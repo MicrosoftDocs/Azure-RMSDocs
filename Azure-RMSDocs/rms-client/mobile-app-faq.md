@@ -7,7 +7,7 @@ keywords: Some frequently asked questions to help you use the Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 08/31/2018
 ms.topic: article
 ms.service: information-protection
 ms.custom: askipteam
