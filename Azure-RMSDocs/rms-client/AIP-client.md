@@ -42,7 +42,7 @@ The Azure Information Protection client for Windows is a free, downloadable clie
 
 For install instructions:
 
-- [End users](install-client-app)
+- [End users](install-client-app.md)
 
 - [Administrators](client-admin-guide-install.md)
 
