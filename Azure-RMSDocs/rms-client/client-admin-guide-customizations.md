@@ -425,6 +425,10 @@ Because some documents might include invisible characters or different kinds of 
 
 If a header or footer text is more than a single line, create a key and value for each line. For example, you have the following footer with two lines:
 
+
+|The file is classified as Confidential <br />Label applied manually|
+
+
 **The file is classified as Confidential**
 
 **Label applied manually**
