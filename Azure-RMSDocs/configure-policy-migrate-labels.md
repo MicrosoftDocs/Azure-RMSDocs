@@ -72,7 +72,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 Use the following table to identify which configuration settings of a migrated label are not supported for clients that use these labels, and whether you should edit and publish the migrated label in the Security & Compliance Center. If you publish labels that are identified to be excluded from publishing, no labels display for the clients that support unified labeling.
 
-Azure Information Protection clients can continue to use these label settings without any problems because they continue to download the labels from the Azure portal.
+Azure Information Protection clients can use these label settings without any problems because they continue to download the labels from the Azure portal.
 
 |Label configuration|Supported in the Security & Compliance Center|Exclude from editing and publishing in the Security & Compliance Center|
 |-------------------|---------------------------------------------|-------------------------|
