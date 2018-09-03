@@ -70,11 +70,11 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 ### Label settings that are not supported in the Security & Compliance Center
 
-Use the following table to identify which configuration settings of a migrated label are not supported for clients that use these labels, and whether you should publish the migrated label in the Security & Compliance Center. If you publish labels that are identified to be excluded from publishing, no labels display for the clients that support unified labeling.
+Use the following table to identify which configuration settings of a migrated label are not supported for clients that use these labels, and whether you should edit and publish the migrated label in the Security & Compliance Center. If you publish labels that are identified to be excluded from publishing, no labels display for the clients that support unified labeling.
 
-Azure Information Protection clients can continue to use these label settings without any problems.
+Azure Information Protection clients can continue to use these label settings without any problems because they continue to download the labels from the Azure portal.
 
-|Label configuration|Supported in the Security & Compliance Center|Exclude from publishing|
+|Label configuration|Supported in the Security & Compliance Center|Exclude from editing and publishing in the Security & Compliance Center|
 |-------------------|---------------------------------------------|-------------------------|
 |Status of enabled or disabled<br /><br />Notes: Not synchronized to the Security & Compliance Center |Not applicable|Not applicable|
 |Label color: Select from list or specify by using RGB code<br /><br />Notes: Label colors are not supported by the Security & Compliance Center |Not applicable|Not applicable|
