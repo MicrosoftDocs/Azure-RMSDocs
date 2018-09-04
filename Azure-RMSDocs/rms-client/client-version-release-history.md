@@ -48,9 +48,9 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Versions later than 1.29.5.0
+## Version 1.37.19.0
 
-If you have a version of the client that is later than 1.29.5.0, it is a preview build for testing and evaluation purposes.
+**Released**: 00/17/2018
 
 This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 

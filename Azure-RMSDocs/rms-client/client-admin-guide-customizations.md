@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 09/17/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -96,7 +96,7 @@ In addition, check that these computers do not have a file named **Policy.msip**
 
 ## Modify the email address for the Report an Issue link
 
-This configuration option is currently in preview and is subject to change. It also requires the preview version of the Azure Information Protection client.
+This configuration option is currently in preview and is subject to change.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
@@ -247,13 +247,13 @@ To configure this advanced setting, enter the following strings:
 
 ## Don't protect PDF files by using the ISO standard for PDF encryption
 
-This configuration option is currently in preview and is subject to change. It also requires the preview version of the Azure Information Protection client.
+This configuration option is currently in preview and is subject to change.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When the general availability (GA) version of the Azure Information Protection client protects a PDF file, the resulting file has a .ppdf file name extension. However, when the current preview version of the Azure Information Protection client protects a PDF file, the resulting file name extension remains as .pdf and adheres to the ISO standard for PDF encryption. For more information about this standard, see section **7.6 Encryption** from the [document that is derived from ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) and published by Adobe Systems Incorporated.
+When the current general availability (GA) version of the Azure Information Protection client protects a PDF file, the resulting file name extension remains as .pdf and adheres to the ISO standard for PDF encryption. For more information about this standard, see section **7.6 Encryption** from the [document that is derived from ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) and published by Adobe Systems Incorporated.
 
-If you need the current preview version of the client to revert to the GA behavior, use the following advanced setting by entering the following string:
+If you need the client to revert to the behavior in older versions of the client and protect PDF files by using a .ppdf file name extension, use the following advanced setting by entering the following string:
 
 - Key: **EnablePDFv2Protection**
 
@@ -263,7 +263,7 @@ For the Azure Information Protection scanner to use the new setting, the scanner
 
 ## Support for files protected by Secure Islands
 
-This configuration option is currently in preview and is subject to change. It also requires the preview versions of the Azure Information Protection client, the Azure Information Protection scanner, or the Azure Information Protection viewer.
+This configuration option is currently in preview and is subject to change.
 
 If you used Secure Islands to protect documents, you might have protected text and picture files, and generically protected files as a result of this protection. For example, files that have a file name extension of .ptxt, .pjpeg, or .pfile. When you edit the registry as follows, Azure Information Protection can decrypt these files:
 
@@ -372,7 +372,7 @@ The advanced client setting:
 
 ## Remove headers and footers from other labeling solutions
 
-This configuration option is currently in preview and is subject to change. It also requires the preview version of the Azure Information Protection client.
+This configuration option is currently in preview and is subject to change.
 
 This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
