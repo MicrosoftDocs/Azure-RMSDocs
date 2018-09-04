@@ -378,7 +378,7 @@ This configuration uses multiple [advanced client settings](#how-to-configure-ad
 
 These settings let you remove or replace headers or footers from documents when those visual markings have been applied by another labeling solution. For example, the old footer contains the name of an old label that you have now migrated to Azure Information Protection with a new label name and its own footer.
 
-When the client gets this configuration in its policy, the old headers and footers are removed or replaced when the document is saved. 
+When the client gets this configuration in its policy, the old headers and footers are removed or replaced when the document is opened in the Office app and any Azure Information Protection label is applied to the document.
 
 This configuration is not supported for Outlook, and be aware that when you use it with Word, Excel, and PowerPoint, it can negatively affect the performance of these apps for users. The configuration lets you define settings per application, for example, search for text in the headers and footers of Word documents but not Excel spreadsheets or PowerPoint presentations.
 
