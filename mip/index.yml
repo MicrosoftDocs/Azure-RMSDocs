@@ -49,7 +49,7 @@ sections:
     className: cardsM
     columns: 2
     items:
-    - href: https://channel9.msdn.com/Shows/Internet-of-Things-Show/Part-18-Contoso-HVACs-Digital-transformation-through-Internet-of-Things-solutions/player
+    - href: https://www.youtube.com/embed/6hneqjL4qjI
       html: <p>TODO</p>
       image: 
         src: media/index/i_video.svg

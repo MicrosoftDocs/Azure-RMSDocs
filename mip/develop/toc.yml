@@ -6,6 +6,12 @@
     href: concepts/overview.md
 - name: Quickstarts
   items:
+  - name: List sensitivity labels (C++)
+    href: list-labels-cpp.md
+  - name: Apply a label (C++)
+    href: apply-label-cpp.md
+  - name: Read a label (C++)
+    href: read-label-cpp.md
   - name: Simple authentication - C++
     href: authentication/simple-authentication.md
   - name: Simple authentication - Node.js
@@ -14,22 +20,7 @@
     href: authentication/python.md
   - name: Authentication delegate - C++
     href: authentication/authdelegate.md
-  - name: Apply label - C++
-  - name: List labels - C++
-  - name: Read label - C++
-- name: Tutorials
-  items:
-  - name: Mint an authentication token
-  - name: Create an authentication delegate
-    href: authentication/authdelegate.md
-  - name: Initialize a FileProfile
-  - name: Add an engine and list labels
 - name: Samples
-  items:
-  - name: C# UWP thing
-  - name: Commandline cross-platform file API
-  - name: Commandline cross-platform UPE API
-  - name: Commandline cross-platform protection API
 - name: Concepts
   items:
   - name: The APIs
