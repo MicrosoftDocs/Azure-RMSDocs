@@ -1,5 +1,5 @@
 ---
-title: Quickstart: List sensitivity labels in a Microsoft Information Protection tenant using C++
+title: Quickstart - List sensitivity labels in a Microsoft Information Protection tenant using C++
 description: A quickstart showing you how to use the Microsoft Information Protection C++ SDK to list the sensitivity labels in your tenant.
 services: information-protection
 author: BryanLa
@@ -42,7 +42,7 @@ procedure.
 1. Step one of the procedure
 1. Step two of the procedure
 1. Step three of the procedure
-   ![Browser](media/contribute-how-to-mvc-quickstart/browser.png)
+   
    <!---Use screenshots but be judicious to maintain a reasonable length. Make
     sure screenshots align to the
     [current standards](contribute-mvc-screen-shots.md).
