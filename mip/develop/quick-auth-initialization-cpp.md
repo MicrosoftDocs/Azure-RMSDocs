@@ -13,7 +13,7 @@ ms.author: bryanla
 
 This quickstart illustrates the patterns used by MIP SDK clients for authentication and initialization. The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs.
 
-[!NOTE]
+> [!NOTE]
 > Although this quickstart uses File API examples, this same pattern is applicable to clients using the Policy and Protection APIs.
 
 Perhaps use https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions 

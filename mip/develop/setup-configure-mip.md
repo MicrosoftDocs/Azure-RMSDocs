@@ -73,7 +73,7 @@ As part of the Office 365 subscription provisioning process, an associated Azure
 
 Application accounts are created using the [Azure AD **App registrations** page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), in the Azure portal. To create an application account for use by the applications you'll build with the MIP SDK:
 
-[!IMPORTANT] 
+> [!IMPORTANT] 
 > To access the Azure AD **App registrations** page, you'll need to sign in to the portal with a user account that is a member of the [Subscription administrator](/azure/billing/billing-add-change-azure-subscription-administrator) role.
 > TBD - if they need to add access to an API/perms that require admin consent, they'll also need to be global admin in the tenant, and "Grant Permissions" when adding the API/perm. It isn't clear yet if we have MIP APIs to add to perms?
 > We recommend testing with a restricted account, when passing username and password commandline parameters. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
