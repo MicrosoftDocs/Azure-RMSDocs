@@ -7,7 +7,7 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/31/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 
