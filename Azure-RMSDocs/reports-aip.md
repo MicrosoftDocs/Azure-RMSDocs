@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Reporting for Azure Information Protection
-description: How to use reports to see how your Azure Information Protection labels are being used and what sensitive information you have
+title: Central reporting for Azure Information Protection
+description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Reporting for Azure Information Protection
+# Central reporting for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
