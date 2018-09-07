@@ -1,5 +1,5 @@
 ---
-title: Quickstart - List sensitivity labels in a Microsoft Information Protection (MIP) tenant using C++
+title: Quickstart - List sensitivity labels in a Microsoft Information Protection (MIP) tenant using C++ MIP SDK
 description: A quickstart showing you how to use the Microsoft Information Protection C++ SDK to list the sensitivity labels in your tenant.
 services: information-protection
 author: BryanLa
@@ -9,7 +9,7 @@ ms.date: 09/10/2018
 ms.author: bryanla
 ---
 
-# Quickstart: List sensitivity labels
+# Quickstart: List sensitivity labels (C++)
 
 Introductory paragraph.
 <!--- Answer the fundamental "why would I want to do this?" question. --->
