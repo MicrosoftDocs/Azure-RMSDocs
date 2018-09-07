@@ -7,7 +7,7 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/29/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
