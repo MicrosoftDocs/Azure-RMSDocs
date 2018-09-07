@@ -8,20 +8,16 @@
   href: setup-configure-mip.md
 - name: Quickstarts
   items:
-  - name: List sensitivity labels (C++)
-    href: quick-list-labels-cpp.md
-  - name: Apply a label (C++)
-    href: quick-apply-label-cpp.md
-  - name: Read a label (C++)
-    href: quick-read-label-cpp.md
-  - name: (TBD) Simple authentication - C++ 
-    href: authentication/simple-authentication.md
-  - name: (TBD) Simple authentication - Node.js
-    href: authentication/node.md
-  - name: (TBD) Simple authentication - Python
-    href: authentication/python.md
-  - name: (TBD) Authentication delegate - C++
-    href: authentication/authdelegate.md
+  - name: Authentication and initialization (C++)
+    href: quick-auth-initialization-cpp.md
+  - name: File APIs
+    items:
+    - name: List sensitivity labels (C++)
+      href: quick-file-list-labels-cpp.md
+    - name: Apply a label (C++)
+      href: quick-file-apply-label-cpp.md
+    - name: Read a label (C++)
+      href: quick-file-read-label-cpp.md
 - name: Samples
 - name: Concepts
   items:
