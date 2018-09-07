@@ -52,7 +52,7 @@ The following steps cover items you need to complete to ensure your client compu
     - **Desktop development with C++** Windows workload, plus the following optional components:
         - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default 
 
-        ![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)
+        [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
 3. Download the SDK binaries and samples: 
     - IF we're using a GitHub Repo (TBD)
@@ -69,17 +69,13 @@ The following steps cover items you need to complete to ensure your client compu
 
 ## Register a client application with Azure Active Directory
 
-As part of the Office 365 subscription provisioning process, an Azure AD tenant is also created. The Azure AD tenant provides identity and access management for your Office 365 subscription, and is managed through the [Azure portal](https://portal.azure.com).
+As part of the Office 365 subscription provisioning process, an associated Azure AD tenant is created. The Azure AD tenant provides identity and access management for Office 365 *user accounts* and *application accounts*. Upon sign-in, accounts are represented by a *security principal*, which encapsulates the account's identity configuration for access control, etc. Security principals that represent an application account are referred to as a [*service principal*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
 
-Among other things, Azure AD manages identity and access for all user and application accounts. Accounts are represented by a security principal upon sign-in, encapsulating the identity configuration for the account. An application security principal is referred to as a [service principal](/azure/active-directory/develop/developer-glossary#service-principal-object). 
+Applications built with the MIP SDK use an application account to authenticate with Azure AD and access MIP services. Application accounts are created using the [Azure AD **App registrations** page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), in the Azure portal. You can learn about the complete process in [Integrating applications with Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications).
 
-The MIP SDK uses a service principal to authenticate and download the MIP policy. After following the steps above, a standard user account or service principal must be used to authenticate to the service.
+[!IMPORTANT] 
+> In tutorials that require username and password commandline parameters, we recommend testing with a restricted account. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
 
-**Important**: In tutorials that require username and password commandline parameters, we recommend testing with a restricted account. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
-
-Authenticating to Azure Active Directory (AD) requires that the client application is registered, via the Azure AD Application Registration portal. [This process](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications) describes the steps required.
-
-MIP SDK-specific steps will be covered in a later tutorial. This link is intended to provide a high-level overview of the process.
 
 ## TBD: Define Label Taxonomy and Protection Settings?
 

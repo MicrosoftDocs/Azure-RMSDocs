@@ -18,7 +18,6 @@
       href: quick-file-apply-label-cpp.md
     - name: Read a label (C++)
       href: quick-file-read-label-cpp.md
-- name: Samples
 - name: Concepts
   items:
   - name: The APIs
