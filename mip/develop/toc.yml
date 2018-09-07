@@ -3,7 +3,7 @@
 - name: Overview
   items:
   - name: About Microsoft Information Protection SDK
-    href: concepts/overview.md
+    href: overview.md
 - name: Setup
   href: setup-mip-client.md
 - name: Quickstarts
@@ -14,13 +14,13 @@
     href: quick-apply-label-cpp.md
   - name: Read a label (C++)
     href: quick-read-label-cpp.md
-  - name: Simple authentication - C++
+  - name: (TBD) Simple authentication - C++ 
     href: authentication/simple-authentication.md
-  - name: Simple authentication - Node.js
+  - name: (TBD) Simple authentication - Node.js
     href: authentication/node.md
-  - name: Simple authentication - Python
+  - name: (TBD) Simple authentication - Python
     href: authentication/python.md
-  - name: Authentication delegate - C++
+  - name: (TBD) Authentication delegate - C++
     href: authentication/authdelegate.md
 - name: Samples
 - name: Concepts
