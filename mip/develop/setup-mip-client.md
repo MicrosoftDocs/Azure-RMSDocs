@@ -21,7 +21,9 @@ Be sure to review the following topics before getting started:
 * [What is Azure Information Protection?](https://docs.microsoft.com/azure/information-protection/understand-explore/what-is-information-protection)
 * [How does the protection work in Azure Information Protection?](https://docs.microsoft.com/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
-You also need access to an Office 365 subscription. You may use any of the following types of subscriptions:
+## Sign up for an Office 365 subscription
+
+You need access to an Office 365 subscription in order to run the SDK samples. You may use any of the following types of subscriptions:
 
 | Name | Sign-up |
 |------|---------|
@@ -33,6 +35,7 @@ You also need access to an Office 365 subscription. You may use any of the follo
 QUESTIONS:
 - Should we add Microsoft 365 to the above?
 - Is AIP Premium P1/P2 backed by an Azure AD tenant? Or does the user need to sign up for an Azure subscription first, and use that AAD account to get the AIP P1/P2 subscription?
+- Because the MIP SDK requires an Office 365 tenant with certain private preview features enabled, you must have an account from a properly flighted preview tenant. If you are doing the lab in-person at //Build, creds will be provided during the workshop but disabled after. If you're doing this lab outside of //Build, please head to https://aka.ms/mipsdkpreviewaccount and request an account. (TBD)
 
 ## Configure your client computer
 
@@ -40,21 +43,24 @@ The following steps cover items you need to complete to ensure your client compu
 
 ### Windows 10
 
-1. Using Windows Update, update your machine to Windows 10 Fall Creators Update or later.
-
-2. Ensure [Visual Studio 2017 is installed](https://visualstudio.microsoft.com/downloads/), with the following components (TBD, from //build):
-    - Universal Windows Platform development with C++ Universal Windows Platform Tools
-    - Windows 10 SDK 10.0.16299.0 for UWP or later
-    - Desktop development with C++ components
-    - Windows 10 SDK (10.0.16299.0 or later) for Desktop C++ 
-3. Download the SDK binaries - TBD: 
-    - https://aka.ms/mipsdkbins ? (Sep 2108)
-    - Supported platforms, system requirements
-4. Download the samples (TBD: might be part of above?)
-    - First create a [GitHub profile](https://github.com/join), if you don't already have one.
-    - Install the latest version of [Software Freedom Conservancy's Git client tools](https://git-scm.com/download/) for your platform. 
-    - TBD: git clone of repo/repos?
-5. If you're using a Windows 10 workstation, ensure "Developer Mode" is enabled:
+1. Using Windows Update, update your machine to Windows 10 Fall Creators Update (version 1709) or later. To  verify your current version:
+    - Click the Windows icon in the lower left
+    - Type "About your PC" and press the "Enter" key
+    - Scroll down to **Windows specifications** and look under **Version**
+2. Ensure [Visual Studio 2017 is installed](https://visualstudio.microsoft.com/downloads/), with the following components (TBD):
+    - **Universal Windows Platform development** workload, plus the following optional components:
+        - **C++ Universal Windows Platform tools**
+        - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default
+    - **Desktop development with C++** workload, plus the following optional components:
+        - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default 
+3. Download the SDK binaries and samples: 
+    - IF we're using a GitHub Repo (TBD)
+        - First create a [GitHub profile](https://github.com/join), if you don't already have one.
+        - Install the latest version of [Software Freedom Conservancy's Git client tools](https://git-scm.com/download/)
+        - `git clone <repo-path>`
+    - ELSE: https://aka.ms/mipsdkbins (Sep 2108)
+    - Info on supported platforms, system requirements (TBD)
+5. Ensure "Developer Mode" is enabled on your workstation:
     - Click the Windows icon in the lower left
     - Type "Use developer features" and press the "Enter" key
     - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
@@ -73,7 +79,6 @@ The MIP SDK uses a service principal to authenticate and download the MIP policy
 Authenticating to Azure Active Directory (AD) requires that the client application is registered, via the Azure AD Application Registration portal. [This process](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications) describes the steps required.
 
 MIP SDK-specific steps will be covered in a later tutorial. This link is intended to provide a high-level overview of the process.
-
 
 ## TBD: Define Label Taxonomy and Protection Settings?
 
