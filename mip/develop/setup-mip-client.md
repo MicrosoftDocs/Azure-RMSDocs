@@ -11,13 +11,13 @@ ms.author: bryanla
 
 # Set up and configure your Microsoft Information Protection (MIP) client workstation
 
-The quickstart and tutorial articles are centered around building applications that use MIP SDK libraries and APIs. This article shows you how to configure your client workstation, in preparation for using the SDK.
+The MIP quickstart and tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to configure your client workstation, in preparation for using the SDK.
 
 ## Prerequisites
 
 Be sure to review the following topics before getting started:
 
-* [What is Office 365 Security and Compliance Center?](https://support.office.com/article/overview-of-security-and-compliance-in-office-365-dcb83b2c-ac66-4ced-925d-50eb9698a0b2?redirectSourcePath=%252farticle%252f7fe448f7-49bd-4d3e-919d-0a6d1cf675bb&ui=en-US&rs=en-US&ad=US)
+* [What is Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 * [What is Azure Information Protection?](https://docs.microsoft.com/azure/information-protection/understand-explore/what-is-information-protection)
 * [How does the protection work in Azure Information Protection?](https://docs.microsoft.com/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
@@ -87,3 +87,8 @@ MIP SDK-specific steps will be covered in a later tutorial. This link is intende
 * Provide details on labeling taxonomy best practices.
 
 ## Next Steps
+
+Now you're ready to begin the first quickstart.
+
+> [!div class="nextstepaction"]
+> [List sensitivity labels](quick-list-labels-cpp.md)

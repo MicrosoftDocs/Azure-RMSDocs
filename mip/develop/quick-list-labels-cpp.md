@@ -62,3 +62,10 @@ Include a sentence or two to explain only what is needed to complete the procedu
 ## Procedure 3
 
 Include a sentence or two to explain only what is needed to complete the procedure.
+
+## Next Steps
+
+Now that you've learned how to set up the initialization code, and list sensitivity labels, try the next quickstart:
+
+> [!div class="nextstepaction"]
+> [Apply a label](quick-apply-label-cpp.md)
