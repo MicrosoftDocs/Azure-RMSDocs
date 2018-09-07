@@ -47,12 +47,15 @@ The following steps cover items you need to complete to ensure your client compu
     - Click the Windows icon in the lower left
     - Type "About your PC" and press the "Enter" key
     - Scroll down to **Windows specifications** and look under **Version**
-2. Ensure [Visual Studio 2017 is installed](https://visualstudio.microsoft.com/downloads/), with the following components (TBD):
-    - **Universal Windows Platform development** workload, plus the following optional components:
+2. Ensure [Visual Studio 2017 is installed](https://visualstudio.microsoft.com/downloads/), with the following workloads and components:
+    - **Universal Windows Platform development** Windows workload, plus the following optional components:
         - **C++ Universal Windows Platform tools**
         - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default
-    - **Desktop development with C++** workload, plus the following optional components:
+    - **Desktop development with C++** Windows workload, plus the following optional components:
         - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default 
+
+        ![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)
+
 3. Download the SDK binaries and samples: 
     - IF we're using a GitHub Repo (TBD)
         - First create a [GitHub profile](https://github.com/join), if you don't already have one.

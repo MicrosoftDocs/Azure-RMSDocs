@@ -12,27 +12,13 @@ ms.author: bryanla
 # Quickstart: List sensitivity labels
 
 Introductory paragraph.
-<!---Required:
-Lead with a light intro that describes, in customer-friendly language,
-what the customer will learn, or do, or accomplish. Answer the fundamental
-"why would I want to do this?" question.
---->
+<!--- Answer the fundamental "why would I want to do this?" question. --->
 
 In this quickstart, you will <do X>
 
-If you don’t have a <service> subscription, create a free trial account...
-<!--- Required, if a free trial account exists
-Because quickstarts are intended to help new customers use a subscription
-to quickly try out a specific product/service, include a link to a free
-trial before the first H2, if one exists. You can find listed examples in
-[Write quickstarts](contribute-how-to-mvc-quickstart.md)
---->
-
-<!---Avoid notes, tips, and important boxes. Readers tend to skip over them.
-Better to put that info directly into the article text.--->
-
 ## Prerequisites
 
+Be sure to complete the [Client workstation setup and configuration steps](setup-mip-client.md) before proceeding. 
 
 ## Procedure 1
 
