@@ -4,14 +4,16 @@
   items:
   - name: About Microsoft Information Protection SDK
     href: concepts/overview.md
+- name: Setup
+  href: setup-mip-client.md
 - name: Quickstarts
   items:
   - name: List sensitivity labels (C++)
-    href: list-labels-cpp.md
+    href: quick-list-labels-cpp.md
   - name: Apply a label (C++)
-    href: apply-label-cpp.md
+    href: quick-apply-label-cpp.md
   - name: Read a label (C++)
-    href: read-label-cpp.md
+    href: quick-read-label-cpp.md
   - name: Simple authentication - C++
     href: authentication/simple-authentication.md
   - name: Simple authentication - Node.js
