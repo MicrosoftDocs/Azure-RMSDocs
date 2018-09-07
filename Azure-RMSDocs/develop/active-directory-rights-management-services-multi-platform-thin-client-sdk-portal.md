@@ -8,10 +8,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 4ee4fa26-b4f7-478f-b360-be6f421c5718
 # optional metadata
 
@@ -54,5 +52,3 @@ This release, RMS SDK 4.2, is available for the following operating systems:
 [Developer guidance and terms](core-concepts.md) - The focus of RMS SDK 4.2 is to help you build AD RMS-enabled applications that leverage Right Management Services, as simply as possible.
 
 [API reference](api-reference-4-2.md) - The RMS SDK 4.2 supports several operating systems noted in the table of contents following.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

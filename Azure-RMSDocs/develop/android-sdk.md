@@ -8,10 +8,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 # optional metadata
 
@@ -155,4 +153,3 @@ Our UI library provides re-usable UI for consumption and protection operations f
 [Android API Reference](https://msdn.microsoft.com/library/dn758245.aspx)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

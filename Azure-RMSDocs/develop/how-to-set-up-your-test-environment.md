@@ -8,10 +8,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 # optional metadata
 
@@ -54,4 +52,3 @@ This guidance is not comprehensive. To learn how to configure the RMS Client 2.1
 * [Install the SDK](install-the-rms-sdk.md)
 * [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

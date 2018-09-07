@@ -6,11 +6,9 @@ description: Information for users who run the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/14/2018
-ms.topic: article
-ms.prod:
+ms.date: 08/06/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 
 
@@ -64,12 +62,11 @@ Protection-only mode runs in the following scenarios:
 
 ## Supported tasks for protection-only mode
 
-- Protect (and unprotect) documents and emails from within your Office apps, by using the Office Information Rights Management (IRM) feature: For example: Click **File** > **Info** > **Protect Document** > **Restrict Access**. For more information, see [Using information protection with Office 365, Office 2016, or Office 2013](../deploy-use/help-users.md).
+- Protect (and unprotect) documents and emails from within your Office apps, by using the Office Information Rights Management (IRM) feature: For example: Click **File** > **Info** > **Protect Document** > **Restrict Access**. For more information, see [Using information protection with Office 365, Office 2016, or Office 2013](../help-users.md).
 
 - Protect (and unprotect) files by using Windows File Explorer: Right-click the file, files, or folder > **Classify and protect**. To apply protection that has been configured by your administrator, in the **Classify and protect - Azure Information Protection** dialog box, click **Select template** and choose one of the available templates.
 
 - View protected files by using the Azure Information Protection Viewer.
 
 - Access the document tracking site from your Office apps. However, you must have a valid subscription to track and revoke documents from this site.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]  
+  

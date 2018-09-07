@@ -8,10 +8,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 9142dd29-f1f4-4c2f-82ac-534f14b8bba1
 # optional metadata
 
@@ -139,5 +137,3 @@ This topic outlines the built-in rights that the Microsoft Rights Management SDK
 - iOS and OS X: [MSEmailRights replyAll](https://msdn.microsoft.com/library/dn758319.aspx)
 - Windows Store and Windows Phone: [EmailRights.ReplyAll](https://msdn.microsoft.com/library/microsoft.rightsmanagement.emailrights.replyall.aspx)
 - Linux: [EmailRights::ReplyAll](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EmailRights.html)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

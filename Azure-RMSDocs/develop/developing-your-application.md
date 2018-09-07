@@ -8,10 +8,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 03/13/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 # optional metadata
 
@@ -236,4 +234,3 @@ Once you get everything built and executing, the outputs of the application shou
 6. Finally, you enter some policy metadata: policy name, description, and issuer (Azure AD Tenant) display name
 ![app output - step 6](../media/develop/app-output-6.png)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

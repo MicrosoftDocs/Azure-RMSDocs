@@ -7,11 +7,9 @@ keywords: Some frequently asked questions to help you use the Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
-ms.topic: article
-ms.prod: azure
+ms.date: 08/31/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 
@@ -68,7 +66,7 @@ If your personal email address was used to protect the file, use credentials fro
 
 Yes, when you apply for a Microsoft account, you can specify your Hotmail or Gmail email address, or any other email address that you own. 
 
-However, although this viewer can open protected files with this account, not all applications can open protected content when a Microsoft account is used for authentication. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+However, although this viewer can open protected files with this account, not all applications can open protected content when a Microsoft account is used for authentication. [More information](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## Which file extensions can I open with this app?
 
@@ -84,5 +82,3 @@ In the app, go to **Settings** > **Send feedback**.
 ## My question has not been answered—what should I do?
 
 Post your question on our [Yammer site](https://www.yammer.com/AskIPTeam).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

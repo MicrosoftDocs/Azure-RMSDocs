@@ -7,9 +7,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 09/25/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
@@ -238,4 +237,3 @@ This section outlines information about the current and previous releases of the
 
 **A**:The OS X SDK works with Xcode 4.6 and later only, as well as OS X 10.8 and later.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

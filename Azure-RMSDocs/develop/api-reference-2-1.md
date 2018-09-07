@@ -8,10 +8,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 6dcfa840-026b-4728-b53c-2c9c730fcf84
 # optional metadata
 
@@ -39,5 +37,3 @@ The Microsoft Rights Management SDK 2.1 supports RMS enablement of Windows clie
 ## Related topics
 
 * [Release notes](release-notes-rtm.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

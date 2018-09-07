@@ -7,10 +7,8 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 
 # optional metadata
@@ -70,5 +68,3 @@ For examples for how you might use the Rights Management sharing application, an
 
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

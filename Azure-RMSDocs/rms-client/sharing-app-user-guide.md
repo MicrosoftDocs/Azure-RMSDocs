@@ -7,10 +7,8 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/27/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 
 # optional metadata
@@ -72,6 +70,5 @@ Here are just some examples of how you might use the RMS sharing application, to
 
 - [Specify settings in the dialog box](sharing-app-dialog-box.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

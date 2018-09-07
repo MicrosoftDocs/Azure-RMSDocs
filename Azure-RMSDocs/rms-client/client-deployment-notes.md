@@ -7,10 +7,8 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 06/12/2018
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 
 # optional metadata
@@ -164,7 +162,7 @@ To perform service discovery, the RMS client checks the following:
 
 1. **The Windows registry on the local computer**: If service discovery settings are configured in the registry, these settings are tried first. 
 
-    By default, these settings are not configured in the registry but an administrator can configure them for AD RMS as documented in a [following section](#enabling-client-side-service-discovery-by-using-the-windows-registry). An administrator typically configures these settings for the Azure Rights Management service during the [migration process](../plan-design/migrate-from-ad-rms-phase2.md) from AD RMS to Azure Information Protection.
+    By default, these settings are not configured in the registry but an administrator can configure them for AD RMS as documented in a [following section](#enabling-client-side-service-discovery-by-using-the-windows-registry). An administrator typically configures these settings for the Azure Rights Management service during the [migration process](../migrate-from-ad-rms-phase2.md) from AD RMS to Azure Information Protection.
 
 2. **Active Directory Domain Services**: A domain-joined computer queries Active Directory for a service connection point (SCP). 
 
@@ -187,7 +185,7 @@ To perform service discovery, the RMS client checks the following:
 >  
 > - When a user initiates sign in from an Office application, the user name (and domain) from the authentication is used to identify the Azure Information Protection tenant to use. In this case, registry settings are not needed and the SCP is not checked.
 > 
-> - When you have configured [DNS redirection](../plan-design/migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) for Office 2016 click-to-run desktop apps, the RMS client finds the Azure Rights Management service by being denied access to the AD RMS cluster that it previously found. This deny action triggers the client to look for the SRV record, which redirects the client to the Azure Rights Management service for your tenant. This SRV record also lets Exchange Online decrypt emails that have been protected by your AD RMS cluster. 
+> - When you have configured [DNS redirection](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) for Office 2016 click-to-run desktop apps, the RMS client finds the Azure Rights Management service by being denied access to the AD RMS cluster that it previously found. This deny action triggers the client to look for the SRV record, which redirects the client to the Azure Rights Management service for your tenant. This SRV record also lets Exchange Online decrypt emails that have been protected by your AD RMS cluster. 
 
 ### AD RMS only: Enabling server-side service discovery by using Active Directory
 If your account has  sufficient privileges (Enterprise Admins and  local administrator for the AD RMS server), you can automatically register a service connection point (SCP) when you install the AD RMS root cluster server. If an SCP already exists in the forest, you must first delete the existing SCP before you can register  a new one.
@@ -268,4 +266,3 @@ In some cases, you might need to redirect traffic during service discovery, for 
 
 6.  Close Registry Editor.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

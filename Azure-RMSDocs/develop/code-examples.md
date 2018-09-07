@@ -8,10 +8,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 634df601-79d2-4bc2-b845-4df886d7c589
 # optional metadata
 
@@ -41,5 +39,3 @@ These topics will introduce you to important code elements for the associated ve
 - [Android code examples](android-code.md)
 - [Linux code examples](linux-c-code-examples.md)
 - [iOS/OS X code examples](ios-os-x-code-examples.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
