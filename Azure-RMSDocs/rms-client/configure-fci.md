@@ -6,11 +6,9 @@ description: Instructions to use the Rights Management (RMS) client with the Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
-ms.topic: article
-ms.prod:
+ms.date: 08/06/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 
 # optional metadata
@@ -34,7 +32,7 @@ Use this article for instructions and a script to use the Azure Information Prot
 This solution lets you automatically protect all files in a folder on a file server running Windows Server, or automatically protect files that meet a specific criteria. For example, files that have been classified as containing confidential or sensitive information. This solution connects directly to the Azure Rights Management service from Azure Information Protection to protect the files, so you must have this service deployed for your organization.
 
 > [!NOTE]
-> Although Azure Information Protection includes a [connector](../deploy-use/deploy-rms-connector.md) that supports File Classification Infrastructure, that solution supports native protection only—for example, Office files.
+> Although Azure Information Protection includes a [connector](../deploy-rms-connector.md) that supports File Classification Infrastructure, that solution supports native protection only—for example, Office files.
 > 
 > To support multiple file types with Windows Server file classification infrastructure, you must use the PowerShell **AzureInformationProtection** module, as documented in this article. The Azure Information Protection cmdlets, like the Azure Information Protection client, support generic protection as well as native protection, which means that file types other than Office documents can be protected. For more information, see [File types supported by the Azure Information Protection client](client-admin-guide-file-types.md) from the Azure Information Protection client admin guide.
 
@@ -59,7 +57,7 @@ Prerequisites for these instructions:
     
     - You have an Internet connection, and you have configured your computer settings if these are required for a proxy server. For example: `netsh winhttp import proxy source=ie`
     
-- You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email addresses. This is required for all users that might need to access files after they are protected by FCI and the Azure Rights Management service. If you do not do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this requirement, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).
+- You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email addresses. This is required for all users that might need to access files after they are protected by FCI and the Azure Rights Management service. If you do not do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this requirement, see [Preparing users and groups for Azure Information Protection](../prepare.md).
     
 - You have downloaded to the file server the Rights Management templates and identified the template ID that will protect the files. To do this, use the [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) cmdlet. This scenario does not support departmental templates so you must either use a template that is not configured for a scope, or the scope configuration must include the application compatibility option such that the **Show this template to all users when the applications do not support user identity** check box is selected.
 
@@ -299,6 +297,5 @@ Now all you need to do is create a new file management task that uses the same s
 
 ## Next steps
 
-You might be wondering: [What’s the difference between Windows Server FCI and the Azure Information Protection scanner?](../get-started/faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner) 
+You might be wondering: [What’s the difference between Windows Server FCI and the Azure Information Protection scanner?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner) 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

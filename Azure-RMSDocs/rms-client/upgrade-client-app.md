@@ -7,10 +7,8 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 06/29/2018
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 
 
@@ -62,5 +60,4 @@ More how-to instructions from the Azure Information Protection user guide:
 ## Additional information for administrators    
 See the [Azure Information Protection client administrator guide](client-admin-guide.md).
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]  
+  

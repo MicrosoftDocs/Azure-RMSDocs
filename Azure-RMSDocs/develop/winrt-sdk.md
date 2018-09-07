@@ -8,10 +8,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 # optional metadata
 
@@ -88,5 +86,3 @@ You are now ready to create your own new Windows Store apps.
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
 [Windows API Reference](https://msdn.microsoft.com/library/dn891914.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -8,10 +8,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
 # optional metadata
 
@@ -58,5 +56,3 @@ For this release of the Microsoft Rights Management SDK 4.2, your quick start a
   |[Setup developer environment](setup-developer-environment.md)|The following topics show you have to setup you your development environment to work with the AD RMS SDK APIs for your particular operating system.|
   |[Code examples](code-examples.md)|MS RMS SDK 4.2 includes example code and working projects for some supported operating systems.|
   |[Community resources](community-resources.md)|Active Directory Rights Management Services is well supported by a growing community of developers on multiple platforms.|
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

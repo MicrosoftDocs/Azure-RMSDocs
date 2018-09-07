@@ -7,10 +7,8 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 06/28/2018
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 
 # optional metadata
@@ -123,5 +121,3 @@ More how-to instructions from the Azure Information Protection user guide:
 
 ## Additional information for administrators    
 See [Configuring and using document tracking for Azure Information Protection](client-admin-guide-document-tracking.md) from the [admin guide](client-admin-guide.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

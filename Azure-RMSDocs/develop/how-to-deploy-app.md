@@ -8,10 +8,8 @@ author: kkanakas
 ms.author: kartikk
 manager: mbaldwin
 ms.date: 02/27/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 # optional metadata
 
@@ -55,5 +53,3 @@ If the desired experience is to not provide the IT administrator of *ABC* with a
 ## Flow 2: *ABC* IT Administrator provides the key to the *CoolApp* team
 
 Once *ABC's* IT Administrator creates the service principal, as shown in **Figure 1**, *ABC* provides the information to the *CoolApp* team. The *CoolApp* team then proceeds to embed the information in the *CoolApp* application for use in *ABC's* tenant.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

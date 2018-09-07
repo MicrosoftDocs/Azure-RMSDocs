@@ -6,11 +6,9 @@ description: Sample script to copy and edit, as described in the instructions fo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/19/2017
-ms.topic: article
-ms.prod:
+ms.date: 08/31/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 
 # optional metadata
@@ -177,5 +175,3 @@ if (!$Script:isScriptProcess) { exit(-1) } else {exit(0)}
 ---
 
 Back to [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

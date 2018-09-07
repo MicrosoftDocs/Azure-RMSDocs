@@ -8,10 +8,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 # optional metadata
 
@@ -88,5 +86,3 @@ You are now ready to create your own new Windows Phone apps.
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
 [Windows Phone SDK](http://dev.windowsphone.com/en-us/downloadsdk)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

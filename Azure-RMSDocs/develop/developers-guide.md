@@ -5,9 +5,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 10/11/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
@@ -34,7 +33,7 @@ Service applications provide capabilities to protect information when exporting 
 
 ## PowerShell guides
 
-Used by Azure Rights management administrators, PowerShell cmdlets are also useful for developing and testing your service applications. For more information, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell).
+Used by Azure Rights management administrators, PowerShell cmdlets are also useful for developing and testing your service applications. For more information, see [Using PowerShell with the Azure Information Protection client](/azure/information-protection/rms-client/client-admin-guide-powershell).
 
 ## User applications
 
@@ -137,6 +136,5 @@ Each of the following topics presents specific guidance for an aspect of impleme
 ### See also
 
 - [Developer terminology](terms.md)
-- [Terminology for Azure Information Protection - ITPro](../get-started/terminology.md)
+- [Terminology for Azure Information Protection - ITPro](../terminology.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -8,10 +8,8 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 6a8df1d8-1279-4189-b17d-f128b7ca5643
 # optional metadata
 
@@ -44,5 +42,3 @@ The Azure Information Protection SDK 4.2 supports several operating systems. Fo
 ## Related topics
 
 * [Get started](get-started.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

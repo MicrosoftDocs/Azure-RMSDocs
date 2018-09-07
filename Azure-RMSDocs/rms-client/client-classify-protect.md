@@ -6,11 +6,9 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
-ms.topic: article
-ms.prod:
+ms.date: 08/06/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 
 # optional metadata
@@ -187,8 +185,7 @@ More how-to instructions from the Azure Information Protection user guide:
 -   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-For configuration instructions to enable the policy setting **Make the custom permissions option available to users**, see [Configuring the Azure Information Protection policy settings](../deploy-use/configure-policy-settings.md).
+For configuration instructions to enable the policy setting **Make the custom permissions option available to users**, see [Configuring the Azure Information Protection policy settings](../configure-policy-settings.md).
 
-Other configuration instructions: [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
+Other configuration instructions: [Configuring the Azure Information Protection policy](../configure-policy.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
