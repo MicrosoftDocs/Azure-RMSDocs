@@ -6,11 +6,9 @@ description: Instructions to remove classification labels and protection from fi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/28/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 
 
 # optional metadata
@@ -51,6 +49,8 @@ On the Information Protection bar, click the **Delete Label** icon:
 If the **Delete Label** icon is not immediately available, first click the **Edit Label** icon:
 
 ![Azure Information Protection bar - Edit Label](../media/edit-label.png)
+
+If you still do not see the **Delete Label** icon, your administrator does not allow you to use this option.
 
 > [!NOTE]
 > If you don't see this Information Protection bar in your Office apps:

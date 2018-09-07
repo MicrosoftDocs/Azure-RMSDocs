@@ -6,11 +6,9 @@ description: How the RMS sharing application supports Azure RMS as a free, downl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 16/01/2018
+ms.date: 08/22/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 
 # optional metadata

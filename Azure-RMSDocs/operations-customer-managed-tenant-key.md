@@ -6,11 +6,9 @@ description: Information about the life cycle operations that are relevant if yo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 08/29/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 
 # optional metadata
@@ -50,7 +48,7 @@ Examples of when you might need to rekey for Azure Information Protection:
 
 - You believe the master copy of your tenant key (the copy in your possession) is compromised.
 
-To rekey to another key that you manage, you can either create a new key in Azure Key Vault or use a different key that is already in Azure Key Vault. Then follow the same procedures that you did to implement BYOK for Azure Information Protection.
+To rekey to another key that you manage, you can either create a new key in Azure Key Vault or use a different key that is already in Azure Key Vault. Then follow the same procedures that you did to implement BYOK for Azure Information Protection. 
 
 1. Only if the new key is in a different key vault to the one you are already using for Azure Information Protection: Authorize Azure Information Protection to use the key vault, by using the [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet.
 
@@ -61,6 +59,8 @@ To rekey to another key that you manage, you can either create a new key in Azur
 For more information about each of these steps:
 
 - To rekey to another key that you manage, see [Implementing BYOK for your Azure Information Protection tenant key](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+    
+    If you are rekeying an HSM-protected key that you create on-premises and transfer to Key Vault, you can use the same security world and access cards as you used for your current key.
 
 - To rekey, changing to a key that Microsoft manages for you, see the [Rekey your tenant key](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) section for Microsoft-managed operations.
 

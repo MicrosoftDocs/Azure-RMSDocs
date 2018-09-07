@@ -6,11 +6,9 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2018
+ms.date: 09/04/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 
 # optional metadata
@@ -84,7 +82,7 @@ Additionally:
 
 ## Enforce protection-only mode when your organization has a mix of licenses
 
-If your organization does not have any licenses for Azure Information Protection, but does have licenses for Office 365 that include the Azure Rights Management service for data protection, the Azure Information Protection client for Windows automatically runs in [protection-only mode](client-protection-only-mode.md).
+If your organization does not have any licenses for Azure Information Protection, but does have licenses for Office 365 that include the Azure Rights Management service for protecting data, the Azure Information Protection client for Windows automatically runs in [protection-only mode](client-protection-only-mode.md).
 
 However, if your organization has a subscription for Azure Information Protection, by default all Windows computers can download the Azure Information Protection policy. The Azure Information Protection client does not do license checking and enforcement. 
 
@@ -96,6 +94,20 @@ Locate the following value name and set the value data to **0**:
 
 In addition, check that these computers do not have a file named **Policy.msip** in the **%LocalAppData%\Microsoft\MSIP** folder. If this file exists, delete it. This file contains the Azure Information Protection policy and might have downloaded before you edited the registry, or if the Azure Information Protection client was installed with the demo option.
 
+## Modify the email address for the Report an Issue link
+
+This configuration option is currently in preview and is subject to change. It also requires the preview version of the Azure Information Protection client.
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When users select the **Report an Issue** link from the **Help and Feedback** client dialog box, by default, a Microsoft address is populated in an email message. Use the following advanced client setting to modify that address. For example, specify `mailto:helpdesk@contoso.com` for the email address of your help desk. 
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **ReportAnIssueLink**
+
+- Value: **\<HTTP string>**
+
 ## Hide the Classify and Protect menu option in Windows File Explorer
 
 Create the following DWORD value name (with any value data):
@@ -106,7 +118,9 @@ Create the following DWORD value name (with any value data):
 
 By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service to download the latest Azure Information Protection policy. If you have computers that you know will not be able to connect to the Internet for a period of time, you can prevent the client from attempting to connect to the service by editing the registry. 
 
-Locate the following value name and set the value data to **0**:
+Note that without an Internet connection, the client cannot apply protection (or remove protection) by using your organization's cloud-based key. Instead, the client is limited to using labels that apply classification only, or protection that uses [HYOK](../configure-adrms-restrictions.md).
+
+To configure this setting, locate the following value name in the registry and set the value data to **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
@@ -231,25 +245,21 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
-## Protect PDF files by using the ISO standard for PDF encryption
+## Don't protect PDF files by using the ISO standard for PDF encryption
 
 This configuration option is currently in preview and is subject to change. It also requires the preview version of the Azure Information Protection client.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-By default, when the Azure Information Protection client protects a PDF file, the resulting file has a .ppdf file name extension. You can change this behavior so that the file name extension remains as .pdf and adheres to the ISO standard for PDF encryption. For more information about this standard, see section **7.6 Encryption** from the [document that is derived from ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) and published by Adobe Systems Incorporated.  
+When the general availability (GA) version of the Azure Information Protection client protects a PDF file, the resulting file has a .ppdf file name extension. However, when the current preview version of the Azure Information Protection client protects a PDF file, the resulting file name extension remains as .pdf and adheres to the ISO standard for PDF encryption. For more information about this standard, see section **7.6 Encryption** from the [document that is derived from ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) and published by Adobe Systems Incorporated.
 
-To configure this advanced setting, enter the following string:
+If you need the current preview version of the client to revert to the GA behavior, use the following advanced setting by entering the following string:
 
 - Key: **EnablePDFv2Protection**
 
-- Value: **True**
-
-As a result of this configuration option, when the Azure Information Protection client protects a PDF file, this action creates a protected PDF document that can be opened with the preview version of the Azure Information Protection client for Windows, and other PDF readers that support the ISO standard for PDF encryption. The Azure Information Protection app for iOS and Android does not currently support the ISO standard for PDF encryption.
+- Value: **False**
 
 For the Azure Information Protection scanner to use the new setting, the scanner service must be restarted.
-
-Known issue with the current preview: In the document properties, the protected PDF displays an incorrect value for the Author.
 
 ## Support for files protected by Secure Islands
 
@@ -305,6 +315,8 @@ The label ID value is displayed on the **Label** blade, when you view or configu
 
 Specify your choice of a migration rule name. Use a descriptive name that helps you to identify how one or more labels from your previous labeling solution should be mapped to an Azure Information Protection label. The name displays in the scanner reports and in Event Viewer. 
 
+Note that this setting does not remove any visual markings that the old label might have applied. To remove headers and footers, see the next section, [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions).
+
 ### Example 1: One-to-one mapping of the same label name
 
 Documents that have a Secure Islands label of "Confidential" should be relabeled as "Confidential" by Azure Information Protection.
@@ -358,10 +370,107 @@ The advanced client setting:
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"Secure Islands label contains Internal",Classification,.\*Internal.\*|
 
 
+## Remove headers and footers from other labeling solutions
+
+This configuration option is currently in preview and is subject to change. It also requires the preview version of the Azure Information Protection client.
+
+This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+
+These settings let you remove or replace headers or footers from documents when those visual markings have been applied by another labeling solution. For example, the old footer contains the name of an old label that you have now migrated to Azure Information Protection with a new label name and its own footer.
+
+When the client gets this configuration in its policy, the old headers and footers are removed or replaced when the document is opened in the Office app and any Azure Information Protection label is applied to the document.
+
+This configuration is not supported for Outlook, and be aware that when you use it with Word, Excel, and PowerPoint, it can negatively affect the performance of these apps for users. The configuration lets you define settings per application, for example, search for text in the headers and footers of Word documents but not Excel spreadsheets or PowerPoint presentations.
+
+Because the pattern matching affects the performance for users, we recommend that you limit the Office application types (**W**ord, **E**xcel, **P**owerPoint) to just those that need to be searched:
+
+- Key: **RemoveExternalContentMarkingInApp**
+
+- Value: \<**Office application types WXP**> 
+
+Examples:
+
+- To search Word documents only, specify **W**.
+
+- To search Word documents and PowerPoint presentations, specify **WP**.
+
+You then need at least one more advanced client setting, **ExternalContentMarkingToRemove**, to specify the contents of the header or footer, and how to remove or replace them.
+
+### How to configure ExternalContentMarkingToRemove
+
+When you specify the string value for the **ExternalContentMarkingToRemove** key, you have three options that use regular expressions:
+
+- Partial match to remove everything in the header or footer.
+    
+    Example: Headers or footers contain the string **TEXT TO REMOVE**. You want to completely remove these headers or footers. You specify the value: `*TEXT*`.
+
+- Complete match to remove just specific words in the header or footer.
+    
+    Example: Headers or footers contain the string **TEXT TO REMOVE**. You want to remove the word **TEXT** only, which leaves the header or footer string as **TO REMOVE**. You specify the value: `TEXT `.
+
+- Complete match to remove everything in the header or footer.
+    
+    Example: Headers or footers have the string **TEXT TO REMOVE**. You want to remove headers or footers that have exactly this string. You specify the value: `^TEXT TO REMOVE$`.
+    
+
+The pattern matching for the string that you specify is case-insensitive. The maximum string length is 255 characters.
+
+Because some documents might include invisible characters or different kinds of spaces or tabs, the string that you specify for a phrase or sentence might not be detected. Whenever possible, specify a single distinguishing word for the value and be sure to test the results before you deploy in production.
+
+- Key: **ExternalContentMarkingToRemove**
+
+- Value: \<**string to match, defined as regular expression**> 
+
+#### Multiline headers or footers
+
+If a header or footer text is more than a single line, create a key and value for each line. For example, you have the following footer with two lines:
+
+**The file is classified as Confidential**
+
+**Label applied manually**
+
+To remove this multline footer, you create the following two entries:
+
+- Key 1: **ExternalContentMarkingToRemove**
+
+- Key Value 1: **\*Confidential***
+
+- Key 2: **ExternalContentMarkingToRemove**
+
+- Key Value 2: **\*Label applied*** 
+
+#### Optimization for PowerPoint
+
+Footers in PowerPoint are implemented as shapes. To avoid removing shapes that contain the text that you have specified but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process.
+
+If you do not specify this additional advanced client setting, and PowerPoint is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
+
+To find the name of the shape that you're using as a header or footer:
+
+1. In PowerPoint, display the **Selection** pane: **Format** tab > **Arrange** group > **Selection Pane**.
+
+2. Select the shape on the slide that contains your header or footer. The name of the selected shape is now highlighted in the **Selection** pane.
+
+Use the name of the shape to specify a string value for the **PowerPointShapeNameToRemove** key. 
+
+Example: The shape name is **fc**. To remove the shape with this name, you specify the value: `fc`.
+
+- Key: **PowerPointShapeNameToRemove**
+
+- Value: \<**PowerPoint shape name**> 
+
+When you have more than one PowerPoint shape to remove, create as many **PowerPointShapeNameToRemove** keys as you have shapes to remove. For each entry, specify the name of the shape to remove.
+
+By default, only the Master slides are checked for headers and footers. To extend this search to all slides, which is a much more resource-intensive process, use an additional advanced client setting named **RemoveExternalContentMarkingInAllSlides**:
+
+- Key: **RemoveExternalContentMarkingInAllSlides**
+
+- Value: **True**
+
 ## Label an Office document by using an existing custom property
 
 > [!NOTE]
-> If you use this configuration and the configuration from the previous section to migrate from another labeling solution, the labeling migration setting takes precedence. 
+> If you use this configuration and the configuration to [migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions), the labeling migration setting takes precedence. 
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
