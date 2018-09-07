@@ -32,17 +32,12 @@ ms.suite: ems
 > [!NOTE]
 > This feature is currently in preview and subject to change. Any data collected during this preview might not be supported when the feature moves to general availability.
 
-Use Azure Information Protection analytics in the Azure portal for central reporting so that you can do the following:
 
-- Track adoption of your Azure Information Protection labels.
-
-- Monitor user access to labeled documents and emails, and changes to their classification.
-
-- Identify documents in your on-premises data repositories that contain sensitive information that must be protected.
+Use Azure Information Protection analytics for central reporting to track the adoption of your Azure Information Protection labels, as well as monitor user access to labeled documents and emails, and any changes to their classification. You can also identify documents that contain sensitive information that must be protected.
 
 The data that you see is aggregated from the following endpoints: The Azure Information Protection client, the Azure Information Protection scanner, and [clients that support unified labeling](configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
 
-For example, you'll be able to see:
+For example, you'll be able to see the following:
 
 - From the **Usage report**, where you can select a time period:
     
