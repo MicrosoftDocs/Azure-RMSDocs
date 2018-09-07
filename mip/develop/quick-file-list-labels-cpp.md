@@ -54,4 +54,4 @@ Include a sentence or two to explain only what is needed to complete the procedu
 Now that you've learned how to set up the initialization code, and list sensitivity labels, try the next quickstart:
 
 > [!div class="nextstepaction"]
-> [Apply a label](quick-apply-label-cpp.md)
+> [Apply a label](quick-file-apply-label-cpp.md)

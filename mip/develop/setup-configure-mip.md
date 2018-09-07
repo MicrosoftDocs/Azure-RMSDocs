@@ -92,4 +92,4 @@ MIP SDK-specific steps will be covered in a later tutorial. This link is intende
 Now you're ready to begin the first quickstart!
 
 > [!div class="nextstepaction"]
-> [Authentication and initialization](quick-authentication-initialization-cpp.md)
+> [Authentication and initialization](quick-auth-initialization-cpp.md)
