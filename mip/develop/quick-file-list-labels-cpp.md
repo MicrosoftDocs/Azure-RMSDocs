@@ -14,6 +14,8 @@ ms.author: bryanla
 Introductory paragraph.
 <!--- Answer the fundamental "why would I want to do this?" question. --->
 
+Perhaps use https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions 
+
 In this quickstart, you will <do X>
 
 ## Prerequisites
