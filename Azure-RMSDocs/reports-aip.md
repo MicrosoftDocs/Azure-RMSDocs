@@ -32,7 +32,7 @@ ms.suite: ems
 > [!NOTE]
 > This feature is currently in preview and subject to change. Any data collected during this preview might not be supported when the feature moves to general availability.
 
-Use Azure Information Protection analytics in the Azure portal to track adoption of your Azure Information Protection labels. You can also identify documents in your on-premises data repositories that contain sensitive information that needs to be protected, and monitor user access to labeled documents and emails, and changes to their classification.
+Use Azure Information Protection analytics in the Azure portal to track adoption of your Azure Information Protection labels. You can also identify documents in your on-premises data repositories that contain sensitive information that must be protected, and you can monitor user access to labeled documents and emails, and changes to their classification.
 
 The aggregated data that you see comes from the following endpoints: 
 
@@ -42,7 +42,7 @@ The aggregated data that you see comes from the following endpoints:
 
 - Clients that support [unified labeling](configure-policy-migrate-labels.md#clients-that-support-unified-labeling)
 
-For example, you can see:
+For example, you'll be able to see:
 
 - From the **Usage report**, where you can select a time period:
     
