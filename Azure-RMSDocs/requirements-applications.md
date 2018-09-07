@@ -39,7 +39,7 @@ Unless stated otherwise, the supported capabilities apply to both Azure RMS and 
 
 The following table displays RMS-enlightened client applications from Microsoft and software vendors. 
 
-For information about viewing protected PDF documents, see [Protected PDF readers for Microsoft Information Protection](../rms-client/protected-pdf-readers.md).
+For information about viewing protected PDF documents, see [Protected PDF readers for Microsoft Information Protection](./rms-client/protected-pdf-readers.md).
 
 Information about the table columns:
 
