@@ -24,7 +24,5 @@ For a more exhaustive list, please review this document. [Link to API Concepts](
 
 ## Next Steps
 
-To get started with the SDK, complete the client workstation setup and configuration steps:
+Now you're ready to get started with the SDK. The first thing you'll need to do, is [complete the MIP SDK setup and configuration](setup-configure-mip.md) steps, to make sure your Office 365 subscription and client machine are set up correctly.
 
-> [!div class="nextstepaction"]
-> [Set up and configure your Microsoft Information Protection client workstation](setup-mip-client.md)

@@ -18,7 +18,7 @@ In this quickstart, you will <do X>
 
 ## Prerequisites
 
-Be sure to complete the [Client workstation setup and configuration steps](setup-mip-client.md) before proceeding. 
+Be sure to complete the [Microsoft Information Protection SDK setup and configuration steps](setup-configure-mip.md) before proceeding. 
 
 ## Procedure 1
 

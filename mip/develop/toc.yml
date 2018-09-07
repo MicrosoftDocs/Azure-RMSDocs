@@ -5,7 +5,7 @@
   - name: About Microsoft Information Protection SDK
     href: overview.md
 - name: Setup
-  href: setup-mip-client.md
+  href: setup-configure-mip.md
 - name: Quickstarts
   items:
   - name: List sensitivity labels (C++)
