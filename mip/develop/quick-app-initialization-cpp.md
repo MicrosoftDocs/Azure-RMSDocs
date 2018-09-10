@@ -11,7 +11,13 @@ ms.author: bryanla
 
 # Quickstart: Client application initialization (C++)
 
-This quickstart illustrates the client initialization pattern used by the MIP C++ SDK. The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs.
+This quickstart illustrates the client initialization pattern used by the MIP C++ SDK. At a high level, all clients must accomplish the following initialization steps in this order:
+
+1. Acquire and provide a suitable OAuth2 access token to the SDK
+2. Initialize and provide a Profile object to the SDK
+3. Initialize and provide an Engine object to the SDK 
+
+The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs. 
 
 > [!NOTE]
 > Although this quickstart uses File API examples, this same pattern is applicable to clients using the Policy and Protection APIs.
@@ -30,22 +36,22 @@ https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/t
 
 ## Authentication
 
-Authentication of MIP SDK client applications requires the implementation of a delegate class, which extends the `mip::AuthDelegate` class. The delegate implementation provides the preferred method of authentication, when requested by the SDK at run-time.  
+As mentioned, the client is also responsible for acquiring a suitable OAuth2 access token, and providing it to the MIP SDK. This is accomplished through the implementation of a delegate class, which extends the `mip::AuthDelegate` class. The delegate implementation provides the preferred method of authentication, when requested by the SDK at run-time.  
 
 `mip::AuthDelegate` contains nested classes `OAuth2Challenge` and `OAuth2Token`, and defines the pure virtual function `mip::AuthDelegate::AcquireOAuth2Token`. `AcquireOAuth2Token` must be extended by developers, to define the preferred method of access token acquisition:
 
 ```cpp
 class AuthDelegate {
 public:
-  class OAuth2Challenge {           // Manages OAuth authority info
+  class OAuth2Challenge {           // Manages OAuth2 authority info
   ...
   };
 
-  class OAuth2Token {               // Manages OAuth access token acquisition and storage
+  class OAuth2Token {               // Manages OAuth2 access token acquisition and storage
   ...
   };
 
-  virtual bool AcquireOAuth2Token(  // Called when an OAuth access token is required by SDK client app
+  virtual bool AcquireOAuth2Token(  // Called when an OAuth2 access token is required by SDK client app
       const mip::Identity& identity,
       const OAuth2Challenge& challenge,
       OAuth2Token& token) = 0;
@@ -62,9 +68,7 @@ The SDK calls the client application's implementation of `mip::AuthDelegate::Acq
 
 2. Write the access token acquisition logic.
 
-3. Return a token acquisition status to the SDK.
-
-When finished, the client must return a bool that indicates whether token acquisition was successful.
+3. Return a token acquisition status to the SDK. When `AcquireOAuth2Token` is finished, the client must return a bool that indicates whether token acquisition was successful.
 
 >[!Important]
 > Applications won't ever have to call `AcquireOAuth2Token` directly. The SDK will call this method  when required.
