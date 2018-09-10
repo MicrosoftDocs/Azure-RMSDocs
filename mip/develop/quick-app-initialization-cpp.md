@@ -54,7 +54,7 @@ Authentication in the MIP SDK is performed by extending the `mip::AuthDelegate` 
 
 
 
-## Consent (TBD - since QS, should probably leave in concepts and point to it)
+## Consent (TBD - since this is a QS, and this is a slightly advanced concept, should probably leave in concepts and point to it?)
 
 The `mip::Consent` enum class implements an easy-to-use approach that permits application developers to provide a custom consent experience based on the endpoint that is being accessed by the SDK. The notification can inform a user of the data that will be collected, how to get the data removed, or any other information that is required by law or compliance policies. Once the user grants consent, the application can continue. 
 
