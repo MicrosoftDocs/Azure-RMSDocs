@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2018
+ms.date: 09/24/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
