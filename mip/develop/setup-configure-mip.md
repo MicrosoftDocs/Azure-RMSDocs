@@ -104,4 +104,4 @@ Application accounts are created using the [Azure AD **App registrations** page]
 Now you're ready to begin the first quickstart!
 
 > [!div class="nextstepaction"]
-> [Authentication and initialization](quick-sdk-initialization-cpp.md)
+> [Authentication and initialization](quick-app-initialization-cpp.md)

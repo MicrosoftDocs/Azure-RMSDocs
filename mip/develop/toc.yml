@@ -9,7 +9,7 @@
 - name: Quickstarts
   items:
   - name: SDK initialization (C++)
-    href: quick-auth-initialization-cpp.md
+    href: quick-app-initialization-cpp.md
   - name: File APIs
     items:
     - name: List sensitivity labels (C++)

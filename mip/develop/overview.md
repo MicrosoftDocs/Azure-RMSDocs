@@ -24,5 +24,5 @@ For a more exhaustive list, review [Link to API Concepts]().
 
 ## Next Steps
 
-Now you're ready to get started with the SDK. The first thing you'll need to do, is [complete the MIP SDK setup and configuration](setup-configure-mip.md) steps, to make sure your Office 365 subscription and client machine are set up correctly.
+Now you're ready to get started with the SDK. The first thing you'll need to do, is [complete the MIP SDK setup and configuration steps](setup-configure-mip.md), to make sure your Office 365 subscription and client machine are set up correctly.
 

@@ -1,6 +1,6 @@
 ---
 title: Quickstart - Initialization for Microsoft Information Protection (MIP) SDK C++ clients
-description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection (MIP) SDK clients.
+description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection (MIP) SDK client applications.
 services: information-protection
 author: BryanLa
 ms.service: information-protection
@@ -9,7 +9,7 @@ ms.date: 09/10/2018
 ms.author: bryanla
 ---
 
-# Quickstart: SDK initialization (C++)
+# Quickstart: Client application initialization (C++)
 
 This quickstart illustrates the patterns used by MIP C++ SDK clients for initialization. The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs.
 
@@ -18,7 +18,7 @@ This quickstart illustrates the patterns used by MIP C++ SDK clients for initial
 
 ## Prerequisites
 
-If you haven't already, before continuing:
+If you haven't already, complete the following before continuing with this quickstart:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
 - Review [Observers in the MIP SDK](concepts-async-observers.md), as the MIP SDK is designed to be almost entirely asynchronous.
@@ -31,9 +31,7 @@ https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/t
 
 ## Authentication
 
-### Authentication delegate
-
-Authentication in the MIP SDK is performed by extending the class `mip::AuthDelegate` to implement your preferred method of authentication.
+Authentication in the MIP SDK is performed by extending the `mip::AuthDelegate` delegate class, to implement your preferred method of authentication.
 
 `mip::AuthDelegate` contains two classes:
 
@@ -54,7 +52,9 @@ Authentication in the MIP SDK is performed by extending the class `mip::AuthDele
 
 ### Implement an authentication delegate 
 
-## Consent (TBD - or leave in concepts and point to it)
+
+
+## Consent (TBD - since QS, should probably leave in concepts and point to it)
 
 The `mip::Consent` enum class implements an easy-to-use approach that permits application developers to provide a custom consent experience based on the endpoint that is being accessed by the SDK. The notification can inform a user of the data that will be collected, how to get the data removed, or any other information that is required by law or compliance policies. Once the user grants consent, the application can continue. 
 
