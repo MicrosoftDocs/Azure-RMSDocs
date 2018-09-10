@@ -11,29 +11,28 @@ ms.author: bryanla
 
 # Quickstart: Client application initialization (C++)
 
-This quickstart illustrates the patterns used by the MIP C++ SDK for client initialization. The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs.
+This quickstart illustrates the client initialization pattern used by the MIP C++ SDK. The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs.
 
 > [!NOTE]
 > Although this quickstart uses File API examples, this same pattern is applicable to clients using the Policy and Protection APIs.
 
 ## Prerequisites
 
-If you haven't already, complete the following before continuing with this quickstart:
+If you haven't already, complete the following prerequisites before continuing with this quickstart:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
 - Review [Observers in the MIP SDK](concepts-async-observers.md), as the MIP SDK is designed to be almost entirely asynchronous.
 
 ## Observers
 
-(TBD) Not sure if we need this?
-
-https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/observer.md
+(TBD) Is pointing them to the Observer concepts article enough? Or should we have them walk through [Implement File API Observers](
+https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/observer.md) ?
 
 ## Authentication
 
-Authentication in the MIP SDK requires the implementation of a delegate class, which provides the preferred method of authentication. This is accomplished by extending the `mip::AuthDelegate` class.  
+Authentication of MIP SDK client applications requires the implementation of a delegate class, which extends the `mip::AuthDelegate` class. The delegate implementation provides the preferred method of authentication, when requested by the SDK at run-time.  
 
-`mip::AuthDelegate` contains two nested classes (), and defines a pure virtual function called `mip::AuthDelegate::AcquireOAuth2Token`. `AcquireOAuth2Token` must be extended by developers, in order to define their preferred method of access token acquisition:
+`mip::AuthDelegate` contains nested classes `OAuth2Challenge` and `OAuth2Token`, and defines the pure virtual function `mip::AuthDelegate::AcquireOAuth2Token`. `AcquireOAuth2Token` must be extended by developers, to define the preferred method of access token acquisition:
 
 ```cpp
 class AuthDelegate {
@@ -42,41 +41,42 @@ public:
   ...
   };
 
-  class OAuth2Token {               // Manages OAuth token acquisition and storage
+  class OAuth2Token {               // Manages OAuth access token acquisition and storage
   ...
   };
 
-  virtual bool AcquireOAuth2Token(  // Called when an auth token is required by SDK client app
+  virtual bool AcquireOAuth2Token(  // Called when an OAuth access token is required by SDK client app
       const mip::Identity& identity,
       const OAuth2Challenge& challenge,
       OAuth2Token& token) = 0;
 };
 ```
 
-The SDK calls the client application's `mip::AuthDelegate::AcquireOAuth2Token` implementation, the client is provided with three parameters:
+1. Extend `mip::AuthDelegate` and override `mip::AuthDelegate::AcquireOAuth2Token`
+
+The SDK calls the client application's implementation of `mip::AuthDelegate::AcquireOAuth2Token`, with three parameters:
 
 - `mip::Identity`: The identity of the user or service to be authenticated, if known.
-- `mip::AuthDelegate::OAuth2Challenge`: Accepts two parameters, **authority** and **resource**. **Authority** is the service the token will be generated against. **Resource** is the service we're trying to access. The SDK will handle passing these parameters in to the delegate when called.
-- `mip::AuthDelegate::OAuth2Token`: We will write the token result to this object. It will be consumed by the SDK when the engine is loaded. Outside of our authentication implementation, it shouldn't be necessary to get or set this value anywhere.
+- `mip::AuthDelegate::OAuth2Challenge`: Contains the **authority** and **resource**. **Authority** is the service the access token will be generated against. **Resource** is the service being accessed. 
+- `mip::AuthDelegate::OAuth2Token`: The client application updates with the token result. It will be consumed by the SDK when the engine is loaded. Outside of our authentication implementation, it shouldn't be necessary to get or set this value anywhere.
+
+2. Write the access token acquisition logic.
+
+3. Return a token acquisition status to the SDK.
 
 When finished, the client must return a bool that indicates whether token acquisition was successful.
 
 >[!Important]
 > Applications won't ever have to call `AcquireOAuth2Token` directly. The SDK will call this method  when required.
 
-### Implement an authentication delegate 
-
-
-## Consent (TBD - since this is a QS, and this is a slightly advanced concept, should probably leave in concepts and point to it?)
+### Implement a consent delegate (TBD - since this article is a QS, and consent is a slightly advanced concept, should probably leave in concepts (updated using below format) and point to it?)
 
 The `mip::Consent` enum class implements an easy-to-use approach that permits application developers to provide a custom consent experience based on the endpoint that is being accessed by the SDK. The notification can inform a user of the data that will be collected, how to get the data removed, or any other information that is required by law or compliance policies. Once the user grants consent, the application can continue. 
 
 GDPR info here? 
 Exception details?
 
-### Implement a consent delegate
-
-Consent is implemented by extending the `mip::Consent` base class and implementing `GetUserConsent` to return one of the `mip::Consent` enum values. 
+1. Extend the `mip::Consent` base class - Consent is implemented by extending the `mip::Consent` base class and implementing `GetUserConsent` to return one of the `mip::Consent` enum values. 
 
 The object derived from `mip::Consent` is passed in to the `mip::FileProfile::Settings` or `mip::ProtectionProfile::Settings` constructor.
 
@@ -87,7 +87,7 @@ Operations that will trigger the consent flow are (TBD):
 - One
 - Two
 
-### Consent Options
+2. Setting consent options -
 
 - **AcceptAlways**: Consent and remember the decision.
 - **Accept**: Consent once.
@@ -98,7 +98,7 @@ application should present the URL to the user. Client applications should
 provide some means of obtaining user consent and return the appropriate
 Consent enum that corresponds to the user's decision.
 
-### Sample Consent Delegate Implementation
+Sample consent delegate implementation:
 
 #### consent_delegate_impl.h
 
