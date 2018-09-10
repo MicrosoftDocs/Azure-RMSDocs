@@ -8,7 +8,7 @@
   href: setup-configure-mip.md
 - name: Quickstarts
   items:
-  - name: SDK initialization (C++)
+  - name: Application initialization (C++)
     href: quick-app-initialization-cpp.md
   - name: File APIs
     items:
