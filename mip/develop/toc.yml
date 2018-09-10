@@ -8,7 +8,7 @@
   href: setup-configure-mip.md
 - name: Quickstarts
   items:
-  - name: Authentication and initialization (C++)
+  - name: SDK initialization (C++)
     href: quick-auth-initialization-cpp.md
   - name: File APIs
     items:
@@ -21,11 +21,12 @@
 - name: Concepts
   items:
   - name: The APIs
-  - name: Async
   - name: Authentication
   - name: Engine      
   - name: Handler 
   - name: Labels 
+  - name: Observers for async
+    href: concepts-async-observers.md
   - name: Profile
   - name: Use cases 
 - name: How-to guides
