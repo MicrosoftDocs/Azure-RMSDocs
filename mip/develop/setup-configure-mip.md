@@ -39,6 +39,9 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 
 Next, complete the following steps to ensure your client computer is set up and configured correctly. 
 
+>[!NOTE]
+> The code examples in the Quickstart and Tutorial sections assume use of Visual Studio 2017 or greater.
+
 ### Windows 10
 
 1. Using Windows Update, update your machine to Windows 10 Fall Creators Update (version 1709) or later. To  verify your current version:

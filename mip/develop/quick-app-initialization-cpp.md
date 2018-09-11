@@ -27,12 +27,24 @@ If you haven't already, be sure to complete the following prerequisites before c
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
 - The MIP SDK makes use of the observer pattern to implement asynchronous event notifications. Review [Observers in the MIP SDK](concept-async-observers.md) to learn more about observer concepts, and how they're implemented by the SDK.
 
-## Observers
+## Create a Visual Studio solution and implement an observer class
 
 (TBD) Is pointing them to the Observer concepts article enough? Or should we have them walk through [Implement File API Observers](
 https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/observer.md) ?
 
-## Authentication
+1. Create a new Visual Studio 2017 solution:
+   - Open Visual Studio, select **File**, **New**, **Project**.
+   - In the **New Project** dialog:
+     - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
+     - In the center pane, select **Windows Console Application**
+     - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
+     - When finished, click the **OK** button in the lower right.
+
+2. Implement the Observer class, for use with the File Profile
+   - test
+   - test 
+
+## Implement the authentication delegate
 
 As mentioned, the client is also responsible for acquiring a suitable OAuth2 access token, and providing it to the MIP SDK. Token acquisition is accomplished in the implementation of a delegate class, which extends the `mip::AuthDelegate` class. The delegate implementation provides the preferred method of authentication, when requested by the SDK at run-time.  
 
@@ -147,13 +159,13 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 }
 ```
 
-## Profile creation
+## Implement a profile object
 
 From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#fileprofile 
 From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/profile.md 
 
 
-## Engine creation
+## Implement an engine object
 
 From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#engine 
 From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/engine.md 
