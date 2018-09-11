@@ -10,40 +10,38 @@ ms.author: bryanla
 ---
 # Observers in the MIP SDK
 
-## Summary
+The MIP SDK is designed to be almost entirely asynchronous. For example, any operation resulting in network or file IO is performed asynchronously. To handle the event notifications for these asynchronous events, the SDK makes use of the [observer pattern](https://wikipedia.org/wiki/Observer_pattern). 
 
-The MIP SDK is designed to be almost entirely asynchronous. Any operation resulting in network or file IO is performed asynchronously. To handle the event notifications for these asynchronous events, the SDK makes use of the [observer pattern](https://wikipedia.org/wiki/Observer_pattern). When constructing an object that will perform an asynchronous operation, an `Observer` class must be implemented. Observers will receive the notification events related to the various asynchronous operations in the MIP SDK, and provide the result to the caller.
+## Implementation overview
 
-Functions in each `Observer` class are virtual and should be overridden for the preferred asynchronous pattern. In each of our examples, we demonstrate the event notification observer pattern via `std::promise` and `std::future`.
+When constructing an object that will perform an asynchronous operation, an `Observer` class must be implemented. Observers will receive the notification events related to the various asynchronous operations in the MIP SDK, and provide the result to the caller.
 
-Each class-specific observer contains a set of success/failure functions for the outcome of an async operation. *Success* functions return the object associated with the operation. *Failure* functions return an exception that contains details on why the operation was unsuccessful.
+Functions in each `Observer` class are virtual and are overridden for the preferred asynchronous pattern. The SDK implements the event notification observer pattern via `std::promise` and `std::future`.
 
-As an example, `FileProfile::Observer` can perform two operations: 
+Each class-specific observer contains a set of success and error/failure functions, for the outcome of an async operation. *Success* functions return the object associated with the operation. *Error*/*Failure* functions return an exception that contains details on why the operation was unsuccessful.
 
-- It can load a profile via `FileProfile::LoadAsync`.
-- It can load an engine via `FileProfile::AddEngineAsync`. 
+As an example, `FileProfile` supports the following two operations: 
 
-Since we implement two `Observer` functions per asynchronous operation, it can be assumed that there are **four** `Observer` methods associated with `FileProfile`: 
+- It can add a new engine to the profile via `FileProfile::AddEngineAsync`. 
+- It can unload an engine from the profile via `FileProfile::UnloadEngineAsync`.
 
-- `OnLoadSuccess()`
-- `OnLoadFailure()`
-- `OnAddEngineSuccess`
-- `OnAddEngineFailure()`. 
+Since two `Observer` functions are implemented per asynchronous operation, it can be assumed that there are **four** `Observer` methods associated with `FileProfile`: 
 
-## File API Observer Classes
+- `FileProfileObserver::OnAddEngineSuccess()`
+- `FileProfileObserver::OnAddEngineError()`
+- `FileProfileObserver::OnUnloadEngineSuccess`
+- `FileProfileObserver::OnUnloadEngineError()`. 
+
+## MIP SDK Observer Classes
 
 The MIP SDK File API contains two observers:
 
 * `mip::FileProfile::Observer`
 * `mip::FileHandler::Observer`
 
-## Policy API Observer Classes
-
 The MIP SDK Policy API has just a single observer:
 
 * `mip::Profile::Observer`
-
-## Protection API Observer Classes
 
 The MIP SDK Protection API has three observers:
 

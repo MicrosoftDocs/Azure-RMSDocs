@@ -80,11 +80,11 @@
       - name: FileEngine
         href: reference/class_mip_fileengine.md
       - name: FileEngine::Settings
-        href: reference/class_mip_fileengine::settings.md
+        href: reference/class_mip_fileengine_settings.md
       - name: FileHandler
         href: reference/class_mip_filehandler.md
       - name: FileHandler::Observer
-        href: reference/class_mip_filehandler::observer.md
+        href: reference/class_mip_filehandler_observer.md
       - name: FileIOError
         href: reference/class_mip_fileioerror.md
       - name: FileProfile
