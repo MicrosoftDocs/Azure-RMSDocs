@@ -11,20 +11,18 @@ ms.author: bryanla
 
 # Quickstart: Client application initialization (C++)
 
-This quickstart illustrates the client initialization pattern used by the MIP C++ SDK. At a high level, all clients must accomplish the following initialization steps in this order:
+This quickstart illustrates the client initialization pattern used by the MIP C++ SDK at runtime. At a high level, all clients must accomplish the following initialization steps, in this order:
 
 1. Acquire and provide a suitable OAuth2 access token to the SDK
 2. Initialize and provide a Profile object to the SDK
 3. Initialize and provide an Engine object to the SDK 
 
-The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs. 
-
 > [!NOTE]
-> Although this quickstart uses File API examples, this same pattern is applicable to clients using the Policy and Protection APIs.
+> The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs.  Although this quickstart demonstrates File API examples, this same pattern is applicable to clients using the Policy and Protection APIs.
 
 ## Prerequisites
 
-If you haven't already, complete the following prerequisites before continuing with this quickstart:
+If you haven't already, be sure to complete the following prerequisites before continuing:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
 - Review [Observers in the MIP SDK](concepts-async-observers.md), as the MIP SDK is designed to be almost entirely asynchronous.

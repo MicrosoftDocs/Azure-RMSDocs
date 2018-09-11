@@ -20,7 +20,10 @@ In this quickstart, you will <do X>
 
 ## Prerequisites
 
-Be sure to complete the [Microsoft Information Protection SDK setup and configuration steps](setup-configure-mip.md) before proceeding. 
+If you haven't already, be sure to complete the following prerequisites before continuing:
+
+- Complete the [Quickstart: Client application initialization](quick-app-initialization.md) first.
+- Review [Classification labels](concepts-classification-labels.md) concepts.
 
 ## Procedure 1
 

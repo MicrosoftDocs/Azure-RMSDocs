@@ -25,6 +25,7 @@
   - name: Engine      
   - name: Handler 
   - name: Labels 
+    href: concepts-classification-labels.md
   - name: Observers for async
     href: concepts-async-observers.md
   - name: Profile
