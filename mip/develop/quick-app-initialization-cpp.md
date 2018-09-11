@@ -25,7 +25,7 @@ This quickstart illustrates the client initialization pattern used by the MIP C+
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
-- The MIP SDK makes use of the [observer pattern](https://wikipedia.org/wiki/Observer_pattern) to implement asynchronous event notifications. Review [Observers in the MIP SDK](concepts-async-observers.md) to learn more about observer concepts, and how they're implemented by the SDK.
+- The MIP SDK makes use of the observer pattern to implement asynchronous event notifications. Review [Observers in the MIP SDK](concepts-async-observers.md) to learn more about observer concepts, and how they're implemented by the SDK.
 
 ## Observers
 

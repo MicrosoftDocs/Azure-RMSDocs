@@ -12,9 +12,7 @@ ms.author: bryanla
 
 ## Summary
 
-The MIP SDK is designed to be almost entirely asynchronous. Any operation resulting in network or file IO is performed asynchronously. To handle the event notifications for these asynchronous events, the SDK makes use of various `Observer` classes. When constructing an object that will perform an asynchronous operation, an `Observer` must be provided. Observers will receive the notification events related to the various asynchronous operations in the MIP SDK, and provide the result to the caller.
-
-The included observers can be extended to implement the desired callback behavior. The SDK samples are implemented via future/promise and the implementations below will demonstrate that pattern.
+The MIP SDK is designed to be almost entirely asynchronous. Any operation resulting in network or file IO is performed asynchronously. To handle the event notifications for these asynchronous events, the SDK makes use of the [observer pattern](https://wikipedia.org/wiki/Observer_pattern). When constructing an object that will perform an asynchronous operation, an `Observer` class must be implemented. Observers will receive the notification events related to the various asynchronous operations in the MIP SDK, and provide the result to the caller.
 
 Functions in each `Observer` class are virtual and should be overridden by the developer for the preferred asynchronous pattern. In each of our examples, we demonstrate this event notification observer pattern via `std::promise` and `std::future`.
 

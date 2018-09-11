@@ -13,10 +13,12 @@ ms.author: bryanla
 
 The File API contains two observer classes. Observer members are virtual and can be overridden to handle event callbacks.
 
-- [`mip::FileProfile::Observer`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_fileprofile_observer)
-- [`mip::FileHandler::Observer`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_filehandler_observer)
+- [`mip::FileProfile::Observer`](reference/class_mip_fileprofile_observer)
+- [`mip::FileHandler::Observer`](reference/class_mip_filehandler_observer)
 
-When an asynchronous operation completes, the member function corresponding to the result is called. Examples are `OnLoadSuccess()`, `OnLoadFailure()`, and `OnAddEngineSuccess()` for `mip::FileProfile::Observer`.
+When an asynchronous operation completes, the `OnXxx()` member function corresponding to the result is called. Examples are `OnLoadSuccess()`, `OnLoadFailure()`, and `OnAddEngineSuccess()` for `mip::FileProfile::Observer`.
+
+The examples below demonstrate the promise/future pattern, which is also used by the SDK samples, and can be extended to implement the desired callback behavior. 
 
 ## File Profile Observer Implementation
 

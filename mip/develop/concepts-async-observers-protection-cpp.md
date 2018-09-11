@@ -13,12 +13,13 @@ ms.author: bryanla
 
 The Protection API contains three observer classes. Observer members are virtual and can be overridden to handle callbacks for asynchronous operations.
 
-- [Protection Profile: `mip::ProtectionProfile::Observer`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_ProtectionProfile_observer)
-- [Protection Engine: `mip::ProtectionEngine::Observer`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_ProtectionEngine_observer)
-- [Protection Handler: `mip::ProtectionHandler::Observer`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_Protectionhandler_observer)
+- [Protection Profile: `mip::ProtectionProfile::Observer`](reference/class_mip_ProtectionProfile_observer)
+- [Protection Engine: `mip::ProtectionEngine::Observer`](reference/class_mip_ProtectionEngine_observer)
+- [Protection Handler: `mip::ProtectionHandler::Observer`](reference/class_mip_Protectionhandler_observer)
 
+When an asynchronous operation completes, the `OnXxx()` member function corresponding to the result is called. Examples are `OnLoadSuccess()`, `OnLoadFailure()`, and `OnAddEngineSuccess()` for `mip::ProtectionProfile::Observer`.
 
-When an asynchronous operation completes, the member function corresponding to the result is called. Examples are `OnLoadSuccess()`, `OnLoadFailure()`, and `OnAddEngineSuccess()` for `mip::ProtectionProfile::Observer`.
+The examples below demonstrate the promise/future pattern, which is also used by the SDK samples, and can be extended to implement the desired callback behavior. 
 
 ## Protection Protection Observer Implementation
 
