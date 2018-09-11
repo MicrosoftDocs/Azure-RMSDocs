@@ -43,7 +43,7 @@ The MIP SDK Protection API has three observers:
 
 ## Next Steps (TBD)
 
-Learn more about how observers are implemented and used in C++, by the various APIs:
+Learn more about how observers are implemented and used, by the various APIs:
 
 * [File API Observers (C++)](concepts-async-observers-file-cpp.md)
 * [Policy API Observers (C++)](concepts-async-observers-policy-cpp.md)

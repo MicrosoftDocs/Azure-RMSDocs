@@ -13,9 +13,9 @@ ms.author: bryanla
 
 The Protection API contains three observer classes. Observer members are virtual and can be overridden to handle callbacks for asynchronous operations.
 
-- [Protection Profile: `mip::ProtectionProfile::Observer`](reference/class_mip_ProtectionProfile_observer)
-- [Protection Engine: `mip::ProtectionEngine::Observer`](reference/class_mip_ProtectionEngine_observer)
-- [Protection Handler: `mip::ProtectionHandler::Observer`](reference/class_mip_Protectionhandler_observer)
+- [Protection Profile: `mip::ProtectionProfile::Observer`](reference/class_mip_ProtectionProfile_observer.md)
+- [Protection Engine: `mip::ProtectionEngine::Observer`](reference/class_mip_ProtectionEngine_observer.md)
+- [Protection Handler: `mip::ProtectionHandler::Observer`](reference/class_mip_Protectionhandler_observer.md)
 
 When an asynchronous operation completes, the `OnXxx()` member function corresponding to the result is called. Examples are `OnLoadSuccess()`, `OnLoadFailure()`, and `OnAddEngineSuccess()` for `mip::ProtectionProfile::Observer`.
 

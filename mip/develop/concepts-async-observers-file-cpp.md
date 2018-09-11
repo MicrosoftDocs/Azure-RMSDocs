@@ -13,8 +13,8 @@ ms.author: bryanla
 
 The File API contains two observer classes. Observer members are virtual and can be overridden to handle event callbacks.
 
-- [`mip::FileProfile::Observer`](reference/class_mip_fileprofile_observer)
-- [`mip::FileHandler::Observer`](reference/class_mip_filehandler_observer)
+- [`mip::FileProfile::Observer`](reference/class_mip_fileprofile_observer.md)
+- [`mip::FileHandler::Observer`](reference/class_mip_filehandler_observer.md)
 
 When an asynchronous operation completes, the `OnXxx()` member function corresponding to the result is called. Examples are `OnLoadSuccess()`, `OnLoadFailure()`, and `OnAddEngineSuccess()` for `mip::FileProfile::Observer`.
 
