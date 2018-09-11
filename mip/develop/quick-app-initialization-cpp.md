@@ -25,7 +25,7 @@ This quickstart illustrates the client initialization pattern used by the MIP C+
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
-- The MIP SDK makes use of the observer pattern to implement asynchronous event notifications. Review [Observers in the MIP SDK](concepts-async-observers.md) to learn more about observer concepts, and how they're implemented by the SDK.
+- The MIP SDK makes use of the observer pattern to implement asynchronous event notifications. Review [Observers in the MIP SDK](concept-async-observers.md) to learn more about observer concepts, and how they're implemented by the SDK.
 
 ## Observers
 
@@ -34,7 +34,7 @@ https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/t
 
 ## Authentication
 
-As mentioned, the client is also responsible for acquiring a suitable OAuth2 access token, and providing it to the MIP SDK. This is accomplished through the implementation of a delegate class, which extends the `mip::AuthDelegate` class. The delegate implementation provides the preferred method of authentication, when requested by the SDK at run-time.  
+As mentioned, the client is also responsible for acquiring a suitable OAuth2 access token, and providing it to the MIP SDK. Token acquisition is accomplished in the implementation of a delegate class, which extends the `mip::AuthDelegate` class. The delegate implementation provides the preferred method of authentication, when requested by the SDK at run-time.  
 
 `mip::AuthDelegate` contains nested classes `OAuth2Challenge` and `OAuth2Token`, and defines the pure virtual function `mip::AuthDelegate::AcquireOAuth2Token`. `AcquireOAuth2Token` must be extended by developers, to define the preferred method of access token acquisition:
 
@@ -62,7 +62,7 @@ The SDK calls the client application's implementation of `mip::AuthDelegate::Acq
 
 - `mip::Identity`: The identity of the user or service to be authenticated, if known.
 - `mip::AuthDelegate::OAuth2Challenge`: Contains the **authority** and **resource**. **Authority** is the service the access token will be generated against. **Resource** is the service being accessed. 
-- `mip::AuthDelegate::OAuth2Token`: The client application updates with the token result. It will be consumed by the SDK when the engine is loaded. Outside of our authentication implementation, it shouldn't be necessary to get or set this value anywhere.
+- `mip::AuthDelegate::OAuth2Token`: The client application updates with the token result. It will be consumed by the SDK when the engine is loaded. It shouldn't be necessary to get or set this value anywhere outside of the `AcquireOAuth2Token` implementation.
 
 2. Write the access token acquisition logic.
 
@@ -116,7 +116,7 @@ public:
 
 #### consent_delegate_impl.cpp
 
-When the SDK requires consent, the `GetUserConsent` method is called *by the SDK*, and the URL passed in as a parameter. In the sample below, the user is notified that the SDK will connect to that provided URL, then returns `Consent::AcceptAlways`. This isn't a great example as the user wasn't presented with a real choice.
+When the SDK requires consent, the `GetUserConsent` method is called *by the SDK*, and the URL passed in as a parameter. In the example below, the user is notified that the SDK will connect to that provided URL, then returns `Consent::AcceptAlways`. This example isn't a good implementation, as the user wasn't presented with a real choice.
 
 ```console
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
