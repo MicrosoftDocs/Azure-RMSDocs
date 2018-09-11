@@ -21,6 +21,7 @@
 - name: Concepts
   items:
   - name: The APIs
+    href: concepts-apis-use-cases.md
   - name: Authentication
   - name: Engine      
   - name: Handler 
@@ -28,6 +29,13 @@
     href: concepts-classification-labels.md
   - name: Observers for async
     href: concepts-async-observers.md
+    items:
+    - name: File API observers (C++)
+      href: concepts-async-observers-file-cpp.md
+    - name: Policy API observers (C++)
+      href: concepts-async-observers-policy-cpp.md
+    - name: Protection API observers (C++)
+      href: concepts-async-observers-protection-cpp.md
   - name: Profile
   - name: Use cases 
 - name: How-to guides

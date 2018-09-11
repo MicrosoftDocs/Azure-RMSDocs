@@ -22,7 +22,7 @@ In this quickstart, you will <do X>
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete the [Quickstart: Client application initialization](quick-app-initialization.md) first.
+- Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first.
 - Review [Classification labels](concepts-classification-labels.md) concepts.
 
 ## Procedure 1

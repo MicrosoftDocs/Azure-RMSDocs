@@ -12,7 +12,9 @@ ms.author: bryanla
 
 ## Summary
 
-The MIP SDK is designed to be almost entirely asynchronous. Any operation resulting in network or file IO is performed asynchronously. To handle the event notifications for these asynchronous events, the SDK makes use of various `Observer` classes.
+The MIP SDK is designed to be almost entirely asynchronous. Any operation resulting in network or file IO is performed asynchronously. To handle the event notifications for these asynchronous events, the SDK makes use of various `Observer` classes. When constructing an object that will perform an asynchronous operation, an `Observer` must be provided. Observers will receive the notification events related to the various asynchronous operations in the MIP SDK, and provide the result to the caller.
+
+The included observers can be extended to implement the desired callback behavior. The SDK samples are implemented via future/promise and the implementations below will demonstrate that pattern.
 
 Functions in each `Observer` class are virtual and should be overridden by the developer for the preferred asynchronous pattern. In each of our examples, we demonstrate this event notification observer pattern via `std::promise` and `std::future`.
 
@@ -20,31 +22,31 @@ Each class-specific observer contains a set of functions related to the possible
 
 As an example, `FileProfile::Observer` can perform two operations: It can load a profile via `FileProfile::LoadAsync`, or it can load an engine via `FileProfile::AddEngineAsync`. Since we implement two `Observer` functions per asynchronous operation, it can be assumed that there are **four** `Observer` methods associated with `FileProfile`: `OnLoadSuccess()`, `OnLoadFailure()`, `OnAddEngineSuccess`, and `OnAddEngineFailure()`. 
 
-** (TBD) Is it pure virtual? **
-
 ## File API Observer Classes
 
-MIP SDK File API contains two observers:
+The MIP SDK File API contains two observers:
 
 * `mip::FileProfile::Observer`
 * `mip::FileHandler::Observer`
 
 ## Policy API Observer Classes
 
-MIP SDK Policy API has just a single observer:
+The MIP SDK Policy API has just a single observer:
 
 * `mip::Profile::Observer`
 
 ## Protection API Observer Classes
 
-MIP SDK Protection API has
+The MIP SDK Protection API has three observers:
 
+* `mip::ProtectionProfile::Observer`
 * `mip::ProtectionEngine::Observer`
 * `mip::ProtectionHandler::Observer`
 
 ## Next Steps (TBD)
 
-* File API Observers
-* Policy API Observers
-* Protection API Observers
-* Implementation Examples
+Learn more about how observers are implemented and used in C++, by the various APIs:
+
+* [File API Observers (C++)](concepts-async-observers-file-cpp.md)
+* [Policy API Observers (C++)](concepts-async-observers-policy-cpp.md)
+* [Protection API Observers (C++)](concepts-async-observers-protection-cpp.md)
