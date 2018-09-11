@@ -95,7 +95,7 @@ Application accounts are created using the [Azure AD **App registrations** page]
 
 ## TBD: Define Label Taxonomy and Protection Settings?
 
-See [Classification label concepts](concepts-classification-labels.md).
+See [Classification label concepts](concept-classification-labels.md).
 
 * Provide links to SCC configuration.
 * Provide details on rights required to config labels.
@@ -103,5 +103,5 @@ See [Classification label concepts](concepts-classification-labels.md).
 
 ## Next Steps
 
-- Before starting the Quickstarts section, be sure to read about [Observers in the MIP SDK](concepts-async-observers.md), as the MIP SDK is designed to be almost entirely asynchronous.
+- Before starting the Quickstarts section, be sure to read about [Observers in the MIP SDK](concept-async-observers.md), as the MIP SDK is designed to be almost entirely asynchronous.
 - If you're ready to gets some hands-on experience with the SDK, start with [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md).

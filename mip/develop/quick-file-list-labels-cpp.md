@@ -23,7 +23,7 @@ In this quickstart, you will <do X>
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
 - Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first.
-- Review [Classification labels](concepts-classification-labels.md) concepts.
+- Review [Classification labels](concept-classification-labels.md) concepts.
 
 ## Procedure 1
 
@@ -61,7 +61,7 @@ Include a sentence or two to explain only what is needed to complete the procedu
 
 ## Next Steps
 
-Now that you've learned how to set up the initialization code, and list sensitivity labels, try the next quickstart:
+Now that you've learned how to write the initialization code and list sensitivity labels, try the next quickstart:
 
 > [!div class="nextstepaction"]
 > [Apply a label](quick-file-apply-label-cpp.md)
