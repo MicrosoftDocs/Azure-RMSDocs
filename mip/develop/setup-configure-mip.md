@@ -11,7 +11,7 @@ ms.author: bryanla
 
 # Microsoft Information Protection (MIP) SDK setup and configuration 
 
-The MIP quickstart and tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Office 365 subscription and client workstation, in preparation for using the SDK.
+The Quickstart and Tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Office 365 subscription and client workstation, in preparation for using the SDK.
 
 Be sure to review the following topics before getting started:
 
@@ -45,9 +45,9 @@ Next, complete the following steps to ensure your client computer is set up and 
 ### Windows 10
 
 1. Using Windows Update, update your machine to Windows 10 Fall Creators Update (version 1709) or later. To  verify your current version:
-    - Click the Windows icon in the lower left
-    - Type "About your PC" and press the "Enter" key
-    - Scroll down to **Windows specifications** and look under **Version**
+    - Click the Windows icon in the lower left.
+    - Type "About your PC" and press the "Enter" key.
+    - Scroll down to **Windows specifications** and look under **Version**.
 2. Install [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), with the following workloads and optional components:
     - **Universal Windows Platform development** Windows workload, plus the following optional components:
         - **C++ Universal Windows Platform tools**
@@ -57,16 +57,16 @@ Next, complete the following steps to ensure your client computer is set up and 
 
         [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. Download the SDK binaries and samples: 
+3. Download the SDK samples and binaries: 
     - (TBD) Samples 
         - First create a [GitHub profile](https://github.com/join), if you don't already have one.
         - Install the latest version of [Software Freedom Conservancy's Git client tools](https://git-scm.com/download/)
         - `git clone <repo-path>`
-    - (TBD) Binaries
+    - (TBD) Binaries [NOTE: this will also impact the include/lib path instructions in the App Initialization quickstart]
         - Contained in Sample repo?
-        - OR, download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins ?
+        - OR, download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins?
         - OR, Nuget?
-    - (TBD) Info on supported platforms, system requirements
+    - (TBD) Info on supported platforms, system requirements?
 5. Ensure "Developer Mode" is enabled on your workstation:
     - Click the Windows icon in the lower left
     - Type "Use developer features" and press the "Enter" key

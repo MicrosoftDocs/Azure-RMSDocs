@@ -25,7 +25,7 @@ This quickstart illustrates the client initialization pattern used by the MIP C+
 If you haven't already, be sure to:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
-- The MIP SDK makes use of the observer pattern to implement asynchronous event notifications. Review [Observers in the MIP SDK](concept-async-observers.md) to learn more about observer concepts, and how they're implemented by the SDK.
+- Review [Observers in the MIP SDK](concept-async-observers.md) to learn more about observer concepts, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
 
 ## Create a Visual Studio solution and implement an observer class
 
@@ -33,7 +33,7 @@ If you haven't already, be sure to:
 https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/observer.md)
 
 >[!NOTE]
-> Throughout this article, we refer to MIP SDK files downloaded as part of [MIP SDK setup and configuration](setup-configure-mip.md#configure-your-client-workstation). For simplicity, the `<MIP-SDK-DIR>` syntax is used to represent the path to the root location of the directory. For instance, if you unzipped the `\file`, `\protection`, and `\upe` directories under the path `C:\VSProjects\MipDev\SDKBinaries\0.4.441.0\win32_0.4.441.0`, `<MIP-SDK-DIR>` would represent that path.
+> Throughout this article, we reference the MIP SDK files downloaded as part of .
 
 1. Create a new Visual Studio solution:
 
@@ -44,7 +44,24 @@ https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/t
      - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
      - When finished, click the **OK** button in the lower right.
 
-2. Implement an observer class. This is used later with the File profile class.
+   [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
+
+2. Configure the include and library directory paths in your project settings. These were downloaded/unzipped as part of the [MIP SDK setup and configuration](setup-configure-mip.md#configure-your-client-workstation) prerequisite:
+   - In the **Solution Explorer**, right click on the project node, and select **Properties**.
+   - On the **Property Pages** dialog, under **Configuration Properties**, select the **VC++ Directories** node.
+   - Select the **Include Directories** row, click the drop-down on the right side then **<Edit...>**, enter the path(s) to the SDK include subdirectories in the top field, and click **OK**. Specify the `\include` subdirectories (but no deeper), within the directory where you installed the SDK.
+   - Repeat the previous step for the **Library Directories** row, entering the path(s) to the SDK library subdirectories. Be sure to select the paths that match the current build configuration for your solution (debug/release target, and platform). Specify the `\bins\<target>\<platform>` subdirectories, within the directory where you installed the SDK.
+
+   [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
+
+3. Add the SDK binaries path to the PATH environment variable:
+   - Click the Windows icon in the lower left.
+   - Type "Path" and press the "Enter" key.
+   - On the **System Properties** dialog, click **Environment Variables**.
+   - Click the **Path** row under **User variables for \<user\>**, then click **Edit...**
+   - Click **New**, enter the same `\bins\<target>\<platform>` subdirectory path(s) you entered earlier for the SDK libraries, and click **OK**.
+
+4. Implement an observer class. This is used later with the File profile class.
 
    - CPP
      ```cpp
@@ -55,6 +72,8 @@ https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/t
      ``` 
 
 ## Implement the authentication delegate
+
+TODO: WE'll go thru a native app, but call out Web app similarites/differences.
 
 As mentioned, the client is also responsible for acquiring a suitable OAuth2 access token, and providing it to the MIP SDK. Token acquisition is accomplished in the implementation of a delegate class, which extends the `mip::AuthDelegate` class. The delegate implementation provides the preferred method of authentication, when requested by the SDK at run-time.  
 
