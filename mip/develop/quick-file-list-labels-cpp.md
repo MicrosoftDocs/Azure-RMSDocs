@@ -5,7 +5,7 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/10/2018
+ms.date: 09/27/2018
 ms.author: bryanla
 ---
 

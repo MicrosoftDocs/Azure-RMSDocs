@@ -5,7 +5,7 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 09/10/2018
+ms.date: 09/27/2018
 ms.author: bryanla
 ---
 # Observers in the MIP SDK
