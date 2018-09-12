@@ -27,50 +27,105 @@ If you haven't already, be sure to:
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
 - Review [Observers in the MIP SDK](concept-async-observers.md) to learn more about observer concepts, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
 
-## Create a Visual Studio solution and implement an observer class
+## Create a Visual Studio solution
 
-Here we create the initial Visual Studio solution, upon which the following Quickstarts will build. We also create a basic implementation for an observer class, by extending the SDK's `FileProfile::Observer` class. 
+Here we create the initial Visual Studio solution and project, upon which the following Quickstarts will build.  
 
-1. Create a new Visual Studio solution:
+1. Create a new Visual Studio solution:  
 
-   - Open Visual Studio 2017, select **File**, **New**, **Project**.
-   - In the **New Project** dialog:
-     - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
-     - In the center pane, select **Windows Console Application**
-     - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
-     - When finished, click the **OK** button in the lower right.
+- Open Visual Studio 2017, select **File**, **New**, **Project**.
+- In the **New Project** dialog:
+  - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
+  - In the center pane, select **Windows Console Application**
+  - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
+  - When finished, click the **OK** button in the lower right.
 
-   [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
+  [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
 2. Configure the include and library directory paths in your project settings. These directories were established as part of the [MIP SDK setup and configuration](setup-configure-mip.md#configure-your-client-workstation) prerequisite:
-   - In the **Solution Explorer**, right click on the project node, and select **Properties**.
+   - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Properties**.
    - On the **Property Pages** dialog, under **Configuration Properties**, select the **VC++ Directories** node.
    - Select the **Include Directories** row then click the drop-down on the right side, then **<Edit...>**, and enter the path(s) to the SDK include subdirectories in the top field. Click **OK**. Be sure to specify the `\include` subdirectories (but no deeper), within the directory where you installed the SDK.
    - Repeat the previous step for the **Library Directories** row, entering the path(s) to the SDK library subdirectories. Be sure to select the paths that match the current build configuration for your solution (debug/release target, and platform). Be sure to specify the `\bins\<target>\<platform>` subdirectories, within the directory where you installed the SDK.
    - Click **OK** on the **Property Pages** dialog when finished.
 
-   [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
+     [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
 
 3. Add the SDK binaries path to the PATH environment variable, to allow the SDK .DLL files to be found at runtime:
    - Click the Windows icon in the lower left.
-   - Type "Path" and press the "Enter" key.
+   - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
    - On the **System Properties** dialog, click **Environment Variables**.
    - Click the **Path** row under **User variables for \<user\>**, then click **Edit...**
    - Click **New**, enter the same `\bins\<target>\<platform>` subdirectory path(s) you entered earlier for the SDK libraries, and click **OK**.
 
-4. Implement an observer class, which is used later during initialiation of the File profile object.
+## Implement an observer class
 
-   - CPP
+Now create a basic implementation for an observer class, by extending the SDK's `FileProfile::Observer` class. The observer is instantied and used later, during initialization of the File profile and engine objects.
+
+1. Add a new class to your project, which generates both the header/.h and implementation/.cpp files for you:
+
+   - In the **Solution Explorer**, right click on the project node, select **Add**, then select **Class**.
+   - On the **Add Class** dialog:
+     - In the **Class Name** field, enter "profile_observer". You'll notice that both the **.h file** and **.cpp file** fields are automatically populated, based on the name you enter.
+     - When finished, click the **OK** button.
+
+     [![Visual Studio add class](media/quick-app-initialization-cpp/add-class.png)](media/quick-app-initialization-cpp/add-class.png#lightbox)
+
+2. After generating the .h and .cpp files for the class, both files will be opened in tabs, in the Editor Groups portion of the Visual Studio user interface. Now update each file to implement the new observer class:
+
+   - Update "profile_observer.h", by selecting/deleting its contents, then copy/paste the following into the file:
+
      ```cpp
+     #include <memory>
+     #include "mip/file/file_profile.h"
+
+     class ProfileObserver final : public mip::FileProfile::Observer {
+     public:
+          ProfileObserver() { }
+	        // Observer implementation
+	        void OnLoadSuccess(const std::shared_ptr<mip::FileProfile>& profile, const std::shared_ptr<void>& context) override;
+	        void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
+	        void OnAddEngineSuccess(const std::shared_ptr<mip::FileEngine>& engine, const std::shared_ptr<void>& context) override;
+	        void OnAddEngineError(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
+     };
      ```
 
-   - Header
+   - Update "profile_observer.cpp", by selecting/deleting its contents, then copy/paste the following into the file:
+
      ```cpp
+     #include "profile_observer.h"
+     #include <future>
+
+     using std::promise;
+     using std::shared_ptr;
+     using std::static_pointer_cast;
+     using mip::FileEngine;
+     using mip::FileProfile;
+
+     void ProfileObserver::OnLoadSuccess(const shared_ptr<FileProfile>& profile, const shared_ptr<void>& context) {
+          auto promise = static_pointer_cast<std::promise<shared_ptr<FileProfile>>>(context);
+          promise->set_value(profile);
+     }
+
+     void ProfileObserver::OnLoadFailure(const std::exception_ptr& error, const shared_ptr<void>& context) {
+          auto promise = static_pointer_cast<std::promise<shared_ptr<FileProfile>>>(context);
+          promise->set_exception(error);
+     }
+
+     void ProfileObserver::OnAddEngineSuccess(const shared_ptr<FileEngine>& engine, const shared_ptr<void>& context) {
+          auto promise = static_pointer_cast<std::promise<shared_ptr<FileEngine>>>(context);
+          promise->set_value(engine);
+     }
+
+     void ProfileObserver::OnAddEngineError(const std::exception_ptr& error, const shared_ptr<void>& context) {
+          auto promise = static_pointer_cast<std::promise<shared_ptr<FileEngine>>>(context);
+          promise->set_exception(error);
+     }
      ``` 
 
 ## Implement the authentication delegate
 
-TODO: We go thru a native app, but call out Web app similarites/differences.
+TODO: We go through a native app, but call out Web app similarites/differences.
 
 As mentioned, the client is also responsible for acquiring a suitable OAuth2 access token, and providing it to the MIP SDK. Token acquisition is accomplished in the implementation of a delegate class, which extends the `mip::AuthDelegate` class. The delegate implementation provides the preferred method of authentication, when requested by the SDK at run-time.  
 
@@ -185,13 +240,13 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 }
 ```
 
-## Implement a profile object
+## Implement a File profile object
 
 From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#fileprofile 
 From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/profile.md 
 
 
-## Implement an engine object
+## Implement an File engine object
 
 From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#engine 
 From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/engine.md 

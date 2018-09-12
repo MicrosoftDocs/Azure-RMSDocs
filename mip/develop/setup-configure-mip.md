@@ -68,8 +68,8 @@ Next, complete the following steps to ensure your client computer is set up and 
         - OR, Nuget?
     - (TBD) Info on supported platforms, system requirements?
 5. Ensure "Developer Mode" is enabled on your workstation:
-    - Click the Windows icon in the lower left
-    - Type "Use developer features" and press the "Enter" key
+    - Click the Windows icon in the lower left.
+    - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
     - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
     - Close the **Settings** dialog.
 
