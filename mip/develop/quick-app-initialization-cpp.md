@@ -60,7 +60,7 @@ Here we create the initial Visual Studio solution and project, upon which the fo
 
 ## Implement an observer class
 
-Now create a basic implementation for an observer class, by extending the SDK's `FileProfile::Observer` class. The observer is instantied and used later, during initialization of the File profile and engine objects.
+Now create a basic implementation for an observer class, by extending the SDK's `FileProfile::Observer` class. The observer is instantiated and used later, by the File profile and File engine objects.
 
 1. Add a new class to your project, which generates both the header/.h and implementation/.cpp files for you:
 
@@ -73,7 +73,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
 
 2. After generating the .h and .cpp files for the class, both files will be opened in tabs, in the Editor Groups portion of the Visual Studio user interface. Now update each file to implement the new observer class:
 
-   - Update "profile_observer.h", by selecting/deleting its contents, then copy/paste the following into the file:
+   - Update "profile_observer.h", by selecting/deleting the definition of `class profile_observer`, and copying/pasting the following into the file:
 
      ```cpp
      #include <memory>
@@ -90,10 +90,9 @@ Now create a basic implementation for an observer class, by extending the SDK's 
      };
      ```
 
-   - Update "profile_observer.cpp", by selecting/deleting its contents, then copy/paste the following into the file:
+   - Update "profile_observer.cpp", by selecting/deleting the implementation of the `profile_observer` class, then copying/pasting the following into the file:
 
      ```cpp
-     #include "profile_observer.h"
      #include <future>
 
      using std::promise;
@@ -122,6 +121,11 @@ Now create a basic implementation for an observer class, by extending the SDK's 
           promise->set_exception(error);
      }
      ``` 
+   - When finished, your .h and .cpp files should look like the following examples:
+
+   [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/profile-observer-h.png#lightbox)
+
+   [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/profile-observer-cpp.png#lightbox)
 
 ## Implement the authentication delegate
 
@@ -148,6 +152,8 @@ public:
       OAuth2Token& token) = 0;
 };
 ```
+
+
 
 1. Extend `mip::AuthDelegate` and override `mip::AuthDelegate::AcquireOAuth2Token`
 
