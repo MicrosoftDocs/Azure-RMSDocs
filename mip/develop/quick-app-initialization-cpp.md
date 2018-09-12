@@ -29,11 +29,7 @@ If you haven't already, be sure to:
 
 ## Create a Visual Studio solution and implement an observer class
 
-(TBD) Is pointing them to the Observer concepts article enough? Or should we have them walk through [Implement File API Observers](
-https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/observer.md)
-
->[!NOTE]
-> Throughout this article, we reference the MIP SDK files downloaded as part of .
+Here we create the initial Visual Studio solution, upon which the following Quickstarts will build. We also create a basic implementation for an observer class, by extending the SDK's `FileProfile::Observer` class. 
 
 1. Create a new Visual Studio solution:
 
@@ -46,7 +42,7 @@ https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/t
 
    [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
-2. Configure the include and library directory paths in your project settings. These were downloaded/unzipped as part of the [MIP SDK setup and configuration](setup-configure-mip.md#configure-your-client-workstation) prerequisite:
+2. Configure the include and library directory paths in your project settings. These directories were established as part of the [MIP SDK setup and configuration](setup-configure-mip.md#configure-your-client-workstation) prerequisite:
    - In the **Solution Explorer**, right click on the project node, and select **Properties**.
    - On the **Property Pages** dialog, under **Configuration Properties**, select the **VC++ Directories** node.
    - Select the **Include Directories** row, click the drop-down on the right side then **<Edit...>**, enter the path(s) to the SDK include subdirectories in the top field, and click **OK**. Specify the `\include` subdirectories (but no deeper), within the directory where you installed the SDK.
@@ -61,7 +57,7 @@ https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/t
    - Click the **Path** row under **User variables for \<user\>**, then click **Edit...**
    - Click **New**, enter the same `\bins\<target>\<platform>` subdirectory path(s) you entered earlier for the SDK libraries, and click **OK**.
 
-4. Implement an observer class. This is used later with the File profile class.
+4. Implement an observer class, which is used later during initialiation of the File profile object.
 
    - CPP
      ```cpp
@@ -73,7 +69,7 @@ https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/t
 
 ## Implement the authentication delegate
 
-TODO: WE'll go thru a native app, but call out Web app similarites/differences.
+TODO: We go thru a native app, but call out Web app similarites/differences.
 
 As mentioned, the client is also responsible for acquiring a suitable OAuth2 access token, and providing it to the MIP SDK. Token acquisition is accomplished in the implementation of a delegate class, which extends the `mip::AuthDelegate` class. The delegate implementation provides the preferred method of authentication, when requested by the SDK at run-time.  
 

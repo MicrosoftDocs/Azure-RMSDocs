@@ -33,7 +33,7 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 (TBD) QUESTIONS:
 - Should we add Microsoft 365 to the above?
 - Is AIP Premium P1/P2 backed by an Azure AD tenant? Or does the user need to sign up for an Azure subscription first, and use that AAD account to get the AIP P1/P2 subscription?
-- Do they still need a whitelisted tenant? ie: "Because the MIP SDK requires an Office 365 tenant with certain private preview features enabled, you must have an account from a properly configured preview tenant. If you need a test account, you can submit a request at https://aka.ms/mipsdkpreviewaccount. "
+- Do they still need a whitelisted tenant? per "Because the MIP SDK requires an Office 365 tenant with certain private preview features enabled, you must have an account from a properly configured preview tenant. If you need a test account, you can submit a request at https://aka.ms/mipsdkpreviewaccount. "
 
 ## Configure your client workstation
 
@@ -62,7 +62,7 @@ Next, complete the following steps to ensure your client computer is set up and 
         - First create a [GitHub profile](https://github.com/join), if you don't already have one.
         - Install the latest version of [Software Freedom Conservancy's Git client tools](https://git-scm.com/download/)
         - `git clone <repo-path>`
-    - (TBD) Binaries [NOTE: this will also impact the include/lib path instructions in the App Initialization quickstart]
+    - (TBD) Binaries [NOTE: will also impact the include/lib path instructions in the App Initialization quickstart]
         - Contained in Sample repo?
         - OR, download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins?
         - OR, Nuget?
