@@ -79,22 +79,34 @@ As part of the Office 365 subscription provisioning process, an associated Azure
 
 Application accounts are created using the [Azure AD **App registrations** page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), in the Azure portal. To create an application account for use with MIP SDK client applications:
 
-   > [!IMPORTANT] 
-   > To access the Azure AD **App registrations** page, you'll need to sign in to the portal with a user account that is a member of the [Subscription administrator](/azure/billing/billing-add-change-azure-subscription-administrator) role.
-   > (TBD) Confirm they need to add access to an API/perms. If so, 1 perm requires admin consent, so  they'll also need to be global admin in the tenant, and "Grant Permissions" when adding the API/perm. Need to confirm, based on [the Ignite 2008 HOL](https://github.com/tommoser/Ignite-HOL-4000#app-registration) we will have:  
-     - API called "Microsoft Rights Management Services", and perms: "Create and access protected content for users" [USER], "Read protected content on behalf of a user" [ADMIN], and "Create protected content on behalf of a user" [ADMIN].  
-     - API called "Microsoft Information Protection Sync Service", and perm: "Read all unified policies a user has access to".[TBD]
-   > We recommend testing with a restricted account, when passing username and password commandline parameters. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
+> [!IMPORTANT] 
+> To access the Azure AD **App registrations** page, you'll need to sign in to the portal with a user account that is a member of the [Subscription administrator](/azure/billing/billing-add-change-azure-subscription-administrator) role.  
+>
+> (TBD) Confirm they need to add access to an API/perms. If so, 1 perm requires admin consent, so  they'll also need to be global admin in the tenant, and "Grant Permissions" when adding the API/perm. Need to confirm, based on [the Ignite 2008 HOL](https://github.com/tommoser/Ignite-HOL-4000#app-registration) we will have:  
+    - API called "Microsoft Rights Management Services", and perms: "Create and access protected content for users" [USER], "Read protected content on behalf of a user" [ADMIN], and "Create protected content on behalf of a user" [ADMIN].  
+    - API called "Microsoft Information Protection Sync Service", and perm: "Read all unified policies a user has access to".[TBD]
+> We recommend testing with a restricted account, when passing username and password commandline parameters. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
 
 1. Follow the steps in [Integrating applications with Azure Active Directory, Add an application section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#adding-an-application). For testing purposes, use the following values for the given properties as you go through the guide: 
-    - **Application type** - (TBD)
-    - **Sign-On URL** - (TBD) You can use "https://localhost" for test purposes.
-    - **Redirect URI** - (TBD) You can use "https://localhost" for test purposes.
+    - **Application type** - Select "Native", as the client applications demonstrated by the SDK are console applications. Console applications are considered "public" clients by OAuth2. Unlike a "confidential" server-based application, such as a web application, "public" clients are not able to register or use secure credentials.
+    - **Redirect URI** - Since the SDK uses simple console client applications, use a URI in the format `<app-name>://authorize`.
 
-2. Now go to the [Updating an application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application) section for details on adding permissions to the required MIP API(s).
-    - (TBD) Confirm they need to add access to an API/perms. If so, 1 perm requires admin consent, so  they'll also need to be global admin in the tenant, and "Grant Permissions" when adding the API/perm. Need to confirm, based on [the Ignite 2008 HOL](https://github.com/tommoser/Ignite-HOL-4000#app-registration) we will have:  
-      - API called "Microsoft Rights Management Services", and perms: "Create and access protected content for users" [USER], "Read protected content on behalf of a user" [ADMIN], and "Create protected content on behalf of a user" [ADMIN].  
-      - API called "Microsoft Information Protection Sync Service", and perm: "Read all unified policies a user has access to".[TBD]
+2. When finished, you'll be returned to the **Registered app** page for your new application registration. Copy the GUID in the **Application ID** field, as you will need this later. 
+
+3. Then click **Settings** to add the APIs and permissions to which the client will need access. On the **Settings** page, click **Required permissions**.
+
+4. On the **Required permissions** page, click **Add**
+   - On the **Add API access** page, click **Select an API**
+     - On the **Select an API** Page, select the **Microsoft Rights Management Services** API, and click **Select**.
+       - On the **Enable Access** page for the API's available permissions, select **Create and access protected content for users**, and click **Select**, then **Done**
+
+5. Repeat step #4, but this time when you get to the **Select an API** page, you'll need to search for the API. 
+   - In the search box, type **Microsoft Information Protection Sync Service** then select the service and click **Select**.
+     - On the **Enable Access** page for the API's available permissions, select **Read all unified policies a user has access to**, and click **Select**, then **Done**
+
+6. When you're back on the **Required Permissions** page, click **Grant Permissions** and confirm. 
+
+For more details on adding APIs and permissions to a registration, see [Updating an application, Configure a client application to access web APIs section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Here you'll find information on adding the APIs and permissions needed by a client application.  
 
 ## TBD: Define Label Taxonomy and Protection Settings?
 

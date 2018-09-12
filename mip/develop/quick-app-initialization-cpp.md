@@ -25,8 +25,8 @@ This quickstart illustrates the client initialization pattern used by the MIP C+
 If you haven't already, be sure to:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
-- Review [Observers in the MIP SDK](concept-async-observers.md) to learn more about observer concepts, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
-- Review [Authentication in the MIP SDK](concept-authentication-cpp.md) to learn how you can implement authentication and consent.
+- Review [Observer concepts](concept-async-observers.md) to learn more about observer concepts, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
+- Review [Authentication concepts](concept-authentication-cpp.md) to learn how authentication and consent are implemented by the SDK and client application.
 
 ## Create a Visual Studio solution and project
 
@@ -67,14 +67,14 @@ Now create a basic implementation for an observer class, by extending the SDK's 
 
    - In the **Solution Explorer**, right click on the project node, select **Add**, then select **Class**.
    - On the **Add Class** dialog:
-     - In the **Class Name** field, enter "profile_observer". You'll notice that both the **.h file** and **.cpp file** fields are automatically populated, based on the name you enter.
+     - In the **Class Name** field, enter "profile_observer". Notice that both the **.h file** and **.cpp file** fields are automatically populated, based on the name you enter.
      - When finished, click the **OK** button.
 
      [![Visual Studio add class](media/quick-app-initialization-cpp/add-class.png)](media/quick-app-initialization-cpp/add-class.png#lightbox)
 
-2. After generating the .h and .cpp files for the class, both files will be opened in tabs, in the Editor Groups portion of the Visual Studio user interface. Now update each file to implement the new observer class:
+2. After generating the .h and .cpp files for the class, both files are opened in Editor Group tabs. Now update each file to implement the new observer class:
 
-   - Update "profile_observer.h", by selecting/deleting the definition of `class profile_observer`. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include, etc.). Then copy/paste the following into the file :
+   - Update "profile_observer.h", by selecting/deleting the definition of `class profile_observer`. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file:
 
      ```cpp
      #include <memory>
@@ -91,7 +91,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
      };
      ```
 
-   - Update "profile_observer.cpp", by selecting/deleting the implementation of the `profile_observer` class. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include, etc.). Then copy/paste the following into the file:
+   - Update "profile_observer.cpp", by selecting/deleting the implementation of the `profile_observer` class. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file:
 
      ```cpp
      #include <future>
@@ -122,11 +122,12 @@ Now create a basic implementation for an observer class, by extending the SDK's 
           promise->set_exception(error);
      }
      ``` 
+
 ## Implement the authentication delegate
 
 TODO: We go through a native app, but call out Web app similarites/differences.
 
-As mentioned, the client is also responsible for acquiring a suitable OAuth2 access token, and providing it to the MIP SDK. Token acquisition is accomplished in the implementation of a delegate class, which extends the `mip::AuthDelegate` class. `mip::AuthDelegate` defines the pure virtual function `mip::AuthDelegate::AcquireOAuth2Token`, which is overriden to acquire and provide the access token.
+The MIP SDK implements authentication using class extensibility, and a coordinated request/response mechanism with the client application. As mentioned, the client must acquire a suitable OAuth2 access token, when asked by the MIP SDK at runtime. Token acquisition is accomplished in the implementation of the client's delegate class, which extends the `mip::AuthDelegate` class and implements `mip::AuthDelegate::AcquireOAuth2Token`.
 
 ```cpp
 class AuthDelegate {
@@ -167,14 +168,14 @@ The SDK calls the client application's implementation of `mip::AuthDelegate::Acq
 
 The `mip::Consent` enum class implements an easy-to-use approach that permits application developers to provide a custom consent experience based on the endpoint that is being accessed by the SDK. The notification can inform a user of the data that will be collected, how to get the data removed, or any other information that is required by law or compliance policies. Once the user grants consent, the application can continue. 
 
-GDPR info here? 
-Exception details?
+TBD: GDPR info here? 
+TBD: Exception details?
 
 1. Extend the `mip::Consent` base class - Consent is implemented by extending the `mip::Consent` base class and implementing `GetUserConsent` to return one of the `mip::Consent` enum values. 
 
 The object derived from `mip::Consent` is passed in to the `mip::FileProfile::Settings` or `mip::ProtectionProfile::Settings` constructor.
 
-When a user performs an operation that would require providing consent, the SDK calls the `GetUserConsent` method, passing in the destination URL as the parameter. It's in this method where one would implement displaying the necessary information to the user, allowing them to make a decision on whether or not they consent to using the service. 
+When a user performs an operation requiring consent, the SDK calls the `GetUserConsent` method, passing in the destination URL. `GetUserConsent` then displays the necessary information to the user, requesting a decision on whether to allow the application to access the service. 
 
 Operations that will trigger the consent flow are (TBD):
 

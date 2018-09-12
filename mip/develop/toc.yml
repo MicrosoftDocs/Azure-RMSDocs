@@ -26,6 +26,13 @@
     href: concept-profile-engine-cpp.md  
   - name: Authentication
     href: concept-authentication-cpp.md
+    items:
+    - name: Implementing an authentication delegate (C++)
+      href: concept-authentication-delegate-cpp.md
+    - name: Acquiring an access token (PowerShell)
+      href: concept-authentication-acquire-token-ps.md
+    - name: Acquiring an access token (Python)
+      href: concept-authentication-acquire-token-py.md      
   - name: Handler 
   - name: Labels 
     href: concept-classification-labels.md
