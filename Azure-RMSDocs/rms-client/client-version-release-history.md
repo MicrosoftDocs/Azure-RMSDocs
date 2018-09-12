@@ -52,7 +52,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 If you have a version of the client that is later than 1.37.19.0, it is a preview build for testing and evaluation purposes.
 
-This version includes the MSIPC version 1.0.3592.627 of the RMS client.
+**Released**: 09/20/2018
 
 ## Version 1.37.19.0
 
@@ -62,7 +62,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **New features**: 
 
-- Support for the ISO standard for PDF encryption so that documents that you protect retain their .pdf file name extension by default, and can be opened by PDF readers that support this ISO standard. Currently, you must instruct users to open these protected PDFs manually by using the Azure Information Protection viewer. To help users do this, when they open one of these protected PDFs, they see a page with icons to select for their operating system. If you do not want this behavior and instead, require parity with the general availability version of the Azure Information Protection client, you can configure an [advanced client configuration](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
+- Support for the ISO standard for PDF encryption, by configuring a new [advanced client configuration](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this option is configured, PDF documents that you protect retain their .pdf file name extension (rather than change to .ppdf) and can be opened by PDF readers that support this ISO standard. Currently, you must instruct users to open these protected PDFs manually by using the Azure Information Protection viewer. To help users do this, when they open one of these protected PDFs, they see a page with icons to select for their operating system..
 
 - Support for new sensitive information types to help you classify documents that contain personal information. [More information](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
