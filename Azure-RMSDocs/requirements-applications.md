@@ -95,11 +95,8 @@ The following Office client suites support protecting files and emails on Window
 - Office 365 with Office 2016 apps (minimum version 1805, build 9330.2078) when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
 
 - Office 365 ProPlus: Office 2016 and Office 2013
-<<<<<<< HEAD
-=======
     
     These editions of Office are included with most but not all Office 365 subscriptions that include protecting data from Azure Information Protection. Check your subscription information to see if Office 365 ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
->>>>>>> 204ec5fe32d4dd740ab45781550de5f596ae7c4a
 
 - Office Professional Plus 2016
 
