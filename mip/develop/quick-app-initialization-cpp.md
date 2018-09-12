@@ -11,18 +11,18 @@ ms.author: bryanla
 
 # Quickstart: Client application initialization (C++)
 
-This quickstart illustrates the client initialization pattern used by the MIP C++ SDK at runtime. At a high level, all clients must accomplish the following initialization steps, in this order:
+This quickstart illustrates the client initialization pattern used by the MIP C++ SDK at runtime. At a high level, all clients must accomplish the following initialization steps before using APIs:
 
-1. Acquire and provide a suitable OAuth2 access token to the SDK
-2. Initialize and provide a Profile object to the SDK
-3. Initialize and provide an Engine object to the SDK 
+- Acquire and provide a suitable OAuth2 access token to the SDK
+- Initialize and provide a Profile object to the SDK
+- Initialize and provide an Engine object to the SDK 
 
 > [!NOTE]
 > The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs.  Although this quickstart demonstrates File API examples, this same pattern is applicable to clients using the Policy and Protection APIs.
 
 ## Prerequisites
 
-If you haven't already, be sure to complete the following prerequisites before continuing:
+If you haven't already, be sure to:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
 - The MIP SDK makes use of the observer pattern to implement asynchronous event notifications. Review [Observers in the MIP SDK](concept-async-observers.md) to learn more about observer concepts, and how they're implemented by the SDK.
@@ -30,19 +30,29 @@ If you haven't already, be sure to complete the following prerequisites before c
 ## Create a Visual Studio solution and implement an observer class
 
 (TBD) Is pointing them to the Observer concepts article enough? Or should we have them walk through [Implement File API Observers](
-https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/observer.md) ?
+https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/observer.md)
 
-1. Create a new Visual Studio 2017 solution:
-   - Open Visual Studio, select **File**, **New**, **Project**.
+>[!NOTE]
+> Throughout this article, we refer to MIP SDK files downloaded as part of [MIP SDK setup and configuration](setup-configure-mip.md#configure-your-client-workstation). For simplicity, the `<MIP-SDK-DIR>` syntax is used to represent the path to the root location of the directory. For instance, if you unzipped the `\file`, `\protection`, and `\upe` directories under the path `C:\VSProjects\MipDev\SDKBinaries\0.4.441.0\win32_0.4.441.0`, `<MIP-SDK-DIR>` would represent that path.
+
+1. Create a new Visual Studio solution:
+
+   - Open Visual Studio 2017, select **File**, **New**, **Project**.
    - In the **New Project** dialog:
      - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
      - In the center pane, select **Windows Console Application**
      - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
      - When finished, click the **OK** button in the lower right.
 
-2. Implement the Observer class, for use with the File Profile
-   - test
-   - test 
+2. Implement an observer class. This is used later with the File profile class.
+
+   - CPP
+     ```cpp
+     ```
+
+   - Header
+     ```cpp
+     ``` 
 
 ## Implement the authentication delegate
 
