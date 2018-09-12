@@ -45,12 +45,13 @@ Here we create the initial Visual Studio solution, upon which the following Quic
 2. Configure the include and library directory paths in your project settings. These directories were established as part of the [MIP SDK setup and configuration](setup-configure-mip.md#configure-your-client-workstation) prerequisite:
    - In the **Solution Explorer**, right click on the project node, and select **Properties**.
    - On the **Property Pages** dialog, under **Configuration Properties**, select the **VC++ Directories** node.
-   - Select the **Include Directories** row, click the drop-down on the right side then **<Edit...>**, enter the path(s) to the SDK include subdirectories in the top field, and click **OK**. Specify the `\include` subdirectories (but no deeper), within the directory where you installed the SDK.
-   - Repeat the previous step for the **Library Directories** row, entering the path(s) to the SDK library subdirectories. Be sure to select the paths that match the current build configuration for your solution (debug/release target, and platform). Specify the `\bins\<target>\<platform>` subdirectories, within the directory where you installed the SDK.
+   - Select the **Include Directories** row then click the drop-down on the right side, then **<Edit...>**, and enter the path(s) to the SDK include subdirectories in the top field. Click **OK**. Be sure to specify the `\include` subdirectories (but no deeper), within the directory where you installed the SDK.
+   - Repeat the previous step for the **Library Directories** row, entering the path(s) to the SDK library subdirectories. Be sure to select the paths that match the current build configuration for your solution (debug/release target, and platform). Be sure to specify the `\bins\<target>\<platform>` subdirectories, within the directory where you installed the SDK.
+   - Click **OK** on the **Property Pages** dialog when finished.
 
    [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
 
-3. Add the SDK binaries path to the PATH environment variable:
+3. Add the SDK binaries path to the PATH environment variable, to allow the SDK .DLL files to be found at runtime:
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key.
    - On the **System Properties** dialog, click **Environment Variables**.
