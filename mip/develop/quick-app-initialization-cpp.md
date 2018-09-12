@@ -27,20 +27,20 @@ If you haven't already, be sure to:
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
 - Review [Observers in the MIP SDK](concept-async-observers.md) to learn more about observer concepts, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
 
-## Create a Visual Studio solution
+## Create a Visual Studio solution and project
 
-Here we create the initial Visual Studio solution and project, upon which the following Quickstarts will build.  
+Here we create the initial Visual Studio solution and project, upon which the following Quickstarts will build. 
 
-1. Create a new Visual Studio solution:  
+1. Create a new Visual Studio solution:
 
-- Open Visual Studio 2017, select **File**, **New**, **Project**.
-- In the **New Project** dialog:
-  - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
-  - In the center pane, select **Windows Console Application**
-  - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
-  - When finished, click the **OK** button in the lower right.
+   - Open Visual Studio 2017, select **File**, **New**, **Project**.
+   - In the **New Project** dialog:
+     - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
+     - In the center pane, select **Windows Console Application**
+     - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
+     - When finished, click the **OK** button in the lower right.
 
-  [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
+     [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
 2. Configure the include and library directory paths in your project settings. These directories were established as part of the [MIP SDK setup and configuration](setup-configure-mip.md#configure-your-client-workstation) prerequisite:
    - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Properties**.
