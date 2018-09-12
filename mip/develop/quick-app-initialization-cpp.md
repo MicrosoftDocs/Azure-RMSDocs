@@ -26,6 +26,7 @@ If you haven't already, be sure to:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
 - Review [Observers in the MIP SDK](concept-async-observers.md) to learn more about observer concepts, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
+- Review [Authentication in the MIP SDK](concept-authentication-cpp.md) to learn how you can implement authentication and consent.
 
 ## Create a Visual Studio solution and project
 
@@ -73,7 +74,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
 
 2. After generating the .h and .cpp files for the class, both files will be opened in tabs, in the Editor Groups portion of the Visual Studio user interface. Now update each file to implement the new observer class:
 
-   - Update "profile_observer.h", by selecting/deleting the definition of `class profile_observer`, and copying/pasting the following into the file:
+   - Update "profile_observer.h", by selecting/deleting the definition of `class profile_observer`. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include, etc.). Then copy/paste the following into the file :
 
      ```cpp
      #include <memory>
@@ -90,7 +91,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
      };
      ```
 
-   - Update "profile_observer.cpp", by selecting/deleting the implementation of the `profile_observer` class, then copying/pasting the following into the file:
+   - Update "profile_observer.cpp", by selecting/deleting the implementation of the `profile_observer` class. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include, etc.). Then copy/paste the following into the file:
 
      ```cpp
      #include <future>
@@ -121,19 +122,11 @@ Now create a basic implementation for an observer class, by extending the SDK's 
           promise->set_exception(error);
      }
      ``` 
-   - When finished, your .h and .cpp files should look like the following examples:
-
-   [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/profile-observer-h.png#lightbox)
-
-   [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/profile-observer-cpp.png#lightbox)
-
 ## Implement the authentication delegate
 
 TODO: We go through a native app, but call out Web app similarites/differences.
 
-As mentioned, the client is also responsible for acquiring a suitable OAuth2 access token, and providing it to the MIP SDK. Token acquisition is accomplished in the implementation of a delegate class, which extends the `mip::AuthDelegate` class. The delegate implementation provides the preferred method of authentication, when requested by the SDK at run-time.  
-
-`mip::AuthDelegate` contains nested classes `OAuth2Challenge` and `OAuth2Token`, and defines the pure virtual function `mip::AuthDelegate::AcquireOAuth2Token`. `AcquireOAuth2Token` must be extended by developers, to define the preferred method of access token acquisition:
+As mentioned, the client is also responsible for acquiring a suitable OAuth2 access token, and providing it to the MIP SDK. Token acquisition is accomplished in the implementation of a delegate class, which extends the `mip::AuthDelegate` class. `mip::AuthDelegate` defines the pure virtual function `mip::AuthDelegate::AcquireOAuth2Token`, which is overriden to acquire and provide the access token.
 
 ```cpp
 class AuthDelegate {
@@ -257,7 +250,7 @@ From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/dev
 From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#engine 
 From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/engine.md 
 
-## Test the application
+## Build and test the application
 
 (TBD) - show sample output here, but DON'T USE THIS block
 

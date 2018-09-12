@@ -9,7 +9,7 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# Core concepts: The Profile and Engine objects
+# Profile and Engine objects
 
 ## Profiles
 

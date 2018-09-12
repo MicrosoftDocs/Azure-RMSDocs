@@ -23,8 +23,9 @@
   - name: The APIs
     href: concept-apis-use-cases.md
   - name: The profile and engine 
-    href: concept-core-profile-engine.md  
+    href: concept-profile-engine-cpp.md  
   - name: Authentication
+    href: concept-authentication-cpp.md
   - name: Handler 
   - name: Labels 
     href: concept-classification-labels.md
