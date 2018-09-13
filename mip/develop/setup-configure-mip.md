@@ -108,7 +108,9 @@ To register an application account in Azure AD for use with the Quickstarts and 
    - On the **Select an API** page, in the search box type "**Microsoft Information Protection Sync Service**", then click the API and click **Select**.
    - On the **Enable Access** page for the API's available permissions, click "**Read all unified policies a user has access to**", and click **Select**, then **Done**
 
-6. When you're back on the **Required Permissions** page, click **Grant Permissions**, then **Yes**. This step gives pre-consent to the application using this registration, to access the APIs under the specified permissions. If you signed in as a global administrator,  consent is recorded for all users in the tenant that run the application; otherwise, it applies only to your user account.
+6. When you're back on the **Required Permissions** page, click **Grant Permissions**, then **Yes**. This step gives pre-consent to the application using this registration, to access the APIs under the specified permissions. If you signed in as a global administrator, consent is recorded for all users in the tenant that run the application; otherwise, it applies only to your user account. 
+
+When finished, application registration and API permissions should look similar to the following:
 
    [![Azure AD app registration](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 

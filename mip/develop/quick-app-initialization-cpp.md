@@ -123,9 +123,11 @@ Now create a basic implementation for an observer class, by extending the SDK's 
      }
      ``` 
 
+================== BELOW THIS LINE IS WIP ===========================
+
 ## Implement the authentication delegate
 
-The MIP SDK implements authentication using class extensibility, providing a coordinated request/response mechanism with the client application. The client application must acquire a suitable OAuth2 access token, when asked by the MIP SDK at runtime. Token acquisition is accomplished in the implementation of the client's delegate class, which extends the `mip::AuthDelegate` class and implements the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function.
+The MIP SDK implements authentication using class extensibility, providing a coordinated request/response mechanism with the client application. The client application must acquire a suitable OAuth2 access token, when asked by the MIP SDK at runtime. Token acquisition is accomplished in the implementation of the client's authentication delegate class, which extends the `mip::AuthDelegate` class and implements the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function.
 
 1. Extend `mip::AuthDelegate` and override `mip::AuthDelegate::AcquireOAuth2Token`
 
