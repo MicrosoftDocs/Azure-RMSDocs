@@ -39,32 +39,18 @@ sections:
       - image:
           src: media/index/logo_python.svg
     rows:
-      - title: Simple authentication
+      - title: Application initialization
         values: 
-        - href: authentication/simple-authentication
-        - href: authentication/node
-        - href: authentication/python
-      - title: Authentication delegate
+        - href: quick-app-initialization-cpp
+      - title: Use the File API to list sensitivity labels
         values: 
-        - href: authentication/auth-delegate
-      - title: List labels
+        - href: quick-file-list-lables-cpp
+      - title: Use the File API to apply a label
         values: 
-        - href: authentication/simple-authentication
-      - title: Apply label
+        - href: quick-file-apply-lable-cpp
+      - title: Use the File API to read a label
         values: 
-        - href: authentication/simple-authentication
-      - title: Read label
-        values: 
-        - href: authentication/simple-authentication
-- title: Step-by-Step Tutorials
-  items:
-  - type: list
-    style: ordered
-    items:
-    - html: <a href="authentication/simple-authentication">Mint an authentication token</a>
-    - html: <a href="authentication/simple-authentication">Create an authentication delegate</a>
-    - html: <a href="authentication/simple-authentication">Initialize a FileProfile</a>
-    - html: <a href="authentication/simple-authentication">Add an engine and list labels</a>    
+        - href: quick-file-read-lable-cpp
 - title: Reference
   items:
   - type: list
