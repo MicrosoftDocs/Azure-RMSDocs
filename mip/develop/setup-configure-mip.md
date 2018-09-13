@@ -108,6 +108,8 @@ Application accounts are created using the [Azure AD **App registrations** page]
 
 For more details on adding APIs and permissions to a registration, see [Updating an application, Configure a client application to access web APIs section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Here you'll find information on adding the APIs and permissions needed by a client application.  
 
+TBD: Screen shot of perms page?
+
 ## TBD: Define Label Taxonomy and Protection Settings?
 
 See [Classification label concepts](concept-classification-labels.md).
