@@ -100,7 +100,7 @@ Application accounts are created using the [Azure AD **App registrations** page]
    - In the search box, type **Microsoft Information Protection Sync Service** then select the service and click **Select**.
      - On the **Enable Access** page for the API's available permissions, select **Read all unified policies a user has access to**, and click **Select**, then **Done**
 
-6. When you're back on the **Required Permissions** page, click **Grant Permissions** and confirm. 
+6. When you're back on the **Required Permissions** page, click **Grant Permissions**, then **Yes**. This step gives pre-consent to the application using this registration, to access the APIs under the specified permissions. If you signed in as a global administrator,  consent is recorded for all users in the tenant; otherwise, it applies only to your user account.
 
 For more details on adding APIs and permissions to a registration, see [Updating an application, Configure a client application to access web APIs section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Here you'll find information on adding the APIs and permissions needed by a client application.  
 
