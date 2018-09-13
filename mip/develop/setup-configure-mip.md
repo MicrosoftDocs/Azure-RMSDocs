@@ -76,11 +76,11 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 ## Register a client application with Azure Active Directory
 
-As part of the Office 365 subscription provisioning process, an associated Azure AD tenant is created. The Azure AD tenant provides identity and access management for Office 365 *user accounts* and *application accounts*. Applications that require access to secured APIs (such as MIP APIs), require an application account in order to sign in and authenticate.
+As part of the Office 365 subscription provisioning process, an associated Azure AD tenant is created. The Azure AD tenant provides identity and access management for Office 365 *user accounts* and *application accounts*. Applications that require access to secured APIs (such as MIP APIs), require an application account.
 
-Upon sign-in, accounts are represented by a *security principal*, which encapsulates the account's identity configuration for access control, etc. Security principals that represent an application account (such as an application built with the MIP SDK), are referred to as a [*service principal*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
+For authentication and authorization at runtime, accounts are represented by a *security principal*, which is derived from the account's identity information. Security principals that represent an application account are referred to as a [*service principal*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
 
-To create an application account for use with MIP SDK client applications:
+To register an application account in Azure AD for use with MIP SDK client applications:
 
   > [!IMPORTANT] 
   > To access Azure AD tenant management for account creation, you'll need to sign in to the Azure portal with a user account that is a member of the ["Owner" role on the subscription](/azure/billing/billing-add-change-azure-subscription-administrator). Depending on the configuration of your tenant, you may also need to be a member of the "Global Admininstrator" directory role to [register an application](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
