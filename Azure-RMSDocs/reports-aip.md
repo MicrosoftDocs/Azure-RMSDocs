@@ -6,7 +6,7 @@ description: How to use central reporting to track adoption of your Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/00/2018
+ms.date: 09/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +35,7 @@ ms.suite: ems
 
 Use Azure Information Protection analytics for central reporting to track the adoption of your Azure Information Protection labels, as well as monitor user access to labeled documents and emails, and any changes to their classification. You can also identify documents that contain sensitive information that must be protected.
 
-The data that you see is aggregated from the following endpoints: The Azure Information Protection client, the Azure Information Protection scanner, and [clients that support unified labeling](https://review.docs.microsoft.com/en-us/azure/information-protection/configure-policy-migrate-labels?branch=pr-en-us-2163#clients-that-support-unified-labeling).
+The data that you see is aggregated from your Azure Information Protection clients and Azure Information Protection scanners.
 
 For example, you'll be able to see the following:
 
