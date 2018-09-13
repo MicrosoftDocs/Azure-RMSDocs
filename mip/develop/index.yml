@@ -21,11 +21,11 @@ abstract:
     image:
       alt: 
       height: 112
-      src: media/index/i_video.svg
-      width: 200  
-    title: TODO
-    href: https://www.youtube.com/embed/6hneqjL4qjI
-    width: 200
+      src: media/index/tom-mip-sdk.png
+      width: 250  
+    title: MIP SDK Overview (15:26)
+    href: https://www.youtube.com/embed/HFXI_pcGGRc
+    width: 250
 sections:
 - title: 5-Minute Quickstarts
   items:
