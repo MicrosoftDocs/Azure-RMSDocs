@@ -3,43 +3,48 @@
 - name: Overview
   items:
   - name: About Microsoft Information Protection SDK
-    href: concepts/overview.md
+    href: overview.md
+- name: Setup
+  href: setup-configure-mip.md
 - name: Quickstarts
   items:
-  - name: Simple authentication - C++
-    href: authentication/simple-authentication.md
-  - name: Simple authentication - Node.js
-    href: authentication/node.md
-  - name: Simple authentication - Python
-    href: authentication/python.md
-  - name: Authentication delegate - C++
-    href: authentication/authdelegate.md
-  - name: Apply label - C++
-  - name: List labels - C++
-  - name: Read label - C++
-- name: Tutorials
-  items:
-  - name: Mint an authentication token
-  - name: Create an authentication delegate
-    href: authentication/authdelegate.md
-  - name: Initialize a FileProfile
-  - name: Add an engine and list labels
-- name: Samples
-  items:
-  - name: C# UWP thing
-  - name: Commandline cross-platform file API
-  - name: Commandline cross-platform UPE API
-  - name: Commandline cross-platform protection API
+  - name: Application initialization (C++)
+    href: quick-app-initialization-cpp.md
+  - name: File APIs
+    items:
+    - name: List sensitivity labels (C++)
+      href: quick-file-list-labels-cpp.md
+    - name: Apply a label (C++)
+      href: quick-file-apply-label-cpp.md
+    - name: Read a label (C++)
+      href: quick-file-read-label-cpp.md
 - name: Concepts
   items:
   - name: The APIs
-  - name: Async
+    href: concept-apis-use-cases.md
+  - name: The profile and engine 
+    href: concept-profile-engine-cpp.md  
   - name: Authentication
-  - name: Engine      
+    href: concept-authentication-cpp.md
+    items:
+    - name: Implementing an authentication delegate (C++)
+      href: concept-authentication-delegate-cpp.md
+    - name: Acquiring an access token (PowerShell)
+      href: concept-authentication-acquire-token-ps.md
+    - name: Acquiring an access token (Python)
+      href: concept-authentication-acquire-token-py.md      
   - name: Handler 
   - name: Labels 
-  - name: Profile
-  - name: Use cases 
+    href: concept-classification-labels.md
+  - name: Observers for async
+    href: concept-async-observers.md
+    items:
+    - name: File API observers (C++)
+      href: concept-async-observers-file-cpp.md
+    - name: Policy API observers (C++)
+      href: concept-async-observers-policy-cpp.md
+    - name: Protection API observers (C++)
+      href: concept-async-observers-protection-cpp.md
 - name: How-to guides
   items: 
   - name: TBD
@@ -83,11 +88,11 @@
       - name: FileEngine
         href: reference/class_mip_fileengine.md
       - name: FileEngine::Settings
-        href: reference/class_mip_fileengine::settings.md
+        href: reference/class_mip_fileengine_settings.md
       - name: FileHandler
         href: reference/class_mip_filehandler.md
       - name: FileHandler::Observer
-        href: reference/class_mip_filehandler::observer.md
+        href: reference/class_mip_filehandler_observer.md
       - name: FileIOError
         href: reference/class_mip_fileioerror.md
       - name: FileProfile

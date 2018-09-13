@@ -17,6 +17,15 @@ metadata:
   ms.author: bryanla
 abstract:
   description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection—no matter where it’s stored or who it’s shared with.
+  aside:
+    image:
+      alt: 
+      height: 112
+      src: media/index/tom-mip-sdk.png
+      width: 250  
+    title: MIP SDK Overview (15:26)
+    href: https://www.youtube.com/embed/HFXI_pcGGRc
+    width: 250
 sections:
 - title: 5-Minute Quickstarts
   items:
@@ -30,32 +39,18 @@ sections:
       - image:
           src: media/index/logo_python.svg
     rows:
-      - title: Simple authentication
+      - title: Application initialization
         values: 
-        - href: authentication/simple-authentication
-        - href: authentication/node
-        - href: authentication/python
-      - title: Authentication delegate
+        - href: quick-app-initialization-cpp
+      - title: Use the File API to list sensitivity labels
         values: 
-        - href: authentication/auth-delegate
-      - title: List labels
+        - href: quick-file-list-labels-cpp
+      - title: Use the File API to apply a label
         values: 
-        - href: authentication/simple-authentication
-      - title: Apply label
+        - href: quick-file-apply-label-cpp
+      - title: Use the File API to read a label
         values: 
-        - href: authentication/simple-authentication
-      - title: Read label
-        values: 
-        - href: authentication/simple-authentication
-- title: Step-by-Step Tutorials
-  items:
-  - type: list
-    style: ordered
-    items:
-    - html: <a href="authentication/simple-authentication">Mint an authentication token</a>
-    - html: <a href="authentication/simple-authentication">Create an authentication delegate</a>
-    - html: <a href="authentication/simple-authentication">Initialize a FileProfile</a>
-    - html: <a href="authentication/simple-authentication">Add an engine and list labels</a>    
+        - href: quick-file-read-label-cpp
 - title: Reference
   items:
   - type: list

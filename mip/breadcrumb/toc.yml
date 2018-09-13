@@ -6,5 +6,5 @@
       items:
       - name: Microsoft Information Protection
         items:
-        - name: SDK
+        - name: Develop
           href: /information-protection/develop/

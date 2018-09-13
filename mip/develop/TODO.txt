@@ -1,0 +1,2 @@
+delete all subdirectories, except for /media
+delete this file

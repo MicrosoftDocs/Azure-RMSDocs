@@ -4,6 +4,4 @@
 - name: Deploy and use the Service
 - name: Deploy and use the client
 - name: Develop and customize apps
-  items:
-  - name: MIP SDK
-    href: develop/
+  href: develop/
