@@ -25,7 +25,7 @@ This quickstart illustrates the client initialization pattern used by the MIP C+
 If you haven't already, be sure to:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
-- Review [Observer concepts](concept-async-observers.md) to learn more about observer concepts, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
+- Review [Observer concepts](concept-async-observers.md) to learn more about observers, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
 - Review [Authentication concepts](concept-authentication-cpp.md) to learn how authentication and consent are implemented by the SDK and client application.
 
 ## Create a Visual Studio solution and project
@@ -74,7 +74,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
 
 2. After generating the .h and .cpp files for the class, both files are opened in Editor Group tabs. Now update each file to implement the new observer class:
 
-   - Update "profile_observer.h", by selecting/deleting the definition of `class profile_observer`. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file:
+   - Update "profile_observer.h", by selecting/deleting the definition of `class profile_observer`. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file, after any remaining preprocessor directives:
 
      ```cpp
      #include <memory>
@@ -91,7 +91,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
      };
      ```
 
-   - Update "profile_observer.cpp", by selecting/deleting the implementation of the `profile_observer` class. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file:
+   - Update "profile_observer.cpp", by selecting/deleting the implementation of the `profile_observer` class. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file, after any remaining preprocessor directives:
 
      ```cpp
      #include <future>
@@ -125,32 +125,11 @@ Now create a basic implementation for an observer class, by extending the SDK's 
 
 ## Implement the authentication delegate
 
-TODO: We go through a native app, but call out Web app similarites/differences.
-
-The MIP SDK implements authentication using class extensibility, and a coordinated request/response mechanism with the client application. As mentioned, the client must acquire a suitable OAuth2 access token, when asked by the MIP SDK at runtime. Token acquisition is accomplished in the implementation of the client's delegate class, which extends the `mip::AuthDelegate` class and implements `mip::AuthDelegate::AcquireOAuth2Token`.
-
-```cpp
-class AuthDelegate {
-public:
-  class OAuth2Challenge {           // Manages OAuth2 authority info
-  ...
-  };
-
-  class OAuth2Token {               // Manages OAuth2 access token acquisition and storage
-  ...
-  };
-
-  virtual bool AcquireOAuth2Token(  // Called when an OAuth2 access token is required by SDK client app
-      const mip::Identity& identity,
-      const OAuth2Challenge& challenge,
-      OAuth2Token& token) = 0;
-};
-```
-
-
+The MIP SDK implements authentication using class extensibility, providing a coordinated request/response mechanism with the client application. The client application must acquire a suitable OAuth2 access token, when asked by the MIP SDK at runtime. Token acquisition is accomplished in the implementation of the client's delegate class, which extends the `mip::AuthDelegate` class and implements the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function.
 
 1. Extend `mip::AuthDelegate` and override `mip::AuthDelegate::AcquireOAuth2Token`
 
+TODO: Put this in the code comments?
 The SDK calls the client application's implementation of `mip::AuthDelegate::AcquireOAuth2Token`, with three parameters:
 
 - `mip::Identity`: The identity of the user or service to be authenticated, if known.
@@ -162,7 +141,7 @@ The SDK calls the client application's implementation of `mip::AuthDelegate::Acq
 3. Return a token acquisition status to the SDK. When `AcquireOAuth2Token` is finished, the client must return a bool that indicates whether token acquisition was successful.
 
 >[!Important]
-> Applications won't ever have to call `AcquireOAuth2Token` directly. The SDK will call this method  when required.
+> Applications will never call `AcquireOAuth2Token` directly. The SDK will call this method  when required.
 
 ### Implement a consent delegate (TBD - since this article is a QS, and consent is a slightly advanced concept, should probably leave in concepts (updated using below format) and point to it?)
 
