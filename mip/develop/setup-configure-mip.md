@@ -80,11 +80,7 @@ As part of the Office 365 subscription provisioning process, an associated Azure
 Application accounts are created using the [Azure AD **App registrations** page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), in the Azure portal. To create an application account for use with MIP SDK client applications:
 
 > [!IMPORTANT] 
-> To access the Azure AD **App registrations** page, you'll need to sign in to the portal with a user account that is a member of the [Subscription administrator](/azure/billing/billing-add-change-azure-subscription-administrator) role.  
->
-> (TBD) Confirm they need to add access to an API/perms. If so, 1 perm requires admin consent, so  they'll also need to be global admin in the tenant, and "Grant Permissions" when adding the API/perm. Need to confirm, based on [the Ignite 2008 HOL](https://github.com/tommoser/Ignite-HOL-4000#app-registration) we will have:  
-    - API called "Microsoft Rights Management Services", and perms: "Create and access protected content for users" [USER], "Read protected content on behalf of a user" [ADMIN], and "Create protected content on behalf of a user" [ADMIN].  
-    - API called "Microsoft Information Protection Sync Service", and perm: "Read all unified policies a user has access to".[TBD]
+> To access Azure AD tenant management, you'll need to sign in to the Azure portal with a user account that is a member of the [Subscription administrator](/azure/billing/billing-add-change-azure-subscription-administrator) role. Depending on the configuration of your tenant, you may also need to be a member of the global admininstrator directory role to add application registrations.
 > We recommend testing with a restricted account, when passing username and password commandline parameters. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
 
 1. Follow the steps in [Integrating applications with Azure Active Directory, Add an application section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#adding-an-application). For testing purposes, use the following values for the given properties as you go through the guide: 
