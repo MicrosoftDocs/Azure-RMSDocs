@@ -65,7 +65,7 @@ Next, complete the following steps to ensure your client computer is set up and 
     - (TBD) Binaries [NOTE: will also impact the include/lib path instructions in the App Initialization quickstart]
         - Contained in Sample repo?
         - OR, download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins?
-        - OR, Nuget?
+        - OR, NuGet?
     - (TBD) Info on supported platforms, system requirements?
 5. Ensure "Developer Mode" is enabled on your workstation:
     - Click the Windows icon in the lower left.
@@ -75,13 +75,15 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 ## Register a client application with Azure Active Directory
 
-As part of the Office 365 subscription provisioning process, an associated Azure AD tenant is created. The Azure AD tenant provides identity and access management for Office 365 *user accounts* and *application accounts*. Upon sign-in, accounts are represented by a *security principal*, which encapsulates the account's identity configuration for access control, etc. Security principals that represent an application account are referred to as a [*service principal*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
+As part of the Office 365 subscription provisioning process, an associated Azure AD tenant is created. The Azure AD tenant provides identity and access management for Office 365 *user accounts* and *application accounts*. Applications that require access to secured APIs (such as MIP APIs), require an application account in order to sign in and authenticate.
 
-Application accounts are created using the [Azure AD **App registrations** page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), in the Azure portal. To create an application account for use with MIP SDK client applications:
+Upon sign-in, accounts are represented by a *security principal*, which encapsulates the account's identity configuration for access control, etc. Security principals that represent an application account (such as an application built with the MIP SDK), are referred to as a [*service principal*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
 
-> [!IMPORTANT] 
-> To access Azure AD tenant management, you'll need to sign in to the Azure portal with a user account that is a member of the [Subscription administrator](/azure/billing/billing-add-change-azure-subscription-administrator) role. Depending on the configuration of your tenant, you may also need to be a member of the global admininstrator directory role to add application registrations.
-> We recommend testing with a restricted account, when passing username and password commandline parameters. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
+To create an application account for use with MIP SDK client applications:
+
+  > [!IMPORTANT] 
+  > To access Azure AD tenant management for account creation, you'll need to sign in to the Azure portal with a user account that is a member of the [Subscription administrator](/azure/billing/billing-add-change-azure-subscription-administrator) role. Depending on the configuration of your tenant, you may also need to be a member of the global admininstrator directory role to [register an application](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
+  > We recommend testing with a restricted account. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
 
 1. Follow the steps in [Integrating applications with Azure Active Directory, Add an application section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#adding-an-application). For testing purposes, use the following values for the given properties as you go through the guide: 
     - **Application type** - Select "Native", as the client applications demonstrated by the SDK are console applications. Console applications are considered "public" clients by OAuth2. Unlike a "confidential" server-based application, such as a web application, "public" clients are not able to register or use secure credentials.
