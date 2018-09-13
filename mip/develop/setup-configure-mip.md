@@ -97,18 +97,19 @@ To create an application account for use with MIP SDK client applications:
 4. Now you'll add the MIP APIs and permissions the application will require at runtime:
    - On the **Required permissions** page, click **Add**. 
    - On the **Add API access** page, click **Select an API**.
-   - On the **Select an API** page, select the **Microsoft Rights Management Services** API, and click **Select**.
-   - On the **Enable Access** page for the API's available permissions, select **Create and access protected content for users**, and click **Select**, then **Done**.
+   - On the **Select an API** page, click the "**Microsoft Rights Management Services**" API, and click **Select**.
+   - On the **Enable Access** page for the API's available permissions, click "**Create and access protected content for users**", and click **Select**, then **Done**.
 
 5. Repeat step #4, but this time when you get to the **Select an API** page, you'll need to search for the API.
-   - On the **Select an API** page, in the search box type **Microsoft Information Protection Sync Service**, then select the API and click **Select**.
-   - On the **Enable Access** page for the API's available permissions, select **Read all unified policies a user has access to**, and click **Select**, then **Done**
+   - On the **Select an API** page, in the search box type "**Microsoft Information Protection Sync Service**", then click the API and click **Select**.
+   - On the **Enable Access** page for the API's available permissions, click "**Read all unified policies a user has access to**", and click **Select**, then **Done**
 
-6. When you're back on the **Required Permissions** page, click **Grant Permissions**, then **Yes**. This step gives pre-consent to the application using this registration, to access the APIs under the specified permissions. If you signed in as a global administrator,  consent is recorded for all users in the tenant; otherwise, it applies only to your user account.
+6. When you're back on the **Required Permissions** page, click **Grant Permissions**, then **Yes**. This step gives pre-consent to the application using this registration, to access the APIs under the specified permissions. If you signed in as a global administrator,  consent is recorded for all users in the tenant that run the application; otherwise, it applies only to your user account.
+
+[![Azure AD app registration](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
+
 
 For more details on adding APIs and permissions to a registration, see [Updating an application, Configure a client application to access web APIs section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Here you'll find information on adding the APIs and permissions needed by a client application.  
-
-TBD: Screen shot of perms page?
 
 ## TBD: Define Label Taxonomy and Protection Settings?
 
