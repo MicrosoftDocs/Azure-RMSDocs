@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/24/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -38,7 +38,7 @@ This native integration has the following benefits:
 
 - Support for the ISO standard for PDF encryption.
     
-    This protected PDF file format is the default for the [current preview version](client-version-release-history.md#versions-later-than-12950) of the Azure Information Protection client. The file name extension remains as .pdf and does not change to .ppdf.
+    This protected PDF file format must be [enabled by an administrator](https://review.docs.microsoft.com/en-us/azure/information-protection/rms-client/client-admin-guide-customizations?branch=pr-en-us-2117#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this configuration is made, the file name extension remains as .pdf and does not change to .ppdf.
 
 For more information, see the following blog post: [blog post](https://aka.ms/AIPblog)
 
@@ -54,7 +54,7 @@ The following PDF readers can open protected PDF files that adhere to the ISO st
 
 ### Support for previous formats
 
-The PDF readers in the next table support protected PDF documents that have a .ppdf file name extension (now deprecated) and older formats that have a .pdf file name extension.
+The PDF readers in the next table support protected PDF documents that have a .ppdf file name extensionand older formats that have a .pdf file name extension.
 
 Currently, SharePoint Online and SharePoint on-premises use an older format for PDF documents in IRM-protected libraries.
 
@@ -64,7 +64,3 @@ Currently, SharePoint Online and SharePoint on-premises use an older format for 
 |Windows 10 and previous versions<br />through Windows 7 Service Pack 1|Azure Information Protection viewer<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS sharing app|
 |Android|Azure Information Protection app<br /><br />Foxit MobilePDF with RMS<br /><br />GigaTrust App for Android|
 |iOS|Azure Information Protection app<br /><br />Foxit MobilePDF with RMS<br /><br />TITUS Docs|
-
-
-> [!NOTE]
-> If you want the current preview version of the Azure Information Protection client to protect PDF documents by using the deprecated .ppdf file name extension, an administrator must configure an [advanced client setting](https://review.docs.microsoft.com/en-us/azure/information-protection/rms-client/client-admin-guide-customizations?branch=pr-en-us-2117#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
