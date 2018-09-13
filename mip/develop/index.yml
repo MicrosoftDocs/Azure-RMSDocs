@@ -44,13 +44,13 @@ sections:
         - href: quick-app-initialization-cpp
       - title: Use the File API to list sensitivity labels
         values: 
-        - href: quick-file-list-lables-cpp
+        - href: quick-file-list-labels-cpp
       - title: Use the File API to apply a label
         values: 
-        - href: quick-file-apply-lable-cpp
+        - href: quick-file-apply-label-cpp
       - title: Use the File API to read a label
         values: 
-        - href: quick-file-read-lable-cpp
+        - href: quick-file-read-label-cpp
 - title: Reference
   items:
   - type: list

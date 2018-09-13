@@ -62,15 +62,15 @@ Next, complete the following steps to ensure your client computer is set up and 
    - If you don't have one already, first create a [GitHub profile](https://github.com/join).
    - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
    - Using Git Bash, download the sample(s) of interest:
-     - Use the following query to view the samples, which are stored in individual repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
-     - Use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repo.
+     - Use the following query to view the repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
+     - Using Git Bash, use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repository.
 
 4. Download SDK binaries
 
    - TBD: will also impact the include/lib path instructions in the App Initialization quickstart
    - TBD: Explain naming conventions and/or supported platforms, system requirements?
-   - Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins?
-   - OR use NuGet packages from VS?
+   - TBD: Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins?
+     - OR use NuGet packages from VS?
 
 5. Ensure "Developer Mode" is enabled on your workstation:
     - Click the Windows icon in the lower left.
@@ -84,7 +84,7 @@ As part of the Office 365 subscription provisioning process, an associated Azure
 
 For authentication and authorization at runtime, accounts are represented by a *security principal*, which is derived from the account's identity information. Security principals that represent an application account are referred to as a [*service principal*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
 
-To register an application account in Azure AD for use with MIP SDK client applications:
+To register an application account in Azure AD for use with the Quickstarts and MIP SDK samples:
 
   > [!IMPORTANT] 
   > To access Azure AD tenant management for account creation, you'll need to sign in to the Azure portal with a user account that is a member of the ["Owner" role on the subscription](/azure/billing/billing-add-change-azure-subscription-administrator). Depending on the configuration of your tenant, you may also need to be a member of the "Global Admininstrator" directory role to [register an application](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
@@ -110,7 +110,7 @@ To register an application account in Azure AD for use with MIP SDK client appli
 
 6. When you're back on the **Required Permissions** page, click **Grant Permissions**, then **Yes**. This step gives pre-consent to the application using this registration, to access the APIs under the specified permissions. If you signed in as a global administrator,  consent is recorded for all users in the tenant that run the application; otherwise, it applies only to your user account.
 
-[![Azure AD app registration](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
+   [![Azure AD app registration](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
 For more details on adding APIs and permissions to a registration, see [Updating an application, Configure a client application to access web APIs section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Here you'll find information on adding the APIs and permissions needed by a client application.  
