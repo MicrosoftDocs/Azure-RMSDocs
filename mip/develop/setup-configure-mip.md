@@ -57,17 +57,21 @@ Next, complete the following steps to ensure your client computer is set up and 
 
         [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. Download the SDK samples and binaries: 
-    - (TBD) Samples from https://github.com/azure-samples
-        - First create a [GitHub profile](https://github.com/join), if you don't already have one.
-        - Install the latest version of [Software Freedom Conservancy's Git client tools](https://git-scm.com/download/)
-        - `git clone <repo-path>`
-    - (TBD) Binaries 
-        - NOTE: will also impact the include/lib path instructions in the App Initialization quickstart
-        - Will they still be contained in each sample repo?
-        - OR, download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins?
-        - OR, NuGet?
-    - (TBD) Info on supported platforms, system requirements?
+3. Download SDK samples  
+
+   - If you don't have one already, first create a [GitHub profile](https://github.com/join).
+   - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
+   - Using Git Bash, download the sample(s) of interest:
+     - Use the following query to view the samples, which are stored in individual repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
+     - Use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repo.
+
+4. Download SDK binaries
+
+   - TBD: will also impact the include/lib path instructions in the App Initialization quickstart
+   - TBD: Explain naming conventions and/or supported platforms, system requirements?
+   - Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins?
+   - OR use NuGet packages from VS?
+
 5. Ensure "Developer Mode" is enabled on your workstation:
     - Click the Windows icon in the lower left.
     - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
