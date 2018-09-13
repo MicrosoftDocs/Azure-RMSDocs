@@ -58,12 +58,13 @@ Next, complete the following steps to ensure your client computer is set up and 
         [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
 3. Download the SDK samples and binaries: 
-    - (TBD) Samples 
+    - (TBD) Samples from https://github.com/azure-samples
         - First create a [GitHub profile](https://github.com/join), if you don't already have one.
         - Install the latest version of [Software Freedom Conservancy's Git client tools](https://git-scm.com/download/)
         - `git clone <repo-path>`
-    - (TBD) Binaries [NOTE: will also impact the include/lib path instructions in the App Initialization quickstart]
-        - Contained in Sample repo?
+    - (TBD) Binaries 
+        - NOTE: will also impact the include/lib path instructions in the App Initialization quickstart
+        - Will they still be contained in each sample repo?
         - OR, download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins?
         - OR, NuGet?
     - (TBD) Info on supported platforms, system requirements?
@@ -82,25 +83,26 @@ Upon sign-in, accounts are represented by a *security principal*, which encapsul
 To create an application account for use with MIP SDK client applications:
 
   > [!IMPORTANT] 
-  > To access Azure AD tenant management for account creation, you'll need to sign in to the Azure portal with a user account that is a member of the [Subscription administrator](/azure/billing/billing-add-change-azure-subscription-administrator) role. Depending on the configuration of your tenant, you may also need to be a member of the global admininstrator directory role to [register an application](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
+  > To access Azure AD tenant management for account creation, you'll need to sign in to the Azure portal with a user account that is a member of the ["Owner" role on the subscription](/azure/billing/billing-add-change-azure-subscription-administrator). Depending on the configuration of your tenant, you may also need to be a member of the "Global Admininstrator" directory role to [register an application](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
   > We recommend testing with a restricted account. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
 
-1. Follow the steps in [Integrating applications with Azure Active Directory, Add an application section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#adding-an-application). For testing purposes, use the following values for the given properties as you go through the guide: 
-    - **Application type** - Select "Native", as the client applications demonstrated by the SDK are console applications. Console applications are considered "public" clients by OAuth2. Unlike a "confidential" server-based application, such as a web application, "public" clients are not able to register or use secure credentials.
+1. Follow the steps in [Integrating applications with Azure Active Directory, Add an application section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#adding-an-application). For testing purposes, use the following values for the given properties as you go through the guide steps: 
+    - **Application type** - Select "Native", as the applications demonstrated by the SDK are natively installed console applications. Native applications are considered "public" clients by OAuth2, as they are unable to store/use application credentials in a secure manner. Unlike a "confidential" server-based application, such as a web application, which is registered with its own credentials. 
     - **Redirect URI** - Since the SDK uses simple console client applications, use a URI in the format `<app-name>://authorize`.
 
 2. When finished, you'll be returned to the **Registered app** page for your new application registration. Copy the GUID in the **Application ID** field, as you will need this later. 
 
 3. Then click **Settings** to add the APIs and permissions to which the client will need access. On the **Settings** page, click **Required permissions**.
 
-4. On the **Required permissions** page, click **Add**
-   - On the **Add API access** page, click **Select an API**
-     - On the **Select an API** Page, select the **Microsoft Rights Management Services** API, and click **Select**.
-       - On the **Enable Access** page for the API's available permissions, select **Create and access protected content for users**, and click **Select**, then **Done**
+4. Now you'll add the MIP APIs and permissions the application will require at runtime:
+   - On the **Required permissions** page, click **Add**. 
+   - On the **Add API access** page, click **Select an API**.
+   - On the **Select an API** page, select the **Microsoft Rights Management Services** API, and click **Select**.
+   - On the **Enable Access** page for the API's available permissions, select **Create and access protected content for users**, and click **Select**, then **Done**.
 
-5. Repeat step #4, but this time when you get to the **Select an API** page, you'll need to search for the API. 
-   - In the search box, type **Microsoft Information Protection Sync Service** then select the service and click **Select**.
-     - On the **Enable Access** page for the API's available permissions, select **Read all unified policies a user has access to**, and click **Select**, then **Done**
+5. Repeat step #4, but this time when you get to the **Select an API** page, you'll need to search for the API.
+   - On the **Select an API** page, in the search box type **Microsoft Information Protection Sync Service**, then select the API and click **Select**.
+   - On the **Enable Access** page for the API's available permissions, select **Read all unified policies a user has access to**, and click **Select**, then **Done**
 
 6. When you're back on the **Required Permissions** page, click **Grant Permissions**, then **Yes**. This step gives pre-consent to the application using this registration, to access the APIs under the specified permissions. If you signed in as a global administrator,  consent is recorded for all users in the tenant; otherwise, it applies only to your user account.
 
