@@ -186,7 +186,21 @@ The MIP SDK implements authentication using class extensibility, providing a mec
 
 ## Implement the File profile and engine
 
-As mentioned earlier, the profile and engine objects are universal concepts that apply to all SDK clients. Now you'll complete the coding portion of this Quickstart, by adding code that will instantiate the profile and engine.
+As mentioned earlier, the profile and engine objects are universal concepts that apply to all SDK clients. Now you'll complete the coding portion of this Quickstart, by adding code that will instantiate the profile and engine. You'll also update `AcquireOAuth2Token()` to use a valid static token for testing. 
+
+1. Update your `main()` implementation to instantiate the profile and engine objects.
+
+     ```cpp
+
+     ``` 
+
+2. Generate a test token using the PowerShell `Get-ADALToken` cmdlet.
+
+3. Update your `AcquireOAuth2Token()` implementation to use the static test token.
+
+     ```cpp
+
+     ``` 
 
 From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#fileprofile 
 From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/profile.md 
@@ -198,12 +212,7 @@ From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/dev
 
 Finally, lets build and test your client application. Before we can do that though, you'll need to generate an access token which we can use for testing.
 
-1. Generate a test token using PowerShell
-
-2. Update your code to use the static test token
-
-3. Build and test your application
-
+   - TBD - compile/build instructions
    - If your code builds and runs successfully, you should see the following output in the console window. [TBD: REPLACE THIS]
 
    ```cmd
