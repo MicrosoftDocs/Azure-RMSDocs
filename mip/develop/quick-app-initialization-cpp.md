@@ -131,7 +131,7 @@ The MIP SDK implements authentication using class extensibility, providing a mec
 
 2. Now update each file to implement your new authentication delegate class:
 
-   - Update "auth_delegate.h", by selecting/deleting all of `class auth_delegate`. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file, after any remaining preprocessor directives:
+   - Update "auth_delegate.h", by replacing all of the `class auth_delegate` class with the following source. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include):
 
      ```cpp
      #include <string>
@@ -153,10 +153,10 @@ The MIP SDK implements authentication using class extensibility, providing a mec
      };
      ```
 
-   - Update "auth_delegate.cpp", by selecting/deleting the implementation of the `auth_delegate` class. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file, after any remaining preprocessor directives:
+   - Update "auth_delegate.cpp", by replacing all of the `auth_delegate` class implementation with the following source. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). 
 
-   > [!IMPORTANT]
-   > Notice that the token acquisition code is not complete. We will test later with a static access token, but in production this would be replaced with code that can dynamically acquire an access token, based on the specified criteria (authority, resource URI, app/user credentials, etc.)
+     > [!IMPORTANT]
+     > Notice that the token acquisition code is not complete. We will test later with a static access token, but in production this would be replaced with code that can dynamically acquire an access token, based on the specified criteria (authority, resource URI, app/user credentials, etc.)  
 
      ```cpp
      using std::string;
