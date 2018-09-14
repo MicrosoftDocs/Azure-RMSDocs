@@ -41,8 +41,9 @@ Look out for announcements on the [Enterprise Mobility and Security Blog](https:
 
 > [!NOTE]
 > **Now in preview**:
-> - Centralized reporting for classification and labeling
-> - Labeling ability in Office apps for mobile devices (iOS and Android) and Mac computers
+> - Centralized reporting for classification and labeling. For more information, see [Central reporting for Azure Information Protection](reports-aip.md).
+> - Labeling ability in Office apps for mobile devices (iOS and Android) and Mac computers for customers who are opted-in to the [Office Insider program](https://support.office.com/article/what-is-office-insider-f4208185-b63a-4b68-9c7a-9a32d2411c16).
+
 
 Request new features and vote on requests by visiting the [UserVoice site](https://msip.uservoice.com/) for Azure Information Protection.
 
