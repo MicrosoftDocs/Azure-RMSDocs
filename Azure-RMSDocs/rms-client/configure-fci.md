@@ -290,7 +290,7 @@ When you have confirmed that these tasks run successfully, you can close File Re
 
 ## Action required if you make changes to the Rights Management template
 
-If you make changes to the Rights Management template that the script references, the computer account that runs the script to protect the files does not automatically get the updated template. To do so, in the script, locate the commented out `Get-RMSTemplate -Force` command in the Set-RMSConnection function, and remove the `#` comment character. The next time the script runs, the updated template is downloaded. To optimize performance so that templates don't download unnecessarily, you can then comment out this line again. 
+If you make changes to the Rights Management template that the script references, the computer account that runs the script to protect the files does not automatically get the updated template. In the script, locate the commented out `Get-RMSTemplate -Force` command in the Set-RMSConnection function, and remove the comment character at the beginning of the line. The next time the script runs, the updated template is downloaded. To optimize performance so that templates don't download unnecessarily, you can then comment out this line again. 
 
 If the changes to the template are important enough to reprotect the files on the file server, you can do this interactively by running the Protect-RMSFile cmdlet with an account that has the Export or Full Control usage rights for the files. 
 
