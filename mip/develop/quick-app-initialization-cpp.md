@@ -202,12 +202,6 @@ As mentioned earlier, the profile and engine objects are universal concepts that
 
      ``` 
 
-From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#fileprofile 
-From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/profile.md 
-
-From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#engine 
-From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/engine.md 
-
 ## Build and test the application
 
 Finally, lets build and test your client application. Before we can do that though, you'll need to generate an access token which we can use for testing.
