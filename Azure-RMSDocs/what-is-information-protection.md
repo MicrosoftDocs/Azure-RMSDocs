@@ -149,7 +149,7 @@ You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%252
 
 - [Protect and control your sensitive emails with new Office 365 Message Encryption capabilities](https://myignite.microsoft.com/videos/53230)
 
-The sessions for **Ignite 2018** are now published, and you'll find many sessions that are tagged [Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Information%2520Protection). If you can join us in Orlando, our top five sessions that we recommend are the following:
+The sessions for **Ignite 2018** are now published, and you'll find many sessions that are tagged [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection). If you can join us in Orlando, our top five sessions that we recommend are the following:
 
 - [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle](https://myignite.techcommunity.microsoft.com/sessions/64297)
  
