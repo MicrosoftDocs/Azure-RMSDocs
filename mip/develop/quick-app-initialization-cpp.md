@@ -156,7 +156,7 @@ The MIP SDK implements authentication using class extensibility, providing a mec
    - Update "auth_delegate.cpp", by replacing all of the `auth_delegate` class implementation with the following source. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). 
 
      > [!IMPORTANT]
-     > Notice that the token acquisition code is not complete. We will test later with a static access token, but in production this would be replaced with code that can dynamically acquire an access token, based on the specified criteria (authority, resource URI, app/user credentials, etc.)  
+     > Notice that the token acquisition code is intentionally incomplete. We will test later with a static access token. In production, this needs to be modified to dynamically acquire an access token, based on the specified criteria (authority, resource URI, app/user credentials, etc.). OAuth2 "native" clients should prompt for user credentials and use the "authorization code" flow. OAuth2 "confidential clients" can use their own secure credentials (such as a service), or prompt for user credentials (such as a web app) 
 
      ```cpp
      using std::string;
