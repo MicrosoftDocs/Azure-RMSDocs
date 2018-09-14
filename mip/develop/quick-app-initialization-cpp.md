@@ -125,7 +125,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
 
 ## Implement an authentication delegate
 
-The MIP SDK implements authentication using class extensibility, providing a mechanism to share authentication work with the client application. The client application must acquire a suitable OAuth2 access token, when asked by the MIP SDK at runtime. Token acquisition is accomplished in the implementation of the client's authentication delegate class, by extending the `mip::AuthDelegate` class and implements the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function.
+The MIP SDK implements authentication using class extensibility, providing a mechanism to share authentication work with the client application. The client application must acquire a suitable OAuth2 access token, when asked by the MIP SDK at runtime. Token acquisition is accomplished in the implementation of the client's authentication delegate class, by extending the `mip::AuthDelegate` class and implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function.
 
 1. Using the same Visual Studio "Add class" feature we used in step #1 of the previous section, add another class to your project. This time, enter "auth_delegate" in the **Class Name** field. 
 
@@ -139,25 +139,23 @@ The MIP SDK implements authentication using class extensibility, providing a mec
 
      class AuthDelegateImpl final : public mip::AuthDelegate {
      public:
-          AuthDelegateImpl() = delete;			  // Prevents default constructor
-          AuthDelegateImpl(
-            const std::string& appId);			  // AppID for AAD app registration
+          AuthDelegateImpl() = delete;        // Prevents default constructor
 
-          bool AcquireOAuth2Token(				    // Called by MIP SDK to get a token
-            const mip::Identity& identity,	  // Identity of the account to be authenticated, if known
-            const OAuth2Challenge& challenge,	// Authority (AAD tenant issuing token), and resource (API being accessed; "aud" claim).
-            OAuth2Token& token) override;		  // Token handed back to MIP SDK
+          AuthDelegateImpl(
+            const std::string& appId);        // AppID for registered AAD app
+
+          bool AcquireOAuth2Token(            // Called by MIP SDK to get a token
+            const mip::Identity& identity,    // Identity of the account to be authenticated, if known
+            const OAuth2Challenge& challenge, // Authority (AAD tenant issuing token), and resource (API being accessed; "aud" claim).
+            OAuth2Token& token) override;     // Token handed back to MIP SDK
      private:
           std::string mAppId;
      };
-
      ```
 
    - Update "auth_delegate.cpp", by selecting/deleting the implementation of the `auth_delegate` class. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file, after any remaining preprocessor directives:
 
      ```cpp
-     #include <stdexcept>
-     using std::runtime_error;
      using std::string;
 
      AuthDelegateImpl::AuthDelegateImpl(const string& clientId) : mAppId(clientId) {}
@@ -257,13 +255,10 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 }
 ```
 
-## Implement a File profile object
+## Implement the File profile and engine
 
 From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#fileprofile 
 From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/profile.md 
-
-
-## Implement an File engine object
 
 From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#engine 
 From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/engine.md 
