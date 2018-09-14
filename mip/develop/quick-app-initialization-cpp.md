@@ -129,18 +129,23 @@ Now create a basic implementation for an observer class, by extending the SDK's 
 
 The MIP SDK implements authentication using class extensibility, providing a coordinated request/response mechanism with the client application. The client application must acquire a suitable OAuth2 access token, when asked by the MIP SDK at runtime. Token acquisition is accomplished in the implementation of the client's authentication delegate class, which extends the `mip::AuthDelegate` class and implements the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function.
 
-1. Extend `mip::AuthDelegate` and override `mip::AuthDelegate::AcquireOAuth2Token`
+1. Using the same Visual Studio "Add class" feature as we used previously, add another class to your project. This time, enter "auth_delegate" in the **Class Name** field. Now update each file to implement the new authentication delegate class:
 
-TODO: Put this in the code comments?
-The SDK calls the client application's implementation of `mip::AuthDelegate::AcquireOAuth2Token`, with three parameters:
+   - Update "auth_delegate.h", by selecting/deleting the definition of `class auth_delegate`. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file, after any remaining preprocessor directives:
 
-- `mip::Identity`: The identity of the user or service to be authenticated, if known.
-- `mip::AuthDelegate::OAuth2Challenge`: Contains the **authority** and **resource**. **Authority** is the service the access token will be generated against. **Resource** is the service being accessed. 
-- `mip::AuthDelegate::OAuth2Token`: The client application updates with the token result. It will be consumed by the SDK when the engine is loaded. It shouldn't be necessary to get or set this value anywhere outside of the `AcquireOAuth2Token` implementation.
+     ```cpp
+     ```
 
-2. Write the access token acquisition logic.
+   - Update "auth_delegate.cpp", by selecting/deleting the implementation of the `auth_delegate` class. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file, after any remaining preprocessor directives:
 
-3. Return a token acquisition status to the SDK. When `AcquireOAuth2Token` is finished, the client must return a bool that indicates whether token acquisition was successful.
+     ```cpp
+     ``` 
+
+
+TODO: Can we get better auth error exceptions? A mismatched resource URI (aud claim, vs. what the SDK is expecting) w/File API yields:
+Unhandled exception at 0x00007FFCEDE2A388 in MipSdkAuthSimple.exe: Microsoft C++ exception: mip::InternalError at memory location 0x000000D6ECEFE520.
+
+When `AcquireOAuth2Token` is finished, the client must return a bool that indicates whether token acquisition was successful.
 
 >[!Important]
 > Applications will never call `AcquireOAuth2Token` directly. The SDK will call this method  when required.
