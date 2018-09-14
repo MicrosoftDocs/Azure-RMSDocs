@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/20/2018
+ms.date: 09/21/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
@@ -53,6 +53,8 @@ Use the following information to see what’s new or changed for a supported rel
 If you have a version of the client that is later than 1.37.19.0, it is a preview build for testing and evaluation purposes.
 
 **Released**: 09/20/2018
+
+Enables support for future features.
 
 ## Version 1.37.19.0
 
