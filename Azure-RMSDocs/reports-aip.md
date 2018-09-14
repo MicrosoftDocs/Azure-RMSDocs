@@ -53,7 +53,7 @@ For example, you'll be able to see the following:
 
 - From the **Data discovery** report:
 
-    - What files reside on your scanned data repositories
+    - What files are on your scanned data repositories
     
     - Which files are labeled and protected, and the location of files by labels
     
