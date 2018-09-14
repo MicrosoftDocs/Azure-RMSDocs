@@ -155,18 +155,25 @@ The MIP SDK implements authentication using class extensibility, providing a mec
 
    - Update "auth_delegate.cpp", by selecting/deleting the implementation of the `auth_delegate` class. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file, after any remaining preprocessor directives:
 
+   > [!IMPORTANT]
+   > Notice that the token acquisition code is not complete. We will test later with a static access token, but in production this would be replaced with code that can dynamically acquire an access token, based on the specified criteria (authority, resource URI, app/user credentials, etc.)
+
      ```cpp
      using std::string;
 
      AuthDelegateImpl::AuthDelegateImpl(const string& clientId) : mAppId(clientId) {}
 
-     bool AuthDelegateImpl::AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) {
+     bool AuthDelegateImpl::AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) 
+     {
+	        // TODO: replace with token acquisition code
+	        const string authority = challenge.GetAuthority();
+	        const string resourceURI = challenge.GetResource();
+	        string accessToken = "eyJ0eXAiOi ...";
 
-       // TODO: replace with token acquisition code
-       string accessToken = "eyJ0eXAiOi ...";
-       token.SetAccessToken(accessToken);
+	        // Pass access token back to MIP SDK
+	        token.SetAccessToken(accessToken);
 
-       return true;
+          return true;
      }
      ``` 
 
