@@ -132,7 +132,7 @@ The MIP SDK implements authentication using class extensibility, providing a mec
 
 2. Now update each file to implement your new authentication delegate class:
 
-   - Update "auth_delegate.h", by replacing all of the `class auth_delegate` class with the following source. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include):
+   - Update "auth_delegate.h", by replacing all of the `class auth_delegate` class code with the following source. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include):
 
      ```cpp
      #include <string>
@@ -142,8 +142,9 @@ The MIP SDK implements authentication using class extensibility, providing a mec
      public:
           AuthDelegateImpl() = delete;        // Prevents default constructor
 
-          AuthDelegateImpl(
-            const std::string& appId);        // AppID for registered AAD app
+	        AuthDelegateImpl(
+		        const std::string& appId)         // AppID for registered AAD app
+		        : mAppId(appId) {};
 
           bool AcquireOAuth2Token(            // Called by MIP SDK to get a token
             const mip::Identity& identity,    // Identity of the account to be authenticated, if known
@@ -158,14 +159,17 @@ The MIP SDK implements authentication using class extensibility, providing a mec
 
      > [!IMPORTANT]
      > Notice that the token acquisition code is intentionally incomplete. We will test later with a static access token. 
-     > In production, this needs to be modified to dynamically acquire an access token, based on the specified criteria (authority, resource URI, app/user credentials, etc.). OAuth2 "native" clients should prompt for user credentials and use the "authorization code" flow. OAuth2 "confidential clients" can use their own secure credentials (such as a service), or prompt for user credentials (such as a web app).
+     > In production, this code must dynamically acquire an access token, based on specified criteria:
+     > - the appId and reply/redirect URI specified in your Azure AD app registration (reply/redirect URI **must** match your app registration)
+     > - the authority and resource URI passed in by the SDK (resource URI **must** match your app registration's API/permissions)
+     > - app/user credentials
+     > 
+     > OAuth2 "native" clients should prompt for user credentials and use the "authorization code" flow. OAuth2 "confidential clients" can use their own secure credentials (such as a service), or prompt for user credentials (such as a web app).
      >
      > AcquireOAuth2Token() is **only** called by the MIP SDK, as required.
 
      ```cpp
      using std::string;
-
-     AuthDelegateImpl::AuthDelegateImpl(const string& clientId) : mAppId(clientId) {}
 
      bool AuthDelegateImpl::AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) 
      {
