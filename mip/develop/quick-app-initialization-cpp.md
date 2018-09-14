@@ -182,7 +182,7 @@ The MIP SDK implements authentication using class extensibility, providing a mec
      }
      ``` 
 
-============================= WIP BELOW THIS LINE ==============================================
+=================== WIP BELOW THIS LINE ====================
 
 ## Implement the File profile and engine
 
