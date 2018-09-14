@@ -80,10 +80,10 @@ Now create a basic implementation for an observer class, by extending the SDK's 
      class ProfileObserver final : public mip::FileProfile::Observer {
      public:
           ProfileObserver() { }
-	        void OnLoadSuccess(const std::shared_ptr<mip::FileProfile>& profile, const std::shared_ptr<void>& context) override;
-	        void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
-	        void OnAddEngineSuccess(const std::shared_ptr<mip::FileEngine>& engine, const std::shared_ptr<void>& context) override;
-	        void OnAddEngineError(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
+          void OnLoadSuccess(const std::shared_ptr<mip::FileProfile>& profile, const std::shared_ptr<void>& context) override;
+          void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
+          void OnAddEngineSuccess(const std::shared_ptr<mip::FileEngine>& engine, const std::shared_ptr<void>& context) override;
+          void OnAddEngineError(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
      };
      ```
 
@@ -136,10 +136,10 @@ The MIP SDK implements authentication using class extensibility, providing a mec
      class AuthDelegateImpl final : public mip::AuthDelegate {
      public:
           AuthDelegateImpl() = delete;        // Prevents default constructor
-
-	        AuthDelegateImpl(
+          
+          AuthDelegateImpl(
             const std::string& appId)         // AppID for registered AAD app
-		        : mAppId(appId) {};
+            : mAppId(appId) {};
 
           bool AcquireOAuth2Token(            // Called by MIP SDK to get a token
             const mip::Identity& identity,    // Identity of the account to be authenticated, if known
@@ -200,9 +200,8 @@ Fortunately, the SDK provides an easy-to-use approach for developers to implemen
 
      class ConsentDelegateImpl final : public mip::ConsentDelegate {
      public:
-	        ConsentDelegateImpl() = default;
-
-	        virtual mip::Consent GetUserConsent(const std::string& url) override;
+          ConsentDelegateImpl() = default;
+          virtual mip::Consent GetUserConsent(const std::string& url) override;
      };
      ```
 
@@ -217,8 +216,8 @@ Fortunately, the SDK provides an easy-to-use approach for developers to implemen
      Consent ConsentDelegateImpl::GetUserConsent(const string& url) 
      {
           // Accept the consent to connect to the url
-	       std::cout << "SDK will connect to: " << url << std::endl;
-	       return Consent::AcceptAlways;
+          std::cout << "SDK will connect to: " << url << std::endl;
+          return Consent::AcceptAlways;
      }
      ``` 
 
