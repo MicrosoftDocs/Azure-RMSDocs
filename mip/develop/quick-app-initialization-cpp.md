@@ -25,8 +25,9 @@ This quickstart illustrates the client initialization pattern used by the MIP C+
 If you haven't already, be sure to:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
-- Review [Observer concepts](concept-async-observers.md) to learn more about observers, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
+- Review [Profile and engine objects](concept-profile-engine-cpp.md). The profile and engine objects are universal concepts, required by clients that use the MIP File/Policy/Protection APIs. 
 - Review [Authentication concepts](concept-authentication-cpp.md) to learn how authentication and consent are implemented by the SDK and client application.
+- Optional: review [Observer concepts](concept-async-observers.md) to learn more about observers, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
 
 ## Create a Visual Studio solution and project
 
@@ -72,9 +73,9 @@ Now create a basic implementation for an observer class, by extending the SDK's 
 
      [![Visual Studio add class](media/quick-app-initialization-cpp/add-class.png)](media/quick-app-initialization-cpp/add-class.png#lightbox)
 
-2. After generating the .h and .cpp files for the class, both files are opened in Editor Group tabs. Now update each file to implement the new observer class:
+2. After generating the .h and .cpp files for the class, both files are opened in Editor Group tabs. Now update each file to implement your new observer class:
 
-   - Update "profile_observer.h", by selecting/deleting the definition of `class profile_observer`. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file, after any remaining preprocessor directives:
+   - Update "profile_observer.h", by selecting/deleting all of `class profile_observer`. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). Then copy/paste the following source into the file, after any remaining preprocessor directives:
 
      ```cpp
      #include <memory>
@@ -123,131 +124,100 @@ Now create a basic implementation for an observer class, by extending the SDK's 
      }
      ``` 
 
-================== BELOW THIS LINE IS WIP ===========================
+## Implement an authentication delegate
 
-## Implement the authentication delegate
+The MIP SDK implements authentication using class extensibility, providing a mechanism to share authentication work with the client application. The client application must acquire a suitable OAuth2 access token, when asked by the MIP SDK at runtime. Token acquisition is accomplished in the implementation of the client's authentication delegate class, by extending the `mip::AuthDelegate` class and implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function.
 
-The MIP SDK implements authentication using class extensibility, providing a coordinated request/response mechanism with the client application. The client application must acquire a suitable OAuth2 access token, when asked by the MIP SDK at runtime. Token acquisition is accomplished in the implementation of the client's authentication delegate class, which extends the `mip::AuthDelegate` class and implements the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function.
+1. Using the same Visual Studio "Add class" feature we used in step #1 of the previous section, add another class to your project. This time, enter "auth_delegate" in the **Class Name** field. 
 
-1. Extend `mip::AuthDelegate` and override `mip::AuthDelegate::AcquireOAuth2Token`
+2. Now update each file to implement your new authentication delegate class:
 
-TODO: Put this in the code comments?
-The SDK calls the client application's implementation of `mip::AuthDelegate::AcquireOAuth2Token`, with three parameters:
+   - Update "auth_delegate.h", by replacing all of the `class auth_delegate` class with the following source. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include):
 
-- `mip::Identity`: The identity of the user or service to be authenticated, if known.
-- `mip::AuthDelegate::OAuth2Challenge`: Contains the **authority** and **resource**. **Authority** is the service the access token will be generated against. **Resource** is the service being accessed. 
-- `mip::AuthDelegate::OAuth2Token`: The client application updates with the token result. It will be consumed by the SDK when the engine is loaded. It shouldn't be necessary to get or set this value anywhere outside of the `AcquireOAuth2Token` implementation.
+     ```cpp
+     #include <string>
+     #include "mip/common_types.h"
 
-2. Write the access token acquisition logic.
+     class AuthDelegateImpl final : public mip::AuthDelegate {
+     public:
+          AuthDelegateImpl() = delete;        // Prevents default constructor
 
-3. Return a token acquisition status to the SDK. When `AcquireOAuth2Token` is finished, the client must return a bool that indicates whether token acquisition was successful.
+          AuthDelegateImpl(
+            const std::string& appId);        // AppID for registered AAD app
 
->[!Important]
-> Applications will never call `AcquireOAuth2Token` directly. The SDK will call this method  when required.
+          bool AcquireOAuth2Token(            // Called by MIP SDK to get a token
+            const mip::Identity& identity,    // Identity of the account to be authenticated, if known
+            const OAuth2Challenge& challenge, // Authority (AAD tenant issuing token), and resource (API being accessed; "aud" claim).
+            OAuth2Token& token) override;     // Token handed back to MIP SDK
+     private:
+          std::string mAppId;
+     };
+     ```
 
-### Implement a consent delegate (TBD - since this article is a QS, and consent is a slightly advanced concept, should probably leave in concepts (updated using below format) and point to it?)
+   - Update "auth_delegate.cpp", by replacing all of the `auth_delegate` class implementation with the following source. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). 
 
-The `mip::Consent` enum class implements an easy-to-use approach that permits application developers to provide a custom consent experience based on the endpoint that is being accessed by the SDK. The notification can inform a user of the data that will be collected, how to get the data removed, or any other information that is required by law or compliance policies. Once the user grants consent, the application can continue. 
+     > [!IMPORTANT]
+     > Notice that the token acquisition code is intentionally incomplete. We will test later with a static access token. 
+     > In production, this needs to be modified to dynamically acquire an access token, based on the specified criteria (authority, resource URI, app/user credentials, etc.). OAuth2 "native" clients should prompt for user credentials and use the "authorization code" flow. OAuth2 "confidential clients" can use their own secure credentials (such as a service), or prompt for user credentials (such as a web app).
+     >
+     > AcquireOAuth2Token() is **only** called by the MIP SDK, as required.
 
-TBD: GDPR info here? 
-TBD: Exception details?
+     ```cpp
+     using std::string;
 
-1. Extend the `mip::Consent` base class - Consent is implemented by extending the `mip::Consent` base class and implementing `GetUserConsent` to return one of the `mip::Consent` enum values. 
+     AuthDelegateImpl::AuthDelegateImpl(const string& clientId) : mAppId(clientId) {}
 
-The object derived from `mip::Consent` is passed in to the `mip::FileProfile::Settings` or `mip::ProtectionProfile::Settings` constructor.
+     bool AuthDelegateImpl::AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) 
+     {
+	        // TODO: replace with token acquisition code
+	        const string authority = challenge.GetAuthority();
+	        const string resourceURI = challenge.GetResource();
+	        string accessToken = "eyJ0eXAiOi ...";
 
-When a user performs an operation requiring consent, the SDK calls the `GetUserConsent` method, passing in the destination URL. `GetUserConsent` then displays the necessary information to the user, requesting a decision on whether to allow the application to access the service. 
+	        // Pass access token back to MIP SDK
+	        token.SetAccessToken(accessToken);
 
-Operations that will trigger the consent flow are (TBD):
+          // True = successful token acquisition; False = failure
+          return true;
+     }
+     ``` 
 
-- One
-- Two
+============================= WIP BELOW THIS LINE ==============================================
 
-2. Setting consent options -
+## Implement the File profile and engine
 
-- **AcceptAlways**: Consent and remember the decision.
-- **Accept**: Consent once.
-- **Reject**: Do not consent.
-
-When the SDK requests user consent with this method, the client
-application should present the URL to the user. Client applications should
-provide some means of obtaining user consent and return the appropriate
-Consent enum that corresponds to the user's decision.
-
-Sample consent delegate implementation:
-
-#### consent_delegate_impl.h
-
-```cpp
-class ConsentDelegateImpl final : public mip::ConsentDelegate {
-public:
-  ConsentDelegateImpl() = default;
-  
-  virtual mip::Consent GetUserConsent(const std::string& url) override;
-
-};
-```
-
-#### consent_delegate_impl.cpp
-
-When the SDK requires consent, the `GetUserConsent` method is called *by the SDK*, and the URL passed in as a parameter. In the example below, the user is notified that the SDK will connect to that provided URL, then returns `Consent::AcceptAlways`. This example isn't a good implementation, as the user wasn't presented with a real choice.
-
-```console
-Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
-  //Print the consent URL, ask user to choose
-  std::cout << "SDK will connect to: " << url << std::endl;
-
-  std::cout << "1) Accept Always" << std::endl;
-  std::cout << "2) Accept" << std::endl;
-  std::cout << "3) Reject" << std::endl;
-  std::cout << "Select an option: ";
-  char input;
-  std::cin >> input;
-
-  switch (input)
-  {
-  case '1':
-    return Consent::AcceptAlways;
-    break;
-  case '2':
-    return Consent::Accept;
-    break;
-  case '3':
-    return Consent::Reject;
-    break;
-  default:
-    return Consent::Reject;
-  }  
-}
-```
-
-## Implement a File profile object
+As mentioned earlier, the profile and engine objects are universal concepts that apply to all SDK clients. Now you'll complete the coding portion of this Quickstart, by adding code that will instantiate the profile and engine.
 
 From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#fileprofile 
 From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/profile.md 
-
-
-## Implement an File engine object
 
 From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#engine 
 From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/engine.md 
 
 ## Build and test the application
 
-(TBD) - show sample output here, but DON'T USE THIS block
+Finally, lets build and test your client application. Before we can do that though, you'll need to generate an access token which we can use for testing.
 
-```cmd
-Non-Business : 87ba5c36-b7cf-4793-bbc2-bd5b3a9f95ca
-Public : 87867195-f2b8-4ac2-b0b6-6bb73cb33afc
-General : f42aa342-8706-4288-bd11-ebb85995028c
-Confidential : 074e257c-5848-4582-9a6f-34a182080e71
-->  Microsoft FTE : d9f23ae3-a239-45ea-bf23-f515f824c57b
-->  Microsoft Extended : 9fbde396-1a24-4c79-8edf-9254a0f35055
-Highly Confidential : f5dc2dea-db0f-47cd-8b20-a52e1590fb64
-->  Microsoft FTE : f74878b7-c0ff-44a4-82ff-8ce29f7fccb5
-->  Microsoft Extended : c179f820-d535-4b2f-b252-8a9c4ac14ec6
-Press any key to continue . . .
-```
+1. Generate a test token using PowerShell
+
+2. Update your code to use the static test token
+
+3. Build and test your application
+
+   - If your code builds and runs successfully, you should see the following output in the console window. [TBD: REPLACE THIS]
+
+   ```cmd
+   Non-Business : 87ba5c36-b7cf-4793-bbc2-bd5b3a9f95ca
+   Public : 87867195-f2b8-4ac2-b0b6-6bb73cb33afc
+   General : f42aa342-8706-4288-bd11-ebb85995028c
+   Confidential : 074e257c-5848-4582-9a6f-34a182080e71
+   ->  Microsoft FTE : d9f23ae3-a239-45ea-bf23-f515f824c57b
+   ->  Microsoft Extended : 9fbde396-1a24-4c79-8edf-9254a0f35055
+   Highly Confidential : f5dc2dea-db0f-47cd-8b20-a52e1590fb64
+   ->  Microsoft FTE : f74878b7-c0ff-44a4-82ff-8ce29f7fccb5
+   ->  Microsoft Extended : c179f820-d535-4b2f-b252-8a9c4ac14ec6
+   Press any key to continue . . .
+   ```
 
 ## Next Steps
 
