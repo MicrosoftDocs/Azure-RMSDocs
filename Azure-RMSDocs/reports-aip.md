@@ -59,7 +59,7 @@ For example, you'll be able to see the following:
     
     - Which files contain sensitive information for known categories, such as financial data and personal information, and the location of files by these categories
     
-The reports use [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) to store the data in a workspace that you own. If you are familiar with the query language, you can modify the queries, and create new reports and Power BI dashboards. You might find the following tutorial helpful to understand the query language: [Getting Started with the Analytics Portal](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
+The reports use [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) to store the data in a workspace that you own. If you're familiar with the query language, you can modify the queries, and create new reports and Power BI dashboards. You might find the following tutorial helpful to understand the query language: [Getting Started with the Analytics Portal](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
 
 ### Information collected and sent to Microsoft
 
@@ -84,9 +84,9 @@ To view the Azure Information Protection reports and create your own, make sure 
 
 |Requirement|More information|
 |---------------|--------------------|
-|An Azure subscription that includes Log Analytics|See the [Azure Log Analytics pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you do not have an Azure subscription or you do not currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
+|An Azure subscription that includes Log Analytics|See the [Azure Log Analytics pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
 |The current preview version of the Azure Information Protection client.|If you haven't already installed the current preview version of the client, you can download and install it from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
-|For the **Discovery and risk** report: <br /><br />- You have deployed at least one instance of the Azure Information Protection scanner (current preview version)|For installation instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). <br /><br />If you are upgrading from a previous version of the scanner, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
+|For the **Discovery and risk** report: <br /><br />- You have deployed at least one instance of the Azure Information Protection scanner (current preview version)|For installation instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). <br /><br />If you're upgrading from a previous version of the scanner, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 
 
 ## Configure a Log Analytics workspace for the reports
