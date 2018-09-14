@@ -25,8 +25,9 @@ This quickstart illustrates the client initialization pattern used by the MIP C+
 If you haven't already, be sure to:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
-- Review [Observer concepts](concept-async-observers.md) to learn more about observers, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
+- Review [Profile and engine objects](concept-profile-engine-cpp.md). The profile and engine objects are universal concepts, required by clients that use the MIP File/Policy/Protection APIs. 
 - Review [Authentication concepts](concept-authentication-cpp.md) to learn how authentication and consent are implemented by the SDK and client application.
+- Optional: review [Observer concepts](concept-async-observers.md) to learn more about observers, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
 
 ## Create a Visual Studio solution and project
 
@@ -156,7 +157,10 @@ The MIP SDK implements authentication using class extensibility, providing a mec
    - Update "auth_delegate.cpp", by replacing all of the `auth_delegate` class implementation with the following source. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). 
 
      > [!IMPORTANT]
-     > Notice that the token acquisition code is intentionally incomplete. We will test later with a static access token. In production, this needs to be modified to dynamically acquire an access token, based on the specified criteria (authority, resource URI, app/user credentials, etc.). OAuth2 "native" clients should prompt for user credentials and use the "authorization code" flow. OAuth2 "confidential clients" can use their own secure credentials (such as a service), or prompt for user credentials (such as a web app) 
+     > Notice that the token acquisition code is intentionally incomplete. We will test later with a static access token. 
+     > In production, this needs to be modified to dynamically acquire an access token, based on the specified criteria (authority, resource URI, app/user credentials, etc.). OAuth2 "native" clients should prompt for user credentials and use the "authorization code" flow. OAuth2 "confidential clients" can use their own secure credentials (such as a service), or prompt for user credentials (such as a web app).
+     >
+     > AcquireOAuth2Token() is **only** called by the MIP SDK, as required.
 
      ```cpp
      using std::string;
@@ -173,96 +177,14 @@ The MIP SDK implements authentication using class extensibility, providing a mec
 	        // Pass access token back to MIP SDK
 	        token.SetAccessToken(accessToken);
 
+          // True = successful token acquisition; False = failure
           return true;
      }
      ``` 
 
-
-TODO: Can we get better auth error exceptions? A mismatched resource URI (aud claim, vs. what the SDK is expecting) w/File API yields:
-Unhandled exception at 0x00007FFCEDE2A388 in MipSdkAuthSimple.exe: Microsoft C++ exception: mip::InternalError at memory location 0x000000D6ECEFE520.
-
-When `AcquireOAuth2Token` is finished, the client must return a bool that indicates whether token acquisition was successful.
-
->[!Important]
-> Applications will never call `AcquireOAuth2Token` directly. The SDK will call this method  when required.
-
-### Implement a consent delegate (TBD - since this article is a QS, and consent is a slightly advanced concept, should probably leave in concepts (updated using below format) and point to it?)
-
-The `mip::Consent` enum class implements an easy-to-use approach that permits application developers to provide a custom consent experience based on the endpoint that is being accessed by the SDK. The notification can inform a user of the data that will be collected, how to get the data removed, or any other information that is required by law or compliance policies. Once the user grants consent, the application can continue. 
-
-TBD: GDPR info here? 
-TBD: Exception details?
-
-1. Extend the `mip::Consent` base class - Consent is implemented by extending the `mip::Consent` base class and implementing `GetUserConsent` to return one of the `mip::Consent` enum values. 
-
-The object derived from `mip::Consent` is passed in to the `mip::FileProfile::Settings` or `mip::ProtectionProfile::Settings` constructor.
-
-When a user performs an operation requiring consent, the SDK calls the `GetUserConsent` method, passing in the destination URL. `GetUserConsent` then displays the necessary information to the user, requesting a decision on whether to allow the application to access the service. 
-
-Operations that will trigger the consent flow are (TBD):
-
-- One
-- Two
-
-2. Setting consent options -
-
-- **AcceptAlways**: Consent and remember the decision.
-- **Accept**: Consent once.
-- **Reject**: Do not consent.
-
-When the SDK requests user consent with this method, the client
-application should present the URL to the user. Client applications should
-provide some means of obtaining user consent and return the appropriate
-Consent enum that corresponds to the user's decision.
-
-Sample consent delegate implementation:
-
-#### consent_delegate_impl.h
-
-```cpp
-class ConsentDelegateImpl final : public mip::ConsentDelegate {
-public:
-  ConsentDelegateImpl() = default;
-  
-  virtual mip::Consent GetUserConsent(const std::string& url) override;
-
-};
-```
-
-#### consent_delegate_impl.cpp
-
-When the SDK requires consent, the `GetUserConsent` method is called *by the SDK*, and the URL passed in as a parameter. In the example below, the user is notified that the SDK will connect to that provided URL, then returns `Consent::AcceptAlways`. This example isn't a good implementation, as the user wasn't presented with a real choice.
-
-```console
-Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
-  //Print the consent URL, ask user to choose
-  std::cout << "SDK will connect to: " << url << std::endl;
-
-  std::cout << "1) Accept Always" << std::endl;
-  std::cout << "2) Accept" << std::endl;
-  std::cout << "3) Reject" << std::endl;
-  std::cout << "Select an option: ";
-  char input;
-  std::cin >> input;
-
-  switch (input)
-  {
-  case '1':
-    return Consent::AcceptAlways;
-    break;
-  case '2':
-    return Consent::Accept;
-    break;
-  case '3':
-    return Consent::Reject;
-    break;
-  default:
-    return Consent::Reject;
-  }  
-}
-```
-
 ## Implement the File profile and engine
+
+As mentioned earlier, the profile and engine objects are universal concepts that apply to all SDK clients.
 
 From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#fileprofile 
 From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/profile.md 
