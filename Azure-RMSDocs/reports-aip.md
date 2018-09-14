@@ -55,9 +55,9 @@ For example, you'll be able to see the following:
 
     - What files reside on your scanned data repositories
     
-    - Which files are labeled and protected
+    - Which files are labeled and protected, and the location of files by labels
     
-    - Which files contain sensitive information for known categories, such as financial data and personal information
+    - Which files contain sensitive information for known categories, such as financial data and personal information, and the location of files by these categories
     
 The reports use [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) to store the data in a workspace that you own. If you are familiar with the query language, you can modify the queries, and create new reports and PowerBI dashboards. You might find the following tutorial helpful to understand the query language: [Getting Started with the Analytics Portal](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
 
