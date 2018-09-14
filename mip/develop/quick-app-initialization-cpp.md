@@ -18,7 +18,7 @@ This quickstart illustrates the client initialization pattern used by the MIP C+
 - Initialize and provide an Engine object to the SDK 
 
 > [!NOTE]
-> The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs.  Although this quickstart demonstrates File API examples, this same pattern is applicable to clients using the Policy and Protection APIs.
+> The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs. Although this quickstart demonstrates usage of the File APIs, this same pattern is applicable to clients using the Policy and Protection APIs.
 
 ## Prerequisites
 
@@ -143,7 +143,7 @@ The MIP SDK implements authentication using class extensibility, providing a mec
           AuthDelegateImpl() = delete;        // Prevents default constructor
 
 	        AuthDelegateImpl(
-		        const std::string& appId)         // AppID for registered AAD app
+            const std::string& appId)         // AppID for registered AAD app
 		        : mAppId(appId) {};
 
           bool AcquireOAuth2Token(            // Called by MIP SDK to get a token
@@ -158,15 +158,13 @@ The MIP SDK implements authentication using class extensibility, providing a mec
    - Update "auth_delegate.cpp", by replacing all of the `auth_delegate` class implementation with the following source. **Don't** remove the preprocessor directives generated in the previous step (#pragma, #include). 
 
      > [!IMPORTANT]
-     > Notice that the token acquisition code is intentionally incomplete. We will test later with a static access token. 
+     > Notice that the following token acquisition code is intentionally incomplete. We will test later with a static access token.  
      > In production, this code must dynamically acquire an access token, based on specified criteria:
      > - the appId and reply/redirect URI specified in your Azure AD app registration (reply/redirect URI **must** match your app registration)
      > - the authority and resource URI passed in by the SDK (resource URI **must** match your app registration's API/permissions)
-     > - app/user credentials
-     > 
-     > OAuth2 "native" clients should prompt for user credentials and use the "authorization code" flow. OAuth2 "confidential clients" can use their own secure credentials (such as a service), or prompt for user credentials (such as a web app).
+     > - app/user credentials (OAuth2 "native" clients should prompt for user credentials and use the "authorization code" flow. OAuth2 "confidential clients" can use their own secure credentials with a flow like "client credentials" (such as a service), or prompt for user credentials using the "authorization code" flow (such as a web app)).
      >
-     > AcquireOAuth2Token() is **only** called by the MIP SDK, as required.
+     > OAuth2 token acquisition is a complex protocol, and as such, is normally accomplished by using a library. TokenAcquireOAuth2Token() is **only** called by the MIP SDK, as required.
 
      ```cpp
      using std::string;
