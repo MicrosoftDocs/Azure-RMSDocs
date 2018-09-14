@@ -182,9 +182,11 @@ The MIP SDK implements authentication using class extensibility, providing a mec
      }
      ``` 
 
+============================= WIP BELOW THIS LINE ==============================================
+
 ## Implement the File profile and engine
 
-As mentioned earlier, the profile and engine objects are universal concepts that apply to all SDK clients.
+As mentioned earlier, the profile and engine objects are universal concepts that apply to all SDK clients. Now you'll complete the coding portion of this Quickstart, by adding code that will instantiate the profile and engine.
 
 From: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#fileprofile 
 From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/profile.md 
@@ -194,20 +196,28 @@ From: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/dev
 
 ## Build and test the application
 
-(TBD) - show sample output here, but DON'T USE THIS block
+Finally, lets build and test your client application. Before we can do that though, you'll need to generate an access token which we can use for testing.
 
-```cmd
-Non-Business : 87ba5c36-b7cf-4793-bbc2-bd5b3a9f95ca
-Public : 87867195-f2b8-4ac2-b0b6-6bb73cb33afc
-General : f42aa342-8706-4288-bd11-ebb85995028c
-Confidential : 074e257c-5848-4582-9a6f-34a182080e71
-->  Microsoft FTE : d9f23ae3-a239-45ea-bf23-f515f824c57b
-->  Microsoft Extended : 9fbde396-1a24-4c79-8edf-9254a0f35055
-Highly Confidential : f5dc2dea-db0f-47cd-8b20-a52e1590fb64
-->  Microsoft FTE : f74878b7-c0ff-44a4-82ff-8ce29f7fccb5
-->  Microsoft Extended : c179f820-d535-4b2f-b252-8a9c4ac14ec6
-Press any key to continue . . .
-```
+1. Generate a test token using PowerShell
+
+2. Update your code to use the static test token
+
+3. Build and test your application
+
+   - If your code builds and runs successfully, you should see the following output in the console window. [TBD: REPLACE THIS]
+
+   ```cmd
+   Non-Business : 87ba5c36-b7cf-4793-bbc2-bd5b3a9f95ca
+   Public : 87867195-f2b8-4ac2-b0b6-6bb73cb33afc
+   General : f42aa342-8706-4288-bd11-ebb85995028c
+   Confidential : 074e257c-5848-4582-9a6f-34a182080e71
+   ->  Microsoft FTE : d9f23ae3-a239-45ea-bf23-f515f824c57b
+   ->  Microsoft Extended : 9fbde396-1a24-4c79-8edf-9254a0f35055
+   Highly Confidential : f5dc2dea-db0f-47cd-8b20-a52e1590fb64
+   ->  Microsoft FTE : f74878b7-c0ff-44a4-82ff-8ce29f7fccb5
+   ->  Microsoft Extended : c179f820-d535-4b2f-b252-8a9c4ac14ec6
+   Press any key to continue . . .
+   ```
 
 ## Next Steps
 
