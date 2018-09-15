@@ -232,18 +232,18 @@ As mentioned earlier, the profile and engine objects are universal concepts that
 
    ``` 
 
-3. Generate a test token using the PowerShell `Get-ADALToken` cmdlet you installed earlier in MIP SDK Setup and configuration:
+3. Generate a test token using the PowerShell `Get-ADALToken` cmdlet you installed earlier in MIP SDK Setup and configuration. Update `$appId` and `redirectUri`, based on the values you used in when created the Azure AD app registration.
 
    ```powershell
    $authority = 'https://login.windows.net/common/oauth2/authorize'  # provided by MIP SDK
    $resourceUrl = 'https://syncservice.o365syncservice.com/'         # provided by MIP SDK; must match the URL of resource/API requested by the registered app
-   $appId = '0edbcbed-8773-44de-b87c-b8c6276d41eb'                   # App ID of the registered app
+   $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'                   # App ID of the registered app
    $redirectUri = 'bltest://authorize'                               # Must match the redirect URI of the registered app
    $response = Get-ADALToken -Resource $resourceUrl -ClientId $clientId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
    $response.AccessToken | clip                                      # Copies the access token text to the clipboard
    ```
 
-4. Paste the access token into the \<access-token\> placeholder, in the following line of your `AcquireOAuth2Token()` implementation, in "auth_delegate.cpp":
+4. Paste the access token on the clipboard, into the `<access-token>` placeholder in the following line of your `AcquireOAuth2Token()` implementation, in "auth_delegate.cpp":
 
    ```cpp
    string accessToken = "<access-token>";
