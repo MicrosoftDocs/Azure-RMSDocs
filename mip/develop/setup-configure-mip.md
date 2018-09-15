@@ -39,15 +39,13 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 
 Next, complete the following steps to ensure your client computer is set up and configured correctly. 
 
->[!NOTE]
-> The code examples in the Quickstart and Tutorial sections assume use of Visual Studio 2017 or greater.
-
 ### Windows 10
 
 1. Using Windows Update, update your machine to Windows 10 Fall Creators Update (version 1709) or later. To  verify your current version:
     - Click the Windows icon in the lower left.
     - Type "About your PC" and press the "Enter" key.
     - Scroll down to **Windows specifications** and look under **Version**.
+
 2. Install [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), with the following workloads and optional components:
     - **Universal Windows Platform development** Windows workload, plus the following optional components:
         - **C++ Universal Windows Platform tools**
@@ -57,7 +55,28 @@ Next, complete the following steps to ensure your client computer is set up and 
 
         [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. Download SDK samples  
+3. Install the [ADAL.PS PowerShell Module](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2). 
+
+   - Because administrator rights are required to install modules, first you will need to either:
+
+     - log on to your computer with an account that has Administrator rights.
+     - run the Windows PowerShell session with elevated rights (Run as Administrator).
+
+   - Then run the `install-module -name adal.ps` cmdlet:
+
+     ```powershell
+     PS C:\WINDOWS\system32> install-module -name adal.ps
+
+     Untrusted repository
+     You are installing the modules from an untrusted repository. If you trust this repository, change its
+     InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to install the modules from
+     'PSGallery'?
+     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): A
+
+     PS C:\WINDOWS\system32>
+     ```
+
+4. Download SDK samples  
 
    - If you don't have one already, first create a [GitHub profile](https://github.com/join).
    - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
@@ -65,14 +84,14 @@ Next, complete the following steps to ensure your client computer is set up and 
      - Use the following query to view the repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
      - Using Git Bash, use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repository.
 
-4. Download SDK binaries
+5. Download SDK binaries
 
    - TBD: will also impact the include/lib path instructions in the App Initialization quickstart
    - TBD: Explain naming conventions and/or supported platforms, system requirements?
    - TBD: Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins?
      - OR use NuGet packages from VS?
 
-5. Ensure "Developer Mode" is enabled on your workstation:
+6. Ensure "Developer Mode" is enabled on your workstation:
     - Click the Windows icon in the lower left.
     - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
     - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
