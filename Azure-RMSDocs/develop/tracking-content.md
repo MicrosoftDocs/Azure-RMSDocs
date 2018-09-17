@@ -9,7 +9,7 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 # optional metadata
