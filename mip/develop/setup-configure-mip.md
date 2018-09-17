@@ -57,7 +57,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 3. Install the [ADAL.PS PowerShell Module](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2). 
 
-   - Because administrator rights are required to install modules, first you will need to either:
+   - Because administrator rights are required to install modules, first you need to either:
 
      - log on to your computer with an account that has Administrator rights.
      - run the Windows PowerShell session with elevated rights (Run as Administrator).

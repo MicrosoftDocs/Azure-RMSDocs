@@ -236,8 +236,8 @@ As mentioned earlier, the profile and engine objects apply to all SDK clients us
 3. Generate a test token using the PowerShell `Get-ADALToken` cmdlet you installed earlier in MIP SDK Setup and configuration. Update `$appId` and `redirectUri`, based on the values you used in when created the Azure AD app registration.
 
    ```powershell
-   $authority = 'https://login.windows.net/common/oauth2/authorize'  # Required by MIP SDK
-   $resourceUrl = 'https://syncservice.o365syncservice.com/'         # Required by MIP SDK; matches the URL of the "Microsoft Information Protection Sync Service" resource/API requested by the Azure AD app registration
+   $authority = 'https://login.windows.net/common/oauth2/authorize'  # Enforced by MIP SDK
+   $resourceUrl = 'https://syncservice.o365syncservice.com/'         # Enforced by MIP SDK; matches the URL of the "Microsoft Information Protection Sync Service" resource/API requested by the Azure AD app registration
    $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'                   # App ID of the Azure AD app registration
    $redirectUri = 'bltest://authorize'                               # Must match the redirect URI of the Azure AD app registration
    $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
