@@ -240,7 +240,10 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
 
    ``` 
 
-3. Generate a test token using the PowerShell `Get-ADALToken` cmdlet you installed earlier in MIP SDK Setup and configuration. Update `$appId` and `redirectUri`, based on the values you used in when created the Azure AD app registration.
+3. Generate a test token using the following PowerShell script. The script uses the `Get-ADALToken` cmdlet you installed earlier,in MIP SDK Setup and configuration. 
+
+  - First update `$appId` and `redirectUri`, based on the values you used in when created the Azure AD app registration. 
+  - When you run the script, it triggers an Azure AD authentication prompt. Enter the credentials of a user from the same tenant where your application is registered:
 
    ```powershell
    $authority = 'https://login.windows.net/common/oauth2/authorize'  # Enforced by MIP SDK
