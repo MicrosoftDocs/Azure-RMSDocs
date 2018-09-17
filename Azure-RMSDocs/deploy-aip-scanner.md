@@ -218,7 +218,7 @@ In its default setting, the scanner runs one time and in the reporting-only mode
 
 2. Restart the **Azure Information Protection Scanner** service by running the following command:
     
-    Start-AIPScan
+        Start-AIPScan
 
 3. As before, monitor the event log and the reports to see which files were labeled, what classification was applied, and whether protection was applied.
 
@@ -278,7 +278,7 @@ For the first scan cycle, the scanner inspects all files in the configured data 
 
 You can force the scanner to inspect all files again by running the following command:
 
-    Run [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) with the `-Reset` parameter. The scanner must be configured for a manual schedule, which requires the `-Schedule` parameter to be set to **Manual** with [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
+Run [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) with the `-Reset` parameter. The scanner must be configured for a manual schedule, which requires the `-Schedule` parameter to be set to **Manual** with [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
 
 Inspecting all files again is useful when you want the reports to include all files and this configuration choice is typically used when the scanner runs in discovery mode. When a full scan is complete, the scan type automatically changes to incremental so that for subsequent scans, only new or modified files are scanned.
 
