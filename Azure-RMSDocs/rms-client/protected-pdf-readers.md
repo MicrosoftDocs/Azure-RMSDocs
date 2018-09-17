@@ -11,13 +11,13 @@ ms.date: 10/02/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
-ms.assetid: xxxxx
+ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
 
 # optional metadata
 
 #audience:
 #ms.devlang:
-ms.reviewer: esaggese
+ms.reviewer: kartikka
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
