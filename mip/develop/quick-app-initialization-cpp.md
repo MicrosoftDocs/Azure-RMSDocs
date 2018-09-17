@@ -28,7 +28,7 @@ If you haven't already, be sure to:
 
 ## Create a Visual Studio solution and project
 
-First we create the initial Visual Studio solution and solution, upon which the following Quickstarts will build. 
+First we create and configure the initial Visual Studio solution and project, upon which the Quickstarts will build. 
 
 1. Open Visual Studio 2017, select **File**, **New**, **Project**. In the **New Project** dialog:
      - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
@@ -40,25 +40,22 @@ First we create the initial Visual Studio solution and solution, upon which the 
 
 2. Configure the project settings:
    - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Properties**.
-   - On the top of the **Property Pages** dialog, make sure your project build "Configuration" is set to **Debug**, and the "Platform" target is set to **x64**:
-
-     [![Visual Studio solution build configuration](media/quick-app-initialization-cpp/set-build-configuration-platform.png)](media/quick-app-initialization-cpp/set-build-configuration-platform.png#lightbox)
-
+   - On the top of the **Property Pages** dialog, set your project build "Configuration" to **Debug**, and the "Platform" target to **x64**:
    - Under **Configuration Properties**, select the **VC++ Directories** node.
-   - Select the **Include Directories** row then click the drop-down on the right side, then **<Edit...>**, and enter the paths to the SDK include (.h) subdirectories in the top field. Specify the full paths to `file\include`, `protection\include`, `upe\include` subdirectories (but no deeper), within the path where you installed the SDK. Click **OK**. 
+   - Select the **Include Directories** row, then click the drop-down on the right side, then **<Edit...>**, and enter the paths to the SDK include (.h) subdirectories in the top field. Specify the full paths to `file\include`, `protection\include`, `upe\include` subdirectories (but no deeper), within the path where you installed the SDK. Click **OK**. 
 
         [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
 
-   - Repeat the previous step for the **Library Directories** row, entering the paths to the SDK binary static libraries (.lib) subdirectories. Be sure to use the path(s) that match the current build configuration for your solution (debug/release and platform target). Specify the full paths to the `file\bins\<debug/release>\<platform>`, `protection\bins\<debug/release>\<platform>`, `upe\bins\<debug/release>\<platform>` subdirectories.
+   - Repeat the previous step for the **Library Directories** row, entering the paths to the SDK binary static libraries (.lib) subdirectories. Be sure to use the paths that match the current build configuration for your solution (debug/release and platform target). Specify the full paths to the `file\bins\<debug/release>\<platform>`, `protection\bins\<debug/release>\<platform>`, `upe\bins\<debug/release>\<platform>` subdirectories.
 
    - Under **Configuration Properties**, open the **Linker** node, and select the **Input**. 
-   - Select the **Include Directories** row then click the drop-down on the right side, then **<Edit...>**. Add "mip_protection_sdk.lib;mip_file_sdk.lib;mip_upe_sdk.lib;" to the libraries list, in the top field. Click **OK**. 
+   - Select the **Include Directories** row, then click the drop-down on the right side, then **<Edit...>**. Add `mip_protection_sdk.lib;mip_file_sdk.lib;mip_upe_sdk.lib;` to the libraries list, in the top field. Click **OK**. 
    - Click **OK** on the **Property Pages** dialog when finished.
 
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
 
 
-4. Add the path to the SDK binary dynamic libraries (.dll), to the PATH environment variable. This allows the dependent .DLLs to be found at runtime:
+4. Add the path to the SDK binary dynamic libraries (.dll), to the PATH environment variable. This allows the dependent.DLLs to be found at runtime:
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
    - On the **System Properties** dialog, click **Environment Variables**.
@@ -67,7 +64,7 @@ First we create the initial Visual Studio solution and solution, upon which the 
 
 ## Implement an observer class
 
-Now create a basic implementation for an observer class, by extending the SDK's `FileProfile::Observer` class. The observer is instantiated and used later, by the File profile and File engine objects.
+Now create a basic implementation for an observer class, by extending the SDK's `mip::FileProfile::Observer` class. The observer is instantiated and used later, by the File profile and File engine objects.
 
 1. Add a new class to your project, which generates both the header/.h and implementation/.cpp files for you:
 
@@ -130,7 +127,9 @@ Now create a basic implementation for an observer class, by extending the SDK's 
 
 ## Implement an authentication delegate
 
-The MIP SDK implements authentication using class extensibility, providing a mechanism to share authentication work with the client application. The client application must acquire a suitable OAuth2 access token, when asked by the MIP SDK at runtime. Token acquisition is accomplished by extending the `mip::AuthDelegate` class and overriding/implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function.
+The MIP SDK implements authentication using class extensibility, providing a mechanism to share authentication work with the client application. The client application must acquire a suitable OAuth2 access token, and provided to the MIP SDK at runtime. 
+
+Now create an implementation for an authentication delegate, by extending the SDK's `mip::AuthDelegate` class, and overriding/implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function. The authentication delegate is instantiated and used later, by the File profile and File engine objects.
 
 1. Using the same Visual Studio "Add class" feature we used in step #1 of the previous section, add another class to your project. This time, enter "auth_delegate" in the **Class Name** field. 
 
@@ -195,7 +194,7 @@ Azure AD requires an application to be given consent, before it can access secur
 - accounts from the *same tenant* where your application is registered, if you or an administrator didn't explicitly pre-consent access via the "Grant Permissions" feature.
 - accounts from a *different tenant* if your application is registered as multi-tenant, and the tenant administrator hasn't pre-consented for all users in advance.
 
-Fortunately, the SDK provides an easy-to-use approach for developers to control the consent experience, based on the endpoint being accessed by the SDK. Once the user grants consent, the application can continue. 
+Now create an implementation for a consent delegate, by extending the SDK's `mip::ConsentDelegate` class, and overriding/implementing the `mip::AuthDelegate::GetUserConsent()` pure virtual function. The consent delegate is instantiated and used later, by the File profile and File engine objects.
 
 1. Using the same Visual Studio "Add class" feature we used previously, add another class to your project. This time, enter "consent_delegate" in the **Class Name** field. 
 
@@ -231,9 +230,9 @@ Fortunately, the SDK provides an easy-to-use approach for developers to control 
 
 ## Implement a File profile and engine
 
-As mentioned earlier, the profile and engine objects apply to all SDK clients using MIP APIs. Now complete the coding portion of this Quickstart, by adding code that will instantiate the profile and engine. You also update `AcquireOAuth2Token()` to use a valid static token for testing: 
+As mentioned, profile and engine object are required for SDK clients using MIP APIs. Now complete the coding portion of this Quickstart, by adding code that instantiates the profile and engine. You also update `AcquireOAuth2Token()` to use a valid static token for testing: 
 
-1. From **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It will have the same as the project containing it, which you specified earlier during project/solution creation.
+1. From **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It will have the same as the project containing it, which you specified during project creation.
 
 2. Replace your generated `main()` implementation with the following code:
 
