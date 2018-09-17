@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/13/2018
+ms.date: 09/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
@@ -90,7 +90,9 @@ See also: [Office Applications Service Description](https://technet.microsoft.co
 
 #### Windows computers for Information Rights Management (IRM)
 
-The following Office client suites support protecting files and emails on Windows computers by using Azure RMS:
+The following Office client suites support protecting files and emails on Windows computers by using the Azure Rights Management service:
+
+- Office 365 with Office 2016 apps (minimum version 1805, build 9330.2078) when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
 
 - Office 365 ProPlus: Office 2016 and Office 2013
     
@@ -104,7 +106,7 @@ The following Office client suites support protecting files and emails on Window
 
 All editions of Office (with the exception of Office 2007) support consuming protected content.
 
-Azure RMS with Office Professional Plus 2010 with Service Pack 2 or Office Professional 2010 with Service Pack 2:
+When you use the Azure Rights Management service with Office Professional Plus 2010 and Service Pack 2 or Office Professional 2010 with Service Pack 2:
 
 - Requires the Azure Information Protection client for Windows or the Rights Management sharing application for Windows.
 
