@@ -2,14 +2,13 @@
 # required metadata
 
 title: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center
-description: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center for unified labeling with MIP clients. 
+description: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center for client that support unified labeling. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/xx/2018
 ms.topic: article
 ms.service: information-protection
-ms.assetid: xxx
 
 # optional metadata
 
@@ -103,14 +102,16 @@ For the labels that successfully migrate, they can now be used by [clients that 
 
 The clients that currently support unified labeling include:
 
-- MacOS computers that use Office for Mac 2016 (public preview)
-
-- iOS and Android devices that use Word, Excel, and PowerPoint from Office Mobile.
+- From the Office Insiders program:
+    
+    - MacOS computers that use Office for Mac 2016
+    
+    - iOS and Android devices that use Word, Excel, and PowerPoint from Office Mobile.
 
 - Clients from software vendors and developers that use the [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference)
 
 
 ## Next steps
 
-
+If you're new to the Security & Compliance Center, see [Office 365 Security and Compliance](https://docs.microsoft.com/office365/securitycompliance/?redirectSourcePath=%252fen-us%252farticle%252fOverview-of-security-and-compliance-in-Office-365-dcb83b2c-ac66-4ced-925d-50eb9698a0b2 )
 
