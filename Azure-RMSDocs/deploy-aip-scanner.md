@@ -196,7 +196,7 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 1. In your PowerShell session, restart the **Azure Information Protection Scanner** service by running the following command:
     
-    Start-AIPScan
+        Start-AIPScan
 
 2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the service stops. You can use the local Windows **Applications and Services** event log, **Azure Information Protection**, to confirm when the service is stopped. Look for the informational event ID **911**.
 
