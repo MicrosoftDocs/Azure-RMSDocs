@@ -28,12 +28,9 @@ If you haven't already, be sure to:
 
 ## Create a Visual Studio solution and project
 
-Here we create the initial Visual Studio solution, upon which the following Quickstarts will build. 
+First we create the initial Visual Studio solution and solution, upon which the following Quickstarts will build. 
 
-1. Create a new Visual Studio solution and starter project:
-
-   - Open Visual Studio 2017, select **File**, **New**, **Project**.
-   - In the **New Project** dialog:
+1. Open Visual Studio 2017, select **File**, **New**, **Project**. In the **New Project** dialog:
      - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
      - In the center pane, select **Windows Console Application**
      - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
@@ -48,11 +45,11 @@ Here we create the initial Visual Studio solution, upon which the following Quic
      [![Visual Studio solution build configuration](media/quick-app-initialization-cpp/set-build-configuration-platform.png)](media/quick-app-initialization-cpp/set-build-configuration-platform.png#lightbox)
 
    - Under **Configuration Properties**, select the **VC++ Directories** node.
-   - Select the **Include Directories** row then click the drop-down on the right side, then **<Edit...>**, and enter the path(s) to the SDK include subdirectories in the top field. Click **OK**. Be sure to specify the `\include` subdirectories (but no deeper), within the directory where you installed the SDK.
+   - Select the **Include Directories** row then click the drop-down on the right side, then **<Edit...>**, and enter the path(s) to the SDK include (.h) subdirectories in the top field. Be sure to specify the `\include` subdirectories (but no deeper), within the path where you installed the SDK. Click **OK**. 
 
         [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
 
-   - Repeat the previous step for the **Library Directories** row, entering the path(s) to the SDK library subdirectories. Be sure to select the paths that match the current build configuration for your solution (debug/release and platform target). Specify the `\bins\<target>\<platform>` subdirectories, within the directory where you installed the SDK.
+   - Repeat the previous step for the **Library Directories** row, entering the path(s) to the SDK binary static libraries (.lib) subdirectories. Be sure to select the path(s) that match the current build configuration for your solution (debug/release and platform target). Specify the `\bins\<debug/release>\<platform>` subdirectories, within the directory where you installed the SDK.
 
    - Under **Configuration Properties**, open the **Linker** node, and select the **Input**. 
    - Select the **Include Directories** row then click the drop-down on the right side, then **<Edit...>**. Add "mip_protection_sdk.lib;mip_file_sdk.lib;mip_upe_sdk.lib;" to the libraries list, in the top field. Click **OK**. 
@@ -61,7 +58,7 @@ Here we create the initial Visual Studio solution, upon which the following Quic
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
 
 
-4. Add the SDK binaries path to the PATH environment variable, to allow the SDK .DLL files to be found at runtime:
+4. Add the path to the SDK binary dynamic libraries (.dll) to the PATH environment variable, to allow the .DLLs to be found at runtime:
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
    - On the **System Properties** dialog, click **Environment Variables**.
