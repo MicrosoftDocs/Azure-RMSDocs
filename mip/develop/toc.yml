@@ -78,13 +78,13 @@
       - name: Consent
         href: reference/class_mip_consent.md        
       - name: ConsentCallback
-        href: reference/class_consentcallback.md        
+        href: reference/class_mip_consentcallback.md        
       - name: ConsentDelegate
         href: reference/class_consentdelegate.md
       - name: ConsentDeniedError
-        href: reference/class_consentdeniederror.md
+        href: reference/class_mip_consentdeniederror.md
       - name: ConsentResult
-        href: reference/class_consentresult.md                
+        href: reference/class_mip_consentresult.md                
       - name: ContentLabel
         href: reference/class_mip_contentlabel.md
       - name: CustomAction
@@ -210,7 +210,7 @@
       - name: RMSPFileException
         href: reference/class_mip_rmspfileexception.md        
       - name: RMSRightsException
-        href: reference/class_mip_rmsrightsfileexception.md        
+        href: reference/class_mip_rmsrightsexception.md        
       - name: RMSStreamException
         href: reference/class_mip_rmsstreamexception.md        
       - name: Stream
