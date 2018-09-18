@@ -75,12 +75,22 @@
         href: reference/class_mip_badinputerror.md
       - name: ClassificationResult
         href: reference/class_mip_classificationresult.md
+      - name: Consent
+        href: reference/class_mip_consent.md        
+      - name: ConsentCallback
+        href: reference/class_consentcallback.md        
       - name: ConsentDelegate
         href: reference/class_consentdelegate.md
+      - name: ConsentDeniedError
+        href: reference/class_consentdeniederror.md
+      - name: ConsentResult
+        href: reference/class_consentresult.md                
       - name: ContentLabel
         href: reference/class_mip_contentlabel.md
       - name: CustomAction
         href: reference/class_mip_customaction.md
+      - name: CustomProtectedStream
+        href: reference/class_mip_customprotectedstream.md        
       - name: Error
         href: reference/class_mip_error.md
       - name: ExecutionState
@@ -101,8 +111,18 @@
         href: reference/class_mip_fileprofile_observer.md
       - name: FileProfile::Settings
         href: reference/class_mip_fileprofile_settings.md
+      - name: GetUserPolicyResult
+        href: reference/class_mip_getuserpolicyresult.md
+      - name: HttpDelegate
+        href: reference/class_mip_httpdelegate.md
+      - name: HttpRequest
+        href: reference/class_mip_httprequest.md
+      - name: HttpResponse
+        href: reference/class_mip_httpresponse.md                               
       - name: InternalError
         href: reference/class_mip_internalerror.md
+      - name: IStream
+        href: reference/class_mip_istream.md        
       - name: JustificationRequiredError
         href: reference/class_mip_justificationrequirederror.md
       - name: JustifyAction
@@ -119,10 +139,14 @@
         href: reference/class_mip_networkerror.md
       - name: NotSupportedError
         href: reference/class_mip_notsupportederror.md
+      - name: PolicyDescriptor
+        href: reference/class_mip_policydescriptor.md        
       - name: PolicyEngine
         href: reference/class_mip_policyengine.md
       - name: PolicyEngine::Settings
         href: reference/class_mip_policyengine_settings.md
+      - name: PolicyHandler
+        href: reference/class_mip_policyhandler.md        
       - name: PrivilegedRequiredError
         href: reference/class_mip_privilegedrequirederror.md
       - name: Profile
@@ -167,8 +191,36 @@
         href: reference/class_mip_removeprotectionaction.md
       - name: RemoveWatermarkAction
         href: reference/class_mip_removewatermarkaction.md
+      - name: RMSCryptographyException
+        href: reference/class_mip_rmscryptographyexception.md
+      - name: RMSException
+        href: reference/class_mip_rmsexception.md
+      - name: RMSInvalidArgumentException
+        href: reference/class_mip_rmsinvalidargumentexception.md
+      - name: RMSLogicException
+        href: reference/class_mip_rmslogicexception.md
+      - name: RMSNetworkException
+        href: reference/class_mip_rmsnetworkexception.md
+      - name: RMSNotFoundException
+        href: reference/class_mip_rmsnotfoundexception.md
+      - name: RMSNullPointerException
+        href: reference/class_mip_rmsnullpointerexception.md
+      - name: RMSOfficeFileException
+        href: reference/class_mip_rmsofficefileexception.md        
+      - name: RMSPFileException
+        href: reference/class_mip_rmspfileexception.md        
+      - name: RMSRightsException
+        href: reference/class_mip_rmsrightsfileexception.md        
+      - name: RMSStreamException
+        href: reference/class_mip_rmsstreamexception.md        
       - name: Stream
         href: reference/class_mip_stream.md
+      - name: TemplateDescriptor
+        href: reference/class_mip_templatedescriptor.md
+      - name: TransientNetworkError
+        href: reference/class_mip_transientnetworkerror.md
+      - name: UserPolicy
+        href: reference/class_mip_userpolicy.md                        
       - name: UserRights
         href: reference/class_mip_userrights.md
       - name: UserRoles
@@ -181,5 +233,7 @@
     href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
   - name: SDK (public preview)
     href: http://aka.ms/mipsdk
-  - name: Supported platforms 
+  - name: Supported platforms (TBD)
+  - name: Samples
+    href: https://github.com/Azure-Samples?utf8=✓&q=MipSdk
    
