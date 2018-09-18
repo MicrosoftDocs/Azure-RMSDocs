@@ -11,21 +11,18 @@ ms.author: bryanla
 
 # Quickstart: List sensitivity labels (C++)
 
-
+This Quickstart will show you how to use the MIP File API, to list the sensitivity labels that have been configured in your Office 365 tenant.
 
 ## Prerequisites
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first.
-- Review [Classification labels](concept-classification-labels.md) concepts.
+- Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This Quickstart relies on the proper creation of that solution.
+- Optionally: Review [Classification labels](concept-classification-labels.md) concepts.
 
 ## Procedure 1
 
-Listing Labels: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#listing-labels
-File Handler: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#filehandler 
-Also: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/engine.md
-Also: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/file-handler.md 
+
 
 ## Generate an access token and update `AcquireOAuth2Token()`
 
