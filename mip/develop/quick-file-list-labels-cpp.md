@@ -11,53 +11,62 @@ ms.author: bryanla
 
 # Quickstart: List sensitivity labels (C++)
 
-Introductory paragraph.
-<!--- Answer the fundamental "why would I want to do this?" question. --->
-
-Perhaps use https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions 
-
-In this quickstart, you will <do X>
+This Quickstart will show you how to use the MIP File API, to list the sensitivity labels that have been configured in your Office 365 tenant.
 
 ## Prerequisites
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first.
-- Review [Classification labels](concept-classification-labels.md) concepts.
+- Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This Quickstart relies on the proper creation of that solution.
+- Optionally: Review [Classification labels](concept-classification-labels.md) concepts.
 
-## Procedure 1
+============== WIP BELOW THIS LINE ===============
 
-Listing Labels: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#listing-labels
-File Handler: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#filehandler 
-Also: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/engine.md
-Also: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/file-handler.md 
+## Add File engine logic to list the configured sensitivity labels
 
-Include a sentence or two to explain only what is needed to complete the
-procedure.
+1. Open the Visual Studio solution you created previously in "Quickstart: Client application initialization". 
 
-1. Step one of the procedure
-1. Step two of the procedure
-1. Step three of the procedure
-   
-   <!---Use screenshots but be judicious to maintain a reasonable length. Make
-    sure screenshots align to the
-    [current standards](contribute-mvc-screen-shots.md).
-   If users access your product/service via a web browser the first screenshot
-   should always include the full browser window in Chrome or Safari. This is
-   to show users that the portal is browser-based - OS and browser agnostic.--->
-1. Step four of the procedure
+2. Using **Solution Explorer**, open "auth_delegate.cpp", and scroll to the the following line of your `AcquireOAuth2Token()` implementation. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step:
 
-## Procedure 2
+   ```cpp
+   string accessToken = "<access-token>";
+   ``` 
 
-Include a sentence or two to explain only what is needed to complete the procedure.
+## Update the token acquisition logic
 
-1. Step one of the procedure
-1. Step two of the procedure
-1. Step three of the procedure
+1. Generate a test token using the following PowerShell script. The script uses the `Get-ADALToken` cmdlet you installed earlier,in MIP SDK Setup and configuration. 
 
-## Procedure 3
+  - Update `$appId` and `redirectUri`, using the values you used in your Azure AD app registration. 
+  - When you run the script, it triggers an Azure AD authentication prompt. Enter the credentials of a user from the same tenant where your application is registered:
 
-Include a sentence or two to explain only what is needed to complete the procedure.
+   ```powershell
+   $authority = 'https://login.windows.net/common/oauth2/authorize'  # Enforced by MIP SDK
+   $resourceUrl = 'https://syncservice.o365syncservice.com/'         # Enforced by MIP SDK; matches the URL of the "Microsoft Information Protection Sync Service" resource/API requested by the Azure AD app registration
+   $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'                   # App ID of the Azure AD app registration
+   $redirectUri = 'bltest://authorize'                               # Must match the redirect URI of the Azure AD app registration
+   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
+   $response.AccessToken | clip                                      # Copies the access token text to the clipboard
+   ```
+
+2. Using **Solution Explorer**, open "auth_delegate.cpp", and scroll to the the following line of your `AcquireOAuth2Token()` implementation. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step:
+
+   ```cpp
+   string accessToken = "<access-token>";
+   ``` 
+
+## Build and test the application
+
+Finally, build and test your client application. If your code builds and runs successfully, you should see output similar to the following in the console window. 
+
+```cmd
+Non-Business : 87ba5c36-b7cf-4793-bbc2-bd5b3a9f95ca
+Public : 87867195-f2b8-4ac2-b0b6-6bb73cb33afc
+General : f42aa342-8706-4288-bd11-ebb85995028c
+Confidential : 074e257c-5848-4582-9a6f-34a182080e71
+Highly Confidential : f5dc2dea-db0f-47cd-8b20-a52e1590fb64
+
+Press any key to continue . . .
+```
 
 ## Next Steps
 

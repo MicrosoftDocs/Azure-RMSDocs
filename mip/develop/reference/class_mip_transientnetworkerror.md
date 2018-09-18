@@ -1,10 +1,11 @@
-# class mip::JustificationRequiredError 
+# class mip::TransientNetworkError 
+Transient networking error. Caused by unexpected behavior when making network calls to service endpoints. The operation can be retried as this is a transient error.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual std::shared_ptr<Error> Clone() const  |  Clone the error.
  public char const* what() const  |  Get a cstring error message.
+public std::shared_ptr<Error> Clone() const  |  Clone the error.
  public virtual ErrorType GetErrorType() const  |  Get the error type.
  public virtual const std::string& GetErrorName() const  |  Get the error name.
  public virtual const std::string& GetMessage() const  |  Get the error message.
@@ -12,17 +13,17 @@ public virtual std::shared_ptr<Error> Clone() const  |  Clone the error.
   
 ## Members
   
-### Error
-Clone the error.
-
-  
-**Returns**: A clone of the error.
-  
 ### what
 Get a cstring error message.
 
   
 **Returns**: A cstring err message
+  
+### Error
+Clone the error.
+
+  
+**Returns**: A clone of the error.
   
 ### ErrorType
 Get the error type.

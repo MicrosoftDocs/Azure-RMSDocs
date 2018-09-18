@@ -11,9 +11,13 @@ public const std::shared_ptr<AuthDelegate>& GetAuthDelegate() const  |  Get the 
 public const std::shared_ptr<Profile::Observer>& GetObserver() const  |  Get the event observer.
  public const ApplicationInfo GetApplicationInfo() const  |  Get the application info.
 public std::shared_ptr<LoggerDelegate> GetLoggerDelegate() const  |  Get the logger delegate (if any) provided by the application.
-public void SetLoggerDelegate(const std::shared_ptr<LoggerDelegate>& loggerDelegate)  |  Use external logger implementation.
+public void SetLoggerDelegate(const std::shared_ptr<LoggerDelegate>& loggerDelegate)  |  Override default logger.
+public std::shared_ptr<HttpDelegate> GetHttpDelegate() const  |  Get the http delegate (if any) provided by the application.
+public void SetHttpDelegate(const std::shared_ptr<HttpDelegate>& httpDelegate)  |  Override default http stack with client's own.
  public void OptOutTelemetry()  |  Opts out of all telemetry gathering.
  public bool IsTelemetryOptedOut() const  |  Gets whether or not telemetry gathering should be disabled.
+ public void SetMinimumLogLevel(LogLevel logLevel)  |  Set the minimum log level that will trigger a logging event.
+ public LogLevel GetMinimumLogLevel() const  |  Get the Minimum Log Level object.
   
 ## Members
   
@@ -74,8 +78,27 @@ Get the logger delegate (if any) provided by the application.
 **Returns**: Logger delegate to be used for logging
   
 ### SetLoggerDelegate
-Use external logger implementation.
-This should be called by client applications if they want to use their own logger implementation
+Override default logger.
+
+Parameters:  
+* **loggerDelegate**: Logging callback interface implemented by client applications
+
+
+This should be called by client applications that use their own logger implementation
+  
+### HttpDelegate
+Get the http delegate (if any) provided by the application.
+
+  
+**Returns**: Http delegate to be used for http operations
+  
+### SetHttpDelegate
+Override default http stack with client's own.
+
+Parameters:  
+* **httpDelegate**: Http callback interface implemented by client application
+
+
   
 ### OptOutTelemetry
 Opts out of all telemetry gathering.
@@ -85,3 +108,20 @@ Gets whether or not telemetry gathering should be disabled.
 
   
 **Returns**: Whether or not telemetry gathering should be disabled
+  
+### SetMinimumLogLevel
+Set the minimum log level that will trigger a logging event.
+
+Parameters:  
+* **logLevel**: minimum log level that will trigger a logging event. 
+
+
+
+  
+**Returns**: True
+  
+### LogLevel
+Get the Minimum Log Level object.
+
+  
+**Returns**: Minimum log level that will trigger a logging event.

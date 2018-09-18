@@ -4,9 +4,10 @@ A class that defines the interface to the mip sdk logger.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public void Init(const std::string& storagePath)  |  Initialize the logger.
+ public void Init(const std::string& storagePath, LogLevel logLevel)  |  Initialize the logger.
+ public LogLevel GetLogLevel() const  |  Get the minimum loglevel that would trigger a logging event.
  public void Flush()  |  Flush the logger.
- public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const uint64_t line)  |  Write a log statement to log file.
+ public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Write a log statement to log file.
   
 ## Members
   
@@ -14,9 +15,18 @@ A class that defines the interface to the mip sdk logger.
 Initialize the logger.
 
 Parameters:  
-* **storagePath**: the path to the location where persistent state, including logs, may be stored.
+* **storagePath**: the path to the location where persistent state, including logs, may be stored. 
 
 
+* **logLevel**: the minimum loglevel that would trigger a logging event.
+
+
+  
+### LogLevel
+Get the minimum loglevel that would trigger a logging event.
+
+  
+**Returns**: The minimum loglevel that would trigger a logging event.
   
 ### Flush
 Flush the logger.

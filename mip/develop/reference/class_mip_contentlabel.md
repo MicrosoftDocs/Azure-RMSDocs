@@ -7,6 +7,8 @@ In addition to the label information, it holds properties for a specific applied
 --------------------------------|---------------------------------------------
  public const std::string& GetCreationTime() const  |  Get the creation time of the label.
  public AssignmentMethod GetAssignmentMethod() const  |  Get the assignment method of the label.
+public const std::vector<std::pair<std::string, std::string>>& GetExtendedProperties() const  |  returns whether or not protection was applied by the label.
+ public bool IsProtectionAppliedFromLabel() const  |  returns whether or not protection was applied by the label.
 public std::shared_ptr<Label> GetLabel() const  |  Get the actual label object applied on the content.
   
 ## Members
@@ -24,6 +26,18 @@ Get the assignment method of the label.
 **Returns**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
   
 **See also**: mip::AssignmentMethod
+  
+### GetExtendedProperties
+returns whether or not protection was applied by the label.
+
+  
+**Returns**: True if there is template protection and it was by this label, else false.
+  
+### IsProtectionAppliedFromLabel
+returns whether or not protection was applied by the label.
+
+  
+**Returns**: True if there is template protection and it was by this label, else false.
   
 ### Label
 Get the actual label object applied on the content.

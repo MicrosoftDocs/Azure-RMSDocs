@@ -15,14 +15,14 @@ Get the list of names of metadata that need to be removed from content.
 
   
 **Returns**: A vector of strings to remove. 
-removing metadata should be done before adding metadata.
+Removing metadata should be done before adding metadata.
   
 ### GetMetadataToAdd
 Get the list of metadata as key value pairs. The metadata needs to be added to content metadata.
 
   
 **Returns**: Const std::vector<std::pair<std::string, std::string>>& 
-removing metadata should be done before adding metadata.
+Removing metadata should be done before adding metadata.
   
 ### ActionType
 Get the type of [Action](class_mip_action.md).

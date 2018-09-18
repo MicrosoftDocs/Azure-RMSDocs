@@ -11,16 +11,16 @@ ms.author: bryanla
 
 # Quickstart: Client application initialization (C++)
 
-This quickstart illustrates the client initialization pattern used by the MIP C++ SDK at runtime. 
+This quickstart will show you how to implement the client initialization pattern, used by the MIP C++ SDK at runtime. 
 
 > [!NOTE]
-> The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs. Although this quickstart demonstrates usage of the File APIs, this same pattern is applicable to clients using the Policy and Protection APIs.
+> The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs. Although this Quickstart demonstrates usage of the File APIs, this same pattern is applicable to clients using the Policy and Protection APIs. Future Quickstarts should be done serially, as each one builds on the previous one, with this one being the first.
 
 ## Prerequisites
 
 If you haven't already, be sure to:
 
-- Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md).
+- Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md). This Quickstart relies on proper SDK setup and configuration.
 - Optionally:
   - Review [Profile and engine objects](concept-profile-engine-cpp.md). The profile and engine objects are universal concepts, required by clients that use the MIP File/Policy/Protection APIs. 
   - Review [Authentication concepts](concept-authentication-cpp.md) to learn how authentication and consent are implemented by the SDK and client application.
@@ -28,12 +28,9 @@ If you haven't already, be sure to:
 
 ## Create a Visual Studio solution and project
 
-Here we create the initial Visual Studio solution, upon which the following Quickstarts will build. 
+First we create and configure the initial Visual Studio solution and project, upon which the Quickstarts will build. 
 
-1. Create a new Visual Studio solution and starter project:
-
-   - Open Visual Studio 2017, select **File**, **New**, **Project**.
-   - In the **New Project** dialog:
+1. Open Visual Studio 2017, select the **File** menu, **New**, **Project**. In the **New Project** dialog:
      - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
      - In the center pane, select **Windows Console Application**
      - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
@@ -41,29 +38,30 @@ Here we create the initial Visual Studio solution, upon which the following Quic
 
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
-2. Configure the include and library directory paths in your project settings. These directories were established as part of the [MIP SDK setup and configuration](setup-configure-mip.md#configure-your-client-workstation) prerequisite:
-   - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Properties**.
-   - On the **Property Pages** dialog, under **Configuration Properties**, select the **VC++ Directories** node.
-   - Select the **Include Directories** row then click the drop-down on the right side, then **<Edit...>**, and enter the path(s) to the SDK include subdirectories in the top field. Click **OK**. Be sure to specify the `\include` subdirectories (but no deeper), within the directory where you installed the SDK.
-   - Repeat the previous step for the **Library Directories** row, entering the path(s) to the SDK library subdirectories. Be sure to select the paths that match the current build configuration for your solution (debug/release target, and platform). Be sure to specify the `\bins\<target>\<platform>` subdirectories, within the directory where you installed the SDK.
+
+2. Configure the project settings:
+   - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Properties**. 
+   - On the top/right of the **Property Pages** dialog, click **Configuration Manager...**. On the **Configuration Manager** dialog, set your  "Active solution configuration" to **Debug**, and "Active solution platform" target to **x64**. Click **Close** when finished.
+   - Under **Configuration Properties**, select the **VC++ Directories** node.
+   - Select the **Include Directories** row, then click the drop-down on the right side, then **<Edit...>**, and enter the paths to the SDK include (.h) subdirectories in the top field. Specify the full paths to `file\include`, `protection\include`, `upe\include` subdirectories (but no deeper), within the path where you installed the SDK. Click **OK**. 
+
+        [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
+
+   - Repeat the previous step for the **Library Directories** row, entering the paths to the SDK binary static libraries (.lib) subdirectories. Be sure to use the paths that match the current build configuration for your solution. For this Quickstart, specify the absolute or relative paths to the `file\bins\debug\amd64`, `protection\bins\debug\amd64`, `upe\bins\debug\amd64` subdirectories.
+
+   - Under **Configuration Properties**, open the **Linker** node, and select the **Input** node. 
+   - Select the **Additional Dependencies** row, then click the drop-down on the right side, then **<Edit...>**. Here you add the names of the SDK static libraries. Add `mip_protection_sdk.lib;mip_file_sdk.lib;mip_upe_sdk.lib;` to the libraries list, in the top field. Click **OK**. 
    - Click **OK** on the **Property Pages** dialog when finished.
 
-     [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
-
-3. Add the SDK binaries path to the PATH environment variable, to allow the SDK .DLL files to be found at runtime:
-   - Click the Windows icon in the lower left.
-   - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
-   - On the **System Properties** dialog, click **Environment Variables**.
-   - Click the **Path** row under **User variables for \<user\>**, then click **Edit...**
-   - Click **New**, enter the same `\bins\<target>\<platform>` subdirectory path(s) you entered earlier for the SDK libraries, and click **OK**.
+     [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
 
 ## Implement an observer class
 
-Now create a basic implementation for an observer class, by extending the SDK's `FileProfile::Observer` class. The observer is instantiated and used later, by the File profile and File engine objects.
+Now create a basic implementation for an observer class, by extending the SDK's `mip::FileProfile::Observer` class. The observer is instantiated and used later, by the File profile and File engine objects.
 
 1. Add a new class to your project, which generates both the header/.h and implementation/.cpp files for you:
 
-   - In the **Solution Explorer**, right click on the project node, select **Add**, then select **Class**.
+   - In the **Solution Explorer**, right click on the project node again, select **Add**, then select **Class**.
    - On the **Add Class** dialog:
      - In the **Class Name** field, enter "profile_observer". Notice that both the **.h file** and **.cpp file** fields are automatically populated, based on the name you enter.
      - When finished, click the **OK** button.
@@ -72,7 +70,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
 
 2. After generating the .h and .cpp files for the class, both files are opened in Editor Group tabs. Now update each file to implement your new observer class:
 
-   - Update "profile_observer.h", by selecting/deleting the generated `profile_observer` class. **Don't** remove the preprocessor directives generated by the previous step (#pragma, #include). Then copy/paste the following source into the file, after any remaining preprocessor directives:
+   - Update "profile_observer.h", by selecting/deleting the generated `profile_observer` class. **Don't** remove the preprocessor directives generated by the previous step (#pragma, #include). Then copy/paste the following source into the file, after any existing preprocessor directives:
 
      ```cpp
      #include <memory>
@@ -88,7 +86,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
      };
      ```
 
-   - Update "profile_observer.cpp", by selecting/deleting the generated `profile_observer` class implementation. **Don't** remove the preprocessor directives generated by the previous step (#pragma, #include). Then copy/paste the following source into the file, after any remaining preprocessor directives:
+   - Update "profile_observer.cpp", by selecting/deleting the generated `profile_observer` class implementation. **Don't** remove the preprocessor directives generated by the previous step (#pragma, #include). Then copy/paste the following source into the file, after any existing preprocessor directives:
 
      ```cpp
      #include <future>
@@ -118,13 +116,17 @@ Now create a basic implementation for an observer class, by extending the SDK's 
           auto promise = static_pointer_cast<std::promise<shared_ptr<FileEngine>>>(context);
           promise->set_exception(error);
      }
-     ``` 
+     ```
+
+3. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
 
 ## Implement an authentication delegate
 
-The MIP SDK implements authentication using class extensibility, providing a mechanism to share authentication work with the client application. The client application must acquire a suitable OAuth2 access token, when asked by the MIP SDK at runtime. Token acquisition is accomplished by extending the `mip::AuthDelegate` class and overriding/implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function.
+The MIP SDK implements authentication using class extensibility, which provides a mechanism to share authentication work with the client application. The client must acquire a suitable OAuth2 access token, and provided to the MIP SDK at runtime. 
 
-1. Using the same Visual Studio "Add class" feature we used in step #1 of the previous section, add another class to your project. This time, enter "auth_delegate" in the **Class Name** field. 
+Now create an implementation for an authentication delegate, by extending the SDK's `mip::AuthDelegate` class, and overriding/implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function. The authentication delegate is instantiated and used later, by the File profile and File engine objects.
+
+1. Using the same Visual Studio "Add Class" feature we used in step #1 of the previous section, add another class to your project. This time, enter "auth_delegate" in the **Class Name** field. 
 
 2. Now update each file to implement your new authentication delegate class:
 
@@ -155,9 +157,9 @@ The MIP SDK implements authentication using class extensibility, providing a mec
 
      > [!IMPORTANT]
      > The following token acquisition code is intentionally incomplete. We will test later with a static access token.  
-     > In production, this code must dynamically acquire a token, based on specified criteria:
+     > In production, this must be replaced by code that dynamically prompts the user for authentication and acquires a token, using:
      > - the appId and reply/redirect URI specified in your Azure AD app registration (reply/redirect URI **must** match your app registration)
-     > - the authority and resource URI passed in by the SDK (resource URI **must** match your app registration's API/permissions)
+     > - the authority and resource URI passed by the SDK in the `challenge` argument (resource URI **must** match your app registration's API/permissions)
      > - app/user credentials (OAuth2 "native" clients should prompt for user credentials and use the "authorization code" flow. OAuth2 "confidential clients" can use their own secure credentials with the "client credentials" flow (such as a service), or prompt for user credentials using the "authorization code" flow (such as a web app)).
      >
      > OAuth2 token acquisition is a complex protocol, and normally accomplished by using a library. TokenAcquireOAuth2Token() is **only** called by the MIP SDK, as required.
@@ -179,17 +181,18 @@ The MIP SDK implements authentication using class extensibility, providing a mec
           return true;
      }
      ``` 
+3. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
 
 ## Implement a consent delegate
 
-Azure AD requires an application to be given consent, before it can access secured resources under the identity of an account. Consent is recorded as a permanent acknowledgement of permission in the tenant of the account, for the requested resource API/permissions, and a given account (user consent) or all accounts (admin consent). Consent occurs in various scenarios, based on the API and level of permissions the application is seeking, and the account being used for sign-in and token acquisition: 
+Azure AD requires an application to be given consent, before it can access secured resources under the identity of an account. Consent is recorded as a permanent acknowledgement of permission in the tenant of the account, by a given account (user consent) or all accounts (admin consent), for the app to access the requested resource API/permissions. Consent occurs in various scenarios, based on the API and level of permissions the application is seeking, and the account being used for sign-in and token acquisition: 
 
 - accounts from the *same tenant* where your application is registered, if you or an administrator didn't explicitly pre-consent access via the "Grant Permissions" feature.
 - accounts from a *different tenant* if your application is registered as multi-tenant, and the tenant administrator hasn't pre-consented for all users in advance.
 
-Fortunately, the SDK provides an easy-to-use approach for developers to control the consent experience, based on the endpoint being accessed by the SDK. Once the user grants consent, the application can continue. 
+Now create an implementation for a consent delegate, by extending the SDK's `mip::ConsentDelegate` class, and overriding/implementing the `mip::AuthDelegate::GetUserConsent()` pure virtual function. The consent delegate is instantiated and used later, by the File profile and File engine objects.
 
-1. Using the same Visual Studio "Add class" feature we used previously, add another class to your project. This time, enter "consent_delegate" in the **Class Name** field. 
+1. Using the same Visual Studio "Add Class" feature we used previously, add another class to your project. This time, enter "consent_delegate" in the **Class Name** field. 
 
 2. Now update each file to implement your new consent delegate class:
 
@@ -220,59 +223,76 @@ Fortunately, the SDK provides an easy-to-use approach for developers to control 
           return Consent::AcceptAlways;
      }
      ``` 
+3. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
 
-## Implement a File profile and engine
+## Construct a File profile and engine
 
-As mentioned earlier, the profile and engine objects apply to all SDK clients using MIP APIs. Now complete the coding portion of this Quickstart, by adding code that will instantiate the profile and engine. You also update `AcquireOAuth2Token()` to use a valid static token for testing: 
+As mentioned, profile and engine object are required for SDK clients using MIP APIs. Complete the coding portion of this Quickstart, by adding code to instantiate the profile and engine objects: 
 
-1. From **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It will have the same as the project containing it, which you specified earlier during project/solution creation.
+1. From **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It defaults to the same name as the project containing it, which you specified during project creation.
 
-2. Replace your generated `main()` implementation with the following code:
+2. Remove the generated implementation of `main()`. **Don't** remove preprocessor directives generated by Visual Studio during project creation (#pragma, #include). Append the following code after any preprocessor directives:
 
    ```cpp
+   #include "auth_delegate.h"
+   #include "consent_delegate.h"
+   #include "profile_observer.h"
+
+   using std::promise;
+   using std::future;
+   using std::make_shared;
+   using std::shared_ptr;
+   using std::string;
+   using std::cout;
+   using mip::ApplicationInfo; 
+   using mip::FileProfile;
+   using mip::FileEngine;
+
+   int main()
+   {
+     // Construct/initialize objects used by the application's profile object
+     ApplicationInfo appInfo{"0edbblll-8773-44de-b87c-b8c6276d41eb",	// ApplicationInfo object (App ID, friendly name)
+                 "AppInitialization Quickstart" };
+     auto profileObserver = make_shared<ProfileObserver>();			// Observer object					
+     auto authDelegateImpl = make_shared<AuthDelegateImpl>(			// Authentication delegate object (App ID)
+                 "0edbblll-8773-44de-b87c-b8c6276d41eb");
+     auto consentDelegateImpl = make_shared<ConsentDelegateImpl>();	// Consent delegate object
+ 
+     // Construct/initialize profile object
+     FileProfile::Settings profileSettings("",		// Path for logging/telemetry/state; blank = C:
+       true,										// true = use in-memory state storage (vs disk)
+       authDelegateImpl,							
+       consentDelegateImpl,						
+       profileObserver,							
+       appInfo);									
+
+     // Set up promise/future connection for async profile operations; load profile asynchronously
+     auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
+     auto profileFuture = profilePromise->get_future();
+     mip::FileProfile::LoadAsync(profileSettings, profilePromise);
+     auto profile = profileFuture.get();
+
+     // Construct/initialize engine object
+     FileEngine::Settings engineSettings("1",		// User-defined engine ID
+       "Client data",								// User-defined engine state		
+       "en-US");									// Locale (default = en-US)
+
+     // Set up promise/future connect for async engine operations; add engine to profile asynchronously
+     auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
+     auto engineFuture = enginePromise->get_future();
+     profile->AddEngineAsync(engineSettings, enginePromise);
+     auto engine = engineFuture.get();				// MIP triggers AcquireOAuth2Token() for token acquisition
+
+     return 0;
+   }
 
    ``` 
 
-3. Generate a test token using the PowerShell `Get-ADALToken` cmdlet you installed earlier in MIP SDK Setup and configuration. Update `$appId` and `redirectUri`, based on the values you used in when created the Azure AD app registration.
-
-   ```powershell
-   $authority = 'https://login.windows.net/common/oauth2/authorize'  # Required by MIP SDK
-   $resourceUrl = 'https://syncservice.o365syncservice.com/'         # Required by MIP SDK; matches the URL of the "Microsoft Information Protection Sync Service" resource/API requested by the Azure AD app registration
-   $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'                   # App ID of the Azure AD app registration
-   $redirectUri = 'bltest://authorize'                               # Must match the redirect URI of the Azure AD app registration
-   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
-   $response.AccessToken | clip                                      # Copies the access token text to the clipboard
-   ```
-
-4. Paste the access token on the clipboard, into the `<access-token>` placeholder in the following line of your `AcquireOAuth2Token()` implementation, in "auth_delegate.cpp":
-
-   ```cpp
-   string accessToken = "<access-token>";
-   ``` 
-
-## Build and test the application
-
-Finally, build and test your client application. 
-
-- TBD - compile/build instructions
-- If your code builds and runs successfully, you should see the following output in the console window. [TBD: REPLACE THIS]
-
-```cmd
-Non-Business : 87ba5c36-b7cf-4793-bbc2-bd5b3a9f95ca
-Public : 87867195-f2b8-4ac2-b0b6-6bb73cb33afc
-General : f42aa342-8706-4288-bd11-ebb85995028c
-Confidential : 074e257c-5848-4582-9a6f-34a182080e71
-->  Microsoft FTE : d9f23ae3-a239-45ea-bf23-f515f824c57b
-->  Microsoft Extended : 9fbde396-1a24-4c79-8edf-9254a0f35055
-Highly Confidential : f5dc2dea-db0f-47cd-8b20-a52e1590fb64
-->  Microsoft FTE : f74878b7-c0ff-44a4-82ff-8ce29f7fccb5
-->  Microsoft Extended : c179f820-d535-4b2f-b252-8a9c4ac14ec6
-Press any key to continue . . .
-```
+3. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart.
 
 ## Next Steps
 
-Now you're ready for the next quickstart, where you'll start to experience the MIP File APIs.
+Now that your initialization code is complete, you're ready for the next quickstart, where you'll start to experience the MIP File APIs.
 
 > [!div class="nextstepaction"]
 > [List sensitivity labels](quick-file-list-labels-cpp.md)

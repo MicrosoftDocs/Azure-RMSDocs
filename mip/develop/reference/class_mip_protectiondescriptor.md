@@ -5,16 +5,18 @@ Represents an ad-hoc policy associated with protected content.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
  public ProtectionType GetProtectionType() const  |  Gets type of protection, whether it originated from protection sdk template or not.
- public const std::string& GetName() const  |  Gets policy name.
- public const std::string& GetDescription() const  |  Gets policy description.
- public const std::string& GetTemplateId() const  |  Gets the protection template id.
-public const std::vector<UserRights>& GetUserRights() const  |  Gets collection of users-to-rights mappings.
-public const std::vector<UserRoles>& GetUserRoles() const  |  Gets collection of users-to-roles mappings.
-public const std::chrono::time_point<std::chrono::system_clock>& GetContentValidUntil() const  |  Gets policy expiration time.
+ public std::string GetOwner() const  |  Gets owner for the protection.
+ public std::string GetName() const  |  Gets policy name.
+ public std::string GetDescription() const  |  Gets policy description.
+ public std::string GetTemplateId() const  |  Gets the protection template id.
+ public std::string GetLabelId() const  |  Gets the label id.
+public std::vector<UserRights> GetUserRights() const  |  Gets collection of users-to-rights mappings.
+public std::vector<UserRoles> GetUserRoles() const  |  Gets collection of users-to-roles mappings.
+public std::chrono::time_point<std::chrono::system_clock> GetContentValidUntil() const  |  Gets policy expiration time.
  public bool DoesAllowOfflineAccess() const  |  Gets whether or not policy allows offline content access.
- public const std::string& GetReferrer() const  |  Gets policy referrer address.
-public const std::map<std::string, std::string>& GetEncryptedAppData() const  |  Gets app-specific data that was encrypted.
-public const std::map<std::string, std::string>& GetSignedAppData() const  |  Gets the app-specific data that was signed.
+ public std::string GetReferrer() const  |  Gets policy referrer address.
+public std::map<std::string, std::string> GetEncryptedAppData() const  |  Gets app-specific data that was encrypted.
+public std::map<std::string, std::string> GetSignedAppData() const  |  Gets the app-specific data that was signed.
   
 ## Members
   
@@ -23,6 +25,12 @@ Gets type of protection, whether it originated from protection sdk template or n
 
   
 **Returns**: Type of protection
+  
+### GetOwner
+Gets owner for the protection.
+
+  
+**Returns**: Owner of protection
   
 ### GetName
 Gets policy name.
@@ -41,6 +49,13 @@ Gets the protection template id.
 
   
 **Returns**: Template id
+  
+### GetLabelId
+Gets the label id.
+
+  
+**Returns**: [Label](class_mip_label.md) id
+This property will only be populated in ProtectionDescriptors for preexisting protected content. i.e. It is a field populated by the server at the moment protected content is consumed.
   
 ### UserRights
 Gets collection of users-to-rights mappings.
@@ -79,7 +94,7 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](class_mip_protectionhandler.md) may contain a dictionary of app-specific data that was encrypted by the protection service.This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata)
+A [ProtectionHandler](class_mip_protectionhandler.md) may contain a dictionary of app-specific data that was encrypted by the protection service.This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getappsigneddata)
   
 ### GetSignedAppData
 Gets the app-specific data that was signed.

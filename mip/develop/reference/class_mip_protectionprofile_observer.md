@@ -23,10 +23,10 @@ Parameters:
 * **profile**: A reference to the newly-created [ProtectionProfile](class_mip_protectionprofile.md)
 
 
-* **context**: The same context that was passed to ProtectionProfile::LoadAsync
+* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](class_mip_protectionprofile.md#addengineasync)
 
 
-An application can pass any type of context (e.g. std::promise, std::function, etc.) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess) or [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure)
+An application can pass any type of context (e.g. std::promise, std::function, etc.) to [ProtectionProfile::AddEngineAsync](class_mip_protectionprofile.md#addengineasync) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess) or [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure)
   
 ### OnLoadFailure
 Called when loading a profile caused an error.
@@ -35,10 +35,10 @@ Parameters:
 * **error**: [Error](class_mip_error.md) that occurred while loading 
 
 
-* **context**: The same context that was passed to ProtectionProfile::LoadAsync
+* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](class_mip_protectionprofile.md#addengineasync)
 
 
-An application can pass any type of context (e.g. std::promise, std::function, etc.) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess) or [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure)
+An application can pass any type of context (e.g. std::promise, std::function, etc.) to [ProtectionProfile::AddEngineAsync](class_mip_protectionprofile.md#addengineasync) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess) or [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure)
   
 ### OnListEnginesSuccess
 Called when list of engines was generated successfully.
@@ -47,7 +47,7 @@ Parameters:
 * **engineIds**: a list of engine ids the are available. 
 
 
-* **context**: the context passed to the operation.
+* **context**: The same context that was passed to [ProtectionProfile::ListEnginesAsync](class_mip_protectionprofile.md#listenginesasync)
 
 
   
@@ -58,12 +58,20 @@ Parameters:
 * **error**: the error that cause the list engines operation to fail. 
 
 
-* **context**: the context passed to the operation.
+* **context**: The same context that was passed to [ProtectionProfile::ListEnginesAsync](class_mip_protectionprofile.md#listenginesasync)
 
 
   
 ### OnAddEngineSuccess
 Called when a new engine was added successfully.
+
+Parameters:  
+* **engine**: Newly-created engine 
+
+
+* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](class_mip_protectionprofile.md#addengineasync)
+
+
   
 ### OnAddEngineError
 Called when adding a new engine resulted in an error.
@@ -72,7 +80,7 @@ Parameters:
 * **error**: the error that cause the add engine operation to fail. 
 
 
-* **context**: the context passed to the operation.
+* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](class_mip_protectionprofile.md#addengineasync)
 
 
   
@@ -80,7 +88,7 @@ Parameters:
 Called when an engine was deleted successfully.
 
 Parameters:  
-* **context**: the context passed to the operation.
+* **context**: The same context that was passed to [ProtectionProfile::DeleteEngineAsync](class_mip_protectionprofile.md#deleteengineasync)
 
 
   
@@ -91,5 +99,5 @@ Parameters:
 * **error**: the error that cause the delete engine operation to fail. 
 
 
-* **context**: the context passed to the operation.
+* **context**: The same context that was passed to [ProtectionProfile::DeleteEngineAsync](class_mip_protectionprofile.md#deleteengineasync)
 

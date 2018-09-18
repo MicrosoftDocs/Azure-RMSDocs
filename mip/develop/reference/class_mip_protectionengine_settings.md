@@ -11,13 +11,14 @@
  public const Identity& GetIdentity() const  |  Gets the user Identity associated with the engine.
  public void SetIdentity(const Identity& identity)  |  Sets the user Identity associated with the engine.
  public const std::string& GetClientData() const  |  Gets custom data specified by client.
+ public void SetClientData(const std::string& clientData)  |  Sets custom data specified by client.
  public const std::string& GetLocale() const  |  Gets the locale in which engine data will be written.
 public void SetCustomSettings(const std::vector<std::pair<std::string, std::string>>& value)  |  Sets name/value pairs used for testing and experimentation.
 public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  Gets name/value pairs used for testing and experimentation.
  public void SetSessionId(const std::string& sessionId)  |  Sets the engine session id, used for correlation of logging/telemetry.
  public const std::string& GetSessionId() const  |  Gets the engine session id.
- public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Sets the cloud endpoint base url, used to specify cloud boundary.
- public const std::string& GetCloudEndpointBaseUrl() const  |  Gets the cloudEndpointBaseUrl.
+ public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Sets the cloud endpoint base url, used to specify cloud instance. if not set it will be default value.
+ public const std::string& GetCloudEndpointBaseUrl() const  |  Base url associated with protection endpoints.
   
 ## Members
   
@@ -31,7 +32,7 @@ Parameters:
 * **clientData**: customizable client data that can be stored with the engine when unloaded and can be retrieved from a loaded engine. 
 
 
-* **locale**: Engine output will be provided in this locale, default "en-US".
+* **locale**: Engine output will be provided in this locale.
 
 
   
@@ -45,7 +46,7 @@ Parameters:
 * **clientData**: customizable client data that can be stored with the engine when unloaded and can be retrieved from a loaded engine. 
 
 
-* **locale**: Engine output will be provided in this locale, default "en-US".
+* **locale**: Engine output will be provided in this locale.
 
 
   
@@ -83,6 +84,14 @@ Gets custom data specified by client.
   
 **Returns**: Custom data specified by client
   
+### SetClientData
+Sets custom data specified by client.
+
+Parameters:  
+* **Custom**: data specified by client
+
+
+  
 ### GetLocale
 Gets the locale in which engine data will be written.
 
@@ -118,15 +127,15 @@ Gets the engine session id.
 **Returns**: Engine session id
   
 ### SetCloudEndpointBaseUrl
-Sets the cloud endpoint base url, used to specify cloud boundary.
+Sets the cloud endpoint base url, used to specify cloud instance. if not set it will be default value.
 
 Parameters:  
-* **cloudEndpointBaseUrl**: Base url associated with protection endpoints
+* **cloudEndpointBaseUrl**: **represents** the cloud instance to request as there can be other cloud instances of Service
 
 
   
 ### GetCloudEndpointBaseUrl
-Gets the cloudEndpointBaseUrl.
+Base url associated with protection endpoints.
 
   
-**Returns**: Base url associated with protection endpoints
+**Returns**: CloudEndpointBaseUrl

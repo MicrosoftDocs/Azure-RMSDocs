@@ -10,6 +10,7 @@ public std::shared_ptr<mip::Stream> CreateStreamFromBuffer(uint8_t* buffer, cons
 public std::shared_ptr<mip::Stream> CreateStreamFromStdStream(const std::shared_ptr<std::iostream>& stdIOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::iostream.
 public std::shared_ptr<mip::Stream> CreateStreamFromStdStream(const std::shared_ptr<std::istream>& stdIStream)       |  Creates a [Stream](class_mip_stream.md) from a std::istream.
 public std::shared_ptr<mip::Stream> CreateStreamFromStdStream(const std::shared_ptr<std::ostream>& stdOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::ostream.
+public MIP_API void ReleaseAllResources()       |  Release all resources (threads, etc) prior to shutdown.
 **mip::Rights functions**|
 public std::string AuditedExtract()       |  Gets string identifier for 'audited extract' right.
 public std::string Comment()       |  Gets string identifier for 'comment' right.
@@ -31,8 +32,6 @@ public std::string CoOwner()       |  Gets string identifier for 'co-owner' role
 public std::string Reviewer()       |  Gets string identifier for 'reviewer' role.
 public std::string Viewer()       |  Gets string identifier for 'viewer' role.
 
-  
-## Enumeration Details
   
 ## Functions (common)
 
@@ -56,7 +55,17 @@ Name of the setting to explicitly specify policy data file path.
 
 ## Functions (mip)
 
-### mip::Stream (istream)
+### mip::CreateStreamFromBuffer(buffer)
+
+Creates an [Stream](class_mip_stream.md) from a buffer.
+
+Parameters:  
+* **buffer**: Pointer to a buffer
+
+**Returns**: **Size** of buffer
+  
+
+### mip::CreateStreamFromStdStream(istream)
 
 Creates a [Stream](class_mip_stream.md) from a std::istream.
 
@@ -66,7 +75,7 @@ Parameters:
   
 **Returns**: [Stream](class_mip_stream.md) wrapping a std::istream
   
-### mip::Stream (ostream)
+### mip::CreateStreamFromStdStream(ostream)
 
 Creates a [Stream](class_mip_stream.md) from a std::ostream.
 
@@ -76,7 +85,7 @@ Parameters:
   
 **Returns**: [Stream](class_mip_stream.md) wrapping a std::ostream
   
-### mip::Stream (iostream)
+### mip::CreateStreamFromStdStream(iostream)
 
 Creates a [Stream](class_mip_stream.md) from a std::iostream.
 
@@ -85,15 +94,12 @@ Parameters:
   
 **Returns**: [Stream](class_mip_stream.md) wrapping a std::iostream
   
-### mip::Stream (buffer)
+### mip::ReleaseAllResources
 
-Creates an [Stream](class_mip_stream.md) from a buffer.
+Release all resources (threads, etc) prior to shutdown.
 
-Parameters:  
-* **buffer**: Pointer to a buffer
+If MIP dynamic libraries are delay-loaded by an application, this function must be called prior to the application explicitly unloading those MIP libraries to avoid deadlock. For example, on win32, this function must be called prior to any calls to explictly unload MIP DLLs via FreeLibrary or \__FUnloadDelayLoadedDLL2. Applications must release references to all MIP objects (e.g. Profiles, Engines, Handlers) prior to calling this function.
 
-**Returns**: Size Size of buffer
-  
 ## Functions (mip::rights)
 
 ### AuditedExtract

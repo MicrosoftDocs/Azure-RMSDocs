@@ -12,9 +12,8 @@ public void SetProtection(const std::shared_ptr<ProtectionDescriptor>& protectio
  public void RemoveProtection()  |  Removes protection from the file. If the file is labeled, the label will be lost.
 public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr<void>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  parameter.
 public void CommitAsync(const std::shared_ptr<Stream>& outputStream, const std::shared_ptr<void>& context) | Writes the changes to the stream specified by the \|outputStream\ |  parameter.
+ public void NotifySave(const std::string& contentIdentifier)  |  To be called when the changes have been commited to disk.
  public std::string GetOutputFileName()  |  Calculates the output file name and extension based on the original file name and the accumulated changes.
- public virtual ~FileHandler()  | _Not yet documented._
- protected FileHandler()  | _Not yet documented._
   
 ## Members
   
@@ -38,21 +37,21 @@ Parameters:
   
 ### SetLabel
 Sets the sensitivity label to the file.
-Changes will not be written to the file until CommitAsync will be called.
+Changes will not be written to the file until CommitAsync is called.
 Throws [JustificationRequiredError](class_mip_justificationrequirederror.md) when setting the label requires a justification and no justification message was provided via the labelingOptions parameter.
   
 ### DeleteLabel
 Deletes the sensitivity label from the file.
-Changes will not be written to the file until CommitAsync will be called. Privileged and Auto method allows the API to override any existing label 
+Changes will not be written to the file until CommitAsync is called. Privileged and Auto method allows the API to override any existing label 
 Throws [JustificationRequiredError](class_mip_justificationrequirederror.md) when setting the label requires a justification and no justification message was provided via the justificationMessage parameter.
   
 ### SetProtection
 Sets either custom or template based permissions (according to protectionDescriptor->GetProtectionType) to the file.
-Changes will not be written to the file until CommitAsync will be called.
+Changes will not be written to the file until CommitAsync is called.
   
 ### RemoveProtection
 Removes protection from the file. If the file is labeled, the label will be lost.
-Changes will not be written to the file until CommitAsync will be called.
+Changes will not be written to the file until CommitAsync is called.
   
 ### CommitAsync
 Writes the changes to the file specified by the |outputFilePath| parameter.
@@ -62,12 +61,14 @@ Writes the changes to the file specified by the |outputFilePath| parameter.
 Writes the changes to the stream specified by the |outputStream| parameter.
 [FileHandler::Observer](class_mip_filehandler_observer.md) will be called upon success or failure.
   
+### NotifySave
+To be called when the changes have been commited to disk.
+
+Parameters:  
+* **contentIdentifier**: example for a file: "C:\mip-sdk-for-cpp\files\audit.docx" [path:filename] example for an email: "RE: Audit design:user1@contoso.com" [Subject:Sender] 
+
+
+Fires an Audit event
+  
 ### GetOutputFileName
 Calculates the output file name and extension based on the original file name and the accumulated changes.
-  
-### ~FileHandler
-_Not documented yet._
-
-  
-### FileHandler
-_Not documented yet._

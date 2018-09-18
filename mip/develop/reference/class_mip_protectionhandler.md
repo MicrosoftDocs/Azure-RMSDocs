@@ -4,11 +4,12 @@ Performs protection-related actions for a specific protection configuration (i.e
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr<Stream> CreateProtectedStream(const std::shared_ptr<Stream>& backingStream, uint64_t contentStartPosition, uint64_t contentSize)  |  Create a protected stream which will allow for encryption/decryption of content.
+public std::shared_ptr<Stream> CreateProtectedStream(const std::shared_ptr<Stream>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Create a protected stream which will allow for encryption/decryption of content.
  public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Encrypt a buffer.
  public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Decrypt a buffer.
- public uint64_t GetProtectedContentLength(uint64_t size)  |  Calculates size (in bytes) of content if it were to be encrypted with this [ProtectionHandler](class_mip_protectionhandler.md).
- public uint64_t GetBlockSize()  |  Gets the block size (in bytes) for the cipher mode used by this [ProtectionHandler](class_mip_protectionhandler.md).
+ public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calculates size (in bytes) of content if it were to be encrypted with this [ProtectionHandler](class_mip_protectionhandler.md).
+ public int64_t GetBlockSize()  |  Gets the block size (in bytes) for the cipher mode used by this [ProtectionHandler](class_mip_protectionhandler.md).
+public std::vector<std::string> GetRights() const  |  Gets the rights granted to the user/identity associated with this [ProtectionHandler](class_mip_protectionhandler.md).
  public bool AccessCheck(const std::string& right) const  |  Checks if protection handler grants user access to the specified right.
  public const std::string GetIssuedTo()  |  Gets user associated with the protection handler.
  public const std::string GetOwner()  |  Gets email address of content owner.
@@ -94,7 +95,10 @@ Parameters:
 Calculates size (in bytes) of content if it were to be encrypted with this [ProtectionHandler](class_mip_protectionhandler.md).
 
 Parameters:  
-* **contentLength**: Size (in bytes) of unprotected content
+* **unprotectedLength**: Size (in bytes) of unprotected content 
+
+
+* **includesFinalBlock**: Describes whether or not the unprotected content in question includes the final block. For example, in CBC4k encryption mode, non-final protected blocks are the same size as unprotected blocks, but final protected blocks are larger than their unprotected counterparts.
 
 
 
@@ -106,6 +110,12 @@ Gets the block size (in bytes) for the cipher mode used by this [ProtectionHandl
 
   
 **Returns**: Block size (in bytes)
+  
+### GetRights
+Gets the rights granted to the user/identity associated with this [ProtectionHandler](class_mip_protectionhandler.md).
+
+  
+**Returns**: Rights granted to the user
   
 ### AccessCheck
 Checks if protection handler grants user access to the specified right.
