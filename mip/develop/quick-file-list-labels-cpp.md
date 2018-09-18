@@ -20,11 +20,19 @@ If you haven't already, be sure to complete the following prerequisites before c
 - Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This Quickstart relies on the proper creation of that solution.
 - Optionally: Review [Classification labels](concept-classification-labels.md) concepts.
 
-## Procedure 1
+============== WIP BELOW THIS LINE ===============
 
+## Add File engine logic to list the configured sensitivity labels
 
+1. Open the Visual Studio solution you created previously in "Quickstart: Client application initialization". 
 
-## Generate an access token and update `AcquireOAuth2Token()`
+2. Using **Solution Explorer**, open "auth_delegate.cpp", and scroll to the the following line of your `AcquireOAuth2Token()` implementation. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step:
+
+   ```cpp
+   string accessToken = "<access-token>";
+   ``` 
+
+## Update the token acquisition logic
 
 1. Generate a test token using the following PowerShell script. The script uses the `Get-ADALToken` cmdlet you installed earlier,in MIP SDK Setup and configuration. 
 
@@ -40,7 +48,7 @@ If you haven't already, be sure to complete the following prerequisites before c
    $response.AccessToken | clip                                      # Copies the access token text to the clipboard
    ```
 
-2. Open "auth_delegate.cpp", and scroll to the the following line of your `AcquireOAuth2Token()` implementation. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step:
+2. Using **Solution Explorer**, open "auth_delegate.cpp", and scroll to the the following line of your `AcquireOAuth2Token()` implementation. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step:
 
    ```cpp
    string accessToken = "<access-token>";
