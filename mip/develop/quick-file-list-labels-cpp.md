@@ -11,23 +11,28 @@ ms.author: bryanla
 
 # Quickstart: List sensitivity labels (C++)
 
-
+This Quickstart will show you how to use the MIP File API, to list the sensitivity labels that have been configured in your Office 365 tenant.
 
 ## Prerequisites
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first.
-- Review [Classification labels](concept-classification-labels.md) concepts.
+- Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This Quickstart relies on the proper creation of that solution.
+- Optionally: Review [Classification labels](concept-classification-labels.md) concepts.
 
-## Procedure 1
+============== WIP BELOW THIS LINE ===============
 
-Listing Labels: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#listing-labels
-File Handler: https://github.com/tommoser/build-ILL-mip-sdk/wiki/Build-2018-Workshop-Instructions#filehandler 
-Also: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/engine.md
-Also: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/develop/tutorial-file/file-handler.md 
+## Add File engine logic to list the configured sensitivity labels
 
-## Generate an access token and update `AcquireOAuth2Token()`
+1. Open the Visual Studio solution you created previously in "Quickstart: Client application initialization". 
+
+2. Using **Solution Explorer**, open "auth_delegate.cpp", and scroll to the the following line of your `AcquireOAuth2Token()` implementation. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step:
+
+   ```cpp
+   string accessToken = "<access-token>";
+   ``` 
+
+## Update the token acquisition logic
 
 1. Generate a test token using the following PowerShell script. The script uses the `Get-ADALToken` cmdlet you installed earlier,in MIP SDK Setup and configuration. 
 
@@ -43,7 +48,7 @@ Also: https://github.com/MicrosoftDocs/Azure-RMSDocs-pr/blob/release-mip/mip/dev
    $response.AccessToken | clip                                      # Copies the access token text to the clipboard
    ```
 
-2. Open "auth_delegate.cpp", and scroll to the the following line of your `AcquireOAuth2Token()` implementation. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step:
+2. Using **Solution Explorer**, open "auth_delegate.cpp", and scroll to the the following line of your `AcquireOAuth2Token()` implementation. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step:
 
    ```cpp
    string accessToken = "<access-token>";
