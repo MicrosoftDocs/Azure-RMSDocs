@@ -104,9 +104,9 @@ The clients that currently support unified labeling include:
 
 - From the Office Insiders program:
     
-    - MacOS computers that use Office for Mac 2016
+    - MacOS computers that use Word, PowerPoint, and Excel from Office for Mac 2016
     
-    - iOS and Android devices that use Word, Excel, and PowerPoint from Office Mobile.
+    - iOS and Android devices that use Word and PowerPoint from Office Mobile.
 
 - Clients from software vendors and developers that use the [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference)
 
