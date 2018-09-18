@@ -91,7 +91,19 @@ Next, complete the following steps to ensure your client computer is set up and 
    - TBD: Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins?
      - OR use NuGet packages from VS?
 
-6. Ensure "Developer Mode" is enabled on your workstation:
+6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. This allows the dependent .DLLs to be found at runtime, by client applications:
+   - Click the Windows icon in the lower left.
+   - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
+   - On the **System Properties** dialog, click **Environment Variables**.
+   - On the **Environment Variables** dialog, click the **Path** variable row under **User variables for \<user\>**, then click **Edit...**.
+   - On the **Edit environment variable** dialog, click **New**, which creates a new editable row. Using the full path to each of the `file\bins\debug\amd64`, `protection\bins\debug\amd64`, and `upe\bins\debug\amd64` subdirectories, add a new row for each. The SDK directories are stored in a `<API>\bins\<target>\<platform>` format, where:
+     - \<API\> = `file`, `protection`, `upe`
+     - \<target\> = `debug`, `release`
+     - \<platform\> = `amd64` (aka: x64), `x86`, etc.
+   
+   - When finished updating the **Path** variable, click **OK**. Then click **OK** when returned to the **Environment Variables** dialog.
+
+7. Ensure "Developer Mode" is enabled on your workstation:
     - Click the Windows icon in the lower left.
     - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
     - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.

@@ -11,7 +11,7 @@ ms.author: bryanla
 
 # Quickstart: Client application initialization (C++)
 
-This quickstart illustrates the client initialization pattern used by the MIP C++ SDK at runtime. 
+This quickstart will show you how to implement the client initialization pattern, used by the MIP C++ SDK at runtime. 
 
 > [!NOTE]
 > The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs. Although this Quickstart demonstrates usage of the File APIs, this same pattern is applicable to clients using the Policy and Protection APIs. Future Quickstarts should be done serially, as each one builds on the previous one, with this one being the first.
@@ -30,7 +30,7 @@ If you haven't already, be sure to:
 
 First we create and configure the initial Visual Studio solution and project, upon which the Quickstarts will build. 
 
-1. Open Visual Studio 2017, select **File**, **New**, **Project**. In the **New Project** dialog:
+1. Open Visual Studio 2017, select the **File** menu, **New**, **Project**. In the **New Project** dialog:
      - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
      - In the center pane, select **Windows Console Application**
      - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
@@ -38,29 +38,22 @@ First we create and configure the initial Visual Studio solution and project, up
 
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
+
 2. Configure the project settings:
-   - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Properties**.
-   - On the top of the **Property Pages** dialog, set your project build "Configuration" to **Debug**, and the "Platform" target to **x64**:
+   - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Properties**. 
+   - On the top/right of the **Property Pages** dialog, click **Configuration Manager...**. On the **Configuration Manager** dialog, set your  "Active solution configuration" to **Debug**, and "Active solution platform" target to **x64**. Click **Close** when finished.
    - Under **Configuration Properties**, select the **VC++ Directories** node.
    - Select the **Include Directories** row, then click the drop-down on the right side, then **<Edit...>**, and enter the paths to the SDK include (.h) subdirectories in the top field. Specify the full paths to `file\include`, `protection\include`, `upe\include` subdirectories (but no deeper), within the path where you installed the SDK. Click **OK**. 
 
         [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
 
-   - Repeat the previous step for the **Library Directories** row, entering the paths to the SDK binary static libraries (.lib) subdirectories. Be sure to use the paths that match the current build configuration for your solution (debug/release and platform target). Specify the full paths to the `file\bins\<debug/release>\<platform>`, `protection\bins\<debug/release>\<platform>`, `upe\bins\<debug/release>\<platform>` subdirectories.
+   - Repeat the previous step for the **Library Directories** row, entering the paths to the SDK binary static libraries (.lib) subdirectories. Be sure to use the paths that match the current build configuration for your solution. For this Quickstart, specify the absolute or relative paths to the `file\bins\debug\amd64`, `protection\bins\debug\amd64`, `upe\bins\debug\amd64` subdirectories.
 
-   - Under **Configuration Properties**, open the **Linker** node, and select the **Input**. 
-   - Select the **Include Directories** row, then click the drop-down on the right side, then **<Edit...>**. Add `mip_protection_sdk.lib;mip_file_sdk.lib;mip_upe_sdk.lib;` to the libraries list, in the top field. Click **OK**. 
+   - Under **Configuration Properties**, open the **Linker** node, and select the **Input** node. 
+   - Select the **Additional Dependencies** row, then click the drop-down on the right side, then **<Edit...>**. Here you add the names of the SDK static libraries. Add `mip_protection_sdk.lib;mip_file_sdk.lib;mip_upe_sdk.lib;` to the libraries list, in the top field. Click **OK**. 
    - Click **OK** on the **Property Pages** dialog when finished.
 
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
-
-
-4. Add the path to the SDK binary dynamic libraries (.dll), to the PATH environment variable. This allows the dependent.DLLs to be found at runtime:
-   - Click the Windows icon in the lower left.
-   - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
-   - On the **System Properties** dialog, click **Environment Variables**.
-   - Click the **Path** row under **User variables for \<user\>**, then click **Edit...**
-   - Click **New**, enter the same `\bins\<target>\<platform>` subdirectory path(s) you entered earlier for the SDK libraries, and click **OK**.
 
 ## Implement an observer class
 
@@ -68,7 +61,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
 
 1. Add a new class to your project, which generates both the header/.h and implementation/.cpp files for you:
 
-   - In the **Solution Explorer**, right click on the project node, select **Add**, then select **Class**.
+   - In the **Solution Explorer**, right click on the project node again, select **Add**, then select **Class**.
    - On the **Add Class** dialog:
      - In the **Class Name** field, enter "profile_observer". Notice that both the **.h file** and **.cpp file** fields are automatically populated, based on the name you enter.
      - When finished, click the **OK** button.
@@ -123,15 +116,17 @@ Now create a basic implementation for an observer class, by extending the SDK's 
           auto promise = static_pointer_cast<std::promise<shared_ptr<FileEngine>>>(context);
           promise->set_exception(error);
      }
-     ``` 
+     ```
+
+3. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
 
 ## Implement an authentication delegate
 
-The MIP SDK implements authentication using class extensibility, providing a mechanism to share authentication work with the client application. The client application must acquire a suitable OAuth2 access token, and provided to the MIP SDK at runtime. 
+The MIP SDK implements authentication using class extensibility, which provides a mechanism to share authentication work with the client application. The client must acquire a suitable OAuth2 access token, and provided to the MIP SDK at runtime. 
 
 Now create an implementation for an authentication delegate, by extending the SDK's `mip::AuthDelegate` class, and overriding/implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function. The authentication delegate is instantiated and used later, by the File profile and File engine objects.
 
-1. Using the same Visual Studio "Add class" feature we used in step #1 of the previous section, add another class to your project. This time, enter "auth_delegate" in the **Class Name** field. 
+1. Using the same Visual Studio "Add Class" feature we used in step #1 of the previous section, add another class to your project. This time, enter "auth_delegate" in the **Class Name** field. 
 
 2. Now update each file to implement your new authentication delegate class:
 
@@ -186,6 +181,7 @@ Now create an implementation for an authentication delegate, by extending the SD
           return true;
      }
      ``` 
+3. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
 
 ## Implement a consent delegate
 
@@ -196,7 +192,7 @@ Azure AD requires an application to be given consent, before it can access secur
 
 Now create an implementation for a consent delegate, by extending the SDK's `mip::ConsentDelegate` class, and overriding/implementing the `mip::AuthDelegate::GetUserConsent()` pure virtual function. The consent delegate is instantiated and used later, by the File profile and File engine objects.
 
-1. Using the same Visual Studio "Add class" feature we used previously, add another class to your project. This time, enter "consent_delegate" in the **Class Name** field. 
+1. Using the same Visual Studio "Add Class" feature we used previously, add another class to your project. This time, enter "consent_delegate" in the **Class Name** field. 
 
 2. Now update each file to implement your new consent delegate class:
 
@@ -227,12 +223,11 @@ Now create an implementation for a consent delegate, by extending the SDK's `mip
           return Consent::AcceptAlways;
      }
      ``` 
+3. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
 
 ## Construct a File profile and engine
 
-As mentioned, profile and engine object are required for SDK clients using MIP APIs. 
-
-Complete the coding portion of this Quickstart, by adding code that instantiates the profile and engine: 
+As mentioned, profile and engine object are required for SDK clients using MIP APIs. Complete the coding portion of this Quickstart, by adding code to instantiate the profile and engine objects: 
 
 1. From **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It defaults to the same name as the project containing it, which you specified during project creation.
 
@@ -293,11 +288,11 @@ Complete the coding portion of this Quickstart, by adding code that instantiates
 
    ``` 
 
-3. Now build the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart.
+3. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart.
 
 ## Next Steps
 
-Now you're ready for the next quickstart, where you'll start to experience the MIP File APIs.
+Now that your initialization code is complete, you're ready for the next quickstart, where you'll start to experience the MIP File APIs.
 
 > [!div class="nextstepaction"]
 > [List sensitivity labels](quick-file-list-labels-cpp.md)
