@@ -95,10 +95,9 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 5. Download SDK binaries
 
-   - TBD: will also impact the include/lib path instructions in the App Initialization quickstart
-   - TBD: Explain naming conventions and/or supported platforms, system requirements?
-   - TBD: Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins?
-     - OR use NuGet packages from VS?
+   - TBD: Explain that this also impacts the include/lib path instructions in the App Initialization quickstart
+   - TBD: Explain naming conventions 
+   - TBD: Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins? OR use NuGet packages from VS?
 
 6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. This allows the dependent .DLLs to be found at runtime, by client applications:
    - Click the Windows icon in the lower left.
