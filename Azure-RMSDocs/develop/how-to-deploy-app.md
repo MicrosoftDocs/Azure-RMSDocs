@@ -5,7 +5,7 @@ title: How to deploy an app - AIP
 description: This article describes the process of deploying a service application into a different tenant than the one it was originally developed with.
 keywords:
 author: kkanakas
-ms.author: kartikk
+ms.author: kartikka
 manager: mbaldwin
 ms.date: 02/27/2017
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 #ROBOTS:
 audience: developer
 #ms.devlang:
-ms.reviewer: kartikk
+ms.reviewer: kartikka
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
