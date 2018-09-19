@@ -98,4 +98,4 @@ The end result being that we've successfully loaded the profile and stored in th
 
 Now that the profile has been added, the next step is to add an engine to the profile.
 
-[Protection engine concepts](concept-profile-engine-protection-engine.md)
+[Protection engine concepts](concept-profile-engine-protection-engine-cpp.md)
