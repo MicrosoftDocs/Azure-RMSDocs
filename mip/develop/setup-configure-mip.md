@@ -13,20 +13,20 @@ ms.author: bryanla
 
 The Quickstart and Tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Office 365 subscription and client workstation, in preparation for using the SDK.
 
-The MIP SDK is supported on the following platforms:
-
-| Operating system | Versions |
-|------------------|----------|
-| Linux   | Ubuntu 1604 |
-|         | Red Hat 7   |
-| macOS   | TBD |
-| Windows | All supported versions, 32 and 64 bit |
-
 Be sure to review the following topics before getting started:
 
 - [What is Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [What is Azure Information Protection?](https://docs.microsoft.com/azure/information-protection/understand-explore/what-is-information-protection)
 - [How does the protection work in Azure Information Protection?](https://docs.microsoft.com/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
+
+The MIP SDK is supported on the following platforms:
+
+| Operating system | Versions |  
+|------------------|----------|
+| Linux   | Ubuntu 1604 | 
+|         | Red Hat 7   | 
+| macOS   | TBD | 
+| Windows | All supported versions, 32 and 64 bit | 
 
 ## Sign up for an Office 365 subscription
 
