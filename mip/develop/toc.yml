@@ -22,8 +22,21 @@
   items:
   - name: The APIs
     href: concept-apis-use-cases.md
-  - name: The profile and engine 
+  - name: The profile and engine (C++)
     href: concept-profile-engine-cpp.md  
+    items: 
+      - name: File profile (C++)
+        href: concept-profile-engine-file-profile-cpp.md
+      - name: File engine (C++)
+        href: concept-profile-engine-file-engine-cpp.md
+      - name: Policy profile (C++)
+        href: concept-profile-engine-policy-profile-cpp.md
+      - name: Policy engine (C++)
+        href: concept-profile-engine-policy-engine-cpp.md
+      - name: Protection profile (C++)
+        href: concept-profile-engine-protection-profile-cpp.md
+      - name: Protection engine (C++)
+        href: concept-profile-engine-protection-engine-cpp.md            
   - name: Authentication (C++)
     href: concept-authentication-cpp.md
     items:
