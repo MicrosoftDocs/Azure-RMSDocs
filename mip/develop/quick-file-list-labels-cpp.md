@@ -11,7 +11,7 @@ ms.author: bryanla
 
 # Quickstart: List sensitivity labels (C++)
 
-This Quickstart will show you how to use the MIP File API, to list the sensitivity labels configured for your organization.
+This Quickstart shows you how to use the MIP File API, to list the sensitivity labels configured for your organization.
 
 ## Prerequisites
 
@@ -20,11 +20,11 @@ If you haven't already, be sure to complete the following prerequisites before c
 - Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This "List sensitivity labels" Quickstart relies on the proper creation of the starter solution.
 - Optionally: Review [Classification labels](concept-classification-labels.md) concepts.
 
-## Add logic to list the configured sensitivity labels
+## Add logic to list sensitivity labels
 
-Add logic to list your organization's sensitivity labels, using the File engine object. As noted in the code comments, a call to your `AcquireOAuth2Token()` method is triggered by the call to `engineFuture.get()`.
+Add logic to list your organization's sensitivity labels, using the File engine object. As noted in the code comments, a call to your `AcquireOAuth2Token()` method is also triggered, by the call to `engineFuture.get()`.
 
-1. Open the Visual Studio solution you created previously in "Quickstart: Client application initialization". 
+1. Open the Visual Studio solution you created in the previous "Quickstart: Client application initialization" Quickstart.
 
 2. Using **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It defaults to the same name as the project containing it, which you specified during project creation. 
 
@@ -34,7 +34,7 @@ Add logic to list your organization's sensitivity labels, using the File engine 
    using std::endl;
    ```
 
-4. In the body of `main()`, between the `auto engine = engineFuture.get();` and `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
+4. In the body of `main()`, between the `profile->AddEngineAsync(engineSettings, enginePromise);` and `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
    // Get engine object and list sensitivity labels
@@ -77,10 +77,15 @@ Add logic to list your organization's sensitivity labels, using the File engine 
      $response.AccessToken | clip                                      # Copies the access token text to the clipboard
      ```
 
-   - Update `$appId` and `redirectUri` to use the values specified in your Azure AD app registration, then save the file.
-   - Run the script. The `Get-ADALToken` cmdlet triggers an Azure AD authentication prompt similar to the following example. Enter the credentials of a user from the same tenant where your application is registered. After successful sign in, the access token will be placed on the clipboard.
+   - Update the `$appId` and `redirectUri` variables to use the values specified in your Azure AD app registration, then save the file.
+   - Run the script. 
+     - If you didn't give pre-consent to your Azure AD application registration as outlined in "MIP SDK setup and configuration", or you are signing in with a user account from a tenant other than the one where your application is registered.
 
-     [![Visual Studio add class](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
+       [![Visual Studio add class](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png#lightbox)
+
+     - Otherwise, `Get-ADALToken` cmdlet triggers an Azure AD authentication prompt similar to the following example. Enter the credentials of a user from the same Azure AD tenant where your application is registered. After successful sign-in, the access token will be placed on the clipboard.
+
+       [![Visual Studio add class](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
 2. Immediately after completing step #1 above, use **Solution Explorer** and open "auth_delegate.cpp". Scroll down to the following line of your `AcquireOAuth2Token()` implementation. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step. The token should be a long string, in a format similar to `eyJ0eXAiOi ...`:
 
@@ -102,19 +107,43 @@ Highly Confidential : f5dc2dea-db0f-47cd-8b20-a52e1590fb64
 Press any key to continue . . .
 ```
 
-### Troubleshooting
+## Troubleshooting
 
-#### Incorrect sign-in account
+### Problems during execution of PowerShell script 
 
-If your project builds successfully, but you see an error similar to the following during token acquisition sign-in, you'll need to specify a different account: 
+#### Incorrect redirect URI in application registration or PowerShell script (AADSTS50011)
 
-*AADSTS50020: User account 'user@domain.com' from identity provider 'https://sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/' does not exist in tenant 'Organization name' and cannot access the application '0edbblll-8773-44de-b87c-b8c6276d41eb' in that tenant.*
+If during sign-in in your PowerShell script you see an error similar to the following, you'll need to verify the redirect URI being used:
 
-Rerun the PowerShell script, but be sure to use an account from the same tenant where your Azure AD application registration resides.
+*AADSTS50011: The reply url specified in the request does not match the reply urls configured for the application: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.*
 
-#### Bad access token
+This error means you need do one of the following:
+- Update the Redirect URI in your Azure AD application configuration. See [MIP SDK setup and configuration](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) to verify that you've correctly configured the Redirect URI property.
+- Update the `redirectUri` variable in your PowerShell script to match your application registration.
 
-If your project builds successfully, but you see output similar to the following in the console output, you most likely have an invalid or expired token in your `AcquireOAuth2Token()` method. Go back to [Update the token acquisition logic](#update-the-token-acquisition-logic) and regenerate the access token, update `AcquireOAuth2Token()` again, and rebuild/retest.
+#### Incorrect sign-in account (AADSTS50020)
+
+If during sign-in in your PowerShell script you see an error similar to the following:
+
+*AADSTS50020: User account 'user@domain.com' from identity provider 'https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/' does not exist in tenant 'Organization name' and cannot access the application '0edbblll-8773-44de-b87c-b8c6276d41eb' in that tenant.*
+
+This error means you need do one of the following: 
+
+- Rerun the PowerShell script, but be sure to use an account from the same tenant where your Azure AD application registration resides. 
+- If your sign-in account was correct, your PowerShell session may already be authenticated under a different account. In this case , you'll need to exit then reopen the script, then try running it again.
+- If you're using these Quickstarts with a web app (instead of native), and need to sign in using an account from a different tenant, be sure your Azure AD application registration is enabled for multi-tenant use. You can verify by using the "edit Manifest" feature in the application registration, and ensure it specifies `"availableToOtherTenants": true,`.
+
+#### Incorrect permissions in application registration (AADSTS65005)
+
+If during sign-in in your PowerShell script you see an error similar to the following, you need to update the permission requests in your Azure AD application configuration:
+
+*AADSTS65005: Invalid resource. The client has requested access to a resource which is not listed in the requested permissions in the client's application registration. Client app ID: 0edbblll-8773-44de-b87c-b8c6276d41eb. Resource value from request: https://syncservice.o365syncservice.com/. Resource app ID: 870c4f2e-85b6-4d43-bdda-6ed9a579b725. List of valid resources from app registration: 00000002-0000-0000-c000-000000000000.*
+
+See [MIP SDK setup and configuration](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) to verify that you've correctly configured the permission requests in your application registration.
+
+### Bad access token
+
+If your project builds successfully, but you see output similar to the following example in the console output, you most likely have an invalid or expired token in your `AcquireOAuth2Token()` method. Go back to [Update the token acquisition logic](#update-the-token-acquisition-logic) and regenerate the access token, update `AcquireOAuth2Token()` again, and rebuild/retest.
 
 ```cmd
 An exception occurred... is the access token incorrect/expired?
@@ -127,7 +156,7 @@ To automatically close the console when debugging stops, enable Tools->Options->
 Press any key to close this window . . .
 ```
 
-#### Sensitivity labels aren't configured
+### Sensitivity labels aren't configured
 
 If your project builds successfully, but you have no output in the console window, be sure your organization's sensitivity labels are configured correctly. See [MIP SDK setup and configuration](setup-configure-mip.md), under "Define label taxonomy and protection settings" for details. 
 
