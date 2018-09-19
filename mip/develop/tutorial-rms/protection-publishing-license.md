@@ -1,4 +1,0 @@
-# Publishing Licenses
-
-## Summary
-
