@@ -34,10 +34,6 @@ sections:
     columns:
       - image:
           src: media/index/logo_Cplusplus.svg
-      - image:
-          src: media/index/logo_nodejs.svg
-      - image:
-          src: media/index/logo_python.svg
     rows:
       - title: Application initialization
         values: 
@@ -57,7 +53,6 @@ sections:
     style: cards
     className: cardsD
     items:
-    - title: Command-Line
     - title: Languages
       html: <p><a href="reference/mip-sdk-reference">C++</a></p>
-    - title: REST
+
