@@ -17,12 +17,12 @@ This Quickstart will show you how to use the MIP File API, to list the sensitivi
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This Quickstart relies on the proper creation of that solution.
+- Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This "List sensitivity labels" Quickstart relies on the proper creation of the starter solution.
 - Optionally: Review [Classification labels](concept-classification-labels.md) concepts.
 
 ## Add logic to list the configured sensitivity labels
 
-Here you add logic that will list the configured sensitivity labels, using the File engine object. As noted in the code comments, the MIP SDK also triggers a call to your AcquireOAuth2Token() method, when `engineFuture.get()` is called to retrieve the engine object asynchronously.
+Add logic to list your organization's sensitivity labels, using the File engine object. As noted in the code comments, a call to your `AcquireOAuth2Token()` method is triggered by the call to `engineFuture.get()`.
 
 1. Open the Visual Studio solution you created previously in "Quickstart: Client application initialization". 
 
@@ -62,25 +62,25 @@ Here you add logic that will list the configured sensitivity labels, using the F
 	 }
    ``` 
 
-## Update the token acquisition logic
+## Update the token acquisition logic with a valid access token
 
 1. Generate a test token using the following PowerShell script. The script uses the `Get-ADALToken` cmdlet from the ADAL.PS module you installed earlier, in MIP SDK Setup and configuration. 
 
-  - Copy the script and place it in a PowerShell Script file (.ps1 extension):
+   - Copy the script and place it in a PowerShell Script file (.ps1 extension):
 
-   ```powershell
-   $authority = 'https://login.windows.net/common/oauth2/authorize'  # Enforced by MIP SDK
-   $resourceUrl = 'https://syncservice.o365syncservice.com/'         # Enforced by MIP SDK; matches the URL of the "Microsoft Information Protection Sync Service" resource/API requested by the Azure AD app registration
-   $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'                   # App ID of the Azure AD app registration
-   $redirectUri = 'bltest://authorize'                               # Must match the redirect URI of the Azure AD app registration
-   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
-   $response.AccessToken | clip                                      # Copies the access token text to the clipboard
-   ```
+     ```powershell
+     $authority = 'https://login.windows.net/common/oauth2/authorize'  # Enforced by MIP SDK
+     $resourceUrl = 'https://syncservice.o365syncservice.com/'         # Enforced by MIP SDK; matches the URL of the "Microsoft Information Protection Sync Service" resource/API requested by the Azure AD app registration
+     $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'                   # App ID of the Azure AD app registration
+     $redirectUri = 'bltest://authorize'                               # Must match the redirect URI of the Azure AD app registration
+     $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
+     $response.AccessToken | clip                                      # Copies the access token text to the clipboard
+     ```
 
-  - Update `$appId` and `redirectUri` to use the values specified in your Azure AD app registration, then save the file.
-  - When you run the script, `Get-ADALToken` triggers an Azure AD authentication prompt. Enter the credentials of a user from the same tenant where your application is registered. After successful sign in, the access token will be placed on the clipboard:
+   - Update `$appId` and `redirectUri` to use the values specified in your Azure AD app registration, then save the file.
+   - Run the script. The `Get-ADALToken` cmdlet triggers an Azure AD authentication prompt similar to the following example. Enter the credentials of a user from the same tenant where your application is registered. After successful sign in, the access token will be placed on the clipboard.
 
-    [![Visual Studio add class](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
+     [![Visual Studio add class](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
 2. Immediately after completing step #1 above, use **Solution Explorer** and open "auth_delegate.cpp". Scroll down to the following line of your `AcquireOAuth2Token()` implementation. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step. The token should be a long string, in a format similar to `eyJ0eXAiOi ...`:
 
@@ -90,7 +90,7 @@ Here you add logic that will list the configured sensitivity labels, using the F
 
 ## Build and test the application
 
-Finally, build and test your client application. If your project builds and runs successfully, you should see output similar to the following in the console window: 
+Finally, build and test your client application. If your project builds and runs successfully, you should see output similar to the following example in the console window: 
 
 ```cmd
 Non-Business : 87ba5c36-b7cf-4793-bbc2-bd5b3a9f95ca
