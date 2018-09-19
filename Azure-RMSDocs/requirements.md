@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/17/2018
+ms.date: 09/19/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
@@ -83,6 +83,8 @@ The following devices support the Azure Information Protection client, which let
 - Windows Server 2012 R2 and Windows Server 2012
 
 - Windows Server 2008 R2 
+
+In addition to installing the Azure Information Protection client on physical computers, you also install it on virtual machines. 
 
 For the listed server versions, the Azure Information Protection client is supported for Remote Desktop Services. If you delete user profiles when you use the Azure Information Protection client with Remote Desktop Services, do not delete the **%Appdata%\Microsoft\Protect** folder.
 
