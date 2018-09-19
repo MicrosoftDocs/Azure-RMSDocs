@@ -13,20 +13,20 @@ ms.author: bryanla
 
 The Quickstart and Tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Office 365 subscription and client workstation, in preparation for using the SDK.
 
-The MIP SDK is supported on the following platforms:
-
-| Operating system | Versions |
-|------------------|----------|
-| Linux   | Ubuntu 1604 |
-|         | Red Hat 7   |
-| macOS   | TBD |
-| Windows | All supported versions, 32 and 64 bit |
-
 Be sure to review the following topics before getting started:
 
 - [What is Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [What is Azure Information Protection?](https://docs.microsoft.com/azure/information-protection/understand-explore/what-is-information-protection)
 - [How does the protection work in Azure Information Protection?](https://docs.microsoft.com/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
+
+The MIP SDK is supported on the following platforms:
+
+| Operating system | Versions |  
+|------------------|----------|
+| Linux   | Ubuntu 1604 | 
+|         | Red Hat 7   | 
+| macOS   | TBD | 
+| Windows | All supported versions, 32 and 64 bit | 
 
 ## Sign up for an Office 365 subscription
 
@@ -95,10 +95,9 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 5. Download SDK binaries
 
-   - TBD: will also impact the include/lib path instructions in the App Initialization quickstart
-   - TBD: Explain naming conventions and/or supported platforms, system requirements?
-   - TBD: Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins?
-     - OR use NuGet packages from VS?
+   - TBD: Explain that this also impacts the include/lib path instructions in the App Initialization quickstart
+   - TBD: Explain naming conventions 
+   - TBD: Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins? OR use NuGet packages from VS?
 
 6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. This allows the dependent .DLLs to be found at runtime, by client applications:
    - Click the Windows icon in the lower left.

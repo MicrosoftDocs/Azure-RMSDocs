@@ -281,7 +281,6 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
      auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
      auto engineFuture = enginePromise->get_future();
      profile->AddEngineAsync(engineSettings, enginePromise);
-     auto engine = engineFuture.get();				// MIP triggers AcquireOAuth2Token() for token acquisition
 
      return 0;
    }
