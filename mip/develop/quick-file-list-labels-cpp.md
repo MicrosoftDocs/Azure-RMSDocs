@@ -64,9 +64,9 @@ Here you add logic that will list the configured sensitivity labels, using the F
 
 ## Update the token acquisition logic
 
-1. Generate a test token using the following PowerShell script. The script uses the `Get-ADALToken` cmdlet you installed earlier, in MIP SDK Setup and configuration. 
+1. Generate a test token using the following PowerShell script. The script uses the `Get-ADALToken` cmdlet from the ADAL.PS module you installed earlier, in MIP SDK Setup and configuration. 
 
-  - Copy the following script and place it in a PowerShell Script file (.ps1 extension)
+  - Copy the script and place it in a PowerShell Script file (.ps1 extension):
 
    ```powershell
    $authority = 'https://login.windows.net/common/oauth2/authorize'  # Enforced by MIP SDK
@@ -77,14 +77,12 @@ Here you add logic that will list the configured sensitivity labels, using the F
    $response.AccessToken | clip                                      # Copies the access token text to the clipboard
    ```
 
-  - Update `$appId` and `redirectUri` to use the values specified in your Azure AD app registration. 
-  - When you run the script, it triggers an Azure AD authentication prompt. Enter the credentials of a user from the same tenant where your application is registered:
-
-  - When you run the script above, a sign-in dialog will prompt you to enter the user credentials, similar to below. After successful sign in, the access token will be placed on the clipboard.
+  - Update `$appId` and `redirectUri` to use the values specified in your Azure AD app registration, then save the file.
+  - When you run the script, `Get-ADALToken` triggers an Azure AD authentication prompt. Enter the credentials of a user from the same tenant where your application is registered. After successful sign in, the access token will be placed on the clipboard:
 
     [![Visual Studio add class](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
-2. Immediately after completing step #1 above, use **Solution Explorer** and open "auth_delegate.cpp". Scroll down to the following line of your `AcquireOAuth2Token()` implementation. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step:
+2. Immediately after completing step #1 above, use **Solution Explorer** and open "auth_delegate.cpp". Scroll down to the following line of your `AcquireOAuth2Token()` implementation. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step. The token should be a long string, in a format similar to `eyJ0eXAiOi ...`:
 
    ```cpp
    string accessToken = "<access-token>";
@@ -108,15 +106,15 @@ Press any key to continue . . .
 
 #### Incorrect sign-in account
 
-If your project builds successfully, and you see an error similar to the following during token acquisition sign-in, you'll need to specify a different account: 
+If your project builds successfully, but you see an error similar to the following during token acquisition sign-in, you'll need to specify a different account: 
 
 *AADSTS50020: User account 'user@domain.com' from identity provider 'https://sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/' does not exist in tenant 'Organization name' and cannot access the application '0edbblll-8773-44de-b87c-b8c6276d41eb' in that tenant.*
 
-When you sign in, you need to use an account from the same tenant where your Azure AD application registration resides.
+Rerun the PowerShell script, but be sure to use an account from the same tenant where your Azure AD application registration resides.
 
 #### Bad access token
 
-If your project builds successfully, but you see output similar to the following, you most likely have an invalid or expired token in your `AcquireOAuth2Token()` method. Go back to [Update the token acquisition logic](#update-the-token-acquisition-logic) and regenerate the access token, update `AcquireOAuth2Token()` again, and rebuild/retest.
+If your project builds successfully, but you see output similar to the following in the console output, you most likely have an invalid or expired token in your `AcquireOAuth2Token()` method. Go back to [Update the token acquisition logic](#update-the-token-acquisition-logic) and regenerate the access token, update `AcquireOAuth2Token()` again, and rebuild/retest.
 
 ```cmd
 An exception occurred... is the access token incorrect/expired?
@@ -131,7 +129,7 @@ Press any key to close this window . . .
 
 #### Sensitivity labels aren't configured
 
-See [MIP SDK setup and configuration](setup-configure-mip.md), under "Define label taxonomy and protection settings", to configure your organization's sensitivity labels. 
+If your project builds successfully, but you have no output in the console window, be sure your organization's sensitivity labels are configured correctly. See [MIP SDK setup and configuration](setup-configure-mip.md), under "Define label taxonomy and protection settings" for details. 
 
 ## Next Steps
 
