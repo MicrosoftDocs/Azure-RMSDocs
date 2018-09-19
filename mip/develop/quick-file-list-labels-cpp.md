@@ -17,14 +17,14 @@ This Quickstart shows you how to use the MIP File API, to list the sensitivity l
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete the [Quickstart: Client application initialization](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This "List sensitivity labels" Quickstart relies on the proper creation of the starter solution.
+- Complete the [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This "List sensitivity labels" Quickstart relies on the proper creation of the starter solution.
 - Optionally: Review [Classification labels](concept-classification-labels.md) concepts.
 
 ## Add logic to list the sensitivity labels
 
 Add logic to list your organization's sensitivity labels, using the File engine object. As noted in the code comments, a call to your `AcquireOAuth2Token()` method is also triggered, by the call to `engineFuture.get()`.
 
-1. Open the Visual Studio solution you created in the previous "Quickstart: Client application initialization" Quickstart.
+1. Open the Visual Studio solution you created in the previous "Quickstart: Client application initialization (C++)" Quickstart.
 
 2. Using **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It defaults to the same name as the project containing it, which you specified during project creation. 
 
