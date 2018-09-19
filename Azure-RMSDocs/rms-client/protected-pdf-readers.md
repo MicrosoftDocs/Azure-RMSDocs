@@ -48,7 +48,7 @@ The following PDF readers can open protected PDF files that adhere to the ISO st
 
 |Operating system|Supported readers and download link|
 |----------------|-----------------------------------|
-|Windows 10 and previous versions<br />through Windows 7 Service Pack 1|Adobe Acrobat Reader (preferred): [Read the Adobe General Terms of Use](https://www.adobe.com/legal/terms.html) and then [Download the preview](https://go.microsoft.com/fwlink/?linkid=838993) <br /><br /> Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
+|Windows 10 and previous versions<br />through Windows 7 Service Pack 1|Adobe Acrobat Reader (preferred):<br />-  [Read the Adobe General Terms of Use](https://www.adobe.com/legal/terms.html) <br />- [Download the preview](https://go.microsoft.com/fwlink/?linkid=838993) <br /><br /> Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
 |Android|Azure Information Protection app: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
 |iOS|Azure Information Protection app: [Download](https://go.microsoft.com/fwlink/?linkid=838993)|
 
