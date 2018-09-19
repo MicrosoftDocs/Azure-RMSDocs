@@ -127,4 +127,4 @@ Press any key to continue . . .
 Now that you've learned how to write the initialization code and list sensitivity labels, try the next quickstart:
 
 > [!div class="nextstepaction"]
-> [Apply a label](quick-file-apply-label-cpp.md)
+> [Read a label](quick-file-read-label-cpp.md)
