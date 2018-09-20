@@ -13,7 +13,7 @@ Apply label actions requires the calling application to apply a specific label.
 Get the label ID required.
 
   
-**Returns**: The label Id.
+**Returns**: The label ID.
   
 ### ActionType
 Get the type of [Action](class_mip_action.md).

@@ -1,5 +1,5 @@
 # class mip::UserRoles 
-Represents a group of users and the roles associated with them.
+A group of users and the roles associated with them.
   
 ## Summary
  Members                        | Descriptions                                

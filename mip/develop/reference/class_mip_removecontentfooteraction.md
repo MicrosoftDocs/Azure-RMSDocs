@@ -1,5 +1,5 @@
 # class mip::RemoveContentFooterAction 
-An action class which specifies removing the content footer from the document.
+An action class that specifies removing the content footer from the document.
   
 ## Summary
  Members                        | Descriptions                                

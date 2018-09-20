@@ -1,5 +1,5 @@
 # class mip::RemoveContentHeaderAction 
-An action class which specifies removing the content header from the document.
+An action class that specifies removing the content header from the document.
   
 ## Summary
  Members                        | Descriptions                                

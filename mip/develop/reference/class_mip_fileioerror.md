@@ -4,7 +4,7 @@ File IO error.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public char const* what() const  |  Get a cstring error message.
+ public char const* what() const  |  Get the error message.
 public std::shared_ptr<Error> Clone() const  |  Clone the error.
  public virtual ErrorType GetErrorType() const  |  Get the error type.
  public virtual const std::string& GetErrorName() const  |  Get the error name.
@@ -14,10 +14,10 @@ public std::shared_ptr<Error> Clone() const  |  Clone the error.
 ## Members
   
 ### what
-Get a cstring error message.
+Get the error message.
 
   
-**Returns**: A cstring err message
+**Returns**: The error message
   
 ### Error
 Clone the error.

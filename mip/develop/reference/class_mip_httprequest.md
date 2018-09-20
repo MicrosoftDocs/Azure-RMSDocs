@@ -1,5 +1,5 @@
 # class mip::HttpRequest 
-Interface that describes a single http request.
+Interface that describes a single HTTP request.
   
 ## Summary
  Members                        | Descriptions                                
