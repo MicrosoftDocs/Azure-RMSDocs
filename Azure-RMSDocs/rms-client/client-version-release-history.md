@@ -56,7 +56,7 @@ If you have a version of the client that is later than 1.37.19.0, it is a previe
 
 **New features:**
 
-- Support for [central reporting](reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
+- Support for [central reporting](./reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
 
 ## Version 1.37.19.0
 
@@ -68,7 +68,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - Support for the ISO standard for PDF encryption, by configuring a new [advanced client configuration](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this option is configured, PDF documents that you protect retain their .pdf file name extension (rather than change to .ppdf) and can be opened by PDF readers that support this ISO standard. Currently, you must instruct users to open these protected PDFs manually by using the Azure Information Protection viewer. To help users do this, when they open one of these protected PDFs, they see a page with icons to select for their operating system.
 
-- Support for new sensitive information types to help you classify documents that contain personal information. [More information](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
+- Support for new sensitive information types to help you classify documents that contain personal information. [More information](./configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
 - Labels that apply protection now display in Office 2016 apps (minimum version 1805, build 9330.2078) when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365).
 
