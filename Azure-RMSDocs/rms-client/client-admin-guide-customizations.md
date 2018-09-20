@@ -313,7 +313,7 @@ Specify your choice of a migration rule name. Use a descriptive name that helps 
 
 Note that this setting does not remove any visual markings that the old label might have applied. To remove headers and footers, see the next section, [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions).
 
-Known Issue: If you use this setting and the setting to [Protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), you File Explorer right-click, PowerShell, and the scanner cannot open PDF documents that have a .ppdf file name extension.
+Known Issue: If you use this setting and the setting to [Protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), File Explorer right-click, PowerShell, and the scanner cannot open PDF documents that have a .ppdf file name extension.
 
 ### Example 1: One-to-one mapping of the same label name
 
