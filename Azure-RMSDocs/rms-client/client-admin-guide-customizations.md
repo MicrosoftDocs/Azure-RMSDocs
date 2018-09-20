@@ -267,7 +267,7 @@ When the Azure Information Protection client has downloaded the client policy wi
 
 2. From the output, take a note of the following parameter values:
     
-    - The value for **SubLabelId**, if there is one. If this value is blank, a sublabel wasn't used, so note the value for **MainLabelId**.
+    - The value for **SubLabelId**, if there is one. If this value is blank, a sublabel wasn't used, so note the value for **MainLabelId** instead.
     
     - The value for **RMSTemplateId**. If this value is **Restricted Access**, a user has protected the file using custom permissions rather than the protection settings that are configured for the label. If you continue, those custom permissions will be overwritten by the label's protection settings. Decide whether to continue or ask the user (value displayed for the **RMSIssuer**) to remove the label and re-apply it, together with their original custom permissions.
 
@@ -279,7 +279,7 @@ When the Azure Information Protection client has downloaded the client policy wi
     
     	Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 
-The file retains the .pdf file name extension but is classified and protected by using the ISO standard for PDF encryption.
+The file retains the .pdf file name extension but is classified as before, and it is protected by using the ISO standard for PDF encryption.
 
 ## Support for files protected by Secure Islands
 
