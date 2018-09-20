@@ -263,7 +263,7 @@ When the Azure Information Protection client has downloaded the client policy wi
 
 1. Use [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) with the .ppdf file. For example:
     
-	Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
+		Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
 
 2. From the output, take a note of the following parameter values:
     
