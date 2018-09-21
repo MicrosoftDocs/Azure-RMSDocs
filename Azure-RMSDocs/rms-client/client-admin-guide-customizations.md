@@ -282,6 +282,8 @@ To use PowerShell commands to convert existing .ppdf files to protected .pdf fil
 3. Remove the label by using [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) with the *RemoveLabel* parameter. If you are using the [policy setting](../configure-policy-settings.md) of **Users must provide justification to set a lower classification label, remove a label, or remove protection**, you must also specify the *Justification* parameter with the reason. For example: 
     
     	Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
+    
+    If you can't remove the label because you're using mandatory labeling as as a [policy setting](../configure-policy-settings.md) (**All documents and emails must have have a label**), temporarily apply a different label, instead.
 
 4. Reapply the original label, by specifying the value for the label that you identified in step 1. For example:
     
