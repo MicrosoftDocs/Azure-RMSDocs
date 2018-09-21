@@ -1,5 +1,5 @@
 # class mip::PolicyProfile::Settings 
-[Settings](undefined) used by [PolicyProfile](undefined) during its creation and throughout its lifetime.
+[Settings](class_mip_policyprofile_settings.md) used by [PolicyProfile](class_mip_policyprofile.md) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -34,7 +34,7 @@ Parameters:
 * **authDelegate**: The authentication delegate used by the SDK to acquire authentication tokens. 
 
 
-* **observer**: A class implementing the [PolicyProfile::Observer](undefined) interface. Can be nullptr. 
+* **observer**: A class implementing the [PolicyProfile::Observer](class_mip_policyprofile_observer.md) interface. Can be nullptr. 
 
 
 * **applicationInfo**: The application identifiers used for service access.

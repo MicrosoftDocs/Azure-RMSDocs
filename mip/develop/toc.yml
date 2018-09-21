@@ -154,13 +154,13 @@
       - name: ProtectionDescriptorBuilder
         href: reference/class_mip_protectiondescriptorbuilder.md
       - name: ProtectionEngine::Observer
-        href: reference/class_mipprotectionengine_observer.md
+        href: reference/class_mip_protectionengine_observer.md
       - name: ProtectionEngine::Settings
         href: reference/class_mip_protectionengine_settings.md
       - name: ProtectionEngine
         href: reference/class_mip_protectionengine.md
       - name: ProtectionHandler::Observer
-        href: reference/class_mip_protection_handler.md
+        href: reference/class_mip_protectionhandler.md
       - name: ProtectionHandler
         href: reference/class_mip_protectionhandler.md
       - name: ProtectionProfile::Observer

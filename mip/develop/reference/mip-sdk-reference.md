@@ -46,12 +46,12 @@ The MIP SDK for C++ includes:
 [MetadataAction](class_mip_metadataaction.md)  |  An [Action](class_mip_action.md) that adds metadata information to the content.
 [NetworkError](class_mip_networkerror.md)  |  Networking error. Caused by unexpected behavior when making network calls to service endpoints.
 [NotSupportedError](class_mip_notsupportederror.md)  |  The operation requested by the application is not supported by the SDK.
-[PolicyEngine::Settings](class_mip_policyengine_settings.md)  |  Defines the settings associated with a [PolicyEngine](undefined).
+[PolicyEngine::Settings](class_mip_policyengine_settings.md)  |  Defines the settings associated with a [PolicyEngine](class_mip_policyengine.md).
 [PolicyEngine](class_mip_policyengine.md)  |  This class provides an interface for all engine functions.
 [PolicyHandler](class_mip_policyhandler.md)  |  This class provides an interface for all policy handler functions on a file.
-[PolicyProfile::Observer](class_mip_policyprofile_observer.md)  |  [Observer](undefined) interface for clients to get notifications for profile related events.
-[PolicyProfile::Settings](class_mip_policyprofile_settings.md)  |  [Settings](undefined) used by [PolicyProfile](undefined) during its creation and throughout its lifetime.
-[PolicyProfile](class_mip_policyprofile.md)  |  [PolicyProfile](undefined) class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile](undefined) but it can create multiple profiles if needed.
+[PolicyProfile::Observer](class_mip_policyprofile_observer.md)  |  [Observer](class_mip_policyprofile_observer.md) interface for clients to get notifications for profile related events.
+[PolicyProfile::Settings](class_mip_policyprofile_settings.md)  |  [Settings](class_mip_policyprofile_settings.md) used by [PolicyProfile](class_mip_policyprofile.md) during its creation and throughout its lifetime.
+[PolicyProfile](class_mip_policyprofile.md)  |  [PolicyProfile](class_mip_policyprofile.md) class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile](class_mip_policyprofile.md) but it can create multiple profiles if needed.
 [PolicySyncError](class_mip_policysyncerror.md)  |  An attempt to sync policy data failed.
 [PrivilegedRequiredError](class_mip_privilegedrequirederror.md)  |  Current label was assigned as a privileged operation (The equivalent to an administrator operation), therefore it can't be overriden.
 [ProtectAdhocAction](class_mip_protectadhocaction.md)  |  An action class that specifies adding adhoc protection to the document.
@@ -59,10 +59,10 @@ The MIP SDK for C++ includes:
 [ProtectDoNotForwardAction](class_mip_protectdonotforwardaction.md)  |  An action class that specifies adding do not forward protection to the document.
 [ProtectionDescriptor](class_mip_protectiondescriptor.md)  |  Description of protection associated with a piece of content.
 [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md)  |  Constructs a [ProtectionDescriptor](class_mip_protectiondescriptor.md) that describes protection associated with a piece of content.
-[ProtectionEngine::Observer](class_mipprotectionengine_observer.md)  |  Interface that receives notifications related to [ProtectionEngine](class_mip_protectionengine.md).
+[ProtectionEngine::Observer](class_mip_protectionengine_observer.md)  |  Interface that receives notifications related to [ProtectionEngine](class_mip_protectionengine.md).
 [ProtectionEngine::Settings](class_mip_protectionengine_settings.md)  |  [Settings](class_mip_protectionengine_settings.md) used by [ProtectionEngine](class_mip_protectionengine.md) during its creation and throughout its lifetime.
 [ProtectionEngine](class_mip_protectionengine.md)  |  Manages protection-related actions related to a specific identity.
-[ProtectionHandler::Observer](class_mip_protection_handler.md)  |  Interface that receives notifications related to [ProtectionHandler](class_mip_protectionhandler.md).
+[ProtectionHandler::Observer](class_mip_protectionhandler.md)  |  Interface that receives notifications related to [ProtectionHandler](class_mip_protectionhandler.md).
 [ProtectionHandler](class_mip_protectionhandler.md)  |  Manages protection-related actions for a specific protection configuration.
 [ProtectionProfile::Observer](class_mip_protectionprofile_observer.md)  |  Interface that receives notifications related to [ProtectionProfile](class_mip_protectionprofile.md).
 [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md)  |  [Settings](class_mip_protectionprofile_settings.md) used by [ProtectionProfile](class_mip_protectionprofile.md) during its creation and throughout its lifetime.

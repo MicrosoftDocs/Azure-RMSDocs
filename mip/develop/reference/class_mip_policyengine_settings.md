@@ -1,5 +1,5 @@
 # class mip::PolicyEngine::Settings 
-Defines the settings associated with a [PolicyEngine](undefined).
+Defines the settings associated with a [PolicyEngine](class_mip_policyengine.md).
   
 ## Summary
  Members                        | Descriptions                                
