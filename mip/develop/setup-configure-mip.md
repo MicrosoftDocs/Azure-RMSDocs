@@ -39,11 +39,11 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 | Office 365 Enterprise E3 or E5 | https://products.office.com/business/office-365-enterprise-e3-business-software |
 | Enterprise Mobility and Security E3 or E5 | https://www.microsoft.com/cloud-platform/enterprise-mobility-security |
 | Azure Information Protection Premium P1 or P2 | https://azure.microsoft.com/pricing/details/information-protection/ |
-| Microsoft 365 | https://www.microsoft.com/en-us/microsoft-365/compare-all-microsoft-365-plans | 
+| Microsoft 365 E3, E5, or F1 | https://www.microsoft.com/en-us/microsoft-365/compare-all-microsoft-365-plans | 
 
 ## Configure your client workstation
 
-Next, complete the following steps to ensure your client computer is set up and configured correctly. 
+Next, complete the following steps to ensure your client computer is set up and configured correctly.
 
 ### Windows 10
 
@@ -92,21 +92,34 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 5. Download SDK binaries
 
-   - On Windows, run one or more of the following. File API integrates Policy and Protection APIs.
-   - From the NuGet package manager console, run one of the following:
+The SDK binaries and headers for all platforms can be found at https://aka.ms/mipsdkbins
+
+The files for each platform and API are named as follows:
+
+`mip_sdk_API_OS_1.0.0.0.zip (or .tar.gz)`
+
+For example, the protection API binaries and headers on Debian look like:
+
+`mip_sdk_protection_debian9_1.0.0.0.tar.gz`
+
+Each ZIP or tarball contains three directories:
+
+- **Bins:** The compiled binaries for each platform architecture, where applicable.
+- **Include:** The Microsoft Information Protection SDK header files
+- **Samples:** Source code for the sample applications
+
+On Windows, the SDK can be installed via the NuGet package manager console:
 
     ```Powershell
     Install-Package Microsoft.InformationProtection.File
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
-    ```
-  
+    ```  
 
-- TBD: Explain that this also impacts the include/lib path instructions in the App Initialization quickstart
-   - TBD: Explain naming conventions 
+   - TBD: Explain that this also impacts the include/lib path instructions in the App Initialization quickstart
    - TBD: Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins? OR use NuGet packages from VS?
 
-1. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. This allows the dependent .DLLs to be found at runtime, by client applications:
+6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. This allows the dependent .DLLs to be found at runtime, by client applications:
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
    - On the **System Properties** dialog, click **Environment Variables**.
@@ -118,7 +131,7 @@ Next, complete the following steps to ensure your client computer is set up and 
    
    - When finished updating the **Path** variable, click **OK**. Then click **OK** when returned to the **Environment Variables** dialog.
 
-2. Ensure "Developer Mode" is enabled on your workstation:
+7. Ensure "Developer Mode" is enabled on your workstation:
     - Click the Windows icon in the lower left.
     - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
     - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
