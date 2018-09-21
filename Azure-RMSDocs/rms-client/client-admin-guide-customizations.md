@@ -259,7 +259,9 @@ For the Azure Information Protection scanner to use the new setting, the scanner
 
 ### To convert existing .ppdf files to protected .pdf files
 
-When the Azure Information Protection client has downloaded the client policy with the new setting, you can use PowerShell commands to convert existing .ppdf files to protected .pdf files that use the ISO standard for PDF encryption:
+When the Azure Information Protection client has downloaded the client policy with the new setting, you can use PowerShell commands to convert existing .ppdf files to protected .pdf files that use the ISO standard for PDF encryption. 
+
+To use the following instructions for files that you didn't protect yourself, you must have a [Rights Management usage right](../configure-usage-rights.md) to remove protection from files, or be a super user. To enable the super user feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../configure-super-users.md).
 
 1. Use [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) with the .ppdf file. For example:
     
