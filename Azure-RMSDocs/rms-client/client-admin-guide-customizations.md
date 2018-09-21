@@ -265,6 +265,8 @@ To use the following instructions for files that you didn't protect yourself, yo
 
 In addition, when you use these instructions for files that you didn't protect yourself, you become the [RMS Issuer](../configure-usage-rights.md#rights-management-issuer-and-rights-management-owner). In this scenario, the user who originally protected the document can no longer track and revoke it. If users need to track and revoke their protected PDF documents, ask them to manually remove and then reapply the label by using File Explorer, right-click.
 
+To use PowerShell commands to convert existing .ppdf files to protected .pdf files that use the ISO standard for PDF encryption:
+
 1. Use [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) with the .ppdf file. For example:
     
 		Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
@@ -273,7 +275,7 @@ In addition, when you use these instructions for files that you didn't protect y
     
     - The value (GUID) for **SubLabelId**, if there is one. If this value is blank, a sublabel wasn't used, so note the value for **MainLabelId** instead.
     
-    Note: If there is no value for **MainLabelId** either, the file isn't labeled. In this case, you can use the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) command and [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) commands instead of the commands in step 3 and 4.
+    Note: If there is no value for **MainLabelId** either, the file isn't labeled. In this case, you can use the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) command and [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) command instead of the commands in step 3 and 4.
     
     - The value for **RMSTemplateId**. If this value is **Restricted Access**, a user has protected the file using custom permissions rather than the protection settings that are configured for the label. If you continue, those custom permissions will be overwritten by the label's protection settings. Decide whether to continue or ask the user (value displayed for the **RMSIssuer**) to remove the label and re-apply it, together with their original custom permissions.
 
