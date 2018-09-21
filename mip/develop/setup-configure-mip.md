@@ -23,10 +23,11 @@ The MIP SDK is supported on the following platforms:
 
 | Operating system | Versions |  
 |------------------|----------|
-| Linux   | Ubuntu 1604 | 
-|         | Red Hat 7   | 
-| macOS   | TBD | 
-| Windows | All supported versions, 32 and 64 bit | 
+| Ubuntu  |  16.04 |
+| RedHat Enterprise Linux | 7 |
+| Debian  | 9 |
+| macOS   | High Sierra and later |
+| Windows | All supported versions, 32 and 64 bit |
 
 ## Sign up for an Office 365 subscription
 
@@ -38,11 +39,7 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 | Office 365 Enterprise E3 or E5 | https://products.office.com/business/office-365-enterprise-e3-business-software |
 | Enterprise Mobility and Security E3 or E5 | https://www.microsoft.com/cloud-platform/enterprise-mobility-security |
 | Azure Information Protection Premium P1 or P2 | https://azure.microsoft.com/pricing/details/information-protection/ |
-
-(TBD) QUESTIONS:
-- Should we add Microsoft 365 to the above?
-- Is AIP Premium P1/P2 backed by an Azure AD tenant? Or does the user need to sign up for an Azure subscription first, and use that AAD account to get the AIP P1/P2 subscription?
-- Do they still need a whitelisted tenant? per "Because the MIP SDK requires an Office 365 tenant with certain private preview features enabled, you must have an account from a properly configured preview tenant. If you need a test account, you can submit a request at https://aka.ms/mipsdkpreviewaccount. "
+| Microsoft 365 | https://www.microsoft.com/en-us/microsoft-365/compare-all-microsoft-365-plans | 
 
 ## Configure your client workstation
 
@@ -95,11 +92,21 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 5. Download SDK binaries
 
-   - TBD: Explain that this also impacts the include/lib path instructions in the App Initialization quickstart
+   - On Windows, run one or more of the following. File API integrates Policy and Protection APIs.
+   - From the NuGet package manager console, run one of the following:
+
+    ```Powershell
+    Install-Package Microsoft.InformationProtection.File
+    Install-Package Microsoft.InformationProtection.Policy
+    Install-Package Microsoft.InformationProtection.Protection
+    ```
+  
+
+- TBD: Explain that this also impacts the include/lib path instructions in the App Initialization quickstart
    - TBD: Explain naming conventions 
    - TBD: Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins? OR use NuGet packages from VS?
 
-6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. This allows the dependent .DLLs to be found at runtime, by client applications:
+1. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. This allows the dependent .DLLs to be found at runtime, by client applications:
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
    - On the **System Properties** dialog, click **Environment Variables**.
@@ -111,7 +118,7 @@ Next, complete the following steps to ensure your client computer is set up and 
    
    - When finished updating the **Path** variable, click **OK**. Then click **OK** when returned to the **Environment Variables** dialog.
 
-7. Ensure "Developer Mode" is enabled on your workstation:
+2. Ensure "Developer Mode" is enabled on your workstation:
     - Click the Windows icon in the lower left.
     - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
     - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
