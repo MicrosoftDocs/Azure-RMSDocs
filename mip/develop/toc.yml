@@ -75,54 +75,42 @@
         href: reference/class_mip_badinputerror.md
       - name: ClassificationResult
         href: reference/class_mip_classificationresult.md
-      - name: Consent
-        href: reference/class_mip_consent.md        
-      - name: ConsentCallback
-        href: reference/class_mip_consentcallback.md        
       - name: ConsentDelegate
         href: reference/class_consentdelegate.md
       - name: ConsentDeniedError
         href: reference/class_mip_consentdeniederror.md
-      - name: ConsentResult
-        href: reference/class_mip_consentresult.md                
       - name: ContentLabel
         href: reference/class_mip_contentlabel.md
       - name: CustomAction
         href: reference/class_mip_customaction.md
-      - name: CustomProtectedStream
-        href: reference/class_mip_customprotectedstream.md        
       - name: Error
         href: reference/class_mip_error.md
       - name: ExecutionState
         href: reference/class_mip_executionstate.md
-      - name: FileEngine
-        href: reference/class_mip_fileengine.md
       - name: FileEngine::Settings
         href: reference/class_mip_fileengine_settings.md
-      - name: FileHandler
-        href: reference/class_mip_filehandler.md
+      - name: FileEngine
+        href: reference/class_mip_fileengine.md
       - name: FileHandler::Observer
         href: reference/class_mip_filehandler_observer.md
+      - name: FileHandler
+        href: reference/class_mip_filehandler.md
       - name: FileIOError
         href: reference/class_mip_fileioerror.md
-      - name: FileProfile
-        href: reference/class_mip_fileprofile.md
       - name: FileProfile::Observer
         href: reference/class_mip_fileprofile_observer.md
       - name: FileProfile::Settings
         href: reference/class_mip_fileprofile_settings.md
-      - name: GetUserPolicyResult
-        href: reference/class_mip_getuserpolicyresult.md
+      - name: FileProfile
+        href: reference/class_mip_fileprofile.md
       - name: HttpDelegate
         href: reference/class_mip_httpdelegate.md
       - name: HttpRequest
         href: reference/class_mip_httprequest.md
       - name: HttpResponse
-        href: reference/class_mip_httpresponse.md                               
+        href: reference/class_mip_httpresponse.md
       - name: InternalError
         href: reference/class_mip_internalerror.md
-      - name: IStream
-        href: reference/class_mip_istream.md        
       - name: JustificationRequiredError
         href: reference/class_mip_justificationrequirederror.md
       - name: JustifyAction
@@ -139,22 +127,22 @@
         href: reference/class_mip_networkerror.md
       - name: NotSupportedError
         href: reference/class_mip_notsupportederror.md
-      - name: PolicyDescriptor
-        href: reference/class_mip_policydescriptor.md        
-      - name: PolicyEngine
-        href: reference/class_mip_policyengine.md
       - name: PolicyEngine::Settings
         href: reference/class_mip_policyengine_settings.md
+      - name: PolicyEngine
+        href: reference/class_mip_policyengine.md
       - name: PolicyHandler
-        href: reference/class_mip_policyhandler.md        
+        href: reference/class_mip_policyhandler.md
+      - name: PolicyProfile::Observer
+        href: reference/class_mip_policyprofile_observer.md
+      - name: PolicyProfile::Settings
+        href: reference/class_mip_policyprofile_settings.md
+      - name: PolicyProfile
+        href: reference/class_mip_policyprofile.md
+      - name: PolicySyncError
+        href: reference/class_mip_policysyncerror.md
       - name: PrivilegedRequiredError
         href: reference/class_mip_privilegedrequirederror.md
-      - name: Profile
-        href: reference/class_mip_profile.md
-      - name: Profile::Observer
-        href: reference/class_mip_profile_observer.md
-      - name: Profile::Settings
-        href: reference/class_mip_profile_settings.md
       - name: ProtectAdhocAction
         href: reference/class_mip_protectadhocaction.md
       - name: ProtectByTemplateAction
@@ -165,22 +153,22 @@
         href: reference/class_mip_protectiondescriptor.md
       - name: ProtectionDescriptorBuilder
         href: reference/class_mip_protectiondescriptorbuilder.md
-      - name: ProtectionEngine
-        href: reference/class_mip_protectionengine.md
       - name: ProtectionEngine::Observer
-        href: reference/class_mip_protectionengine_observer.md
+        href: reference/class_mipprotectionengine_observer.md
       - name: ProtectionEngine::Settings
         href: reference/class_mip_protectionengine_settings.md
+      - name: ProtectionEngine
+        href: reference/class_mip_protectionengine.md
+      - name: ProtectionHandler::Observer
+        href: reference/class_mip_protection_handler.md
       - name: ProtectionHandler
         href: reference/class_mip_protectionhandler.md
-      - name: ProtectionHandler::Observer
-        href: reference/class_mip_protectionhandler_observer.md
-      - name: ProtectionProfile
-        href: reference/class_mip_protectionprofile.md
       - name: ProtectionProfile::Observer
         href: reference/class_mip_protectionprofile_observer.md
       - name: ProtectionProfile::Settings
         href: reference/class_mip_protectionprofile_settings.md
+      - name: ProtectionProfile
+        href: reference/class_mip_protectionprofile.md
       - name: RecommendLabelAction
         href: reference/class_mip_recommendlabelaction.md
       - name: RemoveContentFooterAction
@@ -191,36 +179,10 @@
         href: reference/class_mip_removeprotectionaction.md
       - name: RemoveWatermarkAction
         href: reference/class_mip_removewatermarkaction.md
-      - name: RMSCryptographyException
-        href: reference/class_mip_rmscryptographyexception.md
-      - name: RMSException
-        href: reference/class_mip_rmsexception.md
-      - name: RMSInvalidArgumentException
-        href: reference/class_mip_rmsinvalidargumentexception.md
-      - name: RMSLogicException
-        href: reference/class_mip_rmslogicexception.md
-      - name: RMSNetworkException
-        href: reference/class_mip_rmsnetworkexception.md
-      - name: RMSNotFoundException
-        href: reference/class_mip_rmsnotfoundexception.md
-      - name: RMSNullPointerException
-        href: reference/class_mip_rmsnullpointerexception.md
-      - name: RMSOfficeFileException
-        href: reference/class_mip_rmsofficefileexception.md        
-      - name: RMSPFileException
-        href: reference/class_mip_rmspfileexception.md        
-      - name: RMSRightsException
-        href: reference/class_mip_rmsrightsexception.md        
-      - name: RMSStreamException
-        href: reference/class_mip_rmsstreamexception.md        
       - name: Stream
         href: reference/class_mip_stream.md
-      - name: TemplateDescriptor
-        href: reference/class_mip_templatedescriptor.md
       - name: TransientNetworkError
         href: reference/class_mip_transientnetworkerror.md
-      - name: UserPolicy
-        href: reference/class_mip_userpolicy.md                        
       - name: UserRights
         href: reference/class_mip_userrights.md
       - name: UserRoles
