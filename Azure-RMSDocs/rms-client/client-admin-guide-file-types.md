@@ -197,7 +197,7 @@ To help prevent users from changing files that are critical for computer operati
 
 - **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msg,.msp, .msi, .pdb, .jar
     
-    The following file types are now also excluded: .zip, .msg, and .rar 
+    The following file types are now also excluded: .zip, .msg, and .rar. 
 
 - **Excluded folders**: 
     - Windows
