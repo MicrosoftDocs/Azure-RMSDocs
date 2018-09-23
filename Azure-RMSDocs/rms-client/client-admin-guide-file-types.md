@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/17/2018
+ms.date: 09/24/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 
@@ -195,7 +195,9 @@ For more information, see [File API configuration](../develop/file-api-configura
 
 To help prevent users from changing files that are critical for computer operations, some file types and folders are automatically excluded from classification and protection. If users try to classify or protect these files by using the Azure Information Protection client, they see a message that they are excluded.
 
-- **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msp, .msi, .pdb, .jar
+- **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msg,.msp, .msi, .pdb, .jar
+
+The following file types are now also excluded: .zip, .msg, and .rar 
 
 - **Excluded folders**: 
     - Windows
@@ -205,7 +207,7 @@ To help prevent users from changing files that are critical for computer operati
 
 ### File types that are excluded from classification and protection by the Azure Information Protection scanner
 
-By default, the scanner also excludes the same file types as the Azure Information Protection client with the following exceptions: .rar, .rtf, .msg and .zip. 
+By default, the scanner also excludes the same file types as the Azure Information Protection client, except that .rtf is also excluded. 
 
 You can change the file types included or excluded for file inspection by the scanner when you use the following PowerShell cmdlets:
 
