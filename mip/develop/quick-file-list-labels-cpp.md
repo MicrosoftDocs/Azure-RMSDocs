@@ -40,24 +40,24 @@ Add logic to list your organization's sensitivity labels, using the File engine 
    // Get engine object and list sensitivity labels
 	 try
 	 {
-     // Get File engine asynchronously; also triggers AcquireOAuth2Token() call 
-     auto engine = engineFuture.get();  
+      // Get File engine asynchronously; also triggers AcquireOAuth2Token() call 
+      auto engine = engineFuture.get();  
 		
-     // List sensitivity labels
-     auto labels = engine->ListSensitivityLabels(); 
-     for (const auto& label : labels)
-     {
-       cout << label->GetName() << " : " << label->GetId() << endl;
+      // List sensitivity labels
+      auto labels = engine->ListSensitivityLabels(); 
+      for (const auto& label : labels)
+      {
+        cout << label->GetName() << " : " << label->GetId() << endl;
 
-       for (const auto& child : label->GetChildren())
-       {
-         cout << "->  " << child->GetName() << " : " << child->GetId() << endl;
-       }
-     }
+        for (const auto& child : label->GetChildren())
+        {
+          cout << "->  " << child->GetName() << " : " << child->GetId() << endl;
+        }
+      }
    }
    catch (const std::exception& e)
    {
-     cout << "An exception occurred... is the access token incorrect/expired?\n\n" << e.what() << "'\n";
+      cout << "An exception occurred... is the access token incorrect/expired?\n\n" << e.what() << "'\n";
    }
    ``` 
 

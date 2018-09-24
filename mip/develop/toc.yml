@@ -25,17 +25,17 @@
   - name: The profile and engine (C++)
     href: concept-profile-engine-cpp.md  
     items: 
-      - name: File profile (C++)
+      - name: File API profile (C++)
         href: concept-profile-engine-file-profile-cpp.md
-      - name: File engine (C++)
+      - name: File API engine (C++)
         href: concept-profile-engine-file-engine-cpp.md
-      - name: Policy profile (C++)
+      - name: Policy API profile (C++)
         href: concept-profile-engine-policy-profile-cpp.md
-      - name: Policy engine (C++)
+      - name: Policy API engine (C++)
         href: concept-profile-engine-policy-engine-cpp.md
-      - name: Protection profile (C++)
+      - name: Protection API profile (C++)
         href: concept-profile-engine-protection-profile-cpp.md
-      - name: Protection engine (C++)
+      - name: Protection API engine (C++)
         href: concept-profile-engine-protection-engine-cpp.md            
   - name: Authentication (C++)
     href: concept-authentication-cpp.md
@@ -46,6 +46,10 @@
       href: concept-authentication-acquire-token-ps.md
     - name: Acquiring an access token (Python)
       href: concept-authentication-acquire-token-py.md      
+  - name: Handlers
+    items:
+    - name: File API handler (C++)
+      href: concept-handler-file-cpp.md
   - name: Labels 
     href: concept-classification-labels.md
   - name: Observers for async (C++)
