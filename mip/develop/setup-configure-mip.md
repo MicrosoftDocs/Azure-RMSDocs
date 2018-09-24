@@ -93,33 +93,27 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 5. Download SDK binaries
 
-The SDK binaries and headers for all platforms can be found at https://aka.ms/mipsdkbins
+   A .zip file containing SDK binaries and headers for all platforms can be found at https://aka.ms/mipsdkbins. The .zip contains several files, one for each platform and API. The files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform:  
 
-The files for each platform and API are named as follows:
+      `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`
 
-`mip_sdk_API_OS_1.0.0.0.zip (or .tar.gz)`
+   For example, the protection API binaries and headers on Debian look like:  
 
-For example, the protection API binaries and headers on Debian look like:
+      `mip_sdk_protection_debian9_1.0.0.0.tar.gz`
 
-`mip_sdk_protection_debian9_1.0.0.0.tar.gz`
+   Each .zip or tarball contains three directories:
 
-Each ZIP or tarball contains three directories:
+   - **Bins:** The compiled binaries for each platform architecture, where applicable.
+   - **Include:** The Microsoft Information Protection SDK header files
+   - **Samples:** Source code for the sample applications
 
-- **Bins:** The compiled binaries for each platform architecture, where applicable.
-- **Include:** The Microsoft Information Protection SDK header files
-- **Samples:** Source code for the sample applications
-
-On Windows, the SDK can be installed via the NuGet package manager console:
+   On Windows, the SDK can be installed via the NuGet package manager console:
 
     ```Powershell
     Install-Package Microsoft.InformationProtection.File
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
     ```  
-
-   - TBD: Explain that this also impacts the include/lib path instructions in the App Initialization quickstart
-   - TBD: Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins? OR use NuGet packages from VS?
-
 6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. This allows the dependent .DLLs to be found at runtime, by client applications:
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
