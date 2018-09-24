@@ -10,7 +10,7 @@ ms.author: bryanla
 ---
 # File handlers in the MIP SDK
 
-In the MIP SDK File API, the `mip::FileHandler` exposes all of the various operations that can be used to read and write labels, or protection, across a set of file types for which support is built-in. Requests to extend the supported file types can be submitted at **TODO**.
+In the MIP SDK File API, the `mip::FileHandler` exposes all of the various operations that can be used to read and write labels, or protection, across a set of file types for which support is built-in. 
 
 ## Supported File Types
 
