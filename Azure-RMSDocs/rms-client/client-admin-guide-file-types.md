@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 09/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 
@@ -62,7 +62,7 @@ The following file types can be classified even when they are not protected.
 
 - **Microsoft Office**: File types in the following table.
     
-    The supported file formats for these file types are the 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint. Unless you have the preview version of the Azure Information Protection client, the Strict Open XML Document format is not supported.
+    The supported file formats for these file types are the 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint.
     
     |Office file type|Office file type|
     |----------------------------------|----------------------------------|
@@ -132,9 +132,9 @@ These file types are identified separately because when they are natively protec
 |.jt|.pjt|
 
 ###### Footnote 1
-If you use preview version of the Azure Information Protection client, [by default](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), the file name extension of the protected PDF document remains as .pdf.
+If you configure the Azure Information Protection client to [protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), the file name extension of the protected PDF document remains as .pdf.
 
-The next table lists the remaining file types that support native protection by the Azure Information Protection client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. The supported file formats for these file types are the 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint. Unless you have the preview version of the Azure Information Protection client, the Strict Open XML Document format is not supported.
+The next table lists the remaining file types that support native protection by the Azure Information Protection client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. The supported file formats for these file types are the 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint.
 
 For these files, the file name extension remains the same after the file is protected by a Rights Management service.
 
@@ -205,7 +205,7 @@ To help prevent users from changing files that are critical for computer operati
 
 ### File types that are excluded from classification and protection by the Azure Information Protection scanner
 
-By default, the scanner also excludes the same file types as the Azure Information Protection client with the following exceptions for the preview version of the scanner: .rar, .rtf, .msg and .zip. 
+By default, the scanner also excludes the same file types as the Azure Information Protection client with the following exceptions: .rar, .rtf, .msg and .zip. 
 
 You can change the file types included or excluded for file inspection by the scanner when you use the following PowerShell cmdlets:
 
@@ -224,23 +224,19 @@ By default, the scanner protects only Office file types. To change this behavior
 
 Any file that is password-protected cannot be natively protected by the Azure Information Protection client unless the file is currently open in the application that applies the protection. You most often see PDF files that are password-protected but other applications, such as Office apps, also offer this functionality.
 
-Additionally, the general availability (GA) version of the Azure Information Protection client for Windows can view the following files but cannot natively protect or unprotect PDF files in either of the following circumstances:
-
-- A PDF file that is form-based. 
-
-- A protected PDF file that has a .pdf file name extension.
-    
-    The Azure Information Protection client can protect an unprotected PDF file, and it can unprotect and reprotect a protected PDF file when it has a .ppdf file name extension.
-
-As a workaround to protect these files, you could generically protect them by following the instructions in the [Changing the default protection level of files](#changing-the-default-protection-level-of-files) section. However, this method changes the protection level for all files that have a .pdf file name extension, at the computer level. You cannot define generic protection for only the files that meet the listed criteria.
-
-If protecting these files are important, you could temporarily copy them to another computer to generically protect them, and then copy them back again. Or, use the preview version of the Azure Information Protection client.
-
-When you use the current preview version of the Azure Information Protection client, [by default](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), you can natively protect and unprotect PDF files in both of the following circumstances:
+Additionally, unless the Azure Information Protection client is configured to [protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), this client can view the following files but cannot natively protect or unprotect PDF files in either of the following circumstances:
 
 - A PDF file that is form-based.
 
-- A protected PDF file that has a .pdf file name extension. 
+- A protected PDF file that has a .pdf file name extension.
+
+As a workaround to protect these files, you could generically protect them by following the instructions in the [Changing the default protection level of files](#changing-the-default-protection-level-of-files) section. However, this method changes the protection level for all files that have a .pdf file name extension, at the computer level. You cannot define generic protection for only the files that meet the listed criteria.
+
+If protecting these files are important, you could temporarily copy them to another computer to generically protect them, and then copy them back again. Or, configure the client to [protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) so that you can natively protect and unprotect PDF files in both of the following circumstances:
+
+- A PDF file that is form-based.
+
+- A protected PDF file that has a .pdf file name extension.
 
 ### Limitations for container files, such as .zip files
 

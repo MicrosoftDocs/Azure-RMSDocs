@@ -23,12 +23,14 @@ The MIP SDK is supported on the following platforms:
 
 | Operating system | Versions |  
 |------------------|----------|
-| Linux   | Ubuntu 1604 | 
-|         | Red Hat 7   | 
-| macOS   | TBD | 
-| Windows | All supported versions, 32 and 64 bit | 
+| Ubuntu  |  16.04 |
+| RedHat Enterprise Linux | 7 with devtoolset-7 |
+| Debian  | 9 |
+| macOS   | High Sierra and later |
+| Windows | All supported versions, 32 and 64 bit |
 
 ## Sign up for an Office 365 subscription
+
 
 Many of the SDK samples require access to an Office 365 subscription. If you haven't already, be sure to sign up for one of the following subscription types:
 
@@ -38,15 +40,11 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 | Office 365 Enterprise E3 or E5 | https://products.office.com/business/office-365-enterprise-e3-business-software |
 | Enterprise Mobility and Security E3 or E5 | https://www.microsoft.com/cloud-platform/enterprise-mobility-security |
 | Azure Information Protection Premium P1 or P2 | https://azure.microsoft.com/pricing/details/information-protection/ |
-
-(TBD) QUESTIONS:
-- Should we add Microsoft 365 to the above?
-- Is AIP Premium P1/P2 backed by an Azure AD tenant? Or does the user need to sign up for an Azure subscription first, and use that AAD account to get the AIP P1/P2 subscription?
-- Do they still need a whitelisted tenant? per "Because the MIP SDK requires an Office 365 tenant with certain private preview features enabled, you must have an account from a properly configured preview tenant. If you need a test account, you can submit a request at https://aka.ms/mipsdkpreviewaccount. "
+| Microsoft 365 E3, E5, or F1 | https://www.microsoft.com/en-us/microsoft-365/compare-all-microsoft-365-plans | 
 
 ## Configure your client workstation
 
-Next, complete the following steps to ensure your client computer is set up and configured correctly. 
+Next, complete the following steps to ensure your client computer is set up and configured correctly.
 
 ### Windows 10
 
@@ -95,10 +93,23 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 5. Download SDK binaries
 
-   - TBD: Explain that this also impacts the include/lib path instructions in the App Initialization quickstart
-   - TBD: Explain naming conventions 
-   - TBD: Download .zip and copy to a local/project directory? If so, https://aka.ms/mipsdkbins or https://aka.ms/MIPSDKPreviewBins? OR use NuGet packages from VS?
+   A .zip file containing SDK binaries and headers for all platforms can be found at https://aka.ms/mipsdkbins. The .zip contains several files, one for each platform and API. The files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`.
 
+   For example, the .zip for protection API binaries and headers on Debian would be: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`.
+
+   Each .zip or tarball contains three directories:
+
+   - **Bins:** The compiled binaries for each platform architecture, where applicable.
+   - **Include:** The Microsoft Information Protection SDK header files
+   - **Samples:** Source code for the sample applications
+
+   On Windows, the SDK can be installed via the NuGet package manager console:
+
+    ```Powershell
+    Install-Package Microsoft.InformationProtection.File
+    Install-Package Microsoft.InformationProtection.Policy
+    Install-Package Microsoft.InformationProtection.Protection
+    ```  
 6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. This allows the dependent .DLLs to be found at runtime, by client applications:
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
@@ -162,7 +173,9 @@ See [Classification label concepts](concept-classification-labels.md).
 
 * Provide links to SCC configuration.
 * Provide details on rights required to config labels.
+  - Global admin, compliance admin, or AIP admin
 * Provide details on labeling taxonomy best practices.
+  - Provide links to AIP docs, Tom's Ignite 2017 talk
 
 ## Next Steps
 
