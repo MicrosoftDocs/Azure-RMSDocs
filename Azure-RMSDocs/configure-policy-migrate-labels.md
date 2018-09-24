@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/xx/2018
+ms.date: 09/27/2018
 ms.topic: article
 ms.service: information-protection
 
@@ -86,10 +86,12 @@ Azure Information Protection clients can use these label settings without any pr
 |Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and their tooltips|Not applicable|No|
 
 
-
 ## To migrate Azure Information Protection labels
 
-Use the following instructions to migrate your tenant and labels.
+> [!IMPORTANT]
+> Do not migrate your labels until you have confirmed that you can edit and publish sensitivity labels in the Office 365 Security & Compliance Center. Sensitivity labels are starting to roll out to tenants but are not yet available for all tenants.
+
+When you have confirmed that you have sensitivity labels in the Security & Compliance Center, use the following instructions to migrate your tenant and  Azure Information Protection labels.
 
 1. Open a new browser window and sign in to the Azure portal by using the following link: https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade 
 
