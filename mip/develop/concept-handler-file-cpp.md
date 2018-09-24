@@ -58,7 +58,7 @@ auto handler = createFileHandlerFuture.get();
 
 After successfully creating the `FileHandler` object, file operations (get/set/delete/commit) can be performed.
 
-## Label operations: read a Label
+## Read a Label
 
 ### Metadata Requirements
 
@@ -86,7 +86,7 @@ Label data can be read from the `label` object and passed to any other component
 
 ***
 
-## Label operations: set a Label
+## Set a Label
 
 Setting a label is a two part process. First, having created a handler that points to the file in question, the label can be set by calling `FileHandler->SetLabel()` with a couple of parameters.
 
@@ -142,7 +142,7 @@ If writing a label to **FileA.docx**, a copy of the file, **FileB.docx**, will b
 
 ***
 
-## Label operations: delete a Label
+## Delete a Label
 
 ```cpp
 auto handler = mEngine->CreateFileHandler(filePath, std::make_shared<FileHandlerObserverImpl>());
