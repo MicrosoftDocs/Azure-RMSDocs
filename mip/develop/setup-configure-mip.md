@@ -24,12 +24,13 @@ The MIP SDK is supported on the following platforms:
 | Operating system | Versions |  
 |------------------|----------|
 | Ubuntu  |  16.04 |
-| RedHat Enterprise Linux | 7 |
+| RedHat Enterprise Linux | 7 with devtoolset-7 |
 | Debian  | 9 |
 | macOS   | High Sierra and later |
 | Windows | All supported versions, 32 and 64 bit |
 
 ## Sign up for an Office 365 subscription
+
 
 Many of the SDK samples require access to an Office 365 subscription. If you haven't already, be sure to sign up for one of the following subscription types:
 
@@ -182,7 +183,9 @@ See [Classification label concepts](concept-classification-labels.md).
 
 * Provide links to SCC configuration.
 * Provide details on rights required to config labels.
+  - Global admin, compliance admin, or AIP admin
 * Provide details on labeling taxonomy best practices.
+  - Provide links to AIP docs, Tom's Ignite 2017 talk
 
 ## Next Steps
 
