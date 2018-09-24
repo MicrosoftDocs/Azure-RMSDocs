@@ -91,7 +91,7 @@ Azure Information Protection clients can use these label settings without any pr
 > [!IMPORTANT]
 > Do not migrate your labels until you have confirmed that you can edit and publish sensitivity labels in the Office 365 Security & Compliance Center. Sensitivity labels are starting to roll out to Office 365 tenants but are not yet available for all tenants.
 > 
-> To check: From the Office 365 Security & Compliance Center: Go to **Classifications** > **Labels**, and see whether you have a **Sensitivity** tab. If you do not see this tab, your tenant is not yet ready for sensitivity labels and you should not migrate your Azure Information Protection labels at this time.
+> To check: From the Office 365 Security & Compliance Center, go to **Classifications** > **Labels**, and see whether you have a **Sensitivity** tab. If you do not see this tab, your tenant is not yet ready for sensitivity labels and you should not migrate your Azure Information Protection labels at this time.
 
 When you have confirmed that your tenant supports sensitivity labels in the Security & Compliance Center, use the following instructions to migrate your tenant and  Azure Information Protection labels.
 
