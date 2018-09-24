@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/04/2018
+ms.date: 09/21/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -95,8 +95,6 @@ Locate the following value name and set the value data to **0**:
 In addition, check that these computers do not have a file named **Policy.msip** in the **%LocalAppData%\Microsoft\MSIP** folder. If this file exists, delete it. This file contains the Azure Information Protection policy and might have downloaded before you edited the registry, or if the Azure Information Protection client was installed with the demo option.
 
 ## Modify the email address for the Report an Issue link
-
-This configuration option is currently in preview and is subject to change. It also requires the preview version of the Azure Information Protection client.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
@@ -225,9 +223,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Turn on classification to run continuously in the background
 
-This configuration option is currently in preview and is subject to change.
-
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
 
 When you configure this setting, it changes the [default behavior](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) of how the Azure Information Protection client applies automatic and recommended labels to documents: 
 
@@ -245,25 +241,59 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
-## Don't protect PDF files by using the ISO standard for PDF encryption
-
-This configuration option is currently in preview and is subject to change. It also requires the preview version of the Azure Information Protection client.
+## Protect PDF files by using the ISO standard for PDF encryption
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When the general availability (GA) version of the Azure Information Protection client protects a PDF file, the resulting file has a .ppdf file name extension. However, when the current preview version of the Azure Information Protection client protects a PDF file, the resulting file name extension remains as .pdf and adheres to the ISO standard for PDF encryption. For more information about this standard, see section **7.6 Encryption** from the [document that is derived from ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) and published by Adobe Systems Incorporated.
+By default, when the Azure Information Protection client protects a PDF file, the resulting file has a .ppdf file name extension. You can change this behavior so that the file name extension remains as .pdf and adheres to the ISO standard for PDF encryption. For more information about this standard, see section **7.6 Encryption** from the [document that is derived from ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) and published by Adobe Systems Incorporated.
 
-If you need the current preview version of the client to revert to the GA behavior, use the following advanced setting by entering the following string:
+To configure this advanced setting, enter the following string:
 
 - Key: **EnablePDFv2Protection**
 
-- Value: **False**
+- Value: **True**
+
+As a result of this configuration option, when the Azure Information Protection client protects a PDF file, this action creates a protected PDF document that can be opened with the latest version of the Azure Information Protection client for Windows, and other PDF readers that support the ISO standard for PDF encryption. The Azure Information Protection app for iOS and Android does not currently support the ISO standard for PDF encryption.
 
 For the Azure Information Protection scanner to use the new setting, the scanner service must be restarted.
 
+### To convert existing .ppdf files to protected .pdf files
+
+When the Azure Information Protection client has downloaded the client policy with the new setting, you can use PowerShell commands to convert existing .ppdf files to protected .pdf files that use the ISO standard for PDF encryption. 
+
+To use the following instructions for files that you didn't protect yourself, you must have a [Rights Management usage right](../configure-usage-rights.md) to remove protection from files, or be a super user. To enable the super user feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../configure-super-users.md).
+
+In addition, when you use these instructions for files that you didn't protect yourself, you become the [RMS Issuer](../configure-usage-rights.md#rights-management-issuer-and-rights-management-owner). In this scenario, the user who originally protected the document can no longer track and revoke it. If users need to track and revoke their protected PDF documents, ask them to manually remove and then reapply the label by using File Explorer, right-click.
+
+To use PowerShell commands to convert existing .ppdf files to protected .pdf files that use the ISO standard for PDF encryption:
+
+1. Use [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) with the .ppdf file. For example:
+    
+		Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
+
+2. From the output, take a note of the following parameter values:
+    
+    - The value (GUID) for **SubLabelId**, if there is one. If this value is blank, a sublabel wasn't used, so note the value for **MainLabelId** instead.
+    
+    Note: If there is no value for **MainLabelId** either, the file isn't labeled. In this case, you can use the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) command and [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) command instead of the commands in step 3 and 4.
+    
+    - The value for **RMSTemplateId**. If this value is **Restricted Access**, a user has protected the file using custom permissions rather than the protection settings that are configured for the label. If you continue, those custom permissions will be overwritten by the label's protection settings. Decide whether to continue or ask the user (value displayed for the **RMSIssuer**) to remove the label and re-apply it, together with their original custom permissions.
+
+3. Remove the label by using [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) with the *RemoveLabel* parameter. If you are using the [policy setting](../configure-policy-settings.md) of **Users must provide justification to set a lower classification label, remove a label, or remove protection**, you must also specify the *Justification* parameter with the reason. For example: 
+    
+    	Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
+    
+    If you can't remove the label because you're using mandatory labeling as as a [policy setting](../configure-policy-settings.md) (**All documents and emails must have have a label**), temporarily apply a different label, instead.
+
+4. Reapply the original label, by specifying the value for the label that you identified in step 1. For example:
+    
+    	Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
+
+The file retains the .pdf file name extension but is classified as before, and it is protected by using the ISO standard for PDF encryption.
+
 ## Support for files protected by Secure Islands
 
-This configuration option is currently in preview and is subject to change. It also requires the preview versions of the Azure Information Protection client, the Azure Information Protection scanner, or the Azure Information Protection viewer.
+This configuration option is currently in preview and is subject to change.
 
 If you used Secure Islands to protect documents, you might have protected text and picture files, and generically protected files as a result of this protection. For example, files that have a file name extension of .ptxt, .pjpeg, or .pfile. When you edit the registry as follows, Azure Information Protection can decrypt these files:
 
@@ -288,9 +318,9 @@ As a result of this registry edit, the following scenarios are supported:
 
 ## Migrate labels from Secure Islands and other labeling solutions
 
-This configuration option is currently in preview and is subject to change.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+This configuration is currently not compatible with the setting to [Protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When you use both settings together, .ppdf files cannot be opened by File Explorer, PowerShell, or the scanner.
 
 For Office documents and PDF documents that are labeled by Secure Islands, you can relabel these documents with an Azure Information Protection label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents. 
 
@@ -372,11 +402,9 @@ The advanced client setting:
 
 ## Remove headers and footers from other labeling solutions
 
-This configuration option is currently in preview and is subject to change. It also requires the preview version of the Azure Information Protection client.
+This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. These settings are in preview and might change.
 
-This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
-
-These settings let you remove or replace headers or footers from documents when those visual markings have been applied by another labeling solution. For example, the old footer contains the name of an old label that you have now migrated to Azure Information Protection with a new label name and its own footer.
+The settings let you remove or replace headers or footers from documents when those visual markings have been applied by another labeling solution. For example, the old footer contains the name of an old label that you have now migrated to Azure Information Protection with a new label name and its own footer.
 
 When the client gets this configuration in its policy, the old headers and footers are removed or replaced when the document is opened in the Office app and any Azure Information Protection label is applied to the document.
 
