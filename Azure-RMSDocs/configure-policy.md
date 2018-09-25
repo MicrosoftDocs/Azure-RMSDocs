@@ -174,6 +174,8 @@ Use the following information to help you configure the Azure Information Protec
 
 - [How to configure labels for different languages](configure-policy-languages.md)
 
+- [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](configure-policy-migrate-labels.md)
+
 ## Next steps
 
 For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).

@@ -76,6 +76,7 @@
 #### [PowerShell reference](configure-templates-with-powershell.md)
 #### [Migrating from the Azure classic portal](migrate-portal.md)
 ### [Configure languages](configure-policy-languages.md)
+### [Migrate labels to Office 365](configure-policy-migrate-labels.md)
 ## [Configuring mail flow rules for Azure Information Protection labels](configure-exo-rules.md)
 ## [Deploying the Azure Information Protection scanner](deploy-aip-scanner.md)
 ## [Reporting for Azure Information Protection](reports-aip.md)
