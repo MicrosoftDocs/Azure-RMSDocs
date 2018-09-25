@@ -17,7 +17,7 @@ This Quickstart shows you how to use the MIP File API, to apply a sensitivity la
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete [Quickstart: Read sensitivity labels (C++)](quick-file-read-label-cpp.md) first, shows you how to read a sensitivity label that was assigned to a file. This Quickstart builds on the previous one.
+- Complete [Quickstart: List sensitivity labels (C++)](quick-file-list-labels-cpp.md) first, which builds a starter Visual Studio solution, to list an organization's sensitivity labels. This Quickstart builds on the previous one.
 - Optionally: Review [Classification labels](concept-classification-labels.md) concepts.
 
 ============== WIP BELOW THIS LINE ======================
@@ -38,4 +38,9 @@ Add logic to a sensitivity label to a file, using the File engine object.
 
 4. In the body of `main()`, between the `profile->AddEngineAsync(engineSettings, enginePromise);` and `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
 
+## Next Steps
 
+Now that you've learned how to apply a sensitivity label, try the next quickstart:
+
+> [!div class="nextstepaction"]
+> [Read a sensitivity label](quick-file-read-label-cpp.md)
