@@ -22,7 +22,7 @@ The examples below demonstrate the promise/future pattern, which is also used by
 
 ## File Profile Observer Implementation
 
-In the following example, we've created a class, `ProfileObserver` that is derived from `mip::FileProfile::Observer`. The member functions have been overriden to use the future/promise pattern used throughout the samples.
+In the following example, we've created a class, `ProfileObserver` that is derived from `mip::FileProfile::Observer`. The member functions have been overridden to use the future/promise pattern used throughout the samples.
 
 **Note**: The below samples are only partially implemented and do not include overrides for the `mip::FileEngine` related observers.
 
@@ -42,11 +42,11 @@ ProfileObserver() { }
 
 ### profile_observer.cpp
 
-In the implementation itself, we simply define an action to take for each observer member function.
+In the implementation itself, we define an action to take for each observer member function.
 
 Each member accepts two parameters. The first is a shared pointer to the class we're handling in the function. `ProfileObserver::OnLoadSuccess` would expect to receive a `mip::FileProfile`. `ProfileObserver::OnAddEngineSuccess` would expect `mip::FileEngine`.
 
-The second is a shared pointer to the *context*. In our implementation the context is a reference to a `std::promise`, passed by reference as `std::shared_ptr<void>`. The first line of the function casts this to `std::promise`, then stored in an object called `promise`.
+The second is a shared pointer to the *context*. In our implementation, the context is a reference to a `std::promise`, passed by reference as `std::shared_ptr<void>`. The first line of the function casts this to `std::promise`, then stored in an object called `promise`.
 
 Finally, the future is made ready by setting the `promise->set_value()` and passing in the `mip::FileProfile` object.
 
