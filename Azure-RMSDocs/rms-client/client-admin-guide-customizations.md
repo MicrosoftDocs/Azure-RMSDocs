@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -96,9 +96,9 @@ In addition, check that these computers do not have a file named **Policy.msip**
 
 ## Modify the email address for the Report an Issue link
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is only applicable to preview versions of the Azure Information Protection client because general availability versions of the client don't display the **Report an Issue** link.
 
-When users select the **Report an Issue** link from the **Help and Feedback** client dialog box, by default, a Microsoft address is populated in an email message. Use the following advanced client setting to modify that address. For example, specify `mailto:helpdesk@contoso.com` for the email address of your help desk. 
+When users select the **Report an Issue** link from the **Help and Feedback** client dialog box from preview versions of the client, by default, a Microsoft address is populated in an email message. Use the following advanced client setting to modify that address. For example, specify `mailto:helpdesk@contoso.com` for the email address of your help desk. 
 
 To configure this advanced setting, enter the following strings:
 
