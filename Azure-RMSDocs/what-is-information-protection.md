@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/15/2018
+ms.date: 09/26/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
@@ -135,21 +135,7 @@ Additional resources: [Information and support for Azure Information Protection]
 
 ### Microsoft Ignite
 
-**Microsoft Ignite 2017** had many sessions for Azure Information Protection that are available on demand. For a summary of announcements that were made at this conference, see [What’s new in Azure Information Protection @ Ignite 2017](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
-
-You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522) the sessions that are tagged for Azure Information Protection on the Ignite website. However, we recommend that you start with the following sessions:
-
-- [Protecting complete data lifecycle using Microsoft information protection capabilities](https://myignite.microsoft.com/videos/55397)
-
-- [Accelerate Azure information protection deployment and adoption](https://myignite.microsoft.com/videos/53454)
-
-- [Discover what’s new in Azure Information Protection and learn about the roadmap and strategy](https://myignite.microsoft.com/videos/53453)
-
-- [Encryption key management strategies for compliance](https://myignite.microsoft.com/videos/53455)
-
-- [Protect and control your sensitive emails with new Office 365 Message Encryption capabilities](https://myignite.microsoft.com/videos/53230)
-
-The sessions for **Ignite 2018** are now published, and you'll find many sessions that are tagged [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection). If you can join us in Orlando, our top five sessions that we recommend are the following:
+**Microsoft Ignite 2018** in Orlando has many sessions that are tagged [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection). All sessions are recorded so if you can't join us there, you can still watch the sessions afterwards. Our top five sessions that we recommend:
 
 - [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle](https://myignite.techcommunity.microsoft.com/sessions/64297)
  
