@@ -14,10 +14,10 @@
     items:
     - name: List sensitivity labels (C++)
       href: quick-file-list-labels-cpp.md
+    - name: Apply a label (C++)
+      href: quick-file-apply-label-cpp.md  
     - name: Read a label (C++)
       href: quick-file-read-label-cpp.md
-    - name: Apply a label (C++)
-      href: quick-file-apply-label-cpp.md      
 - name: Concepts
   items:
   - name: The APIs
@@ -61,7 +61,6 @@
       href: concept-async-observers-policy-cpp.md
     - name: Protection API observers (C++)
       href: concept-async-observers-protection-cpp.md
-- name: How-to guides
 - name: Reference
   items:
   - name: C++ library

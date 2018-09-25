@@ -93,7 +93,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 5. Download SDK binaries
 
-   A .zip file containing SDK binaries and headers for all platforms can be found at https://aka.ms/mipsdkbins. The .zip contains several files, one for each platform and API. The files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`.
+   A .zip file containing SDK binaries and headers for all platforms can be found at https://aka.ms/mipsdkbins. The .zip contains several additional .zip files, one for each platform and API. The files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`.
 
    For example, the .zip for protection API binaries and headers on Debian would be: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`.
 

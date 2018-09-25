@@ -82,7 +82,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
           void OnLoadSuccess(const std::shared_ptr<mip::FileProfile>& profile, const std::shared_ptr<void>& context) override;
           void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
           void OnAddEngineSuccess(const std::shared_ptr<mip::FileEngine>& engine, const std::shared_ptr<void>& context) override;
-          void OnAddEngineError(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
+          void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
      };
      ```
 
@@ -112,7 +112,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
           promise->set_value(engine);
      }
 
-     void ProfileObserver::OnAddEngineError(const std::exception_ptr& error, const shared_ptr<void>& context) {
+     void ProfileObserver::OnAddEngineFailure(const std::exception_ptr& error, const shared_ptr<void>& context) {
           auto promise = static_pointer_cast<std::promise<shared_ptr<FileEngine>>>(context);
           promise->set_exception(error);
      }
