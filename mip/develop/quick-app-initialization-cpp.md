@@ -289,9 +289,4 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
 
 3. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart.
 
-## Next Steps
 
-Now that your initialization code is complete, you're ready for the next quickstart, where you'll start to experience the MIP File APIs.
-
-> [!div class="nextstepaction"]
-> [List sensitivity labels](quick-file-list-labels-cpp.md)
