@@ -120,7 +120,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - The policy version is changed to 1.4. Identifying the version number is required for [configuring disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
 
-- The **Send Us Feedback** link in the **Help and Feedback** dialog box is removed. It was temporarily replaced with **Report an issue**, but this link now displays only for preview versions.
+- The **Send Us Feedback** link in the **Help and Feedback** dialog box is removed. It was temporarily replaced with **Report an issue**, but this link now displays in preview versions only.
 
 ## Version 1.29.5.0 
 
