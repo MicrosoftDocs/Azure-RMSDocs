@@ -171,12 +171,17 @@ Confidential : 074e457c-5848-4542-9a6f-34a182080e7z
 Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
 
 Press any key to continue . . .
+
+Applying Label ID f42a3342-8706-4288-bd31-ebb85995028z to c:\Test\Test.docx
+Label committed to file: c:\Test\Test_labeled.docx
+
+Press any key to continue . . .
 ```
 
-Assuming a new Microsoft Word document was used as `<input-file-path>` (with no label set), the following "Not set" indicator would be shown on the "Protect" bar:
+Assuming a new Microsoft Word document was used as `<input-file-path>` (with no label set), the following "Not set" indicator would be shown on the "Protect" bar:  
      ![Visual Studio add class](media/quick-file-set-get-label-cpp/word-sensitivity-label-not-set.png)
 
-After committing a "General" label to the file saved as `<output-file-path>`, the "General" label will show with the pencil icon:
+After committing a "General" label to the file saved as `<output-file-path>`, the "General" label will show with the pencil icon:  
      ![Visual Studio add class](media/quick-file-set-get-label-cpp/word-sensitivity-label-general.png)
 
 
