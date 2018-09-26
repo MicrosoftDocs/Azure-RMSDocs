@@ -1,7 +1,6 @@
 ---
 title: Concepts - File handlers in the MIP SDK.
 description: This article will help you understand how File API handlers are used for calling operations.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
@@ -125,7 +124,7 @@ Having now set the label on the file referenced by the handler, there's still on
 
 The final step in committing any change to a file in the MIP SDK is to **commit** the change. This is accomplished by using the `FileHandler->CommitAsync()` function. 
 
-To implement the commitment function, we return to promise/future, creating a promise for a `bool`. The `CommitAsync()` function will return true if the operation succeeded or false if it failed for any reason. TODO: Update details on exception handling.
+To implement the commitment function, we return to promise/future, creating a promise for a `bool`. The `CommitAsync()` function will return true if the operation succeeded or false if it failed for any reason. 
 
 After creating the `promise` and `future`, `CommitAsync()` is called and two parameters provided: The output file path (`std::string`), and the promise. Lastly, the result is obtained by getting the value of the `future` object.
 

@@ -1,7 +1,6 @@
 ---
 title: Concepts - Using PowerShell to acquire an access token.
 description: This article will help you understand how to use PowerShell to acquire an OAuth2 access token. This is required by the implementation of the authentication delegate.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual

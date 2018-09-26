@@ -1,7 +1,6 @@
 ---
 title: Concepts - File API observers in the MIP SDK.
 description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how File API observers are implemented and used for asynchronicity.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
@@ -76,7 +75,7 @@ When we instantiate any SDK class or use a function that performs asynchronous o
 
 ## FileHandler Observer Implementation
 
-Similar to the profile observer, the `mip::FileHandler` implements a `mip::FileHandler::Observers` class for handling asynchronous event notifications during file operations. The implementation is similar to that detailed above. `FileHandlerObserver` is partially defined below. The full implementation can be found in our [GitHub sample repo](). TODO: LINK
+Similar to the profile observer, the `mip::FileHandler` implements a `mip::FileHandler::Observers` class for handling asynchronous event notifications during file operations. The implementation is similar to that detailed above. `FileHandlerObserver` is partially defined below. 
 
 ### file_handler_observer.h
 
@@ -117,6 +116,3 @@ void FileHandlerObserver::OnCreateFileHandlerFailure(const std::exception_ptr& e
 //TODO: override remaining member functions inherited from mip::FileHandler::Observer
 ```
 
-## Next Steps
-
-[TBD - Link to create a `mip::FileProfile`, load a `mip::FileEngine`, and perform file operations with `mip::FileHandler`.]()
