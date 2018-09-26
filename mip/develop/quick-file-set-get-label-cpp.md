@@ -20,6 +20,8 @@ If you haven't already, be sure to complete the following prerequisites before c
 - Complete [Quickstart: List sensitivity labels (C++)](quick-file-list-labels-cpp.md) first, which builds a starter Visual Studio solution, to list an organization's sensitivity labels. This Quickstart builds on the previous one.
 - Optionally: Review [File handlers in the MIP SDK](concept-handler-file-cpp.md) concepts.
 
+> [!IMPORTANT]
+> If too much time passes between the completion of this Quickstart, and the previous "Quickstart: List sensitivity labels", the static token used in the latter will expire. If so, you will need to generate a new token and update your `AcquireOAuth2Token()` implementation again. See [Update the token acquisition logic with a valid access token](quick-file-list-labels-cpp.md#update-the-token-acquisition-logic-with-a-valid-access-token) for more details.
 
 ## Implement an observer class to monitor the File handler object
 
@@ -99,7 +101,7 @@ Add logic to set a sensitivity label on a file, using the File engine object.
 3. In the body of `main()`, below the `system("pause");`, and above the `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
-   // Set up promise/future connection for async File handler operations; create File handler asynchronously
+   // Set up promise/future connection for async File handler operations; create File handler asynchronously (input file)
    string filePathIn = "<input-file-path>";
    std::shared_ptr<FileHandler> handler;
    try
@@ -116,11 +118,11 @@ Add logic to set a sensitivity label on a file, using the File engine object.
         return 1;
    }
 
-   // Set a label on the file
+   // Set a label on input file
    try
    {
         string labelId = "<label-id>";
-        cout << "Applying Label ID " << labelId << " to " << filePathIn << endl;
+        cout << "\nApplying Label ID " << labelId << " to " << filePathIn << endl;
         mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
         handler->SetLabel(labelId, labelingOptions);
    }
@@ -132,9 +134,9 @@ Add logic to set a sensitivity label on a file, using the File engine object.
    }
 
    // Commit changes, save as a different file
+   string filePathOut = "<output-file-path>";
    try
    {
-        string filePathOut = "<output-file-path>";
         auto commitPromise = std::make_shared<std::promise<bool>>();
         auto commitFuture = commitPromise->get_future();
         handler->CommitAsync(filePathOut, commitPromise);
@@ -148,16 +150,45 @@ Add logic to set a sensitivity label on a file, using the File engine object.
    }
    system("pause");
 
-   // Get a label
+   // Set up promise/future connection for async File handler operations; create File handler asynchronously (output file)
+   try
+   {
+        auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
+        auto handlerFuture = handlerPromise->get_future();
+        engine->CreateFileHandlerAsync(filePathOut, mip::ContentState::REST, std::make_shared<FileHandlerObserver>(), handlerPromise);
+        handler = handlerFuture.get();
+   }
+   catch (const std::exception& e)
+   {
+        cout << "An exception occurred... did you specify a valid output file path?\n\n" << e.what() << "'\n";
+		system("pause");
+		return 1;
+   }
+
+   // Get the label from output file
+   try
+   {
+        cout << "\nGetting label committed to file: " << filePathOut << endl;
+        auto label = handler->GetLabel();
+        cout << "Name: " + label->GetLabel()->GetName() << endl;
+        cout << "Id: " + label->GetLabel()->GetId() << endl;
+   }
+   catch (const std::exception& e)
+   {
+        cout << "An exception occurred... did you specify a valid label ID?\n\n" << e.what() << "'\n";
+        system("pause");
+        return 1;
+   }
+   system("pause");
    ```
 
 4. Replace the placeholder values in the source code that you just pasted in, using the following values:
 
    | Placeholder | Value |
    |:----------- |:----- |
-   | \<input-file-path\> | The full path to the input file, for example: `c:\\Test\\Test.docx`. |
+   | \<input-file-path\> | The full path to a test input file, for example: `c:\\Test\\Test.docx`. |
    | \<label-id\> | A sensitivity label ID, copied from the console output in the previous Quickstart, for example: `f42a3342-8706-4288-bd31-ebb85995028z`. |
-   | \<output-file-path\> | The full path to the output file, which will be labeled, for example: `c:\\Test\\Test_labeled.docx`. |
+   | \<output-file-path\> | The full path to the output file, which will be a labeled copy of the input file, for example: `c:\\Test\\Test_labeled.docx`. |
 
 ## Build and test the application
 
@@ -169,12 +200,15 @@ Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
 General : f42a3342-8706-4288-bd31-ebb85995028z
 Confidential : 074e457c-5848-4542-9a6f-34a182080e7z
 Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
-
 Press any key to continue . . .
 
 Applying Label ID f42a3342-8706-4288-bd31-ebb85995028z to c:\Test\Test.docx
 Label committed to file: c:\Test\Test_labeled.docx
+Press any key to continue . . .
 
+Getting label committed to file: c:\Test\Test_labeled.docx
+Name: General
+Id: f42a3342-8706-4288-bd31-ebb85995028z
 Press any key to continue . . .
 ```
 
@@ -184,7 +218,8 @@ Assuming a new Microsoft Word document was used as `<input-file-path>` (with no 
 After committing a "General" label to the file saved as `<output-file-path>`, the "General" label will show with the pencil icon:  
      ![Visual Studio add class](media/quick-file-set-get-label-cpp/word-sensitivity-label-general.png)
 
-
+> [!NOTE]
+> If you're not signed in to Office with an account from the tenant where the sensitivity labels are configured, you may be prompted to sign-in before you can open the labelled document. If you are signed in, be sure to use an access token generated for the same Azure AD tenant for which you are signed in to.
 
 
 
