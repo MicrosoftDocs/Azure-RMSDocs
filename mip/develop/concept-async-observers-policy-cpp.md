@@ -1,7 +1,6 @@
 ---
 title: Concepts - Policy API observers in the MIP SDK.
 description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how Policy API observers are implemented and used for asynchronicity.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
@@ -72,6 +71,3 @@ void ProfileObserver::OnLoadFailure(const std::exception_ptr& error, const std::
 
 When performing any asynchronous operation, the observer implementation is passed to the settings constructor or async function itself. 
 
-## Next Steps
-
-[TBD - Link to create a `mip::Profile`, load a `mip::ProfileEngine`, and perform file operations with `mip::FileHandler`]()
