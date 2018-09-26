@@ -202,6 +202,9 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
     
+    > [!TIP]
+    > Currently in preview, the information from these reports are now sent to Azure Information Protection so that you can view them from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md). 
+        
     If the results are not as you expect, you might need to fine-tune the conditions that you specified in your Azure Information Protection policy. If that's the case, repeat steps 1 through 3 until you are ready to change the configuration to apply the classification and optionally, protection. 
 
 When you're ready to automatically label the files that the scanner discovers, continue to the next procedure. 
