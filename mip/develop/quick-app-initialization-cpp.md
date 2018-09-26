@@ -54,9 +54,9 @@ First we create and configure the initial Visual Studio solution and project, up
 
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
 
-## Implement an observer class
+## Implement an observer class to monitor the File profile and engine objects
 
-Now create a basic implementation for an observer class, by extending the SDK's `mip::FileProfile::Observer` class. The observer is instantiated and used later, by the File profile and File engine objects.
+Now create a basic implementation for an observer class, by extending the SDK's `mip::FileProfile::Observer` class. The observer is instantiated and used later, to monitor the loading of the File profile object, and adding the engine object to the profile.
 
 1. Add a new class to your project, which generates both the header/.h and implementation/.cpp files for you:
 

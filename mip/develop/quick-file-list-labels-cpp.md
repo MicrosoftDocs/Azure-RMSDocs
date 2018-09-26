@@ -36,7 +36,7 @@ Add logic to list your organization's sensitivity labels, using the File engine 
 4. In the body of `main()`, between the `profile->AddEngineAsync(engineSettings, enginePromise);` and `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
-   // Get engine object and list sensitivity labels
+   // Call MIP File APIs
 	 try
 	 {
       // Get File engine asynchronously; also triggers AcquireOAuth2Token() call 
@@ -53,6 +53,7 @@ Add logic to list your organization's sensitivity labels, using the File engine 
           cout << "->  " << child->GetName() << " : " << child->GetId() << endl;
         }
       }
+      system("pause");
    }
    catch (const std::exception& e)
    {
@@ -92,7 +93,10 @@ Add logic to list your organization's sensitivity labels, using the File engine 
 
 ## Build and test the application
 
-Finally, build and test your client application. If your project builds and runs successfully, you should see output similar to the following example in the console window: 
+Finally, build and test your client application. If your project builds and runs successfully, you should see output in the console window, similar to the following example. 
+
+> [!NOTE]
+> Copy the ID of one or more of the sensitivity labels (for example, `87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz`), as you will use it in the next Quickstart: 
 
 ```cmd
 Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
