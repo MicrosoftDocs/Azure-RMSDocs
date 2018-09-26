@@ -42,11 +42,11 @@ ProfileObserver() { }
 
 ### profile_observer.cpp
 
-In the implementation itself, we simply define an action to take for each observer member function.
+In the implementation itself, we define an action to take for each observer member function.
 
 Each member accepts two parameters. The first is a shared pointer to the class we're handling in the function. `ProfileObserver::OnLoadSuccess` would expect to receive a `mip::FileProfile`. `ProfileObserver::OnAddEngineSuccess` would expect `mip::FileEngine`.
 
-The second is a shared pointer to the *context*. In our implementation the context is a reference to a `std::promise`, passed by reference as `std::shared_ptr<void>`. The first line of the function casts this to `std::promise`, then stored in an object called `promise`.
+The second is a shared pointer to the *context*. In our implementation, the context is a reference to a `std::promise`, passed by reference as `std::shared_ptr<void>`. The first line of the function casts this to `std::promise`, then stored in an object called `promise`.
 
 Finally, the future is made ready by setting the `promise->set_value()` and passing in the `mip::FileProfile` object.
 
