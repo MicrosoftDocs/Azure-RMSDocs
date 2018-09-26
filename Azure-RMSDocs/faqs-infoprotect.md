@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
@@ -35,13 +35,17 @@ Try our quick start tutorial to see this working in just a few minutes: [Quick s
 
 Look out for announcements on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional classification features and capabilities become available. There are a few limitations with the current release, which include the following:
 
-- There is no centralized logging for classification and labeling.
-
-- No labeling ability in Office apps for mobile devices (iOS and Android) and Mac computers, or the Office web apps (Office Online).
+- No labeling ability in the Office web apps (Office Online).
 
 - No classification and labeling integration with Exchange Online or SharePoint Online.
 
-Request new features and vote on requests by visiting the [User Voice site](https://msip.uservoice.com/) for Azure Information Protection.
+> [!NOTE]
+> **Now in preview**:
+> - Centralized reporting for classification and labeling. For more information, see [Central reporting for Azure Information Protection](reports-aip.md).
+> - Labeling ability in Office apps for mobile devices (iOS and Android) and Mac computers for customers who are opted-in to the [Office Insider program](https://support.office.com/article/what-is-office-insider-f4208185-b63a-4b68-9c7a-9a32d2411c16). For more information, see [Apply sensitivity labels to your documents and email within Office](https://aka.ms/officemipdocs).
+
+
+Request new features and vote on requests by visiting the [UserVoice site](https://msip.uservoice.com/) for Azure Information Protection.
 
 ## Do I need to be a global admin to configure classification and labels?
 
