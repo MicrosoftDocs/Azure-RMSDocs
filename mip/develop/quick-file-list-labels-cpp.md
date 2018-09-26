@@ -82,10 +82,7 @@ Add logic to list your organization's sensitivity labels, using the File engine 
 
 ## Build and test the application
 
-Finally, build and test your client application. If your project builds and runs successfully, you should see output in the console window, similar to the following example. 
-
-> [!NOTE]
-> Copy the ID of one or more of the sensitivity labels (for example, `87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz`), as you will use it in the next Quickstart: 
+Finally, build and test your client application. If your project builds and runs successfully, you should see output in the console window, similar to the following example:
 
 ```cmd
 Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
@@ -96,6 +93,9 @@ Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
 
 Press any key to continue . . .
 ```
+
+> [!NOTE]
+> Copy and save the ID of one or more of the sensitivity labels (for example, `f42a3342-8706-4288-bd31-ebb85995028z`), as you will use it in the next Quickstart.
 
 ## Troubleshooting
 

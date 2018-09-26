@@ -151,20 +151,17 @@ Add logic to set a sensitivity label on a file, using the File engine object.
    // Get a label
    ```
 
-4. Replace the following placeholders in the source code you just pasted in, using the following values:
+4. Replace the placeholder values in the source code that you just pasted in, using the following values:
 
    | Placeholder | Value |
-   | ----------- | ----- |
+   |:----------- |:----- |
    | \<input-file-path\> | The full path to the input file, for example: `c:\\Test\\Test.docx`. |
    | \<label-id\> | A sensitivity label ID, copied from the console output in the previous Quickstart, for example: `f42a3342-8706-4288-bd31-ebb85995028z`. |
    | \<output-file-path\> | The full path to the output file, which will be labeled, for example: `c:\\Test\\Test_labeled.docx`. |
 
 ## Build and test the application
 
-Build and test your client application. If your project builds and runs successfully, you should see output in the console window, similar to the following example. 
-
-> [!NOTE]
-> Copy the ID of one or more of the sensitivity labels (for example, `87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz`), as you will use it in the next Quickstart: 
+Build and test your client application. If your project builds and runs successfully, you should see output in the console window, similar to the following example: 
 
 ```cmd
 Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
@@ -176,10 +173,10 @@ Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
 Press any key to continue . . .
 ```
 
-In the example above, the Microsoft Word document at `c:\Test\Test.docx` shows the following on the sensitivity label bar:
+Assuming a new Microsoft Word document was used as `<input-file-path>` (with no label set), the following "Not set" indicator would be shown on the "Protect" bar:
      ![Visual Studio add class](media/quick-file-set-get-label-cpp/word-sensitivity-label-not-set.png)
 
-After commiting the label to the file saved as `c:\Test\Test_labeled.docx` shows the "General" label has been set on the document:
+After committing a "General" label to the file saved as `<output-file-path>`, the "General" label will show with the pencil icon:
      ![Visual Studio add class](media/quick-file-set-get-label-cpp/word-sensitivity-label-general.png)
 
 
