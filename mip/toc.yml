@@ -1,7 +1,2 @@
-- name: Understand and explore
-- name: Get started
-- name: Plan and design
-- name: Deploy and use the Service
-- name: Deploy and use the client
 - name: Develop and customize apps
   href: develop/
