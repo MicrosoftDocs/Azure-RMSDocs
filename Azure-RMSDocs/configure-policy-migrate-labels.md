@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/26/2018
+ms.date: 09/27/2018
 ms.topic: article
 ms.service: information-protection
 
@@ -106,13 +106,9 @@ For the labels that successfully migrate, they can now be used by [clients that 
 
 The clients that currently support unified labeling include:
 
-- From the Office Insiders program:
+- Apps from the Office Insiders program. For more information, see the "Where the feature is available today?" section from [Apply sensitivity labels to your documents and email within Office](https://aka.ms/officemipdocs).
     
-    - MacOS computers that use Word, PowerPoint, and Excel from Office for Mac 2016
-    
-    - iOS and Android devices that use Word and PowerPoint from Office Mobile.
-
-- Clients from software vendors and developers that use the [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference)
+- Clients from software vendors and developers that use the [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference).
 
 
 ## Next steps
