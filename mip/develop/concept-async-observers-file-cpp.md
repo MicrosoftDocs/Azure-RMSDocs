@@ -22,7 +22,7 @@ The examples below demonstrate the promise/future pattern, which is also used by
 
 ## File Profile Observer Implementation
 
-In the following example, we've created a class, `ProfileObserver` that is derived from `mip::FileProfile::Observer`. The member functions have been overriden to use the future/promise pattern used throughout the samples.
+In the following example, we've created a class, `ProfileObserver` that is derived from `mip::FileProfile::Observer`. The member functions have been overridden to use the future/promise pattern used throughout the samples.
 
 **Note**: The below samples are only partially implemented and do not include overrides for the `mip::FileEngine` related observers.
 
