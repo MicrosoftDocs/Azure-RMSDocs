@@ -42,12 +42,9 @@ sections:
       - title: Use the File API to list sensitivity labels
         values: 
         - href: quick-file-list-labels-cpp
-      - title: Use the File API to apply a label
+      - title: Use the File API to set/get a label on a file
         values: 
-        - href: quick-file-apply-label-cpp
-      - title: Use the File API to read a label
-        values: 
-        - href: quick-file-read-label-cpp
+        - href: quick-file-set-get-label-cpp
 - title: Reference
   items:
   - type: list

@@ -112,9 +112,4 @@ Add logic to set a sensitivity label on a file, using the File engine object.
 
 4. In the body of `main()`, between the `profile->AddEngineAsync(engineSettings, enginePromise);` and `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
 
-## Next Steps
 
-Now that you've learned how to apply a sensitivity label, try the next quickstart:
-
-> [!div class="nextstepaction"]
-> [Read a sensitivity label](quick-file-read-label-cpp.md)
