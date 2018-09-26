@@ -276,13 +276,25 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
        "Client data",								// User-defined engine state		
        "en-US");									// Locale (default = en-US)
 
-     // Set up promise/future connect for async engine operations; add engine to profile asynchronously
+     // Set up promise/future connection for async engine operations; add engine to profile asynchronously
      auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
      auto engineFuture = enginePromise->get_future();
      profile->AddEngineAsync(engineSettings, enginePromise);
+     std::shared_ptr<FileEngine> engine; 
+     try
+     {
+       engine = engineFuture.get();				// triggers AcquireOAuth2Token() call
+     }
+     catch (const std::exception& e)
+     {
+       cout << "An exception occurred... is the access token incorrect/expired?\n\n"
+        << e.what() << "'\n";
+       system("pause");
+       return 1;
+     }
 
-     return 0;
-   }
+      return 0;
+     }
 
    ``` 
 
