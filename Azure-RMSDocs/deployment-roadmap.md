@@ -124,9 +124,11 @@ Optionally, consider configuring the following:
 ### Step 6: Use and monitor your data protection solutions
 You’re now ready to protect your data, and log how your company is using the labels that you've configured and the data protection. For addition information to support this deployment phase, see the following:
 
+- [Reporting for Azure Information Protection](reports-aip.md)
+
 - [Helping users to protect files by using the Azure Rights Management service](./help-users.md)
 
--  [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md)
+- [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md)
 
 - [Client files and usage logging](./rms-client/client-admin-guide-files-and-logging.md)
 
