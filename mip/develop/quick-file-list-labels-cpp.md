@@ -119,4 +119,4 @@ Press any key to continue . . .
 Now that you've learned how to list the sensitivity labels for your organization, try the next quickstart:
 
 > [!div class="nextstepaction"]
-> [Set and get a sensitivity label](quick-file-read-label-cpp.md)
+> [Set and get a sensitivity label](quick-file-set-get-label-cpp.md)
