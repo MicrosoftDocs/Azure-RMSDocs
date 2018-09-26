@@ -2,6 +2,11 @@
 layout: LandingPage
 ms.topic: landing-page
 ms.service: information-protection
+author: cabailey
+manager: mbaldwin
+ms.author: cabailey
+ms.topic: landing-page
+ms.date: 09/26/2018
 ---
 # Azure Information Protection Documentation
 
