@@ -21,7 +21,7 @@ If you haven't already, be sure to complete the following prerequisites before c
 - Optionally: Review [File handlers in the MIP SDK](concept-handler-file-cpp.md) concepts.
 
 > [!IMPORTANT]
-> If too much time passes between the completion of this Quickstart, and the previous "Quickstart: List sensitivity labels", the static token used in the latter will expire. If so, you will need to generate a new token and update your `AcquireOAuth2Token()` implementation again. See [Update the token acquisition logic with a valid access token](quick-file-list-labels-cpp.md#update-the-token-acquisition-logic-with-a-valid-access-token) for more details.
+> If too much time passes between the completion of the previous Quickstart "List sensitivity labels", and this one, the static token created in the former will expire. If so, you will need to generate a new token and update your `AcquireOAuth2Token()` implementation again. See [Update the token acquisition logic with a valid access token](quick-file-list-labels-cpp.md#update-the-token-acquisition-logic-with-a-valid-access-token) for more details.
 
 ## Implement an observer class to monitor the File handler object
 
@@ -219,7 +219,7 @@ After committing a "General" label to the file saved as `<output-file-path>`, th
      ![Visual Studio add class](media/quick-file-set-get-label-cpp/word-sensitivity-label-general.png)
 
 > [!NOTE]
-> If you're not signed in to Office with an account from the tenant where the sensitivity labels are configured, you may be prompted to sign-in before you can open the labelled document. If you are signed in, be sure to use an access token generated for the same Azure AD tenant for which you are signed in to.
+> If you're not signed in to Office with an account from the Azure Active Directory (AD) tenant where the access token was obtained sensitivity labels are configured, you may be prompted to sign-in before you can open the labelled document. If you are signed in, be sure to also generate the access token for the same Azure AD tenant for which you are signed in to.
 
 
 
