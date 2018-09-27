@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/17/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
@@ -109,9 +109,11 @@ Additional information:
 
 ## What’s the difference between labels in Azure Information Protection and labels in Office 365?
 
-Labels in Azure Information Protection let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud. This classification and protection is independent of where the content is stored or how it is moved. [Labels in Office 365 Security & Compliance](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) let you classify documents and emails for auditing and retention when that content is in Office 365 services. 
+Labels in Azure Information Protection let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud. This classification and protection is independent of where the content is stored or how it is moved. Until recently, Office 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that let you classify documents and emails for auditing and retention when that content is in Office 365 services. 
 
-Today, you apply and manage these labels separately but Microsoft is working towards a comprehensive and unified labeling strategy for multiple services that include Azure Information Protection, Office 365, Microsoft Cloud App Security, and Windows Information Protection. You might have heard this strategy referred to as "Microsoft Information Protection" (MIP). This same labeling schema and store will also be available for software vendors. For more information, see the blog post, [Consistent labeling and protection policies coming to Office 365 and Azure Information Protection](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Consistent-labeling-and-protection-policies-coming-to-Office-365/ba-p/161553).
+Microsoft has been working towards a comprehensive and unified labeling strategy for multiple services that include Azure Information Protection, Office 365, Microsoft Cloud App Security, and Windows Information Protection.  You might have heard this strategy referred to as "Microsoft Information Protection". This same labeling schema and store is also be available for software vendors by using the MIP SDK.
+
+Announced at Microsoft Ignite 2018, you will now start to see an option to configure **sensitivity labels** in addition to retention labels in the Office 365 Security & Compliance Center. For more information, read the blog post, [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ## What’s the difference between Windows Server FCI and the Azure Information Protection scanner?
 
