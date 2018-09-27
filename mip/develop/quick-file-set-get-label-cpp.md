@@ -84,9 +84,9 @@ Create a basic implementation for an observer class, by extending the SDK's `mip
 
 4. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
 
-## Add logic to set a sensitivity label
+## Add logic to set and get a sensitivity label
 
-Add logic to set a sensitivity label on a file, using the File engine object. 
+Add logic to set and get a sensitivity label on a file, using the File engine object. 
 
 1. Using **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It defaults to the same name as the project containing it, which you specified during project creation. 
 
@@ -133,7 +133,7 @@ Add logic to set a sensitivity label on a file, using the File engine object.
         return 1;
    }
 
-   // Commit changes, save as a different file
+   // Commit changes, save as a different/output file
    string filePathOut = "<output-file-path>";
    try
    {
