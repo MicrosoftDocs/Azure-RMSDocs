@@ -97,7 +97,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     
     - Scanner reports include "Last modified by" for Office documents.
     
-    - You can now protect all file types without having to specify them individually by using `*` wildcard when you edit the registry as described in the [File API configuration](develop/file-api-configuration.md) guidance.
+    - You can now protect all file types without having to specify them individually by using `*` wildcard when you edit the registry as described in the [File API configuration](../develop/file-api-configuration.md) guidance.
 
 - When you classify and protect by using PowerShell or the scanner, the Office document metadata is not removed or encrypted.
 
