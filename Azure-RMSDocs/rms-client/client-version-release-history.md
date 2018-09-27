@@ -96,6 +96,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - For documents that are protected in SharePoint libraries, if the *DefaultOwner* parameter is not used for the data repository, the SharePoint Editor value is now used as the default value instead of the Author value.
     
     - Scanner reports include "Last modified by" for Office documents.
+    
+    - You can now protect all file types by using the `*` wildcard when you edit the registry as described in the [File API configuration](../develop/file-api-configuration.md) instructions.
 
 - When you classify and protect by using PowerShell or the scanner, the Office document metadata is not removed or encrypted.
 
