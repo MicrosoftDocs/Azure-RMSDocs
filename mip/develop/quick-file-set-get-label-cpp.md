@@ -219,7 +219,7 @@ After committing a "General" label to the file saved as `<output-file-path>`, th
      ![Visual Studio add class](media/quick-file-set-get-label-cpp/word-sensitivity-label-general.png)
 
 > [!NOTE]
-> If you're not signed in to Office with an account from the Azure Active Directory (AD) tenant where the access token was obtained sensitivity labels are configured, you may be prompted to sign-in before you can open the labelled document. If you are signed in, be sure to also generate the access token for the same Azure AD tenant for which you are signed in to.
+> If you're not signed in to Office with an account from the Azure Active Directory (AD) tenant where the access token was obtained (and sensitivity labels are configured), you may be prompted to sign-in before you can open the labelled document. If you are signed in, the access token used to call the MIP APIs must be issued from the same Azure AD tenant for which you are signed in.
 
 
 
