@@ -1,7 +1,6 @@
 ---
 title: Concepts - Classification labels
 description: This article will help you understand how labels are used for data classification.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual

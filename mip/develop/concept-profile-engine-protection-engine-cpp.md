@@ -1,16 +1,14 @@
-# Protection Engine Implementation Details
+---
+title: Concepts - The Protection API engine object
+description: This article will help you understand the concepts around the Protection engine object, which is created during application initialization.
+author: BryanLa
+ms.service: information-protection
+ms.topic: conceptual
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 
-- [Protection Engine Implementation Details](#protection-engine-implementation-details)
-  - [Summary](#summary)
-  - [Implementation: Add a Protection Engine](#implementation-add-a-protection-engine)
-    - [Implementation: Create Protection Engine Settings](#implementation-create-protection-engine-settings)
-    - [Implementation: Add the Protection Engine](#implementation-add-the-protection-engine)
-  - [Implementation: List Templates](#implementation-list-templates)
-    - [Implementation: ListSensitivityTemplates()](#implementation-listsensitivitytemplates)
-    - [Implementation: Print the Template Ids](#implementation-print-the-template-ids)
-  - [Next Steps](#next-steps)
-
-## Summary
+# Protection API engine
 
 ## Implementation: Add a Protection Engine
 

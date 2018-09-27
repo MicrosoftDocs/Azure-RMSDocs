@@ -1,6 +1,14 @@
-# File Profile Implementation Details
+---
+title: Concepts - The File API profile object
+description: This article will help you understand the concepts around the File profile object, which is created during application initialization.
+author: BryanLa
+ms.service: information-protection
+ms.topic: conceptual
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 
-## Summary
+# File API profile
 
 The profile is the root class for all operations in the MIP SDK. Before using any of the File API functionality, a `FileProfile` must be created and all future operations will be performed by the profile or by other objects *added* to the profile.
 
@@ -13,7 +21,7 @@ There are a few code-prerequisites that should be met prior to attempting to ins
 
 ## Load a Profile
 
-With the [ProfileObserver](), [ConsentDelegateImpl](), and [AuthDelegateImpl]() defined, `mip::FileProfile` can now be instantiated. Creating the `mip::FileProfile` object requires [`mip::FileProfile::Settings`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_fileprofile_settings) to store all of the settings information about the `FileProfile`.
+With the [ProfileObserver](), [ConsentDelegateImpl](), and [AuthDelegateImpl]() defined, `mip::FileProfile` can now be instantiated. Creating the `mip::FileProfile` object requires [`mip::FileProfile::Settings`](reference/class_mip_fileprofile_settings.md) to store all of the settings information about the `FileProfile`.
 
 ### FileProfile::Settings Parameters
 
@@ -103,4 +111,4 @@ The end result being that we've successfully loaded the profile and stored in th
 
 Now that the profile has been added, the next step is to add an engine to the profile. 
 
-- [Adding a File Engine]()
+- [File engine concepts](concept-profile-engine-file-engine-cpp.md)

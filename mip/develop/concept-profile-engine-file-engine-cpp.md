@@ -1,22 +1,20 @@
-# File Engine Implementation Details
+---
+title: Concepts - The File API engine object
+description: This article will help you understand the concepts around the File engine object, which is created during application initialization.
+author: BryanLa
+ms.service: information-protection
+ms.topic: conceptual
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 
-- [File Engine Implementation Details](#file-engine-implementation-details)
-  - [Summary](#summary)
-  - [Add a File Engine](#add-a-file-engine)
-    - [Create File Engine Settings](#create-file-engine-settings)
-    - [Add the File Engine](#add-the-file-engine)
-  - [List Sensitivity Labels](#list-sensitivity-labels)
-    - [ListSensitivityLabels()](#listsensitivitylabels)
-    - [Print the Labels and IDs](#print-the-labels-and-ids)
-  - [Next Steps](#next-steps)
-
-## Summary
+# File API engine
 
 The `mip::FileEngine` in the MIP SDK File API provides an interface to all operations that are performed on behalf of a specified identity. One engine will be added for each user that signs in to the application and all operations that engine performs will be performed in the context of that identity.
 
 The `FileEngine` has two primary responsibilities: Listing labels for an authenticated user and creating file handlers to perform file operations on behalf of the user. 
 
-- [`mip::FileEngine`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_fileengine)
+- [`mip::FileEngine`](reference/class_mip_fileengine.md)
   - `ListSensitivityLabels()`: Gets the list of labels for the loaded engine.
   - `CreateFileHandler()`: Creates a `mip::FileHandler` for a specific file or stream.
 
@@ -106,4 +104,4 @@ The collection of `mip::Label` returned by `GetSensitivityLabels()` can be used 
 Now that the profile is loaded, the engine added, and we have labels, we can add a handler to begin to read, write, or remove labels from files.
 
 - [Creating a File Handler]()
-- [Link to sample app]()
+

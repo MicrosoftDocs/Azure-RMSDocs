@@ -1,8 +1,14 @@
-# Protection Profile Implementation Details
+---
+title: Concepts - The Protection API profile object
+description: This article will help you understand the concepts around the Protection profile object, which is created during application initialization.
+author: BryanLa
+ms.service: information-protection
+ms.topic: conceptual
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 
-## Summary
-
-TODO : List prerequisites.
+# Protection API profile
 
 The two examples below show how to create the profileSettings object using local storage for state storage as well as in-memory only. Both assume that the `authDelegateImpl` object has already been created.
 
@@ -91,4 +97,4 @@ The end result being that we've successfully loaded the profile and stored in th
 
 Now that the profile has been added, the next step is to add an engine to the profile.
 
-[Engines in MIP SDK]()
+[Protection engine concepts](concept-profile-engine-protection-engine-cpp.md)

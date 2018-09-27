@@ -1,7 +1,6 @@
 ---
 title: Concepts - APIs in the MIP SDK.
 description: This article will help you understand 3 types of APIs in the MIP SDK, how they're related, and use-cases for using each.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
@@ -19,11 +18,11 @@ The MIP SDK is composed of three APIs:
 
 ## Protection API
 
-The Protection API, or RMS API as implemented in code, provides the ability for software developers to convert plaintext streams in to rights-managed streams and vice-versa.
+The Protection API provides the ability for software developers to convert plaintext streams in to rights-managed streams and vice-versa.
 
 ### Protection API Use Cases
 
-- Your organization develops 3d printing software using a propriety file format. You want to use AIP to protect the file, so it can be printed only by specific users. Using the Protection API, you can apply protection to the file so that only authorized consumers would be able to open, and/or print. 
+- Your organization develops 3d printing software using a propriety file format. You want to use MIP to protect the file, so it can be printed only by specific users. Using the Protection API, you can apply protection to the file so that only authorized consumers would be able to open, and/or print. 
 
 - Your organization develops an eDiscovery solution that processes Exchange mailboxes and PST files. Your application must be able to user to decrypt messages to fully perform eDiscovery. Using a custom message/RPMSG parser and a sufficiently privileged account, you could leverage the RMS API to decrypt the encrypted file, scan the contents, and discard if out of scope or package if in scope.
 

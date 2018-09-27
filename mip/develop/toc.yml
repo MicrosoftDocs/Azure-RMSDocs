@@ -14,17 +14,28 @@
     items:
     - name: List sensitivity labels (C++)
       href: quick-file-list-labels-cpp.md
-    - name: Apply a label (C++)
-      href: quick-file-apply-label-cpp.md
-    - name: Read a label (C++)
-      href: quick-file-read-label-cpp.md
+    - name: Set/get sensitivity labels (C++)
+      href: quick-file-set-get-label-cpp.md      
 - name: Concepts
   items:
   - name: The APIs
     href: concept-apis-use-cases.md
-  - name: The profile and engine 
+  - name: The profile and engine (C++)
     href: concept-profile-engine-cpp.md  
-  - name: Authentication
+    items: 
+      - name: File API profile (C++)
+        href: concept-profile-engine-file-profile-cpp.md
+      - name: File API engine (C++)
+        href: concept-profile-engine-file-engine-cpp.md
+      - name: Policy API profile (C++)
+        href: concept-profile-engine-policy-profile-cpp.md
+      - name: Policy API engine (C++)
+        href: concept-profile-engine-policy-engine-cpp.md
+      - name: Protection API profile (C++)
+        href: concept-profile-engine-protection-profile-cpp.md
+      - name: Protection API engine (C++)
+        href: concept-profile-engine-protection-engine-cpp.md            
+  - name: Authentication (C++)
     href: concept-authentication-cpp.md
     items:
     - name: Implementing an authentication delegate (C++)
@@ -33,10 +44,13 @@
       href: concept-authentication-acquire-token-ps.md
     - name: Acquiring an access token (Python)
       href: concept-authentication-acquire-token-py.md      
-  - name: Handler 
+  - name: Handlers
+    items:
+    - name: File API handler (C++)
+      href: concept-handler-file-cpp.md
   - name: Labels 
     href: concept-classification-labels.md
-  - name: Observers for async
+  - name: Observers for async (C++)
     href: concept-async-observers.md
     items:
     - name: File API observers (C++)
@@ -45,9 +59,6 @@
       href: concept-async-observers-policy-cpp.md
     - name: Protection API observers (C++)
       href: concept-async-observers-protection-cpp.md
-- name: How-to guides
-  items: 
-  - name: TBD
 - name: Reference
   items:
   - name: C++ library
@@ -195,7 +206,6 @@
     href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
   - name: SDK (public preview)
     href: http://aka.ms/mipsdk
-  - name: Supported platforms (TBD)
   - name: Samples
     href: https://github.com/Azure-Samples?utf8=✓&q=MipSdk
    

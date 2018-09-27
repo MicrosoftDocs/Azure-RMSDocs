@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 09/19/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
@@ -84,6 +84,8 @@ The following devices support the Azure Information Protection client, which let
 
 - Windows Server 2008 R2 
 
+In addition to installing the Azure Information Protection client on physical computers, you can also install it on virtual machines. Check whether the software vendor for the virtual desktop solution has additional configuration that might be required to run the Azure Information Protection client. For example, for Citrix solutions, you might need to [disable Citrix Application Programming Interface (API) hooks](https://support.citrix.com/article/CTX107825) for Office (winword.exe, excel.exe, outlook.exe, powerpoint.exe) and the Azure Information Protection client (msip.app.exe, msip.viewer.exe).
+
 For the listed server versions, the Azure Information Protection client is supported for Remote Desktop Services. If you delete user profiles when you use the Azure Information Protection client with Remote Desktop Services, do not delete the **%Appdata%\Microsoft\Protect** folder.
 
 When the Azure Information Protection client protects the data by using the Azure Rights Management service, the data can be consumed by the [same devices](requirements-client-devices.md) that support the Azure Rights Management service.
@@ -94,9 +96,9 @@ The Azure Information Protection client has [additional prerequisites](./rms-cli
 
 The Azure Information Protection client can label and protect documents and emails by using the Office applications **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
 
+- Office 365 with Office 2016 apps (minimum version 1805, build 9330.2078) when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
+
 - Office 365 ProPlus with 2016 apps or 2013 apps (Click-to-Run or Windows Installer-based installation)
-    
-    These editions of Office are included with most but not all Office 365 subscriptions that include protecting data from Azure Information Protection. Check your subscription information to see if Office 365 ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professional Plus 2016
 

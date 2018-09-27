@@ -2,7 +2,7 @@
 title: Azure Information Protection Developer's Guide
 description: Developers can use Azure Information Protection to protect and manage files of all types
 author: lleonard-msft
-ms.author: alleonar
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: conceptual

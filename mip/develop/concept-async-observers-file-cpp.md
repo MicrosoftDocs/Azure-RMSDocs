@@ -1,7 +1,6 @@
 ---
 title: Concepts - File API observers in the MIP SDK.
 description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how File API observers are implemented and used for asynchronicity.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
@@ -22,7 +21,7 @@ The examples below demonstrate the promise/future pattern, which is also used by
 
 ## File Profile Observer Implementation
 
-In the following example, we've created a class, `ProfileObserver` that is derived from `mip::FileProfile::Observer`. The member functions have been overriden to use the future/promise pattern used throughout the samples.
+In the following example, we've created a class, `ProfileObserver` that is derived from `mip::FileProfile::Observer`. The member functions have been overridden to use the future/promise pattern used throughout the samples.
 
 **Note**: The below samples are only partially implemented and do not include overrides for the `mip::FileEngine` related observers.
 
@@ -42,11 +41,11 @@ ProfileObserver() { }
 
 ### profile_observer.cpp
 
-In the implementation itself, we simply define an action to take for each observer member function.
+In the implementation itself, we define an action to take for each observer member function.
 
 Each member accepts two parameters. The first is a shared pointer to the class we're handling in the function. `ProfileObserver::OnLoadSuccess` would expect to receive a `mip::FileProfile`. `ProfileObserver::OnAddEngineSuccess` would expect `mip::FileEngine`.
 
-The second is a shared pointer to the *context*. In our implementation the context is a reference to a `std::promise`, passed by reference as `std::shared_ptr<void>`. The first line of the function casts this to `std::promise`, then stored in an object called `promise`.
+The second is a shared pointer to the *context*. In our implementation, the context is a reference to a `std::promise`, passed by reference as `std::shared_ptr<void>`. The first line of the function casts this to `std::promise`, then stored in an object called `promise`.
 
 Finally, the future is made ready by setting the `promise->set_value()` and passing in the `mip::FileProfile` object.
 
@@ -76,7 +75,7 @@ When we instantiate any SDK class or use a function that performs asynchronous o
 
 ## FileHandler Observer Implementation
 
-Similar to the profile observer, the `mip::FileHandler` implements a `mip::FileHandler::Observers` class for handling asynchronous event notifications during file operations. The implementation is similar to that detailed above. `FileHandlerObserver` is partially defined below. The full implementation can be found in our [GitHub sample repo](). TODO: LINK
+Similar to the profile observer, the `mip::FileHandler` implements a `mip::FileHandler::Observers` class for handling asynchronous event notifications during file operations. The implementation is similar to that detailed above. `FileHandlerObserver` is partially defined below. 
 
 ### file_handler_observer.h
 
@@ -117,6 +116,3 @@ void FileHandlerObserver::OnCreateFileHandlerFailure(const std::exception_ptr& e
 //TODO: override remaining member functions inherited from mip::FileHandler::Observer
 ```
 
-## Next Steps
-
-[TBD - Link to create a `mip::FileProfile`, load a `mip::FileEngine`, and perform file operations with `mip::FileHandler`.]()

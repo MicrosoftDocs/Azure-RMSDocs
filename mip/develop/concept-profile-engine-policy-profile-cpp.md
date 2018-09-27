@@ -1,6 +1,14 @@
-# Profile Implementation Details
+---
+title: Concepts - The Policy API profile object
+description: This article will help you understand the concepts around the Policy profile object, which is created during application initialization.
+author: BryanLa
+ms.service: information-protection
+ms.topic: conceptual
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 
-## Summary
+# Policy API profile
 
 The `mip::Profile` must be loaded before any Policy API operations can be performed.
 
@@ -84,4 +92,4 @@ The end result being that we've successfully loaded the profile and stored in th
 
 Now that the profile has been added, the next step is to add an engine to the profile.
 
-[Engines in MIP SDK]()
+[Policy engine concepts](concept-profile-engine-policy-engine-cpp.md)

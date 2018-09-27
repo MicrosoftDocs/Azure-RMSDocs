@@ -1,16 +1,14 @@
-# Policy Engine Implementation Details
+---
+title: Concepts - The Policy API engine object
+description: This article will help you understand the concepts around the Policy engine object, which is created during application initialization.
+author: BryanLa
+ms.service: information-protection
+ms.topic: conceptual
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 
-- [Policy Engine Implementation Details](#policy-engine-implementation-details)
-  - [Summary](#summary)
-  - [Implementation: Add a Policy Engine](#implementation-add-a-policy-engine)
-    - [Implementation: Create Policy Engine Settings](#implementation-create-policy-engine-settings)
-    - [Implementation: Add the Policy Engine](#implementation-add-the-policy-engine)
-  - [Implementation: List Sensitivity Labels](#implementation-list-sensitivity-labels)
-    - [Implementation: ListSensitivityLabels()](#implementation-listsensitivitylabels)
-    - [Implementation: Print the Labels](#implementation-print-the-labels)
-  - [Next Steps](#next-steps)
-
-## Summary
+# Policy API engine
 
 `mip::PolicyEngine` implements all operations that the Policy API can perform, with the exception of loading the profile. 
 
@@ -98,4 +96,3 @@ for (const auto& label : labels) {
 
 The collection of `mip::Label` returned by `GetSensitivityLabels()` can be used to display all labels available to the user and then, when selected, use the ID to apply labels to a file.
 
-## Next Steps

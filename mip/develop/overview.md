@@ -1,7 +1,6 @@
 ---
 title: Overview - Microsoft Information Projection SDK.
 description: Microsoft Information Protection (MIP) is the unification of Microsoft's classification, labeling, and protection services, into a single  administration experience and software development kit (SDK).
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: overview
@@ -20,7 +19,7 @@ Microsoft Information Protection (MIP) is the unification of Microsoft's classif
 
 ## Microsoft Information Protection SDK
 
-The MIP SDK exposes the classification, labeling, and protection (CLP) services from Office 365 Security and Compliance Center, to third-party applications and services. Developers can use the SDK to build native support for applying labels and protection to files. Developers can reason over which actions should be taken when specific labels are detected, and reason over AIP-encrypted information.
+The MIP SDK exposes the labeling and protection services from Office 365 Security and Compliance Center to third-party applications and services. Developers can use the SDK to build native support for applying labels and protection to files. Developers can reason over which actions should be taken when specific labels are detected, and reason over MIP-encrypted information. 
 
 The labels and protection applied to information across the suite of Microsoft services are **consistent**. Consistency allows applications and services that support MIP to read and write the labels in a common, predictable manner.
 
