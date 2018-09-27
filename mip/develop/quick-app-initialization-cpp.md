@@ -54,9 +54,9 @@ First we create and configure the initial Visual Studio solution and project, up
 
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
 
-## Implement an observer class
+## Implement an observer class to monitor the File profile and engine objects
 
-Now create a basic implementation for an observer class, by extending the SDK's `mip::FileProfile::Observer` class. The observer is instantiated and used later, by the File profile and File engine objects.
+Now create a basic implementation for an observer class, by extending the SDK's `mip::FileProfile::Observer` class. The observer is instantiated and used later, to monitor the loading of the File profile object, and adding the engine object to the profile.
 
 1. Add a new class to your project, which generates both the header/.h and implementation/.cpp files for you:
 
@@ -276,13 +276,25 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
        "Client data",								// User-defined engine state		
        "en-US");									// Locale (default = en-US)
 
-     // Set up promise/future connect for async engine operations; add engine to profile asynchronously
+     // Set up promise/future connection for async engine operations; add engine to profile asynchronously
      auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
      auto engineFuture = enginePromise->get_future();
      profile->AddEngineAsync(engineSettings, enginePromise);
+     std::shared_ptr<FileEngine> engine; 
+     try
+     {
+       engine = engineFuture.get();				// triggers AcquireOAuth2Token() call
+     }
+     catch (const std::exception& e)
+     {
+       cout << "An exception occurred... is the access token incorrect/expired?\n\n"
+        << e.what() << "'\n";
+       system("pause");
+       return 1;
+     }
 
-     return 0;
-   }
+      return 0;
+     }
 
    ``` 
 

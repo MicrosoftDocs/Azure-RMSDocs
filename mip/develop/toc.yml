@@ -14,6 +14,8 @@
     items:
     - name: List sensitivity labels (C++)
       href: quick-file-list-labels-cpp.md
+    - name: Set/get sensitivity labels (C++)
+      href: quick-file-set-get-label-cpp.md      
 - name: Concepts
   items:
   - name: The APIs

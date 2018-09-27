@@ -33,31 +33,21 @@ Add logic to list your organization's sensitivity labels, using the File engine 
    using std::endl;
    ```
 
-4. In the body of `main()`, between the `profile->AddEngineAsync(engineSettings, enginePromise);` and `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
+4. In the body of `main()`, below the closing brace `}` of the `catch` block, and above the `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
-   // Get engine object and list sensitivity labels
-	 try
-	 {
-      // Get File engine asynchronously; also triggers AcquireOAuth2Token() call 
-      auto engine = engineFuture.get();  
-		
-      // List sensitivity labels
-      auto labels = engine->ListSensitivityLabels(); 
-      for (const auto& label : labels)
-      {
-        cout << label->GetName() << " : " << label->GetId() << endl;
+   // List sensitivity labels
+   auto labels = engine->ListSensitivityLabels();
+   for (const auto& label : labels)
+   {
+      cout << label->GetName() << " : " << label->GetId() << endl;
 
-        for (const auto& child : label->GetChildren())
-        {
-          cout << "->  " << child->GetName() << " : " << child->GetId() << endl;
-        }
+      for (const auto& child : label->GetChildren())
+      {
+        cout << "->  " << child->GetName() << " : " << child->GetId() << endl;
       }
    }
-   catch (const std::exception& e)
-   {
-      cout << "An exception occurred... is the access token incorrect/expired?\n\n" << e.what() << "'\n";
-   }
+   system("pause");
    ``` 
 
 ## Update the token acquisition logic with a valid access token
@@ -92,7 +82,7 @@ Add logic to list your organization's sensitivity labels, using the File engine 
 
 ## Build and test the application
 
-Finally, build and test your client application. If your project builds and runs successfully, you should see output similar to the following example in the console window: 
+Finally, build and test your client application. If your project builds and runs successfully, you should see output in the console window, similar to the following example:
 
 ```cmd
 Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
@@ -103,6 +93,9 @@ Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
 
 Press any key to continue . . .
 ```
+
+> [!NOTE]
+> Copy and save the ID of one or more of the sensitivity labels (for example, `f42a3342-8706-4288-bd31-ebb85995028z`), as you will use it in the next Quickstart.
 
 ## Troubleshooting
 
@@ -121,4 +114,9 @@ Press any key to continue . . .
 | Bad access token | *An exception occurred... is the access token incorrect/expired?<br><br>Failed API call: profile_add_engine_async Failed with: [class mip::PolicySyncException] Failed acquiring policy, Request failed with http status code: 401, x-ms-diagnostics: [2000001;reason="OAuth token submitted with the request can not be parsed.";error_category="invalid_token"], correlationId:[35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (process 29924) exited with code 0.<br><br>Press any key to close this window . . .* | If your project builds successfully, but you see output similar to the left, you likely have an invalid or expired token in your `AcquireOAuth2Token()` method. Go back to [Update the token acquisition logic](#update-the-token-acquisition-logic) and regenerate the access token, update `AcquireOAuth2Token()` again, and rebuild/retest. You can also examine and verify the token and its claims, using the [jwt.ms](https://jwt.ms/) single-page web application. |
 | Sensitivity labels aren't configured | n/a | If your project builds successfully, but you have no output in the console window, be sure your organization's sensitivity labels are configured correctly. See [MIP SDK setup and configuration](setup-configure-mip.md), under "Define label taxonomy and protection settings" for details.  |
 
+## Next Steps
 
+Now that you've learned how to list the sensitivity labels for your organization, try the next quickstart:
+
+> [!div class="nextstepaction"]
+> [Set and get a sensitivity label](quick-file-set-get-label-cpp.md)
