@@ -253,9 +253,11 @@ To configure this advanced setting, enter the following string:
 
 - Value: **True**
 
-As a result of this configuration option, when the Azure Information Protection client protects a PDF file, this action creates a protected PDF document that can be opened with the latest version of the Azure Information Protection client for Windows, and other PDF readers that support the ISO standard for PDF encryption. The Azure Information Protection app for iOS and Android does not currently support the ISO standard for PDF encryption.
+As a result of this configuration option, when the Azure Information Protection client protects a PDF file, this action creates a protected PDF document that can be opened with the latest version of the Azure Information Protection client for Windows, and other PDF readers that support the ISO standard for PDF encryption. The Azure Information Protection app for iOS and Android does not currently support the ISO standard for PDF encryption. For the latest information on the Adobe Acrobat Reader, see [Starting October, use Adobe Acrobat Reader for PDFs protected by Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738).
 
 For the Azure Information Protection scanner to use the new setting, the scanner service must be restarted.
+
+For more information about this PDF encryption, see the blog post [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/2627570).
 
 ### To convert existing .ppdf files to protected .pdf files
 

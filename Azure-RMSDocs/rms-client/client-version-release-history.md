@@ -54,9 +54,10 @@ If you have a version of the client that is later than 1.37.19.0, it is a previe
 
 **Released**: 09/20/2018
 
-New features:
+**New features:**
 
-- The **Help and Feedback** dialog box has a **Report an issue** link specifically for preview versions of the client. This link does not display in general availability versions. By default, this option sends an email to Microsoft but you can change this email address to an HTTP string that you specify. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk. To modify this address, use an [advanced client setting](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
+- Support for [central reporting](../reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
+
 
 ## Version 1.37.19.0
 
@@ -120,7 +121,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - The policy version is changed to 1.4. Identifying the version number is required for [configuring disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
 
-- The **Send Us Feedback** link in the **Help and Feedback** dialog box is removed. It was temporarily replaced with **Report an Issue**, but this link now displays in preview versions only.
+- The **Send Us Feedback** link in the **Help and Feedback** dialog box is removed. It was temporarily replaced with **Report an Issue**, but this link now displays in preview versions only. By default, this option sends an email to Microsoft but you can change this email address to an HTTP string that you specify. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk. To modify this address, use an [advanced client setting](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
 
 ## Version 1.29.5.0 
 
