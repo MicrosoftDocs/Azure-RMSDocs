@@ -101,7 +101,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
 3. In the body of `main()`, below the `system("pause");`, and above the `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
-   // Set up promise/future connection for async File handler operations; create File handler asynchronously (input file)
+   // Set up async FileHandler for input file operations
    string filePathIn = "<input-file-path>";
    std::shared_ptr<FileHandler> handler;
    try
@@ -137,10 +137,17 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    string filePathOut = "<output-file-path>";
    try
    {
+   		cout << "Committing changes" << endl;
         auto commitPromise = std::make_shared<std::promise<bool>>();
         auto commitFuture = commitPromise->get_future();
         handler->CommitAsync(filePathOut, commitPromise);
-        cout << "Label committed to file: " << filePathOut << endl;
+		if (commitFuture.get()) {
+			cout << "Label committed to file: " << filePathOut << endl;
+		}
+		else {
+			cout << "Failed to label: " + filePathOut << endl;
+			return 1;
+		}
    }
    catch (const std::exception& e)
    {
@@ -150,7 +157,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    }
    system("pause");
 
-   // Set up promise/future connection for async File handler operations; create File handler asynchronously (output file)
+   // Set up async FileHandler for output file operations
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
@@ -203,6 +210,7 @@ Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
 Press any key to continue . . .
 
 Applying Label ID f42a3342-8706-4288-bd31-ebb85995028z to c:\Test\Test.docx
+Committing changes
 Label committed to file: c:\Test\Test_labeled.docx
 Press any key to continue . . .
 

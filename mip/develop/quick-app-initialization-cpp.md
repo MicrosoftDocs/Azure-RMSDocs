@@ -250,11 +250,11 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
    int main()
    {
      // Construct/initialize objects used by the application's profile object
-     ApplicationInfo appInfo{"0edbblll-8773-44de-b87c-b8c6276d41eb",	// ApplicationInfo object (App ID, friendly name)
-                 "AppInitialization Quickstart" };
+     ApplicationInfo appInfo{"<application-id>",	// ApplicationInfo object (App ID, friendly name)
+                 "<friendly-name>" };
      auto profileObserver = make_shared<ProfileObserver>();			// Observer object					
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(			// Authentication delegate object (App ID)
-                 "0edbblll-8773-44de-b87c-b8c6276d41eb");
+                 "<application-id>");
      auto consentDelegateImpl = make_shared<ConsentDelegateImpl>();	// Consent delegate object
  
      // Construct/initialize profile object
@@ -272,8 +272,8 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
      auto profile = profileFuture.get();
 
      // Construct/initialize engine object
-     FileEngine::Settings engineSettings("1",		// User-defined engine ID
-       "Client data",								// User-defined engine state		
+     FileEngine::Settings engineSettings("<engine-id>",		// User-defined engine ID
+       "<engine-state>",								// User-defined engine state		
        "en-US");									// Locale (default = en-US)
 
      // Set up promise/future connection for async engine operations; add engine to profile asynchronously
@@ -298,7 +298,17 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
 
    ``` 
 
-3. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart.
+3. Replace the placeholder values in the source code that you just pasted in, using the following values:
+
+   | Placeholder | Value |
+   |:----------- |:----- |
+   | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration".  |
+   | \<friendly-name\> | A user-defined friendly name for your application. |
+   | \<engine-id\> | A user-defined ID assigned to the engine. |
+   | \<engine-state\> | User-defined state to be associated with the engine. |
+
+
+4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart.
 
 ## Next Steps
 
