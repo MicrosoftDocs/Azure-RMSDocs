@@ -2,7 +2,7 @@
 
 | Functions (scope)              | Descriptions                                |
 |--------------------------------|---------------------------------------------|
-**common**
+**common** |
 public const std::string& GetCustomSettingPolicyDataName()       |  Name of the setting to explicitly specify policy data.
 public const std::string& GetCustomSettingExportPolicyFileName()       |  Name of the setting to explicitly specify file path to export SCC policy data to.
 public const std::string& GetCustomSettingPolicyDataFile()       |  Name of the setting to explicitly specify policy data file path.
