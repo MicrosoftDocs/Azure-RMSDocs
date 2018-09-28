@@ -1,3 +1,12 @@
+---
+title: class mip AddContentHeaderAction 
+description: Reference for class mip AddContentHeaderAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::AddContentHeaderAction 
 An action class that specifies adding content header.
   
@@ -43,7 +52,7 @@ Get the font size used to display the content header.
 Get the font color used to display the content header.
 
   
-**Returns**: Font color as a string (e.g."#000000").
+**Returns**: Font color as a string (for example, #000000").
   
 ### GetAlignment
 Get the alignment of the header.
@@ -57,7 +66,7 @@ Get the alignment of the header.
 Get the margin of the header from the bottom.
 
   
-**Returns**: An integer representing the margins from the bottom of the document (e.g. 10 mm).
+**Returns**: The margins from the bottom of the document (for example, 10 mm).
   
 ### ActionType
 Get the type of [Action](class_mip_action.md).

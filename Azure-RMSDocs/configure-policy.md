@@ -180,3 +180,5 @@ Use the following information to help you configure the Azure Information Protec
 
 For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
+To see how your policy is performing, see [Reporting for Azure Information Protection](reports-aip.md).
+
