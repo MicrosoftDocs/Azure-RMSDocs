@@ -220,14 +220,10 @@ Id: f42a3342-8706-4288-bd31-ebb85995028z
 Press any key to continue . . .
 ```
 
-Assuming a new Microsoft Word document was used as `<input-file-path>` (with no label set), the following "Not set" indicator would be shown on the "Protect" bar:  
-     ![Visual Studio add class](media/quick-file-set-get-label-cpp/word-sensitivity-label-not-set.png)
-
-After committing a "General" label to the file saved as `<output-file-path>`, the "General" label will show with the pencil icon:  
-     ![Visual Studio add class](media/quick-file-set-get-label-cpp/word-sensitivity-label-general.png)
+You can verify the application of the label, by opening the document and visually inspecting the document's information protection settings.
 
 > [!NOTE]
-> If you're not signed in to Office with an account from the Azure Active Directory (AD) tenant where the access token was obtained (and sensitivity labels are configured), you may be prompted to sign-in before you can open the labelled document. If you are signed in, the access token used to call the MIP APIs must be issued from the same Azure AD tenant for which you are signed in.
+> If you're labeling an Office document, but not signed in using an account from the Azure Active Directory (AD) tenant where the access token was obtained (and sensitivity labels are configured), you may be prompted to sign-in before you can open the labelled document. 
 
 
 
