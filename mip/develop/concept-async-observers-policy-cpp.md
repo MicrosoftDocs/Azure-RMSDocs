@@ -8,7 +8,7 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# Policy API Observers
+# Microsoft Information Protection SDK - Policy API Observers
 
 The Policy API SDK contains one observer class. Observer members are virtual and should be overridden to handle callbacks for asynchronous operations.
 
