@@ -15,7 +15,7 @@ Microsoft Information Protection (MIP) is the unification of Microsoft's classif
 
 * [What is Office 365 Security and Compliance Center?](https://support.office.com/article/overview-of-security-and-compliance-in-office-365-dcb83b2c-ac66-4ced-925d-50eb9698a0b2?redirectSourcePath=%252farticle%252f7fe448f7-49bd-4d3e-919d-0a6d1cf675bb&ui=en-US&rs=en-US&ad=US)
 * [What is Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
-* [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection.md#how-data-is-protected)
+* [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
 ## Microsoft Information Protection SDK
 
