@@ -37,11 +37,6 @@ The object derived from `mip::Consent` is passed in to the `mip::FileProfile::Se
 
 When a user performs an operation that would require providing consent, the SDK calls the `GetUserConsent` method, passing in the destination URL as the parameter. It's in this method where one would implement displaying the necessary information to the user, allowing them to make a decision on whether or not they consent to using the service. 
 
-Operations that will trigger the consent flow are:
-
-- One
-- Two
-
 ### Consent Options
 
 - **AcceptAlways**: Consent and remember the decision.
