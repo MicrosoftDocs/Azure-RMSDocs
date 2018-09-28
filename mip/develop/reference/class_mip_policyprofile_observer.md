@@ -1,22 +1,22 @@
-# class mip::Profile::Observer 
-[Observer](class_mip_profile_observer.md) interface for clients to get notifications for profile related events.
-If an *Error event occurs, error object holds inside [mip::Error](class_mip_error.md) class. 
+# class mip::PolicyProfile::Observer 
+[Observer](class_mip_policyprofile_observer.md) interface for clients to get notifications for profile related events.
+All errors inherit from [mip::Error](class_mip_error.md). 
 Client should not call the engine back on the thread that calls the observer.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnLoadSuccess(const std::shared_ptr<Profile>& profile, const std::shared_ptr<void>& context)  |  Called when profile was loaded successfully.
+public virtual void OnLoadSuccess(const std::shared_ptr<PolicyProfile>& profile, const std::shared_ptr<void>& context)  |  Called when profile was loaded successfully.
 public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when loading a profile caused an error.
 public virtual void OnListEnginesSuccess(const std::vector<std::string>& engineIds, const std::shared_ptr<void>& context)  |  Called when list of engines was generated successfully.
-public virtual void OnListEnginesError(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when listing engines caused an error.
+public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when listing engines caused an error.
 public virtual void OnUnloadEngineSuccess(const std::shared_ptr<void>& context)  |  Called when an engine was unloaded successfully.
-public virtual void OnUnloadEngineError(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when unloading an engine caused an error.
+public virtual void OnUnloadEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when unloading an engine caused an error.
 public virtual void OnAddEngineSuccess(const std::shared_ptr<PolicyEngine>& engine, const std::shared_ptr<void>& context)  |  Called when a new engine was added successfully.
-public virtual void OnAddEngineError(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when adding a new engine caused an error.
+public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when adding a new engine caused an error.
 public virtual void OnDeleteEngineSuccess(const std::shared_ptr<void>& context)  |  Called when an engine was deleted successfully.
-public virtual void OnDeleteEngineError(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when deleting an engine caused an error.
- public virtual void OnPolicyChanged(const std::string& engineId)  |  Called when the policy has changed for the engine with the given id.
+public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when deleting an engine caused an error.
+ public virtual void OnPolicyChanged(const std::string& engineId)  |  Called when the policy has changed for the engine with the given ID.
   
 ## Members
   
@@ -35,7 +35,7 @@ Parameters:
 Called when loading a profile caused an error.
 
 Parameters:  
-* **error**: the error that cause the load operation to fail. 
+* **error**: the error that caused the load operation to fail. 
 
 
 * **context**: the context passed to the operation.
@@ -46,18 +46,18 @@ Parameters:
 Called when list of engines was generated successfully.
 
 Parameters:  
-* **engineIds**: a list of engine ids the are available. 
+* **engineIds**: a list of engine IDs the are available. 
 
 
 * **context**: the context passed to the operation.
 
 
   
-### OnListEnginesError
+### OnListEnginesFailure
 Called when listing engines caused an error.
 
 Parameters:  
-* **error**: the error that cause the list engine operation to fail. 
+* **error**: the error that caused the list engine operation to fail. 
 
 
 * **context**: the context passed to the operation.
@@ -72,11 +72,11 @@ Parameters:
 
 
   
-### OnUnloadEngineError
+### OnUnloadEngineFailure
 Called when unloading an engine caused an error.
 
 Parameters:  
-* **error**: the error that cause the unload engine operation to fail. 
+* **error**: the error that caused the unload engine operation to fail. 
 
 
 * **context**: the context passed to the operation.
@@ -86,11 +86,11 @@ Parameters:
 ### OnAddEngineSuccess
 Called when a new engine was added successfully.
   
-### OnAddEngineError
+### OnAddEngineFailure
 Called when adding a new engine caused an error.
 
 Parameters:  
-* **error**: the error that cause the add engine operation to fail. 
+* **error**: the error that caused the add engine operation to fail. 
 
 
 * **context**: the context passed to the operation.
@@ -105,11 +105,11 @@ Parameters:
 
 
   
-### OnDeleteEngineError
+### OnDeleteEngineFailure
 Called when deleting an engine caused an error.
 
 Parameters:  
-* **error**: the error that cause the delete engine operation to fail. 
+* **error**: the error that caused the delete engine operation to fail. 
 
 
 * **context**: the context passed to the operation.
@@ -117,10 +117,10 @@ Parameters:
 
   
 ### OnPolicyChanged
-Called when the policy has changed for the engine with the given id.
+Called when the policy has changed for the engine with the given ID.
 
 Parameters:  
 * **engineId**: the engine 
 
 
-To load the new policy it is necessary to call AddEngineAsync again with the engine Id given.
+To load the new policy it is necessary to call AddEngineAsync again with the engine ID given.

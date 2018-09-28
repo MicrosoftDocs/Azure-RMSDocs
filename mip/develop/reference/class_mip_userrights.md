@@ -1,5 +1,5 @@
 # class mip::UserRights 
-Represents a group of users and the rights associated with them.
+A group of users and the rights associated with them.
   
 ## Summary
  Members                        | Descriptions                                

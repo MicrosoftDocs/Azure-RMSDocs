@@ -4,16 +4,16 @@ Recommend label actions is meant to suggest a label to the users. Suppressing th
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetLabelId() const  |  Get the label Id suggested.
+ public const std::string& GetLabelId() const  |  Get the label ID suggested.
  public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   
 ### GetLabelId
-Get the label Id suggested.
+Get the label ID suggested.
 
   
-**Returns**: The label Id.
+**Returns**: The label ID.
   
 ### ActionType
 Get the type of [Action](class_mip_action.md).

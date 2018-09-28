@@ -1,5 +1,5 @@
 # class mip::ProtectDoNotForwardAction 
-An action class which specifies adding do not forward protection to the document.
+An action class that specifies adding do not forward protection to the document.
   
 ## Summary
  Members                        | Descriptions                                

@@ -1,5 +1,5 @@
-# class mip::ConsentDeniedError 
-An operation that required consent from user was not granted consent.
+# class mip::PolicySyncError 
+An attempt to sync policy data failed.
   
 ## Summary
  Members                        | Descriptions                                

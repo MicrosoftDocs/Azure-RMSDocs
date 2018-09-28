@@ -1,5 +1,5 @@
 # class mip::ProtectAdhocAction 
-An action class which specifies adding adhoc protection to the document.
+An action class that specifies adding adhoc protection to the document.
   
 ## Summary
  Members                        | Descriptions                                

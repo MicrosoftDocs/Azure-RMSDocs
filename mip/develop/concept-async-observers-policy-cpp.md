@@ -12,7 +12,7 @@ ms.author: bryanla
 
 The Policy API SDK contains one observer class. Observer members are virtual and should be overridden to handle callbacks for asynchronous operations.
 
-- [`mip::Profile::Observer`](reference/class_mip_Profile_observer.md)
+- [`mip::PolicyProfile::Observer`](reference/class_mip_policyprofile_observer.md)
 
 When an asynchronous operation completes, the `OnXxx()` member function corresponding to the result is called. Examples are `OnLoadSuccess()`, `OnLoadFailure()`, and `OnAddEngineSuccess()` for `mip::Profile::Observer`.
 

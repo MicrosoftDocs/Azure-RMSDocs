@@ -1,5 +1,5 @@
 # class mip::RemoveProtectionAction 
-An action class which specifies removing protection from the document.
+An action class that specifies removing protection from the document.
   
 ## Summary
  Members                        | Descriptions                                

@@ -4,7 +4,7 @@
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public virtual std::shared_ptr<Error> Clone() const  |  Clone the error.
- public char const* what() const  |  Get a cstring error message.
+ public char const* what() const  |  Get the error message.
  public virtual ErrorType GetErrorType() const  |  Get the error type.
  public virtual const std::string& GetErrorName() const  |  Get the error name.
  public virtual const std::string& GetMessage() const  |  Get the error message.
@@ -19,10 +19,10 @@ Clone the error.
 **Returns**: A clone of the error.
   
 ### what
-Get a cstring error message.
+Get the error message.
 
   
-**Returns**: A cstring err message
+**Returns**: The error message
   
 ### ErrorType
 Get the error type.

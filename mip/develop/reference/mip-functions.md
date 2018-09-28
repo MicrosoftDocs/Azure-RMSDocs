@@ -1,16 +1,17 @@
 # Functions
 
- Functions (scope)                        | Descriptions                                
---------------------------------|---------------------------------------------
+| Functions (scope)              | Descriptions                                |
+|--------------------------------|---------------------------------------------|
+**common** |
+public const std::string& GetCustomSettingPolicyDataName()       |  Name of the setting to explicitly specify policy data.
 public const std::string& GetCustomSettingExportPolicyFileName()       |  Name of the setting to explicitly specify file path to export SCC policy data to.
 public const std::string& GetCustomSettingPolicyDataFile()       |  Name of the setting to explicitly specify policy data file path.
-public const std::string& GetCustomSettingPolicyDataName()       |  Name of the setting to explicitly specify policy data.
-**mip functions** |
+ **mip functions** |
 public std::shared_ptr<mip::Stream> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an [Stream](class_mip_stream.md) from a buffer.
 public std::shared_ptr<mip::Stream> CreateStreamFromStdStream(const std::shared_ptr<std::iostream>& stdIOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::iostream.
 public std::shared_ptr<mip::Stream> CreateStreamFromStdStream(const std::shared_ptr<std::istream>& stdIStream)       |  Creates a [Stream](class_mip_stream.md) from a std::istream.
 public std::shared_ptr<mip::Stream> CreateStreamFromStdStream(const std::shared_ptr<std::ostream>& stdOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::ostream.
-public MIP_API void ReleaseAllResources()       |  Release all resources (threads, etc) prior to shutdown.
+public void ReleaseAllResources()       |  Release all resources (threads, etc) prior to shutdown.
 **mip::Rights functions**|
 public std::string AuditedExtract()       |  Gets string identifier for 'audited extract' right.
 public std::string Comment()       |  Gets string identifier for 'comment' right.
@@ -75,16 +76,6 @@ Parameters:
   
 **Returns**: [Stream](class_mip_stream.md) wrapping a std::istream
   
-### mip::CreateStreamFromStdStream(ostream)
-
-Creates a [Stream](class_mip_stream.md) from a std::ostream.
-
-Parameters:  
-* **stdOStream**: Backing std::ostream
-
-  
-**Returns**: [Stream](class_mip_stream.md) wrapping a std::ostream
-  
 ### mip::CreateStreamFromStdStream(iostream)
 
 Creates a [Stream](class_mip_stream.md) from a std::iostream.
@@ -94,14 +85,29 @@ Parameters:
   
 **Returns**: [Stream](class_mip_stream.md) wrapping a std::iostream
   
+### mip::CreateStreamFromStdStream(ostream)
+
+Creates a [Stream](class_mip_stream.md) from a std::ostream.
+
+Parameters:  
+* **stdOStream**: Backing std::ostream
+  
+**Returns**: [Stream](class_mip_stream.md) wrapping a std::ostream
+  
 ### mip::ReleaseAllResources
 
-Release all resources (threads, etc) prior to shutdown.
+Release all resources (threads, etc) before shutdown.  
 
-If MIP dynamic libraries are delay-loaded by an application, this function must be called prior to the application explicitly unloading those MIP libraries to avoid deadlock. For example, on win32, this function must be called prior to any calls to explictly unload MIP DLLs via FreeLibrary or \__FUnloadDelayLoadedDLL2. Applications must release references to all MIP objects (e.g. Profiles, Engines, Handlers) prior to calling this function.
+If MIP dynamic libraries are delay-loaded by an application, this function must be called before the application explicitly unloading those MIP libraries to avoid deadlock. For example, on win32, this function must be called before any calls to explictly unload MIP DLLs via FreeLibrary or \__FUnloadDelayLoadedDLL2. Applications must release references to all MIP objects (for example, Profiles, Engines, Handlers) before calling this function.
 
 ## Functions (mip::rights)
 
+### Owner
+Gets string identifier for 'owner' right.
+
+  
+**Returns**: String identifier for 'owner' right
+  
 ### AuditedExtract
 Gets string identifier for 'audited extract' right.
 
@@ -150,18 +156,11 @@ Gets string identifier for 'extract' right.
   
 **Returns**: String identifier for 'extract' right
   
-
 ### Forward
 Gets string identifier for 'forward' right.
 
   
 **Returns**: String identifier for 'forward' right
-  
-### Owner
-Gets string identifier for 'owner' right.
-
-  
-**Returns**: String identifier for 'owner' right
   
 ### Print
 Gets string identifier for 'print' right.
@@ -187,34 +186,34 @@ Gets string identifier for 'view' right.
   
 **Returns**: String identifier for 'view' right
   
+
 ## Functions (mip::roles)
 
 ### Author
 Gets string identifier for 'author' role.
 
+An author can view, edit, copy, and print the content.
   
 **Returns**: String identifier for 'author' role
-An author can view, edit, copy, and print the content.
   
 ### CoOwner
 Gets string identifier for 'co-owner' role.
 
+A co-owner has all permissions
   
 **Returns**: String identifier for 'co-owner' role
-A co-owner has all permissions
 
 ### Reviewer
 Gets string identifier for 'reviewer' role.
 
+A reviewer can view and edit the content. They cannot copy, or print it.
   
 **Returns**: String identifier for 'reviewer' role
-A reviewer can view and edit the content. They cannot copy, or print it.
-
+  
 ### Viewer
 Gets string identifier for 'viewer' role.
 
-  
-**Returns**: String identifier for 'viewer' role
 A viewer can only view the content. They cannot edit, copy, or print it.
   
+**Returns**: String identifier for 'viewer' role
   

@@ -1,5 +1,5 @@
 # class mip::HttpResponse 
-Interface that describes a single http response, implemented by client app when overriding [HttpDelegate](class_mip_httpdelegate.md).
+Interface that describes a single HTTP response, implemented by client app when overriding [HttpDelegate](class_mip_httpdelegate.md).
   
 ## Summary
  Members                        | Descriptions                                

@@ -1,5 +1,5 @@
 # class mip::RemoveWatermarkAction 
-An action class which specifies removing the watermarking from the document.
+An action class that specifies removing the watermarking from the document.
   
 ## Summary
  Members                        | Descriptions                                

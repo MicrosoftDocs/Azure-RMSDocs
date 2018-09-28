@@ -6,23 +6,20 @@ This class provides an interface for all policy handler functions on a file.
 --------------------------------|---------------------------------------------
 public std::shared_ptr<ContentLabel> GetSensitivityLabel(const ExecutionState& state)  |  Get the sensitivity label from existing content.
 public std::vector<std::shared_ptr<Action>> ComputeActions(const ExecutionState& state)  |  Executes the rules in the handler based on the provided state and returns the list of actions to be executed.
- public void NotifyCommitedActions(const ExecutionState& state)  |  Called once the computed actions have been applied, and the data commited to disk.
+ public void NotifyCommittedActions(const ExecutionState& state)  |  Called once the computed actions have been applied, and the data committed to disk.
   
 ## Members
   
 ### ContentLabel
 Get the sensitivity label from existing content.
-Required information to retrieve the label will be obtained by using the provided execution state. 
 
 Parameters:  
-* **state**: 
+* **state**: Current state of the content 
 
 
 
   
-**Returns**: A content label object that contains the sensitivity label as well as additional information. returns empty if non exists. 
-  
-**See also**: [mip::ContentLabel](class_mip_contentlabel.md).
+**Returns**: The label currently applied to the content. If not labeled, returns empty.
   
 ### Action
 Executes the rules in the handler based on the provided state and returns the list of actions to be executed.
@@ -35,11 +32,11 @@ Parameters:
   
 **Returns**: List of actions that should be applied on the content.
   
-### NotifyCommitedActions
-Called once the computed actions have been applied, and the data commited to disk.
+### NotifyCommittedActions
+Called once the computed actions have been applied, and the data committed to disk.
 
 Parameters:  
-* **state**: the current execution state of the content after the actions have been commited 
+* **state**: the current execution state of the content after the actions have been committed 
 
 
 : This call sends an audit event

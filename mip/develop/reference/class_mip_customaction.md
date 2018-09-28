@@ -4,10 +4,17 @@
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
+ public const std::string& GetName() const  |  Get action name.
 public const std::vector<std::pair<std::string, std::string>>& GetProperties() const  |  Get the properties key value pair list.
  public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
+  
+### GetName
+Get action name.
+
+  
+**Returns**: An action name if one exists else an empty string.
   
 ### GetProperties
 Get the properties key value pair list.
