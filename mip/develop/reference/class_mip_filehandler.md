@@ -1,3 +1,12 @@
+---
+title: class mip FileHandler 
+description: Reference for class mip FileHandler 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::FileHandler 
 Interface for all file handling functions.
   

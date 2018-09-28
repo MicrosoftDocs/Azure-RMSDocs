@@ -1,3 +1,12 @@
+---
+title: class mip AccessDeniedError 
+description: Reference for class mip AccessDeniedError 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::AccessDeniedError 
 The user could not get access to the content. For example, no permissions, content revoked.
   

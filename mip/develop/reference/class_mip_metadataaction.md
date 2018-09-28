@@ -1,3 +1,12 @@
+---
+title: class mip MetadataAction 
+description: Reference for class mip MetadataAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::MetadataAction 
 An [Action](class_mip_action.md) that adds metadata information to the content.
   

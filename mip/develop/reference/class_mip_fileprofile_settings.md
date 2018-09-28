@@ -1,3 +1,12 @@
+---
+title: class mip FileProfile Settings 
+description: Reference for class mip FileProfile Settings 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::FileProfile::Settings 
 [Settings](class_mip_fileprofile_settings.md) used by [FileProfile](class_mip_fileprofile.md) during its creation and throughout its lifetime.
   

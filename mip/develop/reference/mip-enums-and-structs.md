@@ -1,3 +1,12 @@
+---
+title: Summary
+description: Summary
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------

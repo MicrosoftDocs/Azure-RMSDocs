@@ -1,3 +1,12 @@
+---
+title: Functions
+description: Functions
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # Functions
 
 | Functions (scope)              | Descriptions                                |

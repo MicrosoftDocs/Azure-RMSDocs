@@ -1,3 +1,12 @@
+---
+title: class mip CustomAction 
+description: Reference for class mip CustomAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::CustomAction 
 [CustomAction](class_mip_customaction.md) is a generic action class that captures all the sub-properties of the action as a property bag. The caller is responsible to understand the meaning of the action.
   

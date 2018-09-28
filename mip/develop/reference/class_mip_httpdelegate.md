@@ -1,3 +1,12 @@
+---
+title: class mip HttpDelegate 
+description: Reference for class mip HttpDelegate 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::HttpDelegate 
 Interface for overriding HTTP handling.
   

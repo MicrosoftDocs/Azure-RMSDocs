@@ -1,3 +1,12 @@
+---
+title: class mip FileHandler Observer 
+description: Reference for class mip FileHandler Observer 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::FileHandler::Observer 
 [Observer](class_mip_filehandler_observer.md) interface for clients to get notifications events related to file handler.
 All errors inherit from [mip::Error](class_mip_error.md). 

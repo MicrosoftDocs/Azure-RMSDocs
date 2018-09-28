@@ -1,3 +1,12 @@
+---
+title: class mip TransientNetworkError 
+description: Reference for class mip TransientNetworkError 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::TransientNetworkError 
 Transient networking error. Caused by unexpected behavior when making network calls to service endpoints. The operation can be retried as this error is a transient error.
   

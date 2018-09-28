@@ -1,3 +1,12 @@
+---
+title: class mip JustifyAction 
+description: Reference for class mip JustifyAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::JustifyAction 
 Justify [Action](class_mip_action.md) requires providing a justification to a label downgrade and setting the response in the execution state.
   

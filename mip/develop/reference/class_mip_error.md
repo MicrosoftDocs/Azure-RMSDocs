@@ -1,3 +1,12 @@
+---
+title: class mip Error 
+description: Reference for class mip Error 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::Error 
 Base class for all errors that will be reported (thrown or returned) from MIP SDK.
   

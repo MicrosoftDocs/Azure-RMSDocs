@@ -1,3 +1,12 @@
+---
+title: class mip LabelingOptions 
+description: Reference for class mip LabelingOptions 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::LabelingOptions 
 Interface for configuring labeling options for the SetLabel/DeleteLabel methods.
   

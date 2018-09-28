@@ -1,3 +1,12 @@
+---
+title: class mip AddWatermarkAction 
+description: Reference for class mip AddWatermarkAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::AddWatermarkAction 
 An action class that specifies adding watermark.
   

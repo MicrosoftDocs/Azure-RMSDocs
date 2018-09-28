@@ -1,3 +1,12 @@
+---
+title: class mip ConsentDeniedError 
+description: Reference for class mip ConsentDeniedError 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ConsentDeniedError 
 An operation that required consent from user was not granted consent.
   

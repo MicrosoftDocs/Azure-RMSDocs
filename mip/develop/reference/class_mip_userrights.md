@@ -1,3 +1,12 @@
+---
+title: class mip UserRights 
+description: Reference for class mip UserRights 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::UserRights 
 A group of users and the rights associated with them.
   

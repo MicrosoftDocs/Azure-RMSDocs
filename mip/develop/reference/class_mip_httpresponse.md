@@ -1,3 +1,12 @@
+---
+title: class mip HttpResponse 
+description: Reference for class mip HttpResponse 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::HttpResponse 
 Interface that describes a single HTTP response, implemented by client app when overriding [HttpDelegate](class_mip_httpdelegate.md).
   

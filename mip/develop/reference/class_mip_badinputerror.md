@@ -1,3 +1,12 @@
+---
+title: class mip BadInputError 
+description: Reference for class mip BadInputError 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::BadInputError 
 Bad input error, thrown when the input to an SDK API is invalid.
   

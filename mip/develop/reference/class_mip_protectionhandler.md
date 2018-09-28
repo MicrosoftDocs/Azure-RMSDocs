@@ -1,3 +1,12 @@
+---
+title: class mip ProtectionHandler 
+description: Reference for class mip ProtectionHandler 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ProtectionHandler 
 Manages protection-related actions for a specific protection configuration.
   

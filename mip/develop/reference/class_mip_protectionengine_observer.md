@@ -1,3 +1,12 @@
+---
+title: class mip ProtectionEngine Observer 
+description: Reference for class mip ProtectionEngine Observer 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ProtectionEngine::Observer 
 Interface that receives notifications related to [ProtectionEngine](class_mip_protectionengine.md).
 This interface must be implemented by applications using the protection SDK

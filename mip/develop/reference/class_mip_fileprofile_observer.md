@@ -1,3 +1,12 @@
+---
+title: class mip FileProfile Observer 
+description: Reference for class mip FileProfile Observer 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::FileProfile::Observer 
 [Observer](class_mip_fileprofile_observer.md) interface for clients to get notifications for profile related events.
 All errors inherit from [mip::Error](class_mip_error.md). 

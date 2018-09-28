@@ -1,3 +1,12 @@
+---
+title: class mip LoggerDelegate 
+description: Reference for class mip LoggerDelegate 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::LoggerDelegate 
 A class that defines the interface to the MIP SDK logger.
   

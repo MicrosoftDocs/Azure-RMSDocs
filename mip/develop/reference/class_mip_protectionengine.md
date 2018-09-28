@@ -1,3 +1,12 @@
+---
+title: class mip ProtectionEngine 
+description: Reference for class mip ProtectionEngine 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ProtectionEngine 
 Manages protection-related actions related to a specific identity.
   

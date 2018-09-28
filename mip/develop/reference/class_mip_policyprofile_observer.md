@@ -1,3 +1,12 @@
+---
+title: class mip PolicyProfile Observer 
+description: Reference for class mip PolicyProfile Observer 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::PolicyProfile::Observer 
 [Observer](class_mip_policyprofile_observer.md) interface for clients to get notifications for profile related events.
 All errors inherit from [mip::Error](class_mip_error.md). 

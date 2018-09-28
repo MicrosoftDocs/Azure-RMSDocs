@@ -1,3 +1,12 @@
+---
+title: class mip ExecutionState 
+description: Reference for class mip ExecutionState 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ExecutionState 
 Interface for all the state needed to execute the engine.
 Clients should only call the methods to obtain the state that is needed. Hence, for efficiency, clients may want to implement this interface such that the corresponding state is computed dynamically instead of computing in advance.

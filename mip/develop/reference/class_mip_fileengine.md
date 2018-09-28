@@ -1,3 +1,12 @@
+---
+title: class mip FileEngine 
+description: Reference for class mip FileEngine 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::FileEngine 
 This class provides an interface for all engine functions.
   
