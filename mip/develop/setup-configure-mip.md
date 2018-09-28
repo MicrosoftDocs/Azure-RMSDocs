@@ -16,7 +16,7 @@ Be sure to review the following topics before getting started:
 
 - [What is Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [What is Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
-- [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection.md#how-data-is-protected)
+- [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
 The MIP SDK is supported on the following platforms:
 
