@@ -8,7 +8,7 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# Policy API engine
+# Microsoft Information Protection SDK - Policy API engine concepts
 
 `mip::PolicyEngine` implements all operations that the Policy API can perform, with the exception of loading the profile. 
 
@@ -28,7 +28,7 @@ As a best practice, the first parameter, **id**, should be something that allows
 
 ### Implementation: Add the Policy Engine
 
-To add the engine, we'll go back to the future/promise pattern used to [load the profile](). Instead of creating the promise for `mip::Profile`, we'll use `mip::PolicyEngine`.
+To add the engine, we'll go back to the future/promise pattern used to load the profile. Instead of creating the promise for `mip::Profile`, we'll use `mip::PolicyEngine`.
 
 ```cpp
 

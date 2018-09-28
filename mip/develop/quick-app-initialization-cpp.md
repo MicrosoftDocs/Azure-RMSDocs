@@ -44,7 +44,7 @@ First we create and configure the initial Visual Studio solution and project, up
    - Under **Configuration Properties**, select the **VC++ Directories** node.
    - Select the **Include Directories** row, then click the drop-down on the right side, then **<Edit...>**, and enter the paths to the SDK include (.h) subdirectories in the top field. Specify the full paths to `file\include`, `protection\include`, `upe\include` subdirectories (but no deeper), within the path where you installed the SDK. Click **OK**. 
 
-        [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
+        [![Visual Studio set path properties](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
 
    - Repeat the previous step for the **Library Directories** row, entering the paths to the SDK binary static libraries (.lib) subdirectories. Be sure to use the paths that match the current build configuration for your solution. For this Quickstart, specify the absolute or relative paths to the `file\bins\debug\amd64`, `protection\bins\debug\amd64`, `upe\bins\debug\amd64` subdirectories.
 
@@ -52,7 +52,7 @@ First we create and configure the initial Visual Studio solution and project, up
    - Select the **Additional Dependencies** row, then click the drop-down on the right side, then **<Edit...>**. Here you add the names of the SDK static libraries. Add `mip_protection_sdk.lib;mip_file_sdk.lib;mip_upe_sdk.lib;` to the libraries list, in the top field. Click **OK**. 
    - Click **OK** on the **Property Pages** dialog when finished.
 
-     [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
+     [![Visual Studio set static libs](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
 
 ## Implement an observer class to monitor the File profile and engine objects
 

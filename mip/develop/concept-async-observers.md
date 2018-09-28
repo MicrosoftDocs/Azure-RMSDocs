@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
 ---
-# Observers in the MIP SDK
+# Microsoft Information Protection SDK - Observer concepts
 
 The MIP SDK is designed to be almost entirely asynchronous. For example, any operation resulting in network or file IO is performed asynchronously. To handle the event notifications for these asynchronous events, the SDK makes use of the [observer pattern](https://wikipedia.org/wiki/Observer_pattern). 
 

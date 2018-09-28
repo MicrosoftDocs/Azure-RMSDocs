@@ -8,20 +8,20 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# File API profile
+# Microsoft Information Protection SDK - File API profile concepts
 
 The profile is the root class for all operations in the MIP SDK. Before using any of the File API functionality, a `FileProfile` must be created and all future operations will be performed by the profile or by other objects *added* to the profile.
 
 There are a few code-prerequisites that should be met prior to attempting to instantiate a profile:
 
-- [AuthDelegateImpl]() is implemented to extend `mip::AuthDelegate`.
-- [ConsentDelegateImpl]() is implemented to extend `mip::ConsentDelegate`.
-- The application has been [registered in Azure Active Directory]() and the client ID is hard-coded in to the application or configuration files. 
+- `AuthDelegateImpl` is implemented to extend `mip::AuthDelegate`.
+- `ConsentDelegateImpl` is implemented to extend `mip::ConsentDelegate`.
+- The application has been [registered in Azure Active Directory](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad.md) and the client ID is hard-coded in to the application or configuration files. 
 - A class inheriting `mip::FileProfile::Observer` has been appropriately implemented.
 
 ## Load a Profile
 
-With the [ProfileObserver](), [ConsentDelegateImpl](), and [AuthDelegateImpl]() defined, `mip::FileProfile` can now be instantiated. Creating the `mip::FileProfile` object requires [`mip::FileProfile::Settings`](reference/class_mip_fileprofile_settings.md) to store all of the settings information about the `FileProfile`.
+With the `ProfileObserver`, `ConsentDelegateImpl`, and `AuthDelegateImpl` defined, `mip::FileProfile` can now be instantiated. Creating the `mip::FileProfile` object requires [`mip::FileProfile::Settings`](reference/class_mip_fileprofile_settings.md) to store all of the settings information about the `FileProfile`.
 
 ### FileProfile::Settings Parameters
 
@@ -29,9 +29,9 @@ The `FileProfile::Settings` constructor accepts five parameters, listed below:
 
 - `std::string path`: File path under which logging, telemetry, and other persistent state is stored.
 - `bool useInMemoryStorage`: Defines whether or not all state should be stored in memory as opposed to on disk.
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`: A shared pointer of class `mip::AuthDelegate` (See [Auth Section]())
+- `std::shared_ptr<mip::AuthDelegate> authDelegate`: A shared pointer of class `mip::AuthDelegate` 
 - `std::shared_ptr<mip::ConsentDelegate>`: 
-- `std::shared_ptr<mip::FileProfile::Observer> observer`: A shared pointer to the [`FileProfile::Observer`]() implementation.
+- `std::shared_ptr<mip::FileProfile::Observer> observer`: A shared pointer to the `FileProfile::Observer` implementation.
 - `mip::ApplicationInfo applicationInfo`: object. Used to define info regarding application that is consuming the SDK.
 
 The following examples show how to create the `profileSettings` object using local storage for state storage as well as in-memory only. Both assume that the `authDelegateImpl` object has already been created.

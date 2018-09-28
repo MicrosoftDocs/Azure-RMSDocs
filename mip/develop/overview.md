@@ -13,9 +13,9 @@ ms.author: bryanla
 
 Microsoft Information Protection (MIP) is the unification of Microsoft's classification, labeling, and protection services, into a single  administration experience and software development kit (SDK). Unified administration is provided across Office 365, Azure Information Protection, Windows Information Protection, and other Microsoft services. Third parties can use the SDK to integrate with applications, using a standard, consistent data labeling schema and protection service.
 
-* [What is Office 365 Security and Compliance Center?](https://support.office.com/en-us/article/overview-of-security-and-compliance-in-office-365-dcb83b2c-ac66-4ced-925d-50eb9698a0b2?redirectSourcePath=%252farticle%252f7fe448f7-49bd-4d3e-919d-0a6d1cf675bb&ui=en-US&rs=en-US&ad=US)
-* [What is Azure Information Protection?](https://docs.microsoft.com/en-us/azure/information-protection/understand-explore/what-is-information-protection)
-* [How does the protection work in Azure Information Protection?](https://docs.microsoft.com/en-us/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
+* [What is Office 365 Security and Compliance Center?](https://support.office.com/article/overview-of-security-and-compliance-in-office-365-dcb83b2c-ac66-4ced-925d-50eb9698a0b2?redirectSourcePath=%252farticle%252f7fe448f7-49bd-4d3e-919d-0a6d1cf675bb&ui=en-US&rs=en-US&ad=US)
+* [What is Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
+* [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
 ## Microsoft Information Protection SDK
 
@@ -29,7 +29,7 @@ High-level MIP SDK use cases include:
 * A CAD/CAM design application provides native support for Microsoft Information Protection labeling.
 * A cloud access security broker or data loss prevention solution reasons over data encrypted with Azure Information Protection.
 
-For a more exhaustive list, review [Link to API Concepts]().
+For a more exhaustive list, review [API concepts](concept-apis-use-cases.md).
 
 ## Next Steps
 
