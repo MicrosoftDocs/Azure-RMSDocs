@@ -8,7 +8,7 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# Protection API engine
+# Microsoft Information Protection SDK - Protection API engine concepts
 
 ## Implementation: Add a Protection Engine
 
@@ -38,7 +38,7 @@ Though generally you'd pass in a variable to identity rather than hard code.
 
 ### Implementation: Add the Protection Engine
 
-To add the engine, we'll go back to the future/promise pattern used to [load the profile](). Instead of creating the promise for `mip::ProtectionProfile`, we'll use `mip::ProtectionEngine`.
+To add the engine, we'll go back to the future/promise pattern used to load the profile. Instead of creating the promise for `mip::ProtectionProfile`, we'll use `mip::ProtectionEngine`.
 
 ```cpp
 
@@ -93,6 +93,4 @@ Mapping templates to labels can only be done via Policy API by examining the res
 
 ## Next Steps
 
-Now that the profile is loaded, the engine added, and we have templates, we can add a handler to begin to read, write, or remove templates from files.
-
-[Creating a Protection Handler]()
+Now that the profile is loaded, the engine added, and we have templates, we can add a handler to begin to read, write, or remove templates from files. See [Protection handler concepts](concept-handler-protection-cpp.md).

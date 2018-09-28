@@ -8,20 +8,20 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# Protection API profile
+# Microsoft Information Protection SDK - Protection API profile concepts
 
 The two examples below show how to create the profileSettings object using local storage for state storage as well as in-memory only. Both assume that the `authDelegateImpl` object has already been created.
 
 ## Load a Profile
 
-Now that the [`ProtectionProfileObserverImpl`]() and [`AuthDelegateImpl`]() are defined, we'll use the them to instantiate `mip::ProtectionProfile`. Creating the `mip::ProtectionProfile` object requires [`mip::ProtectionProfile::Settings`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_ProtectionProfile_settings).
+Now that the `ProtectionProfileObserverImpl` and `AuthDelegateImpl` are defined, we'll use the them to instantiate `mip::ProtectionProfile`. Creating the `mip::ProtectionProfile` object requires [`mip::ProtectionProfile::Settings`](reference/class_mip_ProtectionProfile_settings.md).
 
 ### ProtectionProfile::Settings Parameters
 
 - `std::string path`: File path under which logging, telemetry, and other persistent state is stored.
 - `bool useInMemoryStorage`: Defines whether or not all state should be stored in memory as opposed to on disk.
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`: A shared pointer of class `mip::AuthDelegate` (See [Auth Section]())
-- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: A shared pointer to the [`ProtectionProfile::Observer`]() implementation.
+- `std::shared_ptr<mip::AuthDelegate> authDelegate`: A shared pointer of class `mip::AuthDelegate`.
+- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: A shared pointer to the `ProtectionProfile::Observer` implementation.
 - `mip::ApplicationInfo applicationInfo`: object. Used to define info regarding application that is consuming the SDK.
 
 The two examples below show how to create the profileSettings object using local storage for state storage as well as in-memory only. Both assume that the `authDelegateImpl` object has already been created.

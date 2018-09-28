@@ -15,8 +15,8 @@ The Quickstart and Tutorial articles are centered around building applications t
 Be sure to review the following topics before getting started:
 
 - [What is Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
-- [What is Azure Information Protection?](https://docs.microsoft.com/azure/information-protection/understand-explore/what-is-information-protection)
-- [How does the protection work in Azure Information Protection?](https://docs.microsoft.com/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
+- [What is Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
+- [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
 The MIP SDK is supported on the following platforms:
 
@@ -39,7 +39,7 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 | Office 365 Enterprise E3 or E5 | https://products.office.com/business/office-365-enterprise-e3-business-software |
 | Enterprise Mobility and Security E3 or E5 | https://www.microsoft.com/cloud-platform/enterprise-mobility-security |
 | Azure Information Protection Premium P1 or P2 | https://azure.microsoft.com/pricing/details/information-protection/ |
-| Microsoft 365 E3, E5, or F1 | https://www.microsoft.com/en-us/microsoft-365/compare-all-microsoft-365-plans | 
+| Microsoft 365 E3, E5, or F1 | https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans | 
 
 ## Configure your client workstation
 

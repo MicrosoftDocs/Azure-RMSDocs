@@ -18,13 +18,13 @@ This code is not intended for production use, but may be used for development an
 
 To run the sample below, the following must be complete:
 
-- Install Python 2.7
-- Implement [utils.h/cpp]() in your project 
-- [auth.py]() should be added to your project and exist in same directory as the binaries at build.
+- Install Python 2.7.
+- Implement utils.h/cpp in your project. 
+- auth.py should be added to your project and exist in same directory as the binaries at build.
 
 ## sample::auth::AcquireToken()
 
-In the [simple authentication example](), we demonstrated a simple `AcquireToken()` function that took no parameters and returned a hard coded token value. In this example, we'll overload AcquireToken() to accept authentication parameters and call an external Python script to return the token.
+In the simple authentication example, we demonstrated a simple `AcquireToken()` function that took no parameters and returned a hard coded token value. In this example, we'll overload AcquireToken() to accept authentication parameters and call an external Python script to return the token.
 
 ### auth.h
 

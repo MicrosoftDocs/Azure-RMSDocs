@@ -8,7 +8,7 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# Authentication 
+# Microsoft Information Protection SDK - Authentication concepts
 
 Authentication in the MIP SDK is performed by extending the class `mip::AuthDelegate` to implement your preferred method of authentication. `mip::AuthDelegate` contains:
 
@@ -36,11 +36,6 @@ Consent is implemented by extending the `mip::Consent` base class and implementi
 The object derived from `mip::Consent` is passed in to the `mip::FileProfile::Settings` or `mip::ProtectionProfile::Settings` constructor.
 
 When a user performs an operation that would require providing consent, the SDK calls the `GetUserConsent` method, passing in the destination URL as the parameter. It's in this method where one would implement displaying the necessary information to the user, allowing them to make a decision on whether or not they consent to using the service. 
-
-Operations that will trigger the consent flow are:
-
-- One
-- Two
 
 ### Consent Options
 
