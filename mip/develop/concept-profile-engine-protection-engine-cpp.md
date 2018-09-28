@@ -93,4 +93,4 @@ Mapping templates to labels can only be done via Policy API by examining the res
 
 ## Next Steps
 
-Now that the profile is loaded, the engine added, and we have templates, we can add a handler to begin to read, write, or remove templates from files.
+Now that the profile is loaded, the engine added, and we have templates, we can add a handler to begin to read, write, or remove templates from files. See [Protection handler concepts](concept-handler-protection-cpp.md).

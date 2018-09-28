@@ -49,3 +49,7 @@ The File API is an abstraction of both the Protection and Policy APIs. It provid
 - Your organization develops a cloud access security broker (CASB). Your customers ask for the ability to apply MIP labels to Microsoft Office and PDF documents. The File API would enable you to display a list of configured labels, then allow your customers to build rules which would apply the desired label. File API, taking in the label ID, would handle the rest for files meeting the customer’s criteria.
 
 - Your organization provides a service-based data loss prevention solution and/or a CASB that monitors SaaS applications for file activity. To reduce the risk of data loss or exposure where data is protected with MIP, your service must be able to scan the contents of protected files. Using File API for the supported formats, when the service is a privileged user, you can remove protection, scan the contents for restricted or sensitive content, discard the plaintext result, and apply a service rule to report on or remediate the risk if found.
+
+## Next steps
+
+Now that you have a general idea of the available MIP APIs and how they're used, continue with [Profile and Engine object concepts](concept-profile-engine-cpp.md). These concepts are fundamental, and apply to all MIP API sets.
