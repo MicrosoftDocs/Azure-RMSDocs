@@ -8,7 +8,7 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# MIP SDK APIs
+# Microsoft Information Protection SDK - API concepts
 
 The MIP SDK is composed of three APIs:
 

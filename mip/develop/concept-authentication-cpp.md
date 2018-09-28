@@ -8,7 +8,7 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# Authentication 
+# Microsoft Information Protection SDK - Authentication concepts
 
 Authentication in the MIP SDK is performed by extending the class `mip::AuthDelegate` to implement your preferred method of authentication. `mip::AuthDelegate` contains:
 
