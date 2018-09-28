@@ -1,3 +1,12 @@
+---
+title: class mip ProtectionProfile 
+description: Reference for class mip ProtectionProfile 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ProtectionProfile 
 [ProtectionProfile](class_mip_protectionprofile.md) is the root class for performing protection operations.
 An application needs to create a [ProtectionProfile](class_mip_protectionprofile.md) before performing any protection operations

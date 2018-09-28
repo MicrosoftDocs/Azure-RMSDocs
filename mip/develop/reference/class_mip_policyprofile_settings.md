@@ -1,3 +1,12 @@
+---
+title: class mip PolicyProfile Settings 
+description: Reference for class mip PolicyProfile Settings 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::PolicyProfile::Settings 
 [Settings](class_mip_policyprofile_settings.md) used by [PolicyProfile](class_mip_policyprofile.md) during its creation and throughout its lifetime.
   

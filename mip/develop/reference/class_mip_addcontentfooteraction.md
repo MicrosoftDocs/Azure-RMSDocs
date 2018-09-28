@@ -1,3 +1,12 @@
+---
+title: class mip AddContentFooterAction 
+description: Reference for class mip AddContentFooterAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::AddContentFooterAction 
 An action class that specifies adding a content footer to the document.
   

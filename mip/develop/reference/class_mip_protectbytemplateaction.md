@@ -1,3 +1,12 @@
+---
+title: class mip ProtectByTemplateAction 
+description: Reference for class mip ProtectByTemplateAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ProtectByTemplateAction 
 An action class that specifies adding protection by template to the document.
   

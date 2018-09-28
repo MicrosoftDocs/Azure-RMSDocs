@@ -1,3 +1,12 @@
+---
+title: class mip NotSupportedError 
+description: Reference for class mip NotSupportedError 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::NotSupportedError 
 The operation requested by the application is not supported by the SDK.
   

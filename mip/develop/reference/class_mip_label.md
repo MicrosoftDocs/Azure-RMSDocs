@@ -1,3 +1,12 @@
+---
+title: class mip Label 
+description: Reference for class mip Label 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::Label 
 Abstraction for a single Microsoft Information Protection label.
   

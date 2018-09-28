@@ -1,3 +1,12 @@
+---
+title: class mip ProtectionProfile Observer 
+description: Reference for class mip ProtectionProfile Observer 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ProtectionProfile::Observer 
 Interface that receives notifications related to [ProtectionProfile](class_mip_protectionprofile.md).
 This interface must be implemented by applications using the protection SDK

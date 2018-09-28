@@ -1,3 +1,12 @@
+---
+title: class mip ClassificationResult 
+description: Reference for class mip ClassificationResult 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ClassificationResult 
 Class that contains the result of a classification call on the Execution State.
   

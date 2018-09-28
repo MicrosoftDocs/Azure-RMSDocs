@@ -1,3 +1,12 @@
+---
+title: class mip PolicyHandler 
+description: Reference for class mip PolicyHandler 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::PolicyHandler 
 This class provides an interface for all policy handler functions on a file.
   

@@ -1,3 +1,12 @@
+---
+title: class mip FileProfile 
+description: Reference for class mip FileProfile 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::FileProfile 
 [FileProfile](class_mip_fileprofile.md) class is the root class for using the Microsoft Information Protection operations.
 A typical application will only need one Profile.

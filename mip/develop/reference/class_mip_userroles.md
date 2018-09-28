@@ -1,3 +1,12 @@
+---
+title: class mip UserRoles 
+description: Reference for class mip UserRoles 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::UserRoles 
 A group of users and the roles associated with them.
   

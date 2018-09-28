@@ -1,3 +1,12 @@
+---
+title: class mip ContentLabel 
+description: Reference for class mip ContentLabel 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ContentLabel 
 Abstraction for a Microsoft Information Protection label that is applied to a piece of content, typically a document.
 It also holds properties for a specific applied label instance.

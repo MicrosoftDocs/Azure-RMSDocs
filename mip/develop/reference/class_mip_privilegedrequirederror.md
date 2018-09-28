@@ -1,3 +1,12 @@
+---
+title: class mip PrivilegedRequiredError 
+description: Reference for class mip PrivilegedRequiredError 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::PrivilegedRequiredError 
 Current label was assigned as a privileged operation (The equivalent to an administrator operation), therefore it can't be overriden.
   

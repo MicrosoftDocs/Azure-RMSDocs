@@ -1,3 +1,12 @@
+---
+title: class mip ProtectionDescriptorBuilder 
+description: Reference for class mip ProtectionDescriptorBuilder 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ProtectionDescriptorBuilder 
 Constructs a [ProtectionDescriptor](class_mip_protectiondescriptor.md) that describes protection associated with a piece of content.
   

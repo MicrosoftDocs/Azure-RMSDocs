@@ -1,3 +1,12 @@
+---
+title: class mip ApplyLabelAction 
+description: Reference for class mip ApplyLabelAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ApplyLabelAction 
 Apply label actions requires the calling application to apply a specific label.
   

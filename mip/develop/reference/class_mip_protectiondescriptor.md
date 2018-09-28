@@ -1,3 +1,12 @@
+---
+title: class mip ProtectionDescriptor 
+description: Reference for class mip ProtectionDescriptor 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ProtectionDescriptor 
 Description of protection associated with a piece of content.
   

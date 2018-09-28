@@ -1,3 +1,12 @@
+---
+title: class mip RemoveWatermarkAction 
+description: Reference for class mip RemoveWatermarkAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::RemoveWatermarkAction 
 An action class that specifies removing the watermarking from the document.
   

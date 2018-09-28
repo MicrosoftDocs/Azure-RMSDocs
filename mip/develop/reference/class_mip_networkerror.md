@@ -1,3 +1,12 @@
+---
+title: class mip NetworkError 
+description: Reference for class mip NetworkError 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::NetworkError 
 Networking error. Caused by unexpected behavior when making network calls to service endpoints.
   

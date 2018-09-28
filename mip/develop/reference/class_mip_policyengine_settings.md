@@ -1,3 +1,12 @@
+---
+title: class mip PolicyEngine Settings 
+description: Reference for class mip PolicyEngine Settings 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::PolicyEngine::Settings 
 Defines the settings associated with a [PolicyEngine](class_mip_policyengine.md).
   

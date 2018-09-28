@@ -1,3 +1,12 @@
+---
+title: class mip AddContentHeaderAction 
+description: Reference for class mip AddContentHeaderAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::AddContentHeaderAction 
 An action class that specifies adding content header.
   

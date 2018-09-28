@@ -1,3 +1,12 @@
+---
+title: class mip RemoveContentHeaderAction 
+description: Reference for class mip RemoveContentHeaderAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::RemoveContentHeaderAction 
 An action class that specifies removing the content header from the document.
   

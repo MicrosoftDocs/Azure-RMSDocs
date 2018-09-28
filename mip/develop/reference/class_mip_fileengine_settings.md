@@ -1,3 +1,12 @@
+---
+title: class mip FileEngine Settings 
+description: Reference for class mip FileEngine Settings 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::FileEngine::Settings 
   
 ## Summary

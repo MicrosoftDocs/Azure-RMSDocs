@@ -1,3 +1,12 @@
+---
+title: class mip FileIOError 
+description: Reference for class mip FileIOError 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::FileIOError 
 File IO error.
   

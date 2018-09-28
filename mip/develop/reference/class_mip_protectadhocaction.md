@@ -1,3 +1,12 @@
+---
+title: class mip ProtectAdhocAction 
+description: Reference for class mip ProtectAdhocAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ProtectAdhocAction 
 An action class that specifies adding adhoc protection to the document.
   

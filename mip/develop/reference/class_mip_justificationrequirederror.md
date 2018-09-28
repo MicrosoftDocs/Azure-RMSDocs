@@ -1,3 +1,12 @@
+---
+title: class mip JustificationRequiredError 
+description: Reference for class mip JustificationRequiredError 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::JustificationRequiredError 
   
 ## Summary
