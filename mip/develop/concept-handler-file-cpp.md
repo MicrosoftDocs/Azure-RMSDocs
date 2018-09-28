@@ -1,6 +1,6 @@
 ---
 title: Concepts - File handlers in the MIP SDK.
-description: This article will help you understand how File API handlers are used for calling operations.
+description: This article will help you understand how File API handlers are created and used for calling operations.
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.author: bryanla
 
 In the MIP SDK File API, the `mip::FileHandler` exposes all of the various operations that can be used to read and write labels, or protection, across a set of file types for which support is built-in. 
 
-## Supported File Types
+## Supported file types
 
 - Office File Formats based on OCP (Office 2010 and later)
 - Legacy Office File Formats (Office 2007)
@@ -19,7 +19,7 @@ In the MIP SDK File API, the `mip::FileHandler` exposes all of the various opera
 - Generic PFILE support
 - Files that support Adobe XMP
 
-## File Handler Functions
+## File handler functions
 
 `mip::FileHandler` exposes methods for reading, writing, and removing both labels and protection information. For the full list, consult the [API reference](reference/class_mip_filehandler.md).
 
@@ -38,7 +38,7 @@ Creating a `FileHandler` to work with a specific file requires:
 - A `FileEngine` added to the `FileProfile`
 - A class that inherits `mip::FileHandler::Observer`
 
-## Create a File Handler
+## Create a file handler
 
 The first step required in managing any files in the File API is to create a `FileHandler` object. This class implements all of the functionality required to get, set, update, delete, and commit label changes to files.
 
@@ -57,9 +57,9 @@ auto handler = createFileHandlerFuture.get();
 
 After successfully creating the `FileHandler` object, file operations (get/set/delete/commit) can be performed.
 
-## Read a Label
+## Read a label
 
-### Metadata Requirements
+### Metadata requirements
 
 There are a few requirements to successfully reading metadata from a file and translating in to something that can be used in applications.
 
@@ -85,7 +85,7 @@ Label data can be read from the `label` object and passed to any other component
 
 ***
 
-## Set a Label
+## Set a label
 
 Setting a label is a two part process. First, having created a handler that points to the file in question, the label can be set by calling `FileHandler->SetLabel()` with a couple of parameters.
 
@@ -97,7 +97,7 @@ The first parameters is simply the label identifier from `ListLabelsAsync()`. Th
 
 The example above assumes we've stored the desired `mip::Label` in an object called `label`.
 
-### Labeling Options
+### Labeling options
 
 The second parameter required to set the label is a `mip::LabelingOptions` object that we create inline while calling the `SetLabel()` function. It could also be created ahead of time.
 
@@ -120,7 +120,7 @@ handler->SetLabel(label->GetId(), labelingOptions);
 
 Having now set the label on the file referenced by the handler, there's still one more step to commit the change and write a file to disk or create an output stream.
 
-### Commit Changes
+### Commit changes
 
 The final step in committing any change to a file in the MIP SDK is to **commit** the change. This is accomplished by using the `FileHandler->CommitAsync()` function. 
 
@@ -141,7 +141,7 @@ If writing a label to **FileA.docx**, a copy of the file, **FileB.docx**, will b
 
 ***
 
-## Delete a Label
+## Delete a label
 
 ```cpp
 auto handler = mEngine->CreateFileHandler(filePath, std::make_shared<FileHandlerObserverImpl>());
