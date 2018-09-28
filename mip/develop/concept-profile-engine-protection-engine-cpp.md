@@ -91,6 +91,3 @@ Printing the names is an easy way to show that we successfully pulled policy fro
 
 Mapping templates to labels can only be done via Policy API by examining the result of `ComputeActions()`.
 
-## Next Steps
-
-Now that the profile is loaded, the engine added, and we have templates, we can add a handler to begin to read, write, or remove templates from files.

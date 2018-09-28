@@ -98,4 +98,11 @@ This method allows the application to be judicious about memory usage, by unload
 
 ## Next Steps
 
-Next, read about [Observers](concept-async-observers.md), and how they're used to provide event notifications for asynchronous events.
+- Next, learn more about [Authentication concepts](concept-authentication-cpp.md) and [Observers](concept-async-observers.md). MIP provides an extensible authentication model, while observers are used to provide event notifications for asynchronous events. Both are fundamental, and apply to all MIP API sets.
+- Then work through the profile and engine concepts for the File, Policy, and Protection APIs
+  - [File API profile concepts](concept-profile-engine-file-profile-cpp.md)
+  - [File API engine concepts](concept-profile-engine-file-engine-cpp.md)
+  - [Policy API profile concepts](concept-profile-engine-file-profile-cpp.md)
+  - [Policy API engine concepts](concept-profile-engine-file-engine-cpp.md)
+  - [Protection API profile concepts](concept-profile-engine-file-profile-cpp.md)
+  - [Protection API engine concepts](concept-profile-engine-file-engine-cpp.md)  
