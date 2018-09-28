@@ -1,7 +1,6 @@
 ---
 title: Microsoft Information Protection (MIP) SDK setup and configuration
 description: Provides the setup and configuration prerequisites, in order to use applications built with the Microsoft Information Protection SDK.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
@@ -166,16 +165,6 @@ When finished, application registration and API permissions should look similar 
 
 
 For more details on adding APIs and permissions to a registration, see [Updating an application, Configure a client application to access web APIs section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Here you'll find information on adding the APIs and permissions needed by a client application.  
-
-## TBD: Define Label Taxonomy and Protection Settings?
-
-See [Classification label concepts](concept-classification-labels.md).
-
-* Provide links to SCC configuration.
-* Provide details on rights required to config labels.
-  - Global admin, compliance admin, or AIP admin
-* Provide details on labeling taxonomy best practices.
-  - Provide links to AIP docs, Tom's Ignite 2017 talk
 
 ## Next Steps
 

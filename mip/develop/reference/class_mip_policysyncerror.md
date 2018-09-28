@@ -1,14 +1,14 @@
 ---
-title: class mip Error 
-description: Reference for class mip Error 
+title: class mip PolicySyncError 
+description: Reference for class mip PolicySyncError 
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.date: 09/27/2018
 ms.author: bryanla
 ---
-# class mip::Error 
-Base class for all errors that will be reported (thrown or returned) from MIP SDK.
+# class mip::PolicySyncError 
+An attempt to sync policy data failed.
   
 ## Summary
  Members                        | Descriptions                                

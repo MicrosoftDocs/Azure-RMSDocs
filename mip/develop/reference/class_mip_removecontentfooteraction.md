@@ -1,5 +1,14 @@
+---
+title: class mip RemoveContentFooterAction 
+description: Reference for class mip RemoveContentFooterAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::RemoveContentFooterAction 
-An action class which specifies removing the content footer from the document.
+An action class that specifies removing the content footer from the document.
   
 ## Summary
  Members                        | Descriptions                                

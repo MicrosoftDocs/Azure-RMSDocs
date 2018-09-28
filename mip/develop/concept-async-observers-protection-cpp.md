@@ -1,7 +1,6 @@
 ---
 title: Concepts - Protection API observers in the MIP SDK.
 description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how Protection API observers are implemented and used for asynchronicity.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
@@ -122,6 +121,3 @@ void ProtectionHandlerObserverImpl::OnCreateProtectionHandlerError(
 };
 ```
 
-## Next Steps
-
-[TBD - Link to create a `mip::ProtectionProfile`, load a `mip::ProtectionEngine`, and perform Protection operations with `mip::ProtectionHandler`]()
