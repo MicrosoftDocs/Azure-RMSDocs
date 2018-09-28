@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
 ---
-# Microsoft Information Protection SDK - File handler concepts  
+# Microsoft Information Protection SDK - File handler concepts
 
 In the MIP SDK File API, the `mip::FileHandler` exposes all of the various operations that can be used to read and write labels, or protection, across a set of file types for which support is built-in. 
 
