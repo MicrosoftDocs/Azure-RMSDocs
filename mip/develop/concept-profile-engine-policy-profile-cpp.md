@@ -16,14 +16,14 @@ The two examples below show how to create the profileSettings object using local
 
 ## Load a Profile
 
-Now that the `ProfileObserver` and `AuthDelegateImpl` are defined, we'll use the them to instantiate `mip::Profile`. Creating the `mip::Profile` object requires [`mip::Profile::Settings`](reference/class_mip_Profile_settings.md).
+Now that the `ProfileObserver` and `AuthDelegateImpl` are defined, we'll use the them to instantiate `mip::PolicyProfile`. Creating the `mip::PolicyProfile` object requires [`mip::PolicyProfile::Settings`](reference/class_mip_PolicyProfile_settings.md).
 
 ### Profile::Settings Parameters
 
 - `std::string path`: File path under which logging, telemetry, and other persistent state is stored.
 - `bool useInMemoryStorage`: Defines whether or not all state should be stored in memory as opposed to on disk.
 - `std::shared_ptr<mip::AuthDelegate> authDelegate`: A shared pointer of class `mip::AuthDelegate` 
-- `std::shared_ptr<mip::Profile::Observer> observer`: A shared pointer to the `Profile::Observer` implementation.
+- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: A shared pointer to the `PolicyProfile::Observer` implementation.
 - `mip::ApplicationInfo applicationInfo`: object. Used to define info regarding application that is consuming the SDK.
 
 The two examples below show how to create the profileSettings object using local storage for state storage as well as in-memory only. Both assume that the `authDelegateImpl` object has already been created.

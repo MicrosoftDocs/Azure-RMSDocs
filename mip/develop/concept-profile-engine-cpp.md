@@ -16,7 +16,7 @@ The profile is the root class for all operations in the MIP SDK. Before using an
 
 There are three types of profile in the MIP SDK:
 
-- [`Profile`](reference/class_mip_profile.md): The profile class for the MIP Policy API.
+- [`PolicyProfile`](reference/class_mip_policyprofile.md): The profile class for the MIP Policy API.
 - [`ProtectionProfile`](reference/class_mip_protectionprofile.md): The profile class for the MIP Protection API.
 - [`FileProfile`](reference/class_mip_fileprofile.md): The profile class for the MIP File API.
 
@@ -35,7 +35,7 @@ The profile itself provides the following functionality:
 - `useInMemoryStorage`: A bool that defines whether state should be stored in memory, or on disk.
 - `authDelegate`: A shared pointer of class `mip::AuthDelegate`. 
 - `consentDelegate`: A shared pointer of class `mip::ConsentDelegate`. 
-- `observer`: A shared pointer to the `Profile::Observer` implementation.
+- `observer`: A shared pointer to the profile `Observer` implementation (in `PolicyProfile`, `ProtectionProfile`, and `EngineProfile`).
 - `applicationInfo`: A `mip::ApplicationInfo` object. Information about the application that is consuming the SDK.
 
 ## Engines

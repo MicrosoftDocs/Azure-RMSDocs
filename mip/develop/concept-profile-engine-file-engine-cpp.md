@@ -15,12 +15,12 @@ The `mip::FileEngine` in the MIP SDK File API provides an interface to all opera
 The `FileEngine` has two primary responsibilities: Listing labels for an authenticated user and creating file handlers to perform file operations on behalf of the user. 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
-  - `ListSensitivityLabels()`: Gets the list of labels for the loaded engine.
-  - `CreateFileHandler()`: Creates a `mip::FileHandler` for a specific file or stream.
+- `ListSensitivityLabels()`: Gets the list of labels for the loaded engine.
+- `CreateFileHandler()`: Creates a `mip::FileHandler` for a specific file or stream.
 
 ## Add a File Engine
 
-As covered in [Profile and Engine objects](concepts-profile-engine-cpp.md), an engine can have two states - `CREATED` or `LOADED`. If it's not one of those two states, it doesn't exist. To both create and load a state, it's only necessary to make a single call to `FileProfile::LoadAsync`. If the engine already exists in the cached state, it will be `LOADED`. If it doesn't exist, it will be `CREATED` and `LOADED`. `CREATED` implies that the application has all of the information from the service needed to load the engine. `LOADED` implies that all of the data structures necessary to leverage the engine have been created in memory.
+As covered in [Profile and Engine objects](concept-profile-engine-cpp.md), an engine can have two states - `CREATED` or `LOADED`. If it's not one of those two states, it doesn't exist. To both create and load a state, it's only necessary to make a single call to `FileProfile::LoadAsync`. If the engine already exists in the cached state, it will be `LOADED`. If it doesn't exist, it will be `CREATED` and `LOADED`. `CREATED` implies that the application has all of the information from the service needed to load the engine. `LOADED` implies that all of the data structures necessary to leverage the engine have been created in memory.
 
 ### Create File Engine Settings
 
