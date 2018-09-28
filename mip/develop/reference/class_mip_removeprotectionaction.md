@@ -1,5 +1,14 @@
+---
+title: class mip RemoveProtectionAction 
+description: Reference for class mip RemoveProtectionAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::RemoveProtectionAction 
-An action class which specifies removing protection from the document.
+An action class that specifies removing protection from the document.
   
 ## Summary
  Members                        | Descriptions                                

@@ -1,7 +1,6 @@
 ---
 title: Concepts - APIs in the MIP SDK.
 description: This article will help you understand 3 types of APIs in the MIP SDK, how they're related, and use-cases for using each.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual

@@ -1,7 +1,6 @@
 ---
 title: Concepts - Authentication in the MIP SDK.
 description: This article will help you understand how the MIP SDK implements authentication, and the requirements for client applications to provide OAuth2 access token acquisition logic.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
@@ -29,8 +28,6 @@ Authentication in the MIP SDK is performed by extending the class `mip::AuthDele
 
 The `mip::Consent` enum class implements an easy-to-use approach that permits application developers to provide a custom consent experience based on the endpoint that is being accessed by the SDK. The notification can inform a user of the data that will be collected, how to get the data removed, or any other information that is required by law or compliance policies. Once the user grants consent, the application can continue. 
 
-(TBD) GDPR info here? 
-(TBD) Exception details?
 
 ### Implementation
 

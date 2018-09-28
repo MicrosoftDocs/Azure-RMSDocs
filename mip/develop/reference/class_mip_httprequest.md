@@ -1,5 +1,14 @@
+---
+title: class mip HttpRequest 
+description: Reference for class mip HttpRequest 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::HttpRequest 
-Interface that describes a single http request.
+Interface that describes a single HTTP request.
   
 ## Summary
  Members                        | Descriptions                                

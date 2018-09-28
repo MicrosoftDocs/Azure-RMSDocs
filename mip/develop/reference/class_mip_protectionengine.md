@@ -1,5 +1,14 @@
+---
+title: class mip ProtectionEngine 
+description: Reference for class mip ProtectionEngine 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ProtectionEngine 
-Performs protection-related actions related to a specific identity.
+Manages protection-related actions related to a specific identity.
   
 ## Summary
  Members                        | Descriptions                                
@@ -7,10 +16,10 @@ Performs protection-related actions related to a specific identity.
  public const Settings& GetSettings() const  |  Gets the engine settings.
 public void GetTemplatesAsync(const std::shared_ptr<ProtectionEngine::Observer>& observer, const std::shared_ptr<void>& context)  |  Get collection of templates available to a user.
 public std::vector<std::string> GetTemplates(const std::shared_ptr<void>& context)  |  Get collection of templates available to a user.
-public void GetRightsForLabelIdAsync(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::shared_ptr<ProtectionEngine::Observer>& observer, const std::shared_ptr<void>& context)  |  Get collection of rights available to a user for a labelId.
+public void GetRightsForLabelIdAsync(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::shared_ptr<ProtectionEngine::Observer>& observer, const std::shared_ptr<void>& context)  |  Get collection of rights available to a user for a label ID.
 public std::vector<std::string> GetRightsForLabelId(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::shared_ptr<void>& context)  |  Get collection of rights available to a user for a labelId.
-public void GetGrantingLabelIdsAsync(const std::shared_ptr<ProtectionEngine::Observer>& observer, const std::shared_ptr<void>& context)  |  Get collection of labelIds available to a user.
-public std::vector<std::string> GetGrantingLabelIds(const std::shared_ptr<void>& context)  |  Get collection of labelIds available to a user.
+public void GetGrantingLabelIdsAsync(const std::shared_ptr<ProtectionEngine::Observer>& observer, const std::shared_ptr<void>& context)  |  Get collection of label IDs available to a user.
+public std::vector<std::string> GetGrantingLabelIds(const std::shared_ptr<void>& context)  |  Get collection of label IDs available to a user.
 public void CreateProtectionHandlerFromDescriptorAsync(const std::shared_ptr<ProtectionDescriptor>& descriptor, const ProtectionHandlerCreationOptions& options, const std::shared_ptr<ProtectionHandler::Observer>& observer, const std::shared_ptr<void>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
 public std::shared_ptr<ProtectionHandler> CreateProtectionHandlerFromDescriptor(const std::shared_ptr<ProtectionDescriptor>& descriptor, const ProtectionHandlerCreationOptions& options, const std::shared_ptr<void>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
 public void CreateProtectionHandlerFromPublishingLicenseAsync(const std::vector<uint8_t>& serializedPublishingLicense, const ProtectionHandlerCreationOptions& options, const std::shared_ptr<ProtectionHandler::Observer>& observer, const std::shared_ptr<void>& context)  |  Creates a protection handler from a serialized publishing license.
@@ -46,16 +55,16 @@ Parameters:
 
 
   
-**Returns**: List of template ids
+**Returns**: List of template IDs
   
 ### GetRightsForLabelIdAsync
-Get collection of rights available to a user for a labelId.
+Get collection of rights available to a user for a label ID.
 
 Parameters:  
-* **documentId**: DocumentID associated with the document metadata 
+* **documentId**: Document ID associated with the document metadata 
 
 
-* **labelId**: labelID associated with the document metadata with which the document created 
+* **labelId**: [Label](class_mip_label.md) ID associated with the document metadata with which the document created 
 
 
 * **ownerEmail**: owner of the document 
@@ -72,13 +81,13 @@ Parameters:
 Get collection of rights available to a user for a labelId.
 
 Parameters:  
-* **documentId**: DocumentID associated with the document metadata 
+* **documentId**: Document ID associated with the document metadata 
 
 
-* **labelId**: labelID associated with the document metadata with which the document created 
+* **labelId**: [Label](class_mip_label.md) ID associated with the document metadata with which the document created 
 
 
-* **ownerEmail**: owner of the document 
+* **ownerEmail**: Owner of the document 
 
 
 * **context**: This same context will be forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
@@ -89,7 +98,7 @@ Parameters:
 **Returns**: List of rights
   
 ### GetGrantingLabelIdsAsync
-Get collection of labelIds available to a user.
+Get collection of label IDs available to a user.
 
 Parameters:  
 * **observer**: A class implementing the [ProtectionEngine::Observer](class_mip_protectionengine_observer.md) interface 
@@ -100,7 +109,7 @@ Parameters:
 
   
 ### GetGrantingLabelIds
-Get collection of labelIds available to a user.
+Get collection of label IDs available to a user.
 
 Parameters:  
 * **context**: This same context will be forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
@@ -108,7 +117,7 @@ Parameters:
 
 
   
-**Returns**: List of labelIds
+**Returns**: List of label IDs
   
 ### CreateProtectionHandlerFromDescriptorAsync
 Creates a protection handler where rights/roles are assigned to specific users.

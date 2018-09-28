@@ -1,10 +1,19 @@
+---
+title: class mip ProtectionHandler 
+description: Reference for class mip ProtectionHandler 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::ProtectionHandler 
-Performs protection-related actions for a specific protection configuration (i.e. users, rights, roles, etc.)
+Manages protection-related actions for a specific protection configuration.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr<Stream> CreateProtectedStream(const std::shared_ptr<Stream>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Create a protected stream which will allow for encryption/decryption of content.
+public std::shared_ptr<Stream> CreateProtectedStream(const std::shared_ptr<Stream>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Create a protected stream that will allow for encryption/decryption of content.
  public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Encrypt a buffer.
  public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Decrypt a buffer.
  public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calculates size (in bytes) of content if it were to be encrypted with this [ProtectionHandler](class_mip_protectionhandler.md).
@@ -13,17 +22,17 @@ public std::vector<std::string> GetRights() const  |  Gets the rights granted to
  public bool AccessCheck(const std::string& right) const  |  Checks if protection handler grants user access to the specified right.
  public const std::string GetIssuedTo()  |  Gets user associated with the protection handler.
  public const std::string GetOwner()  |  Gets email address of content owner.
- public bool IsIssuedToOwner()  |  Gets whether or not the current user is the content owner.
+ public bool IsIssuedToOwner()  |  Gets if the current user is the content owner or not.
 public std::shared_ptr<ProtectionDescriptor> GetProtectionDescriptor()  |  Gets protection details.
  public const std::string GetContentId()  |  Gets unique identifier for the document/content.
- public bool DoesUseDeprecatedAlgorithms()  |  Gets whether or not protection handler uses deprecated crypto algorithms (ECB) for backward compatibility.
- public bool IsAuditedExtractAllowed()  |  Gets whether or not protection handler grants user 'audited extract' right.
+ public bool DoesUseDeprecatedAlgorithms()  |  Gets if protection handler uses deprecated crypto algorithms (ECB) for backward compatibility or not.
+ public bool IsAuditedExtractAllowed()  |  Gets if protection handler grants user 'audited extract' right or not.
 public const std::vector<uint8_t> GetSerializedPublishingLicense()  |  Serialize [ProtectionHandler](class_mip_protectionhandler.md) into a publishing license (PL)
   
 ## Members
   
 ### Stream
-Create a protected stream which will allow for encryption/decryption of content.
+Create a protected stream that will allow for encryption/decryption of content.
 
 Parameters:  
 * **backingStream**: Backing stream from which to read/write 
@@ -58,7 +67,7 @@ Parameters:
 * **outputBufferSize**: Size (in bytes) of output buffer 
 
 
-* **isFinal**: Whether or not input buffer contains the final cleartext bytes
+* **isFinal**: If input buffer contains the final cleartext bytes or not
 
 
 
@@ -84,7 +93,7 @@ Parameters:
 * **outputBufferSize**: Size (in bytes) of output buffer 
 
 
-* **isFinal**: Whether or not input buffer contains the final encrypted bytes
+* **isFinal**: If input buffer contains the final encrypted bytes or not
 
 
 
@@ -98,7 +107,7 @@ Parameters:
 * **unprotectedLength**: Size (in bytes) of unprotected content 
 
 
-* **includesFinalBlock**: Describes whether or not the unprotected content in question includes the final block. For example, in CBC4k encryption mode, non-final protected blocks are the same size as unprotected blocks, but final protected blocks are larger than their unprotected counterparts.
+* **includesFinalBlock**: Describes if the unprotected content in question includes the final block or not. For example, in CBC4k encryption mode, non-final protected blocks are the same size as unprotected blocks, but final protected blocks are larger than their unprotected counterparts.
 
 
 
@@ -126,7 +135,7 @@ Parameters:
 
 
   
-**Returns**: Whether or not protection handler grants user access to the specified right
+**Returns**: If protection handler grants user access to the specified right or not
   
 ### GetIssuedTo
 Gets user associated with the protection handler.
@@ -141,10 +150,10 @@ Gets email address of content owner.
 **Returns**: Email address of content owner
   
 ### IsIssuedToOwner
-Gets whether or not the current user is the content owner.
+Gets if the current user is the content owner or not.
 
   
-**Returns**: Whether or not the current user is the content owner
+**Returns**: If the current user is the content owner or not
   
 ### ProtectionDescriptor
 Gets protection details.
@@ -159,16 +168,16 @@ Gets unique identifier for the document/content.
 **Returns**: Unique content identifier
   
 ### DoesUseDeprecatedAlgorithms
-Gets whether or not protection handler uses deprecated crypto algorithms (ECB) for backward compatibility.
+Gets if protection handler uses deprecated crypto algorithms (ECB) for backward compatibility or not.
 
   
-**Returns**: Whether or not protection handler uses deprecated crypto algorithms
+**Returns**: If protection handler uses deprecated crypto algorithms or not
   
 ### IsAuditedExtractAllowed
-Gets whether or not protection handler grants user 'audited extract' right.
+Gets if protection handler grants user 'audited extract' right or not.
 
   
-**Returns**: Whether or not protection handler grants user 'audited extract' right
+**Returns**: If protection handler grants user 'audited extract' right or not
   
 ### GetSerializedPublishingLicense
 Serialize [ProtectionHandler](class_mip_protectionhandler.md) into a publishing license (PL)

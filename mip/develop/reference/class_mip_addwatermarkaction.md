@@ -1,3 +1,12 @@
+---
+title: class mip AddWatermarkAction 
+description: Reference for class mip AddWatermarkAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::AddWatermarkAction 
 An action class that specifies adding watermark.
   
@@ -48,7 +57,7 @@ Get the font size used to display the watermark.
 Get the font color used to display the watermark.
 
   
-**Returns**: Font color as a string (e.g."#000000").
+**Returns**: Font color as a string (for example, "#000000").
   
 ### ActionType
 Get the type of [Action](class_mip_action.md).
