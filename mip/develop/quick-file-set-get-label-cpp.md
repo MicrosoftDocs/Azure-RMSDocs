@@ -98,7 +98,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
 
    using mip::FileHandler;
    ```
-3. In the body of `main()`, below the `system("pause");`, and above the `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
+3. Toward the end of the body of `main()`, below the `system("pause");`, and above the `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
    // Set up async FileHandler for input file operations

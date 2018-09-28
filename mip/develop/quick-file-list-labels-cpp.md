@@ -16,12 +16,12 @@ This Quickstart shows you how to use the MIP File API, to list the sensitivity l
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This Quickstart relies on the previous one, for proper creation of the starter solution.
+- Complete [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. The "List sensitivity labels" Quickstart relies on the previous one, for proper creation of the starter solution.
 - Optionally: Review [Classification labels](concept-classification-labels.md) concepts.
 
 ## Add logic to list the sensitivity labels
 
-Add logic to list your organization's sensitivity labels, using the File engine object. As noted in the code comments, a call to your `AcquireOAuth2Token()` method is also triggered, by the call to `engineFuture.get()`.
+Add logic to list your organization's sensitivity labels, using the File engine object. 
 
 1. Open the Visual Studio solution you created in the previous "Quickstart: Client application initialization (C++)" article.
 
@@ -33,7 +33,7 @@ Add logic to list your organization's sensitivity labels, using the File engine 
    using std::endl;
    ```
 
-4. In the body of `main()`, below the closing brace `}` of the `catch` block, and above the `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
+4. Toward the end of the body of `main()`, below the closing brace `}` of the `catch` block and above the `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
    // List sensitivity labels
@@ -52,6 +52,8 @@ Add logic to list your organization's sensitivity labels, using the File engine 
 
 ## Update the token acquisition logic with a valid access token
 
+As noted in the code comments, a call to your `AcquireOAuth2Token()` method is triggered by the call to `engineFuture.get()` call in `main()`. You need to finish the implementation of the `AcquireOAuth2Token()` method, to provide the access token back to the MIP SDK.
+
 1. Generate a test token using the following PowerShell script. The script uses the `Get-ADALToken` cmdlet from the ADAL.PS module you installed earlier, in MIP SDK Setup and configuration. 
 
    - Create a PowerShell Script file (.ps1 extension), and copy/paste the following script into the file:
@@ -65,12 +67,12 @@ Add logic to list your organization's sensitivity labels, using the File engine 
      $response.AccessToken | clip                                      # Copies the access token text to the clipboard
      ```
 
-   - Update the `$appId` and `redirectUri` variables to match the values specified in your Azure AD app registration.
+   - Update the `$appId` and `redirectUri` variables, to match the values specified in your Azure AD app registration.
    - Save the script file, then run it using PowerShell. The `Get-ADALToken` cmdlet triggers an Azure AD authentication prompt similar to the following example. After successful sign-in, the access token will be placed on the clipboard.
 
      [![Visual Studio acquire token sign-in](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
-   - You may also need to give consent, to allow the application to access the MIP APIs under the sign-in account. This happens when the Azure AD application registration isn't pre-consented (as outlined in "MIP SDK setup and configuration"), or you're signing in with an account from a different tenant (other than the one where your application is registered). Simply click **Accept** to record your consent.
+   - You may also need to give consent, to allow the application to access the MIP APIs, while running under the sign-in account. This happens when the Azure AD application registration isn't pre-consented (as outlined in "MIP SDK setup and configuration"), or you're signing in with an account from a different tenant (other than the one where your application is registered). Simply click **Accept** to record your consent.
 
      [![Visual Studio consent](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png#lightbox)
 
