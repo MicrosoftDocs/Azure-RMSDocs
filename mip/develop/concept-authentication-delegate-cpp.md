@@ -1,7 +1,6 @@
 ---
 title: Concepts - Authentication delegate implementation (C++)
 description: This article will help you understand how to implement an authentication delegate in C++.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual

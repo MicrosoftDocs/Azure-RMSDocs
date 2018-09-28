@@ -1,10 +1,19 @@
+---
+title: class mip Label 
+description: Reference for class mip Label 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::Label 
 Abstraction for a single Microsoft Information Protection label.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetId() const  |  Get the label Id.
+ public const std::string& GetId() const  |  Get the label ID.
  public const std::string& GetName() const  |  Get the label name.
  public const std::string& GetDescription() const  |  Get the label description.
  public const std::string& GetColor() const  |  Get the color the label should be displayed.
@@ -17,10 +26,10 @@ public const std::vector<std::shared_ptr<Label>>& GetChildren() const  |  Get th
 ## Members
   
 ### GetId
-Get the label Id.
+Get the label ID.
 
   
-**Returns**: The label id.
+**Returns**: The label ID.
   
 ### GetName
 Get the label name.

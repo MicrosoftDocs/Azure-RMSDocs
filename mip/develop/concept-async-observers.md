@@ -1,7 +1,6 @@
 ---
 title: Concepts - Observers in the MIP SDK.
 description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how Observers are implemented and used for asynchronicity.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
@@ -49,7 +48,7 @@ The MIP SDK Protection API has three observers:
 * `mip::ProtectionEngine::Observer`
 * `mip::ProtectionHandler::Observer`
 
-## Next Steps (TBD)
+## Next Steps
 
 Learn more about how observers are implemented and used, by the various APIs:
 

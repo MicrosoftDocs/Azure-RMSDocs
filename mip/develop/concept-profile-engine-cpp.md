@@ -1,7 +1,6 @@
 ---
 title: Concepts - The core concepts in the MIP SDK - Profile and Engine
 description: This article will help you understand the core SDK concepts called the Profile and Engine, which are created during application initialization.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
@@ -34,8 +33,8 @@ The profile itself provides the following functionality:
 
 - `Path`: File path under which logging, telemetry, and other persistent state is stored.
 - `useInMemoryStorage`: A bool that defines whether state should be stored in memory, or on disk.
-- `authDelegate`: A shared pointer of class `mip::AuthDelegate`. ([TBD - Authentication concepts]())
-- `consentDelegate`: A shared pointer of class `mip::ConsentDelegate`. ([TBD - Authentication concepts]())
+- `authDelegate`: A shared pointer of class `mip::AuthDelegate`. 
+- `consentDelegate`: A shared pointer of class `mip::ConsentDelegate`. 
 - `observer`: A shared pointer to the [`Profile::Observer`]() implementation.
 - `applicationInfo`: A `mip::ApplicationInfo` object. Information about the application that is consuming the SDK.
 
@@ -46,7 +45,6 @@ In the File, Profile, and Protection APIs, engines provide an interface to opera
 There are three engine classes in the SDK, one for each API. The following list shows the engine classes and a few of the functions associated with each:
 
 - [`mip::ProtectionEngine`]
-  - (TBD) - Details here.
 - [`mip::PolicyEngine`](https://docs.microsoft.com/en-us/azure/information-protection/develop/mip/class_mip_policyengine)
   - `ListSensitivityLabels()`: Gets the list of labels for the loaded engine.
   - `GetSensitivityLabel()`: Gets the label from existing content.

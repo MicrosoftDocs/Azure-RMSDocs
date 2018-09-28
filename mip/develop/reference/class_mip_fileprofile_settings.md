@@ -1,3 +1,12 @@
+---
+title: class mip FileProfile Settings 
+description: Reference for class mip FileProfile Settings 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::FileProfile::Settings 
 [Settings](class_mip_fileprofile_settings.md) used by [FileProfile](class_mip_fileprofile.md) during its creation and throughout its lifetime.
   
@@ -6,25 +15,25 @@
 --------------------------------|---------------------------------------------
 public Settings(const std::string& path, bool useInMemoryStorage, std::shared_ptr<AuthDelegate> authDelegate, std::shared_ptr<ConsentDelegate> consentDelegate, std::shared_ptr<Observer> observer, const ApplicationInfo& applicationInfo)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor.
  public const std::string& GetPath() const  |  Gets the path under which logging, telemetry, and other persistent state is stored.
- public bool GetUseInMemoryStorage() const  |  Gets whether or not all state should be stored in memory (as opposed to on disk)
+ public bool GetUseInMemoryStorage() const  |  Gets if all state should be stored in memory (as opposed to on disk)
 public std::shared_ptr<AuthDelegate> GetAuthDelegate() const  |  Gets the auth delegate used for acquiring authentication tokens.
 public std::shared_ptr<ConsentDelegate> GetConsentDelegate() const  |  Gets the consent delegate used to request user consent connecting to services.
-public std::shared_ptr<Observer> GetObserver() const  |  Gets the observer which receives notifications of events related to [FileProfile](class_mip_fileprofile.md).
- public const ApplicationInfo GetApplicationInfo() const  |  Gets info regarding application that is consuming the SDK.
- public bool GetSkipTelemetryInit() const  |  Gets whether or not telemetry initialization should be skipped.
+public std::shared_ptr<Observer> GetObserver() const  |  Gets the observer that receives notifications of events related to [FileProfile](class_mip_fileprofile.md).
+ public const ApplicationInfo GetApplicationInfo() const  |  Gets info about application that is consuming the SDK.
+ public bool GetSkipTelemetryInit() const  |  Gets if telemetry initialization should be skipped or not.
  public void SetSkipTelemetryInit()  |  Disables telemetry initialization.
  public void SetNewFeaturesDisabled()  |  Disables new features.
- public bool AreNewFeaturesDisabled() const  |  Gets whether or not new features are disabled.
+ public bool AreNewFeaturesDisabled() const  |  Gets if new features are disabled or not.
 public std::shared_ptr<LoggerDelegate> GetLoggerDelegate() const  |  Get the logger delegate (if any) provided by the application.
 public void SetLoggerDelegate(const std::shared_ptr<LoggerDelegate>& loggerDelegate)  |  Override default logger.
-public std::shared_ptr<HttpDelegate> GetHttpDelegate() const  |  Get the http delegate (if any) provided by the application.
-public void SetHttpDelegate(const std::shared_ptr<HttpDelegate>& httpDelegate)  |  Override default http stack with client's own.
+public std::shared_ptr<HttpDelegate> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
+public void SetHttpDelegate(const std::shared_ptr<HttpDelegate>& httpDelegate)  |  Override default HTTP stack with client's own.
  public void OptOutTelemetry()  |  Opts out of all telemetry gathering.
- public bool IsTelemetryOptedOut() const  |  Gets whether or not telemetry gathering should be disabled.
- public void SetSessionId(const std::string& sessionId)  |  Sets the session id.
- public const std::string& GetSessionId() const  |  Gets the session id.
- public void SetMinimumLogLevel(LogLevel logLevel)  |  Set the minimum log level that will trigger a logging event.
- public LogLevel GetMinimumLogLevel() const  |  Get the Minimum Log Level object.
+ public bool IsTelemetryOptedOut() const  |  Gets if telemetry gathering should be disabled or not.
+ public void SetSessionId(const std::string& sessionId)  |  Sets the session ID.
+ public const std::string& GetSessionId() const  |  Gets the session ID.
+ public void SetMinimumLogLevel(LogLevel logLevel)  |  Set the lowest log level that will trigger a logging event.
+ public LogLevel GetMinimumLogLevel() const  |  Get the lowest log level that will trigger a logging event.
   
 ## Members
   
@@ -35,16 +44,16 @@ Parameters:
 * **path**: File path under which logging, telemetry, and other persistent state is stored 
 
 
-* **useInMemoryStorage**: Whether or not all state should be stored in memory (as opposed to on disk) 
+* **useInMemoryStorage**: true if all state should be stored in memory, false if state can be cached to disk 
 
 
 * **authDelegate**: Auth delegate used for acquiring authentication tokens 
 
 
-* **observer**: [Observer](class_mip_fileprofile_observer.md) instance which will receive notifications of events related to [FileProfile](class_mip_fileprofile.md)
+* **observer**: [Observer](class_mip_fileprofile_observer.md) instance that will receive notifications of events related to [FileProfile](class_mip_fileprofile.md)
 
 
-* **applicationInfo**: Info regarding application that is consuming the SDK
+* **applicationInfo**: Info about application that is consuming the SDK
 
 
   
@@ -55,10 +64,10 @@ Gets the path under which logging, telemetry, and other persistent state is stor
 **Returns**: Path under which logging, telemetry, and other persistent state is stored
   
 ### GetUseInMemoryStorage
-Gets whether or not all state should be stored in memory (as opposed to on disk)
+Gets if all state should be stored in memory (as opposed to on disk)
 
   
-**Returns**: Whether or not all state should be stored in memory (as opposed to on disk)
+**Returns**: If all state should be stored in memory (as opposed to on disk)
   
 ### GetAuthDelegate
 Gets the auth delegate used for acquiring authentication tokens.
@@ -73,42 +82,42 @@ Gets the consent delegate used to request user consent connecting to services.
 **Returns**: Consent delegate used for requesting user consent
   
 ### Observer
-Gets the observer which receives notifications of events related to [FileProfile](class_mip_fileprofile.md).
+Gets the observer that receives notifications of events related to [FileProfile](class_mip_fileprofile.md).
 
   
-**Returns**: [Observer](class_mip_fileprofile_observer.md) which receives notifications of events related to [FileProfile](class_mip_fileprofile.md)
+**Returns**: [Observer](class_mip_fileprofile_observer.md) that receives notifications of events related to [FileProfile](class_mip_fileprofile.md)
   
 ### ApplicationInfo
-Gets info regarding application that is consuming the SDK.
+Gets info about application that is consuming the SDK.
 
   
-**Returns**: Info regarding application that is consuming the SDK
+**Returns**: Info about application that is consuming the SDK
   
 ### GetSkipTelemetryInit
-Gets whether or not telemetry initialization should be skipped.
+Gets if telemetry initialization should be skipped or not.
 
   
-**Returns**: Whether or not telemetry initialization should be skipped
+**Returns**: If telemetry initialization should be skipped or not
   
 ### SetSkipTelemetryInit
 Disables telemetry initialization.
-This should not normally be called by client applications, rather it is used by File SDK (which already initializes telemetry) to prevent duplicate initialization
+This method is not typically called by client applications, rather it is used by File SDK to prevent duplicate initialization
   
 ### SetNewFeaturesDisabled
 Disables new features.
 For applications that don't want to try new features
   
 ### AreNewFeaturesDisabled
-Gets whether or not new features are disabled.
+Gets if new features are disabled or not.
 
   
-**Returns**: Whether or not new features are disabled
+**Returns**: If new features are disabled or not
   
 ### LoggerDelegate
 Get the logger delegate (if any) provided by the application.
 
   
-**Returns**: Logger delegate to be used for logging
+**Returns**: Logger
   
 ### SetLoggerDelegate
 Override default logger.
@@ -117,19 +126,19 @@ Parameters:
 * **loggerDelegate**: Logging callback interface implemented by client applications
 
 
-This should be called by client applications that use their own logger implementation
+This method should be called by client applications that use their own logger implementation
   
 ### HttpDelegate
-Get the http delegate (if any) provided by the application.
+Get the HTTP delegate (if any) provided by the application.
 
   
-**Returns**: Http delegate to be used for http operations
+**Returns**: HTTP delegate to be used for HTTP operations
   
 ### SetHttpDelegate
-Override default http stack with client's own.
+Override default HTTP stack with client's own.
 
 Parameters:  
-* **httpDelegate**: Http callback interface implemented by client application
+* **httpDelegate**: HTTP callback interface implemented by client application
 
 
   
@@ -137,30 +146,30 @@ Parameters:
 Opts out of all telemetry gathering.
   
 ### IsTelemetryOptedOut
-Gets whether or not telemetry gathering should be disabled.
+Gets if telemetry gathering should be disabled or not.
 
   
-**Returns**: Whether or not telemetry gathering should be disabled
+**Returns**: If telemetry gathering should be disabled or not
   
 ### SetSessionId
-Sets the session id.
+Sets the session ID.
 
 Parameters:  
-* **sessionId**: Session id which will be used to correlate logs/telemetry
+* **sessionId**: Session ID that will be used to correlate logs/telemetry
 
 
   
 ### GetSessionId
-Gets the session id.
+Gets the session ID.
 
   
-**Returns**: Session id which will be used to correlate logs/telemetry
+**Returns**: Session ID that will be used to correlate logs/telemetry
   
 ### SetMinimumLogLevel
-Set the minimum log level that will trigger a logging event.
+Set the lowest log level that will trigger a logging event.
 
 Parameters:  
-* **logLevel**: minimum log level that will trigger a logging event. 
+* **logLevel**: lowest log level that will trigger a logging event. 
 
 
 
@@ -168,7 +177,7 @@ Parameters:
 **Returns**: True
   
 ### LogLevel
-Get the Minimum Log Level object.
+Get the lowest log level that will trigger a logging event.
 
   
-**Returns**: Minimum log level that will trigger a logging event.
+**Returns**: Lowest log level that will trigger a logging event.

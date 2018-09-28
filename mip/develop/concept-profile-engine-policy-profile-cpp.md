@@ -1,7 +1,6 @@
 ---
 title: Concepts - The Policy API profile object
 description: This article will help you understand the concepts around the Policy profile object, which is created during application initialization.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
