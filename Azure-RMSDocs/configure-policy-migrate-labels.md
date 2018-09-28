@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/26/2018
+ms.date: 09/28/2018
 ms.topic: article
 ms.service: information-protection
 
@@ -106,16 +106,11 @@ For the labels that successfully migrate, they can now be used by [clients that 
 
 The clients that currently support unified labeling include:
 
-- From the Office Insiders program:
+- Apps from the Office Insiders program. For more information, see the [Where the feature is available today?](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US#bkmk_whereavailable) section from the Office documentation.
     
-    - MacOS computers that use Word, PowerPoint, and Excel from Office for Mac 2016
-    
-    - iOS and Android devices that use Word and PowerPoint from Office Mobile.
-
-- Clients from software vendors and developers that use the [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference)
+- Clients from software vendors and developers that use the [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference).
 
 
 ## Next steps
 
-If you're new to the Security & Compliance Center, see [Office 365 Security and Compliance](https://docs.microsoft.com/office365/securitycompliance/?redirectSourcePath=%252fen-us%252farticle%252fOverview-of-security-and-compliance-in-Office-365-dcb83b2c-ac66-4ced-925d-50eb9698a0b2 )
-
+For more information about configuring your migrated labels in the Office 365 Security & Compliance Center, see the blog post, [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
