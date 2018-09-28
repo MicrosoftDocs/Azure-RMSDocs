@@ -52,4 +52,4 @@ The File API is an abstraction of both the Protection and Policy APIs. It provid
 
 ## Next steps
 
-Now that you have a general idea of the MIP APIs and how they're used, learn more about the [Profile and Engine object concepts](concept-profile-engine-cpp.md). These concepts are fundamental, and apply to all MIP API sets.
+Now that you have a general idea of the available MIP APIs and how they're used, continue with [Profile and Engine object concepts](concept-profile-engine-cpp.md). These concepts are fundamental, and apply to all MIP API sets.
