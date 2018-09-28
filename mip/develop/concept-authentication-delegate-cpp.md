@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
 ---
-# Implementing an authentication delegate (C++)
+# Microsoft Information Protection SDK - Implementing an authentication delegate (C++)
 
 The MIP SDK does implement an authentication delegate for handling authentication challenges and responding with a token. It does not itself implement token acquisition. The token acquisition process is up to the developer and is accomplished by extending the `mip::AuthDelegate` class, specifically the `AcquireOAuth2Token` member function.
 
@@ -104,6 +104,5 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 
 To complete the authentication implementation, it's necessary to build the code behind the `AcquireToken()` function. The examples below discuss a few ways to acquire the token.
 
-- [Simple/PowerShell token acquisition example]()
-- [Python token acquisition example]()
-- [Node.js Authentication Example]()
+- [Simple/PowerShell token acquisition example](concept-authentication-acquire-token-ps.md)
+- [Python token acquisition example](concept-authentication-acquire-token-py.md)

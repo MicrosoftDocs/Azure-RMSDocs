@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
 ---
-# File handlers in the MIP SDK
+# Microsoft Information Protection SDK - File handler concepts
 
 In the MIP SDK File API, the `mip::FileHandler` exposes all of the various operations that can be used to read and write labels, or protection, across a set of file types for which support is built-in. 
 
@@ -36,7 +36,7 @@ Creating a `FileHandler` to work with a specific file requires:
 
 - A `FileProfile`
 - A `FileEngine` added to the `FileProfile`
-- A class that inherits `mip::FileHandler::Observer`, similar to the pattern outlined [here]().
+- A class that inherits `mip::FileHandler::Observer`
 
 ## Create a File Handler
 
@@ -46,7 +46,7 @@ Creating the `FileHandler` is as easy as calling the `FileEngine`'s `CreateFileH
 
 `CreateFileHandlerAsync` accepts three parameters: The path to the file that should be read or modified, the `mip::FileHandler::Observer` for asynchronous event notifications, and the promise for the `FileHandler`.
 
-**Note:** The `mip::FileHandler::Observer` class must be implemented in a derived class as `CreateFileHandler` requires the `Observer` object. Review [here]() for `Observer` details.
+**Note:** The `mip::FileHandler::Observer` class must be implemented in a derived class as `CreateFileHandler` requires the `Observer` object. 
 
 ```cpp
 auto createFileHandlerPromise = std::make_shared<std::promise<std::shared_ptr<mip::FileHandler>>>();
@@ -103,7 +103,7 @@ The second parameter required to set the label is a `mip::LabelingOptions` objec
 
 `LabelingOptions` specifies additional information about the label such as the `AssignmentMethod` and justification for an action.
 
-- `mip::AssignmentMethod` is simply an enumerator that has three values: `STANDARD`, `PRIVILEGED`, or `AUTO`. Review the [mip::AssignmentMethod]() section for more details.
+- `mip::AssignmentMethod` is simply an enumerator that has three values: `STANDARD`, `PRIVILEGED`, or `AUTO`. Review the `mip::AssignmentMethod` reference for more details.
 - Justification is required only if the service policy requires it *and* when lowering the *existing* sensitivity of a file.
 
 ```cpp
