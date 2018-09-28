@@ -8,7 +8,7 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# Classification labels
+# Microsoft Information Protection SDK - Classification label concepts
 
 As part of a comprehensive data protection strategy, organizations should implement a data classification system that outlines the levels of sensitivity of data within the organization, and then map document attributes to those classifications.
 
@@ -57,8 +57,6 @@ In other words, the `ContentLabel` is a `Label` that has been applied to a piece
 
 The SDK also supported adding extra metadata to documents in the form of key/value pairs. If your organization has sub-classifications or tags that describe the information in a more specific manner, the SDK can be used to apply that metadata.
 
-[Read here]() for more information on applying metadata.
+## Next steps
 
-## Links
-
-Classification reference: https://www.gpo.gov/fdsys/pkg/FR-2010-01-05/html/E9-31418.htm
+For more details on the United States government classification system, see https://www.gpo.gov/fdsys/pkg/FR-2010-01-05/html/E9-31418.htm.

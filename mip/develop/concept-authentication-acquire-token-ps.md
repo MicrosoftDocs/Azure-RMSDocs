@@ -80,7 +80,7 @@ $response.AccessToken | clip
 
 Copy the token from the clipboard in to auth.cpp as the value for `string mToken`, replacing "your token here" above. Running the script again may be required, depending on how long the following steps take.
 
-## Creating the AuthDelegateImpl object.
+## Next steps
 
-Using the auth delegate 
+Now continue with [Implementing an authentication delegate](concept-authentication-delegate-cpp.md)
 

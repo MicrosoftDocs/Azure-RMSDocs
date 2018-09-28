@@ -8,7 +8,7 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# Protection API Observers
+# Microsoft Information Protection SDK - Protection API Observers
 
 The Protection API contains three observer classes. Observer members are virtual and can be overridden to handle callbacks for asynchronous operations.
 
@@ -84,7 +84,7 @@ When we instantiate any SDK class or use a function that performs asynchronous o
 
 ## ProtectionHandler Observer Implementation
 
-Similar to the Protection observer, `mip::ProtectionHandler` implements a `mip::ProtectionHandler::Observer` class for handling asynchronous event notifications during protection operations. The implementation is similar to that detailed above. `ProtectionHandlerObserverImpl` is partially defined below. The full implementation can be found in our [GitHub sample repo]().
+Similar to the Protection observer, `mip::ProtectionHandler` implements a `mip::ProtectionHandler::Observer` class for handling asynchronous event notifications during protection operations. The implementation is similar to that detailed above. `ProtectionHandlerObserverImpl` is partially defined below. The full implementation can be found in our [GitHub sample repo](https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk).
 
 ### ProtectionHandlerObserverImpl Class Declaration
 

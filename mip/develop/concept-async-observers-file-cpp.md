@@ -8,7 +8,7 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# File API Observers
+# Microsoft Information Protection SDK - File API Observers
 
 The File API contains two observer classes. Observer members are virtual and can be overridden to handle event callbacks.
 

@@ -8,7 +8,7 @@ ms.date: 09/27/2018
 ms.author: bryanla
 ---
 
-# File API engine
+# Microsoft Information Protection SDK - File API engine concepts
 
 The `mip::FileEngine` in the MIP SDK File API provides an interface to all operations that are performed on behalf of a specified identity. One engine will be added for each user that signs in to the application and all operations that engine performs will be performed in the context of that identity.
 
@@ -20,7 +20,7 @@ The `FileEngine` has two primary responsibilities: Listing labels for an authent
 
 ## Add a File Engine
 
-As covered in the [Concepts - Engine]() page, an engine can have two states - `CREATED` or `LOADED`. If it's not one of those two states, it doesn't exist. To both create and load a state, it's only necessary to make a single call to `FileProfile::LoadAsync`. If the engine already exists in the cached state, it will be `LOADED`. If it doesn't exist, it will be `CREATED` and `LOADED`. `CREATED` implies that the application has all of the information from the service needed to load the engine. `LOADED` implies that all of the data structures necessary to leverage the engine have been created in memory.
+As covered in [Profile and Engine objects](concepts-profile-engine-cpp.md), an engine can have two states - `CREATED` or `LOADED`. If it's not one of those two states, it doesn't exist. To both create and load a state, it's only necessary to make a single call to `FileProfile::LoadAsync`. If the engine already exists in the cached state, it will be `LOADED`. If it doesn't exist, it will be `CREATED` and `LOADED`. `CREATED` implies that the application has all of the information from the service needed to load the engine. `LOADED` implies that all of the data structures necessary to leverage the engine have been created in memory.
 
 ### Create File Engine Settings
 
@@ -36,7 +36,7 @@ As a best practice, the first parameter, `id`, should be something that allows t
 
 ### Add the File Engine
 
-To add the engine, we'll go back to the promise/future pattern used to [load the profile](). Rather than creating the promise for `mip::FileProfile`, it's created using `mip::FileEngine`.
+To add the engine, we'll go back to the promise/future pattern used to load the profile. Rather than creating the promise for `mip::FileProfile`, it's created using `mip::FileEngine`.
 
 ```cpp
   //auto profile will be std::shared_ptr<mip::FileProfile>
@@ -101,7 +101,5 @@ The collection of `mip::Label` returned by `GetSensitivityLabels()` can be used 
 
 ## Next Steps
 
-Now that the profile is loaded, the engine added, and we have labels, we can add a handler to begin to read, write, or remove labels from files.
-
-- [Creating a File Handler]()
+Now that the profile is loaded, the engine added, and we have labels, we can add a handler to begin to read, write, or remove labels from files. See [File handlers in the MIP SDK](concept-handler-file-cpp.md).
 
