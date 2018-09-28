@@ -1,18 +1,26 @@
+---
+title: Summary
+description: Summary
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 **common** |
- enum Consent       |  Represents a user's decision to consent to connect to a service endpoint.
- struct ApplicationInfo  |  Application ID as set in the Azure AD portal.
+enum Consent       |  A user's response when consent is requested to connect to a service endpoint.
+struct ApplicationInfo  |  A struct that includes application specific information.
 **mip** |
- enum ErrorType       | _Not yet documented._
- enum HttpRequestType       |  Http request type.
- enum LogLevel       |  Different log levels used across the mip sdk.
- enum ProtectionHandlerCreationOptions       |  Bit flags that dictate additional policy creation behavior.
- enum ProtectionType       |  Describes whether protection is based off a template or ad-hoc (custom)
- enum ActionType       |  Different action types.
- struct mip::PublishingLicenseContext | Holds the details of a Publishing License used to create a protection handler.
-
+enum ErrorType       | _Not yet documented._
+enum HttpRequestType       |  HTTP request type.
+enum LogLevel       |  Different log levels used across the MIP SDK.
+enum ProtectionHandlerCreationOptions       |  Bit flags that dictate additional policy creation behavior.
+enum ProtectionType       |  Describes whether protection is based off a template or ad-hoc (custom)
+enum ActionType       |  Different action types.
+struct mip::PublishingLicenseContext | Holds the details of a Publishing License used to create a protection handler.
 
   
 ## Enumerations (common)
@@ -29,6 +37,9 @@ Reject            | Do not consent
 ## Enumerations (mip)
 
 ### ActionType
+
+Different action types.
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 ADD_CONTENT_FOOTER            | Add a content footer to the document action type.
@@ -37,7 +48,7 @@ ADD_WATERMARK            | Add a water mark to the entire document action type.
 CUSTOM            | A custom defined action type.
 JUSTIFY            | A justify action type.
 METADATA            | A Meta data change action type.
-PROTECT_ADHOC            | A protect by adhoc policy action type.
+PROTECT_ADHOC            | A protect by ad-hoc policy action type.
 PROTECT_BY_TEMPLATE            | A protect by template action type.
 PROTECT_DO_NOT_FORWARD            | A protect by do not forward action type.
 REMOVE_CONTENT_FOOTER            | Remove content footer action type.
@@ -47,15 +58,12 @@ REMOVE_WATERMARK            | Remove watermarking action type.
 APPLY_LABEL            | Apply label action type.
 RECOMMEND_LABEL            | Recommend label action type.
 
-Different action types.
-
 CUSTOM is the generic action type. Every other action type is a specific action with a specific meaning.
 
-ActionType values can be combined using the following operators
+ActionType values can be combined using the following operators:
 
-- Or (|) operator for [Action](class_mip_action.md).
-- And (&) operator for [Action](class_mip_action.md).
-- Logical Or (Xor) (^) operator for [Action](class_mip_action.md).
+- And (&) operator for [Action](class_mip_action.md) (`operator &(ActionType a, ActionType b)`)
+- Logical Or (Xor) (^) operator for [Action](class_mip_action.md). (`operator ^(ActionType a, ActionType b)`)
 
 
 ### ErrorType
@@ -73,13 +81,17 @@ ACCESS_DENIED            | The user could not get access to the content. e.g. no
 CONSENT_DENIED            | An operation that required consent from user was not granted consent.
   
 ### HttpRequestType
+HTTP request type.
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Get            | GET
 Post            | POST
-Http request type.
   
 ### LogLevel
+
+Different log levels used across the MIP SDK.
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Trace            | 
@@ -89,21 +101,25 @@ Error            |
 Different log levels used across the mip sdk.
   
 ### ProtectionHandlerCreationOptions
+
+Bit flags that dictate additional policy creation behavior.
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 None            | None
 OfflineOnly            | Do not allow UI and network operations.
-AllowAuditedExtraction            | Content can be opened in a non-protection-sdk-aware app
+AllowAuditedExtraction            | Content can be opened in a non-protection-SDK-aware app
 PreferDeprecatedAlgorithms            | Use deprecated crypto algorithms (ECB) for backwards compatibility
-Bit flags that dictate additional policy creation behavior.
-  
+
+
 ### ProtectionType
+Describes whether protection is based off a template or ad-hoc (custom)
+
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 TemplateBased            | Handle was created from a template
 Custom            | Handle was created ad hoc
-Describes whether protection is based off a template or ad-hoc (custom)
-  
+
   
 ### ProtectionHandlerCreationOptions
 ProtectionHandlerCreationOptions bitwise OR operator.
@@ -119,47 +135,16 @@ If MIP dynamic libraries are delay-loaded by an application, this function must 
   
 **Returns**: Bitwise OR of parameters
   
-### mip::Stream
-Creates a [Stream](class_mip_stream.md) from a stream or buffer.
-
-Parameters:  
-* **stdStream**: Backing std::istream, 
-
-**Returns**: [Stream](class_mip_stream.md) wrapping a std::istream
-  
-### mip::Stream
-Creates a [Stream](class_mip_stream.md) from a std::ostream.
-
-Parameters:  
-* **stdOStream**: Backing std::ostream
-
-**Returns**: [Stream](class_mip_stream.md) wrapping a std::ostream
-  
-### mip::Stream
-Creates a [Stream](class_mip_stream.md) from a std::iostream.
-
-Parameters:  
-* **stdIOStream**: Backing std::iostream
-
-**Returns**: [Stream](class_mip_stream.md) wrapping a std::iostream
-  
-### mip::Stream
-Creates an [Stream](class_mip_stream.md) from a buffer.
-
-Parameters:  
-* **buffer**: Pointer to a buffer
-
-**Returns**: Size Size of buffer
-  
 ## Structures
 
 ### ApplicationInfo 
-Application identifier as set in the Azure AD portal.
-  
+A struct that includes application specific information.
+
  Fields                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public std::string applicationId  | Application ID within the Azure AD portal.
- public std::string friendlyName  | Friendly name of the app, as specified in the portal.
+ public std::string applicationId  |  Application identifier as set in the Azure AD portal.
+ public std::string applicationName  |  Application name
+ public std::string applicationVersion  |  The version of the application being used
   
 ### mip::PublishingLicenseContext 
 Holds the details of a Publishing License used to create a protection handler.

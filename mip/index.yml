@@ -2,7 +2,7 @@
 documentType: LandingData
 title: Microsoft Information Protection
 metadata:
-  title: Microsoft Information Protection Documentation - Tutorials, API Reference 
+  title: Microsoft Information Protection Documentation
   description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection — no matter where it’s stored or who it’s shared with.
   author: BryanLa
   manager: mbaldwin
@@ -15,45 +15,9 @@ metadata:
 
 abstract:
   description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection — no matter where it’s stored or who it’s shared with.
-  aside:
-    image:
-      alt: 
-      height: 112
-      src: media/index/tom-mip-sdk.png
-      width: 250  
-    title: MIP SDK Overview (15:26)
-    href: https://www.youtube.com/embed/HFXI_pcGGRc
-    width: 250
 
 sections:
-- title: 5-Minute Quickstarts
+- title: Microsoft Information Protection SDK
   items:
   - type: paragraph
-    text: Learn about Microsoft Information Protection quickly and easily by exploring these articles.
-  - type: list
-    style: unordered
-    items:
-    - html: <a href="develop/quick-app-initialization-cpp">Learn application initialization for MIP SDK apps.</a>
-    - html: <a href="develop/quick-file-list-labels-cpp">Use the File API to list sensitivity labels.</a>    
-
-- title: Samples
-  items:
-  - type: paragraph
-    text: Find samples to help jumpstart your management or development.
-  - type: list
-    style: unordered
-    items:
-    - html: <a href="https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk">MIP SDK samples</a> 
-
-- title: Reference
-  items:
-  - type: list
-    style: cards
-    className: cardsD
-    items:
-    - title: Command-Line
-    - title: Languages
-      html: <p><a href="develop/reference/mip-sdk-reference">C++</a></p>
-    - title: REST
-
-
+    text: Get started with the <a href="develop/">Microsoft Information Protection SDK overview.</a>

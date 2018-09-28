@@ -1,7 +1,6 @@
 ---
 title: Quickstart - Initialization for Microsoft Information Protection (MIP) SDK C++ clients
 description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection (MIP) SDK client applications.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
@@ -55,9 +54,9 @@ First we create and configure the initial Visual Studio solution and project, up
 
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
 
-## Implement an observer class
+## Implement an observer class to monitor the File profile and engine objects
 
-Now create a basic implementation for an observer class, by extending the SDK's `mip::FileProfile::Observer` class. The observer is instantiated and used later, by the File profile and File engine objects.
+Now create a basic implementation for an observer class, by extending the SDK's `mip::FileProfile::Observer` class. The observer is instantiated and used later, to monitor the loading of the File profile object, and adding the engine object to the profile.
 
 1. Add a new class to your project, which generates both the header/.h and implementation/.cpp files for you:
 
@@ -251,11 +250,11 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
    int main()
    {
      // Construct/initialize objects used by the application's profile object
-     ApplicationInfo appInfo{"0edbblll-8773-44de-b87c-b8c6276d41eb",	// ApplicationInfo object (App ID, friendly name)
-                 "AppInitialization Quickstart" };
+     ApplicationInfo appInfo{"<application-id>",	// ApplicationInfo object (App ID, friendly name)
+                 "<friendly-name>" };
      auto profileObserver = make_shared<ProfileObserver>();			// Observer object					
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(			// Authentication delegate object (App ID)
-                 "0edbblll-8773-44de-b87c-b8c6276d41eb");
+                 "<application-id>");
      auto consentDelegateImpl = make_shared<ConsentDelegateImpl>();	// Consent delegate object
  
      // Construct/initialize profile object
@@ -273,21 +272,43 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
      auto profile = profileFuture.get();
 
      // Construct/initialize engine object
-     FileEngine::Settings engineSettings("1",		// User-defined engine ID
-       "Client data",								// User-defined engine state		
+     FileEngine::Settings engineSettings("<engine-id>",		// User-defined engine ID
+       "<engine-state>",								// User-defined engine state		
        "en-US");									// Locale (default = en-US)
 
-     // Set up promise/future connect for async engine operations; add engine to profile asynchronously
+     // Set up promise/future connection for async engine operations; add engine to profile asynchronously
      auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
      auto engineFuture = enginePromise->get_future();
      profile->AddEngineAsync(engineSettings, enginePromise);
+     std::shared_ptr<FileEngine> engine; 
+     try
+     {
+       engine = engineFuture.get();				// triggers AcquireOAuth2Token() call
+     }
+     catch (const std::exception& e)
+     {
+       cout << "An exception occurred... is the access token incorrect/expired?\n\n"
+        << e.what() << "'\n";
+       system("pause");
+       return 1;
+     }
 
-     return 0;
-   }
+      return 0;
+     }
 
    ``` 
 
-3. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart.
+3. Replace the placeholder values in the source code that you just pasted in, using the following values:
+
+   | Placeholder | Value |
+   |:----------- |:----- |
+   | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration".  |
+   | \<friendly-name\> | A user-defined friendly name for your application. |
+   | \<engine-id\> | A user-defined ID assigned to the engine. |
+   | \<engine-state\> | User-defined state to be associated with the engine. |
+
+
+4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart.
 
 ## Next Steps
 

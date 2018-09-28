@@ -1,7 +1,6 @@
 ---
 title: Concepts - Using Python to acquire an access token.
 description: This article will help you understand how to use Python to acquire an OAuth2 access token. This is required by the implementation of the authentication delegate.
-services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
@@ -20,7 +19,7 @@ This code is not intended for production use, but may be used for development an
 To run the sample below, the following must be complete:
 
 - Install Python 2.7
-- Implement [utils.h/cpp]() in your project TODO: link to source in sample repo
+- Implement [utils.h/cpp]() in your project 
 - [auth.py]() should be added to your project and exist in same directory as the binaries at build.
 
 ## sample::auth::AcquireToken()
@@ -116,8 +115,6 @@ namespace sample {
 ## Python Script
 
 This script acquires authentication tokens directly via a simple http request. This is included only as a means to acquire auth tokens for use by the sample apps and is not intended for use in production code. The script works only against tenants that support plain old username/password http authentication. MFA or certificate-based authentication will fail.
-
-TODO: Should we simply link to the repo rather than doc? 
 
 ```python
 import getopt

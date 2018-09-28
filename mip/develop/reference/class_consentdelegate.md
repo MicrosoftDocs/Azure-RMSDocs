@@ -1,3 +1,12 @@
+---
+title: class ConsentDelegate 
+description: Reference for class ConsentDelegate 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class ConsentDelegate 
 Delegate for consent related operations.
 This delegate is implemented by a client application to know when a consent request notification should be displayed to the user.

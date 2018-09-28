@@ -1,5 +1,14 @@
+---
+title: class mip AddContentFooterAction 
+description: Reference for class mip AddContentFooterAction 
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+---
 # class mip::AddContentFooterAction 
-An action class which specifies adding a content footer to the document.
+An action class that specifies adding a content footer to the document.
   
 ## Summary
  Members                        | Descriptions                                
@@ -43,7 +52,7 @@ Get the font size used to display the content footer.
 Get the font color used to display the content footer.
 
   
-**Returns**: Font color as a string (e.g."#000000").
+**Returns**: Font color as a string (for example, "#000000").
   
 ### GetAlignment
 Get the alignment of the footer.
@@ -57,7 +66,7 @@ Get the alignment of the footer.
 Get the margin of the footer from the bottom.
 
   
-**Returns**: An integer representing the margins from the bottom of the document (e.g. 10 mm).
+**Returns**: The margins from the bottom of the document (for example, 10 mm).
   
 ### ActionType
 Get the type of [Action](class_mip_action.md).
