@@ -141,11 +141,11 @@ Microsoft Ignite 2018 in Orlando had many sessions that are tagged [Azure Inform
  
 - [BRK3002 - Understanding how Microsoft Information Protection capabilities work together to protect sensitive information across devices, apps, and services](https://myignite.techcommunity.microsoft.com/sessions/64299) - watch the [YouTube video](https://youtu.be/kL9Y7NGTyQQ)
 
-- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions](https://myignite.techcommunity.microsoft.com/sessions/64283)
+- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions](https://myignite.techcommunity.microsoft.com/sessions/64283) - watch the [YouTube video](https://www.youtube.com/watch?v=JsCyIVyQJmE)
 
 - [BRK3397 - Protect and control your sensitive emails with Office 365 Message Encryption](https://myignite.techcommunity.microsoft.com/sessions/64327)
 
-- [THR2003 - Data discovery, Usage reporting and analytics for all your data with Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/64301)
+- [THR2003 - Data discovery, Usage reporting and analytics for all your data with Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/64301) - watch the [YouTube video](https://www.youtube.com/watch?v=nzDIXd0XaeA)
 
 For a rollup of announcements that were made at this Ignite, see the blog post [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
