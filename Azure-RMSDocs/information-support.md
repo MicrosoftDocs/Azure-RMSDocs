@@ -41,7 +41,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 ## Information about new releases and updates
 The Azure Information Protection product team posts announcements about major new releases on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). Smaller releases are announced on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam), and you might also find it useful to check the [UserVoice site](https://msip.uservoice.com) for the status of requested features.
 
-You'll also find more detailed information on the [Azure Information Protection technical blog](https://aka.ms/AIPblog). For example, a summary of documentation changes is published each month to let you know about information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These doc updates posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
+You'll find additional and more detailed information on the [Azure Information Protection technical blog](https://aka.ms/AIPblog). For example, a summary of documentation changes is published each month to let you know about information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These doc updates posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
 
 ## Support options and community resources
 The following sections provide information about support and troubleshooting options, and community resources.
