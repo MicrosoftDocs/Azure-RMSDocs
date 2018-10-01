@@ -112,8 +112,8 @@ Finally, build and test your client application.
    Press any key to continue . . .
    ```
 
-> [!NOTE]
-> Copy and save the ID of one or more of the sensitivity labels (for example, `f42a3342-8706-4288-bd31-ebb85995028z`), as you will use it in the next Quickstart.
+   > [!NOTE]
+   > Copy and save the ID of one or more of the sensitivity labels (for example, `f42a3342-8706-4288-bd31-ebb85995028z`), as you will use it in the next Quickstart.
 
 ## Troubleshooting
 

@@ -200,70 +200,70 @@ Build and test your client application.
 
 1. Use F6 (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. As you did previously in the "List sensitivity labels" Quickstart, run your PowerShell script to acquire an access token. Each time you are prompted, use the values indicated for the PowerShell variables. You can reuse a previously generated token, if the requested variable values are the same:
+2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. As you did previously in the "List sensitivity labels" Quickstart, run your PowerShell script to acquire the token each time, using the values provided. You can reuse a previously generated token, if the requested variable values are the same:
 
-```cmd
-Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-Set $authority to: https://login.windows.net/common/oauth2/authorize
-Set $resourceUrl to: https://syncservice.o365syncservice.com/
-Be sure to sign in with user account: user1@tenant.onmicrosoft.com
-Enter access token: <paste-access-token-here>
-Press any key to continue . . .
+   ```cmd
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/common/oauth2/authorize
+   Set $resourceUrl to: https://syncservice.o365syncservice.com/
+   Be sure to sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token: <paste-access-token-here>
+   Press any key to continue . . .
 
-Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-Set $authority to: https://login.windows.net/common/oauth2/authorize
-Set $resourceUrl to: https://syncservice.o365syncservice.com/
-Be sure to sign in with user account: user1@tenant.onmicrosoft.com
-Enter access token: <paste-access-token-here>
-Press any key to continue . . .
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/common/oauth2/authorize
+   Set $resourceUrl to: https://syncservice.o365syncservice.com/
+   Be sure to sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token: <paste-access-token-here>
+   Press any key to continue . . .
 
-Sensitivy labels for your organization:
-Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
-Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
-General : f42a3342-8706-4288-bd31-ebb85995028z
-Confidential : 074e457c-5848-4542-9a6f-34a182080e7z
-Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
-Press any key to continue . . .
+   Sensitivy labels for your organization:
+   Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
+   Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
+   General : f42a3342-8706-4288-bd31-ebb85995028z
+   Confidential : 074e457c-5848-4542-9a6f-34a182080e7z
+   Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
+   Press any key to continue . . .
 
-Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to c:\test\test.docx
-Committing changes
+   Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to c:\test\test.docx
+   Committing changes
 
-Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-Set $authority to: https://login.windows.net/common/oauth2/authorize
-Set $resourceUrl to: https://aadrm.com
-Be sure to sign in with user account: user1@tenant.onmicrosoft.com
-Enter access token: <paste-access-token-here>
-Press any key to continue . . .
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/common/oauth2/authorize
+   Set $resourceUrl to: https://aadrm.com
+   Be sure to sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token: <paste-access-token-here>
+   Press any key to continue . . .
 
-Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-Set $authority to: https://login.windows.net/common/oauth2/authorize
-Set $resourceUrl to: https://aadrm.com
-Be sure to sign in with user account: user1@tenant.onmicrosoft.com
-Enter access token: <paste-access-token-here>
-Press any key to continue . . .
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/common/oauth2/authorize
+   Set $resourceUrl to: https://aadrm.com
+   Be sure to sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token: <paste-access-token-here>
+   Press any key to continue . . .
 
-Label committed to file: c:\test\test_labeled.docx
-Press any key to continue . . .
+   Label committed to file: c:\test\test_labeled.docx
+   Press any key to continue . . .
 
-Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-Set $authority to: https://login.windows.net/94f6984e-8d31-4794-bdeb-3ac89ad2b660/oauth2/authorize
-Set $resourceUrl to: https://aadrm.com
-Be sure to sign in with user account: user1@tenant.onmicrosoft.com
-Enter access token: <paste-access-token-here>
-Press any key to continue . . .
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/94f6984e-8d31-4794-bdeb-3ac89ad2b660/oauth2/authorize
+   Set $resourceUrl to: https://aadrm.com
+   Be sure to sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token: <paste-access-token-here>
+   Press any key to continue . . .
 
-Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-Set $authority to: https://login.windows.net/94f6984e-8d31-4794-bdeb-3ac89ad2b660/oauth2/authorize
-Set $resourceUrl to: https://aadrm.com
-Be sure to sign in with user account: user1@tenant.onmicrosoft.com
-Enter access token: <paste-access-token-here>
-Press any key to continue . . .
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/94f6984e-8d31-4794-bdeb-3ac89ad2b660/oauth2/authorize
+   Set $resourceUrl to: https://aadrm.com
+   Be sure to sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token: <paste-access-token-here>
+   Press any key to continue . . .
 
-Getting label from file: c:\test\test_labeled.docx
-Name: Confidential
-Id: 074e457c-5848-4542-9a6f-34a182080e7z
-Press any key to continue . . .
-```
+   Getting label from file: c:\test\test_labeled.docx
+   Name: Confidential
+   Id: 074e457c-5848-4542-9a6f-34a182080e7z
+   Press any key to continue . . .
+   ```
 
 You can verify the application of the label, by opening the document and visually inspecting the document's information protection settings.
 
