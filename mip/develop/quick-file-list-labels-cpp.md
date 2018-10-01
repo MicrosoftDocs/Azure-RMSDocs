@@ -37,6 +37,7 @@ Add logic to list your organization's sensitivity labels, using the File engine 
 
    ```cpp
    // List sensitivity labels
+   cout << "\nSensitivity labels for your organization:\n";
    auto labels = engine->ListSensitivityLabels();
    for (const auto& label : labels)
    {
@@ -50,25 +51,46 @@ Add logic to list your organization's sensitivity labels, using the File engine 
    system("pause");
    ``` 
 
-## Update the token acquisition logic with a valid access token
+## Create a PowerShell script to generate access tokens
 
-As noted in the code comments, a call to your `AcquireOAuth2Token()` method is triggered by the call to `engineFuture.get()` call in `main()`. You need to finish the implementation of the `AcquireOAuth2Token()` method, to provide the access token back to the MIP SDK.
+You use the following PowerShell script to generate access tokens, as requested by the SDK. The script uses the `Get-ADALToken` cmdlet from the ADAL.PS module you installed earlier, in the "MIP SDK Setup and configuration" article. 
 
-1. Generate a test token using the following PowerShell script. The script uses the `Get-ADALToken` cmdlet from the ADAL.PS module you installed earlier, in MIP SDK Setup and configuration. 
+1. Create a PowerShell Script file (.ps1 extension), and copy/paste the following script into the file:
 
-   - Create a PowerShell Script file (.ps1 extension), and copy/paste the following script into the file:
+   - Update the `$appId` and `$redirectUri` variables, to match the values specified in your Azure AD app registration. 
+   - You update the `$authority` and `$resourceUrl` in the following section.
 
-     ```powershell
-     $authority = 'https://login.windows.net/common/oauth2/authorize'  # Enforced by MIP SDK
-     $resourceUrl = 'https://syncservice.o365syncservice.com/'         # Enforced by MIP SDK; matches the URL of the "Microsoft Information Protection Sync Service" resource/API requested by the Azure AD app registration
-     $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'                   # App ID of the Azure AD app registration
-     $redirectUri = 'bltest://authorize'                               # Must match the redirect URI of the Azure AD app registration
-     $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
-     $response.AccessToken | clip                                      # Copies the access token text to the clipboard
-     ```
+   ```powershell
+   $authority = '<authority-url>'                   # Enforced by MIP SDK
+   $resourceUrl = '<resource-url>'                  # Enforced by MIP SDK; matches the URL of the "Microsoft Information Protection Sync Service" resource/API requested by the Azure AD app registration
+   $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'  # App ID of the Azure AD app registration
+   $redirectUri = 'bltest://authorize'              # Must match the redirect URI of the Azure AD app registration
+   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
+   $response.AccessToken | clip                     # Copy the access token text to the clipboard
+   ```
 
-   - Update the `$appId` and `redirectUri` variables, to match the values specified in your Azure AD app registration.
-   - Save the script file, then run it using PowerShell. The `Get-ADALToken` cmdlet triggers an Azure AD authentication prompt similar to the following example. After successful sign-in, the access token will be placed on the clipboard.
+2. Save the script file. You'll need to run it later, as requested by your client application.
+
+## Build and test the application
+
+Finally, build and test your client application. 
+
+1. If your project builds and runs successfully, the application will prompt for an access token (multiple times), as the SDK call your `AcquireOAuth2Token()` method:
+
+```cmd
+Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+Set $authority to: https://login.windows.net/common/oauth2/authorize
+Set $resourceUrl to: https://syncservice.o365syncservice.com/
+Be sure to sign in with user account: User@domain.onmicrosoft.com
+Enter access token:
+```
+
+2. To provide a response to the above prompt, go back to your PowerShell script and:
+
+   - Update the `$authority` and `$resourceUrl` variables. They must match the values provided in the console output, as specified by the MIP SDK in the `challenge` parameter of `AcquireOAuth2Token()`:
+     - `$authority` should be `https://login.windows.net/common/oauth2/authorize`
+     - `$resourceUrl` should be `https://syncservice.o365syncservice.com/` or `https://aadrm.com`
+   - Run the PowerShell script. The `Get-ADALToken` cmdlet triggers an Azure AD authentication prompt similar to the following example. You must use the same identity provided in the console output. After successful sign-in, the access token will be placed on the clipboard.
 
      [![Visual Studio acquire token sign-in](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
@@ -76,15 +98,7 @@ As noted in the code comments, a call to your `AcquireOAuth2Token()` method is t
 
      [![Visual Studio consent](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png#lightbox)
 
-2. Immediately after completing step #1 above, return to Visual Studio and use **Solution Explorer** to open "auth_delegate.cpp". Scroll down to your `AcquireOAuth2Token()` implementation, and find the following line of code. Replace the `<access-token>` placeholder, with the token placed on the clipboard in the previous step. The token should be a long string, in a format similar to `eyJ0eXAiOi ...`.
-
-   ```cpp
-   string accessToken = "<access-token>";
-   ``` 
-
-## Build and test the application
-
-Finally, build and test your client application. If your project builds and runs successfully, you should see output in the console window, similar to the following example:
+3. After supplying the access token(s), your console output should show the sensitivity labels, similar to the following example:
 
 ```cmd
 Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
@@ -113,7 +127,7 @@ Press any key to continue . . .
 
 | Summary | Error message | Solution |
 |---------|---------------|----------|
-| Bad access token | *An exception occurred... is the access token incorrect/expired?<br><br>Failed API call: profile_add_engine_async Failed with: [class mip::PolicySyncException] Failed acquiring policy, Request failed with http status code: 401, x-ms-diagnostics: [2000001;reason="OAuth token submitted with the request can not be parsed.";error_category="invalid_token"], correlationId:[35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (process 29924) exited with code 0.<br><br>Press any key to close this window . . .* | If your project builds successfully, but you see output similar to the left, you likely have an invalid or expired token in your `AcquireOAuth2Token()` method. Go back to [Update the token acquisition logic](#update-the-token-acquisition-logic-with-a-valid-access-token) and regenerate the access token, update `AcquireOAuth2Token()` again, and rebuild/retest. You can also examine and verify the token and its claims, using the [jwt.ms](https://jwt.ms/) single-page web application. |
+| Bad access token | *An exception occurred... is the access token incorrect/expired?<br><br>Failed API call: profile_add_engine_async Failed with: [class mip::PolicySyncException] Failed acquiring policy, Request failed with http status code: 401, x-ms-diagnostics: [2000001;reason="OAuth token submitted with the request cannot be parsed.";error_category="invalid_token"], correlationId:[35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (process 29924) exited with code 0.<br><br>Press any key to close this window . . .* | If your project builds successfully, but you see output similar to the left, you likely have an invalid or expired token in your `AcquireOAuth2Token()` method. Go back to [Update the token acquisition logic](#update-the-token-acquisition-logic-with-a-valid-access-token) and regenerate the access token, update `AcquireOAuth2Token()` again, and rebuild/retest. You can also examine and verify the token and its claims, using the [jwt.ms](https://jwt.ms/) single-page web application. |
 | Sensitivity labels aren't configured | n/a | If your project builds successfully, but you have no output in the console window, be sure your organization's sensitivity labels are configured correctly. See [MIP SDK setup and configuration](setup-configure-mip.md), under "Define label taxonomy and protection settings" for details.  |
 
 ## Next Steps

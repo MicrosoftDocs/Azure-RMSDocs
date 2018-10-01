@@ -168,10 +168,15 @@ Now create an implementation for an authentication delegate, by extending the SD
 
      bool AuthDelegateImpl::AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) 
      {
-	        // TODO: replace with token acquisition code, using mAppId, identity, authority, and resourceURI
-	        const string authority = challenge.GetAuthority();
-	        const string resourceURI = challenge.GetResource();
-	        string accessToken = "<access-token>";
+          // Prompt for access token. In production, replace with token acquisition code, using mAppId, identity, authority, and resource
+	        string accessToken;
+	        cout << "\nRun the PowerShell script to generate an access token using the following values, then copy/paste it below:\n";
+	        cout << "Set $authority to: " + challenge.GetAuthority() + "\n";
+	        cout << "Set $resourceUrl to: " + challenge.GetResource() + "\n";
+	        cout << "Be sure to sign in with user account: " + identity.GetEmail() + "\n";
+	        cout << "Enter access token: ";
+	        cin >> accessToken;
+	        system("pause");
 
 	        // Pass access token back to MIP SDK
 	        token.SetAccessToken(accessToken);
@@ -272,9 +277,10 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
      auto profile = profileFuture.get();
 
      // Construct/initialize engine object
-     FileEngine::Settings engineSettings("<engine-id>",		// User-defined engine ID
-       "<engine-state>",								// User-defined engine state		
-       "en-US");									// Locale (default = en-US)
+     FileEngine::Settings engineSettings(
+       "<user-id>",		          // Engine identity (user ID used for authentication)
+       "<engine-state>",			  // User-defined engine state		
+       "en-US");							  // Locale (default = en-US)
 
      // Set up promise/future connection for async engine operations; add engine to profile asynchronously
      auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
@@ -283,7 +289,7 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
      std::shared_ptr<FileEngine> engine; 
      try
      {
-       engine = engineFuture.get();				// triggers AcquireOAuth2Token() call
+       engine = engineFuture.get();				
      }
      catch (const std::exception& e)
      {
@@ -304,7 +310,7 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
    |:----------- |:----- |
    | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration" (2 instances).  |
    | \<friendly-name\> | A user-defined friendly name for your application. |
-   | \<engine-id\> | A user-defined ID assigned to the engine. |
+   | \<user-id\> | The user ID used for the engine's identity. Must match the user ID used for authentication during token acquisition. |
    | \<engine-state\> | User-defined state to be associated with the engine. |
 
 
