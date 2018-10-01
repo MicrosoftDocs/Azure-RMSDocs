@@ -280,7 +280,7 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
 
      // Construct/initialize engine object
      FileEngine::Settings engineSettings(
-       "<engine-account>",                        // Engine identity (account used for authentication)
+       mip::Identity("<engine-account>"),         // Engine identity (account used for authentication)
        "<engine-state>",                          // User-defined engine state		
        "en-US");                                  // Locale (default = en-US)
 
