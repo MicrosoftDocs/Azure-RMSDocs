@@ -72,7 +72,7 @@ On-demand videos:
 
 - Microsoft Ignite 2018 sessions for [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection):
     
-    - See our [top 5](what-is-information-protection.md#microsoft-ignite) recommended sessions.
+    - See our [top five](what-is-information-protection.md#microsoft-ignite) recommended sessions.
 
 - Microsoft Virtual Academy sessions that include [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection).
 
