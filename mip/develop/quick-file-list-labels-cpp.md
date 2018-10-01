@@ -89,7 +89,7 @@ Enter access token:
 
 3. To provide a response to the above prompt, go back to your PowerShell script and:
 
-   - Update the `$authority` and `$resourceUrl` variables. They must match the values provided in the console output in step #2 (as specified by the MIP SDK in the `challenge` parameter of `AcquireOAuth2Token()`):
+   - Update the `$authority` and `$resourceUrl` variables. They must match the values that are specified in the console output in step #2. These values are provided by the MIP SDK in the `challenge` parameter of `AcquireOAuth2Token()`:
      - `$authority` should be `https://login.windows.net/common/oauth2/authorize`
      - `$resourceUrl` should be `https://syncservice.o365syncservice.com/` or `https://aadrm.com`
    - Run the PowerShell script. The `Get-ADALToken` cmdlet triggers an Azure AD authentication prompt similar to the following example. Specify the same account provided in the console output in step #2. After successful sign-in, the access token will be placed on the clipboard.

@@ -200,7 +200,7 @@ Build and test your client application.
 
 1. Use F6 (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. As you did previously in the "List sensitivity labels" Quickstart, run your PowerShell script to acquire an access token each time you are prompted, using the values indicated for the PowerShell variables. You can reuse a previously generated token, if the requested variable values are the same:
+2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. As you did previously in the "List sensitivity labels" Quickstart, run your PowerShell script to acquire an access token. Each time you are prompted, use the values indicated for the PowerShell variables. You can reuse a previously generated token, if the requested variable values are the same:
 
 ```cmd
 Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
