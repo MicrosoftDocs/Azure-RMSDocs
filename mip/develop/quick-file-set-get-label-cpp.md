@@ -20,9 +20,6 @@ If you haven't already, be sure to complete the following prerequisites before c
 - Complete [Quickstart: List sensitivity labels (C++)](quick-file-list-labels-cpp.md) first, which builds a starter Visual Studio solution, to list an organization's sensitivity labels. This Quickstart builds on the previous one.
 - Optionally: Review [File handlers in the MIP SDK](concept-handler-file-cpp.md) concepts.
 
-> [!IMPORTANT]
-> If too much time passes between the completion of the previous Quickstart "List sensitivity labels", and this one, the static token created in the former will expire. If so, you will need to generate a new token and update your `AcquireOAuth2Token()` implementation again. See [Update the token acquisition logic with a valid access token](quick-file-list-labels-cpp.md#update-the-token-acquisition-logic-with-a-valid-access-token) for more details.
-
 ## Implement an observer class to monitor the File handler object
 
 Similar to the observer you implemented (for the File profile and engine) in the Application initialization Quickstart, now you implement an observer class for a File handler object.
