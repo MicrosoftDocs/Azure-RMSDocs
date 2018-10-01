@@ -257,7 +257,7 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
    int main()
    {
      // Construct/initialize objects required by the application's profile object
-     ApplicationInfo appInfo{"<application-id>",	                  // ApplicationInfo object (App ID, friendly name)
+     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, friendly name)
                  "<friendly-name>" };
      auto profileObserver = make_shared<ProfileObserver>();         // Observer object					
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
@@ -265,7 +265,7 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
      auto consentDelegateImpl = make_shared<ConsentDelegateImpl>(); // Consent delegate object
  
      // Construct/initialize profile object
-     FileProfile::Settings profileSettings("",    // Path for logging/telemetry/state; blank = C:
+     FileProfile::Settings profileSettings("",    // Path for logging/telemetry/state
        true,                                      // true = use in-memory state storage (vs disk)
        authDelegateImpl,							
        consentDelegateImpl,						
@@ -280,7 +280,7 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
 
      // Construct/initialize engine object
      FileEngine::Settings engineSettings(
-       "<user-account>",                          // Engine identity (account used for authentication)
+       "<engine-account>",                        // Engine identity (account used for authentication)
        "<engine-state>",                          // User-defined engine state		
        "en-US");                                  // Locale (default = en-US)
 
@@ -312,7 +312,7 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
    |:----------- |:----- |:--------|
    | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration" (2 instances).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
    | \<friendly-name\> | A user-defined friendly name for your application. | AppInitialization |
-   | \<user-account\> | The account used for the engine's identity. When you specifiy a user account for authentication during token acquisition, it must match this value. | user1@tenant.onmicrosoft.com |
+   | \<engine-account\> | The account used for the engine's identity. When you authenticate with a user account during token acquisition, it must match this value. | user1@tenant.onmicrosoft.com |
    | \<engine-state\> | User-defined state to be associated with the engine. | MyAppState |
 
 
