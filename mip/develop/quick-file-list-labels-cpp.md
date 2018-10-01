@@ -33,7 +33,7 @@ Add logic to list your organization's sensitivity labels, using the File engine 
    using std::endl;
    ```
 
-4. Toward the end of the body of `main()`, below the closing brace `}` of the `catch` block and above the `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
+4. Toward the end of the `main()` body, below the closing brace `}` of the `catch` block and above `return 0;` (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
    // List sensitivity labels
@@ -77,7 +77,7 @@ Finally, build and test your client application.
 
 1. Use F6 (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. Note that you can reuse a previously generated token, if the requested variable values are the same:
+2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. You can reuse a previously generated token, if the requested variable values are the same:
 
 ```cmd
 Run the PowerShell script to generate an access token using the following values, then copy/paste it below:

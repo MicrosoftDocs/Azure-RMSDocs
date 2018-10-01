@@ -95,7 +95,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
 
    using mip::FileHandler;
    ```
-3. Toward the end of the body of `main()`, below the `system("pause");`, and above the `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
+3. Toward the end of the `main()` body, below `system("pause");` and above `return 0;` (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
    // Set up async FileHandler for input file operations
@@ -200,7 +200,7 @@ Build and test your client application.
 
 1. Use F6 (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. As you did previously in the "List sensitivity labels" Quickstart, run your PowerShell script to acquire an access token each time you are prompted, using the values indicated for the PowerShell variables. Note that you can reuse a previously generated token, if the requested variable values are the same:
+2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. As you did previously in the "List sensitivity labels" Quickstart, run your PowerShell script to acquire an access token each time you are prompted, using the values indicated for the PowerShell variables. You can reuse a previously generated token, if the requested variable values are the same:
 
 ```cmd
 Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
