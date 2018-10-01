@@ -77,15 +77,15 @@ Finally, build and test your client application.
 
 1. Use F6 (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. You can reuse a previously generated token, if the requested variable values are the same:
+2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. You can reuse a previously generated token, if prompted multiple times and the requested values are the same:
 
-```cmd
-Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-Set $authority to: https://login.windows.net/common/oauth2/authorize
-Set $resourceUrl to: https://syncservice.o365syncservice.com/
-Be sure to sign in with user account: user1@tenant.onmicrosoft.com
-Enter access token:
-```
+   ```cmd
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/common/oauth2/authorize
+   Set $resourceUrl to: https://syncservice.o365syncservice.com/
+   Be sure to sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token:
+   ```
 
 3. To provide a response to the above prompt, go back to your PowerShell script and:
 
@@ -102,15 +102,15 @@ Enter access token:
 
 4. After supplying the access token(s), your console output should show the sensitivity labels, similar to the following example:
 
-```cmd
-Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
-Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
-General : f42a3342-8706-4288-bd31-ebb85995028z
-Confidential : 074e457c-5848-4542-9a6f-34a182080e7z
-Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
+   ```cmd
+   Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
+   Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
+   General : f42a3342-8706-4288-bd31-ebb85995028z
+   Confidential : 074e457c-5848-4542-9a6f-34a182080e7z
+   Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
 
-Press any key to continue . . .
-```
+   Press any key to continue . . .
+   ```
 
 > [!NOTE]
 > Copy and save the ID of one or more of the sensitivity labels (for example, `f42a3342-8706-4288-bd31-ebb85995028z`), as you will use it in the next Quickstart.
