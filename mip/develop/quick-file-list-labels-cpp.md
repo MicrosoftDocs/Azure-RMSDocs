@@ -83,7 +83,7 @@ Finally, build and test your client application.
 Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
 Set $authority to: https://login.windows.net/common/oauth2/authorize
 Set $resourceUrl to: https://syncservice.o365syncservice.com/
-Be sure to sign in with user account: User@domain.onmicrosoft.com
+Be sure to sign in with user account: user1@tenant.onmicrosoft.com
 Enter access token:
 ```
 

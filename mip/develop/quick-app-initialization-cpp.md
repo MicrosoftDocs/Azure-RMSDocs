@@ -160,9 +160,12 @@ Now create an implementation for an authentication delegate, by extending the SD
      > - The authority and resource URL passed by the SDK in the `challenge` argument (resource URL **must** match your app registration's API/permissions)
      > - Valid app/user credentials, where the account matches the `identity` argument passed by the SDK. OAuth2 "native" clients should prompt for user credentials and use the "authorization code" flow. OAuth2 "confidential clients" can use their own secure credentials with the "client credentials" flow (such as a service), or prompt for user credentials using the "authorization code" flow (such as a web app). 
      >
-     > OAuth2 token acquisition is a complex protocol, and normally accomplished by using a library. TokenAcquireOAuth2Token() is **only** called by the MIP SDK, as required.
+     > OAuth2 token acquisition is a complex protocol, and normally accomplished by using a library. TokenAcquireOAuth2Token() is called **only** by the MIP SDK, as required.
 
      ```cpp
+     #include <iostream>
+     using std::cout;
+     using std::cin;
      using std::string;
 
      bool AuthDelegateImpl::AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) 
@@ -277,7 +280,7 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
 
      // Construct/initialize engine object
      FileEngine::Settings engineSettings(
-       "<user-id>",                               // Engine identity (account used for authentication)
+       "<user-account>",                          // Engine identity (account used for authentication)
        "<engine-state>",                          // User-defined engine state		
        "en-US");                                  // Locale (default = en-US)
 
@@ -305,22 +308,22 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
 
 3. Replace the placeholder values in the source code that you just pasted in, using the following values:
 
-   | Placeholder | Value |
-   |:----------- |:----- |
-   | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration" (2 instances).  |
-   | \<friendly-name\> | A user-defined friendly name for your application. |
-   | \<user-id\> | The user ID used for the engine's identity. Must match the user ID used for authentication during token acquisition. |
-   | \<engine-state\> | User-defined state to be associated with the engine. |
+   | Placeholder | Value | Example |
+   |:----------- |:----- |:--------|
+   | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration" (2 instances).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
+   | \<friendly-name\> | A user-defined friendly name for your application. | AppInitialization |
+   | \<user-account\> | The account used for the engine's identity. When you specifiy a user account for authentication during token acquisition, it must match this value. | user1@tenant.onmicrosoft.com |
+   | \<engine-state\> | User-defined state to be associated with the engine. | MyAppState |
 
 
-4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart. If you run the application, you will see an exception similar to the following:
+4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart. If you run the application, you will see output similar to the following. You won't have an access token to provide, until you complete the next Quickstart.
 
    ```cmd
-   An exception occurred... is the access token incorrect/expired?
-
-   Failed acquiring policy, Request failed with http status code: 401, x-ms-diagnostics: [2000001;reason="OAuth token submitted with the request can not be parsed.";error_category="invalid_token"], correlationId:[5b731x67-6521-4cd8-b911-00009ab9cbez]'
-   
-   Press any key to continue . . .
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/common/oauth2/authorize
+   Set $resourceUrl to: https://syncservice.o365syncservice.com/
+   Be sure to sign in with user account:
+   Enter access token:
    ```
 
 ## Next Steps

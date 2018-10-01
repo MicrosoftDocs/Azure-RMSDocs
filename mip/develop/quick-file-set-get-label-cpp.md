@@ -206,14 +206,14 @@ Build and test your client application.
 Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
 Set $authority to: https://login.windows.net/common/oauth2/authorize
 Set $resourceUrl to: https://syncservice.o365syncservice.com/
-Be sure to sign in with user account: User@domain.onmicrosoft.com
+Be sure to sign in with user account: user1@tenant.onmicrosoft.com
 Enter access token: <paste-access-token-here>
 Press any key to continue . . .
 
 Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
 Set $authority to: https://login.windows.net/common/oauth2/authorize
 Set $resourceUrl to: https://syncservice.o365syncservice.com/
-Be sure to sign in with user account: User@domain.onmicrosoft.com
+Be sure to sign in with user account: user1@tenant.onmicrosoft.com
 Enter access token: <paste-access-token-here>
 Press any key to continue . . .
 
@@ -231,14 +231,14 @@ Committing changes
 Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
 Set $authority to: https://login.windows.net/common/oauth2/authorize
 Set $resourceUrl to: https://aadrm.com
-Be sure to sign in with user account: User@domain.onmicrosoft.com
+Be sure to sign in with user account: user1@tenant.onmicrosoft.com
 Enter access token: <paste-access-token-here>
 Press any key to continue . . .
 
 Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
 Set $authority to: https://login.windows.net/common/oauth2/authorize
 Set $resourceUrl to: https://aadrm.com
-Be sure to sign in with user account: User@domain.onmicrosoft.com
+Be sure to sign in with user account: user1@tenant.onmicrosoft.com
 Enter access token: <paste-access-token-here>
 Press any key to continue . . .
 
@@ -248,14 +248,14 @@ Press any key to continue . . .
 Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
 Set $authority to: https://login.windows.net/94f6984e-8d31-4794-bdeb-3ac89ad2b660/oauth2/authorize
 Set $resourceUrl to: https://aadrm.com
-Be sure to sign in with user account: User@domain.onmicrosoft.com
+Be sure to sign in with user account: user1@tenant.onmicrosoft.com
 Enter access token: <paste-access-token-here>
 Press any key to continue . . .
 
 Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
 Set $authority to: https://login.windows.net/94f6984e-8d31-4794-bdeb-3ac89ad2b660/oauth2/authorize
 Set $resourceUrl to: https://aadrm.com
-Be sure to sign in with user account: User@domain.onmicrosoft.com
+Be sure to sign in with user account: user1@tenant.onmicrosoft.com
 Enter access token: <paste-access-token-here>
 Press any key to continue . . .
 
