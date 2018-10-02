@@ -173,10 +173,10 @@ Now create an implementation for an authentication delegate, by extending the SD
 
      bool AuthDelegateImpl::AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) 
      {
-	        // Acquire a token manually, reuse previous token if same authority/resource. In production, replace with token acquisition code.
-	        string authority = challenge.GetAuthority();
-	        string resource = challenge.GetResource();
-	        if (mToken == "" || (authority != mAuthority || resource != mResource))
+          // Acquire a token manually, reuse previous token if same authority/resource. In production, replace with token acquisition code.
+          string authority = challenge.GetAuthority();
+          string resource = challenge.GetResource();
+          if (mToken == "" || (authority != mAuthority || resource != mResource))
           {
               cout << "\nRun the PowerShell script to generate an access token using the following values, then copy/paste it below:\n";
               cout << "Set $authority to: " + authority + "\n";
@@ -199,11 +199,6 @@ Now create an implementation for an authentication delegate, by extending the SD
 3. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
 
 ## Implement a consent delegate
-
-Azure AD requires an application to be given consent, before it can access secured resources under the identity of an account. Consent is recorded as a permanent acknowledgement of permission in the tenant of the account, by a given account (user consent) or all accounts (admin consent), for the app to access the requested resource API/permissions. Consent occurs in various scenarios, based on the API and level of permissions the application is seeking, and the account being used for sign-in and token acquisition: 
-
-- accounts from the *same tenant* where your application is registered, if you or an administrator didn't explicitly pre-consent access via the "Grant Permissions" feature.
-- accounts from a *different tenant* if your application is registered as multi-tenant, and the tenant administrator hasn't pre-consented for all users in advance.
 
 Now create an implementation for a consent delegate, by extending the SDK's `mip::ConsentDelegate` class, and overriding/implementing the `mip::AuthDelegate::GetUserConsent()` pure virtual function. The consent delegate is instantiated and used later, by the File profile and File engine objects.
 
