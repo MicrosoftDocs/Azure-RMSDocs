@@ -10,7 +10,7 @@
   items:
   - name: Application initialization (C++)
     href: quick-app-initialization-cpp.md
-  - name: File APIs
+  - name: File API
     items:
     - name: List sensitivity labels (C++)
       href: quick-file-list-labels-cpp.md
@@ -209,5 +209,5 @@
   - name: SDK (public preview)
     href: http://aka.ms/mipsdk
   - name: Samples
-    href: https://github.com/Azure-Samples?utf8=✓&q=MipSdk
+    href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
    
