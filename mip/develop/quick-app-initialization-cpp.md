@@ -149,6 +149,9 @@ Now create an implementation for an authentication delegate, by extending the SD
             OAuth2Token& token) override;     // Token handed back to MIP SDK
      private:
           std::string mAppId;
+          std::string mToken;
+          std::string mAuthority;
+          std::string mResource;
      };
      ```
 
@@ -170,21 +173,27 @@ Now create an implementation for an authentication delegate, by extending the SD
 
      bool AuthDelegateImpl::AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) 
      {
-          // Prompt for access token. In production, replace with token acquisition code, using mAppId, identity, authority, and resource
-	        string accessToken;
-	        cout << "\nRun the PowerShell script to generate an access token using the following values, then copy/paste it below:\n";
-	        cout << "Set $authority to: " + challenge.GetAuthority() + "\n";
-	        cout << "Set $resourceUrl to: " + challenge.GetResource() + "\n";
-	        cout << "Be sure to sign in with user account: " + identity.GetEmail() + "\n";
-	        cout << "Enter access token: ";
-	        cin >> accessToken;
-	        system("pause");
+	        // Acquire a token manually, reuse previous token if same authority/resource. In production, replace with token acquisition code.
+	        string authority = challenge.GetAuthority();
+	        string resource = challenge.GetResource();
+	        if (mToken == "" || (authority != mAuthority || resource != mResource))
+	        {
+              cout << "\nRun the PowerShell script to generate an access token using the following values, then copy/paste it below:\n";
+              cout << "Set $authority to: " + authority + "\n";
+              cout << "Set $resourceUrl to: " + resource + "\n";
+              cout << "Sign in with user account: " + identity.GetEmail() + "\n";
+              cout << "Enter access token: ";
+              cin >> mToken;
+              mAuthority = authority;
+              mResource = resource;
+              system("pause");
+          }
 
-	        // Pass access token back to MIP SDK
-	        token.SetAccessToken(accessToken);
+	   // Pass access token back to MIP SDK
+     token.SetAccessToken(mToken);
 
-          // True = successful token acquisition; False = failure
-          return true;
+     // True = successful token acquisition; False = failure
+     return true;
      }
      ``` 
 3. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
