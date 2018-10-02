@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/03/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
@@ -58,6 +58,17 @@ If you have a version of the client that is later than 1.37.19.0, it is a previe
 
 - Support for [central reporting](../reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
 
+**Additional:**
+
+Just for this preview version, to use the scanner, you must follow these steps:
+
+1. Install the current GA version (1.37.19.0) of the client.
+2.	Install and configure the scanner.
+3.	Start the scanner.
+4.	Upgrade the Azure Information Protection client to this preview version.
+5.	Start the the scanner.
+
+If you need instructions to install, configure, and start the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
 
 ## Version 1.37.19.0
 
