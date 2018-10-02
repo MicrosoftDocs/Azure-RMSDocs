@@ -165,8 +165,8 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    catch (const std::exception& e)
    {
         cout << "An exception occurred... did you specify a valid output file path?\n\n" << e.what() << "'\n";
-		system("pause");
-		return 1;
+        system("pause");
+        return 1;
    }
 
    // Get the label from output file

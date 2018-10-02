@@ -35,7 +35,7 @@ First we create and configure the initial Visual Studio solution and project, up
      - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
      - When finished, click the **OK** button in the lower right.
 
-     [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
+       [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
 
 2. Configure the project settings:
@@ -177,7 +177,7 @@ Now create an implementation for an authentication delegate, by extending the SD
 	        string authority = challenge.GetAuthority();
 	        string resource = challenge.GetResource();
 	        if (mToken == "" || (authority != mAuthority || resource != mResource))
-	        {
+          {
               cout << "\nRun the PowerShell script to generate an access token using the following values, then copy/paste it below:\n";
               cout << "Set $authority to: " + authority + "\n";
               cout << "Set $resourceUrl to: " + resource + "\n";
@@ -189,11 +189,11 @@ Now create an implementation for an authentication delegate, by extending the SD
               system("pause");
           }
 
-	   // Pass access token back to MIP SDK
-     token.SetAccessToken(mToken);
+          // Pass access token back to MIP SDK
+          token.SetAccessToken(mToken);
 
-     // True = successful token acquisition; False = failure
-     return true;
+          // True = successful token acquisition; False = failure
+          return true;
      }
      ``` 
 3. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
