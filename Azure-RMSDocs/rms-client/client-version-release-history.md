@@ -63,10 +63,10 @@ If you have a version of the client that is later than 1.37.19.0, it is a previe
 Just for this preview version, to use the scanner, you must follow these steps:
 
 1. Install the current GA version (1.37.19.0) of the client.
-2.	Install and configure the scanner.
-3.	Start the scanner.
-4.	Upgrade the Azure Information Protection client to this preview version.
-5.	Start the the scanner.
+2. Install and configure the scanner.
+3. Start the scanner.
+4. Upgrade the Azure Information Protection client to this preview version.
+5. Start the scanner.
 
 If you need instructions to install, configure, and start the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
 
