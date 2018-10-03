@@ -26,7 +26,7 @@ The MIP SDK is supported on the following platforms:
 | RedHat Enterprise Linux | 7 with devtoolset-7 |
 | Debian  | 9 |
 | macOS   | High Sierra and later |
-| Windows | All supported versions, 32 and 64 bit |
+| Windows | All supported versions, 32 bit and 64 bit |
 
 ## Sign up for an Office 365 subscription
 
@@ -112,7 +112,7 @@ Next, complete the following steps to ensure your client computer is set up and 
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
     ```  
-6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. This allows the dependent DLLs to be found at runtime, by client applications:
+6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. The PATH variable allows the dependent DLLs to be found at runtime, by client applications:
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
    - On the **System Properties** dialog, click **Environment Variables**.
@@ -146,7 +146,7 @@ To register an application account in Azure AD for use with the Quickstarts and 
     - **Application type** - Select "Native", as the applications demonstrated by the SDK are natively installed console applications. Native applications are considered "public" clients by OAuth2, as they are unable to store/use application credentials in a secure manner. Unlike a "confidential" server-based application, such as a web application, which is registered with its own credentials. 
     - **Redirect URI** - Since the SDK uses simple console client applications, use a URI in the format `<app-name>://authorize`.
 
-2. When finished, you'll be returned to the **Registered app** page for your new application registration. Copy the GUID in the **Application ID** field, as you will need this later. 
+2. When finished, you'll be returned to the **Registered app** page for your new application registration. Copy and save the GUID in the **Application ID** field, as you will need it for the Quickstarts. 
 
 3. Then click **Settings** to add the APIs and permissions to which the client will need access. On the **Settings** page, click **Required permissions**.
 
@@ -162,7 +162,7 @@ To register an application account in Azure AD for use with the Quickstarts and 
 
 6. When you're back on the **Required Permissions** page, click **Grant Permissions**, then **Yes**. This step gives pre-consent to the application using this registration, to access the APIs under the specified permissions. If you signed in as a global administrator, consent is recorded for all users in the tenant that run the application; otherwise, it applies only to your user account. 
 
-When finished, application registration and API permissions should look similar to the following:
+When finished, application registration and API permissions should look similar to the following example:
 
    [![Azure AD app registration](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
