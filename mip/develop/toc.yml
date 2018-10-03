@@ -1,0 +1,213 @@
+- name: Microsoft Information Protection SDK
+  href: index.yml
+- name: Overview
+  items:
+  - name: About Microsoft Information Protection SDK
+    href: overview.md
+- name: Setup
+  href: setup-configure-mip.md
+- name: Quickstarts
+  items:
+  - name: Application initialization (C++)
+    href: quick-app-initialization-cpp.md
+  - name: File API
+    items:
+    - name: List sensitivity labels (C++)
+      href: quick-file-list-labels-cpp.md
+    - name: Set/get sensitivity labels (C++)
+      href: quick-file-set-get-label-cpp.md      
+- name: Concepts
+  items:
+  - name: The APIs
+    href: concept-apis-use-cases.md
+  - name: The profile and engine (C++)
+    href: concept-profile-engine-cpp.md  
+    items: 
+      - name: File API profile (C++)
+        href: concept-profile-engine-file-profile-cpp.md
+      - name: File API engine (C++)
+        href: concept-profile-engine-file-engine-cpp.md
+      - name: Policy API profile (C++)
+        href: concept-profile-engine-policy-profile-cpp.md
+      - name: Policy API engine (C++)
+        href: concept-profile-engine-policy-engine-cpp.md
+      - name: Protection API profile (C++)
+        href: concept-profile-engine-protection-profile-cpp.md
+      - name: Protection API engine (C++)
+        href: concept-profile-engine-protection-engine-cpp.md            
+  - name: Authentication (C++)
+    href: concept-authentication-cpp.md
+    items:
+    - name: Implementing an authentication delegate (C++)
+      href: concept-authentication-delegate-cpp.md
+    - name: Acquiring an access token (PowerShell)
+      href: concept-authentication-acquire-token-ps.md
+    - name: Acquiring an access token (Python)
+      href: concept-authentication-acquire-token-py.md      
+  - name: Handlers
+    items:
+    - name: File API handler (C++)
+      href: concept-handler-file-cpp.md
+    - name: Protection API handler (C++)
+      href: concept-handler-protection-cpp.md
+  - name: Labels 
+    href: concept-classification-labels.md
+  - name: Observers for async (C++)
+    href: concept-async-observers.md
+    items:
+    - name: File API observers (C++)
+      href: concept-async-observers-file-cpp.md
+    - name: Policy API observers (C++)
+      href: concept-async-observers-policy-cpp.md
+    - name: Protection API observers (C++)
+      href: concept-async-observers-protection-cpp.md
+- name: Reference
+  items:
+  - name: C++ library
+    href: reference/mip-sdk-reference.md
+    items:
+    - name: Enums and structs
+      href: reference/mip-enums-and-structs.md
+    - name: Functions
+      href: reference/mip-functions.md
+    - name: Classes
+      items:
+      - name: AccessDeniedError
+        href: reference/class_mip_accessdeniederror.md
+      - name: Action
+        href: reference/class_mip_action.md
+      - name: AddContentFooterAction
+        href: reference/class_mip_addcontentfooteraction.md
+      - name: AddContentHeaderAction
+        href: reference/class_mip_addcontentheaderaction.md
+      - name: AddWatermarkAction
+        href: reference/class_mip_addwatermarkaction.md
+      - name: ApplyLabelAction
+        href: reference/class_mip_applylabelaction.md
+      - name: BadInputError
+        href: reference/class_mip_badinputerror.md
+      - name: ClassificationResult
+        href: reference/class_mip_classificationresult.md
+      - name: ConsentDelegate
+        href: reference/class_consentdelegate.md
+      - name: ConsentDeniedError
+        href: reference/class_mip_consentdeniederror.md
+      - name: ContentLabel
+        href: reference/class_mip_contentlabel.md
+      - name: CustomAction
+        href: reference/class_mip_customaction.md
+      - name: Error
+        href: reference/class_mip_error.md
+      - name: ExecutionState
+        href: reference/class_mip_executionstate.md
+      - name: FileEngine::Settings
+        href: reference/class_mip_fileengine_settings.md
+      - name: FileEngine
+        href: reference/class_mip_fileengine.md
+      - name: FileHandler::Observer
+        href: reference/class_mip_filehandler_observer.md
+      - name: FileHandler
+        href: reference/class_mip_filehandler.md
+      - name: FileIOError
+        href: reference/class_mip_fileioerror.md
+      - name: FileProfile::Observer
+        href: reference/class_mip_fileprofile_observer.md
+      - name: FileProfile::Settings
+        href: reference/class_mip_fileprofile_settings.md
+      - name: FileProfile
+        href: reference/class_mip_fileprofile.md
+      - name: HttpDelegate
+        href: reference/class_mip_httpdelegate.md
+      - name: HttpRequest
+        href: reference/class_mip_httprequest.md
+      - name: HttpResponse
+        href: reference/class_mip_httpresponse.md
+      - name: InternalError
+        href: reference/class_mip_internalerror.md
+      - name: JustificationRequiredError
+        href: reference/class_mip_justificationrequirederror.md
+      - name: JustifyAction
+        href: reference/class_mip_justifyaction.md
+      - name: Label
+        href: reference/class_mip_label.md
+      - name: LabelingOptions
+        href: reference/class_mip_labelingoptions.md
+      - name: LoggerDelegate
+        href: reference/class_mip_loggerdelegate.md
+      - name: MetadataAction
+        href: reference/class_mip_metadataaction.md
+      - name: NetworkError
+        href: reference/class_mip_networkerror.md
+      - name: NotSupportedError
+        href: reference/class_mip_notsupportederror.md
+      - name: PolicyEngine::Settings
+        href: reference/class_mip_policyengine_settings.md
+      - name: PolicyEngine
+        href: reference/class_mip_policyengine.md
+      - name: PolicyHandler
+        href: reference/class_mip_policyhandler.md
+      - name: PolicyProfile::Observer
+        href: reference/class_mip_policyprofile_observer.md
+      - name: PolicyProfile::Settings
+        href: reference/class_mip_policyprofile_settings.md
+      - name: PolicyProfile
+        href: reference/class_mip_policyprofile.md
+      - name: PolicySyncError
+        href: reference/class_mip_policysyncerror.md
+      - name: PrivilegedRequiredError
+        href: reference/class_mip_privilegedrequirederror.md
+      - name: ProtectAdhocAction
+        href: reference/class_mip_protectadhocaction.md
+      - name: ProtectByTemplateAction
+        href: reference/class_mip_protectbytemplateaction.md
+      - name: ProtectDoNotForwardAction
+        href: reference/class_mip_protectdonotforwardaction.md
+      - name: ProtectionDescriptor
+        href: reference/class_mip_protectiondescriptor.md
+      - name: ProtectionDescriptorBuilder
+        href: reference/class_mip_protectiondescriptorbuilder.md
+      - name: ProtectionEngine::Observer
+        href: reference/class_mip_protectionengine_observer.md
+      - name: ProtectionEngine::Settings
+        href: reference/class_mip_protectionengine_settings.md
+      - name: ProtectionEngine
+        href: reference/class_mip_protectionengine.md
+      - name: ProtectionHandler::Observer
+        href: reference/class_mip_protectionhandler.md
+      - name: ProtectionHandler
+        href: reference/class_mip_protectionhandler.md
+      - name: ProtectionProfile::Observer
+        href: reference/class_mip_protectionprofile_observer.md
+      - name: ProtectionProfile::Settings
+        href: reference/class_mip_protectionprofile_settings.md
+      - name: ProtectionProfile
+        href: reference/class_mip_protectionprofile.md
+      - name: RecommendLabelAction
+        href: reference/class_mip_recommendlabelaction.md
+      - name: RemoveContentFooterAction
+        href: reference/class_mip_removecontentfooteraction.md
+      - name: RemoveContentHeaderAction
+        href: reference/class_mip_removecontentheaderaction.md
+      - name: RemoveProtectionAction
+        href: reference/class_mip_removeprotectionaction.md
+      - name: RemoveWatermarkAction
+        href: reference/class_mip_removewatermarkaction.md
+      - name: Stream
+        href: reference/class_mip_stream.md
+      - name: TransientNetworkError
+        href: reference/class_mip_transientnetworkerror.md
+      - name: UserRights
+        href: reference/class_mip_userrights.md
+      - name: UserRoles
+        href: reference/class_mip_userroles.md
+- name: Resources
+  items:
+  - name: Developer blog
+    href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/bg-p/InformationProtectionDevelopers
+  - name: Forums 
+    href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
+  - name: SDK (public preview)
+    href: http://aka.ms/mipsdk
+  - name: Samples
+    href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
+   

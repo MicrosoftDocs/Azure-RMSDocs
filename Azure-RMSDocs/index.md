@@ -1,6 +1,12 @@
 ---
 layout: LandingPage
 ms.topic: landing-page
+ms.service: information-protection
+author: cabailey
+manager: mbaldwin
+ms.author: cabailey
+ms.topic: landing-page
+ms.date: 09/26/2018
 ---
 # Azure Information Protection Documentation
 
@@ -8,7 +14,7 @@ Control and help secure email, documents, and sensitive data that you share outs
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/information-protection/understand-explore/what-is-information-protection#resources-for-azure-information-protection">
+        <a href="/information-protection/understand-explore/what-is-information-protection#microsoft-ignite">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -18,7 +24,7 @@ Control and help secure email, documents, and sensitive data that you share outs
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Watch the Azure Information Protection sessions from Microsoft Ignite 2016</h3>
+                        <h3>Watch the Azure Information Protection sessions from Microsoft Ignite 2018</h3>
                     </div>
                 </div>
             </div>
