@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -40,7 +40,7 @@ This native integration has the following benefits:
     
     This protected PDF file format must be [enabled by an administrator](https://review.docs.microsoft.com/en-us/azure/information-protection/rms-client/client-admin-guide-customizations?branch=pr-en-us-2117#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this configuration is made, the file name extension remains as .pdf and does not change to .ppdf.
 
-For more information, see the following blog post: [blog post](https://aka.ms/AIPblog)
+For more information, see the following blog post: [Starting October, use Adobe Acrobat Reader for PDFs protected by Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738)
 
 ## Supported PDF readers
 
