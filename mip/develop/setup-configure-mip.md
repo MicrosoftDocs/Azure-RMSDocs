@@ -30,7 +30,6 @@ The MIP SDK is supported on the following platforms:
 
 ## Sign up for an Office 365 subscription
 
-
 Many of the SDK samples require access to an Office 365 subscription. If you haven't already, be sure to sign up for one of the following subscription types:
 
 | Name | Sign-up |
@@ -40,6 +39,10 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 | Enterprise Mobility and Security E3 or E5 | https://www.microsoft.com/cloud-platform/enterprise-mobility-security |
 | Azure Information Protection Premium P1 or P2 | https://azure.microsoft.com/pricing/details/information-protection/ |
 | Microsoft 365 E3, E5, or F1 | https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans | 
+
+## Configure sensitivity labels
+
+If you're currently using Azure Information Protection, steps must be taken to migrate your labels to Office 365 Security and Compliance Center. For more information on the process, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels). 
 
 ## Configure your client workstation
 
@@ -65,7 +68,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 
    - Because administrator rights are required to install modules, first you need to either:
 
-     - log on to your computer with an account that has Administrator rights.
+     - sign in to your computer with an account that has Administrator rights.
      - run the Windows PowerShell session with elevated rights (Run as Administrator).
 
    - Then run the `install-module -name adal.ps` cmdlet:
@@ -109,7 +112,7 @@ Next, complete the following steps to ensure your client computer is set up and 
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
     ```  
-6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. This allows the dependent .DLLs to be found at runtime, by client applications:
+6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. This allows the dependent DLLs to be found at runtime, by client applications:
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
    - On the **System Properties** dialog, click **Environment Variables**.
@@ -164,9 +167,9 @@ When finished, application registration and API permissions should look similar 
    [![Azure AD app registration](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-For more details on adding APIs and permissions to a registration, see [Updating an application, Configure a client application to access web APIs section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Here you'll find information on adding the APIs and permissions needed by a client application.  
+For more information on adding APIs and permissions to a registration, see [Updating an application, Configure a client application to access web APIs section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Here you'll find information on adding the APIs and permissions needed by a client application.  
 
 ## Next Steps
 
 - Before starting the Quickstarts section, be sure to read about [Observers in the MIP SDK](concept-async-observers.md), as the MIP SDK is designed to be almost entirely asynchronous.
-- If you're ready to gets some hands-on experience with the SDK, start with [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md).
+- If you're ready to get some hands-on experience with the SDK, start with [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md).
