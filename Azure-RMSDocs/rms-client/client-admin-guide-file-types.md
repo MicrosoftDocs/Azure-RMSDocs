@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/24/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 
@@ -197,7 +197,7 @@ To help prevent users from changing files that are critical for computer operati
 
 - **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msg,.msp, .msi, .pdb, .jar
     
-    The following file types are now also excluded: .zip, .msg, and .rar. 
+    Unless you have the current preview version of the Azure Information Protection client, the following file types are also excluded: .zip, .msg, and .rar. 
 
 - **Excluded folders**: 
     - Windows

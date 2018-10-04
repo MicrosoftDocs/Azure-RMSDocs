@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
@@ -52,12 +52,17 @@ Use the following information to see what’s new or changed for a supported rel
 
 If you have a version of the client that is later than 1.37.19.0, it is a preview build for testing and evaluation purposes.
 
-**Released**: 09/20/2018
+**Released**: 10/17/2018
 
 **New features:**
 
 - Support for [central reporting](../reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
 
+**Fixes**:
+
+- The Azure Inforamtion Protection client no longer excludes .msg, .rar, and .zip file name extensions for File Explorer (right-click) and PowerShell commands. However, these file name extensions remain excluded by default for the scanner. 
+
+- The Azure Inforamtion Protection client can correctly bulk-unprotect all files in a folder when you use File Explorer, right-click.
 
 ## Version 1.37.19.0
 
