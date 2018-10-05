@@ -64,8 +64,8 @@ Before you begin using Azure Information Protection, do the following preparatio
 
 ### Step 3: Configure and deploy classification and labeling
 
-> [!TIP!]
-> > Optional but recommended: Consider deploying the [Azure Information Protection scanner](deploy-aip-scanner.md) to discover what sensitive information you have on your local data stores. The information that the scanner finds can help you with your classification taxonomy, provide valuable information about what labels you need, and which files need protecting.
+> [!TIP]
+> Optional but recommended: Consider deploying the [Azure Information Protection scanner](deploy-aip-scanner.md) to discover what sensitive information you have on your local data stores. The information that the scanner finds can help you with your classification taxonomy, provide valuable information about what labels you need, and which files need protecting.
 > 
 > The scanner can be configured to look for well-known sensitive information types in local files on Windows Server, files in network shares, and files in on-premises versions of SharePoint. Because this configuration doesn't require you to configure labels or even have your classification taxonomy defined, running the scanner in this way is suitable for this early stage of your deployment. 
 
