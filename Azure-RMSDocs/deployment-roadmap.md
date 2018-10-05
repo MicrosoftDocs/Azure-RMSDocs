@@ -132,13 +132,13 @@ Optionally, consider configuring the following:
     If you have SharePoint and Exchange on-premises and want to use their information rights management (IRM) features, install and configure the Rights Management connector. For more information, see [Deploying the Azure Rights Management connector](./deploy-rms-connector.md).
 
 ### Step 6: Use and monitor your data protection solutions
-You’re now ready to protect your data, and log how your company is using the labels that you've configured and the data protection. For addition information to support this deployment phase, see the following:
+You’re now ready to monitor how your organization is using the labels that you've configured and confirm that you're protecting sensitive information. For addition information to support this deployment phase, see the following:
 
 - [Reporting for Azure Information Protection](reports-aip.md) - currently in preview
 
-- [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md)
-
 - [Client files and usage logging](./rms-client/client-admin-guide-files-and-logging.md)
+
+- [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md)
 
 ### Step 7: Administer the protection service for your tenant account as needed
 As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. PowerShell might also be needed for some of the advanced configurations. 
