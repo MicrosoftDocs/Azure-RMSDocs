@@ -56,10 +56,10 @@ Next, complete the following steps to ensure your client computer is set up and 
      - Scroll down to **Windows specifications** and look under **Version**.
 
    - Ensure "Developer Mode" is enabled on your workstation:
-    - Click the Windows icon in the lower left.
-    - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
-    - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
-    - Close the **Settings** dialog.
+     - Click the Windows icon in the lower left.
+     - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
+     - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
+     - Close the **Settings** dialog.
 
 2. Install [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), with the following workloads and optional components:
    - **Universal Windows Platform development** Windows workload, plus the following optional components:
@@ -68,7 +68,7 @@ Next, complete the following steps to ensure your client computer is set up and 
    - **Desktop development with C++** Windows workload, plus the following optional components:
      - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default 
 
-   [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
+     [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
 3. Install the [ADAL.PS PowerShell Module](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2). 
 
