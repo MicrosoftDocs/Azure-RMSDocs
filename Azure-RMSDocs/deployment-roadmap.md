@@ -33,6 +33,7 @@ However, if you just want to quickly try Azure Information Protection for yourse
 
 > [!NOTE]
 > If you are looking for a product release roadmap, see our [Information about new releases and updates](information-support.md#information-about-new-releases-and-updates) section.
+> 
 > For information about the unified labeling experiences that are currently in preview and announced at Microsoft Ignite 2018, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ### Identify your deployment roadmap
@@ -57,7 +58,7 @@ Review the subscription information and feature list from the [Azure Information
 Note: Do not manually assign user licenses from the free RMS for individuals subscription and do not use this license to administer the Azure Rights Management service for your organization. These licenses display as **Rights Management Adhoc** in the Office 365 admin center, and **RIGHTSMANAGEMENT_ADHOC** when you run the Azure AD PowerShell cmdlet, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). For more information about how the RMS for individuals subscription is automatically granted and assigned to users, see [RMS for individuals and Azure Information Protection](./rms-for-individuals.md).
 
 ### Step 2: Prepare your tenant to use Azure Information Protection
-Before you begin using Azure Information Protection, make sure that you have user accounts and groups in Office 365 or Azure Active Directory that will be used by Azure Information Protection to authenticate and authorize users from your organization. If necessary, create these account and groups, or synchronize them from your on-premises directory. 
+Before you begin using Azure Information Protection, make sure that you have user accounts and groups in Office 365 or Azure Active Directory. These user accounts and groups will be used by Azure Information Protection to authenticate and authorize users from your organization. If necessary, create these account and groups, or synchronize them from your on-premises directory. 
 
 For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
 
