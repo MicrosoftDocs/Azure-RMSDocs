@@ -44,7 +44,8 @@ First we create and configure the initial Visual Studio solution and project, up
      - Enter "Microsoft.InformationProtection" in the search box.
      - Select the "Microsoft.InformationProtection.File" package.
      - Click "Install", then click "OK" when the **Preview changes** confirmation dialog displays.
-       [![Visual Studio add NuGet package](media/quick-app-initialization-cpp/add-nuget-package.png)](media/quick-app-initialization-cpp/add-nuget-package.png#lightbox)
+   
+   [![Visual Studio add NuGet package](media/quick-app-initialization-cpp/add-nuget-package.png)](media/quick-app-initialization-cpp/add-nuget-package.png#lightbox)
  
 ## Implement an observer class to monitor the File profile and engine objects
 
