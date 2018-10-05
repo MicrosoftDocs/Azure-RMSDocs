@@ -40,11 +40,11 @@ First we create and configure the initial Visual Studio solution and project, up
 2. Add the Nuget package for the MIP SDK File API to your project:
    - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
    - When the **NuGet Package Manager** tab opens in the Editor Group tabs area:
-     - Select the **Browse** tab.
+     - Select **Browse**.
      - Enter "Microsoft.InformationProtection" in the search box.
      - Select the "Microsoft.InformationProtection.File" package.
-     - Click "Install", then click "OK" when the **Preview changes" dialog pops up asking for confirmation.
-           [![Visual Studio add NuGet package](media/quick-app-initialization-cpp/add-nuget-package.png)](media/quick-app-initialization-cpp/add-nuget-package.png#lightbox)
+     - Click "Install", then click "OK" when the **Preview changes** confirmation dialog displays.
+       [![Visual Studio add NuGet package](media/quick-app-initialization-cpp/add-nuget-package.png)](media/quick-app-initialization-cpp/add-nuget-package.png#lightbox)
  
 ## Implement an observer class to monitor the File profile and engine objects
 
