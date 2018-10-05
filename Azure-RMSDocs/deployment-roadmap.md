@@ -86,7 +86,7 @@ After a period of time, when users are comfortable labeling their documents and 
 
 - Conditions to support recommendations and automatic labeling
 
-At this stage, do not select the option to protect documents and emails. However, after you have configured labels for automatic labeling, run the [Azure Information Protection scanner](deploy-aip-scanner.md) on your local data stores in discovery mode. Running the scanner in discovery mode helps you fine-tune your label configuration and prepares you for classifying and protecting files in bulk. 
+At this stage, do not select the option to protect documents and emails. However, after you have configured labels for automatic labeling, run the [Azure Information Protection scanner](deploy-aip-scanner.md) on your local data stores in discovery mode and to match your policy. Running the scanner with this configuration tells you which labels would be applied to files. This information helps you fine-tune your label configuration and prepares you for classifying and protecting files in bulk. 
 
 ### Step 4: Prepare for data protection
 
