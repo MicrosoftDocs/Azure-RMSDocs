@@ -32,7 +32,7 @@ Use the following steps as recommendations to help you prepare for, implement, a
 However, if you just want to quickly try Azure Information Protection for yourself, rather than roll it out in a production environment, see [Quick start tutorial for Azure Information Protection](./infoprotect-quick-start-tutorial.md).
 
 > [!NOTE]
-> If you are looking for a release roadmap, see our [Information about new releases and updates](information-suppor.md#information-about-new-releases-and-updates) section. 
+> If you are looking for a release roadmap, see our [Information about new releases and updates](information-support.md#information-about-new-releases-and-updates) section. 
 > 
 > For information about the new releases announced at Microsoft Ignite 2018, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
