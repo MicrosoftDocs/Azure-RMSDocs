@@ -140,7 +140,9 @@ You’re now ready to protect your data, and log how your company is using the l
 - [Client files and usage logging](./rms-client/client-admin-guide-files-and-logging.md)
 
 ### Step 7: Administer the protection service for your tenant account as needed
-As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. For more information, see [Administering the Azure Rights Management service by using Windows PowerShell](./administer-powershell.md).
+As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. PowerShell might also be needed for some of the advanced configurations. 
+
+For more information, see [Administering the Azure Rights Management service by using Windows PowerShell](./administer-powershell.md).
 
 
 ## Deployment roadmap for data protection only
@@ -198,4 +200,6 @@ Optionally, consider configuring the following:
 You’re now ready to protect your data, and log how your company is using the protection service. For addition information to support this deployment phase, see [Helping users to protect files by using the Azure Rights Management service](./help-users.md) and [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md).
 
 ### Step 5: Administer the protection service for your tenant account as needed
-As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. For more information, see [Administering the Azure Rights Management service by using Windows PowerShell](./administer-powershell.md).
+As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. PowerShell might also be needed for some of the advanced configurations. 
+
+For more information, see [Administering the Azure Rights Management service by using Windows PowerShell](./administer-powershell.md).
