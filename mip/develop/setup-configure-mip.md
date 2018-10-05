@@ -48,21 +48,27 @@ If you're currently using Azure Information Protection, steps must be taken to m
 
 Next, complete the following steps to ensure your client computer is set up and configured correctly.
 
-### Windows 10
+1. If you're using a Windows 10 workstation:
 
-1. Using Windows Update, update your machine to Windows 10 Fall Creators Update (version 1709) or later. To  verify your current version:
+   - Using Windows Update, update your machine to Windows 10 Fall Creators Update (version 1709) or later. To verify your current version:
+     - Click the Windows icon in the lower left.
+     - Type "About your PC" and press the "Enter" key.
+     - Scroll down to **Windows specifications** and look under **Version**.
+
+   - Ensure "Developer Mode" is enabled on your workstation:
     - Click the Windows icon in the lower left.
-    - Type "About your PC" and press the "Enter" key.
-    - Scroll down to **Windows specifications** and look under **Version**.
+    - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
+    - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
+    - Close the **Settings** dialog.
 
 2. Install [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), with the following workloads and optional components:
-    - **Universal Windows Platform development** Windows workload, plus the following optional components:
-        - **C++ Universal Windows Platform tools**
-        - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default
-    - **Desktop development with C++** Windows workload, plus the following optional components:
-        - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default 
+   - **Universal Windows Platform development** Windows workload, plus the following optional components:
+     - **C++ Universal Windows Platform tools**
+     - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default
+   - **Desktop development with C++** Windows workload, plus the following optional components:
+     - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default 
 
-        [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
+   [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
 3. Install the [ADAL.PS PowerShell Module](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2). 
 
@@ -105,13 +111,14 @@ Next, complete the following steps to ensure your client computer is set up and 
    - **Include:** The Microsoft Information Protection SDK header files
    - **Samples:** Source code for the sample applications
 
-   On Windows, the SDK can be installed via the NuGet package manager console:
+   On Windows, the SDK can be installed via the NuGet package manager console in Visual Studio:
 
-    ```Powershell
+    ```console
     Install-Package Microsoft.InformationProtection.File
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
     ```  
+    
 6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. The PATH variable allows the dependent DLLs to be found at runtime, by client applications:
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
@@ -123,12 +130,6 @@ Next, complete the following steps to ensure your client computer is set up and 
      - \<platform\> = `amd64` (aka: x64), `x86`, etc.
    
    - When finished updating the **Path** variable, click **OK**. Then click **OK** when returned to the **Environment Variables** dialog.
-
-7. Ensure "Developer Mode" is enabled on your workstation:
-    - Click the Windows icon in the lower left.
-    - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
-    - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
-    - Close the **Settings** dialog.
 
 ## Register a client application with Azure Active Directory
 
