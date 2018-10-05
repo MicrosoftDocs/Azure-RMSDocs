@@ -31,14 +31,14 @@ Use the following steps as recommendations to help you prepare for, implement, a
 
 However, if you just want to quickly try Azure Information Protection for yourself, rather than roll it out in a production environment, see [Quick start tutorial for Azure Information Protection](./infoprotect-quick-start-tutorial.md).
 
-If you are looking for a release roadmap, see our [Information about new releases and updates](information-suppor.mdt#information-about-new-releases-and-updates) section. For information about the new releases announced at Microsoft Ignite 2018, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
-
-> [!IMPORTANT]
-> Before you do the following steps to deploy Azure Information Protection, make sure that you have reviewed [Requirements for Azure Information Protection](./requirements.md).
+> [!NOTE]
+> If you are looking for a release roadmap, see our [Information about new releases and updates](information-suppor.mdt#information-about-new-releases-and-updates) section. For information about the new releases announced at Microsoft Ignite 2018, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ### Identify your deployment roadmap
 
-Choose the deployment roadmap that's applicable for your organization and that matches the [subscription functionality and features](https://azure.microsoft.com/pricing/details/information-protection/) that you need:
+Before you do the following steps to deploy Azure Information Protection, make sure that you have reviewed [Requirements for Azure Information Protection](./requirements.md).
+
+Then choose the deployment roadmap that's applicable for your organization and that matches the [subscription functionality and features](https://azure.microsoft.com/pricing/details/information-protection/) that you need:
 
 - [Use classification, labeling, and protection](#deployment-roadmap-for-classification-labeling-and-protection)
 
