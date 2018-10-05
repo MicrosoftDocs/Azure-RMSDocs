@@ -91,7 +91,7 @@ Next, complete the following steps to ensure your client computer is set up and 
      PS C:\WINDOWS\system32>
      ```
 
-4. Download SDK samples  
+4. Download SDK samples from GitHub 
 
    - If you don't have one already, first create a [GitHub profile](https://github.com/join).
    - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
@@ -99,7 +99,7 @@ Next, complete the following steps to ensure your client computer is set up and 
      - Use the following query to view the repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
      - Using Git Bash, use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repository.
 
-5. Download SDK binaries
+5. Download SDK binary and header files
 
    A .zip file containing SDK binaries and headers for all platforms can be found at https://aka.ms/mipsdkbinaries. The .zip contains several additional .zip files, one for each platform and API. The files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`.
 
@@ -109,9 +109,9 @@ Next, complete the following steps to ensure your client computer is set up and 
 
    - **Bins:** The compiled binaries for each platform architecture, where applicable.
    - **Include:** The Microsoft Information Protection SDK header files
-   - **Samples:** Source code for the sample applications
+   - **Samples:** Source code for sample applications
 
-   On Windows, the SDK can be installed via the NuGet package manager console in Visual Studio:
+   If you're doing Visual Studio development, the SDK can be also installed via the NuGet Package Manager Console:
 
     ```console
     Install-Package Microsoft.InformationProtection.File
