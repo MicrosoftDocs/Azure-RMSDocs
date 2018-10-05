@@ -119,7 +119,7 @@ Optionally, consider configuring the following:
     
     If you have existing IT services that need to inspect files that Azure Information Protection will protect—such as data leak prevention (DLP) solutions, content encryption gateways (CEG), and anti-malware products—configure the service accounts to be super users for Azure Rights Management. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](./configure-super-users.md).
 
-4. Classify and protect existing files in balk
+4. Classify and protect existing files in bulk
     
     For your on-premises data stores, now run the [Azure Information Protection scanner](deploy-aip-scanner.md) in enforcement mode. For cloud-based data stores, use [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security).
     
@@ -173,7 +173,7 @@ Optionally, consider configuring the following:
 
 1. Deploy the Azure Information Protection client
     
-    Install the Azure Information Protection for users, to support Office 2010, to protect files other than Office documents and emails, and to track protected documents. Provide user training for this client. For more information, see [Azure Information Protection client for Windows](./rms-client/aip-client.md).
+    Install the Azure Information Protection for users to support Office 2010, to protect files other than Office documents and emails, and to track protected documents. Provide user training for this client. For more information, see [Azure Information Protection client for Windows](./rms-client/aip-client.md).
 
 2. Configure Office applications and services
     
