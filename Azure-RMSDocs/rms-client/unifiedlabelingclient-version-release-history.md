@@ -31,9 +31,9 @@ ms.suite: ems
 
 You can download the latest preview version of the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-### Release history
+### Release information
 
-Use the following information to see what’s supported for the latest preview release version of the Azure Information Protection unified labeling client for Windows. 
+Use the following information to see what’s supported for the latest preview version of the Azure Information Protection unified labeling client. This client installs as an Office add-on for Windows computers. 
 
 ## Version 2.0.213.0 
 
@@ -55,7 +55,7 @@ This preview version of the Azure Information Protection unified labeling client
 
 - Help and feedback dialog box, which includes reset settings and export logs
 
-The next set of features are "best effort":
+The next set of features is "best effort":
 
 - Labels that apply Do Not Forward
 
