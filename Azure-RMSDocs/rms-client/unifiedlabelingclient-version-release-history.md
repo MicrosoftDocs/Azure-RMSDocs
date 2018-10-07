@@ -93,5 +93,5 @@ The following features do not work in this preview version:
     
     - To provide feedback or ask questions about this preview client, use the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam).
     
-    To report issues with this preview client, use the **Help and feedback** option from the **Sensitivity** button on the ribbon. From the dialog box, export your logs, and then attach these log files to the email that's created with the **Report an Issue** option. 
+    - To report issues with this preview client, use the **Help and feedback** option from the **Sensitivity** button on the ribbon. From the dialog box, export your logs, and then attach these log files to the email that's created with the **Report an Issue** option. 
 
