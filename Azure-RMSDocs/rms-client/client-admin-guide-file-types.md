@@ -228,7 +228,7 @@ The scanner can inspect .zip files when you follow these instructions:
 
 1. For the Windows Server computer running the scanner, install the [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
 
-2. Configure the scanner to include .zip files to be scanned.
+2. Configure the scanner to include .zip files to be inspected, as described in the preceding section.
 
 3. If .zip files should be protected in addition to classified, add a registry entry for files with this file name extension to have generic protection (pfile), as described in the preceding section.
 
