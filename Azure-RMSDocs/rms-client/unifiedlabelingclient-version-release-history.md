@@ -65,15 +65,15 @@ The next set of features is "best effort":
 
 The following features do not work in this preview version:
 
-- Automatic classification
-
-- Support for multiple languages
+- Automatic and recommended classification
 
 - The Azure Information Protection viewer
 
 - File Explorer, right-click actions
 
-- PowerShell and the scanner
+- PowerShell commands and the scanner
+
+- Support for languages other than English
 
 ## Instructions
 
