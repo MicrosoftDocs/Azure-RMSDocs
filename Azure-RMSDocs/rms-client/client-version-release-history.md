@@ -62,7 +62,7 @@ If you have a version of the client that is later than 1.37.19.0, it is a previe
 
 - The Azure Inforamtion Protection client no longer excludes .msg, .rar, and .zip file name extensions for File Explorer (right-click) and PowerShell commands. However, these file name extensions remain excluded by default for the scanner. 
 
-- The Azure Inforamtion Protection client can correctly bulk-unprotect all files in a folder when you use File Explorer, right-click.
+- The Azure Information Protection client can unprotect multiple files (multi-select and a folder that contains protected files) when you use File Explorer, right-click.
 
 ## Version 1.37.19.0
 
