@@ -106,7 +106,7 @@ For the labels that successfully migrate, they can now be used by [clients that 
 
 The clients that currently support unified labeling include:
 
-- The [Azure Information Protection unified labeling client for Windows](../rms-client/unifiedlabelingclient-version-release-history.md) - in preview
+- The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md) - in preview
 
 - Apps from the Office Insiders program. For more information, see the [Where the feature is available today?](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US#bkmk_whereavailable) section from the Office documentation.
     
