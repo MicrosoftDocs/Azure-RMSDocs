@@ -27,7 +27,7 @@ ms.suite: ems
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 > [!NOTE]
-> This client is in preview and is subject to changes. It uses the unified labeling store and downloads policy from the Office 365 Security & Compliance Center.
+> This client is in preview and is subject to changes. It uses the unified labeling store and downloads policy from the Office 365 Security & Compliance Center. [More information](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
 
 You can download the latest preview version of the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
@@ -77,14 +77,21 @@ The following features do not work in this preview version:
 
 ## Instructions
 
-Install the client as you would the Azure Information Protection client: 
+1. Install the client as you would the Azure Information Protection client: 
+    
+    - For users: [Download and install the client](install-client-app.md)
+    
+    - For admins: [Azure Information Protection client administrator guide](client-admin-guide.md)
 
-- For users: [Download and install the client](install-client-app.md)
+2. Use the client in Office apps as you would the Azure Information Protection client, except that the button on the Office ribbon is named **Sensitivity** rather than **Protect**:
+    
+    - [Classify a file or email](client-classify.md) 
+    
+    - [Classify and protect a file or email](client-classify-protect.md)
 
-- For admins: [Azure Information Protection client administrator guide](client-admin-guide.md)
+3. Share your experience: 
+    
+    - To provide feedback or ask questions about this preview client, use the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam).
+    
+    To report issues with this preview client, use the **Help and feedback** option from the **Sensitivity** button on the ribbon. From the dialog box, export your logs, and then attach these log files to the email that's created with the **Report an Issue** option. 
 
-Use the client in Office apps as you would the Azure Information Protection client, except that the button on the Office ribbon is named **Sensitivity** rather than **Protect**:
-
-- [Classify a file or email](client-classify.md) 
-
-- [Classify and protect a file or email](client-classify-protect.md)
