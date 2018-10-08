@@ -48,21 +48,27 @@ If you're currently using Azure Information Protection, steps must be taken to m
 
 Next, complete the following steps to ensure your client computer is set up and configured correctly.
 
-### Windows 10
+1. If you're using a Windows 10 workstation:
 
-1. Using Windows Update, update your machine to Windows 10 Fall Creators Update (version 1709) or later. To  verify your current version:
-    - Click the Windows icon in the lower left.
-    - Type "About your PC" and press the "Enter" key.
-    - Scroll down to **Windows specifications** and look under **Version**.
+   - Using Windows Update, update your machine to Windows 10 Fall Creators Update (version 1709) or later. To verify your current version:
+     - Click the Windows icon in the lower left.
+     - Type "About your PC" and press the "Enter" key.
+     - Scroll down to **Windows specifications** and look under **Version**.
+
+   - Ensure "Developer Mode" is enabled on your workstation:
+     - Click the Windows icon in the lower left.
+     - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
+     - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
+     - Close the **Settings** dialog.
 
 2. Install [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), with the following workloads and optional components:
-    - **Universal Windows Platform development** Windows workload, plus the following optional components:
-        - **C++ Universal Windows Platform tools**
-        - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default
-    - **Desktop development with C++** Windows workload, plus the following optional components:
-        - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default 
+   - **Universal Windows Platform development** Windows workload, plus the following optional components:
+     - **C++ Universal Windows Platform tools**
+     - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default
+   - **Desktop development with C++** Windows workload, plus the following optional components:
+     - **Windows 10 SDK 10.0.16299.0 SDK** or later, if not included by default 
 
-        [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
+     [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
 3. Install the [ADAL.PS PowerShell Module](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2). 
 
@@ -85,7 +91,7 @@ Next, complete the following steps to ensure your client computer is set up and 
      PS C:\WINDOWS\system32>
      ```
 
-4. Download SDK samples  
+4. Download SDK samples from GitHub 
 
    - If you don't have one already, first create a [GitHub profile](https://github.com/join).
    - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
@@ -93,7 +99,7 @@ Next, complete the following steps to ensure your client computer is set up and 
      - Use the following query to view the repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
      - Using Git Bash, use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repository.
 
-5. Download SDK binaries
+5. Download SDK binary and header files
 
    A .zip file containing SDK binaries and headers for all platforms can be found at https://aka.ms/mipsdkbinaries. The .zip contains several additional .zip files, one for each platform and API. The files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`.
 
@@ -103,15 +109,16 @@ Next, complete the following steps to ensure your client computer is set up and 
 
    - **Bins:** The compiled binaries for each platform architecture, where applicable.
    - **Include:** The Microsoft Information Protection SDK header files
-   - **Samples:** Source code for the sample applications
+   - **Samples:** Source code for sample applications
 
-   On Windows, the SDK can be installed via the NuGet package manager console:
+   If you're doing Visual Studio development, the SDK can be also installed via the NuGet Package Manager Console:
 
-    ```Powershell
+    ```console
     Install-Package Microsoft.InformationProtection.File
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
     ```  
+    
 6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. The PATH variable allows the dependent DLLs to be found at runtime, by client applications:
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
@@ -123,12 +130,6 @@ Next, complete the following steps to ensure your client computer is set up and 
      - \<platform\> = `amd64` (aka: x64), `x86`, etc.
    
    - When finished updating the **Path** variable, click **OK**. Then click **OK** when returned to the **Environment Variables** dialog.
-
-7. Ensure "Developer Mode" is enabled on your workstation:
-    - Click the Windows icon in the lower left.
-    - Type "Use developer features" and press the "Enter" key, when you see the **Use Developer Features** item show.
-    - On the **Settings** dialog, **For developers** tab, under "Use developer features", select the **Developer mode** option.
-    - Close the **Settings** dialog.
 
 ## Register a client application with Azure Active Directory
 

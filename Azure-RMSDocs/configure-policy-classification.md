@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
@@ -105,7 +105,7 @@ When you click **Save**, your changes are automatically available to users and s
 
 ### Sensitive information types that require a minimum version of the client
 
-The following sensitive information types currently require the preview version of the Azure Information Protection client:
+The following sensitive information types require a minimum version of 1.37.19.0 for the Azure Information Protection client:
 
 - **EU Phone Number**
 - **EU Mobile Phone Number**

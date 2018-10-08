@@ -50,7 +50,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 ## Versions later than 1.37.19.0
 
-If you have a version of the client that is later than 1.37.19.0, it is a preview build for testing and evaluation purposes.
+If you have a version 1 of the client that is later than 1.37.19.0, it is a preview build for testing and evaluation purposes.
 
 **Released**: 10/17/2018
 
