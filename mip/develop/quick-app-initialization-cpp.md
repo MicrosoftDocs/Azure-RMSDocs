@@ -27,7 +27,7 @@ If you haven't already, be sure to:
 
 ## Create a Visual Studio solution and project
 
-First we create and configure the initial Visual Studio solution and project, upon which the Quickstarts will build. 
+First we create and configure the initial Visual Studio solution and project, upon which the other Quickstarts will build. 
 
 1. Open Visual Studio 2017, select the **File** menu, **New**, **Project**. In the **New Project** dialog:
    - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
