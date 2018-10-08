@@ -56,9 +56,13 @@ When you use Exchange Online or Exchange Server, you can configure information r
 
 -   **Data loss prevention (DLP) policies** that contain sets of conditions to filter email messages, and take actions to help prevent data loss for confidential or sensitive content. Examples of confidential or sensitive content include personal information or credit card information. Policy Tips can be used when sensitive data is detected, to alert users that they might need to apply protection. For more information, see [Data loss prevention](https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) in the Exchange library.
 
--   **Office 365 Message Encryption** that supports sending a protected email message and protected Office documents as attachments to any address on any device. For user accounts that don't use Azure AD, a web experience supports social identity providers or a one-time passcode. For more information, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) from the Office website.
+- **Office 365 Message Encryption** that supports sending a protected email message and protected Office documents as attachments to any email address on any device. For user accounts that don't use Azure AD, a web experience supports social identity providers or a one-time passcode. For more information, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](/office365/securitycompliance/set-up-new-message-encryption-capabilities) from the Office 365 documentation. To help you find additional information that is related to this configuration, see [Office 365 Message Encryption](https://docs.microsoft.com/office365/securitycompliance/ome).
 
 If you use Exchange on-premises, you can use the IRM features with the Azure Rights Management service by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Azure Rights Management service.
+
+For more information about the protection templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
+
+For more information about the email options that you can use to protect emails, see [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) and [Encrypt-Only option for emails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
 If you are ready to configure Exchange for IRM:
 
