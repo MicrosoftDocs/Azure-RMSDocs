@@ -17,11 +17,8 @@ This Quickstart shows you how to use more of the MIP File APIs. Using one of the
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete [Quickstart: List sensitivity labels (C++)](quick-file-list-labels-cpp.md) first, which builds a starter Visual Studio solution, to list an organization's sensitivity labels. This Quickstart builds on the previous one.
+- Complete [Quickstart: List sensitivity labels (C++)](quick-file-list-labels-cpp.md) first, which builds a starter Visual Studio solution, to list an organization's sensitivity labels. This "Set and get a sensitivity label" Quickstart builds on the previous one.
 - Optionally: Review [File handlers in the MIP SDK](concept-handler-file-cpp.md) concepts.
-
-> [!IMPORTANT]
-> If too much time passes between the completion of the previous Quickstart "List sensitivity labels", and this one, the static token created in the former will expire. If so, you will need to generate a new token and update your `AcquireOAuth2Token()` implementation again. See [Update the token acquisition logic with a valid access token](quick-file-list-labels-cpp.md#update-the-token-acquisition-logic-with-a-valid-access-token) for more details.
 
 ## Implement an observer class to monitor the File handler object
 
@@ -98,7 +95,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
 
    using mip::FileHandler;
    ```
-3. In the body of `main()`, below the `system("pause");`, and above the `return 0;` statements (where you left off in the previous Quickstart), insert the following code:
+3. Toward the end of the `main()` body, below `system("pause");` and above `return 0;` (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
    // Set up async FileHandler for input file operations
@@ -142,7 +139,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
         auto commitFuture = commitPromise->get_future();
         handler->CommitAsync(filePathOut, commitPromise);
 		if (commitFuture.get()) {
-			cout << "Label committed to file: " << filePathOut << endl;
+			cout << "\nLabel committed to file: " << filePathOut << endl;
 		}
 		else {
 			cout << "Failed to label: " + filePathOut << endl;
@@ -168,14 +165,14 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    catch (const std::exception& e)
    {
         cout << "An exception occurred... did you specify a valid output file path?\n\n" << e.what() << "'\n";
-		system("pause");
-		return 1;
+        system("pause");
+        return 1;
    }
 
    // Get the label from output file
    try
    {
-        cout << "\nGetting label committed to file: " << filePathOut << endl;
+        cout << "\nGetting the label committed to file: " << filePathOut << endl;
         auto label = handler->GetLabel();
         cout << "Name: " + label->GetLabel()->GetName() << endl;
         cout << "Id: " + label->GetLabel()->GetId() << endl;
@@ -199,28 +196,55 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
 
 ## Build and test the application
 
-Build and test your client application. If your project builds and runs successfully, you should see output in the console window, similar to the following example: 
+Build and test your client application. 
 
-```cmd
-Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
-Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
-General : f42a3342-8706-4288-bd31-ebb85995028z
-Confidential : 074e457c-5848-4542-9a6f-34a182080e7z
-Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
-Press any key to continue . . .
+1. Use F6 (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-Applying Label ID f42a3342-8706-4288-bd31-ebb85995028z to c:\Test\Test.docx
-Committing changes
-Label committed to file: c:\Test\Test_labeled.docx
-Press any key to continue . . .
+2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. As you did previously in the "List sensitivity labels" Quickstart, run your PowerShell script to acquire the token each time, using the values provided. `AcquireOAuth2Token()` will attempt to use a previously generated token, if the requested authority and resource are the same:
 
-Getting label committed to file: c:\Test\Test_labeled.docx
-Name: General
-Id: f42a3342-8706-4288-bd31-ebb85995028z
-Press any key to continue . . .
-```
+   ```console
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/common/oauth2/authorize
+   Set $resourceUrl to: https://syncservice.o365syncservice.com/
+   Sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token: <paste-access-token-here>
+   Press any key to continue . . .
 
-You can verify the application of the label, by opening the document and visually inspecting the document's information protection settings.
+   Sensitivity labels for your organization:
+   Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
+   Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
+   General : f42a3342-8706-4288-bd31-ebb85995028z
+   Confidential : 074e457c-5848-4542-9a6f-34a182080e7z
+   Highly Confidential : f55c2dea-db0f-47cd-8520-a52e1590fb6z
+   Press any key to continue . . .
+
+   Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to c:\Test\Test.docx
+   Committing changes
+
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/common/oauth2/authorize
+   Set $resourceUrl to: https://aadrm.com
+   Sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token: <paste-access-token-here>
+   Press any key to continue . . .
+
+   Label committed to file: c:\Test\Test_labeled.docx
+   Press any key to continue . . .
+
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/94f69844-8d34-4794-bde4-3ac89ad2b664/oauth2/authorize
+   Set $resourceUrl to: https://aadrm.com
+   Sign in with user account: user1@tenant.onmicrosoft.com
+   Enter access token: <paste-access-token-here>
+   Press any key to continue . . .
+
+   Getting the label committed to file: c:\Test\Test_labeled.docx
+   Name: Confidential
+   Id: 074e457c-5848-4542-9a6f-34a182080e7z
+   Press any key to continue . . .
+   ```
+
+You can verify the application of the label, by opening the output file and visually inspecting the document's information protection settings.
 
 > [!NOTE]
 > If you're labeling an Office document, but not signed in using an account from the Azure Active Directory (AD) tenant where the access token was obtained (and sensitivity labels are configured), you may be prompted to sign-in before you can open the labelled document. 

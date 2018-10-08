@@ -19,7 +19,7 @@ This quickstart will show you how to implement the client initialization pattern
 
 If you haven't already, be sure to:
 
-- Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md). This Quickstart relies on proper SDK setup and configuration.
+- Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md). This "Client application initialization" Quickstart relies on proper SDK setup and configuration.
 - Optionally:
   - Review [Profile and engine objects](concept-profile-engine-cpp.md). The profile and engine objects are universal concepts, required by clients that use the MIP File/Policy/Protection APIs. 
   - Review [Authentication concepts](concept-authentication-cpp.md) to learn how authentication and consent are implemented by the SDK and client application.
@@ -30,33 +30,26 @@ If you haven't already, be sure to:
 First we create and configure the initial Visual Studio solution and project, upon which the Quickstarts will build. 
 
 1. Open Visual Studio 2017, select the **File** menu, **New**, **Project**. In the **New Project** dialog:
-     - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
-     - In the center pane, select **Windows Console Application**
-     - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
-     - When finished, click the **OK** button in the lower right.
+   - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
+   - In the center pane, select **Windows Console Application**
+   - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
+   - When finished, click the **OK** button in the lower right.
 
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
-
-2. Configure the project settings:
-   - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Properties**. 
-   - On the top/right of the **Property Pages** dialog, click **Configuration Manager...**. On the **Configuration Manager** dialog, set your  "Active solution configuration" to **Debug**, and "Active solution platform" target to **x64**. Click **Close** when finished.
-   - Under **Configuration Properties**, select the **VC++ Directories** node.
-   - Select the **Include Directories** row, then click the drop-down on the right side, then **<Edit...>**, and enter the paths to the SDK include (.h) subdirectories in the top field. Specify the full paths to `file\include`, `protection\include`, `upe\include` subdirectories (but no deeper), within the path where you installed the SDK. Click **OK**. 
-
-        [![Visual Studio set path properties](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
-
-   - Repeat the previous step for the **Library Directories** row, entering the paths to the SDK binary static libraries (.lib) subdirectories. Be sure to use the paths that match the current build configuration for your solution. For this Quickstart, specify the absolute or relative paths to the `file\bins\debug\amd64`, `protection\bins\debug\amd64`, `upe\bins\debug\amd64` subdirectories.
-
-   - Under **Configuration Properties**, open the **Linker** node, and select the **Input** node. 
-   - Select the **Additional Dependencies** row, then click the drop-down on the right side, then **<Edit...>**. Here you add the names of the SDK static libraries. Add `mip_protection_sdk.lib;mip_file_sdk.lib;mip_upe_sdk.lib;` to the libraries list, in the top field. Click **OK**. 
-   - Click **OK** on the **Property Pages** dialog when finished.
-
-     [![Visual Studio set static libs](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
-
+2. Add the Nuget package for the MIP SDK File API to your project:
+   - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
+   - When the **NuGet Package Manager** tab opens in the Editor Group tabs area:
+     - Select **Browse**.
+     - Enter "Microsoft.InformationProtection" in the search box.
+     - Select the "Microsoft.InformationProtection.File" package.
+     - Click "Install", then click "OK" when the **Preview changes** confirmation dialog displays.
+   
+     [![Visual Studio add NuGet package](media/quick-app-initialization-cpp/add-nuget-package.png)](media/quick-app-initialization-cpp/add-nuget-package.png#lightbox)
+ 
 ## Implement an observer class to monitor the File profile and engine objects
 
-Now create a basic implementation for an observer class, by extending the SDK's `mip::FileProfile::Observer` class. The observer is instantiated and used later, to monitor the loading of the File profile object, and adding the engine object to the profile.
+Now create a basic implementation for a File profile observer class, by extending the SDK's `mip::FileProfile::Observer` class. The observer is instantiated and used later, to monitor the loading of the File profile object, and adding the engine object to the profile.
 
 1. Add a new class to your project, which generates both the header/.h and implementation/.cpp files for you:
 
@@ -121,7 +114,7 @@ Now create a basic implementation for an observer class, by extending the SDK's 
 
 ## Implement an authentication delegate
 
-The MIP SDK implements authentication using class extensibility, which provides a mechanism to share authentication work with the client application. The client must acquire a suitable OAuth2 access token, and provided to the MIP SDK at runtime. 
+The MIP SDK implements authentication using class extensibility, which provides a mechanism to share authentication work with the client application. The client must acquire a suitable OAuth2 access token, and provide to the MIP SDK at runtime. 
 
 Now create an implementation for an authentication delegate, by extending the SDK's `mip::AuthDelegate` class, and overriding/implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function. The authentication delegate is instantiated and used later, by the File profile and File engine objects.
 
@@ -149,32 +142,48 @@ Now create an implementation for an authentication delegate, by extending the SD
             OAuth2Token& token) override;     // Token handed back to MIP SDK
      private:
           std::string mAppId;
+          std::string mToken;
+          std::string mAuthority;
+          std::string mResource;
      };
      ```
 
    - Update "auth_delegate.cpp", by replacing all of the generated `auth_delegate` class implementation with the following source. **Don't** remove the preprocessor directives generated by the previous step (#pragma, #include). 
 
      > [!IMPORTANT]
-     > The following token acquisition code is intentionally incomplete. We will test later with a static access token.  
-     > In production, this must be replaced by code that dynamically prompts the user for authentication and acquires a token, using:
-     > - the appId and reply/redirect URI specified in your Azure AD app registration (reply/redirect URI **must** match your app registration)
-     > - the authority and resource URI passed by the SDK in the `challenge` argument (resource URI **must** match your app registration's API/permissions)
-     > - app/user credentials (OAuth2 "native" clients should prompt for user credentials and use the "authorization code" flow. OAuth2 "confidential clients" can use their own secure credentials with the "client credentials" flow (such as a service), or prompt for user credentials using the "authorization code" flow (such as a web app)).
+     > The following token acquisition code is not suitable for production use. In production, this must be replaced by code that dynamically acquires a token, using:
+     > - The appId and reply/redirect URI specified in your Azure AD app registration (reply/redirect URI **must** match your app registration)
+     > - The authority and resource URL passed by the SDK in the `challenge` argument (resource URL **must** match your app registration's API/permissions)
+     > - Valid app/user credentials, where the account matches the `identity` argument passed by the SDK. OAuth2 "native" clients should prompt for user credentials and use the "authorization code" flow. OAuth2 "confidential clients" can use their own secure credentials with the "client credentials" flow (such as a service), or prompt for user credentials using the "authorization code" flow (such as a web app). 
      >
-     > OAuth2 token acquisition is a complex protocol, and normally accomplished by using a library. TokenAcquireOAuth2Token() is **only** called by the MIP SDK, as required.
+     > OAuth2 token acquisition is a complex protocol, and normally accomplished by using a library. TokenAcquireOAuth2Token() is called **only** by the MIP SDK, as required.
 
      ```cpp
+     #include <iostream>
+     using std::cout;
+     using std::cin;
      using std::string;
 
      bool AuthDelegateImpl::AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) 
      {
-	        // TODO: replace with token acquisition code
-	        const string authority = challenge.GetAuthority();
-	        const string resourceURI = challenge.GetResource();
-	        string accessToken = "<access-token>";
+          // Acquire a token manually, reuse previous token if same authority/resource. In production, replace with token acquisition code.
+          string authority = challenge.GetAuthority();
+          string resource = challenge.GetResource();
+          if (mToken == "" || (authority != mAuthority || resource != mResource))
+          {
+              cout << "\nRun the PowerShell script to generate an access token using the following values, then copy/paste it below:\n";
+              cout << "Set $authority to: " + authority + "\n";
+              cout << "Set $resourceUrl to: " + resource + "\n";
+              cout << "Sign in with user account: " + identity.GetEmail() + "\n";
+              cout << "Enter access token: ";
+              cin >> mToken;
+              mAuthority = authority;
+              mResource = resource;
+              system("pause");
+          }
 
-	        // Pass access token back to MIP SDK
-	        token.SetAccessToken(accessToken);
+          // Pass access token back to MIP SDK
+          token.SetAccessToken(mToken);
 
           // True = successful token acquisition; False = failure
           return true;
@@ -183,11 +192,6 @@ Now create an implementation for an authentication delegate, by extending the SD
 3. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
 
 ## Implement a consent delegate
-
-Azure AD requires an application to be given consent, before it can access secured resources under the identity of an account. Consent is recorded as a permanent acknowledgement of permission in the tenant of the account, by a given account (user consent) or all accounts (admin consent), for the app to access the requested resource API/permissions. Consent occurs in various scenarios, based on the API and level of permissions the application is seeking, and the account being used for sign-in and token acquisition: 
-
-- accounts from the *same tenant* where your application is registered, if you or an administrator didn't explicitly pre-consent access via the "Grant Permissions" feature.
-- accounts from a *different tenant* if your application is registered as multi-tenant, and the tenant administrator hasn't pre-consented for all users in advance.
 
 Now create an implementation for a consent delegate, by extending the SDK's `mip::ConsentDelegate` class, and overriding/implementing the `mip::AuthDelegate::GetUserConsent()` pure virtual function. The consent delegate is instantiated and used later, by the File profile and File engine objects.
 
@@ -249,17 +253,17 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
 
    int main()
    {
-     // Construct/initialize objects used by the application's profile object
-     ApplicationInfo appInfo{"<application-id>",	// ApplicationInfo object (App ID, friendly name)
+     // Construct/initialize objects required by the application's profile object
+     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, friendly name)
                  "<friendly-name>" };
-     auto profileObserver = make_shared<ProfileObserver>();			// Observer object					
-     auto authDelegateImpl = make_shared<AuthDelegateImpl>(			// Authentication delegate object (App ID)
+     auto profileObserver = make_shared<ProfileObserver>();         // Observer object					
+     auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
-     auto consentDelegateImpl = make_shared<ConsentDelegateImpl>();	// Consent delegate object
+     auto consentDelegateImpl = make_shared<ConsentDelegateImpl>(); // Consent delegate object
  
      // Construct/initialize profile object
-     FileProfile::Settings profileSettings("",		// Path for logging/telemetry/state; blank = C:
-       true,										// true = use in-memory state storage (vs disk)
+     FileProfile::Settings profileSettings("",    // Path for logging/telemetry/state
+       true,                                      // true = use in-memory state storage (vs disk)
        authDelegateImpl,							
        consentDelegateImpl,						
        profileObserver,							
@@ -272,9 +276,10 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
      auto profile = profileFuture.get();
 
      // Construct/initialize engine object
-     FileEngine::Settings engineSettings("<engine-id>",		// User-defined engine ID
-       "<engine-state>",								// User-defined engine state		
-       "en-US");									// Locale (default = en-US)
+     FileEngine::Settings engineSettings(
+       mip::Identity("<engine-account>"),         // Engine identity (account used for authentication)
+       "<engine-state>",                          // User-defined engine state		
+       "en-US");                                  // Locale (default = en-US)
 
      // Set up promise/future connection for async engine operations; add engine to profile asynchronously
      auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
@@ -283,7 +288,7 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
      std::shared_ptr<FileEngine> engine; 
      try
      {
-       engine = engineFuture.get();				// triggers AcquireOAuth2Token() call
+       engine = engineFuture.get();				
      }
      catch (const std::exception& e)
      {
@@ -300,15 +305,23 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
 
 3. Replace the placeholder values in the source code that you just pasted in, using the following values:
 
-   | Placeholder | Value |
-   |:----------- |:----- |
-   | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration".  |
-   | \<friendly-name\> | A user-defined friendly name for your application. |
-   | \<engine-id\> | A user-defined ID assigned to the engine. |
-   | \<engine-state\> | User-defined state to be associated with the engine. |
+   | Placeholder | Value | Example |
+   |:----------- |:----- |:--------|
+   | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration" (2 instances).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
+   | \<friendly-name\> | A user-defined friendly name for your application. | AppInitialization |
+   | \<engine-account\> | The account used for the engine's identity. When you authenticate with a user account during token acquisition, it must match this value. | user1@tenant.onmicrosoft.com |
+   | \<engine-state\> | User-defined state to be associated with the engine. | MyAppState |
 
 
-4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart.
+4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart. If you run the application, you will see output similar to the following. You won't have an access token to provide, until you complete the next Quickstart.
+
+   ```console
+   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
+   Set $authority to: https://login.windows.net/common/oauth2/authorize
+   Set $resourceUrl to: https://syncservice.o365syncservice.com/
+   Be sure to sign in with user account:
+   Enter access token:
+   ```
 
 ## Next Steps
 
