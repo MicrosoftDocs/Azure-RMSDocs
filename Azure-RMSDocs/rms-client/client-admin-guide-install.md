@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
@@ -64,9 +64,9 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     The client installation does not check for this prerequisite but it is needed for the Azure Information Protection client to classify and protect PDF files.
 
-- Do not disable the **Microsoft Azure Information Protection** add-in for Office applications
+- Configure the **Microsoft Azure Information Protection** add-in to be always enabled for Office applications
     
-    If you have configured the group policy setting **List of managed add-ins**, add the Microsoft Azure Information Protection add-in for Office applications by specifying the following programmatic identifiers (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
+    Configure the group policy setting **List of managed add-ins** and add the Microsoft Azure Information Protection add-in for Office applications. Specify the following programmatic identifiers (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
     
     - For Outlook: `MSIP.OutlookAddin`
     
@@ -76,7 +76,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     - For PowerPoint: `MSIP.PowerPointAddin`
     
-    Even if you haven't configured this **List of managed add-ins** group policy setting, you might need to configure it if you get reports that the Microsoft Azure Information Protection add-in is getting disabled. When this add-in is disabled, users do not see the Azure Information Protection bar in the Office application.
+    If you do not configure this setting, the Microsoft Azure Information Protection add-in can get disabled and then, users will not be able to label their documents and emails in their Office application.
     
     For more information about this group policy setting, see [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
 
