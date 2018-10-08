@@ -60,7 +60,7 @@ If you have a version 1 of the client that is later than 1.37.19.0, it is a prev
 
 **Fixes**:
 
-- The Azure Inforamtion Protection client no longer excludes .msg, .rar, and .zip file name extensions for File Explorer (right-click) and PowerShell commands. However, these file name extensions remain excluded by default for the scanner. 
+- The Azure Information Protection client no longer excludes .msg, .rar, and .zip file name extensions for File Explorer (right-click) and PowerShell commands. However, these file name extensions remain excluded by default for the scanner. 
 
 - The Azure Information Protection client can unprotect multiple files (multi-select and a folder that contains protected files) when you use File Explorer, right-click.
 
@@ -108,7 +108,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - Viewing emails by using the Next Item and Previous Item arrow icons on the Quick Access toolbar shows the correct label for each email.
 
-- Custom permissions supports recipient email addresses that contain an apostrophe.
+- Custom permissions support recipient email addresses that contain an apostrophe.
 
 - The computer environment will successfully initialize (bootstrap) when this action is initiated by opening a protected document that's stored in SharePoint Online.
 
@@ -224,7 +224,7 @@ Fixes for stability and for specific scenarios that include:
 
 - For PowerPoint: Support for coauthoring, which previously could cause data loss.
 
-- Files that have a .xml file name extension can now be inspected for recommended or automatic classification.
+- Files that have an .xml file name extension can now be inspected for recommended or automatic classification.
 
 - The viewer can now open protected text-based files (.ptxt and .pxml) larger than 20 MB. 
 - Prevent Outlook hanging when Outlook reminders are used.
