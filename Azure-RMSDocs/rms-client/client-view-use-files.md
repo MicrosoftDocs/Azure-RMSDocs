@@ -69,9 +69,9 @@ If your organization does not have a cloud-based account for you to use (for Off
     
     For more detailed information about the permissions and the usage rights that each contains, see [Rights included in permissions levels](../configure-usage-rights.md#rights-included-in-permissions-levels).
 
-4. To edit the file, click **Save As**, which lets you save the protected file to its original file name extension. You can then edit the file by using the application that's associated with that file type. Usually, that means you can just double-click the file to open it. At this point, the file's label and protection is removed.
+4. To edit the file, click **Save As**, which lets you save the protected file to its original file name extension. You can then edit the file by using the application that's associated with that file type. At this point, the file's label and protection is removed.
     
-    Note that because the viewer is for protected files, the **Save As** button is only enabled for protected files.
+    Note that because the viewer is for protected files, the **Save As** button is enabled only for protected files.
     
 5. When you have finished editing the file, in File Explorer, right-click the file to reapply the label. This action reapplies the protection.
 
