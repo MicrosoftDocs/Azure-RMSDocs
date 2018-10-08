@@ -108,7 +108,7 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     Select **Add permissions**, and on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
     
-    - Choose **Select from the list** where you can then add all users from your organization by selecting **Add \<organization name> - All members**. This setting excludes guest accounts. Or, you can select **Add any authenticated users (Preview)**, or browse the directory.
+    - Choose **Select from the list** where you can then add all users from your organization by selecting **Add \<organization name> - All members**. This setting excludes guest accounts. Or, you can select **Add any authenticated users**, or browse the directory.
         
         When you choose all members or browse the directory, the users or groups must have an email address. In a production environment, users and groups nearly always have an email address, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
         
@@ -287,7 +287,7 @@ This configuration has the advantage that you don't need to specify users, group
     
 2. Make sure **Set permissions** is selected, and then select **Add permissions**.
 
-3. On the **Add permissions** blade, on the **Select from the list** tab, select **Add any authenticated users (Preview)**.
+3. On the **Add permissions** blade, on the **Select from the list** tab, select **Add any authenticated users**.
 
 4. Select the permissions you want, and click **OK**.
 
