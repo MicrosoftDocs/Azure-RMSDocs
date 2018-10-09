@@ -230,7 +230,7 @@ The scanner can inspect .zip files when you follow these instructions:
 
 2. Configure the scanner to include .zip files to be inspected, as described in the preceding section.
 
-3. If .zip files should be protected in addition to classified, add a registry entry for files with this file name extension to have generic protection (pfile), as described in the preceding section.
+3. If .zip files should be classified and protected rather than just inspected for sensitive information, add a registry entry for files with this file name extension to have generic protection (pfile), as described in the preceding section.
 
 Example scenario after doing these steps: 
 
