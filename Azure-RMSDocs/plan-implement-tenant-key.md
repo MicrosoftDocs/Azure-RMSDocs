@@ -6,7 +6,7 @@ description: Information to help you plan for and manage your Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
@@ -156,11 +156,25 @@ To create an HSM-protected key on-premises and transfer it to your key vault as 
 
 For Azure Information Protection to use the key, all Key Vault operations must be permitted for the key. This is the default configuration and the operations are encrypt, decrypt, wrap, unwrap, sign, and verify. You can check the permitted operations of a key by using [Get-AzureKeyVauktKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) and verifying the *key_ops* values returned in the **Key** details. If necessary, add permitted operations by using [Update-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/update-azurekeyvaultkey) and the *KeyOps* parameter.
 
-A key that is stored in Key Vault has a key ID. This key ID is a URL that contains the name of the key vault, the keys container, the name of the key, and the key version. For example: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. You must configure Azure Information Protection to use this key, by specifying its Key Vault URL.
+A key that is stored in Key Vault has a key ID. This key ID is a URL that contains the name of the key vault, the keys container, the name of the key, and the key version. For example: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. You must configure Azure Information Protection to use this key, by specifying its key vault URL.
 
-Before Azure Information Protection can use the key, the Azure Rights Management service must be authorized to use the key in your organization's key vault. To do this, the Azure Key Vault administrator uses the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) and grants permissions to the Azure Rights Management service principal, by using the GUID 00000012-0000-0000-c000-000000000000. For example:
+Before Azure Information Protection can use the key, the Azure Rights Management service must be authorized to use the key in your organization's key vault. To do this, the Azure Key Vault administrator can use the Azure portal, or Azure PowerShell:
 
-	Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
+Configuration by using the Azure portal:
+
+1. Navigate to **Key vaults** > \**<your key vault name>** > **Access policies** > **Add new**.
+
+2. From the **Add access policy** blade, select **Azure Information Protection BYOK** from the **Configure from template (optional)** list box.
+
+3. Do not make any changes to the automatically selected options on the **Add access policy** blade, and click **OK**. 
+    
+    **Microsoft Rights Management Services** is automatically assigned for **Select principal**, and **Get**, **Decrypt**, and **Sign** is automatically selected for the key permissions. 
+
+Configuration by using PowerShell:
+
+- Run the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) and grant permissions to the Azure Rights Management service principal, by using the GUID 00000012-0000-0000-c000-000000000000. For example:
+    
+    	Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 
 You're now ready to configure Azure Information Protection to use this key as your organization's Azure Information Protection tenant key. Using Azure RMS cmdlets, first connect to the Azure Rights Management service and sign in:
 
