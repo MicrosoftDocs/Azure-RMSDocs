@@ -166,9 +166,10 @@ Configuration by using the Azure portal:
 
 2. From the **Add access policy** blade, select **Azure Information Protection BYOK** from the **Configure from template (optional)** list box.
 
-3. Do not make any changes to the automatically selected options on the **Add access policy** blade, and click **OK**. 
+3. Do not make any changes to the automatically selected options on the **Add access policy** blade, and click **OK**: 
     
-    **Microsoft Rights Management Services** is automatically assigned for **Select principal**, and **Get**, **Decrypt**, and **Sign** is automatically selected for the key permissions. 
+    - **Microsoft Rights Management Services** is automatically assigned for **Select principal**.
+    - **Get**, **Decrypt**, and **Sign** is automatically selected for the key permissions. 
 
 Configuration by using PowerShell:
 
