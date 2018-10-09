@@ -315,7 +315,7 @@ To maximize the scanner performance:
 
 - **Have a high speed and reliable network connection between the scanner computer and the scanned data store**
     
-    For example, place the scanner computer in the same LAN, or (preferred) in the same network segment as the scanned data store. If this is not possible because you have multiple data stores to scan, consider installing multiple instances of the scanner.
+    For example, place the scanner computer in the same LAN, or (preferred) in the same network segment as the scanned data store.
     
     The quality of the network connection affects the scanner performance because to inspect the files, the scanner transfers the contents of the files to the computer running the scanner service. When you reduce (or eliminate) the number of network hops this data has to travel, you also reduce the load on your network. 
 
@@ -326,6 +326,8 @@ To maximize the scanner performance:
 - **Do not scan local folders on the computer running the scanner service**
     
     If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.
+
+If necessary, install multiple instances of the scanner. Each scanner instance requires its own configuration database.
 
 Other factors that affect the scanner performance:
 
