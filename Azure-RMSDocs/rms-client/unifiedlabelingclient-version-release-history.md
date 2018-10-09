@@ -37,7 +37,7 @@ Use the following information to see what’s supported for the latest preview v
 
 ## Current preview version
 
-**Released**: 10/xx/2018
+**Released**: 10/16/2018
 
 This preview version of the Azure Information Protection unified labeling client for Windows supports the following features:
 
