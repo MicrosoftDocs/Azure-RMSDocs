@@ -27,7 +27,7 @@ ms.suite: ems
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 > [!NOTE]
-> This client is in preview and is subject to changes. It uses the unified labeling store and downloads policy from the Office 365 Security & Compliance Center. [More information](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
+> This client is in preview and is subject to changes. It uses the unified labeling store and downloads policy with labels from the Office 365 Security & Compliance Center. [More information](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
 
 You can download the latest preview version of the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
