@@ -162,7 +162,7 @@ Before Azure Information Protection can use the key, the Azure Rights Management
 
 Configuration by using the Azure portal:
 
-1. Navigate to **Key vaults** > **\<your key vault name>** > **Access policies** > **Add new**.
+1. Navigate to **Key vaults** > **\<*your key vault name*>** > **Access policies** > **Add new**.
 
 2. From the **Add access policy** blade, select **Azure Information Protection BYOK** from the **Configure from template (optional)** list box, and click **OK**.
     
