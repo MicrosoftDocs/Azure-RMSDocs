@@ -6,7 +6,7 @@ description: Instructions to view and use a protected document that requires you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
@@ -69,11 +69,13 @@ If your organization does not have a cloud-based account for you to use (for Off
     
     For more detailed information about the permissions and the usage rights that each contains, see [Rights included in permissions levels](../configure-usage-rights.md#rights-included-in-permissions-levels).
 
-4. To edit the file, click **Save As**, which lets you save the file without the label and with no protection to its original file name extension. You can then edit the file by using the application that's associated with that file type. 
+4. To edit the file, click **Save As**, which lets you save the protected file to its original file name extension. You can then edit the file by using the application that's associated with that file type. At this point, the file's label and protection is removed.
     
-    When you have finished editing the file, in File Explorer,  right-click the file to reapply the label, which in turn reapplies protection.
+    Note that because the viewer is for protected files, the **Save As** button is enabled only for protected files.
+    
+5. When you have finished editing the file, in File Explorer, right-click the file to reapply the label. This action reapplies the protection.
 
-5. If you have additional protected files to open, you can browse directly to them from the viewer, by using the **Open** option. Your selected file replaces the original file in the viewer. 
+6. If you have additional protected files to open, you can browse directly to them from the viewer, by using the **Open** option. Your selected file replaces the original file in the viewer. 
 
 > [!TIP]
 > If the protected file does not open and you have the full Azure Information Protection client installed, try the **Reset Settings** option. To access this option, from an Office app, select the **Protect** button > **Help and Feedback** > **Reset Settings**. 
