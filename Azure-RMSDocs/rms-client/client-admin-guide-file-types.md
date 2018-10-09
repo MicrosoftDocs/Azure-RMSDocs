@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 
@@ -231,6 +231,12 @@ The scanner can inspect .zip files when you follow these instructions:
 2. Configure the scanner to include .zip files to be inspected, as described in the preceding section.
 
 3. If .zip files should be protected in addition to classified, add a registry entry for files with this file name extension to have generic protection (pfile), as described in the preceding section.
+
+Example scenario after doing these steps: 
+
+A file named **accounts.zip** contains Excel spreadsheets with credit card numbers. Your Azure Information Protection policy has a label named **Confidential \ Finance**, which is configured to discover credit card numbers, and automatically apply the label with protection that restricts access to the Finance group. 
+
+After inspecting the file, the scanner classifies this file as **Confidential \ Finance**, applies generic protection to the file so that only members of the Finance groups can unzip it, and renames the file **accounts.zip.pfile**.
 
 ### Files that cannot be protected by default
 
