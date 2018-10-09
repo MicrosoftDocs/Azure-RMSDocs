@@ -205,7 +205,7 @@
   - name: Developer blog
     href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/bg-p/InformationProtectionDevelopers
   - name: FAQs and known issues
-    href: faqs-and-known-issues.md
+    href: faqs-known-issues.md
   - name: Forums 
     href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
   - name: SDK (public preview)
