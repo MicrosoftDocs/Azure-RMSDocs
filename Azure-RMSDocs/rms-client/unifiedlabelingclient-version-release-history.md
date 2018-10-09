@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -51,17 +51,13 @@ This preview version of the Azure Information Protection unified labeling client
 
 - Default labeling 
 
-- Justification prompts if users lower the sensitivity level, removing a label, or remove protection
-
-- Help and feedback dialog box, which includes reset settings and export logs
-
-The next set of features is "best effort":
-
 - Labels that apply Do Not Forward
 
 - Custom permissions
 
-- Labels that remove protection
+- Justification prompts if users lower the sensitivity level, removing a label, or remove protection
+
+- Help and feedback dialog box, which includes reset settings and export logs
 
 The following features do not work in this preview version:
 
@@ -77,7 +73,7 @@ The following features do not work in this preview version:
 
 ## Instructions
 
-1. Install the client as you would the Azure Information Protection client: 
+1. Install the client as you would the Azure Information Protection client, except that you use the download page for the Azure Information Protection unified labeling client rather than the Azure Information Protection client: 
     
     - For users: [Download and install the client](install-client-app.md)
     
