@@ -164,9 +164,9 @@ Configuration by using the Azure portal:
 
 1. Navigate to **Key vaults** > **\<your key vault name>** > **Access policies** > **Add new**.
 
-2. From the **Add access policy** blade, select **Azure Information Protection BYOK** from the **Configure from template (optional)** list box.
-
-3. Do not make any changes to the automatically selected options on the **Add access policy** blade, and click **OK**: 
+2. From the **Add access policy** blade, select **Azure Information Protection BYOK** from the **Configure from template (optional)** list box, and click **OK**.
+    
+    The selected template has the following configuration:
     
     - **Microsoft Rights Management Services** is automatically assigned for **Select principal**.
     - **Get**, **Decrypt**, and **Sign** is automatically selected for the key permissions. 
