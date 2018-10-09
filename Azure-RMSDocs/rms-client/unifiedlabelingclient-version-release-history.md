@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -46,8 +46,6 @@ This preview version of the Azure Information Protection unified labeling client
 - Manual labeling that applies classification and protection for Word, Excel, PowerPoint, and Outlook.
 
 - Visual marking (headers, footers, watermarks)
-
-- Mandatory labeling 
 
 - Default labeling 
 
