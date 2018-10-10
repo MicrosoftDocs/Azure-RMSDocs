@@ -6,7 +6,7 @@ description: Understand and implement the super user feature of the Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/31/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
@@ -27,7 +27,7 @@ ms.suite: ems
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-The super user feature of the Azure Rights Management service from Azure Information Protection ensures that authorized people and services can always read and inspect the data that Azure Rights Management protects for your organization. And if necessary, remove the protection or change the protection that was previously applied. 
+The super user feature of the Azure Rights Management service from Azure Information Protection ensures that authorized people and services can always read and inspect the data that Azure Rights Management protects for your organization. If necessary, the protection can then be removed or changed.
 
 A super user always has the Rights Management Full Control [usage right](configure-usage-rights.md) for documents and emails that have been protected by your organization’s Azure Information Protection tenant. This ability is sometimes referred to as "reasoning over data" and is a crucial element in maintaining control of your organization’s data. For example, you would use this feature for any of the following scenarios:
 
@@ -84,6 +84,21 @@ If you are using classification and protection, you can also use the [Set-AIPFil
 For more information about these cmdlets, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) from the Azure Information Protection client admin guide.
 
 > [!NOTE]
-> The AzureInformationProtection module replaces the RMS Protection PowerShell module that installed with the RMS Protection Tool. Both these modules are different from and supplements the [PowerShell module for Azure Rights Management](administer-powershell.md). The AzureInformationProtection module supports Azure Information Protection, the Azure Rights Management service (Azure RMS) for Azure Information Protection, and Active Directory Rights Management Services (AD RMS).
+> The AzureInformationProtection module is different from and supplements the [AADRM PowerShell module](administer-powershell.md) that manages the Azure Rights Management service for Azure Information Protection.
 
+### Guidance for using Unprotect-RMSFile for eDiscovery
+
+Although you can use the Unprotect-RMSFile cmdlet to decrypt protected content in PST files, use this cmdlet strategically as part of your eDiscovery process. Running Unprotect-RMSFile on large files on a computer is a resource-intensive (memory and disk space) and the maximum file size supported for this cmdlet is 5 GB.
+
+Ideally, use [Office 365 eDiscovery](/office365/securitycompliance/ediscovery) to search and extract protected emails and protected attachment in emails. The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Office 365 Security & Compliance Center can search for encrypted items prior to export, or decrypt encrypted email on export.
+
+If you cannot use Office 365 eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. Or, if your eDiscovery solution cannot automatically read and decrypt protected content, you can still use this solution in a multi-step process that lets you run Unprotect-RMSFile more efficiently:
+
+1. Export the email in question to a PST file from Exchange Online or Exchange Server, or from the workstation where the user stored their email.
+
+2. Import the PST file into your eDiscovery tool. Because the tool cannot read protected content, it's expected that these items will generate errors.
+
+3. From all the items that the tool couldn't open, generate a new PST file that this time, contains just protected items. This second PST file will likely be much smaller than the original PST file.
+
+4. Run Unprotect-RMSFile on this second PST file to decrypt the contents of this much smaller file. From the output, import the now-decrypted PST file into your discovery tool.
 
