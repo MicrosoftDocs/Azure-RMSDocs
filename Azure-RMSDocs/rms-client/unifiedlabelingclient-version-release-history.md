@@ -29,7 +29,7 @@ ms.suite: ems
 > [!NOTE]
 > This client is in preview and is subject to changes. It uses the unified labeling store and downloads policy with labels from the Office 365 Security & Compliance Center. [More information](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
 
-You can download the latest preview version of the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+You can download the latest preview version of the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=57440).
 
 ### Release information
 
@@ -71,7 +71,7 @@ The following features do not work in this preview version:
 
 ## Instructions
 
-1. Install the client as you would the Azure Information Protection client, except that you use the download page for the Azure Information Protection unified labeling client rather than the Azure Information Protection client: 
+1. Install the client as you would the Azure Information Protection client, except that you use the download page for the [Azure Information Protection unified labeling client](https://www.microsoft.com/en-us/download/details.aspx?id=57440) rather than the Azure Information Protection client: 
     
     - For users: [Download and install the client](install-client-app.md)
     
