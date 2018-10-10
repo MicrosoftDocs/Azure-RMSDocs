@@ -4,17 +4,19 @@ description: This article will help you understand 3 types of APIs in the MIP SD
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 09/27/2018
+ms.date: 10/10/2018
 ms.author: bryanla
 ---
 
 # Microsoft Information Protection SDK - API concepts
 
-The MIP SDK is composed of three APIs:
+The MIP SDK is composed of three APIs, as shown in the following diagram:
 
 - [Protection API](#protection-api)
 - [Policy API](#policy-api)
 - [File API](#file-api)
+
+[![MIP SDK API diagram](media/concept-apis-use-cases/mip-sdk-components.png)](media/concept-apis-use-cases/mip-sdk-components.png#lightbox)
 
 ## Protection API
 
