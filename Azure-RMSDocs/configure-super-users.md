@@ -88,15 +88,15 @@ For more information about these cmdlets, see [Using PowerShell with the Azure I
 
 ### Guidance for using Unprotect-RMSFile for eDiscovery
 
-Although you can use the Unprotect-RMSFile cmdlet to decrypt protected .pst files, use this cmdlet strategically as part of your eDiscovery process. Decrypting large files on a computer is a resource-intensive (memory and disk space) and the maximum file size supported for this cmdlet is 5 GB.
+Although you can use the Unprotect-RMSFile cmdlet to decrypt protected content in PST files, use this cmdlet strategically as part of your eDiscovery process. Running Unprotect-RMSFile on large files on a computer is a resource-intensive (memory and disk space) and the maximum file size supported for this cmdlet is 5 GB.
 
-Ideally, use Office 365 eDiscovery to search and extract protected emails and protected attachment in emails. The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Office 365 Security & Compliance Center can search for encrypted items prior to export, or decrypt encrypted mail on export.
+Ideally, use Office 365 eDiscovery to search and extract protected emails and protected attachment in emails. The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Office 365 Security & Compliance Center can search for encrypted items prior to export, or decrypt encrypted email on export.
 
 If you cannot use Office 365 eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. Or, if your eDiscovery solution cannot automatically read and decrypt protected content, you can still use this solution in a multi-step process that lets you run Unprotect-RMSFile more efficiently:
 
 1. Export the email in question to a PST file from Exchange Online or Exchange Server, or from the workstation where the user stored their email.
 
-2. Import the PST file into your eDiscovery tool. Because the tool cannot open protected content, it's expected that these items will generate errors.
+2. Import the PST file into your eDiscovery tool. Because the tool cannot read protected content, it's expected that these items will generate errors.
 
 3. From all the items that the tool couldn't open, generate a new PST file that this time, contains just protected items. This second PST file will likely be much smaller than the original PST file.
 
