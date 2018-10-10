@@ -12,21 +12,21 @@ ms.author: bryanla
 
 The MIP SDK is composed of three APIs, as shown in the following diagram:
 
-- [Protection API](#protection-api)
-- [Policy API](#policy-api)
-- [File API](#file-api)
-
 [![MIP SDK API diagram](media/concept-apis-use-cases/mip-sdk-components.png)](media/concept-apis-use-cases/mip-sdk-components.png#lightbox)
 
-## Protection API
+Depending on your application's needs, you may be able to interface at the File API layer, or may need to work directly with the Policy and/or Protection API layer(s).
 
-The Protection API provides the ability for software developers to convert plaintext streams in to rights-managed streams and vice-versa.
+## File API
 
-### Protection API Use Cases
+The File API is an abstraction of both the Protection and Policy APIs. It provides easy-to-use interfaces for reading labels from the service, applying labels to defined file types, as well as reading labels from those files types. The File API will be used by any service or application where a supported file type is involved and labels must be read or written, or content protected or decrypted.
 
-- Your organization develops 3d printing software using a propriety file format. You want to use MIP to protect the file, so it can be printed only by specific users. Using the Protection API, you can apply protection to the file so that only authorized consumers would be able to open, and/or print. 
+### File API Use Cases
 
-- Your organization develops an eDiscovery solution that processes Exchange mailboxes and PST files. Your application must be able to user to decrypt messages to fully perform eDiscovery. Using a custom message/RPMSG parser and a sufficiently privileged account, you could leverage the RMS API to decrypt the encrypted file, scan the contents, and discard if out of scope or package if in scope.
+- You’re a software engineer at a financial services institution. You want to be sure that data from your LOB applications, typically exported in Excel format, are labeled on export based on the contents. File API can be used to list available labels then to apply the appropriate label to a supported file format.
+
+- Your organization develops a cloud access security broker (CASB). Your customers ask for the ability to apply MIP labels to Microsoft Office and PDF documents. The File API would enable you to display a list of configured labels, then allow your customers to build rules which would apply the desired label. File API, taking in the label ID, would handle the rest for files meeting the customer’s criteria.
+
+- Your organization provides a service-based data loss prevention solution and/or a CASB that monitors SaaS applications for file activity. To reduce the risk of data loss or exposure where data is protected with MIP, your service must be able to scan the contents of protected files. Using File API for the supported formats, when the service is a privileged user, you can remove protection, scan the contents for restricted or sensitive content, discard the plaintext result, and apply a service rule to report on or remediate the risk if found.
 
 ## Policy API
 
@@ -40,17 +40,15 @@ The Policy API will be leveraged primarily by client applications where the deve
 
 - Your organization develops a DLP service that allows your customers to configure DLP policies via a central administration portal. You have customers that use Microsoft Information Protection and would like to be able to read or apply AIP labels as part of DLP policies. As the software engineer, you can use the Policy API to get a list of labels for the customer organization, then read those labels as part of a DLP rule or apply the label information as part of a rule action.
 
-## File API
+## Protection API
 
-The File API is an abstraction of both the Protection and Policy APIs. It provides easy-to-use interfaces for reading labels from the service, applying labels to defined file types, as well as reading labels from those files types. The File API will be used by any service or application where a supported file type is involved and labels must be read or written, or content protected or decrypted.
+The Protection API provides the ability for software developers to convert plaintext streams in to rights-managed streams and vice-versa.
 
-### File API Use Cases
+### Protection API Use Cases
 
-- You’re a software engineer at a financial services institution. You want to be sure that data from your LOB applications, typically exported in Excel format, are labeled on export based on the contents. File API can be used to list available labels then to apply the appropriate label to a supported file format.
+- Your organization develops 3d printing software using a propriety file format. You want to use MIP to protect the file, so it can be printed only by specific users. Using the Protection API, you can apply protection to the file so that only authorized consumers would be able to open, and/or print. 
 
-- Your organization develops a cloud access security broker (CASB). Your customers ask for the ability to apply MIP labels to Microsoft Office and PDF documents. The File API would enable you to display a list of configured labels, then allow your customers to build rules which would apply the desired label. File API, taking in the label ID, would handle the rest for files meeting the customer’s criteria.
-
-- Your organization provides a service-based data loss prevention solution and/or a CASB that monitors SaaS applications for file activity. To reduce the risk of data loss or exposure where data is protected with MIP, your service must be able to scan the contents of protected files. Using File API for the supported formats, when the service is a privileged user, you can remove protection, scan the contents for restricted or sensitive content, discard the plaintext result, and apply a service rule to report on or remediate the risk if found.
+- Your organization develops an eDiscovery solution that processes Exchange mailboxes and PST files. Your application must be able to user to decrypt messages to fully perform eDiscovery. Using a custom message/RPMSG parser and a sufficiently privileged account, you could leverage the RMS API to decrypt the encrypted file, scan the contents, and discard if out of scope or package if in scope.
 
 ## Next steps
 
