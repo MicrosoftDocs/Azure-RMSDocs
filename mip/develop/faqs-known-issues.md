@@ -16,7 +16,7 @@ ms.author: bryanla
 
 The MIP SDK is supported on the following platforms:
 
-[!INCLUDE [MIP SDK platform support](..\include\mip-sdk-platform-support.md)]
+[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
 
 ### Question: what string type does the SDK use, and what type should I be using in my code?
 

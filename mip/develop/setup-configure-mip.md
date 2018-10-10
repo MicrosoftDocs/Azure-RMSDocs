@@ -20,7 +20,7 @@ Be sure to review the following topics before getting started:
 
 The MIP SDK is supported on the following platforms:
 
-[!INCLUDE [MIP SDK platform support](..\include\mip-sdk-platform-support.md)]
+[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
 
 ## Sign up for an Office 365 subscription
 
