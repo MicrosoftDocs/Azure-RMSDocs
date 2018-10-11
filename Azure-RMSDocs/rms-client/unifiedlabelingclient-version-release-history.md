@@ -61,9 +61,9 @@ The following features do not work in this preview version:
 
 - Automatic and recommended classification
 
-- The Azure Information Protection viewer
+- A viewer for protected text and image files, protected PDF files, and files that are generically protected
 
-- File Explorer, right-click actions
+- File Explorer, right-click actions to classify and protect files
 
 - PowerShell commands and the scanner
 
