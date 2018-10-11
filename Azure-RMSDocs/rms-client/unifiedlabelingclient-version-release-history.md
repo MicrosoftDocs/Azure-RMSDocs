@@ -65,7 +65,9 @@ The following features do not work in this preview version:
 
 - File Explorer, right-click actions to classify and protect files
 
-- PowerShell commands and the scanner
+- PowerShell commands to classify and protect files from the command line
+
+- The scanner to discover, label, and protect files on on-premises data stores
 
 - Support for languages other than English
 
