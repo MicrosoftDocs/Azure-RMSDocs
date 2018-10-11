@@ -6,7 +6,7 @@ description: Understand and implement the super user feature of the Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2018
+ms.date: 10/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
@@ -101,4 +101,6 @@ If you cannot use Office 365 eDiscovery, you might have another eDiscovery solut
 3. From all the items that the tool couldn't open, generate a new PST file that this time, contains just protected items. This second PST file will likely be much smaller than the original PST file.
 
 4. Run Unprotect-RMSFile on this second PST file to decrypt the contents of this much smaller file. From the output, import the now-decrypted PST file into your discovery tool.
+
+For more detailed information and guidance for performing eDiscovery across mailboxes and PST files, see the following blog post: [Azure Information Process and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).
 
