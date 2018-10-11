@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/28/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.service: information-protection
 
@@ -99,7 +99,7 @@ When you have confirmed that your tenant supports sensitivity labels in the Secu
 
 2. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
 
-For the labels that successfully migrate, they can now be used by [clients that support unified labeling](#clients-that-support-unified-labeling) when these labels are published in the Security & Compliance Center.
+For the labels that successfully migrate, they can now be used by [clients that support unified labeling](#clients-that-support-unified-labeling). However, you must first publish these labels in the Security & Compliance Center.
 
 
 ### Clients that support unified labeling
@@ -113,4 +113,4 @@ The clients that currently support unified labeling include:
 
 ## Next steps
 
-For more information about configuring your migrated labels in the Office 365 Security & Compliance Center, see the blog post, [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
+For more information about configuring and publishing your migrated labels in the Office 365 Security & Compliance Center, see the blog post, [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
