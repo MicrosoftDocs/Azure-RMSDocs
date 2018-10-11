@@ -102,5 +102,5 @@ If you cannot use Office 365 eDiscovery, you might have another eDiscovery solut
 
 4. Run Unprotect-RMSFile on this second PST file to decrypt the contents of this much smaller file. From the output, import the now-decrypted PST file into your discovery tool.
 
-For more detailed information and guidance for performing eDiscovery across mailboxes and PST files, see the following blog post: [Azure Information Process and eDiscovery Processes ](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Process-and-eDiscovery-Processes/ba-p/270216).
+For more detailed information and guidance for performing eDiscovery across mailboxes and PST files, see the following blog post: [Azure Information Process and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Process-and-eDiscovery-Processes/ba-p/270216).
 
