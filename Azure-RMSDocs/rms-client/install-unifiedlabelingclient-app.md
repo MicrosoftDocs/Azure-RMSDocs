@@ -23,7 +23,7 @@ ms.suite: ems
 
 ---
 
-# User Guide: Download and install the Azure Information Protection unified labeling client (Preview)
+# Download and install the Azure Information Protection unified labeling client (Preview)
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
@@ -42,7 +42,7 @@ In addition:
 
 1. Download the preview client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=57440).
 
-2. Run the executable file that was downloaded. If you are prompted to continue, click **Yes**.    
+2. Run the executable file that was downloaded, **AzInfoProtection_For_Unified_Labeling.exe**. If you are prompted to continue, click **Yes**.    
 
 3. On the **Install the Azure Information Protection client** page:     
     - Select the option to install a demo policy if you cannot connect to the cloud but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to the Office 365 Security & Compliance Center, this demo policy is replaced with your organization's label policy.
