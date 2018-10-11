@@ -99,7 +99,7 @@ When you have confirmed that your tenant supports sensitivity labels in the Secu
 
 2. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
 
-For the labels that successfully migrate, they can now be used by [clients that support unified labeling](#clients-that-support-unified-labeling). However, you must first publish these labels in the Security & Compliance Center.
+For the labels that successfully migrated, they can now be used by [clients that support unified labeling](#clients-that-support-unified-labeling). However, you must first publish these labels in the Security & Compliance Center.
 
 
 ### Clients that support unified labeling
