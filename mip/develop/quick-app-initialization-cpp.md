@@ -27,33 +27,26 @@ If you haven't already, be sure to:
 
 ## Create a Visual Studio solution and project
 
-First we create and configure the initial Visual Studio solution and project, upon which the Quickstarts will build. 
+First we create and configure the initial Visual Studio solution and project, upon which the other Quickstarts will build. 
 
 1. Open Visual Studio 2017, select the **File** menu, **New**, **Project**. In the **New Project** dialog:
-     - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
-     - In the center pane, select **Windows Console Application**
-     - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
-     - When finished, click the **OK** button in the lower right.
+   - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
+   - In the center pane, select **Windows Console Application**
+   - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
+   - When finished, click the **OK** button in the lower right.
 
-       [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
+     [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
-
-2. Configure the project settings:
-   - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Properties**. 
-   - On the top/right of the **Property Pages** dialog, click **Configuration Manager...**. On the **Configuration Manager** dialog, set your  "Active solution configuration" to **Debug**, and "Active solution platform" target to **x64**. Click **Close** when finished.
-   - Under **Configuration Properties** in the left pane, select the **VC++ Directories** node.
-   - Select the **Include Directories** row, then click the drop-down on the right side, then **<Edit...>**, and enter the paths to the SDK include (.h) subdirectories in the top field. Specify the full paths to `file\include`, `protection\include`, `upe\include` subdirectories (but no deeper), within the path where you installed the SDK. You can create a new row for each, or seperate them with a semicolon (`;`) on a single row. Click **OK**. 
-
-        [![Visual Studio set path properties](media/quick-app-initialization-cpp/set-include-lib-path-properties.png)](media/quick-app-initialization-cpp/set-include-lib-path-properties.png#lightbox)
-
-   - Repeat the previous step for the **Library Directories** row, entering the paths to the SDK binary static libraries (.lib) subdirectories. Be sure to use the paths that match the current build configuration for your solution. For this Quickstart, specify the absolute or relative paths to the `file\bins\debug\amd64`, `protection\bins\debug\amd64`, `upe\bins\debug\amd64` subdirectories.
-
-   - Under **Configuration Properties** in the left pane, open the **Linker** node, and select the **Input** node. 
-   - Select the **Additional Dependencies** row, then click the drop-down on the right side, then **<Edit...>**. Here you add the names of the SDK static libraries. Add `mip_protection_sdk.lib;mip_file_sdk.lib;mip_upe_sdk.lib;` to the libraries list, in the top field. Click **OK**. 
-   - Click **OK** on the **Property Pages** dialog when finished.
-
-     [![Visual Studio set static libs](media/quick-app-initialization-cpp/set-static-libs.png)](media/quick-app-initialization-cpp/set-static-libs.png#lightbox)
-
+2. Add the Nuget package for the MIP SDK File API to your project:
+   - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
+   - When the **NuGet Package Manager** tab opens in the Editor Group tabs area:
+     - Select **Browse**.
+     - Enter "Microsoft.InformationProtection" in the search box.
+     - Select the "Microsoft.InformationProtection.File" package.
+     - Click "Install", then click "OK" when the **Preview changes** confirmation dialog displays.
+   
+     [![Visual Studio add NuGet package](media/quick-app-initialization-cpp/add-nuget-package.png)](media/quick-app-initialization-cpp/add-nuget-package.png#lightbox)
+ 
 ## Implement an observer class to monitor the File profile and engine objects
 
 Now create a basic implementation for a File profile observer class, by extending the SDK's `mip::FileProfile::Observer` class. The observer is instantiated and used later, to monitor the loading of the File profile object, and adding the engine object to the profile.
