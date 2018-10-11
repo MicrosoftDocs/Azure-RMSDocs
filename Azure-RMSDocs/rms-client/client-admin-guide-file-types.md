@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 
@@ -104,7 +104,9 @@ There are maximum file sizes that the Azure Information Protection client suppor
     
     - To protect other file types, and to open these file types in the Azure Information Protection viewer: The maximum file size is limited only by available disk space and memory.
     
-    - To unprotect files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: The maximum file size supported for .pst files is 5 GB. Other file types are limited only by available disk space and memory.
+    - To unprotect files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: The maximum file size supported for .pst files is 5 GB. Other file types are limited only by available disk space and memory
+    
+    Tip: If you need to search or recover protected items in large .pst files, see [Guidance for using Unprotect-RMSFile for eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
 
 ### Supported file types for classification and protection
 
@@ -221,6 +223,22 @@ You can change the file types included or excluded for file inspection by the sc
 > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
 
 By default, the scanner protects only Office file types. To change this behavior for the scanner, edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance.
+
+#### To scan .zip files
+
+The scanner can inspect .zip files when you follow these instructions:
+
+1. For the Windows Server computer running the scanner, install the [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
+
+2. Configure the scanner to include .zip files to be inspected, as described in the preceding section.
+
+3. If .zip files should be classified and protected rather than just inspected for sensitive information, add a registry entry for files with this file name extension to have generic protection (pfile), as described in the preceding section.
+
+Example scenario after doing these steps: 
+
+A file named **accounts.zip** contains Excel spreadsheets with credit card numbers. Your Azure Information Protection policy has a label named **Confidential \ Finance**, which is configured to discover credit card numbers, and automatically apply the label with protection that restricts access to the Finance group. 
+
+After inspecting the file, the scanner classifies this file as **Confidential \ Finance**, applies generic protection to the file so that only members of the Finance groups can unzip it, and renames the file **accounts.zip.pfile**.
 
 ### Files that cannot be protected by default
 
