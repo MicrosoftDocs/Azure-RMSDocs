@@ -71,11 +71,7 @@ The following features do not work in this preview version:
 
 ## Instructions
 
-1. Install the client as you would the Azure Information Protection client, except that you use the download page for the [Azure Information Protection unified labeling client](https://www.microsoft.com/en-us/download/details.aspx?id=57440) rather than the Azure Information Protection client: 
-    
-    - For users: [Download and install the client](install-client-app.md)
-    
-    - For admins: [Azure Information Protection client administrator guide](client-admin-guide.md)
+1. Install the client by using the following instructions: [User Guide: Download and install the Azure Information Protection client (Preview)](install-unifiedlabelingclient-app.md) 
 
 2. Use the client in Office apps as you would the Azure Information Protection client, except that the button on the Office ribbon is named **Sensitivity** rather than **Protect**:
     
