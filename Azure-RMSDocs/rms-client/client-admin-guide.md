@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
@@ -205,7 +205,7 @@ Use the [Version release history and support policy](client-version-release-hist
 
 ### Upgrading the Azure Information Protection scanner
 
-To upgrade the Azure Information Protection scanner, install the latest version of the Azure Information Protection client. Then do one of the following one-time actions:
+To upgrade the Azure Information Protection scanner, install the latest version of the Azure Information Protection client. Then do one of the following one-time actions. After you have done this, there is no need to rescan already scanned files.
 
 For the current GA version: 
 
