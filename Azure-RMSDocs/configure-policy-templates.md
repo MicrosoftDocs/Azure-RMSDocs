@@ -31,11 +31,11 @@ Protection templates, also known as Rights Management templates, are a grouping 
 
 **When you have a subscription that includes classification, labeling, and protection (Azure Information Protection P1 or P2):**
 
-- Templates that are not integrated with your labels for your tenant are displayed in the **Protection templates** section after your labels on the **Azure Information Protection - Labels** blade. To navigate to this blade, select the **CLASSIFICATIONS** > **Labels** menu option. You can convert these templates to labels, or you can link to them when you configure protection for your labels. 
+- Templates that are not integrated with your labels for your tenant are displayed in the **Protection templates** section after your labels on the **Azure Information Protection - Labels** blade. To navigate to this blade, select the **Classifications** > **Labels** menu option. You can convert these templates to labels, or you can link to them when you configure protection for your labels. 
 
 **When you have a subscription that includes protection only (an Office 365 subscription that includes the Azure Rights Management service):**
 
-- Templates for your tenant are displayed in the **Protection templates** section on the **Azure Information Protection - Labels** blade. To navigate to this blade, select the **CLASSIFICATIONS** > **Labels** menu option. No labels are displayed. You also see configuration settings that are specific to classification and labeling, but these settings either have no effect on your templates or cannot be configured. 
+- Templates for your tenant are displayed in the **Protection templates** section on the **Azure Information Protection - Labels** blade. To navigate to this blade, select the **Classifications** > **Labels** menu option. No labels are displayed. You also see configuration settings that are specific to classification and labeling, but these settings either have no effect on your templates or cannot be configured. 
 
 >[!NOTE]
 >In some applications and services, you might see [Do Not Forward](configure-usage-rights.md#do-not-forward-option-for-emails) and [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails) (or **Encrypt**) displayed as a template. These are not templates that you can edit or delete, but options that come by default with the Exchange service.
@@ -105,7 +105,7 @@ Before you edit these templates or convert them to labels, make sure that you ar
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, expand **Protection templates**, and then locate the template that you want to configure.
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, expand **Protection templates**, and then locate the template that you want to configure.
     
 3. Select the template, and on the **Label** blade, you can change the template name and description if required, by editing the **Label display name** and **Description**. Then, select **Protection** that has a value of **Azure (cloud key)**, to open the **Protection** blade.
 
@@ -142,7 +142,7 @@ When you convert a template to a label:
 
 When you create a new label with the protection setting of **Azure (cloud key)**, under the covers, this action creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
 
-1. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select **Add a new label**.
+1. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select **Add a new label**.
 
 2. On the **Label** blade, keep the default of **Enabled**: **On**, then enter a label name and description for the template name and description.
 
@@ -158,7 +158,7 @@ When you create a new label with the protection setting of **Azure (cloud key)**
     
     Although the label is enabled, by default, the template is archived. So that applications and services can use the template to protect documents and emails, complete the final step to publish the template.
 
-5. From the **CLASSIFICATIONS** > **Policies** menu option, select the policy to contain the new protection settings. Then select **Add or remove labels**. From the **Policy: Add or remove labels** blade, select the newly created label that contains your protection settings, select **OK**, and then select **Save**.
+5. From the **Classifications** > **Policies** menu option, select the policy to contain the new protection settings. Then select **Add or remove labels**. From the **Policy: Add or remove labels** blade, select the newly created label that contains your protection settings, select **OK**, and then select **Save**.
 
 ## Next steps
 
