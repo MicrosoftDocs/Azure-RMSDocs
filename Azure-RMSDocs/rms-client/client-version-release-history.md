@@ -73,12 +73,12 @@ Just for this preview version, specific to the scanner:
     4. Upgrade the Azure Information Protection client to this preview version.
     
     5. Start the scanner.
-    
-    If you need instructions to install, configure, and start the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
 
 - Known issue with scanning large data sets:
     
     With this preview version, gradually increase the number of files to be scanned and monitor progress. If the scanner status reports that it is running but new files do not get scanned, reduce the number of files to be scanned and restart the scanner. 
+
+If you need instructions to install, configure, and start the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
 
 ## Version 1.37.19.0
 
