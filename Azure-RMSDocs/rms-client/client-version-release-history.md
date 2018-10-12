@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/13/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
@@ -106,6 +106,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     
     - SharePoint Server 2010 is supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
+- Support for the new **Azure Information Protection - Nodes (Preview)** blade in the Azure portal, that lets you manage scanners from a central location. Information from your deployed scanners that have connectivity to Azure is updated every five minutes. From this blade, you can start the scanner for a one-time scan, rescan all files, check the status of a scanner, and view the scan rate.
+
 **Fixes**
 
 - For the Azure Information Protection scanner:
