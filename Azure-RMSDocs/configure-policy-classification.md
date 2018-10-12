@@ -71,7 +71,7 @@ You can change this behavior so that the Azure Information Protection client per
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label to configure.
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label to configure.
 
 3. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
 

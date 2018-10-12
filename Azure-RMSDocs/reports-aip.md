@@ -96,7 +96,7 @@ To view the Azure Information Protection reports and create your own, make sure 
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
     
-2. Locate the **MANAGE** menu options, and select **Configure analytics (Preview)**.
+2. Locate the **Manage** menu options, and select **Configure analytics (Preview)**.
 
 3. On the **Azure Information Protection log analytics** blade, you see a list of any Log Analytics workspaces that are owned by your tenant. Do one of the following:
     
@@ -110,11 +110,11 @@ When the workspace is configured, you're ready to view the reports.
 
 ## How to view the reports
 
-From the Azure Information Protection blade, locate the **DASHBOARDS (PREVIEW)** menu options, and select one of the following options:
+From the Azure Information Protection blade, locate the **Dashboards** menu options, and select one of the following options:
 
-- **Usage report**: Use this report to see how your labels are being used. 
+- **Usage report (Preview)**: Use this report to see how your labels are being used. 
 
-- **Data discovery**: Use this report to see information about files that the scanners found.
+- **Data discovery (Preview)**: Use this report to see information about files that the scanners found.
 
 ## How to modify the reports
 

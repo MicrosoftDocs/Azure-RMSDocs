@@ -35,7 +35,7 @@ Some of these settings require editing the registry and some use advanced settin
 
 1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** blade.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option: Select **Policies**.
+2. From the **Classifications** > **Labels** menu option: Select **Policies**.
 
 3. On the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
     

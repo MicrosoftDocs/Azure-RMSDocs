@@ -49,7 +49,7 @@ There are different ways that you can activate protection. You can use PowerShel
     
     Click **Create** again.
 
-4. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, select **MANAGE** > **Protection activation**. 
+4. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, select **Manage** > **Protection activation**. 
 
 5. You now see whether protection is activated for your tenant. 
     
