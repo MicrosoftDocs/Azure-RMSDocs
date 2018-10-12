@@ -38,7 +38,7 @@ This native integration has the following benefits:
 
 - Support for the ISO standard for PDF encryption.
     
-    This protected PDF file format must be [enabled by an administrator](rms-client/client-admin-guide-customizations#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this configuration is made, the file name extension remains as .pdf and does not change to .ppdf.
+    This protected PDF file format must be [enabled by an administrator](client-admin-guide-customizations#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this configuration is made, the file name extension remains as .pdf and does not change to .ppdf.
 
 For more information, see the following blog post: [Starting October, use Adobe Acrobat Reader for PDFs protected by Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738)
 
