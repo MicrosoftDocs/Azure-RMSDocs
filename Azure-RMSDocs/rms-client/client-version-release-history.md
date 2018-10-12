@@ -65,13 +65,9 @@ Just for this preview version, specific to the scanner:
 - Install the scanner by following these steps:
     
     1. Install the current GA version (1.37.19.0) of the client.
-    
     2. Install and configure the scanner.
-    
     3. Start the scanner.
-    
     4. Upgrade the Azure Information Protection client to this preview version.
-    
     5. Start the scanner.
 
 - Known issue with scanning large data sets:
