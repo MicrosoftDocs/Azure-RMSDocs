@@ -67,7 +67,7 @@ Use the following instructions to configure visual markings for a label.
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label that contains the visual markings you want to add or change.
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label that contains the visual markings you want to add or change.
 
 3. On the **Label** blade, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markings that you want, and then click **Save**:
     
