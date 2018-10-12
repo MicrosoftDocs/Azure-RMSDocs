@@ -62,7 +62,7 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label you want to change. 
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label you want to change. 
 
 3. On the **Label** blade, locate **Set permissions for documents and emails containing this label**, and select one of the following options:
     

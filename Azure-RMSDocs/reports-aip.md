@@ -96,7 +96,7 @@ To view the Azure Information Protection reports and create your own, make sure 
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
     
-2. Locate the **MANAGE** menu options, and select **Configure analytics (Preview)**.
+2. Locate the **Manage** menu options, and select **Configure analytics (Preview)**.
 
 3. On the **Azure Information Protection log analytics** blade, you see a list of any Log Analytics workspaces that are owned by your tenant. Do one of the following:
     
