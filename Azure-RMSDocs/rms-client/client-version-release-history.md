@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
@@ -252,60 +252,6 @@ Fixes for stability and for specific scenarios that include:
 **Additional changes**:
 
 - For [client usage logging](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client ): Event ID 102 and ID 103 are replaced with event ID 101.
-
-## Version 1.10.56.0
-
-**Released**: 09/18/2017
-
-This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
-
-**New features**:
-
-- Support for the new Office 365 DLP conditions that you can configure for a label. For more information, see [Configure conditions for an Azure Information Protection label](../configure-policy-classification.md).
-
-- Support for labels that are configured for user-defined actions. For Outlook, this label automatically applies the Outlook Do Not Forward option. For Word, Excel, PowerPoint, and File Explorer, this label prompts the user to specify custom permissions. For more information, see [Configure an Azure Information Protection label for protection](../configure-policy-protection.md).
-
-- Labels support multiple languages. Beginning with August 30, 2017, the [default policy](../configure-policy-default.md) includes support for multiple languages that this version of the client displays to users. For users to see labels in their preferred language from a default policy before this date, and for labels that you configure, see [How to configure labels for different languages in Azure Information Protection]configure-policy-languages.md).
-
-- Labels are displayed from the **Protect** button on the Office ribbon, in addition to displaying on the Information Protection bar. 
-
-- Native protection for the following Visio file types: .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx
-
-- Support for advanced client configurations that you configure in the Azure portal. These configurations include the following:
-    
-    - [Hide or show the Do Not Forward button in Outlook](client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
-    
-    - [Make the custom permissions options available or unavailable to users](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
-    
-    - [Permanently hide the Azure Information Protection bar](client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
-    
-    - [Enable recommended classification in Outlook](client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
-
-- For PowerShell, support to label files non-interactively by using the new PowerShell cmdlets, [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) and [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). For more information how to use these cmdlets, see the [PowerShell section](client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) of the admin guide.
-
-- For the PowerShell cmdlets, [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), there are new parameters: **Owner** and **PreserveFileDetails**. These parameters let you specify an email address for the Owner custom property, and leave the date unchanged for documents that you label.
-
-**Fixes**:
-
-Fixes for stability and for specific scenarios that include:
-
-- Support for generically protecting large files that previously could cause corruption if larger than 1 GB. Now, the file size is limited only by available hard disk space and available memory. For more information about file size limitations, see [File sizes supported for protection](client-admin-guide-file-types.md#file-sizes-supported-for-protection) from the admin guide.
-
-- The Azure Information Protection client viewer opens protected PDF (.ppdf) files as view-only.
-
-- Support for labeling and protection of files stored on SharePoint Server.
-
-- Watermarks now support multiple lines. In addition, visual markings are now applied to a document on the [first save only]configure-policy-markings.md#when-visual-markings-are-applied) rather than every time a document is saved.
-
-- The **Run Diagnostics** option in the **Help and Feedback** dialog box is replaced with **Reset Settings**. The behavior for this action has changed to include signing out the user and deleting the Azure Information Protection policy. For more information, see [More information about the Reset Settings option](..\rms-client\client-admin-guide.md#more-information-about-the-reset-settings-option) from the admin guide.
-
-- Support for proxy authentication.
-
-Fixes for a better user experience, that include:
-
-- Email validation when users specify custom permissions. Also, multiple email addresses can now be specified by pressing Enter.
-
-- The parent label is not displayed when all its sublabels are configured for protection and the client does not have an edition of Office that supports protection. 
 
 ## Next steps
 
