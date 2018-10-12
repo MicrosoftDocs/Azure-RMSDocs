@@ -110,11 +110,11 @@ When the workspace is configured, you're ready to view the reports.
 
 ## How to view the reports
 
-From the Azure Information Protection blade, locate the **DASHBOARDS (PREVIEW)** menu options, and select one of the following options:
+From the Azure Information Protection blade, locate the **Dashboards** menu options, and select one of the following options:
 
-- **Usage report**: Use this report to see how your labels are being used. 
+- **Usage report (Preview)**: Use this report to see how your labels are being used. 
 
-- **Data discovery**: Use this report to see information about files that the scanners found.
+- **Data discovery (Preview)**: Use this report to see information about files that the scanners found.
 
 ## How to modify the reports
 
