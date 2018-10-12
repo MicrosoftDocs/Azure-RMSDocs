@@ -85,7 +85,7 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
 
 4. You see the **Quick start** page that automatically opens the first time you connect to the service. Browse the suggested resources, or use the other menu options. To configure the labels that users can select, use the following procedure.
 
-Next time you access the **Azure Information Protection** blade, it automatically selects the **Labels** option so that you can view and configure labels for all users. You can return to the **Quick start** page by selecting it from the **GENERAL** menu.
+Next time you access the **Azure Information Protection** blade, it automatically selects the **Labels** option so that you can view and configure labels for all users. You can return to the **Quick start** page by selecting it from the **General** menu.
 
 ## How to configure the Azure Information Protection policy
 
