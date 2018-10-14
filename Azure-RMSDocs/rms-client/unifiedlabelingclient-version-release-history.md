@@ -33,13 +33,15 @@ You can download the latest preview version of the Azure Information Protection 
 
 ### Release information
 
-Use the following information to see what’s supported for the latest preview version of the Azure Information Protection unified labeling client. This client installs as an Office add-on for Windows computers. 
+Use the following information to see what’s supported for the latest preview version of the Azure Information Protection unified labeling client. 
+
+This client installs as an Office add-on for Windows computers and has the same [prerequisites](../requirements.md) as the Azure Information Protection client that downloads policy from Azure.
 
 ## Current preview version
 
 **Released**: 10/16/2018
 
-This preview version of the Azure Information Protection unified labeling client for Windows supports the following features:
+This preview version of the Azure Information Protection unified labeling client for Windows supports the following features: 
 
 - Upgrade from the Azure Information Protection client
 
