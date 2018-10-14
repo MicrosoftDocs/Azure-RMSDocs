@@ -63,7 +63,7 @@ If you have labels that are currently published from the Azure portal for Azure 
 
 ### Installing the Azure Information Protection unified labeling client with Office 2010
 
-After you have installed the Azure Information Protection unified labeling client by using the previous instructions:    
+After you have installed the Azure Information Protection unified labeling client by using the previous instructions:
 
 1. Open Microsoft Word. When this is the first time that you have run an Office 2010 application after you have installed the Azure Information Protection client, you see a **Microsoft Azure Information Protection** dialog box. This dialog box tells you that administrator credentials are required to complete the sign in process.
 
