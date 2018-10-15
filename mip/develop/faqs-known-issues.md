@@ -28,6 +28,8 @@ The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transfor
 | Windows native | The C++ Standard Library types [`std::string`](https://wikipedia.org/wiki/C%2B%2B_string_handling) and vectors of `uint8_t`, are used for passing strings to/from API functions. Internally, MIP APIs manage conversion to/from UTF-8 encoding when using the strings. As such, when a string is returned from an API, you must expect UTF-8 encoding and manage accordingly when using/converting the string. For more information and examples, see:<ul><li>[WideCharToMultiByte function](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) for assistance with converting wide character strings to multi-byte, such as UTF-8.<li>The following sample files included in the [SDK download](setup-configure-mip.md#configure-your-client-workstation):<ul><li>sample string utility functions in `file\samples\common\string_utils.cpp`, for converting to/from wide UTF-8 strings<li>An implementation of `wmain(int argc, wchar_t *argv[])` in `file\samples\file\main.cpp`, which uses the preceding string conversion functions.</li></ul></ul>|
 | Other platforms | All other platforms supported by the MIP SDK have native support for UTF-8. |
 
+[TEST SDK download](setup-configure-mip.md#configure-your-client-workstation)
+
 ## Known issues
 
 ### Error: "Failed to parse the acquired Compliance Policy"  
