@@ -13,7 +13,8 @@ ms.author: bryanla
 The Quickstart and Tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Office 365 subscription and client workstation, in preparation for using the SDK.
 
 The MIP SDK is supported on the following platforms:
-|||
+
+| | |
 |-|-|
 ||[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]|
 
