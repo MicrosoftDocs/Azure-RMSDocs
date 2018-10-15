@@ -14,7 +14,7 @@ The Microsoft Information Protection (MIP) SDK is composed of three APIs, as sho
 
 [![MIP SDK API diagram](media/concept-apis-use-cases/mip-sdk-components.png)](media/concept-apis-use-cases/mip-sdk-components.png#lightbox)
 
-Depending on your application's needs, you may be able to interface at the File API layer, or may need to work directly with the Policy or Protection API layers.
+Depending on your application's needs, you may want to interface at the File API layer, or may need to work directly with the Policy or Protection API layers.
 
 ## File API
 
@@ -39,15 +39,15 @@ The File API is an abstraction of both the Protection and Policy APIs. It provid
 
 ## Policy API
 
-The Policy API, or Universal Policy Engine (UPE), provides the ability for software developers to obtain labeling policies for a specific user. It can then "compute" the actions those labels should take.
+The Policy API, or Universal Policy Engine (UPE), provides the ability for software developers to retrieve labeling policies for a specific user. It can then "compute" the actions those labels should take.
 
-The Policy API is leveraged primarily by client applications, where the developer controls the interface and file format. It's also used when the only requirement is to obtain user policy, and not necessarily to label files directly. 
+The Policy API is used primarily by client applications, where the developer controls the interface and file format. It's also used when the only requirement is to retrieve user policy, and not label files directly. 
 
 ### Policy API Use Cases
 
-- Your organization develops 3D design software that uses a proprietary file format. Your customers use MIP, and want to be able to apply labels natively through your application. As the software engineer, you use the Policy API and a custom control to display the labels available for the authenticated user. After the user selects a label, you call the compute action method of the API. The API tells you exactly what should be applied as far as metadata, content marking, and protection.
+- Your organization develops 3D design software that uses a proprietary file format. Your customers use MIP, and want to apply labels natively through your application. As the software engineer, you use the Policy API and a custom control to display the labels available for the authenticated user. After the user selects a label, you call the compute action method of the API. The API tells you exactly what should be applied as far as metadata, content marking, and protection.
 
-- Your organization develops a Data Loss Prevention (DLP) service, that allows your customers to configure DLP policies via a central administration portal. You have customers that use MIP, and would like to be able to read or apply AIP labels, as part of DLP policies. As the software engineer, you can use the Policy API to get a list of labels for the customer organization. You can then read those labels as part of a DLP rule, or apply the label information as part of a rule action.
+- Your organization develops a Data Loss Prevention (DLP) service, that allows your customers to configure DLP policies via a central administration portal. You have customers that use MIP, and need to read or apply AIP labels, as part of DLP policies. As the software engineer, you can use the Policy API to get a list of labels for the customer organization. You can then read those labels as part of a DLP rule, or apply the label information as part of a rule action.
 
 ## Protection API
 
@@ -57,7 +57,7 @@ The Protection API provides the ability for software developers to convert plain
 
 - Your organization develops 3d printing software using a propriety file format. You want to use MIP to protect the file, so it can be printed only by specific users. Using the Protection API, you can apply protection to the file so that only authorized consumers can open and print it. 
 
-- Your organization develops an eDiscovery solution that processes Exchange mailboxes and .PST files. Your application must be able to allow users to decrypt messages to perform eDiscovery. Using a custom message/RPMSG parser and a sufficiently privileged account, you can use the RMS API to:
+- Your organization develops an eDiscovery solution that processes Exchange mailboxes and .PST files. Your application needs to allow users to decrypt messages to perform eDiscovery. Using a custom message/RPMSG parser and a sufficiently privileged account, you can use the RMS API to:
   - decrypt the encrypted file
   - scan the contents
   - discard if out of scope, or package if in scope
