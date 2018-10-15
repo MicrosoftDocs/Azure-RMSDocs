@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
@@ -64,9 +64,9 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     The client installation does not check for this prerequisite but it is needed for the Azure Information Protection client to classify and protect PDF files.
 
-- Configure the **Microsoft Azure Information Protection** add-in to be always enabled for Office applications
+- Group policy configuration for **List of managed add-ins**
     
-    Configure the group policy setting **List of managed add-ins** and add the Microsoft Azure Information Protection add-in for Office applications. Specify the following programmatic identifiers (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
+    For Office 2013 and later versions, configure the group policy setting **List of managed add-ins** and add the **Microsoft Azure Information Protection** add-in for Office applications. Specify the following programmatic identifiers (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
     
     - For Outlook: `MSIP.OutlookAddin`
     
@@ -76,7 +76,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     - For PowerPoint: `MSIP.PowerPointAddin`
     
-    If you do not configure this setting, the Microsoft Azure Information Protection add-in can get disabled and then, users will not be able to label their documents and emails in their Office application.
+    If you do not configure this setting, the Microsoft Azure Information Protection add-in can get disabled and users will not be able to label their documents and emails in their Office application.
     
     For more information about configuring this group policy setting, see [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) from the Office Outlook documentation.
 
