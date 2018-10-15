@@ -78,7 +78,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     If you do not configure this setting, the Microsoft Azure Information Protection add-in can get disabled and users will not be able to label their documents and emails in their Office application.
     
-    For more information about configuring this group policy setting, see [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) from the Office Outlook documentation.
+    For more information about configuring this group policy setting, see [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) from the Office documentation.
 
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.
