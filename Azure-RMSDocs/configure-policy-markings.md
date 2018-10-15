@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2018
+ms.date: 10/15/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
@@ -41,6 +41,12 @@ Additional information about these visual markings:
     
 	- Multiple lines of text are supported.
 
+- Maximum string lengths:
+    
+    - The maximum string length that you can enter for headers and footers is 1024 characters. However, Excel has a limit of 253 characters for headers and footers. If you enter a string longer than 253 characters, in Excel, the string truncates after that maximum string length.
+    
+    - The maximum string length for watermarks that you can enter is 255 characters.
+
 - You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied.
 
 - Word, PowerPoint, and Outlook support visual markings in different colors. Visual markings that are configured for colors always display as black in Excel.
@@ -67,7 +73,7 @@ Use the following instructions to configure visual markings for a label.
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label that contains the visual markings you want to add or change.
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label that contains the visual markings you want to add or change.
 
 3. On the **Label** blade, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markings that you want, and then click **Save**:
     

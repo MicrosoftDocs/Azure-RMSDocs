@@ -37,7 +37,7 @@ To change a label, use the following instructions:
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label you want to change.
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label you want to change.
 
     The exception is if you want to reorder a label: Instead of selecting the label, either right-click the label or select the context menu for the label. Then, select the **Move up** or **Move down** options.
 
