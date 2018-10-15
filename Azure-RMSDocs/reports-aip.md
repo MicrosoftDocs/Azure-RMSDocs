@@ -6,7 +6,7 @@ description: How to use central reporting to track adoption of your Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/15/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -122,6 +122,8 @@ Select the query icon in the dashboard to open a **Log Search** blade:
 
 ![Log Analytics icon to customize Azure Information Protection reports](./media/log-analytics-icon.png)
 
+
+The logged data for Azure Information Protection is stored in the following table: **InformationProtectionLogs_CL**
 
 ## Next steps
 After reviewing the information in the reports, you might decide to make changes to your Azure Information Protection policy. For instructions, see [Configuring the Azure Information Protection policy](configure-policy.md).
