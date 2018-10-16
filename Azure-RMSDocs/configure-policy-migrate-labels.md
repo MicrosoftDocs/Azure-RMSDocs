@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/13/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.service: information-protection
 
@@ -105,6 +105,8 @@ For the labels that successfully migrated, they can now be used by [clients that
 ### Clients that support unified labeling
 
 The clients that currently support unified labeling include:
+
+- The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md) - in preview
 
 - Apps from the Office Insiders program. For more information, see the [Where the feature is available today?](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US#bkmk_whereavailable) section from the Office documentation.
     
