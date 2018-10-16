@@ -100,7 +100,7 @@ For more information about the Do Not Forward option, see [Do Not Forward option
 
 ### Example 2: Rule that applies the Encrypt-Only option to emails when they have attachments that are labeled **Confidential \ Partners** and these emails are sent outside the organization
 
-In this example, the **Confidential \ Partners** sublabel has a GUID of 5ab1c8a1-8241-72bc-3f22-304a0558362a. Substitute your own label or sublabel GUID that you want to use with this rule. 
+In this example, the **Confidential \ Partners** sublabel has a GUID of 0e421e6d-ea17-4fdb-8f01-93a3e71333b8. Substitute your own label or sublabel GUID that you want to use with this rule. 
 
 This label is used to classify and protect documents that you use for partner collaboration.   
 
