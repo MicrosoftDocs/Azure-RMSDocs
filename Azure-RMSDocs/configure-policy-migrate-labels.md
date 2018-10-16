@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/13/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.service: information-protection
 
@@ -51,7 +51,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
     
     - Templates that use a cloud-based key and that are part of a label configuration are also migrated with the label. Other protection templates are not migrated. 
     
-    - After a label with cloud-based protection settings has been migrated, the resulting scope of the protection template is the scoped that is defined in the Azure portal (or by using the ADDRM PowerShell module) and the scope that is defined in the Security & Compliance Center. 
+    - After a label with cloud-based protection settings has been migrated, the resulting scope of the protection template is the scoped that is defined in the Azure portal (or by using the AADRM PowerShell module) and the scope that is defined in the Security & Compliance Center. 
 
 - When you migrate your labels, you will see the migration results display whether a label was **created**, **updated**, or **renamed** because of duplication:
 
@@ -105,6 +105,8 @@ For the labels that successfully migrated, they can now be used by [clients that
 ### Clients that support unified labeling
 
 The clients that currently support unified labeling include:
+
+- The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md) - in preview
 
 - Apps from the Office Insiders program. For more information, see the [Where the feature is available today?](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US#bkmk_whereavailable) section from the Office documentation.
     
