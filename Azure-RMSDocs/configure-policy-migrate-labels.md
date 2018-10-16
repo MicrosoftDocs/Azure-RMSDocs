@@ -33,6 +33,15 @@ Migrate your labels if you want to be able to use them in the Office 365 Securit
 
 After you have migrated your labels, you can then make changes to them in the Azure portal or the Office 365 Security & Compliance Center, and the respective clients will download the same change.
 
+> [!WARNING]
+> The [Azure AD roles](/active-directory/users-groups-roles/directory-assign-admin-roles) of **Security Administrator** and **Information Protection Administrator** are not supported by the unified labeling platform. If you use these roles, before you migrate your labels, add the users who have these roles to the **Compliance Administrator** role for the Office 365 Security & Compliance Center. For instructions, see [Give users access to the Office 354 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
+ ).
+> 
+> Users who are not granted this role and are not a global administrator will lose their access to labels and policies in the Azure portal.
+
+If you are a global administrator for your tenant, you can continue to manage labels and polices in the Azure portal after your labels are migrated.
+
+
 ## Considerations for unified labels
 
 Before you migrate your labels, make sure that you are aware of the following changes and considerations:
@@ -95,6 +104,8 @@ Azure Information Protection clients can use these label settings without any pr
 
 When you have confirmed that your tenant supports sensitivity labels in the Security & Compliance Center, use the following instructions to migrate your tenant and  Azure Information Protection labels.
 
+You must be a global administrator to migrate your labels.
+
 1. Open a new browser window and sign in to the Azure portal by using the following link: https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade 
 
 2. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
@@ -115,6 +126,6 @@ The clients that currently support unified labeling include:
 
 ## Next steps
 
-For more information about configuring and publishing your migrated labels in the Office 365 Security & Compliance Center, see [Overview of sensitivity labels](/Office365/SecurityCompliance/sensitivity-labels).
+For more information about your migrated labels that can now be configured and published in the Office 365 Security & Compliance Center, see [Overview of sensitivity labels](/Office365/SecurityCompliance/sensitivity-labels).
 
 To read the announcement blog post: [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
