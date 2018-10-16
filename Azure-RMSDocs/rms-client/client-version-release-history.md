@@ -50,7 +50,10 @@ Use the following information to see what’s new or changed for a supported rel
 
 ## Versions later than 1.37.19.0
 
-If you have a version 1 of the client that is later than 1.37.19.0, it is a preview build for testing and evaluation purposes.
+If you have a version 1 of the client that is later than 1.37.19.0, it is a preview build for testing and evaluation purposes. 
+
+> [!TIP]
+> Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
 
 **Released**: 09/20/2018
 
@@ -60,13 +63,19 @@ If you have a version 1 of the client that is later than 1.37.19.0, it is a prev
 
 **Additional:**
 
-Just for this preview version, to use the scanner, you must follow these steps:
+Just for this preview version, specific to the scanner:
 
-1. Install the current GA version (1.37.19.0) of the client.
-2. Install and configure the scanner.
-3. Start the scanner.
-4. Upgrade the Azure Information Protection client to this preview version.
-5. Start the scanner.
+- Install the scanner by following these steps:
+    
+    1. Install the current GA version (1.37.19.0) of the client.
+    2. Install and configure the scanner.
+    3. Start the scanner.
+    4. Upgrade the Azure Information Protection client to this preview version.
+    5. Start the scanner.
+
+- Known issue with scanning large data sets:
+    
+    With this preview version, gradually increase the number of files to be scanned and monitor progress. If the scanner status reports that it is running but new files do not get scanned, reduce the number of files to be scanned and restart the scanner. 
 
 If you need instructions to install, configure, and start the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
 

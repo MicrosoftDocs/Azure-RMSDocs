@@ -41,7 +41,7 @@ If you need to create a scoped policy so that the label applies to a subset of u
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Policies** menu option: On the **Azure Information Protection** - **Policies** blade, select **Global** if the label to add or remove applies to all users.
+2. From the **Classifications** > **Policies** menu option: On the **Azure Information Protection** - **Policies** blade, select **Global** if the label to add or remove applies to all users.
 
     If the label to add or remove applies to a subset of users, select your scoped policy instead.
 
