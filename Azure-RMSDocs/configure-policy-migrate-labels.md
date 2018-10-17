@@ -35,11 +35,11 @@ After you have migrated your labels, you can then make changes to them in the Az
 
 ### Important information about administrative roles
 
-The [Azure AD roles](/active-directory/users-groups-roles/directory-assign-admin-roles) of **Security Administrator** and **Information Protection Administrator** are not supported by the unified labeling platform. If these administrative roles are used in your organization, before you migrate your labels, add the users who have these roles to the **Compliance Administrator** or the **Organization Management** role groups for the Office 365 Security & Compliance Center. For instructions, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
+The [Azure AD roles](/active-directory/users-groups-roles/directory-assign-admin-roles) of **Security Administrator** and **Information Protection Administrator** are not supported by the unified labeling platform. If these administrative roles are used in your organization, before you migrate your labels, add the users who have these roles to the **Compliance Administrator** or the **Organization Management** role groups for the Office 365 Security & Compliance Center. As an alternative, you can create a new role group for these users and add either **Retention Management** or **Organization Configuration** roles to this group. For instructions, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
 
-After the label migration, users who cannot access the Security & Compliance Center will not be able to see and manage labels and policies in the Azure portal.
+If you do not give these users access to the Security & Compliance Center by using one of these configurations, they will lose access to labels and policies in the Azure portal after your labels are migrated.
 
-If you are a global administrator for your tenant, you can continue to manage labels and polices in both the Azure portal and the Security & Compliance Center after your labels are migrated.
+Global administrators for your tenant can continue to manage labels and polices in both the Azure portal and the Security & Compliance Center after your labels are migrated.
 
 
 ## Considerations for unified labels
