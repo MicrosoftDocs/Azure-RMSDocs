@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
@@ -30,6 +30,16 @@ ms.suite: ems
 Have a question about Azure Information Protection, or about the Azure Rights Management service (Azure RMS)? See if it's answered here.
 
 These FAQ pages are updated regularly, with new additions listed in the monthly documentation update announcements on the [Azure Information Protection technical blog](https://aka.ms/AIPblog).
+
+## What's the difference between Azure Information Protection and Microsoft Information Protection?
+
+Unlike Azure Information Protection, Microsoft Information Protection isn't a subscription or product that you can buy. Instead, it's a framework for products and integrated capabilities that help you protect your organization's sensitive information:
+
+- Individual products in this framework include Azure Information Protection, Office 365 Information Protection (for example. Office 365 DLP), Windows Information Protection, and Microsoft Cloud App Security. 
+
+- The integrated capabilities in this framework include unified label management, end-user labeling experiences built into Office apps, the ability for Windows to understand unified labels and apply protection to data, the Microsoft Information Protection SDK, and new functionality in Adobe Acrobat Reader to view labeled and protected PDFs.
+
+For more information, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ## What's the difference between Azure Information Protection and Azure Rights Management?
 
@@ -111,17 +121,19 @@ Additional information:
 
 ## What’s the difference between labels in Azure Information Protection and labels in Office 365?
 
-Labels in Azure Information Protection let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud. This classification and protection is independent of where the content is stored or how it is moved. Until recently, Office 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that let you classify documents and emails for auditing and retention when that content is in Office 365 services. 
+Until recently, Office 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that let you classify documents and emails for auditing and retention when that content is in Office 365 services. In comparison, Azure Information Protection labels let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud.
 
-Microsoft has been working towards a comprehensive and unified labeling strategy for multiple services that include Azure Information Protection, Office 365, Microsoft Cloud App Security, and Windows Information Protection.  You might have heard this strategy referred to as "Microsoft Information Protection". This same labeling schema and store is also being made available for software vendors by using the MIP SDK.
+Announced at Microsoft Ignite 2018, you will now start to see an option to create and configure **sensitivity labels** in addition to retention labels in the Office 365 Security & Compliance Center. In addition, now in preview, you can migrate your existing Azure Information Protection labels to the new unified labeling store. 
 
-Announced at Microsoft Ignite 2018, you will now start to see an option to configure **sensitivity labels** in addition to retention labels in the Office 365 Security & Compliance Center. For more information about the progress on having labels that are unified across different services, read the blog post, [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
+For more information about unified labeling management and how these labels will be supported, see the blog post, [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
+
+For more information about migrating your existing labels, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](configure-policy-migrate-labels.md).
 
 ## What’s the difference between Windows Server FCI and the Azure Information Protection scanner?
 
-For a while, you've been able to use Windows Server File Classification Infrastructure to classify documents and then protect them by using the [Rights Management connector](deploy-rms-connector.md) (Office documents only) or a [PowerShell script](./rms-client/configure-fci.md) (all file types). 
+Windows Server File Classification Infrastructure has historically been an option to classify documents and then protect them by using the [Rights Management connector](deploy-rms-connector.md) (Office documents only) or a [PowerShell script](./rms-client/configure-fci.md) (all file types). 
 
-You can now use the [Azure Information Protection scanner](deploy-aip-scanner.md). The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
+We now recommend you use the [Azure Information Protection scanner](deploy-aip-scanner.md). The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
 
 The main differences between these two solutions:
 
@@ -141,7 +153,7 @@ When the scanner protects files on SharePoint sites and libraries, the Rights Ma
 
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
-The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office blog](https://blogs.office.com/).
+The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services) and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office 365 blog](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog) and [Office Apps blog](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog).
 
 ## Is Azure Information Protection suitable for my country?
 
