@@ -35,7 +35,7 @@ These FAQ pages are updated regularly, with new additions listed in the monthly 
 
 Unlike Azure Information Protection, Microsoft Information Protection isn't a subscription or product that you can buy. Instead, it's a framework for products and integrated capabilities that help you protect your organization's sensitive information:
 
-- Individual products in this framework include Azure Information Protection, Office 365 Information Protection (for example. Office 365 DLP), Windows Information Protection, and Microsoft Cloud App Security. 
+- Individual products in this framework include Azure Information Protection, Office 365 Information Protection (for example, Office 365 DLP), Windows Information Protection, and Microsoft Cloud App Security. 
 
 - The integrated capabilities in this framework include unified label management, end-user labeling experiences built into Office apps, the ability for Windows to understand unified labels and apply protection to data, the Microsoft Information Protection SDK, and new functionality in Adobe Acrobat Reader to view labeled and protected PDFs.
 
