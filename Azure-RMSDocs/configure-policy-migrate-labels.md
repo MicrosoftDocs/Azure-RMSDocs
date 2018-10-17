@@ -37,7 +37,7 @@ After you have migrated your labels, you can then make changes to them in the Az
 
 The [Azure AD roles](/active-directory/users-groups-roles/directory-assign-admin-roles) of **Security Administrator** and **Information Protection Administrator** are not supported by the unified labeling platform. If these administrative roles are used in your organization, before you migrate your labels, add the users who have these roles to the **Compliance Administrator** or the **Organization Management** role groups for the Office 365 Security & Compliance Center. For instructions, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
 
-If users cannot access the Security & Compliance Center, they will lose their access to labels and policies in the Azure portal.
+After the label migration, users who cannot access the Security & Compliance Center will not be able to see and manage labels and policies in the Azure portal.
 
 If you are a global administrator for your tenant, you can continue to manage labels and polices in both the Azure portal and the Security & Compliance Center after your labels are migrated.
 
