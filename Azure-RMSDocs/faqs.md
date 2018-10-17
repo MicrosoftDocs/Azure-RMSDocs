@@ -84,6 +84,7 @@ Some things to note:
 
 - Users who are assigned an administrative role cannot automatically remove protection from documents or emails that were protected by Azure Information Protection. Only users who are assigned super users can do this, and when the super user feature is enabled. However, any user that you assign administrative permissions to Azure Information Protection can assign users as super users, including their own account. They can also enable the super user feature. These actions are recorded in an administrator log. For more information, see the security best practices section in [Configuring super users for Azure Rights Management and discovery services or data recovery](configure-super-users.md). 
 
+- If you are migrating your Azure Information Protection labels to Office 365, be sure to read the following section from the label migration documentation: [Important information about administrative roles](configure-policy-migrate-labels.md#important-information-about-administrative-roles).
 
 ## Does Azure Information Protection support on-premises and hybrid scenarios?
 
@@ -123,7 +124,7 @@ Additional information:
 
 Until recently, Office 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that let you classify documents and emails for auditing and retention when that content is in Office 365 services. In comparison, Azure Information Protection labels let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud.
 
-Announced at Microsoft Ignite 2018, you will now start to see an option to create and configure **sensitivity labels** in addition to retention labels in the Office 365 Security & Compliance Center. In addition, now in preview, you can migrate your existing Azure Information Protection labels to the new unified labeling store. 
+Announced at Microsoft Ignite 2018, you will now start to see an option to create and configure [sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) in addition to retention labels in the Office 365 Security & Compliance Center. In addition, now in preview, you can migrate your existing Azure Information Protection labels to the new unified labeling store. 
 
 For more information about unified labeling management and how these labels will be supported, see the blog post, [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
