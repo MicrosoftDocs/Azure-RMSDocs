@@ -53,7 +53,7 @@ This preview version of the Azure Information Protection unified labeling client
 
 - Labels that apply Do Not Forward
 
-- Justification prompts if users lower the sensitivity level, removing a label, or remove protection
+- Justification prompts if users lower the sensitivity level
 
 - Help and feedback dialog box, which includes reset settings and export logs
 
