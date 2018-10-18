@@ -244,7 +244,7 @@ Then the scanner uses Windows iFilter to scan the following file types. For thes
 |PDF |.pdf|
 |Text|.txt; .xml; .csv|
 
-By default, only Office file types are protected by the scanner, so PDF and text files are not protected unless you [edit the registry](develop/file-api-configuration.md) to specify the file types:
+By default, only Office file types are protected by the scanner, so PDF and text files are not protected unless you [edit the registry](#editing-the-registry-for-the-scanner) to specify the file types:
 
 - If you do not add the file type of .pdf to the registry: Files that have this file name extension will be labeled but if the label is configured for protection, the protection is not applied.
 
