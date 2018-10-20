@@ -92,7 +92,7 @@ Creates an [Stream](class_mip_stream.md) from a buffer.
 Parameters:  
 * **buffer**: Pointer to a buffer
 
-**Returns**: Size Size of buffer
+**Returns**: Size of buffer
   
 ## Functions (mip::rights)
 
