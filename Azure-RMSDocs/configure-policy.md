@@ -114,7 +114,7 @@ An Azure Information Protection policy contains the following elements that you 
 
 - The option to automatically label an email message, based on its attachments.
 
-- The option to control whether the the Information Protection bar is displayed in Office applications.
+- The option to control whether the Information Protection bar is displayed in Office applications.
 
 - The option to control whether the Do Not Forward button is displayed in Outlook.
 
