@@ -6,7 +6,7 @@ description: Configure settings in the Azure Information Protection policy that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
@@ -39,25 +39,27 @@ To configure these settings:
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Policies** menu option: On the **Azure Information Protection - Policies** blade, select **Global** if the settings that you want to configure will apply to all users.
+2. From the **Classifications** > **Policies** menu option: On the **Azure Information Protection - Policies** blade, select **Global** if the settings that you want to configure will apply to all users.
     
     If the settings that you want to configure are in a [scoped policy](configure-policy-scope.md) so that they apply to selected users only, select your scoped policy instead.
 
 3. On the **Policy** blade, configure the settings:
     
-    - **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sub-labels. 
+    - **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sublabels. 
     
     - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option).
         
-        If a label is not assigned when users save a document or sends an email, they are prompted to select a label. For example:
+        If a label is not assigned when users save a document or send an email, they are prompted to select a label. For example:
         
         ![Azure Information Protection prompt if labeling is enforced](./media/info-protect-enforce-labelv2.png)
+        
+        This option does not apply when you remove a label by using the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) PowerShell cmdlet with the *RemoveLabel* parameter.
         
     - **Users must provide justification to set a lower classification label, remove a label, or remove protection**: When you set this option to **On** and a user does any of these actions (for example, change the **Public** label to **Personal**), the user is prompted to provide an explanation for this action. For example, the user might explain that the document no longer contains sensitive information. The action and its justification reason are logged in their local Windows event log: **Applications and Services Logs** > **Azure Information Protection**.  
         
         ![Azure Information Protection prompt if new classification is lower](./media/info-protect-lower-justification.png)
         
-        This option is not applicable for sublabels.
+        This option is not applicable for lowering the classification of sublabels under the same parent label.
         
     - **For email messages with attachments, apply a label that matches the highest classification of those attachments**: When you set this option to **Recommended**, users are prompted to apply a label to their email message. The label is dynamically chosen, based on the classification labels that are applied to the attachments, and the highest classification label is selected. The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on SharePoint or OneDrive for Business). Users can accept the recommendation or dismiss it. When you set this option to **Automatic**, the label is automatically applied but users can remove the label or select a different label before sending the email.  
     

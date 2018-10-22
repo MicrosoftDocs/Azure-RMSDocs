@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 10/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
@@ -113,9 +113,7 @@ When the client is installed, use the **Help and Feedback** option to open the *
 
 The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website but you can configure it for a custom URL as one of the [policy settings](../configure-policy-settings.md) in the Azure Information Protection policy.
 
-Use the **Send Us Feedback** link (general availability versions) to send suggestions or requests to the Information Protection team. Do not use this option for technical support but instead, see the [Support options and community resources](../information-support.md#support-options-and-community-resources). 
-
-The **Report an Issue** link replaces the **Send Us Feedback** link in the preview version of the client. By default, this option sends an email to Microsoft but you can configure the HTTP string for your users by specifying an [advanced client setting](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link). For example, specify the email address of your help desk.
+The **Report an Issue** link displays in preview versions of the client and not in general availability versions. By default, this option sends an email to Microsoft but you can configure the HTTP string for your users by specifying an [advanced client setting](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link). For example, specify the email address of your help desk.
 
 The **Export Logs** automatically collects and attaches log files for the Azure Information Protection client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk.
 
@@ -207,7 +205,7 @@ Use the [Version release history and support policy](client-version-release-hist
 
 ### Upgrading the Azure Information Protection scanner
 
-To upgrade the Azure Information Protection scanner, install the latest version of the Azure Information Protection client. Then do one of the following one-time actions:
+To upgrade the Azure Information Protection scanner, install the latest version of the Azure Information Protection client. Then do one of the following one-time actions. After you have done this, there is no need to rescan already scanned files.
 
 For the current GA version: 
 

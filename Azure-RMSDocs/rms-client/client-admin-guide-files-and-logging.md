@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
@@ -93,8 +93,6 @@ The client logs user activity to the local Windows event log **Applications and 
 - Custom permissions (when applicable) that includes the [usage rights by their encoding name](../configure-usage-rights.md#usage-rights-and-descriptions) for the specified users, groups, or organizations
     
 For information about usage logging for the protection service, see [Logging and analyzing usage of the Azure Rights Management service](../log-analyze-usage.md)
-
-
 
 ## Next steps
 Now that you've identified all the log files associated with the Azure Information Protection client, see the following for additional information that you might need to support this client:

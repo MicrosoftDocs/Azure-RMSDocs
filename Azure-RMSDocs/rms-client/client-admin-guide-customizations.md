@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/17/2018
+ms.date: 10/15/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -35,7 +35,7 @@ Some of these settings require editing the registry and some use advanced settin
 
 1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** blade.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option: Select **Policies**.
+2. From the **Classifications** > **Labels** menu option: Select **Policies**.
 
 3. On the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
     
@@ -96,9 +96,9 @@ In addition, check that these computers do not have a file named **Policy.msip**
 
 ## Modify the email address for the Report an Issue link
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is only applicable to preview versions of the Azure Information Protection client because general availability versions of the client don't display the **Report an Issue** link.
 
-When users select the **Report an Issue** link from the **Help and Feedback** client dialog box, by default, a Microsoft address is populated in an email message. Use the following advanced client setting to modify that address. For example, specify `mailto:helpdesk@contoso.com` for the email address of your help desk. 
+When users select the **Report an Issue** link from the **Help and Feedback** client dialog box from preview versions of the client, by default, a Microsoft address is populated in an email message. Use the following advanced client setting to modify that address. For example, specify `mailto:helpdesk@contoso.com` for the email address of your help desk. 
 
 To configure this advanced setting, enter the following strings:
 
@@ -253,9 +253,43 @@ To configure this advanced setting, enter the following string:
 
 - Value: **True**
 
-As a result of this configuration option, when the Azure Information Protection client protects a PDF file, this action creates a protected PDF document that can be opened with the latest version of the Azure Information Protection client for Windows, and other PDF readers that support the ISO standard for PDF encryption. The Azure Information Protection app for iOS and Android does not currently support the ISO standard for PDF encryption.
+As a result of this configuration option, when the Azure Information Protection client protects a PDF file, this action creates a protected PDF document that can be opened with the latest version of the Azure Information Protection client for Windows, and other PDF readers that support the ISO standard for PDF encryption. The Azure Information Protection app for iOS and Android does not currently support the ISO standard for PDF encryption. For the latest information on the Adobe Acrobat Reader, see [Starting October, use Adobe Acrobat Reader for PDFs protected by Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738).
 
 For the Azure Information Protection scanner to use the new setting, the scanner service must be restarted.
+
+For more information about this PDF encryption, see the blog post [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
+
+### To convert existing .ppdf files to protected .pdf files
+
+When the Azure Information Protection client has downloaded the client policy with the new setting, you can use PowerShell commands to convert existing .ppdf files to protected .pdf files that use the ISO standard for PDF encryption. 
+
+To use the following instructions for files that you didn't protect yourself, you must have a [Rights Management usage right](../configure-usage-rights.md) to remove protection from files, or be a super user. To enable the super user feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../configure-super-users.md).
+
+In addition, when you use these instructions for files that you didn't protect yourself, you become the [RMS Issuer](../configure-usage-rights.md#rights-management-issuer-and-rights-management-owner). In this scenario, the user who originally protected the document can no longer track and revoke it. If users need to track and revoke their protected PDF documents, ask them to manually remove and then reapply the label by using File Explorer, right-click.
+
+To use PowerShell commands to convert existing .ppdf files to protected .pdf files that use the ISO standard for PDF encryption:
+
+1. Use [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) with the .ppdf file. For example:
+    
+		Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
+
+2. From the output, take a note of the following parameter values:
+    
+    - The value (GUID) for **SubLabelId**, if there is one. If this value is blank, a sublabel wasn't used, so note the value for **MainLabelId** instead.
+    
+    Note: If there is no value for **MainLabelId** either, the file isn't labeled. In this case, you can use the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) command and [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) command instead of the commands in step 3 and 4.
+    
+    - The value for **RMSTemplateId**. If this value is **Restricted Access**, a user has protected the file using custom permissions rather than the protection settings that are configured for the label. If you continue, those custom permissions will be overwritten by the label's protection settings. Decide whether to continue or ask the user (value displayed for the **RMSIssuer**) to remove the label and re-apply it, together with their original custom permissions.
+
+3. Remove the label by using [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) with the *RemoveLabel* parameter. If you are using the [policy setting](../configure-policy-settings.md) of **Users must provide justification to set a lower classification label, remove a label, or remove protection**, you must also specify the *Justification* parameter with the reason. For example: 
+    
+    	Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
+
+4. Reapply the original label, by specifying the value for the label that you identified in step 1. For example:
+    
+    	Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
+
+The file retains the .pdf file name extension but is classified as before, and it is protected by using the ISO standard for PDF encryption.
 
 ## Support for files protected by Secure Islands
 
@@ -285,6 +319,8 @@ As a result of this registry edit, the following scenarios are supported:
 ## Migrate labels from Secure Islands and other labeling solutions
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
+
+This configuration is currently not compatible with the setting to [Protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When you use both settings together, .ppdf files cannot be opened by File Explorer, PowerShell, or the scanner.
 
 For Office documents and PDF documents that are labeled by Secure Islands, you can relabel these documents with an Azure Information Protection label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents. 
 

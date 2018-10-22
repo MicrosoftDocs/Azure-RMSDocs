@@ -22,7 +22,8 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -37,7 +38,9 @@
     "globalMetadata": {
       "breadcrumb_path": "/information-protection/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/azure-rmsdocs",
+      "feedback_product_url": "https://msip.uservoice.com/"
     },
     "fileMetadata": {},
     "template": [],

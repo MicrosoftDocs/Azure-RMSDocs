@@ -6,7 +6,7 @@ description: You can delete or reorder the Azure Information Protection labels t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
@@ -33,7 +33,7 @@ You can delete or reorder the Azure Information Protection labels that users see
 
 When you delete a label that has been applied to documents and emails, users see **Not set** for the label status when these documents and emails are next opened by the Azure Information Protection client. However, the label information remains in the metadata and it can still be read by services that look for this label information.
 
-In addition, if the deleted label applied protection, that protection is not removed. The protection settings from the label remain and display in the **Protection templates** section. This template can now be converted to a new label or linked to a label. While this template remains, you cannot create a new label with the same name as the label that you deleted. If you want to do that, you have the following options:
+In addition, if the deleted label applied protection, that protection is not removed. The protection settings from the label remain and display in the **Protection templates** section. This template can now be converted to a new label. While this template remains, you cannot create a new label with the same name as the label that you deleted. If you want to do that, you have the following options:
 
 - Convert the template to a label. 
     
@@ -63,7 +63,7 @@ Use the following instructions to make these changes.
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, do one or more of the following actions: 
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, do one or more of the following actions: 
 
     - To delete a label: Right-click or select the context menu (**...**) for the label that you want to delete, click **Delete this label**, and click **OK** to confirm. 
 

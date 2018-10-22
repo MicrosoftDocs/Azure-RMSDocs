@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/20/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
@@ -50,11 +50,34 @@ Use the following information to see what’s new or changed for a supported rel
 
 ## Versions later than 1.37.19.0
 
-If you have a version of the client that is later than 1.37.19.0, it is a preview build for testing and evaluation purposes.
+If you have a version 1 of the client that is later than 1.37.19.0, it is a preview build for testing and evaluation purposes. 
+
+> [!TIP]
+> Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
 
 **Released**: 09/20/2018
 
-Enables support for future features.
+**New features:**
+
+- Support for [central reporting](../reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
+
+**Additional:**
+
+Just for this preview version, specific to the scanner:
+
+- Install the scanner by following these steps:
+    
+    1. Install the current GA version (1.37.19.0) of the client.
+    2. Install and configure the scanner.
+    3. Start the scanner.
+    4. Upgrade the Azure Information Protection client to this preview version.
+    5. Start the scanner.
+
+- Known issue with scanning large data sets:
+    
+    With this preview version, gradually increase the number of files to be scanned and monitor progress. If the scanner status reports that it is running but new files do not get scanned, reduce the number of files to be scanned and restart the scanner. 
+
+If you need instructions to install, configure, and start the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
 
 ## Version 1.37.19.0
 
@@ -73,8 +96,6 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 - Labeling support for **Strict Open XML Document** format in Word, Excel, and PowerPoint files. For more information about the Open XML formats, see the Office blog post, [New file format options in the new Office](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
 
 - Support for files that have been protected by Secure Islands when those files are other than PDF and Office documents. For example, protected text and picture files. Or, files that have a .pfile file name extension. This support enables new scenarios, such as the Azure Information Protection scanner being able to inspect these files for sensitive information, and automatically relabeling them for Azure Information Protection. [More information](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
-
-- The **Send Us Feedback** link in the **Help and Feedback** dialog box is replaced with **Report an issue**, which you can customize. By default, this option sends an email to Microsoft. You can change this email address so that when your users select this option, it uses an HTTP string that you specify. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk. To modify this address, use an [advanced client setting](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
 
 - New advanced client settings to remove headers and footers that have been applied to documents by other labeling solutions. [More information](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
 
@@ -95,6 +116,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - For documents that are protected in SharePoint libraries, if the *DefaultOwner* parameter is not used for the data repository, the SharePoint Editor value is now used as the default value instead of the Author value.
     
     - Scanner reports include "Last modified by" for Office documents.
+    
+    - You can now protect all file types by using the `*` wildcard when you edit the registry as described in the [File API configuration](../develop/file-api-configuration.md) instructions.
 
 - When you classify and protect by using PowerShell or the scanner, the Office document metadata is not removed or encrypted.
 
@@ -109,16 +132,18 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 - The Delete Label icon does not display in client apps (Word, Excel, PowerPoint, and Outlook) when you configure the [policy setting](../configure-policy-settings.md) of **All documents and emails must have a label**.
 
 **Additional changes**:
-   
+
 - For [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration):
     
     - Values for the *Schedule* parameter are no longer **OneTime**, **Continuous**, and **Never**, but now **Manual** and **Always**.
         
     - The *Type* parameter is removed, so it is also removed from the output when you run [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration). By default, only new or modified files are inspected after the first scan cycle. If you previously set the *Type* parameter to **Full** to rescan all files, now run [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) with the *Reset* parameter. The scanner must also be configured for a manual schedule, which requires the *Schedule* parameter to be set to **Manual** with [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
     
-- For the scanner, the default exclusion list now includes .msg, .rar, .rtf, and .zip files. [More information](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
+- The default exclusion list for the client and scanner now includes .msg, .rar, and .zip files. The scanner also excludes .rtf files. [More information](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
 
 - The policy version is changed to 1.4. Identifying the version number is required for [configuring disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
+
+- The **Send Us Feedback** link in the **Help and Feedback** dialog box is removed. It was temporarily replaced with **Report an Issue**, but this link now displays in preview versions only. By default, this option sends an email to Microsoft but you can change this email address to an HTTP string that you specify. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk. To modify this address, use an [advanced client setting](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
 
 ## Version 1.29.5.0 
 
@@ -236,60 +261,6 @@ Fixes for stability and for specific scenarios that include:
 **Additional changes**:
 
 - For [client usage logging](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client ): Event ID 102 and ID 103 are replaced with event ID 101.
-
-## Version 1.10.56.0
-
-**Released**: 09/18/2017
-
-This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
-
-**New features**:
-
-- Support for the new Office 365 DLP conditions that you can configure for a label. For more information, see [Configure conditions for an Azure Information Protection label](../configure-policy-classification.md).
-
-- Support for labels that are configured for user-defined actions. For Outlook, this label automatically applies the Outlook Do Not Forward option. For Word, Excel, PowerPoint, and File Explorer, this label prompts the user to specify custom permissions. For more information, see [Configure an Azure Information Protection label for protection](../configure-policy-protection.md).
-
-- Labels support multiple languages. Beginning with August 30, 2017, the [default policy](../configure-policy-default.md) includes support for multiple languages that this version of the client displays to users. For users to see labels in their preferred language from a default policy before this date, and for labels that you configure, see [How to configure labels for different languages in Azure Information Protection]configure-policy-languages.md).
-
-- Labels are displayed from the **Protect** button on the Office ribbon, in addition to displaying on the Information Protection bar. 
-
-- Native protection for the following Visio file types: .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx
-
-- Support for advanced client configurations that you configure in the Azure portal. These configurations include the following:
-    
-    - [Hide or show the Do Not Forward button in Outlook](client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
-    
-    - [Make the custom permissions options available or unavailable to users](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
-    
-    - [Permanently hide the Azure Information Protection bar](client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
-    
-    - [Enable recommended classification in Outlook](client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
-
-- For PowerShell, support to label files non-interactively by using the new PowerShell cmdlets, [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) and [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). For more information how to use these cmdlets, see the [PowerShell section](client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) of the admin guide.
-
-- For the PowerShell cmdlets, [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), there are new parameters: **Owner** and **PreserveFileDetails**. These parameters let you specify an email address for the Owner custom property, and leave the date unchanged for documents that you label.
-
-**Fixes**:
-
-Fixes for stability and for specific scenarios that include:
-
-- Support for generically protecting large files that previously could cause corruption if larger than 1 GB. Now, the file size is limited only by available hard disk space and available memory. For more information about file size limitations, see [File sizes supported for protection](client-admin-guide-file-types.md#file-sizes-supported-for-protection) from the admin guide.
-
-- The Azure Information Protection client viewer opens protected PDF (.ppdf) files as view-only.
-
-- Support for labeling and protection of files stored on SharePoint Server.
-
-- Watermarks now support multiple lines. In addition, visual markings are now applied to a document on the [first save only]configure-policy-markings.md#when-visual-markings-are-applied) rather than every time a document is saved.
-
-- The **Run Diagnostics** option in the **Help and Feedback** dialog box is replaced with **Reset Settings**. The behavior for this action has changed to include signing out the user and deleting the Azure Information Protection policy. For more information, see [More information about the Reset Settings option](..\rms-client\client-admin-guide.md#more-information-about-the-reset-settings-option) from the admin guide.
-
-- Support for proxy authentication.
-
-Fixes for a better user experience, that include:
-
-- Email validation when users specify custom permissions. Also, multiple email addresses can now be specified by pressing Enter.
-
-- The parent label is not displayed when all its sublabels are configured for protection and the client does not have an edition of Office that supports protection. 
 
 ## Next steps
 

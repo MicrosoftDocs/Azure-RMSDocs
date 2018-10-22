@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
@@ -71,7 +71,7 @@ You can change this behavior so that the Azure Information Protection client per
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label to configure.
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label to configure.
 
 3. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
 
@@ -105,7 +105,7 @@ When you click **Save**, your changes are automatically available to users and s
 
 ### Sensitive information types that require a minimum version of the client
 
-The following sensitive information types currently require the preview version of the Azure Information Protection client:
+The following sensitive information types require a minimum version of 1.37.19.0 for the Azure Information Protection client:
 
 - **EU Phone Number**
 - **EU Mobile Phone Number**
