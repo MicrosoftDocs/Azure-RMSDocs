@@ -11,10 +11,12 @@ ms.author: bryanla
 
 # Compute an Action
 
-##
+## Implement ExecutionState and ComputeActions
+
+[TODO: Link to details on samples]
 
 ```cpp
-sample::policy::ExecutionStateOptions options;
+sample::policy::ExecutionStateOptions options; 
 options.newLabelId = newLabelId;
 options.assignmentMethod = mip::AssignmentMethod::STANDARD;
 options.contentFormat = mip::ContentFormat::DEFAULT;
@@ -26,3 +28,4 @@ auto actions = handler->ComputeActions(*state);
 ```
 
 The `PolicyHandler` will compute the actions and return a `std::vector` of `mip::Action`. The application must be built to do something with these actions.
+
