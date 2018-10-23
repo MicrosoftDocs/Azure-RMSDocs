@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -56,6 +56,8 @@ This preview version of the Azure Information Protection unified labeling client
 - Justification prompts if users lower the sensitivity level
 
 - Help and feedback dialog box, which includes reset settings and export logs
+
+- Policy refresh from the Security & Compliance Center every 4 hours, per Office app.
 
 The following features do not work in this preview version:
 
