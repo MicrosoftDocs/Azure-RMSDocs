@@ -1,4 +1,15 @@
-# Summary
+---
+title: Concepts - Implementing ExecutionState in the Microsoft Information Protection SDK
+description: This article will help you understand how to use the ExecutionState in the Microsoft Information Protection SDK to compute actions and provide details for audit logging.
+services: information-protection
+author: BryanLa
+ms.service: information-protection
+ms.topic: conceptual
+ms.date: 10/22/2018
+ms.author: bryanla
+---
+
+# Implement ExecutionState 
 
 Passing information into the MIP SDK to compute an action that should be taken, based on the current state and desired state, is implemented via the `mip::ExecutionState` class. Like other classes in the SDK, the `ExecutionState` is an abstract class and must be implemented by the developer.
 
@@ -14,17 +25,17 @@ Passing information into the MIP SDK to compute an action that should be taken, 
 
 | Member                                                                           | Returns                                                                                                              |
 |----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| std::string GetNewLabelId()                                                      | Returns the label ID to be applied to the object.                                                                    |
-| mip::ContentState GetContentState()                                              | Returns the mip::ContentState of the object.                                                                         |
-| std::pair<bool, std::string> IsDowngradeJustified()                              | Returns a std::pair expressing whether downgrade is justified and the justification.                                 |
-| std::string GetContentIdentifier()                                               | Returns the content identifier. This should be a human-readable identifier, indicating the location of the object.   |
-| mip::ActionSource GetNewLabelActionSource()                                      | Returns the mip::ActionSource of the label.                                                                          |
-| mip::AssignmentMethod GetNewLabelAssignmentMethod()                              | Returns the mip::AssigmentMethod of the label                                                                        |
-| std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties() | Returns a std::vector of std::pairs of strings, containing the custom metadata that will be applied to the document. |
-| std::vector<std::pair<std::string, std::string>> GetContentMetadata()            | Returns a std::vector of std::pairs of string containing the current content metadata.                               |
-| std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()             | Returns a pointer to a mip::ProtectionDescriptor                                                                     |
-| mip::ContentFormat GetContentFormat()                                            | Returns mip::ContentFormat                                                                                           |
-| mip::ActionType GetSupportedActions()                                            | Returns mip::ActionTypes for the label.                                                                              |
+| `std::string GetNewLabelId()`                                                      | Returns the label ID to be applied to the object.                                                                    |
+| `mip::ContentState GetContentState()`                                              | Returns the mip::ContentState of the object.                                                                         |
+| `std::pair<bool, std::string> IsDowngradeJustified()`                              | Returns a std::pair expressing whether downgrade is justified and the justification.                                 |
+| `std::string GetContentIdentifier()`                                               | Returns the content identifier. This should be a human-readable identifier, indicating the location of the object.   |
+| `mip::ActionSource GetNewLabelActionSource()`                                      | Returns the mip::ActionSource of the label.                                                                          |
+| `mip::AssignmentMethod GetNewLabelAssignmentMethod()`                              | Returns the mip::AssigmentMethod of the label                                                                        |
+| `std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties()` | Returns a std::vector of std::pairs of strings, containing the custom metadata that will be applied to the document. |
+| `std::vector<std::pair<std::string, std::string>> GetContentMetadata()`            | Returns a std::vector of std::pairs of string containing the current content metadata.                               |
+| `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`           | Returns a pointer to a mip::ProtectionDescriptor                                                                     |
+| `mip::ContentFormat GetContentFormat()`                                            | Returns mip::ContentFormat                                                                                           |
+| `mip::ActionType GetSupportedActions()`                                           | Returns mip::ActionTypes for the label.                                                                              |
 
 Each must be overridden in an implemention of a class derived from `mip::ExecutionState`. In the sample application linked above, this is accomplished by implementing a struct called `ExecutionStateOptions`, and passing that in to the contructor of the derived class.
 
@@ -49,5 +60,9 @@ Each property is set by the application and then `ExecutionSateOptions` is passe
 
 ### Next Steps
 
+[TODO: FIX THESE]
+
 * Review the sample applications
-* 
+* Review Policy API Computing Actions
+* Review auditing nad the MIP SDK
+  
