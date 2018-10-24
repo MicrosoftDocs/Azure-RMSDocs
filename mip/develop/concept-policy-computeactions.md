@@ -13,7 +13,7 @@ ms.author: bryanla
 
 As previously detailed, the primary functions of the Policy API are to list available labels and to return the specific set of actions that should be taken based on the current and desired state. The last step in the process is to provide a label identifier and, optionally, metadata about the existing label to the `ComputeActions()` function.
 
-Sample code for this article can be found on GitHub. 
+Sample code for this article can be found on GitHub.
 
 * [mipsdk-policyapi-cpp-sample-basic](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic)
 * [mipsdk-policyapi-cpp-sample-advanced](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-advanced)
@@ -104,3 +104,5 @@ Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ActionId
 
 ## Next Steps
 
+* Next, download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/en-us/resources/samples/?sort=0&term=mipsdk+policyapi)
+* Read about how to [pass audit events to the Azure Information Protection audit pipeline](concept-auditing.md)
