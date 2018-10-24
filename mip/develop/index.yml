@@ -19,11 +19,11 @@ abstract:
   description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection—no matter where it’s stored or who it’s shared with.
   aside:
     image:
-      alt: MIP SDK @ Ignite 2018
+      alt: MIP SDK @ Ignite 2018 video
       height: 112
       src: media/index/kartik-tom-mip-sdk.png
       width: 250  
-    title: MIP SDK Overview (40:23)
+    title: MIP SDK @ Ignite 2018
     href: https://www.youtube.com/embed/V02HTllv54s
     width: 250
 sections:
