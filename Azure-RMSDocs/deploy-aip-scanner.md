@@ -280,7 +280,7 @@ To change the default scanner behavior for protecting file types other than Offi
 
 When you edit the registry, manually create the **MSIPC** key and **FileProtection** key if they do not exist, as well as a key for each file name extension.
 
-For example, for the scanner to protect PDF files, the registry after you have edited it will look like the following picture:
+For example, for the scanner to protect PDF files in addition to Office files, the registry after you have edited it will look like the following picture:
 
 ![Editing the registry for the scanner to apply protection](./media/editregistry-scanner.png)
 
