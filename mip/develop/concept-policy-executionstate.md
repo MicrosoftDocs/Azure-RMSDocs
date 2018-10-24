@@ -9,14 +9,14 @@ ms.date: 10/22/2018
 ms.author: bryanla
 ---
 
-# Implement ExecutionState 
+# Implement ExecutionState
 
 Passing information into the MIP SDK to compute an action that should be taken, based on the current state and desired state, is implemented via the `mip::ExecutionState` class. Like other classes in the SDK, the `ExecutionState` is an abstract class and must be implemented by the developer.
 
 > For a complete example of an `ExecutionState` implementation, see the following: 
-> 
-> *  [execution_state_impl.h](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/execution_state_impl.h)
->  * [execution_state_impl.cpp](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/execution_state_impl.cpp)
+>
+> * [execution_state_impl.h](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/execution_state_impl.h)
+> * [execution_state_impl.cpp](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/execution_state_impl.cpp)
 
 ## mip::ExecutionState Members
 
@@ -30,16 +30,16 @@ Passing information into the MIP SDK to compute an action that should be taken, 
 | `std::pair<bool, std::string> IsDowngradeJustified()`                              | Returns a std::pair expressing whether downgrade is justified and the justification.                                 |
 | `std::string GetContentIdentifier()`                                               | Returns the content identifier. This should be a human-readable identifier, indicating the location of the object.   |
 | `mip::ActionSource GetNewLabelActionSource()`                                      | Returns the mip::ActionSource of the label.                                                                          |
-| `mip::AssignmentMethod GetNewLabelAssignmentMethod()`                              | Returns the mip::AssigmentMethod of the label                                                                        |
+| `mip::AssignmentMethod GetNewLabelAssignmentMethod()`                              | Returns the mip::AssignmentMethod of the label                                                                        |
 | `std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties()` | Returns a std::vector of std::pairs of strings, containing the custom metadata that will be applied to the document. |
 | `std::vector<std::pair<std::string, std::string>> GetContentMetadata()`            | Returns a std::vector of std::pairs of string containing the current content metadata.                               |
 | `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`           | Returns a pointer to a mip::ProtectionDescriptor                                                                     |
 | `mip::ContentFormat GetContentFormat()`                                            | Returns mip::ContentFormat                                                                                           |
 | `mip::ActionType GetSupportedActions()`                                           | Returns mip::ActionTypes for the label.                                                                              |
 
-Each must be overridden in an implemention of a class derived from `mip::ExecutionState`. In the sample application linked above, this is accomplished by implementing a struct called `ExecutionStateOptions`, and passing that in to the contructor of the derived class.
+Each must be overridden in an implementation of a class derived from `mip::ExecutionState`. In the sample application linked above, this is accomplished by implementing a struct called `ExecutionStateOptions`, and passing that in to the constructor of the derived class.
 
-In the [example](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/execution_state_impl.h), a struct called `ExecutionStateOptions` is defined and passed in to the implementation's constructor. `ExecutionStateOptions` is defined as:
+In the [example](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/execution_state_impl.h), a struct called `ExecutionStateOptions` is defined as:
 
 ```cpp
 struct ExecutionStateOptions {
@@ -56,13 +56,8 @@ struct ExecutionStateOptions {
 };
 ```
 
-Each property is set by the application and then `ExecutionSateOptions` is passed in to the constructor of the class derived from `mip::ExecutionState`. This information is used to determine the actions to take. If the `mip::PolicyHandler` was initialized with **isAuditDiscoveryEnabled** set to true, the engine will calculate the action and submit information about the event to the Azure Information Protection auditing pipeline. 
+Each property is set by the application and then `ExecutionSateOptions` is passed in to the constructor of the class derived from `mip::ExecutionState`. This information is used to determine the actions to take. If the `mip::PolicyHandler` was initialized with **isAuditDiscoveryEnabled** set to true, the engine will calculate the action and submit information about the event to the Azure Information Protection auditing pipeline.
 
 ### Next Steps
 
-[TODO: FIX THESE]
-
-* Review the sample applications
-* Review Policy API Computing Actions
-* Review auditing nad the MIP SDK
-  
+Next, learn more about [computing actions](concept-policy-computeactions.md). By providing the execution state to the Policy Handler, the list of tasks to be performed will be returned to the application.
