@@ -1,6 +1,6 @@
 ---
 title: FAQs and known issues - Microsoft Information Projection SDK.
-description: Microsoft Information Protection (MIP) SDK FAQs and troubleshooting guidance for known issues.
+description: Microsoft Information Protection (MIP) SDK FAQs and troubleshooting guidance for issues and errors.
 author: BryanLa
 ms.service: information-protection
 ms.topic: troubleshooting
@@ -8,9 +8,11 @@ ms.date: 10/19/2018
 ms.author: bryanla
 ---
 
-# Microsoft Information Protection (MIP) SDK FAQs and known issues
+# Microsoft Information Protection (MIP) SDK FAQs and issues
 
-## Frequently Asked Questions (FAQs)
+This article provides answers to Frequently Asked Questions (FAQs), and troubleshooting guidance for known issues and common errors.
+
+## Frequently Asked Questions 
 
 ### Question: which platforms are supported by the MIP SDK?
 
@@ -28,13 +30,13 @@ The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transfor
 | .NET | For .NET SDK clients, all strings use the default UTF-16 encoding and no special conversion is needed. Conversion to/from UTF-16 is managed internally by the MIP SDK. |
 | Other platforms | All other platforms supported by the MIP SDK have native support for UTF-8. |
 
-## Known issues
+## Issues and errors reference
 
 ### Error: "File format not supported"  
 
 | Error | Solution |
 |-|-|
-|*File format not supported*| This exception results from attempting to protect a PDF file that has been digitally signed or password protected. See [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) for more information on using the Protection API with PDF files.|
+|*File format not supported*| This exception results from attempting to protect a PDF file, that has been digitally signed or password protected. See [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) for more information on using the Protection API with PDF files.|
 
 ### Error: "Failed to parse the acquired Compliance Policy"  
 
