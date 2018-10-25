@@ -29,7 +29,7 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
-1. Continuing from [step 1](infoprotect-tutorial-step1.md) and still in the Azure portal, select **CLASSIFICATIONS** > **Policies** > **Global** to open the **Policy: Global** blade. This blade displays the default Azure Information Protection policy that's created for your tenant.
+1. Continuing from [step 1](infoprotect-tutorial-step1.md) and still in the Azure portal, select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade. This blade displays the default Azure Information Protection policy that's created for your tenant.
 
 2. Spend a few minutes familiarizing yourself with the labels that are displayed:
     
@@ -68,7 +68,7 @@ For this tutorial, we'll change a couple of those policy settings so that you ca
 
 We'll now create a new sublabel for **Confidential**.
 
-1. From the **CLASSIFICATIONS** > **Labels** menu option: Right-click the **Confidential** label, and select **Add a sub-label**.
+1. From the **Classifications** > **Labels** menu option: Right-click the **Confidential** label, and select **Add a sub-label**.
     
     If you do not have a label named **Confidential**, you can select another label or you can create a new label instead and still follow the tutorial with minor differences.
 
@@ -136,7 +136,7 @@ We'll now create a new sublabel for **Confidential**.
 
 13. Click **Save** on this **Sub-label** blade. If you are prompted to confirm, click **OK**. The new label is created and saved, but not yet added to a policy.
 
-14. From the **CLASSIFICATIONS** > **Policies** menu option: Select **Global** again, and then select the **Add or remove labels** link after the labels.
+14. From the **Classifications** > **Policies** menu option: Select **Global** again, and then select the **Add or remove labels** link after the labels.
 
 15. From the **Policy: Add or remove labels** blade, select the label that you have just created, the sublabel named **Finance**, and click **OK**.
 

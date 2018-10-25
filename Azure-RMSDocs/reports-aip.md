@@ -6,11 +6,10 @@ description: How to use central reporting to track adoption of your Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/15/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 
 # optional metadata
@@ -97,7 +96,7 @@ To view the Azure Information Protection reports and create your own, make sure 
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
     
-2. Locate the **MANAGE** menu options, and select **Configure analytics (Preview)**.
+2. Locate the **Manage** menu options, and select **Configure analytics (Preview)**.
 
 3. On the **Azure Information Protection log analytics** blade, you see a list of any Log Analytics workspaces that are owned by your tenant. Do one of the following:
     
@@ -111,11 +110,11 @@ When the workspace is configured, you're ready to view the reports.
 
 ## How to view the reports
 
-From the Azure Information Protection blade, locate the **DASHBOARDS (PREVIEW)** menu options, and select one of the following options:
+From the Azure Information Protection blade, locate the **Dashboards** menu options, and select one of the following options:
 
-- **Usage report**: Use this report to see how your labels are being used. 
+- **Usage report (Preview)**: Use this report to see how your labels are being used. 
 
-- **Data discovery**: Use this report to see information about files that the scanners found.
+- **Data discovery (Preview)**: Use this report to see information about files that the scanners found.
 
 ## How to modify the reports
 
@@ -123,6 +122,8 @@ Select the query icon in the dashboard to open a **Log Search** blade:
 
 ![Log Analytics icon to customize Azure Information Protection reports](./media/log-analytics-icon.png)
 
+
+The logged data for Azure Information Protection is stored in the following table: **InformationProtectionLogs_CL**
 
 ## Next steps
 After reviewing the information in the reports, you might decide to make changes to your Azure Information Protection policy. For instructions, see [Configuring the Azure Information Protection policy](configure-policy.md).

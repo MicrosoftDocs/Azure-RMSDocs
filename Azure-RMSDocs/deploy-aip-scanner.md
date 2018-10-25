@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/17/2018
+ms.date: 10/24/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
@@ -60,7 +60,7 @@ Before you install the Azure Information Protection scanner, make sure that the 
 |Requirement|More information|
 |---------------|--------------------|
 |Windows Server computer to run the scanner service:<br /><br />- 4 core processors<br /><br />- 4 GB of RAM<br /><br />- 10 GB free space (average) for temporary files|Windows Server 2016 or Windows Server 2012 R2. <br /><br />Note: For testing or evaluation purposes in a non-production environment, you can use a Windows client operating system that is [supported by the Azure Information Protection client](requirements.md#client-devices).<br /><br />This computer can be a physical or virtual computer that has a fast and reliable network connection to the data stores to be scanned.<br /><br /> The scanner requires sufficient disk space to create temporary files for each file that it scans, four files per core. The recommended disk space of 10 GB allows for 4 core processors scanning 16 files that each have a file size of 625 MB. <br /><br />Make sure that this computer has the [Internet connectivity](requirements.md#firewalls-and-network-infrastructure) that it needs for Azure Information Protection. If Internet connectivity is not possible because of your organization policies, see the [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.|
-|SQL Server to store the scanner configuration:<br /><br />- Local or remote instance<br /><br />- Sysadmin role to install the scanner|SQL Server 2012 is the minimum version for the following editions:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />When you install the scanner and your account has the Sysadmin role, the installation process automatically creates the AzInfoProtectionScanner database and grants the required db_owner role to the service account that runs the scanner.  If you cannot be granted the Sysadmin role or your organization policies require databases to be created and configured manually, see the [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.|
+|SQL Server to store the scanner configuration:<br /><br />- Local or remote instance<br /><br />- Sysadmin role to install the scanner|SQL Server 2012 is the minimum version for the following editions:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />If you install more than one instance of the scanner, each scanner instance requires its own SQL Server instance.<br /><br />When you install the scanner and your account has the Sysadmin role, the installation process automatically creates the AzInfoProtectionScanner database and grants the required db_owner role to the service account that runs the scanner.  If you cannot be granted the Sysadmin role or your organization policies require databases to be created and configured manually, see the [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.|
 |Service account to run the scanner service|In addition to running the scanner service, this account authenticates to Azure AD and downloads the Azure Information Protection policy. This account must be an Active Directory account and synchronized to Azure AD. If you cannot synchronize this account because of your organization policies, see the [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.<br /><br />This service account has the following requirements:<br /><br />- **Log on locally** right. This right is required for the installation and configuration of the scanner, but not for operation. You must grant this right to the service account but you can remove this right after you have confirmed that the scanner can discover, classify, and protect files. If granting this right even for a short period of time is not possible because of your organization policies, see the [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.<br /><br />- **Log on as a service** right. This right is automatically granted to the service account during the scanner installation and this right is required for the installation, configuration, and operation of the scanner. <br /><br />- Permissions to the data repositories: You must grant **Read** and **Write** permissions for scanning the files and then applying classification and protection to the files that meet the conditions in the Azure Information Protection policy. To run the scanner in discovery mode only, **Read** permission is sufficient.<br /><br />- For labels that reprotect or remove protection: To ensure that the scanner always has access to protected files, make this account a [super user](configure-super-users.md) for the Azure Rights Management service, and ensure that the super user feature is enabled. For more information about the account requirements for applying protection, see [Preparing users and groups for Azure Information Protection](prepare.md). In addition, if you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) for a phased deployment, make sure that this account is included in your onboarding controls you've configured.|
 |The Azure Information Protection client is installed on the Windows Server computer|You must install the full client for the scanner. Do not install the client with just the PowerShell module.<br /><br />For client installation instructions, see the [admin guide](./rms-client/client-admin-guide.md). If you have previously installed the scanner and now need to upgrade it to a later version, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 |Configured labels that apply automatic classification, and optionally, protection|For more information about how to configure the conditions in the Azure Information Protection policy, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md).<br /><br />For more information about how to configure labels to apply protection to files, see [How to configure a label for Rights Management protection](configure-policy-protection.md).<br /><br />These labels can be in the global policy, or one or more [scoped policies](configure-policy-scope.md).<br /><br />Note: Although you can run the scanner even if you haven't configured labels that apply automatic classification, this scenario is not covered with these instructions. [More information](#using-the-scanner-with-alternative-configurations)|
@@ -198,7 +198,7 @@ With the scanner's default configuration, you're now ready to run your first sca
     
         Start-AIPScan
 
-2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the service stops. You can use the local Windows **Applications and Services** event log, **Azure Information Protection**, to confirm when the service is stopped. Look for the informational event ID **911**.
+2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the scanner stops although the scanner service remains running. You can use the local Windows **Applications and Services** event log, **Azure Information Protection**, to confirm when the scanner stops. Look for the informational event ID **911**.
 
 3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
     
@@ -244,7 +244,7 @@ Then the scanner uses Windows iFilter to scan the following file types. For thes
 |PDF |.pdf|
 |Text|.txt; .xml; .csv|
 
-By default, only Office file types are protected by the scanner, so PDF and text files are not protected unless you [edit the registry](develop/file-api-configuration.md) to specify the file types:
+By default, only Office file types are protected by the scanner, so PDF and text files are not protected unless you [edit the registry](#editing-the-registry-for-the-scanner) to specify the file types:
 
 - If you do not add the file type of .pdf to the registry: Files that have this file name extension will be labeled but if the label is configured for protection, the protection is not applied.
 
@@ -268,12 +268,21 @@ Finally, for the remaining file types, the scanner applies the default label in 
 |DigitalNegative|.dng|
 |Pfile|.pfile|
 
-When the scanner applies a label with protection, by default, only Office file types are protected. You can change this behavior so that additional file types are protected. However, when a label applies generic protection to documents, the file name extension changes to .pfile. In addition, the file becomes read-only until it is opened by an authorized user and saved in its native format. Text and images files can also change their file name extension and become read-only. 
+When the scanner applies a label with protection, by default, only Office file types are protected. You can change this behavior so that additional file types are protected. However, when a label applies generic protection to documents, the file name extension changes to .pfile. Other file types can change their file name extension as well. In addition, these files become read-only until they are opened by an authorized user and saved in their native format.
 
-To change the default scanner behavior, for example, to generically protect other file types, you must manually edit the registry and specify the additional file types that you want to be protected. Alternatively, you can protect all file types by specifying the `*` wildcard. For instructions, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". In addition, specific for the scanner:
+### Editing the registry for the scanner
+
+To change the default scanner behavior for protecting file types other than Office files, you must manually edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". In addition, specific for the scanner:
 
 - The scanner has its own default behavior: Only Office file formats are protected by default. If the registry is not modified, any other file types will not be protected by the scanner.
 
+- If you want the same default protection behavior of the Azure Information Protection client, where all files are automatically protected with native or generic protection: Specify the `*` wildcard as a registry key, and `Default` as the value data.
+
+When you edit the registry, manually create the **MSIPC** key and **FileProtection** key if they do not exist, as well as a key for each file name extension.
+
+For example, for the scanner to protect PDF files in addition to Office files, the registry after you have edited it will look like the following picture:
+
+![Editing the registry for the scanner to apply protection](./media/editregistry-scanner.png)
 
 ## When files are rescanned
 
@@ -326,6 +335,8 @@ To maximize the scanner performance:
 - **Do not scan local folders on the computer running the scanner service**
     
     If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.
+
+If necessary, install multiple instances of the scanner. Each scanner instance requires its own configuration database in a different SQL Server instance.
 
 Other factors that affect the scanner performance:
 

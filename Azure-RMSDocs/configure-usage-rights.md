@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
@@ -100,7 +100,7 @@ These default templates are created when your subscription was purchased, and th
 
 ## Do Not Forward option for emails
 
-Exchange clients and services (for example, the Outlook client, the Outlook Web Access app, and Exchange mail flow rules) have an additional information rights protection option for emails: **Do Not Forward**. 
+Exchange clients and services (for example, the Outlook client, Outlook on the web, Exchange mail flow rules, and DLP actions for Exchange) have an additional information rights protection option for emails: **Do Not Forward**. 
 
 Although this option appears to users (and Exchange administrators) as if it's a default Rights Management template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure portal when you view and manage protection templates. Instead, the **Do Not Forward** option is a set of usage rights that is dynamically applied by users to their email recipients.
 
@@ -125,11 +125,11 @@ A user wants to email some information to specific people in the Marketing depar
 
 When Exchange Online uses the new capabilities for Office 365 Message Encryption, a new email option becomes available: **Encrypt-Only**.
 
-This option is available to tenants who use Exchange Online and can be selected in Outlook on the web, as another rights protection option for a mail flow rule, and from Outlook when you have Office 365 ProPlus with a minimum version of [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4). For more information, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
+This option is available to tenants who use Exchange Online and can be selected in Outlook on the web, as another rights protection option for a mail flow rule, as an Office 365 DLP action, and from Outlook when you have Office 365 ProPlus with a minimum version of [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4). For more information, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
 
 When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except **Save As, Export** and **Full Control**. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy from the email, print it, and forward it. 
 
-Similarly, by default, unprotected [Office documents](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) that are attached to the email inherit the same permissions. These documents are automatically protected and when they are downloaded, they can can be saved, edited, copied, and printed from Office applications by the recipients. When the document is saved by a recipient, it can be saved to a new name and even a different format. However, only file formats that support protection are available so that the document cannot be saved without the original protection. If you want different usage rights for an attachment, or your attachment is not an Office document that supports this inherited protection, protect the file before you attach it to the email. You can then assign the specific usage rights that you need for the file.
+Similarly, by default, unprotected [Office documents](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) that are attached to the email inherit the same permissions. These documents are automatically protected and when they are downloaded, they can be saved, edited, copied, and printed from Office applications by the recipients. When the document is saved by a recipient, it can be saved to a new name and even a different format. However, only file formats that support protection are available so that the document cannot be saved without the original protection. If you want different usage rights for an attachment, or your attachment is not an Office document that supports this inherited protection, protect the file before you attach it to the email. You can then assign the specific usage rights that you need for the file.
 
 Alternatively, you can change this protection inheritance of documents by using either of the following configuration parameters that you set with the [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps) command, **Set-IRMConfiguration**. Use these options when you don't need to retain the original protection for the document after the user is authenticated:
 

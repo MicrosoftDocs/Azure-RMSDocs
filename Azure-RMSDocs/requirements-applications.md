@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/17/2018
+ms.date: 10/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
@@ -37,11 +37,11 @@ Unless stated otherwise, the supported capabilities apply to both Azure RMS and 
 
 ## RMS-enlightened applications
 
-The following table displays RMS-enlightened client applications from Microsoft and software vendors.
+The following table displays RMS-enlightened client applications from Microsoft and software vendors. 
+
+For information about viewing protected PDF documents, see [Protected PDF readers for Microsoft Information Protection](./rms-client/protected-pdf-readers.md).
 
 Information about the table columns:
-
--   **Protected PDF**: These files can have a .pdf or .ppdf file name extension.
 
 -   **Email:** The email clients that are listed can protect the email message itself, which automatically protects any attached Office files that are not already protected. In this scenario, the client’s preview feature can display the protected content (message and attachment) to authorized recipients. However, if an email message itself is not protected but the attachment is protected, the client’s preview feature cannot display the protected attachment to authorized recipients. 
     
@@ -50,17 +50,16 @@ Information about the table columns:
 -   **Other file types**: Text and image files include files that have a file name extension such as .txt, .xml, .jpg, and .jpeg. These files change their file name extension after they are natively protected by Rights Management, and become read-only. Files that cannot be natively protected have a .pfile file name extension after they are generically protected by Rights Management. For more information, see the [File types supported](./rms-client/client-admin-guide-file-types.md) from the Azure Information Protection client admin guide.
 
 
-|**Device operating system**|Word, Excel, PowerPoint|Protected PDF|Email|Other file types|
-|-------------------------------|---------------------------|-----------------|---------|--------------------|
-|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online (viewing protected documents) [[1]](#footnote-1)<br /><br />Web browser [[2]](#footnote-2)|Azure Information Protection client for Windows <br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS sharing app|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Web browser [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4) |Azure Information Protection client for Windows: Text, images, pfile<br /><br />RMS sharing application for Windows: Text, images, pfile<br /><br />SealPath RMS plugin for AutoCAD: .dwg|
-|**iOS**|GigaTrust<br /><br /> Office Mobile (viewing and editing protected documents)<br /><br />Office Online [[1]](#footnote-1)<br /><br />TITUS Docs<br /><br />Web browser [[2]](#footnote-2)|Azure Information Protection app (viewing protected documents)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Azure Information Protection app (viewing protected email)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iPad and iPhone [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Web browser [[3]](#footnote-3)|Azure Information Protection app (viewing protecting text and images)<br /><br />TITUS Docs: Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile <br /><br />Web browser [[2]](#footnote-2)|Azure Information Protection app (viewing protected documents) <br /><br />GigaTrust App for Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection app (viewing protected emails)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 and later) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Web browser [[3]](#footnote-3)|Azure Information Protection app (viewing protected text and images)|
-|**macOS**|Office 2016 for Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web browser [[2]](#footnote-2)|Foxit Reader<br /><br />RMS sharing app (viewing protected documents)|Outlook 2016 for Mac<br /><br />Web browser [[3]](#footnote-3)|RMS sharing app (viewing protected text, images, generically protected files)|
-|**Windows 10 Mobile**|Office Mobile apps (viewing protected documents using Azure RMS) <br /><br />Web browser [[2]](#footnote-2)|Not supported|Citrix WorxMail <br /><br />Outlook Mail (viewing protected emails) <br /><br />Web browser [[3]](#footnote-3)|Not supported|
-|**Windows RT**|Office 2013 RT<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web browser [[2]](#footnote-2)|Not supported|Outlook 2013 RT<br /><br />Mail app for Windows<br /><br />Web browser [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go: JT files|
-|**Windows Phone 8.1**|Office Mobile (AD RMS only)<br /><br />Web browser [[2]](#footnote-2)|RMS sharing app (viewing protected documents)|Outlook Mobile [[4]](#footnote-4) <br /><br />Web browser [[3]](#footnote-3)|RMS sharing app (viewing protected text, images, generically protected files)|
-|**Blackberry 10**|Web browser [[2]](#footnote-2)|Not supported|Blackberry email [[4]](#footnote-4) <br /><br />Web browser [[3]](#footnote-3)|Not supported|
-
+|**Device operating system**|Word, Excel, PowerPoint|Email|Other file types|
+|---------------------------|-----------------------|-----------------|---------|
+|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online (viewing protected documents) [[1]](#footnote-1)<br /><br />Web browser [[2]](#footnote-2)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Web browser [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4) |Azure Information Protection client for Windows: Text, images, pfile<br /><br />RMS sharing application for Windows: Text, images, pfile<br /><br />SealPath RMS plugin for AutoCAD: .dwg|
+|**iOS**|GigaTrust<br /><br /> Office Mobile (viewing and editing protected documents)<br /><br />Office Online [[1]](#footnote-1)<br /><br />TITUS Docs<br /><br />Web browser [[2]](#footnote-2)|Azure Information Protection app (viewing protected email)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iPad and iPhone [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Web browser [[3]](#footnote-3)|Azure Information Protection app (viewing protecting text and images)<br /><br />TITUS Docs: Pfile|
+|**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile <br /><br />Web browser [[2]](#footnote-2)|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection app (viewing protected emails)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 and later) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Web browser [[3]](#footnote-3)|Azure Information Protection app (viewing protected text and images)|
+|**macOS**|Office 2016 for Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web browser [[2]](#footnote-2)|Outlook 2016 for Mac<br /><br />Web browser [[3]](#footnote-3)|RMS sharing app (viewing protected text, images, generically protected files)|
+|**Windows 10 Mobile**|Office Mobile apps (viewing protected documents using Azure RMS) <br /><br />Web browser [[2]](#footnote-2)|Citrix WorxMail <br /><br />Outlook Mail (viewing protected emails) <br /><br />Web browser [[3]](#footnote-3)|Not supported|
+|**Windows RT**|Office 2013 RT<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web browser [[2]](#footnote-2)|Outlook 2013 RT<br /><br />Mail app for Windows<br /><br />Web browser [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go: JT files|
+|**Windows Phone 8.1**|Office Mobile (AD RMS only)<br /><br />Web browser [[2]](#footnote-2)|Outlook Mobile [[4]](#footnote-4) <br /><br />Web browser [[3]](#footnote-3)|RMS sharing app (viewing protected text, images, generically protected files)|
+|**Blackberry 10**|Web browser [[2]](#footnote-2)|Blackberry email [[4]](#footnote-4) <br /><br />Web browser [[3]](#footnote-3)|Not supported|
 
 ###### Footnote 1
 Supported only with SharePoint Online and OneDrive for Business, and the documents are unprotected before they are uploaded to a protected library.
@@ -96,7 +95,7 @@ The following Office client suites support protecting files and emails on Window
 
 - Office 365 ProPlus: Office 2016 and Office 2013
     
-    These editions of Office are included with most but not all Office 365 subscriptions that include protecting data from Azure Information Protection. Check your subscription information to see if Office 365 ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+    These editions of Office are included with most but not all Office 365 subscriptions that include data protection from Azure Information Protection. Check your subscription information to see if Office 365 ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professional Plus 2016
 
