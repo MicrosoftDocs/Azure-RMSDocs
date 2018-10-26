@@ -23,7 +23,7 @@ If you haven't already, be sure to complete the following prerequisites before c
 
 ## Add logic to set and get a sensitivity label
 
-Add logic to set and get a sensitivity label on a file, using the File engine object. 
+Add logic to set and get a sensitivity label on a file, using the File engine object.
 
 1. Using **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It defaults to the same name as the project containing it, which you specified during project creation. 
 
