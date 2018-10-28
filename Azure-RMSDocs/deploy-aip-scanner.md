@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2018
+ms.date: 10/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
@@ -198,7 +198,13 @@ With the scanner's default configuration, you're now ready to run your first sca
     
         Start-AIPScan
 
-2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the scanner stops although the scanner service remains running. You can use the local Windows **Applications and Services** event log, **Azure Information Protection**, to confirm when the scanner stops. Look for the informational event ID **911**.
+2. Wait for the scanner to complete its cycle by running the following command:
+    
+    Get-AIPScannerStatus
+    
+    Look for the status to show **Idle** rather than **Scanning**. When the scanner has crawled through all the files in the data stores that you specified, the scanner stops although the scanner service remains running. 
+    
+    You can also use the local Windows **Applications and Services** event log, **Azure Information Protection**, to confirm when the scanner has finished scanning. Look for the informational event ID **911**.
 
 3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
     
@@ -219,13 +225,13 @@ In its default setting, the scanner runs one time and in the reporting-only mode
     
     There are other configuration settings that you might want to change. For example, whether file attributes are changed and what is logged in the reports. In addition, if your Azure Information Protection policy includes the setting that requires a justification message to lower the classification level or remove protection, specify that message by using this cmdlet. Use the [online help](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) for more information about each configuration setting. 
 
-2. Restart the **Azure Information Protection Scanner** service by running the following command:
+2. Start the scanner again by running the following command:
     
         Start-AIPScan
 
-3. As before, monitor the event log and the reports to see which files were labeled, what classification was applied, and whether protection was applied.
+3. As before, run `Get-AIPScannerStatus` to monitor when the scan is complete and then check the reports to see which files were labeled, what classification was applied, and whether protection was applied.
 
-Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files are discovered.
+Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it starts a new cycle so that any new and changed files are discovered.
 
 
 ## How files are scanned
