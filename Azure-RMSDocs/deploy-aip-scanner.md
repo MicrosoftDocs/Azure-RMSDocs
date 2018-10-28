@@ -204,7 +204,7 @@ With the scanner's default configuration, you're now ready to run your first sca
     
     Look for the status to show **Idle** rather than **Scanning**. When the scanner has crawled through all the files in the data stores that you specified, the scanner stops although the scanner service remains running. 
     
-    You can also use the local Windows **Applications and Services** event log, **Azure Information Protection**, to confirm when the scanner has finished scanning. Look for the informational event ID **911**.
+    Check the local Windows **Applications and Services** event log, **Azure Information Protection**. This log also reports when the scanner has finished scanning, with a summary of results. Look for the informational event ID **911**.
 
 3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
     
@@ -225,11 +225,11 @@ In its default setting, the scanner runs one time and in the reporting-only mode
     
     There are other configuration settings that you might want to change. For example, whether file attributes are changed and what is logged in the reports. In addition, if your Azure Information Protection policy includes the setting that requires a justification message to lower the classification level or remove protection, specify that message by using this cmdlet. Use the [online help](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) for more information about each configuration setting. 
 
-2. Start the scanner again by running the following command:
+2. Make a note of the current time and start the scanner again by running the following command:
     
         Start-AIPScan
 
-3. As before, run `Get-AIPScannerStatus` to monitor when the scan is complete and then check the reports to see which files were labeled, what classification was applied, and whether protection was applied.
+3. Monitor the event log for the informational type **911** again, with a time stamp later than when you started the scan in the previous step. Then check the reports to see details of which files were labeled, what classification was applied to each file, and whether protection was applied to them.
 
 Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it starts a new cycle so that any new and changed files are discovered.
 
