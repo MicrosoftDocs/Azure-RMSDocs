@@ -26,13 +26,17 @@ Discovery events provide information on labeled information that is read or cons
 
 These events are submitted to Azure Information Protection Analytics by setting the `AuditDiscoveryEnabled` parameter to true when creating a new `mip::FileHandler`. Additionally, a content identifier that identifies the file in some human-readable format is provided. It's recommended to use the file path for this identifier.
 
-The example below creates a new `mip::FileHandler` with audit discovery enabled. The `CreateFileHandler()` method is called on the `mip::FileEngine` and `AuditDiscoveryEnabled` set to true. TODO The function will fire an audit event that indicates a `mip::FileHandler` for a specified *contentId* was created.
+The example below creates a new `mip::FileHandler` with audit discovery enabled. The `CreateFileHandler()` method is called on the `mip::FileEngine` and `AuditDiscoveryEnabled` set to true. Once the `FileHanlder` reads the label, a discovery audit is generated.
 
 ```cpp
+// Create FileHandler with discovery enabled
 auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
 auto handlerFuture = handlerPromise->get_future();
 fileEngine->CreateFileHandlerAsync(filePath, contentId, mip::ContentState::REST, true /*AuditDiscoveryEnabled*/, make_shared<FileHandlerObserver>(), createFileHandlerPromise);
 auto handler = handlerFuture.get();
+
+// Read label. This generates the discovery audit.
+auto label = handler->GetLabel();
 ```
 
 ### Change Events
