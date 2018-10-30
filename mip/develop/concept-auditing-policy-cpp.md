@@ -24,9 +24,9 @@ These events are useful in detecting applications across your enterprise that ar
 
 Discovery events provide information on labeled information that is read or consumed by the Policy API. These events are useful as they surface the devices, location, and users who are accessing information across an organization.
 
-Discovery events are generated in the Policy API by setting a bool flag when creating the `mip::PolicyHandler` object via the `mip::PolicyEngine`. As seen in the example below, the value for **isAuditDiscoveryEnabled** is set to true. When the `mip::ExecutionState` is passed in to ComputeActions, with existing metadata information, that discovery information will be submitted to Azure Information Protection Analytics.  
+Discovery events are generated in the Policy API by setting a bool flag when creating the `mip::PolicyHandler` object via the `mip::PolicyEngine`. In the example below, the value for **isAuditDiscoveryEnabled** is set to true. When the `mip::ExecutionState` is passed in to `ComputeActions()` or `GetSensitivityLabel()`, with existing metadata information and content identifier, that discovery information will be submitted to Azure Information Protection Analytics.
 
-The discovery audit is generated once the applicaiton calls `ComputeActions()` and provides `mip::ExecutionState`.
+The discovery audit is generated once the applicaiton calls `ComputeActions()` or `GetSensitivityLabel()` and provides `mip::ExecutionState`. This event is generated only once per handler.
 
 Review the `mip::ExecutionState` concepts documentation for more details on execution state.
 
@@ -36,6 +36,9 @@ auto handler = mEngine->CreatePolicyHandler(true);
 
 // Returns vector of mip::Action and generates discovery event.
 auto actions = handler->ComputeActions(*state);
+
+//Or, get the label for a given state
+auto label = handler->GetSensitivityLabel(*state);
 ```
 
 In practice, the `mip::PolicyHandler` should be created with this field set to true when it's desirable to surface information to Azure Information Protection Analytics about files applications and users are reading.
