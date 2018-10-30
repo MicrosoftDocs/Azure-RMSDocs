@@ -2,18 +2,18 @@
 title: Concepts - Implementing ExecutionState in the Microsoft Information Protection SDK
 description: This article will help you understand how to use the ExecutionState in the Microsoft Information Protection SDK to compute actions and provide details for audit logging.
 services: information-protection
-author: BryanLa
+author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 10/22/2018
-ms.author: bryanla
+ms.author: tommos
 ---
 
 # Implement ExecutionState
 
 Passing information into the MIP SDK to compute an action that should be taken, based on the current state and desired state, is implemented via the `mip::ExecutionState` class. Like other classes in the SDK, the `ExecutionState` is an abstract class and must be implemented by the developer.
 
-> For a complete example of an `ExecutionState` implementation, see the following: 
+> For a complete example of an `ExecutionState` implementation, review the following sample source:
 >
 > * [execution_state_impl.h](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/execution_state_impl.h)
 > * [execution_state_impl.cpp](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/execution_state_impl.cpp)
