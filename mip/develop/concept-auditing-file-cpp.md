@@ -17,23 +17,28 @@ auto handler = handlerFuture.get();
 
 ## Commit Events
 
-Once the application has committed an action to the file, the last step is to call `NotifyCommitSuccessful()`, 
+Once the application has committed an action to the file, the last step is to call `NotifyCommitSuccessful()` to submit metadata from the handler to the audit pipeline.
 
 ```cpp
+// Create labeling options, set label
+string contentId = "C:\users\billg\Documents\MyPlan.docx";
 mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
 handler->SetLabel(labelId, labelingOptions);
 auto commitPromise = std::make_shared<std::promise<bool>>();
 auto commitFuture = commitPromise->get_future();
 
+// CommitAsync() returns a bool. If the change was successful, call NotifyCommitSuccessful().
 fileHandler->CommitAsync(outputFile, commitPromise);
 if(commitFuture.get()) {
-    handler->NotifyCommitSuccessful("C:\users\billg\Documents\MyPlan.docx");
+
+    // Submit audit event.
+    handler->NotifyCommitSuccessful(contentId);
 }
 ```
 
 ## Audit Dashboard
 
-Events submitted to the Azure Information Protection audit pipeline will surface in reports. The value provided to `mip::ApplicationInfo.applicationName` will be displayed in the report, indicating information about user, machine, application ID, before and after labels, and more.
+Events submitted to the Azure Information Protection audit pipeline will surface in reports. The client ID provided 
 
 ## Next Steps
 
