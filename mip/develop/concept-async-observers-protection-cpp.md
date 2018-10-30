@@ -20,7 +20,7 @@ When an asynchronous operation completes, the `OnXxx()` member function correspo
 
 The examples below demonstrate the promise/future pattern, which is also used by the SDK samples, and can be extended to implement the desired callback behavior. 
 
-## Protection Protection Observer Implementation
+## ProtectionProfile Observer Implementation
 
 In the following example, we've created a class, `ProtectionProfileObserverImpl` that is derived from `mip::ProtectionProfile::Observer`. The member functions have been overridden to use the promise/future pattern used throughout the samples.
 
