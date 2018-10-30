@@ -20,7 +20,7 @@ Passing information into the MIP SDK to compute an action that should be taken, 
 
 ## mip::ExecutionState Members
 
-`ExecutionState` exposes the following virtual members. Each provides some context to the policy engine to return information on which actions ought to be taken by the application. Additionally, this information may be used to 
+`ExecutionState` exposes the following virtual members. Each provides some context to the policy engine to return information on which actions ought to be taken by the application. Additionally, this information may be used to provide audit information to the Azure Information Protection Reporting feature.
 
 
 | Member                                                                           | Returns                                                                                                              |
