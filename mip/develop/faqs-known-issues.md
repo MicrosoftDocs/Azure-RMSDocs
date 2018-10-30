@@ -36,7 +36,7 @@ The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transfor
 
 | Error | Solution |
 |-|-|
-|*File format not supported*| This exception results from attempting to protect a PDF file, that has been digitally signed or password protected. See [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) for more information on using the Protection API with PDF files.|
+|*File format not supported*| This exception results from attempting to protect or label a PDF file, that has been digitally signed or password protected. See [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) for more information on protecting and labeling PDF files.|
 
 ### Error: "Failed to parse the acquired Compliance Policy"  
 
