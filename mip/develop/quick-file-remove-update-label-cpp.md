@@ -21,20 +21,12 @@ If you haven't already, be sure to complete the following prerequisites before c
 - Complete [Quickstart: Set and get a sensitivity label (C++)](quick-file-set-get-label-cpp.md)
 - Optionally: Review [File handlers in the MIP SDK](concept-handler-file-cpp.md) concepts.
 
-## Add logic to set and get a sensitivity label
+## Add logic to remove a label
 
-Add logic to set and get a sensitivity label on a file, using the File engine object.
+Add logic to remove a sensitivity label on a file, using the File engine object.
 
 1. Using **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It defaults to the same name as the project containing it, which you specified during project creation. 
-
-2. Add the following `#include` and `using` directives, below the corresponding existing directives, at the top of the file:
-
-   ```cpp
-   #include "filehandler_observer.h" 
-   #include "mip/file/file_handler.h" 
-
-   using mip::FileHandler;
-   ```
+   
 3. Toward the end of the `main()` body, below `system("pause");` and above `return 0;` (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
