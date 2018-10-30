@@ -56,8 +56,8 @@ struct ExecutionStateOptions {
 };
 ```
 
-Each property is set by the application and then `ExecutionSateOptions` is passed in to the constructor of the class derived from `mip::ExecutionState`. This information is used to determine the actions to take. If the `mip::PolicyHandler` was initialized with **isAuditDiscoveryEnabled** set to true, the engine will calculate the action and submit information about the event to the Azure Information Protection auditing pipeline.
+Each property is set by the application and then `ExecutionSateOptions` is passed in to the constructor of the class derived from `mip::ExecutionState`. This information is used to determine the actions to take. Data provided in the `mip::ExecutionState` will also surface in Azure Information Protection Analytics.
 
 ### Next Steps
 
-Next, learn more about [computing actions](concept-policy-computeactions.md). By providing the execution state to the Policy Handler, the list of tasks to be performed will be returned to the application.
+Next, learn more about [computing actions](concept-policy-computeactions.md).
