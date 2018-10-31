@@ -200,7 +200,6 @@ With the scanner's default configuration, you're now ready to run your first sca
     
     Alternatively, you can start the scanner from the **Azure Information Protection** blade in the Azure portal, when you use the **Scanner** > **Nodes (Preview)** > \**<*scanner node*>**> **Scan now** option.
 
-<<<<<<< HEAD
 2. Wait for the scanner to complete its cycle by running the following command:
     
     Get-AIPScannerStatus
