@@ -224,7 +224,7 @@ This label is not suitable for emails.
 7. Click **OK** on the **Protection** blade, and then click **Save** on the **Label** blade.
 
 
-### Example 3: Add external users to an existing label
+### Example 3: Add external users to an existing label that protects content
 
 The new users that you add will be able open documents and emails that have already been protected with this label. The permissions that you grant these users can be different from the permissions that the existing users have.
 
