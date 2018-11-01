@@ -1,3 +1,14 @@
+---
+title: Concepts - Auditing in the Microsoft Information Protection SDK File API
+description: This article will help you understand how to use the Microsoft Information Protection SDK to submit File API auditing events to Azure Information Protection Analytics.
+services: information-protection
+author: tommoser
+ms.service: information-protection
+ms.topic: conceptual
+ms.date: 11/1/2018
+ms.author: tommos
+---
+
 # Auditing in the MIP SDK File API
 
 The Azure Information Protection administration portal provides access to reports that give the administrator visibility in to which labels users are applying, manually or automatically, across any applications any services that have integrated the MIP SDK. Development partners using the SDK can easily enable this functionality so that information from their applications will surface in customer reports.
