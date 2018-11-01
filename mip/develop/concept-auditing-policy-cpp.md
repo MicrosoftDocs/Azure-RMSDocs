@@ -26,7 +26,7 @@ Discovery events provide information on labeled information that is read or cons
 
 Discovery events are generated in the Policy API by setting a bool flag when creating the `mip::PolicyHandler` object via the `mip::PolicyEngine`. In the example below, the value for **isAuditDiscoveryEnabled** is set to true. When the `mip::ExecutionState` is passed in to `ComputeActions()` or `GetSensitivityLabel()`, with existing metadata information and content identifier, that discovery information will be submitted to Azure Information Protection Analytics.
 
-The discovery audit is generated once the applicaiton calls `ComputeActions()` or `GetSensitivityLabel()` and provides `mip::ExecutionState`. This event is generated only once per handler.
+The discovery audit is generated once the application calls `ComputeActions()` or `GetSensitivityLabel()` and provides `mip::ExecutionState`. This event is generated only once per handler.
 
 Review the `mip::ExecutionState` concepts documentation for more details on execution state.
 
