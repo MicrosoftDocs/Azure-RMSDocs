@@ -1,6 +1,6 @@
 ---
 title: Concepts - Using the Microsoft Information Protection SDK to generate audit events
-description: This article will help you understand how to use the Microsoft Information Protection SDK to generate audit events that will surface in the Azure Information Protection audit reports.
+description: This article will help you understand how to use the Microsoft Information Protection SDK to compute .
 services: information-protection
 author: tommoser
 ms.service: information-protection
