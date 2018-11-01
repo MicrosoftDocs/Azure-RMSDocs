@@ -19,7 +19,7 @@ Sample code for this article can be found on GitHub.
 
 ## Compute an Action for a New Label
 
-Computing the `mip::Actions` for a new label can be achieved by using the `ExecutionStateImpl` defined in the [ExecutionState](concept-policy-executionstate.md) section.
+Computing the `mip::Actions` for a new label can be achieved by using the `ExecutionStateImpl` defined in  [ExecutionState](concept-auditing-policy-executionstate-cpp.md).
 
 ```cpp
 // Replace with valid label ID.
