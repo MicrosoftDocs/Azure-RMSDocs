@@ -4,12 +4,12 @@ description: This article will help you understand how Policy API handlers are c
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 10/29/2018
+ms.date: 11/01/2018
 ms.author: tommos
 ---
 # Microsoft Information Protection SDK - Policy handler concepts
 
-In the MIP SDK Policy API, the `mip::PolicyHandler` exposes all of the various operations that can be used to compute policy actions and submit audit events.
+In the Policy API, `mip::PolicyHandler` exposes the various operations that can be used to compute policy actions and submit audit events.
 
 ## Policy handler functions
 
@@ -30,13 +30,14 @@ Creating a `PolicyHandler` requires:
 
 ## Create a policy handler
 
-The first step required in obtaining policy actions in the Policy API is to a create a `PolicyHandler` object. This class implements the functionality required to get the list of actions a specific label must take, as well as the function to trigger an audit event.
+The first step required in obtaining policy actions in the Policy API, is to a create a `PolicyHandler` object. This class implements the functionality required to get the list of actions a specific label must take, as well as the function to trigger an audit event.
 
 Creating the `PolicyHandler` is as easy as calling the `PolicyEngine`'s `CreatePolicyHandlerAsync` function using the promise/future pattern.
 
 `CreatePolicyHandlerAsync` accepts a single parameter: **isAuditDiscoveryEnabled**. Set this value to **true** if the application should surface heartbeat events in audit logging.
 
-**Note:** The `mip::PolicyHandler::Observer` class must be implemented in a derived class as `CreatePolicyHandler` requires the `Observer` object. 
+> [!NOTE]
+> The `mip::PolicyHandler::Observer` class must be implemented in a derived class as `CreatePolicyHandler` requires the `Observer` object. 
 
 ```cpp
 auto createPolicyHandlerPromise = std::make_shared<std::promise<std::shared_ptr<mip::PolicyHandler>>>();
@@ -73,7 +74,7 @@ auto handler = mEngine->CreatePolicyHandler(false); // Don't generate audit even
 auto actions = handler->ComputeActions(*state);
 ```
 
-Writing just the `mip::MetadataActions` returned as part of `actions` displays the following:
+Writing just the `mip::MetadataActions` returned as part of `actions` displays:
 
 ```cpp
 Add: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_Enabled : true
@@ -87,13 +88,15 @@ Add: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ContentBits : 3
 
 The `PolicyHandler` computes the actions and returns a `std::vector` of `mip::Action`. It's up to the application developer to apply this metadata to the file or data.
 
-> Note: The example above displays only the `mip::MetadataAction` output. For an example of displaying additional action types, review the sample bundles with the [policy API download](https://aka.ms/mipsdkbins).
+> [!NOTE]
+> The example above displays only the `mip::MetadataAction` output. For an example of displaying additional action types, review the sample bundles with the [policy API download](https://aka.ms/mipsdkbins).
 
 ## Compute Actions with an Existing Label
 
-When using the Policy API, it's up to the application to read metadata from the content. This metadata is provided to the API as part of the `mip::ExecutionState`. `ComputeActions()` can handle more complex operations than applying a new label to an unlabeled document. The example below demonstrates downgrading a label from a more sensitive label to a less sensitive label, where a label already exists. This is simulated by reading in a comma-separated string of metadata, and providing to the API via `mip::ExecutionState`.
+When using the Policy API, it's up to the application to read metadata from the content. This metadata is provided to the API as part of the `mip::ExecutionState`. `ComputeActions()` can handle more complex operations than applying a new label to an unlabeled document. The example below demonstrates downgrading a label from a more sensitive label to a less sensitive label, where a label already exists. This process is simulated by reading in a comma-separated string of metadata, and providing to the API via `mip::ExecutionState`.
 
-> Note: The sample uses a utility function called `SplitString()`. An example can be found [here](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-advanced/blob/master/mipsdk-policyapi-cpp-sample-advanced/utils.cpp)
+> [!NOTE]
+> The sample uses a utility function called `SplitString()`. An example can be found [here](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-advanced/blob/master/mipsdk-policyapi-cpp-sample-advanced/utils.cpp)
 
 ```cpp
 // Replace with valid label ID.
