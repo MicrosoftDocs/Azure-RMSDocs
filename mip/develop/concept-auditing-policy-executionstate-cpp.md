@@ -60,4 +60,4 @@ Each property is set by the application and then `ExecutionSateOptions` is passe
 
 ### Next Steps
 
-Next, learn more about [computing actions](concept-policy-computeactions.md).
+Next, learn more about [computing actions](concept-auditing-policy-computeactions-cpp.md).
