@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/15/2018
+ms.date: 11/02/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -308,9 +308,7 @@ As a result of this registry edit, the following scenarios are supported:
 
 - The Azure Information Protection viewer can open these protected files.
 
-- File Explorer and PowerShell can unprotect these files, or reprotect them with Azure Information Protection.
-
-- File Explorer, PowerShell, and the Azure Information Protection scanner can label these files.
+- File Explorer, PowerShell, and the Azure Information Protection scanner can label these files. As a result, you can apply an Azure Information Protection label that applies new protection from Azure Information Protection, or that removes the existing protection from Secure Islands.
 
 - The Azure Information Protection scanner can inspect these files for sensitive information.
 
