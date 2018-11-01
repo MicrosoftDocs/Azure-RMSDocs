@@ -308,11 +308,11 @@ As a result of this registry edit, the following scenarios are supported:
 
 - The Azure Information Protection viewer can open these protected files.
 
-- File Explorer, PowerShell, and the Azure Information Protection scanner can label these files. As a result, you can apply an Azure Information Protection label that applies new protection from Azure Information Protection, or that removes the existing protection from Secure Islands.
-
 - The Azure Information Protection scanner can inspect these files for sensitive information.
 
-- You can use the [labeling migration client customization](#migrate-labels-from-secure-islands-and-other-labeling-solutions) to convert the Secure Islands label on these protected files to an Azure Information Protection label.
+- File Explorer, PowerShell, and the Azure Information Protection scanner can label these files. As a result, you can apply an Azure Information Protection label that applies new protection from Azure Information Protection, or that removes the existing protection from Secure Islands.
+
+- You can use the [labeling migration client customization](#migrate-labels-from-secure-islands-and-other-labeling-solutions) to automatically convert the Secure Islands label on these protected files to an Azure Information Protection label.
 
 ## Migrate labels from Secure Islands and other labeling solutions
 
