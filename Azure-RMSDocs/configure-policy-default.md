@@ -39,7 +39,7 @@ This version of the default policy is from July 31, 2017.
 
 This version of the default policy is created from the date stated when the Azure Rights Management protection service is already activated. 
 
-For [new tenants starting February 2018](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection), this protection service is automatically activated. Or, You might have [manually [activated](activate-service.md) the service. 
+For [new tenants starting February 2018](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection), this protection service is automatically activated. Or, you might have [manually activated](activate-service.md) the service. 
 
 If the protection service is not activated at the time this version of the default policy is created, the following sublabels are not  configured to apply protection:
 
