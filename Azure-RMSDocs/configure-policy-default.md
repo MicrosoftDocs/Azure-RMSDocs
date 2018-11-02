@@ -6,7 +6,7 @@ description: Understand how the default policy for Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
+ms.date: 11/03/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
@@ -37,11 +37,11 @@ You can reference the following values to return your policy to the defaults, or
 
 This version of the default policy is from July 31, 2017.
 
-This default policy is created when the Azure Rights Management service is activated, which is the case for new tenants starting February 2018. For more information, see the blog post announcement [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection).
+This version of the default policy is created from the date stated when the Azure Rights Management protection service is already activated. 
 
-This default policy is also created if you have manually [activated the service](activate-service.md) before the policy was created. 
+For [new tenants starting February 2018](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection), this protection service is automatically activated. Or, You might have [manually [activated](activate-service.md) the service. 
 
-If the service was not activated, the default policy does not configure protection for the following sublabels:
+If the protection service is not activated at the time this version of the default policy is created, the following sublabels are not  configured to apply protection:
 
 - **Confidential \ All Employees**
 
@@ -51,9 +51,9 @@ If the service was not activated, the default policy does not configure protecti
 
 - **Highly Confidential \ Recipients Only** 
 
-When these sublabels are not automatically configured for protection, the default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017).
+Instead, the default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017).
 
-When protection is applied to the **All Employees** sublabels, the protection is configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
+When these sublabels are configured to apply protection, the **All Employees** sublabels are configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
 Starting August 30, 2017, this version of the default policy includes multi-language versions of the label names and descriptions. 
 
@@ -114,7 +114,9 @@ The protection permissions match those in the [default template](configure-polic
 
 ## Default policy before July 31, 2017
 
-Note that descriptions in this policy refer to data that requires protection, and also to data tracking and revoking. The policy does not configure this protection for these labels, so you must take additional steps to fulfill this description. For example, configure the label to apply protection or use a data loss prevention (DLP) solution. Before you can track and revoke a document by using the document tracking site, the document must be protected by the Azure Rights Management service and tracked by the person who protected the document. 
+Note that descriptions in this policy refer to data that requires protection, and also to data tracking and revoking. This version of the default policy does not configure this protection for these labels, so you must take additional steps to fulfill this description. For example, manually configure the label to apply protection, or use a data loss prevention (DLP) solution to supplement the labels. 
+
+Before you can track and revoke a document by using the document tracking site, the document must be protected by the Azure Rights Management service and tracked by the person who protected the document. 
 
 
 ### Labels
