@@ -41,7 +41,7 @@ This version of the default policy is created from the date stated when the Azur
 
 For [new tenants starting February 2018](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection), this protection service is automatically activated. Or, you might have [manually activated](activate-service.md) the service. 
 
-If the protection service is not activated at the time this version of the default policy is created, the following sublabels are not  configured to apply protection:
+If the protection service is not activated at the time this version of the default policy is created, the following sublabels do not include applying protection as part of their configuration:
 
 - **Confidential \ All Employees**
 
