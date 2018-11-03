@@ -31,7 +31,7 @@ Have a question about Azure Information Protection that is specifically about cl
 
 ## What can I do with the classification capabilities in Azure Information Protection?
 
-Try our quick start tutorial to see this working in just a few minutes: [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
+Try our [Editing labels and settings](infoprotect-quick-start-tutorial.md) tutorial to see this working in just a few minutes.
 
 Look out for announcements on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional classification features and capabilities become available. There are a few limitations with the current release, which include the following:
 

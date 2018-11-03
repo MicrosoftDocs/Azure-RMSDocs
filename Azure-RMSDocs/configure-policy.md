@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
@@ -98,35 +98,7 @@ Next time you access the **Azure Information Protection** blade, it automaticall
 3. To view and edit the policies, select **Policies** from the menu options. To view and edit the policy that all users get, select the **Global** policy. To create a custom policy for selected users, select **Add a new policy**.
     
 
-### Overview of the policy
-
-An Azure Information Protection policy contains the following elements that you can configure:
-    
-- Which labels are included that let administrators and users classify (and optionally, protect) documents and emails.
-
-- Title and tooltip for the Information Protection bar that users see in their Office applications.
-
-- The option to set a default label as a starting point for classifying documents and emails.
-
-- The option to enforce classification when users save documents and send emails.
-
-- The option to prompt users to provide a reason when they select a label that has a lower sensitivity level than the original.
-
-- The option to automatically label an email message, based on its attachments.
-
-- The option to control whether the Information Protection bar is displayed in Office applications.
-
-- The option to control whether the Do Not Forward button is displayed in Outlook.
-
-- The option to let users specify their own permissions for documents.
-
-- The option to provide a custom help link for users.
-
-Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. Two of these labels contain sublabels to provide subcategories, when needed. When a label is configured for sublabels, users cannot select the main label but must select one of the sublabels.
-
-The Azure Information Protection labels can be used with the full range of data that an organization typically creates and stores, from the lowest classification of personal data, to the highest classification of highly confidential data. 
-
-You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels. For more information, use the links in the next section to help you locate the relevant options and how to configure them.
+### Making changes to the policy
 
 You can create any number of labels. However, when they start to get too many for users to easily see and select the right label, create scoped policies so that users see only the labels that are relevant to them. There is an upper limit for labels that apply protection, which is 500.
 
@@ -178,7 +150,7 @@ Use the following information to help you configure the Azure Information Protec
 
 ## Next steps
 
-For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
+For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Editing labels and settings](infoprotect-quick-start-tutorial.md) tutorial.
 
 To see how your policy is performing, see [Reporting for Azure Information Protection](reports-aip.md).
 
