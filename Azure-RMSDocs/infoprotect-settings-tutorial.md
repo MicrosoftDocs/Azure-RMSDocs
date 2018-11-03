@@ -121,7 +121,7 @@ The **General** label is still selected, but it's much less obvious. It's also l
 
 ![Azure Information Protection tutorial - Protect button selected](./media/infoprotect-protectbutton-pulldown.png)
 
-Now, from the pull-down menu, you see that the **General** label is selected. To change the currently selected label, select a different label from the list. When users are new to labeling, they probably won't remember to select the **Protect** button each time.
+Now, from the pull-down menu, you see that the **General** label is selected because it has a check mark next to it. To change the currently selected label, users can select a different label from the list. When users are new to labeling, they probably won't remember to select the **Protect** button each time. They also might not realize that they can select another label.
 
 To display the Information Protection bar again, select **Show Bar** from the pull-down menu.
 
@@ -138,7 +138,7 @@ If we hadn't changed that setting, the Information Protection bar shows this ico
 
 Together with a default label, mandatory labeling ensures that new and edited documents (and emails) have a base classification of your choosing. 
 
-If we hadn't set a default label with the mandatory labeling setting, users are always prompted to select a label when they save an unlabeled document or send an unlabeled email. For many users, these continual prompts can be frustrating and also result in less accurate labeling. For them to be prompted to select a label when they've finished working on a document or email interrupts their workflows, and there's a temptation for them to select any label at random so they can move onto the next thing they need to do.
+If we hadn't set a default label with the mandatory labeling setting, users are always prompted to select a label when they save an unlabeled document or send an unlabeled email. For many users, these continual prompts can be frustrating and also result in less accurate labeling. For them to be prompted to select a label when they've finished working on a document or email interrupts their workflows, and there's then a temptation for them to select any label at random so they can move onto the next thing they need to do.
 
 ### Recommendations for emails with attachments
 
@@ -152,7 +152,7 @@ Add the Word document you just labeled as an attachment to the email message. Yo
 
 If you click **Dismiss**, the new label is not applied but you see how the email is still labeled with the default label that we configured, **General**. The available labels are still visible to select as an alternative.
 
-If you select **Change now**, the email is relabeled to the  **Confidential** sublabel. However, users can still change the label before sending the email, by selecting the Edit Label icon:
+If you select **Change now**, the email is relabeled to the  **Confidential** sublabel. However, users can still change the label before sending the email, by selecting the Edit Label:
 
 ![Azure Information Protection tutorial - prompt to relabel email to match labeled attachment](./media/infoprotect-editlabel-icon.png)
 
