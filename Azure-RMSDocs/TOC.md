@@ -15,7 +15,7 @@
 
 # [Tutorials](infoprotect-quick-start-tutorial.md)
 ## [Editing labels and settings](infoprotect-quick-start-tutorial.md)
-
+## [Configuring policy settings to help classify documents and emails](infoprotect-settings-tutorial.md)
 # [Concepts](overview-policy.md)
 ## [Overview of the Azure Information Protection policy](overview-policy.md)
 ## [Rights Management protection](what-is-azure-rms.md)
