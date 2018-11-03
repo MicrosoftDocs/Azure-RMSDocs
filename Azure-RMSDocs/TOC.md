@@ -6,6 +6,7 @@
 ### [Client device support for data protection](requirements-client-devices.md)
 ### [Application support for data protection](requirements-applications.md)
 ### [On-premises server support for data protection](requirements-servers.md)
+
 # [Quickstarts](/azure/information-protection/quickstart-viewpolicy)
 ## [Get started in the Azure portal](quickstart-viewpolicy.md)
 ## [Find what sensitive information you have](quickstart-findsensitiveinfo.md)
