@@ -36,7 +36,7 @@ The most successful deployments are those that identify specific use cases that 
 |----------------|---------------|
 |Find what sensitive information my organization stores on-premises|[Quickstart: Find what sensitive information you have in files stored on-premises](quickstart-findsensitiveinfo.md)|
 |Make it easy for users to protect their emails that contain sensitive information|[Quickstart: Configure a label for users to easily protect emails that contain sensitive information](quickstart-label-dnf-protectedemail.md)|
-|Make it easy for users to classify data as it's created or edited, and protect it if it contains sensitive information| [Tutorial: Create a new label and change policy settings](infoprotect-quick-start-tutorial.md)|
+|Make it easy for users to classify data as it's created or edited, and protect it if it contains sensitive information| [Tutorial: Edit the policy and create a new label](infoprotect-quick-start-tutorial.md)|
 |Make it easy for users to collaborate on a protected document|[Configuring secure document collaboration by using Azure Information Protection](secure-collaboration-documents.md)|
 |Automatically protect users' emails that are sent outside the organization| [Configuring mail flow rules for Azure Information Protection labels](configure-exo-rules.md)
 |Automatically classify and protect existing data in my on-premises data stores|[Deploying the Azure Information Protection scanner](deploy-aip-scanner.md)|

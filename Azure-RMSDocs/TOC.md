@@ -14,8 +14,8 @@
 ## [Create a new label for specific users](quickstart-label-specificusers.md)
 
 # [Tutorials](infoprotect-quick-start-tutorial.md)
-## [Editing labels and settings](infoprotect-quick-start-tutorial.md)
-## [Configuring policy settings to help classify documents and emails](infoprotect-settings-tutorial.md)
+## [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md)
+## [Configure policy settings that work together](infoprotect-settings-tutorial.md)
 # [Concepts](overview-policy.md)
 ## [Overview of the Azure Information Protection policy](overview-policy.md)
 ## [Rights Management protection](what-is-azure-rms.md)
