@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/19/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
@@ -117,8 +117,6 @@ For information about which Office editions support the protection service, see 
 If you have a firewall or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are included in the Office article, [Office 365 URLs and IP address ranges](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2). See the **Microsoft 365 Common and Office Online** section.
 
 In addition to the information in the Office article, specific to Azure Information Protection:
-
-- Allow HTTPS traffic on TCP 443 to **informationprotection.hosting.portal.azure.net**.
 
 - If you use a web proxy that requires authentication, you must configure it to use integrated Windows authentication with the user's Active Directory logon credentials.
 
