@@ -169,7 +169,7 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 
 To learn more about the Azure Rights Management service, use the other articles in the **Understand & Explore** section, such as [How applications support the Azure Rights Management service](applications-support.md) to learn how your existing applications can integrate with Azure Rights Management to provide an information protection solution. 
 
-Review [Terminology for Azure Information Protection](./terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using the Azure Rights Management service, and be sure to also check [Requirements for Azure Information Protection](requirements.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Editing labels and settings](infoprotect-quick-start-tutorial.md) tutorial.
+Review [Terminology for Azure Information Protection](./terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using the Azure Rights Management service, and be sure to also check [Requirements for Azure Information Protection](requirements.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md) tutorial.
 
 If you’re ready to start deploying data protection for your organization, use the [Azure Information Protection deployment roadmap](deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 

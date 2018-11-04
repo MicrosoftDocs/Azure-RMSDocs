@@ -63,5 +63,5 @@ The Azure Information Protection client checks for any changes whenever a suppor
 
 ## Next steps
 
-For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Editing labels and settings](infoprotect-quick-start-tutorial.md) tutorial.
+For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md) tutorial.
 

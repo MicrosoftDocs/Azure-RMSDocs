@@ -57,5 +57,5 @@ You can use the default labels without changes, or you can customize them, or yo
 
 ## Next steps
 
-For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the following tutorial: [Editing labels and settings](infoprotect-quick-start-tutorial.md).
+For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the following tutorial: [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md).
 

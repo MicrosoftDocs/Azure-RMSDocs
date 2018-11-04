@@ -96,6 +96,6 @@ The first time you connect to the Azure Information Protection service by using 
 
 ## Next steps
 
-Now that you've seen the labels and policy settings in the Azure portal, you might find the following tutorial helpful as your next step: [Editing labels and settings for Azure Information Protection](infoprotect-quick-start-tutorial.md).
+Now that you've seen the labels and policy settings in the Azure portal, you might find the following tutorial helpful as your next step: [Edit the policy and create a new label for Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
 Alternatively, for detailed instructions for configuring all aspects of the Azure Information Protection policy, see [Configuring the Azure Information Protection policy](configure-policy.md).

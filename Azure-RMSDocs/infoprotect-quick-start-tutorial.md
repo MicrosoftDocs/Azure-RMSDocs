@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Tutorial - Editing labels and settings for Azure Information Protection
+title: Tutorial - Edit the Azure Information Protection policy and create a new label
 description: An introduction tutorial that edits the Azure Information Protection policy for your organization that should take you about 15 minutes to complete.
 author: cabailey
 ms.author: cabailey
@@ -22,7 +22,7 @@ ms.service: information-protection
 #Customer intent: As an administrator, I want to make it easy for users to classify data as it's created and protect it if it contains sensitive information
 ---
 
-# Tutorial: Editing labels and settings for Azure Information Protection
+# Tutorial: Edit the Azure Information Protection policy and create a new label
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 

@@ -154,7 +154,7 @@ For a rollup of announcements that were made at this Ignite, see the blog post [
 
 Read the blog post, [Azure Information Protection: Ready, set, protect!](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
 
-Configure and see Azure Information Protection for yourself, with our [quickstarts](quickstart-viewpolicy.md) and [Editing labels and settings](infoprotect-quick-start-tutorial.md) tutorial. Or, if you're ready to deploy this service for your organization, head over to the [how-to guides for common scenarios](how-to-guides.md).
+Configure and see Azure Information Protection for yourself, with our [quickstarts](quickstart-viewpolicy.md) and [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md) tutorial. Or, if you're ready to deploy this service for your organization, head over to the [how-to guides for common scenarios](how-to-guides.md).
 
 Perhaps you know Azure Information Protection by another name? See our [list of alternative terms for the service](aka.md).
 
