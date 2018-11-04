@@ -162,6 +162,16 @@ Because the label is selected before sending the email, there's no need to actua
 
 However, you might want to try repeating this exercise but also attach another document that has a higher classification (a sublabel from the **Highly Confidential** label). Then, you'll see how the prompt changes to apply the higher classification label.
 
+## Clean up resources
+
+Do the following if you do not want to keep the changes that you made in this tutorial:
+
+1. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade.
+
+2. Return the policy settings to their original values that you took a note of, and then select **Save**.
+
+Restart your Word and Outlook apps to download these changes.
+
 ## Next steps
 
 For more information about editing the Azure Information Protection policy settings see [How to configure the policy settings for Azure Information Protection](configure-policy-settings.md).

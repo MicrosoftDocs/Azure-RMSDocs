@@ -80,7 +80,7 @@ Using the Azure portal, we'll first change a couple of policy settings, and then
 
 2. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade. 
 
-3. Locate the policy settings after the labels, in the **Configure settings to display and apply on Information Protection end users** section. If you haven't changed these settings from their defaults, you see there is no default label set, documents and emails aren't required to have a label, and users don't have to provide justification when they change labels:
+3. Locate the policy settings after the labels, in the **Configure settings to display and apply on Information Protection end users** section. Make a note of the current settings. If you haven't changed these settings from their defaults, you see there is no default label set, documents and emails aren't required to have a label, and users don't have to provide justification when they change labels:
     
     ![Azure Information Protection tutorial - default policy](./media/info-protect-policy-default-settings.png)
     
@@ -92,7 +92,9 @@ Using the Azure portal, we'll first change a couple of policy settings, and then
 
 5. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this option to **On**.
 
-6. Select **Save** on this **Policy: Global** blade, and if you're prompted to confirm your action, select **OK**. Close this blade.
+6. In addition, make sure that **Display the Information Protection bar in Office apps** is set to **On**.
+
+7. Select **Save** on this **Policy: Global** blade, and if you're prompted to confirm your action, select **OK**. Close this blade.
 
 ### Create a new label for protection, visual markers, and a condition to prompt for classification
 
@@ -195,7 +197,7 @@ Open a new document in Word. Because the Azure Information Protection client is 
 
 - On the **Home** tab, a **Protection** group, with a button named **Protect**.
     
-    Click **Protect** > **Help and Feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Connected as** and your user name. In addition, you should also see a recent time and date for the last connection and when the Information Protection policy was installed. Verify that your displayed user name is correct for your tenant.
+    Click **Protect** > **Help and Feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Connected as** and your user name. In addition, you should also see a recent time and date for the last connection and when the Information Protection policy was downloaded. Verify that your displayed user name is correct for your tenant.
 
 - A new bar under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the labels that we saw in the Azure portal.
 
@@ -229,7 +231,7 @@ On the Information Protection bar, click the **Edit Label** icon again. But inst
 
 This time when you're prompted, type "This document doesn't need classifying", and click **Confirm**.  
 
-You see the **Sensitivity** value display **Not set**, which is what users see initially if you don't set a default label.
+You see the **Sensitivity** value display **Not set**, which is what users see initially for new documents if you don't set a default label as a policy setting.
 
 ### To see a recommendation prompt for labeling and automatic protection
 
@@ -248,6 +250,23 @@ You see the **Sensitivity** value display **Not set**, which is what users see i
     Because of the protection configuration of the label, only employees can open the document and some actions are restricted for them. For example, because they don't have the Print and the Copy and extract content permissions, they can't print the document or copy from it. Such restrictions help to prevent data loss. As the owner of the document, you can print it and copy from it. However, if you email the document to another user in your organization, they cannot do these actions.
 
 4. You can now close this document.
+
+## Clean up resources
+
+Do the following if you do not want to keep the changes that you made in this tutorial:
+
+1. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade.
+
+2. Return the policy settings to their original values that you took a note of, and then select **Save**. The default values:
+    
+    -  **Select the default label**: **None**
+    -  **Users must provide justification to set a lower classification label, remove a label, or remove protection**: **Off**
+
+3. From the **Classifications** > **Label** menu option: On the **Azure Information Protection - Label** blade, select the context menu (**...**) for the **Finance** label you created.
+
+4. Select **Delete this label** and if you're asked to confirm, select **OK**.
+
+Restart Word to download these changes.
 
 ## Next steps
 
