@@ -52,10 +52,14 @@ Azure Information Protection comes with a [default policy](configure-policy-defa
 
 The Azure Information Protection labels can be used with the full range of data that an organization typically creates and stores, from the lowest classification of personal data, to the highest classification of highly confidential data. 
 
-You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels. For instructions, see [Configuring the Azure Information Protection policy](configure-policy.md).
+You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels. For full instructions, see [Configuring the Azure Information Protection policy](configure-policy.md).
 
 
 ## Next steps
 
-For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the following tutorial: [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md).
+For examples of how to customize the Azure Information Protection policy, and see the resulting behavior for users, try the following tutorials:
+
+- [Edit the Azure Information Protection policy and create a new label and create a new label](infoprotect-quick-start-tutorial.md)
+
+- [Configure Azure Information Protection policy settings that work together](infoprotect-settings-tutorial.md) [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md)
 
