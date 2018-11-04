@@ -55,7 +55,7 @@ To complete this quickstart, you need:
     
     To try the label for yourself, you can install the client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
 
-For a full list of prerequisites for the service, see [Requirements for Azure Information Protection](requirements.md).
+For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 
 ## Configure an existing label to apply the Do Not Forward protection
 
@@ -89,7 +89,7 @@ Your configured label displays only in Outlook and is suitable for emails sent t
 
 2. Specify the recipients, some text for the email message, and then apply the label that you just created. 
     
-    The email message is classified according to the label name, and protected with the Do Not Forward restriction. 
+    The email message is classified according to the label name, and protected with the Do Not Forward restriction.
 
 3. Send the email. 
 

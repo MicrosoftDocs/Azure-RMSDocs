@@ -65,6 +65,7 @@ To complete this tutorial, you need:
     
     - Office Professional Plus 2010 with Service Pack 2.
 
+For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 
 Let's get started.
 

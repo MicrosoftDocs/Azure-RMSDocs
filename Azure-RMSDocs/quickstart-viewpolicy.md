@@ -35,7 +35,7 @@ To complete this quickstart, you need:
     
     If you don't have one of these subscriptions, you can create a [free](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
-For a full list of prerequisites for the service, see [Requirements for Azure Information Protection](requirements.md).
+For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 
 ## Add Azure Information Protection to the Azure portal
 

@@ -45,6 +45,8 @@ To complete this quickstart, you need:
 
 4. Your domain account is synchronized to Azure AD.
 
+For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
+
 ## Prepare a test folder and file
 
 For an initial test to confirm that the scanner is working:
