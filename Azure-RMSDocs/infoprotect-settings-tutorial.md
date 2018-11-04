@@ -164,7 +164,7 @@ However, you might want to try repeating this exercise but also attach another d
 
 ## Clean up resources
 
-Do the following if you do not want to keep the changes that you made in this tutorial:
+Do the following if you don't want to keep the changes that you made in this tutorial:
 
 1. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade.
 
