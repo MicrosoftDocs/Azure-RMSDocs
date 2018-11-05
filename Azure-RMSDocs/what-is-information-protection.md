@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
@@ -152,9 +152,4 @@ For a rollup of announcements that were made at this Ignite, see the blog post [
 
 ## Next steps
 
-Read the blog post, [Azure Information Protection: Ready, set, protect!](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
-
-Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial](infoprotect-quick-start-tutorial.md). Or, if you're ready to deploy this service for your organization, see the [Azure Information Protection deployment roadmap](deployment-roadmap.md).
-
-Perhaps you know Azure Information Protection by another name? See our [list of alternative terms for the service](aka.md).
-
+Configure and see Azure Information Protection for yourself, with our [quickstarts](quickstart-viewpolicy.md) and [tutorials](infoprotect-quick-start-tutorial.md). Or, if you're ready to deploy this service for your organization, head over to the [how-to guides for common scenarios](how-to-guides.md).
