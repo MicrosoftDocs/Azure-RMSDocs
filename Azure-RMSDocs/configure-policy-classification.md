@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/08/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
@@ -78,7 +78,7 @@ You can change this behavior so that the Azure Information Protection client per
 4. On the **Condition** blade, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own:
     - For **Information Types**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
-        The information types use the Office 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) from the Office documentation.
+        The information types use the Office 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](/office365/securitycompliance/what-the-sensitive-information-types-look-for) from the Office 365 documentation.
         
         The list of information types that you can select from the Azure portal is periodically updated to include any new Office DLP additions. However, the list excludes any custom sensitive information types that you have defined and uploaded as a rule package to the Office 365 Security & Compliance Center.
         
