@@ -68,13 +68,13 @@ To generate these reports, the endpoints send the following types of information
 
 - The label action. For example, set a label, change a label, add or remove protection, automatic and recommended labels.
 
-- The document label before and after the action.
+- The label name before and after the label action.
 
 - Your organization's tenant ID.
 
 - The user ID (email address or UPN).
 
-- The user's device name.
+- The name of the user's device.
 
 - For documents: The file path and file name of documents that are labeled.
 
@@ -86,7 +86,7 @@ To generate these reports, the endpoints send the following types of information
 
 - The client operating system version.
 
-Because this information is stored in an Azure Log Analytics workspace that you own, it's available to users who can access this workspace. For information about configuring this access, see the [Manage accounts and users](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) section from the Azure documentation.
+This information is stored in an Azure Log Analytics workspace that you own. If users can access this workspace, they can access this information independently from Azure Information Protection. For information about configuring access to your workspace, see the [Manage accounts and users](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) section from the Azure documentation.
 
 ## Prerequisites for Azure Information Protection analytics
 To view the Azure Information Protection reports and create your own, make sure that the following requirements are in place.
