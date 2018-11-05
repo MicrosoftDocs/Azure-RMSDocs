@@ -80,7 +80,7 @@ To generate these reports, the endpoints send the following types of information
 
 - For emails: The email subject, email sender, and email recipients for emails that are labeled. 
 
-- The sensitive information types ([predefined](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) and custom that you configured for a label) that were detected in content.
+- The sensitive information types ([predefined](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) and custom) that were detected in content.
 
 - The Azure Information Protection client version.
 
