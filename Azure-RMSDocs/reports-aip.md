@@ -6,7 +6,7 @@ description: How to use central reporting to track adoption of your Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/15/2018
+ms.date: 11/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -68,17 +68,25 @@ To generate these reports, the endpoints send the following types of information
 
 - The label action. For example, set a label, change a label, add or remove protection, automatic and recommended labels.
 
+- The document label before and after the action.
+
 - Your organization's tenant ID.
 
 - The user ID (email address or UPN).
 
-- The file path and file name of documents that are labeled.
+- The user's device name.
+
+- For documents: The file path and file name of documents that are labeled.
+
+- For emails: The email subject, email sender, and email recipients for emails that are labeled. 
+
+- The sensitive information types ([predefined](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) and custom that you configured for a label) that were detected in content.
 
 - The Azure Information Protection client version.
 
 - The client operating system version.
 
-This information is stored in an Azure Log Analytics workspace that you own.
+Because this information is stored in an Azure Log Analytics workspace that you own, it's available to users who can access this workspace. For information about configuring this access, see the [Manage accounts and users](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) section from the Azure documentation.
 
 ## Prerequisites for Azure Information Protection analytics
 To view the Azure Information Protection reports and create your own, make sure that the following requirements are in place.
