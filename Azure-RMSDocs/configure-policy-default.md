@@ -6,10 +6,9 @@ description: Understand how the default policy for Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.service: information-protection
-ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 # optional metadata
 
@@ -29,19 +28,19 @@ ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 Use the following information to understand how the default policy for Azure Information Protection is configured.
 
-When an administrator first connects to the Azure Information Protection service by using the Azure portal, the default policy for that tenant is created. Occasionally, Microsoft might make changes to the default policy but if you were already using the service before the default policy was revised, your earlier version of the default policy is not updated because you might have configured it and deployed into production.
+When an administrator first connects to the Azure Information Protection service by using the Azure portal, the Azure Information Protection default policy for that tenant is created. Occasionally, Microsoft might make changes to this default policy but if you were already using the service before the default policy was revised, your earlier version of the Azure Information Protection default policy is not updated because you might have configured it and deployed into production.
 
-You can reference the following values to return your policy to the defaults, or update your policy to the latest values.
+You can reference the following values to return your Azure Information Protection policy to the defaults, or update your Azure Information Protection policy to the latest values.
 
 ## Current default policy
 
-This version of the default policy is from July 31, 2017.
+This version of the Azure Information Protection default policy is from July 31, 2017.
 
-This default policy is created when the Azure Rights Management service is activated, which is the case for new tenants starting February 2018. For more information, see the blog post announcement [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection).
+This Azure Information Protection default policy is created when the Azure Rights Management service is activated, which is the case for new tenants starting February 2018. For more information, see the blog post announcement [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection).
 
-This default policy is also created if you have manually [activated the service](activate-service.md) before the policy was created. 
+This Azure Information Protection default policy is also created if you have manually [activated the service](activate-service.md) before the Azure Information Protection policy was created. 
 
-If the service was not activated, the default policy does not configure protection for the following sublabels:
+If the service was not activated, the Azure Information Protection default policy does not configure protection for the following sublabels:
 
 - **Confidential \ All Employees**
 
@@ -51,11 +50,11 @@ If the service was not activated, the default policy does not configure protecti
 
 - **Highly Confidential \ Recipients Only** 
 
-When these sublabels are not automatically configured for protection, the default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017).
+When these sublabels are not automatically configured for protection, the Azure Information Protection default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017).
 
 When protection is applied to the **All Employees** sublabels, the protection is configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
-Starting August 30, 2017, this version of the default policy includes multi-language versions of the label names and descriptions. 
+Starting August 30, 2017, this version of the Azure Information Protection default policy includes multi-language versions of the label names and descriptions. 
 
 #### More information about the Recipients Only sublabel
 
