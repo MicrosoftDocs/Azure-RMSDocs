@@ -55,6 +55,18 @@ To complete this quickstart, you need:
     
     To try the label for yourself, you can install the client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
 
+5. A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you're signed in to Office apps from one of the following categories:
+    
+    - Office 365 with Office 2016 apps (minimum version 1805, build 9330.2078). To use this option, your account must be assigned a license for Azure Rights Management. This license is included with the Azure Information Protection subscription.
+    
+    - Office 365 ProPlus with 2016 apps or 2013 apps (Click-to-Run or Windows Installer-based installation).
+    
+    - Office Professional Plus 2016.
+    
+    - Office Professional Plus 2013 with Service Pack 1.
+    
+    - Office Professional Plus 2010 with Service Pack 2.
+
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 
 ## Configure an existing label to apply the Do Not Forward protection
