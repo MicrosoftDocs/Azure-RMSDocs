@@ -120,6 +120,17 @@ Additional information:
 
 - If you use many cloud apps for conditional access, you might not see **Microsoft Azure Information Protection** displayed in the list to select. In this case, use the search box at the top of the list. Start typing "Microsoft Azure Information Protection" to filter the available apps. Providing you have a supported subscription, you'll then see **Microsoft Azure Information Protection** to select. 
 
+## I see Azure Information Protection is listed as a security provider for Microsoft Graph Security—how does this work and what alerts will I receive?
+
+Yes, as a public preview offering, you can now receive an alert for **Azure Information Protection anomalous data access**. This alert is triggered when there are unusual attempts to access data that is protected by Azure Information Protection. For example, accessing an unusually high volume of data, at an unusual time of day, or access from an unknown location.
+
+Such alerts can help you to detect advanced data-related attacks and insider threats in your environment. These alerts use machine learning to profile the behavior of users who access your protected data. 
+
+The Azure Information Protection alerts can be accessed by using the Microsoft Graph Security API, or you can [stream alerts](https://developer.microsoft.com/en-us/graph/docs/concepts/security_siemintegration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
+
+For more information about the the Microsoft Graph Security API, see the following blog post: [The Microsoft Graph Security API is now generally available](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/The-Microsoft-Graph-Security-API-is-now-generally-available/ba-p/254128)
+
+
 ## What’s the difference between labels in Azure Information Protection and labels in Office 365?
 
 Until recently, Office 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that let you classify documents and emails for auditing and retention when that content is in Office 365 services. In comparison, Azure Information Protection labels let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud.
