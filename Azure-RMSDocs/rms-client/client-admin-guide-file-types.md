@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 
@@ -104,7 +104,9 @@ There are maximum file sizes that the Azure Information Protection client suppor
     
     - To protect other file types, and to open these file types in the Azure Information Protection viewer: The maximum file size is limited only by available disk space and memory.
     
-    - To unprotect files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: The maximum file size supported for .pst files is 5 GB. Other file types are limited only by available disk space and memory.
+    - To unprotect files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: The maximum file size supported for .pst files is 5 GB. Other file types are limited only by available disk space and memory
+    
+    Tip: If you need to search or recover protected items in large .pst files, see [Guidance for using Unprotect-RMSFile for eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
 
 ### Supported file types for classification and protection
 
@@ -197,7 +199,6 @@ To help prevent users from changing files that are critical for computer operati
 
 - **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msg,.msp, .msi, .pdb, .jar
     
-    Unless you have the current preview version of the Azure Information Protection client, the following file types are also excluded: .zip, .msg, and .rar. 
 
 - **Excluded folders**: 
     - Windows
@@ -209,11 +210,7 @@ To help prevent users from changing files that are critical for computer operati
 
 By default, the scanner also excludes the same file types as the Azure Information Protection client with the following exceptions:
 
-- For the current GA version of the scanner:
-    - .rtf is also excluded.
-
-For the current preview version of the scanner:
-    - .rar, .rtf, .msg and .zip are also excluded.
+    - .rtf, .rar, and .zip are also excluded
 
 You can change the file types included or excluded for file inspection by the scanner when you use the following PowerShell cmdlets:
 

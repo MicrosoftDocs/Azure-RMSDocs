@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 11/02/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -35,7 +35,7 @@ Some of these settings require editing the registry and some use advanced settin
 
 1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** blade.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option: Select **Policies**.
+2. From the **Classifications** > **Labels** menu option: Select **Policies**.
 
 3. On the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
     
@@ -257,7 +257,7 @@ As a result of this configuration option, when the Azure Information Protection 
 
 For the Azure Information Protection scanner to use the new setting, the scanner service must be restarted.
 
-For more information about this PDF encryption, see the blog post [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/2627570).
+For more information about this PDF encryption, see the blog post [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
 ### To convert existing .ppdf files to protected .pdf files
 
@@ -284,8 +284,6 @@ To use PowerShell commands to convert existing .ppdf files to protected .pdf fil
 3. Remove the label by using [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) with the *RemoveLabel* parameter. If you are using the [policy setting](../configure-policy-settings.md) of **Users must provide justification to set a lower classification label, remove a label, or remove protection**, you must also specify the *Justification* parameter with the reason. For example: 
     
     	Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
-    
-    If you can't remove the label because you're using mandatory labeling as as a [policy setting](../configure-policy-settings.md) (**All documents and emails must have have a label**), temporarily apply a different label, instead.
 
 4. Reapply the original label, by specifying the value for the label that you identified in step 1. For example:
     
@@ -310,13 +308,11 @@ As a result of this registry edit, the following scenarios are supported:
 
 - The Azure Information Protection viewer can open these protected files.
 
-- File Explorer and PowerShell can unprotect these files, or reprotect them with Azure Information Protection.
-
-- File Explorer, PowerShell, and the Azure Information Protection scanner can label these files.
-
 - The Azure Information Protection scanner can inspect these files for sensitive information.
 
-- You can use the [labeling migration client customization](#migrate-labels-from-secure-islands-and-other-labeling-solutions) to convert the Secure Islands label on these protected files to an Azure Information Protection label.
+- File Explorer, PowerShell, and the Azure Information Protection scanner can label these files. As a result, you can apply an Azure Information Protection label that applies new protection from Azure Information Protection, or that removes the existing protection from Secure Islands.
+
+- You can use the [labeling migration client customization](#migrate-labels-from-secure-islands-and-other-labeling-solutions) to automatically convert the Secure Islands label on these protected files to an Azure Information Protection label.
 
 ## Migrate labels from Secure Islands and other labeling solutions
 

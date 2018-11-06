@@ -63,7 +63,7 @@ Use the following instructions to make these changes.
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, do one or more of the following actions: 
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, do one or more of the following actions: 
 
     - To delete a label: Right-click or select the context menu (**...**) for the label that you want to delete, click **Delete this label**, and click **OK** to confirm. 
 
