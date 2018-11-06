@@ -6,7 +6,7 @@ description: To configure different settings and labels for specific users, you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
@@ -63,5 +63,5 @@ The Azure Information Protection client checks for any changes whenever a suppor
 
 ## Next steps
 
-For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
+For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md) tutorial.
 
