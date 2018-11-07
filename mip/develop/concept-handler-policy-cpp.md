@@ -30,7 +30,7 @@ Creating a `PolicyHandler` requires:
 
 ## Create a policy handler
 
-The first step required in obtaining policy actions in the Policy API, is to a create a `PolicyHandler` object. This class implements the functionality required to get the list of actions a specific label must take, as well as the function to trigger an audit event.
+The first step required in obtaining policy actions, is to create a `PolicyHandler` object. This class implements the functionality required to get the list of actions a specific label must take, and the function to trigger an audit event.
 
 Creating the `PolicyHandler` is as easy as calling the `PolicyEngine`'s `CreatePolicyHandlerAsync` function using the promise/future pattern.
 
@@ -50,7 +50,12 @@ After successfully creating the `PolicyHandler` object, actions may be computed 
 
 # Compute an Action
 
-As previously detailed, the primary functions of the Policy API are to list available labels and to return the specific set of actions that should be taken based on the current and desired state. The last step in the process is to provide a label identifier and, optionally, metadata about the existing label to the `ComputeActions()` function.
+As previously detailed, the primary functions of the Policy API are to:
+
+- List the available labels.
+- Return the specific set of actions that should be taken, based on the current and desired state. 
+
+The last step in the process is to provide a label identifier and, optionally, metadata about the existing label to the `ComputeActions()` function.
 
 Sample code for this article can be found on GitHub.
 
