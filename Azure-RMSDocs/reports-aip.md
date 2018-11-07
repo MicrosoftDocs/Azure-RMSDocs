@@ -6,7 +6,7 @@ description: How to use central reporting to track adoption of your Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/06/2018
+ms.date: 11/07/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -86,7 +86,7 @@ To generate these reports, the endpoints send the following types of information
 
 - The client operating system version.
 
-This information is stored in an Azure Log Analytics workspace that you own. If users can access this workspace, they can access this information independently from Azure Information Protection. For information about configuring access to your workspace, see the [Manage accounts and users](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) section from the Azure documentation.
+This information is stored in an Azure Log Analytics workspace that you own and can be viewed by users who have access rights to this workspace. For information about configuring access to your workspace, see the [Manage accounts and users](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) section from the Azure documentation.
 
 ## Prerequisites for Azure Information Protection analytics
 To view the Azure Information Protection reports and create your own, make sure that the following requirements are in place.
