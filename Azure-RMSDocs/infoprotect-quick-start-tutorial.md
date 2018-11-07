@@ -151,11 +151,13 @@ We'll now create a new sublabel for **Confidential**.
     
     a. **Choose the type of condition**: Keep the default of **Information Types**.
     
-    b. In the **Select information types** search box: Type **credit card number**. Then, from the search results, select **Credit Card Number**.
+    b. For **Choose an industry**, keep the default of **All**.
     
-    c. **Minimum number of occurrences**: Keep the default of **1**.
+    c. In the **Select information types** search box: Type **credit card number**. Then, from the search results, select **Credit Card Number**.
     
-    d. **Count occurrences with unique values only**: Keep the default of **Off**.
+    d. **Minimum number of occurrences**: Keep the default of **1**.
+    
+    e. **Count occurrences with unique values only**: Keep the default of **Off**.
     
     ![Azure Information Protection tutorial - configure credit card condition](./media/step2-configure-condition.png)
     
