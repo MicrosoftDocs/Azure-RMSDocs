@@ -135,7 +135,7 @@ Then restart your computer.
 
 This command doesn't remove the following items and you must manually remove them if you don't want them after this quickstart:
 
-- The SQL Server database that was created by running the Install-AIPScanner cmdlet when the Azure Information Protection scanner was installed. 
+- The SQL Server database named **AzInfoProtection** that was created by running the Install-AIPScanner cmdlet when the Azure Information Protection scanner was installed. 
 
 - The scanner reports located in %*localappdata*%\Microsoft\MSIP\Scanner\Reports.
 
