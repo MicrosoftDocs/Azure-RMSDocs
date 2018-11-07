@@ -260,10 +260,7 @@ Do the following if you don't want to keep the changes that you made in this tut
 
 1. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade.
 
-2. Return the policy settings to their original values that you took a note of, and then select **Save**. The default values:
-    
-    -  **Select the default label**: **None**
-    -  **Users must provide justification to set a lower classification label, remove a label, or remove protection**: **Off**
+2. Return the policy settings to their original values that you took a note of, and then select **Save**. 
 
 3. From the **Classifications** > **Label** menu option: On the **Azure Information Protection - Label** blade, select the context menu (**...**) for the **Finance** label you created.
 
