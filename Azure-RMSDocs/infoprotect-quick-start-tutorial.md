@@ -85,7 +85,7 @@ Using the Azure portal, we'll first change a couple of policy settings, and then
     
     Make a note of how the settings are currently configured. Specifically, the settings **Select the default label** and **Users must provide justification to set a lower classification label, remove a label, or remove protection**. For example:
     
-    ![Azure Information Protection tutorial - default policy](./media/info-protect-policy-default-settings.png)
+    ![Azure Information Protection tutorial - policy settings to change](./media/info-protect-policy-default-settings.png)
     
     We'll use these policy settings later in the tutorial when you will see them in action.
 
@@ -113,7 +113,7 @@ We'll now create a new sublabel for **Confidential**.
 
 3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection**:
     
-    ![Protection configured for an Azure Information Protection label](./media/info-protect-protection-bar-configured.png) 
+    ![Configuing an Azure Information Protection label for protection](./media/info-protect-protection-bar-configured.png) 
     
 4. On the **Protection** blade, make sure that **Azure (cloud key)** is selected. This option uses the Azure Rights Management service to protect documents and emails. Also make sure that the **Set Permissions** option is selected. Then select **Add permissions**.
 
@@ -151,7 +151,7 @@ We'll now create a new sublabel for **Confidential**.
     
     a. **Choose the type of condition**: Keep the default of **Information Types**.
     
-    b. For **Choose an industry**, keep the default of **All**.
+    b. For **Choose an industry**: Keep the default of **All**.
     
     c. In the **Select information types** search box: Type **credit card number**. Then, from the search results, select **Credit Card Number**.
     
@@ -181,7 +181,7 @@ We'll now create a new sublabel for **Confidential**.
 
     ![Azure Information Protection tutorial - new sublabel](./media/info-protect-policy-configuredv2.png)
     
-    You also see that the settings are configured with your changes for the default label and justification:
+    You also see that the settings are configured for the default label and justification:
     
     ![Azure Information Protection tutorial - settings configured](./media/info-protect-settings-configuredv2.png)
     
