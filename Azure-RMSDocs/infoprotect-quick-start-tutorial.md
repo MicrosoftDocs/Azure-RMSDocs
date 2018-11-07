@@ -6,7 +6,7 @@ description: An introduction tutorial that edits the Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/07/2018
 ms.topic: tutorial
 ms.service: information-protection
 
@@ -28,7 +28,7 @@ ms.service: information-protection
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
-> * Change two policy settings
+> * Configure policy settings
 > * Create a new label 
 > * Configure the label for visual markings, recommended classification, and protection
 > * See your settings and labels in action
@@ -81,17 +81,19 @@ Using the Azure portal, we'll first change a couple of policy settings, and then
 
 2. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade. 
 
-3. Locate the policy settings after the labels, in the **Configure settings to display and apply on Information Protection end users** section. Make a note of the current settings. If you haven't changed these settings from their defaults, you see there is no default label set, documents and emails aren't required to have a label, and users don't have to provide justification when they change labels:
+3. Locate the policy settings after the labels, in the **Configure settings to display and apply on Information Protection end users** section. 
+    
+    Make a note of how the settings are currently configured. Specifically, the settings **Select the default label** and **Users must provide justification to set a lower classification label, remove a label, or remove protection**. For example:
     
     ![Azure Information Protection tutorial - default policy](./media/info-protect-policy-default-settings.png)
     
-    We'll change a couple of those policy settings so that you can see how they work.
+    We'll use these policy settings later in the tutorial when you will see them in action.
 
 4. For **Select the default label**, select **General**. 
 
     If you don't have this label because you have an older version of the policy, choose **Internal** as the equivalent label.
 
-5. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this option to **On**.
+5. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this option to **On** if it is not already.
 
 6. In addition, make sure that **Display the Information Protection bar in Office apps** is set to **On**.
 
@@ -149,11 +151,13 @@ We'll now create a new sublabel for **Confidential**.
     
     a. **Choose the type of condition**: Keep the default of **Information Types**.
     
-    b. In the **Select information types** search box: Type **credit card number**. Then, from the search results, select **Credit Card Number**.
+    b. For **Choose an industry**, keep the default of **All**.
     
-    c. **Minimum number of occurrences**: Keep the default of **1**.
+    c. In the **Select information types** search box: Type **credit card number**. Then, from the search results, select **Credit Card Number**.
     
-    d. **Count occurrences with unique values only**: Keep the default of **Off**.
+    d. **Minimum number of occurrences**: Keep the default of **1**.
+    
+    e. **Count occurrences with unique values only**: Keep the default of **Off**.
     
     ![Azure Information Protection tutorial - configure credit card condition](./media/step2-configure-condition.png)
     
@@ -165,7 +169,7 @@ We'll now create a new sublabel for **Confidential**.
 
 11. For **Select how this label is applied**: Keep the default of **Recommended**, and don't change the default policy tip. 
 
-12. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**.
+12. In the **Add notes for administrator use** box, type **For testing purposes only**.
 
 13. Click **Save** on this **Sub-label** blade. If you're prompted to confirm, click **OK**. The new label is created and saved, but not yet added to a policy.
 
@@ -258,10 +262,7 @@ Do the following if you don't want to keep the changes that you made in this tut
 
 1. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade.
 
-2. Return the policy settings to their original values that you took a note of, and then select **Save**. The default values:
-    
-    -  **Select the default label**: **None**
-    -  **Users must provide justification to set a lower classification label, remove a label, or remove protection**: **Off**
+2. Return the policy settings to their original values that you took a note of, and then select **Save**. 
 
 3. From the **Classifications** > **Label** menu option: On the **Azure Information Protection - Label** blade, select the context menu (**...**) for the **Finance** label you created.
 
