@@ -28,7 +28,7 @@ ms.service: information-protection
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
-> * Change two policy settings
+> * Configure policy settings
 > * Create a new label 
 > * Configure the label for visual markings, recommended classification, and protection
 > * See your settings and labels in action
