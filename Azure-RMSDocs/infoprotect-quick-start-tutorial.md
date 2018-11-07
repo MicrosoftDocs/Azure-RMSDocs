@@ -6,7 +6,7 @@ description: An introduction tutorial that edits the Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/07/2018
 ms.topic: tutorial
 ms.service: information-protection
 
@@ -28,7 +28,7 @@ ms.service: information-protection
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
-> * Change two policy settings
+> * Configure policy settings
 > * Create a new label 
 > * Configure the label for visual markings, recommended classification, and protection
 > * See your settings and labels in action
@@ -81,17 +81,19 @@ Using the Azure portal, we'll first change a couple of policy settings, and then
 
 2. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade. 
 
-3. Locate the policy settings after the labels, in the **Configure settings to display and apply on Information Protection end users** section. Make a note of the current settings. If you haven't changed these settings from their defaults, you see there is no default label set, documents and emails aren't required to have a label, and users don't have to provide justification when they change labels:
+3. Locate the policy settings after the labels, in the **Configure settings to display and apply on Information Protection end users** section. 
     
-    ![Azure Information Protection tutorial - default policy](./media/info-protect-policy-default-settings.png)
+    Make a note of how the settings are currently configured. Specifically, the settings **Select the default label** and **Users must provide justification to set a lower classification label, remove a label, or remove protection**. For example:
     
-    We'll change a couple of those policy settings so that you can see how they work.
+    ![Azure Information Protection tutorial - policy settings to change](./media/info-protect-policy-default-settings.png)
+    
+    We'll use these policy settings later in the tutorial when you will see them in action.
 
 4. For **Select the default label**, select **General**. 
 
     If you don't have this label because you have an older version of the policy, choose **Internal** as the equivalent label.
 
-5. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this option to **On**.
+5. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this option to **On** if it is not already.
 
 6. In addition, make sure that **Display the Information Protection bar in Office apps** is set to **On**.
 
@@ -111,7 +113,7 @@ We'll now create a new sublabel for **Confidential**.
 
 3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection**:
     
-    ![Protection configured for an Azure Information Protection label](./media/info-protect-protection-bar-configured.png) 
+    ![Configuing an Azure Information Protection label for protection](./media/info-protect-protection-bar-configured.png) 
     
 4. On the **Protection** blade, make sure that **Azure (cloud key)** is selected. This option uses the Azure Rights Management service to protect documents and emails. Also make sure that the **Set Permissions** option is selected. Then select **Add permissions**.
 
@@ -149,11 +151,13 @@ We'll now create a new sublabel for **Confidential**.
     
     a. **Choose the type of condition**: Keep the default of **Information Types**.
     
-    b. In the **Select information types** search box: Type **credit card number**. Then, from the search results, select **Credit Card Number**.
+    b. For **Choose an industry**: Keep the default of **All**.
     
-    c. **Minimum number of occurrences**: Keep the default of **1**.
+    c. In the **Select information types** search box: Type **credit card number**. Then, from the search results, select **Credit Card Number**.
     
-    d. **Count occurrences with unique values only**: Keep the default of **Off**.
+    d. **Minimum number of occurrences**: Keep the default of **1**.
+    
+    e. **Count occurrences with unique values only**: Keep the default of **Off**.
     
     ![Azure Information Protection tutorial - configure credit card condition](./media/step2-configure-condition.png)
     
@@ -165,7 +169,7 @@ We'll now create a new sublabel for **Confidential**.
 
 11. For **Select how this label is applied**: Keep the default of **Recommended**, and don't change the default policy tip. 
 
-12. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**.
+12. In the **Add notes for administrator use** box, type **For testing purposes only**.
 
 13. Click **Save** on this **Sub-label** blade. If you're prompted to confirm, click **OK**. The new label is created and saved, but not yet added to a policy.
 
@@ -177,7 +181,7 @@ We'll now create a new sublabel for **Confidential**.
 
     ![Azure Information Protection tutorial - new sublabel](./media/info-protect-policy-configuredv2.png)
     
-    You also see that the settings are configured with your changes for the default label and justification:
+    You also see that the settings are configured for the default label and justification:
     
     ![Azure Information Protection tutorial - settings configured](./media/info-protect-settings-configuredv2.png)
     
@@ -204,35 +208,35 @@ Open a new document in Word. Because the Azure Information Protection client is 
 
 ### To manually change our default label
 
-On the Information Protection bar, select the last label and you see how sublabels display:
+1. On the Information Protection bar, select the last label and you see how sublabels display:
+    
+    ![Azure Information Protection tutorial - see sublabels](./media/info-protect-sub-labelsv2.png)
 
-![Azure Information Protection tutorial - see sublabels](./media/info-protect-sub-labelsv2.png)
+2. Select one of these sublabels, and you see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to show the label and sublabel name, with a corresponding change in label color. For example:
+    
+    ![Azure Information Protection tutorial - sublabel selected](./media/info-protect-sub-label-selectedv2.png)
 
-Select one of these sublabels, and you see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to show the label and sublabel name, with a corresponding change in label color. For example:
+3. On the Information Protection bar, click the **Edit Label** icon next to the currently selected label value:
+    
+    ![Azure Information Protection tutorial - Edit Label icon](./media/info-protect-edit-label-selectedv2.png)
+    
+    This action displays the available labels again.
 
-![Azure Information Protection tutorial - sublabel selected](./media/info-protect-sub-label-selectedv2.png)
-
-On the Information Protection bar, click the **Edit Label** icon next to the currently selected label value:
-
-![Azure Information Protection tutorial - Edit Label icon](./media/info-protect-edit-label-selectedv2.png)
-
-This action displays the available labels again.
-
-Now select the first label, **Personal**. Because you've selected a label that's a lower classification than the previously selected label for this document, you're prompted to justify why you're lowering the classification level:
-
-![Azure Information Protection tutorial - prompt to confirm why lowering](./media/info-protect-lower-justification.png)
-
-Select **The previous label no longer applies**, and click **Confirm**. The **Sensitivity** value changes to **Personal** and the other labels are hidden again.
+4. Now select the first label, **Personal**. Because you've selected a label that's a lower classification than the previously selected label for this document, you're prompted to justify why you're lowering the classification level:
+    
+    ![Azure Information Protection tutorial - prompt to confirm why lowering](./media/info-protect-lower-justification.png)
+    
+    Select **The previous label no longer applies**, and click **Confirm**. The **Sensitivity** value changes to **Personal** and the other labels are hidden again.
 
 ### To remove the classification completely
 
-On the Information Protection bar, click the **Edit Label** icon again. But instead of choosing one of the labels, click the **Delete Label** icon:
-
-![Azure Information Protection tutorial - Delete Icon](./media/delete-icon-from-personalv2.png)
-
-This time when you're prompted, type "This document doesn't need classifying", and click **Confirm**.  
-
-You see the **Sensitivity** value display **Not set**, which is what users see initially for new documents if you don't set a default label as a policy setting.
+1. On the Information Protection bar, click the **Edit Label** icon again. But instead of choosing one of the labels, click the **Delete Label** icon:
+    
+    ![Azure Information Protection tutorial - Delete Icon](./media/delete-icon-from-personalv2.png)
+    
+2. This time when you're prompted, type "This document doesn't need classifying", and click **Confirm**.  
+    
+    You see the **Sensitivity** value display **Not set**, which is what users see initially for new documents if you don't set a default label as a policy setting.
 
 ### To see a recommendation prompt for labeling and automatic protection
 
@@ -258,10 +262,7 @@ Do the following if you don't want to keep the changes that you made in this tut
 
 1. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade.
 
-2. Return the policy settings to their original values that you took a note of, and then select **Save**. The default values:
-    
-    -  **Select the default label**: **None**
-    -  **Users must provide justification to set a lower classification label, remove a label, or remove protection**: **Off**
+2. Return the policy settings to their original values that you took a note of, and then select **Save**. 
 
 3. From the **Classifications** > **Label** menu option: On the **Azure Information Protection - Label** blade, select the context menu (**...**) for the **Finance** label you created.
 
