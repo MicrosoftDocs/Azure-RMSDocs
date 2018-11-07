@@ -56,7 +56,7 @@ struct ExecutionStateOptions {
 };
 ```
 
-Each property is set by the application and then `ExecutionSateOptions` is passed in to the constructor of the class derived from `mip::ExecutionState`. This information is used to determine the actions to take. Data provided in the `mip::ExecutionState` will also surface in Azure Information Protection Analytics.
+Each property is set by the application, then `ExecutionSateOptions` is passed to the constructor of the class derived from `mip::ExecutionState`. This information is used to determine the actions to take. Data provided in the `mip::ExecutionState` will also surface in Azure Information Protection Analytics.
 
 ### Next Steps
 

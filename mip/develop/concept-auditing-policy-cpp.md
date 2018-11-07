@@ -5,13 +5,13 @@ services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/01/2018
+ms.date: 11/07/2018
 ms.author: tommos
 ---
 
 # Auditing in the MIP SDK
 
-The Azure Information Protection administration portal provides access to reports that give the administrator visibility in to which labels users are applying, manually or automatically, across any applications any services that have integrated the MIP SDK. Development partners leveraging the SDK can easily enable this functionality so that information from their applications will surface in customer reports.
+The Azure Information Protection administration portal provides access to administrator reports. These reports provide visibility on the labels users apply, manually or automatically, across any applications that have integrated the MIP SDK. Development partners leveraging the SDK can easily enable this functionality, allowing information from their applications to surface in customer reports.
 
 ## Event Types
 
@@ -35,7 +35,7 @@ These events are useful in detecting applications across your enterprise that ar
 
 Discovery events provide information on labeled information that is read or consumed by the Policy API. These events are useful as they surface the devices, location, and users who are accessing information across an organization.
 
-Discovery events are generated in the Policy API by setting a bool flag when creating the `mip::PolicyHandler` object via the `mip::PolicyEngine`. In the example below, the value for **isAuditDiscoveryEnabled** is set to true. When the `mip::ExecutionState` is passed in to `ComputeActions()` or `GetSensitivityLabel()`, with existing metadata information and content identifier, that discovery information will be submitted to Azure Information Protection Analytics.
+Discovery events are generated in the Policy API by setting a bool flag when creating the `mip::PolicyHandler` object via the `mip::PolicyEngine`. In the example below, the value for **isAuditDiscoveryEnabled** is set to true. When `mip::ExecutionState` is passed to `ComputeActions()` or `GetSensitivityLabel()` (with existing metadata information and content identifier), that discovery information will be submitted to Azure Information Protection Analytics.
 
 The discovery audit is generated once the application calls `ComputeActions()` or `GetSensitivityLabel()` and provides `mip::ExecutionState`. This event is generated only once per handler.
 
@@ -52,7 +52,7 @@ auto actions = handler->ComputeActions(*state);
 auto label = handler->GetSensitivityLabel(*state);
 ```
 
-In practice, the `mip::PolicyHandler` should be created with **isAuditDiscoveryEnabled** set to true, when it's desirable to surface information to Azure Information Protection Analytics about files applications and users are reading.
+In practice, **isAuditDiscoveryEnabled** should be `true` during `mip::PolicyHandler` construction, to allow file access information to flow to Azure Information Protection Analytics.
 
 ## Change Event
 
@@ -70,5 +70,5 @@ Events submitted to the Azure Information Protection audit pipeline will surface
 
 ## Next Steps
 
-For more details on the auditing experience in Azure Information Protection, take a look at the [preview announcement blog on Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
+See the [preview announcement blog on Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854) for more details on the auditing experience in Azure Information Protection.
 
