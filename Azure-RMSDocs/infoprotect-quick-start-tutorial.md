@@ -208,35 +208,35 @@ Open a new document in Word. Because the Azure Information Protection client is 
 
 ### To manually change our default label
 
-On the Information Protection bar, select the last label and you see how sublabels display:
+1. On the Information Protection bar, select the last label and you see how sublabels display:
+    
+    ![Azure Information Protection tutorial - see sublabels](./media/info-protect-sub-labelsv2.png)
 
-![Azure Information Protection tutorial - see sublabels](./media/info-protect-sub-labelsv2.png)
+2. Select one of these sublabels, and you see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to show the label and sublabel name, with a corresponding change in label color. For example:
+    
+    ![Azure Information Protection tutorial - sublabel selected](./media/info-protect-sub-label-selectedv2.png)
 
-Select one of these sublabels, and you see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to show the label and sublabel name, with a corresponding change in label color. For example:
+3. On the Information Protection bar, click the **Edit Label** icon next to the currently selected label value:
+    
+    ![Azure Information Protection tutorial - Edit Label icon](./media/info-protect-edit-label-selectedv2.png)
+    
+    This action displays the available labels again.
 
-![Azure Information Protection tutorial - sublabel selected](./media/info-protect-sub-label-selectedv2.png)
-
-On the Information Protection bar, click the **Edit Label** icon next to the currently selected label value:
-
-![Azure Information Protection tutorial - Edit Label icon](./media/info-protect-edit-label-selectedv2.png)
-
-This action displays the available labels again.
-
-Now select the first label, **Personal**. Because you've selected a label that's a lower classification than the previously selected label for this document, you're prompted to justify why you're lowering the classification level:
-
-![Azure Information Protection tutorial - prompt to confirm why lowering](./media/info-protect-lower-justification.png)
-
-Select **The previous label no longer applies**, and click **Confirm**. The **Sensitivity** value changes to **Personal** and the other labels are hidden again.
+4. Now select the first label, **Personal**. Because you've selected a label that's a lower classification than the previously selected label for this document, you're prompted to justify why you're lowering the classification level:
+    
+    ![Azure Information Protection tutorial - prompt to confirm why lowering](./media/info-protect-lower-justification.png)
+    
+    Select **The previous label no longer applies**, and click **Confirm**. The **Sensitivity** value changes to **Personal** and the other labels are hidden again.
 
 ### To remove the classification completely
 
-On the Information Protection bar, click the **Edit Label** icon again. But instead of choosing one of the labels, click the **Delete Label** icon:
-
-![Azure Information Protection tutorial - Delete Icon](./media/delete-icon-from-personalv2.png)
-
-This time when you're prompted, type "This document doesn't need classifying", and click **Confirm**.  
-
-You see the **Sensitivity** value display **Not set**, which is what users see initially for new documents if you don't set a default label as a policy setting.
+1. On the Information Protection bar, click the **Edit Label** icon again. But instead of choosing one of the labels, click the **Delete Label** icon:
+    
+    ![Azure Information Protection tutorial - Delete Icon](./media/delete-icon-from-personalv2.png)
+    
+2. This time when you're prompted, type "This document doesn't need classifying", and click **Confirm**.  
+    
+    You see the **Sensitivity** value display **Not set**, which is what users see initially for new documents if you don't set a default label as a policy setting.
 
 ### To see a recommendation prompt for labeling and automatic protection
 
