@@ -81,11 +81,13 @@ Using the Azure portal, we'll first change a couple of policy settings, and then
 
 2. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade. 
 
-3. Locate the policy settings after the labels, in the **Configure settings to display and apply on Information Protection end users** section. Make a note of how the settings are currently configured. Specifically, the settings **Select the default label** and **Users must provide justification to set a lower classification label, remove a label, or remove protection**. For example:
+3. Locate the policy settings after the labels, in the **Configure settings to display and apply on Information Protection end users** section. 
+    
+    Make a note of how the settings are currently configured. Specifically, the settings **Select the default label** and **Users must provide justification to set a lower classification label, remove a label, or remove protection**. For example:
     
     ![Azure Information Protection tutorial - default policy](./media/info-protect-policy-default-settings.png)
     
-    We'll use these policy settings for you to later see how they work.
+    We'll use these policy settings later in the tutorial when you will see them in action.
 
 4. For **Select the default label**, select **General**. 
 
