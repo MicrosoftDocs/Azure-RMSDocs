@@ -2,8 +2,8 @@
 author: BryanLa
 ms.author: bryanla
 ms.service: information-protection  
-ms.topic: includ08e
-ms.date: 11//2018
+ms.topic: include
+ms.date: 11/08/2018
 ---
 
 | Operating system | Versions |  
