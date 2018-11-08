@@ -58,11 +58,25 @@ Use the following information to see what’s new or changed for a supported rel
 
 - Support for [central reporting](../reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
 
+- Excel now also supports [visual marking](configure-policy-markings.md)s in different colors.
+
 **Fixes**:
 
 - The Azure Information Protection client no longer excludes .msg, .rar, and .zip file name extensions for File Explorer (right-click) and PowerShell commands. However, these file name extensions remain excluded by default for the scanner. 
 
+- The advanced client setting, **RunPolicyInBackground**, which [turns on classification to run continuously in the background](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) works as documented. 
+
 - The Azure Information Protection client can unprotect multiple files (multi-select and a folder that contains protected files) when you use File Explorer, right-click.
+
+- For Excel:
+    
+    - Visual markings are now applied if you save the spreadsheet while editing a cell.
+    
+    - Excel 2010: When a spreadsheet is protected by using the Co-Author [permission level](configure-usage-rights.md#rights-included-in-permissions-levels), the **Delete Label** button is now available when you right-click the file and choose **Classify and Protect**.
+
+- The advanced client settings for **ExternalContentMarkingToRemove**, which can [remove headers and footers from other labeling solutions](lient-admin-guide-customizationsmd#remove-headers-and-footers-from-other-labeling-solutions) now supports custom layouts.
+
+- The Azure Information Protection viewer no longer crashes if you try to open a file that doesn't have read permissions for your account. 
 
 ## Version 1.37.19.0
 

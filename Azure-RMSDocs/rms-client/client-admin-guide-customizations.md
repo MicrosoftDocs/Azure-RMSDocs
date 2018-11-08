@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/06/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -225,6 +225,46 @@ To configure this advanced setting, enter the following strings:
 - Key: **OutlookDefaultLabel**
 
 - Value: \<**label ID**> or **None**
+
+## Configure a label to apply S/MIME protection
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
+
+Use this setting only when you have a working [S/MIME deployment](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than use Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
+
+This configuration requires you to specify an advanced client setting named **LabelToSMIME** for each Azure Information Protection label that you want to apply S/MIME protection. Then for each entry, set the value by using the following syntax:
+
+`[Azure Information Protection label ID];[S/MIME action]`
+
+The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. To specify a sublabel, the parent label must be in the same scope, or in the global policy.
+
+The S/MIME action can be:
+
+- - `Sign;Encrypt`: To apply a digital signature and S/MIME encryption
+
+- `Encrypt`: To apply S/MIME encryption only
+
+- `Sign`: To apply a digital signature only
+
+Example values for a label ID of **dcf781ba-727f-4860-b3c1-73479e31912b**:
+
+- To apply S/MIME encryption and a digital signature:
+    
+    **dcf781ba-727f-4860-b3c1-73479e31912b;Sign;Encrypt**
+
+- To apply S/MIME encryption only:
+    
+    **dcf781ba-727f-4860-b3c1-73479e31912b;Encrypt**
+    
+- To apply a digital encryption only:
+    
+    **dcf781ba-727f-4860-b3c1-73479e31912b;Sign**
+
+As a result of this configuration, when the label is applied for an email message, S/MIME protection is applied to the email in addition to the label's classification.
+
+If the label you specify is configured for Rights Management protection in the Azure portal, S/MIME protection replaces the Rights Management protection only in Outlook. For all other scenarios that support labeling, Rights Management protection will be applied.
+
+If you want the label to be visible in Outlook only, configure the label to apply the single user-defined action of **Do Not Forward**, as described in the [Quickstart: Configure a label for users to easily protect emails that contain sensitive information](quickstart-label-dnf-protectedemail.md).
 
 ## Remove "Not now" for documents when you use mandatory labeling
 
