@@ -35,16 +35,6 @@
         href: concept-profile-engine-protection-profile-cpp.md
       - name: Protection API engine (C++)
         href: concept-profile-engine-protection-engine-cpp.md            
-  - name: Auditing
-    items:
-    - name: File API auditing (C++)
-      href: concept-auditing-file-cpp.md
-    - name: Policy API auditing (C++)
-      href: concept-auditing-policy-cpp.md
-    - name: Policy API execution state (C++)
-      href: concept-auditing-policy-executionstate-cpp.md        
-    - name: Policy API compute actions (C++)
-      href: concept-auditing-policy-computeactions-cpp.md          
   - name: Authentication (C++)
     href: concept-authentication-cpp.md
     items:
@@ -58,8 +48,16 @@
     items:
     - name: File API handler (C++)
       href: concept-handler-file-cpp.md
+      - name: Auditing 
+        href: concept-auditing-file-cpp.md
     - name: Policy API handler (C++)
       href: concept-handler-policy-cpp.md
+      - name: Auditing 
+        href: concept-auditing-policy-cpp.md
+      - name: Execution state 
+        href: concept-auditing-policy-executionstate-cpp.md        
+      - name: Compute actions 
+        href: concept-auditing-policy-computeactions-cpp.md        
     - name: Protection API handler (C++)
       href: concept-handler-protection-cpp.md
   - name: Labels 
