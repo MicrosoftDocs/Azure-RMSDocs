@@ -48,10 +48,12 @@
     items:
     - name: File API handler (C++)
       href: concept-handler-file-cpp.md
+      items:
       - name: Auditing 
         href: concept-auditing-file-cpp.md
     - name: Policy API handler (C++)
       href: concept-handler-policy-cpp.md
+      items:
       - name: Auditing 
         href: concept-auditing-policy-cpp.md
       - name: Execution state 
