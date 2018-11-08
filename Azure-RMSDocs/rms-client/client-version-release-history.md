@@ -54,6 +54,8 @@ Use the following information to see what’s new or changed for a supported rel
 
 **Released**: 11/27/2018
 
+This version includes the MSIPC version 1.0.3592.627 of the RMS client.
+
 **New features:**
 
 - Support for [central reporting](../reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
