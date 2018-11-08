@@ -60,6 +60,8 @@ Use the following information to see what’s new or changed for a supported rel
 
 - Excel now also supports [visual marking](../configure-policy-markings.md)s in different colors.
 
+- For existing S/MIME deployments, a new advanced client setting (in preview) to configure a label to automatically apply S/MIME protection in Outlook. [More information](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
+
 **Fixes**:
 
 - The Azure Information Protection client no longer excludes .msg, .rar, and .zip file name extensions for File Explorer (right-click) and PowerShell commands. However, these file name extensions remain excluded by default for the scanner. 
