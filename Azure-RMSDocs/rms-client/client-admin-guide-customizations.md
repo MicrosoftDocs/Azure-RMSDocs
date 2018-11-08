@@ -56,6 +56,7 @@ Some of these settings require editing the registry and some use advanced settin
 |EnableCustomPermissions|[Make the custom permissions options available or unavailable to users](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnablePDFv2Protection|[Protect PDF files by using the ISO standard for PDF encryption](#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|LabelToSMIME|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in- Outlook)|
 |OutlookDefaultLabel|[Set a different default label for Outlook](#set-a-different-default-label-for-outlook)|
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
@@ -226,7 +227,7 @@ To configure this advanced setting, enter the following strings:
 
 - Value: \<**label ID**> or **None**
 
-## Configure a label to apply S/MIME protection
+## Configure a label to apply S/MIME protection in Outlook
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
 
@@ -264,7 +265,7 @@ As a result of this configuration, when the label is applied for an email messag
 
 If the label you specify is configured for Rights Management protection in the Azure portal, S/MIME protection replaces the Rights Management protection only in Outlook. For all other scenarios that support labeling, Rights Management protection will be applied.
 
-If you want the label to be visible in Outlook only, configure the label to apply the single user-defined action of **Do Not Forward**, as described in the [Quickstart: Configure a label for users to easily protect emails that contain sensitive information](quickstart-label-dnf-protectedemail.md).
+If you want the label to be visible in Outlook only, configure the label to apply the single user-defined action of **Do Not Forward**, as described in the [Quickstart: Configure a label for users to easily protect emails that contain sensitive information](../quickstart-label-dnf-protectedemail.md).
 
 ## Remove "Not now" for documents when you use mandatory labeling
 
@@ -340,7 +341,8 @@ To use PowerShell commands to convert existing .ppdf files to protected .pdf fil
     
     - The value for **RMSTemplateId**. If this value is **Restricted Access**, a user has protected the file using custom permissions rather than the protection settings that are configured for the label. If you continue, those custom permissions will be overwritten by the label's protection settings. Decide whether to continue or ask the user (value displayed for the **RMSIssuer**) to remove the label and re-apply it, together with their original custom permissions.
 
-3. Remove the label by using [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) with the *RemoveLabel* parameter. If you are using the [policy setting](../configure-policy-settings.md) of **Users must provide justification to set a lower classification label, remove a label, or remove protection**, you must also specify the *Justification* parameter with the reason. For example: 
+3. Remove the label by using [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) with the *RemoveLabel* parameter. If you are using the [policy setting](../configure-
+4. settings.md) of **Users must provide justification to set a lower classification label, remove a label, or remove protection**, you must also specify the *Justification* parameter with the reason. For example: 
     
     	Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 

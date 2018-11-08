@@ -58,7 +58,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 - Support for [central reporting](../reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
 
-- Excel now also supports [visual marking](configure-policy-markings.md)s in different colors.
+- Excel now also supports [visual marking](../configure-policy-markings.md)s in different colors.
 
 **Fixes**:
 
@@ -72,9 +72,9 @@ Use the following information to see what’s new or changed for a supported rel
     
     - Visual markings are now applied if you save the spreadsheet while editing a cell.
     
-    - Excel 2010: When a spreadsheet is protected by using the Co-Author [permission level](configure-usage-rights.md#rights-included-in-permissions-levels), the **Delete Label** button is now available when you right-click the file and choose **Classify and Protect**.
+    - Excel 2010: When a spreadsheet is protected by using the Co-Author [permission level](../configure-usage-rights.md#rights-included-in-permissions-levels), the **Delete Label** button is now available when you right-click the file and choose **Classify and Protect**.
 
-- The advanced client settings for **ExternalContentMarkingToRemove**, which can [remove headers and footers from other labeling solutions](lient-admin-guide-customizationsmd#remove-headers-and-footers-from-other-labeling-solutions) now supports custom layouts.
+- The advanced client settings for **ExternalContentMarkingToRemove**, which can [remove headers and footers from other labeling solutions](client-admin-guide-customizationsmd#remove-headers-and-footers-from-other-labeling-solutions) now supports custom layouts.
 
 - The Azure Information Protection viewer no longer crashes if you try to open a file that doesn't have read permissions for your account. 
 
