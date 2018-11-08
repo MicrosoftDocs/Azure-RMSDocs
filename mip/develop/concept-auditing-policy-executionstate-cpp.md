@@ -5,7 +5,7 @@ services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 10/22/2018
+ms.date: 11/01/2018
 ms.author: tommos
 ---
 
@@ -28,7 +28,7 @@ Passing information into the MIP SDK to compute an action that should be taken, 
 | `std::string GetNewLabelId()`                                                      | Returns the label ID to be applied to the object.                                                                    |
 | `mip::ContentState GetContentState()`                                              | Returns the mip::ContentState of the object.                                                                         |
 | `std::pair<bool, std::string> IsDowngradeJustified()`                              | Returns a std::pair expressing whether downgrade is justified and the justification.                                 |
-| `std::string GetContentIdentifier()`                                               | Returns the content identifier. This should be a human-readable identifier, indicating the location of the object.   |
+| `std::string GetContentIdentifier()`                                               | Returns the content identifier. Should be a human-readable identifier, indicating the location of the object.   |
 | `mip::ActionSource GetNewLabelActionSource()`                                      | Returns the mip::ActionSource of the label.                                                                          |
 | `mip::AssignmentMethod GetNewLabelAssignmentMethod()`                              | Returns the mip::AssignmentMethod of the label                                                                        |
 | `std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties()` | Returns a std::vector of std::pairs of strings, containing the custom metadata that will be applied to the document. |
@@ -37,7 +37,7 @@ Passing information into the MIP SDK to compute an action that should be taken, 
 | `mip::ContentFormat GetContentFormat()`                                            | Returns mip::ContentFormat                                                                                           |
 | `mip::ActionType GetSupportedActions()`                                           | Returns mip::ActionTypes for the label.                                                                              |
 
-Each must be overridden in an implementation of a class derived from `mip::ExecutionState`. In the sample application linked above, this is accomplished by implementing a struct called `ExecutionStateOptions`, and passing that in to the constructor of the derived class.
+Each must be overridden in an implementation of a class derived from `mip::ExecutionState`. In the sample application linked above, this process is accomplished by implementing a struct called `ExecutionStateOptions`, and passing that to the constructor of the derived class.
 
 In the [example](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/execution_state_impl.h), a struct called `ExecutionStateOptions` is defined as:
 
@@ -56,8 +56,8 @@ struct ExecutionStateOptions {
 };
 ```
 
-Each property is set by the application and then `ExecutionSateOptions` is passed in to the constructor of the class derived from `mip::ExecutionState`. This information is used to determine the actions to take. If the `mip::PolicyHandler` was initialized with **isAuditDiscoveryEnabled** set to true, the engine will calculate the action and submit information about the event to the Azure Information Protection auditing pipeline.
+Each property is set by the application, then `ExecutionSateOptions` is passed to the constructor of the class derived from `mip::ExecutionState`. This information is used to determine the actions to take. Data provided in the `mip::ExecutionState` will also surface in Azure Information Protection Analytics.
 
 ### Next Steps
 
-Next, learn more about [computing actions](concept-policy-computeactions.md). By providing the execution state to the Policy Handler, the list of tasks to be performed will be returned to the application.
+Next, learn more about [computing actions](concept-auditing-policy-computeactions-cpp.md).
