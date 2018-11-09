@@ -128,7 +128,7 @@ Such alerts can help you to detect advanced data-related attacks and insider thr
 
 The Azure Information Protection alerts can be accessed by using the Microsoft Graph Security API, or you can [stream alerts](https://developer.microsoft.com/en-us/graph/docs/concepts/security_siemintegration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
 
-For more information about the Microsoft Graph Security API, see the following blog post: [The Microsoft Graph Security API is now generally available](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/The-Microsoft-Graph-Security-API-is-now-generally-available/ba-p/254128)
+For more information about the Microsoft Graph Security API, see [Microsoft Graph Security API overview](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview).
 
 ## What’s the difference between labels in Azure Information Protection and labels in Office 365?
 
