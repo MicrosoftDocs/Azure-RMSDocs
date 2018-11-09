@@ -126,7 +126,7 @@ Yes, as a public preview offering, you can now receive an alert for **Azure Info
 
 Such alerts can help you to detect advanced data-related attacks and insider threats in your environment. These alerts use machine learning to profile the behavior of users who access your protected data. 
 
-The Azure Information Protection alerts can be accessed by using the Microsoft Graph Security API, or you can [stream alerts](https://developer.microsoft.com/en-us/graph/docs/concepts/security_siemintegration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
+The Azure Information Protection alerts can be accessed by [using the Microsoft Graph Security API](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview), or you can [stream alerts](https://developer.microsoft.com/en-us/graph/docs/concepts/security_siemintegration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
 
 For more information about the Microsoft Graph Security API, see [Microsoft Graph Security API overview](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview).
 
