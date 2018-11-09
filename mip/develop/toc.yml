@@ -48,6 +48,18 @@
     items:
     - name: File API handler (C++)
       href: concept-handler-file-cpp.md
+      items:
+      - name: Auditing 
+        href: concept-auditing-file-cpp.md
+    - name: Policy API handler (C++)
+      href: concept-handler-policy-cpp.md
+      items:
+      - name: Auditing 
+        href: concept-auditing-policy-cpp.md
+      - name: Execution state 
+        href: concept-auditing-policy-executionstate-cpp.md        
+      - name: Compute actions 
+        href: concept-auditing-policy-computeactions-cpp.md        
     - name: Protection API handler (C++)
       href: concept-handler-protection-cpp.md
   - name: Labels 
