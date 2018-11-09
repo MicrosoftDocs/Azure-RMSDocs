@@ -168,7 +168,7 @@ For more information on adding APIs and permissions to a registration, see [Upda
 
 Before you can release an application developed with MIP, you must apply for and complete a formal agreement with Microsoft.
 
-1. Obtain your IPIA by sending an email to IPIA@microsoft.com with the following information:
+1. Obtain your IPIA by sending an email to [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting IPIA for enter-company-name) with the following information:
 
    **Subject:** Requesting IPIA for *Company Name*
 
@@ -177,7 +177,7 @@ Before you can release an application developed with MIP, you must apply for and
    - First and last name of the requester
    - Email address of the requester
 
-2. Upon receipt of your IPIA request, we will send you a form (as a Word document). Review the terms and conditions of the IPIA, and return the form to IPIA@microsoft.com with the following information:
+2. Upon receipt of your IPIA request, we will send you a form (as a Word document). Review the terms and conditions of the IPIA, and return the form to [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting IPIA for enter-company-name) with the following information:
 
    - Legal name of the Company
    - State/Province (US/Canada) or Country of Incorporation
@@ -195,7 +195,7 @@ Before you can release an application developed with MIP, you must apply for and
 ### Already have a signed IPIA?
 
 If you already have a signed IPIA and want to add a new *App ID*
-for an application you are releasing, send an email to IPIA@microsoft.com and provide us with the following information:
+for an application you are releasing, send an email to [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Updating IPIA for enter-company-name) and provide us with the following information:
 
 - Name of the Company Application
 - Brief Description of the Application
