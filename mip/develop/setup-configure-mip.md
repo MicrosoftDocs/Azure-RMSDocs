@@ -177,7 +177,7 @@ Before you can release an application developed with MIP, you must apply for and
    - First and last name of the requester
    - Email address of the requester
 
-2. Upon receipt of your IPIA request, we will send you a form (as a Word document). Review the terms and conditions of the IPIA, and return the form to [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting%20IPIA%20for%20<company-name>) with the following information:
+2. Upon receipt of your IPIA request, we will send you a form (as a Word document). Review the terms and conditions of the IPIA, and return the form to [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) with the following information:
 
    - Legal name of the Company
    - State/Province (US/Canada) or Country of Incorporation
