@@ -166,7 +166,7 @@ For more information on adding APIs and permissions to a registration, see [Upda
 
 ## Request an Information Protection Integration Agreement (IPIA)
 
-Before you can release an application developed with MIP/RMS, you must apply for and complete a formal agreement with Microsoft.
+Before you can release an application developed with MIP, you must apply for and complete a formal agreement with Microsoft.
 
 1. Obtain your IPIA by sending an email to **IPIA@microsoft.com** with the following information:
 
