@@ -48,6 +48,11 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     The PowerShell module for the client requires Windows PowerShell version 4.0, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type `$PSVersionTable` in a PowerShell session.
 
+- Screen resolution greater than 800x600
+    
+    Resolutions 800x600 and lower can't fully display the **Classify and protect - Azure Information Protection** dialog box.
+
+
 - Microsoft Online Services Sign-in Assistant 7.250.4303.0
     
     Computers running Office 2010 require Microsoft Online Services Sign-in Assistant version 7.250.4303.0. This version is included with the client installation. If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
