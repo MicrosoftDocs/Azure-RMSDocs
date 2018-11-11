@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -79,8 +79,6 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - Excel 2010: When a spreadsheet is protected by using the Co-Author [permission level](../configure-usage-rights.md#rights-included-in-permissions-levels), the **Delete Label** button is now available when you right-click the file and choose **Classify and Protect**.
 
 - The advanced client settings for **ExternalContentMarkingToRemove**, which can [remove headers and footers from other labeling solutions](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) now supports custom layouts.
-
-- The Azure Information Protection viewer no longer crashes if you try to open a file that doesn't have read permissions for your account. 
 
 ## Version 1.37.19.0
 
