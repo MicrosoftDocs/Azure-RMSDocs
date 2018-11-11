@@ -50,7 +50,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
 - Screen resolution greater than 800x600
     
-    Resolutions 800x600 and lower can't fully display the **Classify and protect - Azure Information Protection** dialog box.
+    Resolutions 800x600 and lower can't fully display the **Classify and protect - Azure Information Protection** dialog box when you right-click a file or folder in File Explorer.
 
 
 - Microsoft Online Services Sign-in Assistant 7.250.4303.0
