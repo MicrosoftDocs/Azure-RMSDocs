@@ -64,7 +64,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     The client installation does not check for this prerequisite but it is needed for the Azure Information Protection client to classify and protect PDF files.
 
-- Use group policy to prevent the Azure Information Protection add-in from being disabled
+- Configure group policy to prevent the Azure Information Protection add-in from being disabled
     
     For Office 2013 and later versions, configure group policy to ensure that the **Microsoft Azure Information Protection** add-in for Office applications is always enabled. Without this configuration, the Microsoft Azure Information Protection add-in can get disabled and users will not be able to label their documents and emails in their Office application.
     
