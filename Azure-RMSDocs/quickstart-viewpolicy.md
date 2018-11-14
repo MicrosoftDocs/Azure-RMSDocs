@@ -43,7 +43,7 @@ Azure Information Protection isn't automatically available in the Azure portal. 
 
 1. Sign in to the [Azure portal](https://portal.azure.com) by using the global admin account for your tenant. 
     
-    If you are not the global admin, you can use one of the following [administrative roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal): **Information Protection Administrator** or **Security Administrator**.
+    If you are not the global admin, use the following link for alternative roles: [Signing in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal) 
 
 2. On the hub menu, select **Create a resource**, and then, from the search box for the Marketplace, type **Azure Information Protection**. 
     
