@@ -122,8 +122,6 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     
     - You can now protect all file types by using the `*` wildcard when you edit the registry as described in the [Editing the registry for the scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) section.
 
-- When you classify and protect by using PowerShell or the scanner, the Office document metadata is not removed or encrypted.
-
 - Viewing emails by using the Next Item and Previous Item arrow icons on the Quick Access toolbar shows the correct label for each email.
 
 - Custom permissions support recipient email addresses that contain an apostrophe.

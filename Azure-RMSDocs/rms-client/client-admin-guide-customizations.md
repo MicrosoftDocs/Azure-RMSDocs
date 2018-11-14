@@ -61,6 +61,7 @@ Some of these settings require editing the registry and some use advanced settin
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[Disable the low integrity level for the scanner](#disable-the-low-integrity-level-for-the-scanner)|
+|PullPolicy|[Prevent sign-in prompts for AD RMS only computers](#prevent-sign-in-prompts-for-ad-rms-only-computers)
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Modify the email address for the Report an Issue link](#modify-the-email-address-for-the-report-an-issue-link)|
 |RunPolicyInBackground|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)|
@@ -69,13 +70,21 @@ Some of these settings require editing the registry and some use advanced settin
 
 ## Prevent sign-in prompts for AD RMS only computers
 
-By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service. For computers that only communicate with AD RMS, this configuration can result in a sign-in prompt for users that is not necessary. You can prevent this sign-in prompt by editing the registry:
+By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service. For computers that only communicate with AD RMS, this configuration can result in a sign-in prompt for users that is not necessary. You can prevent this sign-in prompt by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. Or, you can prevent this sign-in prompt by editing the registry.
 
-Locate the following value name, and then set the value data to **0**:
+- To configure the advanced client setting, enter the following strings:
+    
+    - Key: **ReportAnIssueLink**
+    
+    - Value: **\<HTTP string>**
 
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+- Alternatively, to edit the registry:
+    
+    - Locate the following value name, and then set the value data to **0**:
+    
+        **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Regardless of this setting, the Azure Information Protection client follows the standard [RMS service discovery process](client-deployment-notes.md#rms-service-discovery) to find its AD RMS cluster.
+Regardless of either setting, the Azure Information Protection client follows the standard [RMS service discovery process](client-deployment-notes.md#rms-service-discovery) to find its AD RMS cluster.
 
 ## Sign in as a different user
 
