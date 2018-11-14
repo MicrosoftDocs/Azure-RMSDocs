@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
@@ -68,7 +68,9 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
     - **Security Administrator**
 
     - **Global Administrator / Company Administrator**
-
+    
+    > [!NOTE] 
+    > If your teant has been migrated to the unified labeling store, your account must have permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 ## To access the Azure Information Protection blade for the first time
 
