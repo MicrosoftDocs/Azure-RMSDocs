@@ -31,7 +31,7 @@ When you assign a label to a document or email message, you can select several o
 
 Additional information about these visual markings:
 
-- Headers and footers apply to Word, Excel, PowerPoint, and Outlook.
+- Headers and footers support single lines of text that apply to Word, Excel, PowerPoint, and Outlook.
 
 - Watermarks apply to Word, Excel, and PowerPoint:
 
