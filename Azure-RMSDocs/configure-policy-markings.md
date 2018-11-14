@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
@@ -31,7 +31,7 @@ When you assign a label to a document or email message, you can select several o
 
 Additional information about these visual markings:
 
-- Headers and footers apply to Word, Excel, PowerPoint, and Outlook.
+- Headers and footers support single lines of text that apply to Word, Excel, PowerPoint, and Outlook.
 
 - Watermarks apply to Word, Excel, and PowerPoint:
 
