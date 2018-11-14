@@ -70,13 +70,17 @@ Some of these settings require editing the registry and some use advanced settin
 
 ## Prevent sign-in prompts for AD RMS only computers
 
-By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service. For computers that only communicate with AD RMS, this configuration can result in a sign-in prompt for users that is not necessary. You can prevent this sign-in prompt by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. Or, you can prevent this sign-in prompt by editing the registry.
+By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service. For computers that only communicate with AD RMS, this configuration can result in a sign-in prompt for users that is not necessary. You can prevent this sign-in prompt by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal and then download the policy for computers. Or, you can prevent this sign-in prompt by editing the registry.
 
-- To configure the advanced client setting, enter the following strings:
+- To configure the advanced client setting:
     
-    - Key: **ReportAnIssueLink**
+    1. Enter the following strings:
     
-    - Value: **\<HTTP string>**
+        - Key: **PullPolicy**
+        
+        - Value: **False**
+    
+    2. Download the policy with this setting and install it on computers, following the instructions from [Support for disconnected computers](#support-for-disconnected-computers).
 
 - Alternatively, to edit the registry:
     
