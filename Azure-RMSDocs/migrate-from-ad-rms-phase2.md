@@ -133,7 +133,7 @@ The template changes that you might need to make for this step:
 
 - If your templates in AD RMS used the **ANYONE** group, you might need to manually add users or groups. 
     
-    In AD RMS, the ANYONE group granted rights to all authenticated users and this group is not supported by Azure Information Protection. The closet equivalent is a group that's automatically created for all users in your Azure AD tenant. If you were using the ANYONE group for your AD RMS templates, you might need to add users and the rights that you want to grant them.
+    In AD RMS, the ANYONE group granted rights to all users authenticated by your on-premises Active Directory, and this group is not supported by Azure Information Protection. The closet equivalent is a group that's automatically created for all users in your Azure AD tenant. If you were using the ANYONE group for your AD RMS templates, you might need to add users and the rights that you want to grant them.
 
 ### Procedure if you created custom templates before the migration
 
