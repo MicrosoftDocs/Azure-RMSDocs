@@ -76,7 +76,7 @@ By default, the Azure Information Protection client automatically tries to conne
     
     **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Regardless of either setting, the Azure Information Protection client follows the standard [RMS service discovery process](client-deployment-notes.md#rms-service-discovery) to find its AD RMS cluster.
+Regardless of this setting, the Azure Information Protection client still follows the standard [RMS service discovery process](client-deployment-notes.md#rms-service-discovery) to find its AD RMS cluster.
 
 ## Sign in as a different user
 
