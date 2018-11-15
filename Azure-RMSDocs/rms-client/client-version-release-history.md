@@ -82,6 +82,10 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - The advanced client settings for **ExternalContentMarkingToRemove**, which can [remove headers and footers from other labeling solutions](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) now supports custom layouts.
 
+**Additional changes:**
+
+- When the scanner's schedule is set to Always, there is now a delay of 30 seconds between scans.
+
 ## Version 1.37.19.0
 
 **Released**: 09/17/2018
