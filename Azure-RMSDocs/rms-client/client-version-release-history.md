@@ -84,7 +84,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **Additional changes:**
 
-- When the scanner's schedule is set to Always, there is now a delay of 30 seconds between scans.
+- When the scanner's schedule is set to **Always**, there is now a delay of 30 seconds between scans.
 
 ## Version 1.37.19.0
 
