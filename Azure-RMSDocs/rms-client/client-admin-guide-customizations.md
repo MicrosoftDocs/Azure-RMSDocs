@@ -259,7 +259,7 @@ The label ID value is displayed on the **Label** blade, when you view or configu
 
 The S/MIME action can be:
 
-- - `Sign;Encrypt`: To apply a digital signature and S/MIME encryption
+- `Sign;Encrypt`: To apply a digital signature and S/MIME encryption
 
 - `Encrypt`: To apply S/MIME encryption only
 
