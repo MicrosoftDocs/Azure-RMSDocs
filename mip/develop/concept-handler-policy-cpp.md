@@ -52,5 +52,5 @@ After successfully creating the `PolicyHandler` object, actions may be computed 
 
 Now that you've learned about creation of a Policy handler:
 
-- Learn how to [create an execution state class](concept-handler-policy-execution-state-cpp.md), which is used for determining compute actions.
+- Learn how to [create an execution state class](concept-handler-policy-executionstate-cpp.md), which is used for determining compute actions.
 - Download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
