@@ -60,5 +60,5 @@ Each property is set by the application, then `ExecutionStateOptions` is passed 
 
 ### Next Steps
 
-- Learn how to determine [compute actions for a new or existing label](concept-handler-policy-computeactions.md), based on the current and desired state.
+- Learn how to determine [compute actions for a new or existing label](concept-handler-policy-computeactions-cpp.md), based on the current and desired state.
 - Download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
