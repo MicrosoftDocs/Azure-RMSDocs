@@ -275,7 +275,7 @@ Example values for a label ID of **dcf781ba-727f-4860-b3c1-73479e31912b**:
     
     **dcf781ba-727f-4860-b3c1-73479e31912b;Encrypt**
     
-- To apply a digital encryption only:
+- To apply a digital signature only:
     
     **dcf781ba-727f-4860-b3c1-73479e31912b;Sign**
 
