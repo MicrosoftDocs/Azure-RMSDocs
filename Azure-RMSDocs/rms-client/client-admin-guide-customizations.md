@@ -249,7 +249,7 @@ To configure this advanced setting, enter the following strings:
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
 
-Use this setting only when you have a working [S/MIME deployment](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than use Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
+Use this setting only when you have a working [S/MIME deployment](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
 
 This configuration requires you to specify an advanced client setting named **LabelToSMIME** for each Azure Information Protection label that you want to apply S/MIME protection. Then for each entry, set the value by using the following syntax:
 
@@ -267,7 +267,7 @@ The S/MIME action can be:
 
 Example values for a label ID of **dcf781ba-727f-4860-b3c1-73479e31912b**:
 
-- To apply S/MIME encryption and a digital signature:
+- To apply a digital signature and S/MIME encryption:
     
     **dcf781ba-727f-4860-b3c1-73479e31912b;Sign;Encrypt**
 
