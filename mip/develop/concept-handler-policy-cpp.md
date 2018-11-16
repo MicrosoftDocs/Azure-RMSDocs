@@ -9,7 +9,7 @@ ms.author: tommos
 ---
 # Microsoft Information Protection SDK - Policy handler concepts
 
-In the Policy API, `mip::PolicyHandler` exposes the various operations that can be used to compute policy actions and submit audit events.
+In the Policy API, `mip::PolicyHandler` exposes operations used to compute policy actions, and submit audit events.
 
 ## Policy handler functions
 
@@ -30,7 +30,7 @@ Creating a `PolicyHandler` requires:
 
 ## Create a policy handler
 
-The first step required in obtaining policy actions, is to create a `PolicyHandler` object. This class implements the functionality required to get the list of actions a specific label must take, and the function to trigger an audit event.
+The first step required in obtaining policy actions, is to create a `PolicyHandler` object. This class implements functionality required to get the list of actions a specific label must take. It also implements the function to trigger an audit event.
 
 Creating the `PolicyHandler` is as easy as calling the `PolicyEngine`'s `CreatePolicyHandlerAsync` function using the promise/future pattern.
 

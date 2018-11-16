@@ -1,11 +1,11 @@
 ---
 title: Concepts - Using the Microsoft Information Protection SDK to generate audit events
-description: This article will help you understand how to use the Microsoft Information Protection SDK to compute .
+description: This article will help you understand how to use the Microsoft Information Protection SDK to compute.
 services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/01/2018
+ms.date: 11/16/2018
 ms.author: tommos
 ---
 
@@ -13,7 +13,7 @@ ms.author: tommos
 
 As previously detailed, the primary functions of the Policy API are to:
 - list available labels
-- return the specific set of actions that should be taken based on the current and desired state
+- return a set of actions that should be taken, based on the current and desired state
 
 The last step in the process is to provide a label identifier and, optionally, metadata about the existing label to the `ComputeActions()` function.
 
@@ -58,7 +58,7 @@ The `PolicyHandler` computes the actions and returns a `std::vector` of `mip::Ac
 
 ## Compute Actions with an Existing Label
 
-When using the Policy API, it's up to the application to read metadata from the content. This metadata is provided to the API as part of the `mip::ExecutionState`. `ComputeActions()` can handle more complex operations than applying a new label to an unlabeled document. The example below demonstrates downgrading a label from a more sensitive label to a less sensitive label, where a label already exists. This process is simulated by reading in a comma-separated string of metadata, and providing to the API via `mip::ExecutionState`.
+When using the Policy API, it's up to the application to read metadata from  content. This metadata is provided to the API as part of the `mip::ExecutionState`. `ComputeActions()` can handle more complex operations than applying a new label to an unlabeled document. The example below demonstrates downgrading a label from a more sensitive label, to a less sensitive label. This process is simulated by reading a comma-separated string of metadata, and providing to the API via `mip::ExecutionState`.
 
 > [!NOTE]
 > The sample uses a utility function called `SplitString()`. An example can be found [here](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/utils.cpp)
