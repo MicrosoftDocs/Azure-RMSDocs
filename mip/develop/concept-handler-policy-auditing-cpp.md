@@ -70,5 +70,6 @@ Events submitted to the Azure Information Protection audit pipeline will surface
 
 ## Next Steps
 
-See the [preview announcement blog on Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854) for more details on the auditing experience in Azure Information Protection.
+- See the [preview announcement blog on Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854) for more details on the auditing experience in Azure Information Protection.
+- Download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
 

@@ -23,7 +23,7 @@ Sample code for this article can be found on GitHub.
 
 ## Compute an Action for a New Label
 
-Computing the `mip::Actions` for a new label can be achieved by using the `ExecutionStateImpl` defined in  [ExecutionState](concept-auditing-policy-executionstate-cpp.md).
+Computing the `mip::Actions` for a new label, can be achieved by using the `ExecutionStateImpl` defined in  [ExecutionState](concept-handler-policy-executionstate-cpp.md).
 
 ```cpp
 // Replace with valid label ID.
@@ -111,5 +111,5 @@ Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ActionId
 
 ## Next Steps
 
-* Next, download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
-* Read about how to [pass audit events to the Azure Information Protection audit pipeline](concept-auditing-policy-cpp.md)
+- Learn how to [pass audit events to Azure Information Protection Analytics](concept-handler-policy-auditing.md)
+- Download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
