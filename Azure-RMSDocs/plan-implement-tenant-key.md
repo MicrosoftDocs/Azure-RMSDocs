@@ -213,7 +213,7 @@ Now that you've planned for and if necessary, created and configured your tenant
     
     ![log file in Excel where tenant key is being used](./media/RMS_Logging.png)
     
-    For more information about usage logging, see [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md).
+    For more information about usage logging, see [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md).
     
 3.  Manage your tenant key.
     

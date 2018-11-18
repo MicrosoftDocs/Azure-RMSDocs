@@ -112,7 +112,7 @@ Two fields in the usage log files are applicable to document tracking: **AdminAc
 There are also request types that log how users and administrators are using the document tracking site. For example, **RevokeAccess** is the request type when a user or an administrator on behalf of a user has revoked a document in the document tracking site. Use this request type in combination with the AdminAction field to determine whether the user revoked their own document (the AdminAction field is empty) or an administrator revoked a document on behalf of a user (the AdminAction is true).
 
 
-For more information about usage logging, see [Logging and analyzing usage of the Azure Rights Management service](../log-analyze-usage.md)
+For more information about usage logging, see [Logging and analyzing the protection usage from Azure Information Protection](../log-analyze-usage.md)
 
 
 

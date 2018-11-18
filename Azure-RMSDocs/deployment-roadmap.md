@@ -103,7 +103,7 @@ When users are comfortable labeling documents and emails, you're ready to start 
 
 Optionally, consider configuring the following:
 
-- Usage logging so that you can monitor how your organization is using the protection service. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md).
+- Usage logging so that you can monitor how your organization is using the protection service. You can do this step now, or later. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md).
 
 ### Step 5: Configure your Azure Information Protection policy, applications, and services for data protection
 
@@ -119,7 +119,7 @@ Optionally, consider configuring the following:
 
 3. Configure the super user feature for data recovery
     
-    If you have existing IT services that need to inspect files that Azure Information Protection will protect—such as data leak prevention (DLP) solutions, content encryption gateways (CEG), and anti-malware products—configure the service accounts to be super users for Azure Rights Management. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](./configure-super-users.md).
+    If you have existing IT services that need to inspect files that Azure Information Protection will protect—such as data leak prevention (DLP) solutions, content encryption gateways (CEG), and anti-malware products—configure the service accounts to be super users for Azure Rights Management. For more information, see [Configuring super users for Azure Information Protection and discovery services or data recovery](./configure-super-users.md).
 
 4. Classify and protect existing files in bulk
     
@@ -138,7 +138,7 @@ You’re now ready to monitor how your organization is using the labels that you
 
 - [Client files and usage logging](./rms-client/client-admin-guide-files-and-logging.md)
 
-- [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md)
+- [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md)
 
 ### Step 7: Administer the protection service for your tenant account as needed
 As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. PowerShell might also be needed for some of the advanced configurations. 
@@ -171,7 +171,7 @@ Optionally, consider configuring the following:
 
 - Custom templates for protection settings if the default templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring and managing templates for Azure Information Protection](./configure-policy-templates.md).
 
-- Usage logging so that you can monitor how your organization is using the protection service. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md).
+- Usage logging so that you can monitor how your organization is using the protection service. You can do this step now, or later. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md).
 
 ### Step 3: Install the client and configure applications and services for Rights Management
 
@@ -185,7 +185,7 @@ Optionally, consider configuring the following:
 
 3. Configure the super user feature for data recovery
     
-    If you have existing IT services that need to inspect files that Azure Information Protection will protect—such as data leak prevention (DLP) solutions, content encryption gateways (CEG), and anti-malware products—configure the service accounts to be super users for Azure Rights Management. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](./configure-super-users.md).
+    If you have existing IT services that need to inspect files that Azure Information Protection will protect—such as data leak prevention (DLP) solutions, content encryption gateways (CEG), and anti-malware products—configure the service accounts to be super users for Azure Rights Management. For more information, see [Configuring super users for Azure Information Protection and discovery services or data recovery](./configure-super-users.md).
 
 4. Protect existing files in bulk 
     
@@ -198,7 +198,7 @@ Optionally, consider configuring the following:
     If you have on-premises services that you want to use with the protection service, install and configure the Rights Management connector. For more information, see [Deploying the Azure Rights Management connector](./deploy-rms-connector.md).
 
 ### Step 4: Use and monitor your data protection solutions
-You’re now ready to protect your data, and log how your company is using the protection service. For addition information to support this deployment phase, see [Helping users to protect files by using the Azure Rights Management service](./help-users.md) and [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md).
+You’re now ready to protect your data, and log how your company is using the protection service. For addition information to support this deployment phase, see [Helping users to protect files by using the Azure Rights Management service](./help-users.md) and [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md).
 
 ### Step 5: Administer the protection service for your tenant account as needed
 As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. PowerShell might also be needed for some of the advanced configurations. 

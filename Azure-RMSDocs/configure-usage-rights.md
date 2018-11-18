@@ -190,4 +190,4 @@ The default use license validity period for a tenant is 30 days and you can conf
 ## See Also
 [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md)
 
-[Configuring super users for Azure Rights Management and discovery services or data recovery](configure-super-users.md)
+[Configuring super users for Azure Information Protection and discovery services or data recovery](configure-super-users.md)

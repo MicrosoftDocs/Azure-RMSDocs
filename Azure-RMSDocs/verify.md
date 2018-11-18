@@ -40,7 +40,7 @@ If your testing is unsuccessful, review the configuration steps in [Azure Inform
 
 ## Next steps
 
-You can monitor how your organization is using the Azure Rights Management service by using usage logging. For more information, see [Logging and analyzing usage of the Azure Rights Management service](log-analyze-usage.md).
+You can monitor how your organization is using the Azure Rights Management service by using usage logging. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](log-analyze-usage.md).
 
 
 
