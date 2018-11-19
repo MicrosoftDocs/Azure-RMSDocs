@@ -86,7 +86,7 @@ In order to use your Rights Management Services SDK 2.1 service application with
 -   Install [Azure RMS powershell module](https://technet.microsoft.com/library/jj585012.aspx).
 -   Start Powershell and run the following commands to get the RMS configuration of the tenant.
 
-    `Import-Module aadrm`
+    `Import-Module AIPService`
 
     `Connect-AipService` (type-in your admin credentials)
 
