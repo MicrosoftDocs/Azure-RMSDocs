@@ -31,10 +31,10 @@ Do you need to use PowerShell to administer the protection service from Azure In
 
 The table in the next section includes some of the advanced configuration scenarios that use PowerShell. When the configuration can also be completed without using PowerShell, this information is also included in the table.
 
-For a complete list of the available cmdlets for this module, with more information about each one, see [AIP-Service](/powershell/module/aipservice/?view=azureipps#aipservice).
+For a complete list of the available cmdlets for this module, with more information about each one, see [AIPService](/powershell/module/aipservice/?view=azureipps#aipservice).
 
 > [!NOTE]
-> To install this PowerShell module, see [Installing the AIP-Service PowerShell module](install-powershell.md).
+> To install this PowerShell module, see [Installing the AIPService PowerShell module](install-powershell.md).
 
 In addition to this service-side PowerShell module, the Azure Information Protection client installs a supplemental PowerShell module, **AzureInformationProtection**. This client module supports classifying and protecting multiple files so that, for example, you can bulk-protect all files in a folder. For more information, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) from the admin guide.
 
