@@ -79,7 +79,7 @@ You can use an account that has one of the following privileges:
     > 
     > To run the RMS connector with least privileges, create a dedicated account for this purpose that you then assign the Azure RMS connector administrator role by doing the following:
     >
-    > 1.  If you haven't already done so, download and install Windows PowerShell for Rights Management. For more information, see [Installing the AADRM PowerShell module](install-powershell.md).
+    > 1.  If you haven't already done so, download and install Windows PowerShell for Rights Management. For more information, see [Installing the AIPService PowerShell module](install-powershell.md).
     >
     >     Start Windows PowerShell with the **Run as administrator** command, and connect to the Azure RMS service by using the [Connect-AipServiceService](/powershell/module/aipservice/connect-aipservice) command:
     >

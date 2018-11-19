@@ -35,7 +35,7 @@ In addition, you can export and import protection templates. These two actions l
 
 You can also use export and import to back up and restore your protection templates. As a best practice, regularly back up your templates. Then, if you make a change to the protection settings that wasn't intended, you can easily revert to a previous version.
 
-For installation instructions, see [Installing the AADRM PowerShell module](install-powershell.md).
+For installation instructions, see [Installing the AIPService PowerShell module](install-powershell.md).
 
 The cmdlets that support creating and managing protection templates:
 

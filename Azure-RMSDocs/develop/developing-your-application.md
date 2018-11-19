@@ -53,7 +53,7 @@ Once the service is activated you will need PowerShell components for the next s
 >Record the BPOSId (tenant ID) value. You will need it in future steps.
 
 *Example output*
-![cmdlet output](../media/develop/output-of-Get-AipServiceConfiguration.png)
+![cmdlet output](../media/develop/output-of-Get-AadrmConfiguration.png)
 
 - Disconnect from the service: `Disconnect-AipServiceService`
 

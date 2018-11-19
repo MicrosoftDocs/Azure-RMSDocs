@@ -147,7 +147,7 @@ Run the Get-AipServiceConfiguration cmdlet from the Azure RMS
 Windows PowerShell module:
 
 1. If this module is not already installed on your computer, see
-[Installing the AADRM PowerShell module](../install-powershell.md).
+[Installing the AIPService PowerShell module](../install-powershell.md).
 
 2. Start Windows PowerShell with the **Run as Administrator** option.
 

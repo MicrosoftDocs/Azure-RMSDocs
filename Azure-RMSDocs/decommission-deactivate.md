@@ -50,7 +50,7 @@ For more information about the procedures in this table, see the following resou
 
 - For instructions to import your Azure Information Protection tenant key as a TPD file, see [Add a Trusted Publishing Domain](https://technet.microsoft.com/library/cc771460.aspx).
 
-- To install the Windows PowerShell module for Azure Rights Management, to set the migration URL, see [Installing the AADRM PowerShell module](install-powershell.md).
+- To install the Windows PowerShell module for Azure Rights Management, to set the migration URL, see [Installing the AIPService PowerShell module](install-powershell.md).
 
 - To use PowerShell with the Azure Information Protection client, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md).
 

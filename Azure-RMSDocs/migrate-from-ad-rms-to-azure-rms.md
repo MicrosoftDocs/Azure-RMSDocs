@@ -145,7 +145,7 @@ The migration steps can be divided into five phases that can be done at differen
 
 [**PHASE 1: MIGRATION PREPARATION**](migrate-from-ad-rms-phase1.md)
 
-- **Step 1: Install the AADRM PowerShell module and identify your tenant URL**
+- **Step 1: Install the AIPService PowerShell module and identify your tenant URL**
 
     The migration process requires you to run one or more of the PowerShell cmdlets from the AIPService module. You will need to know your tenant's Azure Rights Management service URL to complete many of the migration steps, and you can identity this value by using PowerShell.
 

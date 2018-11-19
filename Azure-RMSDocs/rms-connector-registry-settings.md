@@ -35,7 +35,7 @@ Instructions for when you use these settings:
 
 -   *\<YourTenantURL>* is the Azure Rights Management service URL for your Azure Information Protection tenant. To find this value:
 
-    1.  Run the [Get-AipServiceConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for the Azure Rights Management service. If you haven’t already installed the Windows PowerShell module for Azure RMS, see [Installing the AADRM PowerShell module](install-powershell.md).
+    1.  Run the [Get-AipServiceConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for the Azure Rights Management service. If you haven’t already installed the Windows PowerShell module for Azure RMS, see [Installing the AIPService PowerShell module](install-powershell.md).
 
     2.  From the output, identify the **LicensingIntranetDistributionPointUrl** value.
 

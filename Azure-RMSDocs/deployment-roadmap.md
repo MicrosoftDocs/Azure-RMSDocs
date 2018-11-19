@@ -95,7 +95,7 @@ When users are comfortable labeling documents and emails, you're ready to start 
 
 1. Decide whether you want Microsoft to manage your tenant key (the default), or generate and manage your tenant key yourself (known as bring your own key, or BYOK). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
-2. Install the PowerShell module for AADRM on at least one computer that has Internet access. You can do this step now, or later. For more information, see [Installing the AADRM PowerShell module](./install-powershell.md).
+2. Install the PowerShell module for AADRM on at least one computer that has Internet access. You can do this step now, or later. For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).
 
 3. If you are currently using AD RMS: Perform a migration to move the keys, templates, and URLs to the cloud. For more information, see [Migrating from AD RMS to Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -161,7 +161,7 @@ Before you begin using the protection service from Azure Information Protection,
 
 2. Decide whether you want Microsoft to manage your tenant key (the default), or generate and manage your tenant key yourself (known as bring your own key, or BYOK). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
-3. Install the PowerShell module for AADRM on at least one computer that has Internet access. You can do this step now, or later. For more information, see [Installing the AADRM PowerShell module](./install-powershell.md).
+3. Install the PowerShell module for AADRM on at least one computer that has Internet access. You can do this step now, or later. For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).
 
 4. If you are currently using AD RMS: Perform a migration to move the keys, templates, and URLs to the cloud. For more information, see [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 

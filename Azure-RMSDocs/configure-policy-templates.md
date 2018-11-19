@@ -71,7 +71,7 @@ If you obtained your subscription some time ago, your default templates are crea
 You can rename (and reconfigure) these default templates when you use the Azure portal.
 
 >[!NOTE]
->If you don't see your default templates in the **Azure Information Protection - Labels** blade, they are converted to labels, or linked to a label. They still exist as templates, but in the Azure portal, you see them as part of a label configuration that includes protection settings for a cloud key. You can always confirm what templates your tenant has, by running the [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate) from the [AADRM PowerShell module](administer-powershell.md).
+>If you don't see your default templates in the **Azure Information Protection - Labels** blade, they are converted to labels, or linked to a label. They still exist as templates, but in the Azure portal, you see them as part of a label configuration that includes protection settings for a cloud key. You can always confirm what templates your tenant has, by running the [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate) from the [AIPService PowerShell module](administer-powershell.md).
 >
 >You can manually convert templates, as explained in the later section, [To convert templates to labels](#to-convert-templates-to-labels), and then rename them if you want. Or they are converted automatically for you if your default Azure Information Protection policy was recently created and the Azure Rights Management service for your tenant was activated at that time.
 
@@ -81,7 +81,7 @@ Templates that are archived display as unavailable in the **Azure Information Pr
 
 Before you edit these templates or convert them to labels, make sure that you are aware of the following changes and considerations. Because of implementation changes, the following list is especially important if you previously managed templates in the Azure classic portal.
 
-- After you edit or convert a template and save the Azure Information Protection policy, the following changes are made to the original [usage rights](configure-usage-rights.md). If required, you can add or remove individual usage rights by using the Azure portal. Or, use PowerShell with the [New-​Aadrm​Rights​Definition](/powershell/module/aipservice/set-aipservicetemplateproperty) and [Set-​Aadrm​Template​Property](/powershell/module/aipservice/set-​aadrm​template​property) cmdlets.
+- After you edit or convert a template and save the Azure Information Protection policy, the following changes are made to the original [usage rights](configure-usage-rights.md). If required, you can add or remove individual usage rights by using the Azure portal. Or, use PowerShell with the [New-​AipService​Rights​Definition](/powershell/module/aipservice/set-aipservicetemplateproperty) and [Set-AipServiceTemplate​Property](/powershell/module/aipservice/set-aipservice​template​property) cmdlets.
     
     - **Allow Macros** (common name) is automatically added. This usage right is required for the Azure Information Protection bar in Office apps.
 
@@ -93,7 +93,7 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 - Currently, if you edit and save a departmental template, it removes the scope configuration. The equivalent of a scoped template in the Azure Information Protection policy is a [scoped policy](configure-policy-scope.md). If you convert the template to a label, you can select an existing scope.
     
-    In addition, you cannot set the application compatibility setting for a departmental template by using the Azure portal. If necessary, you can set this application compatibility setting by using the [Set-​Aadrm​Template​Property](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet and the *EnableInLegacyApps* parameter.
+    In addition, you cannot set the application compatibility setting for a departmental template by using the Azure portal. If necessary, you can set this application compatibility setting by using the [Set-AipServiceTemplate​Property](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet and the *EnableInLegacyApps* parameter.
 
 - When you convert or link a template to a label, it can no longer be used by other labels. In addition, this template no longer displays in the **Protection templates** section. 
 

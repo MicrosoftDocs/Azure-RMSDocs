@@ -103,7 +103,7 @@
 ## [Manage personal data for Azure Information Protection](manage-personal-data.md)
 ## [Decommissioning and deactivating](decommission-deactivate.md)
 ## [Administering with PowerShell](administer-powershell.md)
-### [Installing the AADRM PowerShell module](install-powershell.md)
+### [Installing the AIPService PowerShell module](install-powershell.md)
 
 # [Deploy & Use the Client](/azure/information-protection/rms-client/use-client)
 

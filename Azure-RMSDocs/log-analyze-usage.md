@@ -71,7 +71,7 @@ The Azure Rights Management service writes logs to your Azure storage account as
 
 It can take a while for logs to appear in your storage account after an Azure Rights Management action. Most logs appear within 15 minutes. We recommend that you download the logs to local storage, such as a local folder, a database, or a map-reduce repository.
 
-To download your usage logs, you will use the Azure Rights Management administration module for Windows PowerShell. For installation instructions, see [Installing the AADRM PowerShell module](install-powershell.md). If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
+To download your usage logs, you will use the Azure Rights Management administration module for Windows PowerShell. For installation instructions, see [Installing the AIPService PowerShell module](install-powershell.md). If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
 
 ### To download your usage logs by using PowerShell
 

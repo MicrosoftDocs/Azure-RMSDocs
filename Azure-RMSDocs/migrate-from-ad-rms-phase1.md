@@ -30,11 +30,11 @@ ms.suite: ems
 Use the following information for Phase 1 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 1 though 3 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) and prepare your environment for migration without any impact to your users.
 
 
-## Step 1: Install the AADRM PowerShell module and identify your tenant URL
+## Step 1: Install the AIPService PowerShell module and identify your tenant URL
 
 Install the AIPService module so that you can configure and manage the service that provides the data protection for Azure Information Protection.
 
-For instructions, see [Installing the AADRM PowerShell module](./install-powershell.md).
+For instructions, see [Installing the AIPService PowerShell module](./install-powershell.md).
 
 > [!NOTE]
 > If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`

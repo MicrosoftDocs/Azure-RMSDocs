@@ -2,7 +2,7 @@
 # required metadata
 
 title: Add-AadrmKey
-description: Help for Add-AadrmKey from the AIPService module.
+description: Help for Add-AadrmKey from the AADRM module.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -25,9 +25,9 @@ ms.suite: ems
 
 # Add-AadrmKey
 
-This cmdlet is now removed from the latest version of the Azure Rights Management module, because the Azure Rights Management service uses Azure Key Vault for customer-managed keys.
+This cmdlet is now removed from the AADRM module, because the protection service (Azure Rights Management) uses Azure Key Vault for customer-managed keys.
 
 Instead, use [Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
-In addition, update your version of the module so it is **2.9.0.0** or later. For instructions, see [Installing the AADRM PowerShell module](install-powershell.md).
+In addition, replace the AADRM the module with the new version, AIPService. For instructions, see [Installing the AIPService PowerShell module](install-powershell.md).
 

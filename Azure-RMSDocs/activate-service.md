@@ -72,7 +72,7 @@ For instructions how to activate the Rights Management service from your managem
 
 Alternatively, you can use the following PowerShell commands:
 
-1. Install the AIPService module, to configure and manage the protection service. For instructions, see [Installing the AADRM PowerShell module](install-powershell.md).
+1. Install the AIPService module, to configure and manage the protection service. For instructions, see [Installing the AIPService PowerShell module](install-powershell.md).
 
 2. From a PowerShell session, run [Connect-AipServiceService](/powershell/module/aipservice/connect-aipservice), and when prompted, provide the Global Administrator account details for your Azure Information Protection tenant.
 
@@ -86,7 +86,7 @@ If you don’t want all users to be able to protect documents and emails immedia
 > [!IMPORTANT]
 > To use this command, you must have at least version **2.1.0.0** of the [Azure Rights Management PowerShell module](https://go.microsoft.com/fwlink/?LinkId=257721).
 >
-> To check the version you have installed, run: **(Get-Module aadrm –ListAvailable).Version**
+> To check the version you have installed, run: **(Get-Module AIPService –ListAvailable).Version**
 
 For example, if you initially want only administrators in the “IT department” group (that has an object ID of fbb99ded-32a0-45f1-b038-38b519009503) to be able to protect content for testing purposes, use the following command:
 

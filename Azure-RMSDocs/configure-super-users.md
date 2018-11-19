@@ -50,7 +50,7 @@ If you need to manually enable the super user feature, use the PowerShell cmdlet
 Although using a group for your super users is easier to manage, be aware that for performance reasons, Azure Rights Management [caches the group membership](prepare.md#group-membership-caching-by-azure-information-protection). So if you need to assign a new user to be a super user to decrypt content immediately, add that user by using Add-AipServiceSuperUser, rather than adding the user to an existing group that you have configured by using Set-AipServiceSuperUserGroup.
 
 > [!NOTE]
-> If you have not yet installed the Windows PowerShell module for Azure Rights Management, see [Installing the AADRM PowerShell module](install-powershell.md).
+> If you have not yet installed the Windows PowerShell module for Azure Rights Management, see [Installing the AIPService PowerShell module](install-powershell.md).
 
 It doesn't matter when you enable the super user feature or when you add users as super users. For example, if you enable the feature on Thursday and then add a user on Friday, that user can immediately open content that was protected at the very beginning of the week.
 
@@ -84,7 +84,7 @@ If you are using classification and protection, you can also use the [Set-AIPFil
 For more information about these cmdlets, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) from the Azure Information Protection client admin guide.
 
 > [!NOTE]
-> The AzureInformationProtection module is different from and supplements the [AADRM PowerShell module](administer-powershell.md) that manages the Azure Rights Management service for Azure Information Protection.
+> The AzureInformationProtection module is different from and supplements the [AIPService PowerShell module](administer-powershell.md) that manages the Azure Rights Management service for Azure Information Protection.
 
 ### Guidance for using Unprotect-RMSFile for eDiscovery
 
