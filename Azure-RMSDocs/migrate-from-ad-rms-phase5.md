@@ -88,7 +88,7 @@ To remove the onboarding controls:
 
 1. In a PowerShell session, connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
 
-		Connect-AipServiceservice
+		Connect-AipService
 
 2. Run the following command, and enter **Y** to confirm:
 

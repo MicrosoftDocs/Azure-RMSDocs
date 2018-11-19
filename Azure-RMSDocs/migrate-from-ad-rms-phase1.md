@@ -71,7 +71,7 @@ For most migrations, it is not practical to migrate all clients at once, so you 
 
 2. Configure this group for onboarding controls to allow only people in this group to use Azure Rights Management to protect content. To do this, in a PowerShell session, connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
 
-		Connect-AipServiceservice
+		Connect-AipService
 
     Then configure this group for onboarding controls, substituting your group object ID for the one in this example, and enter **Y** to confirm when you are prompted:
 

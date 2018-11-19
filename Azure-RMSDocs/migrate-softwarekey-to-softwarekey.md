@@ -37,7 +37,7 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
 
 ## To import the configuration data to Azure Information Protection
 
-1. On an Internet-connected workstation, use the [Connect-AipServiceService](/powershell/aipservice/connect-aadrmservice) cmdlet to connect to the Azure Rights Management service:
+1. On an Internet-connected workstation, use the [Connect-AipServiceService](/powershell/aipservice/connect-aipservice) cmdlet to connect to the Azure Rights Management service:
 
     ```
     Connect-AipServiceService
@@ -59,7 +59,7 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     
 3. When you have uploaded each file, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to identify the imported key that matches the currently active SLC key in AD RMS. This key will become the active tenant key for your Azure Rights Management service.
 
-4.  Use the [Disconnect-AipServiceService](/powershell/aipservice/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
+4.  Use the [Disconnect-AipServiceService](/powershell/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
     Disconnect-AipServiceService

@@ -69,7 +69,7 @@ Now that you’ve prepared your HSM key in Azure Key Vault for the Azure Rights 
 
 These procedures are done by the administrator for Azure Information Protection.
 
-1. On the Internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connnect-AadrmService](/powershell/aipservice/connect-aadrmservice) cmdlet.
+1. On the Internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connnect-AadrmService](/powershell/aipservice/connect-aipservice) cmdlet.
     
     Then upload each trusted publishing domain (.xml) file, by using the [Import-AadrmTpd](/powershell/aipservice/import-aadrmtpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
     
@@ -91,7 +91,7 @@ These procedures are done by the administrator for Azure Information Protection.
 
 2.  When you have uploaded each file, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to specify which imported key matches the currently active SLC key in your AD RMS cluster. This key becomes the active tenant key for your Azure Rights Management service.
 
-3.  Use the [Disconnect-AipServiceService](/powershell/aipservice/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
+3.  Use the [Disconnect-AipServiceService](/powershell/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
     Disconnect-AipServiceService
