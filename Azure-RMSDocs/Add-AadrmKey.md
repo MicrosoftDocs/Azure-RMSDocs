@@ -13,7 +13,7 @@ ms.assetid: A1C99424-D986-4A5A-B2E1-6D18EEF11B21
 
 # optional metadata
 
-#ROBOTS: NOINDEX, NOFOLLOW
+#ROBOTS: NOINDEX,NOFOLLOW
 #audience:
 #ms.devlang:
 ms.reviewer: aashishr
