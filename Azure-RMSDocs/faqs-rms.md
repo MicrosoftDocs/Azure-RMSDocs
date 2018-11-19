@@ -98,7 +98,7 @@ Absolutely, and the nice thing is, users are able to seamlessly protect and cons
 No, you always remain in control of your data and can continue to access it, even if you decide to no longer use the Azure Rights Management service. For more information, see [Decommissioning and deactivating Azure Rights Management](decommission-deactivate.md).
 
 ## Can I control which of my users can use Azure RMS to protect content?
-Yes, the Azure Rights Management service has user onboarding controls for this scenario. For more information, see the [Configuring onboarding controls for a phased deployment](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) section in the [Activating Azure Rights Management](activate-service.md) article.
+Yes, the Azure Rights Management service has user onboarding controls for this scenario. For more information, see the [Configuring onboarding controls for a phased deployment](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) section in the [Activating the protection service from Azure Information Protection](activate-service.md) article.
 
 ## Can I prevent users from sharing protected documents with specific organizations?
 One of the biggest benefits of using the Azure Rights Management service for data protection is that it supports business-to-business collaboration without you having to configure explicit trusts for each partner organization, because Azure AD takes care of the authentication for you.

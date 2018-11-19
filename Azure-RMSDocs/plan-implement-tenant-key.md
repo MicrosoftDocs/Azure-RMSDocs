@@ -203,7 +203,7 @@ Now that you've planned for and if necessary, created and configured your tenant
     
     - If the protection service isn't already activated, you must now activate the Rights Management service so that your organization can start to use Azure Information Protection. Users immediately start to use your tenant key (managed by Microsoft, or managed by you in Azure Key Vault).
     
-        For more information about activation, see [Activating Azure Rights Management](./activate-service.md).
+        For more information about activation, see [Activating the protection service from Azure Information Protection](./activate-service.md).
         
     - If the Rights Management service was already activated and then you decided to manage your own tenant key, users gradually transition from the old tenant key to the new tenant key. This staggered transition can take a few weeks to complete. Documents and files that were protected with the old tenant key remains accessible to authorized users.
         

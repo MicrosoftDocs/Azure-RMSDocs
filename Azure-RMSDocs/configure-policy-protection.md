@@ -46,7 +46,7 @@ When a document or email is protected by a Rights Management service, it is encr
 For more information about the Azure Rights Management protection and how it works, see [What is Azure Rights Management?](what-is-azure-rms.md)
 
 > [!IMPORTANT]
-> To configure a label to apply this protection, the Azure Rights Management service must be activated for your organization. For more information, see [Activating Azure Rights Management](activate-service.md).
+> To configure a label to apply this protection, the Azure Rights Management service must be activated for your organization. For more information, see [Activating the protection service from Azure Information Protection](activate-service.md).
 
 When the label applies protection, a protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following features for protected files: Co-authoring, Office Online, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP). 
 

@@ -99,7 +99,7 @@ When users are comfortable labeling documents and emails, you're ready to start 
 
 3. If you are currently using AD RMS: Perform a migration to move the keys, templates, and URLs to the cloud. For more information, see [Migrating from AD RMS to Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-4. Make sure that the protection service is activated so that you can begin to protect documents and emails. If a phased deployment is required, configure user onboarding controls to restrict users' ability to apply protection. For more information, see [Activating Azure Rights Management](./activate-service.md).
+4. Make sure that the protection service is activated so that you can begin to protect documents and emails. If a phased deployment is required, configure user onboarding controls to restrict users' ability to apply protection. For more information, see [Activating the protection service from Azure Information Protection](./activate-service.md).
 
 Optionally, consider configuring the following:
 
@@ -165,7 +165,7 @@ Before you begin using the protection service from Azure Information Protection,
 
 4. If you are currently using AD RMS: Perform a migration to move the keys, templates, and URLs to the cloud. For more information, see [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-5. Make sure that the protection service is activated so that you can begin to protect documents and emails. If a phased deployment is required, configure user onboarding controls to restrict users' ability to apply protection. For more information, see [Activating Azure Rights Management](./activate-service.md).
+5. Make sure that the protection service is activated so that you can begin to protect documents and emails. If a phased deployment is required, configure user onboarding controls to restrict users' ability to apply protection. For more information, see [Activating the protection service from Azure Information Protection](./activate-service.md).
 
 Optionally, consider configuring the following:
 

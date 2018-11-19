@@ -46,5 +46,5 @@ When activation is complete, the information bar displays **Activation finished 
 
 
 ## Next steps
-Resume reading [Activating Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
+Resume reading [Activating the protection service from Azure Information Protection](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 

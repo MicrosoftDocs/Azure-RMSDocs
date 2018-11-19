@@ -97,7 +97,7 @@ In addition to the prerequisites for installing the AzureInformationProtection m
 
 This prerequisite applies whether you apply the data protection by using labels or by directly connecting to the Azure Rights Management service to apply the data protection.
 
-If your Azure Information Protection tenant is not activated, see the instructions for [Activating Azure Rights Management](../activate-service.md).
+If your Azure Information Protection tenant is not activated, see the instructions for [Activating the protection service from Azure Information Protection](../activate-service.md).
 
 #### Prerequisite 2: To remove protection from files for others using your own account
 
