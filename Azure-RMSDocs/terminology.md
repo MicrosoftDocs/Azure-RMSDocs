@@ -31,10 +31,11 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 
 |Term|Definition|
 |--------|--------------|
-|AADRM|The name of the PowerShell module for the Azure Rights Management service, which was derived from the unofficial abbreviation for Azure Rights Management when it was previously named (Windows) Azure Active Directory Rights Management.|
-|activate|To enable the Azure Rights Management service so that an organization can protect their documents and email. This action also enables IRM features in Exchange Online and SharePoint Online.|
+|AADRM|The name of the first PowerShell module for the protection service (Azure Rights Management), which was derived from the unofficial abbreviation for Azure Rights Management when it was previously named (Windows) Azure Active Directory Rights Management. This PowerShell module is now replaced with the AIPService module.|
+|activate|To enable the protection service (Azure Rights Management) so that an organization can protect their documents and email. This action also enables IRM features in Exchange Online and SharePoint Online.|
 |Active Directory Rights Management Services|Frequently abbreviated to *AD RMS*.<br /><br />A Windows Server role that provides rights management protection by using encryption and policy to help secure documents, files, and email.|
 |AD RMS|See *Active Directory Rights Management Services*.|
+|AIPService|The current name of the PowerShell module for the protection service, which replaces with the older, AADRM module.|
 AzureInformationProtection|The name of the PowerShell module for the Azure Information Protection client.
 |Azure Information Protection|A cloud-based service that uses labels to classify and protect documents and emails. Azure Rights Management provides the protection by using encryption, identity, and authorization policies.|
 Azure Information Protection client|The client side of Azure Information Protection that lets users, administrators, and services use the labels and settings from your Azure Information Protection policy.|

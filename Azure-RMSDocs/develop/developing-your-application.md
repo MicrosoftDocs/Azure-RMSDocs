@@ -45,7 +45,7 @@ Once the service is activated you will need PowerShell components for the next s
 ### Getting your Tenant ID
 
 - As an administrator, run PowerShell.
-- Import the RMS module: `Import-Module AADRM`
+- Import the RMS module: `Import-Module AIPService`
 - Connect to the service with the assigned user credentials: `Connect-AipServiceService –Verbose`
 - Ensure RMS is enabled: `enable-aipservice`
 - Get your tenant ID by running: `Get-AipServiceConfiguration`

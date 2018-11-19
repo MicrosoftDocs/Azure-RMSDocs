@@ -122,7 +122,7 @@ You can use the following PowerShell commands and commented instructions to auto
 To automatically get the values and run Set-RMSServerAuthentication:
 
 ````
-# Make sure that you have the AADRM and MSOnline modules installed
+# Make sure that you have the AIPService and MSOnline modules installed
 
 $ServicePrincipalName="<new service principal name>"
 Connect-AipServiceService
