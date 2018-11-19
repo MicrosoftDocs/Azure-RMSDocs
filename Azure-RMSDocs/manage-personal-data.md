@@ -29,13 +29,13 @@ When you configure and use Azure Information Protection, email addresses and IP 
 
 - The Azure Information Protection policy
 
-- Protection templates for the Azure Rights Management service
+- Protection templates for the protection service
 
-- Super users and delegated administrators for the Azure Rights Management service 
+- Super users and delegated administrators for the protection service 
 
-- Administration logs for the Azure Rights Management service
+- Administration logs for the protection service
 
-- Usage logs for the Azure Rights Management service
+- Usage logs for the protection service
 
 - Document tracking logs
 
@@ -86,14 +86,14 @@ EnableInLegacyApps      : False
 LabelId                 :
 ```
 
-### Super users and delegated administrators for the Azure Rights Management service
+### Super users and delegated administrators for the protection service
 
-Run the [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) cmdlet and [get-aipservicerolebasedadministrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator) cmdlet to see which users have been assigned the super user role or global administrator role for the Azure Rights Management service. For users who have been assigned either of these roles, their email addresses are displayed.
+Run the [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) cmdlet and [get-aipservicerolebasedadministrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator) cmdlet to see which users have been assigned the super user role or global administrator role for the protection service (Azure Rights Management) from Azure Information Protection. For users who have been assigned either of these roles, their email addresses are displayed.
 
 
-### Administration logs for the Azure Rights Management service
+### Administration logs for the protection service
 
-Run the [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) cmdlet to get a log of admin actions for the Azure Rights Management service, which protects data for Azure Information Protection. This log includes personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
+Run the [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) cmdlet to get a log of admin actions for the protection service (Azure Rights Management) from Azure Information Protection. This log includes personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
 
 For example:
 ```
@@ -101,8 +101,8 @@ PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/20
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
 ```
 
-### Usage logs for the Azure Rights Management service
-Run the [Get-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog) cmdlet to retrieve a log of end-user actions that use the Azure Rights Management service. This service protects data for Azure Information Protection. The log could include personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
+### Usage logs for the protection service
+Run the [Get-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog) cmdlet to retrieve a log of end-user actions that use the protection service from Azure Information Protection. The log could include personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
 
 For example:
 ```
@@ -214,7 +214,7 @@ Personal data that you view and specify in the Azure portal is accessible only t
 
 - **Global Administrator / Company Administrator**
 
-Personal data that you view and specify by using the AIPService module is accessible only to users who have been assigned the **Information Protection Administrator** role or **Global Administrator / Company Administrator** roles from Azure Active Directory, or the global administrator role for the Azure Rights Management service.  
+Personal data that you view and specify by using the AIPService module (or the older module, AADRM)is accessible only to users who have been assigned the **Information Protection Administrator** role or **Global Administrator / Company Administrator** roles from Azure Active Directory, or the global administrator role for the protection service.  
 
 ## Updating personal data
 
@@ -226,9 +226,9 @@ You cannot update email addresses for the super users and delegated administrato
 
 ### Protection templates
 
-Run the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet to update the protection template. Because the personal data is within the `RightsDefinitions` property, you will also need to use the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet to create a RightsDefinitions object with the updated information, and use the RightsDefinitions object with the `Set-AipServiceTemplateProperty` cmdlet.
+Run the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet to update the protection template. Because the personal data is within the `RightsDefinitions` property, you will also need to use the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet to create a rights definitions object with the updated information, and use the rights definitions object with the `Set-AipServiceTemplateProperty` cmdlet.
 
-### Super users and delegated administrators for the Azure Rights Management service
+### Super users and delegated administrators for the protection service
 
 When you need update an email address for a super user:
 
@@ -249,13 +249,13 @@ For the protection settings, you can delete the same information by using PowerS
 
 To delete email addresses for super users and delegated administrators, remove these users by using the [Remove-AipServiceSuperUser](/powershell/module/aipservice/Remove-AipServiceSuperUser) cmdlet and [Remove-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Remove-AipServiceRoleBasedAdministrator). 
 
-To delete personal data in document tracking logs, administration logs, or usage logs for the Azure Rights Management service, use the following section to raise a request with Microsoft Support.
+To delete personal data in document tracking logs, administration logs, or usage logs for the protection service, use the following section to raise a request with Microsoft Support.
 
 To delete personal data in the client log files and scanner logs that are stored  on computers, use any standard Windows tools to delete the files or personal data within the files. 
 
 ### To delete personal data with Microsoft Support
 
-Use the following three steps to request that Microsoft deletes personal data in document tracking logs, administration logs, or usage logs for the Azure Rights Management service. 
+Use the following three steps to request that Microsoft deletes personal data in document tracking logs, administration logs, or usage logs for the protection service. 
 
 **Step 1: Initiate delete request**
 [Contact Microsoft Support](information-support.md#to-contact-microsoft-support) to open an Azure Information Protection support case with a request for deleting data from your tenant. You must prove that you are an administrator for your Azure Information Protection tenant and understand that this process takes several days to confirm. While submitting your request, you will need to provide additional information, depending on the data that needs to be deleted.
@@ -273,13 +273,12 @@ Microsoft will verify that your request to delete one or more logs is legitimate
 Microsoft Customer Support Services (CSS) will send you a confirmation email that the data has been deleted. 
 
 ## Exporting personal data
-When you use the AADRM PowerShell cmdlets, the personal data is made available for search and export as a PowerShell object. The PowerShell object can be converted into JSON and saved by using the `ConvertTo-Json` cmdlet.
+When you use the AIPService or AADRM PowerShell cmdlets, the personal data is made available for search and export as a PowerShell object. The PowerShell object can be converted into JSON and saved by using the `ConvertTo-Json` cmdlet.
 
 ## Restricting the use of personal data for profiling or marketing without consent
 Azure Information Protection follows Microsoft's [privacy terms](https://privacy.microsoft.com/privacystatement) for profiling or marketing based on personal data.
 
 ## Auditing and reporting
-Only users who have been assigned [administrator permissions](#securing-and-controlling-access-to-personal-information) can use the AIPService module for search and export of personal data. These operations are recorded in the administration  log that can be downloaded.
+Only users who have been assigned [administrator permissions](#securing-and-controlling-access-to-personal-information) can use the AIPService or ADDRM module for search and export of personal data. These operations are recorded in the administration  log that can be downloaded.
 
 For delete actions, the support request acts as the auditing and reporting trail for the actions performed by Microsoft. After deletion, the deleted data will not be available for search and export, and the administrator can verify this using the Get cmdlets from the AIPService module.
-
