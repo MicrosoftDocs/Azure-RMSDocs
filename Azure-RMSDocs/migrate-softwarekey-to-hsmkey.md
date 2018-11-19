@@ -161,10 +161,10 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
 
 3. When you have uploaded each file, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to specify which imported key matches the currently active SLC key in your AD RMS cluster.
 
-4. Use the [Disconnect-AadrmService](/powershell/aipservice/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
+4. Use the [Disconnect-AipServiceService](/powershell/aipservice/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
-    Disconnect-AadrmService
+    Disconnect-AipServiceService
     ```
 
 If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](/powershell/aipservice/get-aadrmkeys) Azure RMS cmdlet.

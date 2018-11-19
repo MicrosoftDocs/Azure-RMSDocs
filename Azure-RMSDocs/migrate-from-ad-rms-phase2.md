@@ -111,7 +111,7 @@ Open a PowerShell session and run the following commands:
 
 1. Connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
     
-        Connect-Aadrmservice
+        Connect-AipServiceservice
 
 2. Activate the Azure Rights Management service:
     

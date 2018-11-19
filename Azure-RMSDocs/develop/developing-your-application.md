@@ -46,7 +46,7 @@ Once the service is activated you will need PowerShell components for the next s
 
 - As an administrator, run PowerShell.
 - Import the RMS module: `Import-Module AADRM`
-- Connect to the service with the assigned user credentials: `Connect-AadrmService –Verbose`
+- Connect to the service with the assigned user credentials: `Connect-AipServiceService –Verbose`
 - Ensure RMS is enabled: `Enable-AADRM`
 - Get your tenant ID by running: `Get-AadrmConfiguration`
 
@@ -55,7 +55,7 @@ Once the service is activated you will need PowerShell components for the next s
 *Example output*
 ![cmdlet output](../media/develop/output-of-Get-AadrmConfiguration.png)
 
-- Disconnect from the service: `Disconnect-AadrmService`
+- Disconnect from the service: `Disconnect-AipServiceService`
 
 ### Create a service Principal
 Follow these steps to create a Service Principal:

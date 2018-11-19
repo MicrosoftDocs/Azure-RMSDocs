@@ -75,10 +75,10 @@ To download your usage logs, you will use the Azure Rights Management administra
 
 ### To download your usage logs by using PowerShell
 
-1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](/powershell/aipservice/connect-aadrmservice) cmdlet to connect to the Azure Rights Management service:
+1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AipServiceService](/powershell/aipservice/connect-aadrmservice) cmdlet to connect to the Azure Rights Management service:
 
     ```
-    Connect-AadrmService
+    Connect-AipServiceService
     ```
     
 2.  Run the following command to download the logs for a specific date: 

@@ -81,10 +81,10 @@ You can use an account that has one of the following privileges:
     >
     > 1.  If you haven't already done so, download and install Windows PowerShell for Rights Management. For more information, see [Installing the AADRM PowerShell module](install-powershell.md).
     >
-    >     Start Windows PowerShell with the **Run as administrator** command, and connect to the Azure RMS service by using the [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice) command:
+    >     Start Windows PowerShell with the **Run as administrator** command, and connect to the Azure RMS service by using the [Connect-AipServiceService](/powershell/module/aadrm/connect-aadrmservice) command:
     >
     >     ```
-    >     Connect-AadrmService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
+    >     Connect-AipServiceService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
     >     ```
     > 2.  Then run the [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) command, using just one of the following parameters:
     >

@@ -155,7 +155,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
 ##### To identify the value to specify for the ServiceLocation parameter
 
-1. From a PowerShell session, first run [Connect-AadrmService](https://docs.microsoft.com/powershell/aipservice/connect-aadrmservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aipservice/get-aadrmconfiguration). 
+1. From a PowerShell session, first run [Connect-AipServiceService](https://docs.microsoft.com/powershell/aipservice/connect-aadrmservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aipservice/get-aadrmconfiguration). 
  
     If you haven’t already installed the PowerShell module for the Azure Rights Management service, see [Installing the AADRM PowerShell module](../install-powershell.md).
 

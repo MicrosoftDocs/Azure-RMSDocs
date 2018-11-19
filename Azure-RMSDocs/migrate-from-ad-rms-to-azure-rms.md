@@ -133,7 +133,7 @@ Include your AD RMS partners in your planning phase for migration because they m
 
 - Their Azure Rights Management service is not yet activated but they know their Azure Rights Management service URL.
 
-    They can get this information by installing the Azure Rights Management Tool, connecting to the service ([Connect-AadrmService](/powershell/aipservice/connect-aadrmservice)), and then viewing their tenant information for the Azure Rights Management service ([Get-AadrmConfiguration](/powershell/aipservice/get-aadrmconfiguration)).
+    They can get this information by installing the Azure Rights Management Tool, connecting to the service ([Connect-AipServiceService](/powershell/aipservice/connect-aadrmservice)), and then viewing their tenant information for the Azure Rights Management service ([Get-AadrmConfiguration](/powershell/aipservice/get-aadrmconfiguration)).
 
 - They provide you with the URLs for their AD RMS cluster and their Azure Rights Management service URL, so that you can configure your migrated clients to redirect requests for their AD RMS protected content to their tenant's Azure Rights Management service. Instructions for configuring client redirection are in step 7.
 

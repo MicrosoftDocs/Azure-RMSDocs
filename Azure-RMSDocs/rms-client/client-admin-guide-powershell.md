@@ -125,9 +125,9 @@ To automatically get the values and run Set-RMSServerAuthentication:
 # Make sure that you have the AADRM and MSOnline modules installed
 
 $ServicePrincipalName="<new service principal name>"
-Connect-AadrmService
+Connect-AipServiceService
 $bposTenantID=(Get-AadrmConfiguration).BPOSId
-Disconnect-AadrmService
+Disconnect-AipServiceService
 Connect-MsolService
 New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 
@@ -151,9 +151,9 @@ Windows PowerShell module:
 
 2. Start Windows PowerShell with the **Run as Administrator** option.
 
-3. Use the `Connect-AadrmService` cmdlet to connect to the Azure Rights Management service:
+3. Use the `Connect-AipServiceService` cmdlet to connect to the Azure Rights Management service:
     
-    	Connect-AadrmService
+    	Connect-AipServiceService
     
     When prompted, enter your Azure Information Protection tenant administrator credentials. Typically, you use an account that is a global administrator for Azure Active Directory or Office 365.
     
@@ -175,7 +175,7 @@ Windows PowerShell module:
 
 5. Disconnect from the service:
     
-    	Disconnect-AadrmService
+    	Disconnect-AipServiceService
 
 ##### To get the AppPrincipalId and Symmetric Key
 
