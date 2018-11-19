@@ -115,7 +115,7 @@ Open a PowerShell session and run the following commands:
 
 2. Activate the Azure Rights Management service:
     
-        Enable-Aadrm
+        Enable-AipService
 
 **What if your Azure Information Protection tenant is already activated?** If the Azure Rights Management service is already activated for your organization, and you have created custom templates that you want to use after the migration, you must export and import these templates. This procedure is covered in the next step. 
 
@@ -139,11 +139,11 @@ The template changes that you might need to make for this step:
 
 If you created custom templates before the migration, either before or after activating the Azure Rights Management service, templates will not be available to users after the migration, even if they were set to **Published**. To make them available to users, you must first do the following: 
 
-1. Identify these templates and make a note of their template ID, by running the [Get-AadrmTemplate](/powershell/aipservice/get-aadrmtemplate). 
+1. Identify these templates and make a note of their template ID, by running the [Get-AipServiceTemplate](/powershell/aipservice/get-aadrmtemplate). 
 
-2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AadrmTemplate](/powershell/aipservice/export-aadrmtemplate).
+2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AipServiceTemplate](/powershell/aipservice/export-aadrmtemplate).
 
-3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate).
+3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AipServiceTemplate](/powershell/module/aipservice/import-aadrmtemplate).
 
 You can then publish or archive these templates as you would any other template that you create after the migration.
 

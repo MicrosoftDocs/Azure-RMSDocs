@@ -71,7 +71,7 @@ These procedures are done by the administrator for Azure Information Protection.
 
 1. On the Internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connnect-AadrmService](/powershell/aipservice/connect-aipservice) cmdlet.
     
-    Then upload each trusted publishing domain (.xml) file, by using the [Import-AadrmTpd](/powershell/aipservice/import-aadrmtpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
+    Then upload each trusted publishing domain (.xml) file, by using the [Import-AipServiceTpd](/powershell/aipservice/import-aadrmtpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
     
     To run this cmdlet, you need the password that you specified earlier for each configuration data file, and the URL for the key that was identified in the previous step.
     
@@ -84,12 +84,12 @@ These procedures are done by the administrator for Azure Information Protection.
     Enter the password that you specified to export the configuration data file. Then, run the following command and confirm that you want to perform this action:
     
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
+    Import-AipServiceTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
     
     As part of this import, the SLC key is imported and automatically set as archived.
 
-2.  When you have uploaded each file, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to specify which imported key matches the currently active SLC key in your AD RMS cluster. This key becomes the active tenant key for your Azure Rights Management service.
+2.  When you have uploaded each file, run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aadrmkeyproperties) to specify which imported key matches the currently active SLC key in your AD RMS cluster. This key becomes the active tenant key for your Azure Rights Management service.
 
 3.  Use the [Disconnect-AipServiceService](/powershell/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
@@ -97,7 +97,7 @@ These procedures are done by the administrator for Azure Information Protection.
     Disconnect-AipServiceService
     ```
 
-If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](/powershell/aipservice/get-aadrmkeys) Azure RMS cmdlet.
+If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AipServiceKeys](/powershell/aipservice/get-aadrmkeys) Azure RMS cmdlet.
 
 You’re now ready to go to [Step 5. Activate the Azure Rights Management service](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 

@@ -49,18 +49,18 @@ When you configure and use Azure Information Protection, email addresses and IP 
 
 Using the Azure portal, an administrator can specify email addresses for scoped policies and for protection settings within a label configuration. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
 
-For labels that are configured to apply protection from the Azure Rights Management service, email address can also be found in protection templates, by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm). This PowerShell module also lets an administrator specify users by email address to be a [super user](configure-super-users.md), or an administrator for the Azure Rights Management service. 
+For labels that are configured to apply protection from the Azure Rights Management service, email address can also be found in protection templates, by using PowerShell cmdlets from the [AADRM module](/powershell/module/aipservice). This PowerShell module also lets an administrator specify users by email address to be a [super user](configure-super-users.md), or an administrator for the Azure Rights Management service. 
 
 When Azure Information Protection is used to classify and protect documents and emails, email addresses and the users' IP addresses might be saved in log files.
 
 
 ### Protection templates
 
-Run the [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) cmdlet to get a list of protection templates. You can use the template ID to get details of a specific template. The `RightsDefinitions` object displays the personal data, if any. 
+Run the [Get-AipServiceTemplate](/powershell/module/aipservice/get-aadrmtemplate) cmdlet to get a list of protection templates. You can use the template ID to get details of a specific template. The `RightsDefinitions` object displays the personal data, if any. 
 
 Example:
 ```
-PS C:\Users> Get-AadrmTemplate -TemplateId fcdbbc36-1f48-48ca-887f-265ee1268f51 | select *
+PS C:\Users> Get-AipServiceTemplate -TemplateId fcdbbc36-1f48-48ca-887f-265ee1268f51 | select *
 
 
 TemplateId              : fcdbbc36-1f48-48ca-887f-265ee1268f51
@@ -88,25 +88,25 @@ LabelId                 :
 
 ### Super users and delegated administrators for the Azure Rights Management service
 
-Run the [Get-AadrmSuperUser](/powershell/module/aadrm/get-aadrmsuperuser) cmdlet and [Get-AadrmRoleBasedAdministrator](/powershell/module/aadrm/get-aadrmrolebasedadministrator) cmdlet to see which users have been assigned the super user role or global administrator role for the Azure Rights Management service. For users who have been assigned either of these roles, their email addresses are displayed.
+Run the [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aadrmsuperuser) cmdlet and [Get-AadrmRoleBasedAdministrator](/powershell/module/aipservice/get-aadrmrolebasedadministrator) cmdlet to see which users have been assigned the super user role or global administrator role for the Azure Rights Management service. For users who have been assigned either of these roles, their email addresses are displayed.
 
 
 ### Administration logs for the Azure Rights Management service
 
-Run the [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) cmdlet to get a log of admin actions for the Azure Rights Management service, which protects data for Azure Information Protection. This log includes personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
+Run the [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aadrmadminlog) cmdlet to get a log of admin actions for the Azure Rights Management service, which protects data for Azure Information Protection. This log includes personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
 
 For example:
 ```
-PS C:\Users> Get-AadrmAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
+PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
 ```
 
 ### Usage logs for the Azure Rights Management service
-Run the [Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog) cmdlet to retrieve a log of end-user actions that use the Azure Rights Management service. This service protects data for Azure Information Protection. The log could include personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
+Run the [Get-AipServiceUserLog](/powershell/module/aipservice/get-aadrmuserlog) cmdlet to retrieve a log of end-user actions that use the Azure Rights Management service. This service protects data for Azure Information Protection. The log could include personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
 
 For example:
 ```
-PS C:\Users> Get-AadrmUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
+PS C:\Users> Get-AipServiceUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
 Downloading the log for 2018-04-01.
 Downloading the log for 2018-04-03.
@@ -134,11 +134,11 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 ### Document tracking logs
 
-Run the [Get-AadrmDocumentLog](/powershell/module/aadrm/get-aadrmdocumentlog) cmdlet to retrieve information from the document tracking site about a specific user. To get tracking information associated with the document logs, use the [Get-AadrmTrackingLog](/powershell/module/aadrm/get-aadrmtrackinglog?view=azureipps) cmdlet.
+Run the [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aadrmdocumentlog) cmdlet to retrieve information from the document tracking site about a specific user. To get tracking information associated with the document logs, use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aadrmtrackinglog?view=azureipps) cmdlet.
 
 For example:
 ```
-PS C:\Users> Get-AadrmDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
+PS C:\Users> Get-AipServiceDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
 
 ContentId             : 6326fcb2-c465-4c24-a7f6-1cace7a9cb6f
@@ -171,7 +171,7 @@ RevocationInfo        : Revoked: False
                         RevokedBy:
 
 
-PS C:\Users> Get-AadrmTrackingLog -UserEmail "admin@aip500.onmicrosoft.com"
+PS C:\Users> Get-AipServiceTrackingLog -UserEmail "admin@aip500.onmicrosoft.com"
 
 ContentId            : 6326fcb2-c465-4c24-a7f6-1cace7a9cb6f
 Issuer               : admin@aip500.onmicrosoft.com
@@ -220,34 +220,34 @@ Personal data that you view and specify by using the AADRM module is accessible 
 
 You can update email addresses for scoped policies and protection settings in the Azure Information Protection policy. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
 
-For the protection settings, you can update the same information by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm).
+For the protection settings, you can update the same information by using PowerShell cmdlets from the [AADRM module](/powershell/module/aipservice).
 
 You cannot update email addresses for the super users and delegated administrators. Instead, remove the specified user account, and add the user account with the updated email address. 
 
 ### Protection templates
 
-Run the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet to update the protection template. Because the personal data is within the `RightsDefinitions` property, you will also need to use the [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlet to create a RightsDefinitions object with the updated information, and use the RightsDefinitions object with the `Set-AadrmTemplateProperty` cmdlet.
+Run the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aadrmtemplateproperty) cmdlet to update the protection template. Because the personal data is within the `RightsDefinitions` property, you will also need to use the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aadrmrightsdefinition) cmdlet to create a RightsDefinitions object with the updated information, and use the RightsDefinitions object with the `Set-AipServiceTemplateProperty` cmdlet.
 
 ### Super users and delegated administrators for the Azure Rights Management service
 
 When you need update an email address for a super user:
 
-1. Use [Remove-AadrmSuperUser](/powershell/module/aadrm/Remove-AadrmSuperUser) to remove the user and old email address.
+1. Use [Remove-AipServiceSuperUser](/powershell/module/aipservice/Remove-AipServiceSuperUser) to remove the user and old email address.
 
-2. Use [Add-AadrmSuperUser](/powershell/module/aadrm/Add-AadrmSuperUser) to add the user and new email address.
+2. Use [Add-AipServiceSuperUser](/powershell/module/aipservice/Add-AipServiceSuperUser) to add the user and new email address.
 
 When you need update an email address for a delegated administrator:
 
-1. Use [Remove-AadrmRoleBasedAdministrator](/powershell/module/aadrm/Remove-AadrmRoleBasedAdministrator) to remove the user and old email address.
+1. Use [Remove-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Remove-AipServiceRoleBasedAdministrator) to remove the user and old email address.
 
-2. Use [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/Add-AadrmRoleBasedAdministrator) to add the user and new email address.
+2. Use [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Add-AipServiceRoleBasedAdministrator) to add the user and new email address.
 
 ## Deleting personal data
 You can delete email addresses for scoped policies and protection settings in the Azure Information Protection policy. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
 
-For the protection settings, you can delete the same information by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm).
+For the protection settings, you can delete the same information by using PowerShell cmdlets from the [AADRM module](/powershell/module/aipservice).
 
-To delete email addresses for super users and delegated administrators, remove these users by using the [Remove-AadrmSuperUser](/powershell/module/aadrm/Remove-AadrmSuperUser) cmdlet and [Remove-AadrmRoleBasedAdministrator](/powershell/module/aadrm/Remove-AadrmRoleBasedAdministrator). 
+To delete email addresses for super users and delegated administrators, remove these users by using the [Remove-AipServiceSuperUser](/powershell/module/aipservice/Remove-AipServiceSuperUser) cmdlet and [Remove-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Remove-AipServiceRoleBasedAdministrator). 
 
 To delete personal data in document tracking logs, administration logs, or usage logs for the Azure Rights Management service, use the following section to raise a request with Microsoft Support.
 

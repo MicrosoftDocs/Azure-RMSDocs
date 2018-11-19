@@ -59,7 +59,7 @@ Prerequisites for these instructions:
     
 - You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email addresses. This is required for all users that might need to access files after they are protected by FCI and the Azure Rights Management service. If you do not do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this requirement, see [Preparing users and groups for Azure Information Protection](../prepare.md).
     
-- This scenario does not support departmental templates so you must either use a template that is not configured for a scope, or use the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet and the *EnableInLegacyApps* parameter.
+- This scenario does not support departmental templates so you must either use a template that is not configured for a scope, or use the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aadrmtemplateproperty) cmdlet and the *EnableInLegacyApps* parameter.
 
 ## Instructions to configure File Server Resource Manager FCI for Azure Rights Management protection
 Follow these instructions to automatically protect all files in a folder, by using a PowerShell script as a custom task. Do these procedures in this order:

@@ -125,11 +125,11 @@ Note that if you have Azure Information Protection labels, you must first conver
 
 Alternatively, you can add external users to custom templates (and labels) by using PowerShell. This configuration requires you to use a rights definition object that you use to update your template:
 
-1. Specify the external email addresses and their rights in a rights definition object, by using the [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlet to create a variable.
+1. Specify the external email addresses and their rights in a rights definition object, by using the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aadrmrightsdefinition) cmdlet to create a variable.
 
-2. Supply this variable to the RightsDefinition parameter with the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
+2. Supply this variable to the RightsDefinition parameter with the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aadrmtemplateproperty) cmdlet.
 
-    When you add users to an existing template, you must define rights definition objects for the existing users in the templates, in addition to the new users. For this scenario, you might find helpful **Example 3: Add new users and rights to a custom template** from the [Examples](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) section for the cmdlet.
+    When you add users to an existing template, you must define rights definition objects for the existing users in the templates, in addition to the new users. For this scenario, you might find helpful **Example 3: Add new users and rights to a custom template** from the [Examples](/powershell/module/aipservice/set-aadrmtemplateproperty#examples) section for the cmdlet.
 
 ## What type of groups can I use with Azure RMS?
 For most scenarios, you can use any group type in Azure AD that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](prepare.md#azure-information-protection-requirements-for-group-accounts).

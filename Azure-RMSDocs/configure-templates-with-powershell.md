@@ -39,21 +39,21 @@ For installation instructions, see [Installing the AADRM PowerShell module](inst
 
 The cmdlets that support creating and managing protection templates:
 
-- [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate)
+- [Add-AipServiceTemplate](/powershell/module/aipservice/add-aadrmtemplate)
 
-- [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate)
+- [Export-AipServiceTemplate](/powershell/module/aipservice/export-aadrmtemplate)
 
-- [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate)
+- [Get-AipServiceTemplate](/powershell/module/aipservice/get-aadrmtemplate)
 
-- [Get-AadrmTemplateProperty](/powershell/module/aadrm/get-aadrmtemplateproperty)
+- [Get-AipServiceTemplateProperty](/powershell/module/aipservice/get-aadrmtemplateproperty)
 
-- [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate)
+- [Import-AipServiceTemplate](/powershell/module/aipservice/import-aadrmtemplate)
 
-- [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition)
+- [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aadrmrightsdefinition)
 
-- [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate)
+- [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aadrmtemplate)
 
-- [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty)
+- [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aadrmtemplateproperty)
 
 
 

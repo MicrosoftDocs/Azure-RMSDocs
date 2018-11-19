@@ -49,7 +49,7 @@ In addition to this usage logging, you also have the following logging options:
 
 |Logging option|Description|
 |----------------|---------------|
-|Admin log|Logs administrative tasks for the Azure Rights Management service. For example, if the service is deactivated, when the super user feature is enabled, and when users are delegated admin permissions to the service. <br /><br />For more information, see the PowerShell cmdlet, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
+|Admin log|Logs administrative tasks for the Azure Rights Management service. For example, if the service is deactivated, when the super user feature is enabled, and when users are delegated admin permissions to the service. <br /><br />For more information, see the PowerShell cmdlet, [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aadrmadminlog).|
 |Document tracking|Lets users track and revoke their documents that they have tracked with the Azure Information Protection client or the RMS sharing app. Global administrators can also track these documents on behalf of users. <br /><br />For more information, see [Configuring and using document tracking for Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
 |Client event logs|Usage activity for the Azure Information Protection client, logged in the local Windows **Applications and Services** event log, **Azure Information Protection**. <br /><br />For more information, see [Usage logging for the Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Client log files|Troubleshooting logs for the Azure Information Protection client, located in **%localappdata%\Microsoft\MSIP**. <br /><br />These files are designed for Microsoft Support.|
@@ -84,20 +84,20 @@ To download your usage logs, you will use the Azure Rights Management administra
 2.  Run the following command to download the logs for a specific date: 
 
     ```
-    Get-AadrmUserLog -Path <location> -fordate <date>
+    Get-AipServiceUserLog -Path <location> -fordate <date>
     ```
 
     For example, after creating a folder called Logs on your E: drive:
     
-    * To download logs for a specific date (such as 2/1/2016), run the following command: `Get-AadrmUserLog -Path E:\Logs -fordate 2/1/2016`
+    * To download logs for a specific date (such as 2/1/2016), run the following command: `Get-AipServiceUserLog -Path E:\Logs -fordate 2/1/2016`
     
-    * To download logs for a date range (such as from 2/1/2016 through 2/14/2016), run the following command: `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
+    * To download logs for a date range (such as from 2/1/2016 through 2/14/2016), run the following command: `Get-AipServiceUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
 
-When you specify the day only, as in our examples, the time is assumed to be 00:00:00 in your local time, and then converted to UTC. When you specify a time with your -fromdate or -todate parameters (for example, -fordate "2/1/2016 15:00:00"), that date and time is converted to UTC. The Get-AadrmUserLog command then gets the logs for that UTC time period.
+When you specify the day only, as in our examples, the time is assumed to be 00:00:00 in your local time, and then converted to UTC. When you specify a time with your -fromdate or -todate parameters (for example, -fordate "2/1/2016 15:00:00"), that date and time is converted to UTC. The Get-AipServiceUserLog command then gets the logs for that UTC time period.
 
 You cannot specify less than a whole day to download.
 
-By default, this cmdlet uses three threads to download the logs. If you have sufficient network bandwidth and want to decrease the time required to download the logs, use the -NumberOfThreads parameter, which supports a value from 1 through 32. For example, if you run the following command, the cmdlet spawns 10 threads to download the logs: `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
+By default, this cmdlet uses three threads to download the logs. If you have sufficient network bandwidth and want to decrease the time required to download the logs, use the -NumberOfThreads parameter, which supports a value from 1 through 32. For example, if you run the following command, the cmdlet spawns 10 threads to download the logs: `Get-AipServiceUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
 
 
 > [!TIP]
@@ -224,25 +224,25 @@ There are many request types for the Azure Rights Management service but the fol
 
 
 ## Windows PowerShell reference
-Starting February 2016, the only Windows PowerShell cmdlet that you need for Azure Rights Management usage logging is [Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog). 
+Starting February 2016, the only Windows PowerShell cmdlet that you need for Azure Rights Management usage logging is [Get-AipServiceUserLog](/powershell/module/aipservice/get-aadrmuserlog). 
 
 Before this change, the following cmdlets were needed for Azure Rights Management usage logs, and are now deprecated:  
 
--   [Disable-AadrmUsageLogFeature](/powershell/module/aadrm/disable-aadrmusagelogfeature)
+-   [Disable-AipServiceUsageLogFeature](/powershell/module/aipservice/disable-aadrmusagelogfeature)
 
--   [Enable-AadrmUsageLogFeature](/powershell/module/aadrm/enable-aadrmusagelogfeature)
+-   [Enable-AipServiceUsageLogFeature](/powershell/module/aipservice/enable-aadrmusagelogfeature)
 
--   [Get-AadrmUsageLog](/powershell/module/aadrm/get-aadrmusagelog)
+-   [Get-AadrmUsageLog](/powershell/module/aipservice/get-aadrmusagelog)
 
--   [Get-AadrmUsageLogFeature](/powershell/module/aadrm/get-aadrmusagelogfeature)
+-   [Get-AadrmUsageLogFeature](/powershell/module/aipservice/get-aadrmusagelogfeature)
 
--   [Get-AadrmUsageLogLastCounterValue](/powershell/module/aadrm/get-aadrmusageloglastcountervalue)
+-   [Get-AadrmUsageLogLastCounterValue](/powershell/module/aipservice/get-aadrmusageloglastcountervalue)
 
--   [Get-AadrmUsageLogStorageAccount](/powershell/module/aadrm/get-aadrmusagelogstorageaccount)
+-   [Get-AadrmUsageLogStorageAccount](/powershell/module/aipservice/get-aadrmusagelogstorageaccount)
 
--   [Set-AadrmUsageLogStorageAccount](/powershell/module/aadrm/set-aadrmusagelogstorageaccount)
+-   [Set-AadrmUsageLogStorageAccount](/powershell/module/aipservice/set-aadrmusagelogstorageaccount)
 
-If you have logs in your own Azure storage from before the Azure Rights Management logging change, you can  download them with these older cmdlets, using Get-AadrmUsageLog and Get-AadrmUsageLogLastCounterValue, as before. But all new usage logs will write to the new Azure RMS storage and must be downloaded with Get-AadrmUserLog.
+If you have logs in your own Azure storage from before the Azure Rights Management logging change, you can  download them with these older cmdlets, using Get-AadrmUsageLog and Get-AadrmUsageLogLastCounterValue, as before. But all new usage logs will write to the new Azure RMS storage and must be downloaded with Get-AipServiceUserLog.
 
 For more information about using Windows PowerShell for the Azure Rights Management service, see [Administering the Azure Rights Management service by Using Windows PowerShell](administer-powershell.md).
 

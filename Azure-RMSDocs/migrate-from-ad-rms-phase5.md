@@ -92,13 +92,13 @@ To remove the onboarding controls:
 
 2. Run the following command, and enter **Y** to confirm:
 
-		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+		Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
     
     Note that this command removes any license enforcement for the Azure Rights Management protection service, so that all computers can protect documents and emails.
 
 3. Confirm that onboarding controls are no longer set:
 
-		Get-AadrmOnboardingControlPolicy
+		Get-AipServiceOnboardingControlPolicy
 
     In the output, **License** should show **False**, and there is no GUID displayed for the **SecurityGroupOjbectId**
 
@@ -116,11 +116,11 @@ Moving from one key to another doesn’t happen immediately but over a few weeks
 
 To rekey your Azure Information Protection tenant key:
 
-- **If your tenant key is managed by Microsoft**: Run the PowerShell cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) and specify the key identifier for the key that was automatically created for your tenant. You can identify the value to specify by running the [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet. The key that was automatically created for your tenant has the oldest creation date, so you can identify it by using the following command:
+- **If your tenant key is managed by Microsoft**: Run the PowerShell cmdlet [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aadrmkeyproperties) and specify the key identifier for the key that was automatically created for your tenant. You can identify the value to specify by running the [Get-AipServiceKeys](/powershell/module/aipservice/get-aadrmkeys) cmdlet. The key that was automatically created for your tenant has the oldest creation date, so you can identify it by using the following command:
     
-    	(Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
+    	(Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **If your tenant key is managed by you (BYOK)**: In Azure Key Vault, repeat your key creation process for your Azure Information Protection tenant, and then run the [Use-AadrmKeyVaultKey](/powershell/aipservice/use-aadrmkeyvaultkey) cmdlet again to specify the URI for this new key. 
+- **If your tenant key is managed by you (BYOK)**: In Azure Key Vault, repeat your key creation process for your Azure Information Protection tenant, and then run the [Use-AipServiceKeyVaultKey](/powershell/aipservice/use-aadrmkeyvaultkey) cmdlet again to specify the URI for this new key. 
 
 For more information about managing your Azure Information Protection tenant key, see [Operations for your Azure Information Protection tenant key](./operations-tenant-key.md).
 

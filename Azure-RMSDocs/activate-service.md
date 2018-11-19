@@ -74,14 +74,14 @@ Alternatively, you can use the following PowerShell commands:
 
 1. Install the AADRM module, to configure and manage the protection service. For instructions, see [Installing the AADRM PowerShell module](install-powershell.md).
 
-2. From a PowerShell session, run [Connect-AipServiceService](/powershell/module/aadrm/connect-aipservice), and when prompted, provide the Global Administrator account details for your Azure Information Protection tenant.
+2. From a PowerShell session, run [Connect-AipServiceService](/powershell/module/aipservice/connect-aipservice), and when prompted, provide the Global Administrator account details for your Azure Information Protection tenant.
 
 3. Run [Get-Aadrm](/powershell/aipservice/get-aadrm) to confirm whether the Azure Rights Management service is activated. A status of **Enabled** confirms activation; **Disabled** indicates that the service is deactivated.
 
-4. To activate the service, run [Enable-Aadrm](/powershell/aipservice/enable-aadrm).
+4. To activate the service, run [Enable-AipService](/powershell/aipservice/enable-aadrm).
 
 ## Configuring onboarding controls for a phased deployment
-If you don’t want all users to be able to protect documents and emails immediately by using Azure Rights Management, you can configure user onboarding controls by using the [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) PowerShell command. You can run this command before or after you activate the Azure Rights Management service.
+If you don’t want all users to be able to protect documents and emails immediately by using Azure Rights Management, you can configure user onboarding controls by using the [Set-AipServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aadrmonboardingcontrolpolicy) PowerShell command. You can run this command before or after you activate the Azure Rights Management service.
 
 > [!IMPORTANT]
 > To use this command, you must have at least version **2.1.0.0** of the [Azure Rights Management PowerShell module](https://go.microsoft.com/fwlink/?LinkId=257721).
@@ -91,7 +91,7 @@ If you don’t want all users to be able to protect documents and emails immedia
 For example, if you initially want only administrators in the “IT department” group (that has an object ID of fbb99ded-32a0-45f1-b038-38b519009503) to be able to protect content for testing purposes, use the following command:
 
 ```
-Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fbb99ded-32a0-45f1-b038-38b519009503"
+Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fbb99ded-32a0-45f1-b038-38b519009503"
 ```
 
 Note that for this configuration option, you must specify a group; you cannot specify individual users. To obtain the object ID for the group, you can use Azure AD PowerShell—for example, for version 1.0 of the module, use the [Get-MsolGroup](/powershell/msonline/v1/get-msolgroup) command. Or, you can copy the **Object ID** value of the group from the Azure portal.
@@ -99,16 +99,16 @@ Note that for this configuration option, you must specify a group; you cannot sp
 Alternatively, if you want to ensure that only users who are correctly licensed to use Azure Information Protection can protect content:
 
 ```
-Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $True
+Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $True
 ```
 
 When you no longer need to use onboarding controls, whether you used the group or licensing option, run:
 
 ```
-Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
 ```
 
-For more information about this cmdlet and additional examples, see the [Set-AadrmOnboardingControlPolicy](/powershell/aipservice/set-aadrmonboardingcontrolpolicy) help.
+For more information about this cmdlet and additional examples, see the [Set-AipServiceOnboardingControlPolicy](/powershell/aipservice/set-aadrmonboardingcontrolpolicy) help.
 
 When you use these onboarding controls, all users in the organization can always consume protected content that has been protected by your subset of users, but they won’t be able to apply information protection themselves from client applications. For example, they won’t see in their Office apps the default templates that are automatically published when the Azure Rights Management service is activated, or custom templates that you might configure. Server-side applications, such as Exchange, can implement their own per-user controls for Rights Management integration to achieve the same result. For example, to prevent users from protecting emails in Outlook on the web, use [Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/set-owamailboxpolicy?view=exchange-ps) to set the *IRMEnabled* parameter to *$false*.
 

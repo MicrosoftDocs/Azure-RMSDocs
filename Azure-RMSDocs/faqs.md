@@ -76,7 +76,7 @@ Global administrators for an Office 365 tenant or Azure AD tenant can obviously 
 
 - Azure Rights Management **Global Administrator** and **Connector Administrator**: For these Azure Rights Management administrator roles, the first grants users permissions to run all [PowerShell cmdlets from the AADRM module](administer-powershell.md) without making them a global administrator for other cloud services, and the second role grants permissions to run only the Rights Management (RMS) connector. Neither of these administrative roles grant permissions to management consoles or to use the Admin mode in the document tracking site.
 
-    To assign either of these administrative roles, use the AADRM PowerShell cmdlet, [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator).
+    To assign either of these administrative roles, use the AADRM PowerShell cmdlet, [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aadrmrolebasedadministrator).
 
 Some things to note:
 

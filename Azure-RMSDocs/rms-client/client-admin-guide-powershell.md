@@ -126,7 +126,7 @@ To automatically get the values and run Set-RMSServerAuthentication:
 
 $ServicePrincipalName="<new service principal name>"
 Connect-AipServiceService
-$bposTenantID=(Get-AadrmConfiguration).BPOSId
+$bposTenantID=(Get-AipServiceConfiguration).BPOSId
 Disconnect-AipServiceService
 Connect-MsolService
 New-MsolServicePrincipal -DisplayName $ServicePrincipalName
@@ -143,7 +143,7 @@ The next sections explain how to manually get and specify these values, with mor
 
 ##### To get the BposTenantId
 
-Run the Get-AadrmConfiguration cmdlet from the Azure RMS
+Run the Get-AipServiceConfiguration cmdlet from the Azure RMS
 Windows PowerShell module:
 
 1. If this module is not already installed on your computer, see
@@ -157,9 +157,9 @@ Windows PowerShell module:
     
     When prompted, enter your Azure Information Protection tenant administrator credentials. Typically, you use an account that is a global administrator for Azure Active Directory or Office 365.
     
-4. Run `Get-AadrmConfiguration` and make a copy of the BPOSId value.
+4. Run `Get-AipServiceConfiguration` and make a copy of the BPOSId value.
     
-    An example of output from Get-AadrmConfiguration:
+    An example of output from Get-AipServiceConfiguration:
     
 		    BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
 		
@@ -239,7 +239,7 @@ Our example command would then look like the following:
 
 As shown in the previous command, you can supply the values with a single command, which you would do in a script to run non-interactively. But for testing purposes, you can just type Set-RMSServerAuthentication, and supply the values one-by-one when prompted. When the command completes, the client is now operating in "server mode", which is suitable for non-interactive use such as scripts and Windows Server File Classification Infrastructure.
 
-Consider making this service principal account a super user: To ensure that this service principal account can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aipservice/Add-AadrmSuperUser.md), but specify the **ServicePrincipalId** parameter with your AppPrincipalId value.
+Consider making this service principal account a super user: To ensure that this service principal account can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AipServiceSuperUser](/powershell/aipservice/Add-AipServiceSuperUser.md), but specify the **ServicePrincipalId** parameter with your AppPrincipalId value.
 
 For more information about super users, see [Configuring super users for Azure Information Protection and discovery services or data recovery](../configure-super-users.md).
 
@@ -250,7 +250,7 @@ For more information about super users, see [Configuring super users for Azure I
 
 When you use a service principal account to protect files and download templates outside the Azure North America region, you must edit the registry: 
 
-1. Run the Get-AadrmConfiguration cmdlet again, and make a note of the values for **CertificationExtranetDistributionPointUrl** and **LicensingExtranetDistributionPointUrl**.
+1. Run the Get-AipServiceConfiguration cmdlet again, and make a note of the values for **CertificationExtranetDistributionPointUrl** and **LicensingExtranetDistributionPointUrl**.
 
 2. On each computer where you will run the AzureInformationProtection cmdlets, open the registry editor.
 
