@@ -87,19 +87,19 @@ Get-Command -Module AIP-Service
 Use the `Get-Help <cmdlet_name>` command to see the Help for a specific cmdlet, and use the **-online** parameter to see the latest help on the Microsoft documentation site. For example:
 
 ```
-Get-Help Connect-AadrmService -online
+Get-Help Connect-AipService -online
 ```
 
 For more information:
 
--   Full list of cmdlets available: [AIP-Service Module](/powershell/aip-service/?view=azureipps#aip-service)
+-   Full list of cmdlets available: [AIP-Service Module](/powershell/aipservice/?view=azureipps#aipservice)
 
 -   List of main configuration scenarios that support PowerShell: [Administering protection from Azure Information Protection by using PowerShell](administer-powershell.md)
 
-Before you can run any commands that configure the protection service, you must connect to the service by using the [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet.
+Before you can run any commands that configure the protection service, you must connect to the service by using the [Connect-AipService](/powershell/aipservice/connect-aipservice) cmdlet.
 
-When you have finished running your configuration commands, as a best practice, disconnect from the service by using the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet. If you do not disconnect, the connection is automatically disconnected after a period of inactivity. Because of the automatic disconnection behavior, you might find that you need to occasionally reconnect in a PowerShell session. 
+When you have finished running your configuration commands, as a best practice, disconnect from the service by using the [Disconnect-AipService](/powershell/aipservice/disconnect-aipservice) cmdlet. If you do not disconnect, the connection is automatically disconnected after a period of inactivity. Because of the automatic disconnection behavior, you might find that you need to occasionally reconnect in a PowerShell session. 
 
 > [!NOTE]
-> If the protection service is not yet activated, you can do this after you have connected to the service, by using the [Enable-Aadrm](/powershell/aadrm/vlatest/enable-aadrm) cmdlet.
+> If the protection service is not yet activated, you can do this after you have connected to the service, by using the [Enable-AipService](/powershell/aipservice/enable-aipservice) cmdlet.
 

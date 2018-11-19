@@ -139,9 +139,9 @@ The template changes that you might need to make for this step:
 
 If you created custom templates before the migration, either before or after activating the Azure Rights Management service, templates will not be available to users after the migration, even if they were set to **Published**. To make them available to users, you must first do the following: 
 
-1. Identify these templates and make a note of their template ID, by running the [Get-AadrmTemplate](/powershell/aadrm/vlatest/get-aadrmtemplate). 
+1. Identify these templates and make a note of their template ID, by running the [Get-AadrmTemplate](/powershell/aipservice/get-aadrmtemplate). 
 
-2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate).
+2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AadrmTemplate](/powershell/aipservice/export-aadrmtemplate).
 
 3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate).
 

@@ -37,14 +37,14 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
 
 ## To import the configuration data to Azure Information Protection
 
-1. On an Internet-connected workstation, use the [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet to connect to the Azure Rights Management service:
+1. On an Internet-connected workstation, use the [Connect-AadrmService](/powershell/aipservice/connect-aadrmservice) cmdlet to connect to the Azure Rights Management service:
 
     ```
     Connect-AadrmService
     ```
     When prompted, enter your Azure Rights Management tenant administrator credentials (typically, you will use an account that is a global administrator for Azure Active Directory or Office 365).
 
-2. Use the [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) cmdlet to upload each exported trusted publishing domain (.xml) file. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. 
+2. Use the [Import-AadrmTpd](/powershell/aipservice/import-aadrmtpd) cmdlet to upload each exported trusted publishing domain (.xml) file. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. 
     
     To run this cmdlet, you will need the password that you specified earlier for each configuration data file. 
     
@@ -59,7 +59,7 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     
 3. When you have uploaded each file, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to identify the imported key that matches the currently active SLC key in AD RMS. This key will become the active tenant key for your Azure Rights Management service.
 
-4.  Use the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
+4.  Use the [Disconnect-AadrmService](/powershell/aipservice/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
     Disconnect-AadrmService

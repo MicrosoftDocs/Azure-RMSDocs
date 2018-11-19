@@ -75,7 +75,7 @@ To download your usage logs, you will use the Azure Rights Management administra
 
 ### To download your usage logs by using PowerShell
 
-1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet to connect to the Azure Rights Management service:
+1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](/powershell/aipservice/connect-aadrmservice) cmdlet to connect to the Azure Rights Management service:
 
     ```
     Connect-AadrmService
@@ -108,7 +108,7 @@ By default, this cmdlet uses three threads to download the logs. If you have suf
 #### If you manually enabled Azure Rights Management usage logging before the logging change February 22, 2016
 
 
-If you used usage logging prior to the logging change, you will have usage logs in your configured Azure storage account. Microsoft will not copy these logs from your storage account to the new Azure Rights Management managed storage account as part of this logging change. You are responsible for managing the lifecycle of the previously generated logs and can use the [Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) cmdlet to download your old logs. For example:
+If you used usage logging prior to the logging change, you will have usage logs in your configured Azure storage account. Microsoft will not copy these logs from your storage account to the new Azure Rights Management managed storage account as part of this logging change. You are responsible for managing the lifecycle of the previously generated logs and can use the [Get-AadrmUsageLog](/powershell/aipservice/get-aadrmusagelog) cmdlet to download your old logs. For example:
 
 - To download all available logs to your E:\logs folder: `Get-AadrmUsageLog -Path "E:\Logs"`
     

@@ -69,9 +69,9 @@ Now that you’ve prepared your HSM key in Azure Key Vault for the Azure Rights 
 
 These procedures are done by the administrator for Azure Information Protection.
 
-1. On the Internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connnect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet.
+1. On the Internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connnect-AadrmService](/powershell/aipservice/connect-aadrmservice) cmdlet.
     
-    Then upload each trusted publishing domain (.xml) file, by using the [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
+    Then upload each trusted publishing domain (.xml) file, by using the [Import-AadrmTpd](/powershell/aipservice/import-aadrmtpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
     
     To run this cmdlet, you need the password that you specified earlier for each configuration data file, and the URL for the key that was identified in the previous step.
     
@@ -91,13 +91,13 @@ These procedures are done by the administrator for Azure Information Protection.
 
 2.  When you have uploaded each file, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to specify which imported key matches the currently active SLC key in your AD RMS cluster. This key becomes the active tenant key for your Azure Rights Management service.
 
-3.  Use the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
+3.  Use the [Disconnect-AadrmService](/powershell/aipservice/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
     Disconnect-AadrmService
     ```
 
-If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) Azure RMS cmdlet.
+If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](/powershell/aipservice/get-aadrmkeys) Azure RMS cmdlet.
 
 You’re now ready to go to [Step 5. Activate the Azure Rights Management service](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
