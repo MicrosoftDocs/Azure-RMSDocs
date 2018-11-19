@@ -81,10 +81,10 @@ You can use an account that has one of the following privileges:
     >
     > 1.  If you haven't already done so, download and install Windows PowerShell for Rights Management. For more information, see [Installing the AIPService PowerShell module](install-powershell.md).
     >
-    >     Start Windows PowerShell with the **Run as administrator** command, and connect to the Azure RMS service by using the [Connect-AipServiceService](/powershell/module/aipservice/connect-aipservice) command:
+    >     Start Windows PowerShell with the **Run as administrator** command, and connect to the Azure RMS service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) command:
     >
     >     ```
-    >     Connect-AipServiceService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
+    >     Connect-AipService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
     >     ```
     > 2.  Then run the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) command, using just one of the following parameters:
     >

@@ -57,7 +57,7 @@
 ## [Preparing users and groups](prepare.md)
 
 # [Deploy & Use the Service](activate-service.md)
-## [Activating the service](activate-service.md)
+## [Activating protection](activate-service.md)
 ### [Office 365 admin center](activate-office365.md)
 ### [Azure portal](activate-azure.md)
 ## [Configuring applications](configure-applications.md)

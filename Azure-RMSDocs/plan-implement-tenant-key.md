@@ -179,7 +179,7 @@ Configuration by using PowerShell:
 
 You're now ready to configure Azure Information Protection to use this key as your organization's Azure Information Protection tenant key. Using Azure RMS cmdlets, first connect to the Azure Rights Management service and sign in:
 
-	Connect-AipServiceService
+	Connect-AipService
 
 Then run the [Use-AipServiceKeyVaultKey cmdlet](/powershell/module/aipservice/use-aipservicekeyvaultkey), specifying the key URL. For example:
 

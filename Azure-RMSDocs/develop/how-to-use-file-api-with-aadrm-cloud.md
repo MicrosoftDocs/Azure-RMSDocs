@@ -88,7 +88,7 @@ In order to use your Rights Management Services SDK 2.1 service application with
 
     `Import-Module aadrm`
 
-    `Connect-AipServiceService` (type-in your admin credentials)
+    `Connect-AipService` (type-in your admin credentials)
 
     `Get-AipServiceConfiguration`
 

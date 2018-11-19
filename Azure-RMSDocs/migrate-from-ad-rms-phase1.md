@@ -47,7 +47,7 @@ For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 1. Connect to the Azure Rights Management service and when prompted, enter the credentials for your tenant's global administrator:
     
-		Connect-AipServiceService
+		Connect-AipService
     
 2. Get your tenant's configuration:
     

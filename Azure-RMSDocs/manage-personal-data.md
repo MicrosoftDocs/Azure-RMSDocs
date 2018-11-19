@@ -29,7 +29,7 @@ When you configure and use Azure Information Protection, email addresses and IP 
 
 - The Azure Information Protection policy
 
-- Protection templates for the protection service
+- Templates for the protection service
 
 - Super users and delegated administrators for the protection service 
 

@@ -125,7 +125,7 @@ To automatically get the values and run Set-RMSServerAuthentication:
 # Make sure that you have the AIPService and MSOnline modules installed
 
 $ServicePrincipalName="<new service principal name>"
-Connect-AipServiceService
+Connect-AipService
 $bposTenantID=(Get-AipServiceConfiguration).BPOSId
 Disconnect-AipServiceService
 Connect-MsolService
@@ -151,9 +151,9 @@ Windows PowerShell module:
 
 2. Start Windows PowerShell with the **Run as Administrator** option.
 
-3. Use the `Connect-AipServiceService` cmdlet to connect to the Azure Rights Management service:
+3. Use the `Connect-AipService` cmdlet to connect to the Azure Rights Management service:
     
-    	Connect-AipServiceService
+    	Connect-AipService
     
     When prompted, enter your Azure Information Protection tenant administrator credentials. Typically, you use an account that is a global administrator for Azure Active Directory or Office 365.
     
