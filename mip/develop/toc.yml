@@ -64,6 +64,8 @@
       href: concept-handler-protection-cpp.md
   - name: Labels 
     href: concept-classification-labels.md
+  - name: Metadata
+    href: concepts-mip-metadata.md
   - name: Observers for async (C++)
     href: concept-async-observers.md
     items:
