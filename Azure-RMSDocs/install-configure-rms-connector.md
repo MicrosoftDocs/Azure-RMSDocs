@@ -75,7 +75,7 @@ You can use an account that has one of the following privileges:
 -   **Azure Rights Management connector administrator**: An account in Azure Active Directory that has been granted rights to install and administer the RMS connector for your organization.
 
     > [!NOTE]
-    > The Azure Rights Management global administrator role and Azure Rights Management connector administrator role are assigned to accounts by using the Azure RMS [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aadrmrolebasedadministrator) cmdlet.
+    > The Azure Rights Management global administrator role and Azure Rights Management connector administrator role are assigned to accounts by using the Azure RMS [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) cmdlet.
     > 
     > To run the RMS connector with least privileges, create a dedicated account for this purpose that you then assign the Azure RMS connector administrator role by doing the following:
     >
@@ -86,7 +86,7 @@ You can use an account that has one of the following privileges:
     >     ```
     >     Connect-AipServiceService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
     >     ```
-    > 2.  Then run the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aadrmrolebasedadministrator) command, using just one of the following parameters:
+    > 2.  Then run the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) command, using just one of the following parameters:
     >
     >     ```
     >     Add-AipServiceRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"

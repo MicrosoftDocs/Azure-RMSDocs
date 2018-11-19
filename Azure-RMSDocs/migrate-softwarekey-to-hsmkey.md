@@ -159,7 +159,7 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
 
     As part of this import, the SLC key is imported and automatically set as archived.
 
-3. When you have uploaded each file, run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aadrmkeyproperties) to specify which imported key matches the currently active SLC key in your AD RMS cluster.
+3. When you have uploaded each file, run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) to specify which imported key matches the currently active SLC key in your AD RMS cluster.
 
 4. Use the [Disconnect-AipServiceService](/powershell/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
@@ -167,7 +167,7 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
     Disconnect-AipServiceService
     ```
 
-If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AipServiceKeys](/powershell/aipservice/get-aadrmkeys) Azure RMS cmdlet.
+If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AipServiceKeys](/powershell/aipservice/get-aipservicekeys) Azure RMS cmdlet.
 
 
 You’re now ready to go to [Step 5. Activate the Azure Rights Management service](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).

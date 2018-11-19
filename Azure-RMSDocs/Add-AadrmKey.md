@@ -27,7 +27,7 @@ ms.suite: ems
 
 This cmdlet is now removed from the latest version of the Azure Rights Management module, because the Azure Rights Management service uses Azure Key Vault for customer-managed keys.
 
-Instead, use [Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aadrmkeyvaultkey). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
+Instead, use [Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
 In addition, update your version of the module so it is **2.9.0.0** or later. For instructions, see [Installing the AADRM PowerShell module](install-powershell.md).
 

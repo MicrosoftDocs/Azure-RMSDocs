@@ -60,7 +60,7 @@ When you are ready to deactivate the Azure Rights Management service for your o
 Use one of the following procedures to deactivate Azure Rights Management.
 
 > [!TIP]
-> You can also use the Windows PowerShell cmdlet, [Disable-AipService](/powershell/module/aipservice/disable-aadrm), to deactivate Rights Management.
+> You can also use the Windows PowerShell cmdlet, [Disable-AipService](/powershell/module/aipservice/disable-aipservice), to deactivate Rights Management.
 
 #### To deactivate Rights Management from the Office 365 admin center
 

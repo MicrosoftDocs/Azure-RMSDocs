@@ -89,7 +89,7 @@ These procedures are done by the administrator for Azure Information Protection.
     
     As part of this import, the SLC key is imported and automatically set as archived.
 
-2.  When you have uploaded each file, run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aadrmkeyproperties) to specify which imported key matches the currently active SLC key in your AD RMS cluster. This key becomes the active tenant key for your Azure Rights Management service.
+2.  When you have uploaded each file, run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) to specify which imported key matches the currently active SLC key in your AD RMS cluster. This key becomes the active tenant key for your Azure Rights Management service.
 
 3.  Use the [Disconnect-AipServiceService](/powershell/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
@@ -97,7 +97,7 @@ These procedures are done by the administrator for Azure Information Protection.
     Disconnect-AipServiceService
     ```
 
-If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AipServiceKeys](/powershell/aipservice/get-aadrmkeys) Azure RMS cmdlet.
+If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AipServiceKeys](/powershell/aipservice/get-aipservicekeys) Azure RMS cmdlet.
 
 You’re now ready to go to [Step 5. Activate the Azure Rights Management service](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 

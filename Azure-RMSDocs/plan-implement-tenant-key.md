@@ -43,7 +43,7 @@ What is the Azure Information Protection tenant key?
 |Compliance regulations, additional security, and control over all life cycle operations. <br /><br />For example: Your key must be protected by a hardware security module (HSM).|BYOK|
 
 
-If required, you can change your tenant key topology after deployment, by using the [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aadrmkeyproperties) cmdlet.
+If required, you can change your tenant key topology after deployment, by using the [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) cmdlet.
 
 
 ## Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)
@@ -129,7 +129,7 @@ Make your choice first for compliance, and then to minimize network latency:
 
 - Because all cryptographic calls for protection chain to your Azure Information Protection tenant key, you want to minimize the network latency that these calls incur. To do that, create your key vault in the same Azure region or instance as your Azure Information Protection tenant.
 
-To identify the location of your Azure Information Protection tenant, use the [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aadrmconfiguration)​ PowerShell cmdlet and identify the region from the URLs. For example:
+To identify the location of your Azure Information Protection tenant, use the [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)​ PowerShell cmdlet and identify the region from the URLs. For example:
 
 	LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
@@ -181,7 +181,7 @@ You're now ready to configure Azure Information Protection to use this key as yo
 
 	Connect-AipServiceService
 
-Then run the [Use-AipServiceKeyVaultKey cmdlet](/powershell/module/aipservice/use-aadrmkeyvaultkey), specifying the key URL. For example:
+Then run the [Use-AipServiceKeyVaultKey cmdlet](/powershell/module/aipservice/use-aipservicekeyvaultkey), specifying the key URL. For example:
 
 	Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 
@@ -192,7 +192,7 @@ Then run the [Use-AipServiceKeyVaultKey cmdlet](/powershell/module/aipservice/us
 
 If you need to confirm that the key URL is set correctly for Azure Information Protection: In Azure Key Vault, run [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) to see the key URL.
 
-Finally, if the Azure Rights Management service is already activated, run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aadrmkeyproperties) to tell Azure Information Protection to use this key as the active tenant key for the Azure Rights Management service. If you do not do this step, Azure Information Protection will continue to use the default Microsoft-managed key that was automatically created for your tenant.
+Finally, if the Azure Rights Management service is already activated, run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) to tell Azure Information Protection to use this key as the active tenant key for the Azure Rights Management service. If you do not do this step, Azure Information Protection will continue to use the default Microsoft-managed key that was automatically created for your tenant.
 
 
 ## Next steps

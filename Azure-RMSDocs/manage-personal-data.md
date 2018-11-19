@@ -56,7 +56,7 @@ When Azure Information Protection is used to classify and protect documents and 
 
 ### Protection templates
 
-Run the [Get-AipServiceTemplate](/powershell/module/aipservice/get-aadrmtemplate) cmdlet to get a list of protection templates. You can use the template ID to get details of a specific template. The `RightsDefinitions` object displays the personal data, if any. 
+Run the [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate) cmdlet to get a list of protection templates. You can use the template ID to get details of a specific template. The `RightsDefinitions` object displays the personal data, if any. 
 
 Example:
 ```
@@ -88,12 +88,12 @@ LabelId                 :
 
 ### Super users and delegated administrators for the Azure Rights Management service
 
-Run the [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aadrmsuperuser) cmdlet and [Get-AadrmRoleBasedAdministrator](/powershell/module/aipservice/get-aadrmrolebasedadministrator) cmdlet to see which users have been assigned the super user role or global administrator role for the Azure Rights Management service. For users who have been assigned either of these roles, their email addresses are displayed.
+Run the [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) cmdlet and [get-aipservicerolebasedadministrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator) cmdlet to see which users have been assigned the super user role or global administrator role for the Azure Rights Management service. For users who have been assigned either of these roles, their email addresses are displayed.
 
 
 ### Administration logs for the Azure Rights Management service
 
-Run the [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aadrmadminlog) cmdlet to get a log of admin actions for the Azure Rights Management service, which protects data for Azure Information Protection. This log includes personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
+Run the [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) cmdlet to get a log of admin actions for the Azure Rights Management service, which protects data for Azure Information Protection. This log includes personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
 
 For example:
 ```
@@ -102,7 +102,7 @@ The Rights Management administration log was successfully generated and can be f
 ```
 
 ### Usage logs for the Azure Rights Management service
-Run the [Get-AipServiceUserLog](/powershell/module/aipservice/get-aadrmuserlog) cmdlet to retrieve a log of end-user actions that use the Azure Rights Management service. This service protects data for Azure Information Protection. The log could include personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
+Run the [Get-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog) cmdlet to retrieve a log of end-user actions that use the Azure Rights Management service. This service protects data for Azure Information Protection. The log could include personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
 
 For example:
 ```
@@ -134,7 +134,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 ### Document tracking logs
 
-Run the [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aadrmdocumentlog) cmdlet to retrieve information from the document tracking site about a specific user. To get tracking information associated with the document logs, use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aadrmtrackinglog?view=azureipps) cmdlet.
+Run the [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) cmdlet to retrieve information from the document tracking site about a specific user. To get tracking information associated with the document logs, use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps) cmdlet.
 
 For example:
 ```
@@ -226,7 +226,7 @@ You cannot update email addresses for the super users and delegated administrato
 
 ### Protection templates
 
-Run the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aadrmtemplateproperty) cmdlet to update the protection template. Because the personal data is within the `RightsDefinitions` property, you will also need to use the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aadrmrightsdefinition) cmdlet to create a RightsDefinitions object with the updated information, and use the RightsDefinitions object with the `Set-AipServiceTemplateProperty` cmdlet.
+Run the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet to update the protection template. Because the personal data is within the `RightsDefinitions` property, you will also need to use the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet to create a RightsDefinitions object with the updated information, and use the RightsDefinitions object with the `Set-AipServiceTemplateProperty` cmdlet.
 
 ### Super users and delegated administrators for the Azure Rights Management service
 
