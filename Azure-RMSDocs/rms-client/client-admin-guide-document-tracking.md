@@ -31,7 +31,7 @@ If you have a [subscription that supports document tracking](https://www.microso
 
 ## Using PowerShell to manage the document tracking site
 
-The following sections contain information about how you can manage the document tracking site by using PowerShell. For installation instructions for the PowerShell module, see [Installing the AIPService PowerShell module](../install-powershell.md). If you have previously downloaded and installed the module, check the version number by running: `(Get-Module AIPService –ListAvailable).Version`
+The following sections contain information about how you can manage the document tracking site by using PowerShell. For installation instructions for the PowerShell module, see [Installing the AIPService PowerShell module](../install-powershell.md).
 
 For more information about each of the cmdlets, use the links provided.
 
@@ -39,7 +39,7 @@ For more information about each of the cmdlets, use the links provided.
 
 If displaying all document tracking information is prohibited in your organization because of privacy requirements, you can disable document tracking by using the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet. 
 
-This cmdlet disables access to the document tracking site so that all users in your organization cannot track or revoke access to documents that they have protected. You can re-enable document tracking any time, by using the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature), and you can check whether document tracking is currently enabled or disabled by using [Get-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature). If you have the previous version of the PowerShell module, AADRM, to run these cmdlets, you must have at least version **2.3.0.0** of the AADRM module for PowerShell. 
+This cmdlet disables access to the document tracking site so that all users in your organization cannot track or revoke access to documents that they have protected. You can re-enable document tracking any time, by using the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature), and you can check whether document tracking is currently enabled or disabled by using [Get-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature). 
 
 When the document tracking site is enabled, by default, it shows information such as the email addresses of the people who attempted to access the protected documents, when these people tried to access them, and their location. This level of information can be helpful to determine how the shared documents are used and whether they should be revoked if suspicious activity is seen. However, for privacy reasons, you might need to disable this user information for some or all users. 
 
@@ -63,9 +63,6 @@ You can use the following cmdlets to download logging information from the docum
 - [Get-AipServiceDocumentLog](/powershell/module/aipservice/Get-AipServiceDocumentLog)
     
     This cmdlet returns protection information about the tracked documents for a specified user if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. Use this cmdlet to help answer the question "How are documents protected for a specified user?"
-
-If you have the previous version of the PowerShell module, AADRM, you must have a minimum version of **2.13.0.0** for the this older version of the module.
-
 
 ## Destination URLs used by the document tracking site
 
