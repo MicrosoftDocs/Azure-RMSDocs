@@ -49,7 +49,7 @@ When you configure and use Azure Information Protection, email addresses and IP 
 
 Using the Azure portal, an administrator can specify email addresses for scoped policies and for protection settings within a label configuration. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
 
-For labels that are configured to apply protection from the Azure Rights Management service, email address can also be found in protection templates, by using PowerShell cmdlets from the [AADRM module](/powershell/module/aipservice). This PowerShell module also lets an administrator specify users by email address to be a [super user](configure-super-users.md), or an administrator for the Azure Rights Management service. 
+For labels that are configured to apply protection from the Azure Rights Management service, email address can also be found in protection templates, by using PowerShell cmdlets from the [AIPService module](/powershell/module/aipservice). This PowerShell module also lets an administrator specify users by email address to be a [super user](configure-super-users.md), or an administrator for the Azure Rights Management service. 
 
 When Azure Information Protection is used to classify and protect documents and emails, email addresses and the users' IP addresses might be saved in log files.
 
@@ -214,13 +214,13 @@ Personal data that you view and specify in the Azure portal is accessible only t
 
 - **Global Administrator / Company Administrator**
 
-Personal data that you view and specify by using the AADRM module is accessible only to users who have been assigned the **Information Protection Administrator** role or **Global Administrator / Company Administrator** roles from Azure Active Directory, or the global administrator role for the Azure Rights Management service.  
+Personal data that you view and specify by using the AIPService module is accessible only to users who have been assigned the **Information Protection Administrator** role or **Global Administrator / Company Administrator** roles from Azure Active Directory, or the global administrator role for the Azure Rights Management service.  
 
 ## Updating personal data
 
 You can update email addresses for scoped policies and protection settings in the Azure Information Protection policy. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
 
-For the protection settings, you can update the same information by using PowerShell cmdlets from the [AADRM module](/powershell/module/aipservice).
+For the protection settings, you can update the same information by using PowerShell cmdlets from the [AIPService module](/powershell/module/aipservice).
 
 You cannot update email addresses for the super users and delegated administrators. Instead, remove the specified user account, and add the user account with the updated email address. 
 
@@ -245,7 +245,7 @@ When you need update an email address for a delegated administrator:
 ## Deleting personal data
 You can delete email addresses for scoped policies and protection settings in the Azure Information Protection policy. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
 
-For the protection settings, you can delete the same information by using PowerShell cmdlets from the [AADRM module](/powershell/module/aipservice).
+For the protection settings, you can delete the same information by using PowerShell cmdlets from the [AIPService module](/powershell/module/aipservice).
 
 To delete email addresses for super users and delegated administrators, remove these users by using the [Remove-AipServiceSuperUser](/powershell/module/aipservice/Remove-AipServiceSuperUser) cmdlet and [Remove-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Remove-AipServiceRoleBasedAdministrator). 
 
@@ -279,7 +279,7 @@ When you use the AADRM PowerShell cmdlets, the personal data is made available f
 Azure Information Protection follows Microsoft's [privacy terms](https://privacy.microsoft.com/privacystatement) for profiling or marketing based on personal data.
 
 ## Auditing and reporting
-Only users who have been assigned [administrator permissions](#securing-and-controlling-access-to-personal-information) can use the AADRM module for search and export of personal data. These operations are recorded in the administration  log that can be downloaded.
+Only users who have been assigned [administrator permissions](#securing-and-controlling-access-to-personal-information) can use the AIPService module for search and export of personal data. These operations are recorded in the administration  log that can be downloaded.
 
-For delete actions, the support request acts as the auditing and reporting trail for the actions performed by Microsoft. After deletion, the deleted data will not be available for search and export, and the administrator can verify this using the Get cmdlets from the AADRM module.
+For delete actions, the support request acts as the auditing and reporting trail for the actions performed by Microsoft. After deletion, the deleted data will not be available for search and export, and the administrator can verify this using the Get cmdlets from the AIPService module.
 

@@ -32,7 +32,7 @@ Use the following information for Phase 1 of migrating from AD RMS to Azure Info
 
 ## Step 1: Install the AADRM PowerShell module and identify your tenant URL
 
-Install the AADRM module so that you can configure and manage the service that provides the data protection for Azure Information Protection.
+Install the AIPService module so that you can configure and manage the service that provides the data protection for Azure Information Protection.
 
 For instructions, see [Installing the AADRM PowerShell module](./install-powershell.md).
 

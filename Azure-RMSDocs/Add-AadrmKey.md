@@ -2,7 +2,7 @@
 # required metadata
 
 title: Add-AadrmKey
-description: Help for Add-AadrmKey from the AADRM module.
+description: Help for Add-AadrmKey from the AIPService module.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin

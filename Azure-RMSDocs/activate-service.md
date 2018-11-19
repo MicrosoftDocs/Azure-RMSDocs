@@ -72,7 +72,7 @@ For instructions how to activate the Rights Management service from your managem
 
 Alternatively, you can use the following PowerShell commands:
 
-1. Install the AADRM module, to configure and manage the protection service. For instructions, see [Installing the AADRM PowerShell module](install-powershell.md).
+1. Install the AIPService module, to configure and manage the protection service. For instructions, see [Installing the AADRM PowerShell module](install-powershell.md).
 
 2. From a PowerShell session, run [Connect-AipServiceService](/powershell/module/aipservice/connect-aipservice), and when prompted, provide the Global Administrator account details for your Azure Information Protection tenant.
 
