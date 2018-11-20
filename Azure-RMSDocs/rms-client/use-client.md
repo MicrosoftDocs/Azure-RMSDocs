@@ -6,14 +6,13 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 
 # optional metadata
 
-ROBOTS: noindex,nofollow
 #audience:
 #ms.devlang:
 ms.reviewer: esaggese

@@ -13,7 +13,7 @@ ms.assetid: 3281e45e-cf69-4dc5-946b-3029851d3152
 
 # optional metadata
 
-#ROBOTS: NOINDEX, NOFOLLOW
+#ROBOTS: NOINDEX,NOFOLLOW
 #audience:
 #ms.devlang:
 ms.reviewer: esaggese
