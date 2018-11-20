@@ -6,7 +6,7 @@ description: The information in this article has been removed because it is no l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
