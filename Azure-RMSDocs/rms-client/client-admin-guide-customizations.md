@@ -255,7 +255,7 @@ This configuration requires you to specify an advanced client setting named **La
 
 `[Azure Information Protection label ID];[S/MIME action]`
 
-The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. To specify a sublabel, the parent label must be in the same scope, or in the global policy.
+The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. To use S/MIME with a sublabel, always specify the ID of just the sublabel and not the parent label. When you specify a sublabel, the parent label must be in the same scope, or in the global policy.
 
 The S/MIME action can be:
 
