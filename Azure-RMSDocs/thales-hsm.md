@@ -13,7 +13,7 @@ ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 
 # optional metadata
 
-#ROBOTS: NOINDEX,NOFOLLOW
+#ROBOTS: NOINDEX
 #audience:
 #ms.devlang:
 ms.reviewer: esaggese
@@ -29,3 +29,4 @@ ms.suite: ems
 
 The information in this article has been removed because it is no longer relevant now that Azure Rights Management uses Azure Key Vault for customer-managed tenant keys (also known as bring your own key, or BYOK). 
 
+For more information, see [Implementing BYOK for your Azure Information Protection tenant key](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
