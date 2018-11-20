@@ -29,3 +29,4 @@ ms.suite: ems
 
 The information in this article has been removed because it is no longer relevant now that Azure Rights Management uses Azure Key Vault for customer-managed tenant keys (also known as bring your own key, or BYOK). 
 
+For more information, see [Implementing BYOK for your Azure Information Protection tenant key](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).

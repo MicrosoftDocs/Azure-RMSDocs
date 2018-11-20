@@ -29,3 +29,5 @@ ms.suite: ems
 >*Applies to: Azure Rights Management, [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 The information in this article has been removed because it is no longer relevant now that Azure Rights Management uses Azure Key Vault for customer-managed tenant keys (also known as bring your own key, or BYOK). 
+
+For more information, see [Implementing BYOK for your Azure Information Protection tenant key](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
