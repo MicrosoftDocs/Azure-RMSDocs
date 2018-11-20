@@ -13,7 +13,7 @@ ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
 
 # optional metadata
 
-#ROBOTS: NOINDEX,NOFOLLOW
+#ROBOTS: NOINDEX
 #audience:
 #ms.devlang:
 ms.reviewer: esaggese
