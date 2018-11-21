@@ -74,7 +74,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - The Azure Information Protection client can unprotect multiple files (multi-select and a folder that contains protected files) when you use File Explorer, right-click.
 
-- Documents open as expected in Office after a label is applied that removes protection by using right-click in File Explorer, PowerShell commands, and the scanner. A recovery pop-up dialog box no longer displays.
+- Documents open as expected in Office after a label is applied that removes protection. A recovery pop-up dialog box no longer displays.
 
 - For Excel:
     
