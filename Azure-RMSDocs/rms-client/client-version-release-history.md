@@ -47,7 +47,7 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Version 1.41.010
+## Version 1.41.51.0
 
 > [!TIP]
 > Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
@@ -73,6 +73,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 - The advanced client setting, **RunPolicyInBackground**, which [turns on classification to run continuously in the background](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) works as documented. 
 
 - The Azure Information Protection client can unprotect multiple files (multi-select and a folder that contains protected files) when you use File Explorer, right-click.
+
+- Documents open as expected in Office after a label is applied that removes protection by using right-click in File Explorer, PowerShell commands, and the scanner. A recovery pop-up dialog box no longer displays.
 
 - For Excel:
     
