@@ -74,8 +74,6 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - The Azure Information Protection client can unprotect multiple files (multi-select and a folder that contains protected files) when you use File Explorer, right-click.
 
-- Documents open as expected in Office after a label is applied that removes protection. A recovery pop-up dialog box no longer displays.
-
 - For Excel:
     
     - Visual markings are now applied if you save the spreadsheet while editing a cell.
@@ -131,6 +129,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - You can now protect all file types by using the `*` wildcard when you edit the registry as described in the [Editing the registry for the scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) section.
 
 - Viewing emails by using the Next Item and Previous Item arrow icons on the Quick Access toolbar shows the correct label for each email.
+
+- When you classify and protect by using File Explorer, PowerShell, or the scanner, the Office document metadata is not removed or encrypted.
 
 - Custom permissions support recipient email addresses that contain an apostrophe.
 
