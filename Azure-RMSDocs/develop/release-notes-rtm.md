@@ -37,7 +37,7 @@ This article contains important information about this and previous releases of 
 >[!Note]
 > The feature documentation updates in this section apply to the SDK download dated 12/11/2015.
 
-- **Improved authentication flow** - using OAuth2 token-based authentication via the [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/). For more information on this process and the API extensions for it, see [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md).
+- **Improved authentication flow** - using OAuth2 token-based authentication via the [Azure Active Directory Authentication Library (ADAL)](/azure/active-directory/develop/active-directory-authentication-libraries). For more information on this process and the API extensions for it, see [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md).
 
 - **Update to ADAL** - By updating your application to use ADAL authentication rather than the Microsoft Online Sign-in Assistant, you and your customers will be able to:
 
