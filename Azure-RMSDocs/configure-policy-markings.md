@@ -105,7 +105,7 @@ You can use the following variables in the text string for your header, footer, 
 Example: If you specify the string `Document: ${item.name}  Classification: ${item.label}` for the **General** label footer, the footer text applied to a documented named project.docx will be **Document: project.docx  Classification: General**.
 
 >[!TIP]
-> You also use a [field code to insert the label name](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification-in-the-document) into a document or template.
+> You also use a [field code to insert the label name](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) into a document or template.
 
 ## Setting different visual markings for Word, Excel, PowerPoint, and Outlook
 
