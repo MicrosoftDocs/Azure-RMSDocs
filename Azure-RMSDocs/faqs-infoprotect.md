@@ -75,7 +75,7 @@ Because Azure Information Protection uses persistent metadata for classification
 
 For more information and examples of using this metadata with Exchange Online mail flow rules, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).
 
-## Can I create a document template that automatically includes the classification in a header, footer, or another specific place in the document?
+## Can I create a document template that automatically includes the classification in the document?
 
 Yes. You can configure a label to [apply a header or footer that includes the label name](configure-policy-markings.md). But if that doesn't meet your requirements, you can create a document template that has the formatting you want and add the classification as a field code. 
 
@@ -87,9 +87,9 @@ To add this field code in your document:
 
 2. In the document, position the cursor where you want to add the label's classification and then, from the **Insert** tab, select **Text** > **Quick Parts** > **Field**.
 
-3. In the **Field** dialog box, for **Categories**, select **Document Information**, and from the **Fields names**, select **DocProperty**.
+3. In the **Field** dialog box, from the **Categories** dropdown, select **Document Information**. Then, from the **Fields names** dropdown, select **DocProperty**.
 
-4. From the **Property:** dropdown, select **Sensitivity**, and select **OK**.
+4. From the **Property** dropdown, select **Sensitivity**, and select **OK**.
 
 The current label's classification is displayed in the document and this value will be refreshed automatically whenever you open the document or use the template. So if the label changes, the classification that is displayed for this field code is automatically updated in the document.
 
