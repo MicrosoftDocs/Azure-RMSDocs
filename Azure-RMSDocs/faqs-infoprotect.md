@@ -75,7 +75,7 @@ Because Azure Information Protection uses persistent metadata for classification
 
 For more information and examples of using this metadata with Exchange Online mail flow rules, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).
 
-## Can I create a document template that automatically includes the classification in the document?
+## Can I create a document template that automatically includes the classification?
 
 Yes. You can configure a label to [apply a header or footer that includes the label name](configure-policy-markings.md). But if that doesn't meet your requirements, you can create a document template that has the formatting you want and add the classification as a field code. 
 
