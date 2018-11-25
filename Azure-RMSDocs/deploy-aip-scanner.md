@@ -259,7 +259,7 @@ The scanner then uses installed filters to scan supported file types:
 
 - With configuration, the scanner can also inspect .zip and .tiff files.
 
-For more information, see [File types supported for inspection](../client-admin-guide-file-types.md#file-types-supported-for-inspection).
+For more information, see [File types supported for inspection](./client-admin-guide-file-types.md#file-types-supported-for-inspection).
 
 After inspection, documents with these file types are labeled by using the conditions that you specified for your labels. Or, if you're using discovery mode, documents with the supported file types can be reported to contain the conditions that you specified for your labels, or all known sensitive information types. 
 
@@ -273,12 +273,12 @@ If the label applies protection, by default, only Office file types are protecte
 
 For the file types that can't be inspected, the scanner applies the default label in the Azure Information Protection policy, or the default label that you configure for the scanner:
 
-- If the label applies classification only, the label is applied for file types that [support classification only](../client-admin-guide-file-types.md#file-types-supported-for-classification-only). For other file types, the file is not labeled.
+- If the label applies classification only, the label is applied for file types that [support classification only](./client-admin-guide-file-types.md#file-types-supported-for-classification-only). For other file types, the file is not labeled.
 
 - If the label applies classification and protection:
     
     - If the [registry is edited](#editing-the-registry-for-the-scanner) to include the file type, the label is applied with classification and protection .
-    - If the [registry is not edited](#editing-the-registry-for-the-scanner) to include the file type, the label is applied with classification but not protection for file types that [support classification only](../client-admin-guide-file-types.md#file-types-supported-for-classification-only). For other file types, the file is not labeled. 
+    - If the [registry is not edited](#editing-the-registry-for-the-scanner) to include the file type, the label is applied with classification but not protection for file types that [support classification only](./client-admin-guide-file-types.md#file-types-supported-for-classification-only). For other file types, the file is not labeled. 
 
 ### Editing the registry for the scanner
 
