@@ -244,47 +244,45 @@ Because we configured the schedule to run continuously, when the scanner has wor
 
 ## How files are scanned
 
+The scanner runs through the following processes when it scans files.
+
+### 1. Determine whether files are included or excluded for scanning 
 The scanner automatically skips files that are [excluded from classification and protection](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection), such as executables and system files.
 
 You can change this behavior by defining a list of file types to scan, or exclude from scanning. When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. To specify this list, use [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). After you have specified your file types list, you can add a new file type to the list by using [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes), and remove a file type from the list by using [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
 
-Then the scanner uses Windows iFilter to scan the following file types. For these file types, the document will be labeled by using the conditions that you specified for your labels.
+### 2. Inspect and label files
 
-|Application type|File type|
-|--------------------------------|-------------------------------------|
-|Word|.docx; .docm; .dotm; .dotx|
-|Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
-|PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
-|PDF |.pdf|
-|Text|.txt; .xml; .csv|
+The scanner then uses installed filters to scan supported file types:
 
-By default, only Office file types are protected by the scanner, so PDF and text files are not protected unless you [edit the registry](#editing-the-registry-for-the-scanner) to specify the file types:
+- Without any configuration, Windows IFilter is used for file types that are used by Word, Excel, PowerPoint, PDF, and for text files.
+
+- With configuration, the scanner can also inspect .zip and .tiff files.
+
+For more information, see [File types supported for inspection](../client-admin-guide-file-types.md#file-types-supported-for-inspection).
+
+After inspection, documents with these file types are labeled by using the conditions that you specified for your labels. Or, if you're using discovery mode, documents with the supported file types can be reported to contain the conditions that you specified for your labels, or all known sensitive information types. 
+
+If the label applies protection, by default, only Office file types are protected by the scanner, so PDF and text files are not protected after inspection, unless you [edit the registry](#editing-the-registry-for-the-scanner) to specify the file types:
 
 - If you do not add the file type of .pdf to the registry: Files that have this file name extension will be labeled but if the label is configured for protection, the protection is not applied.
 
 - If you do not add the file types of .txt, .xml, or .csv to the registry: Files that have these file name extensions will not be labeled because these file types do not support classification-only.
 
-Finally, for the remaining file types, the scanner applies the default label in the Azure Information Protection policy, or the default label that you configure for the scanner.
+### 3. Label files that can't be inspected
 
-|Application type|File type|
-|--------------------------------|-------------------------------------|
-|Project|.mpp; .mpt|
-|Publisher|.pub|
-|Visio|.vsd; .vdw; .vst; .vss; .vsdx; .vsdm; .vssx; .vssm; .vstx; .vstm|
-|XPS|.xps; .oxps; .dwfx|
-|Solidworks|.sldprt; .slddrw; .sldasm|
-|Jpeg |.jpg; .jpeg; .jpe; .jif; .jfif; .jfi|
-|Png |.png|
-|Gif|.gif|
-|Bitmap|.bmp; .giff|
-|Tiff|.tif; .tiff|
-|Photoshop|.psdv|
-|DigitalNegative|.dng|
-|Pfile|.pfile|
+For the file types that can't be inspected, the scanner applies the default label in the Azure Information Protection policy, or the default label that you configure for the scanner:
 
-When the scanner applies a label with protection, by default, only Office file types are protected. You can change this behavior so that additional file types are protected. However, when a label applies generic protection to documents, the file name extension changes to .pfile. Other file types can change their file name extension as well. In addition, these files become read-only until they are opened by an authorized user and saved in their native format.
+- If the label applies classification only, the label is applied for file types that [support classification only](../client-admin-guide-file-types.md#file-types-supported-for-classification-only). For other file types, the file is not labeled.
+
+- If the label applies classification and protection:
+    
+    - If the [registry is edited](#editing-the-registry-for-the-scanner) to include the file type, the label is applied with classification and protection .
+    - If the [registry is not edited](#editing-the-registry-for-the-scanner) to include the file type, the label is applied with classification but not protection for file types that [support classification only](../client-admin-guide-file-types.md#file-types-supported-for-classification-only). For other file types, the file is not labeled. 
 
 ### Editing the registry for the scanner
+
+When the scanner applies a label with protection, by default, only Office file types are protected. You can change this behavior so that additional file types are protected. However, when a label applies generic protection to documents, the file name extension changes to .pfile. Other file types can change their file name extension as well. In addition, these files become read-only until they are opened by an authorized user and saved in their native format.
 
 To change the default scanner behavior for protecting file types other than Office files, you must manually edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". In addition, specific for the scanner:
 
