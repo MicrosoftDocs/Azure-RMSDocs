@@ -228,3 +228,5 @@
     href: http://aka.ms/mipsdk
   - name: Security best practices
     href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc  
+  - name: Test
+    href: /information-protection/test/overview?context=/information-protection/develop/rc/rc  
