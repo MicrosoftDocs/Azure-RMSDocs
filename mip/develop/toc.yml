@@ -227,6 +227,6 @@
   - name: SDK (public preview)
     href: http://aka.ms/mipsdk
   - name: Security best practices
-    href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
+    href: /azure/information-protection/develop/security-guidelines?context=https://docs.microsoft.com/information-protection/develop/rc/rc
   - name: TEST
     href: /information-protection/test/overview?context=/information-protection/develop/rc/rc    
