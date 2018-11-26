@@ -17,7 +17,7 @@ To extend the base class `mip::AuthDelegate`, we create a new class called `samp
 
 ### auth_delegate_impl.h
 
-For this example, the default constructor accepts just username, password, and the application's [application ID](/azure/active-directory/develop/developer-glossary.md#application-id-client-id). These will be stored in the private variables `mUserName`, `mPassword`, and `mClientId`.
+For this example, the default constructor accepts just username, password, and the application's [application ID](/azure/active-directory/develop/developer-glossary#application-id-client-id). These will be stored in the private variables `mUserName`, `mPassword`, and `mClientId`.
 
 It's important to note that information such as the identity provider or resource URI aren't necessary to implement, at least not in the `AuthDelegateImpl` constructor. That information is passed as part of `AcquireOAuth2Token` in the `OAuth2Challenge` object. Instead, we'll pass those details to the `AcquireToken` call in `AcquireOAuth2Token`.
 

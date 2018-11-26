@@ -743,6 +743,321 @@
             "source_path": "Azure-RMSDocs/plan-design/thales-hsm.md",
             "redirect_url": "/information-protection/thales-hsm",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_consentdelegate.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_accessdeniederror.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_action.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_addcontentfooteraction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_addcontentheaderaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_addwatermarkaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_applylabelaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_badinputerror.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },       
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_classificationresult.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_contentlabel.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_customaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_error.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_executionstate.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_fileengine.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_fileengine_settings.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_filehandler.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_filehandler_observer.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_fileioerror.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },       
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_fileprofile.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_fileprofile_observer.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_fileprofile_settings.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_internalerror.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },       
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_justificationrequirederror.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_justifyaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_label.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_labelingoptions.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_loggerdelegate.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_metadataaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_networkerror.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_notsupportederror.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_policyengine.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_policyengine_settings.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },       
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_privilegedrequirederror.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_profile.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_profile_observer.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_profile_settings.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectadhocaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectbytemplateaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectdonotforwardaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectiondescriptor.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectiondescriptorbuilder.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionengine.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },       
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionengine_observer.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionengine_settings.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionhandler.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionhandler_observer.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },       
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionprofile.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionprofile_observer.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionprofile_settings.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_recommendlabelaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_removecontentfooteraction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_removecontentheaderaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_removeprotectionaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_removewatermarkaction.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_stream.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_userrights.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },       
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/class_mip_userroles.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/mip-enums-and-structs.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "Azure-RMSDocs/Develop/mip/mip-functions.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/Develop/mip/mip-sdk-reference.md",
+            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "information-protection/develop/concept-auditing-policy-cpp.md",
+            "redirect_url": "/information-protection/develop/concept-handler-policy-auditing-cpp",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "information-protection/develop/concept-auditing-policy-computeactions-cpp.md",
+            "redirect_url": "/information-protection/develop/concept-handler-policy-computeactions-cpp",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "information-protection/develop/concept-auditing-policy-executionstate-cpp.md",
+            "redirect_url": "/information-protection/develop/concept-handler-policy-executionstate-cpp",
+            "redirect_document_id": false
         }
     ]
 }

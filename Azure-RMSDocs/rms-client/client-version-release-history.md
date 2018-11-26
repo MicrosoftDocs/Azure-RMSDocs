@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/18/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
@@ -109,6 +109,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     
     - SharePoint Server 2010 is supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
+- Support for the new **Azure Information Protection - Nodes (Preview)** blade in the Azure portal, that lets you manage scanners from a central location. Information from your deployed scanners that have connectivity to Azure is updated every five minutes. From this blade, you can start the scanner for a one-time scan, rescan all files, check the status of a scanner, and view the scan rate.
+
 **Fixes**
 
 - For the Azure Information Protection scanner:
@@ -117,9 +119,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     
     - Scanner reports include "Last modified by" for Office documents.
     
-    - You can now protect all file types by using the `*` wildcard when you edit the registry as described in the [File API configuration](../develop/file-api-configuration.md) instructions.
-
-- When you classify and protect by using PowerShell or the scanner, the Office document metadata is not removed or encrypted.
+    - You can now protect all file types by using the `*` wildcard when you edit the registry as described in the [Editing the registry for the scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) section.
 
 - Viewing emails by using the Next Item and Previous Item arrow icons on the Quick Access toolbar shows the correct label for each email.
 

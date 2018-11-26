@@ -18,7 +18,7 @@ public virtual void OnGetTemplatesSuccess(const std::shared_ptr<std::vector<std:
 public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when retrieving templates generated an error.
 public virtual void OnGetRightsForLabelIdSuccess(const std::shared_ptr<std::vector<std::string>>& rights, const std::shared_ptr<void>& context)  |  Called when rights were retrieved successfully.
 public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when retrieving rights for a label ID for the user.
-public virtual void OnGetGrantingLabelIdsSuccess(const std::shared_ptr<std::vector<std::string>>& lableIds, const std::shared_ptr<void>& context)  |  Called when label IDs were retrieved successfully.
+public virtual void OnGetGrantingLabelIdsSuccess(const std::shared_ptr<std::vector<std::string>>& labelIds, const std::shared_ptr<void>& context)  |  Called when label IDs were retrieved successfully.
 public virtual void OnGetGrantingLabelIdsFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when retrieving label IDs for the user.
   
 ## Members
@@ -75,7 +75,7 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when label IDs were retrieved successfully.
 
 Parameters:  
-* **lableIds**: A reference to the list of lable IDs retrieved 
+* **labelIds**: A reference to the list of label IDs retrieved 
 
 
 * **context**: The same context that was passed to [ProtectionEngine::GetGrantingLabelIdsAsync](class_mip_protectionengine.md#getgrantinglabelidsasync)

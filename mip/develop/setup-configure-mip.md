@@ -12,21 +12,15 @@ ms.author: bryanla
 
 The Quickstart and Tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Office 365 subscription and client workstation, in preparation for using the SDK.
 
+The MIP SDK is supported on the following platforms:  
+
+[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
+
 Be sure to review the following topics before getting started:
 
 - [What is Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [What is Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
-
-The MIP SDK is supported on the following platforms:
-
-| Operating system | Versions |  
-|------------------|----------|
-| Ubuntu  |  16.04 |
-| RedHat Enterprise Linux | 7 with devtoolset-7 |
-| Debian  | 9 |
-| macOS   | High Sierra and later |
-| Windows | All supported versions, 32 bit and 64 bit |
 
 ## Sign up for an Office 365 subscription
 
@@ -170,7 +164,50 @@ When finished, application registration and API permissions should look similar 
 
 For more information on adding APIs and permissions to a registration, see [Updating an application, Configure a client application to access web APIs section](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Here you'll find information on adding the APIs and permissions needed by a client application.  
 
+## Request an Information Protection Integration Agreement (IPIA)
+
+Before you can release an application developed with MIP, you must apply for and complete a formal agreement with Microsoft.
+
+1. Obtain your IPIA by sending an email to [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting%20IPIA%20for%20<company-name>) with the following information:
+
+   **Subject:** Requesting IPIA for *Company Name*
+
+   In the body of the email, include:
+   - Application and product name
+   - First and last name of the requester
+   - Email address of the requester
+
+2. Upon receipt of your IPIA request, we will send you a form (as a Word document). Review the terms and conditions of the IPIA, and return the form to [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) with the following information:
+
+   - Legal name of the Company
+   - State/Province (US/Canada) or Country of Incorporation
+   - Company URL
+   - Email address of the contact person
+   - Additional addresses of the company (optional)
+   - Name of the Company Application
+   - Brief Description of the Application
+   - *Azure Tenant ID*
+   - *App ID* for the application
+   - Company contacts, email, and phone for Critical Situation Correspondence
+
+3. When we receive your form, we'll send you the final IPIA link to digitally sign. After your signing, it will be signed by the appropriate Microsoft representative, completing the agreement.
+
+### Already have a signed IPIA?
+
+If you already have a signed IPIA and want to add a new *App ID*
+for an application you are releasing, send an email to [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Updating%20IPIA%20for%20<company-name>) and provide us with the following information:
+
+- Name of the Company Application
+- Brief Description of the Application
+- Azure Tenant ID (even if it the same one as before)
+- App ID for the application
+- Company contacts, email, and phone for Critical Situation Correspondence
+
+Upon the sending of the email, please allow up to 72 hours for an acknowledgement of the receipt.
+
 ## Next Steps
 
 - Before starting the Quickstarts section, be sure to read about [Observers in the MIP SDK](concept-async-observers.md), as the MIP SDK is designed to be almost entirely asynchronous.
 - If you're ready to get some hands-on experience with the SDK, start with [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md).
+
+

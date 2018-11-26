@@ -6,14 +6,14 @@ description: Help for Add-AadrmKey from the AADRM module.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: A1C99424-D986-4A5A-B2E1-6D18EEF11B21
 
 # optional metadata
 
-#ROBOTS: NOINDEX, NOFOLLOW
+#ROBOTS: NOINDEX
 #audience:
 #ms.devlang:
 ms.reviewer: aashishr

@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
@@ -27,9 +27,11 @@ ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark.
+When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark. 
 
 Additional information about these visual markings:
+
+- Multiple lines of text are supported for all visual markings.
 
 - Headers and footers apply to Word, Excel, PowerPoint, and Outlook.
 
@@ -38,8 +40,6 @@ Additional information about these visual markings:
     - Excel: Watermarks are visible only in Page layout and Print preview modes, and when printed.
     
 	- PowerPoint: Watermarks are applied to the master slide, as a background image. On the **View** tab, **Slide Master**, make sure that the **Hide Background Graphics** check box is not selected.
-    
-	- Multiple lines of text are supported.
 
 - Maximum string lengths:
     

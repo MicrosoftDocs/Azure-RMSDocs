@@ -71,7 +71,7 @@ $authority = "https://login.windows.net/common/oauth2/authorize"
 $resourceUrl = "https://dataservice.o365filtering.com"
 #clientId and redirectUri are from the RMS Sharing Application. 
 #Once custom app registration is supported, a custom id and uri will be required. 
-$clientId = "6b069eef-9dde-4a29-b402-8ce866edc897"
+$clientId = "0edbblll-8773-44de-b87c-b8c6276d41eb"
 $redirectUri = "com.microsoft.rms-sharing-for-win://authorize"
 
 $response = Get-ADALToken -Resource $resourceUrl -ClientId $clientId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:Always
