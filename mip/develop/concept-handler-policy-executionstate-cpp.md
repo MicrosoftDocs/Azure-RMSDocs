@@ -56,8 +56,9 @@ struct ExecutionStateOptions {
 };
 ```
 
-Each property is set by the application, then `ExecutionSateOptions` is passed to the constructor of the class derived from `mip::ExecutionState`. This information is used to determine the actions to take. Data provided in the `mip::ExecutionState` will also surface in Azure Information Protection Analytics.
+Each property is set by the application, then `ExecutionStateOptions` is passed to the constructor of the class derived from `mip::ExecutionState`. This information is used to determine the actions to take. Data provided in the `mip::ExecutionState` will also surface in Azure Information Protection Analytics.
 
 ### Next Steps
 
-Next, learn more about [computing actions](concept-auditing-policy-computeactions-cpp.md).
+- Learn how to determine [compute actions for a new or existing label](concept-handler-policy-computeactions-cpp.md), based on the current and desired state.
+- Download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

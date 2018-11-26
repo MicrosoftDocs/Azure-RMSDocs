@@ -54,16 +54,18 @@
     - name: Policy API handler (C++)
       href: concept-handler-policy-cpp.md
       items:
-      - name: Auditing 
-        href: concept-auditing-policy-cpp.md
       - name: Execution state 
-        href: concept-auditing-policy-executionstate-cpp.md        
+        href: concept-handler-policy-executionstate-cpp.md  
       - name: Compute actions 
-        href: concept-auditing-policy-computeactions-cpp.md        
+        href: concept-handler-policy-computeactions-cpp.md  
+      - name: Auditing 
+        href: concept-handler-policy-auditing-cpp.md
     - name: Protection API handler (C++)
       href: concept-handler-protection-cpp.md
   - name: Labels 
     href: concept-classification-labels.md
+  - name: Metadata
+    href: concept-mip-metadata.md
   - name: Observers for async (C++)
     href: concept-async-observers.md
     items:
