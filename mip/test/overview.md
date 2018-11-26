@@ -29,9 +29,5 @@ High-level MIP SDK use cases include:
 * A CAD/CAM design application provides native support for Microsoft Information Protection labeling.
 * A cloud access security broker or data loss prevention solution reasons over data encrypted with Azure Information Protection.
 
-For a more exhaustive list, review [API concepts](concept-apis-use-cases.md).
 
-## Next Steps
-
-Now you're ready to get started with the SDK. The first thing you'll need to do, is [complete the MIP SDK setup and configuration steps](setup-configure-mip.md), to make sure your Office 365 subscription and client machine are set up correctly.
 
