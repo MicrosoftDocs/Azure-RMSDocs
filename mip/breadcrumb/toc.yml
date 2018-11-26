@@ -8,10 +8,4 @@
         items:
         - name: Develop
           href: /information-protection/develop/
-      - name: Microsoft Information Protection
-        tocHref: /azure/information-protection/
-        topicHref: /information-protection/develop/
-        items:
-        - name: Develop
-          tocHref: /azure/information-protection/develop/
-          topicHref: /information-protection/develop/
+
