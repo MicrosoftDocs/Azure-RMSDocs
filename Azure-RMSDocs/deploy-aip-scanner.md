@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2018
+ms.date: 11/26/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
@@ -45,7 +45,7 @@ When you have configured your [Azure Information Protection policy](configure-po
 
 ![Azure Information Protection scanner architecture overview](./media/infoprotect-scanner.png)
 
-The scanner can inspect any files that Windows can index, by using iFilters that are installed on the computer. Then, to determine if the files need labeling, the scanner uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns. Because the scanner uses the Azure Information Protection client, it can classify and protect the same [file types](./rms-client/client-admin-guide-file-types.md).
+The scanner can inspect any files that Windows can index, by using IFilters that are installed on the computer. Then, to determine if the files need labeling, the scanner uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns. Because the scanner uses the Azure Information Protection client, it can classify and protect the same [file types](./rms-client/client-admin-guide-file-types.md).
 
 You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels. You can also run the scanner to discover files that contain sensitive information types, without configuring labels for conditions that apply automatic classification.
 
@@ -251,11 +251,12 @@ The scanner automatically skips files that are [excluded from classification and
 
 You can change this behavior by defining a list of file types to scan, or exclude from scanning. When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. To specify this list, use [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). After you have specified your file types list, you can add a new file type to the list by using [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes), and remove a file type from the list by using [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
 
+
 ### 2. Inspect and label files
 
 The scanner then uses installed filters to scan supported file types:
 
-- Without any configuration, Windows IFilter is used for file types that are used by Word, Excel, PowerPoint, PDF, and for text files.
+- Without any configuration, Windows IFilter is used for file types that are used by Word, Excel, PowerPoint, and for PDF documents and text files.
 
 - With configuration, the scanner can also inspect .zip and .tiff files.
 
@@ -278,7 +279,7 @@ For the file types that can't be inspected, the scanner applies the default labe
 - If the label applies classification and protection:
     
     - If the [registry is edited](#editing-the-registry-for-the-scanner) to include the file type, the label is applied with classification and protection .
-    - If the [registry is not edited](#editing-the-registry-for-the-scanner) to include the file type, the label is applied with classification but not protection for file types that [support classification only](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only). For other file types, the file is not labeled. 
+    - If the [registry is not edited](#editing-the-registry-for-the-scanner) to include the file type, the label is applied with classification but not protection for file types that [support classification only](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only). For other file types, the file is not labeled.
 
 ### Editing the registry for the scanner
 
