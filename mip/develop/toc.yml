@@ -222,8 +222,9 @@
     href: faqs-known-issues.md
   - name: Forums 
     href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
-  - name: SDK (public preview)
-    href: http://aka.ms/mipsdk
   - name: Samples
     href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
-   
+  - name: SDK (public preview)
+    href: http://aka.ms/mipsdk
+  - name: Security best practices
+    href: /azure/information-protection/develop/security-guidelines?context=information-protection/develop/rc/rc
