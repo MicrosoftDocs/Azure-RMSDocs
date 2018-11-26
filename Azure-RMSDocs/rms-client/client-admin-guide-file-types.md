@@ -254,7 +254,7 @@ If you have a container file that includes classified and protected files, you m
 
 ## File types supported for inspection
 
-The Azure Information Protection client uses Windows IFilter to inspect the contents of documents. For the following file types, the document will be labeled by using the conditions that you specified for your labels. Or, if you use the Azure Information Protection scanner in discovery mode, the following file types can be reported to contain the conditions that you specified for your labels, or all known sensitive information types.
+The Azure Information Protection client uses Windows IFilter to inspect the contents of documents. The following file types can be inspected when you use the Azure Information Protection scanner, or the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command.
 
 |Application type|File type|
 |--------------------------------|-------------------------------------|
@@ -268,13 +268,13 @@ With additional configuration, .zip files and .tiff files can also be inspected.
 
 ### To inspect .zip files
 
-The Azure Information Protection scanner and the PowerShell command [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) can inspect .zip files when you follow these instructions:
+The Azure Information Protection scanner and the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can inspect .zip files when you follow these instructions:
 
 1. For the computer running the scanner or the PowerShell session, install the [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
 
 2. For the scanner: Include .zip files to be inspected, as described in the [Azure Information Protection scanner](#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner) section.
 
-3. For the scanner: If .zip files should be classified and protected rather than just inspected for sensitive information, add a registry entry for files with this file name extension to have generic protection (pfile), as described in the [Changing the default protection level of files](#changing-the-default-protection-level-of-files) section.
+3. For the scanner: If .zip files should be classified and protected with a label, rather than just inspected for sensitive information, add a registry entry for this file name extension to have generic protection (pfile), as described in the [Changing the default protection level of files](#changing-the-default-protection-level-of-files) section.
 
 Example scenario after doing these steps: 
 
@@ -284,7 +284,7 @@ After inspecting the file, the scanner classifies this file as **Confidential \ 
 
 ### To inspect .tiff files by using OCR
 
-The Azure Information Protection scanner and the PowerShell command [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you configure [Windows TIFF IFilter Settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) on the computer running the scanner or the PowerShell session.
+The Azure Information Protection scanner and the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you configure [Windows TIFF IFilter Settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) on the computer running the scanner or the PowerShell session.
 
 ## Next steps
 Now that you've identified the file types supported by the Azure Information Protection client, see the following resources for additional information that you might need to support this client:
