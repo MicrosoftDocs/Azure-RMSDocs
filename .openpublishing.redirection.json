@@ -1043,6 +1043,21 @@
             "source_path": "Azure-RMSDocs/Develop/mip/mip-sdk-reference.md",
             "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "information-protection/develop/concept-auditing-policy-cpp.md",
+            "redirect_url": "/information-protection/develop/concept-handler-policy-auditing-cpp",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "information-protection/develop/concept-auditing-policy-computeactions-cpp.md",
+            "redirect_url": "/information-protection/develop/concept-handler-policy-computeactions-cpp",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "information-protection/develop/concept-auditing-policy-executionstate-cpp.md",
+            "redirect_url": "/information-protection/develop/concept-handler-policy-executionstate-cpp",
+            "redirect_document_id": false
         }
     ]
 }
