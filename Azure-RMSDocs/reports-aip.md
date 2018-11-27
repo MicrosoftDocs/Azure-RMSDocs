@@ -50,6 +50,18 @@ For example, you'll be able to see the following:
     
     - Which applications are being used for labeling
 
+- From the **Activity logs**, where you can select a time period:
+    
+    - What labeling actions were performed by a specific user
+    
+    - What labeling actions were performed from a specific device
+    
+    - Which users have accessed a specific labeled document
+    
+    - What labeling actions were performed for a specific file path
+    
+    - What labeling actions were performed by a specific application, such File Explorer and right-click, or the AzureInformationProtection PowerShell module
+
 - From the **Data discovery** report:
 
     - What files are on your scanned data repositories
@@ -121,6 +133,12 @@ When the workspace is configured, you're ready to view the reports.
 From the Azure Information Protection blade, locate the **Dashboards** menu options, and select one of the following options:
 
 - **Usage report (Preview)**: Use this report to see how your labels are being used. 
+
+- **Activity logs (Preview)**: Use this report to see labeling actions from users, and on devices and file paths.
+    
+    This report is currently rolling out to tenants, so if you do not see it, try again in a few days. 
+    
+    This report has a **Columns** option, that lets you display more activity information than the default display. One of the columns is for **Device Risk**, which will display data from Windows Defender when that application is integrated with Azure Information Protection.
 
 - **Data discovery (Preview)**: Use this report to see information about files that the scanners found.
 
