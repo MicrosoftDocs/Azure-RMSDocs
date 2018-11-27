@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
@@ -49,7 +49,7 @@ Additional information about these visual markings:
 
 - You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied.
 
-- Word, PowerPoint, and Outlook support visual markings in different colors. Visual markings that are configured for colors always display as black in Excel.
+- Word, PowerPoint, Outlook, and now Excel support visual markings in different colors.
 
 - Visual markings support one language only.
 
