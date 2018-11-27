@@ -1,11 +1,11 @@
 ---
 title: Concepts - Using the Microsoft Information Protection SDK to generate audit events
-description: This article will help you understand how to use the Microsoft Information Protection SDK to compute .
+description: This article will help you understand how to use the Microsoft Information Protection SDK to compute.
 services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/01/2018
+ms.date: 11/16/2018
 ms.author: tommos
 ---
 
@@ -13,7 +13,7 @@ ms.author: tommos
 
 As previously detailed, the primary functions of the Policy API are to:
 - list available labels
-- return the specific set of actions that should be taken based on the current and desired state
+- return a set of actions that should be taken, based on the current and desired state
 
 The last step in the process is to provide a label identifier and, optionally, metadata about the existing label to the `ComputeActions()` function.
 
@@ -23,7 +23,7 @@ Sample code for this article can be found on GitHub.
 
 ## Compute an Action for a New Label
 
-Computing the `mip::Actions` for a new label can be achieved by using the `ExecutionStateImpl` defined in  [ExecutionState](concept-auditing-policy-executionstate-cpp.md).
+Computing the `mip::Actions` for a new label, can be achieved by using the `ExecutionStateImpl` defined in  [ExecutionState](concept-handler-policy-executionstate-cpp.md).
 
 ```cpp
 // Replace with valid label ID.
@@ -58,7 +58,7 @@ The `PolicyHandler` computes the actions and returns a `std::vector` of `mip::Ac
 
 ## Compute Actions with an Existing Label
 
-When using the Policy API, it's up to the application to read metadata from the content. This metadata is provided to the API as part of the `mip::ExecutionState`. `ComputeActions()` can handle more complex operations than applying a new label to an unlabeled document. The example below demonstrates downgrading a label from a more sensitive label to a less sensitive label, where a label already exists. This process is simulated by reading in a comma-separated string of metadata, and providing to the API via `mip::ExecutionState`.
+When using the Policy API, it's up to the application to read metadata from content. This metadata is provided to the API as part of the `mip::ExecutionState`. `ComputeActions()` can handle more complex operations than applying a new label to an unlabeled document. The example below demonstrates downgrading a label from a more sensitive label, to a less sensitive label. This process is simulated by reading a comma-separated string of metadata, and providing to the API via `mip::ExecutionState`.
 
 > [!NOTE]
 > The sample uses a utility function called `SplitString()`. An example can be found [here](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/utils.cpp)
@@ -111,5 +111,5 @@ Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ActionId
 
 ## Next Steps
 
-* Next, download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
-* Read about how to [pass audit events to the Azure Information Protection audit pipeline](concept-auditing-policy-cpp.md)
+- Learn how to [pass audit events to Azure Information Protection Analytics](concept-handler-policy-auditing-cpp.md)
+- Download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
