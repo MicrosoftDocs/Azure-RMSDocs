@@ -6,10 +6,9 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
-ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 
 # optional metadata
 
@@ -48,36 +47,44 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Versions later than 1.37.19.0
-
-If you have a version 1 of the client that is later than 1.37.19.0, it is a preview build for testing and evaluation purposes. 
+## Version 1.41.51.0
 
 > [!TIP]
 > Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
 
-**Released**: 09/20/2018
+**Released**: 11/27/2018
+
+This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **New features:**
 
 - Support for [central reporting](../reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
 
-**Additional:**
+- Excel now also supports [visual marking](../configure-policy-markings.md)s in different colors.
 
-Just for this preview version, specific to the scanner:
+- For existing S/MIME deployments, a new advanced client setting (in preview) to configure a label to automatically apply S/MIME protection in Outlook. [More information](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook).
 
-- Install the scanner by following these steps:
+- A new advanced client setting, as an alternative to editing the registry to prevent sign-in prompts for the Azure Information Protection service for [disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
+
+**Fixes**:
+
+- The Azure Information Protection client no longer excludes .msg, .rar, and .zip file name extensions for File Explorer (right-click) and PowerShell commands. However, these file name extensions remain excluded by default for the scanner. 
+
+- The advanced client setting, **RunPolicyInBackground**, which [turns on classification to run continuously in the background](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) works as documented. 
+
+- The Azure Information Protection client can unprotect multiple files (multi-select and a folder that contains protected files) when you use File Explorer, right-click.
+
+- For Excel:
     
-    1. Install the current GA version (1.37.19.0) of the client.
-    2. Install and configure the scanner.
-    3. Start the scanner.
-    4. Upgrade the Azure Information Protection client to this preview version.
-    5. Start the scanner.
-
-- Known issue with scanning large data sets:
+    - Visual markings are now applied if you save the spreadsheet while editing a cell.
     
-    With this preview version, gradually increase the number of files to be scanned and monitor progress. If the scanner status reports that it is running but new files do not get scanned, reduce the number of files to be scanned and restart the scanner. 
+    - Excel 2010: When a spreadsheet is protected by using the Co-Author [permission level](../configure-usage-rights.md#rights-included-in-permissions-levels), the **Delete Label** button is now available when you right-click the file and choose **Classify and Protect**.
 
-If you need instructions to install, configure, and start the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
+- The advanced client settings for **ExternalContentMarkingToRemove**, which can [remove headers and footers from other labeling solutions](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) now supports custom layouts.
+
+**Additional changes:**
+
+- When the scanner's schedule is set to **Always**, there is now a delay of 30 seconds between scans.
 
 ## Version 1.37.19.0
 
@@ -123,7 +130,9 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - Viewing emails by using the Next Item and Previous Item arrow icons on the Quick Access toolbar shows the correct label for each email.
 
-- Custom permissions supports recipient email addresses that contain an apostrophe.
+- When you classify and protect by using File Explorer, PowerShell, or the scanner, the Office document metadata is not removed or encrypted.
+
+- Custom permissions support recipient email addresses that contain an apostrophe.
 
 - The computer environment will successfully initialize (bootstrap) when this action is initiated by opening a protected document that's stored in SharePoint Online.
 
@@ -202,5 +211,4 @@ For more information about installing and using the client:
 - For users: [Download and install the client](install-client-app.md)
 
 - For admins: [Azure Information Protection client administrator guide](client-admin-guide.md)
-
 
