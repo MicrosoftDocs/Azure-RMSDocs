@@ -16,11 +16,18 @@ The MIP SDK is supported on the following platforms:
 
 [!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
 
+## Prerequisites
+
 Be sure to review the following topics before getting started:
 
 - [What is Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [What is Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
+
+> [!IMPORTANT]
+> **In order to honor user privacy, you must ask the user to consent before enabling automatic logging.** The following example is a standard message Microsoft uses for logging notification:
+>
+> *By turning on Error and Performance Logging, you are agreeing to send Error and Performance Data to Microsoft. Microsoft will collect error and performance data over the internet (“Data”). Microsoft uses this Data to provide and improve the quality, security and integrity of Microsoft products and services. For example, we analyze performance and reliability, such as what features you use, how quickly the features respond, device performance, user interface interactions, and any problems you experience with the product. Data will also include information about the configuration of your software like the software you are currently running, and the IP address.*
 
 ## Sign up for an Office 365 subscription
 
@@ -36,7 +43,7 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 
 ## Configure sensitivity labels
 
-If you're currently using Azure Information Protection, steps must be taken to migrate your labels to Office 365 Security and Compliance Center. For more information on the process, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels). 
+If you're currently using Azure Information Protection, you must migrate your labels to Office 365 Security and Compliance Center. For more information on the process, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels). 
 
 ## Configure your client workstation
 
