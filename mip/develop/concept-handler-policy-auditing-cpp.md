@@ -35,7 +35,7 @@ These events are useful in detecting applications across your enterprise that ar
 
 Discovery events provide information on labeled information that is read or consumed by the Policy API. These events are useful as they surface the devices, location, and users who are accessing information across an organization.
 
-Discovery events are generated in the Policy API by setting a bool flag when creating the `mip::PolicyHandler` object via the `mip::PolicyEngine`. In the example below, the value for **isAuditDiscoveryEnabled** is set to true. When `mip::ExecutionState` is passed to `ComputeActions()` or `GetSensitivityLabel()` (with existing metadata information and content identifier), that discovery information will be submitted to Azure Information Protection Analytics.
+Discovery events are generated in the Policy API, by setting a flag when creating the `mip::PolicyHandler` object. In the example below, the value for **isAuditDiscoveryEnabled** is set to `true`. When `mip::ExecutionState` is passed to `ComputeActions()` or `GetSensitivityLabel()` (with existing metadata information and content identifier), discovery information will be submitted to Azure Information Protection Analytics.
 
 The discovery audit is generated once the application calls `ComputeActions()` or `GetSensitivityLabel()` and provides `mip::ExecutionState`. This event is generated only once per handler.
 
@@ -66,9 +66,10 @@ handler->NotifyCommittedActions(*state);
 
 ## Audit Dashboard
 
-Events submitted to the Azure Information Protection audit pipeline will surface in reports at https://portal.azure.com. Azure Information Protection Analytics is in public preview and features/functionality are subject to change.
+Events submitted to the Azure Information Protection audit pipeline will surface in reports at https://portal.azure.com. Azure Information Protection Analytics is in public preview and features/functionality may change.
 
 ## Next Steps
 
-See the [preview announcement blog on Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854) for more details on the auditing experience in Azure Information Protection.
+- For details on the auditing experience in Azure Information Protection, see the [preview announcement blog on Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
+- Download the [Policy API Samples from GitHub and try out the Policy API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
 

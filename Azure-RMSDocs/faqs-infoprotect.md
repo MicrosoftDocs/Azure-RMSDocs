@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
@@ -74,6 +74,24 @@ No. When you label an email message that has attachments, those attachments do n
 Because Azure Information Protection uses persistent metadata for classification, which includes a clear-text label, this information can be read by DLP solutions and other applications. 
 
 For more information and examples of using this metadata with Exchange Online mail flow rules, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).
+
+## Can I create a document template that automatically includes the classification?
+
+Yes. You can configure a label to [apply a header or footer that includes the label name](configure-policy-markings.md). But if that doesn't meet your requirements, you can create a document template that has the formatting you want and add the classification as a field code. 
+
+As an example, you might have a table in your document's header that displays the classification. Or, you use specific wording for an introduction that references the document's classification.
+
+To add this field code in your document:
+
+1. Label the document and save it. This action creates new metadata fields that you can now use for your field code.
+
+2. In the document, position the cursor where you want to add the label's classification and then, from the **Insert** tab, select **Text** > **Quick Parts** > **Field**.
+
+3. In the **Field** dialog box, from the **Categories** dropdown, select **Document Information**. Then, from the **Fields names** dropdown, select **DocProperty**.
+
+4. From the **Property** dropdown, select **Sensitivity**, and select **OK**.
+
+The current label's classification is displayed in the document and this value will be refreshed automatically whenever you open the document or use the template. So if the label changes, the classification that is displayed for this field code is automatically updated in the document.
 
 ## How is Azure Information Protection classification for emails different from Exchange message classification?
 

@@ -43,14 +43,14 @@ Before you begin, make sure that your organization has a key vault that has been
 
 
 > [!TIP]
-> If you are doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
+> If you are doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](/azure/key-vault/key-vault-get-started). 
 
 
 ## Part 1: Transfer your HSM key to Azure Key Vault
 
 These procedures are done by the administrator for Azure Key Vault.
 
-1. For each exported SLC key that you want to store in Azure Key Vault, follow the instructions from the Azure Key Vault documentation, using [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azurekey-vault) with the following exception:
+1. For each exported SLC key that you want to store in Azure Key Vault, follow the instructions from the Azure Key Vault documentation, using [Implementing bring your own key (BYOK) for Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) with the following exception:
 
     - Do not do the steps for **Generate your tenant key**, because you already have the equivalent from your AD RMS deployment. Instead, identify the key used by your AD RMS server from the Thales installation and use this key during the migration. Thales encrypted key files are usually named **key<*keyAppName*><*keyIdentifier*>** locally on the server.
 

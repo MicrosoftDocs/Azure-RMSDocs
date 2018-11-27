@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
@@ -45,7 +45,7 @@ When you have configured your [Azure Information Protection policy](configure-po
 
 ![Azure Information Protection scanner architecture overview](./media/infoprotect-scanner.png)
 
-The scanner can inspect any files that Windows can index, by using iFilters that are installed on the computer. Then, to determine if the files need labeling, the scanner uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns. Because the scanner uses the Azure Information Protection client, it can classify and protect the same [file types](./rms-client/client-admin-guide-file-types.md).
+The scanner can inspect any files that Windows can index, by using IFilters that are installed on the computer. Then, to determine if the files need labeling, the scanner uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns. Because the scanner uses the Azure Information Protection client, it can classify and protect the same [file types](./rms-client/client-admin-guide-file-types.md).
 
 You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels. You can also run the scanner to discover files that contain sensitive information types, without configuring labels for conditions that apply automatic classification.
 
@@ -198,7 +198,7 @@ With the scanner's default configuration, you're now ready to run your first sca
     
         Start-AIPScan
     
-    Alternatively, you can start the scanner from the **Azure Information Protection** blade in the Azure portal, when you use the **Scanner** > **Nodes (Preview)** > \**<*scanner node*>**> **Scan now** option.
+    Alternatively, you can start the scanner from the **Azure Information Protection** blade in the Azure portal, when you use the **Scanner** > **Nodes (Preview)** > \**<*scanner node*>** > **Scan now** option.
 
 2. Wait for the scanner to complete its cycle by running the following command:
     
@@ -213,7 +213,7 @@ With the scanner's default configuration, you're now ready to run your first sca
 3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
     
     > [!TIP]
-    > Currently in preview, scanners send this information to Azure Information Protection every five minutes when you have the preview version of the scanner, so that you can view the results in near real-time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md). 
+    > Scanners send this information to Azure Information Protection every five minutes, so that you can view the results in near real-time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md). 
         
     If the results are not as you expect, you might need to fine-tune the conditions that you specified in your Azure Information Protection policy. If that's the case, repeat steps 1 through 3 until you are ready to change the configuration to apply the classification and optionally, protection. 
 
@@ -248,7 +248,7 @@ The scanner automatically skips files that are [excluded from classification and
 
 You can change this behavior by defining a list of file types to scan, or exclude from scanning. When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. To specify this list, use [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). After you have specified your file types list, you can add a new file type to the list by using [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes), and remove a file type from the list by using [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
 
-Then the scanner uses Windows iFilter to scan the following file types. For these file types, the document will be labeled by using the conditions that you specified for your labels.
+Then the scanner uses Windows IFilter to scan the following file types. For these file types, the document will be labeled by using the conditions that you specified for your labels.
 
 |Application type|File type|
 |--------------------------------|-------------------------------------|
@@ -258,13 +258,17 @@ Then the scanner uses Windows iFilter to scan the following file types. For thes
 |PDF |.pdf|
 |Text|.txt; .xml; .csv|
 
-By default, only Office file types are protected by the scanner, so PDF and text files are not protected unless you [edit the registry](#editing-the-registry-for-the-scanner) to specify the file types:
+In addition, the scanner can also use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you configure [Windows TIFF IFilter Settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) on the computer running the scanner.
+
+By default, only Office file types are protected by the scanner, so PDF documents and text files, and TIFF images are not protected unless you [edit the registry](#editing-the-registry-for-the-scanner) to specify the file types:
 
 - If you do not add the file type of .pdf to the registry: Files that have this file name extension will be labeled but if the label is configured for protection, the protection is not applied.
 
 - If you do not add the file types of .txt, .xml, or .csv to the registry: Files that have these file name extensions will not be labeled because these file types do not support classification-only.
 
-Finally, for the remaining file types, the scanner applies the default label in the Azure Information Protection policy, or the default label that you configure for the scanner.
+- If you do not add the file type of .tiff to the registry after configuring the Windows TIFF IFilter: Files that have this file name extension will be labeled but if the label is configured for protection, the protection is not applied.
+
+Finally, for the remaining file types, the scanner does not inspect them but applies the default label in the Azure Information Protection policy, or the default label that you configure for the scanner.
 
 |Application type|File type|
 |--------------------------------|-------------------------------------|
@@ -386,7 +390,7 @@ Other factors that affect the scanner performance:
     
     - The scanner runs more quickly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents.
     
-    - The scanner runs more slowing when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.
+    - The scanner runs more slowly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.
     
 
 ## List of cmdlets for the scanner 
