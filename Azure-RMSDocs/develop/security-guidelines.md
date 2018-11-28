@@ -76,7 +76,7 @@ AIP does not support code modification at run time or modification of the import
 
 If your application does not correctly interpret and enforce the rights expressed in the AIP   issuance license, you may make information available in ways that the information owner did not intend. An example of this is when an application allows a user to save unencrypted information to new media when the issuance license only confers the right to view the information.
 
-The AIP system organizes rights a few groupings. For more information, see [Configuring usage rights for Azure Rights Management](../configure-usage-rights.md).
+The AIP system organizes rights a few groupings. For more information, see [Configuring usage rights for Azure Information Protection](../configure-usage-rights.md).
 
 ### Azure Information Protection  
 API allows a user to either decrypt information or not; the information does not have any inherent protection. If a user has the right to decrypt information, the API permits it, and the application is responsible for managing or protecting that information after it is in the clear. An application is responsible for managing its environment and interface to prevent the unauthorized use of information; for example, disabling the **Print** and **Copy** buttons if a license only grants the PLAY right. Your test suite should verify that your application acts correctly on all the license rights that it recognizes.

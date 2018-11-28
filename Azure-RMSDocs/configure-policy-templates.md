@@ -42,7 +42,7 @@ Protection templates, also known as Rights Management templates, are a grouping 
 
 ## Default templates
 
-When you obtain your subscription for Azure Information Protection or for an Office 365 subscription that includes the Azure Rights Management service, two default templates are automatically created for your tenant. These templates restrict access to authorized users in your organization. When these templates are created, they have the permissions that are listed in the [Configuring usage rights for Azure Rights Management](configure-usage-rights.md#rights-included-in-the-default-templates) documentation.
+When you obtain your subscription for Azure Information Protection or for an Office 365 subscription that includes the Azure Rights Management service, two default templates are automatically created for your tenant. These templates restrict access to authorized users in your organization. When these templates are created, they have the permissions that are listed in the [Configuring usage rights for Azure Information Protection](configure-usage-rights.md#rights-included-in-the-default-templates) documentation.
 
 In addition, the templates are configured to allow offline access for seven days and do not have an expiration date.
 
