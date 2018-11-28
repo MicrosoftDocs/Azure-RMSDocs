@@ -216,6 +216,8 @@ This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
 - Support for the [policy setting](../configure-policy-settings.md), **Display the Information Protection bar in Office apps**. When this setting is off, users select labels from the **Protect** button on the ribbon.
 
+- Headers and footers in Word, Excel, and PowerPoint now support multiple lines of text.
+
 - A new advanced client setting (still in preview) to turn on classification to run continuously in the background. When this setting is enabled, for Office apps, automatic and recommended classification runs continuously in the background, instead of running when documents are saved. With this change in behavior, you can now apply automatic and recommended classification to documents that are stored in SharePoint Online. [More information](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)
 
 - A new advanced client setting so that Outlook doesn't apply the default label that is configured in the Azure Information Protection policy. Instead, Outlook can apply a different default label, or no label. [More information](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
