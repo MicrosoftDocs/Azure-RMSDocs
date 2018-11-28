@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
@@ -31,8 +31,6 @@ When you assign a label to a document or email message, you can select several o
 
 Additional information about these visual markings:
 
-- Multiple lines of text are supported for all visual markings.
-
 - Headers and footers apply to Word, Excel, PowerPoint, and Outlook.
 
 - Watermarks apply to Word, Excel, and PowerPoint:
@@ -40,6 +38,8 @@ Additional information about these visual markings:
     - Excel: Watermarks are visible only in Page layout and Print preview modes, and when printed.
     
 	- PowerPoint: Watermarks are applied to the master slide, as a background image. On the **View** tab, **Slide Master**, make sure that the **Hide Background Graphics** check box is not selected.
+
+- Multiple lines are supported for watermarks, and for headers and footers in Word, Excel, and PowerPoint. If you specify multiple lines for a label's header or footer that is applied in Outlook, the lines are concatenated. In this scenario, consider using the configuration to [set different visual markings for Word, Excel, PowerPoint, and Outlook](##setting-different-visual-markings-for-word-excel-powerpoint-and-outlook).
 
 - Maximum string lengths:
     
