@@ -9,7 +9,6 @@ manager: mbaldwin
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.service: information-protection
-ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 
 # optional metadata
@@ -24,11 +23,11 @@ ms.suite: ems
 
 ---
 
-# How to activate Azure Rights Management from the Azure portal
+# How to activate the Rights Management protection service from the Azure portal
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Use these instructions if you want to activate the Azure Rights Management service (Azure RMS) from the Azure portal.
+Use these instructions if you want to activate the Rights Management protection service (Azure RMS) from Azure Information Protection, by using the Azure portal.
 
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
     

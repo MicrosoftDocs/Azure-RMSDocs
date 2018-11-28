@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Activate Azure RMS with the Office 365 admin center - AIP
-description: Activation instructions for the Azure Rights Management service when you use the new version of the Office 365 admin center.
+title: Activate Rights Management protection with the Office 365 admin center - AIP
+description: Activation instructions for the Azure Rights Management service when you use the Office 365 admin center.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -24,13 +24,13 @@ ms.suite: ems
 
 ---
 
-# How to activate Azure Rights Management from the Office 365 admin center
+# How to activate Rights Management protection from the Office 365 admin center
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Use these instructions if you have access to the Azure Rights Management service from the Office 365 admin center. For example, you have a subscription for Office 365 E3 or Office 365 E5.
 
-1. After you have signed up for an Office 365 plan that includes Rights Management, [sign in to Office 365](https://portal.office.com/) with your work or school account that has the global administrator role for your Office 365 deployment.
+1. After you have signed up for an Office 365 plan that includes Azure Rights Management, [sign in to Office 365](https://portal.office.com/) with your work or school account that has the global administrator role for your Office 365 deployment.
 
 2. If the Office 365 admin center does not automatically display, select the app launcher icon in the upper-left and choose **Admin**. The **Admin** tile appears only to Office 365 administrators.
 
