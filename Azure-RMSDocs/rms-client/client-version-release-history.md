@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -69,8 +69,6 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 **Fixes**:
 
 - The Azure Information Protection client no longer excludes .msg, .rar, and .zip file name extensions for File Explorer (right-click) and PowerShell commands. However, these file name extensions remain excluded by default for the scanner. 
-
-- The advanced client setting, **RunPolicyInBackground**, which [turns on classification to run continuously in the background](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) works as documented. 
 
 - The Azure Information Protection client can unprotect multiple files (multi-select and a folder that contains protected files) when you use File Explorer, right-click.
 
