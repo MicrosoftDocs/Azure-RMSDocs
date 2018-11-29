@@ -244,7 +244,7 @@ Before this change, the following cmdlets were needed for Azure Rights Managemen
 
 If you have logs in your own Azure storage from before the Azure Rights Management logging change, you can  download them with these older cmdlets, using get-aipserviceUsageLog and get-aipserviceUsageLogLastCounterValue, as before. But all new usage logs will write to the new Azure RMS storage and must be downloaded with Get-AipServiceUserLog.
 
-For more information about using Windows PowerShell for the Azure Rights Management service, see [Administering the Azure Rights Management service by Using Windows PowerShell](administer-powershell.md).
+For more information about using Windows PowerShell for the Azure Rights Management service, see [Administering protection from Azure Information Protection by using PowerShell](administer-powershell.md).
 
 
 

@@ -143,7 +143,7 @@ You’re now ready to monitor how your organization is using the labels that you
 ### Step 7: Administer the protection service for your tenant account as needed
 As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. PowerShell might also be needed for some of the advanced configurations. 
 
-For more information, see [Administering the Azure Rights Management service by using Windows PowerShell](./administer-powershell.md).
+For more information, see [Administering protection from Azure Information Protection by using PowerShell](./administer-powershell.md).
 
 
 ## Deployment roadmap for data protection only
@@ -203,4 +203,4 @@ You’re now ready to protect your data, and log how your company is using the p
 ### Step 5: Administer the protection service for your tenant account as needed
 As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. PowerShell might also be needed for some of the advanced configurations. 
 
-For more information, see [Administering the Azure Rights Management service by using Windows PowerShell](./administer-powershell.md).
+For more information, see [Administering protection from Azure Information Protection by using PowerShell](./administer-powershell.md).
