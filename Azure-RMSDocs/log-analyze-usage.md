@@ -64,7 +64,7 @@ Protection usage logging is enabled by default for all customers.
 There is no extra cost for the log storage or for the logging feature functionality.
 
 ## How to access and use your protection usage logs
-Azure Information Protection writes logs as a series of blobs to an Azure storage account that it automatically creates for your tenant. Each blob contains one or more log records, in W3C extended log format. The blob names are numbers, in the order in which they were created. The [How to interpret your Azure Rights Management usage logs](#how-to-interpret-your-azure-rights-management-usage-logs) section later in this document contains more information about the log contents and their creation.
+Azure Information Protection writes logs as a series of blobs to an Azure storage account that it automatically creates for your tenant. Each blob contains one or more log records, in W3C extended log format. The blob names are numbers, in the order in which they were created. The [How to interpret your Azure Rights Management usage logs](#how-to-interpret-your-usage-logs) section later in this document contains more information about the log contents and their creation.
 
 It can take a while for logs to appear in your storage account after a protection action. Most logs appear within 15 minutes. We recommend that you download the logs to local storage, such as a local folder, a database, or a map-reduce repository.
 

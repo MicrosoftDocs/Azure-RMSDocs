@@ -141,7 +141,7 @@ For more information about removing protection only for recipients who view the 
 
 ## Rights Management issuer and Rights Management owner
 
-When a document or email is protected by using the Azure Rights Management service, the account that protects that content automatically becomes the Rights Management issuer for that content. This account is logged as the **issuer** field in the [usage logs](log-analyze-usage.md#how-to-interpret-your-azure-rights-management-usage-logs). 
+When a document or email is protected by using the Azure Rights Management service, the account that protects that content automatically becomes the Rights Management issuer for that content. This account is logged as the **issuer** field in the [usage logs](log-analyze-usage.md#how-to-interpret-your-usage-logs). 
 
 The Rights Management issuer is always granted the Full Control usage right for the document or email, and in addition:
 
@@ -163,7 +163,7 @@ When the Rights Management issuer protects on behalf of users, assigning the Rig
 
 For example, the user who created the document can print it, even though it's now protected with a template that doesn't include the Print usage right. The same user can always access their document, regardless of the offline access setting or expiry date that might have been configured in that template. In addition, because the Rights Management owner has the Full Control usage right, this user can also reprotect the document to grant additional users access (at which point the user then becomes the Rights Management issuer as well as the Rights Management owner), and this user can even remove the protection. However, only the Rights Management issuer can track and revoke a document.
 
-The Rights Management owner for a document or email is logged as the **owner-email** field in the [usage logs](log-analyze-usage.md#how-to-interpret-your-azure-rights-management-usage-logs).
+The Rights Management owner for a document or email is logged as the **owner-email** field in the [usage logs](log-analyze-usage.md#how-to-interpret-your-usage-logs).
 
 Note that the Rights Management owner is independent from the Windows file system Owner. They are often the same but can be different, even if you don't use the SDKs or PowerShell.
 
