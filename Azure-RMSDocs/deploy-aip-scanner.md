@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 11/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
@@ -258,7 +258,7 @@ Then the scanner uses Windows IFilter to scan the following file types. For thes
 |PDF |.pdf|
 |Text|.txt; .xml; .csv|
 
-In addition, the scanner can also use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you configure [Windows TIFF IFilter Settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) on the computer running the scanner.
+In addition, the scanner can also use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) on the computer running the scanner.
 
 By default, only Office file types are protected by the scanner, so PDF documents and text files, and TIFF images are not protected unless you [edit the registry](#editing-the-registry-for-the-scanner) to specify the file types:
 
