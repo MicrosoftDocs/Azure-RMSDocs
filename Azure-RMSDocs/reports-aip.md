@@ -138,11 +138,11 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
 
 - **Activity logs (Preview)**: Use this report to see labeling actions from users, and on devices and file paths.
     
-    This report is currently rolling out to tenants, so if you do not see it, try again in a few days. 
+    This report is currently rolling out to tenants, so if you do not see it, try again in a few days.
     
-    This report has a **Columns** option, that lets you display more activity information than the default display. One of the columns is for **Device Risk**, which displays data from computers running [Windows Defender ATP](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview). Select the displayed device risk level to go to the device page in Windows Defender ATP, where you can see a comprehensive view of the device security status and its active alerts.
+    This report has a **Columns** option, that lets you display more activity information than the default display.
 
-- **Data discovery (Preview)**: Use this report to see information about files found by the scanners or Windows Defender ATP.
+- **Data discovery (Preview)**: Use this report to see information about files found by scanners or Windows Defender ATP.
 
 ## How to modify the reports
 
