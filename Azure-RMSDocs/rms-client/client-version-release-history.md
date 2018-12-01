@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -28,7 +28,7 @@ ms.suite: ems
 
 The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. 
 
-You can download the latest general availability release version and the current preview version (if available) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). The general availability version is also included in the Microsoft Update Catalog (category: **Azure Information Protection**), so that you can upgrade the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
+You can download the latest general availability release version and the current preview version (if available) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). After a short delay of typically a couple of weeks, the general availability version is also included in the Microsoft Update Catalog (category: **Azure Information Protection**). This inclusion in the catalog means that you can upgrade the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
 
 For more information, see [Upgrading and maintaining the Azure Information Protection client](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
@@ -62,15 +62,13 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - Excel now also supports [visual marking](../configure-policy-markings.md)s in different colors.
 
-- For existing S/MIME deployments, a new advanced client setting (in preview) to configure a label to automatically apply S/MIME protection in Outlook. [More information](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook).
+- For existing S/MIME deployments, a new advanced client setting (in preview) to configure a label to automatically apply S/MIME protection in Outlook. [More information](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
 - A new advanced client setting, as an alternative to editing the registry to prevent sign-in prompts for the Azure Information Protection service for [disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
 
 **Fixes**:
 
 - The Azure Information Protection client no longer excludes .msg, .rar, and .zip file name extensions for File Explorer (right-click) and PowerShell commands. However, these file name extensions remain excluded by default for the scanner. 
-
-- The advanced client setting, **RunPolicyInBackground**, which [turns on classification to run continuously in the background](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) works as documented. 
 
 - The Azure Information Protection client can unprotect multiple files (multi-select and a folder that contains protected files) when you use File Explorer, right-click.
 
@@ -80,7 +78,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     
     - Excel 2010: When a spreadsheet is protected by using the Co-Author [permission level](../configure-usage-rights.md#rights-included-in-permissions-levels), the **Delete Label** button is now available when you right-click the file and choose **Classify and Protect**.
 
-- The advanced client settings for **ExternalContentMarkingToRemove**, which can [remove headers and footers from other labeling solutions](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) now supports custom layouts.
+- The advanced client settings that can [remove headers and footers from other labeling solutions](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) now supports custom layouts.
 
 **Additional changes:**
 
