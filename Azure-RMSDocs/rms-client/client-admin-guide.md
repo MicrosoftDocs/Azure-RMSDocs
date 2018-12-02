@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
@@ -205,15 +205,9 @@ Use the [Version release history and support policy](client-version-release-hist
 
 ### Upgrading the Azure Information Protection scanner
 
-To upgrade the Azure Information Protection scanner, install the latest version of the Azure Information Protection client. Then do one of the following one-time actions. After you have done this, there is no need to rescan already scanned files.
+To upgrade the Azure Information Protection scanner, install the latest version of the Azure Information Protection client. Then do the following one-time action. After you have done this, there is no need to rescan already scanned files.
 
-For the current GA version: 
-
-- Rerun the scanner installation command with [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner). Your configuration settings for the scanner and repositories will be retained. Reinstalling the scanner grants the scanner service account delete permissions for the scanner database, which will be required for reports.
-
-For the preview version: 
-
-- Run [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) after you have upgraded the Azure Information Protection client from the general availability version 1.29.5.0, or earlier. Your configuration settings for the scanner and repositories will be retained. Running this cmdlet is required to update the database schema for the scanner and if required, the scanner service account is also granted delete permissions for the scanner database. 
+- Run [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) after you have upgraded the Azure Information Protection client. Your configuration settings for the scanner and repositories will be retained. Running this cmdlet is required to update the database schema for the scanner and if required, the scanner service account is also granted delete permissions for the scanner database. 
     
     Until you run this update cmdlet, the scanner does not run and you typically see Event ID **1000** in the Windows event log, with the following error message: **Invalid object name 'ScannerStatus'**.
 
