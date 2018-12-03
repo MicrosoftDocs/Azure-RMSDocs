@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
@@ -70,7 +70,7 @@ The following devices support the Azure Information Protection client, which let
 
 - Windows 10 (x86, x64)
     
-    - No support for handwriting in the Windows 10 RS4 build for Insiders. 
+    - No support for handwriting in the Windows 10 RS4 build and later. 
 
 - Windows 8.1 (x86, x64)
 
