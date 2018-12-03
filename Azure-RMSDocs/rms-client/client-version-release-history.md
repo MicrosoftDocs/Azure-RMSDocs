@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -81,6 +81,10 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 - The advanced client settings that can [remove headers and footers from other labeling solutions](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) now supports custom layouts.
 
 **Additional changes:**
+
+- The Azure Information Protection client by default, now protects PDF files by using the ISO standard for PDF encryption. Previously, you had to enable this support with an advanced client setting.
+    
+    If you want the client to revert to protecting PDF files by using a .ppdf file name extension, use the same [advanced client setting](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), but specify **False**.
 
 - When the scanner's schedule is set to **Always**, there is now a delay of 30 seconds between scans.
 
