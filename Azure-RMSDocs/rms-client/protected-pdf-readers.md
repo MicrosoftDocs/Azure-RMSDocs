@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/13/2018
+ms.date: 12/04/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -38,7 +38,7 @@ This native integration has the following benefits:
 
 - Support for the ISO standard for PDF encryption.
     
-    This protected PDF file format must be [enabled by an administrator](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this configuration is made, the file name extension remains as .pdf and does not change to .ppdf.
+    Unless this capability has been [disabled by an administrator](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), this protected PDF file format is now enabled by default on the latest version of the Azure Information Protection client.
 
 For more information, see the following blog post: [Starting October, use Adobe Acrobat Reader for PDFs protected by Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738)
 
@@ -54,7 +54,7 @@ The following PDF readers can open protected PDF files that adhere to the ISO st
 
 ### Support for previous formats
 
-The PDF readers in the next table support protected PDF documents that have a .ppdf file name extensionand older formats that have a .pdf file name extension.
+The PDF readers in the next table support protected PDF documents that have a .ppdf file name extension and older formats that have a .pdf file name extension.
 
 Currently, SharePoint Online and SharePoint on-premises use an older format for PDF documents in IRM-protected libraries.
 

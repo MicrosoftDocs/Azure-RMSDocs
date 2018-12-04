@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -54,7 +54,7 @@ Some of these settings require editing the registry and some use advanced settin
 |DisableDNF|[Hide or show the Do Not Forward button in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
 |EnableBarHiding|[Permanently hide the Azure Information Protection bar](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Make the custom permissions options available or unavailable to users](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
-|EnablePDFv2Protection|[Protect PDF files by using the ISO standard for PDF encryption](#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
+|EnablePDFv2Protection|[Don't protect PDF files by using the ISO standard for PDF encryption](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |OutlookDefaultLabel|[Set a different default label for Outlook](#set-a-different-default-label-for-outlook)|
@@ -321,23 +321,21 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
-## Protect PDF files by using the ISO standard for PDF encryption
+## Don't protect PDF files by using the ISO standard for PDF encryption
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-By default, when the Azure Information Protection client protects a PDF file, the resulting file has a .ppdf file name extension. You can change this behavior so that the file name extension remains as .pdf and adheres to the ISO standard for PDF encryption. For more information about this standard, see section **7.6 Encryption** from the [document that is derived from ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) and published by Adobe Systems Incorporated.
+When the latest version of the Azure Information Protection client protects a PDF file, the resulting file name extension remains as .pdf and adheres to the ISO standard for PDF encryption. For more information about this standard, see section **7.6 Encryption** from the [document that is derived from ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) and published by Adobe Systems Incorporated.
 
-To configure this advanced setting, enter the following string:
+If you need the client to revert to the behavior in older versions of the client that protected PDF files by using a .ppdf file name extension, use the following advanced setting by entering the following string:
 
 - Key: **EnablePDFv2Protection**
 
-- Value: **True**
-
-As a result of this configuration option, when the Azure Information Protection client protects a PDF file, this action creates a protected PDF document that can be opened with the latest version of the Azure Information Protection client for Windows, and other PDF readers that support the ISO standard for PDF encryption. The Azure Information Protection app for iOS and Android does not currently support the ISO standard for PDF encryption. For the latest information on the Adobe Acrobat Reader, see [Starting October, use Adobe Acrobat Reader for PDFs protected by Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738).
+- Value: **False**
 
 For the Azure Information Protection scanner to use the new setting, the scanner service must be restarted.
 
-For more information about this PDF encryption, see the blog post [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
+For more information about the new PDF encryption, see the blog post [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
 ### To convert existing .ppdf files to protected .pdf files
 
