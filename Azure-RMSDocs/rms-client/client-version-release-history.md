@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/03/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -84,7 +84,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - When the scanner's schedule is set to **Always**, there is now a delay of 30 seconds between scans.
 
-- In some scenarios, the scanner retains the existing default Rights Management owner rather than using the scanner's computer account. For more information, see the *DefaultOwner* parameter for [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) and [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository).  
+- In some scenarios, the scanner retains the existing default Rights Management owner rather than using the scanner's computer account. For more information, see the *DefaultOwner* parameter for [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) and [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository).
 
 ## Version 1.37.19.0
 
