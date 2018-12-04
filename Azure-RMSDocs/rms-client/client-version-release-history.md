@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -83,6 +83,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 **Additional changes:**
 
 - When the scanner's schedule is set to **Always**, there is now a delay of 30 seconds between scans.
+
+- The scanner no longer changes the Rights Management owner for files that it labels when the file is already protected.
 
 ## Version 1.37.19.0
 
