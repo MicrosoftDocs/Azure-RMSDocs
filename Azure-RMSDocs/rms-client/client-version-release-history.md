@@ -88,6 +88,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - When the scanner's schedule is set to **Always**, there is now a delay of 30 seconds between scans.
 
+- The scanner no longer changes the Rights Management owner for files that it labels when the file is already protected.
+
 ## Version 1.37.19.0
 
 **Released**: 09/17/2018
