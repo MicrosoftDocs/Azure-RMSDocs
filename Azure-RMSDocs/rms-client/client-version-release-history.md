@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -58,6 +58,10 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **New features:**
 
+- The Azure Information Protection client by default, now protects PDF files by using the ISO standard for PDF encryption. Previously, you had to enable this support with an advanced client setting.
+    
+    If you want the client to revert to protecting PDF files by using a .ppdf file name extension, use the same [advanced client setting](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), but specify **False**.
+
 - Support for [central reporting](../reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
 
 - Excel now also supports [visual marking](../configure-policy-markings.md)s in different colors.
@@ -84,6 +88,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - When the scanner's schedule is set to **Always**, there is now a delay of 30 seconds between scans.
 
+- The scanner no longer changes the Rights Management owner for files that it labels when the file is already protected.
+
 ## Version 1.37.19.0
 
 **Released**: 09/17/2018
@@ -92,7 +98,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **New features**: 
 
-- Support for the ISO standard for PDF encryption, by configuring a new [advanced client configuration](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this option is configured, PDF documents that you protect retain their .pdf file name extension (rather than change to .ppdf) and can be opened by PDF readers that support this ISO standard. Currently, you must instruct users to open these protected PDFs manually by using the Azure Information Protection viewer. To help users do this, when they open one of these protected PDFs, they see a page with icons to select for their operating system.
+- Support for the ISO standard for PDF encryption, by configuring a new [advanced client configuration](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this option is set to **True**, PDF documents that you protect retain their .pdf file name extension (rather than change to .ppdf) and can be opened by PDF readers that support this ISO standard. Currently, you must instruct users to open these protected PDFs manually by using the Azure Information Protection viewer. To help users do this, when they open one of these protected PDFs, they see a page with icons to select for their operating system.
 
 - Support for new sensitive information types to help you classify documents that contain personal information. [More information](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
