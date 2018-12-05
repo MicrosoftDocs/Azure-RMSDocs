@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.service: information-protection
 
@@ -54,7 +54,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
     
     For a more consistent user experience, we recommend you publish the same labels in the same scopes in the Security & Compliance Center.
 
-- Not all settings from a migrated label are supported by the Security & Compliance Center. Use the table in the [Label settings that are not supported in the Security & Compliance Center](#label-settings-that-are-not-supported-in-the-security--compliance-center) section to help you identify these settings and whether you should exclude the migrated labels from publishing in the Security & Compliance Center.
+- Not all settings from a migrated label are supported by the Security & Compliance Center. Use the table in the [Label settings that are not supported in the Security & Compliance Center](#label-settings-that-are-not-supported-in-the-security--compliance-center) section to help you identify the settings that are not supported by the Security & Compliance Center.
 
 - Protection templates:
     
@@ -72,17 +72,15 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 - Any localized strings for the labels are not migrated. You must define new localized strings for the migrated labels in the Security & Compliance Center.
 
-- After the migration, when you edit a migrated label in the Azure portal, the same change is automatically reflected in the Security & Compliance Center. However, when you edit a migrated label in the Security & Compliance Center, you must then update the label in the Azure portal for the label to pick up the change. For example, edit the **Add notes for administrator use** box on the **Label** blade. 
-
-- Unified labeling is still rolling out to tenants. If it's not yet supported for your tenant, the migration will not succeed and gracefully undo any changes. Until it's supported for all tenants, you must use a special link to access the option to migrate your tenant and labels. This link is provided in the instructions that follow.
+- After the migration, when you edit a migrated label in the Azure portal, the same change is automatically reflected in the Security & Compliance Center. However, when you edit a migrated label in the Security & Compliance Center, you must return to the Azure portal, **Azure Information Protection - Unified labeling** blade, and select **Publish**. This additional action is needed for Azure Information Protection clients to pick up the label changes.
 
 ### Label settings that are not supported in the Security & Compliance Center
 
-Use the following table to identify which configuration settings of a migrated label are not supported for clients that use these labels, and whether you should edit and publish the migrated label in the Security & Compliance Center. If you publish labels that are identified to be excluded from publishing, no labels display for the clients that support unified labeling.
+Use the following table to identify which configuration settings of a migrated label are not supported by unified labeling clients, or are supported with limitations. To avoid confusion, we recommend that you don't configure the settings that have no effect on unified labeling clients.
 
 Azure Information Protection clients can use these label settings without any problems because they continue to download the labels from the Azure portal.
 
-|Label configuration|Supported in the Security & Compliance Center|Exclude from editing and publishing in the Security & Compliance Center|
+|Label configuration|Supported by unified labeling clients|Exclude from editing in the Security & Compliance Center|
 |-------------------|---------------------------------------------|-------------------------|
 |Status of enabled or disabled<br /><br />Notes: Not synchronized to the Security & Compliance Center |Not applicable|Not applicable|
 |Label color: Select from list or specify by using RGB code<br /><br />Notes: Label colors are not supported by the Security & Compliance Center |Not applicable|Not applicable|
@@ -97,12 +95,7 @@ Azure Information Protection clients can use these label settings without any pr
 
 ## To migrate Azure Information Protection labels
 
-> [!IMPORTANT]
-> Do not migrate your labels until you have confirmed that you can edit and publish sensitivity labels in the Office 365 Security & Compliance Center. Sensitivity labels are starting to roll out to Office 365 tenants but are not yet available for all tenants.
-> 
-> To check: From the Office 365 Security & Compliance Center, go to **Classifications** > **Labels**, and see whether you have a **Sensitivity** tab. If you do not see this tab, your tenant is not yet ready for sensitivity labels and you should not migrate your Azure Information Protection labels at this time.
-
-When you have confirmed that your tenant supports sensitivity labels in the Security & Compliance Center, use the following instructions to migrate your tenant and  Azure Information Protection labels.
+Use the following instructions to migrate your tenant and Azure Information Protection labels to use the new unified labeling store.
 
 You must be a global administrator to migrate your labels.
 
@@ -112,6 +105,8 @@ You must be a global administrator to migrate your labels.
 
 For the labels that successfully migrated, they can now be used by [clients that support unified labeling](#clients-that-support-unified-labeling). However, you must first publish these labels in the Security & Compliance Center.
 
+> [!IMPORTANT]
+> If you edit the labels outside the Azure portal, for Azure Information Protection clients, return to this **Azure Information Protection - Unified labeling** blade, and select **Publish**.
 
 ### Clients that support unified labeling
 
