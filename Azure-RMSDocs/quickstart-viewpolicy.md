@@ -31,7 +31,7 @@ You can finish this quickstart in 5 minutes.
 
 To complete this quickstart, you need:
 
-- A subscription that includes Azure Information Protection Plan 1 or Plan 1.
+- A subscription that includes Azure Information Protection Plan 1 or Plan 2.
     
     If you don't have one of these subscriptions, you can create a [free](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
