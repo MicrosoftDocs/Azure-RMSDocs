@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/05/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.service: information-protection
 
