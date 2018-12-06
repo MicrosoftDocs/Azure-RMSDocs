@@ -6,7 +6,7 @@ description: Supporting information for Azure Information Protection that inclu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/12/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
@@ -71,7 +71,7 @@ For in-depth technical information about how the protection technology works, se
 
 ## Documentation
 
-- Azure Active Directory documentation: [Azure Active Directory](/active-directory/)
+- Azure Active Directory documentation: [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- Office 365 Library: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
+- Office 365 Enterprise documentation: [Office 365](https://docs.microsoft.com/en-us/Office365/Enterprise/)
 
