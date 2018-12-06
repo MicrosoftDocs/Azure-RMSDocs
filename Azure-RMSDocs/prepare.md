@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
@@ -79,9 +79,9 @@ For assigning usage rights and access controls, and configuring the Azure Rights
     
     Azure Information Protection can use any value in this Azure AD proxyAddresses attribute, providing the domain has been added to your tenant (a "verified domain"). For more information about verifying domains:
     
-    - For Azure AD: [Add a custom domain name to Azure Active Directory](/active-directory/active-directory-add-domain)
+    - For Azure AD: [Add a custom domain name to Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - For office 365: [Add a domain and users to Office 365](https://go.microsoft.com/fwlinkid/?linkid=847121)
+    - For office 365: [Add a domain to Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - The **Azure AD userPrincipalName** attribute is used only when an account in your tenant doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
 

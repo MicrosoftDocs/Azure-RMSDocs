@@ -2,8 +2,7 @@
 # required metadata
 
 title: Get started - AIP app for iOS & Android
-description:
-keywords: How to view emails or files with the Azure Information Protection app for iOS and Android
+description: View emails or files with the Azure Information Protection app for iOS and Android
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin

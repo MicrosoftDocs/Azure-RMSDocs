@@ -34,7 +34,7 @@ When the [Rights Management (RMS) sharing application is installed on your compu
 >
 > If your organization does not use either Azure Information Protection or AD RMS, you can apply for a free account that will accept your credentials so that you can open files that are protected by using RMS:
 >
-> -   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
+> -   To apply for this account, click the link to apply for [RMS for individuals](https://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
 > -   For more information, see [RMS for individuals and Azure Rights Management](../rms-for-individuals.md).

@@ -146,7 +146,7 @@ For more information, see the following resources:
 
 - [FAQs for Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md)
 
-Download the relevant app by using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970).
+Download the relevant app by using the links on the [Microsoft Azure Information Protection page](https://go.microsoft.com/fwlink/?LinkId=303970).
 
 ### More information about the Rights Management sharing application
 
@@ -162,7 +162,7 @@ For more information, see the following resources:
 
 -   [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](https://technet.microsoft.com/dn451248)
 
-Download the viewer for Mac computers and for Windows Phone by using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970).
+Download the viewer for Mac computers and for Windows Phone by using the links on the [Microsoft Azure Information Protection page](https://go.microsoft.com/fwlink/?LinkId=303970).
 
 
 ### More information about other applications that support Azure Information Protection

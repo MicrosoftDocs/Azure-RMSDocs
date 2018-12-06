@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: What is Azure Information Protection?
+title: What is Azure Information Protection? - AIP
 description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey

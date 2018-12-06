@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/30/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
@@ -68,7 +68,7 @@ Before you install the Azure Information Protection scanner, make sure that the 
 
 If you can't meet all the requirements in the table because they are prohibited by your organization policies, see the next section for alternatives.
 
-If all the requirements are met, go straight to the [installation section](#install-the-azure-information-protection-scanner).
+If all the requirements are met, go straight to the [installation section](#install-the-scanner).
 
 ### Deploying the scanner with alternative configurations
 
@@ -227,7 +227,7 @@ In its default setting, the scanner runs one time and in the reporting-only mode
     
     	Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
-    There are other configuration settings that you might want to change. For example, whether file attributes are changed and what is logged in the reports. In addition, if your Azure Information Protection policy includes the setting that requires a justification message to lower the classification level or remove protection, specify that message by using this cmdlet. Use the [online help](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) for more information about each configuration setting. 
+    There are other configuration settings that you might want to change. For example, whether file attributes are changed and what is logged in the reports. In addition, if your Azure Information Protection policy includes the setting that requires a justification message to lower the classification level or remove protection, specify that message by using this cmdlet. Use the [online help](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#optional-parameters) for more information about each configuration setting. 
 
 2. Make a note of the current time and start the scanner again by running the following command:
     
@@ -370,7 +370,7 @@ Other factors that affect the scanner performance:
 
 - You change the conditions in the Azure Information Protection
     
-    Your first scan cycle when the scanner must inspect every file will obviously take longer than subsequent scan cycles that by default, inspect only new and changed files. However, if you change the conditions in the Azure Information Protection policy, all files are scanned again, as described in the [preceding section](#when-files-are-rescanned-by-the-azure-information-protection-scanner).
+    Your first scan cycle when the scanner must inspect every file will obviously take longer than subsequent scan cycles that by default, inspect only new and changed files. However, if you change the conditions in the Azure Information Protection policy, all files are scanned again, as described in the [preceding section](#when-files-are-rescanned).
 
 - Your chosen logging level
     
