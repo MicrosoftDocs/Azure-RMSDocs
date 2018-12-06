@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Tutorial - Configure Azure Information Protection policy settings to help classify documents and emails
+title: Tutorial - Configure Azure Information Protection policy settings to help classify documents and emails - AIP
 description: An introduction tutorial that steps you through configuring Azure Information Protection policy settings to help classify your organization's documents and emails.
 author: cabailey
 ms.author: cabailey
