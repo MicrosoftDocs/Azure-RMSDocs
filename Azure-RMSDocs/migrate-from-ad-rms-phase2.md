@@ -78,7 +78,7 @@ Your current AD RMS deployment is using one of the following configurations for 
 - Password protected by using an external cryptographic provider.
 
 > [!NOTE]
-> For more information about using hardware security modules with AD RMS, see [Using AD RMS with Hardware Security Modules](http://technet.microsoft.com/library/jj651024.aspx).
+> For more information about using hardware security modules with AD RMS, see [Using AD RMS with Hardware Security Modules](https://technet.microsoft.com/library/jj651024.aspx).
 
 The two Azure Information Protection tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**) in Azure Key Vault. When you manage your own Azure Information Protection tenant key, it’s sometimes referred to as “bring your own key” (BYOK). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) article.
 

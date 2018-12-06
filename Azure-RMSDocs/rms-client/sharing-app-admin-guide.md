@@ -31,7 +31,7 @@ ms.suite: ems
 > [!IMPORTANT]
 > **End of support notification**: The Rights Management sharing application for Windows is being replaced by the [Azure Information Protection client](aip-client.md). Support for this older application will stop January 31, 2019. 
 
-Use the following information if you are responsible for the Microsoft Rights Management sharing application on an enterprise network, or if you want more technical information than is in the [Rights Management sharing application user guide](sharing-app-user-guide.md) or [FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
+Use the following information if you are responsible for the Microsoft Rights Management sharing application on an enterprise network, or if you want more technical information than is in the [Rights Management sharing application user guide](sharing-app-user-guide.md) or [FAQ for Microsoft Rights Management Sharing Application for Windows](https://go.microsoft.com/fwlink/?LinkId=303971).
 
 The RMS sharing application is best suited to work with Azure Information Protection, because this deployment configuration supports sending protected attachments to users in another organization, and options such as email notifications and document tracking with revocation. However, with some limitations, it also works with the on-premises version, AD RMS. For a comprehensive comparison of features that are supported by Azure Information Protection and AD RMS, see [Comparing Azure Information Protection and AD RMS](../compare-on-premise.md). If you have AD RMS and want to migrate to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md).
 
