@@ -33,7 +33,7 @@ ms.suite: ems
  
 The RMS sharing application is a downloadable application that supports Office 2010 for Windows computers, and used to be recommended for all Windows computers and mobile devices. It is still recommended for Mac computers and Windows Phone devices. One of its benefits is that it can apply generic protection for applications and files that do not natively support the Azure Rights Management service, which means that all files can be protected. For more information about the different protection levels, see the [Level of protection – native and generic](./rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) section from the [Rights Management sharing application administrator guide](./rms-client/sharing-app-admin-guide.md).
 
-When users protect their files by using the RMS sharing application, they can also track the documents that they protected, and if necessary, revoke access to them. They do this by using the [document tracking site](http://go.microsoft.com/fwlink/?LinkId=529562).
+When users protect their files by using the RMS sharing application, they can also track the documents that they protected, and if necessary, revoke access to them. They do this by using the [document tracking site](https://go.microsoft.com/fwlink/?LinkId=529562).
 
 For Windows computers, the RMS sharing application unobtrusively integrates with and enhances the  applications that users already use:
 
@@ -45,13 +45,13 @@ For Windows computers, the RMS sharing application unobtrusively integrates with
 
 -   Back-end configuration for Office 2010 that lets Word, Excel, PowerPoint, and Outlook from this suite work seamlessly with the Azure Rights Management service.
 
-Although the RMS sharing application for Windows can be downloaded and installed for a single computer by using the [Microsoft Rights Management page](http://go.microsoft.com/fwlink/?LinkId=303970), it also supports an enterprise deployment for silent installation and custom configuration. For more information, see the following resources:
+Although the RMS sharing application for Windows can be downloaded and installed for a single computer by using the [Microsoft Rights Management page](https://go.microsoft.com/fwlink/?LinkId=303970), it also supports an enterprise deployment for silent installation and custom configuration. For more information, see the following resources:
 
 -   [Rights Management sharing application administrator guide](./rms-client/sharing-app-admin-guide.md)
 
 -   [Rights Management sharing application user guide](./rms-client/sharing-app-user-guide.md)
 
-The RMS sharing application for mobile devices supports the most commonly used mobile devices, such as iPad and iPhone, Android, Windows Phone, and Windows RT. Users can download this app from the relevant store, and there are links to these from the [Microsoft Rights Management page](http://go.microsoft.com/fwlink/?LinkId=303970).
+The RMS sharing application for mobile devices supports the most commonly used mobile devices, such as iPad and iPhone, Android, Windows Phone, and Windows RT. Users can download this app from the relevant store, and there are links to these from the [Microsoft Rights Management page](https://go.microsoft.com/fwlink/?LinkId=303970).
 
 **If you have Microsoft Intune**: Because the RMS sharing app includes the Microsoft Intune App Software Development Kit, you can use  the following options:
 

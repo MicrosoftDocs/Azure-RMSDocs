@@ -1,5 +1,5 @@
 ---
-title: Quickstart - Get started in the Azure portal
+title: Quickstart - Get started with Azure Information Protection in the Azure portal - AIP
 description: If your organization is brand new to Azure Information Protection, start here to add the service to the Azure portal, confirm the protection service is activated, and view the policy.
 author: cabailey
 author: cabailey
@@ -21,7 +21,7 @@ ms.service: information-protection
 #Customer intent: As an administrator, I want to see Azure Information Protection in the Azure portal so that I can configure the service.
 ---
 
-# Quickstart: Get started in the Azure portal
+# Quickstart: Get started with Azure Information Protection in the Azure portal
 
 In this quickstart, you'll add Azure Information Protection to the Azure portal, confirm the protection service is activated, and view your organization's default policy. 
 

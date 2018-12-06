@@ -42,7 +42,7 @@ The following steps guide you in setting up your RMS server and include:
 
     Beginning with Windows Server 2008, both the client and the server components are included in the operating system. You can download the server components for prior operating systems from the following location.
 
-    -   [RMS Server v1.0 SP2](http://go.microsoft.com/fwlink/p/?linkid=73722)
+    -   [RMS Server v1.0 SP2](https://go.microsoft.com/fwlink/p/?linkid=73722)
 
     To configure the server component on Windows Server 2008, you must install the AD RMS role. If you are developing applications against a prior server operating system, configure the registry after installing RMS server v1.0 SP2 but before provisioning the RMS service.
 
