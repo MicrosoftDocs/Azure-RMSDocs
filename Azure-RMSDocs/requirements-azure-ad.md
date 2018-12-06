@@ -6,7 +6,7 @@ description: Identify the Azure AD requirements to use Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
@@ -31,9 +31,9 @@ You must have an Azure AD directory to use Azure Information Protection. You us
 
 If you have a subscription that includes Azure Information Protection or Azure Rights Management, your Azure AD directory is automatically created for you if needed.  
 
-For more information about Azure AD, see [What is Azure AD Directory?](/active-directory/active-directory-whatis)
+For more information about Azure AD, see [What is Azure AD Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 
-To integrate your Azure AD directory with your on-premises AD forests, see [Integrating your on-premises identities with Azure Active Directory](/active-directory/active-directory-aadconnect).
+To integrate your Azure AD directory with your on-premises AD forests, see [Integrate on-premises Active Directory domains with Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
 ### Scenarios that have specific requirements 
 
