@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Compare Azure Information Protection & AD RMS
+title: Compare Azure Information Protection & AD RMS - AIP
 description: If you know or have previously deployed Active Directory Rights Management Services (AD RMS), you might be wondering how Azure Information Protection compares in terms of functionality and requirements. 
 author: cabailey
 ms.author: cabailey

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Overview of Azure Rights Management protection from Azure Information Protection
+title: Overview of Azure Rights Management protection from Azure Information Protection - AIP
 description: Information about Azure Rights Management (Azure RMS), the protection technology used by Azure Information Protection.
 author: cabailey
 ms.author: cabailey
