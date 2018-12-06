@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center
+title: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center - AIP
 description: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center for client that support unified labeling. 
 author: cabailey
 ms.author: cabailey

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: New Azure Information Protection label
+title: New Azure Information Protection label - AIP
 description: Although Azure Information Protection comes with default labels that you can customize, you can also create your own labels that users see on the Information Protection bar.
 author: cabailey
 ms.author: cabailey
