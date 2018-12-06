@@ -30,7 +30,7 @@ ms.suite: ems
 Use this information to help you specify the options in the RMS sharing application **add protection** dialog box or the **share protected** dialog box. You will see this dialog box when you [protect a file to share](sharing-app-protect-by-email.md) or you [protect a file in place](sharing-app-protect-in-place.md) and choose custom permissions.
 
 > [!IMPORTANT]
-> If the options you see are different from those documented here, you probably don’t have the latest version of the sharing application installed. You can download the latest version from the [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) page.
+> If the options you see are different from those documented here, you probably don’t have the latest version of the sharing application installed. You can download the latest version from the [Microsoft Rights Management](https://go.microsoft.com/fwlink/?LinkId=303970) page.
 > 
 > How do you know if you have the latest version? Look for **Microsoft Rights Management sharing application** listed in Programs and Features, and check the corresponding version number. To see and use the options in the table, the version should be at least **1.0.1770.0**. You can check the latest version number from the download page.
 
