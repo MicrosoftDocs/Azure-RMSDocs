@@ -2,8 +2,7 @@
 # required metadata
 
 title: Protected PDF readers for Microsoft Information Protection
-description:
-keywords: 
+description: Learn about PDF documents that are labeled for classification and protection, and how to view them.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
