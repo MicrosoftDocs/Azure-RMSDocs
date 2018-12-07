@@ -397,7 +397,7 @@ As a result of this registry edit, the following scenarios are supported:
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
 
-This configuration is currently not compatible with the setting to [Protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When you use both settings together, .ppdf files cannot be opened by File Explorer, PowerShell, or the scanner.
+This configuration is currently not compatible with the new default behavior that protects PDF files by using the ISO standard for PDF encryption. In this scenario, .ppdf files cannot be opened by File Explorer, PowerShell, or the scanner. To resolve this, use the advanced client setting to [don't use the ISO standard for PDF encryption](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
 For Office documents and PDF documents that are labeled by Secure Islands, you can relabel these documents with an Azure Information Protection label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents. 
 
