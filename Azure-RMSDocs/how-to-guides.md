@@ -6,7 +6,7 @@ description: Identify use cases that classify and protect your organization's da
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -30,7 +30,7 @@ There are many ways in which you can use Azure Information Protection to classif
 
 The most successful deployments are those that identify specific use cases that provide the most business benefit to the organization. Use the following list of common scenarios and instructions to get your deployment off the ground.
 
-
+## Deploy by scenario
 
 |Scenario: I want to ...|Instructions|
 |----------------|---------------|
@@ -42,6 +42,18 @@ The most successful deployments are those that identify specific use cases that 
 |Automatically classify and protect existing data in my on-premises data stores|[Deploying the Azure Information Protection scanner](deploy-aip-scanner.md)|
 |Use my own key to protect my organization's data| [Planning and implementing your tenant key](plan-implement-tenant-key.md)|
 |Migrate from AD RMS|[Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)|
+
+## Additional deployment instructions from our Customer Experience Engineering team
+
+You'll find additional step-by-step instructions on the [Azure Information Protection technical blog](https://aka.ms/AIPblog). For example:
+
+-[Using Azure Information Protection to protect PDF’s and Adobe Acrobat Reader to view them](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010)
+
+- [Cataloging your Sensitive Data with AIP, Even Before Configuring Labels!](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cataloging-your-Sensitive-Data-with-AIP-Even-Before-Configuring/ba-p/267241)
+
+- [Azure Information Protection Scanner Express Installation](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Scanner-Express-Installation/ba-p/265424)
+
+- [Discovery of Sensitive Data Using the AIP Scanner (AIP Premium P1)](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discovery-of-Sensitive-Data-Using-the-AIP-Scanner-AIP-Premium-P1/ba-p/252040)
 
 ## Next steps
 
