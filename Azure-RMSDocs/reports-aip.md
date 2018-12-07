@@ -6,7 +6,7 @@ description: How to use central reporting to track adoption of your Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,10 +31,13 @@ ms.suite: ems
 > [!NOTE]
 > This feature is currently in preview and subject to change. Any data collected during this preview might not be supported when the feature moves to general availability.
 
+Use Azure Information Protection analytics for central reporting to track the adoption of your Azure Information Protection labels. In addition:
 
-Use Azure Information Protection analytics for central reporting to track the adoption of your Azure Information Protection labels, as well as monitor user access to labeled documents and emails, and any changes to their classification. You can also identify documents that contain sensitive information that must be protected.
+- Monitor user access to labeled documents and emails, and any changes to their classification. 
 
-Currently, the data that you see is aggregated from your Azure Information Protection clients and Azure Information Protection scanners.
+- Identify documents that contain sensitive information that must be protected.
+
+Currently, the data that you see is aggregated from your Azure Information Protection clients and Azure Information Protection scanners, and from Windows computers running [Windows Defender Advanced Threat Protection (Windows Defender ATP)](/windows/security/threat-protection/windows-defender-atp/overview).
 
 For example, you'll be able to see the following:
 
@@ -64,7 +67,7 @@ For example, you'll be able to see the following:
 
 - From the **Data discovery** report:
 
-    - What files are on your scanned data repositories
+    - What files are on your scanned data repositories, or Windows 10 computers
     
     - Which files are labeled and protected, and the location of files by labels
     
@@ -107,8 +110,7 @@ To view the Azure Information Protection reports and create your own, make sure 
 |---------------|--------------------|
 |An Azure subscription that includes Log Analytics|See the [Azure Log Analytics pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
 |The current generally available version of the Azure Information Protection client.|If you haven't already installed this version of the client, you can download and install it from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
-|For the **Discovery and risk** report: <br /><br />- You have deployed at least one instance of the Azure Information Protection scanner (current GA version)|For installation instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). <br /><br />If you're upgrading from a previous version of the scanner, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
-
+|For the **Discovery and risk** report: <br /><br />- To display data from on-premises data stores, you have deployed at least one instance of the Azure Information Protection scanner (current GA version) <br /><br />- To display data from Windows 10 computers, they must be a minimum build of 1809, you are using Windows Defender Advanced Threat Protection (Windows Defender ATP), and you have enabled the Azure Information Protection integration feature from Windows Defender Security Center|For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). If you're upgrading from a previous version of the scanner, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).<br /><br />For information about configuring and using the Azure Information Protection integration feature from Windows Defender Security Center, see [Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
 
 ## Configure a Log Analytics workspace for the reports
 
@@ -136,11 +138,11 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
 
 - **Activity logs (Preview)**: Use this report to see labeling actions from users, and on devices and file paths.
     
-    This report is currently rolling out to tenants, so if you do not see it, try again in a few days. 
+    This report is currently rolling out to tenants, so if you do not see it, try again in a few days.
     
-    This report has a **Columns** option, that lets you display more activity information than the default display. One of the columns is for **Device Risk**, which will display data from Windows Defender when that application is integrated with Azure Information Protection.
+    This report has a **Columns** option, that lets you display more activity information than the default display.
 
-- **Data discovery (Preview)**: Use this report to see information about files that the scanners found.
+- **Data discovery (Preview)**: Use this report to see information about files found by scanners or Windows Defender ATP.
 
 ## How to modify the reports
 

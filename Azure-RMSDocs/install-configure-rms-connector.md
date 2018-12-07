@@ -34,12 +34,13 @@ Before you begin, make sure that you have reviewed and checked the [prerequisite
 
 ## Installing the RMS connector
 
-1.  Identify the computers (minimum of two) that will run the RMS connector. They must meet the minimum specification listed in the prerequisites.
+1.  Identify the computers (minimum of two) that wil
+2.  l run the RMS connector. They must meet the minimum specification listed in the prerequisites.
 
     > [!NOTE]
     > You install a single RMS connector (consisting of multiple servers for high availability) per tenant (Office 365 tenant or Azure AD tenant). Unlike Active Directory RMS, you do not have to install an RMS connector in each forest.
 
-2.  Download the source files for the RMS connector from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106).
+2.  Download the source files for the RMS connector from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
 
     To install the RMS connector, download RMSConnectorSetup.exe.
 
@@ -179,7 +180,7 @@ The connector URL server name can be any name under a namespace that you control
 > [!IMPORTANT]
 > We recommend that you don’t change this name after you have configured Exchange or SharePoint servers to use the connector, because you have to then clear these servers of all IRM configurations and then reconfigure them.
 
-After the name is created in DNS and is configured for an IP address, configure load balancing for that address, which directs traffic to the connector servers. You can use any IP-based load balancer for this purpose, which includes  the Network Load Balancing (NLB) feature in Windows Server. For more information, see [Load Balancing Deployment Guide](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
+After the name is created in DNS and is configured for an IP address, configure load balancing for that address, which directs traffic to the connector servers. You can use any IP-based load balancer for this purpose, which includes  the Network Load Balancing (NLB) feature in Windows Server. For more information, see [Load Balancing Deployment Guide](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
 
 Use the following settings to configure the NLB cluster:
 
@@ -206,9 +207,9 @@ If you use the HTTPS option, ensure that all servers that run the connector have
 > [!TIP]
 > You can use the following information and resources to help you request and install a server authentication certificate, and to bind this certificate to the Default Web Site in IIS:
 >
-> -   If you use Active Directory Certificate Services (AD CS) and an enterprise certification authority (CA) to deploy these server authentication certificates, you can duplicate and then use the Web Server certificate template. This certificate template uses **Supplied in the request** for the certificate subject name, which means that you can provide the FQDN of the RMS connector name for the certificate subject name or subject alternative name when you request the certificate.
-> -   If you use a stand-alone CA or purchase this certificate from another company, see [Configuring Internet Server Certificates (IIS 7)](http://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) in the [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
-> -   To configure IIS to use the certificate, see [Add a Binding to a Site (IIS 7)](http://technet.microsoft.com/library/cc731692.aspx) in the [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
+> - If you use Active Directory Certificate Services (AD CS) and an enterprise certification authority (CA) to deploy these server authentication certificates, you can duplicate and then use the Web Server certificate template. This certificate template uses **Supplied in the request** for the certificate subject name, which means that you can provide the FQDN of the RMS connector name for the certificate subject name or subject alternative name when you request the certificate.
+> -   If you use a stand-alone CA or purchase this certificate from another company, see [Configuring Internet Server Certificates (IIS 7)](https://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) in the [Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
+> - To configure IIS to use the certificate, see [Add a Binding to a Site (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx) in the [Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
 
 ## Configuring the RMS connector for a web proxy server
 If your connector servers are installed in a network that does not have direct Internet connectivity and requires manual configuration of a web proxy server for outbound Internet access, you must configure the registry on these servers for the RMS connector.
@@ -244,7 +245,7 @@ To install the RMS connector administration tool, run the following files:
 
 -   For a 64-bit computer: RMSConnectorSetup.exe
 
-If you haven’t already downloaded these files, you can do so from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106).
+If you haven’t already downloaded these files, you can do so from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
 
 
 ## Next steps

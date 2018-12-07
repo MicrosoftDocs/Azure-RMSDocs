@@ -6,7 +6,7 @@ description: Information for admins about deploying the Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
@@ -38,7 +38,7 @@ For an enterprise installation and configuration of the client for Windows, see 
 > If you want to quickly install and test the Azure Information Protection client for a single computer, see [Download and install the Azure Information Protection client](./rms-client/install-client-app.md) from the [Azure Information Protection client user guide](./rms-client/client-user-guide.md).
 
 ## The Azure Information Protection client for iOS and Android: Installation and management
-To install the Azure Information Protection client for these popular mobile platforms, you can download the relevant app by using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970). No configuration is required.
+To install the Azure Information Protection client for these popular mobile platforms, you can download the relevant app by using the links on the [Microsoft Azure Information Protection page](https://go.microsoft.com/fwlink/?LinkId=303970). No configuration is required.
 
 > [!NOTE]
 > For Mac computers and Windows Phone, links from this page download the RMS sharing apps for mobile devices. These devices do not currently support the Azure Information Protection client.

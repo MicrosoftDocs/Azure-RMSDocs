@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Change an Azure Information Protection label
+title: Change an Azure Information Protection label - AIP
 description: You can change or refine any of the labels that users see on the Information Protection bar, by configuring them in the Azure Information Protection policy.
 author: cabailey
 ms.author: cabailey
