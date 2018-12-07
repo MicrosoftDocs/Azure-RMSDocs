@@ -6,7 +6,7 @@ description: Information about the registry settings on servers using the RMS co
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
@@ -35,7 +35,7 @@ Instructions for when you use these settings:
 
 -   *\<YourTenantURL>* is the Azure Rights Management service URL for your Azure Information Protection tenant. To find this value:
 
-    1.  Run the [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for the Azure Rights Management service. If you haven’t already installed the Windows PowerShell module for Azure RMS, see [Installing the AADRM PowerShell module](install-powershell.md).
+    1.  Run the [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) cmdlet for the Azure Rights Management service. If you haven’t already installed the Windows PowerShell module for Azure RMS, see [Installing the AADRM PowerShell module](install-powershell.md).
 
     2.  From the output, identify the **LicensingIntranetDistributionPointUrl** value.
 
