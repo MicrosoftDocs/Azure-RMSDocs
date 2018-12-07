@@ -50,11 +50,11 @@ Other benefits of using Azure Key Vault for your Azure Information Protection te
 
 - Azure Key Vault provides role separation, as a recognized security best practice. Azure Information Protection administrators can focus on managing data classification and protection, and Azure Key Vault administrators can focus on managing encryption keys and any special policies that they might require for security or compliance.
 
-- Some organizations have restrictions where their master key must live. Azure Key Vault provides a high level of control where to store the master key because the service is available in many Azure regions. Currently, you can choose from 28 Azure regions and you can expect this number to increase. For more information, see the [Products available by region] (https://azure.microsoft.com/regions/services/) page on the Azure site.
+- Some organizations have restrictions where their master key must live. Azure Key Vault provides a high level of control where to store the master key because the service is available in many Azure regions. Currently, you can choose from 28 Azure regions and you can expect this number to increase. For more information, see the [Products available by region](https://azure.microsoft.com/regions/services/) page on the Azure site.
 
 In addition to managing keys, Azure Key Vault offers your security administrators the same management experience to store, access, and manage certificates and secrets (such as passwords) for other services and applications that use encryption. 
 
-For more information about Azure Key Vault, see [What is Azure Key Vault?](/azure/key-vault/key-vault-whatis) and visit the [Azure Key Vault team blog](https://cloudblogs.microsoft.com/kv/) for the latest information and to learn how other services use this technology.
+For more information about Azure Key Vault, see [What is Azure Key Vault?](/azure/key-vault/key-vault-whatis) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/) for the latest information and to learn how other services use this technology.
 
 ## Restrictions when using BYOK
 

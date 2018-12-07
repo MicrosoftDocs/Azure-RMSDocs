@@ -84,7 +84,7 @@ Alternatively, you can use the following PowerShell commands:
 If you don’t want all users to be able to protect documents and emails immediately by using Azure Rights Management, you can configure user onboarding controls by using the [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) PowerShell command. You can run this command before or after you activate the Azure Rights Management service.
 
 > [!IMPORTANT]
-> To use this command, you must have at least version **2.1.0.0** of the [Azure Rights Management PowerShell module](https://go.microsoft.com/fwlink/?LinkId=257721).
+> To use this command, you must have at least version **2.1.0.0** of the [Azure Rights Management PowerShell module](https://www.powershellgallery.com/packages/AADRM).
 >
 > To check the version you have installed, run: **(Get-Module aadrm –ListAvailable).Version**
 
