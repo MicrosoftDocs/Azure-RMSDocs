@@ -47,15 +47,15 @@ However, some relevant information that can help your legal adviser make a deter
 
 ## Legal and privacy
 
-- For Microsoft Azure agreement information: [Microsoft Azure Agreement](http://azure.microsoft.com/support/legal/subscription-agreement/)
+- For Microsoft Azure agreement information: [Microsoft Azure Agreement](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- For Microsoft Azure privacy information: [Microsoft Azure Privacy Statement](http://azure.microsoft.com/support/legal/privacy-statement/)
+- For Microsoft Azure privacy information: [Microsoft Azure Privacy Statement](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## Security, compliance, and auditing
 
 See the [Security, compliance, and regulatory requirements](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](./azure-rms-problems-it-solves.md) article, for information about specific certifications for the Azure Rights Management service. In addition:
 
-- For external certifications for Azure Information Protection: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
+- For external certifications for Azure Information Protection: [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/)
 
 - For FIPS 140 information: [FIPS 140 Validation](https://technet.microsoft.com/library/security/cc750357.aspx)
 
