@@ -174,7 +174,7 @@ To perform service discovery, the RMS client checks the following:
 
     For example:  5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
-    *\<YourTenantURL\>* has the following format: **{GUID}.rms.[Region].aadrm.com**.You can find this value by identifying the **RightsManagementServiceId** value when you run the [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS.
+    *\<YourTenantURL\>* has the following format: **{GUID}.rms.[Region].aadrm.com**.You can find this value by identifying the **RightsManagementServiceId** value when you run the [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) cmdlet for Azure RMS.
 
 > [!NOTE]
 > There are four important exceptions for this service discovery flow:

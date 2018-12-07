@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -63,7 +63,7 @@ Some of these settings require editing the registry and some use advanced settin
 |ProcessUsingLowIntegrity|[Disable the low integrity level for the scanner](#disable-the-low-integrity-level-for-the-scanner)|
 |PullPolicy|[Support for disconnected computers](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
-|ReportAnIssueLink|[Modify the email address for the Report an Issue link](#modify-the-email-address-for-the-report-an-issue-link)|
+|ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)|
 |SyncPropertyName|[Label an Office document by using an existing custom property](#label-an-office-document-by-using-an-existing-custom-property)|
 |SyncPropertyState|[Label an Office document by using an existing custom property](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -117,11 +117,11 @@ Locate the following value name and set the value data to **0**:
 
 In addition, check that these computers do not have a file named **Policy.msip** in the **%LocalAppData%\Microsoft\MSIP** folder. If this file exists, delete it. This file contains the Azure Information Protection policy and might have downloaded before you edited the registry, or if the Azure Information Protection client was installed with the demo option.
 
-## Modify the email address for the Report an Issue link
+## Add "Report an Issue" for users
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is only applicable to preview versions of the Azure Information Protection client because general availability versions of the client don't display the **Report an Issue** link.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When users select the **Report an Issue** link from the **Help and Feedback** client dialog box from preview versions of the client, by default, a Microsoft address is populated in an email message. Use the following advanced client setting to modify that address. For example, specify `mailto:helpdesk@contoso.com` for the email address of your help desk. 
+When you specify the following advanced client setting, users see a **Report an Issue** option that they can select from the **Help and Feedback** client dialog box. Specify an HTTP string for the link. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk. 
 
 To configure this advanced setting, enter the following strings:
 
@@ -397,7 +397,7 @@ As a result of this registry edit, the following scenarios are supported:
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
 
-This configuration is currently not compatible with the setting to [Protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When you use both settings together, .ppdf files cannot be opened by File Explorer, PowerShell, or the scanner.
+This configuration is currently not compatible with the new default behavior that protects PDF files by using the ISO standard for PDF encryption. In this scenario, .ppdf files cannot be opened by File Explorer, PowerShell, or the scanner. To resolve this, use the advanced client setting to [don't use the ISO standard for PDF encryption](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
 For Office documents and PDF documents that are labeled by Secure Islands, you can relabel these documents with an Azure Information Protection label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents. 
 

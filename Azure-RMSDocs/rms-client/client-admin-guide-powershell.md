@@ -60,7 +60,7 @@ The current release of the AzureInformationProtection module has the following l
 
 Before you start to use these cmdlets, see the additional prerequisites and instructions that corresponds to your deployment:
 
-- [Azure Information Protection and Azure Rights Management service](#azure-information-protection-service-and-azure-rights-management-service)
+- [Azure Information Protection and Azure Rights Management service](#azure-information-protection-and-azure-rights-management-service)
 
 	- Applicable if you use classification-only or classification with Rights Management protection: You have a subscription that includes Azure Information Protection (for example, Enterprise Mobility + Security).
 	- Applicable if you use protection-only with the Azure Rights Management service: You have a subscription that includes the Azure Rights Management service (for example, Office 365 E3 and Office 365 E5).
@@ -274,7 +274,7 @@ When you use a service principal account to protect files and download templates
 
 ### Example scenarios for using the cmdlets for Azure Information protection and the Azure Rights Management service
 
-It's more efficient to use labels to classify and protect files, because there are just two cmdlets that you need, which can be run by themselves or together: [Get-AIPFileStatus](/powershell/azureinformationprotection/get-aipfilestatus) and  [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Use the help for both these cmdlets for more information and examples.
+It's more efficient to use labels to classify and protect files, because there are just two cmdlets that you need, which can be run by themselves or together: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) and [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Use the help for both these cmdlets for more information and examples.
 
 However, to protect or unprotect files by directly connecting to the Azure Rights Management service, you must typically run a series of cmdlets as described next.
 

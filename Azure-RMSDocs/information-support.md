@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
@@ -67,6 +67,8 @@ For additional support options, ask your Microsoft contact.
 ### Self-help
 
 Try the [Azure Information Protection help bot](help-bot.md), currently in beta.
+
+Hands-on labs: See [Azure Information Protection Hands On Lab](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)
 
 On-demand videos:
 

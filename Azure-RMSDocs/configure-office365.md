@@ -217,7 +217,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
             {
                 if($_.Exception.Message -match "Could not load file or assembly")
                 {
-                    Write-Error -Message "Unable to load the SharePoint Server 2013 Client Components.`nDownload Location: http://www.microsoft.com/en-us/download/details.aspx?id=42038"
+                    Write-Error -Message "Unable to load the SharePoint Server 2013 Client Components.`nDownload Location: https://www.microsoft.com/en-us/download/details.aspx?id=42038"
                 }
                 else
                 {
@@ -539,7 +539,7 @@ If you need to disable IRM for user's OneDrive for Business libraries, see the [
 ##### Additional script to output all OneDrive for Business URLs to a .CSV file
 For step 4c above, you can use the following Windows PowerShell script to extract the URLs for all users' OneDrive for Business libraries, which you can then check, edit if necessary, and then import into the main script.
 
-This script also requires the [SharePoint Online Client Components SDK](http://www.microsoft.com/en-us/download/details.aspx?id=42038) and the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Follow the same instructions to copy and paste it, save the file locally (for example, "Report-OneDriveForBusinessSiteInfo.ps1"), modify the   `$sharepointAdminCenterUrl` and `$tenantAdmin` values as before, and then run the script.
+This script also requires the [SharePoint Online Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=42038) and the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Follow the same instructions to copy and paste it, save the file locally (for example, "Report-OneDriveForBusinessSiteInfo.ps1"), modify the   `$sharepointAdminCenterUrl` and `$tenantAdmin` values as before, and then run the script.
 
 *&#42;&#42;Disclaimer&#42;&#42;*: This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
 
@@ -555,7 +555,7 @@ This script also requires the [SharePoint Online Client Components SDK](http://w
  Script Installation Requirements:
 
    SharePoint Online Client Components SDK
-   http://www.microsoft.com/en-us/download/details.aspx?id=42038
+   https://www.microsoft.com/en-us/download/details.aspx?id=42038
 
    SharePoint Online Management Shell
    https://www.microsoft.com/en-us/download/details.aspx?id=35588
@@ -619,7 +619,7 @@ function Load-SharePointOnlineClientComponentAssemblies
         {
             if($_.Exception.Message -match "Could not load file or assembly")
             {
-                Write-Error -Message "Unable to load the SharePoint Server 2013 Client Components.`nDownload Location: http://www.microsoft.com/en-us/download/details.aspx?id=42038"
+                Write-Error -Message "Unable to load the SharePoint Server 2013 Client Components.`nDownload Location: https://www.microsoft.com/en-us/download/details.aspx?id=42038"
             }
             else
             {
@@ -764,7 +764,7 @@ $oneDriveForBusinessSiteUrls | Out-File -FilePath $reportName
 ##### Script to disable IRM for OneDrive for Business
 Use the following sample script if you need to disable IRM for users' OneDrive for Business.
 
-This script also requires the [SharePoint Online Client Components SDK](http://www.microsoft.com/en-us/download/details.aspx?id=42038) and the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Copy and paste the contents, save the file locally (for example, "Disable-IRMOnOneDriveForBusiness.ps1"), and modify the `$sharepointAdminCenterUrl` and `$tenantAdmin` values. Manually specify the OneDrive for Business URLs or use the script in the previous section so that you can import these, and then run the script.
+This script also requires the [SharePoint Online Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=42038) and the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Copy and paste the contents, save the file locally (for example, "Disable-IRMOnOneDriveForBusiness.ps1"), and modify the `$sharepointAdminCenterUrl` and `$tenantAdmin` values. Manually specify the OneDrive for Business URLs or use the script in the previous section so that you can import these, and then run the script.
 
 *&#42;&#42;Disclaimer&#42;&#42;*: This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
 
@@ -779,7 +779,7 @@ This script also requires the [SharePoint Online Client Components SDK](http://w
  Script Installation Requirements:
 
    SharePoint Online Client Components SDK
-   http://www.microsoft.com/en-us/download/details.aspx?id=42038
+   https://www.microsoft.com/en-us/download/details.aspx?id=42038
 
    SharePoint Online Management Shell
    https://www.microsoft.com/en-us/download/details.aspx?id=35588
@@ -848,7 +848,7 @@ function Load-SharePointOnlineClientComponentAssemblies
         {
             if($_.Exception.Message -match "Could not load file or assembly")
             {
-                Write-Error -Message "Unable to load the SharePoint Server 2013 Client Components.`nDownload Location: http://www.microsoft.com/en-us/download/details.aspx?id=42038"
+                Write-Error -Message "Unable to load the SharePoint Server 2013 Client Components.`nDownload Location: https://www.microsoft.com/en-us/download/details.aspx?id=42038"
             }
             else
             {
