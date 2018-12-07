@@ -239,7 +239,7 @@ Our example command would then look like the following:
 
 As shown in the previous command, you can supply the values with a single command, which you would do in a script to run non-interactively. But for testing purposes, you can just type Set-RMSServerAuthentication, and supply the values one-by-one when prompted. When the command completes, the client is now operating in "server mode", which is suitable for non-interactive use such as scripts and Windows Server File Classification Infrastructure.
 
-Consider making this service principal account a super user: To ensure that this service principal account can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), but specify the **ServicePrincipalId** parameter with your AppPrincipalId value.
+Consider making this service principal account a super user: To ensure that this service principal account can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/Add-AadrmSuperUser), but specify the **ServicePrincipalId** parameter with your AppPrincipalId value.
 
 For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../configure-super-users.md).
 
