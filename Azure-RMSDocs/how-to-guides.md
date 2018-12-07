@@ -30,7 +30,7 @@ There are many ways in which you can use Azure Information Protection to classif
 
 The most successful deployments are those that identify specific use cases that provide the most business benefit to the organization. Use the following list of common scenarios and instructions to get your deployment off the ground.
 
-## Deploy by scenario
+## Common scenarios
 
 |Scenario: I want to ...|Instructions|
 |----------------|---------------|
@@ -43,9 +43,9 @@ The most successful deployments are those that identify specific use cases that 
 |Use my own key to protect my organization's data| [Planning and implementing your tenant key](plan-implement-tenant-key.md)|
 |Migrate from AD RMS|[Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)|
 
-## Additional deployment instructions from our Customer Experience Engineering team
+## Additional deployment instructions
 
-You'll find additional step-by-step instructions on the [Azure Information Protection technical blog](https://aka.ms/AIPblog). For example:
+Our [Azure Information Protection technical blog](https://aka.ms/AIPblog) has additional step-by-step instructions from our Customer Experience Engineering team. For example:
 
 -[Using Azure Information Protection to protect PDF’s and Adobe Acrobat Reader to view them](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010)
 
