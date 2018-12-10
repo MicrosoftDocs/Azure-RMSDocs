@@ -7,7 +7,7 @@ keywords:
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
@@ -189,7 +189,7 @@ The *MSIPCSampleApp* sample application is available for use with this SDK for t
                       }
     ```
 
-- **Step 3**: Check if the **Edit** right exists for this user with this content via the [UserPolicy.accessCheck](https://msdn.microsoft.comlibrary/dn790885.aspx) method.
+- **Step 3**: Check if the **Edit** right exists for this user with this content via the [UserPolicy.accessCheck](https://msdn.microsoft.com/library/dn790885.aspx) method.
 
     **Source**: *TextEditorFragment.java*
 
