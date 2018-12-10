@@ -1,3 +1,3 @@
 ---
-redirect_url: /information-protection/deploy-use/rms-for-individuals
+redirect_url: /information-protection/rms-for-individuals
 ---
