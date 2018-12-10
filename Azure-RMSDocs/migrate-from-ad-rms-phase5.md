@@ -45,7 +45,7 @@ To remove the SCP, make sure that you are logged in as a domain enterprise admin
 
 4. Select **Remove Current SCP**, and then click **OK**.
 
-Now monitor your AD RMS servers for activity. For example, check the [requests in the System Health report](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), the [ServiceRequest table](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) or [audit user access to protected content](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). 
+Now monitor your AD RMS servers for activity. For example, check the [requests in the System Health report](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), the [ServiceRequest table](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) or [audit user access to protected content](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). 
 
 When you have confirmed that RMS clients are no longer communicating with these servers and that clients are successfully using Azure Information Protection, you can remove the AD RMS server role from these servers. If you’re using dedicated servers, you might prefer the cautionary step of first shutting down the servers for a period of time. This gives you time to make sure that there are no reported problems that might require you to restart these servers for service continuity while you investigate why clients are not using Azure Information Protection.
 
