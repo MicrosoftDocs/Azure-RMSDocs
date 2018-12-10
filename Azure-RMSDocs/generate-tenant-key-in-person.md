@@ -25,7 +25,7 @@ ms.suite: ems
 
 # Generate and transfer your tenant key – in person: RETIRED CONTENT
 
->*Applies to: Azure Rights Management, [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Applies to: Azure Rights Management, [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 The information in this article has been removed because it is no longer relevant now that Azure Rights Management uses Azure Key Vault for customer-managed tenant keys (also known as bring your own key, or BYOK).
 
