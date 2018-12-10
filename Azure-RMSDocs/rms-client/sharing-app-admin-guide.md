@@ -40,7 +40,7 @@ For a technical overview of the Rights Management sharing application, informati
 ## Automatic deployment for the Microsoft Rights Management sharing application
 The Windows version of the RMS sharing application supports a scripted installation, which makes it suitable for enterprise deployments.
 
-The only prerequisites for installations are that the computers run a minimum version of Windows 7 Service Pack 1, and that the Microsoft Framework, minimum version 4.0 is installed. If you need to install the Microsoft .NET Framework 4.0, you can [download it for installation from the Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=17718).
+The only prerequisites for installations are that the computers run a minimum version of Windows 7 Service Pack 1, and that the Microsoft Framework, minimum version 4.0 is installed. If you need to install the Microsoft .NET Framework 4.0, you can [download it for installation from the Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=17718).
 
 ### To download the RMS sharing application for automatic deployment
 
@@ -99,7 +99,7 @@ To verify success, see the [Verifying installation success](#verifying-installat
 
     1.  Log in to a computer by using a local administrator account.
 
-    2.  On that computer, [download and install the Microsoft Online Sign In Assistant](http://www.microsoft.com/download/details.aspx?id=28177).
+    2.  On that computer, [download and install the Microsoft Online Sign In Assistant](https://www.microsoft.com/download/details.aspx?id=28177).
 
     3.  Run the following command to see displayed on the screen the certification service URL, which you can then copy and save for the next step:
 
