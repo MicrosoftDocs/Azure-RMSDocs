@@ -6,6 +6,7 @@ description: Three generations of the Rights Management SDK are now available.
 keywords:
 author: bryanla
 manager: mbaldwin
+ms.author: bryanla
 ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
