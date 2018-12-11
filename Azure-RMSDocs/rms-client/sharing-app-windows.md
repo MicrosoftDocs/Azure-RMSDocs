@@ -45,5 +45,5 @@ The Rights Management sharing application for Windows (also known as just “the
 > For Mac computers and Windows Phones: [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](https://technet.microsoft.com/dn451248).
 
 ## See Also
-[FAQ for Rights Management Sharing Application for Windows](http://technet.microsoft.com/dn467883)
+[FAQ for Rights Management Sharing Application for Windows](https://technet.microsoft.com/dn467883)
 

@@ -44,7 +44,7 @@ The only prerequisites for installations are that the computers run a minimum ve
 
 ### To download the RMS sharing application for automatic deployment
 
-1.  Go to the [Microsoft Rights Management sharing application for Windows](http://www.microsoft.com/download/details.aspx?id=40857) page in the Microsoft Download Center, and click **Download**.
+1.  Go to the [Microsoft Rights Management sharing application for Windows](https://www.microsoft.com/download/details.aspx?id=40857) page in the Microsoft Download Center, and click **Download**.
 
 2.  Select and download the files that you need. There are two client installation packages: one for Windows 64-bit (Microsoft Rights Management sharing application x64.zip), and another for Windows 32-bit (Microsoft Rights Management sharing application x86.zip).
 
