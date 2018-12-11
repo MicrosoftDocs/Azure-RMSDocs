@@ -6,7 +6,7 @@ description: Outlines important changes and features in this and previous versio
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
@@ -23,13 +23,13 @@ This topic outlines important changes and features in this new version of the RM
 
 -   [New for July 2017](#new-for-july-2017)
 -   [October 2016 update](#October-2016-update)
--   [June 2016 update](#new-for-June-2016)
+-   [June 2016 update](#june-2016-update)
 -   [December 2015 update](#december-2015-update)
--   [July 2015 update - Adds support for Linux / C++ development](#july-2015-update-adds-support-for-linux-c-developm)
--   [May 2015 update - Adds logging control](#may-2015-update-adds-logging-control)
--   [February 2015 update - Adds Windows Store application support](#february-2015-update-adds-windows-store-application-support)
--   [January 2015 Update - Adds WinPhone platform support](#january-2015-update-adds-winphone-platform-support)
--   [October 2014 update - Upgrade to Microsoft RMS SDK 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
+-   [July 2015 update - Adds support for Linux / C++ development](#july-2015-update---adds-support-for-linux--c-development)
+-   [May 2015 update - Adds logging control](#may-2015-update---adds-logging-control)
+-   [February 2015 update - Adds Windows Store application support](#february-2015-update---adds-windows-store-application-support)
+-   [January 2015 Update - Adds WinPhone platform support](#january-2015-update---adds-winphone-platform-support)
+-   [October 2014 update - Upgrade to Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-4-1)
 -   [Release notes](#release-notes)
 -   [Frequently asked questions](#frequently-asked-questions)
 
