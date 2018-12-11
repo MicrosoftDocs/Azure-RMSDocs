@@ -7,7 +7,7 @@ keywords:
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 12-10-2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
@@ -39,8 +39,8 @@ This topic will guide you through setting up your environment for creating your 
 
 You must have the following software on your development system:
 
--   The [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet) operating system.
--   [Windows Phone 8.1 Development Tools (SDK)](http://dev.windowsphone.com/en-us/downloadsdk)
+-   The [Windows 8.1](https://windows.microsoft.com/windows-8/meet) operating system.
+-   [Windows Phone 8.1 Development Tools (SDK)](https://developer.microsoft.com/windows/downloads/sdk-archive)
 -   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)or above, or Visual Studio Express 2012, which is included in the Windows Phone SDK 8.0/8.1
 -   The MS RMS SDK 4.2 package for Windows Phone. For more information see, [Get started](get-started.md).
 -   Authentication library: We recommend that you use the [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) and other authentication libraries can be used.
@@ -85,4 +85,4 @@ You are now ready to create your own new Windows Phone apps.
 
 [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 
-[Windows Phone SDK](http://dev.windowsphone.com/en-us/downloadsdk)
+[Windows Phone SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
