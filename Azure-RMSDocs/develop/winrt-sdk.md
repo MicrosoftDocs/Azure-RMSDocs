@@ -39,7 +39,7 @@ This topic will guide you through setting up your environment for creating your 
 
 You must have the following software on your development system:
 
--   The [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet) operating system
+-   The [Windows 8.1](https://windows.microsoft.com/windows-8/meet) operating system
 -   The [Windows SDK for Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) or above, or Visual Studio Express 2012, which is included in the Windows SDK for Windows 8.0/8.1.
 -   The MS RMS SDK 4.2 package for Windows Store Applications. For more information see, [Get started](get-started.md).
@@ -81,7 +81,7 @@ You are now ready to create your own new Windows Store apps.
 
 [Developer terms and concepts](core-concepts.md)
 
-[Windows 8](http://windows.microsoft.com/en-US/windows-8/meet)
+[Windows 8](https://windows.microsoft.com/windows-8/meet)
 
 [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 

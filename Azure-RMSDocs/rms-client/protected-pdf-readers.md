@@ -6,7 +6,7 @@ description: Learn about PDF documents that are labeled for classification and p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2018
+ms.date: 12/12/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
@@ -46,7 +46,7 @@ The following PDF readers can open protected PDF files that adhere to the ISO st
 
 |Operating system|Supported readers and download link|
 |----------------|-----------------------------------|
-|Windows 10 and previous versions<br />through Windows 7 Service Pack 1|Adobe Acrobat Reader (preferred):<br />-  [Read the Adobe General Terms of Use](https://www.adobe.com/legal/terms.html) <br />- [Download the preview](https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/misc/MIP_Preview/1900820120/Adobe_MIP_Preview_1900820120.zip) <br /><br /> Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://www.foxitsoftware.com/pdf-reader/)|
+|Windows 10 and previous versions<br />through Windows 7 Service Pack 1|Adobe Acrobat Reader (preferred):<br />-  1. Read the [Adobe General Terms of Use](https://www.adobe.com/legal/terms.html) <br />- 2. Install the Adobe Reader from the [Adobe site](https://www.adobe.com/)<br />- 3. Install the [Adobe plug-in](https://go.microsoft.com/fwlink/?linkid=2050049)<br />- 4. If prompted, ask your admin to [authorize the plug-in](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396) <br /><br /> Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://www.foxitsoftware.com/pdf-reader/)|
 |Android|Azure Information Protection app: [Download](https://go.microsoft.com/fwlink/?LinkId=325340)|
 |iOS|Azure Information Protection app: [Download](https://go.microsoft.com/fwlink/?LinkId=325338)|
 
