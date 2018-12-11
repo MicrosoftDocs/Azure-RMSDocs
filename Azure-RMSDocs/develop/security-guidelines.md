@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Security Best Practices | Microsoft Information Protection
-description: RMS-enabled applications are best built using Azure Information Protection best practices.
+title: Security Best Practices for Information Protection
+description: RMS-enabled applications are best built using Information Protection best practices.
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
@@ -14,11 +14,11 @@ ms.suite: ems
 ms.reviewer: kartikk
 ---
 
-# Security Best Practices for Azure Information Protection
+# Security Best Practices for Information Protection
 
-The Azure Information Protection (AIP) Software Development Kit (SDK) provides a robust system for publishing and consuming protected information of all types. To help an AIP   system be as strong as possible, AIP enabled applications must be built using AIP    best practices. AIP enabled applications share responsibility for helping to maintain the security of this ecosystem. Identifying security risks and providing mitigations for those risks introduced during application development helps to minimize the likelihood of a less secure software implementation.
+The Information Protection (AIP) Software Development Kit (SDK) provides a robust system for publishing and consuming protected information of all types. To help an AIP   system be as strong as possible, AIP enabled applications must be built using AIP    best practices. AIP enabled applications share responsibility for helping to maintain the security of this ecosystem. Identifying security risks and providing mitigations for those risks introduced during application development helps to minimize the likelihood of a less secure software implementation.
 
-Best practices for implementing applications by using the Azure Information Protection Software Development Kit (SDK) include the following categories of suggestions:
+Best practices for implementing applications by using the Information Protection Software Development Kit (SDK) include the following categories of suggestions:
 - [Threat Models and Mitigations](https://msdn.microsoft.com/library/aa362751.aspx)
 - [Security Attacks](https://msdn.microsoft.com/library/aa362736.aspx)
 
@@ -76,7 +76,7 @@ AIP does not support code modification at run time or modification of the import
 
 If your application does not correctly interpret and enforce the rights expressed in the AIP   issuance license, you may make information available in ways that the information owner did not intend. An example of this is when an application allows a user to save unencrypted information to new media when the issuance license only confers the right to view the information.
 
-The AIP system organizes rights a few groupings. For more information, see [Configuring usage rights for Azure Rights Management](../configure-usage-rights.md).
+The AIP system organizes rights into a few groupings. For more information, see [Configuring usage rights for Azure Rights Management](../configure-usage-rights.md).
 
 ### Azure Information Protection  
 API allows a user to either decrypt information or not; the information does not have any inherent protection. If a user has the right to decrypt information, the API permits it, and the application is responsible for managing or protecting that information after it is in the clear. An application is responsible for managing its environment and interface to prevent the unauthorized use of information; for example, disabling the **Print** and **Copy** buttons if a license only grants the PLAY right. Your test suite should verify that your application acts correctly on all the license rights that it recognizes.
