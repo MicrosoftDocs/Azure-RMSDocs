@@ -34,7 +34,7 @@ The Azure Information Protection SDK 4.2 supports several operating systems. Fo
 - [Android namespaces](https://msdn.microsoft.com/library/dn758245.aspx)
 
 ### Linux
-- [Linux API reference](linux-c-api-reference.md) - API reference for our Linux flavored operating system support is hosted on Github - [RMS SDK for C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
+- [Linux API reference](linux-c-api-reference.md) - API reference for our Linux flavored operating system support is hosted on Github - [RMS SDK for C++](https://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
 ### Microsoft
 - [Windows API Reference](https://msdn.microsoft.com/library/dn891914.aspx) - API reference for the Windows Phone and Windows Store Applications SDKs.
