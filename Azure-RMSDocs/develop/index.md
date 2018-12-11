@@ -6,6 +6,7 @@ description: Three generations of the Rights Management SDK are now available.
 keywords:
 author: bryanla
 manager: mbaldwin
+ms.author: bryanla
 ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
@@ -40,7 +41,6 @@ This collection of Microsoft supplied RMS code samples and developer support too
 
 | Item | Operating System | Supporting SDK Version | Description |
 |------|------------------|------------------------|-------------|
-| [Read PFILE protected PDF](https://blogs.msdn.microsoft.com/rms/2015/11/09/reading-a-pfile-protected-pdf/) | Windows Desktop| [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK | **Read PFILE protected PDF** is a simple code example on our RMS Developer's Corner blog that uses the MSIPC File API to decrypt and open a PFILE protected PDF document.|
 | [IpcManagedAPI](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Windows Desktop | [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK | **IpcManagedAPI** is a .NET (C#) representation of RMS SDK 2.1 to make it easy for your managed application to be RMS-enabled.|
 | [IPCNotepad](https://code.msdn.microsoft.com/ipcnotepad-sample-f67dae80) | Windows Desktop | [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK| **IPCNotepad** is a sample RMS-enabled application that takes you through the basic steps that each RMS-enabled application should perform when protecting and consuming restricted content.|
 | [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms)|Windows Desktop|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK|**IpcDlp** is a sample RMS-enabled Data Leak Protection (DLP) application that takes you through the basic steps that a DLP RMS-enabled application should perform by using File API for protecting and consuming restricted content.|

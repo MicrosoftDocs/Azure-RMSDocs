@@ -42,8 +42,8 @@ The Rights Management sharing application for Windows (also known as just “the
 > [!TIP]
 > There's also an Azure Information Protection app for iOS and Android. For more information, see [FAQs for Azure Information Protection app for iOS and Android](mobile-app-faq.md )
 > 
-> For Mac computers and Windows Phones: [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](http://technet.microsoft.com/dn451248).
+> For Mac computers and Windows Phones: [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](https://technet.microsoft.com/dn451248).
 
 ## See Also
-[FAQ for Rights Management Sharing Application for Windows](http://technet.microsoft.com/dn467883)
+[FAQ for Rights Management Sharing Application for Windows](https://technet.microsoft.com/dn467883)
 
