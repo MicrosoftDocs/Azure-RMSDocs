@@ -42,7 +42,7 @@ Each RMS API has a callback that must be implemented in order to enable the user
 - Android -  [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) and [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx) interfaces.
 - iOS / OS X -  [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) protocol.
 -  Windows Phone / Window RT -  [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx) interface.
-- Linux -  [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) interface.
+- Linux -  [IAuthenticationCallback](https://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) interface.
 
 ### What library to use for authentication
 In order to implement your authentication callback you will need to download an appropriate library and configure your development environment to use it. You will find the ADAL libraries on GitHub for these platforms.
