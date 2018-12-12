@@ -6,7 +6,7 @@ description: Instructions for users who have upgraded from the RMS sharing appli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25

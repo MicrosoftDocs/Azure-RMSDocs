@@ -6,7 +6,7 @@ description: Information and instructions if you decide you no longer want to us
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad

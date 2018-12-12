@@ -6,7 +6,7 @@ description: Understand how the most commonly used end-user applications (such a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9

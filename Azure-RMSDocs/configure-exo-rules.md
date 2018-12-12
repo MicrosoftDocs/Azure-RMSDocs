@@ -6,7 +6,7 @@ description: Instructions and examples to configure Exchange Online mail flow ru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5

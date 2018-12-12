@@ -6,7 +6,7 @@ description: Sample script to copy and edit, as described in the instructions fo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/26/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
