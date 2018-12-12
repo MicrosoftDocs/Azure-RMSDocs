@@ -16,7 +16,7 @@ ms.reviewer: kartikk
 
 # Security best practices for Information Protection
 
-Information Protection Software Development Kits (SDK) provide a robust system for publishing and consuming protected information of all types. To help a system be as strong as possible, information protection-enabled applications must be built using best practices. Applications share responsibility in helping maintain the security of this ecosystem. Identifying security risks and providing mitigations for those risks introduced during application development helps to minimize the likelihood of a less secure software implementation.
+Information Protection Software Development Kits (SDKs) provide a robust system for publishing and consuming protected information of all types. To help a system be as strong as possible, information protection-enabled applications must be built using best practices. Applications share responsibility in helping maintain the security of this ecosystem. Identifying security risks and providing mitigations for those risks introduced during application development helps to minimize the likelihood of a less secure software implementation.
 
 This information supplements the legal agreement that must be signed, to obtain digital certificates for applications using the SDKs.
 
@@ -98,7 +98,7 @@ None at this time.
 
 ## Next steps
 
-Best practices for implementing applications by using the API SDK include the following articles:
+Best practices for implementing applications by using the AIP SDK include the following articles:
 
 - [Threat Models and Mitigations](https://msdn.microsoft.com/library/aa362751.aspx)
 - [Security Attacks](https://msdn.microsoft.com/library/aa362736.aspx)
