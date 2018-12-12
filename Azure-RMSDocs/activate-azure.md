@@ -6,7 +6,7 @@ description: Instructions for protection activation in the Azure portal so that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.custom: askipteam
