@@ -18,13 +18,13 @@ ms.reviewer: kartikk
 
 Information Protection Software Development Kits (SDK) provide a robust system for publishing and consuming protected information of all types. To help a system be as strong as possible, information protection-enabled applications must be built using best practices. Applications share responsibility in helping maintain the security of this ecosystem. Identifying security risks and providing mitigations for those risks introduced during application development helps to minimize the likelihood of a less secure software implementation.
 
-This information supplements the legal agreement that must be signed in order to obtain digital certificates for applications using the SDKs.
+This information supplements the legal agreement that must be signed, to obtain digital certificates for applications using the SDKs.
 
-## Subjects not covered in these topics
+## Subjects not covered
 
-These topics briefly describe the following issues, which are significant when creating both a development environment and a secure application:
+Although the following subjects are important considerations for creating a development environment and secure applications, they're out of scope for this article:
 
-- **Software development process management** — Covers configuration management, securing source code, minimizing access to debugged code, and assigning priority to bugs. For some customers, having a more secure software development process is of paramount importance to them. Some customers even prescribe a development process.
+- **Software development process management** — Configuration management, securing source code, minimizing access to debugged code, and assigning priority to bugs. For some customers, having a more secure software development process is of paramount importance to them. Some customers even prescribe a development process.
 - **Common coding errors** — Information for avoiding buffer overruns. We recommend the latest version of Writing Secure Code by Michael Howard and David LeBlanc (Microsoft Press, 2002) to review these generic threats and mitigations.
 - **Social engineering** — Includes information about procedural and structural safeguards, to help protect code against exploitation by developers or others within the manufacturer's organization.
 - **Physical security** — Includes information about locking down access to your code base and signing certificates.
