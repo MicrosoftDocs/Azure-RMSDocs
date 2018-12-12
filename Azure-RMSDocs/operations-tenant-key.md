@@ -6,7 +6,7 @@ description: Identify the different levels of control and responsibility that yo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2018
+ms.date: 08/29/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
