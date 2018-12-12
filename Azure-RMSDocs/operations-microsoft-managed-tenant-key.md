@@ -6,7 +6,7 @@ description: Information about the life cycle operations that are relevant if Mi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 03/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
