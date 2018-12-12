@@ -6,7 +6,7 @@ description: Understand labels and settings in an Azure Inforamtion Protection p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 

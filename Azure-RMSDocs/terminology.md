@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/04/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
