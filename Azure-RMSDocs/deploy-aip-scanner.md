@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
@@ -260,9 +260,7 @@ Then the scanner uses Windows IFilter to scan the following file types. For thes
 
 In addition, the scanner can also use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) on the computer running the scanner.
 
-By default, only Office file types are protected by the scanner, so PDF documents and text files, and TIFF images are not protected unless you [edit the registry](#editing-the-registry-for-the-scanner) to specify the file types:
-
-- If you do not add the file type of .pdf to the registry: Files that have this file name extension will be labeled but if the label is configured for protection, the protection is not applied.
+By default, only Office file types and PDF files are protected by the scanner, so text and image files are not protected unless you [edit the registry](#editing-the-registry-for-the-scanner) to specify the file types:
 
 - If you do not add the file types of .txt, .xml, or .csv to the registry: Files that have these file name extensions will not be labeled because these file types do not support classification-only.
 
@@ -286,21 +284,17 @@ Finally, for the remaining file types, the scanner does not inspect them but app
 |DigitalNegative|.dng|
 |Pfile|.pfile|
 
-When the scanner applies a label with protection, by default, only Office file types are protected. You can change this behavior so that additional file types are protected. However, when a label applies generic protection to documents, the file name extension changes to .pfile. Other file types can change their file name extension as well. In addition, these files become read-only until they are opened by an authorized user and saved in their native format.
+When the scanner applies a label with protection, by default, only Office file types and PDF files are protected. You can change this behavior so that additional file types are protected. However, when a label applies generic protection to documents, the file name extension changes to .pfile. Other file types can change their file name extension as well. In addition, these files become read-only until they are opened by an authorized user and saved in their native format.
 
 ### Editing the registry for the scanner
 
-To change the default scanner behavior for protecting file types other than Office files, you must manually edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". In addition, specific for the scanner:
+To change the default scanner behavior for protecting file types other than Office files and PDFs, you must manually edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". In addition, specific for the scanner:
 
-- The scanner has its own default behavior: Only Office file formats are protected by default. If the registry is not modified, any other file types will not be protected by the scanner.
+- The scanner has its own default behavior: Only Office file formats and PDF documents are protected by default. If the registry is not modified, any other file types will not be protected by the scanner.
 
 - If you want the same default protection behavior of the Azure Information Protection client, where all files are automatically protected with native or generic protection: Specify the `*` wildcard as a registry key, and `Default` as the value data.
 
 When you edit the registry, manually create the **MSIPC** key and **FileProtection** key if they do not exist, as well as a key for each file name extension.
-
-For example, for the scanner to protect PDF files in addition to Office files, the registry after you have edited it will look like the following picture:
-
-![Editing the registry for the scanner to apply protection](./media/editregistry-scanner.png)
 
 ## When files are rescanned
 
