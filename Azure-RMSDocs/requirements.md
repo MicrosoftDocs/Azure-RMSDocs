@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Requirements for Azure Information Protection
+title: Requirements for Azure Information Protection - AIP
 description: Identify the prerequisites to deploy Azure Information Protection for your organization.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
@@ -25,7 +25,7 @@ ms.suite: ems
 
 # Requirements for Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Before you deploy Azure Information Protection for your organization, make sure that you have the following prerequisites. 
 
@@ -33,7 +33,7 @@ Before you deploy Azure Information Protection for your organization, make sure 
 
 **For classification, labeling, and protection**: You must have an [Azure Information Protection plan](https://azure.microsoft.com/pricing/details/information-protection/). 
 
-**For protection-only**: You must have an [Office 365 plan that includes Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+**For protection-only**: You must have an [Office 365 plan that includes Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 To make sure that your organization's subscription includes the Azure Information Protection features that you want to use, review the feature list from the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection) page.
 
@@ -70,7 +70,7 @@ The following devices support the Azure Information Protection client, which let
 
 - Windows 10 (x86, x64)
     
-    - No support for handwriting in the Windows 10 RS4 build for Insiders. 
+    - No support for handwriting in the Windows 10 RS4 build and later. 
 
 - Windows 8.1 (x86, x64)
 
@@ -146,7 +146,7 @@ The following deployment scenario is not supported unless you are using AD RMS f
 
 - Running AD RMS and Azure RMS side by side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-There is a supported migration path [from AD RMS to Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](decommission-deactivate.md).
+There is a supported migration path [from AD RMS to Azure Information Protection](https://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](decommission-deactivate.md).
 
 
 

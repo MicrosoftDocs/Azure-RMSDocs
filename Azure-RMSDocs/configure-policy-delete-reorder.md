@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Delete or reorder an Azure Information Protection label
+title: Delete or reorder an Azure Information Protection label - AIP
 description: You can delete or reorder the Azure Information Protection labels that users see.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff

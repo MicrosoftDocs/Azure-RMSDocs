@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Tutorial - Edit the Azure Information Protection policy and create a new label
+title: Tutorial - Edit the Azure Information Protection policy and create a new label - AIP
 description: An introduction tutorial that edits the Azure Information Protection policy for your organization that should take you about 15 minutes to complete.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2018
+ms.date: 11/14/2018
 ms.topic: tutorial
 ms.service: information-protection
 
@@ -75,9 +75,11 @@ Using the Azure portal, we'll first change a couple of policy settings, and then
 
 ### Edit the policy settings
 
-1. Open a new browser window and [sign in to the Azure portal](https://portal.azure.com). Then navigate to **Azure Information Protection**. 
+1. Open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin. Then navigate to **Azure Information Protection**. 
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    
+    If you are not the global admin, use the following link for alternative roles: [Signing in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade. 
 

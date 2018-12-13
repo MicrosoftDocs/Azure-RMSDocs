@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Add or remove a label to or from an Azure Information Protection policy
+title: Add or remove a label to or from an Azure Information Protection policy - AIP
 description: Add or remove an Azure Information Protection label to or from the global policy for all users, or to or from a scoped policy for a subset of users.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1

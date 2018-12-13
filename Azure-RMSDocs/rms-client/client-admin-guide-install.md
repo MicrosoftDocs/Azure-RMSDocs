@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 11/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
@@ -46,7 +46,12 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
 - Windows PowerShell version 4.0
     
-    The PowerShell module for the client requires Windows PowerShell version 4.0, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type `$PSVersionTable` in a PowerShell session.
+    The PowerShell module for the client requires Windows PowerShell version 4.0, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type `$PSVersionTable` in a PowerShell session.
+
+- Screen resolution greater than 800x600
+    
+    Resolutions 800x600 and lower can't fully display the **Classify and protect - Azure Information Protection** dialog box when you right-click a file or folder in File Explorer.
+
 
 - Microsoft Online Services Sign-in Assistant 7.250.4303.0
     
@@ -64,21 +69,21 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     The client installation does not check for this prerequisite but it is needed for the Azure Information Protection client to classify and protect PDF files.
 
-- Group policy configuration for **List of managed add-ins**
+- Configure group policy to prevent the Azure Information Protection add-in from being disabled
     
-    For Office 2013 and later versions, configure the group policy setting **List of managed add-ins** and add the **Microsoft Azure Information Protection** add-in for Office applications. Specify the following programmatic identifiers (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
+    For Office 2013 and later versions, configure group policy to ensure that the **Microsoft Azure Information Protection** add-in for Office applications is always enabled. Without this configuration, the Microsoft Azure Information Protection add-in can get disabled and users will not be able to label their documents and emails in their Office application.
     
-    - For Outlook: `MSIP.OutlookAddin`
+    - For Outlook: Use the group policy setting documented in [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) from the Office documentation.
     
-    - For Word: `MSIP.WordAddin`
-    
-    - For Excel: `MSIP.ExcelAddin`
-    
-    - For PowerPoint: `MSIP.PowerPointAddin`
-    
-    If you do not configure this setting, the Microsoft Azure Information Protection add-in can get disabled and users will not be able to label their documents and emails in their Office application.
-    
-    For more information about configuring this group policy setting, see [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) from the Office documentation.
+    - For Word, Excel, and PowerPoint: Use the group policy setting **list of managed add-ins** documented in the Support article [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). 
+        
+        Specify the following programmatic identifiers (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
+        
+        For Word: `MSIP.WordAddin`
+        
+        For Excel: `MSIP.ExcelAddin`
+        
+        For PowerPoint: `MSIP.PowerPointAddin`
 
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.

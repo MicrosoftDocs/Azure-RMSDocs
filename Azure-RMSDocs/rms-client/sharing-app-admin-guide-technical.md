@@ -41,9 +41,9 @@ The Microsoft Rights Management sharing application is an optional downloadable 
 
 -   Full interoperability with PDF files protected using File Classification Infrastructure (FCI), and supported PDF authoring tools.
 
-The Microsoft Rights Management sharing application uses the [AD RMS Client 2.1 runtime](http://www.microsoft.com/download/details.aspx?id=38396). By using the functionality of AD RMS 2.1, the Microsoft Rights Management sharing application provides end users a simple protection and consumption experience.
+The Microsoft Rights Management sharing application uses the [AD RMS Client 2.1 runtime](https://www.microsoft.com/download/details.aspx?id=38396). By using the functionality of AD RMS 2.1, the Microsoft Rights Management sharing application provides end users a simple protection and consumption experience.
 
-With the October 2013 release of RMS, you can natively protect documents by using Office 2010 and send them to people in another company, who can then consume them by using the Azure Rights Management service from Azure Information Protection. In addition, with this release, if you use AD RMS in Cryptographic Mode 2, you can use RMS for individuals and consume content from people in another company that uses the Azure Rights Management service. For more information about Cryptographic Mode 2, see [AD RMS Cryptographic Modes](http://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
+With the October 2013 release of RMS, you can natively protect documents by using Office 2010 and send them to people in another company, who can then consume them by using the Azure Rights Management service from Azure Information Protection. In addition, with this release, if you use AD RMS in Cryptographic Mode 2, you can use RMS for individuals and consume content from people in another company that uses the Azure Rights Management service. For more information about Cryptographic Mode 2, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
 
 For deployment information, see [Automatic deployment for the Microsoft Rights Management sharing application](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)
 

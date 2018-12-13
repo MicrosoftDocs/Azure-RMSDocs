@@ -1,5 +1,5 @@
 ---
-title: Quickstart - Get started in the Azure portal
+title: Quickstart - Get started with Azure Information Protection in the Azure portal - AIP
 description: If your organization is brand new to Azure Information Protection, start here to add the service to the Azure portal, confirm the protection service is activated, and view the policy.
 author: cabailey
 author: cabailey
@@ -21,7 +21,7 @@ ms.service: information-protection
 #Customer intent: As an administrator, I want to see Azure Information Protection in the Azure portal so that I can configure the service.
 ---
 
-# Quickstart: Get started in the Azure portal
+# Quickstart: Get started with Azure Information Protection in the Azure portal
 
 In this quickstart, you'll add Azure Information Protection to the Azure portal, confirm the protection service is activated, and view your organization's default policy. 
 
@@ -31,7 +31,7 @@ You can finish this quickstart in 5 minutes.
 
 To complete this quickstart, you need:
 
-- A subscription that includes Azure Information Protection Plan 1 or Plan 1.
+- A subscription that includes Azure Information Protection Plan 1 or Plan 2.
     
     If you don't have one of these subscriptions, you can create a [free](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
@@ -43,7 +43,7 @@ Azure Information Protection isn't automatically available in the Azure portal. 
 
 1. Sign in to the [Azure portal](https://portal.azure.com) by using the global admin account for your tenant. 
     
-    If you are not the global admin, you can use one of the following [administrative roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal): **Information Protection Administrator** or **Security Administrator**.
+    If you are not the global admin, use the following link for alternative roles: [Signing in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. On the hub menu, select **Create a resource**, and then, from the search box for the Marketplace, type **Azure Information Protection**. 
     

@@ -1,11 +1,11 @@
 ---
-title: Quickstart - Configure a label for users to easily protect emails that contain sensitive information
+title: Quickstart - Configure a label for users to easily protect emails that contain sensitive information - AIP
 description: Configure a label that protects an email for a user by automatically applying the Do Not Forward protection.
 author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: quickstart
 ms.service: information-protection
 
@@ -71,9 +71,11 @@ For a full list of prerequisites to use Azure Information Protection, see [Requi
 
 ## Configure an existing label to apply the Do Not Forward protection
 
-1. Open a new browser window and [sign in to the Azure portal](https://portal.azure.com). Then navigate to **Azure Information Protection**. 
+1. Open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin. Then navigate to **Azure Information Protection**. 
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    
+    If you are not the global admin, use the following link for alternative roles: [Signing in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label you want to configure to apply the protection. 
 

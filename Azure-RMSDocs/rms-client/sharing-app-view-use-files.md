@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Open RMS-protected files with the RMS sharing app - AIP
+title: Open RMS-protected files with the RMS sharing app
 description: Instructions to view and use a protected file, which requires you to have the Rights Management (RMS) sharing application installed.
 author: cabailey
 ms.author: cabailey
@@ -23,21 +23,24 @@ ms.suite: ems
 
 ---
 
-# View and use files that have been protected by Rights Management
+# Use the Rights Management sharing application to view and use protected files
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
-When the [Rights Management (RMS) sharing application is installed on your computer](install-sharing-app.md), you view a protected file by simply double-clicking it. The file might be an attachment in an email message, or you might see it when you use File Explorer.
+> [!IMPORTANT]
+> **End of support notification**: The Rights Management sharing application for Windows is being replaced by the [Azure Information Protection client](aip-client.md). Support for this older application will stop January 31, 2019.
 
-> [!NOTE]
-> Before you can view the protected file, the Rights Management service must first confirm that you are authorized to view the file, which it does by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
->
-> If your organization does not use either Azure Information Protection or AD RMS, you can apply for a free account that will accept your credentials so that you can open files that are protected by using RMS:
->
-> -   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
->
->     When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
-> -   For more information, see [RMS for individuals and Azure Rights Management](../rms-for-individuals.md).
+When the [Rights Management (RMS) sharing application is installed on your computer](install-sharing-app.md), you can view a protected file by simply double-clicking it. The file might be an attachment in an email message, or you might see it when you use File Explorer.
+
+Before you can view the protected file, the Rights Management service must first confirm that you are authorized to view the file, which it does by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
+
+If your organization does not use either Azure Information Protection or AD RMS, you can apply for a free account that will accept your credentials so that you can open files that are protected by using RMS:
+
+- To apply for this account, click the link to apply for [RMS for individuals](https://go.microsoft.com/fwlink/?LinkId=309469). 
+    
+    When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
+
+- For more information, see [RMS for individuals and Azure Rights Management](../rms-for-individuals.md).
 
 ## To view a protected file
 By using File Explorer or the email message that contains the attachment, double-click the protected file, and enter your credentials if prompted to do so.

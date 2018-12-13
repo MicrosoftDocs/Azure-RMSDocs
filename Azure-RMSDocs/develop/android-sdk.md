@@ -38,10 +38,10 @@ This topic will guide you through setting up your environment for creating your 
 
 We recommend the following software on your development system:
 
--   Windows or OS X operating system to run the [Eclipse](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html) development environment.
+-   Windows or OS X operating system to run the [Eclipse](https://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html) development environment.
 -   This guide assumes that you are using the Eclipse SDK beginning with Eclipse Juno 4.2 and using a default installation.
 -   Java starting with Java 1.6.
--   [Android Developer Tools (ADT) Plugin](http://developer.android.com/sdk/installing/index.html). NOTE - You might be asked to restart Eclipse to complete the installation.
+-   [Android Developer Tools (ADT) Plugin](https://developer.android.com/studio/install). NOTE - You might be asked to restart Eclipse to complete the installation.
 
      
 
@@ -53,7 +53,7 @@ We recommend the following software on your development system:
 
     For more information see, [ADAL for Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
-    **Note**  If your application will not be using the ADAL Library as the OAuth 2.0 authentication library, you should review this Android guidance, [Some SecureRandom Thoughts](http://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
+    **Note**  If your application will not be using the ADAL Library as the OAuth 2.0 authentication library, you should review this Android guidance, [Some SecureRandom Thoughts](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
 
      
 

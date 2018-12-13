@@ -35,16 +35,6 @@
         href: concept-profile-engine-protection-profile-cpp.md
       - name: Protection API engine (C++)
         href: concept-profile-engine-protection-engine-cpp.md            
-  - name: Auditing
-    items:
-    - name: File API auditing (C++)
-      href: concept-auditing-file-cpp.md
-    - name: Policy API auditing (C++)
-      href: concept-auditing-policy-cpp.md
-    - name: Policy API execution state (C++)
-      href: concept-auditing-policy-executionstate-cpp.md        
-    - name: Policy API compute actions (C++)
-      href: concept-auditing-policy-computeactions-cpp.md          
   - name: Authentication (C++)
     href: concept-authentication-cpp.md
     items:
@@ -58,12 +48,24 @@
     items:
     - name: File API handler (C++)
       href: concept-handler-file-cpp.md
+      items:
+      - name: Auditing 
+        href: concept-auditing-file-cpp.md
     - name: Policy API handler (C++)
       href: concept-handler-policy-cpp.md
+      items:
+      - name: Execution state 
+        href: concept-handler-policy-executionstate-cpp.md  
+      - name: Compute actions 
+        href: concept-handler-policy-computeactions-cpp.md  
+      - name: Auditing 
+        href: concept-handler-policy-auditing-cpp.md
     - name: Protection API handler (C++)
       href: concept-handler-protection-cpp.md
   - name: Labels 
     href: concept-classification-labels.md
+  - name: Metadata
+    href: concept-mip-metadata.md
   - name: Observers for async (C++)
     href: concept-async-observers.md
     items:
@@ -220,8 +222,9 @@
     href: faqs-known-issues.md
   - name: Forums 
     href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
-  - name: SDK (public preview)
-    href: http://aka.ms/mipsdk
   - name: Samples
     href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
-   
+  - name: SDK (public preview)
+    href: http://aka.ms/mipsdk
+  - name: Security best practices
+    href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc

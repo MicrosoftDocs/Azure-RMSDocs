@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Configure labels and templates for different languages in Azure Information Protection
+title: Configure labels and templates for different languages in Azure Information Protection - AIP
 description: You can add support for different languages for the labels that users see on the Information Protection bar, and for any templates that users see, by specifying the languages in the Azure Information Protection policy and importing your translations.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde

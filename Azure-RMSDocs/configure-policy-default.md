@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: The default policy for Azure Information Protection
+title: The default policy for Azure Information Protection - AIP
 description: Understand how the default policy for Azure Information Protection is configured. If you modify the default policy, you can reference these values to return your policy to the defaults.
 author: cabailey
 ms.author: cabailey

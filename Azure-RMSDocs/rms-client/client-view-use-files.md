@@ -6,7 +6,7 @@ description: Instructions to view and use a protected document that requires you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/08/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
@@ -53,7 +53,7 @@ If your organization does not have a cloud-based account for you to use (for Off
 
 - If you were sent a protected email, follow the instructions to sign in with your social identity provider (such as Google for a Gmail account) or apply for a one-time passcode.
 
-- You can apply for a free account that will accept your credentials so that you can open documents that are protected by Rights Management. To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469) and use your company email address rather than a personal email address. 
+- You can apply for a free account that will accept your credentials so that you can open documents that are protected by Rights Management. To apply for this account, click the link to apply for [RMS for individuals](https://go.microsoft.com/fwlink/?LinkId=309469) and use your company email address rather than a personal email address. 
 
 ## To view and use a protected document
 

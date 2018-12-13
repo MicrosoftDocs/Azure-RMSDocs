@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Overview of Azure Rights Management protection from Azure Information Protection
+title: Overview of Azure Rights Management protection from Azure Information Protection - AIP
 description: Information about Azure Rights Management (Azure RMS), the protection technology used by Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
@@ -25,7 +25,7 @@ ms.suite: ems
 
 # What is Azure Rights Management?
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Azure Rights Management (often abbreviated to Azure RMS) is the protection technology used by [Azure Information Protection](what-is-information-protection.md).
@@ -61,7 +61,7 @@ Use the following table to identify business requirements or problems that your 
 |Ability to scale across your organization, as needed|√ Because Azure Rights Management runs as a cloud service with the Azure elasticity to scale up and out, you don’t have to provision or deploy additional on-premises servers.|
 |Ability to create simple and flexible policies|√ [Customized protection templates](configure-policy-templates.md) provide a quick and easy solution for administrators to apply policies, and for users to apply the correct level of protection for each document and restrict access to people inside your organization.<br /><br />For example, for a company-wide strategy paper to be shared with all employees, you could apply a read-only policy to all internal employees. Then, for a more sensitive document, such as a financial report, you could restrict access to executives only.|
 |Broad application support|√ Azure Rights Management has tight integration with Microsoft Office applications and services, and extends support for other applications by using the [Azure Information Protection client](./rms-client/aip-client.md ).<br /><br />√ The [Azure Information Protection SDKs](./develop/developers-guide.md) provide your internal developers and software vendors with APIs to write custom applications that support Azure Information Protection.<br /><br />For more information, see [Other applications that support the Rights Management APIs](api-support.md).|
-|IT must maintain control of data|√ Organizations can choose to manage their own tenant key and use the “[Bring Your Own Key](plan-implement-tenant-key.md)” (BYOK) solution and store their tenant key in Hardware Security Modules (HSMs).<br /><br />√ Support for auditing and [usage logging](log-analyze-usage.md) so that you can analyze for business insights, monitor for abuse, and (if you have an information leak) perform forensic analysis.<br /><br />√ Delegated access by using the [super user feature](configure-super-users.md) ensures that IT can always access protected content, even if a document was protected by an employee who then leaves the organization. In comparison, peer-to-peer encryption solutions risk losing access to company data.<br /><br />√ Synchronize [just the directory attributes that Azure RMS needs](/active-directory/active-directory-aadconnectsync-attributes-synchronized#azure-rms) to support a common identity for your on-premises Active Directory accounts, by using a [directory synchronization tool](/active-directory/active-directory-hybrid-identity-design-considerations-tools-comparison), such as Azure AD Connect.<br /><br />√ Enable single-sign on without replicating passwords to the cloud, by using AD FS.<br /><br />√ Organizations always have the choice to stop using the Azure Rights Management service without losing access to content that was previously protected by Azure Rights Management. For information about decommissioning options, see [Decommissioning and deactivating Azure Rights Management](decommission-deactivate.md). In addition, organizations who have deployed Active Directory Rights Management Services (AD RMS) can [migrate to the Azure Rights Management service](migrate-from-ad-rms-to-azure-rms.md) without losing access to data that was previously protected by AD RMS.|
+|IT must maintain control of data|√ Organizations can choose to manage their own tenant key and use the “[Bring Your Own Key](plan-implement-tenant-key.md)” (BYOK) solution and store their tenant key in Hardware Security Modules (HSMs).<br /><br />√ Support for auditing and [usage logging](log-analyze-usage.md) so that you can analyze for business insights, monitor for abuse, and (if you have an information leak) perform forensic analysis.<br /><br />√ Delegated access by using the [super user feature](configure-super-users.md) ensures that IT can always access protected content, even if a document was protected by an employee who then leaves the organization. In comparison, peer-to-peer encryption solutions risk losing access to company data.<br /><br />√ Synchronize [just the directory attributes that Azure RMS needs](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#azure-rms) to support a common identity for your on-premises Active Directory accounts, by using [a hybrid identity solution](/azure/active-directory/hybrid/), such as Azure AD Connect.<br /><br />√ Enable single-sign on without replicating passwords to the cloud, by using AD FS.<br /><br />√ Organizations always have the choice to stop using the Azure Rights Management service without losing access to content that was previously protected by Azure Rights Management. For information about decommissioning options, see [Decommissioning and deactivating Azure Rights Management](decommission-deactivate.md). In addition, organizations who have deployed Active Directory Rights Management Services (AD RMS) can [migrate to the Azure Rights Management service](migrate-from-ad-rms-to-azure-rms.md) without losing access to data that was previously protected by AD RMS.|
 > [!TIP]
 > If you are familiar with the on-premises version of Rights Management, Active Directory Rights Management Services (AD RMS), you might be interested in the comparison table from [Comparing Azure Rights Management and AD RMS](compare-on-premise.md).
 
@@ -74,7 +74,7 @@ Azure Rights Management supports the following security, compliance and regulat
 
 √ Certified for the following:
 
--   ISO/IEC 27001:2013 (./includes [ISO/IEC 27018](http://azure.microsoft.com/blog/2015/02/16/azure-first-cloud-computing-platform-to-conform-to-isoiec-27018-only-international-set-of-privacy-controls-in-the-cloud/))
+-   ISO/IEC 27001:2013 (./includes [ISO/IEC 27018](https://azure.microsoft.com/blog/2015/02/16/azure-first-cloud-computing-platform-to-conform-to-isoiec-27018-only-international-set-of-privacy-controls-in-the-cloud/))
 
 -   SOC 2 SSAE 16/ISAE 3402 attestations
 
@@ -86,7 +86,7 @@ Azure Rights Management supports the following security, compliance and regulat
 
 -   PCI DSS Level 1
 
-For more information about these external certifications, see the [Azure Trust Center](http://azure.microsoft.com/support/trust-center/compliance/).
+For more information about these external certifications, see the [Azure Trust Center](https://azure.microsoft.com/support/trust-center/compliance/).
 
 ## Next steps
 

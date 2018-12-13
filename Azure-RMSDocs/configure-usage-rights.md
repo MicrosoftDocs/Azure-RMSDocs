@@ -25,7 +25,7 @@ ms.suite: ems
 
 # Configuring usage rights for Azure Rights Management
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 When you set protection on files or emails by using the Azure Rights Management service from Azure Information Protection and you do not use a template, you must configure the usage rights yourself. In addition, when you configure templates or labels for Azure Rights Management protection, you select the usage rights that will then be automatically applied when the template or label is selected by users, administrators, or configured services. For example, in the Azure portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights.
 

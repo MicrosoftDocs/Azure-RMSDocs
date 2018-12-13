@@ -6,7 +6,7 @@ description: Information resources for the Azure Information Protection client f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
@@ -38,7 +38,7 @@ The Azure Information Protection client for Windows is a free, downloadable clie
 > [!TIP]
 > There's also an Azure Information Protection app for iOS and Android. For more information, see [FAQs for Azure Information Protection app for iOS and Android](mobile-app-faq.md )
 > 
-> For Mac computers and Windows Phones: Use the RMS sharing app for mobile devices and read the [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](http://technet.microsoft.com/dn451248).
+> For Mac computers and Windows Phones: Use the RMS sharing app for mobile devices and read the [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](https://technet.microsoft.com/dn451248).
 
 ## Install instructions
 

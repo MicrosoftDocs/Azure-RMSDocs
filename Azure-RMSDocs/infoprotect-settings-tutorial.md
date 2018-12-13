@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Tutorial - Configure Azure Information Protection policy settings to help classify documents and emails
+title: Tutorial - Configure Azure Information Protection policy settings to help classify documents and emails - AIP
 description: An introduction tutorial that steps you through configuring Azure Information Protection policy settings to help classify your organization's documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: tutorial
 ms.service: information-protection
 
@@ -43,7 +43,7 @@ You can finish this tutorial in about 15 minutes.
 
 To complete this tutorial, you need:
 
-1. A subscription that includes Azure Information Protection Plan 2.
+1. A subscription that includes Azure Information Protection Plan 1 or Plan 2.
     
     If you don't have a subscription that includes this plan, you can create a [free](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
@@ -77,9 +77,11 @@ Rather than relying on users to manually label their documents and emails, you c
 
 Using the Azure portal, we'll edit the global policy to change policy settings for all users.
 
-1. Open a new browser window and [sign in to the Azure portal](https://portal.azure.com). Then navigate to **Azure Information Protection**. 
+1. Open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin. Then navigate to **Azure Information Protection**. 
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    
+    If you are not the global admin, use the following link for alternative roles: [Signing in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade. 
 

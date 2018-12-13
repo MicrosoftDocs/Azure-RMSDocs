@@ -6,7 +6,7 @@ description: Phase 2 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
@@ -25,7 +25,7 @@ ms.suite: ems
 
 # Migration phase 2 - server-side configuration for AD RMS
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 4 though 6 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -78,7 +78,7 @@ Your current AD RMS deployment is using one of the following configurations for 
 - Password protected by using an external cryptographic provider.
 
 > [!NOTE]
-> For more information about using hardware security modules with AD RMS, see [Using AD RMS with Hardware Security Modules](http://technet.microsoft.com/library/jj651024.aspx).
+> For more information about using hardware security modules with AD RMS, see [Using AD RMS with Hardware Security Modules](https://technet.microsoft.com/library/jj651024.aspx).
 
 The two Azure Information Protection tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**) in Azure Key Vault. When you manage your own Azure Information Protection tenant key, it’s sometimes referred to as “bring your own key” (BYOK). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) article.
 
@@ -131,9 +131,9 @@ The template changes that you might need to make for this step:
 
 - If you created Azure Information Protection custom templates before the migration, you must manually export and import them.
 
-- If your templates in AD RMS used the **ANYONE** group, you might need to add users or groups from outside your organization. 
+- If your templates in AD RMS used the **ANYONE** group, you might need to manually add users or groups. 
     
-    In AD RMS, the ANYONE group granted rights to all authenticated users. This group is automatically converted to all users in your Azure AD tenant. If you do not need to grant rights to any additional users, no further action is needed. But if you were using the ANYONE group to include external users, you must manually add these users and the rights that you want to grant them.
+    In AD RMS, the ANYONE group granted rights to all users authenticated by your on-premises Active Directory, and this group is not supported by Azure Information Protection. The closet equivalent is a group that's automatically created for all users in your Azure AD tenant. If you were using the ANYONE group for your AD RMS templates, you might need to add users and the rights that you want to grant them.
 
 ### Procedure if you created custom templates before the migration
 
@@ -149,7 +149,7 @@ You can then publish or archive these templates as you would any other template 
 
 ### Procedure if your templates in AD RMS used the **ANYONE** group
 
-If your templates in AD RMS used the **ANYONE** group, this group is automatically converted to use the group named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. This group contains all users from your Azure AD tenant.
+If your templates in AD RMS used the **ANYONE** group, the closest equivalent group in Azure Information Protection is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. This group contains all users from your Azure AD tenant.
 
 When you manage templates and labels in the Azure portal, this group displays as your tenant's domain name in Azure AD. For example, this group might look like the following for Contoso: **contoso.onmicrosoft.com**. To add this group, the option displays **Add \<organization name> - All members**.
 
