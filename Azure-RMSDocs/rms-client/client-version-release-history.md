@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -47,10 +47,34 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Version 1.41.51.0
+## Versions later than 1.41.51.0
+
+If you have a version 1 of the client that is later than 1.41.51.0, it is a preview build for testing and evaluation purposes.  
 
 > [!TIP]
 > Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
+
+**Released**: 01/14/2019
+
+This version includes the MSIPC version 1.0.3592.627 of the RMS client.
+
+**New features:**
+
+- The Azure Information Protection scanner is now configured from the Azure portal, rather than using PowerShell. As a result, the following cmdlets are now deprecated:
+    - Add-AIPScannerRepository
+    - Add-AIPScannerScannedFileTypes
+    - Get-AIPScannerRepository
+    - Remove-AIPScannerRepository
+    - Remove-AIPScannerScannedFileTypes
+    - Set-AIPScannerRepository
+    - Set-AIPScannerScannedFileTypes
+
+The Azure Information Protection scanner now supports multiple configuration databases on the same SQL server instance.
+
+**Fixes**:
+
+
+## Version 1.41.51.0
 
 **Released**: 11/27/2018
 
