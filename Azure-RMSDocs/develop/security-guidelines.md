@@ -6,7 +6,7 @@ description: RMS-enabled applications are best built using Information Protectio
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 12/11/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
@@ -79,7 +79,7 @@ If your application doesn't correctly interpret and enforce the rights expressed
 
 The information protection system organizes rights into a few groupings. For more information, see [Configuring usage rights for Azure Rights Management](../configure-usage-rights.md).
 
-AIP allows a user to either decrypt information or not. The information doesn't have any inherent protection. If a user has the right to decrypt, the API permits it. The application is responsible for managing or protecting that information after it is in the clear. An application is responsible for managing its environment and interface to prevent the unauthorized use of information. For example, disabling the **Print** and **Copy** buttons if a license only grants the PLAY right. Your test suite should verify that your application acts correctly on all the license rights that it recognizes.
+AIP allows a user to either decrypt information or not. The information doesn't have any inherent protection. If a user has the right to decrypt, the API permits it. The application is responsible for managing or protecting that information after it is in the clear. An application is responsible for managing its environment and interface to prevent the unauthorized use of information. For example, disabling the **Print** and **Copy** buttons if a license only grants the VIEW right. Your test suite should verify that your application acts correctly on all the license rights that it recognizes.
 
 ### Minimum standard
 
