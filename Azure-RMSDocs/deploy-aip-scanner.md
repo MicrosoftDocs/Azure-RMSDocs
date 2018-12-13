@@ -296,6 +296,10 @@ To change the default scanner behavior for protecting file types other than Offi
 
 When you edit the registry, manually create the **MSIPC** key and **FileProtection** key if they do not exist, as well as a key for each file name extension.
 
+For example, for the scanner to protect TIFF images in addition to Office files and PDFs, the registry after you have edited it, will look like the following picture:
+
+![Editing the registry for the scanner to apply protection](./media/editregistry-scanner.png)
+
 ## When files are rescanned
 
 For the first scan cycle, the scanner inspects all files in the configured data stores and then for subsequent scans, only new or modified files are inspected. 
