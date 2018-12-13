@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/08/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
@@ -131,13 +131,11 @@ When this option is selected, the email is encrypted and recipients must be auth
 
 Similarly, by default, unprotected [Office documents](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) that are attached to the email inherit the same permissions. These documents are automatically protected and when they are downloaded, they can be saved, edited, copied, and printed from Office applications by the recipients. When the document is saved by a recipient, it can be saved to a new name and even a different format. However, only file formats that support protection are available so that the document cannot be saved without the original protection. If you want different usage rights for an attachment, or your attachment is not an Office document that supports this inherited protection, protect the file before you attach it to the email. You can then assign the specific usage rights that you need for the file.
 
-Alternatively, you can change this protection inheritance of documents by using either of the following configuration parameters that you set with the [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps) command, **Set-IRMConfiguration**. Use these options when you don't need to retain the original protection for the document after the user is authenticated:
+Alternatively, you can change this protection inheritance of documents by specifying `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true` with [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps). Use this configuration when you don't need to retain the original protection for the document after the user is authenticated. When recipients open the email message, the document is not protected.
 
-- To remove the document's protection for all recipients: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. When these recipients open the email message, the document is not protected.
+If you do need an attached document to retain the original protection, see [Secure document collaboration by using Azure Information Protection](secure-collaboration-documents.md).
 
-- To remove the document's protection only for recipients who view the document in their browser (typically because it is sent to a social provider address, such as Gmail): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. When these recipients download the document, the protection is removed.
-
-For more information about removing protection only for recipients who view the document in their browser, see the Office blog post, [Admin control for attachments now available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). If you do need an attached document to retain the original protection, see [Secure document collaboration by using Azure Information Protection](secure-collaboration-documents.md).
+Note: If you see references to **DecryptAttachmentFromPortal**, this parameter is now deprecated for [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) and is no longer available.
 
 ## Rights Management issuer and Rights Management owner
 
