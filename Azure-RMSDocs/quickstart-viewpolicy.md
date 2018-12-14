@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/15/2018
 ms.topic: quickstart
 ms.service: information-protection
 
@@ -90,7 +90,7 @@ The first time you connect to the Azure Information Protection service by using 
     
 3. After the labels, in the **Configure settings to display and apply on Information Protection end users** section, you also see some policy settings. For example, there is no default label set, documents and emails are not required to have a label, and users do not have to provide justification when they change labels:
     
-    ![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-policy-default-settings.png) 
+    ![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-policy-default-settings-quickstart.png) 
 
 4. Because you are only viewing the labels and settings, you can close any blades that you have opened.
 
