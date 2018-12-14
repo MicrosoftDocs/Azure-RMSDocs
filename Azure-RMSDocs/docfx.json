@@ -3,66 +3,31 @@
     "content": [
       {
         "files": [
-          "**/*.md",
-          "**/*.yml"
+	  "**/**.md", 
+          "**/**.yml"
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
-          "**/_themes/**"
-        ],
-        "src": "articles",
-        "dest": "."
-      },
-      {
-      "files": [
-          "**/*.md",
-          "**/*.yml"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "**/_themes/**"
-        ],
-        "src": "bread",
-        "dest": "bread"
+          "**/includes/**"
+        ]
       }
     ],
     "resource": [
-      {
-        "files": [
-          "**/*.svg",
+        {
+          "files": [
+          "**/images/**", 
           "**/*.png",
           "**/*.jpg",
-          "**/*.jpeg",
           "**/*.gif",
-          "**/*.svg"
-        ],
+          "**/*.bmp",
+          "**/*.html"
+          ],
         "exclude": [
           "**/obj/**",
-          "**/_themes/**"
-        ],
-        "src": "articles",
-        "dest": "."
-      },
-      {
-        "files": [
-          "includes/**/*.svg",
-          "includes/**/*.png",
-          "includes/**/*.jpg",
-          "includes/**/*.jpeg",
-          "includes/**/*.gif"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/_themes/**"
-        ],
-        "src": null,
-        "dest": null
+          "_themes/**"
+        ]
       }
     ],
-    "overwrite": [],
-    "externalReference": [],
     "dest": "Azure-RMSDocs",
     "template": "docs.html",
     "globalMetadata": {
