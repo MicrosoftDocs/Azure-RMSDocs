@@ -15,7 +15,7 @@ metadata:
   ms.date: 12/14/2018
   ms.author: mbaldwin
 abstract:
-  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection—no matter where it's stored or who it's shared with.
+  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection, no matter where it's stored or who it's shared with.
 sections:
 - title: 
   items:
@@ -26,12 +26,12 @@ sections:
     - title: Learn more about Azure Information Protection
       href: what-is-information-protection.md
       image: 
-        src: ./media/i_learn-about.svg
+        src: https://docs.microsoft.com/media/common/i_learn-about.svg
         href: what-is-information-protection.md
     - title:  Get started with Azure Information Protection
       href: quickstart-viewpolicy.md
       image: 
-        src: ./media/i_quick-start.svg
+        src: https://docs.microsoft.com/media/common/i_quick-start.svg
         href: quickstart-viewpolicy.md
 - title: 5-Minute Azure Information Protection quickstarts
   items:
@@ -41,18 +41,18 @@ sections:
     style: icon48
     items: 
     - image: 
-        src: ./media/i_portal.svg
+        src: https://docs.microsoft.com/media/common/i_portal.svg
       text: Azure Portal
       href: quickstart-viewpolicy.md
     - image: 
-        src: ./media/i_search.svg
+        src: https://docs.microsoft.com/media/common/i_search.svg
       text: Find your sensitive information
       href: quickstart-findsensitiveinfo.md
     - image: 
-        src: ./media/i_config-tools.svg
+        src: https://docs.microsoft.com/media/common/i_config-tools.svg
       text: Configure a label
       href: quickstart-label-dnf-protectedemail.md
     - image: 
-        src: i_categorize.svg
+        src: https://docs.microsoft.com/media/common/i_categorize.svg
       text: Create a new label
       href: quickstart-label-specificusers.md
