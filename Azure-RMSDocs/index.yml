@@ -56,3 +56,14 @@ sections:
         src: https://docs.microsoft.com/media/common/i_categorize.svg
       text: Create a new label
       href: quickstart-label-specificusers.md
+- title: Step-by-Step Tutorials
+  items:
+  - type: paragraph
+    text: Learn how to definepolicies
+  - type: list
+    style: ordered
+    items:
+    - title: Edit the Azure Information Protection policy and create a new label
+      href: infoprotect-quick-start-tutorial.md
+    - title: Configure Azure Information Protection policy settings that work together
+      href: infoprotect-settings-tutorial.md
