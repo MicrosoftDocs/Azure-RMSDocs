@@ -36,7 +36,7 @@ sections:
 - title: 5-Minute Azure Information Protection quickstarts
   items:
   - type: paragraph
-    text: Learn how to protect your data using the following quickstart samples: 
+    text: Learn how to protect your data using the following quickstart samples.
   - type: list
     style: icon48
     items: 
