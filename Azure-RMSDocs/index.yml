@@ -59,7 +59,7 @@ sections:
 - title: Step-by-Step Tutorials
   items:
   - type: paragraph
-    text: Learn how to edit policies, create new labels, and configure settings.
+    text: Learn how to edit policies, create new labels and configure settings.
   - type: list
     style: ordered
     items:
