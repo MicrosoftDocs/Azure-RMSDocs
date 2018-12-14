@@ -1,155 +1,119 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Azure Information Protection documentation
+title: Azure Information Protection Documentation
 metadata:
   document_id: na
-  title: Azure Information Protection documentation
-  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection—no matter where it’s stored or who it’s shared with.
-  keywords:
+  title: Azure Information Protection Documentation
+  meta.description: Control and help secure email, documents, and sensitive data that you share outside your company walls. 
+  services: information-protection
   author: msmbaldwin
-  ms.author: mbaldwin
   manager: mbaldwin
-  ms.date: 12/15/2018
-  ms.topic: landing-page
-  ms.devlang: 
   ms.service: information-protection
+  ms.tgt_pltfrm: na
+  ms.devlang: na
+  ms.topic: landing-page
+  ms.date: 12/14/2018
+  ms.author: mbaldwin
+abstract:
+  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection—no matter where it’s stored or who it’s shared with.
 sections:
-- items:
-  - type: markdown
-    text: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection—no matter where it’s stored or who it’s shared with. 
-- items:
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 2
-    items:
-    - href: what-is-information-protection.md
-      html: <p>Learn more about Azure Information Protection.</p>
-      image:
-        src: https://docs.microsoft.com/en-us/media/common/i_overview.svg
-      title: What is Azure Information Protection?
-    - href: free-trial-sign-up.md
-      html: <p>Try Intune with this simple tutorial.</p>
-      image:
-        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
-      title: Get started
-    - href: get-support.md
-      html: <p>Learn how to create a support ticket and get help when you need it.</p>
-      image:
-        src: https://docs.microsoft.com/en-us/media/common/i_support.svg
-      title: Get support
-    - href: whats-new.md
-      html: <p>See what's new in Intune this week.</p>
-      image:
-        src: https://docs.microsoft.com/en-us/media/common/i_whats-new.svg
-      title: What's new
-- title: New articles and blog posts
+- title: 
   items:
-  - type: paragraph
-    text: 'Read the latest and greatest information you need to know.'
   - type: list
     style: cards
-    className: cardsM
-    columns: 3
-    items: 
-    - href: what-is-intune.md
-      title: Learn about Intune on the Azure portal
-      image:
-        src: https://docs.microsoft.com/en-us/media/common/i_portal.svg
-    - href: ui-changes.md
-      title: See where your Intune features are in the Azure portal 
-      image:
-        src: https://docs.microsoft.com/en-us/media/common/i_guide.svg
-    - href: high-level-architecture.md
-      title: View the Intune high-level architecture
-      image:
-        src: https://docs.microsoft.com/en-us/media/common/i_architecture.svg
-    - href: enrollment-autopilot.md 
-      title: Windows AutoPilot Deployment Program support in Microsoft Intune
-      image:
-        src: https://docs.microsoft.com/en-us/media/common/i_generic-database.svg
-    - href: https://blogs.technet.microsoft.com/intunesupport/2018/09/12/support-tip-intune-support-for-ios-12/
-      title: "[Blog] Support Tip: Intune Support for iOS 12"
-      image:
-        src: https://docs.microsoft.com/en-us/media/common/i_blog.svg
-    - href: https://blogs.technet.microsoft.com/intunesupport/2018/09/04/coming-soon-new-intune-support-experience-for-premier-customers/
-      title: "[Blog] New Intune support experience for Premier customers"
+    className: cardsFTitle
+    items:
+    - title:  Learn more about Azure Information Protection
+      href: what-is-information-protection.md
       image: 
-        src: https://docs.microsoft.com/en-us/media/common/i_blog.svg
-    
-- title: Videos
+        src: /media/common/i_learn-about.svg
+        href: what-is-information-protection.md
+    - title:  Get started with Azure Information Protection
+      href: quickstart-viewpolicy.md
+      image: 
+        src: /media/common/i_quick-start.svg
+        href: quickstart-viewpolicy.md
+- title: 5-Minute Azure Information Protection quickstarts
   items:
-  - type: markdown
-    text: ">[!VIDEO https://www.youtube.com/embed/x8nWl1eB10Y]"
   - type: paragraph
-    text: ' '    
-  - type: markdown
-    text: ">[!VIDEO https://www.youtube.com/embed/Cn29dmgDcIw]"
-
-- title: Free Intune Training
+    text: 'Learn how to deploy an NGINX web-server within a Virtual Machine running Ubuntu:'
+  - type: list
+    style: icon48
+    items: 
+    - image: 
+        src: https://docs.microsoft.com/azure/virtual-machines/linux/media/index/cli.svg
+      text: Azure CLI
+      href: https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-quick-create-cli?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json
+    - image: 
+        src: https://docs.microsoft.com/azure/virtual-machines/linux/media/index/portal.svg
+      text: Azure portal
+      href: https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-quick-create-portal?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json
+    - image: 
+        src: https://docs.microsoft.com/azure/virtual-machines/linux/media/index/logo_powershell.svg
+      text: Azure PowerShell
+      href: https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-quick-create-powershell?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json
+- title: 5-Minute Windows quickstarts
+  items: 
+  - type: paragraph
+    text: 'Learn how to deploy an IIS web-server within a virtual machine running Windows Server 2016:'
+  - type: list
+    style: icon48
+    items: 
+    - image: 
+        src: https://docs.microsoft.com/azure/virtual-machines/windows/media/index/logo_powershell.svg
+      text: Azure PowerShell
+      href: https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-quick-create-powershell?toc=/azure/virtual-machines/windows/toc.json
+    - image: 
+        src: https://docs.microsoft.com/azure/virtual-machines/windows/media/index/portal.svg
+      text: Azure portal
+      href: https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-quick-create-portal?toc=/azure/virtual-machines/windows/toc.json
+    - image: 
+        src: https://docs.microsoft.com/azure/virtual-machines/windows/media/index/cli.svg
+      text: Azure CLI
+      href: https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-quick-create-cli?toc=/azure/virtual-machines/windows/toc.json
+- title: Build your skills with Microsoft Learn
   items:
   - type: list
     style: cards
-    className: cardsM
-    columns: 1
-    items: 
-    - href: https://www.pluralsight.com/courses/windows-10-configuring-intune-creators
-      title: "Windows 10 Configuring: Plan and Implement Microsoft Intune"
-      image:
-        src: https://docs.microsoft.com/en-us/media/logos/logo_pluralsight.svg        
-
-- title: Planning articles 
-  items:
-  - type: list
-    style: unordered
-    items: 
-    - html: <a href="/intune/planning-guide">Intune deployment planning, design, and implementation guide</a>
-    - html: <a href="/intune/migration-guide">Intune migration guide</a>
-
-- title: How-to articles
-  items:
-  - type: list
-    style: unordered
+    className: cardsFTitle
     items:
-    - html: <a href="/intune/device-enrollment">Enroll devices</a>
-    - html: <a href="/intune/device-management">Manage devices</a>
-    - html: <a href="/intune/app-management">Manage apps</a>
-    - html: <a href="/intune/device-profiles">Configure devices</a>
-    - html: <a href="/intune/device-compliance-get-started">Set device compliance</a>
-    - html: <a href="/intune/conditional-access">Set up conditional access</a>
-    - html: <a href="/intune/app-protection-policy">Protect apps</a>
-    - html: <a href="/intune/mobile-threat-defense">Set up mobile threat defense</a>
-    - html: <a href="/intune/network-access-control-integrate">Integrate network access control</a>
-    - html: <a href="/intune/role-based-access-control">Manage roles</a>
-    - html: <a href="/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json">Manage PCs with the Intune software client</a>
-
-- title: Troubleshooting articles
+    - title: Introduction to Azure compute
+      href: /learn/modules/intro-to-azure-compute/
+      image: 
+        src: /learn/achievements/intro-to-azure-compute.svg
+        href: /learn/modules/intro-to-azure-compute/
+    - title: Introduction to Azure Virtual Machines
+      href: /learn/modules/intro-to-azure-virtual-machines/
+      image: 
+        src: /learn/achievements/intro-to-azure-virtual-machines.svg
+        href: /learn/modules/intro-to-azure-virtual-machines/
+    - title:  Add and size disks in Azure Virtual Machines
+      href: /learn/modules/add-and-size-disks-in-azure-virtual-machines/
+      image: 
+        src: /learn/achievements/add-and-size-disks-in-azure-virtual-machines.svg
+        href: /learn/modules/add-and-size-disks-in-azure-virtual-machines/
+  - type: paragraph
+    text: <a href="/learn/browse/?products=azure-virtual-machines">More interactive learning...</a>
+- title: Free Pluralsight Video Training
   items:
   - type: list
-    style: unordered
+    style: cards
+    className: cardsFTitle
     items:
-    - html: <a href="/intune/help-desk-operators">Help users with the Troubleshooting portal</a>
-    - html: <a href="/intune/known-issues">Known issues with Intune</a>
-    - html: <a href="/intune/get-support">Get support</a>
-
-- title: Developing and customizing articles
+    - title: Azure Administrator
+      href: https://go.microsoft.com/fwlink/?linkid=2012827
+      image: 
+        src: https://docs.microsoft.com/media/logos/logo_pluralsight.svg
+        href: https://go.microsoft.com/fwlink/?linkid=2012827
+- title: Reference
   items:
   - type: list
-    style: unordered
+    style: cards
+    className: cardsD
     items:
-    - html: <a href="/intune/custom-settings-configure">Configure custom device settings</a>
-    - html: <a href="/intune/apps-prepare-mobile-application-management">Prepare line of business (LOB) apps with the Intune App Wrapper Tool</a>
-    - html: <a href="/intune/app-sdk">Prepare LOB apps with the Intune App SDK</a>
-    - html: <a href="https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/intune_graph_overview">Working with Intune in Microsoft Graph</a>
-    - html: <a href="/intune/reports-nav-intune-data-warehouse">Intune Data Warehouse API</a>
-
-- title: Other resources
-  items:
-  - type: list
-    style: unordered
-    items:
-    - html: <a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program">150+ licenses? Leverage your FastTrack benefits</a>
-    - html: <a href="https://blogs.technet.microsoft.com/enterprisemobility/">Read the Enterprise Mobility and Security blog</a>
-    - html: <a href="https://blogs.technet.microsoft.com/intunesupport/"> Get help on the Intune support blog</a>
-    - html: <a href="https://microsoftintune.uservoice.com/forums/291681-ideas">Give feedback on Intune at UserVoice</a>
-    - html: <a href="https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc">Ask or answer questions on the Intune discussion forum</a>
+    - title: Command-Line
+      html: <p><a href="/cli/azure/vm">Azure CLI</a></p><p><a href="/powershell/azureps-cmdlets-docs">Azure PowerShell</a></p>
+    - title: Languages
+      html: <p><a href="/dotnet/api/microsoft.azure.management.compute">.NET</a></p><p><a href="/java/api">Java</a></p><p><a href="https://azure.microsoft.com/develop/nodejs/#azure-sdk">Node?.js</a></p><p><a href="https://azure.microsoft.com/develop/python/">Python</a></p>
+    - title: REST
+      html: <p><a href="/rest/api/compute">REST API Reference</a></p>
