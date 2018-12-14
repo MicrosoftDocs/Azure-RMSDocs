@@ -1,0 +1,155 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Azure Information Protection documentation
+metadata:
+  document_id: na
+  title: Azure Information Protection documentation
+  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection—no matter where it’s stored or who it’s shared with.
+  keywords:
+  author: msmbaldwin
+  ms.author: mbaldwin
+  manager: mbaldwin
+  ms.date: 12/15/2018
+  ms.topic: landing-page
+  ms.devlang: 
+  ms.service: information-protection
+sections:
+- items:
+  - type: markdown
+    text: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection—no matter where it’s stored or who it’s shared with. 
+- items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 2
+    items:
+    - href: what-is-information-protection.md
+      html: <p>Learn more about Azure Information Protection.</p>
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_overview.svg
+      title: What is Azure Information Protection?
+    - href: free-trial-sign-up.md
+      html: <p>Try Intune with this simple tutorial.</p>
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+      title: Get started
+    - href: get-support.md
+      html: <p>Learn how to create a support ticket and get help when you need it.</p>
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_support.svg
+      title: Get support
+    - href: whats-new.md
+      html: <p>See what's new in Intune this week.</p>
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_whats-new.svg
+      title: What's new
+- title: New articles and blog posts
+  items:
+  - type: paragraph
+    text: 'Read the latest and greatest information you need to know.'
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items: 
+    - href: what-is-intune.md
+      title: Learn about Intune on the Azure portal
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_portal.svg
+    - href: ui-changes.md
+      title: See where your Intune features are in the Azure portal 
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_guide.svg
+    - href: high-level-architecture.md
+      title: View the Intune high-level architecture
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_architecture.svg
+    - href: enrollment-autopilot.md 
+      title: Windows AutoPilot Deployment Program support in Microsoft Intune
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_generic-database.svg
+    - href: https://blogs.technet.microsoft.com/intunesupport/2018/09/12/support-tip-intune-support-for-ios-12/
+      title: "[Blog] Support Tip: Intune Support for iOS 12"
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_blog.svg
+    - href: https://blogs.technet.microsoft.com/intunesupport/2018/09/04/coming-soon-new-intune-support-experience-for-premier-customers/
+      title: "[Blog] New Intune support experience for Premier customers"
+      image: 
+        src: https://docs.microsoft.com/en-us/media/common/i_blog.svg
+    
+- title: Videos
+  items:
+  - type: markdown
+    text: ">[!VIDEO https://www.youtube.com/embed/x8nWl1eB10Y]"
+  - type: paragraph
+    text: ' '    
+  - type: markdown
+    text: ">[!VIDEO https://www.youtube.com/embed/Cn29dmgDcIw]"
+
+- title: Free Intune Training
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 1
+    items: 
+    - href: https://www.pluralsight.com/courses/windows-10-configuring-intune-creators
+      title: "Windows 10 Configuring: Plan and Implement Microsoft Intune"
+      image:
+        src: https://docs.microsoft.com/en-us/media/logos/logo_pluralsight.svg        
+
+- title: Planning articles 
+  items:
+  - type: list
+    style: unordered
+    items: 
+    - html: <a href="/intune/planning-guide">Intune deployment planning, design, and implementation guide</a>
+    - html: <a href="/intune/migration-guide">Intune migration guide</a>
+
+- title: How-to articles
+  items:
+  - type: list
+    style: unordered
+    items:
+    - html: <a href="/intune/device-enrollment">Enroll devices</a>
+    - html: <a href="/intune/device-management">Manage devices</a>
+    - html: <a href="/intune/app-management">Manage apps</a>
+    - html: <a href="/intune/device-profiles">Configure devices</a>
+    - html: <a href="/intune/device-compliance-get-started">Set device compliance</a>
+    - html: <a href="/intune/conditional-access">Set up conditional access</a>
+    - html: <a href="/intune/app-protection-policy">Protect apps</a>
+    - html: <a href="/intune/mobile-threat-defense">Set up mobile threat defense</a>
+    - html: <a href="/intune/network-access-control-integrate">Integrate network access control</a>
+    - html: <a href="/intune/role-based-access-control">Manage roles</a>
+    - html: <a href="/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json">Manage PCs with the Intune software client</a>
+
+- title: Troubleshooting articles
+  items:
+  - type: list
+    style: unordered
+    items:
+    - html: <a href="/intune/help-desk-operators">Help users with the Troubleshooting portal</a>
+    - html: <a href="/intune/known-issues">Known issues with Intune</a>
+    - html: <a href="/intune/get-support">Get support</a>
+
+- title: Developing and customizing articles
+  items:
+  - type: list
+    style: unordered
+    items:
+    - html: <a href="/intune/custom-settings-configure">Configure custom device settings</a>
+    - html: <a href="/intune/apps-prepare-mobile-application-management">Prepare line of business (LOB) apps with the Intune App Wrapper Tool</a>
+    - html: <a href="/intune/app-sdk">Prepare LOB apps with the Intune App SDK</a>
+    - html: <a href="https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/intune_graph_overview">Working with Intune in Microsoft Graph</a>
+    - html: <a href="/intune/reports-nav-intune-data-warehouse">Intune Data Warehouse API</a>
+
+- title: Other resources
+  items:
+  - type: list
+    style: unordered
+    items:
+    - html: <a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program">150+ licenses? Leverage your FastTrack benefits</a>
+    - html: <a href="https://blogs.technet.microsoft.com/enterprisemobility/">Read the Enterprise Mobility and Security blog</a>
+    - html: <a href="https://blogs.technet.microsoft.com/intunesupport/"> Get help on the Intune support blog</a>
+    - html: <a href="https://microsoftintune.uservoice.com/forums/291681-ideas">Give feedback on Intune at UserVoice</a>
+    - html: <a href="https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc">Ask or answer questions on the Intune discussion forum</a>
