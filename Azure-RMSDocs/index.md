@@ -10,7 +10,7 @@ ms.date: 09/26/2018
 ---
 # Azure Information Protection Documentation
 
-Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection—no matter where it’s stored or who it’s shared with.
+Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection, no matter where it's stored or who it's shared with.
 
 <ul class="panelContent cardsFTitle">
     <li>
