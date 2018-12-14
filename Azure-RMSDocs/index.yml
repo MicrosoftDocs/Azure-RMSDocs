@@ -58,10 +58,9 @@ sections:
       href: quickstart-label-specificusers.md
 - title: Step-by-Step Tutorials
   items:
-  - type: paragraph
-    text: Learn how to definepolicies
   - type: list
     style: ordered
+    text: Learn how to edit policies, create new labels, and configure settings.
     items:
     - title: Edit the Azure Information Protection policy and create a new label
       href: infoprotect-quick-start-tutorial.md
