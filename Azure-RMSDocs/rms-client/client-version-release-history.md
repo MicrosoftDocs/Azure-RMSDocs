@@ -69,10 +69,17 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - Set-AIPScannerRepository
     - Set-AIPScannerScannedFileTypes
 
-The Azure Information Protection scanner now supports multiple configuration databases on the same SQL server instance.
+- The Azure Information Protection scanner now supports multiple configuration databases on the same SQL server instance when you specify a profile name.
 
 **Fixes**:
 
+**Additional changes:**
+
+- The following sensitive information types are no longer supported for labels that you configure for recommended or automatic classification:
+    - EU Phone Number
+    - EU GPS Coordinates
+
+- A new PowerShell cmdlet, [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration), for scenarios where the Azure Information Protection scanner cannot download its configuration from the Azure portal.
 
 ## Version 1.41.51.0
 
@@ -141,6 +148,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - New cmdlet, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): Gets the current status of the service for the scanner.  
     
     - New cmdlet, [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan): Instructs the scanner to start a one time scan cycle when the schedule is set to manual.
+    
+    - PDF documents are now protected by default when you use the ISO standard for PDF encryption.
     
     - SharePoint Server 2010 is supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
