@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2018
+ms.date: 12/19/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 
@@ -210,7 +210,7 @@ To help prevent users from changing files that are critical for computer operati
 
 By default, the scanner also excludes the same file types as the Azure Information Protection client with the following exceptions:
 
-    - .rtf, .rar, and .zip are also excluded
+- .rtf, .rar, and .zip are also excluded
 
 You can change the file types included or excluded for file inspection by the scanner when you use the following PowerShell cmdlets:
 
