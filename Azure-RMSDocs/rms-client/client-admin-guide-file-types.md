@@ -223,7 +223,7 @@ You can change the file types included or excluded for file inspection by the sc
 > [!NOTE]
 > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
 
-By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, edit the registry and specify the additional file types that you want to be protected. For instructions, see [Editing the registry for the scanner](../deploy-aip-scanner.md#Editing-the-registry-for-the-scanner) from the scanner deployment instructions.
+By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, edit the registry and specify the additional file types that you want to be protected. For instructions, see [Editing the registry for the scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) from the scanner deployment instructions.
 
 #### To scan .zip files
 
