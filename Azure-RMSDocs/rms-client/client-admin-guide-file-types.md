@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2018
+ms.date: 12/19/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 
@@ -210,7 +210,7 @@ To help prevent users from changing files that are critical for computer operati
 
 By default, the scanner also excludes the same file types as the Azure Information Protection client with the following exceptions:
 
-    - .rtf, .rar, and .zip are also excluded
+- .rtf, .rar, and .zip are also excluded
 
 You can change the file types included or excluded for file inspection by the scanner when you use the following PowerShell cmdlets:
 
@@ -223,7 +223,7 @@ You can change the file types included or excluded for file inspection by the sc
 > [!NOTE]
 > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
 
-By default, the scanner protects only Office file types. To change this behavior for the scanner, edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance.
+By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, edit the registry and specify the additional file types that you want to be protected. For instructions, see [Editing the registry for the scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) from the scanner deployment instructions.
 
 #### To scan .zip files
 
