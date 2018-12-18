@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/14/2018
+ms.date: 01/14/2019
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -70,6 +70,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - Set-AIPScannerScannedFileTypes
 
 - The Azure Information Protection scanner now supports multiple configuration databases on the same SQL server instance when you specify a profile name.
+
+- If you label and protect files by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. [More information](client-admin-guide-document-tracking.md#using-powerShell-to-register-labeled-documents-with-the-document-tracking-site)
 
 **Fixes**:
 
