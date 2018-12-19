@@ -83,6 +83,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - A new PowerShell cmdlet, [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration), for scenarios where the Azure Information Protection scanner cannot download its configuration from the Azure portal.
 
+- The Azure Information Protection scanner no longer excludes .zip files by default.
+
 ## Version 1.41.51.0
 
 **Released**: 11/27/2018
