@@ -106,7 +106,7 @@ To generate these reports, the endpoints send the following types of information
 - The client operating system version.
 
 > [!NOTE]
-> When you create the workspace for the reports, you see a checkbox for document content matches. If you select this checkbox, the actual data that's identified by the sensitive information types is also collected. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to collect this data, do not select this checkbox.
+> Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for document content matches. When you select this checkbox, the actual data that's identified by the sensitive information types or your custom conditions is also collected. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to collect this data, do not select this checkbox.
 >
 > Currently, this information is not displayed in the reports but can be viewed and retrieved with queries.
 
