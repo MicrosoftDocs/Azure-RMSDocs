@@ -107,6 +107,8 @@ To generate these reports, the endpoints send the following types of information
 
 > [!NOTE]
 > If you select the checkbox for content matches, the actual data that's identified by the sensitive information types is also collected. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to collect this data, do not select this checkbox.
+>
+> Currently, this information is not displayed in the reports but can be viewed and retrieved with queries. 
 
 This information is stored in an Azure Log Analytics workspace that your organization owns and can be viewed by users who have access rights to this workspace. For information about configuring access to your workspace, see the [Manage accounts and users](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) section from the Azure documentation.
 
