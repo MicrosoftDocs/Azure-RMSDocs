@@ -33,10 +33,10 @@ sections:
       image: 
         src: https://docs.microsoft.com/media/common/i_quick-start.svg
         href: quickstart-viewpolicy.md
-- title: 5-Minute Azure Information Protection quickstarts
+- title: 5-Minute Quickstarts
   items:
   - type: paragraph
-    text: Learn how to protect your data using the following quickstart samples.
+    text: Learn how to protect your data using the following quickstarts.
   - type: list
     style: icon48
     items: 
@@ -61,7 +61,7 @@ sections:
   - type: paragraph
     text: Learn how to edit policies, create new labels and configure settings.
   - type: list
-    style: ordered
+    style: unordered
     items:
     - html: <a href="/azure/information-protection/infoprotect-quick-start-tutorial">Edit the Azure Information Protection policy and create a new label</a>
     - html: <a href="/azure/information-protection/infoprotect-settings-tutorial">Configure Azure Information Protection policy settings that work together</a>
