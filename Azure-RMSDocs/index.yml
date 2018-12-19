@@ -2,9 +2,8 @@
 documentType: LandingData
 title: Azure Information Protection Documentation
 metadata:
-  document_id: na
   title: Azure Information Protection Documentation
-  meta.description: Control and help secure email, documents, and sensitive data that you share outside your company walls. 
+  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. 
   services: information-protection
   author: msmbaldwin
   manager: mbaldwin
@@ -14,6 +13,7 @@ metadata:
   ms.topic: landing-page
   ms.date: 12/14/2018
   ms.author: mbaldwin
+  layout: LandingPage
 abstract:
   description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection, no matter where it's stored or who it's shared with.
 sections:
