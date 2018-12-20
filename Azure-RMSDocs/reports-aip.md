@@ -135,7 +135,7 @@ To view the Azure Information Protection reports and create your own, make sure 
     
     - To use an existing Log Analytics workspace: Select the workspace from the list.
 
-If you need help creating the Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
+If you need help with creating the Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
 When the workspace is configured, you're ready to view the reports.
 
