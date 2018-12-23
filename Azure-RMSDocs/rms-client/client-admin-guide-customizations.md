@@ -533,7 +533,7 @@ If a header or footer text is more than a single line, create a key and value fo
 
 **Label applied manually**
 
-To remove this multline footer, you create the following two entries:
+To remove this multiline footer, you create the following two entries:
 
 - Key 1: **ExternalContentMarkingToRemove**
 
