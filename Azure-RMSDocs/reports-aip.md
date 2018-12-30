@@ -154,7 +154,7 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
 - **Data discovery (Preview)**: Use this report to see information about files found by scanners or Windows Defender ATP.
 
 > [!NOTE]
-> There is currently a known problem displaying question marks (**?**) in paths and file names instead of non-ASCI characters when the sending operating system locale is English.
+> There is currently a known problem displaying question marks (**?**) in paths and file names instead of non-ASCII characters when the sending operating system locale is English.
 
 ## How to modify the reports
 
