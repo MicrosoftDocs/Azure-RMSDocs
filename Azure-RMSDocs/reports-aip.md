@@ -6,7 +6,7 @@ description: How to use central reporting to track adoption of your Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/20/2018
+ms.date: 12/30/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -152,6 +152,9 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
     This report has a **Columns** option, that lets you display more activity information than the default display.
 
 - **Data discovery (Preview)**: Use this report to see information about files found by scanners or Windows Defender ATP.
+
+> [!NOTE]
+> There is currently a known problem displaying question marks (**?**) in paths and file names instead of non-ASCII characters when the sending operating system locale is English.
 
 ## How to modify the reports
 
