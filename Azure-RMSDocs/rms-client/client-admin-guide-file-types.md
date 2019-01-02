@@ -279,7 +279,7 @@ After inspecting the file, the scanner classifies this file as **Confidential \ 
 
 ### To inspect .tiff files by using OCR
 
-The Azure Information Protection scanner and the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you configure [Windows TIFF IFilter Settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) on the computer running the scanner or the PowerShell session.
+The Azure Information Protection scanner and the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) on the computer running the scanner or the PowerShell session.
 
 For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, add a registry entry for this file name extension to have native protection, as described in [Editing the registry for the scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) from the scanner deployment instructions.
 
