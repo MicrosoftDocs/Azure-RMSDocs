@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2018
+ms.date: 01/03/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 

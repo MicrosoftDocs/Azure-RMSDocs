@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/26/2018
+ms.date: 01/03/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
@@ -281,21 +281,7 @@ For the file types that can't be inspected, the scanner applies the default labe
     - If the [registry is edited](#editing-the-registry-for-the-scanner) to include the file type, the label is applied with classification and protection .
     - If the [registry is not edited](#editing-the-registry-for-the-scanner) to include the file type, the label is applied with classification but not protection for file types that [support classification only](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only). For other file types, the file is not labeled.
 
-### Editing the registry for the scanner
-
-When the scanner applies a label with protection, by default, only Office file types are protected. You can change this behavior so that additional file types are protected. However, when a label applies generic protection to documents, the file name extension changes to .pfile. Other file types can change their file name extension as well. In addition, these files become read-only until they are opened by an authorized user and saved in their native format.
-
-To change the default scanner behavior for protecting file types other than Office files, you must manually edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". In addition, specific for the scanner:
-
-- The scanner has its own default behavior: Only Office file formats are protected by default. If the registry is not modified, any other file types will not be protected by the scanner.
-
-- If you want the same default protection behavior of the Azure Information Protection client, where all files are automatically protected with native or generic protection: Specify the `*` wildcard as a registry key, and `Default` as the value data.
-
-When you edit the registry, manually create the **MSIPC** key and **FileProtection** key if they do not exist, as well as a key for each file name extension.
-
-For example, for the scanner to protect PDF files in addition to Office files, the registry after you have edited it will look like the following picture:
-
-![Editing the registry for the scanner to apply protection](./media/editregistry-scanner.png)
+cabailey-inspectsectio
 
 ## When files are rescanned
 
