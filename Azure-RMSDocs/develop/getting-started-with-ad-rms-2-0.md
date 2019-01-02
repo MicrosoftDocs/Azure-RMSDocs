@@ -71,4 +71,3 @@ The RMS SDK 2.1 supports a range of important client and server platforms. For
 ## Related topics
 
 * [RMS Developers Guide](developers-guide.md)
-* [AD RMS Developer's Corner](http://blogs.msdn.com/b/rms/)

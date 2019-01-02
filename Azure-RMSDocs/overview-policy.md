@@ -2,11 +2,11 @@
 # required metadata
 
 title: Overview of the Azure Information Protection policy
-description: Understand labels and settings in an Azure Inforamtion Protection policy. 
+description: Understand labels and settings in an Azure Information Protection policy. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2018
+ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -48,7 +48,9 @@ An Azure Information Protection policy contains the following elements that you 
 
 - The option to provide a custom help link for users.
 
-Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. Two of these labels contain sublabels to provide subcategories, when needed. When a label is configured for sublabels, users cannot select the main label but must select one of the sublabels.
+Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. Two of these labels contain sublabels to provide subcategories, when needed. 
+
+When a label is configured for sublabels, users cannot select the main label but must select one of the sublabels. In this scenario, the main label is supported as a display container only for the name and color.
 
 The Azure Information Protection labels can be used with the full range of data that an organization typically creates and stores, from the lowest classification of personal data, to the highest classification of highly confidential data. 
 

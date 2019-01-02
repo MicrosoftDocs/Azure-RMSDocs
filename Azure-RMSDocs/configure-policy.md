@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure the Azure Information Protection policy
+title: Configure the Azure Information Protection policy - AIP
 description: To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. 
 author: cabailey
 ms.author: cabailey
@@ -70,7 +70,7 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
     - **Global Administrator / Company Administrator**
     
     > [!NOTE] 
-    > If your teant has been migrated to the unified labeling store, to manage labels from the Azure portal, your account must also have permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > If your tenant has been migrated to the unified labeling store, to manage labels from the Azure portal, your account must also have permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 ## To access the Azure Information Protection blade for the first time
 

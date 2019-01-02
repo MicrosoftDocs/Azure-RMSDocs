@@ -6,7 +6,7 @@ description: Supporting information for Azure Information Protection that inclu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/12/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
@@ -47,15 +47,15 @@ However, some relevant information that can help your legal adviser make a deter
 
 ## Legal and privacy
 
-- For Microsoft Azure agreement information: [Microsoft Azure Agreement](http://azure.microsoft.com/support/legal/subscription-agreement/)
+- For Microsoft Azure agreement information: [Microsoft Azure Agreement](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- For Microsoft Azure privacy information: [Microsoft Azure Privacy Statement](http://azure.microsoft.com/support/legal/privacy-statement/)
+- For Microsoft Azure privacy information: [Microsoft Azure Privacy Statement](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## Security, compliance, and auditing
 
 See the [Security, compliance, and regulatory requirements](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](./azure-rms-problems-it-solves.md) article, for information about specific certifications for the Azure Rights Management service. In addition:
 
-- For external certifications for Azure Information Protection: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
+- For external certifications for Azure Information Protection: [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/)
 
 - For FIPS 140 information: [FIPS 140 Validation](https://technet.microsoft.com/library/security/cc750357.aspx)
 
@@ -71,7 +71,7 @@ For in-depth technical information about how the protection technology works, se
 
 ## Documentation
 
-- Azure Active Directory documentation: [Azure Active Directory](/active-directory/)
+- Azure Active Directory documentation: [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- Office 365 Library: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
+- Office 365 Enterprise documentation: [Office 365](https://docs.microsoft.com/en-us/Office365/Enterprise/)
 

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Azure Active Directory requirements for AIP
+title: Azure AD requirements for Azure Information Protection - AIP
 description: Identify the Azure AD requirements to use Azure Information Protection, so that users can be successfully authenticated.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
@@ -25,15 +25,15 @@ ms.suite: ems
 
 # Azure Active Directory requirements for Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 You must have an Azure AD directory to use Azure Information Protection. You use an account from this directory to sign in to the Azure portal, where, for example, you can configure and manage Azure Information Protection labels and Azure Rights Management templates.
 
 If you have a subscription that includes Azure Information Protection or Azure Rights Management, your Azure AD directory is automatically created for you if needed.  
 
-For more information about Azure AD, see [What is Azure AD Directory?](/active-directory/active-directory-whatis)
+For more information about Azure AD, see [What is Azure AD Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 
-To integrate your Azure AD directory with your on-premises AD forests, see [Integrating your on-premises identities with Azure Active Directory](/active-directory/active-directory-aadconnect).
+To integrate your Azure AD directory with your on-premises AD forests, see [Integrate on-premises Active Directory domains with Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
 ### Scenarios that have specific requirements 
 

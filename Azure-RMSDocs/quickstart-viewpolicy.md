@@ -1,11 +1,11 @@
 ---
-title: Quickstart - Get started in the Azure portal
+title: Quickstart - Get started with Azure Information Protection in the Azure portal - AIP
 description: If your organization is brand new to Azure Information Protection, start here to add the service to the Azure portal, confirm the protection service is activated, and view the policy.
 author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/15/2018
 ms.topic: quickstart
 ms.service: information-protection
 
@@ -21,7 +21,7 @@ ms.service: information-protection
 #Customer intent: As an administrator, I want to see Azure Information Protection in the Azure portal so that I can configure the service.
 ---
 
-# Quickstart: Get started in the Azure portal
+# Quickstart: Get started with Azure Information Protection in the Azure portal
 
 In this quickstart, you'll add Azure Information Protection to the Azure portal, confirm the protection service is activated, and view your organization's default policy. 
 
@@ -31,7 +31,7 @@ You can finish this quickstart in 5 minutes.
 
 To complete this quickstart, you need:
 
-- A subscription that includes Azure Information Protection Plan 1 or Plan 1.
+- A subscription that includes Azure Information Protection Plan 1 or Plan 2.
     
     If you don't have one of these subscriptions, you can create a [free](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
@@ -90,7 +90,7 @@ The first time you connect to the Azure Information Protection service by using 
     
 3. After the labels, in the **Configure settings to display and apply on Information Protection end users** section, you also see some policy settings. For example, there is no default label set, documents and emails are not required to have a label, and users do not have to provide justification when they change labels:
     
-    ![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-policy-default-settings.png) 
+    ![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-policy-default-settings-quickstart.png) 
 
 4. Because you are only viewing the labels and settings, you can close any blades that you have opened.
 

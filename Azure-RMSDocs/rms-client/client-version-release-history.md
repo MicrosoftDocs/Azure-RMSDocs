@@ -6,10 +6,9 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.service: information-protection
-ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 
 # optional metadata
 
@@ -29,7 +28,7 @@ ms.suite: ems
 
 The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. 
 
-You can download the latest general availability release version and the current preview version (if available) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). The general availability version is also included in the Microsoft Update Catalog (category: **Azure Information Protection**), so that you can upgrade the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
+You can download the latest general availability release version and the current preview version (if available) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). After a short delay of typically a couple of weeks, the general availability version is also included in the Microsoft Update Catalog (category: **Azure Information Protection**). This inclusion in the catalog means that you can upgrade the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
 
 For more information, see [Upgrading and maintaining the Azure Information Protection client](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
@@ -48,36 +47,48 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Versions later than 1.37.19.0
-
-If you have a version 1 of the client that is later than 1.37.19.0, it is a preview build for testing and evaluation purposes. 
+## Version 1.41.51.0
 
 > [!TIP]
 > Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
 
-**Released**: 09/20/2018
+**Released**: 11/27/2018
+
+This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **New features:**
 
+- The Azure Information Protection client by default, now protects PDF files by using the ISO standard for PDF encryption. Previously, you had to enable this support with an advanced client setting.
+    
+    If you want the client to revert to protecting PDF files by using a .ppdf file name extension, use the same [advanced client setting](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), but specify **False**.
+
 - Support for [central reporting](../reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
 
-**Additional:**
+- Excel now also supports [visual marking](../configure-policy-markings.md)s in different colors.
 
-Just for this preview version, specific to the scanner:
+- For existing S/MIME deployments, a new advanced client setting (in preview) to configure a label to automatically apply S/MIME protection in Outlook. [More information](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
-- Install the scanner by following these steps:
+- A new advanced client setting, as an alternative to editing the registry to prevent sign-in prompts for the Azure Information Protection service for [disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
+
+**Fixes**:
+
+- The Azure Information Protection client no longer excludes .msg, .rar, and .zip file name extensions for File Explorer (right-click) and PowerShell commands. However, these file name extensions remain excluded by default for the scanner. 
+
+- The Azure Information Protection client can unprotect multiple files (multi-select and a folder that contains protected files) when you use File Explorer, right-click.
+
+- For Excel:
     
-    1. Install the current GA version (1.37.19.0) of the client.
-    2. Install and configure the scanner.
-    3. Start the scanner.
-    4. Upgrade the Azure Information Protection client to this preview version.
-    5. Start the scanner.
-
-- Known issue with scanning large data sets:
+    - Visual markings are now applied if you save the spreadsheet while editing a cell.
     
-    With this preview version, gradually increase the number of files to be scanned and monitor progress. If the scanner status reports that it is running but new files do not get scanned, reduce the number of files to be scanned and restart the scanner. 
+    - Excel 2010: When a spreadsheet is protected by using the Co-Author [permission level](../configure-usage-rights.md#rights-included-in-permissions-levels), the **Delete Label** button is now available when you right-click the file and choose **Classify and Protect**.
 
-If you need instructions to install, configure, and start the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
+- The advanced client settings that can [remove headers and footers from other labeling solutions](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) now supports custom layouts.
+
+**Additional changes:**
+
+- When the scanner's schedule is set to **Always**, there is now a delay of 30 seconds between scans.
+
+- The scanner no longer changes the Rights Management owner for files that it labels when the file is already protected.
 
 ## Version 1.37.19.0
 
@@ -87,7 +98,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **New features**: 
 
-- Support for the ISO standard for PDF encryption, by configuring a new [advanced client configuration](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this option is configured, PDF documents that you protect retain their .pdf file name extension (rather than change to .ppdf) and can be opened by PDF readers that support this ISO standard. Currently, you must instruct users to open these protected PDFs manually by using the Azure Information Protection viewer. To help users do this, when they open one of these protected PDFs, they see a page with icons to select for their operating system.
+- Support for the ISO standard for PDF encryption, by configuring a new [advanced client configuration](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). When this option is set to **True**, PDF documents that you protect retain their .pdf file name extension (rather than change to .ppdf) and can be opened by PDF readers that support this ISO standard. Currently, you must instruct users to open these protected PDFs manually by using the Azure Information Protection viewer. To help users do this, when they open one of these protected PDFs, they see a page with icons to select for their operating system.
 
 - Support for new sensitive information types to help you classify documents that contain personal information. [More information](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
@@ -107,6 +118,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     
     - New cmdlet, [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan): Instructs the scanner to start a one time scan cycle when the schedule is set to manual.
     
+    - PDF documents are now protected by default when you use the ISO standard for PDF encryption.
+    
     - SharePoint Server 2010 is supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
 - Support for the new **Azure Information Protection - Nodes (Preview)** blade in the Azure portal, that lets you manage scanners from a central location. Information from your deployed scanners that have connectivity to Azure is updated every five minutes. From this blade, you can start the scanner for a one-time scan, rescan all files, check the status of a scanner, and view the scan rate.
@@ -123,7 +136,9 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - Viewing emails by using the Next Item and Previous Item arrow icons on the Quick Access toolbar shows the correct label for each email.
 
-- Custom permissions supports recipient email addresses that contain an apostrophe.
+- When you classify and protect by using File Explorer, PowerShell, or the scanner, the Office document metadata is not removed or encrypted.
+
+- Custom permissions support recipient email addresses that contain an apostrophe.
 
 - The computer environment will successfully initialize (bootstrap) when this action is initiated by opening a protected document that's stored in SharePoint Online.
 
@@ -143,7 +158,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - The policy version is changed to 1.4. Identifying the version number is required for [configuring disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
 
-- The **Send Us Feedback** link in the **Help and Feedback** dialog box is removed. It was temporarily replaced with **Report an Issue**, but this link now displays in preview versions only. By default, this option sends an email to Microsoft but you can change this email address to an HTTP string that you specify. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk. To modify this address, use an [advanced client setting](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
+- The **Send Us Feedback** link in the **Help and Feedback** dialog box is removed. It was temporarily replaced with **Report an Issue** that by default, sent an email to Microsoft. From December 2018 onward, the  **Report an Issue** option is not displayed by default but can be added with an [advanced client setting](client-admin-guide-customizations.md#add-report-an-issue-for-users) where you specify an HTTP string for the link. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk. 
 
 ## Version 1.29.5.0 
 
@@ -195,74 +210,6 @@ This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
 - Removed the "Congratulations!" welcome page and "What's new in Azure Information Protection" page, which displayed for first-time use in Office applications.
 
-## Version 1.26.6.0
-
-**Released**: 04/17/2018
-
-This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
-
-**New features**:
-
-- The Azure Information Protection scanner: The PowerShell module that is included with the client has new cmdlets to install and configure the scanner so that you can discover, classify, and protect files on your on-premises data stores. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md). 
-
-- You can now set different visual markings for Word, Excel, PowerPoint, and Outlook by using an "If.App" variable statement in the text string, and identify the application type. [More information](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
-
-- Support for the [policy setting](../configure-policy-settings.md), **Display the Information Protection bar in Office apps**. When this setting is off, users select labels from the **Protect** button on the ribbon.
-
-- A new advanced client setting (still in preview) to turn on classification to run continuously in the background. When this setting is enabled, for Office apps, automatic and recommended classification runs continuously in the background, instead of running when documents are saved. With this change in behavior, you can now apply automatic and recommended classification to documents that are stored in SharePoint Online. [More information](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)
-
-- A new advanced client setting so that Outlook doesn't apply the default label that is configured in the Azure Information Protection policy. Instead, Outlook can apply a different default label, or no label. [More information](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
-
-- For Office apps, when you specify custom permissions, you can now browse and select users from an address book icon. This option brings parity to the user experience when you specify custom permissions by using File Explorer.
-
-- Support for a completely non-interactive authentication method, for service accounts that use PowerShell and that cannot be granted the **Log on locally** right. This authentication method requires you to use the new *Token* parameter with [Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication), and run a PowerShell script as a task. [More information](client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
-
-- New parameter, *IntegratedAuth* for [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication). This parameter supports server mode for AD RMS, which is needed for AD RMS to support Windows Server FCI.
-
-
-**Fixes**:
-
-Fixes for stability and for specific scenarios that include:
-
-- For Office versions 16.0.8628.2010 and later (Click-to-Run), the Azure Information Protection bar supports the latest monitor display options that previously might result in the bar displaying outside Office applications.
-
-- When two organization using Azure Information Protection share labeled documents and emails, their own labels are retained and not replaced by the other organization's labels.
-
-- For Excel:
-        
-    - Support for changing Office themes or Windows themes, which previously caused Excel to not display any data after the theme was changed.
-        
-    - Support for cells that contain cross-references, which previously caused text corruption in that cell.
-    
-    - Support for typing Japanese, Chinese, or Korean characters, which previously closed a window so these characters couldn't be selected.
-    
-    - Support for comments, which previously closed the comment while it was being typed.
-
-- For PowerPoint: Support for coauthoring, which previously could cause data loss.
-
-- Files that have a .xml file name extension can now be inspected for recommended or automatic classification.
-
-- The viewer can now open protected text-based files (.ptxt and .pxml) larger than 20 MB. 
-- Prevent Outlook hanging when Outlook reminders are used.
-
-- Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.
-
-- You can now configure a label for user-defined permissions for Word, Excel, PowerPoint, and File Explorer and also use the advanced client setting to hide the custom permissions options. [More information](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
-
-- Fall back to the Calibri font if visual markers in the Azure Information Protection policy are configured for a font name that is not installed on the client.
-
-- Prevent Office crashes after the Azure Information Protection client is upgraded.
-
-- For Office apps, improve performance and memory consumption.
-
-- When you configure a label for user-defined permissions and HYOK (AD RMS) protection, the protection no longer incorrectly uses the Azure Rights Management service.
-
-- For a more consistent management experience, sublabels no longer inherit visual markings and protection settings from their parent label.
-
-**Additional changes**:
-
-- For [client usage logging](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client ): Event ID 102 and ID 103 are replaced with event ID 101.
-
 ## Next steps
 
 For more information about installing and using the client: 
@@ -270,5 +217,4 @@ For more information about installing and using the client:
 - For users: [Download and install the client](install-client-app.md)
 
 - For admins: [Azure Information Protection client administrator guide](client-admin-guide.md)
-
 

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Add or remove a label to or from an Azure Information Protection policy
+title: Add or remove a label to or from an Azure Information Protection policy - AIP
 description: Add or remove an Azure Information Protection label to or from the global policy for all users, or to or from a scoped policy for a subset of users.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
@@ -27,7 +27,9 @@ ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-After you create an Azure Information Protection label, you can then add it to a policy so that it is available for users. If the label is for all users, add the label to the global policy. If the label is for a subset of users, add the label to a scoped policy. Currently, a label can be added to only one policy. To add a sublabel, its parent label must be in the same policy, or in the global policy.
+After you create an Azure Information Protection label, you can then add it to a policy so that it is available for users. If the label is for all users, add the label to the global policy. If the label is for a subset of users, add the label to a scoped policy. A label can be added to only one policy. 
+
+To add a sublabel, its parent label must be in the same policy, or in the global policy. When you add a sublabel, settings from the main label are not inherited. For users who are assigned the sublabel in their policy, the main label is supported only as a display container for the name and color. In this scenario, other configuration settings in the main label are not supported for visual markings, protection, and conditions. Although you can still configure them, those settings in the main label are supported only for users who have the main label in their policy without the sublabel.
 
 For labels that are already in a policy, you can remove them from the policy. This action does not delete the label. It remains available to be used in another policy.
 
@@ -64,5 +66,4 @@ If you need to create a scoped policy so that the label applies to a subset of u
 
 ## Next steps
 
-For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  
-
+For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.
