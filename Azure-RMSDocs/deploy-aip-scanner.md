@@ -313,7 +313,7 @@ For the first scan cycle, the scanner inspects all files in the configured data 
 
 You can force the scanner to inspect all files again by running [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) with the `-Reset` parameter. The scanner must be configured for a manual schedule, which requires the `-Schedule` parameter to be set to **Manual** with [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
 
-Alternatively, you can force the scanner to inspect all files again from the **Azure Information Protection** blade in the Azure portal, when you use the **Scanner** > **Nodes (Preview)** > \**<*scanner node*>**> **Rescan all files** option.
+Alternatively, you can force the scanner to inspect all files again from the **Azure Information Protection** blade in the Azure portal, when you use the **Scanner** \> **Nodes (Preview)** \> **\<*scanner node*\>**\> **Rescan all files** option.
 
 Inspecting all files again is useful when you want the reports to include all files and this configuration choice is typically used when the scanner runs in discovery mode. When a full scan is complete, the scan type automatically changes to incremental so that for subsequent scans, only new or modified files are scanned.
 
