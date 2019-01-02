@@ -264,7 +264,7 @@ The scanner then uses installed filters to scan supported file types:
 
 For more information, see [File types supported for inspection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection).
 
-After inspection, documents with these file types can be labeled by using the conditions that you specified for your labels. Or, if you're using discovery mode, documents with the supported file types can be reported to contain the conditions that you specified for your labels, or all known sensitive information types. 
+After inspection, these file types can be labeled by using the conditions that you specified for your labels. Or, if you're using discovery mode, these files can be reported to contain the conditions that you specified for your labels, or all known sensitive information types. 
 
 However, the scanner cannot label the files under the following circumstances:
 
@@ -272,7 +272,7 @@ However, the scanner cannot label the files under the following circumstances:
 
 - If the label applies classification and protection, but the scanner does not protect the file type.
     
-    By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. Other file types can be protected when you [edit the registry](#editing-the-registry-for-the-scanner) to specify the file types.
+    By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. Other file types can be protected when you [edit the registry](#editing-the-registry-for-the-scanner) as described in a following section.
 
 For example, after inspecting files that have a file name extension of .txt, the scanner can't apply a label that's configured for classification but not protection, because the .txt file type doesn't support classification-only. If the label is configured for classification and protection, and the registry is edited for the .txt file type, the scanner can label the file. 
 
@@ -285,7 +285,7 @@ As in the preceding step, the scanner cannot label the files under the following
 
 - If the label applies classification and protection, but the scanner does not protect the file type.
     
-    By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. Other file types can be protected when you [edit the registry](#editing-the-registry-for-the-scanner) to specify the file types.
+    By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. Other file types can be protected when you [edit the registry](#editing-the-registry-for-the-scanner) as described next.
 
 
 ### Editing the registry for the scanner
