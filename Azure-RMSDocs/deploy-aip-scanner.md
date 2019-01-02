@@ -234,7 +234,7 @@ In its default setting, the scanner runs one time and in the reporting-only mode
     
         Start-AIPScan
     
-    Alternatively, you can start the scanner from the **Azure Information Protection** blade in the Azure portal, when you use the **Scanner** > **Nodes (Preview)** > \**<*scanner node*>**> **Scan now** option.
+    Alternatively, you can start the scanner from the **Azure Information Protection** blade in the Azure portal, when you use the **Scanner** \> **Nodes (Preview)** \> **\<*scanner node*\>**\> **Scan now** option.
 
 3. Monitor the event log for the informational type **911** again, with a time stamp later than when you started the scan in the previous step. 
     
