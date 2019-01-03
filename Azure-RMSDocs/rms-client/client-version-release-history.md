@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -176,40 +176,6 @@ This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
 - When you use the advanced client setting to [label an Office document by using an existing custom property](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property), automatic labeling doesn't override manual labeling.
 
-## Version 1.27.48.0
-
-**Released**: 05/30/2018
-
-This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
-
-**New features**: 
-
-- For the Azure Information Protection scanner:
-    
-    - You can specify a file types list to include or exclude from scanning. To specify this list, use [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). After you have specified your file types list, you can add a new file type to the list by using [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes), and remove a file type from the list by using [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
-    
-    - You can label files without inspecting the contents by applying a default label. Use the [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository) cmdlet, and set the *MatchPolicy* parameter to **Off**. 
-    
-    - You can discover files with sensitive information types without configuring labels for automatic classification. use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet, and set the *DiscoverInformationTypes* parameter to **All**
-    
-    - By default, only Office document types are protected. Other file types can be protected when you define them in the registry. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance.
-    
-    - By default, the scanner now runs with a low integrity level for higher security in case you run the scanner with an account that has privileged rights. When the service account that runs the scanner has only the rights documented in the [scanner prerequisites](../deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), the low integrity level is not necessary and is not recommended because it negatively affects performance. You can use an advanced client setting to disable the low integrity level. [More information](client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) 
-    
-- For [Get-AIPFileStatus](/powershell/module/azureinformationprotection/Get-AIPFileStatus), the output now includes the Rights Management owner and Rights Management issuer, and the date that the content was protected.
- 
-**Additional changes**:
-
-- For the Azure Information Protection scanner: 
-    
-    - If you installed a previous version of the scanner, rerun the scanner installation command with [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) after you have upgraded the Azure Information Protection client. Your configuration settings for the scanner and repositories will be retained. Reinstalling the scanner grants the scanner service account delete permissions for the scanner database, which will be required for reports.    
-    
-    - The *ScanMode* parameter from [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) is renamed to **Enforce**, with values of Off and On.
-    
-    - To use a default label, you no longer need to configure a default label as a policy setting. Instead, just specify this default label with the repository configuration. 
-
-- Removed the "Congratulations!" welcome page and "What's new in Azure Information Protection" page, which displayed for first-time use in Office applications.
-
 ## Next steps
 
 For more information about installing and using the client: 
@@ -217,4 +183,3 @@ For more information about installing and using the client:
 - For users: [Download and install the client](install-client-app.md)
 
 - For admins: [Azure Information Protection client administrator guide](client-admin-guide.md)
-
