@@ -85,7 +85,6 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - Azure Publish Setting Password
     - Azure Storage Account Key (Generic)
 
-
 **Fixes**:
 
 - New visual markings are consistently applied when a user adds new sections to a Word document, and then relabels the document.

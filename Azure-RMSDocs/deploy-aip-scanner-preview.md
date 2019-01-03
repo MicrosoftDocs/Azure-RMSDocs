@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Deploy the Azure Information Protection scanner
-description: Instructions to install, configure, and run the Azure Information Protection scanner to discover, classify, and protect files on data stores.
+title: Deploy the Azure Information Protection scanner (PREVEW)
+description: Instructions to install, configure, and run the current preview version of the Azure Information Protection scanner to discover, classify, and protect files on data stores.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -23,16 +23,17 @@ ms.suite: ems
 
 ---
 
-# Deploying the Azure Information Protection scanner to automatically classify and protect files
+# Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2*
 
 > [!NOTE]
-> This article is for the current general availability version of the Azure Information Protection scanner.
+> This article is for the current preview version of the Azure Information Protection scanner. Versions in preview are subject to change.
 > 
-> If you are looking for deployment instructions for the current preview of the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files (PREVIEW)](deploy-aip-scanner-preview.md).
+> For deployment instructions for the general availability version of the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
 Use this information to learn about the Azure Information Protection scanner, and then how to successfully install, configure, and run it. 
+
 This scanner runs as a service on Windows Server and lets you discover, classify, and protect files on the following data stores:
 
 - Local folders on the Windows Server computer that runs the scanner.
