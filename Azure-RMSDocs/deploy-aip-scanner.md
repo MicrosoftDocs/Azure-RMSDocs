@@ -256,13 +256,9 @@ After you have specified your file types list, you can add a new file type to th
 
 ### 2. Inspect and label files
 
-The scanner then uses installed filters to scan supported file types:
+The scanner then uses filters to scan supported file types. These same filters are used by the operating system for Windows Search and indexing. Without any additional configuration, Windows IFilter is used to scan file types that are used by Word, Excel, PowerPoint, and for PDF documents and text files.
 
-- Without any configuration, Windows IFilter is used for file types that are used by Word, Excel, PowerPoint, and for PDF documents and text files.
-
-- With configuration, the scanner can also inspect .zip and .tiff files.
-
-For more information, see [File types supported for inspection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection).
+For a full list of file types that are supported by default, and additional information how to configure existing filters that include .zip files and .tiff files, see [File types supported for inspection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection).
 
 After inspection, these file types can be labeled by using the conditions that you specified for your labels. Or, if you're using discovery mode, these files can be reported to contain the conditions that you specified for your labels, or all known sensitive information types. 
 

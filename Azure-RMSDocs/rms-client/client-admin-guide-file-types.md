@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/03/2019
+ms.date: 01/04/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 
@@ -249,7 +249,7 @@ If you have a container file that includes classified and protected files, you m
 
 ## File types supported for inspection
 
-The Azure Information Protection client uses Windows IFilter to inspect the contents of documents. The following file types can be inspected when you use the Azure Information Protection scanner, or the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command.
+Without any additional configuration, the Azure Information Protection client uses Windows IFilter to inspect the contents of documents. Windows IFilter is used by Windows Search for indexing. As a result, the following file types can be inspected when you use the Azure Information Protection scanner, or the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command.
 
 |Application type|File type|
 |--------------------------------|-------------------------------------|
@@ -259,7 +259,11 @@ The Azure Information Protection client uses Windows IFilter to inspect the cont
 |PDF |.pdf|
 |Text|.txt; .xml; .csv|
 
-With additional configuration, .zip files and .tiff files can also be inspected.
+With additional configuration, other file types can also be inspected. For example, you can [register a custom file name extension to use the existing Windows filter handler for text files](https://docs.microsoft.com/en-us/windows/desktop/search/-search-ifilter-registering-filters), and you can install additional filters.
+
+You can use the information from the [Finding a Filter Handler for a Given File Extension](https://docs.microsoft.com/en-us/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension) section from the Windows Search Developer's Guide to check what filters are installed.
+
+See the following sections for configuration instructions to inspect .zip files, and .tiff files.
 
 ### To inspect .zip files
 
