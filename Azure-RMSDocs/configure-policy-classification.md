@@ -6,7 +6,7 @@ description: Conditions for a label let you automatically assign a label to a do
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/14/2019
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
@@ -116,6 +116,20 @@ The following sensitive information types require a minimum version of 1.37.19.0
 - **Thai Population Identification Code**
 - **Turkish National Identification number**
 - **Japanese Residence Card Number**
+
+
+The following sensitive information types require the current preview version of the Azure Information Protection client:
+
+- **Azure Service Bus Connection String**
+- **Azure IoT Connection String**
+- **Azure Storage Account**
+- **Azure IAAS Database Connection String and Azure SQL Connection String**
+- **Azure Redis Cache Connection String**
+- **Azure SAS**
+- **SQL Server Connection String**
+- **Azure DocumentDB Auth Key**
+- **Azure Publish Setting Password**
+- **Azure Storage Account Key (Generic)**
 
 Additionally, the following sensitive information types are not supported for the current preview version of the Azure Information Protection client, and no longer display in the Azure portal:
 
