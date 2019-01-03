@@ -73,6 +73,19 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - If you label and protect files by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. [More information](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
+- Support for the following sensitive information types that help to identify credentials in documents and emails:
+    - Azure Service Bus Connection String
+    - Azure IoT Connection String
+    - Azure Storage Account
+    - Azure IAAS Database Connection String and Azure SQL Connection String
+    - Azure Redis Cache Connection String
+    - Azure SAS
+    - SQL Server Connection String
+    - Azure DocumentDB Auth Key
+    - Azure Publish Setting Password
+    - Azure Storage Account Key (Generic)
+
+
 **Fixes**:
 
 - New visual markings are consistently applied when a user adds new sections to a Word document, and then relabels the document.
