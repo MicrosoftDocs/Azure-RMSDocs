@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/03/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
@@ -102,7 +102,7 @@ Azure Information Protection cannot classify and protect structured data such as
 
 ## I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?
 
-Yes, as a public preview offering, you can now configure Azure AD conditional access for Azure Information Protection.
+Yes, as a preview offering, you can now configure Azure AD conditional access for Azure Information Protection.
 
 When a user opens a document that is protected by Azure Information Protection, administrators can now block or grant access to users in their tenant, based on the standard conditional access controls. Requiring multi-factor authentication (MFA) is one of the most commonly requested conditions. Another one is that devices must be [compliant with your Intune policies](/intune/conditional-access-intune-common-ways-use) so that for example, mobile devices meet your password requirements and a minimum operating system version, and computers must be domain-joined.
 
@@ -117,6 +117,8 @@ Additional information:
 - We recommend that you do not add administrator accounts to your conditional access policies because these accounts will not be able to access the Azure Information Protection blade in the Azure portal.
 
 - If you use MFA in your conditional access policies for collaborating with other organizations (B2B), you must use [Azure AD B2B collaboration](/azure/active-directory/b2b/what-is-b2b) and create guest accounts for the users you want to share with in the other organization.
+
+- With the Azure AD December 2018 preview release, you can now prompt users to accept a terms of use before they open a protected document for the first time. For more information, see the following blog post announcement: [Updates to Azure AD Terms of Use functionality within conditional access](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822)
 
 - If you use many cloud apps for conditional access, you might not see **Microsoft Azure Information Protection** displayed in the list to select. In this case, use the search box at the top of the list. Start typing "Microsoft Azure Information Protection" to filter the available apps. Providing you have a supported subscription, you'll then see **Microsoft Azure Information Protection** to select. 
 
