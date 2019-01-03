@@ -75,6 +75,16 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **Fixes**:
 
+- New visual markings are consistently applied when a user adds new sections to a Word document, and then relabels the document.
+
+- The Azure Information Protection client correctly removes protection from a PDF document that was protected by the Rights Management sharing application.
+
+- Sublabels are correctly applied by PowerShell and the scanner when the parent label is configured for user-defined permissions.
+
+- The Azure Information Protection client correctly displays labels that have been applied by [clients that support unified labeling](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
+
+- Documents open correctly in Office without a recovery message after protection has been removed by File Explorer and right-click, PowerShell, and the scanner.
+
 **Additional changes:**
 
 - The following sensitive information types are no longer supported for labels that you configure for recommended or automatic classification:
