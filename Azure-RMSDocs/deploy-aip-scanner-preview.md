@@ -197,7 +197,7 @@ Before you install the scanner, or upgrade it from the general availability vers
 
 10. You can now close the **Add a new profile** blade and you see your profile name displayed in the **Azure Information Protection - Profiles (Preview)** blade, together with the **SCHEDULE** column showing **Manual** and the **ENFORCE** column is blank.
 
-You're now ready to install the scanner with the scanner profile that you've just defined.
+You're now ready to install the scanner with the scanner profile that you've just created.
 
 ## Install the scanner
 
@@ -263,7 +263,7 @@ You're now ready to run your first scan in discovery mode.
     
     Look for the status to show **Idle** rather than **Scanning**. When the scanner has crawled through all the files in the data stores that you specified, the scanner stops although the scanner service remains running. 
     
-    Alternatively, you can view the status from the **Azure Information Protection** blade in the Azure portal, by checking the **Scanner** > **Nodes ** > **\<*scanner node*>**> **STATUS** column.
+    Alternatively, you can view the status from the **Azure Information Protection** blade in the Azure portal, by checking the **Scanner** > **Nodes (Preview)** > **\<*scanner node*>**> **STATUS** column.
     
     Check the local Windows **Applications and Services** event log, **Azure Information Protection**. This log also reports when the scanner has finished scanning, with a summary of results. Look for the informational event ID **911**.
 
@@ -366,7 +366,7 @@ For files that don't support native protection, specify the file name extension 
 
 For the first scan cycle, the scanner inspects all files in the configured data stores and then for subsequent scans, only new or modified files are inspected. 
 
-You can force the scanner to inspect all files again from the **Azure Information Protection** blade in the Azure portal, when you use the **Scanner** \> **Nodes ** \> **\<*scanner node*\>**\> **Rescan all files** option.
+You can force the scanner to inspect all files again from the **Azure Information Protection** blade in the Azure portal, when you use the **Scanner** \> **Nodes (Preview)** \> **\<*scanner node*\>**\> **Rescan all files** option.
 
 Inspecting all files again is useful when you want the reports to include all files and this configuration choice is typically used when the scanner runs in discovery mode. When a full scan is complete, the scan type automatically changes to incremental so that for subsequent scans, only new or modified files are scanned.
 
