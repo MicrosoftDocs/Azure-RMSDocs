@@ -4,7 +4,7 @@ description: A quickstart showing you how to write the initialization logic for 
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 12/13/2018
+ms.date: 01/04/2019
 ms.author: tommos
 ---
 
