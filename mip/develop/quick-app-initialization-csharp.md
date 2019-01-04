@@ -191,7 +191,7 @@ namespace mip_sdk_dotnet_quickstart
 }
 ``` 
 
-3. Replace the placeholder values in the source code that you just pasted in, using the following values:
+3. Replace the placeholder values in the source code that you pasted in, using the following values:
 
    | Placeholder | Value | Example |
    |:----------- |:----- |:--------|

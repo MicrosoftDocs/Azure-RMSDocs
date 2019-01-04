@@ -9,7 +9,7 @@ ms.author: tommos
 ---
 # Getting Started with the Microsoft Information Protection C# Wrapper
 
-The Microsoft Information Protection SDK C# Wrapper enables developers to build applications that integrate the classification, labeling, and protection features of the Microsoft Information Protection SDK in to their .NET (C#), applications and services. 
+The Microsoft Information Protection SDK C# Wrapper enables developers to build applications that integrate the classification, labeling, and protection features of the Microsoft Information Protection SDK in to their .NET (C#), applications, and services.
 
 The managed wrapper and all dependencies can be installed via NuGet in Visual Studio.
 
@@ -26,7 +26,7 @@ From the Package Manager Console in Visual Studio 2017, install the package by r
 
 `install-package Microsoft.InformationProtection.File`
 
-No additional packages are required. All of the 3rd party libraries are included and will copy to the output folder on build.
+No additional packages are required. All of the third party libraries are included and will copy to the output folder on build.
 
 ## Wrapper Details
 
