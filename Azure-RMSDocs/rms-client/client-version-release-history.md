@@ -60,14 +60,11 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **New features:**
 
-- The Azure Information Protection scanner is now configured from the Azure portal, rather than using PowerShell. As a result, the following cmdlets are now deprecated:
-    - Add-AIPScannerRepository
-    - Add-AIPScannerScannedFileTypes
-    - Get-AIPScannerRepository
-    - Remove-AIPScannerRepository
-    - Remove-AIPScannerScannedFileTypes
-    - Set-AIPScannerRepository
-    - Set-AIPScannerScannedFileTypes
+- The Azure Information Protection scanner is now configured from the Azure portal, rather than by using PowerShell:
+    
+    - If you are upgrading from a general availability version of the scanner, the upgrade process is different from previous versions. so be sure to read [Upgrading the Azure Information Protection scanner](client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
+    
+    - If you are installing the scanner for the first time, rather than upgrading, see [Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner-preview.md).
 
 - The Azure Information Protection scanner now supports multiple configuration databases on the same SQL server instance when you specify a profile name.
 
@@ -103,9 +100,18 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - EU Phone Number
     - EU GPS Coordinates
 
+- Because the Azure Information Protections scanner is configured from the Azure portal, the following cmdlets are now deprecated and can't be used to configure data repositories or the file types list:
+    - Add-AIPScannerRepository
+    - Add-AIPScannerScannedFileTypes
+    - Get-AIPScannerRepository
+    - Remove-AIPScannerRepository
+    - Remove-AIPScannerScannedFileTypes
+    - Set-AIPScannerRepository
+    - Set-AIPScannerScannedFileTypes
+
 - A new PowerShell cmdlet, [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration), for scenarios where the Azure Information Protection scanner cannot download its configuration from the Azure portal.
 
-- The Azure Information Protection scanner no longer excludes .zip files by default.
+- The Azure Information Protection scanner no longer excludes .zip files by default. To inspect and label .zip files, see the [To inspect .zip files](client-admin-guile-file-types.md#to-inspect-zip-files) section of the admin guide.
 
 ## Version 1.41.51.0
 

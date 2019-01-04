@@ -31,6 +31,8 @@ ms.suite: ems
 > This article is for the current preview version of the Azure Information Protection scanner. Versions in preview are subject to change.
 > 
 > For deployment instructions for the general availability version of the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
+> 
+> If you are upgrading from a general availability version of the scanner to the preview version, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
 
 Use this information to learn about the preview versions of the Azure Information Protection scanner, and then how to successfully install, configure, and run it. 
 
@@ -93,7 +95,7 @@ The scanner can accommodate these restrictions but they require additional confi
 
 #### Restriction: The scanner server cannot have Internet connectivity
 
-Follow the instructions for a [disconnected computer](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). Then, after you have configured the scanner in the Azure portal, export your settings, and in a PowerShell session, run Import-AIPScannerConfiguration and specify the file that contains the exported settings.
+Follow the instructions for a [disconnected computer](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). Then, after you have configured the scanner in the Azure portal, export your settings, and in a PowerShell session, run [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) and specify the file that contains the exported settings.
 
 Note that in this configuration, the scanner cannot apply protection (or remove protection) by using your organization's cloud-based key. Instead, the scanner is limited to using labels that apply classification only, or protection that uses [HYOK](configure-adrms-restrictions.md). 
 
@@ -109,9 +111,7 @@ If you cannot be granted the Sysadmin role even temporarily, you must manually c
 |User account for scanner installation|db_owner|
 |User account for scanner configuration |db_owner|
 
-Typically, you will use the same user account to install and configure the scanner. But if you use different accounts, they both require the db_owner role for the scanner configuration database.
-
-The scanner configuration database is named as follows:
+Typically, you will use the same user account to install and configure the scanner. But if you use different accounts, they both require the db_owner role for the scanner configuration database:
 
 - If you do not specify your own profile name for the scanner, the configuration database is named **AIPScanner_\<computer_name>**. 
 
@@ -132,7 +132,7 @@ You can have one account to run the scanner service and use another account to a
 
 ## Configure the scanner in the Azure portal
 
-Before you install the scanner, or upgrade it from the general availability version of the scanner, create a profile for the scanner in the Azure portal. You can then configure settings for the scanner, and add the data repositories to scan.
+Before you install the scanner, or upgrade it from the general availability version of the scanner, create a profile for the scanner in the Azure portal. You configure the profile for scanner settings, and the data repositories to scan.
 
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
     
@@ -165,15 +165,28 @@ Before you install the scanner, or upgrade it from the general availability vers
     
     Supported versions for SharePoint: SharePoint Server 2016 and SharePoint Server 2013. SharePoint Server 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
-    To add your first data store, still on the **Add a new profile** blade, select **Configure repositories**.
-
-7. On the **Repositories** blade, select **Add**.
-
-8. On the **Repository** blade, specify the path for the data repository. Wildcards are not supported and WebDav locations are not supported.
+    To add your first data store, still on the **Add a new profile** blade, select **Configure repositories** to open the **Repositories** blade:
     
-    Examples include `C:\Folder`, `C:\Folder\Filename`, `\\Server\Folder`, `http://sharepoint.contoso.com/Shared%20Documents/Folder`. Paths can include spaces when you enclose the path value with quotes.
+    ![Configure data repositories for the Azure Information Protection scanner](./media/scanner-repositories-bar.png)
+
+7. On the **Repositories** blade, select **Add**:
     
-    For the remaining settings, do not change them for this initial configuration, but keep them as **Profile default**. This means that the data repository inherits the settings from the scanner profile. Select **Save**.
+    ![Add data repository for the Azure Information Protection scanner](./media/scanner-repository-add.png)
+
+8. On the **Repository** blade, specify the path for the data repository. 
+    
+    Wildcards are not supported and WebDav locations are not supported. Paths can include spaces when you enclose the path value with quotes.
+    
+    Examples:
+    
+        - For a local path: `C:\Folder`
+        - For a network share: `C:\Folder\Filename`
+        - For a UNC path:`\\Server\Folder`
+        - For a SharePoint library: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
+    
+    For the remaining settings, do not change them for this initial configuration, but keep them as **Profile default**. This means that the data repository inherits the settings from the scanner profile. 
+    
+    Select **Save**.
 
 9. If you want to add another data repository, repeat steps 7 and 8.
 
@@ -474,9 +487,9 @@ Information **911**
 
 **Scanner cycle finished.**
 
-This event is logged when the scanner has finished its one-time scan since the computer started, or the scanner has finished a cycle for a continuous schedule.
+This event is logged when the scanner has finished a manual scan, or the scanner has finished a cycle for a continuous schedule.
 
-If the scanner was configured to run one time rather than continuously, to scan the files again, set the **Schedule** to **Manual** or **Always** in the scanner profile, and then restart the service.
+If the scanner was configured to run manually rather than continuously, to scan the files again, set the **Schedule** to **Manual** or **Always** in the scanner profile, and then restart the service.
 
 ----
 
