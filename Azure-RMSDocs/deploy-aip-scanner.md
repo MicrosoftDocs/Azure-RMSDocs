@@ -447,9 +447,9 @@ Information **911**
 
 **Scanner cycle finished.**
 
-This event is logged when the scanner has finished its one-time scan since the server started, or the scanner has finished a cycle for a continuous schedule.
+This event is logged when the scanner has finished a manual scan, or the scanner has finished a cycle for a continuous schedule.
 
-If the scanner was configured to run one time rather than continuously, to scan the files again, you must set the schedule to **OneTime** or **Continuous**, and then manually restart the service. To change the schedule, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet and the **Schedule** parameter.
+If the scanner was configured to run manually rather than continuously, to run a new scan, use the [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) cmdlet. To change the schedule, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet and the **Schedule** parameter.
 
 ----
 
