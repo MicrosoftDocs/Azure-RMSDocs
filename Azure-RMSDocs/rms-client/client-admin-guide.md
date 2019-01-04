@@ -249,7 +249,9 @@ If you don't configure the scanner in the Azure portal before you run the Update
 In this scenario, when you configure the scanner in the Azure portal, you must specify exactly the same profile name that was used when you ran the Update-AIPScanner command. If the name doesn't match, the scanner will not be configured for your settings. 
 
 > [!TIP]
-> To identify scanners that have this misconfiguration, use the **Azure Information Protection - Nodes** blade in the Azure portal. For scanners that have Internet connectivity, they display their computer name with the preview version number of the Azure Information Protection client, but no profile name. Only scanners that have a version number 1.41.51.0 should display no profile name on this blade. 
+> To identify scanners that have this misconfiguration, use the **Azure Information Protection - Nodes** blade in the Azure portal.
+>  
+> For scanners that have Internet connectivity, they display their computer name with the preview version number of the Azure Information Protection client, but no profile name. Only scanners that have a version number 1.41.51.0 should display no profile name on this blade. 
 
 If you didn't specify a profile name when you ran the Update-AIPScanner command, the computer name is used to automatically create the profile name for the scanner.
 
