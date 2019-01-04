@@ -228,9 +228,9 @@ Although it's possible to upgrade the scanner in a different order, we highly re
 > [!IMPORTANT]
 > For a smooth upgrade path, do not install the preview version of the Azure Information Protection client on the computer running the scanner as your first step to upgrade the scanner. Instead, follow the upgrade instructions.
 
-1. Create a new scanner profile in the Azure portal, and configure settings for the scanner and your data repositories. For instructions, see 
+1. Use the Azure portal to create a new scanner profile that includes settings for the scanner, and that specifies your data repositories with any settings that they need. For help with this step, see the [Configure the scanner in the Azure portal](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal) section from the preview scanner deployment instructions.
     
-    If the computer running the scanner is disconnected from the Internet, you still need to do this step. Then, export your settings to a file.
+    If the computer running the scanner is disconnected from the Internet, you still need to do this step. Then, from the Azure portal, use the **Export** option to export your profile to a file.
 
 2. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
 
