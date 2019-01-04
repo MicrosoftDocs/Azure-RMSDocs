@@ -75,10 +75,10 @@ The `SetDllDirectory()` function will be called later to tell the .NET applicati
 
 The MIP SDK implements authentication using class extensibility, which provides a mechanism to share authentication work with the client application. The client must acquire a suitable OAuth2 access token, and provide to the MIP SDK at runtime.
 
-Now create an implementation for an authentication delegate, by extending the SDK's `Microsoft.InformationProtection.IAuthDelegate` interface, and overriding/implementing the `IAuthDelegate.AcquireToken()` virtual function. The authentication delegate is instantiated and used later, by the File profile and File engine objects.
+Now create an implementation for an authentication delegate, by extending the SDK's `Microsoft.InformationProtection.IAuthDelegate` interface, and overriding/implementing the `IAuthDelegate.AcquireToken()` virtual function. The authentication delegate is instantiated and used later by the `FileProfile` and `FileEngine` objects.
 
 1. Right-click the project name in Visual Studio, select **Add** then **Class**.
-2. Enter "AuthDelegateImplemenation" in the **Name** field. Click **Add**.
+2. Enter "AuthDelegateImplementation" in the **Name** field. Click **Add**.
 3. Add using statements for the ADAL library and the MIP library:
 
      ```csharp
@@ -89,11 +89,11 @@ Now create an implementation for an authentication delegate, by extending the SD
 4. Set `AuthDelegateImplementation` to inherit `Microsoft.InformationProtection.IAuthDelegate` and implement a private variable of `Microsoft.InformationProtection.ApplicationInfo` and a constructor that accepts the same type.
 
      ```csharp
-     public class AuthDelegateImplemenation : IAuthDelegate
+     public class AuthDelegateImplementation : IAuthDelegate
      {
         private ApplicationInfo _appInfo;
 
-        public AuthDelegateImplemenation(ApplicationInfo appInfo)
+        public AuthDelegateImplementation(ApplicationInfo appInfo)
         {
             _appInfo = appInfo;
         }
