@@ -217,6 +217,9 @@ To upgrade the Azure Information Protection scanner, install the latest version 
 
 #### To upgrade the scanner to the current preview version
 
+> [!IMPORTANT]
+> For a smooth upgrade path, do not install the preview version of the Azure Information Protection client on the computer running the scanner as your first step to upgrade the scanner. Instead, use the following upgrade instructions.
+
 For the current preview version of the scanner, the upgrade process is very different from previous versions. Upgrading the scanner automatically changes the scanner to gets its configuration settings from the Azure portal. In addition, the schema is updated for the scanner's configuration database, and this database is also renamed from AzInfoProtection:
 
 - If you do not specify your own profile name, the configuration database is renamed **AIPScanner_\<computer_name>**. 
@@ -224,9 +227,6 @@ For the current preview version of the scanner, the upgrade process is very diff
 - If you specify your own profile name, the configuration database is renamed **AIPScanner_\<profile_name>**.
 
 Although it's possible to upgrade the scanner in a different order, we recommend the following steps:
-
-> [!IMPORTANT]
-> For a smooth upgrade path, do not install the preview version of the Azure Information Protection client on the computer running the scanner as your first step to upgrade the scanner. Instead, follow the upgrade instructions.
 
 1. Use the Azure portal to create a new scanner profile that includes settings for the scanner and your data repositories with any settings that they need. For help with this step, see the [Configure the scanner in the Azure portal](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal) section from the preview scanner deployment instructions.
     
@@ -242,7 +242,11 @@ Although it's possible to upgrade the scanner in a different order, we recommend
 
 6. Restart the Azure Information Protection Scanner service, **Azure Information Protection Scanner**.
 
-If you don't configure the scanner in the Azure portal before you run the Update-AIPScanner command, you won't have a profile name to specify that identifies your scanner configuration settings for the upgrade process. In this scenario, when you configure the scanner in the Azure portal, you must specify the same profile name that was used for the Update-AIPScanner command. If you didn't specify a profile name when you ran this update command, the computer name is used to automatically create the profile name for the scanner.
+##### Upgrading in a different order to the recommended steps
+
+If you don't configure the scanner in the Azure portal before you run the Update-AIPScanner command, you won't have a profile name to specify that identifies your scanner configuration settings for the upgrade process. 
+
+In this scenario, when you configure the scanner in the Azure portal, you must specify exactly the same profile name that was used when you ran the Update-AIPScanner command. If you didn't specify a profile name when you ran this update command, the computer name is used to automatically create the profile name for the scanner.
 
 ## Uninstalling the Azure Information Protection client
 
