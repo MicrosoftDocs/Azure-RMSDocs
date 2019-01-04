@@ -111,7 +111,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - A new PowerShell cmdlet, [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration), for scenarios where the Azure Information Protection scanner cannot download its configuration from the Azure portal.
 
-- The Azure Information Protection scanner no longer excludes .zip files by default. To inspect and label .zip files, see the [To inspect .zip files](client-admin-guile-file-types.md#to-inspect-zip-files) section of the admin guide.
+- The Azure Information Protection scanner no longer excludes .zip files by default. To inspect and label .zip files, see the [To inspect .zip files](client-admin-guide-file-types.md#to-inspect-zip-files) section of the admin guide.
 
 ## Version 1.41.51.0
 

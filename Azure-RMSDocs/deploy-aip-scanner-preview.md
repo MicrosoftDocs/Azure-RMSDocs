@@ -179,10 +179,13 @@ Before you install the scanner, or upgrade it from the general availability vers
     
     Examples:
     
-        - For a local path: `C:\Folder`
-        - For a network share: `C:\Folder\Filename`
-        - For a UNC path:`\\Server\Folder`
-        - For a SharePoint library: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
+    For a local path: `C:\Folder`
+    
+    For a network share: `C:\Folder\Filename`
+    
+    For a UNC path:`\\Server\Folder`
+    
+    For a SharePoint library: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
     For the remaining settings, do not change them for this initial configuration, but keep them as **Profile default**. This means that the data repository inherits the settings from the scanner profile. 
     
