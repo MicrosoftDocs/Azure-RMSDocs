@@ -142,7 +142,9 @@ Before you install the scanner, or upgrade it from the general availability vers
     
     This option is still rolling out to tenants so if you do not see it listed, you can open the blade directly by using the following link: https://portal.azure.com/?ScannerConfiguration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/scannerProfilesBlade
 
-3. On the **Azure Information Protection - Profiles (Preview)** blade, select **Add**.
+3. On the **Azure Information Protection - Profiles (Preview)** blade, select **Add**:
+    
+    ![Add profile for the Azure Information Protection scanner](./media/scanner-add-profile.png)
 
 4. On the **Add a new profile** blade, specify a name for the scanner that is used to identify its configuration settings and data repositories to scan. For example, you might specify **Europe** to identify the geographical location of the data repositories that your scanner will cover. When you later install or upgrade the scanner, you will need to specify the same profile name.
     
@@ -249,7 +251,7 @@ You're now ready to run your first scan in discovery mode.
 
 ## Run a discovery cycle and view reports for the scanner
 
-1. In your PowerShell session, restart the **Azure Information Protection Scanner** service by running the following command:
+1. In your PowerShell session, start the scanner, by running the following command:
     
         Start-AIPScan
     
@@ -287,7 +289,7 @@ If you are following these instructions, the scanner runs one time and in the re
     
     There are other configuration settings that you might want to change. For example, whether file attributes are changed and whether the scanner can relabel files. Use the information popup help to learn more information about each configuration setting.
 
-2. Make a note of the current time and start the scanner again by running the following command:
+2. Make a note of the current time and start the scanner again by running the following command in your PowerShell session:
     
         Start-AIPScan
     
@@ -307,7 +309,9 @@ The scanner runs through the following processes when it scans files.
 ### 1. Determine whether files are included or excluded for scanning 
 The scanner automatically skips files that are [excluded from classification and protection](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection), such as executable files and system files.
 
-You can change this behavior by defining a list of file types to scan, or exclude from scanning. You can specify this list for the scanner to apply to all data repositories by default, and you can specify a list for each data repository. To specify this list, use the **Files types to scan** setting in the scanner profile.  
+You can change this behavior by defining a list of file types to scan, or exclude from scanning. You can specify this list for the scanner to apply to all data repositories by default, and you can specify a list for each data repository. To specify this list, use the **Files types to scan** setting in the scanner profile:
+
+![Configure file types to scan for the Azure Information Protection scanner](./media/scanner-file-types.png)
 
 ### 2. Inspect and label files
 
