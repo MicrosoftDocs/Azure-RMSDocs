@@ -54,7 +54,7 @@ If you have a version 1 of the client that is later than 1.41.51.0, it is a prev
 > [!TIP]
 > Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
 
-**Released**: 01/14/2019
+**Released**: 01/15/2019
 
 This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
