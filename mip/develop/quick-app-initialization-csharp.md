@@ -148,7 +148,7 @@ namespace mip_sdk_dotnet_quickstart
 As mentioned, profile and engine object are required for SDK clients using MIP APIs. Complete the coding portion of this Quickstart, by adding code to load the native DLLs then instantiate the profile and engine objects.
 
    ```csharp
-   using System;
+using System;
 using System.Threading.Tasks;
 using Microsoft.InformationProtection;
 using Microsoft.InformationProtection.File;
@@ -176,7 +176,7 @@ namespace mip_sdk_dotnet_quickstart
                //Instatiate the AuthDelegateImpl object, passing in AppInfo. 
                AuthDelegateImplementation authDelegate = new AuthDelegateImplementation(appInfo);
 
-               //Initialize and instantiate the File Profile                                   
+               //Initialize and instantiate the File Profile
                //Create the FileProfileSettings object
                var profileSettings = new FileProfileSettings("mip_data", false, authDelegate, new ConsentDelegateImplementation(), appInfo, LogLevel.Trace);
 
@@ -184,7 +184,8 @@ namespace mip_sdk_dotnet_quickstart
                var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
 
                //Create a FileEngineSettings object, then use that to add an engine to the profile
-               var engineSettings = new FileEngineSettings(System.Guid.NewGuid().ToString(), "", "en-US");
+               var engineSettings = new FileEngineSettings("user1@tenant.com", "", "en-US");
+               engineSettings.Identity = new Identity("user1@tenant.com");
                var fileEngine = Task.Run(async () => await fileProfile.AddEngineAsync(engineSettings)).Result;
           }
      }
