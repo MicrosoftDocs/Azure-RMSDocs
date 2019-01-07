@@ -76,7 +76,7 @@ Before you install the Azure Information Protection scanner, make sure that the 
 
 If you can't meet all the requirements in the table because they are prohibited by your organization policies, see the next section for alternatives.
 
-If all the requirements are met, go straight to the [configuration section](#configure-the-scanner-in-the-azure-portal).
+If all the requirements are met, go straight to [configuring the scanner section](#configure-the-scanner-in-the-azure-portal).
 
 ### Deploying the scanner with alternative configurations
 
@@ -150,7 +150,7 @@ Before you install the scanner, or upgrade it from the general availability vers
     
     Optionally, specify a description for administrative purposes, to help you identify the scanner's profie name.
 
-5. For this initial configuration, configure the following settings:
+5. For this initial configuration, configure the following settings, and then select **Save** but do not close the blade:
     
     - **Schedule**: Keep the default of **Manual**
     - **Info types to be discovered**: Keep the default of **All**
@@ -162,8 +162,6 @@ Before you install the scanner, or upgrade it from the general availability vers
     - **Preserve details**: Keep the default of **On**
     - **File types to scan**: Keep the file types for **Exclude**
     - **Default owner**: Keep the default of **Scanner Account**
-    
-    Select Save.
 
 6. Now that the profile is created and saved, you're ready to specify the data stores to be scanned. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
     
@@ -193,10 +191,10 @@ Before you install the scanner, or upgrade it from the general availability vers
     
     > [!TIP]
     > If you add a SharePoint path for "Shared Documents":
-    
-     - Specify "Shared Documents" in the path when you want to scan all documents and all folders from Shared Documents. For example: `http://sp2013/Shared Documents`
-     
-     - Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: `http://sp2013/Documents/Sales Reports`
+    >
+     >- Specify "Shared Documents" in the path when you want to scan all documents and all folders from Shared Documents. For example: `http://sp2013/Shared Documents`
+     >
+     >- Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: `http://sp2013/Documents/Sales Reports`
     
     For the remaining settings on this blade, do not change them for this initial configuration, but keep them as **Profile default**. This means that the data repository inherits the settings from the scanner profile. 
     
