@@ -20,7 +20,7 @@ ms.reviewer: demizets
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
-
+settings
 ---
 
 # Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files
@@ -95,7 +95,13 @@ The scanner can accommodate these restrictions but they require additional confi
 
 #### Restriction: The scanner server cannot have Internet connectivity
 
-Follow the instructions for a [disconnected computer](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). Then, after you have configured the scanner in the Azure portal, export your settings, and in a PowerShell session, run [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) and specify the file that contains the exported settings.
+Follow the instructions for a [disconnected computer](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). Then, do the following:
+
+1. Configure the scanner in the Azure portal, by creating a scanner profile. If you need help with this step, see [Configure the scanner in the Azure portal](#configure-the scanner in the Azure portal).
+
+2. Export your scanner profile from the **Azure Information Protection - Profiles (Preview)** blade, by using the **Export** option.
+
+3. Finally, in a PowerShell session, run [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) and specify the file that contains the exported settings.
 
 Note that in this configuration, the scanner cannot apply protection (or remove protection) by using your organization's cloud-based key. Instead, the scanner is limited to using labels that apply classification only, or protection that uses [HYOK](configure-adrms-restrictions.md). 
 
@@ -390,6 +396,12 @@ In addition, all files are inspected when the scanner downloads an Azure Informa
 > If you changed protection settings in the policy, also wait 15 minutes from when you saved the protection settings before you restart the service.
 
 If the scanner downloaded a policy that had no automatic conditions configured, the copy of the policy file in the scanner folder does not update. In this scenario, you must delete the policy file, **Policy.msip** from both **%LocalAppData%\Microsoft\MSIP\Policy.msip** and **%LocalAppData%\Microsoft\MSIP\Scanner** before the scanner can use a newly downloaded policy file that has labels correctly figured for automatic conditions.
+
+## Bulking editing for the data repository settings
+
+For the data repositories that you've added to a scanner profile, you can use the **Export** and **Import** options to quickly make changes to the settings. For example, for your SharePoint data repositories, you want to add a new file type to exclude from scanning.
+
+Instead of editing each data repository in the Azure portal, use the **Export** option from the **Repository** blade. Manually edit the file to make the change, and then use the **Import** option on the same blade.
 
 ## Using the scanner with alternative configurations
 
