@@ -4,8 +4,8 @@
 title: Overview - RMS SDK 4.2 | Azure RMS
 description: AD RMS and Azure RMS is an information protection technology that helps safeguard digital information from unauthorized use.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual

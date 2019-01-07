@@ -4,8 +4,8 @@
 title: Azure Information Protection SDK 2.1 developer guidance | Microsoft Docs
 description: A collection of how-to topics for developing with the AIP SDK 2.1
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: conceptual
