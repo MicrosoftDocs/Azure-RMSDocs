@@ -4,8 +4,8 @@
 title: Deploying your application - AIP
 description: This topic outlines and guides you through deployment of your application
 keywords: deploy, RMS, AIP
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: conceptual
