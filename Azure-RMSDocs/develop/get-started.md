@@ -4,8 +4,8 @@
 title: Get started | Azure RMS
 description: Quick start guide to a first application is through the development environment setup guides for each of the operating systems / platforms.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual

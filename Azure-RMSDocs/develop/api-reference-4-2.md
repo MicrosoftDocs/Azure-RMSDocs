@@ -3,8 +3,8 @@
 title: API SDK 4.2 reference | Microsoft Docs
 description: Azure Information Protection SDK 4.2 supports several operating systems. Including Android, iOS, OS X, Linux, Windows Phone, and Windows Store.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: conceptual

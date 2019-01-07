@@ -3,8 +3,8 @@
 
 title: What's new and release notes
 description: Outlines important changes and features in this and previous versions.
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 12/11/2018
 ms.topic: conceptual
