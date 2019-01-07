@@ -9,7 +9,6 @@ manager: mbaldwin
 ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
-ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 
 # optional metadata
 
@@ -20,7 +19,7 @@ ms.reviewer: demizets
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
-settings
+
 ---
 
 # Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files
