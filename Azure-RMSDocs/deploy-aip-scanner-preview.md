@@ -153,7 +153,7 @@ Before you install the scanner, or upgrade it from the general availability vers
 5. For this initial configuration, configure the following settings, and then select **Save** but do not close the blade:
     
     - **Schedule**: Keep the default of **Manual**
-    - **Info types to be discovered**: Keep the default of **All**
+    - **Info types to be discovered**: Change to **Policy only**
     - **Configure repositories**: Do not configure at this time
     - **Enforce**: Select **Off**
     - **Label files based on content**: Keep the default of **On**
@@ -163,7 +163,7 @@ Before you install the scanner, or upgrade it from the general availability vers
     - **File types to scan**: Keep the file types for **Exclude**
     - **Default owner**: Keep the default of **Scanner Account**
 
-6. Now that the profile is created and saved, you're ready to specify the data stores to be scanned. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
+6. Now that the profile is created and saved, you're ready to return to the **Configure repositories** option to specify the data stores to be scanned. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
     
     SharePoint Server 2016 and SharePoint Server 2013 are supported for SharePoint. SharePoint Server 2010 is also supported when you have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
@@ -399,14 +399,14 @@ There are two alternative scenarios that the Azure Information Protection scanne
     
     For this configuration, set the **Default label** to **Custom**, and select the label to use.
     
-    The contents of the files are not inspected and all files in the data repository are labeled according to the default label that you specify for the data repository or if this is not specified, the default label that is specified as a policy setting for the scanner account.
+    The contents of the files are not inspected and all files in the data repository are labeled according to the default label that you specify for the data repository or the scanner profile.
     
 
 - Identify all custom conditions and known sensitive information types.
     
     For this configuration, set the **Info types to be discovered** to **All**.
     
-    The scanner uses any custom conditions that you have specified for labels in the Azure Information Protection policy, and the list of information types that are available to specify for labels in the Azure Information Protection policy.
+    The scanner uses any custom conditions that you have specified for labels in the Azure Information Protection policy, and the list of information types that are available to specify for labels in the Azure Information Protection policy. This setting helps you find sensitive information that you might not realize you had, but at the expense of scanning rates for the scanner.
     
     The following quickstart for the general availability version of the scanner uses this configuration: [Quickstart: Find what sensitive information you have](quickstart-findsensitiveinfo.md).
 
@@ -422,7 +422,7 @@ To maximize the scanner performance:
 
 - **Make sure the scanner computer has available processor resources**
     
-    Inspecting the file contents for a match against your configured conditions, and encrypting and decrypting files are processor-intensive actions. Monitor typical scanning cycles for your specified data stores to identify whether a lack of processor resources is negatively affecting the scanner performance.
+    Inspecting the file contents, and encrypting and decrypting files are processor-intensive actions. Monitor typical scanning cycles for your specified data stores to identify whether a lack of processor resources is negatively affecting the scanner performance.
     
 - **Do not scan local folders on the computer running the scanner service**
     
@@ -440,7 +440,7 @@ Other factors that affect the scanner performance:
 
 - You change the conditions in the Azure Information Protection
     
-    Your first scan cycle when the scanner must inspect every file will obviously take longer than subsequent scan cycles that by default, inspect only new and changed files. However, if you change the conditions in the Azure Information Protection policy, all files are scanned again, as described in the [preceding section](#when-files-are-rescanned).
+    Your first scan cycle when the scanner must inspect every file will take longer than subsequent scan cycles that by default, inspect only new and changed files. However, if you change the conditions in the Azure Information Protection policy, all files are scanned again, as described in the [preceding section](#when-files-are-rescanned).
 
 - Your chosen logging level
     
