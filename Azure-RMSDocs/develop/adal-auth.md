@@ -4,8 +4,8 @@
 title: Configure your app for ADAL authentication - AIP
 description: Steps for configuring Azure Information Protection app to use Azure ADAL based authentication
 keywords: authentication, RMS, ADAL, Informatin Protection,
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: conceptual
