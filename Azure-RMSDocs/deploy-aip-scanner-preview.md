@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current preview ver
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2019
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
