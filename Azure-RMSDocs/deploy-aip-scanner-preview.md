@@ -258,19 +258,17 @@ You're now ready to run your first scan in discovery mode.
 
 ## Run a discovery cycle and view reports for the scanner
 
-1. In your PowerShell session, start the scanner, by running the following command:
+1. In the Azure portal, return to Azure Information Protection to start the scanner. From the **Scanner** menu option, select **Nodes**. Select your scanner node, and then the **Scan now** option.
+    
+    Alternatively, in your PowerShell session, run the following command:
     
         Start-AIPScan
-    
-    Alternatively, you can start the scanner from the **Azure Information Protection** blade in the Azure portal, when you use the **Scanner** > **Nodes** > **\<*scanner node*>**> **Scan now** option.
 
-2. Wait for the scanner to complete its cycle by running the following command:
+2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the scanner stops although the scanner service remains running:
     
-    	Get-AIPScannerStatus
+    From the **Azure Information Protection - Nodes** blade, the value for the **STATUS** column changes from **Scanning** to **Idle**.
     
-    Look for the status to show **Idle** rather than **Scanning**. When the scanner has crawled through all the files in the data stores that you specified, the scanner stops although the scanner service remains running. 
-    
-    Alternatively, you can view the status from the **Azure Information Protection** blade in the Azure portal, by checking the **Scanner** > **Nodes** > **\<*scanner node*>**> **STATUS** column.
+    Using PowerShell, you can run `Get-AIPScannerStatus` to monitor the status change.
     
     Check the local Windows **Applications and Services** event log, **Azure Information Protection**. This log also reports when the scanner has finished scanning, with a summary of results. Look for the informational event ID **911**.
 
@@ -296,17 +294,17 @@ If you are following these instructions, the scanner runs one time and in the re
     
     There are other configuration settings that you might want to change. For example, whether file attributes are changed and whether the scanner can relabel files. Use the information popup help to learn more information about each configuration setting.
 
-2. Make a note of the current time and start the scanner again by running the following command in your PowerShell session:
+2. Make a note of the current time and start the scanner again by selecting the **Scan now** option from the **Azure Information Protection - Nodes** blade.
+    
+    Alternatively, you can run the following command in your PowerShell session:
     
         Start-AIPScan
-    
-    Alternatively, you can start the scanner from the **Azure Information Protection** blade in the Azure portal, when you use the **Scanner** > **Nodes** > **\<*scanner node*>**> **Scan now** option.
 
 3. Monitor the event log for the informational type **911** again, with a time stamp later than when you started the scan in the previous step. 
     
     Then check the reports to see details of which files were labeled, what classification was applied to each file, and whether protection was applied to them. Or, use the Azure portal to more easily see this information.
 
-Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it starts a new cycle so that any new and changed files are discovered.
+Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it automatically starts a new cycle so that any new and changed files are discovered.
 
 
 ## How files are scanned
