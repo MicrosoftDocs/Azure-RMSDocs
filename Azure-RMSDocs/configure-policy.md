@@ -154,7 +154,7 @@ Use the following information to help you configure the Azure Information Protec
 
 For examples of how to customize the Azure Information Protection policy, and see the resulting behavior for users, try the following tutorials:
 
-- [Edit the Azure Information Protection policy and create a new label and create a new label](infoprotect-quick-start-tutorial.md)
+- [Edit the Azure Information Protection policy and create a new label](infoprotect-quick-start-tutorial.md)
 
 - [Configure Azure Information Protection policy settings that work together](infoprotect-settings-tutorial.md)
 
