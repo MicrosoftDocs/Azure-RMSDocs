@@ -115,6 +115,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - The Azure Information Protection scanner no longer excludes .zip files by default. To inspect and label .zip files, see the [To inspect .zip files](client-admin-guide-file-types.md#to-inspect-zip-files) section of the admin guide.
 
+- The [policy setting](../configure-policy-settings.md) **Users must provide justification to set a lower classification label, remove a label, or remove protection** no longer applies to the scanner. The scanner performs these actions when you configure the setting **Relabel files** to **On** in the scanner profile.
+
 ## Version 1.41.51.0
 
 **Released**: 11/27/2018
