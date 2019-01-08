@@ -96,7 +96,7 @@ The scanner can accommodate these restrictions but they require additional confi
 
 Follow the instructions for a [disconnected computer](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). Then, do the following:
 
-1. Configure the scanner in the Azure portal, by creating a scanner profile. If you need help with this step, see [Configure the scanner in the Azure portal](#configure-the scanner in the Azure portal).
+1. Configure the scanner in the Azure portal, by creating a scanner profile. If you need help with this step, see [Configure the scanner in the Azure portal](#configure-the scanner-in-the-azure-portal).
 
 2. Export your scanner profile from the **Azure Information Protection - Profiles (Preview)** blade, by using the **Export** option.
 
@@ -277,12 +277,12 @@ You're now ready to run your first scan in discovery mode.
     
     Check the local Windows **Applications and Services** event log, **Azure Information Protection**. This log also reports when the scanner has finished scanning, with a summary of results. Look for the informational event ID **911**.
 
-3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
+3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With our setting of **Policy only** for **Info types to be discovered**, only files that meet the conditions you've configured for automatic classification are included in these reports. If you don't see any labels reported, check your label configuration includes automatic rather than recommended classification. 
     
     > [!TIP]
     > Scanners send this information to Azure Information Protection every five minutes, so that you can view the results in near real-time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md). 
         
-    If the results are not as you expect, you might need to fine-tune the conditions that you specified in your Azure Information Protection policy. If that's the case, repeat steps 1 through 3 until you are ready to change the configuration to apply the classification and optionally, protection. 
+    If the results are not as you expect, you might need to reconfigure the conditions that you specified for you labels in your Azure Information Protection policy. If that's the case, repeat steps 1 through 3 until you are ready to change the configuration to apply the classification and optionally, protection. 
 
 When you're ready to automatically label the files that the scanner discovers, continue to the next procedure. 
 
