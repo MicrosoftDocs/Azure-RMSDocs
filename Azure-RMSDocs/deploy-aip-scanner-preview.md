@@ -96,7 +96,7 @@ The scanner can accommodate these restrictions but they require additional confi
 
 Follow the instructions for a [disconnected computer](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). Then, do the following:
 
-1. Configure the scanner in the Azure portal, by creating a scanner profile. If you need help with this step, see [Configure the scanner in the Azure portal](#configure-the scanner-in-the-azure-portal).
+1. Configure the scanner in the Azure portal, by creating a scanner profile. If you need help with this step, see [Configure the scanner in the Azure portal](#configure-the-scanner-in-the-azure-portal).
 
 2. Export your scanner profile from the **Azure Information Protection - Profiles (Preview)** blade, by using the **Export** option.
 
