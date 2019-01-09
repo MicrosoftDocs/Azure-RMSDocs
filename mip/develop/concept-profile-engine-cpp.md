@@ -12,7 +12,7 @@ ms.author: bryanla
 
 ## Profiles
 
-The profile is the root class for all operations in the MIP SDK. Before using any of the three APIs, a profile must be created by the client application. All future operations will be performed by the profile or by other objects *added* to the profile.
+The profile is the root class for all operations in the MIP SDK. Before using any of the three APIs, the client application must create a profile. Future operations are performed by the profile, or by other objects *added* to the profile.
 
 There are three types of profile in the MIP SDK:
 
@@ -20,7 +20,7 @@ There are three types of profile in the MIP SDK:
 - [`ProtectionProfile`](reference/class_mip_protectionprofile.md): The profile class for the MIP Protection API.
 - [`FileProfile`](reference/class_mip_fileprofile.md): The profile class for the MIP File API.
 
-The API used in the consuming application will determine which profile class should be used.
+The API used in the consuming application determines which profile class should be used.
 
 The profile itself provides the following functionality:
 
@@ -36,11 +36,11 @@ The profile itself provides the following functionality:
 - `authDelegate`: A shared pointer of class `mip::AuthDelegate`. 
 - `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_consentdelegate.md). 
 - `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
-- `applicationInfo`: A [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) object. Information about the application that is consuming the SDK, which match your Azure Active Directory application registration ID and name.
+- `applicationInfo`: A [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) object. Information about the application that is consuming the SDK, which matches your Azure Active Directory application registration ID and name.
 
 ## Engines
 
-In the File, Profile, and Protection APIs, engines provide an interface to operations performed on behalf of a specific identity. One engine will be added to the Profile object, for each user that signs in to the application. All operations performed by the engine will be in the context of that identity.
+The File, Profile, and Protection API engines provide an interface to operations performed on behalf of a specific identity. One engine is added to the Profile object, for each user that signs in to the application. All operations performed by the engine are in the context of that identity.
 
 There are three engine classes in the SDK, one for each API. The following list shows the engine classes and a few of the functions associated with each:
 
@@ -62,7 +62,7 @@ An engine may have one of two states:
 
 An engine must be both created and loaded to perform any operations. The `Profile` class exposes a few engine management methods: `AddEngineAsync`, `RemoveEngineAsync`, and `UnloadEngineAsync`.
 
-The following table describes the possible engine states and which method can changes that state.
+The following table describes the possible engine states, and which methods can change that state:
 
 |         | NONE              | CREATED           | LOADED         |
 |---------|-------------------|-------------------|----------------|
@@ -72,15 +72,15 @@ The following table describes the possible engine states and which method can ch
 
 ### Engine ID
 
-Each engine has a unique identifier, `id`, that is used in all engine management operations. The application can provide an `id` or the SDK will generate a new unique identifier, if one is not provided by the application. All other engine properties (for example, email address in the identity info) are opaque payloads for the SDK. The SDK does NOT perform any logic to keep any of the other properties unique, or enforce any other constraints.
+Each engine has a unique identifier, `id`, that is used in all engine management operations. The application can provide an `id`, or the SDK can generated one, if it's not provided by the application. All other engine properties (for example, email address in the identity info) are opaque payloads for the SDK. The SDK does NOT perform any logic to keep any of the other properties unique, or enforce any other constraints.
 
 ### Engine Management Methods
 
-As mentioned above, there are three engine management methods in the SDK: `AddEngineAsync`, `DeleteEngineAsync`, and `UnloadEngineAsync`.
+As mentioned previously, there are three engine management methods in the SDK: `AddEngineAsync`, `DeleteEngineAsync`, and `UnloadEngineAsync`.
 
 #### AddEngineAsync
 
-This method loads an existing engine, or creates a new one if one doesn't already exist in local state.
+This method loads an existing engine, or creates one if one doesn't already exist in local state.
 
 If the application doesn't provide an `id`, `AddEngineAsync` generates a new `id`. It then checks to see if an engine with that `id` already exists in local state. If it does, it loads that engine. If the engine does *not* exist in local state, a new engine is created by calling the necessary APIs and backend services.
 
@@ -94,7 +94,7 @@ Deletes the engine with the given `id`. All traces of the engine are removed fro
 
 Unloads the in-memory data structures for the engine with the given `id`. The local state of this engine is still intact, and can be reloaded with `AddEngineAsync`.
 
-This method allows the application to be judicious about memory usage, by unloading engines that are not expected to be used soon.
+This method allows the application to be judicious about memory usage, by unloading engines that aren't expected to be used soon.
 
 ## Next Steps
 
