@@ -94,23 +94,27 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 4. Download SDK binary and header files
 
-   A .zip file containing SDK binaries and headers for all platforms can be found at https://aka.ms/mipsdkbinaries. The .zip contains several additional .zip files, one for each platform and API. The files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`.
+   **NuGet package**
 
-   For example, the .zip for protection API binaries and headers on Debian would be: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`.
-
-   Each .zip or tarball contains three directories:
-
-   - **Bins:** The compiled binaries for each platform architecture, where applicable.
-   - **Include:** The Microsoft Information Protection SDK header files
-   - **Samples:** Source code for sample applications
-
-   If you're doing Visual Studio development, the SDK can be also installed via the NuGet Package Manager Console:
+   If you're doing Visual Studio development, the SDK can be also installed via the NuGet Package Manager Console. The Quickstart articles also use NuGet:
 
     ```console
     Install-Package Microsoft.InformationProtection.File
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
     ```  
+
+   **.Zip file download**
+
+   A .zip file containing SDK binaries and headers for all platforms can be found at https://aka.ms/mipsdkbinaries. The .zip contains several additional compressed files, one for each platform and API. The files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`.
+
+   For example, the file for protection API binaries and headers on Debian would be: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`.
+
+   Each .zip or tarball contains three directories:
+
+   - **Bins:** The compiled binaries for each platform architecture, where applicable.
+   - **Include:** The Microsoft Information Protection SDK header files
+   - **Samples:** Source code for sample applications
     
 5. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. The PATH variable allows the dependent DLLs to be found at runtime, by client applications:
    - Click the Windows icon in the lower left.
