@@ -5,8 +5,8 @@ title: How to enable document tracking and revocation | Azure RMS
 description: Basic guidance for implementing document tracking of content as well as example code for metadata updates and a Track Usage button for your app.
 
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
