@@ -34,9 +34,9 @@ The profile itself provides the following functionality:
 - `Path`: File path under which logging, telemetry, and other persistent state is stored.
 - `useInMemoryStorage`: A bool that defines whether state should be stored in memory, or on disk.
 - `authDelegate`: A shared pointer of class `mip::AuthDelegate`. 
-- `consentDelegate`: A shared pointer of class `mip::ConsentDelegate`. 
-- `observer`: A shared pointer to the profile `Observer` implementation (in `PolicyProfile`, `ProtectionProfile`, and `EngineProfile`).
-- `applicationInfo`: A `mip::ApplicationInfo` object. Information about the application that is consuming the SDK.
+- `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_consentdelegate.md). 
+- `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
+- `applicationInfo`: A [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) object. Information about the application that is consuming the SDK, which match your Azure Active Directory application registration ID and name.
 
 ## Engines
 
@@ -44,7 +44,7 @@ In the File, Profile, and Protection APIs, engines provide an interface to opera
 
 There are three engine classes in the SDK, one for each API. The following list shows the engine classes and a few of the functions associated with each:
 
-- [`mip::ProtectionEngine`]
+- [`mip::ProtectionEngine`](reference/class_mip_protectionengine.md)
 - [`mip::PolicyEngine`](reference/class_mip_policyengine.md)
   - `ListSensitivityLabels()`: Gets the list of labels for the loaded engine.
   - `GetSensitivityLabel()`: Gets the label from existing content.
