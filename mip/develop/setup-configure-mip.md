@@ -92,15 +92,7 @@ Next, complete the following steps to ensure your client computer is set up and 
      PS C:\WINDOWS\system32>
      ```
 
-4. Download SDK samples from GitHub 
-
-   - If you don't have one already, first create a [GitHub profile](https://github.com/join).
-   - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
-   - Using Git Bash, download the sample(s) of interest:
-     - Use the following query to view the repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
-     - Using Git Bash, use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repository.
-
-5. Download SDK binary and header files
+4. Download SDK binary and header files
 
    A .zip file containing SDK binaries and headers for all platforms can be found at https://aka.ms/mipsdkbinaries. The .zip contains several additional .zip files, one for each platform and API. The files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`.
 
@@ -120,7 +112,7 @@ Next, complete the following steps to ensure your client computer is set up and 
     Install-Package Microsoft.InformationProtection.Protection
     ```  
     
-6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. The PATH variable allows the dependent DLLs to be found at runtime, by client applications:
+5. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. The PATH variable allows the dependent DLLs to be found at runtime, by client applications:
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
    - On the **System Properties** dialog, click **Environment Variables**.
@@ -131,6 +123,14 @@ Next, complete the following steps to ensure your client computer is set up and 
      - \<platform\> = `amd64` (aka: x64), `x86`, etc.
    
    - When finished updating the **Path** variable, click **OK**. Then click **OK** when returned to the **Environment Variables** dialog.
+
+6. Download SDK samples from GitHub (OPTIONAL)
+
+   - If you don't have one already, first create a [GitHub profile](https://github.com/join).
+   - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
+   - Using Git Bash, download the sample(s) of interest:
+     - Use the following query to view the repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
+     - Using Git Bash, use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repository.
 
 ## Register a client application with Azure Active Directory
 
