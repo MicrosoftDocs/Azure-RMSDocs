@@ -182,7 +182,7 @@ Before you install the scanner, or upgrade it from the general availability vers
 
 8. On the **Repository** blade, specify the path for the data repository. 
     
-    Wildcards are not supported and WebDav locations are not supported. Paths can include spaces when you enclose the path value with quotes.
+    Wildcards are not supported and WebDav locations are not supported.
     
     Examples:
     
@@ -197,9 +197,9 @@ Before you install the scanner, or upgrade it from the general availability vers
     > [!TIP]
     > If you add a SharePoint path for "Shared Documents":
     >
-     >- Specify "Shared Documents" in the path when you want to scan all documents and all folders from Shared Documents. For example: `"http://sp2013/Shared Documents"`
+     >- Specify "Shared Documents" in the path when you want to scan all documents and all folders from Shared Documents. For example: `http://sp2013/Shared Documents`
      >
-     >- Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: `"http://sp2013/Documents/Sales Reports"`
+     >- Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: `http://sp2013/Documents/Sales Reports`
     
     For the remaining settings on this blade, do not change them for this initial configuration, but keep them as **Profile default**. This means that the data repository inherits the settings from the scanner profile. 
     
