@@ -1,11 +1,11 @@
 ---
-title: Quickstart - Set and get a sensitivity label on a file using the C++ MIP SDK
+title: Quickstart - Set and get a sensitivity label on a file using the C# MIP SDK
 description: A quickstart showing you how to use the Microsoft Information Protection C++ SDK to set and get a sensitivity label on a file.
 services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/09/2019
 ms.author: bryanla
 ---
 
@@ -24,7 +24,7 @@ If you haven't already, be sure to complete the following prerequisites before c
 
 Add logic to set and get a sensitivity label on a file, using the File engine object. 
 
-1. Using **Solution Explorer**, open the .cs file in your project that contains the implementation of the Mmain()` method. It defaults to the same name as the project containing it, which you specified during project creation. 
+1. Using **Solution Explorer**, open the .cs file in your project that contains the implementation of the Main()` method. It defaults to the same name as the project containing it, which you specified during project creation. 
 
 2. Toward the end of the `Main()` body, below `Console.ReadKey()` and above `}` (where you left off in the previous Quickstart), insert the following code:
 
@@ -58,6 +58,8 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
      var contentLabel = handlerModified.Label;
      Console.WriteLine(string.Format("Getting the label committed to file: {0}", outputFilePath));
      Console.WriteLine(string.Format("File Label: {0} \r\nIsProtected: {1}", contentLabel.Label, contentLabel.IsProtectionAppliedFromLabel.ToString()));
+     Console.WriteLine("Press a key to continue.");
+     Console.ReadKey();
    ```
 
 4. Replace the placeholder values in the source code that you just pasted in, using the following values:
