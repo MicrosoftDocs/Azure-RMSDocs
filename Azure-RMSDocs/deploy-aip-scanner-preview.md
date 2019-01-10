@@ -197,9 +197,9 @@ Before you install the scanner, or upgrade it from the general availability vers
     > [!TIP]
     > If you add a SharePoint path for "Shared Documents":
     >
-     >- Specify "Shared Documents" in the path when you want to scan all documents and all folders from Shared Documents. For example: `http://sp2013/Shared Documents`
+     >- Specify **Shared Documents** in the path when you want to scan all documents and all folders from Shared Documents. For example: `http://sp2013/Shared Documents`
      >
-     >- Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: `http://sp2013/Documents/Sales Reports`
+     >- Specify **Documents** in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: `http://sp2013/Documents/Sales Reports`
     
     For the remaining settings on this blade, do not change them for this initial configuration, but keep them as **Profile default**. This means that the data repository inherits the settings from the scanner profile. 
     
@@ -400,7 +400,14 @@ If the scanner downloaded a policy that had no automatic conditions configured, 
 
 For the data repositories that you've added to a scanner profile, you can use the **Export** and **Import** options to quickly make changes to the settings. For example, for your SharePoint data repositories, you want to add a new file type to exclude from scanning.
 
-Instead of editing each data repository in the Azure portal, use the **Export** option from the **Repository** blade. Manually edit the file to make the change, and then use the **Import** option on the same blade.
+Instead of editing each data repository in the Azure portal, use the **Export** option from the **Repository** blade:
+
+![Exporting data repository settings for the scanner](./media/export-scanner-repositories.png)
+
+
+ Manually edit the file to make the change, and then use the **Import** option on the same blade:
+
+![Importing edited data repository settings for the scanner](./media/import-scanner-repositories.png)
 
 ## Using the scanner with alternative configurations
 
