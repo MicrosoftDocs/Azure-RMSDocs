@@ -254,8 +254,9 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
    int main()
    {
      // Construct/initialize objects required by the application's profile object
-     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, app name)
-                 "<application-name>" };
+     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, name, version)
+                 "<application-name>",
+                 "<application-version>"};
      auto profileObserver = make_shared<ProfileObserver>();         // Observer object					
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
@@ -272,8 +273,19 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
      // Set up promise/future connection for async profile operations; load profile asynchronously
      auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
      auto profileFuture = profilePromise->get_future();
-     mip::FileProfile::LoadAsync(profileSettings, profilePromise);
-     auto profile = profileFuture.get();
+	try
+	{ 
+		mip::FileProfile::LoadAsync(profileSettings, profilePromise);
+	}
+	catch (const std::exception& e)
+	{
+		cout << "An exception occurred... are the Settings and ApplicationInfo objects populated correctly?\n\n"
+			<< e.what() << "'\n";
+		system("pause");
+		return 1;
+
+	}
+	auto profile = profileFuture.get();
 
      // Construct/initialize engine object
      FileEngine::Settings engineSettings(
@@ -298,17 +310,17 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
        return 1;
      }
 
-      return 0;
-     }
-
+   return 0;
+   }
    ``` 
 
 3. Replace the placeholder values in the source code that you just pasted in, using the following values:
 
    | Placeholder | Value | Example |
    |:----------- |:----- |:--------|
-   | \<application-id\> | The Azure AD Application ID (GUID) assigned to the application registered in [step #2 of the "MIP SDK setup and configuration"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) article. Replace 2 instances.  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
+   | \<application-id\> | The Azure AD Application ID (GUID) assigned to the application registered in [step #2 of the "MIP SDK setup and configuration"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) article. Replace 2 instances.  | "0edbblll-8773-44de-b87c-b8c6276d41eb" |
    | \<application-name\> | A user-defined friendly name for your application. Must contain valid ASCII characters (excluding ';'), and ideally matches the application name you used in your Azure AD registration. | AppInitialization |
+   | \<application-version\> | User-defined version info for your application. Must contain valid ASCII characters (excluding ';'). | 1.1.0.0 |
    | \<engine-account\> | The account used for the engine's identity. When you authenticate with a user account during token acquisition, it must match this value. | user1@tenant.onmicrosoft.com |
    | \<engine-state\> | User-defined state to be associated with the engine. | MyAppState |
 
