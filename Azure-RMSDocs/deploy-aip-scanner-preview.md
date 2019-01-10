@@ -404,10 +404,7 @@ Instead of editing each data repository in the Azure portal, use the **Export** 
 
 ![Exporting data repository settings for the scanner](./media/export-scanner-repositories.png)
 
-
- Manually edit the file to make the change, and then use the **Import** option on the same blade:
-
-![Importing edited data repository settings for the scanner](./media/import-scanner-repositories.png)
+Manually edit the file to make the change, and then use the **Import** option on the same blade.
 
 ## Using the scanner with alternative configurations
 
