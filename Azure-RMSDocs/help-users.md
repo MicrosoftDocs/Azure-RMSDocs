@@ -6,7 +6,7 @@ description: Information to help you provide guidance for users, administrators,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
@@ -79,7 +79,7 @@ In addition to making it easier for users to protect documents and emails, the A
 For instructions to use this client for Windows computers, see the [Azure Information Protection client user guide](./rms-client/client-user-guide.md).
 
 
-## Using information protection with Office 365, Office 2016, or Office 2013
+## Using information protection with Office 365, Office 2019, Office 2016, or Office 2013
 If you are using the Azure Rights Management service and have not installed the Azure Information Protection client, users do not see the Azure Information Protection bar in their Office desktop apps. They also don't see the **Protect** button on the ribbon, or **Classify and protect** from File Explorer. These additions make it easier for users to protect documents and emails. For these users, they must follow instructions similar to the steps that follow.
 
 > [!TIP]
