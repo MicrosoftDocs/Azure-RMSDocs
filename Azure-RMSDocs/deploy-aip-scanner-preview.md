@@ -159,13 +159,13 @@ Before you install the scanner, or upgrade it from the general availability vers
     
     - **Schedule**: Keep the default of **Manual**
     - **Info types to be discovered**: Change to **Policy only**
-    - **Configure repositories**: Do not configure at this time
+    - **Configure repositories**: Do not configure at this time because the profile must first be saved.
     - **Enforce**: Select **Off**
     - **Label files based on content**: Keep the default of **On**
     - **Default label**: Keep the default of **Policy default**
     - **Relabel files**: Keep the default of **Off**
-    - **Preserve details**: Keep the default of **On**
-    - **File types to scan**: Keep the file types for **Exclude**
+    - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On**
+    - **File types to scan**: Keep the default file types for **Exclude**
     - **Default owner**: Keep the default of **Scanner Account**
 
 6. Now that the profile is created and saved, you're ready to return to the **Configure repositories** option to specify the data stores to be scanned. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
