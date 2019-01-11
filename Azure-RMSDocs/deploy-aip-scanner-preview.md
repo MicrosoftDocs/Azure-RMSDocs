@@ -400,7 +400,7 @@ If the scanner downloaded a policy that had no automatic conditions configured, 
 
 For the data repositories that you've added to a scanner profile, you can use the **Export** and **Import** options to quickly make changes to the settings. For example, for your SharePoint data repositories, you want to add a new file type to exclude from scanning.
 
-Instead of editing each data repository in the Azure portal, use the **Export** option from the **Repository** blade:
+Instead of editing each data repository in the Azure portal, use the **Export** option from the **Repositories** blade:
 
 ![Exporting data repository settings for the scanner](./media/export-scanner-repositories.png)
 
