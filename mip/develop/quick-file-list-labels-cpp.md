@@ -33,7 +33,7 @@ Add logic to list your organization's sensitivity labels, using the File engine 
    using std::endl;
    ```
 
-4. Toward the end of the `main()` body, below the closing brace `}` of the `catch` block and above `return 0;` (where you left off in the previous Quickstart), insert the following code:
+4. Toward the end of the `main()` body, below the closing brace `}` of the last `catch` block and above `return 0;` (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
    // List sensitivity labels
@@ -57,12 +57,12 @@ Use the following PowerShell script to generate access tokens, which are request
 
 1. Create a PowerShell Script file (.ps1 extension), and copy/paste the following script into the file:
 
-   - `$authority` and `$resourceUrl` are updated later, in the following section:
-   - Update the `$appId` and `$redirectUri` variables, to match the values specified in your Azure AD app registration. 
+   - `$authority` and `$resourceUrl` are updated later, in the following section.
+   - Update `$appId` and `$redirectUri`, to match the values you specified in your Azure AD app registration. 
 
    ```powershell
-   $authority = '<authority-url>'                   # Enforced by MIP SDK
-   $resourceUrl = '<resource-url>'                  # Enforced by MIP SDK; matches a resource/API URL in the app registration
+   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token() 
+   $resourceUrl = '<resource-url>'                  # Specified when SDK calls AcquireOAuth2Token()
    $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'  # App ID of the Azure AD app registration
    $redirectUri = 'bltest://authorize'              # Redirect URI of the Azure AD app registration
    $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
@@ -77,7 +77,7 @@ Finally, build and test your client application.
 
 1. Use F6 (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application  prompts for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. You can reuse a previously generated token, if prompted multiple times and the requested values are the same:
+2. If your project builds and runs successfully, the application prompts for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. You can reuse a previously generated token, if prompted multiple times and the requested values are the same:
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
@@ -100,7 +100,7 @@ Finally, build and test your client application.
 
      [![Visual Studio consent](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png#lightbox)
 
-4. After supplying the access token, your console output should show the sensitivity labels, similar to the following example:
+4. After pasting the access token into the prompt from step #2, your console output should show the sensitivity labels, similar to the following example:
 
    ```console
    Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
