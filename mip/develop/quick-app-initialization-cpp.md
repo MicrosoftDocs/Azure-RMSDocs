@@ -318,11 +318,11 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
 
    | Placeholder | Value | Example |
    |:----------- |:----- |:--------|
-   | \<application-id\> | The Azure AD Application ID (GUID) assigned to the application registered in [step #2 of the "MIP SDK setup and configuration"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) article. Replace 2 instances.  | "`0edbblll-8773-44de-b87c-b8c6276d41eb`" |
-   | \<application-name\> | A user-defined friendly name for your application. Must contain valid ASCII characters (excluding ';'), and ideally matches the application name you used in your Azure AD registration. | "`AppInitialization`" |
-   | \<application-version\> | User-defined version info for your application. Must contain valid ASCII characters (excluding ';'). | "`1.1.0.0`" |
-   | \<engine-account\> | The account used for the engine's identity. When you authenticate with a user account during token acquisition, it must match this value. | "`user1@tenant.onmicrosoft.com`" |
-   | \<engine-state\> | User-defined state to be associated with the engine. | "`My App State`" |
+   | \<application-id\> | The Azure AD Application ID (GUID) assigned to the application registered in [step #2 of the "MIP SDK setup and configuration"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) article. Replace 2 instances. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
+   | \<application-name\> | A user-defined friendly name for your application. Must contain valid ASCII characters (excluding ';'), and ideally matches the application name you used in your Azure AD registration. | `"AppInitialization"` |
+   | \<application-version\> | User-defined version info for your application. Must contain valid ASCII characters (excluding ';'). | `"1.1.0.0"` |
+   | \<engine-account\> | The account used for the engine's identity. When you authenticate with a user account during token acquisition, it must match this value. | `"user1@tenant.onmicrosoft.com"` |
+   | \<engine-state\> | User-defined state to be associated with the engine. | `"My App State"` |
 
 
 4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart. If you run the application, you will see output similar to the following. You won't have an access token to provide, until you complete the next Quickstart.
