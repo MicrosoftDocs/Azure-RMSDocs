@@ -24,7 +24,7 @@ If you haven't already, be sure to complete the following prerequisites before c
 
 Similar to the observer you implemented (for the File profile and engine) in the Application initialization Quickstart, now you implement an observer class for a File handler object.
 
-Create a basic implementation for an observer class, by extending the SDK's `mip::FileHandler::Observer` class. The observer is instantiated and used later, to monitor File handler operations.
+Create a basic implementation for a File handler observer, by extending the SDK's `mip::FileHandler::Observer` class. The observer is instantiated and used later, to monitor File handler operations.
 
 1. Open the Visual Studio solution you worked on in the previous "Quickstart: List sensitivity labels (C++)" article.
 
@@ -100,12 +100,19 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    ```cpp
    // Set up async FileHandler for input file operations
    string filePathIn = "<input-file-path>";
+   string contentIdentifier = "<content-identifier>";
    std::shared_ptr<FileHandler> handler;
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(filePathIn, mip::ContentState::REST, std::make_shared<FileHandlerObserver>(), handlerPromise);
+        engine->CreateFileHandlerAsync(
+             filePathIn, 
+             contentIdentifier,
+             mip::ContentState::REST, 
+             true, 
+             std::make_shared<FileHandlerObserver>(), 
+             handlerPromise);
         handler = handlerFuture.get();
    }
    catch (const std::exception& e)
@@ -155,11 +162,19 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    system("pause");
 
    // Set up async FileHandler for output file operations
+   contentIdentifier = "c:\Test\Test_labeled.docx";
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(filePathOut, mip::ContentState::REST, std::make_shared<FileHandlerObserver>(), handlerPromise);
+        engine->CreateFileHandlerAsync(
+             filePathOut, 
+             contentIdentifier,
+             mip::ContentState::REST,
+             true,
+             std::make_shared<FileHandlerObserver>(),
+             handlerPromise);
+
         handler = handlerFuture.get();
    }
    catch (const std::exception& e)
@@ -186,13 +201,14 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    system("pause");
    ```
 
-4. Replace the placeholder values in the source code that you just pasted in, using the following values:
+4. Replace the placeholder values in the source code that you just pasted in as follows, using string constants:
 
    | Placeholder | Value |
    |:----------- |:----- |
-   | \<input-file-path\> | The full path to a test input file, for example: `c:\\Test\\Test.docx`. |
-   | \<label-id\> | A sensitivity label ID, copied from the console output in the previous Quickstart, for example: `f42a3342-8706-4288-bd31-ebb85995028z`. |
-   | \<output-file-path\> | The full path to the output file, which will be a labeled copy of the input file, for example: `c:\\Test\\Test_labeled.docx`. |
+   | \<input-file-path\> | The full path to a test input file, for example: "`c:\\Test\\Test.docx`". |
+   | \<content-identifier\> | A human-readable identifier for the content. For example: <ul><li>for a file, consider path\filename: "`c:\Test\Test.docx`"</li><li>for an email, consider subject:sender : "`RE: Audit design:user1@contoso.com`"</li></ul> |
+   | \<label-id\> | A sensitivity label ID, copied from the console output in the previous Quickstart, for example: "`f42a3342-8706-4288-bd31-ebb85995028z`". |
+   | \<output-file-path\> | The full path to the output file, which will be a labeled copy of the input file, for example: "`c:\\Test\\Test_labeled.docx`". |
 
 ## Build and test the application
 
