@@ -279,12 +279,12 @@ You're now ready to run your first scan in discovery mode.
 
 3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. These reports include the time taken to scan, the number of scanned files, and statistics of how many files were classified and protected. The **Reports** folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space. 
     
-    > [!TIP]
+    > [!NOTE]
     > You can change the level of logging by using the *ReportLevel* parameter with [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration), but you can't change the report folder location or name. Consider using a junction point for the folder if you want to store the reports on a different volume or partition.
 
     With our setting of **Policy only** for **Info types to be discovered**, only files that meet the conditions you've configured for automatic classification are included in these reports. If you don't see any labels reported, check your label configuration includes automatic rather than recommended classification. 
     
-    > [!NOTE]
+    > [!TIP]
     > Scanners send this information to Azure Information Protection every five minutes, so that you can view the results in near real-time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md). 
         
     If the results are not as you expect, you might need to reconfigure the conditions that you specified for you labels in your Azure Information Protection policy. If that's the case, repeat steps 1 through 3 until you are ready to change the configuration to apply the classification and optionally, protection. 
