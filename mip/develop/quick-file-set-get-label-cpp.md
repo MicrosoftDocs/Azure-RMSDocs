@@ -30,7 +30,7 @@ Create a basic implementation for a File handler observer, by extending the SDK'
 
 2. Add a new class to your project, which generates both the header/.h and implementation/.cpp files for you:
 
-   - In the **Solution Explorer**, right click on the project node again, select **Add**, then select **Class**.
+   - In the **Solution Explorer**, right-click the project node again, select **Add**, then select **Class**.
    - On the **Add Class** dialog:
      - In the **Class Name** field, enter "filehandler_observer". Notice that both the **.h file** and **.cpp file** fields are automatically populated, based on the name you enter.
      - When finished, click the **OK** button.
@@ -138,7 +138,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    }
 
    // Commit changes, save as a different/output file
-   string filePathOut = "c:\\Test\\Test_labeled.docx";
+   string filePathOut = "<output-file-path>";
    try
    {
    		cout << "Committing changes" << endl;
@@ -216,7 +216,7 @@ Build and test your client application.
 
 1. Use F6 (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. As you did previously in the "List sensitivity labels" Quickstart, run your PowerShell script to acquire the token each time, using the values provided for $authority and $resourceUrl. 
+2. If your project builds and runs successfully, the application prompts for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. As you did previously in the "List sensitivity labels" Quickstart, run your PowerShell script to acquire the token each time, using the values provided for $authority and $resourceUrl. 
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:

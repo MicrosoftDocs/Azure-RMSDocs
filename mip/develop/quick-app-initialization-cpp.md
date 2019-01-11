@@ -10,10 +10,10 @@ ms.author: bryanla
 
 # Quickstart: Client application initialization (C++)
 
-This quickstart will show you how to implement the client initialization pattern, used by the MIP C++ SDK at runtime. 
+This quickstart shows you how to implement the client initialization pattern, used by the MIP C++ SDK at runtime. 
 
 > [!NOTE]
-> The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs. Although this Quickstart demonstrates usage of the File APIs, this same pattern is applicable to clients using the Policy and Protection APIs. Future Quickstarts should be done serially, as each one builds on the previous one, with this one being the first.
+> The steps outlined in this quickstart are required for any client application that uses the MIP File, Policy, or Protection APIs. Although this Quickstart demonstrates usage of the File APIs, this same pattern is applicable to clients using the Policy and Protection APIs. Complete the remaining Quickstarts serially, as each one builds on the previous one, with this one being the first.
 
 ## Prerequisites
 
@@ -22,12 +22,12 @@ If you haven't already, be sure to:
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md). This "Client application initialization" Quickstart relies on proper SDK setup and configuration.
 - Optionally:
   - Review [Profile and engine objects](concept-profile-engine-cpp.md). The profile and engine objects are universal concepts, required by clients that use the MIP File/Policy/Protection APIs. 
-  - Review [Authentication concepts](concept-authentication-cpp.md) to learn how authentication and consent are implemented by the SDK and client application.
-  - Review [Observer concepts](concept-async-observers.md) to learn more about observers, and how they're implemented. The MIP SDK makes use of the observer pattern to implement asynchronous event notifications.
+  - Review [Authentication concepts](concept-authentication-cpp.md) to learn how authentication and consent are implemented by the SDK and the client application.
+  - Review [Observer concepts](concept-async-observers.md) to learn more about observers, and how they're implemented. The MIP SDK uses the observer pattern to implement asynchronous event notifications.
 
 ## Create a Visual Studio solution and project
 
-First we create and configure the initial Visual Studio solution and project, upon which the other Quickstarts will build. 
+First we create and configure the initial Visual Studio solution and project, upon which the other Quickstarts build. 
 
 1. Open Visual Studio 2017, select the **File** menu, **New**, **Project**. In the **New Project** dialog:
    - In the left pane, under **Installed**, **Other Languages**, select **Visual C++**.
@@ -38,7 +38,7 @@ First we create and configure the initial Visual Studio solution and project, up
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
 2. Add the Nuget package for the MIP SDK File API to your project:
-   - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
+   - In the **Solution Explorer**, right-click the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
    - When the **NuGet Package Manager** tab opens in the Editor Group tabs area:
      - Select **Browse**.
      - Enter "Microsoft.InformationProtection" in the search box.
@@ -53,7 +53,7 @@ Now create a basic implementation for a File profile observer class, by extendin
 
 1. Add a new class to your project, which generates both the header/.h and implementation/.cpp files for you:
 
-   - In the **Solution Explorer**, right click on the project node again, select **Add**, then select **Class**.
+   - In the **Solution Explorer**, right-click the project node again, select **Add**, then select **Class**.
    - On the **Add Class** dialog:
      - In the **Class Name** field, enter "profile_observer". Notice that both the **.h file** and **.cpp file** fields are automatically populated, based on the name you enter.
      - When finished, click the **OK** button.
@@ -230,7 +230,7 @@ Now create an implementation for a consent delegate, by extending the SDK's `mip
 
 ## Construct a File profile and engine
 
-As mentioned, profile and engine object are required for SDK clients using MIP APIs. Complete the coding portion of this Quickstart, by adding code to instantiate the profile and engine objects: 
+As mentioned, profile and engine objects are required for SDK clients using MIP APIs. Complete the coding portion of this Quickstart, by adding code to instantiate the profile and engine objects: 
 
 1. From **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It defaults to the same name as the project containing it, which you specified during project creation.
 
@@ -314,7 +314,7 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
    }
    ``` 
 
-3. Replace the placeholder values in the source code that you just pasted in as follows, using string constants:
+3. Replace all placeholder values in the source code that you just pasted in, using string constants:
 
    | Placeholder | Value | Example |
    |:----------- |:----- |:--------|
@@ -325,7 +325,7 @@ As mentioned, profile and engine object are required for SDK clients using MIP A
    | \<engine-state\> | User-defined state to be associated with the engine. | `"My App State"` |
 
 
-4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart. If you run the application, you will see output similar to the following. You won't have an access token to provide, until you complete the next Quickstart.
+4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart. If you run the application, you see output similar to the following. You won't have an access token to provide, until you complete the next Quickstart.
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
