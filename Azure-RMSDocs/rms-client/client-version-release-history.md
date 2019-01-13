@@ -66,8 +66,6 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     
     - If you are installing the scanner for the first time, rather than upgrading, see [Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner-preview.md).
 
-- Discovery of labeled files that are reported to [Azure Information Protection analytics](../reports-aip.md), and now included in the **Data Discovery (Preview)** reports.
-
 - If you label and protect files by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. [More information](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
 - The Azure Information Protection scanner now supports multiple configuration databases on the same SQL server instance when you specify a profile name.
