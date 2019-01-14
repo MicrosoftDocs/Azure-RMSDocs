@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/14/2019
+ms.date: 01/16/2019
 ms.topic: quickstart
 ms.service: information-protection
 

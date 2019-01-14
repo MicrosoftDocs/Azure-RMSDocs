@@ -6,7 +6,7 @@ description: After you have protected your documents, you can track how people a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/14/2019
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
