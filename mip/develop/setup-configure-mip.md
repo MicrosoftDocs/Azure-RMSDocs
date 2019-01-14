@@ -4,7 +4,7 @@ description: Provides the setup and configuration prerequisites, in order to use
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/08/2019
+ms.date: 01/18/2019
 ms.author: bryanla
 ---
 
@@ -67,7 +67,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 
      [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. Install the [ADAL.PS PowerShell Module](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2). 
+3. Install the [ADAL.PS PowerShell Module](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2): 
 
    - Because administrator rights are required to install modules, first you need to either:
 
@@ -88,7 +88,7 @@ Next, complete the following steps to ensure your client computer is set up and 
      PS C:\WINDOWS\system32>
      ```
 
-4. Download SDK files
+4. Download SDK files:
 
    The MIP SDK is supported on the following platforms, with separate downloads for each supported platform/language:  
 
@@ -112,7 +112,7 @@ Next, complete the following steps to ensure your client computer is set up and 
     Install-Package Microsoft.InformationProtection.Protection
     ```  
 
-5. Add the paths of the SDK binaries (ie: dynamic link libraries), to the PATH environment variable. The PATH variable allows the dependent DLLs to be found at runtime, by client applications.
+5. If you're not using the NuGet package, add the paths of the SDK binaries to the PATH environment variable. The PATH variable allows the dependent binaries (DLLs) to be found at runtime, by client applications (OPTIONAL):
 
    If you're using a Windows 10 workstation:
 
@@ -127,7 +127,7 @@ Next, complete the following steps to ensure your client computer is set up and 
    
    - When finished updating the **Path** variable, click **OK**. Then click **OK** when returned to the **Environment Variables** dialog.
 
-6. Download SDK samples from GitHub (OPTIONAL)
+6. Download SDK samples from GitHub (OPTIONAL):
 
    - If you don't have one already, first create a [GitHub profile](https://github.com/join).
    - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
