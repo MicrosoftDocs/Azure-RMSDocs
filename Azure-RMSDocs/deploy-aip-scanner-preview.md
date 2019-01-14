@@ -279,10 +279,12 @@ You're now ready to run your first scan in discovery mode.
     
     Check the local Windows **Applications and Services** event log, **Azure Information Protection**. This log also reports when the scanner has finished scanning, with a summary of results. Look for the informational event ID **911**.
 
-3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports. The .txt summary files include the time taken to scan, the number of scanned files, and how many files had a match for the information types. The .csv files have more details for each file. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space. 
+3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports. The .txt summary files include the time taken to scan, the number of scanned files, and how many files had a match for the information types. The .csv files have more details for each file. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
     
     > [!NOTE]
-    > You can change the level of logging by using the *ReportLevel* parameter with [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration), but you can't change the report folder location or name. Consider using a junction point for the folder if you want to store the reports on a different volume or partition.
+    > You can change the level of logging by using the *ReportLevel* parameter with [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration), but you can't change the report folder location or name. Consider using a directory junction for the folder if you want to store the reports on a different volume or partition.
+    >
+    > For example, using the [Mklink](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753194(v=ws.11\)) command: `mklink /j C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports D:\Scanner_reports`
 
     With our setting of **Policy only** for **Info types to be discovered**, only files that meet the conditions you've configured for automatic classification are included in these reports. If you don't see any labels reported, check your label configuration includes automatic rather than recommended classification. 
     
