@@ -285,8 +285,8 @@ You're now ready to run your first scan in discovery mode.
     > You can change the level of logging by using the *ReportLevel* parameter with [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration), but you can't change the report folder location or name. Consider using a directory junction for the folder if you want to store the reports on a different volume or partition.
     >
     > For example, using the [Mklink](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753194(v=ws.11\)) command: `mklink /j C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports D:\Scanner_reports`
-
-    With our setting of **Policy only** for **Info types to be discovered**, only files that meet the conditions you've configured for automatic classification are included in these reports. If you don't see any labels reported, check your label configuration includes automatic rather than recommended classification. 
+    
+    With our setting of **Policy only** for **Info types to be discovered**, only files that meet the conditions you've configured for automatic classification are included in the detailed reports. If you don't see any labels applied, check your label configuration includes automatic rather than recommended classification.
     
     > [!TIP]
     > Scanners send this information to Azure Information Protection every five minutes, so that you can view the results in near real-time from the Azure portal. For more information, see [Reporting for Azure Information Protection](reports-aip.md). 
@@ -394,7 +394,9 @@ For files that don't support native protection, specify the file name extension 
 
 For the first scan cycle, the scanner inspects all files in the configured data stores and then for subsequent scans, only new or modified files are inspected. 
 
-You can force the scanner to inspect all files again from the **Azure Information Protection** blade in the Azure portal, when you use the **Scanner** \> **Nodes** \> **\<*scanner node*\>**\> **Rescan all files** option.
+You can force the scanner to inspect all files again from the **Azure Information Protection - Nodes** blade in the Azure portal, when you use the **Rescan all files** option:
+
+![Initiate rescan for the Azure Information Protection scanner](./media/scanner-rescan-files.png)
 
 Inspecting all files again is useful when you want the reports to include all files and this configuration choice is typically used when the scanner runs in discovery mode. When a full scan is complete, the scan type automatically changes to incremental so that for subsequent scans, only new or modified files are scanned.
 
