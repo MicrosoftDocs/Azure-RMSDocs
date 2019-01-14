@@ -6,6 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: bryanla
+manager: mbaldwin
 ---
 
 # Microsoft Information Protection (MIP) SDK setup and configuration 
