@@ -5,8 +5,9 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
+manager: mbaldwin
 ---
 
 # Quickstart: Set and get a sensitivity label (C++)

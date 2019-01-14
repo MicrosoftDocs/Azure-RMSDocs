@@ -6,6 +6,7 @@ ms.service: information-protection
 ms.topic: overview
 ms.date: 09/27/2018
 ms.author: bryanla
+manager: mbaldwin
 ---
 # Overview
 

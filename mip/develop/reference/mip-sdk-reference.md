@@ -1,17 +1,16 @@
 ---
-title: MIP SDK for C++ (Preview) Reference
-description: MIP SDK for C++ (Preview) Reference
+title: MIP SDK for C++ Reference
+description: MIP SDK for C++ Reference
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
+manager: mbaldwin
 ---
-# MIP SDK for C++ (Preview) Reference
+# MIP SDK for C++ Reference
 
-The Microsoft Information Protection (MIP) SDK for C++ (Preview) allows developers to manage and apply data protection policies to data and other digital assets.  
-
-To learn more, see [MIP Developer blog](https://aka.ms/MIPDevelopers)<!-- and [MIP samples](https://aka.ms/mipsdksamples)-->.
+The Microsoft Information Protection (MIP) SDK for C++ allows developers to manage and apply data protection policies to data and other digital assets.  
 
 The MIP SDK for C++ includes:
 
