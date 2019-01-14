@@ -83,4 +83,5 @@ TBD
 
 ## Next steps
 
-For more information on getting started, see [MIP SDK setup and configuration](setup-configure-mip.md)
+- See [MIP SDK FAQs and issues](faqs-known-issues.md) for information on supported platforms and more.
+- See [MIP SDK setup and configuration](setup-configure-mip.md) for information on how to get started with the MIP SDK.
