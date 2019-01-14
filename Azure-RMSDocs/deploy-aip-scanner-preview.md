@@ -308,7 +308,7 @@ If you are following these instructions, the scanner runs one time and in the re
     
     There are other configuration settings that you might want to change. For example, whether file attributes are changed and whether the scanner can relabel files. Use the information popup help to learn more information about each configuration setting.
 
-2. Make a note of the current time and start the scanner again by selecting the scanner and then the **Scan now** option from the **Azure Information Protection - Nodes** blade:
+2. Make a note of the current time and start the scanner again from the **Azure Information Protection - Nodes** blade:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
     
