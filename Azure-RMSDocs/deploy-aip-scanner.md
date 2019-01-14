@@ -32,7 +32,8 @@ ms.suite: ems
 > 
 > If you are looking for deployment instructions for the current preview of the scanner, which includes configuration from the Azure portal, see [Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner-preview.md).
 
-Use this information to learn about the Azure Information Protection scanner, and then how to successfully install, configure, and run it. 
+Use this information to learn about the Azure Information Protection scanner, and then how to successfully install, configure, and run it.
+
 This scanner runs as a service on Windows Server and lets you discover, classify, and protect files on the following data stores:
 
 - Local folders on the Windows Server computer that runs the scanner.

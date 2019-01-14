@@ -394,7 +394,7 @@ For files that don't support native protection, specify the file name extension 
 
 For the first scan cycle, the scanner inspects all files in the configured data stores and then for subsequent scans, only new or modified files are inspected. 
 
-You can force the scanner to inspect all files again from the **Azure Information Protection - Nodes** blade in the Azure portal, when you use the **Rescan all files** option:
+You can force the scanner to inspect all files again from the **Azure Information Protection - Nodes** blade in the Azure portal. Select your scanner from the list, and then select the **Rescan all files** option:
 
 ![Initiate rescan for the Azure Information Protection scanner](./media/scanner-rescan-files.png)
 
