@@ -212,8 +212,11 @@ With the scanner's default configuration, you're now ready to run your first sca
     
     	Get-AIPScannerStatus
     
-    Look for the status to show **Idle** rather than **Scanning**. When the scanner has crawled through all the files in the data stores that you specified, the scanner stops although the scanner service remains running.     
     Alternatively, you can view the status from the **Azure Information Protection - Nodes** blade in the Azure portal, by checking the **STATUS** column.
+    
+    Look for the status to show **Idle** rather than **Scanning**.
+    
+    When the scanner has crawled through all the files in the data stores that you specified, the scanner stops although the scanner service remains running.
     
     Check the local Windows **Applications and Services** event log, **Azure Information Protection**. This log also reports when the scanner has finished scanning, with a summary of results. Look for the informational event ID **911**.
 
