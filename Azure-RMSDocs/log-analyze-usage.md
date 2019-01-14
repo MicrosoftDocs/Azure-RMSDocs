@@ -6,7 +6,7 @@ description: Information and instructions how to use usage logging with Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/15/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
@@ -188,7 +188,7 @@ There are many request types for the Azure Rights Management service but the fol
 |AllDocsCsv|A call is made from the document tracking site to download the CSV file from the **All Documents** page.|
 |BECreateEndUserLicenseV1|A call is  made from a mobile device to create an end-user license.|
 |BEGetAllTemplatesV1|A call is  made from a mobile device (back-end) to get all the templates.|
-|Certify|The client is certifying the content for protection.|
+|Certify|The client is certifying the user for the consumption and creation of protected content.|
 |DeleteTemplateById|A call is  made from the Azure portal, to delete a template by template  ID.|
 |DocumentEventsCsv|A call is made from the document tracking site to download the .CSV file for a single document.|
 |ExportTemplateById|A call is  made from the Azure portal to export a template based on a template ID.|
