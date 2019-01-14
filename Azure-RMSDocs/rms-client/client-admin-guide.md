@@ -220,7 +220,7 @@ To upgrade the Azure Information Protection scanner, install the latest version 
 > [!IMPORTANT]
 > For a smooth upgrade path, do not install the preview version of the Azure Information Protection client on the computer running the scanner as your first step to upgrade the scanner. Instead, use the following upgrade instructions.
 
-For the current preview version of the scanner, the upgrade process is very different from previous versions. Upgrading the scanner automatically changes the scanner to gets its configuration settings from the Azure portal. In addition, the schema is updated for the scanner's configuration database, and this database is also renamed from AzInfoProtection:
+For the current preview version of the scanner, the upgrade process is different from previous versions. Upgrading the scanner automatically changes the scanner to gets its configuration settings from the Azure portal. In addition, the schema is updated for the scanner's configuration database, and this database is also renamed from AzInfoProtection:
 
 - If you do not specify your own profile name, the configuration database is renamed **AIPScanner_\<computer_name>**. 
 
