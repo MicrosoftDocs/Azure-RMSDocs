@@ -211,6 +211,19 @@ To upgrade the Azure Information Protection scanner, install the latest version 
     
     Until you run this update cmdlet, the scanner does not run and you typically see Event ID **1000** in the Windows event log, with the following error message: **Invalid object name 'ScannerStatus'**.
 
+#### Moving the scanner configuration database
+
+If you want to move the scanner configuration database from one SQL Server instance to another and use a custom profile name, do not run the upgrade command, but instead:
+
+1. Uninstall the scanner by using [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner).
+
+2. Upgrade the Azure Information Protection client to the preview version.
+
+3. Install the scanner by using [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), specifying the new SQL Server instance and the custom profile name.
+
+4. Optional: If you do not want the scanner to rescan all files, export the ScannerFiles table and import it to the new database.
+
+
 ## Uninstalling the Azure Information Protection client
 
 You can use any of the following options to uninstall the client:
