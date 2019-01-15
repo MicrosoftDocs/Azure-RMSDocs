@@ -253,7 +253,7 @@ If you change the [default behavior](client-admin-guide-customizations.md#dont-p
 
 ### Limitations for container files, such as .zip files
 
-Container files are files that include other files, with a typical example being .zip files that contain compressed files. Other examples include .rar, .7z, and .msg. A PDF document can also be container when it includes attachments.
+Container files are files that include other files, with a typical example being .zip files that contain compressed files. Other examples include .rar, .7z, and .msg. A PDF document is considered to be a container when it includes attachments.
 
 You can classify and protect these container files, but the classification and protection is not applied to each file inside the container.
 
