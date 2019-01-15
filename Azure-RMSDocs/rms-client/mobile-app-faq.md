@@ -31,7 +31,9 @@ This page provides answers to frequently asked questions about the Azure Informa
 
 ## What can I do with the Azure Information Protection app?
 
-This app lets you view rights-protected email messages (.rpmsg files) if your email app doesn't natively support rights management data protection. This app also lets you view rights-protected PDF files, and pictures and text files that are rights-protected. Currently, you cannot use this app to create new protected email messages, reply to them, or create or edit protected files.
+This app lets you view rights-protected email messages (.rpmsg files) if your email app doesn't natively support rights management data protection. This app also lets you view rights-protected PDF files, and pictures and text files that are rights-protected. 
+
+You can't use this app to create new protected email messages, reply to them, or create or edit protected files. The app also can't open attachments in protected PDF documents.
 
 ## Can I open PDF files that are in SharePoint protected libraries and OneDrive for Business?
 
