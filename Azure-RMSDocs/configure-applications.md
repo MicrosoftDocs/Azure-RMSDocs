@@ -49,7 +49,7 @@ After you have deployed Azure Information Protection for your organization, use 
 
 	-   [Office 2010](configure-office-apps.md#office-2010)
 
--   [Azure Information Protection client: Installation and configuration for clients](configure-sharing-app.md)
+-   [Azure Information Protection client: Installation and configuration for clients](configure-client.md)
 
 -   [Rights Management sharing application: Installation and configuration for clients](configure-sharing-app.md)
 
