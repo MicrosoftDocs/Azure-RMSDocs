@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/04/2019
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -181,6 +181,7 @@ When you export the policy from the Azure portal, a zipped file is downloaded th
     
 2. Rename the identified file to **Policy.msip**, and then copy it to the **%LocalAppData%\Microsoft\MSIP** folder on computers that have the Azure Information Protection client installed. 
 
+If your disconnected computer is running the preview version of the Azure Information Protection scanner, there are additional configuration steps you must take. For more information, see [Restriction: The scanner server cannot have Internet connectivity](../deploy-aip-scanner-preview.md#restriction-the-scanner-server-cannot-have-internet-connectivity) from the scanner deployment instructions.
 
 ## Hide or show the Do Not Forward button in Outlook
 
