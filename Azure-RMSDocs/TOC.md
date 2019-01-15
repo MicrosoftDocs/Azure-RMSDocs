@@ -88,6 +88,7 @@
 ## [Configure secure document collaboration](secure-collaboration-documents.md)
 ## [Configuring mail flow rules for Azure Information Protection labels](configure-exo-rules.md)
 ## [Deploying the Azure Information Protection scanner](deploy-aip-scanner.md)
+## [Deploying the Azure Information Protection scanner (PREVIEW)](deploy-aip-scanner-preview.md)
 ## [Reporting for Azure Information Protection](reports-aip.md)
 ## [Deploying the RMS connector](deploy-rms-connector.md)
 ### [Install and configure the connector](install-configure-rms-connector.md)

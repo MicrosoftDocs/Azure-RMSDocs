@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/27/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -47,10 +47,77 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Version 1.41.51.0
+## Versions later than 1.41.51.0
+
+If you have a version 1 of the client that is later than 1.41.51.0, it is a preview build for testing and evaluation purposes.  
 
 > [!TIP]
 > Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
+
+**Released**: 01/15/2019
+
+This version includes the MSIPC version 1.0.3592.627 of the RMS client.
+
+**New features:**
+
+- The Azure Information Protection scanner is now configured from the Azure portal, rather than by using PowerShell:
+    
+    - If you are upgrading from a general availability version of the scanner, the upgrade process is different from previous versions, so be sure to read [Upgrading the Azure Information Protection scanner](client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
+    
+    - If you are installing the scanner for the first time, rather than upgrading, see [Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner-preview.md).
+
+- If you label and protect files by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. [More information](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
+
+- The Azure Information Protection scanner now supports multiple configuration databases on the same SQL server instance when you specify a profile name.
+
+- Support for the following sensitive information types that help to identify credentials in documents and emails:
+    - Azure Service Bus Connection String
+    - Azure IoT Connection String
+    - Azure Storage Account
+    - Azure IAAS Database Connection String and Azure SQL Connection String
+    - Azure Redis Cache Connection String
+    - Azure SAS
+    - SQL Server Connection String
+    - Azure DocumentDB Auth Key
+    - Azure Publish Setting Password
+    - Azure Storage Account Key (Generic)
+
+**Fixes**:
+
+- New visual markings are consistently applied when a user adds new sections to a Word document, and then relabels the document.
+
+- The Azure Information Protection client correctly removes protection from a PDF document that was protected by the Rights Management sharing application.
+
+- Paths and file names do not display question marks (**?**) instead of non-ASCII characters in Azure Information Protection analystics when the sending operating system locale is English.
+
+- Sublabels are correctly applied by PowerShell and the scanner when the parent label is configured for user-defined permissions.
+
+- The Azure Information Protection client correctly displays labels that have been applied by [clients that support unified labeling](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
+
+- Documents open correctly in Office without a recovery message after protection has been removed by File Explorer and right-click, PowerShell, and the scanner.
+
+**Additional changes:**
+
+- The following sensitive information types are no longer supported for labels that you configure for recommended or automatic classification:
+    - EU Phone Number
+    - EU GPS Coordinates
+
+- Because the Azure Information Protections scanner is configured from the Azure portal, the following cmdlets are now deprecated and can't be used to configure data repositories or the file types list:
+    - Add-AIPScannerRepository
+    - Add-AIPScannerScannedFileTypes
+    - Get-AIPScannerRepository
+    - Remove-AIPScannerRepository
+    - Remove-AIPScannerScannedFileTypes
+    - Set-AIPScannerRepository
+    - Set-AIPScannerScannedFileTypes
+
+- A new PowerShell cmdlet, [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration), for scenarios where the Azure Information Protection scanner cannot download its configuration from the Azure portal.
+
+- The Azure Information Protection scanner no longer excludes .zip files by default. To inspect and label .zip files, see the [To inspect .zip files](client-admin-guide-file-types.md#to-inspect-zip-files) section of the admin guide.
+
+- The [policy setting](../configure-policy-settings.md) **Users must provide justification to set a lower classification label, remove a label, or remove protection** no longer applies to the scanner. The scanner performs these actions when you configure the setting **Relabel files** to **On** in the scanner profile.
+
+## Version 1.41.51.0
 
 **Released**: 11/27/2018
 
