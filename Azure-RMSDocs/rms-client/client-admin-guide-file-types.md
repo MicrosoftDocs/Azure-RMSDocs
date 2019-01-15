@@ -255,9 +255,13 @@ If you change the [default behavior](client-admin-guide-customizations.md#dont-p
 
 Container files are files that include other files, with a typical example being .zip files that contain compressed files. Other examples include .rar, .7z, and .msg.
 
+A PDF document can also be container when it includes attachments.
+
 You can classify and protect these container files, but the classification and protection is not applied to each file inside the container.
 
 If you have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings. However, you can remove the protection for all files in supported container files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet.
+
+The Azure Information Protection viewer cannot open attachments in a protected PDF document.
 
 ## File types supported for inspection
 
