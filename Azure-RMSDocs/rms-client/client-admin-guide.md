@@ -255,17 +255,17 @@ In this scenario, when you configure the scanner in the Azure portal, you must s
 
 If you didn't specify a profile name when you ran the Update-AIPScanner command, the computer name is used to automatically create the profile name for the scanner.
 
-#### Known issue: Moving the scanner configuration database
+#### Moving the scanner configuration database to a different SQL Server instance
 
-In the current preview version, there is a known issue if you try to move the scanner configuration database from one SQL Server instance to another and use a custom profile name when you run the upgrade command.
+In the current preview version, there is a known issue if you try to move the scanner configuration database from one SQL Server instance to another after you run the upgrade command.
 
-If you want to make this configuration change, instead of using the upgrade command, do the following:
+If you know that you want move the scanner configuration database for the preview version, do the following:
 
 1. Uninstall the scanner by using [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner).
 
 2. Upgrade the Azure Information Protection client to the preview version.
 
-3. Install the scanner by using [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), specifying the new SQL Server instance and the custom profile name.
+3. Install the scanner by using [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), specifying the new SQL Server instance and profile name.
 
 4. Optional: If you do not want the scanner to rescan all files, export the ScannerFiles table and import it to the new database.
 
