@@ -257,7 +257,7 @@ If you didn't specify a profile name when you ran the Update-AIPScanner command,
 
 #### Moving the scanner configuration database to a different SQL Server instance
 
-In the current preview version, there is a known issue if you try to move the scanner configuration database from one SQL Server instance to another after you run the upgrade command.
+In the current preview version, there is a known issue if you try to move the scanner configuration database to a new SQL Server instance after you run the upgrade command.
 
 If you know that you want move the scanner configuration database for the preview version, do the following:
 
