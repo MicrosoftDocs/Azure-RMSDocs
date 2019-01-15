@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/04/2019
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 
@@ -212,15 +212,27 @@ To help prevent users from changing files that are critical for computer operati
 
 By default, the scanner also excludes the same file types as the Azure Information Protection client with the following exceptions:
 
+For the general availability version:
+
 - .rtf, .rar, and .zip are also excluded
 
-You can change the file types included or excluded for file inspection by the scanner when you use the following PowerShell cmdlets:
+For the current preview version: 
+
+    - .rtf, and .rar, are also excluded
+
+You can change the file types included or excluded for file inspection by the scanner:
+
+For the general availability version, use the following PowerShell cmdlets:
 
 - [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes)
 
 - [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes)
 
 - [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes)
+
+For the current preview version:
+
+- Configure **File types to scan** in the scanner profile, by [using the Azure portal](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal).
 
 > [!NOTE]
 > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
@@ -271,7 +283,7 @@ The Azure Information Protection scanner and the [Set-AIPFileClassiciation](/pow
 
 1. For the computer running the scanner or the PowerShell session, install the [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
 
-2. For the scanner: Include .zip files to be inspected, as described in the [Azure Information Protection scanner](#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner) section.
+2. For the scanner: Unless you are running the current preview version of the scanner, include .zip files to be inspected, as described in the [Azure Information Protection scanner](#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner) section.
 
 3. For the scanner: After finding sensitive information, if the .zip file should be classified and protected with a label, add a registry entry for this file name extension to have generic protection (pfile), as described in [Editing the registry for the scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) from the scanner deployment instructions.
 
