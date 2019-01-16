@@ -131,7 +131,7 @@ Tip: To get started with protecting documents by using Office for Mac, you might
 
 The Azure Information Protection app for iOS and Android provides a viewer for rights-protected email messages (.rpmsg files) when these mobile devices don't have an email app that can open protected emails. This app can also open rights-protected PDF files, and pictures and text files that are rights-protected.
 
-If your iOS and Android devices are enrolled by Microsoft Intune, users can install the app from their Company Portal and you can manage the app by using Intune's [app protection policies](/intune/app-protection-policies).
+If your iOS and Android devices are enrolled by Microsoft Intune, users can install the app from the Company Portal and you can manage the app by using Intune's [app protection policies](/intune/app-protection-policies).
 
 For more information about how to use app, see the [FAQ for Microsoft Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md).
 
