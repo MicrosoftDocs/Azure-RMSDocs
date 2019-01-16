@@ -45,9 +45,10 @@ To install the Azure Information Protection client for these popular mobile plat
 
 **If you have Microsoft Intune**: Because the Azure Information Protection app was built using the Microsoft Intune App Software Development Kit, when iOS and Android devices are enrolled by Intune, you can deploy and manage the Azure Information Protection app for these devices:
 
-- First, [add the Azure Information Protection app to Intune](/intune/apps-add).
+- To deploy the app, [add the Azure Information Protection app to Intune](/intune/apps-add) and [assign it to users](/intune/apps-deploy).
 
-- Then, deploy the app by [assigning it to users](/intune/apps-deploy).
+- To manage the app, use Intune's [app protection policies](/intune/app-protection-policies).
 
-- Optionally, manage the app by using Intune's [app protection policies](/intune/app-protection-policies).
+## Next steps
 
+After you have installed and configured the Azure Information Protection client, you might need to learn more about how the client interprets the different usage rights that can be used to protect documents and emails. For more information, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md).
