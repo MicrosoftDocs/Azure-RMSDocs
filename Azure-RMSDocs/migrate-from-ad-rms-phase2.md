@@ -149,7 +149,7 @@ You can then publish or archive these templates as you would any other template 
 
 ### Procedure if your templates in AD RMS used the **ANYONE** group
 
-If your templates in AD RMS used the **ANYONE** group, the closest equivalent group in Azure Information Protection is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. This group contains all users from your Azure AD tenant.
+If your templates in AD RMS used the **ANYONE** group, the closest equivalent group in Azure Information Protection is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong>. This group contains all users from your Azure AD tenant.
 
 When you manage templates and labels in the Azure portal, this group displays as your tenant's domain name in Azure AD. For example, this group might look like the following for Contoso: **contoso.onmicrosoft.com**. To add this group, the option displays **Add \<organization name> - All members**.
 

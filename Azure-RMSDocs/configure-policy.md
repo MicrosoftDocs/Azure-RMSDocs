@@ -63,11 +63,11 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
 
 - Use an account that has one of the following [administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Information Protection Administrator**
+  - **Information Protection Administrator**
 
-    - **Security Administrator**
+  - **Security Administrator**
 
-    - **Global Administrator / Company Administrator**
+  - **Global Administrator / Company Administrator**
     
     > [!NOTE] 
     > If your tenant has been migrated to the unified labeling store, to manage labels from the Azure portal, your account must also have permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
