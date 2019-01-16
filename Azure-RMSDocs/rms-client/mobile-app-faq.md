@@ -33,7 +33,7 @@ This page provides answers to frequently asked questions about the Azure Informa
 
 This app lets you view rights-protected email messages (.rpmsg files) if your email app doesn't natively support rights management data protection. This app also lets you view rights-protected PDF documents, and pictures and text files that are rights-protected. 
 
-You can't use this app to create new protected email messages, reply to them, or create or edit protected files. In addition, the app can't open attachments in protected PDF documents.
+Because this app is a viewer, you can't use it to create new protected email messages, reply to them, or create or edit protected files. In addition, the app can't open attachments for the files that you view. For example, attachments in protected PDF documents or in rights-protected email messages.
 
 ## Can I open PDF files that are in SharePoint protected libraries and OneDrive for Business?
 
