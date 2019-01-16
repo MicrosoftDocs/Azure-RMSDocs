@@ -4,9 +4,9 @@
 title: How to renew the symmetric key in Azure Information Protection
 description: This article describes the process of renewing a symmetric key in Azure Information Protection.
 keywords:
-author: lleonard-msft
+author: bryanla
 manager: mbaldwin
-ms.author: alleonar
+ms.author: bryanla
 ms.date:  03/27/2017
 ms.topic: conceptual
 ms.service: information-protection

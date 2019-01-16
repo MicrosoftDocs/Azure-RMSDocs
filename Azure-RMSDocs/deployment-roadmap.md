@@ -6,7 +6,7 @@ description: Use these steps to prepare for, implement, and manage Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
@@ -25,11 +25,11 @@ ms.suite: ems
 
 # Azure Information Protection deployment roadmap
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization.
 
-However, if you just want to quickly try Azure Information Protection for yourself, rather than roll it out in a production environment, see [Quick start tutorial for Azure Information Protection](./infoprotect-quick-start-tutorial.md).
+However, if you are looking for scenario-based instructions, see [How to guides for common scenarios that use Azure Information Protection](how-to-guides.md).
 
 > [!NOTE]
 > If you are looking for a product release roadmap, see our [Information about new releases and updates](information-support.md#information-about-new-releases-and-updates) section.
@@ -38,7 +38,7 @@ However, if you just want to quickly try Azure Information Protection for yourse
 
 ### Identify your deployment roadmap
 
-Before you do the following steps to deploy Azure Information Protection, make sure that you have reviewed [Requirements for Azure Information Protection](./requirements.md).
+Before you implement any of the following steps to deploy Azure Information Protection, make sure that you have reviewed [Requirements for Azure Information Protection](./requirements.md).
 
 Then choose the deployment roadmap that's applicable for your organization and that matches the [subscription functionality and features](https://azure.microsoft.com/pricing/details/information-protection/) that you need:
 
@@ -65,7 +65,7 @@ For more information, see [Preparing users and groups for Azure Information Prot
 ### Step 3: Configure and deploy classification and labeling
 
 > [!TIP]
-> **Optional but recommended**: Consider deploying the [Azure Information Protection scanner](deploy-aip-scanner.md) to discover what sensitive information you have on your local data stores. The information that the scanner finds can help you with your classification taxonomy, provide valuable information about what labels you need, and which files need protecting.
+> **Optional but recommended**: Consider deploying the Azure Information Protection scanner to discover what sensitive information you have on your local data stores. We have a [quickstart](quickstart-findsensitiveinfo.md) that covers this scenario. The information that the scanner finds can help you with your classification taxonomy, provide valuable information about what labels you need, and which files need protecting.
 > 
 > The scanner can be configured to look for well-known sensitive information types in local files on Windows Server, files in network shares, and files in on-premises versions of SharePoint. Because this configuration doesn't require you to configure labels or even have your classification taxonomy defined, running the scanner in this way is suitable for this very early stage of your deployment. You can also use this configuration of the scanner in parallel with the following deployment steps, until you configure conditions for your labels.
 

@@ -6,7 +6,7 @@ description: Information to help you monitor the connector and your organization
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
@@ -180,7 +180,7 @@ Usage logging helps you identify when emails and documents are protected and con
 
 For more information about usage logging, see [Logging and analyzing usage of the Azure Rights Management service](log-analyze-usage.md).
 
-If you need more detailed logging for diagnosis purposes, you can use [Debugview](http://go.microsoft.com/fwlink/?LinkID=309277) from Windows Sysinternals. Enable tracing for the RMS connector by modifying the web.config file for the Default site in IIS:
+If you need more detailed logging for diagnosis purposes, you can use [Debugview](https://go.microsoft.com/fwlink/?LinkID=309277) from Windows Sysinternals. Enable tracing for the RMS connector by modifying the web.config file for the Default site in IIS:
 
 1. Locate the web.config file from **%programfiles%\Microsoft Rights Management connector\Web Service**.
 

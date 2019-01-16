@@ -4,8 +4,8 @@
 title: How-to enable your service application to work with cloud based RMS | Azure RMS
 description: This topic outlines steps for setting up your service application to use Azure Rights Management.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -57,7 +57,7 @@ In order to use your Rights Management Services SDK 2.1 service application with
 
 ### Instructions to generate a symmetric key
 
--   Install [Microsoft Online Sign-in Assistant](http://go.microsoft.com/fwlink/p/?LinkID=286152)
+-   Install [Microsoft Online Sign-in Assistant](https://go.microsoft.com/fwlink/p/?LinkID=286152)
 -   Install [Azure AD Powershell Module](https://bposast.vo.msecnd.net/MSOPMW/8073.4/amd64/AdministrationConfig-en.msi).
 
 **Note** - You must be a tenant administrator to use the Powershell cmdlets.

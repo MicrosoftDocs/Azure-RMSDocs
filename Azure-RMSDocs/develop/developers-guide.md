@@ -1,7 +1,7 @@
 ---
 title: Azure Information Protection Developer's Guide
 description: Developers can use Azure Information Protection to protect and manage files of all types
-author: lleonard-msft
+author: bryanla
 ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/11/2017
@@ -99,8 +99,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 ## Other resources
 
 - [Security best practice guide](security-guidelines.md)
-- [RMS Developer's Corner (blog)](https://blogs.msdn.microsoft.com/rms/)
-- [Frequently Asked Questions for Azure Information Protection](https://docs.microsoft.com/information-protection/get-started/faqs)
+- [Frequently Asked Questions for Azure Information Protection](/azure/information-protection/faqs)
 
 ### Support articles
 
@@ -126,7 +125,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 - [Windows Phone and Windows Store API reference](https://msdn.microsoft.com/library/dn891914.aspx)
 - [iOS/OSX API reference](https://msdn.microsoft.com/library/dn758306.aspx)
 - [Android API reference](https://msdn.microsoft.com/library/dn758245.aspx)
-- [Linux API reference](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)
+- [Linux API reference](https://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 
 ### Previous versions
 

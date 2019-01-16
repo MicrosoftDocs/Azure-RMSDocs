@@ -6,7 +6,7 @@ description: Information and instructions how to use usage logging with Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 01/15/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
@@ -25,7 +25,7 @@ ms.suite: ems
 
 # Logging and analyzing usage of the Azure Rights Management service
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Use this information to help you understand how you can use usage logging for the Azure Rights Management service from Azure Information Protection. This service provides the data protection for your organization's documents and emails and it can log every request to it. These requests include when users protect documents and email and also consume this content, actions performed by your administrators for this service, and actions performed by Microsoft operators to support your Azure Information Protection deployment. 
 
@@ -188,7 +188,7 @@ There are many request types for the Azure Rights Management service but the fol
 |AllDocsCsv|A call is made from the document tracking site to download the CSV file from the **All Documents** page.|
 |BECreateEndUserLicenseV1|A call is  made from a mobile device to create an end-user license.|
 |BEGetAllTemplatesV1|A call is  made from a mobile device (back-end) to get all the templates.|
-|Certify|The client is certifying the content for protection.|
+|Certify|The client is certifying the user for the consumption and creation of protected content.|
 |DeleteTemplateById|A call is  made from the Azure portal, to delete a template by template  ID.|
 |DocumentEventsCsv|A call is made from the document tracking site to download the .CSV file for a single document.|
 |ExportTemplateById|A call is  made from the Azure portal to export a template based on a template ID.|

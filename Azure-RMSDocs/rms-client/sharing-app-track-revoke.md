@@ -43,7 +43,7 @@ Actions you can take in the document tracking site:
     
     Note: If you do not see this icon, despite being a global admin, it's because you haven't yet shared any documents. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
 
-- If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977).
+- If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](https://go.microsoft.com/fwlink/?LinkId=523977).
 
 ## Using Office to access the document tracking site
 
@@ -73,7 +73,7 @@ In addition to tracking your documents on Windows computers by using Office appl
 
 #### Using a web browser to access the doc tracking site
 
-- Using a supported browser, go to the [document tracking site](http://go.microsoft.com/fwlink/?LinkId=529562).
+- Using a supported browser, go to the [document tracking site](https://go.microsoft.com/fwlink/?LinkId=529562).
 
     Supported browsers: We recommend using Internet Explorer that is at least version 10, but you can use any of following browsers to use the document tracking site:
 

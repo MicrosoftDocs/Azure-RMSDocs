@@ -4,8 +4,8 @@
 title: Getting started | Azure RMS
 description: The RMS SDK 2.1 platform enables developers to build applications that leverage RMS information protection.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -71,4 +71,3 @@ The RMS SDK 2.1 supports a range of important client and server platforms. For
 ## Related topics
 
 * [RMS Developers Guide](developers-guide.md)
-* [AD RMS Developer's Corner](http://blogs.msdn.com/b/rms/)

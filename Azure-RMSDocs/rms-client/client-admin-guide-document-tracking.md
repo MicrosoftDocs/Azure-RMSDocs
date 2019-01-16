@@ -6,7 +6,7 @@ description: Instructions and information for admins to configure and use docume
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 01/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
@@ -101,6 +101,16 @@ To leave the Administrator mode, click **X** next to **Exit administrator mode**
 
 For instructions how to use the document tracking site, see [Track and revoke your documents](client-track-revoke.md) from the user guide.
 
+### Using PowerShell to register labeled documents with the document tracking site
+
+This option is only available for the current preview version of the Azure Information Protection client.
+
+To be able to track and revoke a document, it must first be registered with the document tracking site. This action occurs when users select the **Track and revoke** option from File Explorer or their Office apps when they use the Azure Information Protection client. For the Rights Management sharing application, this action occurs automatically when users select the **Share Protected** option.
+
+If you label and protect files for users by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. For example:
+
+	Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
+
 ## Usage logging for the document tracking site
 
 Two fields in the usage log files are applicable to document tracking: **AdminAction** and **ActingAsUser**.
@@ -111,9 +121,7 @@ Two fields in the usage log files are applicable to document tracking: **AdminAc
 
 There are also request types that log how users and administrators are using the document tracking site. For example, **RevokeAccess** is the request type when a user or an administrator on behalf of a user has revoked a document in the document tracking site. Use this request type in combination with the AdminAction field to determine whether the user revoked their own document (the AdminAction field is empty) or an administrator revoked a document on behalf of a user (the AdminAction is true).
 
-
 For more information about usage logging, see [Logging and analyzing usage of the Azure Rights Management service](../log-analyze-usage.md)
-
 
 
 ## Next steps

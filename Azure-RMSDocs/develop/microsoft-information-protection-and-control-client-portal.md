@@ -4,8 +4,8 @@
 title: Rights Management Services SDK 2.1 | Azure RMS
 description: The RMS SDK 2.1 platform enables developers to build applications that leverage RMS or Azure RMS to provide information protection.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -31,11 +31,9 @@ The Rights Management Services SDK 2.1 platform enables developers to build 
 
 ### Developer audience
 
-The RMS SDK 2.1, available from the [RMS SDK 2.1 download page](http://www.microsoft.com/en-us/download/details.aspx?id=38397) on the Microsoft download center, is used to create custom applications that enable rights management on digital assets and enforce terms-of-use for those assets. Knowledge of the C++ programming language is required.
+The RMS SDK 2.1, available from the [RMS SDK 2.1 download page](https://www.microsoft.com/download/details.aspx?id=38397) on the Microsoft download center, is used to create custom applications that enable rights management on digital assets and enforce terms-of-use for those assets. Knowledge of the C++ programming language is required.
 
-For more information about this technology see our [RMS Developer's Corner](http://blogs.msdn.com/b/rms/archive/2012/05/31/official-release-of-ad-rms-sdk-2-0-and-ad-rms-client-2-0.aspx), the official blog of the Rights Management product team at Microsoft for developers working with information protection using AD RMS.
-
-For answers to frequently asked questions, see the developers section of our [RMS FAQ](http://aka.ms/adrmsfaq )
+For answers to frequently asked questions, see the developers section of our [RMS FAQ](https://aka.ms/adrmsfaq)
 
 ### Run-time requirements
 
@@ -53,6 +51,5 @@ For information about the run-time requirements for a particular programming ele
 
 ## Related topics
 
-* [RMS SDK 2.1 download page](http://www.microsoft.com/en-us/download/details.aspx?id=38397)
-* [RMS Developer's Corner](http://blogs.msdn.com/b/rms/archive/2012/05/31/official-release-of-ad-rms-sdk-2-0-and-ad-rms-client-2-0.aspx)
-* [RMS FAQ](http://aka.ms/adrmsfaq )
+* [RMS SDK 2.1 download page](https://www.microsoft.com/download/details.aspx?id=38397)
+* [RMS FAQ](https://aka.ms/adrmsfaq )

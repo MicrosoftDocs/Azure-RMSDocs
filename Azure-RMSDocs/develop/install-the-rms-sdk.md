@@ -4,8 +4,8 @@
 title: Install the SDK | Azure RMS
 description: This topic guides you through installing the developer tools.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -31,7 +31,7 @@ This topic guides you through installing the developer tools.
 
 ### Install the developer tools
 
-1.  Download the [Rights Management Services SDK 2.1](http://www.microsoft.com/en-us/download/details.aspx?id=38397) from the Microsoft Download Center, being careful to choose the correct architecture version for your computer.
+1.  Download the [Rights Management Services SDK 2.1](https://www.microsoft.com/download/details.aspx?id=38397) from the Microsoft Download Center, being careful to choose the correct architecture version for your computer.
 2.  Run the installer package from your install location:
 
     **...\\setup\_sdk.exe**

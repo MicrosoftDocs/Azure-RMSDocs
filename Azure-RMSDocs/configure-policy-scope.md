@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Configure scoped policies for Azure Information Protection
+title: Configure scoped policies for Azure Information Protection - AIP
 description: To configure different settings and labels for specific users, you must configure a scoped policy for Azure Information Protection. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
@@ -34,6 +34,8 @@ For applications that support the Azure Information Protection client, all users
 Note that in addition to the Office desktop applications that support the Azure Information Protection client, labels are also supported with PowerShell, and the Azure Information Protection scanner. This means that you can create and configure scoped policies for accounts that run PowerShell commands, or the scanner. 
 
 Scoped policies, just like labels, are ordered in the Azure portal. If a user is configured for multiple scopes, an effective policy is computed for that user before it is downloaded. According to the order of the polices, the last policy setting is applied. The labels that the user sees are from the global policy and any additional labels from scoped policies that the user belongs to.
+
+The exception is when a user from your tenant opens a labeled document or email and that user is not in the label's scope. In this scenario, the user sees the name of the label set but the label isn't displayed as available to select.  
 
 Because a scoped policy always inherits the labels and settings and from the global policy, the labels from the global policy are displayed when you create or edit a scoped policy. However, you cannot edit the labels from the global policy when you edit a scoped policy. You can however, add sublabels to these inherited labels.
 
@@ -63,5 +65,4 @@ The Azure Information Protection client checks for any changes whenever a suppor
 
 ## Next steps
 
-For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
-
+For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md) tutorial.

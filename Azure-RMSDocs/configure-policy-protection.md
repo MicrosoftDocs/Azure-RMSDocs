@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Configure an Azure Information Protection label for protection
+title: Configure an Azure Information Protection label for protection - AIP
 description: You can protect your most sensitive documents and emails when you configure a label to use Rights Management protection. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
@@ -108,17 +108,17 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     Select **Add permissions**, and on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
     
-    - Choose **Select from the list** where you can then add all users from your organization by selecting **Add \<organization name> - All members**. This setting excludes guest accounts. Or, you can select **Add any authenticated users (Preview)**, or browse the directory.
+    - Choose **Select from the list** where you can then add all users from your organization by selecting **Add \<organization name> - All members**. This setting excludes guest accounts. Or, you can select **Add any authenticated users**, or browse the directory.
         
         When you choose all members or browse the directory, the users or groups must have an email address. In a production environment, users and groups nearly always have an email address, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
         
         ###### More information about **Add any authenticated users** 
         This setting doesn't restrict who can access the content that the label protects, while still encrypting the content and providing you with options to restrict how the content can be used (permissions), and accessed (expiry and offline access). However, the application opening the protected content must be able to support the authentication being used. For this reason, federated social providers such as Google, and onetime passcode authentication should be used for email only, and only when you use Exchange Online and the new capabilities from Office 365 Message Encryption. Microsoft accounts can be used with the Azure Information Protection viewer and Office 2016 Click-to-Run. 
           
-        Some typical scenarios for the any authenticated users setting:  
-                - You don't mind who views the content, but you want to restrict how it is used. For example, you do not want the content to be edited, copied, or printed.  
-                - You don't need to restrict who accesses the content, but you want to be able to track who opens it and potentially, revoke it.  
-                - You have a requirement that the content must be encrypted at rest and in transit, but it doesn't require access controls.  
+        Some typical scenarios for the any authenticated users setting:
+        - You don't mind who views the content, but you want to restrict how it is used. For example, you do not want the content to be edited, copied, or printed.
+        - You don't need to restrict who accesses the content, but you want to be able to track who opens it and potentially, revoke it.
+        - You have a requirement that the content must be encrypted at rest and in transit, but it doesn't require access controls.
         
     - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, use this option to specify all users in another organization by entering any domain name from that organization. You can also use this option for social providers, by entering their domain name such as **gmail.com**, **hotmail.com**, or **outlook.com**.
         
@@ -141,7 +141,7 @@ Exchange does not have to be configured for Azure Information Protection before 
     |Setting|More information|Recommended setting
     |-----------|--------------------|--------------------|
     |**content expiration**|Define a date or number of days for when documents or emails that are protected by these settings should not open for the selected users. You can specify a date or specify a number of days starting from the time that the protection is applied to the content.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|**Content never expires** unless the content has a specific time-bound requirement.|
-    |**Allow offline access**|Use this setting to balance any security requirements that you have (./includes access after revocation) with the ability for the selected users to open protected content when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, these users must be reauthenticated and their access is logged. When this happens, if their credentials are not cached, the users are prompted to sign in before they can open the document or email.<br /><br />In addition to reauthentication, the policy and the user group membership is reevaluated. This means that users could experience different access results for the same document or email if there are changes in the policy or group membership from when they last accessed the content. That could include no access if the document has been [revoked](./rms-client/client-track-revoke.md).|Depending on how sensitive the content is:<br /><br />- **Number of days the content is available without an Internet connection** = **7** for sensitive business data that could cause damage to the business if shared with unauthorized people. This recommendation offers a balanced compromise between flexibility and security. Examples include contracts, security reports, forecast summaries, and sales account data.<br /><br />- **Never** for very sensitive business data that would cause damage to the business if it was shared with unauthorized people. This recommendation prioritizes security over flexibility, and ensures that if the document is revoked, all authorized users immediately cannot open the document. Examples include employee and customer information, passwords, source code, and pre-announced financial reports.|
+    |**Allow offline access**|Use this setting to balance any security requirements that you have (includes access after revocation) with the ability for the selected users to open protected content when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, these users must be reauthenticated and their access is logged. When this happens, if their credentials are not cached, the users are prompted to sign in before they can open the document or email.<br /><br />In addition to reauthentication, the policy and the user group membership is reevaluated. This means that users could experience different access results for the same document or email if there are changes in the policy or group membership from when they last accessed the content. That could include no access if the document has been [revoked](./rms-client/client-track-revoke.md).|Depending on how sensitive the content is:<br /><br />- **Number of days the content is available without an Internet connection** = **7** for sensitive business data that could cause damage to the business if shared with unauthorized people. This recommendation offers a balanced compromise between flexibility and security. Examples include contracts, security reports, forecast summaries, and sales account data.<br /><br />- **Never** for very sensitive business data that would cause damage to the business if it was shared with unauthorized people. This recommendation prioritizes security over flexibility, and ensures that if the document is revoked, all authorized users immediately cannot open the document. Examples include employee and customer information, passwords, source code, and pre-announced financial reports.|
     
     When you have finished configuring the permissions and settings, click **OK**. 
     
@@ -224,7 +224,7 @@ This label is not suitable for emails.
 7. Click **OK** on the **Protection** blade, and then click **Save** on the **Label** blade.
 
 
-### Example 3: Add external users to an existing label
+### Example 3: Add external users to an existing label that protects content
 
 The new users that you add will be able open documents and emails that have already been protected with this label. The permissions that you grant these users can be different from the permissions that the existing users have.
 
@@ -287,7 +287,7 @@ This configuration has the advantage that you don't need to specify users, group
     
 2. Make sure **Set permissions** is selected, and then select **Add permissions**.
 
-3. On the **Add permissions** blade, on the **Select from the list** tab, select **Add any authenticated users (Preview)**.
+3. On the **Add permissions** blade, on the **Select from the list** tab, select **Add any authenticated users**.
 
 4. Select the permissions you want, and click **OK**.
 

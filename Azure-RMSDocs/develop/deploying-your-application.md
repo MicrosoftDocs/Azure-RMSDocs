@@ -4,8 +4,8 @@
 title: Deploying your application - AIP
 description: This topic outlines and guides you through deployment of your application
 keywords: deploy, RMS, AIP
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: conceptual
@@ -116,7 +116,7 @@ In order for your end-user to take advantage of Information Protection services,
 > If you will be running your client application with Azure based RMS, you'll need to create your own tenants. For more information, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../requirements.md).
 > For more information on running with Azure RMS see, [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
--   Download the [Microsoft Online Services Sign-In Assistant](http://www.microsoft.com/download/details.aspx?id=28177) from the Microsoft Download Center.
+-   Download the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=28177) from the Microsoft Download Center.
 -   Ensure that your deployment of a rights-enabled application includes a pre-requisites check for this service selection.
 -   For your own testing and for your end-users use of the on-line service see the TechNet topic, [Configuring Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx).
 
@@ -126,7 +126,7 @@ For more on enabling your application to use RMS for Azure Rights Management ser
 
 ## Related topics
 
-* [Microsoft Online Services Sign-In Assistant](http://www.microsoft.com/download/details.aspx?id=28177)
+* [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=28177)
 * [Configuring Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx)
 * [Enable your application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
 
