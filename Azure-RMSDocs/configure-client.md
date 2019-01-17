@@ -43,11 +43,25 @@ To install the Azure Information Protection client for these popular mobile plat
 > [!NOTE]
 > For Mac computers and Windows Phone, links from this page download the RMS sharing apps for mobile devices. These devices do not currently support the Azure Information Protection client.
 
-**If you have Microsoft Intune**: Because the Azure Information Protection app was built using the Microsoft Intune App Software Development Kit, when iOS and Android devices are enrolled by Intune, you can deploy and manage the Azure Information Protection app for these devices:
+### Integration with Intune
+
+Because the Azure Information Protection app uses the Microsoft Intune App Software Development Kit, when iOS and Android devices are enrolled by Intune, you can deploy and manage the Azure Information Protection app for these devices:
 
 - To deploy the app, [add the Azure Information Protection app to Intune](/intune/apps-add) and [assign it to users](/intune/apps-deploy).
 
 - To manage the app, use Intune's [app protection policies](/intune/app-protection-policies).
+
+When you add the Azure Information Protection app to Intune, you must specify the **Appstore URL**:
+
+For Android:
+
+	com.microsoft.ipviewer
+
+For iOS:
+
+	com.microsoft.rms-sharing
+
+When the Azure Information Protection app is configured for an app protection policy for Android devices, in addition to opening protected text, images, and PDF documents, this app can also open audio and video files. For more information, see [View media files with the Azure Information Protection app](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app).
 
 ## Next steps
 
