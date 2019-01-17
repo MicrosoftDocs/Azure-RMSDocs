@@ -41,21 +41,21 @@ The instructions that follow are for Windows Server 2012 R2 or Windows Server 20
 ## Prerequisites for Azure Rights Management protection with Windows Server FCI
 Prerequisites for these instructions:
 
--  On each file server where you will run File Resource Manager with file classification infrastructure:
+- On each file server where you will run File Resource Manager with file classification infrastructure:
     
-    - You have installed File Server Resource Manager as one of the role services for the File Services role.
+  - You have installed File Server Resource Manager as one of the role services for the File Services role.
     
-    - You have identified a local folder that contains files to protect with Rights Management. For example, C:\FileShare.
+  - You have identified a local folder that contains files to protect with Rights Management. For example, C:\FileShare.
     
-    - You have installed the AzureInformationProtection PowerShell module and configured the prerequisites for this module to connect to the Azure Rights Management service.
+  - You have installed the AzureInformationProtection PowerShell module and configured the prerequisites for this module to connect to the Azure Rights Management service.
     
     The AzureInformationProtection PowerShell module is included with the Azure Information Protection client. For installation instructions, see [Install the Azure Information Protection client for users](client-admin-guide-install.md) from the Azure Information Protection admin guide. If required, you can install just the PowerShell module by using the `PowerShellOnly=true` parameter.
     
     The [prerequisites for using this PowerShell module](client-admin-guide-powershell.md#azure-information-protection-and-azure-rights-management-service) include activating the Azure Rights Management service, creating a service principal, and editing the registry if your tenant is outside North America. Before you start the instructions in this article, make sure that you have values for your **BposTenantId**, **AppPrincipalId**, and **Symmetric key**, as documented in these prerequisites. 
     
-    - If you want to change the default level of protection (native or generic) for specific file name extensions, you have edited the registry as described in the [Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) section from the admin guide.
+  - If you want to change the default level of protection (native or generic) for specific file name extensions, you have edited the registry as described in the [Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) section from the admin guide.
     
-    - You have an Internet connection, and you have configured your computer settings if these are required for a proxy server. For example: `netsh winhttp import proxy source=ie`
+  - You have an Internet connection, and you have configured your computer settings if these are required for a proxy server. For example: `netsh winhttp import proxy source=ie`
     
 - You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email addresses. This is required for all users that might need to access files after they are protected by FCI and the Azure Rights Management service. If you do not do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this requirement, see [Preparing users and groups for Azure Information Protection](../prepare.md).
     
