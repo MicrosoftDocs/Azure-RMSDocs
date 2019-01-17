@@ -76,30 +76,30 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 
 ### To force an immediate refresh
 
-1.  Using a registry editor, delete the data for the **LastUpdatedTime** value. For example, the data might display **2015-04-20T15:52**; delete 2015-04-20T15:52 so that no data is displayed. Use the following information to locate the registry path to delete this registry value data.
+1. Using a registry editor, delete the data for the **LastUpdatedTime** value. For example, the data might display **2015-04-20T15:52**; delete 2015-04-20T15:52 so that no data is displayed. Use the following information to locate the registry path to delete this registry value data.
 
-	**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
+   **Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
 
-	**Type:** REG_SZ
+   **Type:** REG_SZ
 
-	**Value:** LastUpdatedTime
+   **Value:** LastUpdatedTime
 
-	> [!TIP]
-	> In the registry path, <*MicrosoftRMS_FQDN*> refers to your Microsoft RMS service FQDN. If you want to verify this value:
+   > [!TIP]
+   > In the registry path, <*MicrosoftRMS_FQDN*> refers to your Microsoft RMS service FQDN. If you want to verify this value:
+   > 
+   > Run the [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing the AADRM PowerShell module](install-powershell.md).
+   > 
+   > From the output, identify the **LicensingIntranetDistributionPointUrl** value.
+   > 
+   > For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+   > 
+   > From the value, remove **https://** and **/_wmcs/licensing** from this string. The remaining value is your Microsoft RMS service FQDN. In our example, the Microsoft RMS service FQDN would be the following value:
+   > 
+   > **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
-    > Run the [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing the AADRM PowerShell module](install-powershell.md).
-    >
-    > From the output, identify the **LicensingIntranetDistributionPointUrl** value.
-    >
-    > For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
-    > 
-    > From the value, remove **https://** and **/_wmcs/licensing** from this string. The remaining value is your Microsoft RMS service FQDN. In our example, the Microsoft RMS service FQDN would be the following value:
-    >
-    >**5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+2. Delete the following folder and all files it contains: **%localappdata%\Microsoft\MSIPC\Templates**
 
-2.  Delete the following folder and all files it contains: **%localappdata%\Microsoft\MSIPC\Templates**
-
-3.  Restart your Office applications and instances of File Explorer.
+3. Restart your Office applications and instances of File Explorer.
 
 
 ## See Also
