@@ -31,7 +31,7 @@ Your application should explicitly add "Owner" rights when creating a license fr
 
 When your application is creating a license handle using [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx), it must also grant the owner full rights (permissions) explicitly.
 
-> [!NOTE] 
+> [!NOTE]
 > Setting a user as "owner" using [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) with the **IPC\_LI\_OWNER** property does not grant the owner full permissions.
 
 The following example code only represents the steps involved in creating and adding the specific rights to a given license.
