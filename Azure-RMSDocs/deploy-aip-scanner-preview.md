@@ -303,12 +303,12 @@ If you are following these instructions, the scanner runs one time and in the re
 
 2. On the \<**profile name**> blade, change the following two settings, and then select **Save**:
     
-    - **Schedule**: Change to **Always**
-    - **Enforce**: Select **On**
+   - **Schedule**: Change to **Always**
+   - **Enforce**: Select **On**
     
-    There are other configuration settings that you might want to change. For example, whether file attributes are changed and whether the scanner can relabel files. Use the information popup help to learn more information about each configuration setting.
+     There are other configuration settings that you might want to change. For example, whether file attributes are changed and whether the scanner can relabel files. Use the information popup help to learn more information about each configuration setting.
 
-2. Make a note of the current time and start the scanner again from the **Azure Information Protection - Nodes** blade:
+3. Make a note of the current time and start the scanner again from the **Azure Information Protection - Nodes** blade:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
     
@@ -316,7 +316,7 @@ If you are following these instructions, the scanner runs one time and in the re
     
         Start-AIPScan
 
-3. Monitor the event log for the informational type **911** again, with a time stamp later than when you started the scan in the previous step. 
+4. Monitor the event log for the informational type **911** again, with a time stamp later than when you started the scan in the previous step. 
     
     Then check the reports to see details of which files were labeled, what classification was applied to each file, and whether protection was applied to them. Or, use the Azure portal to more easily see this information.
 
