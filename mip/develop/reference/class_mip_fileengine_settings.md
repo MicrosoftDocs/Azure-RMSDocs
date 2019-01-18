@@ -1,21 +1,24 @@
 ---
-title: class mip FileEngine Settings 
-description: Reference for class mip FileEngine Settings 
+title: class mip::FileEngine::Settings 
+description: Documents the mip::fileengine class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::FileEngine::Settings 
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  [FileEngine::Settings](class_mip_fileengine_settings.md) constructor for loading an existing engine.
- public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor for creating a new engine.
+ public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileEngine::Settings](class_mip_fileengine_settings.md) constructor for loading an existing engine.
+ public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor for creating a new engine.
  public const std::string& GetEngineId() const  |  Returns the engine ID.
- public const Identity& GetIdentity() const  |  Returns the engine Identity.
+ public void SetEngineId(const std::string& id)  |  Set the engine ID.
+ public const Identity& GetIdentity() const  |  Returns the engine [Identity](undefined).
  public void SetIdentity(const Identity& identity)  |  Sets the engine identity.
  public const std::string& GetClientData() const  |  Returns the engine client data.
  public const std::string& GetLocale() const  |  Return the engine locale.
@@ -27,6 +30,7 @@ public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings
  public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Gets the cloudEndpointBaseUrl.
  public void SetProtectionOnlyEngine(const bool protectionOnly)  |  Sets protection only engine indicator - no policy/label.
  public const bool IsProtectionOnlyEngine() const  |  Return protection only engine indicator - no policy/label.
+ public bool IsLoadSensitivityTypesEnabled() const  |  Get the the flag indicating if load sensitivity labels is enabled.
   
 ## Members
   
@@ -40,7 +44,10 @@ Parameters:
 * **clientData**: customizable client data that can be stored with the engine when unloaded, can be retrieved from a loaded engine. 
 
 
-* **locale**: engine localizable output will be provided in this locale.
+* **locale**: engine localizable output will be provided in this locale. 
+
+
+* **loadSensitivityTypes**: Optional flag indicating when the engine is loaded should load also custom sensitivity types, if true OnPolicyChange Observer on the profile will be invoked on updates to custom sensitivity types as well as policy changes. if false ListSensitivityTypes call will always return an empty list.
 
 
   
@@ -48,21 +55,32 @@ Parameters:
 [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor for creating a new engine.
 
 Parameters:  
-* **identity**: Identity info of the user associated with the new engine. 
+* **identity**: [Identity](undefined) info of the user associated with the new engine. 
 
 
 * **clientData**: customizable client data that can be stored with the engine when unloaded, can be retrieved from a loaded engine. 
 
 
-* **locale**: engine localizable output will be provided in this locale.
+* **locale**: engine localizable output will be provided in this locale. 
+
+
+* **loadSensitivityTypes**: Optional flag indicating when the engine is loaded should load also custom sensitivity types, if true OnPolicyChange Observer on the profile will be invoked on updates to custom sensitivity types as well as policy changes. if false ListSensitivityTypes call will always return an empty list.
 
 
   
 ### GetEngineId
 Returns the engine ID.
   
-### GetIdentity
-Returns the engine Identity.
+### SetEngineId
+Set the engine ID.
+
+Parameters:  
+* **id**: engine ID.
+
+
+  
+### Identity
+Returns the engine [Identity](undefined).
   
 ### SetIdentity
 Sets the engine identity.
@@ -104,3 +122,9 @@ Sets protection only engine indicator - no policy/label.
   
 ### IsProtectionOnlyEngine
 Return protection only engine indicator - no policy/label.
+  
+### IsLoadSensitivityTypesEnabled
+Get the the flag indicating if load sensitivity labels is enabled.
+
+  
+**Returns**: True if enabled else false.

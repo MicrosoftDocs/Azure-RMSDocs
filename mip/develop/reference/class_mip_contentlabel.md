@@ -1,12 +1,14 @@
 ---
-title: class mip ContentLabel 
-description: Reference for class mip ContentLabel 
+title: class mip::ContentLabel 
+description: Documents the mip::contentlabel class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::ContentLabel 
 Abstraction for a Microsoft Information Protection label that is applied to a piece of content, typically a document.
 It also holds properties for a specific applied label instance.
@@ -28,13 +30,13 @@ Get the creation time of the label.
   
 **Returns**: Creation time as a GMT string.
   
-### GetAssignmentMethod
+### AssignmentMethod
 Get the assignment method of the label.
 
   
 **Returns**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
   
-**See also**: mip::AssignmentMethod
+**See also**: [mip::AssignmentMethod](undefined)
   
 ### GetExtendedProperties
 Gets extended properties.

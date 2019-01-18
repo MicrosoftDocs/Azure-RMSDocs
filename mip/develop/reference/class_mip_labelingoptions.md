@@ -1,12 +1,14 @@
 ---
-title: class mip LabelingOptions 
-description: Reference for class mip LabelingOptions 
+title: class mip::LabelingOptions 
+description: Documents the mip::labelingoptions class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::LabelingOptions 
 Interface for configuring labeling options for the SetLabel/DeleteLabel methods.
   
@@ -28,11 +30,11 @@ public void SetExtendedProperties(const std::vector<std::pair<std::string, std::
 _Not documented yet._
 
   
-### GetAssignmentMethod
+### AssignmentMethod
 _Not documented yet._
 
   
-### GetActionSource
+### ActionSource
 _Not documented yet._
 
   

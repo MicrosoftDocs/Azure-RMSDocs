@@ -1,12 +1,14 @@
 ---
-title: class mip ProtectionEngine Settings 
-description: Reference for class mip ProtectionEngine Settings 
+title: class mip::ProtectionEngine::Settings 
+description: Documents the mip::protectionengine class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::ProtectionEngine::Settings 
 [Settings](class_mip_protectionengine_settings.md) used by [ProtectionEngine](class_mip_protectionengine.md) during its creation and throughout its lifetime.
   
@@ -17,8 +19,8 @@ ms.author: bryanla
  public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for loading an existing engine.
  public const std::string& GetEngineId() const  |  Gets the engine ID.
  public void SetEngineId(const std::string& engineId)  |  Sets the engine ID.
- public const Identity& GetIdentity() const  |  Gets the user Identity associated with the engine.
- public void SetIdentity(const Identity& identity)  |  Sets the user Identity associated with the engine.
+ public const Identity& GetIdentity() const  |  Gets the user [Identity](undefined) associated with the engine.
+ public void SetIdentity(const Identity& identity)  |  Sets the user [Identity](undefined) associated with the engine.
  public const std::string& GetClientData() const  |  Gets custom data specified by client.
  public void SetClientData(const std::string& clientData)  |  Sets custom data specified by client.
  public const std::string& GetLocale() const  |  Gets the locale in which engine data will be written.
@@ -35,7 +37,7 @@ public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings
 [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for creating a new engine.
 
 Parameters:  
-* **identity**: Identity that will be associated with [ProtectionEngine](class_mip_protectionengine.md)
+* **identity**: [Identity](undefined) that will be associated with [ProtectionEngine](class_mip_protectionengine.md)
 
 
 * **clientData**: customizable client data that can be stored with the engine when unloaded and can be retrieved from a loaded engine. 
@@ -73,17 +75,17 @@ Parameters:
 
 
   
-### GetIdentity
-Gets the user Identity associated with the engine.
+### Identity
+Gets the user [Identity](undefined) associated with the engine.
 
   
-**Returns**: User Identity associated with the engine
+**Returns**: User [Identity](undefined) associated with the engine
   
 ### SetIdentity
-Sets the user Identity associated with the engine.
+Sets the user [Identity](undefined) associated with the engine.
 
 Parameters:  
-* **identity**: User Identity associated with the engine
+* **identity**: User [Identity](undefined) associated with the engine
 
 
   

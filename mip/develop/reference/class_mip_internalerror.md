@@ -1,12 +1,14 @@
 ---
-title: class mip InternalError 
-description: Reference for class mip InternalError 
+title: class mip::InternalError 
+description: Documents the mip::internalerror class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::InternalError 
 Internal error. This error is thrown when something unexpected happens during execution.
   

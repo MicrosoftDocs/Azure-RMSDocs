@@ -1,12 +1,14 @@
 ---
-title: class mip FileProfile Settings 
-description: Reference for class mip FileProfile Settings 
+title: class mip::FileProfile::Settings 
+description: Documents the mip::fileprofile class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::FileProfile::Settings 
 [Settings](class_mip_fileprofile_settings.md) used by [FileProfile](class_mip_fileprofile.md) during its creation and throughout its lifetime.
   
@@ -69,7 +71,7 @@ Gets if all state should be stored in memory (as opposed to on disk)
   
 **Returns**: If all state should be stored in memory (as opposed to on disk)
   
-### GetAuthDelegate
+### AuthDelegate
 Gets the auth delegate used for acquiring authentication tokens.
 
   

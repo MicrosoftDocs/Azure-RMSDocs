@@ -1,12 +1,14 @@
 ---
-title: class mip ProtectionDescriptorBuilder 
-description: Reference for class mip ProtectionDescriptorBuilder 
+title: class mip::ProtectionDescriptorBuilder 
+description: Documents the mip::protectiondescriptorbuilder class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::ProtectionDescriptorBuilder 
 Constructs a [ProtectionDescriptor](class_mip_protectiondescriptor.md) that describes protection associated with a piece of content.
   

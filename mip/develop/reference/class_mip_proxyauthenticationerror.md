@@ -1,6 +1,6 @@
 ---
-title: class mip::NetworkError 
-description: Documents the mip::networkerror class of the Microsoft Information Protection (MIP) SDK.
+title: class mip::ProxyAuthenticationError 
+description: Documents the mip::proxyauthenticationerror class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 manager: mbaldwin
 ms.service: information-protection
@@ -9,8 +9,8 @@ ms.author: bryanla
 ms.date: 01/17/2019
 ---
 
-# class mip::NetworkError 
-Networking error. Caused by unexpected behavior when making network calls to service endpoints.
+# class mip::ProxyAuthenticationError 
+Proxy authentication failure.
   
 ## Summary
  Members                        | Descriptions                                

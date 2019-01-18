@@ -1,12 +1,14 @@
 ---
-title: class mip Stream 
-description: Reference for class mip Stream 
+title: class mip::Stream 
+description: Documents the mip::stream class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::Stream 
 A class that defines the interface between the MIP SDK and stream-based content.
   

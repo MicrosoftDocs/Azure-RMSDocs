@@ -1,12 +1,14 @@
 ---
-title: class mip AddContentHeaderAction 
-description: Reference for class mip AddContentHeaderAction 
+title: class mip::AddContentHeaderAction 
+description: Documents the mip::addcontentheaderaction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::AddContentHeaderAction 
 An action class that specifies adding content header.
   
@@ -54,13 +56,13 @@ Get the font color used to display the content header.
   
 **Returns**: Font color as a string (for example, #000000").
   
-### GetAlignment
+### ContentMarkAlignment
 Get the alignment of the header.
 
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: ContentMarkAlignment
+**See also**: [ContentMarkAlignment](undefined)
   
 ### GetMargin
 Get the margin of the header from the bottom.

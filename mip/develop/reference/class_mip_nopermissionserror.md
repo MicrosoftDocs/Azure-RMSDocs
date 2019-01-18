@@ -1,6 +1,6 @@
 ---
-title: class mip::NetworkError 
-description: Documents the mip::networkerror class of the Microsoft Information Protection (MIP) SDK.
+title: class mip::NoPermissionsError 
+description: Documents the mip::nopermissionserror class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 manager: mbaldwin
 ms.service: information-protection
@@ -9,12 +9,14 @@ ms.author: bryanla
 ms.date: 01/17/2019
 ---
 
-# class mip::NetworkError 
-Networking error. Caused by unexpected behavior when making network calls to service endpoints.
+# class mip::NoPermissionsError 
+The user could not get access to the content. For example, no permissions, content revoked.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
+ public std::string GetReferrer() const  |  Gets the contact in case of missing rights to the document.
+ public std::string GetOwner() const  | _Not yet documented._
  public char const* what() const  |  Get the error message.
 public std::shared_ptr<Error> Clone() const  |  Clone the error.
  public virtual ErrorType GetErrorType() const  |  Get the error type.
@@ -23,6 +25,16 @@ public std::shared_ptr<Error> Clone() const  |  Clone the error.
  public virtual void SetMessage(const std::string& msg)  |  Set the error message.
   
 ## Members
+  
+### GetReferrer
+Gets the contact in case of missing rights to the document.
+
+  
+**Returns**: The contact in case of missing rights to the document.
+  
+### GetOwner
+_Not documented yet._
+
   
 ### what
 Get the error message.

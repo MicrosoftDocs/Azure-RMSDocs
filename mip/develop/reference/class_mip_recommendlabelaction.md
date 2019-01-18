@@ -1,12 +1,14 @@
 ---
-title: class mip RecommendLabelAction 
-description: Reference for class mip RecommendLabelAction 
+title: class mip::RecommendLabelAction 
+description: Documents the mip::recommendlabelaction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::RecommendLabelAction 
 Recommend label actions is meant to suggest a label to the users. Suppressing this call after a user ignores the recommended label should be done through the supported actions on the execution state.
   
@@ -14,6 +16,7 @@ Recommend label actions is meant to suggest a label to the users. Suppressing th
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
  public const std::string& GetLabelId() const  |  Get the label ID suggested.
+public const std::vector<std::string>& GetClassificationIds() const  |  Get the Classification IDs that matched and caused this label to appear.
  public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
@@ -23,6 +26,12 @@ Get the label ID suggested.
 
   
 **Returns**: The label ID.
+  
+### GetClassificationIds
+Get the Classification IDs that matched and caused this label to appear.
+
+  
+**Returns**: Const std::vector<std::string>& a list of classification IDs that caused this label to appear.
   
 ### ActionType
 Get the type of [Action](class_mip_action.md).

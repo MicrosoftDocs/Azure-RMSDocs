@@ -1,12 +1,14 @@
 ---
-title: class mip ConsentDeniedError 
-description: Reference for class mip ConsentDeniedError 
+title: class mip::ConsentDeniedError 
+description: Documents the mip::consentdeniederror class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::ConsentDeniedError 
 An operation that required consent from user was not granted consent.
   

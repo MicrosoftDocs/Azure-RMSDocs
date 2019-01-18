@@ -1,12 +1,14 @@
 ---
-title: class mip ProtectionDescriptor 
-description: Reference for class mip ProtectionDescriptor 
+title: class mip::ProtectionDescriptor 
+description: Documents the mip::protectiondescriptor class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::ProtectionDescriptor 
 Description of protection associated with a piece of content.
   
@@ -21,6 +23,7 @@ Description of protection associated with a piece of content.
  public std::string GetLabelId() const  |  Gets the label ID, if any.
 public std::vector<UserRights> GetUserRights() const  |  Gets collection of users-to-rights mappings.
 public std::vector<UserRoles> GetUserRoles() const  |  Gets collection of users-to-roles mappings.
+ public bool DoesContentExpire() const  |  Checks if content has an expiration time or not.
 public std::chrono::time_point<std::chrono::system_clock> GetContentValidUntil() const  |  Gets protection expiration time.
  public bool DoesAllowOfflineAccess() const  |  Gets if protection allows offline content access or not.
  public std::string GetReferrer() const  |  Gets protection referrer address.
@@ -79,6 +82,12 @@ Gets collection of users-to-roles mappings.
   
 **Returns**: Collection of users-to-roles mappings
   
+### DoesContentExpire
+Checks if content has an expiration time or not.
+
+  
+**Returns**: True if content can expire, else false
+  
 ### GetContentValidUntil
 Gets protection expiration time.
 
@@ -103,7 +112,7 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata)
+A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getappsigneddata)
   
 ### GetSignedAppData
 Gets the app-specific data that was signed.

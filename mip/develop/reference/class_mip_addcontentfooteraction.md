@@ -1,12 +1,14 @@
 ---
-title: class mip AddContentFooterAction 
-description: Reference for class mip AddContentFooterAction 
+title: class mip::AddContentFooterAction 
+description: Documents the mip::addcontentfooteraction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::AddContentFooterAction 
 An action class that specifies adding a content footer to the document.
   
@@ -54,13 +56,13 @@ Get the font color used to display the content footer.
   
 **Returns**: Font color as a string (for example, "#000000").
   
-### GetAlignment
+### ContentMarkAlignment
 Get the alignment of the footer.
 
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: ContentMarkAlignment
+**See also**: [ContentMarkAlignment](undefined)
   
 ### GetMargin
 Get the margin of the footer from the bottom.

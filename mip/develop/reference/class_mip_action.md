@@ -1,12 +1,14 @@
 ---
-title: class mip Action 
-description: Reference for class mip Action 
+title: class mip::Action 
+description: Documents the mip::action class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::Action 
 Interface for an action. Each action translates to a step that needs to be taken by the application to apply the label (as defined in the policy)
   

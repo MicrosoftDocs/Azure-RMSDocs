@@ -1,13 +1,15 @@
 ---
-title: class ConsentDelegate 
-description: Reference for class ConsentDelegate 
+title: class mip::ConsentDelegate 
+description: Documents the mip::consentdelegate class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
-# class ConsentDelegate 
+
+# class mip::ConsentDelegate 
 Delegate for consent related operations.
 This delegate is implemented by a client application to know when a consent request notification should be displayed to the user.
   

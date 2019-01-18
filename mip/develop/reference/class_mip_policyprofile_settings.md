@@ -1,14 +1,16 @@
 ---
-title: class mip PolicyProfile Settings 
-description: Reference for class mip PolicyProfile Settings 
+title: class mip::PolicyProfile::Settings 
+description: Documents the mip::policyprofile class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::PolicyProfile::Settings 
-[Settings](class_mip_policyprofile_settings.md) used by [PolicyProfile](class_mip_policyprofile.md) during its creation and throughout its lifetime.
+[Settings](undefined) used by [PolicyProfile](undefined) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -43,7 +45,7 @@ Parameters:
 * **authDelegate**: The authentication delegate used by the SDK to acquire authentication tokens. 
 
 
-* **observer**: A class implementing the [PolicyProfile::Observer](class_mip_policyprofile_observer.md) interface. Can be nullptr. 
+* **observer**: A class implementing the [PolicyProfile::Observer](undefined) interface. Can be nullptr. 
 
 
 * **applicationInfo**: The application identifiers used for service access.
@@ -62,7 +64,7 @@ Get the Use In Memory Storage flag.
   
 **Returns**: True if use in memory is set else false.
   
-### GetAuthDelegate
+### AuthDelegate
 Get the Auth Delegate.
 
   
@@ -116,7 +118,7 @@ Opts out of all telemetry gathering.
 Gets if telemetry gathering should be disabled or not.
 
   
-**Returns**: Iftelemetry gathering should be disabled or not
+**Returns**: True if telemetry gathering should be disabled else false
   
 ### SetMinimumLogLevel
 Set the minimum log level that will trigger a logging event.

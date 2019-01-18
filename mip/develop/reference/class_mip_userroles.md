@@ -1,12 +1,14 @@
 ---
-title: class mip UserRoles 
-description: Reference for class mip UserRoles 
+title: class mip::UserRoles 
+description: Documents the mip::userroles class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::UserRoles 
 A group of users and the roles associated with them.
   

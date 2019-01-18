@@ -1,12 +1,14 @@
 ---
-title: class mip AddWatermarkAction 
-description: Reference for class mip AddWatermarkAction 
+title: class mip::AddWatermarkAction 
+description: Documents the mip::addwatermarkaction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::AddWatermarkAction 
 An action class that specifies adding watermark.
   
@@ -29,7 +31,7 @@ An API used to mark the watermark element.
   
 **Returns**: The name that should be used for the UI element that holds the watermark. The same name will be returned in RemoveWatermarkingAction in case the watermark needs to be removed.
   
-### GetLayout
+### WatermarkLayout
 An API used to get the water mark layout.
 
   

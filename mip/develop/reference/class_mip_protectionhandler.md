@@ -1,12 +1,14 @@
 ---
-title: class mip ProtectionHandler 
-description: Reference for class mip ProtectionHandler 
+title: class mip::ProtectionHandler 
+description: Documents the mip::protectionhandler class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
+manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/17/2019
 ---
+
 # class mip::ProtectionHandler 
 Manages protection-related actions for a specific protection configuration.
   
@@ -28,6 +30,7 @@ public std::shared_ptr<ProtectionDescriptor> GetProtectionDescriptor()  |  Gets 
  public bool DoesUseDeprecatedAlgorithms()  |  Gets if protection handler uses deprecated crypto algorithms (ECB) for backward compatibility or not.
  public bool IsAuditedExtractAllowed()  |  Gets if protection handler grants user 'audited extract' right or not.
 public const std::vector<uint8_t> GetSerializedPublishingLicense()  |  Serialize [ProtectionHandler](class_mip_protectionhandler.md) into a publishing license (PL)
+public const std::vector<uint8_t> GetSerializedProtectionInfo()  |  Gets protection info.
   
 ## Members
   
@@ -184,3 +187,9 @@ Serialize [ProtectionHandler](class_mip_protectionhandler.md) into a publishing 
 
   
 **Returns**: Serialized publishing license
+  
+### GetSerializedProtectionInfo
+Gets protection info.
+
+  
+**Returns**: Serialized protection info
