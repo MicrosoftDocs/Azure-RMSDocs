@@ -45,7 +45,7 @@ After you have deployed Azure Information Protection for your organization, use 
 
 - [Office applications: Configuration for clients](configure-office-apps.md)
 
-	-   [Office 2016 and Office 2013](configure-office-apps#office2016-and-office-2013)
+	-   [Office 2016 and Office 2013](configure-office-apps.md#office2016-and-office-2013)
 
 	-   [Office 2010](configure-office-apps.md#office2010)
 

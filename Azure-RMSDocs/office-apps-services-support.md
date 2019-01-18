@@ -102,7 +102,7 @@ Although no longer new, the following post from the Office 365 blog has some add
 
 If you are ready to configure SharePoint for IRM:
 
-- For SharePoint Online, see [SharePoint Online and OneDrive for Business: IRM Configuration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configurationn).
+- For SharePoint Online, see [SharePoint Online and OneDrive for Business: IRM Configuration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration).
 
 - For Sharepoint Server, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
