@@ -39,15 +39,15 @@ After you have deployed Azure Information Protection for your organization, use 
 
 -   [Office 365: Configuration for clients and online services](configure-office365.md)
 
-    -   [Exchange Online: IRM Configuration](configure-office365.md#exchange-online-irm-configuration)
+    -   [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration)
 
-    -   [SharePoint Online and OneDrive for Business: IRM Configuration](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)
+    -   [SharePoint Online and OneDrive for Business: IRM Configuration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)
 
 - [Office applications: Configuration for clients](configure-office-apps.md)
 
-	-   [Office 2016 and Office 2013](configure-office-apps.md#office-2016-and-office-2013)
+	-   [Office 2016 and Office 2013](configure-office-apps#office2016-and-office-2013)
 
-	-   [Office 2010](configure-office-apps.md#office-2010)
+	-   [Office 2010](configure-office-apps.md#office2010)
 
 -   [Azure Information Protection client: Installation and configuration for clients](configure-client.md)
 

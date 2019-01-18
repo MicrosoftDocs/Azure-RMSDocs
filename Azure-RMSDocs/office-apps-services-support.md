@@ -66,7 +66,7 @@ For more information about the email options that you can use to protect emails,
 
 If you're ready to configure Exchange to protect emails:
 
-- For Exchange Online, see [Exchange Online: IRM Configuration](configure-office365.md#exchange-online-irm-configuration).
+- For Exchange Online, see [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration).
 
 - For Exchange on-premises, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
@@ -102,7 +102,7 @@ Although no longer new, the following post from the Office 365 blog has some add
 
 If you are ready to configure SharePoint for IRM:
 
-- For SharePoint Online, see [SharePoint Online and OneDrive for Business: IRM Configuration](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration).
+- For SharePoint Online, see [SharePoint Online and OneDrive for Business: IRM Configuration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configurationn).
 
 - For Sharepoint Server, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 

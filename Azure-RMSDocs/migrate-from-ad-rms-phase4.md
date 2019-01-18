@@ -44,7 +44,7 @@ Independently from the Azure Information Protection tenant key topology that you
     
     When this DNS record is in place, users using Outlook on the web and mobile email clients will be able to view AD RMS protected emails in those apps, and Exchange will be able to use the key you imported from AD RMS to decrypt, index, journal, and protect content that has been protected by AD RMS.  
 
-2. Run the Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) command. If you need help running this command, see the step-by-step instructions from [Exchange Online: IRM Configuration](configure-office365.md#exchange-online-irm-configuration).
+2. Run the Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) command. If you need help running this command, see the step-by-step instructions from [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration).
     
     From the output, check whether **AzureRMSLicensingEnabled** is set to **True**:
     
