@@ -98,8 +98,16 @@
         href: reference/class_mip_addwatermarkaction.md
       - name: ApplyLabelAction
         href: reference/class_mip_applylabelaction.md
+      - name: AuthDelegate
+        href: reference/class_mip_authdelegate.md 
+      - name: AuthDelegate::OAuth2Challenge
+        href: reference/class_mip_authdelegate_oauth2challenge.md        
+      - name: AuthDelegate::OAuth2Token
+        href: reference/class_mip_authdelegate_oauth2token.md 
       - name: BadInputError
         href: reference/class_mip_badinputerror.md
+      - name: ClassificationRequest
+        href: reference/class_mip_classificationrequest.md
       - name: ClassificationResult
         href: reference/class_mip_classificationresult.md
       - name: ConsentDelegate
@@ -118,6 +126,8 @@
         href: reference/class_mip_fileengine.md
       - name: FileEngine::Settings
         href: reference/class_mip_fileengine_settings.md
+      - name: FileExecutionState
+        href: reference/class_mip_fileexecutionstate.md        
       - name: FileHandler
         href: reference/class_mip_filehandler.md
       - name: FileHandler::Observer
@@ -136,6 +146,8 @@
         href: reference/class_mip_httprequest.md
       - name: HttpResponse
         href: reference/class_mip_httpresponse.md
+      - name: Identity
+        href: reference/class_mip_identity.md
       - name: InternalError
         href: reference/class_mip_internalerror.md
       - name: JustificationRequiredError
@@ -152,6 +164,12 @@
         href: reference/class_mip_metadataaction.md
       - name: NetworkError
         href: reference/class_mip_networkerror.md
+      - name: NoAuthTokenError
+        href: reference/class_mip_noauthtokenerror.md
+      - name: NoPermissionsError
+        href: reference/class_mip_nopermissionserror.md
+      - name: NoPolicyError
+        href: reference/class_mip_nopolicyerror.md
       - name: NotSupportedError
         href: reference/class_mip_notsupportederror.md
       - name: PolicyEngine
@@ -180,12 +198,12 @@
         href: reference/class_mip_protectiondescriptor.md
       - name: ProtectionDescriptorBuilder
         href: reference/class_mip_protectiondescriptorbuilder.md
+      - name: ProtectionEngine
+        href: reference/class_mip_protectionengine.md
       - name: ProtectionEngine::Observer
         href: reference/class_mip_protectionengine_observer.md
       - name: ProtectionEngine::Settings
         href: reference/class_mip_protectionengine_settings.md
-      - name: ProtectionEngine
-        href: reference/class_mip_protectionengine.md
       - name: ProtectionHandler
         href: reference/class_mip_protectionhandler.md
       - name: ProtectionHandler::Observer
@@ -196,6 +214,8 @@
         href: reference/class_mip_protectionprofile_observer.md
       - name: ProtectionProfile::Settings
         href: reference/class_mip_protectionprofile_settings.md
+      - name: ProxyAuthenticationError
+        href: reference/class_mip_proxyauthenticationerror.md
       - name: RecommendLabelAction
         href: reference/class_mip_recommendlabelaction.md
       - name: RemoveContentFooterAction
@@ -206,6 +226,10 @@
         href: reference/class_mip_removeprotectionaction.md
       - name: RemoveWatermarkAction
         href: reference/class_mip_removewatermarkaction.md
+      - name: SensitivityTypesRulePackage
+        href: reference/class_mip_sensitivitytypesrulepackage.md
+      - name: ServiceDisabledError
+        href: reference/class_mip_servicedisablederror.md
       - name: Stream
         href: reference/class_mip_stream.md
       - name: TransientNetworkError
