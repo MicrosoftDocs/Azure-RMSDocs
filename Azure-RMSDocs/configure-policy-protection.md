@@ -52,7 +52,7 @@ When the label applies protection, a protected document is not suitable to be sa
 
 Exchange does not have to be configured for Azure Information Protection before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for Azure Information Protection, you do not get the full functionality of using Azure Rights Management protection with Exchange. For example, users cannot view protected emails on mobile phones or with Outlook on the web, protected emails cannot be indexed for search, and you cannot configure Exchange Online DLP for Rights Management protection. To ensure that Exchange can support these additional scenarios, see the following resources:
 
-- For Exchange Online, see the instructions for [Exchange Online: IRM Configuration](configure-office365.md#exchange-online-irm-configuration).
+- For Exchange Online, see the instructions for [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration).
 
 - For Exchange on-premises, you must deploy the [RMS connector and configure your Exchange servers](deploy-rms-connector.md). 
 
