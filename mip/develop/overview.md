@@ -4,9 +4,10 @@ description: Microsoft Information Protection (MIP) is the unification of Micros
 author: BryanLa
 ms.service: information-protection
 ms.topic: overview
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
 manager: mbaldwin
+#Customer intent: As a an application developer or administrator, I want to get an overview of the MIP SDK, so that I can determine what it is and how it's used.
 ---
 # Overview
 
