@@ -2,11 +2,10 @@
 title: class mip::AddContentHeaderAction 
 description: Documents the mip::addcontentheaderaction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::AddContentHeaderAction 
@@ -15,14 +14,14 @@ An action class that specifies adding content header.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetUIElementName()  |  An API used to mark the content header element.
- public const std::string& GetText() const  |  Get the text that is meant to go into the content header.
- public const std::string& GetFontName() const  |  Get the font name used to display the content header.
- public int GetFontSize() const  |  Get the font size used to display the content header.
- public const std::string& GetFontColor() const  |  Get the font color used to display the content header.
- public ContentMarkAlignment GetAlignment() const  |  Get the alignment of the header.
- public int GetMargin() const  |  Get the margin of the header from the bottom.
- public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+public const std::string& GetUIElementName()  |  An API used to mark the content header element.
+public const std::string& GetText() const  |  Get the text that is meant to go into the content header.
+public const std::string& GetFontName() const  |  Get the font name used to display the content header.
+public int GetFontSize() const  |  Get the font size used to display the content header.
+public const std::string& GetFontColor() const  |  Get the font color used to display the content header.
+public ContentMarkAlignment GetAlignment() const  |  Get the alignment of the header.
+public int GetMargin() const  |  Get the margin of the header from the bottom.
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   

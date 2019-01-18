@@ -2,11 +2,10 @@
 title: class mip::ProtectionEngine 
 description: Documents the mip::protectionengine class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::ProtectionEngine 
@@ -15,7 +14,7 @@ Manages protection-related actions related to a specific identity.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const Settings& GetSettings() const  |  Gets the engine settings.
+public const Settings& GetSettings() const  |  Gets the engine settings.
 public void GetTemplatesAsync(const std::shared_ptr<ProtectionEngine::Observer>& observer, const std::shared_ptr<void>& context)  |  Get collection of templates available to a user.
 public std::vector<std::string> GetTemplates(const std::shared_ptr<void>& context)  |  Get collection of templates available to a user.
 public void GetRightsForLabelIdAsync(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::shared_ptr<ProtectionEngine::Observer>& observer, const std::shared_ptr<void>& context)  |  Get collection of rights available to a user for a label ID.

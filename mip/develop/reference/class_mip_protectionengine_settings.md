@@ -2,11 +2,10 @@
 title: class mip::ProtectionEngine::Settings 
 description: Documents the mip::protectionengine class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::ProtectionEngine::Settings 
@@ -15,21 +14,21 @@ ms.date: 01/17/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for creating a new engine.
- public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for loading an existing engine.
- public const std::string& GetEngineId() const  |  Gets the engine ID.
- public void SetEngineId(const std::string& engineId)  |  Sets the engine ID.
- public const Identity& GetIdentity() const  |  Gets the user [Identity](undefined) associated with the engine.
- public void SetIdentity(const Identity& identity)  |  Sets the user [Identity](undefined) associated with the engine.
- public const std::string& GetClientData() const  |  Gets custom data specified by client.
- public void SetClientData(const std::string& clientData)  |  Sets custom data specified by client.
- public const std::string& GetLocale() const  |  Gets the locale in which engine data will be written.
+public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for creating a new engine.
+public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for loading an existing engine.
+public const std::string& GetEngineId() const  |  Gets the engine ID.
+public void SetEngineId(const std::string& engineId)  |  Sets the engine ID.
+public const Identity& GetIdentity() const  |  Gets the user [Identity](undefined) associated with the engine.
+public void SetIdentity(const Identity& identity)  |  Sets the user [Identity](undefined) associated with the engine.
+public const std::string& GetClientData() const  |  Gets custom data specified by client.
+public void SetClientData(const std::string& clientData)  |  Sets custom data specified by client.
+public const std::string& GetLocale() const  |  Gets the locale in which engine data will be written.
 public void SetCustomSettings(const std::vector<std::pair<std::string, std::string>>& value)  |  Sets name/value pairs used for testing and experimentation.
 public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  Gets name/value pairs used for testing and experimentation.
- public void SetSessionId(const std::string& sessionId)  |  Sets the engine session ID, used for correlation of logging/telemetry.
- public const std::string& GetSessionId() const  |  Gets the engine session ID.
- public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Optionally sets the cloud endpoint base URL.
- public const std::string& GetCloudEndpointBaseUrl() const  |  Gets the cloud base URL used by all service requests, if specified.
+public void SetSessionId(const std::string& sessionId)  |  Sets the engine session ID, used for correlation of logging/telemetry.
+public const std::string& GetSessionId() const  |  Gets the engine session ID.
+public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Optionally sets the cloud endpoint base URL.
+public const std::string& GetCloudEndpointBaseUrl() const  |  Gets the cloud base URL used by all service requests, if specified.
   
 ## Members
   

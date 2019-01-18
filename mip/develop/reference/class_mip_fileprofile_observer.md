@@ -2,11 +2,10 @@
 title: class mip::FileProfile::Observer 
 description: Documents the mip::fileprofile class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::FileProfile::Observer 
@@ -17,7 +16,7 @@ Client should not call the engine back on the thread that calls the observer.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public virtual ~Observer()  | _Not yet documented._
+public virtual ~Observer()  | _Not yet documented._
 public virtual void OnLoadSuccess(const std::shared_ptr<mip::FileProfile>& profile, const std::shared_ptr<void>& context)  |  Called when profile was loaded successfully.
 public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when loading a profile caused an error.
 public virtual void OnListEnginesSuccess(const std::vector<std::string>& engineIds, const std::shared_ptr<void>& context)  |  Called when list of engines was generated successfully.
@@ -28,9 +27,9 @@ public virtual void OnAddEngineSuccess(const std::shared_ptr<mip::FileEngine>& e
 public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when adding a new engine caused an error.
 public virtual void OnDeleteEngineSuccess(const std::shared_ptr<void>& context)  |  Called when an engine was deleted successfully.
 public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when deleting an engine caused an error.
- public virtual void OnPolicyChanged(const std::string& engineId)  |  Called when the policy has changed for the engine with the given ID.
- public virtual void OnAddPolicyEngineStarting(bool requiresPolicyFetch)  |  Called prior to engine creation to describe whether or not the policy engine's policy data must be fetched from the server or whether it can be created from locally cached data.
- protected Observer()  | _Not yet documented._
+public virtual void OnPolicyChanged(const std::string& engineId)  |  Called when the policy has changed for the engine with the given ID.
+public virtual void OnAddPolicyEngineStarting(bool requiresPolicyFetch)  |  Called prior to engine creation to describe whether or not the policy engine's policy data must be fetched from the server or whether it can be created from locally cached data.
+protected Observer()  | _Not yet documented._
   
 ## Members
   

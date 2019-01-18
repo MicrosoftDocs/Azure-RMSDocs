@@ -2,11 +2,10 @@
 title: class mip::UserRoles 
 description: Documents the mip::userroles class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::UserRoles 

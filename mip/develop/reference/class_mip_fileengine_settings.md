@@ -2,11 +2,10 @@
 title: class mip::FileEngine::Settings 
 description: Documents the mip::fileengine class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::FileEngine::Settings 
@@ -14,23 +13,23 @@ ms.date: 01/17/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileEngine::Settings](class_mip_fileengine_settings.md) constructor for loading an existing engine.
- public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor for creating a new engine.
- public const std::string& GetEngineId() const  |  Returns the engine ID.
- public void SetEngineId(const std::string& id)  |  Set the engine ID.
- public const Identity& GetIdentity() const  |  Returns the engine [Identity](undefined).
- public void SetIdentity(const Identity& identity)  |  Sets the engine identity.
- public const std::string& GetClientData() const  |  Returns the engine client data.
- public const std::string& GetLocale() const  |  Return the engine locale.
+public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileEngine::Settings](class_mip_fileengine_settings.md) constructor for loading an existing engine.
+public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor for creating a new engine.
+public const std::string& GetEngineId() const  |  Returns the engine ID.
+public void SetEngineId(const std::string& id)  |  Set the engine ID.
+public const Identity& GetIdentity() const  |  Returns the engine [Identity](undefined).
+public void SetIdentity(const Identity& identity)  |  Sets the engine identity.
+public const std::string& GetClientData() const  |  Returns the engine client data.
+public const std::string& GetLocale() const  |  Return the engine locale.
 public void SetCustomSettings(const std::vector<std::pair<std::string, std::string>>& value)  |  Sets a list of name/value pairs used for testing and experimentation.
 public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  Gets a list of name/value pairs used for testing and experimentation.
- public void SetSessionId(const std::string& sessionId)  |  Sets the engine session ID.
- public const std::string& GetSessionId() const  |  Return the engine session ID.
- public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Sets the protection cloud endpoint base url, used to specify cloud boundary.
- public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Gets the cloudEndpointBaseUrl.
- public void SetProtectionOnlyEngine(const bool protectionOnly)  |  Sets protection only engine indicator - no policy/label.
- public const bool IsProtectionOnlyEngine() const  |  Return protection only engine indicator - no policy/label.
- public bool IsLoadSensitivityTypesEnabled() const  |  Get the the flag indicating if load sensitivity labels is enabled.
+public void SetSessionId(const std::string& sessionId)  |  Sets the engine session ID.
+public const std::string& GetSessionId() const  |  Return the engine session ID.
+public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Sets the protection cloud endpoint base url, used to specify cloud boundary.
+public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Gets the cloudEndpointBaseUrl.
+public void SetProtectionOnlyEngine(const bool protectionOnly)  |  Sets protection only engine indicator - no policy/label.
+public const bool IsProtectionOnlyEngine() const  |  Return protection only engine indicator - no policy/label.
+public bool IsLoadSensitivityTypesEnabled() const  |  Get the the flag indicating if load sensitivity labels is enabled.
   
 ## Members
   

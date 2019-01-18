@@ -2,11 +2,10 @@
 title: class mip::ServiceDisabledError 
 description: Documents the mip::servicedisablederror class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::ServiceDisabledError 
@@ -15,14 +14,14 @@ The user could not get access to the content due to a service being disabled.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public Extent GetExtent() const  |  Gets the extent for which the service is disabled.
- public char const* what() const  |  Get the error message.
+public Extent GetExtent() const  |  Gets the extent for which the service is disabled.
+public char const* what() const  |  Get the error message.
 public std::shared_ptr<Error> Clone() const  |  Clone the error.
- public virtual ErrorType GetErrorType() const  |  Get the error type.
- public virtual const std::string& GetErrorName() const  |  Get the error name.
- public virtual const std::string& GetMessage() const  |  Get the error message.
- public virtual void SetMessage(const std::string& msg)  |  Set the error message.
- enum Extent  |  Describes the extent for which the service is disabled.
+public virtual ErrorType GetErrorType() const  |  Get the error type.
+public virtual const std::string& GetErrorName() const  |  Get the error name.
+public virtual const std::string& GetMessage() const  |  Get the error message.
+public virtual void SetMessage(const std::string& msg)  |  Set the error message.
+enum Extent  |  Describes the extent for which the service is disabled.
   
 ## Members
   

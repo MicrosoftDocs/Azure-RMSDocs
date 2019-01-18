@@ -2,11 +2,10 @@
 title: class mip::ExecutionState 
 description: Documents the mip::executionstate class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::ExecutionState 
@@ -16,17 +15,17 @@ Clients should only call the methods to obtain the state that is needed. Hence, 
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public std::string GetNewLabelId() const  |  Gets the sensitivity label ID that should be applied on the document.
- public ActionSource GetNewLabelActionSource() const  |  Gets the source for a new label action.
- public std::string GetContentIdentifier() const  |  Gets the content identifier that describes the document. example for a file: [path\filename] example for an email: [Subject:Sender].
- public ContentState GetContentState() const  |  Gets the state of the content while the application is interacting with it.
+public std::string GetNewLabelId() const  |  Gets the sensitivity label ID that should be applied on the document.
+public ActionSource GetNewLabelActionSource() const  |  Gets the source for a new label action.
+public std::string GetContentIdentifier() const  |  Gets the content identifier that describes the document. example for a file: [path\filename] example for an email: [Subject:Sender].
+public ContentState GetContentState() const  |  Gets the state of the content while the application is interacting with it.
 public std::pair<bool, std::string> IsDowngradeJustified() const  |  Implementation should pass if justification to downgrade an existing label was given.
- public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Get the new label's assignment method.
+public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Get the new label's assignment method.
 public std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties() const  |  Return new label's extended properties.
 public std::vector<std::pair<std::string, std::string>> GetContentMetadata(const std::vector<std::string>& names, const std::vector<std::string>& namePrefixes) const  |  Get the meta-data items from the content.
 public std::shared_ptr<ProtectionDescriptor> GetProtectionDescriptor() const  |  Get the Protection Descriptor.
- public ContentFormat GetContentFormat() const  |  Gets the content format.
- public ActionType GetSupportedActions() const  |  Gets a masked enum describing all the supported action types.
+public ContentFormat GetContentFormat() const  |  Gets the content format.
+public ActionType GetSupportedActions() const  |  Gets a masked enum describing all the supported action types.
 public virtual std::map<std::string, std::shared_ptr<ClassificationResult>> GetClassificationResults(const std::vector<std::shared_ptr<ClassificationRequest>> &) const  |  Return a map of classification results.
 public virtual std::map<std::string, std::string> GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
   

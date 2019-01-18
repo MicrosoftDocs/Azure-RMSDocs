@@ -2,11 +2,10 @@
 title: class mip::JustifyAction 
 description: Documents the mip::justifyaction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::JustifyAction 
@@ -17,7 +16,7 @@ Justify [Action](class_mip_action.md) requires providing a justification to a la
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   

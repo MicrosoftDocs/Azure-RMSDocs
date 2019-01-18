@@ -2,11 +2,10 @@
 title: class mip::ProtectionProfile 
 description: Documents the mip::protectionprofile class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::ProtectionProfile 
@@ -16,13 +15,13 @@ An application needs to create a [ProtectionProfile](class_mip_protectionprofile
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const Settings& GetSettings() const  |  Gets settings used by [ProtectionProfile](class_mip_protectionprofile.md) during its initialization and throughout its lifetime.
+public const Settings& GetSettings() const  |  Gets settings used by [ProtectionProfile](class_mip_protectionprofile.md) during its initialization and throughout its lifetime.
 public void ListEnginesAsync(const std::shared_ptr<void>& context)  |  Starts list engines operation.
 public std::vector<std::string> ListEngines()  |  List engines.
 public void AddEngineAsync(const ProtectionEngine::Settings& settings, const std::shared_ptr<void>& context)  |  Starts adding a new protection engine to the profile.
 public std::shared_ptr<ProtectionEngine> AddEngine(const ProtectionEngine::Settings& settings)  |  Add a new protection engine to the profile.
 public void DeleteEngineAsync(const std::string& engineId, const std::shared_ptr<void>& context)  |  Starts deleting the protection engine with the given ID. All data for the given engine will be deleted.
- public void DeleteEngine(const std::string& engineId)  |  Delete the protection engine with the given ID. All data for the given engine will be deleted.
+public void DeleteEngine(const std::string& engineId)  |  Delete the protection engine with the given ID. All data for the given engine will be deleted.
   
 ## Members
   

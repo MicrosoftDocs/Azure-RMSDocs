@@ -2,11 +2,10 @@
 title: class mip::PolicyProfile::Observer 
 description: Documents the mip::policyprofile class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::PolicyProfile::Observer 
@@ -24,11 +23,11 @@ public virtual void OnListEnginesFailure(const std::exception_ptr& error, const 
 public virtual void OnUnloadEngineSuccess(const std::shared_ptr<void>& context)  |  Called when an engine was unloaded successfully.
 public virtual void OnUnloadEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when unloading an engine caused an error.
 public virtual void OnAddEngineSuccess(const std::shared_ptr<PolicyEngine>& engine, const std::shared_ptr<void>& context)  |  Called when a new engine was added successfully.
- public virtual void OnAddEngineStarting(bool requiresPolicyFetch)  |  Called prior to engine creation to describe whether or not the engine's policy data must be fetched from the server or whether it can be created from locally cached data.
+public virtual void OnAddEngineStarting(bool requiresPolicyFetch)  |  Called prior to engine creation to describe whether or not the engine's policy data must be fetched from the server or whether it can be created from locally cached data.
 public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when adding a new engine caused an error.
 public virtual void OnDeleteEngineSuccess(const std::shared_ptr<void>& context)  |  Called when an engine was deleted successfully.
 public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when deleting an engine caused an error.
- public virtual void OnPolicyChanged(const std::string& engineId)  |  Called when the policy has changed for the engine with the given ID, Or when the loaded Custom Sensitivity Types have changed.
+public virtual void OnPolicyChanged(const std::string& engineId)  |  Called when the policy has changed for the engine with the given ID, Or when the loaded Custom Sensitivity Types have changed.
   
 ## Members
   

@@ -2,11 +2,10 @@
 title: class mip::HttpResponse 
 description: Documents the mip::httpresponse class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::HttpResponse 
@@ -15,8 +14,8 @@ Interface that describes a single HTTP response, implemented by client app when 
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public int32_t GetStatusCode() const  |  Get response status code.
- public const std::string& GetBody() const  |  Get request body.
+public int32_t GetStatusCode() const  |  Get response status code.
+public const std::string& GetBody() const  |  Get request body.
 public const std::map<std::string, std::string, CaseInsensitiveComparator>& GetHeaders() const  |  Get request headers.
   
 ## Members

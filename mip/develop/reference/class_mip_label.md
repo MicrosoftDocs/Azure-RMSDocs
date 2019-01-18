@@ -2,11 +2,10 @@
 title: class mip::Label 
 description: Documents the mip::label class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::Label 
@@ -15,13 +14,13 @@ Abstraction for a single Microsoft Information Protection label.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetId() const  |  Get the label ID.
- public const std::string& GetName() const  |  Get the label name.
- public const std::string& GetDescription() const  |  Get the label description.
- public const std::string& GetColor() const  |  Get the color the label should be displayed.
- public int GetSensitivity() const  |  Get the Sensitivity of the label.
- public const std::string& GetTooltip() const  |  Get the tooltip description of the label.
- public bool IsActive() const  |  Gets a boolean signaling if the label is active.
+public const std::string& GetId() const  |  Get the label ID.
+public const std::string& GetName() const  |  Get the label name.
+public const std::string& GetDescription() const  |  Get the label description.
+public const std::string& GetColor() const  |  Get the color the label should be displayed.
+public int GetSensitivity() const  |  Get the Sensitivity of the label.
+public const std::string& GetTooltip() const  |  Get the tooltip description of the label.
+public bool IsActive() const  |  Gets a boolean signaling if the label is active.
 public std::weak_ptr<Label> GetParent() const  |  Get the parent label.
 public const std::vector<std::shared_ptr<Label>>& GetChildren() const  |  Get the children labels of the current label.
 public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  Get the custom settings of a label.

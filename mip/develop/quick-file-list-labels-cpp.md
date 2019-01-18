@@ -6,7 +6,6 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: bryanla
-manager: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to list sensitivity labels, so that I can implement this logic in my own application.
 ---
 

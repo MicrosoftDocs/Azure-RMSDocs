@@ -2,11 +2,10 @@
 title: class mip::RemoveWatermarkAction 
 description: Documents the mip::removewatermarkaction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::RemoveWatermarkAction 
@@ -16,7 +15,7 @@ An action class that specifies removing the watermarking from the document.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::vector<std::string>& GetUIElementNames()  |  Gets a list of names that should be used to find the UI elements that should be removed.
- public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   

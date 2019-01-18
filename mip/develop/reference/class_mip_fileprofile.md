@@ -2,11 +2,10 @@
 title: class mip::FileProfile 
 description: Documents the mip::fileprofile class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::FileProfile 
@@ -16,7 +15,7 @@ A typical application will only need one Profile.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const Settings& GetSettings() const  |  Returns the profile settings.
+public const Settings& GetSettings() const  |  Returns the profile settings.
 public void ListEnginesAsync(const std::shared_ptr<void>& context)  |  Starts list engines operation.
 public void UnloadEngineAsync(const std::string& id, const std::shared_ptr<void>& context)  |  Starts unloading the file engine with the given ID.
 public void AddEngineAsync(const FileEngine::Settings& settings, const std::shared_ptr<void>& context)  |  Starts adding a new file engine to the profile.

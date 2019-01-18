@@ -2,11 +2,10 @@
 title: class mip::ProtectionDescriptor 
 description: Documents the mip::protectiondescriptor class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::ProtectionDescriptor 
@@ -15,18 +14,18 @@ Description of protection associated with a piece of content.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public ProtectionType GetProtectionType() const  |  Gets type of protection, whether it originated from protection SDK template or not.
- public std::string GetOwner() const  |  Gets owner for the protection.
- public std::string GetName() const  |  Gets protection name.
- public std::string GetDescription() const  |  Gets protection description.
- public std::string GetTemplateId() const  |  Gets the protection template ID, if any.
- public std::string GetLabelId() const  |  Gets the label ID, if any.
+public ProtectionType GetProtectionType() const  |  Gets type of protection, whether it originated from protection SDK template or not.
+public std::string GetOwner() const  |  Gets owner for the protection.
+public std::string GetName() const  |  Gets protection name.
+public std::string GetDescription() const  |  Gets protection description.
+public std::string GetTemplateId() const  |  Gets the protection template ID, if any.
+public std::string GetLabelId() const  |  Gets the label ID, if any.
 public std::vector<UserRights> GetUserRights() const  |  Gets collection of users-to-rights mappings.
 public std::vector<UserRoles> GetUserRoles() const  |  Gets collection of users-to-roles mappings.
- public bool DoesContentExpire() const  |  Checks if content has an expiration time or not.
+public bool DoesContentExpire() const  |  Checks if content has an expiration time or not.
 public std::chrono::time_point<std::chrono::system_clock> GetContentValidUntil() const  |  Gets protection expiration time.
- public bool DoesAllowOfflineAccess() const  |  Gets if protection allows offline content access or not.
- public std::string GetReferrer() const  |  Gets protection referrer address.
+public bool DoesAllowOfflineAccess() const  |  Gets if protection allows offline content access or not.
+public std::string GetReferrer() const  |  Gets protection referrer address.
 public std::map<std::string, std::string> GetEncryptedAppData() const  |  Gets app-specific data that was encrypted.
 public std::map<std::string, std::string> GetSignedAppData() const  |  Gets the app-specific data that was signed.
   

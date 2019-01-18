@@ -2,11 +2,10 @@
 title: class mip::AddContentFooterAction 
 description: Documents the mip::addcontentfooteraction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::AddContentFooterAction 
@@ -15,14 +14,14 @@ An action class that specifies adding a content footer to the document.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetUIElementName()  |  An API used to mark the content footer element.
- public const std::string& GetText() const  |  Get the text that is meant to go into the content footer.
- public const std::string& GetFontName() const  |  Get the font name, used to display the content footer.
- public int GetFontSize() const  |  Get the font size used to display the content footer.
- public const std::string& GetFontColor() const  |  Get the font color used to display the content footer.
- public ContentMarkAlignment GetAlignment() const  |  Get the alignment of the footer.
- public int GetMargin() const  |  Get the margin of the footer from the bottom.
- public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+public const std::string& GetUIElementName()  |  An API used to mark the content footer element.
+public const std::string& GetText() const  |  Get the text that is meant to go into the content footer.
+public const std::string& GetFontName() const  |  Get the font name, used to display the content footer.
+public int GetFontSize() const  |  Get the font size used to display the content footer.
+public const std::string& GetFontColor() const  |  Get the font color used to display the content footer.
+public ContentMarkAlignment GetAlignment() const  |  Get the alignment of the footer.
+public int GetMargin() const  |  Get the margin of the footer from the bottom.
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   

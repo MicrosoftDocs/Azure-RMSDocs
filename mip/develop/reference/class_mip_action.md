@@ -2,11 +2,10 @@
 title: class mip::Action 
 description: Documents the mip::action class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::Action 
@@ -15,7 +14,7 @@ Interface for an action. Each action translates to a step that needs to be taken
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   

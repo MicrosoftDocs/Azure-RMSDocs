@@ -2,11 +2,10 @@
 title: class mip::PolicyProfile::Settings 
 description: Documents the mip::policyprofile class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::PolicyProfile::Settings 
@@ -16,19 +15,19 @@ ms.date: 01/17/2019
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public Settings(const std::string& path, bool useInMemoryStorage, const std::shared_ptr<AuthDelegate>& authDelegate, const std::shared_ptr<PolicyProfile::Observer>& observer, const ApplicationInfo& applicationInfo)  |  Interface for configuring the profile.
- public const std::string& GetPath() const  |  Get the path to the stored state.
- public bool GetUseInMemoryStorage() const  |  Get the Use In Memory Storage flag.
+public const std::string& GetPath() const  |  Get the path to the stored state.
+public bool GetUseInMemoryStorage() const  |  Get the Use In Memory Storage flag.
 public const std::shared_ptr<AuthDelegate>& GetAuthDelegate() const  |  Get the Auth Delegate.
 public const std::shared_ptr<PolicyProfile::Observer>& GetObserver() const  |  Get the event observer.
- public const ApplicationInfo GetApplicationInfo() const  |  Get the application info.
+public const ApplicationInfo GetApplicationInfo() const  |  Get the application info.
 public std::shared_ptr<LoggerDelegate> GetLoggerDelegate() const  |  Get the logger delegate (if any) provided by the application.
 public void SetLoggerDelegate(const std::shared_ptr<LoggerDelegate>& loggerDelegate)  |  Override default logger.
 public std::shared_ptr<HttpDelegate> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr<HttpDelegate>& httpDelegate)  |  Override default HTTP stack with client's own.
- public void OptOutTelemetry()  |  Opts out of all telemetry gathering.
- public bool IsTelemetryOptedOut() const  |  Gets if telemetry gathering should be disabled or not.
- public void SetMinimumLogLevel(LogLevel logLevel)  |  Set the minimum log level that will trigger a logging event.
- public LogLevel GetMinimumLogLevel() const  |  Get the Minimum Log Level object.
+public void OptOutTelemetry()  |  Opts out of all telemetry gathering.
+public bool IsTelemetryOptedOut() const  |  Gets if telemetry gathering should be disabled or not.
+public void SetMinimumLogLevel(LogLevel logLevel)  |  Set the minimum log level that will trigger a logging event.
+public LogLevel GetMinimumLogLevel() const  |  Get the Minimum Log Level object.
   
 ## Members
   

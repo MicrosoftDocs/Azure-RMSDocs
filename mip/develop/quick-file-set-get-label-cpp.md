@@ -7,7 +7,6 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: bryanla
-manager: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to set and get a sensitivity label, so that I can implement this logic in my own application.
 ---
 

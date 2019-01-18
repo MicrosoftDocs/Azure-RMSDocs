@@ -2,11 +2,10 @@
 title: class mip::Stream 
 description: Documents the mip::stream class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::Stream 
@@ -15,15 +14,15 @@ A class that defines the interface between the MIP SDK and stream-based content.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  Read into a buffer from the stream.
- public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  Write into the stream from a buffer.
- public bool Flush()  |  flush the stream.
- public void Seek(int64_t position)  |  Seek specific position within the stream.
- public bool CanRead() const  |  A check if stream can be read from.
- public bool CanWrite() const  |  A check if stream can be written to.
- public int64_t Position()  |  Get the current position within the stream.
- public int64_t Size()  |  Get the size of the content within the stream.
- public void Size(int64_t value)  |  Set the stream size.
+public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  Read into a buffer from the stream.
+public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  Write into the stream from a buffer.
+public bool Flush()  |  flush the stream.
+public void Seek(int64_t position)  |  Seek specific position within the stream.
+public bool CanRead() const  |  A check if stream can be read from.
+public bool CanWrite() const  |  A check if stream can be written to.
+public int64_t Position()  |  Get the current position within the stream.
+public int64_t Size()  |  Get the size of the content within the stream.
+public void Size(int64_t value)  |  Set the stream size.
   
 ## Members
   

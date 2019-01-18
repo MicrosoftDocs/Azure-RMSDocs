@@ -2,7 +2,6 @@
 title: Summary
 description: Summary
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
@@ -25,8 +24,8 @@ enum LogLevel       |  Different log levels used across the MIP SDK.
 enum ProtectionHandlerCreationOptions       |  Bit flags that dictate additional policy creation behavior.
 enum ProtectionType       |  Describes whether protection is based off a template or ad-hoc (custom)
 enum WatermarkLayout       |  Layout for watermarks.
-struct mip::ApplicationInfo  |  A struct that includes application specific information.
-struct mip::PublishingLicenseContext | Holds the details of a Publishing License used to create a protection handler.
+struct ApplicationInfo  |  A struct that includes application specific information.
+struct PublishingLicenseContext | Holds the details of a Publishing License used to create a protection handler.
 
   
 ## Enumerations (mip)
@@ -161,7 +160,7 @@ DIAGONAL            | Watermark layout is diagonal
 Layout for watermarks.
 
  
-## Structures
+## Structures 
 
 ### mip::ApplicationInfo 
 A struct that includes application specific information.

@@ -2,11 +2,10 @@
 title: class mip::ProtectionProfile::Observer 
 description: Documents the mip::protectionprofile class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::ProtectionProfile::Observer 

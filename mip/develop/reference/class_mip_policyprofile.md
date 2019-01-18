@@ -2,11 +2,10 @@
 title: class mip::PolicyProfile 
 description: Documents the mip::policyprofile class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::PolicyProfile 
@@ -15,7 +14,7 @@ ms.date: 01/17/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const Settings& GetSettings() const  |  Get the settings set on the profile.
+public const Settings& GetSettings() const  |  Get the settings set on the profile.
 public void ListEnginesAsync(const std::shared_ptr<void>& context)  |  Starts list engines operation.
 public void UnloadEngineAsync(const std::string& id, const std::shared_ptr<void>& context)  |  Starts unloading the policy engine with the given ID.
 public void AddEngineAsync(const PolicyEngine::Settings& settings, const std::shared_ptr<void>& context)  |  Starts adding a new policy engine to the profile.

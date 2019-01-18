@@ -2,11 +2,10 @@
 title: class mip::FileHandler 
 description: Documents the mip::filehandler class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
-manager: mbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/17/2019
+ms.date: 01/18/2019
 ---
 
 # class mip::FileHandler 
@@ -18,16 +17,16 @@ Interface for all file handling functions.
 public std::shared_ptr<ContentLabel> GetLabel()  |  Starts retrieving the sensitivity label from the file.
 public std::shared_ptr<ProtectionHandler> GetProtection()  |  Starts retrieving the protection policy from the file.
 public void ClassifyAsync(const std::shared_ptr<void>& context)  |  Executes the rules in the handler and returns the list of actions to be executed.
- public void SetLabel(const std::string& labelId, const LabelingOptions& labelingOptions)  |  Sets the sensitivity label to the file.
- public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Deletes the sensitivity label from the file.
+public void SetLabel(const std::string& labelId, const LabelingOptions& labelingOptions)  |  Sets the sensitivity label to the file.
+public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Deletes the sensitivity label from the file.
 public void SetProtection(const std::shared_ptr<ProtectionDescriptor>& protectionDescriptor)  |  Sets either custom or template-based permissions (according to protectionDescriptor->GetProtectionType) to the file.
 public void SetProtection(const std::vector<uint8_t>& serializedPublishingLicense, const std::vector<uint8_t>& serializedProtectionInfo)  |  Sets either custom or template-based permissions (according to serializedPublishingLicense and serializedProtectionInfo) to the file.
- public void RemoveProtection()  |  Removes protection from the file. If the file is labeled, the label will be lost.
+public void RemoveProtection()  |  Removes protection from the file. If the file is labeled, the label will be lost.
 public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr<void>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  parameter.
 public void CommitAsync(const std::shared_ptr<Stream>& outputStream, const std::shared_ptr<void>& context) | Writes the changes to the stream specified by the \|outputStream\ |  parameter.
 public void GetDecryptedTemporaryFileAsync(const std::shared_ptr<void>& context)  |  Returns a path to a temporary file (that will be deleted if possible) - representing the decrypted content.
- public void NotifyCommitSuccessful(const std::string& contentIdentifier)  |  To be called when the changes have been committed to disk.
- public std::string GetOutputFileName()  |  Calculates the output file name and extension based on the original file name and the accumulated changes.
+public void NotifyCommitSuccessful(const std::string& contentIdentifier)  |  To be called when the changes have been committed to disk.
+public std::string GetOutputFileName()  |  Calculates the output file name and extension based on the original file name and the accumulated changes.
   
 ## Members
   
