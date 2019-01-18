@@ -261,7 +261,7 @@ You can classify and protect these container files, but the classification and p
 
 If you have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings. However, you can remove the protection for all files in supported container files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet.
 
-The Azure Information Protection viewer cannot open attachments in a protected PDF document. In this scenario, when the document is opened in the viewer, the attachments are not visible.
+The Azure Information Protection viewer cannot open attachments in a protected PDF document.
 
 ## File types supported for inspection
 
