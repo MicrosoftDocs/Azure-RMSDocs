@@ -267,7 +267,7 @@ The Azure Information Protection viewer cannot open attachments in a protected P
 
 ## File types supported for inspection
 
-Without any additional configuration, the Azure Information Protection client uses Windows IFilter to inspect the contents of documents. Windows IFilter is used by Windows Search for indexing. As a result, the following file types can be inspected when you use the [Azure Information Protection scanner](../deploy-aip-scanner.md), or the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command.
+Without any additional configuration, the Azure Information Protection client uses Windows IFilter to inspect the contents of documents. Windows IFilter is used by Windows Search for indexing. As a result, the following file types can be inspected when you use the [Azure Information Protection scanner](../deploy-aip-scanner.md), or the [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command.
 
 |Application type|File type|
 |--------------------------------|-------------------------------------|
