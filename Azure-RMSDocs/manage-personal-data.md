@@ -203,7 +203,7 @@ In addition, the Azure Information Protection client logs this personal data to 
 
 When the Azure Information Protection client runs the scanner, personal data is saved to %localappdata%\Microsoft\MSIP\Scanner\Reports on the Windows Server computer that runs the scanner.
 
-You can prevent the Azure Information Protection client from writing its logging information by configuring an [advanced client setting](client-admin-guide-customizations.md#change-the-local-logging-level).
+You can prevent the Azure Information Protection client from writing its logging information by configuring an [advanced client setting](../client-admin-guide-customizations.md#change-the-local-logging-level).
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 
