@@ -111,7 +111,7 @@
       - name: ClassificationResult
         href: reference/class_mip_classificationresult.md
       - name: ConsentDelegate
-        href: reference/class_consentdelegate.md
+        href: reference/class_mip_consentdelegate.md
       - name: ConsentDeniedError
         href: reference/class_mip_consentdeniederror.md
       - name: ContentLabel
