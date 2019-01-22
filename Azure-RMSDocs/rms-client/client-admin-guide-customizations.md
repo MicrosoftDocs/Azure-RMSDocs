@@ -655,7 +655,7 @@ Set the logging level to one of the following values:
 
 - **Trace**: Very detailed logging that has a performance impact and should be enabled only if requested by Microsoft Support. If you are instructed to set this level of logging, remember to set a different value when the relevant logs have been collected.
 
-This advanced client setting does not change the information that's sent to Azure Information Protection for [central reporting](./reports-aip.md).
+This advanced client setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md).
 
 
 ## Integration with Exchange message classification for a mobile device labeling solution
