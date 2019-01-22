@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
@@ -44,7 +44,7 @@ Client logs files and currently installed policy file:
 
 ## Usage logging for the Azure Information Protection client
 
-The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. The events include the following information:
+The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. By default, the events include the following information:
 
 - Client version, policy ID
 
@@ -91,7 +91,9 @@ The client logs user activity to the local Windows event log **Applications and 
 - User justification (when applicable)
 
 - Custom permissions (when applicable) that includes the [usage rights by their encoding name](../configure-usage-rights.md#usage-rights-and-descriptions) for the specified users, groups, or organizations
-    
+
+You can prevent this information from being saved by configuring an [advanced client setting](client-admin-guide-customizations.md#change-the-local-logging-level).
+
 For information about usage logging for the protection service, see [Logging and analyzing usage of the Azure Rights Management service](../log-analyze-usage.md)
 
 ## Next steps
