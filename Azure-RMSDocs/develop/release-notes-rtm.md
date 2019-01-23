@@ -41,9 +41,9 @@ This article contains important information about this and previous releases of 
 
 - **Update to ADAL** - By updating your application to use ADAL authentication rather than the Microsoft Online Sign-in Assistant, you and your customers will be able to:
 
- - Utilize multi-factor authentication
- - Install the RMS 2.1 client without requiring administrative privileges to the machine
- - Certify your application for Windows 10
+  - Utilize multi-factor authentication
+  - Install the RMS 2.1 client without requiring administrative privileges to the machine
+  - Certify your application for Windows 10
 
 - **Support for Microsoft Online Sign-in Assistant (SIA) with the RMS SDK is being removed.** We will continue to support the use of SIA for six months after which time support will stop.
 
@@ -128,7 +128,7 @@ The File API component of SDK has been extended and offers the following feature
 
     **Note**  As of the April 2015 release, a check has been added to the installation process for this KB.
 
-     
+     
 
 -   **File API integration**
 

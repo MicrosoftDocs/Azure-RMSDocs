@@ -161,19 +161,19 @@ If your Exchange servers are running an earlier version of the operating system,
 
 1. Make sure that the Exchange servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that Exchange can use the RMS connector.
 
-2.  On the Exchange server roles that communicate with the RMS connector, do one of the following:
+2. On the Exchange server roles that communicate with the RMS connector, do one of the following:
 
-    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
+   -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
 
-        For example, to run the tool locally to configure a server running Exchange 2016 or Exchange 2013:
+       For example, to run the tool locally to configure a server running Exchange 2016 or Exchange 2013:
 
-        ```
-        .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetExchange2013
-        ```
+       ```
+       .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetExchange2013
+       ```
 
-    -   Make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
+   -   Make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
-3. Enable IRM functionality for Exchange by [enabling IRM for internal messages](https://technet.microsoft.com/library/bb124077(v=exchg.150\).aspx#Anchor_1).
+3. Enable IRM functionality for Exchange by [enabling IRM for internal messages](https://technet.microsoft.com/library/bb124077(v=exchg.150).aspx#Anchor_1).
 
     > [!NOTE]
     > By default, after you run **Set-IRMConfiguration -InternalLicensingEnabled $true**, IRM is automatically enabled for the Outlook Web App and mobile devices, in addition to enabling IRM for mailboxes. However, administrators can disable IRM at different levels, for example, for a Client Access Server, for the Outlook Web App virtual directory or the Outlook Web App mailbox policy, and for a mobile device mailbox policy. If users cannot see any of the Azure RMS templates in the Outlook Web App (after waiting a day) or on mobile devices when they can see the templates in the Outlook client, check the relevant settings to make sure that IRM is not disabled. For more information, see [Enable or Disable Information Rights Management on Client Access Servers](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx) in the Exchange documentation. 

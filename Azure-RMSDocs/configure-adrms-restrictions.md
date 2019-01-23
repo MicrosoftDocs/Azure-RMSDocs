@@ -123,35 +123,35 @@ An AD RMS deployment must meet the following requirements to provide HYOK protec
 
 - AD RMS configuration:
     
-    - Minimal version of Windows Server 2012 R2: Required for production environments but for testing or evaluation purposes, you can use a minimal version of Windows Server 2008 R2 with Service Pack 1.
+  - Minimal version of Windows Server 2012 R2: Required for production environments but for testing or evaluation purposes, you can use a minimal version of Windows Server 2008 R2 with Service Pack 1.
     
-    - One of the following topologies:
+  - One of the following topologies:
         
-        - Single forest with a single AD RMS root cluster. 
+    - Single forest with a single AD RMS root cluster. 
         
-        - Multiple forests with independent AD RMS root clusters and users don't have access to the content that's protected by the users in the other forests.
+    - Multiple forests with independent AD RMS root clusters and users don't have access to the content that's protected by the users in the other forests.
         
-        - Multiple forests with AD RMS clusters in each of them. Each AD RMS cluster shares a licensing URL that points to the same AD RMS cluster. On this AD RMS cluster, you must import all the trusted user domain (TUD) certificates from all the other AD RMS clusters. For more information about this topology, see [Trusted User Domain](https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx).
+    - Multiple forests with AD RMS clusters in each of them. Each AD RMS cluster shares a licensing URL that points to the same AD RMS cluster. On this AD RMS cluster, you must import all the trusted user domain (TUD) certificates from all the other AD RMS clusters. For more information about this topology, see [Trusted User Domain](https://technet.microsoft.com/library/dd983944(v=ws.10).aspx).
         
     When you have multiple AD RMS clusters in separate forests, delete any labels in the global policy that apply HYOK (AD RMS) protection and configure a [scoped policy](configure-policy-scope.md) for each cluster. Then, assign users for each cluster to their scoped policy, making sure that you do not use groups that would result in a user being assigned to more than one scoped policy. The result should be that each user has labels for one AD RMS cluster only. 
     
-    - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx): You can confirm the mode by checking the AD RMS cluster properties, **General** tab.
+  - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx): You can confirm the mode by checking the AD RMS cluster properties, **General** tab.
     
-    - Each AD RMS server is configured for the certification URL. [Instructions](#configuring-ad-rms-servers-to-locate-the-certification-url) 
+  - Each AD RMS server is configured for the certification URL. [Instructions](#configuring-ad-rms-servers-to-locate-the-certification-url) 
     
-    - A service connection point (SCP) is not registered in Active Directory: An SCP is not used when you use AD RMS protection with Azure Information Protection. 
+  - A service connection point (SCP) is not registered in Active Directory: An SCP is not used when you use AD RMS protection with Azure Information Protection. 
     
-        - If you have a registered an SCP for your AD RMS deployment, you must remove it so that [service discovery](./rms-client/client-deployment-notes.md#rms-service-discovery) is successful for Azure Rights Management protection. 
+      - If you have a registered an SCP for your AD RMS deployment, you must remove it so that [service discovery](./rms-client/client-deployment-notes.md#rms-service-discovery) is successful for Azure Rights Management protection. 
         
-        - If you are installing a new AD RMS cluster for HYOK, skip the step to register the SCP during the configuration of the first node. For each additional node, make sure that the server is configured for the certification URL before you add the AD RMS role and join the existing cluster.
+      - If you are installing a new AD RMS cluster for HYOK, skip the step to register the SCP during the configuration of the first node. For each additional node, make sure that the server is configured for the certification URL before you add the AD RMS role and join the existing cluster.
     
-    - The AD RMS servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the connecting clients: Required for production environments but not required for testing or evaluation purposes.
+  - The AD RMS servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the connecting clients: Required for production environments but not required for testing or evaluation purposes.
     
-    - Configured rights templates.
+  - Configured rights templates.
     
-    - Not configured for Exchange IRM.
+  - Not configured for Exchange IRM.
     
-    - For mobile devices and Mac computers: The [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx) is installed and configured.
+  - For mobile devices and Mac computers: The [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx) is installed and configured.
 
 - Directory synchronization is configured between your on-premises Active Directory and Azure Active Directory, and users who will use HYOK protection are configured for single sign-on.
 

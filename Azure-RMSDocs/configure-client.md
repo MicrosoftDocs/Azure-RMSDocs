@@ -6,7 +6,7 @@ description: Information for admins about deploying the Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
@@ -43,7 +43,12 @@ To install the Azure Information Protection client for these popular mobile plat
 > [!NOTE]
 > For Mac computers and Windows Phone, links from this page download the RMS sharing apps for mobile devices. These devices do not currently support the Azure Information Protection client.
 
-**If you have Microsoft Intune**: Because the Azure Information Protection app includes the Microsoft Intune App Software Development Kit, when iOS and Android devices are enrolled by Intune, you can deploy and manage the Azure Information Protection Viewer for these devices. For more information, see [Configure and deploy mobile application management policies in the Microsoft Intune console](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) from the Intune documentation. For Step 2, use the instructions to publish a policy managed app.
+**If you have Microsoft Intune**: Because the Azure Information Protection app was built using the Microsoft Intune App Software Development Kit, when iOS and Android devices are enrolled by Intune, you can deploy and manage the Azure Information Protection app for these devices:
 
+- To deploy the app, [add the Azure Information Protection app to Intune](/intune/apps-add) and [assign it to users](/intune/apps-deploy).
 
+- To manage the app, use Intune's [app protection policies](/intune/app-protection-policies).
 
+## Next steps
+
+After you have installed and configured the Azure Information Protection client, you might need to learn more about how the client interprets the different usage rights that can be used to protect documents and emails. For more information, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md).
