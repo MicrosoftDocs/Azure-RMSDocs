@@ -27,7 +27,7 @@ public MIP_API std::shared_ptr<mip::Stream> CreateStreamFromStdStream(const std:
 public MIP_API std::shared_ptr<mip::Stream> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an [Stream](class_mip_stream.md) from a buffer.
 public ActionType operator &(ActionType a, ActionType b)       |  And (&) operator for [Action](class_mip_action.md) type enum.
 public ActionType operator^(ActionType a, ActionType b)       |  Xor (^) operator for [Action](class_mip_action.md) type enum.
-**mip::auditmetadatakeys :**
+**mip::auditmetadatakeys :** |
 public std::string Sender()       |  Audit metadata keys in string representation.
 public std::string Recipients()       | _Not yet documented._
 public std::string LastModifiedBy()       | _Not yet documented._
