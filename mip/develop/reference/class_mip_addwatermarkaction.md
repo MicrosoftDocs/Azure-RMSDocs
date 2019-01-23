@@ -1,25 +1,26 @@
 ---
-title: class mip AddWatermarkAction 
-description: Reference for class mip AddWatermarkAction 
+title: class mip::AddWatermarkAction 
+description: Documents the mip::addwatermarkaction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/23/2019
 ---
+
 # class mip::AddWatermarkAction 
 An action class that specifies adding watermark.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetUIElementName()  |  An API used to mark the watermark element.
- public WatermarkLayout GetLayout() const  |  An API used to get the water mark layout.
- public const std::string& GetText() const  |  Get the text that is meant to go into the watermark.
- public const std::string& GetFontName() const  |  Get the font name used to display the watermark.
- public int GetFontSize() const  |  Get the font size used to display the watermark.
- public const std::string& GetFontColor() const  |  Get the font color used to display the watermark.
- public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+public const std::string& GetUIElementName()  |  An API used to mark the watermark element.
+public WatermarkLayout GetLayout() const  |  An API used to get the water mark layout.
+public const std::string& GetText() const  |  Get the text that is meant to go into the watermark.
+public const std::string& GetFontName() const  |  Get the font name used to display the watermark.
+public int GetFontSize() const  |  Get the font size used to display the watermark.
+public const std::string& GetFontColor() const  |  Get the font color used to display the watermark.
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   
@@ -29,7 +30,7 @@ An API used to mark the watermark element.
   
 **Returns**: The name that should be used for the UI element that holds the watermark. The same name will be returned in RemoveWatermarkingAction in case the watermark needs to be removed.
   
-### GetLayout
+### WatermarkLayout
 An API used to get the water mark layout.
 
   

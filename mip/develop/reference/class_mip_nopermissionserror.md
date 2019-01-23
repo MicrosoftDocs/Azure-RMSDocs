@@ -1,6 +1,6 @@
 ---
-title: class mip::Error 
-description: Documents the mip::error class of the Microsoft Information Protection (MIP) SDK.
+title: class mip::NoPermissionsError 
+description: Documents the mip::nopermissionserror class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
@@ -8,12 +8,14 @@ ms.author: bryanla
 ms.date: 01/23/2019
 ---
 
-# class mip::Error 
-Base class for all errors that will be reported (thrown or returned) from MIP SDK.
+# class mip::NoPermissionsError 
+The user could not get access to the content. For example, no permissions, content revoked.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
+public std::string GetReferrer() const  |  Gets the contact in case of missing rights to the document.
+public std::string GetOwner() const  | _Not yet documented._
 public char const* what() const  |  Get the error message.
 public std::shared_ptr<Error> Clone() const  |  Clone the error.
 public virtual ErrorType GetErrorType() const  |  Get the error type.
@@ -22,6 +24,16 @@ public virtual const std::string& GetMessage() const  |  Get the error message.
 public virtual void SetMessage(const std::string& msg)  |  Set the error message.
   
 ## Members
+  
+### GetReferrer
+Gets the contact in case of missing rights to the document.
+
+  
+**Returns**: The contact in case of missing rights to the document.
+  
+### GetOwner
+_Not documented yet._
+
   
 ### what
 Get the error message.

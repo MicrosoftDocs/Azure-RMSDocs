@@ -1,12 +1,13 @@
 ---
-title: class mip JustifyAction 
-description: Reference for class mip JustifyAction 
+title: class mip::JustifyAction 
+description: Documents the mip::justifyaction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/23/2019
 ---
+
 # class mip::JustifyAction 
 Justify [Action](class_mip_action.md) requires providing a justification to a label downgrade and setting the response in the execution state.
   
@@ -15,7 +16,7 @@ Justify [Action](class_mip_action.md) requires providing a justification to a la
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   

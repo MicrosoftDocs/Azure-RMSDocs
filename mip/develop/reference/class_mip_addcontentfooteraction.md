@@ -1,26 +1,27 @@
 ---
-title: class mip AddContentFooterAction 
-description: Reference for class mip AddContentFooterAction 
+title: class mip::AddContentFooterAction 
+description: Documents the mip::addcontentfooteraction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/23/2019
 ---
+
 # class mip::AddContentFooterAction 
 An action class that specifies adding a content footer to the document.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetUIElementName()  |  An API used to mark the content footer element.
- public const std::string& GetText() const  |  Get the text that is meant to go into the content footer.
- public const std::string& GetFontName() const  |  Get the font name, used to display the content footer.
- public int GetFontSize() const  |  Get the font size used to display the content footer.
- public const std::string& GetFontColor() const  |  Get the font color used to display the content footer.
- public ContentMarkAlignment GetAlignment() const  |  Get the alignment of the footer.
- public int GetMargin() const  |  Get the margin of the footer from the bottom.
- public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+public const std::string& GetUIElementName()  |  An API used to mark the content footer element.
+public const std::string& GetText() const  |  Get the text that is meant to go into the content footer.
+public const std::string& GetFontName() const  |  Get the font name, used to display the content footer.
+public int GetFontSize() const  |  Get the font size used to display the content footer.
+public const std::string& GetFontColor() const  |  Get the font color used to display the content footer.
+public ContentMarkAlignment GetAlignment() const  |  Get the alignment of the footer.
+public int GetMargin() const  |  Get the margin of the footer from the bottom.
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   
@@ -54,13 +55,13 @@ Get the font color used to display the content footer.
   
 **Returns**: Font color as a string (for example, "#000000").
   
-### GetAlignment
+### ContentMarkAlignment
 Get the alignment of the footer.
 
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: ContentMarkAlignment
+**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### GetMargin
 Get the margin of the footer from the bottom.

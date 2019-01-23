@@ -1,24 +1,25 @@
 ---
-title: class mip NotSupportedError 
-description: Reference for class mip NotSupportedError 
+title: class mip::NotSupportedError 
+description: Documents the mip::notsupportederror class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/23/2019
 ---
+
 # class mip::NotSupportedError 
 The operation requested by the application is not supported by the SDK.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public char const* what() const  |  Get the error message.
+public char const* what() const  |  Get the error message.
 public std::shared_ptr<Error> Clone() const  |  Clone the error.
- public virtual ErrorType GetErrorType() const  |  Get the error type.
- public virtual const std::string& GetErrorName() const  |  Get the error name.
- public virtual const std::string& GetMessage() const  |  Get the error message.
- public virtual void SetMessage(const std::string& msg)  |  Set the error message.
+public virtual ErrorType GetErrorType() const  |  Get the error type.
+public virtual const std::string& GetErrorName() const  |  Get the error name.
+public virtual const std::string& GetMessage() const  |  Get the error message.
+public virtual void SetMessage(const std::string& msg)  |  Set the error message.
   
 ## Members
   

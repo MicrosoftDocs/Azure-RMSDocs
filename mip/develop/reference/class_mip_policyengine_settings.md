@@ -1,31 +1,33 @@
 ---
-title: class mip PolicyEngine Settings 
-description: Reference for class mip PolicyEngine Settings 
+title: class mip::PolicyEngine::Settings 
+description: Documents the mip::policyengine class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/23/2019
 ---
+
 # class mip::PolicyEngine::Settings 
 Defines the settings associated with a [PolicyEngine](class_mip_policyengine.md).
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  [PolicyEngine::Settings](class_mip_policyengine_settings.md) constructor for loading an existing engine.
- public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  [PolicyEngine::Settings](class_mip_policyengine_settings.md) constructor for creating a new engine.
- public const std::string& GetEngineId() const  |  Get the engine ID.
- public void SetEngineId(const std::string& id)  |  Set the engine ID.
- public const Identity& GetIdentity() const  |  Get the Identity object.
- public void SetIdentity(const Identity& identity)  |  Set the Identity object.
- public const std::string& GetClientData() const  |  Get the Client Data set in the settings.
- public void SetClientData(const std::string& clientData)  |  Set the Client Data string.
- public const std::string& GetLocale() const  |  Get the Locale set in the settings.
+public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [PolicyEngine::Settings](class_mip_policyengine_settings.md) constructor for loading an existing engine.
+public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [PolicyEngine::Settings](class_mip_policyengine_settings.md) constructor for creating a new engine.
+public const std::string& GetEngineId() const  |  Get the engine ID.
+public void SetEngineId(const std::string& id)  |  Set the engine ID.
+public const Identity& GetIdentity() const  |  Get the [Identity](class_mip_identity.md) object.
+public void SetIdentity(const Identity& identity)  |  Set the [Identity](class_mip_identity.md) object.
+public const std::string& GetClientData() const  |  Get the Client Data set in the settings.
+public void SetClientData(const std::string& clientData)  |  Set the Client Data string.
+public const std::string& GetLocale() const  |  Get the Locale set in the settings.
 public void SetCustomSettings(const std::vector<std::pair<std::string, std::string>>& customSettings)  |  Set the custom settings, used for feature gating and testing.
 public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
- public void SetSessionId(const std::string& sessionId)  |  Set the session ID, used for client defined telemetry.
- public const std::string& GetSessionId() const  |  Get the session ID, a unique identifier.
+public void SetSessionId(const std::string& sessionId)  |  Set the session ID, used for client defined telemetry.
+public const std::string& GetSessionId() const  |  Get the session ID, a unique identifier.
+public bool IsLoadSensitivityTypesEnabled() const  |  Get the the flag indicating if load sensitivity labels is enabled.
   
 ## Members
   
@@ -39,7 +41,10 @@ Parameters:
 * **clientData**: customizable client data that can be stored with the engine when unloaded, can be retrieved from a loaded engine. 
 
 
-* **locale**: engine localizable output will be provided in this locale.
+* **locale**: engine localizable output will be provided in this locale. 
+
+
+* **Optional**: flag indicating when the engine is loaded should load also custom sensitivity types, if true OnPolicyChange Observer on the profile will be invoked on updates to custom sensitivity types as well as policy changes. if false ListSensitivityTypes call will always return an empty list.
 
 
   
@@ -47,13 +52,16 @@ Parameters:
 [PolicyEngine::Settings](class_mip_policyengine_settings.md) constructor for creating a new engine.
 
 Parameters:  
-* **identity**: Identity info of the user associated with the new engine. 
+* **identity**: [Identity](class_mip_identity.md) info of the user associated with the new engine. 
 
 
 * **clientData**: customizable client data that can be stored with the engine when unloaded, can be retrieved from a loaded engine. 
 
 
-* **locale**: engine localizable output will be provided in this locale.
+* **locale**: engine localizable output will be provided in this locale. 
+
+
+* **Optional**: flag indicating when the engine is loaded should load also custom sensitivity types, if true OnPolicyChange Observer on the profile will be invoked on updates to custom sensitivity types as well as policy changes. if false ListSensitivityTypes call will always return an empty list.
 
 
   
@@ -71,23 +79,23 @@ Parameters:
 
 
   
-### GetIdentity
-Get the Identity object.
+### Identity
+Get the [Identity](class_mip_identity.md) object.
 
   
 **Returns**: A reference to the identity in the settings object. 
   
-**See also**: mip::Identity
+**See also**: [mip::Identity](class_mip_identity.md)
   
 ### SetIdentity
-Set the Identity object.
+Set the [Identity](class_mip_identity.md) object.
 
 Parameters:  
 * **identity**: the unique identity of a user. 
 
 
   
-**See also**: mip::Identity
+**See also**: [mip::Identity](class_mip_identity.md)
   
 ### GetClientData
 Get the Client Data set in the settings.
@@ -136,3 +144,9 @@ Get the session ID, a unique identifier.
 
   
 **Returns**: The session ID.
+  
+### IsLoadSensitivityTypesEnabled
+Get the the flag indicating if load sensitivity labels is enabled.
+
+  
+**Returns**: True if enabled else false.

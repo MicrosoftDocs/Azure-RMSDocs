@@ -1,12 +1,13 @@
 ---
-title: class mip RemoveContentFooterAction 
-description: Reference for class mip RemoveContentFooterAction 
+title: class mip::RemoveContentFooterAction 
+description: Documents the mip::removecontentfooteraction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/23/2019
 ---
+
 # class mip::RemoveContentFooterAction 
 An action class that specifies removing the content footer from the document.
   
@@ -14,7 +15,7 @@ An action class that specifies removing the content footer from the document.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::vector<std::string>& GetUIElementNames()  |  Gets a list of names that should be used to find the UI elements that should be removed.
- public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   

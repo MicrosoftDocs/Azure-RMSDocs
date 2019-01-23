@@ -1,22 +1,23 @@
 ---
-title: class mip LoggerDelegate 
-description: Reference for class mip LoggerDelegate 
+title: class mip::LoggerDelegate 
+description: Documents the mip::loggerdelegate class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/23/2019
 ---
+
 # class mip::LoggerDelegate 
 A class that defines the interface to the MIP SDK logger.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public void Init(const std::string& storagePath, LogLevel logLevel)  |  Initialize the logger.
- public LogLevel GetLogLevel() const  |  Get the lowest logl evel that would trigger a logging event.
- public void Flush()  |  Flush the logger.
- public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Write a log statement to log file.
+public void Init(const std::string& storagePath, LogLevel logLevel)  |  Initialize the logger.
+public LogLevel GetLogLevel() const  |  Get the lowest logl evel that would trigger a logging event.
+public void Flush()  |  Flush the logger.
+public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Write a log statement to log file.
   
 ## Members
   

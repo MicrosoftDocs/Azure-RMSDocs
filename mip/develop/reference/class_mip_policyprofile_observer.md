@@ -1,12 +1,13 @@
 ---
-title: class mip PolicyProfile Observer 
-description: Reference for class mip PolicyProfile Observer 
+title: class mip::PolicyProfile::Observer 
+description: Documents the mip::policyprofile class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/23/2019
 ---
+
 # class mip::PolicyProfile::Observer 
 [Observer](class_mip_policyprofile_observer.md) interface for clients to get notifications for profile related events.
 All errors inherit from [mip::Error](class_mip_error.md). 
@@ -22,10 +23,11 @@ public virtual void OnListEnginesFailure(const std::exception_ptr& error, const 
 public virtual void OnUnloadEngineSuccess(const std::shared_ptr<void>& context)  |  Called when an engine was unloaded successfully.
 public virtual void OnUnloadEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when unloading an engine caused an error.
 public virtual void OnAddEngineSuccess(const std::shared_ptr<PolicyEngine>& engine, const std::shared_ptr<void>& context)  |  Called when a new engine was added successfully.
+public virtual void OnAddEngineStarting(bool requiresPolicyFetch)  |  Called prior to engine creation to describe whether or not the engine's policy data must be fetched from the server or whether it can be created from locally cached data.
 public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when adding a new engine caused an error.
 public virtual void OnDeleteEngineSuccess(const std::shared_ptr<void>& context)  |  Called when an engine was deleted successfully.
 public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when deleting an engine caused an error.
- public virtual void OnPolicyChanged(const std::string& engineId)  |  Called when the policy has changed for the engine with the given ID.
+public virtual void OnPolicyChanged(const std::string& engineId)  |  Called when the policy has changed for the engine with the given ID, Or when the loaded Custom Sensitivity Types have changed.
   
 ## Members
   
@@ -36,7 +38,7 @@ Parameters:
 * **profile**: the current profile used to start the operation. 
 
 
-* **context**: the context passed to the operation.
+* **context**: the context passed to the LoadAsync operation.
 
 
   
@@ -47,7 +49,7 @@ Parameters:
 * **error**: the error that caused the load operation to fail. 
 
 
-* **context**: the context passed to the operation.
+* **context**: the context passed to the LoadAsync operation.
 
 
   
@@ -58,7 +60,7 @@ Parameters:
 * **engineIds**: a list of engine IDs the are available. 
 
 
-* **context**: the context passed to the operation.
+* **context**: the context passed to the ListEnginesAsync operation.
 
 
   
@@ -69,7 +71,7 @@ Parameters:
 * **error**: the error that caused the list engine operation to fail. 
 
 
-* **context**: the context passed to the operation.
+* **context**: the context passed to the ListEnginesAsync operation.
 
 
   
@@ -77,7 +79,7 @@ Parameters:
 Called when an engine was unloaded successfully.
 
 Parameters:  
-* **context**: the context passed to the operation.
+* **context**: the context passed to the UnloadEngineAsync operation.
 
 
   
@@ -88,12 +90,29 @@ Parameters:
 * **error**: the error that caused the unload engine operation to fail. 
 
 
-* **context**: the context passed to the operation.
+* **context**: the context passed to the UnloadEngineAsync operation.
 
 
   
 ### OnAddEngineSuccess
 Called when a new engine was added successfully.
+
+Parameters:  
+* **engine**: the newly-added engine 
+
+
+* **context**: the context passed to the AddEngineAsync operation
+
+
+  
+### OnAddEngineStarting
+Called prior to engine creation to describe whether or not the engine's policy data must be fetched from the server or whether it can be created from locally cached data.
+
+Parameters:  
+* **requiresPolicyFetch**: Describes whether engine data must be fetched via HTTP or if it will be loaded from cache
+
+
+This optional callback may be used by an application to be informed whether or not an AddEngineAsync operation will require an HTTP operation (with its associated delay) to complete.
   
 ### OnAddEngineFailure
 Called when adding a new engine caused an error.
@@ -102,7 +121,7 @@ Parameters:
 * **error**: the error that caused the add engine operation to fail. 
 
 
-* **context**: the context passed to the operation.
+* **context**: the context passed to the AddEngineAsync operation.
 
 
   
@@ -110,7 +129,7 @@ Parameters:
 Called when an engine was deleted successfully.
 
 Parameters:  
-* **context**: the context passed to the operation.
+* **context**: the context passed to the DeleteEngineAsync operation.
 
 
   
@@ -121,12 +140,12 @@ Parameters:
 * **error**: the error that caused the delete engine operation to fail. 
 
 
-* **context**: the context passed to the operation.
+* **context**: the context passed to the DeleteEngineAsync operation.
 
 
   
 ### OnPolicyChanged
-Called when the policy has changed for the engine with the given ID.
+Called when the policy has changed for the engine with the given ID, Or when the loaded Custom Sensitivity Types have changed.
 
 Parameters:  
 * **engineId**: the engine 

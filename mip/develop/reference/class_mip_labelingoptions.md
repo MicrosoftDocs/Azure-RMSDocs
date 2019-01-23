@@ -1,25 +1,26 @@
 ---
-title: class mip LabelingOptions 
-description: Reference for class mip LabelingOptions 
+title: class mip::LabelingOptions 
+description: Documents the mip::labelingoptions class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/23/2019
 ---
+
 # class mip::LabelingOptions 
 Interface for configuring labeling options for the SetLabel/DeleteLabel methods.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public LabelingOptions(AssignmentMethod method, ActionSource actionSource)  | _Not yet documented._
- public AssignmentMethod GetAssignmentMethod() const  | _Not yet documented._
- public ActionSource GetActionSource() const  | _Not yet documented._
- public bool IsDowngradeJustified() const  | _Not yet documented._
- public const std::string& GetJustificationMessage() const  | _Not yet documented._
+public LabelingOptions(AssignmentMethod method, ActionSource actionSource)  | _Not yet documented._
+public AssignmentMethod GetAssignmentMethod() const  | _Not yet documented._
+public ActionSource GetActionSource() const  | _Not yet documented._
+public bool IsDowngradeJustified() const  | _Not yet documented._
+public const std::string& GetJustificationMessage() const  | _Not yet documented._
 public const std::vector<std::pair<std::string, std::string>>& GetExtendedProperties() const  | _Not yet documented._
- public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _Not yet documented._
+public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _Not yet documented._
 public void SetExtendedProperties(const std::vector<std::pair<std::string, std::string>>& extendedProperties)  | _Not yet documented._
   
 ## Members
@@ -28,11 +29,11 @@ public void SetExtendedProperties(const std::vector<std::pair<std::string, std::
 _Not documented yet._
 
   
-### GetAssignmentMethod
+### AssignmentMethod
 _Not documented yet._
 
   
-### GetActionSource
+### ActionSource
 _Not documented yet._
 
   

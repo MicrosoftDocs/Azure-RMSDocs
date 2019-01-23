@@ -4,8 +4,9 @@ description: A quickstart showing you how to use the Microsoft Information Prote
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
+#Customer intent: As a an application developer, I want to learn how to list sensitivity labels, so that I can implement this logic in my own application.
 ---
 
 # Quickstart: List sensitivity labels (C++)
