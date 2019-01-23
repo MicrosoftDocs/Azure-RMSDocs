@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/22/2019
+ms.date: 01/23/2019
 ---
 
 # class mip::PolicyEngine::Settings 
@@ -18,8 +18,8 @@ public Settings(const std::string& engineId, const std::string& clientData, cons
 public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [PolicyEngine::Settings](class_mip_policyengine_settings.md) constructor for creating a new engine.
 public const std::string& GetEngineId() const  |  Get the engine ID.
 public void SetEngineId(const std::string& id)  |  Set the engine ID.
-public const Identity& GetIdentity() const  |  Get the [Identity](class_mip_identity) object.
-public void SetIdentity(const Identity& identity)  |  Set the [Identity](class_mip_identity) object.
+public const Identity& GetIdentity() const  |  Get the [Identity](class_mip_identity.md) object.
+public void SetIdentity(const Identity& identity)  |  Set the [Identity](class_mip_identity.md) object.
 public const std::string& GetClientData() const  |  Get the Client Data set in the settings.
 public void SetClientData(const std::string& clientData)  |  Set the Client Data string.
 public const std::string& GetLocale() const  |  Get the Locale set in the settings.
@@ -52,7 +52,7 @@ Parameters:
 [PolicyEngine::Settings](class_mip_policyengine_settings.md) constructor for creating a new engine.
 
 Parameters:  
-* **identity**: [Identity](class_mip_identity) info of the user associated with the new engine. 
+* **identity**: [Identity](class_mip_identity.md) info of the user associated with the new engine. 
 
 
 * **clientData**: customizable client data that can be stored with the engine when unloaded, can be retrieved from a loaded engine. 
@@ -80,22 +80,22 @@ Parameters:
 
   
 ### Identity
-Get the [Identity](class_mip_identity) object.
+Get the [Identity](class_mip_identity.md) object.
 
   
 **Returns**: A reference to the identity in the settings object. 
   
-**See also**: [mip::Identity](class_mip_identity)
+**See also**: [mip::Identity](class_mip_identity.md)
   
 ### SetIdentity
-Set the [Identity](class_mip_identity) object.
+Set the [Identity](class_mip_identity.md) object.
 
 Parameters:  
 * **identity**: the unique identity of a user. 
 
 
   
-**See also**: [mip::Identity](class_mip_identity)
+**See also**: [mip::Identity](class_mip_identity.md)
   
 ### GetClientData
 Get the Client Data set in the settings.

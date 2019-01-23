@@ -58,7 +58,7 @@ The MIP SDK for C++ includes:
 [mip::NotSupportedError](class_mip_NotSupportedError.md)  |  The operation requested by the application is not supported by the SDK.
 [mip::PolicyEngine](class_mip_PolicyEngine.md)  |  This class provides an interface for all engine functions.
 [mip::PolicyHandler](class_mip_PolicyHandler.md)  |  This class provides an interface for all policy handler functions on a file.
-[mip::PolicyProfile](class_mip_PolicyProfile.md)  |  [PolicyProfile](undefined) class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile](undefined) but it can create multiple profiles if needed.
+[mip::PolicyProfile](class_mip_PolicyProfile.md)  |  [PolicyProfile](class_mip_policyprofile.md) class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile](class_mip_policyprofile.md) but it can create multiple profiles if needed.
 [mip::PolicySyncError](class_mip_PolicySyncError.md)  |  An attempt to sync policy data failed.
 [mip::PrivilegedRequiredError](class_mip_PrivilegedRequiredError.md)  |  Current label was assigned as a privileged operation (The equivalent to an administrator operation), therefore it can't be overriden.
 [mip::ProtectAdhocAction](class_mip_ProtectAdhocAction.md)  |  An action class that specifies adding adhoc protection to the document.
