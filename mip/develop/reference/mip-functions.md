@@ -9,6 +9,8 @@ ms.author: bryanla
 ---
 # Functions
 
+## Summary
+
 | Functions by namespace scope   | Descriptions                                |
 |--------------------------------|---------------------------------------------|
 **mip :** |
@@ -27,11 +29,13 @@ public MIP_API std::shared_ptr<mip::Stream> CreateStreamFromStdStream(const std:
 public MIP_API std::shared_ptr<mip::Stream> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an [Stream](class_mip_stream.md) from a buffer.
 public ActionType operator &(ActionType a, ActionType b)       |  And (&) operator for [Action](class_mip_action.md) type enum.
 public ActionType operator^(ActionType a, ActionType b)       |  Xor (^) operator for [Action](class_mip_action.md) type enum.
+ | 
 **mip::auditmetadatakeys :** |
 public std::string Sender()       |  Audit metadata keys in string representation.
 public std::string Recipients()       | _Not yet documented._
 public std::string LastModifiedBy()       | _Not yet documented._
 public std::string LastModifiedDate()       | _Not yet documented._
+ | 
 **mip::rights :** |
 public std::string Owner()       |  Gets string identifier for 'owner' right.
 public std::string View()       |  Gets string identifier for 'view' right.
@@ -47,6 +51,7 @@ public std::string Forward()       |  Gets string identifier for 'forward' right
 public std::vector<std::string> EmailRights()       |  Gets a list of rights that apply to emails.
 public std::vector<std::string> EditableDocumentRights()       |  Gets a list of rights that apply to documents.
 public std::vector<std::string> CommonRights()       |  Gets a list of rights that apply in all scenarios.
+ | 
 **mip::roles :** |
 public std::string Viewer()       |  Gets string identifier for 'viewer' role.
 public std::string Reviewer()       |  Gets string identifier for 'reviewer' role.
