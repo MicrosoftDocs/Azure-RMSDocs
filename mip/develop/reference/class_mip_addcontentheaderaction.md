@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/18/2019
+ms.date: 01/22/2019
 ---
 
 # class mip::AddContentHeaderAction 
@@ -61,7 +61,7 @@ Get the alignment of the header.
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: [ContentMarkAlignment](undefined)
+**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### GetMargin
 Get the margin of the header from the bottom.

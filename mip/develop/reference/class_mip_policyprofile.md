@@ -5,11 +5,11 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/18/2019
+ms.date: 01/22/2019
 ---
 
 # class mip::PolicyProfile 
-[PolicyProfile](undefined) class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile](undefined) but it can create multiple profiles if needed.
+[PolicyProfile](class_mip_policyprofile.md) class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile](class_mip_policyprofile.md) but it can create multiple profiles if needed.
   
 ## Summary
  Members                        | Descriptions                                
@@ -35,7 +35,7 @@ Parameters:
 * **context**: a parameter that will be passed into the observer functions. 
 
 
-[PolicyProfile::Observer](undefined) will be called upon success or failure.
+[PolicyProfile::Observer](class_mip_policyprofile_observer.md) will be called upon success or failure.
   
 ### UnloadEngineAsync
 Starts unloading the policy engine with the given ID.
@@ -47,7 +47,7 @@ Parameters:
 * **context**: a parameter that will be forwarded opaquely to the observer functions. 
 
 
-[PolicyProfile::Observer](undefined) will be called upon success or failure.
+[PolicyProfile::Observer](class_mip_policyprofile_observer.md) will be called upon success or failure.
   
 ### AddEngineAsync
 Starts adding a new policy engine to the profile.
@@ -59,7 +59,7 @@ Parameters:
 * **context**: a parameter that will be fowarded opaquely to the observer functions. 
 
 
-[PolicyProfile::Observer](undefined) will be called upon success or failure.
+[PolicyProfile::Observer](class_mip_policyprofile_observer.md) will be called upon success or failure.
   
 ### DeleteEngineAsync
 Starts deleting the policy engine with the given ID. All data for the given profile will be deleted.
@@ -71,4 +71,4 @@ Parameters:
 * **context**: a parameter that will be passed into the observer functions. 
 
 
-[PolicyProfile::Observer](undefined) will be called upon success or failure.
+[PolicyProfile::Observer](class_mip_policyprofile_observer.md) will be called upon success or failure.

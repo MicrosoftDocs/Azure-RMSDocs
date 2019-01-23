@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/18/2019
+ms.date: 01/22/2019
 ---
 
 # class mip::FileEngine::Settings 
@@ -17,7 +17,7 @@ public Settings(const std::string& engineId, const std::string& clientData, cons
 public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor for creating a new engine.
 public const std::string& GetEngineId() const  |  Returns the engine ID.
 public void SetEngineId(const std::string& id)  |  Set the engine ID.
-public const Identity& GetIdentity() const  |  Returns the engine [Identity](undefined).
+public const Identity& GetIdentity() const  |  Returns the engine [Identity](class_mip_identity).
 public void SetIdentity(const Identity& identity)  |  Sets the engine identity.
 public const std::string& GetClientData() const  |  Returns the engine client data.
 public const std::string& GetLocale() const  |  Return the engine locale.
@@ -54,7 +54,7 @@ Parameters:
 [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor for creating a new engine.
 
 Parameters:  
-* **identity**: [Identity](undefined) info of the user associated with the new engine. 
+* **identity**: [Identity](class_mip_identity) info of the user associated with the new engine. 
 
 
 * **clientData**: customizable client data that can be stored with the engine when unloaded, can be retrieved from a loaded engine. 
@@ -79,7 +79,7 @@ Parameters:
 
   
 ### Identity
-Returns the engine [Identity](undefined).
+Returns the engine [Identity](class_mip_identity).
   
 ### SetIdentity
 Sets the engine identity.

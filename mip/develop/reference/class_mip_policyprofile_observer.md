@@ -5,11 +5,11 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/18/2019
+ms.date: 01/22/2019
 ---
 
 # class mip::PolicyProfile::Observer 
-[Observer](undefined) interface for clients to get notifications for profile related events.
+[Observer](class_mip_policyprofile_observer.md) interface for clients to get notifications for profile related events.
 All errors inherit from [mip::Error](class_mip_error.md). 
 Client should not call the engine back on the thread that calls the observer.
   

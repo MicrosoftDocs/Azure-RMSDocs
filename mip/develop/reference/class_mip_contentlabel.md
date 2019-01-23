@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/18/2019
+ms.date: 01/22/2019
 ---
 
 # class mip::ContentLabel 
@@ -35,7 +35,7 @@ Get the assignment method of the label.
   
 **Returns**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
   
-**See also**: [mip::AssignmentMethod](undefined)
+**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod)
   
 ### GetExtendedProperties
 Gets extended properties.

@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/18/2019
+ms.date: 01/22/2019
 ---
 
 # class mip::ExecutionState 
@@ -70,7 +70,7 @@ Get the new label's assignment method.
   
 **Returns**: The assignment method STANDARD, PRIVILEGED, AUTO. 
   
-**See also**: [mip::AssignmentMethod](undefined)
+**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod)
   
 ### GetNewLabelExtendedProperties
 Return new label's extended properties.
@@ -97,7 +97,7 @@ Gets the content format.
   
 **Returns**: DEFAULT, EMAIL 
   
-**See also**: [mip::ContentFormat](undefined)
+**See also**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat)
   
 ### ActionType
 Gets a masked enum describing all the supported action types.

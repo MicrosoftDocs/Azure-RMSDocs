@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/18/2019
+ms.date: 01/22/2019
 ---
 
 # class mip::ProtectionEngine::Settings 
@@ -18,8 +18,8 @@ public Settings(const Identity& identity, const std::string& clientData, const s
 public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for loading an existing engine.
 public const std::string& GetEngineId() const  |  Gets the engine ID.
 public void SetEngineId(const std::string& engineId)  |  Sets the engine ID.
-public const Identity& GetIdentity() const  |  Gets the user [Identity](undefined) associated with the engine.
-public void SetIdentity(const Identity& identity)  |  Sets the user [Identity](undefined) associated with the engine.
+public const Identity& GetIdentity() const  |  Gets the user [Identity](class_mip_identity) associated with the engine.
+public void SetIdentity(const Identity& identity)  |  Sets the user [Identity](class_mip_identity) associated with the engine.
 public const std::string& GetClientData() const  |  Gets custom data specified by client.
 public void SetClientData(const std::string& clientData)  |  Sets custom data specified by client.
 public const std::string& GetLocale() const  |  Gets the locale in which engine data will be written.
@@ -36,7 +36,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  Gets the cloud bas
 [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for creating a new engine.
 
 Parameters:  
-* **identity**: [Identity](undefined) that will be associated with [ProtectionEngine](class_mip_protectionengine.md)
+* **identity**: [Identity](class_mip_identity) that will be associated with [ProtectionEngine](class_mip_protectionengine.md)
 
 
 * **clientData**: customizable client data that can be stored with the engine when unloaded and can be retrieved from a loaded engine. 
@@ -75,16 +75,16 @@ Parameters:
 
   
 ### Identity
-Gets the user [Identity](undefined) associated with the engine.
+Gets the user [Identity](class_mip_identity) associated with the engine.
 
   
-**Returns**: User [Identity](undefined) associated with the engine
+**Returns**: User [Identity](class_mip_identity) associated with the engine
   
 ### SetIdentity
-Sets the user [Identity](undefined) associated with the engine.
+Sets the user [Identity](class_mip_identity) associated with the engine.
 
 Parameters:  
-* **identity**: User [Identity](undefined) associated with the engine
+* **identity**: User [Identity](class_mip_identity) associated with the engine
 
 
   
