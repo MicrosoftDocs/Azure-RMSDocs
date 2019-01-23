@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2019
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -629,15 +629,9 @@ To configure this advanced setting so that the scanner runs with an integrity le
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
-By default, the Azure Information Protection client writes labeling activity to the following local locations:
-
-- Client log files for troubleshooting: **%localappdata%\Microsoft\MSIP**
+By default, the Azure Information Protection client writes client log files to the **%localappdata%\Microsoft\MSIP** folder. These files are intended for troubleshooting by Microsoft Support.
  
-- Local Windows event log: **Applications and Services Logs** > **Azure Information Protection**
-
-See the [Usage logging for the Azure Information Protection client](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) section for details about the labeling information that is stored by default.
-
-To change what information is stored locally, configure the following advanced client setting:
+To change the logging level for these files, configure the following advanced client setting:
 
 - Key: **LogLevel**
 
@@ -655,8 +649,7 @@ Set the logging level to one of the following values:
 
 - **Trace**: Very detailed logging that has a performance impact and should be enabled only if requested by Microsoft Support. If you are instructed to set this level of logging, remember to set a different value when the relevant logs have been collected.
 
-This advanced client setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md).
-
+This advanced client setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md), or change the information that's written to the local [event log](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
 
 ## Integration with Exchange message classification for a mobile device labeling solution
 

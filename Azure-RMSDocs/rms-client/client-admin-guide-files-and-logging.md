@@ -92,8 +92,6 @@ The client logs user activity to the local Windows event log **Applications and 
 
 - Custom permissions (when applicable) that includes the [usage rights by their encoding name](../configure-usage-rights.md#usage-rights-and-descriptions) for the specified users, groups, or organizations
 
-You can prevent this information from being logged by configuring an [advanced client setting](client-admin-guide-customizations.md#change-the-local-logging-level).
-
 For information about usage logging for the protection service, see [Logging and analyzing usage of the Azure Rights Management service](../log-analyze-usage.md)
 
 ## Next steps
