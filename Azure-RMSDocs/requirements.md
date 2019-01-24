@@ -96,7 +96,7 @@ The Azure Information Protection client has [additional prerequisites](./rms-cli
 
 The Azure Information Protection client can label and protect documents and emails by using the Office applications **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
 
-- Office 365 with Office apps from Office Business or Microsoft 365 Business when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
+- Office 365 with Office apps from Office 365 Business or Microsoft 365 Business when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
 
 - Office 365 ProPlus
 
