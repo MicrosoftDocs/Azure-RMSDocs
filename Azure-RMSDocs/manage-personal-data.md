@@ -6,7 +6,7 @@ description: Information about the personal data that is used by Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
@@ -202,6 +202,12 @@ When labels and protection are applied to documents and emails, email addresses 
 In addition, the Azure Information Protection client logs this personal data to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**.
 
 When the Azure Information Protection client runs the scanner, personal data is saved to %localappdata%\Microsoft\MSIP\Scanner\Reports on the Windows Server computer that runs the scanner.
+
+You can turn off logging information for the Azure Information Protection client and the scanner by using the following configurations:
+
+- For the Azure Information Protection client: Create an [advanced client setting](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) that configures the **LogLevel** to **Off**.
+
+- For the Azure Information Protection scanner: Use the [Set-AIPScannerConfiguration](/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the *ReportLevel* parameter to **Off**.
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 
