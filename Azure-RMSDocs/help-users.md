@@ -6,7 +6,7 @@ description: Information to help you provide guidance for users, administrators,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
@@ -85,11 +85,11 @@ If you are using the Azure Rights Management service and have not installed the 
 > [!TIP]
 > To find application-specific help and instructions for using information protection with these applications, search for **IRM** and the application name and version.
 
-#### To protect a document in Word 2013
+#### To protect a document in Word from Office 365 ProPlus
 
 1.  Within Microsoft Word, create a document.
 
-2.  From the **File** menu, click **Info**, click **Protect Document**, and then click **Restrict Access**.
+2.  From the **File** menu: **Info** > **Protect Document** >  **Restrict Access**.
 
 3. Choose a template to quickly apply the appropriate usage rights, or select **Restrict Access** and select the usage rights yourself.
 
@@ -104,11 +104,11 @@ For example, a usage right of View-only does not allow the user to edit or save 
 
 The usage rights are displayed at the top of the document by using a restriction banner. The banner might display the permissions that are applied to the document, or it might provide a link to display them.
 
-#### To protect an email message using Outlook 2013 and Exchange Online
+#### To protect an email message using Outlook from Office 365 ProPlus, connecting to Exchange Online
 
 1.  Within Outlook, create a mail message that is addressed to a recipient within your organization.
 
-2.  From the **OPTIONS** tab,  click **Permission**, and then select an option. For example: **Do Not Forward**, or **\<Company Name>- Confidential**, or **\<Company Name> - Confidential View Only**.
+2.  From the **OPTIONS** tab: **Permission** > Select an option. For example: **Do Not Forward**, or **\<Company Name>- Confidential**, or **\<Company Name> - Confidential View Only**.
 
 3.  Send the message.
 
@@ -120,12 +120,10 @@ For example, if the email message is protected by using the **Do Not Forward** o
 
 1.  Using Outlook on the web, create a mail message addressed to a recipient within your organization.
 
-2.  Click  **…**,  click **set permission**, and then select an option. For example: **Do Not Forward** or **Do Not Reply All**. Or, **\<Company Name>- Confidential** or **\<Company Name> - Confidential View Only**.
+2.  Select **Protect**. The **Do Not Forward** option is selected by default. To change this, select **Change Permissions** and then select an option from the drop down. For example: **Encrypt** or **\<Company Name>- Confidential** or **\<Company Name> - Confidential View Only**.
 
 3.  Send the message.
 
 Similarly to viewing a protected document, when the recipients open the email message, they are first authenticated. If they are authorized to see the email message, it opens with the restricted [usage rights](configure-usage-rights.md) that were specified for that user. 
 
-For example, if you selected **Do Not Reply All**, the **REPLY ALL** option in the message window is not available.
-
-
+For example, with the default **Do Not Forward** option, the **Forward** option in the message window is not available.
