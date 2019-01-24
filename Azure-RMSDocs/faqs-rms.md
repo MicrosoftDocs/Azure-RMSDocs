@@ -140,7 +140,7 @@ When you use Exchange Online and the Azure Rights Management service, you just s
 
 The recipient sees an option to sign in to their Gmail, Yahoo, or Microsoft account, and then they can read the protected email. Alternatively, they can choose the option for a one-time passcode to read the email in a browser.
 
-To support this scenario, Exchange Online must be enabled for the Azure Rights Management service and the new capabilities in Office 365 Message Encryption. For more information about this configuration, see [Exchange Online: IRM Configuration](configure-office365.md#exchange-online-irm-configuration).
+To support this scenario, Exchange Online must be enabled for the Azure Rights Management service and the new capabilities in Office 365 Message Encryption. For more information about this configuration, see [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration).
 
 For more information about the new capabilities that include supporting all email accounts on all devices, see the following blog post: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
@@ -178,7 +178,7 @@ If you are interested in a specific capability that isn't yet supported, be sure
 ## How do I configure One Drive for Business in SharePoint Online, so that users can safely share their files with people inside and outside the company?
 By default, as an Office 365 administrator, you don’t configure this; users do.
 
-Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive for Business is designed for users to enable and configure IRM for their own OneDrive for Business library. However, by using PowerShell, you can do this for them. For instructions, see the [SharePoint Online and OneDrive for Business: IRM Configuration](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) section in the [Office 365: Configuration for clients and online services](configure-office365.md) article.
+Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive for Business is designed for users to enable and configure IRM for their own OneDrive for Business library. However, by using PowerShell, you can do this for them. For instructions, see the [SharePoint Online and OneDrive for Business: IRM Configuration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration) section in the [Office 365: Configuration for clients and online services](configure-office365.md) article.
 
 ## Do you have any tips or tricks for a successful deployment?
 

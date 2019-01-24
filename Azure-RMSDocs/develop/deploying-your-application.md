@@ -30,7 +30,7 @@ This topic guides you through the deployment process for your Azure Information 
 Before you can release an application developed with AIP/RMS, you must apply for and complete a formal agreement with Microsoft.
 
 ### Begin the process
-Obtain your IPIA by sending an email to **IPIA@microsoft.com** with the following information:
+Obtain your IPIA by sending an email to <strong>IPIA@microsoft.com</strong> with the following information:
 
 **Subject:** Requesting IPIA for *Company Name*
 
@@ -41,7 +41,7 @@ In the body of the email, include:
 
 ### Next steps
 Upon receipt of your IPIA request, we will send you a form (as a Word document).
-Review the terms and conditions of the IPIA, and return the form to **IPIA@microsoft.com** with the following information:
+Review the terms and conditions of the IPIA, and return the form to <strong>IPIA@microsoft.com</strong> with the following information:
 - Legal name of the Company
 - State/Province (US/Canada) or Country of Incorporation
 - Company URL
@@ -58,7 +58,7 @@ When we receive your form, we'll send you the final IPIA link to digitally sign.
 
 ### Already have a signed IPIA?
 If you already have a signed IPIA and want to add a new *App ID*
-for an application you are releasing, send an email to **IPIA@microsoft.com** and provide us with the following information:
+for an application you are releasing, send an email to <strong>IPIA@microsoft.com</strong> and provide us with the following information:
 - Name of the Company Application
 - Brief Description of the Application
 - Azure Tenant ID (even if it the same one as before)

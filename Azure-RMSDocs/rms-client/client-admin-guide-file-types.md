@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 
@@ -46,26 +46,26 @@ For the listed file types, WebDav locations are not supported.
 
 The following file types can be classified even when they are not protected.
 
-- **Adobe Portable Document Format**: .pdf​
+- **Adobe Portable Document Format**: .pdf
 
-- **Microsoft Project**: .mpp, .mpt​
+- **Microsoft Project**: .mpp, .mpt
 
-- **Microsoft Publisher**: .pub​
+- **Microsoft Publisher**: .pub
 
-- **Microsoft XPS**: .xps .oxps​
+- **Microsoft XPS**: .xps .oxps
 
-- **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi. png, .tif, .tiff​
+- **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi. png, .tif, .tiff
 
-- **Autodesk Design Review 2013**: .dwfx​
+- **Autodesk Design Review 2013**: .dwfx
 
-- **Adobe Photoshop**: .psd​
+- **Adobe Photoshop**: .psd
 
 - **Digital Negative**: .dng
 
 - **Microsoft Office**: File types in the following table.
-    
+
     The supported file formats for these file types are the 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint.
-    
+
     |Office file type|Office file type|
     |----------------------------------|----------------------------------|
     |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vdw<br /><br />.vsd|.vsdm<br /><br /> .vsdx<br /><br />.vss<br /><br />.vssm<br /><br />.vst<br /><br />.vstm<br /><br />.vssx<br /><br />.vstx<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx|
@@ -95,19 +95,21 @@ The data protection can be applied automatically when a user selects a label tha
 There are maximum file sizes that the Azure Information Protection client supports for protection.
 
 - **For Office files:**
-    
-    |Office application|Maximum file size supported|
-    |--------------------------------|-------------------------------------|
-    |Word 2007 (supported by AD RMS only)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016|32-bit: 512 MB<br /><br />64-bit: 512 MB
-    |Excel 2007 (supported by AD RMS only)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory|
-    |PowerPoint 2007 (supported by AD RMS only)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory
+
+
+  |                                                     Office application                                                      |                                                Maximum file size supported                                                 |
+  |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+  |             Word 2007 (supported by AD RMS only)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
+  |           Excel 2007 (supported by AD RMS only)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
+  | PowerPoint 2007 (supported by AD RMS only)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
+
 
 - **For all other files**: 
-    
-    - To protect other file types, and to open these file types in the Azure Information Protection viewer: The maximum file size is limited only by available disk space and memory.
-    
-    - To unprotect files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: The maximum file size supported for .pst files is 5 GB. Other file types are limited only by available disk space and memory
-    
+
+  - To protect other file types, and to open these file types in the Azure Information Protection viewer: The maximum file size is limited only by available disk space and memory.
+
+  - To unprotect files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: The maximum file size supported for .pst files is 5 GB. Other file types are limited only by available disk space and memory
+
     Tip: If you need to search or recover protected items in large .pst files, see [Guidance for using Unprotect-RMSFile for eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
 
 ### Supported file types for classification and protection
@@ -138,7 +140,7 @@ These file types are identified separately because when they are natively protec
 ###### Footnote 1
 With the latest version of the Azure Information Protection client, [by default](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), the file name extension of the protected PDF document remains as .pdf.
 
-The next table lists the remaining file types that support native protection by the Azure Information Protection client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. The supported file formats for these file types are the 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint.
+The next table lists the remaining file types that support native protection by the Azure Information Protection client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. The supported file formats for these file types are the 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint.
 
 For these files, the file name extension remains the same after the file is protected by a Rights Management service.
 
@@ -162,9 +164,9 @@ You can also force the Azure Information Protection client to block the protecti
 To configure the Azure Information Protection client to apply generic protection to all files that by default, would have native protection applied, make the following registry edits. Note if the FileProtection key does not exist, you must manually create it.
 
 1. Create a new key named * for the following registry path, which denotes files with any file name extension:
-    
+
     - For 32-bit version of Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
-    
+
     - For 64-bit version of Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection**
 
 2. In the newly added key (for example, HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*), create a new string value (REG_SZ) named **Encryption** that has the data value of **Pfile**.
@@ -193,14 +195,16 @@ You can make similar registry edits for other scenarios by changing the value of
 
 - **Off**: Block protection
 
-For more information, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". 
+After making these registry changes, there's no need to restart the computer. However, if you're using PowerShell commands to protect files, you must start a new PowerShell session for the changes to take effect.
+
+For more information about editing the registry to change the default protection level of files, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile".
 
 ## File types that are excluded from classification and protection
 
 To help prevent users from changing files that are critical for computer operations, some file types and folders are automatically excluded from classification and protection. If users try to classify or protect these files by using the Azure Information Protection client, they see a message that they are excluded.
 
 - **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msg,.msp, .msi, .pdb, .jar
-    
+
 
 - **Excluded folders**: 
     - Windows
@@ -248,20 +252,22 @@ If you change the [default behavior](client-admin-guide-customizations.md#dont-p
 - A PDF file that is form-based.
 
 - A protected PDF file that has a .pdf file name extension.
-    
+
     The Azure Information Protection client can protect an unprotected PDF file, and it can unprotect and reprotect a protected PDF file when it has a .ppdf file name extension.
 
 ### Limitations for container files, such as .zip files
 
-Container files are files that include other files, with a typical example being .zip files that contain compressed files. Other examples include .rar, .7z, and .msg.
+Container files are files that include other files, with a typical example being .zip files that contain compressed files. Other examples include .rar, .7z, .msg files, and PDF documents that include attachments.
 
 You can classify and protect these container files, but the classification and protection is not applied to each file inside the container.
 
 If you have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings. However, you can remove the protection for all files in supported container files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet.
 
+The Azure Information Protection viewer cannot open attachments in a protected PDF document. In this scenario, when the document is opened in the viewer, the attachments are not visible.
+
 ## File types supported for inspection
 
-Without any additional configuration, the Azure Information Protection client uses Windows IFilter to inspect the contents of documents. Windows IFilter is used by Windows Search for indexing. As a result, the following file types can be inspected when you use the [Azure Information Protection scanner](../deploy-aip-scanner.md), or the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command.
+Without any additional configuration, the Azure Information Protection client uses Windows IFilter to inspect the contents of documents. Windows IFilter is used by Windows Search for indexing. As a result, the following file types can be inspected when you use the [Azure Information Protection scanner](../deploy-aip-scanner.md), or the [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command.
 
 |Application type|File type|
 |--------------------------------|-------------------------------------|
@@ -279,7 +285,7 @@ The following sections have configuration instructions to inspect .zip files, an
 
 ### To inspect .zip files
 
-The Azure Information Protection scanner and the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can inspect .zip files when you follow these instructions:
+The Azure Information Protection scanner and the [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can inspect .zip files when you follow these instructions:
 
 1. For the computer running the scanner or the PowerShell session, install the [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
 

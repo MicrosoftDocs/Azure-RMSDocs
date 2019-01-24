@@ -45,13 +45,13 @@ Use the following instructions to add a new label that can then be added to an A
     
     - To create a new sublabel: Right-click or select the context menu (**...**) for the label that you want to create a sublabel for, and then click **Add a sub-label**.
 
-4. On the **Label** or **Sub-label** blade, select the options that you want for this new label, and then click **Save**.
+3. On the **Label** or **Sub-label** blade, select the options that you want for this new label, and then click **Save**.
     
     When you specify a display name, you are prevented from specifying some characters (such as a backslash and ampersand) because not all services and applications that use Azure Information Protection can support these characters. In addition to the characters that are blocked, do not specify the **#** character.    
     
-    Note that new labels are automatically assigned the color black. Choose a distinguishing color from the list of colors, or enter a hex triplet code for the red, green, and blue (RGB) components of the color. For example, **#DAA520**. If you need a reference for these codes, [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) from the MSDN documentation is a helpful starting point, and you'll find these codes in many picture editing programs such as Microsoft Paint, where you choose a custom color from a palette and it automatically displays the RGB values.
+    Note that new labels are automatically assigned the color black. Choose a distinguishing color from the list of colors, or enter a hex triplet code for the red, green, and blue (RGB) components of the color. For example, **#DAA520**. If you need a reference for these codes, [Colors by Name](https://msdn.microsoft.com/library/aa358802(v=vs.85).aspx) from the MSDN documentation is a helpful starting point, and you'll find these codes in many picture editing programs such as Microsoft Paint, where you choose a custom color from a palette and it automatically displays the RGB values.
 
-5. To make your new label available to users: From the **Classifications** > **Policies** menu option, select the policy to contain the new label. Select **Add or remove labels**. Select the label from the **Policy: Add or remove labels** blade, select **OK**, and then select **Save**.
+4. To make your new label available to users: From the **Classifications** > **Policies** menu option, select the policy to contain the new label. Select **Add or remove labels**. Select the label from the **Policy: Add or remove labels** blade, select **OK**, and then select **Save**.
     
     >[!TIP]
     >For new labels, consider adding them first to a scoped policy that you use for testing. When you are satisfied with the results, remove the label from this testing scope, and then add the label to a policy that you use in production.     
@@ -60,7 +60,7 @@ Use the following instructions to add a new label that can then be added to an A
     
     Your changes are automatically available to users and services. There's no longer a separate publish option.
 
-6. If you want this new label name and description to display in different languages for users: Follow the procedures in [How to configure labels for different languages](configure-policy-languages.md). 
+5. If you want this new label name and description to display in different languages for users: Follow the procedures in [How to configure labels for different languages](configure-policy-languages.md). 
 
 ## Next steps
 

@@ -131,14 +131,14 @@ When you cannot migrate all your Windows clients at once, run the following proc
 
 1. Return to the migration scripts, **Migrate-Client.cmd** and **Migrate-User.cmd**, which you extracted previously when you downloaded these scripts in the [preparation phase](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
-2.  Follow the instructions in **Migrate-Client.cmd** to modify the script so that it contains your tenant's Azure Rights Management service URL, and also your server names for your AD RMS cluster extranet licensing URL and intranet licensing URL. Then, increment the script version, which was previously explained. A good practice for tracking script versions is to use today’s date in the following format: YYYYMMDD
+2. Follow the instructions in **Migrate-Client.cmd** to modify the script so that it contains your tenant's Azure Rights Management service URL, and also your server names for your AD RMS cluster extranet licensing URL and intranet licensing URL. Then, increment the script version, which was previously explained. A good practice for tracking script versions is to use today’s date in the following format: YYYYMMDD
     
-    > [!IMPORTANT]
-    > As before, be careful not to introduce additional spaces before or after your addresses.
-    > 
-    > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https://rms.treyresearch.net:443/_wmcs/licensing. You can find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net:**443**. 
+   > [!IMPORTANT]
+   > As before, be careful not to introduce additional spaces before or after your addresses.
+   > 
+   > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https://rms.treyresearch.net:443/_wmcs/licensing. You can find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net:<strong>443</strong>. 
     
-    If you need to retrieve your Azure Rights Management service URL for *&lt;YourTenantURL&gt;*, refer back to [To identify your Azure Rights Management service URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
+   If you need to retrieve your Azure Rights Management service URL for *&lt;YourTenantURL&gt;*, refer back to [To identify your Azure Rights Management service URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
 3. Using the instructions at the beginning of this step, configure your script deployment methods to run **Migrate-Client.cmd** and **Migrate-User.cmd** on the Windows client computers that are used by the members of the AIPMigrated group. 
 
