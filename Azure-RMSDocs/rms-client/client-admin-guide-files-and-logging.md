@@ -44,7 +44,7 @@ Client logs files and currently installed policy file:
 
 ## Usage logging for the Azure Information Protection client
 
-The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. By default, the events include the following information:
+The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. The events include the following information:
 
 - Client version, policy ID
 
