@@ -100,6 +100,8 @@ The Azure Information Protection client can label and protect documents and emai
 
 - Office 365 ProPlus
 
+- Office Professional Plus 2019
+
 - Office Professional Plus 2016
 
 - Office Professional Plus 2013 with Service Pack 1
