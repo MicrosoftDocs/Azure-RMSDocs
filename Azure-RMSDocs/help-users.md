@@ -79,7 +79,7 @@ In addition to making it easier for users to protect documents and emails, the A
 For instructions to use this client for Windows computers, see the [Azure Information Protection client user guide](./rms-client/client-user-guide.md).
 
 
-## Using information protection with Office 365, Office 2016, or Office 2013
+## Using information protection with Office 365, Office 2019, Office 2016, or Office 2013
 If you are using the Azure Rights Management service and have not installed the Azure Information Protection client, users do not see the Azure Information Protection bar in their Office desktop apps. They also don't see the **Protect** button on the ribbon, or **Classify and protect** from File Explorer. These additions make it easier for users to protect documents and emails. For these users, they must follow instructions similar to the steps that follow.
 
 > [!TIP]
@@ -118,11 +118,11 @@ For example, if the email message is protected by using the **Do Not Forward** o
 
 #### To protect an email message using Outlook on the web
 
-1.  Using Outlook on the web, create a mail message addressed to a recipient within your organization.
+1. Using Outlook on the web, create a mail message addressed to a recipient within your organization.
 
-2.  Select **Protect**. Unless the default has been changed by an administrator, the **Do Not Forward** option is automatically selected. If you want to change the default, select **Change Permissions** and then select an option from the drop down. For example: **Encrypt** or **\<Company Name>- Confidential**.
+2. Select **Protect**. Unless the default has been changed by an administrator, the **Do Not Forward** option is automatically selected. If you want to change the default, select **Change Permissions** and then select an option from the drop down. For example: **Encrypt** or **\<Company Name>- Confidential**.
 
-3.  Send the message.
+3. Send the message.
 
 Similarly to viewing a protected document, when the recipients open the email message, they are first authenticated. If they are authorized to see the email message, it opens with the restricted [usage rights](configure-usage-rights.md) that were specified for that user. 
 

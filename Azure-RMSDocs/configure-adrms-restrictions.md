@@ -6,7 +6,7 @@ description: Overview of HYOK (AD RMS) protection with Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
@@ -74,8 +74,8 @@ The following table lists the supported scenarios for protecting content by usin
 
 |Platform|Application|Supported|
 |----------------------|----------|-----------|
-|Windows|Azure Information Protection client with Office 2016 and Office 2013 <br /><br />- Word, Excel, PowerPoint|Protection: Yes<br /><br />Consumption: Yes|
-|Windows|Azure Information Protection client with Office 2016 and Office 2013 <br /><br />- Outlook|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection client with Office 365 apps, Office 2019, Office 2016, and Office 2013 <br /><br />- Word, Excel, PowerPoint|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection client with Office 365 apps, Office 2019, Office 2016, and Office 2013 <br /><br />- Outlook|Protection: Yes<br /><br />Consumption: Yes|
 |Windows|Azure Information Protection client with File Explorer|Protection: Yes <br /><br />Consumption: Yes|
 |Windows|Azure Information Protection Viewer|Protection: Not applicable<br /><br />Consumption: Yes|
 |Windows|Azure Information Protection client with PowerShell labeling cmdlets|Protection: Yes<br /><br />Consumption: Yes|
@@ -157,7 +157,7 @@ An AD RMS deployment must meet the following requirements to provide HYOK protec
 
 - If you share documents or emails that are protected by HYOK with others outside your organization: AD RMS is configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that are created by using Active Directory Federation Services (AD FS).
 
-- Users have a version of Office that is Office 2016 Professional Plus or Office 2013 Professional Plus with Service Pack 1, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 are not supported for this scenario.
+- Users have a version of Office that supports Information Rights Management (IRM) and at least Office 2013 Professional Plus with Service Pack 1, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 are not supported for this scenario.
     
     - For Office 2016, Microsoft Installer (.msi)-based edition: You have installed [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
 

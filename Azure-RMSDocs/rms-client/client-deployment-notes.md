@@ -6,7 +6,7 @@ description: Information about installation, supported operating systems, regist
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
@@ -186,7 +186,7 @@ To perform service discovery, the RMS client checks the following:
 >  
 > - When a user initiates sign in from an Office application, the user name (and domain) from the authentication is used to identify the Azure Information Protection tenant to use. In this case, registry settings are not needed and the SCP is not checked.
 > 
-> - When you have configured [DNS redirection](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) for Office 2016 click-to-run desktop apps, the RMS client finds the Azure Rights Management service by being denied access to the AD RMS cluster that it previously found. This deny action triggers the client to look for the SRV record, which redirects the client to the Azure Rights Management service for your tenant. This SRV record also lets Exchange Online decrypt emails that have been protected by your AD RMS cluster. 
+> - When you have configured [DNS redirection](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) for Office click-to-run desktop apps, the RMS client finds the Azure Rights Management service by being denied access to the AD RMS cluster that it previously found. This deny action triggers the client to look for the SRV record, which redirects the client to the Azure Rights Management service for your tenant. This SRV record also lets Exchange Online decrypt emails that have been protected by your AD RMS cluster. 
 
 ### AD RMS only: Enabling server-side service discovery by using Active Directory
 If your account has  sufficient privileges (Enterprise Admins and  local administrator for the AD RMS server), you can automatically register a service connection point (SCP) when you install the AD RMS root cluster server. If an SCP already exists in the forest, you must first delete the existing SCP before you can register  a new one.
