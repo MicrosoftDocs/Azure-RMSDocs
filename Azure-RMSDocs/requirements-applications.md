@@ -63,7 +63,6 @@ Information about the table columns:
 
 ###### Footnote 1
 Includes: 
-
 - Office apps from Office 365 Business or Microsoft 365 Business when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
 - Office 365 ProPlus apps
 
@@ -75,9 +74,7 @@ For [Office attachments](https://support.office.com/article/bb643d33-4a3f-4ac7-9
 
 ###### Footnote 4
 If the sender and the recipient are part of the same organization. Or either of the following conditions:
-
 - The sender or the recipient are using Exchange Online.
-
 - The sender is using Exchange on-premises in a hybrid configuration. 
 
 ###### Footnote 5
