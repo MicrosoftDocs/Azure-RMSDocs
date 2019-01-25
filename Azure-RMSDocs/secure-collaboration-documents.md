@@ -6,7 +6,7 @@ description: End-to-end workflow for collaborating on documents that are protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
@@ -37,7 +37,7 @@ When you configure these permissions, you can specify which users they are for:
 
 - **For users who do not have an Azure Active Directory account**: Specify an email address that will be used with a Microsoft account. This account can already exist, or users can create it at the time they open the protected document. 
     
-    To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
+    To open documents with a Microsoft account, users must use Office 365 apps (Click-to-Run). Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
 
 - **For any authenticated user**: This option is suitable for when you don't need to control who accesses the protected document, providing the user can be authenticated. The authentication can be by Azure AD, by using a Microsoft account, or even a federated social provider or one-time passcode when the content is protected by the new capabilities of Office 365 Message Encryption. 
 
@@ -146,7 +146,7 @@ In addition, the following scenarios support viewing documents:
 Supports user accounts, email-enabled groups, all members. User accounts and email-enabled groups can include guest accounts. All members exclude guest accounts.
 
 ###### Footnote 2
-Currently supported by Office 2016 Click-to-Run only.
+Currently supported by Office 365 apps (Click-to-Run) only.
 
 
 
