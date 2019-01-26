@@ -201,7 +201,7 @@ In addition, there are FAQs designed for end users:
 
 - [FAQ for Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md)
 
-- [FAQ for RMS sharing app for Mac computers and Windows Phone](https://technet.microsoft.com/dn451248)
+- [FAQ for RMS sharing app for Mac computers](https://technet.microsoft.com/dn451248)
 
 - [FAQ for Rights Management Sharing Application for Windows](https://technet.microsoft.com/dn467883)
 
