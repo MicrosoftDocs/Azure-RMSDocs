@@ -175,7 +175,7 @@ To configure the Azure Information Protection client to apply generic protection
 
 These two settings result in the Azure Information Protection client applying generic protection to all files that have a file name extension. If this is your goal, no further configuration is required. However, you can define exceptions for specific file types, so that they are still natively protected. To do this, you must make three (for 32-bit Windows) or 6 (for 64-bit Windows) additional registry edits for each file type:
 
-1. For **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** and **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection**: Add a new key that has the name of the file name extension (without the preceding period).
+1. For **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** and **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (if applicable): Add a new key that has the name of the file name extension (without the preceding period).
 
     For example, for files that have a .docx file name extension, create a key named **DOCX**.
 
