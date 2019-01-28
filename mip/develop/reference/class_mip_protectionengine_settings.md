@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::ProtectionEngine::Settings 
@@ -23,8 +23,8 @@ public void SetIdentity(const Identity& identity)  |  Sets the user [Identity](c
 public const std::string& GetClientData() const  |  Gets custom data specified by client.
 public void SetClientData(const std::string& clientData)  |  Sets custom data specified by client.
 public const std::string& GetLocale() const  |  Gets the locale in which engine data will be written.
-public void SetCustomSettings(const std::vector<std::pair<std::string, std::string>>& value)  |  Sets name/value pairs used for testing and experimentation.
-public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  Gets name/value pairs used for testing and experimentation.
+public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& value)  |  Sets name/value pairs used for testing and experimentation.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Gets name/value pairs used for testing and experimentation.
 public void SetSessionId(const std::string& sessionId)  |  Sets the engine session ID, used for correlation of logging/telemetry.
 public const std::string& GetSessionId() const  |  Gets the engine session ID.
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Optionally sets the cloud endpoint base URL.
@@ -32,7 +32,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  Gets the cloud bas
   
 ## Members
   
-### Settings
+### Settings function
 [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for creating a new engine.
 
 Parameters:  
@@ -46,7 +46,7 @@ Parameters:
 
 
   
-### Settings
+### Settings function
 [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for loading an existing engine.
 
 Parameters:  
@@ -60,13 +60,13 @@ Parameters:
 
 
   
-### GetEngineId
+### GetEngineId function
 Gets the engine ID.
 
   
 **Returns**: Engine ID
   
-### SetEngineId
+### SetEngineId function
 Sets the engine ID.
 
 Parameters:  
@@ -74,13 +74,13 @@ Parameters:
 
 
   
-### Identity
+### GetIdentity function
 Gets the user [Identity](class_mip_identity.md) associated with the engine.
 
   
 **Returns**: User [Identity](class_mip_identity.md) associated with the engine
   
-### SetIdentity
+### SetIdentity function
 Sets the user [Identity](class_mip_identity.md) associated with the engine.
 
 Parameters:  
@@ -88,13 +88,13 @@ Parameters:
 
 
   
-### GetClientData
+### GetClientData function
 Gets custom data specified by client.
 
   
 **Returns**: Custom data specified by client
   
-### SetClientData
+### SetClientData function
 Sets custom data specified by client.
 
 Parameters:  
@@ -102,13 +102,13 @@ Parameters:
 
 
   
-### GetLocale
+### GetLocale function
 Gets the locale in which engine data will be written.
 
   
 **Returns**: Locale in which engine data will be written
   
-### SetCustomSettings
+### SetCustomSettings function
 Sets name/value pairs used for testing and experimentation.
 
 Parameters:  
@@ -116,13 +116,13 @@ Parameters:
 
 
   
-### GetCustomSettings
+### GetCustomSettings function
 Gets name/value pairs used for testing and experimentation.
 
   
 **Returns**: Name/value pairs used for testing and experimentation
   
-### SetSessionId
+### SetSessionId function
 Sets the engine session ID, used for correlation of logging/telemetry.
 
 Parameters:  
@@ -130,13 +130,13 @@ Parameters:
 
 
   
-### GetSessionId
+### GetSessionId function
 Gets the engine session ID.
 
   
 **Returns**: Engine session ID
   
-### SetCloudEndpointBaseUrl
+### SetCloudEndpointBaseUrl function
 Optionally sets the cloud endpoint base URL.
 
 Parameters:  
@@ -145,7 +145,7 @@ Parameters:
 
 If base URL is not specified, it will be determined via DNS lookup of the engine identity's domain.
   
-### GetCloudEndpointBaseUrl
+### GetCloudEndpointBaseUrl function
 Gets the cloud base URL used by all service requests, if specified.
 
   

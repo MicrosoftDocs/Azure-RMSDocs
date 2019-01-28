@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::AddContentFooterAction 
@@ -25,51 +25,51 @@ public ActionType GetType() const  |  Get the type of [Action](class_mip_action.
   
 ## Members
   
-### GetUIElementName
+### GetUIElementName function
 An API used to mark the content footer element.
 
   
 **Returns**: The name that should be used for the UI element that holds the content footer. The same name will be returned in [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) in case the content footer needs to be removed.
   
-### GetText
+### GetText function
 Get the text that is meant to go into the content footer.
 
   
 **Returns**: Content footer text.
   
-### GetFontName
+### GetFontName function
 Get the font name, used to display the content footer.
 
   
 **Returns**: Font name. Default value is Calibri if nothing is set by the policy.
   
-### GetFontSize
+### GetFontSize function
 Get the font size used to display the content footer.
 
   
 **Returns**: Font size as an integer.
   
-### GetFontColor
+### GetFontColor function
 Get the font color used to display the content footer.
 
   
 **Returns**: Font color as a string (for example, "#000000").
   
-### ContentMarkAlignment
+### GetAlignment function
 Get the alignment of the footer.
 
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
+**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
-### GetMargin
+### GetMargin function
 Get the margin of the footer from the bottom.
 
   
 **Returns**: The margins from the bottom of the document (for example, 10 mm).
   
-### ActionType
+### GetType function
 Get the type of [Action](class_mip_action.md).
 
   

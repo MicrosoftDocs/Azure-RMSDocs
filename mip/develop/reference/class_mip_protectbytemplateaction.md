@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::ProtectByTemplateAction 
@@ -19,13 +19,13 @@ public ActionType GetType() const  |  Get the type of [Action](class_mip_action.
   
 ## Members
   
-### GetTemplateId
+### GetTemplateId function
 Get the protection template ID associated with the action.
 
   
 **Returns**: The protection template ID.
   
-### ActionType
+### GetType function
 Get the type of [Action](class_mip_action.md).
 
   

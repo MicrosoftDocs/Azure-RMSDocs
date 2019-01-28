@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::ClassificationResult 
@@ -20,17 +20,17 @@ public int GetConfidenceLevel() const  |  Get the confidence in the result.
   
 ## Members
   
-### GetId
+### GetId function
 Get the ID of the classification policy.
 
   
 **Returns**: ID of the classification policy.
   
-### GetCount
+### GetCount function
 Get the instance count.
 
   
 **Returns**: The instance count.
   
-### GetConfidenceLevel
+### GetConfidenceLevel function
 Get the confidence in the result.

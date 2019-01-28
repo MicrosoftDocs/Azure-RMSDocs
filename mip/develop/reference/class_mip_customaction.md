@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::CustomAction 
@@ -15,24 +15,24 @@ ms.date: 01/23/2019
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  |  Get action name.
-public const std::vector<std::pair<std::string, std::string>>& GetProperties() const  |  Get the properties key value pair list.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetProperties() const  |  Get the properties key value pair list.
 public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   
-### GetName
+### GetName function
 Get action name.
 
   
 **Returns**: An action name if one exists else an empty string.
   
-### GetProperties
+### GetProperties function
 Get the properties key value pair list.
 
   
 **Returns**: A key value pair list.
   
-### ActionType
+### GetType function
 Get the type of [Action](class_mip_action.md).
 
   

@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::AddWatermarkAction 
@@ -24,43 +24,43 @@ public ActionType GetType() const  |  Get the type of [Action](class_mip_action.
   
 ## Members
   
-### GetUIElementName
+### GetUIElementName function
 An API used to mark the watermark element.
 
   
 **Returns**: The name that should be used for the UI element that holds the watermark. The same name will be returned in RemoveWatermarkingAction in case the watermark needs to be removed.
   
-### WatermarkLayout
+### GetLayout function
 An API used to get the water mark layout.
 
   
 **Returns**: WatermarkLayout the watermarking layout in th form of an enum HORIZONTAL|DIAGONAL. ,
   
-### GetText
+### GetText function
 Get the text that is meant to go into the watermark.
 
   
 **Returns**: Content header text.
   
-### GetFontName
+### GetFontName function
 Get the font name used to display the watermark.
 
   
 **Returns**: Font name. Default value is Calibri if nothing is set by the policy.
   
-### GetFontSize
+### GetFontSize function
 Get the font size used to display the watermark.
 
   
 **Returns**: Font size as an integer.
   
-### GetFontColor
+### GetFontColor function
 Get the font color used to display the watermark.
 
   
 **Returns**: Font color as a string (for example, "#000000").
   
-### ActionType
+### GetType function
 Get the type of [Action](class_mip_action.md).
 
   

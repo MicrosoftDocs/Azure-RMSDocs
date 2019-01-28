@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::SensitivityTypesRulePackage 
@@ -18,13 +18,13 @@ public const std::string& GetRulePackage() const  |  Get the Rule Package.
   
 ## Members
   
-### GetRulePackageId
+### GetRulePackageId function
 Get the Rule Package Id.
 
   
 **Returns**: The Rule Package Id
   
-### GetRulePackage
+### GetRulePackage function
 Get the Rule Package.
 
   

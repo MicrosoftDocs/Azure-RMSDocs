@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::HttpDelegate 
@@ -14,12 +14,12 @@ Interface for overriding HTTP handling.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr<HttpResponse> Send(const std::shared_ptr<HttpRequest>& request, const std::shared_ptr<void>& context)  |  Send HTTP request.
-public void SendAsync(const std::shared_ptr<HttpRequest>& request, const std::shared_ptr<void>& context, const std::function<void(std::shared_ptr<HttpResponse>)>& fnCallback)  | _Not yet documented._
+public std::shared_ptr\<HttpResponse\> Send(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context)  |  Send HTTP request.
+public void SendAsync(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context, const std::function\<void(std::shared_ptr\<HttpResponse\>)\>& fnCallback)  | _Not yet documented._
   
 ## Members
   
-### HttpResponse
+### Send function
 Send HTTP request.
 
 Parameters:  
@@ -33,5 +33,5 @@ Parameters:
   
 **Returns**: HTTP response
   
-### SendAsync
+### SendAsync function
 _Not documented yet._

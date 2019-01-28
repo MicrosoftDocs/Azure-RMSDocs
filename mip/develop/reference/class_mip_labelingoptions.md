@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::LabelingOptions 
@@ -19,39 +19,39 @@ public AssignmentMethod GetAssignmentMethod() const  | _Not yet documented._
 public ActionSource GetActionSource() const  | _Not yet documented._
 public bool IsDowngradeJustified() const  | _Not yet documented._
 public const std::string& GetJustificationMessage() const  | _Not yet documented._
-public const std::vector<std::pair<std::string, std::string>>& GetExtendedProperties() const  | _Not yet documented._
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  | _Not yet documented._
 public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _Not yet documented._
-public void SetExtendedProperties(const std::vector<std::pair<std::string, std::string>>& extendedProperties)  | _Not yet documented._
+public void SetExtendedProperties(const std::vector\<std::pair\<std::string, std::string\>\>& extendedProperties)  | _Not yet documented._
   
 ## Members
   
-### LabelingOptions
+### LabelingOptions function
 _Not documented yet._
 
   
-### AssignmentMethod
+### GetAssignmentMethod function
 _Not documented yet._
 
   
-### ActionSource
+### GetActionSource function
 _Not documented yet._
 
   
-### IsDowngradeJustified
+### IsDowngradeJustified function
 _Not documented yet._
 
   
-### GetJustificationMessage
+### GetJustificationMessage function
 _Not documented yet._
 
   
-### GetExtendedProperties
+### GetExtendedProperties function
 _Not documented yet._
 
   
-### SetDowngradeJustification
+### SetDowngradeJustification function
 _Not documented yet._
 
   
-### SetExtendedProperties
+### SetExtendedProperties function
 _Not documented yet._

@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::AuthDelegate 
@@ -18,7 +18,7 @@ public bool AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challe
   
 ## Members
   
-### AcquireOAuth2Token
+### AcquireOAuth2Token function
 This method is called when an auth token is required for the policy engine with the given identity and the given challenge. The client should return whether acquiring token was successful. If successful, it should initialize the given token object.
 
 Parameters:  

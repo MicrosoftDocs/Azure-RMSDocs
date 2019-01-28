@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::FileExecutionState 
@@ -13,12 +13,12 @@ ms.date: 01/23/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual std::map<std::string, std::shared_ptr<ClassificationResult>> GetClassificationResults(const std::shared_ptr<FileHandler> &, const std::vector<std::shared_ptr<ClassificationRequest>> &) const  |  Return a map of classification results.
-public virtual std::vector<uint8_t> GetSerializedProtectionInfo() const  |  Return a buffer with the serialized PL.
+public virtual std::map\<std::string, std::shared_ptr\<ClassificationResult\>\> GetClassificationResults(const std::shared_ptr\<FileHandler\> &, const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Return a map of classification results.
+public virtual std::vector\<uint8_t\> GetSerializedProtectionInfo() const  |  Return a buffer with the serialized PL.
   
 ## Members
   
-### ClassificationResult
+### GetClassificationResults function
 Return a map of classification results.
 
 Parameters:  
@@ -32,7 +32,7 @@ Parameters:
   
 **Returns**: A list of classification result.
   
-### GetSerializedProtectionInfo
+### GetSerializedProtectionInfo function
 Return a buffer with the serialized PL.
 
   

@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::AuthDelegate::OAuth2Challenge 
@@ -21,7 +21,7 @@ public const std::string& GetScope() const  |  Get the scope string.
   
 ## Members
   
-### OAuth2Challenge
+### OAuth2Challenge function
 Construct a new [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) object.
 
 Parameters:  
@@ -35,19 +35,19 @@ Parameters:
 
 
   
-### GetAuthority
+### GetAuthority function
 Get the authority string.
 
   
 **Returns**: The authority string.
   
-### GetResource
+### GetResource function
 Get the resource string.
 
   
 **Returns**: The resource string.
   
-### GetScope
+### GetScope function
 Get the scope string.
 
   

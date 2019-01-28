@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::FileProfile 
@@ -16,28 +16,28 @@ A typical application will only need one Profile.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Returns the profile settings.
-public void ListEnginesAsync(const std::shared_ptr<void>& context)  |  Starts list engines operation.
-public void UnloadEngineAsync(const std::string& id, const std::shared_ptr<void>& context)  |  Starts unloading the file engine with the given ID.
-public void AddEngineAsync(const FileEngine::Settings& settings, const std::shared_ptr<void>& context)  |  Starts adding a new file engine to the profile.
-public void DeleteEngineAsync(const std::string& id, const std::shared_ptr<void>& context)  |  Starts deleting the file engine with the given ID. All data for the given profile will be deleted.
+public void ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Starts list engines operation.
+public void UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts unloading the file engine with the given ID.
+public void AddEngineAsync(const FileEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  Starts adding a new file engine to the profile.
+public void DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts deleting the file engine with the given ID. All data for the given profile will be deleted.
   
 ## Members
   
-### Settings
+### GetSettings function
 Returns the profile settings.
   
-### ListEnginesAsync
+### ListEnginesAsync function
 Starts list engines operation.
 [FileProfile::Observer](class_mip_fileprofile_observer.md) will be called upon success or failure.
   
-### UnloadEngineAsync
+### UnloadEngineAsync function
 Starts unloading the file engine with the given ID.
 [FileProfile::Observer](class_mip_fileprofile_observer.md) will be called upon success or failure.
   
-### AddEngineAsync
+### AddEngineAsync function
 Starts adding a new file engine to the profile.
 [FileProfile::Observer](class_mip_fileprofile_observer.md) will be called upon success or failure.
   
-### DeleteEngineAsync
+### DeleteEngineAsync function
 Starts deleting the file engine with the given ID. All data for the given profile will be deleted.
 [FileProfile::Observer](class_mip_fileprofile_observer.md) will be called upon success or failure.

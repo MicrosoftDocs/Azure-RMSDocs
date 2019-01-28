@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::ConsentDelegate 
@@ -19,7 +19,7 @@ public Consent GetUserConsent(const std::string& url)  |  Called when SDK requir
   
 ## Members
   
-### Consent
+### GetUserConsent function
 Called when SDK requires user consent to connect to a service endpoint.
 
 Parameters:  

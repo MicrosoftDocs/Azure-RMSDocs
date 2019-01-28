@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::ApplyLabelAction 
@@ -15,24 +15,24 @@ Apply label actions requires the calling application to apply a specific label.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetLabelId() const  |  Get the label ID required.
-public const std::vector<std::string>& GetClassificationIds() const  |  Get the Classification IDs that matched and caused this label to appear.
+public const std::vector\<std::string\>& GetClassificationIds() const  |  Get the Classification IDs that matched and caused this label to appear.
 public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   
-### GetLabelId
+### GetLabelId function
 Get the label ID required.
 
   
 **Returns**: The label ID.
   
-### GetClassificationIds
+### GetClassificationIds function
 Get the Classification IDs that matched and caused this label to appear.
 
   
 **Returns**: Const std::vector<std::string>& a list of classification IDs that caused this label to appear.
   
-### ActionType
+### GetType function
 Get the type of [Action](class_mip_action.md).
 
   

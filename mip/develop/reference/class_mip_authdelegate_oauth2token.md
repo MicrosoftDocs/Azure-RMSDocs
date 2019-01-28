@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::AuthDelegate::OAuth2Token 
@@ -21,10 +21,10 @@ public void SetAccessToken(const std::string& accessToken)  |  Set the Access To
   
 ## Members
   
-### OAuth2Token
+### OAuth2Token function
 Construct a new [OAuth2Token](class_mip_authdelegate_oauth2token.md) object.
   
-### OAuth2Token
+### OAuth2Token function
 Construct a new [OAuth2Token](class_mip_authdelegate_oauth2token.md) object from an accessToken.
 
 Parameters:  
@@ -32,13 +32,13 @@ Parameters:
 
 
   
-### GetAccessToken
+### GetAccessToken function
 Get the Access token string.
 
   
 **Returns**: The access token string.
   
-### SetAccessToken
+### SetAccessToken function
 Set the Access Token string.
 
 Parameters:  

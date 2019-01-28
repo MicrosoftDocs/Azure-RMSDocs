@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::LoggerDelegate 
@@ -21,7 +21,7 @@ public void WriteToLog(const LogLevel level, const std::string& message, const s
   
 ## Members
   
-### Init
+### Init function
 Initialize the logger.
 
 Parameters:  
@@ -32,16 +32,16 @@ Parameters:
 
 
   
-### LogLevel
+### GetLogLevel function
 Get the lowest logl evel that would trigger a logging event.
 
   
 **Returns**: The lowest log level that would trigger a logging event.
   
-### Flush
+### Flush function
 Flush the logger.
   
-### WriteToLog
+### WriteToLog function
 Write a log statement to log file.
 
 Parameters:  

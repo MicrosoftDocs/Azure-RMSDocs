@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::ProtectionDescriptorBuilder 
@@ -14,25 +14,25 @@ Constructs a [ProtectionDescriptor](class_mip_protectiondescriptor.md) that desc
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr<ProtectionDescriptor> Build()  |  Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by this [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) instance.
+public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by this [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) instance.
 public void SetName(const std::string& value)  |  Sets protection policy name.
 public void SetDescription(const std::string& value)  |  Sets protection policy description.
-public void SetContentValidUntil(const std::chrono::time_point<std::chrono::system_clock>& value)  |  Sets protection policy expiration time.
+public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  Sets protection policy expiration time.
 public void SetAllowOfflineAccess(bool value)  |  Sets if protection policy allows offline content access or not.
 public void SetReferrer(const std::string& uri)  |  Sets protection policy referrer address.
-public void SetEncryptedAppData(const std::map<std::string, std::string>& value)  |  Sets app-specific data that should be encrypted.
-public void SetSignedAppData(const std::map<std::string, std::string>& value)  |  Sets app-specific data that should be signed.
+public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be encrypted.
+public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be signed.
 public virtual ~ProtectionDescriptorBuilder()  | _Not yet documented._
   
 ## Members
   
-### ProtectionDescriptor
+### Build function
 Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by this [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) instance.
 
   
 **Returns**: New [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance
   
-### SetName
+### SetName function
 Sets protection policy name.
 
 Parameters:  
@@ -40,7 +40,7 @@ Parameters:
 
 
   
-### SetDescription
+### SetDescription function
 Sets protection policy description.
 
 Parameters:  
@@ -48,7 +48,7 @@ Parameters:
 
 
   
-### SetContentValidUntil
+### SetContentValidUntil function
 Sets protection policy expiration time.
 
 Parameters:  
@@ -56,7 +56,7 @@ Parameters:
 
 
   
-### SetAllowOfflineAccess
+### SetAllowOfflineAccess function
 Sets if protection policy allows offline content access or not.
 
 Parameters:  
@@ -64,7 +64,7 @@ Parameters:
 
 
   
-### SetReferrer
+### SetReferrer function
 Sets protection policy referrer address.
 
 Parameters:  
@@ -73,7 +73,7 @@ Parameters:
 
 The referrer is a URI that can be displayed to the user upon failed protection policy acquisition that contains information on how that user can gain permission to access the content.
   
-### SetEncryptedAppData
+### SetEncryptedAppData function
 Sets app-specific data that should be encrypted.
 
 Parameters:  
@@ -82,7 +82,7 @@ Parameters:
 
 An application can specify a dictionary of app-specific data that will be encrypted by the protection service. This encrypted data is independent of the signed data set by SetSignedAppData.
   
-### SetSignedAppData
+### SetSignedAppData function
 Sets app-specific data that should be signed.
 
 Parameters:  
@@ -91,5 +91,5 @@ Parameters:
 
 An application can specify a dictionary of app-specific data that will be signed by the protection service. This signed data is independent of the encrypted data set by SetEncryptedAppData.
   
-### ~ProtectionDescriptorBuilder
+### ~ProtectionDescriptorBuilder function
 _Not documented yet._

@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::ProtectionProfile 
@@ -16,22 +16,22 @@ An application needs to create a [ProtectionProfile](class_mip_protectionprofile
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Gets settings used by [ProtectionProfile](class_mip_protectionprofile.md) during its initialization and throughout its lifetime.
-public void ListEnginesAsync(const std::shared_ptr<void>& context)  |  Starts list engines operation.
-public std::vector<std::string> ListEngines()  |  List engines.
-public void AddEngineAsync(const ProtectionEngine::Settings& settings, const std::shared_ptr<void>& context)  |  Starts adding a new protection engine to the profile.
-public std::shared_ptr<ProtectionEngine> AddEngine(const ProtectionEngine::Settings& settings)  |  Add a new protection engine to the profile.
-public void DeleteEngineAsync(const std::string& engineId, const std::shared_ptr<void>& context)  |  Starts deleting the protection engine with the given ID. All data for the given engine will be deleted.
+public void ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Starts list engines operation.
+public std::vector\<std::string\> ListEngines()  |  List engines.
+public void AddEngineAsync(const ProtectionEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  Starts adding a new protection engine to the profile.
+public std::shared_ptr\<ProtectionEngine\> AddEngine(const ProtectionEngine::Settings& settings)  |  Add a new protection engine to the profile.
+public void DeleteEngineAsync(const std::string& engineId, const std::shared_ptr\<void\>& context)  |  Starts deleting the protection engine with the given ID. All data for the given engine will be deleted.
 public void DeleteEngine(const std::string& engineId)  |  Delete the protection engine with the given ID. All data for the given engine will be deleted.
   
 ## Members
   
-### Settings
+### GetSettings function
 Gets settings used by [ProtectionProfile](class_mip_protectionprofile.md) during its initialization and throughout its lifetime.
 
   
 **Returns**: [Settings](class_mip_protectionprofile_settings.md) used by [ProtectionProfile](class_mip_protectionprofile.md) during its initialization and throughout its lifetime
   
-### ListEnginesAsync
+### ListEnginesAsync function
 Starts list engines operation.
 
 Parameters:  
@@ -40,13 +40,13 @@ Parameters:
 
 [ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) will be called upon success or failure.
   
-### ListEngines
+### ListEngines function
 List engines.
 
   
 **Returns**: Cached engine IDs
   
-### AddEngineAsync
+### AddEngineAsync function
 Starts adding a new protection engine to the profile.
 
 Parameters:  
@@ -58,7 +58,7 @@ Parameters:
 
 [ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) will be called upon success or failure.
   
-### ProtectionEngine
+### AddEngine function
 Add a new protection engine to the profile.
 
 Parameters:  
@@ -69,7 +69,7 @@ Parameters:
   
 **Returns**: Newly created [ProtectionEngine](class_mip_protectionengine.md)
   
-### DeleteEngineAsync
+### DeleteEngineAsync function
 Starts deleting the protection engine with the given ID. All data for the given engine will be deleted.
 
 Parameters:  
@@ -81,7 +81,7 @@ Parameters:
 
 [ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) will be called upon success or failure.
   
-### DeleteEngine
+### DeleteEngine function
 Delete the protection engine with the given ID. All data for the given engine will be deleted.
 
 Parameters:  

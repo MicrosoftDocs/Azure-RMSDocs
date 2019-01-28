@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::HttpResponse 
@@ -16,23 +16,23 @@ Interface that describes a single HTTP response, implemented by client app when 
 --------------------------------|---------------------------------------------
 public int32_t GetStatusCode() const  |  Get response status code.
 public const std::string& GetBody() const  |  Get request body.
-public const std::map<std::string, std::string, CaseInsensitiveComparator>& GetHeaders() const  |  Get request headers.
+public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Get request headers.
   
 ## Members
   
-### GetStatusCode
+### GetStatusCode function
 Get response status code.
 
   
 **Returns**: Status code
   
-### GetBody
+### GetBody function
 Get request body.
 
   
 **Returns**: Request body
   
-### GetHeaders
+### GetHeaders function
 Get request headers.
 
   
