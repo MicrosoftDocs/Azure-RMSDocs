@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ---
 
 # class mip::PolicyEngine::Settings 
@@ -23,15 +23,15 @@ public void SetIdentity(const Identity& identity)  |  Set the [Identity](class_m
 public const std::string& GetClientData() const  |  Get the Client Data set in the settings.
 public void SetClientData(const std::string& clientData)  |  Set the Client Data string.
 public const std::string& GetLocale() const  |  Get the Locale set in the settings.
-public void SetCustomSettings(const std::vector<std::pair<std::string, std::string>>& customSettings)  |  Set the custom settings, used for feature gating and testing.
-public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
+public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& customSettings)  |  Set the custom settings, used for feature gating and testing.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
 public void SetSessionId(const std::string& sessionId)  |  Set the session ID, used for client defined telemetry.
 public const std::string& GetSessionId() const  |  Get the session ID, a unique identifier.
 public bool IsLoadSensitivityTypesEnabled() const  |  Get the the flag indicating if load sensitivity labels is enabled.
   
 ## Members
   
-### Settings
+### Settings function
 [PolicyEngine::Settings](class_mip_policyengine_settings.md) constructor for loading an existing engine.
 
 Parameters:  
@@ -48,7 +48,7 @@ Parameters:
 
 
   
-### Settings
+### Settings function
 [PolicyEngine::Settings](class_mip_policyengine_settings.md) constructor for creating a new engine.
 
 Parameters:  
@@ -65,13 +65,13 @@ Parameters:
 
 
   
-### GetEngineId
+### GetEngineId function
 Get the engine ID.
 
   
 **Returns**: A unique string identifying the engine.
   
-### SetEngineId
+### SetEngineId function
 Set the engine ID.
 
 Parameters:  
@@ -79,7 +79,7 @@ Parameters:
 
 
   
-### Identity
+### GetIdentity function
 Get the [Identity](class_mip_identity.md) object.
 
   
@@ -87,7 +87,7 @@ Get the [Identity](class_mip_identity.md) object.
   
 **See also**: [mip::Identity](class_mip_identity.md)
   
-### SetIdentity
+### SetIdentity function
 Set the [Identity](class_mip_identity.md) object.
 
 Parameters:  
@@ -97,13 +97,13 @@ Parameters:
   
 **See also**: [mip::Identity](class_mip_identity.md)
   
-### GetClientData
+### GetClientData function
 Get the Client Data set in the settings.
 
   
 **Returns**: A string of data specified by the client.
   
-### SetClientData
+### SetClientData function
 Set the Client Data string.
 
 Parameters:  
@@ -111,13 +111,13 @@ Parameters:
 
 
   
-### GetLocale
+### GetLocale function
 Get the Locale set in the settings.
 
   
 **Returns**: The locale.
   
-### SetCustomSettings
+### SetCustomSettings function
 Set the custom settings, used for feature gating and testing.
 
 Parameters:  
@@ -125,13 +125,13 @@ Parameters:
 
 
   
-### GetCustomSettings
+### GetCustomSettings function
 Get the custom settings, used for feature gating and testing.
 
   
 **Returns**: List of name/value pairs.
   
-### SetSessionId
+### SetSessionId function
 Set the session ID, used for client defined telemetry.
 
 Parameters:  
@@ -139,13 +139,13 @@ Parameters:
 
 
   
-### GetSessionId
+### GetSessionId function
 Get the session ID, a unique identifier.
 
   
 **Returns**: The session ID.
   
-### IsLoadSensitivityTypesEnabled
+### IsLoadSensitivityTypesEnabled function
 Get the the flag indicating if load sensitivity labels is enabled.
 
   

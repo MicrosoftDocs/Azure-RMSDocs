@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ---
 
 # class mip::FileHandler::Observer 
@@ -16,37 +16,37 @@ Client should not call the engine back on the thread that calls the observer.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnCreateFileHandlerSuccess(const std::shared_ptr<FileHandler>& fileHandler, const std::shared_ptr<void>& context)  |  Called when the handler is created successfully.
-public virtual void OnCreateFileHandlerFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when creating the handler failed.
-public virtual void OnClassifySuccess(const std::vector<std::shared_ptr<Action>>& actions, const std::shared_ptr<void>& context)  |  Called when classify success.
-public virtual void OnClassifyFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when classify failed.
-public virtual void OnGetDecryptedTemporaryFileSuccess(const std::string& decryptedFilePath, const std::shared_ptr<void>& context)  |  Called when getting the decrypted temporary file success.
-public virtual void OnGetDecryptedTemporaryFileFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when getting the decrypted temporary file failed.
-public virtual void OnCommitSuccess(bool committed, const std::shared_ptr<void>& context)  |  Called when committing the changes to the file were successful.
-public virtual void OnCommitFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when committing the changes to the file failed.
+public virtual void OnCreateFileHandlerSuccess(const std::shared_ptr\<FileHandler\>& fileHandler, const std::shared_ptr\<void\>& context)  |  Called when the handler is created successfully.
+public virtual void OnCreateFileHandlerFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when creating the handler failed.
+public virtual void OnClassifySuccess(const std::vector\<std::shared_ptr\<Action\>\>& actions, const std::shared_ptr\<void\>& context)  |  Called when classify success.
+public virtual void OnClassifyFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when classify failed.
+public virtual void OnGetDecryptedTemporaryFileSuccess(const std::string& decryptedFilePath, const std::shared_ptr\<void\>& context)  |  Called when getting the decrypted temporary file success.
+public virtual void OnGetDecryptedTemporaryFileFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when getting the decrypted temporary file failed.
+public virtual void OnCommitSuccess(bool committed, const std::shared_ptr\<void\>& context)  |  Called when committing the changes to the file were successful.
+public virtual void OnCommitFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when committing the changes to the file failed.
   
 ## Members
   
-### OnCreateFileHandlerSuccess
+### OnCreateFileHandlerSuccess function
 Called when the handler is created successfully.
   
-### OnCreateFileHandlerFailure
+### OnCreateFileHandlerFailure function
 Called when creating the handler failed.
   
-### OnClassifySuccess
+### OnClassifySuccess function
 Called when classify success.
   
-### OnClassifyFailure
+### OnClassifyFailure function
 Called when classify failed.
   
-### OnGetDecryptedTemporaryFileSuccess
+### OnGetDecryptedTemporaryFileSuccess function
 Called when getting the decrypted temporary file success.
   
-### OnGetDecryptedTemporaryFileFailure
+### OnGetDecryptedTemporaryFileFailure function
 Called when getting the decrypted temporary file failed.
   
-### OnCommitSuccess
+### OnCommitSuccess function
 Called when committing the changes to the file were successful.
   
-### OnCommitFailure
+### OnCommitFailure function
 Called when committing the changes to the file failed.

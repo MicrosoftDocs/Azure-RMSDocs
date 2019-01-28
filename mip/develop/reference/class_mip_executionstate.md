@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ---
 
 # class mip::ExecutionState 
@@ -19,44 +19,44 @@ public std::string GetNewLabelId() const  |  Gets the sensitivity label ID that 
 public ActionSource GetNewLabelActionSource() const  |  Gets the source for a new label action.
 public std::string GetContentIdentifier() const  |  Gets the content identifier that describes the document. example for a file: [path\filename] example for an email: [Subject:Sender].
 public ContentState GetContentState() const  |  Gets the state of the content while the application is interacting with it.
-public std::pair<bool, std::string> IsDowngradeJustified() const  |  Implementation should pass if justification to downgrade an existing label was given.
+public std::pair\<bool, std::string\> IsDowngradeJustified() const  |  Implementation should pass if justification to downgrade an existing label was given.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Get the new label's assignment method.
-public std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties() const  |  Return new label's extended properties.
-public std::vector<std::pair<std::string, std::string>> GetContentMetadata(const std::vector<std::string>& names, const std::vector<std::string>& namePrefixes) const  |  Get the meta-data items from the content.
-public std::shared_ptr<ProtectionDescriptor> GetProtectionDescriptor() const  |  Get the Protection Descriptor.
+public std::vector\<std::pair\<std::string, std::string\>\> GetNewLabelExtendedProperties() const  |  Return new label's extended properties.
+public std::vector\<std::pair\<std::string, std::string\>\> GetContentMetadata(const std::vector\<std::string\>& names, const std::vector\<std::string\>& namePrefixes) const  |  Get the meta-data items from the content.
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Get the Protection Descriptor.
 public ContentFormat GetContentFormat() const  |  Gets the content format.
 public ActionType GetSupportedActions() const  |  Gets a masked enum describing all the supported action types.
-public virtual std::map<std::string, std::shared_ptr<ClassificationResult>> GetClassificationResults(const std::vector<std::shared_ptr<ClassificationRequest>> &) const  |  Return a map of classification results.
-public virtual std::map<std::string, std::string> GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
+public virtual std::map\<std::string, std::shared_ptr\<ClassificationResult\>\> GetClassificationResults(const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Return a map of classification results.
+public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
   
 ## Members
   
-### GetNewLabelId
+### GetNewLabelId function
 Gets the sensitivity label ID that should be applied on the document.
 
   
 **Returns**: Sensitivity label ID to be applied to the content if exists else empty to remove label.
   
-### ActionSource
+### GetNewLabelActionSource function
 Gets the source for a new label action.
 
   
 **Returns**: Action source.
   
-### GetContentIdentifier
+### GetContentIdentifier function
 Gets the content identifier that describes the document. example for a file: [path\filename] example for an email: [Subject:Sender].
 
   
 **Returns**: Content identifier to be applied to the content.
 This value is used by auditing as a human-readable description of the content
   
-### ContentState
+### GetContentState function
 Gets the state of the content while the application is interacting with it.
 
   
 **Returns**: State of the content data
   
-### IsDowngradeJustified
+### IsDowngradeJustified function
 Implementation should pass if justification to downgrade an existing label was given.
 
   
@@ -64,7 +64,7 @@ Implementation should pass if justification to downgrade an existing label was g
   
 **See also**: [mip::JustifyAction](class_mip_justifyaction.md)
   
-### AssignmentMethod
+### GetNewLabelAssignmentMethod function
 Get the new label's assignment method.
 
   
@@ -72,26 +72,26 @@ Get the new label's assignment method.
   
 **See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod)
   
-### GetNewLabelExtendedProperties
+### GetNewLabelExtendedProperties function
 Return new label's extended properties.
 
   
 **Returns**: The extended properties applied to the content.
   
-### GetContentMetadata
+### GetContentMetadata function
 Get the meta-data items from the content.
 
   
 **Returns**: The metadata applied to the content. 
 Each metadata item is a pair of name and value.
   
-### ProtectionDescriptor
+### GetProtectionDescriptor function
 Get the Protection Descriptor.
 
   
 **Returns**: The Protection Descriptor
   
-### ContentFormat
+### GetContentFormat function
 Gets the content format.
 
   
@@ -99,14 +99,14 @@ Gets the content format.
   
 **See also**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat)
   
-### ActionType
+### GetSupportedActions function
 Gets a masked enum describing all the supported action types.
 
   
 **Returns**: A masked enum describing all the supported action types.
 ActionType::Justify must be supported. When a policy and label change requires justification, a justification action will always be returned.
   
-### ClassificationResult
+### GetClassificationResults function
 Return a map of classification results.
 
 Parameters:  
@@ -117,7 +117,7 @@ Parameters:
   
 **Returns**: A list of classification result.
   
-### GetAuditMetadata
+### GetAuditMetadata function
 Return a map of application specific audit key-value pairs.
 
   

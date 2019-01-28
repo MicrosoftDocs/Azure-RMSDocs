@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ---
 
 # class mip::PolicyProfile 
@@ -15,20 +15,20 @@ ms.date: 01/23/2019
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Get the settings set on the profile.
-public void ListEnginesAsync(const std::shared_ptr<void>& context)  |  Starts list engines operation.
-public void UnloadEngineAsync(const std::string& id, const std::shared_ptr<void>& context)  |  Starts unloading the policy engine with the given ID.
-public void AddEngineAsync(const PolicyEngine::Settings& settings, const std::shared_ptr<void>& context)  |  Starts adding a new policy engine to the profile.
-public void DeleteEngineAsync(const std::string& id, const std::shared_ptr<void>& context)  |  Starts deleting the policy engine with the given ID. All data for the given profile will be deleted.
+public void ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Starts list engines operation.
+public void UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts unloading the policy engine with the given ID.
+public void AddEngineAsync(const PolicyEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  Starts adding a new policy engine to the profile.
+public void DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts deleting the policy engine with the given ID. All data for the given profile will be deleted.
   
 ## Members
   
-### Settings
+### GetSettings function
 Get the settings set on the profile.
 
   
 **Returns**: Settings set on the profile.
   
-### ListEnginesAsync
+### ListEnginesAsync function
 Starts list engines operation.
 
 Parameters:  
@@ -37,7 +37,7 @@ Parameters:
 
 [PolicyProfile::Observer](class_mip_policyprofile_observer.md) will be called upon success or failure.
   
-### UnloadEngineAsync
+### UnloadEngineAsync function
 Starts unloading the policy engine with the given ID.
 
 Parameters:  
@@ -49,7 +49,7 @@ Parameters:
 
 [PolicyProfile::Observer](class_mip_policyprofile_observer.md) will be called upon success or failure.
   
-### AddEngineAsync
+### AddEngineAsync function
 Starts adding a new policy engine to the profile.
 
 Parameters:  
@@ -61,7 +61,7 @@ Parameters:
 
 [PolicyProfile::Observer](class_mip_policyprofile_observer.md) will be called upon success or failure.
   
-### DeleteEngineAsync
+### DeleteEngineAsync function
 Starts deleting the policy engine with the given ID. All data for the given profile will be deleted.
 
 Parameters:  

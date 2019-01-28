@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ---
 
 # class mip::ProtectionEngine 
@@ -15,28 +15,28 @@ Manages protection-related actions related to a specific identity.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Gets the engine settings.
-public void GetTemplatesAsync(const std::shared_ptr<ProtectionEngine::Observer>& observer, const std::shared_ptr<void>& context)  |  Get collection of templates available to a user.
-public std::vector<std::string> GetTemplates(const std::shared_ptr<void>& context)  |  Get collection of templates available to a user.
-public void GetRightsForLabelIdAsync(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::shared_ptr<ProtectionEngine::Observer>& observer, const std::shared_ptr<void>& context)  |  Get collection of rights available to a user for a label ID.
-public std::vector<std::string> GetRightsForLabelId(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::shared_ptr<void>& context)  |  Get collection of rights available to a user for a labelId.
-public void CreateProtectionHandlerFromDescriptorAsync(const std::shared_ptr<ProtectionDescriptor>& descriptor, const ProtectionHandlerCreationOptions& options, const std::shared_ptr<ProtectionHandler::Observer>& observer, const std::shared_ptr<void>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
-public std::shared_ptr<ProtectionHandler> CreateProtectionHandlerFromDescriptor(const std::shared_ptr<ProtectionDescriptor>& descriptor, const ProtectionHandlerCreationOptions& options, const std::shared_ptr<void>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
-public void CreateProtectionHandlerFromPublishingLicenseAsync(const std::vector<uint8_t>& serializedPublishingLicense, const ProtectionHandlerCreationOptions& options, const std::shared_ptr<ProtectionHandler::Observer>& observer, const std::shared_ptr<void>& context)  |  Creates a protection handler from a serialized publishing license.
-public std::shared_ptr<ProtectionHandler> CreateProtectionHandlerFromPublishingLicense(const std::vector<uint8_t>& serializedPublishingLicense, const ProtectionHandlerCreationOptions& options, const std::shared_ptr<void>& context)  |  Creates a protection handler from a serialized publishing license.
-public void CreateProtectionHandlerFromProtectionInfoAsync(const std::vector<uint8_t>& serializedPublishingLicense, const std::vector<uint8_t>& serializedProtectionInfo, const std::shared_ptr<ProtectionHandler::Observer>& observer, const std::shared_ptr<void>& context)  |  Creates a protection handler from a serialized publishing license and a serialized protection info.
-public std::shared_ptr<ProtectionHandler> CreateProtectionHandlerFromProtectionInfo(const std::vector<uint8_t>& serializedPublishingLicense, const std::vector<uint8_t>& serializedProtectionInfo, const std::shared_ptr<void>& context)  |  Creates a protection handler from a serialized publishing license and a serialized protection info.
-public void CreateProtectionHandlerFromPublishingLicenseContextAsync(const PublishingLicenseContext& publishingLicenseContext, const ProtectionHandlerCreationOptions& options, const std::shared_ptr<ProtectionHandler::Observer>& observer, const std::shared_ptr<void>& context)  |  Creates a protection handler from a publishing license context.
-public std::shared_ptr<ProtectionHandler> CreateProtectionHandlerFromPublishingLicenseContext(const PublishingLicenseContext& publishingLicenseContext, const ProtectionHandlerCreationOptions& options, const std::shared_ptr<void>& context)  |  Creates a protection handler from a publishing license context.
+public void GetTemplatesAsync(const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Get collection of templates available to a user.
+public std::vector\<std::string\> GetTemplates(const std::shared_ptr\<void\>& context)  |  Get collection of templates available to a user.
+public void GetRightsForLabelIdAsync(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Get collection of rights available to a user for a label ID.
+public std::vector\<std::string\> GetRightsForLabelId(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::shared_ptr\<void\>& context)  |  Get collection of rights available to a user for a labelId.
+public void CreateProtectionHandlerFromDescriptorAsync(const std::shared_ptr\<ProtectionDescriptor\>& descriptor, const ProtectionHandlerCreationOptions& options, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
+public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromDescriptor(const std::shared_ptr\<ProtectionDescriptor\>& descriptor, const ProtectionHandlerCreationOptions& options, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
+public void CreateProtectionHandlerFromPublishingLicenseAsync(const std::vector\<uint8_t\>& serializedPublishingLicense, const ProtectionHandlerCreationOptions& options, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler from a serialized publishing license.
+public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromPublishingLicense(const std::vector\<uint8_t\>& serializedPublishingLicense, const ProtectionHandlerCreationOptions& options, const std::shared_ptr\<void\>& context)  |  Creates a protection handler from a serialized publishing license.
+public void CreateProtectionHandlerFromProtectionInfoAsync(const std::vector\<uint8_t\>& serializedPublishingLicense, const std::vector\<uint8_t\>& serializedProtectionInfo, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler from a serialized publishing license and a serialized protection info.
+public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromProtectionInfo(const std::vector\<uint8_t\>& serializedPublishingLicense, const std::vector\<uint8_t\>& serializedProtectionInfo, const std::shared_ptr\<void\>& context)  |  Creates a protection handler from a serialized publishing license and a serialized protection info.
+public void CreateProtectionHandlerFromPublishingLicenseContextAsync(const PublishingLicenseContext& publishingLicenseContext, const ProtectionHandlerCreationOptions& options, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler from a publishing license context.
+public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromPublishingLicenseContext(const PublishingLicenseContext& publishingLicenseContext, const ProtectionHandlerCreationOptions& options, const std::shared_ptr\<void\>& context)  |  Creates a protection handler from a publishing license context.
   
 ## Members
   
-### Settings
+### GetSettings function
 Gets the engine settings.
 
   
 **Returns**: Engine settings
   
-### GetTemplatesAsync
+### GetTemplatesAsync function
 Get collection of templates available to a user.
 
 Parameters:  
@@ -47,7 +47,7 @@ Parameters:
 
 
   
-### GetTemplates
+### GetTemplates function
 Get collection of templates available to a user.
 
 Parameters:  
@@ -58,7 +58,7 @@ Parameters:
   
 **Returns**: List of template IDs
   
-### GetRightsForLabelIdAsync
+### GetRightsForLabelIdAsync function
 Get collection of rights available to a user for a label ID.
 
 Parameters:  
@@ -78,7 +78,7 @@ Parameters:
 
 
   
-### GetRightsForLabelId
+### GetRightsForLabelId function
 Get collection of rights available to a user for a labelId.
 
 Parameters:  
@@ -98,7 +98,7 @@ Parameters:
   
 **Returns**: List of rights
   
-### CreateProtectionHandlerFromDescriptorAsync
+### CreateProtectionHandlerFromDescriptorAsync function
 Creates a protection handler where rights/roles are assigned to specific users.
 
 Parameters:  
@@ -115,7 +115,7 @@ Parameters:
 
 
   
-### ProtectionHandler
+### CreateProtectionHandlerFromDescriptor function
 Creates a protection handler where rights/roles are assigned to specific users.
 
 Parameters:  
@@ -132,7 +132,7 @@ Parameters:
   
 **Returns**: [ProtectionHandler](class_mip_protectionhandler.md)
   
-### CreateProtectionHandlerFromPublishingLicenseAsync
+### CreateProtectionHandlerFromPublishingLicenseAsync function
 Creates a protection handler from a serialized publishing license.
 
 Parameters:  
@@ -149,7 +149,7 @@ Parameters:
 
 
   
-### ProtectionHandler
+### CreateProtectionHandlerFromPublishingLicense function
 Creates a protection handler from a serialized publishing license.
 
 Parameters:  
@@ -169,7 +169,7 @@ Parameters:
   
 **Returns**: [ProtectionHandler](class_mip_protectionhandler.md)
   
-### CreateProtectionHandlerFromProtectionInfoAsync
+### CreateProtectionHandlerFromProtectionInfoAsync function
 Creates a protection handler from a serialized publishing license and a serialized protection info.
 
 Parameters:  
@@ -186,7 +186,7 @@ Parameters:
 
 
   
-### ProtectionHandler
+### CreateProtectionHandlerFromProtectionInfo function
 Creates a protection handler from a serialized publishing license and a serialized protection info.
 
 Parameters:  
@@ -203,7 +203,7 @@ Parameters:
   
 **Returns**: [ProtectionHandler](class_mip_protectionhandler.md)
   
-### CreateProtectionHandlerFromPublishingLicenseContextAsync
+### CreateProtectionHandlerFromPublishingLicenseContextAsync function
 Creates a protection handler from a publishing license context.
 
 Parameters:  
@@ -220,7 +220,7 @@ Parameters:
 
 
   
-### ProtectionHandler
+### CreateProtectionHandlerFromPublishingLicenseContext function
 Creates a protection handler from a publishing license context.
 
 Parameters:  

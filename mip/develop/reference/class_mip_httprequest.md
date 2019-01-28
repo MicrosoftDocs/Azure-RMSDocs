@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ---
 
 # class mip::HttpRequest 
@@ -17,29 +17,29 @@ Interface that describes a single HTTP request.
 public HttpRequestType GetRequestType() const  |  Get request type.
 public const std::string& GetUrl() const  |  Get request url.
 public const std::string& GetBody() const  |  Get request body.
-public const std::map<std::string, std::string, CaseInsensitiveComparator>& GetHeaders() const  |  Get request headers.
+public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Get request headers.
   
 ## Members
   
-### HttpRequestType
+### GetRequestType function
 Get request type.
 
   
 **Returns**: Request type
   
-### GetUrl
+### GetUrl function
 Get request url.
 
   
 **Returns**: Request url
   
-### GetBody
+### GetBody function
 Get request body.
 
   
 **Returns**: Request body
   
-### GetHeaders
+### GetHeaders function
 Get request headers.
 
   

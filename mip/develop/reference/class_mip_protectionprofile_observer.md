@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ---
 
 # class mip::ProtectionProfile::Observer 
@@ -15,18 +15,18 @@ This interface must be implemented by applications using the protection SDK
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnLoadSuccess(const std::shared_ptr<ProtectionProfile>& profile, const std::shared_ptr<void>& context)  |  Called when profile was loaded successfully.
-public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when loading a profile caused an error.
-public virtual void OnListEnginesSuccess(const std::vector<std::string>& engineIds, const std::shared_ptr<void>& context)  |  Called when list of engines was generated successfully.
-public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when listing engines resulted in an error.
-public virtual void OnAddEngineSuccess(const std::shared_ptr<ProtectionEngine>& engine, const std::shared_ptr<void>& context)  |  Called when a new engine was added successfully.
-public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when adding a new engine resulted in an error.
-public virtual void OnDeleteEngineSuccess(const std::shared_ptr<void>& context)  |  Called when an engine was deleted successfully.
-public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when deleting an engine resulted in an error.
+public virtual void OnLoadSuccess(const std::shared_ptr\<ProtectionProfile\>& profile, const std::shared_ptr\<void\>& context)  |  Called when profile was loaded successfully.
+public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when loading a profile caused an error.
+public virtual void OnListEnginesSuccess(const std::vector\<std::string\>& engineIds, const std::shared_ptr\<void\>& context)  |  Called when list of engines was generated successfully.
+public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when listing engines resulted in an error.
+public virtual void OnAddEngineSuccess(const std::shared_ptr\<ProtectionEngine\>& engine, const std::shared_ptr\<void\>& context)  |  Called when a new engine was added successfully.
+public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when adding a new engine resulted in an error.
+public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context)  |  Called when an engine was deleted successfully.
+public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when deleting an engine resulted in an error.
   
 ## Members
   
-### OnLoadSuccess
+### OnLoadSuccess function
 Called when profile was loaded successfully.
 
 Parameters:  
@@ -38,7 +38,7 @@ Parameters:
 
 An application can pass any type of context (for example, std::promise, std::function) to [ProtectionProfile::LoadAsync](class_mip_protectionprofile.md#addengineasync) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess) or [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure)
   
-### OnLoadFailure
+### OnLoadFailure function
 Called when loading a profile caused an error.
 
 Parameters:  
@@ -50,7 +50,7 @@ Parameters:
 
 An application can pass any type of context (for example, std::promise, std::function) to [ProtectionProfile::LoadAsync](class_mip_protectionprofile.md#addengineasync) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess) or [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure)
   
-### OnListEnginesSuccess
+### OnListEnginesSuccess function
 Called when list of engines was generated successfully.
 
 Parameters:  
@@ -61,7 +61,7 @@ Parameters:
 
 
   
-### OnListEnginesFailure
+### OnListEnginesFailure function
 Called when listing engines resulted in an error.
 
 Parameters:  
@@ -72,7 +72,7 @@ Parameters:
 
 
   
-### OnAddEngineSuccess
+### OnAddEngineSuccess function
 Called when a new engine was added successfully.
 
 Parameters:  
@@ -83,7 +83,7 @@ Parameters:
 
 
   
-### OnAddEngineFailure
+### OnAddEngineFailure function
 Called when adding a new engine resulted in an error.
 
 Parameters:  
@@ -94,7 +94,7 @@ Parameters:
 
 
   
-### OnDeleteEngineSuccess
+### OnDeleteEngineSuccess function
 Called when an engine was deleted successfully.
 
 Parameters:  
@@ -102,7 +102,7 @@ Parameters:
 
 
   
-### OnDeleteEngineFailure
+### OnDeleteEngineFailure function
 Called when deleting an engine resulted in an error.
 
 Parameters:  

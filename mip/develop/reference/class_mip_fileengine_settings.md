@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ---
 
 # class mip::FileEngine::Settings 
@@ -21,8 +21,8 @@ public const Identity& GetIdentity() const  |  Returns the engine [Identity](cla
 public void SetIdentity(const Identity& identity)  |  Sets the engine identity.
 public const std::string& GetClientData() const  |  Returns the engine client data.
 public const std::string& GetLocale() const  |  Return the engine locale.
-public void SetCustomSettings(const std::vector<std::pair<std::string, std::string>>& value)  |  Sets a list of name/value pairs used for testing and experimentation.
-public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  Gets a list of name/value pairs used for testing and experimentation.
+public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& value)  |  Sets a list of name/value pairs used for testing and experimentation.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Gets a list of name/value pairs used for testing and experimentation.
 public void SetSessionId(const std::string& sessionId)  |  Sets the engine session ID.
 public const std::string& GetSessionId() const  |  Return the engine session ID.
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Sets the protection cloud endpoint base url, used to specify cloud boundary.
@@ -33,7 +33,7 @@ public bool IsLoadSensitivityTypesEnabled() const  |  Get the the flag indicatin
   
 ## Members
   
-### Settings
+### Settings function
 [FileEngine::Settings](class_mip_fileengine_settings.md) constructor for loading an existing engine.
 
 Parameters:  
@@ -50,7 +50,7 @@ Parameters:
 
 
   
-### Settings
+### Settings function
 [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor for creating a new engine.
 
 Parameters:  
@@ -67,10 +67,10 @@ Parameters:
 
 
   
-### GetEngineId
+### GetEngineId function
 Returns the engine ID.
   
-### SetEngineId
+### SetEngineId function
 Set the engine ID.
 
 Parameters:  
@@ -78,31 +78,31 @@ Parameters:
 
 
   
-### Identity
+### GetIdentity function
 Returns the engine [Identity](class_mip_identity.md).
   
-### SetIdentity
+### SetIdentity function
 Sets the engine identity.
   
-### GetClientData
+### GetClientData function
 Returns the engine client data.
   
-### GetLocale
+### GetLocale function
 Return the engine locale.
   
-### SetCustomSettings
+### SetCustomSettings function
 Sets a list of name/value pairs used for testing and experimentation.
   
-### GetCustomSettings
+### GetCustomSettings function
 Gets a list of name/value pairs used for testing and experimentation.
   
-### SetSessionId
+### SetSessionId function
 Sets the engine session ID.
   
-### GetSessionId
+### GetSessionId function
 Return the engine session ID.
   
-### SetProtectionCloudEndpointBaseUrl
+### SetProtectionCloudEndpointBaseUrl function
 Sets the protection cloud endpoint base url, used to specify cloud boundary.
 
 Parameters:  
@@ -110,19 +110,19 @@ Parameters:
 
 
   
-### GetProtectionCloudEndpointBaseUrl
+### GetProtectionCloudEndpointBaseUrl function
 Gets the cloudEndpointBaseUrl.
 
   
 **Returns**: Base url associated with protection endpoints
   
-### SetProtectionOnlyEngine
+### SetProtectionOnlyEngine function
 Sets protection only engine indicator - no policy/label.
   
-### IsProtectionOnlyEngine
+### IsProtectionOnlyEngine function
 Return protection only engine indicator - no policy/label.
   
-### IsLoadSensitivityTypesEnabled
+### IsLoadSensitivityTypesEnabled function
 Get the the flag indicating if load sensitivity labels is enabled.
 
   

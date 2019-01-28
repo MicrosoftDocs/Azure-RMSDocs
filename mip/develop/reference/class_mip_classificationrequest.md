@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ---
 
 # class mip::ClassificationRequest 
@@ -19,13 +19,13 @@ public std::string GetRulePackageId() const  |  Get the ID of the rule package.
   
 ## Members
   
-### GetClassificationId
+### GetClassificationId function
 Get the ID of the classification policy.
 
   
 **Returns**: ID of the classification policy.
   
-### GetRulePackageId
+### GetRulePackageId function
 Get the ID of the rule package.
 
   

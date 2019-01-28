@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ---
 
 # class mip::Stream 
@@ -26,7 +26,7 @@ public void Size(int64_t value)  |  Set the stream size.
   
 ## Members
   
-### Read
+### Read function
 Read into a buffer from the stream.
 
 Parameters:  
@@ -40,7 +40,7 @@ Parameters:
   
 **Returns**: Number of bytes read.
   
-### Write
+### Write function
 Write into the stream from a buffer.
 
 Parameters:  
@@ -54,13 +54,13 @@ Parameters:
   
 **Returns**: Number of bytes written.
   
-### Flush
+### Flush function
 flush the stream.
 
   
 **Returns**: True if successful else false.
   
-### Seek
+### Seek function
 Seek specific position within the stream.
 
 Parameters:  
@@ -68,31 +68,31 @@ Parameters:
 
 
   
-### CanRead
+### CanRead function
 A check if stream can be read from.
 
   
 **Returns**: True if readable else false.
   
-### CanWrite
+### CanWrite function
 A check if stream can be written to.
 
   
 **Returns**: True if writeable else false.
   
-### Position
+### Position function
 Get the current position within the stream.
 
   
 **Returns**: Position within the stream.
   
-### Size
+### Size function
 Get the size of the content within the stream.
 
   
 **Returns**: The stream size.
   
-### Size
+### Size function
 Set the stream size.
 
 Parameters:  

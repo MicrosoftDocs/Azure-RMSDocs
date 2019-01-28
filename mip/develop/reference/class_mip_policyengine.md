@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ---
 
 # class mip::PolicyEngine 
@@ -15,19 +15,19 @@ This class provides an interface for all engine functions.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Get the policy engine [Settings](class_mip_policyengine_settings.md).
-public const std::vector<std::shared_ptr<Label>>& ListSensitivityLabels()  |  list the sensitivity labels associated with the policy engine.
-public const std::vector<std::shared_ptr<SensitivityTypesRulePackage>>& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
+public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  list the sensitivity labels associated with the policy engine.
+public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
 public bool IsLabelingRequired() const  |  Checks if the policy dictates that a document must be labeled or not.
-public std::shared_ptr<Label> GetDefaultSensitivityLabel()  |  Get the default sensitivity label.
-public std::shared_ptr<PolicyHandler> CreatePolicyHandler(bool isAuditDiscoveryEnabled)  |  Create a Policy Handler to execute policy-related functions on a file's execution state.
+public std::shared_ptr\<Label\> GetDefaultSensitivityLabel()  |  Get the default sensitivity label.
+public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler(bool isAuditDiscoveryEnabled)  |  Create a Policy Handler to execute policy-related functions on a file's execution state.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Logs an application specific event to the audit pipeline.
 public const std::string& GetPolicyDataXml() const  |  Gets policy data XML which describes the settings, labels, and rules associated with this policy.
-public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  Gets a list of custom settings.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Gets a list of custom settings.
   
 ## Members
   
-### Settings
+### GetSettings function
 Get the policy engine [Settings](class_mip_policyengine_settings.md).
 
   
@@ -35,13 +35,13 @@ Get the policy engine [Settings](class_mip_policyengine_settings.md).
   
 **See also**: [mip::PolicyEngine::Settings](class_mip_policyengine_settings.md)
   
-### Label
+### ListSensitivityLabels function
 list the sensitivity labels associated with the policy engine.
 
   
 **Returns**: A list of sensitivity labels.
   
-### SensitivityTypesRulePackage
+### ListSensitivityTypes function
 list the sensitivity types associated with the policy engine.
 
   
@@ -49,25 +49,25 @@ list the sensitivity types associated with the policy engine.
   
 **See also**: [PolicyEngine::Settings](class_mip_policyengine_settings.md)).
   
-### GetMoreInfoUrl
+### GetMoreInfoUrl function
 Provide a url for looking up more information about the policy/labels.
 
   
 **Returns**: A url in string format.
   
-### IsLabelingRequired
+### IsLabelingRequired function
 Checks if the policy dictates that a document must be labeled or not.
 
   
 **Returns**: True if labeling is mandatory, else false.
   
-### Label
+### GetDefaultSensitivityLabel function
 Get the default sensitivity label.
 
   
 **Returns**: Default sensitivity label if exists, nullptr if there is no default label set.
   
-### PolicyHandler
+### CreatePolicyHandler function
 Create a Policy Handler to execute policy-related functions on a file's execution state.
 
 Parameters:  
@@ -79,7 +79,7 @@ Parameters:
 **Returns**: Policy Handler.
 Application needs to keep the policy handler object for the lifetime of the document
   
-### SendApplicationAuditEvent
+### SendApplicationAuditEvent function
 Logs an application specific event to the audit pipeline.
 
 Parameters:  
@@ -93,13 +93,13 @@ Parameters:
 
 
   
-### GetPolicyDataXml
+### GetPolicyDataXml function
 Gets policy data XML which describes the settings, labels, and rules associated with this policy.
 
   
 **Returns**: Policy data XML
   
-### GetCustomSettings
+### GetCustomSettings function
 Gets a list of custom settings.
 
   

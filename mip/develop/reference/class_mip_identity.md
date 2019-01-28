@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/23/2019
+ms.date: 01/25/2019
 ---
 
 # class mip::Identity 
@@ -22,10 +22,10 @@ public const std::string& GetDelegatedEmail() const  |  Get the delegated email,
   
 ## Members
   
-### Identity
+### Identity function
 Default [Identity](class_mip_identity.md) constructor used when a user email address is not known.
   
-### Identity
+### Identity function
 [Identity](class_mip_identity.md) constructor used when a user email address is known.
 
 Parameters:  
@@ -33,13 +33,13 @@ Parameters:
 
 
   
-### GetEmail
+### GetEmail function
 Get the email.
 
   
 **Returns**: The email.
   
-### SetDelegatedEmail
+### SetDelegatedEmail function
 Sets the delegated email, A delegated email address is an on behalf of user for which the opertations are performed.
 
 Parameters:  
@@ -47,7 +47,7 @@ Parameters:
 
 
   
-### GetDelegatedEmail
+### GetDelegatedEmail function
 Get the delegated email, A delegated email address is an on behalf of user for which the opertations are performed.
 
   
