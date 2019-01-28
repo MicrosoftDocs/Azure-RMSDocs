@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/17/20198
 ms.topic: article
 ms.service: information-protection
 
@@ -99,9 +99,13 @@ Use the following instructions to migrate your tenant and Azure Information Prot
 
 You must be a global administrator to migrate your labels.
 
-1. Open a new browser window and sign in to the Azure portal by using the following link: https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
+    
+    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
+2. From the **Manage** menu option, select **Unified labeling (Preview)**.
+
+3. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
 
 For the labels that successfully migrated, they can now be used by [clients that support unified labeling](#clients-that-support-unified-labeling). However, you must first publish these labels in the Security & Compliance Center.
 

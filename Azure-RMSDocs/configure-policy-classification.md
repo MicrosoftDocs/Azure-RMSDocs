@@ -6,7 +6,7 @@ description: Conditions for a label let you automatically assign a label to a do
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
@@ -37,7 +37,9 @@ An example prompt for when you configure a condition to apply a label as a recom
 
 ![Azure Information Protection detection and recommendation](./media/info-protect-recommend-calloutsv2.png)
 
-In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by selecting **Dismiss**. If the user chooses to dismiss the recommendation and the condition still applies when the document is next opened, the label recommendation is displayed again. 
+In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by selecting **Dismiss**. If the user chooses to dismiss the recommendation and the condition still applies when the document is next opened, the label recommendation is displayed again.
+
+If you configure automatic classification rather than recommended, the label is automatically applied and the user still sees a notification in their Office apps. However, the **Change now** and **Dismiss** buttons are replace with **OK**.
 
 > [!IMPORTANT]
 >Do not configure a label for automatic classification and a user-defined permission. The user-defined permissions option is a [protection setting](configure-policy-protection.md) that lets users specify who should be granted permissions.
@@ -107,11 +109,9 @@ When you click **Save**, your changes are automatically available to users and s
 
 The following sensitive information types require a minimum version of 1.37.19.0 for the Azure Information Protection client:
 
-- **EU Phone Number**
 - **EU Mobile Phone Number**
 - **EU Passport Number**
 - **EU Driver's License Number**
-- **EU GPS Coordinates**
 - **EU National Identification Number**
 - **EU Social Security Number (SSN) or Equivalent ID**
 - **EU Tax Identification Number (TIN)**
@@ -119,6 +119,24 @@ The following sensitive information types require a minimum version of 1.37.19.0
 - **Turkish National Identification number**
 - **Japanese Residence Card Number**
 
+
+The following sensitive information types require the current preview version of the Azure Information Protection client:
+
+- **Azure Service Bus Connection String**
+- **Azure IoT Connection String**
+- **Azure Storage Account**
+- **Azure IAAS Database Connection String and Azure SQL Connection String**
+- **Azure Redis Cache Connection String**
+- **Azure SAS**
+- **SQL Server Connection String**
+- **Azure DocumentDB Auth Key**
+- **Azure Publish Setting Password**
+- **Azure Storage Account Key (Generic)**
+
+Additionally, the following sensitive information types are not supported for the current preview version of the Azure Information Protection client, and no longer display in the Azure portal:
+
+- **EU Phone Number**
+- **EU GPS Coordinates**
 
 ## Next steps
 

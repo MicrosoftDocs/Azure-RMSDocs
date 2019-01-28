@@ -93,7 +93,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 
    The MIP SDK is supported on the following platforms, with separate downloads for each supported platform/language:  
 
-   [!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
+   [!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
    **Tar.gz/.Zip downloads**
 
