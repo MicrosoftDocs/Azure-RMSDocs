@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 01/25/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
@@ -42,8 +42,9 @@ Look out for announcements on the [Enterprise Mobility + Security blog](https://
 > [!NOTE]
 > **Now in preview**:
 > - Centralized reporting for classification and labeling. For more information, see [Central reporting for Azure Information Protection](reports-aip.md).
-> - Labeling ability in Office apps for mobile devices (iOS and Android) and Mac computers for customers who are opted-in to the [Office Insider program](https://support.office.com/article/what-is-office-insider-f4208185-b63a-4b68-9c7a-9a32d2411c16). For more information, see [Apply sensitivity labels to your documents and email within Office](https://aka.ms/officemipdocs).
-
+>
+>**Recently released**:
+> - Labeling ability built in to Office apps for mobile devices (iOS and Android) and Mac computers. For more information, see [Apply sensitivity labels to your documents and email within Office](https://aka.ms/officemipdocs).
 
 Request new features and vote on requests by visiting the [UserVoice site](https://msip.uservoice.com/) for Azure Information Protection.
 
