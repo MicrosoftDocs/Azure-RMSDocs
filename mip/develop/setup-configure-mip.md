@@ -14,7 +14,7 @@ The Quickstart and Tutorial articles are centered around building applications t
 
 The MIP SDK is supported on the following platforms:  
 
-[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
+[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ## Prerequisites
 
