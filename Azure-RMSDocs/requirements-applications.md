@@ -90,7 +90,7 @@ See also: [Office Applications Service Description](https://technet.microsoft.co
 
 The following Office client suites support protecting files and emails on Windows computers by using the Azure Rights Management service:
 
-- Office apps (minimum version 1805, build 9330.2078) from Office 365 Business or Microsoft 365 Business when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
+- Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
 
 - Office 365 ProPlus
     
