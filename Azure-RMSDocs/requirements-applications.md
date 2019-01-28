@@ -155,9 +155,9 @@ Download the relevant app by using the links on the [Microsoft Azure Information
 
 ### More information about the Rights Management sharing application
 
-This application is being replaced by the Azure Information Protection client. It is still required for Windows phones and tablets to view protected files. 
+This application is being replaced by the Azure Information Protection client.
 
-For Mac computers, it offers a viewer for protected PDF files (.ppdf), protected text images, and generically protected files. The RMS sharing app for Mac can also protect image files, but not other files. To protect Office files, use Office for Mac. 
+For Mac computers, the Rights Management sharing application offers a viewer for protected PDF files (.ppdf), protected text images, and generically protected files. It can also protect image files, but not other files. To protect Office files on these computers, use Office for Mac. 
 
 For more information, see the following resources:
 
