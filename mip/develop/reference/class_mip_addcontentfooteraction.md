@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/25/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::AddContentFooterAction 
@@ -61,7 +61,7 @@ Get the alignment of the footer.
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
+**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
 ### GetMargin function
 Get the margin of the footer from the bottom.

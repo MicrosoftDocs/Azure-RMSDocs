@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/25/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::ProtectionDescriptor 
@@ -111,11 +111,11 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getappsigneddata)
+A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getappsigneddata-function)
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](class_mip_protectiondescriptor.md#getencryptedappdata)
+A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](class_mip_protectiondescriptor.md#getencryptedappdata-function)
