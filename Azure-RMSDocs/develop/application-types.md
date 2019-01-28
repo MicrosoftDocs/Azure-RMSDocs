@@ -4,14 +4,12 @@
 title: Application types | Azure RMS
 description: This topic covers types of applications that you might choose to create as rights-enabled.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
 # optional metadata
 
@@ -64,5 +62,3 @@ For more information on protecting your application, see [Understanding usage re
 - [Developing your application](developing-your-application.md)
 - [Setting the API security mode](setting-the-api-security-mode-api-mode.md)
 - [Understanding usage restrictions](understanding-usage-restrictions.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

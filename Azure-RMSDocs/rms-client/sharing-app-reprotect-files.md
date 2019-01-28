@@ -8,10 +8,8 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 
 # optional metadata
@@ -39,7 +37,7 @@ When a file has been protected by Rights Management, you can change the permissi
 >
 > Similarly, if you want to add or remove a permission, you cannot just specify that permission to add or remove but must specify all the permissions that you want the specified people to have.
 
-If you are the owner of the file you want to re-protect (for example, you originally protected it by using the sharing application), you will automatically have permissions to re-protect the file. If are not the owner, you might or might not have permissions to re-protect the file, depending on the permissions that the protected file currently has. You need the [Full Control usage right](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) to re-protect a file.
+If you are the owner of the file you want to re-protect (for example, you originally protected it by using the sharing application), you will automatically have permissions to re-protect the file. If are not the owner, you might or might not have permissions to re-protect the file, depending on the permissions that the protected file currently has. You need the [Full Control usage right](../configure-usage-rights.md#usage-rights-and-descriptions) to re-protect a file.
 
 For example, if somebody else protected the file by using the Rights Management sharing application, and they specified a group that you belong to and **Co-Owner** as the custom permission, you will be able to re-protect the file. However, if they didn't specify your name or a group that you belong to, or if they selected **Reviewer - View and Edit**, or a template that does not let you remove permissions, you will not be able to re-protect the file. The easiest way to find out, is to try re-protecting the file.
 
@@ -73,10 +71,10 @@ If you want to completely remove all permissions so that the file is no longer p
 >
 > If your organization does not use either Azure Information Protection or AD RMS, you can apply for a free account that will accept your credentials so that you can use RMS-protected files:
 >
-> -   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
+> -   To apply for this account, click the link to apply for [RMS for individuals](https://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
-> -   For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> -   For more information, see [RMS for individuals and Azure Rights Management](../rms-for-individuals.md).
 
 ## To re-protect a file that you have emailed
 
@@ -100,5 +98,3 @@ For examples for how you might use the Rights Management sharing application, an
 
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

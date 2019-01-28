@@ -2,16 +2,13 @@
 # required metadata
 
 title: Get started - AIP app for iOS & Android
-description:
-keywords: How to view emails or files with the Azure Information Protection app for iOS and Android
+description: View emails or files with the Azure Information Protection app for iOS and Android
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 05/01/2018
-ms.topic: article
-ms.prod: azure
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 
 # optional metadata
@@ -42,7 +39,7 @@ To use the following instructions, you need access from your mobile device to on
 
 - **A .rpmsg file**: This is a rights-protected email message that displays as an attachment in an email message when your email app on your mobile device does not natively support rights management data protection. 
     
-    Use another device to send yourself a rights-protected email message that you can access from your mobile device. For example, use Outlook from a Windows computer. For a list of email clients that natively support rights management, see the EMAIL column from the [Applications that support Azure Rights Management data protection](../get-started/requirements-applications.md) page.
+    Use another device to send yourself a rights-protected email message that you can access from your mobile device. For example, use Outlook from a Windows computer. For a list of email clients that natively support rights management, see the EMAIL column from the [Applications that support Azure Rights Management data protection](../requirements-applications.md) page.
 
 - **A rights-protected PDF file**: From a Windows computer, use the Azure Information Protection client to [protect a PDF file](client-classify-protect.md) and then send yourself this rights-protected PDF file as an attachment in email. Alternatively, upload a PDF file to a SharePoint protected library and then share it, using your email address.
 
@@ -53,7 +50,3 @@ To view these files in the Azure Information Protection viewer app, tap the emai
 ## Next steps
 
 For questions or feedback about this app that are not addressed in the [FAQs](mobile-app-faq.md), visit our [Yammer site](https://www.yammer.com/AskIPTeam).
-
-If the app isn't working as described, see the resources listed in our [House rules](../house-rules.md) page.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

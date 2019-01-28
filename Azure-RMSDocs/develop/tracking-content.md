@@ -5,14 +5,12 @@ title: How to enable document tracking and revocation | Azure RMS
 description: Basic guidance for implementing document tracking of content as well as example code for metadata updates and a Track Usage button for your app.
 
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 # optional metadata
 
@@ -166,5 +164,3 @@ The client simply needs to open a browser with the appropriate URL. The RMS Docu
 * [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
 * [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

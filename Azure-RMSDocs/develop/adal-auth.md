@@ -4,14 +4,12 @@
 title: Configure your app for ADAL authentication - AIP
 description: Steps for configuring Azure Information Protection app to use Azure ADAL based authentication
 keywords: authentication, RMS, ADAL, Informatin Protection,
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 03/13/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 
 # optional metadata
@@ -34,7 +32,7 @@ This topic describes the steps for configuring your app for Azure Active Directo
 
 You will need the following:
 
-- A [subscription for Microsoft Azure](https://azure.microsoft.com/) (a free trial is sufficient). For more information, see [How users sign up for RMS for individuals](../understand-explore/rms-for-individuals-user-sign-up.md)
+- A [subscription for Microsoft Azure](https://azure.microsoft.com/) (a free trial is sufficient). For more information, see [How users sign up for RMS for individuals](../rms-for-individuals-user-sign-up.md)
 - A subscription for Microsoft Azure Rights Management (a free [RMS for Individuals](https://technet.microsoft.com/library/dn592127.aspx) account is sufficient).
 
 > [!NOTE]
@@ -109,4 +107,3 @@ After signing up for Microsoft Azure:
 
 ![Select SAVE](../media/SaveApplication.png)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

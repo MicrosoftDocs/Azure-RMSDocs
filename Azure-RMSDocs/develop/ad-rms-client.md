@@ -4,14 +4,12 @@
 title: Client | Azure RMS
 description: The AD RMS Client 2.1 is software designed for your client computers to help protect access to and usage of information
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: F7145090-C2EB-405A-A4CF-0240D57A36DA
 # optional metadata
 
@@ -42,5 +40,3 @@ For more information, see the [TechNet documentation on the RMS Client 2.1](http
 * [Overview](ad-rms-overview.md)
 * [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
 * [TechNet documentation on the RMS Client 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

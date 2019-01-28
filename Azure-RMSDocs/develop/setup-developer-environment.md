@@ -4,14 +4,12 @@
 title: Setup developer environment | Azure RMS
 description: Show you how to setup you your development environment to work with the AD RMS SDK APIs for your particular operating system.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 296FC4C0-99C6-4997-AD97-5CEE01221B1A
 # optional metadata
 
@@ -37,5 +35,3 @@ The following topics show you how to setup you your development environment to w
 |[Windows Phone](windows-phone-apps.md)|Windows Phone applications can use the MS RMS SDK 4.2 to enable integrated information protection in their application by using the Azure Active Directory Rights Management (AAD RM).|
 |[Windows Store](winrt-sdk.md)|Windows Store applications can use the MS RMS SDK 4.2 to enable integrated information protection in their application by using the Azure Active Directory Rights Management (AAD RM).|
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

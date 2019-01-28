@@ -1,13 +1,12 @@
 ---
 title: Azure Information Protection Developer's Guide
 description: Developers can use Azure Information Protection to protect and manage files of all types
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/11/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
@@ -34,7 +33,7 @@ Service applications provide capabilities to protect information when exporting 
 
 ## PowerShell guides
 
-Used by Azure Rights management administrators, PowerShell cmdlets are also useful for developing and testing your service applications. For more information, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell).
+Used by Azure Rights management administrators, PowerShell cmdlets are also useful for developing and testing your service applications. For more information, see [Using PowerShell with the Azure Information Protection client](/azure/information-protection/rms-client/client-admin-guide-powershell).
 
 ## User applications
 
@@ -72,7 +71,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 
 - [How to enable document tracking and revocation (service)](tracking-content.md)
 - [How to deploy your client](../rms-client/client-deployment-notes.md)
-- [How to deploy your service app into a different tenant] (how-to-deploy-app.md)
+- [How to deploy your service app into a different tenant](how-to-deploy-app.md)
 - [How to install and configure an RMS Server (service)](how-to-install-and-configure-an-rms-server.md)
 - [How to use document tracking (user)](how-to-use-document-tracking.md)
 - [How to renew a symmetric key in Azure Information Protection](how-to-renew-symmetric-key.md)
@@ -100,8 +99,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 ## Other resources
 
 - [Security best practice guide](security-guidelines.md)
-- [RMS Developer's Corner (blog)](https://blogs.msdn.microsoft.com/rms/)
-- [Frequently Asked Questions for Azure Information Protection](https://docs.microsoft.com/information-protection/get-started/faqs)
+- [Frequently Asked Questions for Azure Information Protection](/azure/information-protection/faqs)
 
 ### Support articles
 
@@ -127,7 +125,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 - [Windows Phone and Windows Store API reference](https://msdn.microsoft.com/library/dn891914.aspx)
 - [iOS/OSX API reference](https://msdn.microsoft.com/library/dn758306.aspx)
 - [Android API reference](https://msdn.microsoft.com/library/dn758245.aspx)
-- [Linux API reference](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)
+- [Linux API reference](https://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 
 ### Previous versions
 
@@ -137,6 +135,5 @@ Each of the following topics presents specific guidance for an aspect of impleme
 ### See also
 
 - [Developer terminology](terms.md)
-- [Terminology for Azure Information Protection - ITPro](../get-started/terminology.md)
+- [Terminology for Azure Information Protection - ITPro](../terminology.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

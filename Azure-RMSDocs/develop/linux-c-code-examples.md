@@ -4,14 +4,12 @@
 title: Linux code examples | Azure RMS
 description: This topic introduces you to important scenarios and code elements for the Linux version of the RMS SDK.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
 # optional metadata
 
@@ -607,5 +605,3 @@ Description: Specify Azure authority *URI* and *FileCache* object
 Description: Call **result-> accessToken()** method
 
 **Note**  Any of the authentication library methods may raise **rmsauth::Exception**
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

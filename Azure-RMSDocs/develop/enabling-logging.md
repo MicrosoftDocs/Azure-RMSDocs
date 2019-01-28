@@ -4,14 +4,12 @@
 title: How to&#58; Enable error and performance logging | Azure RMS
 description: The Microsoft Rights Management SDK 4.2 manages diagnosis and performance logs upload through a single device property.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 # optional metadata
 
@@ -102,5 +100,3 @@ Get current logging control flag setting
 **Note** - The Windows code snips above are in C++. For C\#, update the syntax with ‘.’ in place of ‘::’.
 
 **Linux / C++** - This SDK has some basic logging that is not as extensive as that of the other platforms. For more information see the **Troubleshooting** section of the "README.md" at [RMS SDK for portable C++](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

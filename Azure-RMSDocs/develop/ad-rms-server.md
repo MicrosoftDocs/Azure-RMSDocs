@@ -4,14 +4,12 @@
 title: AD RMS Server | Azure RMS
 description: The server component of Rights Management Services (RMS) is implemented by a set of web services that run on Microsoft Internet Information Services.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 17B05780-B0EF-4805-8304-52DCDEB3AADB
 # optional metadata
 
@@ -34,7 +32,7 @@ This topic describes the purpose and functions of the RMS Server; for Azure and 
 > [!IMPORTANT] 
 > We recommend developing and testing your application via Azure RMS.
 
-**Windows Server** - For RMS on premise servers, beginning with Windows Server 2008, you can install and configure the RMS service by adding it as a role. To install the service on prior operating systems, download it from the Microsoft download center at [Microsoft Windows Rights Management Services with Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909).
+**Windows Server** - For RMS on premise servers, beginning with Windows Server 2008, you can install and configure the RMS service by adding it as a role. To install the service on prior operating systems, download it from the Microsoft download center at [Microsoft Windows Rights Management Services with Service Pack 2](https://www.microsoft.com/download/details.aspx?id=4909).
 
 Of the many web services installed, the following are important for application development for RMS Server on Windows Server.
 
@@ -49,12 +47,10 @@ Of the many web services installed, the following are important for application 
 
 ## Related topics ##
 * [Overview](ad-rms-overview.md)
-* [Microsoft Internet Information Services](http://www.iis.net/overview)
+* [Microsoft Internet Information Services](https://www.iis.net/overview)
 * [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
-* [Microsoft Windows Rights Management Services with Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909)
+* [Microsoft Windows Rights Management Services with Service Pack 2](https://www.microsoft.com/download/details.aspx?id=4909)
 * [Active Directory Rights Management Services Scripting API](https://msdn.microsoft.com/library/Bb968797)
 * [Activating a Computer](https://msdn.microsoft.com/library/Cc530377)
 * [Activating a User](https://msdn.microsoft.com/library/Cc530378)
 * [Creating an Issuance License](https://msdn.microsoft.com/library/Aa362355)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

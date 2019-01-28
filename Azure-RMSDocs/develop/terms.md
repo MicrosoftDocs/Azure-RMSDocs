@@ -4,14 +4,12 @@
 title: AIP Developer Terminology | Microsoft Docs
 description: A collection of developer terminology definitions specific to Rights Management Services.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
 # optional metadata
 
@@ -42,5 +40,3 @@ Also referred to as PFile format, it is the default file format for AD RMS and f
 
 PFile format is transparent to the application developer as it is embedded in the way Microsoft Rights Management SDK 4.2 is designed.
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

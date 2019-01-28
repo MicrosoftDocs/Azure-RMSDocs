@@ -7,10 +7,8 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 
 # optional metadata
@@ -36,7 +34,7 @@ You do not have to be a local administrator to install the RMS sharing applicati
 
 ## To download and install the Rights Management sharing application
 
-1.  Go to the [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
+1.  Go to the [Microsoft Rights Management](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
 
 2.  In the **Computers** section, click the icon for the **RMS app for Windows** and save the **Setup.exe** file to install Microsoft Rights Management sharing application.
 
@@ -76,4 +74,3 @@ For examples for how you might use the Rights Management sharing application, an
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

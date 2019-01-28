@@ -4,14 +4,12 @@
 title: Testing your application | Azure RMS
 description: Instructions on how to setup your application for testing.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 # optional metadata
 
@@ -38,10 +36,10 @@ You can test with either Azure RMS or an RMS server running on Windows Server.  
 - To install the developer runtime:
 
    You must have the Rights Management Service Client 2.1 installed on the computer on which you will be testing your application.
-   - To test your application on a computer other than your development computer, install the RMS Client 2.1 on that computer from the [AD RMS Client download page](http://www.microsoft.com/en-us/download/details.aspx?id=38396).
-   - Your development computer should have the Rights Management Services SDK 2.1, which was previously installed.
+  - To test your application on a computer other than your development computer, install the RMS Client 2.1 on that computer from the [AD RMS Client download page](https://www.microsoft.com/download/details.aspx?id=38396).
+  - Your development computer should have the Rights Management Services SDK 2.1, which was previously installed.
 
-   For help installing RMS SDK 2.1, see [Install the SDK](install-the-rms-sdk.md).
+    For help installing RMS SDK 2.1, see [Install the SDK](install-the-rms-sdk.md).
 
 ## Remarks
 
@@ -54,4 +52,3 @@ This guidance is not comprehensive. To learn how to configure the RMS Client 2.1
 * [Install the SDK](install-the-rms-sdk.md)
 * [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

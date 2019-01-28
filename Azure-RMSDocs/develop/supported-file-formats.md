@@ -4,14 +4,12 @@
 title: Supported file formats | Azure RMS
 description: The current version of the File API supports native protection for MS Office files, PDF and PFile protection for all other file formats.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: EC831494-7F2C-4C70-9063-B02CDDEA14EE
 # optional metadata
 
@@ -43,4 +41,3 @@ Administrators can set registry keys to configure whether and how files should b
 * [Developer notes](developer-notes.md)
 * [File API configuration](file-api-configuration.md)
  
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

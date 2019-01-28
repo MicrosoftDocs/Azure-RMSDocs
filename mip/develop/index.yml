@@ -1,0 +1,56 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Microsoft Information Protection SDK Documentation
+metadata:
+  title: Microsoft Information Protection SDK Documentation - Tutorials, API Reference 
+  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection—no matter where it’s stored or who it’s shared with.
+  services: information-protection
+  author: BryanLa
+  manager: mbaldwin
+  layout: LandingPage
+  ms.assetid: 
+  ms.service: information-protection
+  ms.tgt_pltfrm: na
+  ms.devlang: na
+  ms.topic: landing-page
+  ms.date: 09/26/2018
+  ms.author: bryanla
+abstract:
+  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection—no matter where it’s stored or who it’s shared with.
+  aside:
+    image:
+      alt: MIP SDK @ Ignite 2018 video
+      height: 112
+      src: media/index/kartik-tom-mip-sdk.png
+      width: 250  
+    title: MIP SDK @ Ignite 2018
+    href: https://www.youtube.com/embed/V02HTllv54s
+    width: 250
+sections:
+- title: 5-Minute Quickstarts
+  description: After completing <a href="setup-configure-mip">setup and configuration</a>, check out the MIP SDK Quickstarts.
+  items:
+  - type: table
+    style: dataMatrix
+    columns:
+      - image:
+          src: media/index/logo_Cplusplus.svg
+    rows:
+      - title: Application initialization
+        values: 
+        - href: quick-app-initialization-cpp
+      - title: Use the File API to list sensitivity labels
+        values: 
+        - href: quick-file-list-labels-cpp
+      - title: Use the File API to set/get a label on a file
+        values: 
+        - href: quick-file-set-get-label-cpp
+- title: Reference
+  items:
+  - type: list
+    style: cards
+    className: cardsD
+    items:
+    - title: Languages
+      html: <p><a href="reference/mip-sdk-reference">C++</a></p>
+

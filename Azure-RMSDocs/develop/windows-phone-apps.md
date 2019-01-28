@@ -4,14 +4,12 @@
 title: Windows Phone setup | Azure RMS
 description: Windows Phone applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their application.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
-ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.date: 12/10/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 # optional metadata
 
@@ -41,9 +39,9 @@ This topic will guide you through setting up your environment for creating your 
 
 You must have the following software on your development system:
 
--   The [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet) operating system.
--   [Windows Phone 8.1 Development Tools (SDK)](http://dev.windowsphone.com/en-us/downloadsdk)
--   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)or above, or Visual Studio Express 2012, which is included in the Windows Phone SDK 8.0/8.1
+-   The [Windows 8.1](https://windows.microsoft.com/windows-8/meet) operating system.
+-   [Windows Phone 8.1 Development Tools (SDK)](https://developer.microsoft.com/windows/downloads/sdk-archive)
+-   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)or above, or Visual Studio Express 2012, which is included in the Windows Phone SDK 8.0/8.1
 -   The MS RMS SDK 4.2 package for Windows Phone. For more information see, [Get started](get-started.md).
 -   Authentication library: We recommend that you use the [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) and other authentication libraries can be used.
 
@@ -85,8 +83,6 @@ You are now ready to create your own new Windows Phone apps.
 
 [Windows API Reference](https://msdn.microsoft.com/library/dn891914.aspx)
 
-[Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
+[Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 
-[Windows Phone SDK](http://dev.windowsphone.com/en-us/downloadsdk)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
+[Windows Phone SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)

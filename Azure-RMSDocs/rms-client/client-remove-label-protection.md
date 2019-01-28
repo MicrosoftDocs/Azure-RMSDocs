@@ -6,11 +6,9 @@ description: Instructions to remove classification labels and protection from fi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
-ms.topic: article
-ms.prod:
+ms.date: 12/12/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 
 
 # optional metadata
@@ -34,7 +32,7 @@ When the [Azure Information Protection client is installed on your computer](ins
 When the label that you remove is configured to apply protection, this action also removes protection from the file. You might be prompted to record why you are removing the label.
 
 > [!IMPORTANT]
-> You must be the owner of the file to remove protection, or been granted permissions to remove protection (the Rights Management Extract or Full Control permission).
+> You must be the owner of the file to remove protection, or been granted permissions to remove protection (the Rights Management permission of **Export** or **Full Control**).
 
 If you want to choose a different label or a different set of protection settings, you do not need to remove the label or protection. Instead, choose a new label and if necessary, you can define custom permissions if your administrator allows this configuration. 
 
@@ -51,6 +49,8 @@ On the Information Protection bar, click the **Delete Label** icon:
 If the **Delete Label** icon is not immediately available, first click the **Edit Label** icon:
 
 ![Azure Information Protection bar - Edit Label](../media/edit-label.png)
+
+If you still do not see the **Delete Label** icon, your administrator does not allow you to use this option.
 
 > [!NOTE]
 > If you don't see this Information Protection bar in your Office apps:
@@ -84,9 +84,7 @@ More how-to instructions from the Azure Information Protection user guide:
 - [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-For configuration instructions to enable the policy setting **Make the custom permissions option available to users**, see [Configuring the Azure Information Protection policy settings](../deploy-use/configure-policy-settings.md).
+For configuration instructions to enable the policy setting **Make the custom permissions option available to users**, see [Configuring the Azure Information Protection policy settings](../configure-policy-settings.md).
 
-Other configuration instructions: [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
+Other configuration instructions: [Configuring the Azure Information Protection policy](../configure-policy.md).
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

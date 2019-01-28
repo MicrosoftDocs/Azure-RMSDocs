@@ -6,11 +6,9 @@ description: After you have protected your documents, you can track how people a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/28/2018
-ms.topic: article
-ms.prod:
+ms.date: 01/16/2019
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 
 # optional metadata
@@ -68,6 +66,8 @@ Unless you are an administrator, you can track and revoke only the documents tha
 
 To track a document that you have protected, you must use your Windows computer to register it with the document tracking site. To do this, use either File Explorer, or your Office apps.
 
+If you have the current preview version of the Azure Information Protection client, you can also register the protected document with PowerShell when you use the *EnableTracking* parameter with the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet.
+
 ## Using Office to track or revoke the document
 
 For the Office applications, Word, Excel, and PowerPoint: 
@@ -123,5 +123,3 @@ More how-to instructions from the Azure Information Protection user guide:
 
 ## Additional information for administrators    
 See [Configuring and using document tracking for Azure Information Protection](client-admin-guide-document-tracking.md) from the [admin guide](client-admin-guide.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

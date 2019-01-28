@@ -4,14 +4,12 @@
 title: ADAL authentication for your RMS enabled application | Azure RMS
 description: Outlines the process for authentication with ADAL
 keywords: authentication, RMS, ADAL
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 
 # optional metadata
@@ -128,5 +126,3 @@ Use this code as an example of how to manage your own authentication tokens.
 - [IPC_OAUTH2_CALLBACK_INFO](https://msdn.microsoft.com/library/mt661868.aspx)
 - [IPC_PROMPT_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
 - [IPC_AAD_APPLICATION_ID](https://msdn.microsoft.com/library/mt661867.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

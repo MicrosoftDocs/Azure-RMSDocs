@@ -4,14 +4,12 @@
 title: Developing your application - AIP
 description: Guidance thorugh a basic console app implementing document protection with AIP
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 03/13/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 # optional metadata
 
@@ -68,7 +66,7 @@ Follow these steps to create a Service Principal:
 - Connect to your online service with the assigned user credentials: `Connect-MsolService`
 - Create a new service principal by running: `New-MsolServicePrincipal`
 - Provide a name for your service principal
-> Record the symmetric key and application principal id for future use.
+  > Record the symmetric key and application principal id for future use.
 
 *Example output*
 ![cmdlet output](../media/develop/output-of-NewMsolServicePrincipal.png)
@@ -86,8 +84,8 @@ The following diagram depicts an architecture and process flow for the app you'r
 ![design summary](../media/develop/design-summary.png)
 
 1. The user inputs:
-  - The path of the file to be protected
-  - Selects a template or creates an ad-hoc policy
+   - The path of the file to be protected
+   - Selects a template or creates an ad-hoc policy
 2. The application requests authentication with AIP.
 3. AIP confirms authentication
 4. The application requests templates from the AIP.
@@ -222,18 +220,17 @@ Once you get everything built and executing, the outputs of the application shou
 ![app output - step 1](../media/develop/app-output-1.png)
 
 2. You are asked to provide the path to the file to be protected.
-![app output - step 2](../media/develop/app-output-2.png)
+   ![app output - step 2](../media/develop/app-output-2.png)
 
 3. You are prompted to enter a license owner’s email (this owner must have Global Administrator privileges on the Azure AD Tenant).
-![app output - step 3](../media/develop/app-output-3.png)
+   ![app output - step 3](../media/develop/app-output-3.png)
 
 4. You enter email addresses of users who will have rights to access the file (emails must be separated by spaces).
-![app output - step 4](../media/develop/app-output-4.png)
+   ![app output - step 4](../media/develop/app-output-4.png)
 
 5. You select from a list of rights to be given to the authorized users.
-![app output - step 5](../media/develop/app-output-5.png)
+   ![app output - step 5](../media/develop/app-output-5.png)
 
 6. Finally, you enter some policy metadata: policy name, description, and issuer (Azure AD Tenant) display name
-![app output - step 6](../media/develop/app-output-6.png)
+   ![app output - step 6](../media/develop/app-output-6.png)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -7,10 +7,8 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 05/04/2018
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 
 # optional metadata
@@ -45,7 +43,7 @@ Actions you can take in the document tracking site:
     
     Note: If you do not see this icon, despite being a global admin, it's because you haven't yet shared any documents. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
 
-- If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977).
+- If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](https://go.microsoft.com/fwlink/?LinkId=523977).
 
 ## Using Office to access the document tracking site
 
@@ -60,7 +58,7 @@ Actions you can take in the document tracking site:
 If you do not see these options for RMS, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](install-sharing-app.md).
 
 > [!NOTE] 
-> If you have installed the [Azure Information Protection client](../rms-client/info-protect-client.md), you can also access the document tracking site by using the **Protect** button: 
+> If you have installed the [Azure Information Protection client](info-protect-client.md), you can also access the document tracking site by using the **Protect** button: 
 > 
 > - In an Office application, on the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**. 
 
@@ -75,7 +73,7 @@ In addition to tracking your documents on Windows computers by using Office appl
 
 #### Using a web browser to access the doc tracking site
 
-- Using a supported browser, go to the [document tracking site](http://go.microsoft.com/fwlink/?LinkId=529562).
+- Using a supported browser, go to the [document tracking site](https://go.microsoft.com/fwlink/?LinkId=529562).
 
     Supported browsers: We recommend using Internet Explorer that is at least version 10, but you can use any of following browsers to use the document tracking site:
 
@@ -110,5 +108,3 @@ For examples for how you might use the Rights Management sharing application, an
 
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

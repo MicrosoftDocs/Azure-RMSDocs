@@ -4,14 +4,12 @@
 title: Development environment files | Azure RMS
 description: This topic shows the development environment files and their relative installation locations on your computer.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 # optional metadata
 
@@ -52,5 +50,3 @@ The Rights Management Services SDK 2.1 includes the following files, install
 |Msipc.lib|\lib\x64|Library to link with when using the RMS SDK 2.1 to build x64 applications.|
 |Msipc_s.lib|\lib\x64|Provides entry point for [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) for x64 applications.|
 |Genmanifest.exe|\tools|Generates a manifest for use during development of an RMS-enabled application.|
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

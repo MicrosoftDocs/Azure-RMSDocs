@@ -4,14 +4,12 @@
 title: Deploying your application - AIP
 description: This topic outlines and guides you through deployment of your application
 keywords: deploy, RMS, AIP
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 03/13/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 # optional metadata
 
@@ -32,7 +30,7 @@ This topic guides you through the deployment process for your Azure Information 
 Before you can release an application developed with AIP/RMS, you must apply for and complete a formal agreement with Microsoft.
 
 ### Begin the process
-Obtain your IPIA by sending an email to **IPIA@microsoft.com** with the following information:
+Obtain your IPIA by sending an email to <strong>IPIA@microsoft.com</strong> with the following information:
 
 **Subject:** Requesting IPIA for *Company Name*
 
@@ -43,7 +41,7 @@ In the body of the email, include:
 
 ### Next steps
 Upon receipt of your IPIA request, we will send you a form (as a Word document).
-Review the terms and conditions of the IPIA, and return the form to **IPIA@microsoft.com** with the following information:
+Review the terms and conditions of the IPIA, and return the form to <strong>IPIA@microsoft.com</strong> with the following information:
 - Legal name of the Company
 - State/Province (US/Canada) or Country of Incorporation
 - Company URL
@@ -60,7 +58,7 @@ When we receive your form, we'll send you the final IPIA link to digitally sign.
 
 ### Already have a signed IPIA?
 If you already have a signed IPIA and want to add a new *App ID*
-for an application you are releasing, send an email to **IPIA@microsoft.com** and provide us with the following information:
+for an application you are releasing, send an email to <strong>IPIA@microsoft.com</strong> and provide us with the following information:
 - Name of the Company Application
 - Brief Description of the Application
 - Azure Tenant ID (even if it the same one as before)
@@ -115,10 +113,10 @@ In order for your end-user to take advantage of Information Protection services,
 
 
 > [!IMPORTANT]
-> If you will be running your client application with Azure based RMS, you'll need to create your own tenants. For more information, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).
+> If you will be running your client application with Azure based RMS, you'll need to create your own tenants. For more information, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../requirements.md).
 > For more information on running with Azure RMS see, [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
--   Download the [Microsoft Online Services Sign-In Assistant](http://www.microsoft.com/download/details.aspx?id=28177) from the Microsoft Download Center.
+-   Download the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=28177) from the Microsoft Download Center.
 -   Ensure that your deployment of a rights-enabled application includes a pre-requisites check for this service selection.
 -   For your own testing and for your end-users use of the on-line service see the TechNet topic, [Configuring Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx).
 
@@ -128,8 +126,7 @@ For more on enabling your application to use RMS for Azure Rights Management ser
 
 ## Related topics
 
-* [Microsoft Online Services Sign-In Assistant](http://www.microsoft.com/download/details.aspx?id=28177)
+* [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=28177)
 * [Configuring Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx)
 * [Enable your application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -6,11 +6,9 @@ description: Instructions how to classify your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
-ms.topic: article
-ms.prod:
+ms.date: 12/12/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 
 # optional metadata
@@ -105,6 +103,5 @@ More how-to instructions from the Azure Information Protection user guide:
 - [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-See [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
+See [Configuring the Azure Information Protection policy](../configure-policy.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

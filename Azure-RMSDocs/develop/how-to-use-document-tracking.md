@@ -4,14 +4,12 @@
 title: How to use document tracking | Azure RMS
 description: The document tracking feature requires some simple understandings about managing the associated metadata and registration with the service.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
 # optional metadata
 
@@ -37,9 +35,9 @@ Operationally, only the **content name** and the **notification type** propertie
 
 The sequence of steps you will use to setup document tracking for a given piece of content is:
 
--   Create a **license metadata** object then set the **content name** and **notification type**. These are the only required properties.
-   - Android - [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx)
-   -  iOS - [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)
+- Create a **license metadata** object then set the **content name** and **notification type**. These are the only required properties.
+  - Android - [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx)
+  -  iOS - [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)
 
 Chose policy type; template or ad-hoc:
 - For template based document tracking, create a **user policy** object passing the license metadata as a parameter.
@@ -52,10 +50,8 @@ Chose policy type; template or ad-hoc:
 
     **Note**  The license metadata object is only directly accessible during the process of setting up document tracking for the given user policy. Once the user policy object is created, the associated license metadata is not accessible i.e. changing the values of license metadata has no effect.
 
-     
+     
 
--   Finally, call the platform registration method for document tracking
+- Finally, call the platform registration method for document tracking
   - Android - [UserPolicy.registerForDocTracking asynchronous](https://msdn.microsoft.com/library/mt573699.aspx) or [UserPolicy.registerForDocTracking synchronous](https://msdn.microsoft.com/library/mt631387.aspx)
   - iOS - [MSUserPolicy.registerForDocTracking](https://msdn.microsoft.com/library/mt573694.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

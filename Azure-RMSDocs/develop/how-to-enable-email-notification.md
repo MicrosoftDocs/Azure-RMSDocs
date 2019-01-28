@@ -4,14 +4,12 @@
 title: Enabling email notification | Azure RMS
 description: Email notification allows for a protected content owner to be notified when his or her content is accessed.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
 # optional metadata
 
@@ -66,5 +64,3 @@ The following table contains the application data fields, property name and valu
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
 - [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx)
 - [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

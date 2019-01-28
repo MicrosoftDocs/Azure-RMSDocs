@@ -4,14 +4,12 @@
 title: Android setup | Azure RMS
 description: Android applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their applications.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 # optional metadata
 
@@ -40,12 +38,12 @@ This topic will guide you through setting up your environment for creating your 
 
 We recommend the following software on your development system:
 
--   Windows or OS X operating system to run the [Eclipse](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html) development environment.
+-   Windows or OS X operating system to run the [Eclipse](https://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html) development environment.
 -   This guide assumes that you are using the Eclipse SDK beginning with Eclipse Juno 4.2 and using a default installation.
 -   Java starting with Java 1.6.
--   [Android Developer Tools (ADT) Plugin](http://developer.android.com/sdk/installing/index.html). NOTE - You might be asked to restart Eclipse to complete the installation.
+-   [Android Developer Tools (ADT) Plugin](https://developer.android.com/studio/install). NOTE - You might be asked to restart Eclipse to complete the installation.
 
-     
+     
 
 -   The MS RMS SDK 4.2 package for Android. For more information see, [Get started](get-started.md).
 
@@ -55,9 +53,9 @@ We recommend the following software on your development system:
 
     For more information see, [ADAL for Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
-    **Note**  If your application will not be using the ADAL Library as the OAuth 2.0 authentication library, you should review this Android guidance, [Some SecureRandom Thoughts](http://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
+    **Note**  If your application will not be using the ADAL Library as the OAuth 2.0 authentication library, you should review this Android guidance, [Some SecureRandom Thoughts](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
 
-     
+     
 
 Read the [What's new](release-notes.md) topic for information about API updates, release notes, and frequently asked questions (FAQ).
 
@@ -69,7 +67,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 **Note**  MS RMS SDK 4.2 Preview Release: In this preview release, the screen shots have not been updated to show the change in name of the pathes from com/microsoft/protection to com/microsoft/rightsmanagment. The text though, has been updated.
 
- 
+ 
 -   Open the Eclipse development environment.
 -   To create a new Android Application project, on the **File** menu, click **New**, click **Project**, and then select **Android Application Project**.
 
@@ -100,45 +98,45 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 **Referencing the SDK**
 
--   Navigate to the folder in which you extracted the *adrms\_android\_sdk.zip*. In the "SDK > com > microsoft > rightsmanagement" folder, make sure the files *.classpath*, *.project*, and *project.properties* are not marked as read-only.
--   To reference the SDK, you must import it to the workspace.
+- Navigate to the folder in which you extracted the *adrms\_android\_sdk.zip*. In the "SDK > com > microsoft > rightsmanagement" folder, make sure the files *.classpath*, *.project*, and *project.properties* are not marked as read-only.
+- To reference the SDK, you must import it to the workspace.
 
-    In Eclipse, click **File**. On the **File** menu, click **Import**. In the **Import** dialog box, select **Android / Existing Android Code into Workspace**.
+  In Eclipse, click **File**. On the **File** menu, click **Import**. In the **Import** dialog box, select **Android / Existing Android Code into Workspace**.
 
-    ![Import it to the workspace](../media/Android-setup-07.png)
+  ![Import it to the workspace](../media/Android-setup-07.png)
 
--   Click **Next**. Navigate to select the folder in which you extracted the *adrms\_android\_sdk.zip*. The SDK should appear in the list as **com.microsoft.rightsmanagement**.
+- Click **Next**. Navigate to select the folder in which you extracted the *adrms\_android\_sdk.zip*. The SDK should appear in the list as **com.microsoft.rightsmanagement**.
 
-    ![Navigate to select the folder](../media/Android-setup-08c.jpg)
+  ![Navigate to select the folder](../media/Android-setup-08c.jpg)
 
--   When you click **Finish**, the SDK project appears as a sibling of your previously created application.
+- When you click **Finish**, the SDK project appears as a sibling of your previously created application.
 
-    ![The SDK project appears as a sibling of your application](../media/Android-setup-09.jpg)
+  ![The SDK project appears as a sibling of your application](../media/Android-setup-09.jpg)
 
--   Right-click the **Project** icon and view the properties for the project.
--   Navigate to the **Android** tab.
--   Click **Add**, and then select the *com.microsoft.rightsmanagement* library from the workspace.
+- Right-click the **Project** icon and view the properties for the project.
+- Navigate to the **Android** tab.
+- Click **Add**, and then select the *com.microsoft.rightsmanagement* library from the workspace.
 
-    ![Add the library](../media/Android-setup-10b.jpg)
+  ![Add the library](../media/Android-setup-10b.jpg)
 
--   Click **OK**.
+- Click **OK**.
 
-    Because the MS RMS SDK 4.2 connects with AAD RM, the application has to be granted the **INTERNET** and **ACCESS\_NETWORK\_STATE**. To do so, open the *AndroidManifest.xml* file in the root of the project.
+  Because the MS RMS SDK 4.2 connects with AAD RM, the application has to be granted the **INTERNET** and **ACCESS\_NETWORK\_STATE**. To do so, open the *AndroidManifest.xml* file in the root of the project.
 
-    To add the permissions, click **Add**, and then select **Uses Permissions**.
+  To add the permissions, click **Add**, and then select **Uses Permissions**.
 
-    ![Add permissions](../media/Android-setup-11d.jpg)
+  ![Add permissions](../media/Android-setup-11d.jpg)
 
--   You can verify the manifest step by viewing the manifest in the text editor view. Make sure the following lines appear:
+- You can verify the manifest step by viewing the manifest in the text editor view. Make sure the following lines appear:
 
-   ```
-    <uses-sdk
-         android:minSdkVersion="15"
-         android:targetSdkVersion="19"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission/>
-   ```
+  ```
+  <uses-sdk
+       android:minSdkVersion="15"
+       android:targetSdkVersion="19"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission/>
+  ```
 
 **Note**  The SDK uses the *android.support.v4*
 
@@ -155,4 +153,3 @@ Our UI library provides re-usable UI for consumption and protection operations f
 [Android API Reference](https://msdn.microsoft.com/library/dn758245.aspx)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

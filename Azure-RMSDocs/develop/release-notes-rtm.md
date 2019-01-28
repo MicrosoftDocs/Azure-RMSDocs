@@ -4,14 +4,12 @@
 title: Release notes
 description: SDK updates by revision and other developer information.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/18/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 # optional metadata
 
@@ -43,9 +41,9 @@ This article contains important information about this and previous releases of 
 
 - **Update to ADAL** - By updating your application to use ADAL authentication rather than the Microsoft Online Sign-in Assistant, you and your customers will be able to:
 
- - Utilize multi-factor authentication
- - Install the RMS 2.1 client without requiring administrative privileges to the machine
- - Certify your application for Windows 10
+  - Utilize multi-factor authentication
+  - Install the RMS 2.1 client without requiring administrative privileges to the machine
+  - Certify your application for Windows 10
 
 - **Support for Microsoft Online Sign-in Assistant (SIA) with the RMS SDK is being removed.** We will continue to support the use of SIA for six months after which time support will stop.
 
@@ -130,7 +128,7 @@ The File API component of SDK has been extended and offers the following feature
 
     **Note**  As of the April 2015 release, a check has been added to the installation process for this KB.
 
-     
+     
 
 -   **File API integration**
 
@@ -169,5 +167,3 @@ The File API component of SDK has been extended and offers the following feature
     3 - The first available language specified in the Rights Management Server (RMS) template.
 
 If no name and description can be retrieved, an error is returned. There can be only one name and description for a specific LCID.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

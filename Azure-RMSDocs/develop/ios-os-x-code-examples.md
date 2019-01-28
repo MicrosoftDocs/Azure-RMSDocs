@@ -4,14 +4,12 @@
 title: iOS/OS X code examples | Azure RMS
 description: This topic will introduce you to important code elements for the iOS/OS X version of the RMS SDK.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 # optional metadata
 
@@ -43,7 +41,7 @@ Following are **Objective C** code examples from a larger sample application rep
 
 - **Step 1**: Create an [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) object
 
- **Description**: Instantiate an [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) object, through its create method which implements service authentication using the [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) in the following example code section.
+  **Description**: Instantiate an [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) object, through its create method which implements service authentication using the [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) in the following example code section.
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -100,19 +98,19 @@ Following are **Objective C** code examples from a larger sample application rep
                           }];
        }
 
--   **Step 3**: Check if the Edit right exists for this user with this content via the [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) method of a [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) object.
+- **Step 3**: Check if the Edit right exists for this user with this content via the [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) method of a [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) object.
 
-        - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
-        {
-            //check if user has edit rights and apply enforcements
-            if (!protectedData.userPolicy.accessCheck(EditableDocumentRights.Edit))
-            {
-                // enforce on the UI
-                textEditor.focusableInTouchMode = NO;
-                textEditor.focusable = NO;
-                textEditor.enabled = NO;
-            }
-        }
+      - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
+      {
+          //check if user has edit rights and apply enforcements
+          if (!protectedData.userPolicy.accessCheck(EditableDocumentRights.Edit))
+          {
+              // enforce on the UI
+              textEditor.focusableInTouchMode = NO;
+              textEditor.focusable = NO;
+              textEditor.enabled = NO;
+          }
+      }
 
 ### Scenario: Create a new protected file using a template
 
@@ -283,5 +281,3 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
 
             }];
           }
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

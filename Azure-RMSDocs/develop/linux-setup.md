@@ -2,14 +2,12 @@
 title: Linux setup 
 description: Several flavors of Linux operating systems can now use Rights Management SDK 4.x.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
 audience: developer
 ms.reviewer: kartikk
@@ -42,5 +40,3 @@ Libraries and samples have been successfully compiled on Windows and OSX as well
 - [Get started](get-started.md)
 - [What's new](release-notes.md)
 - [Developer terms and concepts](core-concepts.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

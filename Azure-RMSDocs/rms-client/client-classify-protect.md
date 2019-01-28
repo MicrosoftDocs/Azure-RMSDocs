@@ -6,11 +6,9 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
-ms.topic: article
-ms.prod:
+ms.date: 12/12/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 
 # optional metadata
@@ -84,6 +82,8 @@ Possible reasons:
 - If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening it. This action checks for changes to your labels.
 
 - If the missing label applies protection, you might have an edition of Office that does not support applying Rights Management protection. To verify, click **Protect** > **Help and Feedback**. In the dialog box, check if you have a message in the **Client status** section that says **This client is not licensed for Office Professional Plus.** 
+    
+    You do not need Office Professional Plus if you have Office 2016 apps with a minimum version 1805, build 9330.2078, and your account is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365).
 
 - The label might be in a scoped policy that doesn't include your account. Check with your help desk or administrator.
 
@@ -144,13 +144,13 @@ The admin guide contains a full list of the file types supported and the files a
 
 2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. 
 
-    - If none of the labels can be selected (they appear dimmed): The selected file does not support classification but you can protect it with custom permissions (step 3). For example:
+   - If none of the labels can be selected (they appear dimmed): The selected file does not support classification but you can protect it with custom permissions (step 3). For example:
 
-    ![No labels available in the Classify and protect - Azure Information Protection** dialog box](../media/info-protect-dialog-labels-dimmed.png)
+     ![No labels available in the Classify and protect - Azure Information Protection** dialog box](../media/info-protect-dialog-labels-dimmed.png)
     
-    - If you do not see labels but an option for **Company pre-defined protection** in this dialog box: The client is running in [protection-only mode](client-protection-only-mode.md). Either select a template to apply protection that your administrator has configured for you, or, select **Custom permissions** to specify your own protection settings and go to step 4.
+   - If you do not see labels but an option for **Company pre-defined protection** in this dialog box: The client is running in [protection-only mode](client-protection-only-mode.md). Either select a template to apply protection that your administrator has configured for you, or, select **Custom permissions** to specify your own protection settings and go to step 4.
     
-    ![No labels in the Classify and protect - Azure Information Protection** dialog box](../media/info-protect-dialog-labels-protection-only.png)
+     ![No labels in the Classify and protect - Azure Information Protection** dialog box](../media/info-protect-dialog-labels-protection-only.png)
     
 3. If allowed by your administrator, you can specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label. To do this, select **Protect with custom permissions**.
     
@@ -160,15 +160,15 @@ The admin guide contains a full list of the file types supported and the files a
 
 4. If you selected the custom permissions option, now specify the following:
 
-    - **Select permissions**: Select the level of access that you want people to have when you protect the selected file or files.
+   - **Select permissions**: Select the level of access that you want people to have when you protect the selected file or files.
     
-    - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. 
+   - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. 
     
-    Alternatively, you can use the address book icon to select users or groups from the Outlook address book.
+     Alternatively, you can use the address book icon to select users or groups from the Outlook address book.
         
-    - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
+   - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
     
-    Note that if this setting was previously configured by using custom permissions from an Office 2010 app, the specified expiry date does not display in this dialog box but the expiry date is still set. This is a display issue only for when the expiry date was configured in Office 2010.
+     Note that if this setting was previously configured by using custom permissions from an Office 2010 app, the specified expiry date does not display in this dialog box but the expiry date is still set. This is a display issue only for when the expiry date was configured in Office 2010.
 
 5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 
@@ -187,8 +187,7 @@ More how-to instructions from the Azure Information Protection user guide:
 -   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-For configuration instructions to enable the policy setting **Make the custom permissions option available to users**, see [Configuring the Azure Information Protection policy settings](../deploy-use/configure-policy-settings.md).
+For configuration instructions to enable the policy setting **Make the custom permissions option available to users**, see [Configuring the Azure Information Protection policy settings](../configure-policy-settings.md).
 
-Other configuration instructions: [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
+Other configuration instructions: [Configuring the Azure Information Protection policy](../configure-policy.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

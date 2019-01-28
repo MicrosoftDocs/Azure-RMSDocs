@@ -4,14 +4,12 @@
 title: iOS and OS X setup | Azure RMS
 description: iOS and OS X applications can use the RMS SDK 4.2 to enable integrated information protection in their application by using the AAD RM.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 # optional metadata
 
@@ -114,5 +112,3 @@ Our UI library provides re-usable UI for consumption and protection operations f
 * [Developer terms and concepts](core-concepts.md)
 
 * [iOS / OS X API Reference](https://msdn.microsoft.com/library/dn758306.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

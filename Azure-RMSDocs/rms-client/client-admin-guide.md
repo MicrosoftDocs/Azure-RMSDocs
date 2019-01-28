@@ -6,11 +6,9 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/19/2018
-ms.topic: article
-ms.prod:
+ms.date: 01/18/2019
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 
 # optional metadata
@@ -62,13 +60,13 @@ The Azure Information Protection client includes the following:
 
 - A PowerShell module to apply and remove classification labels and protection from files. 
     
-    This module includes cmdlets to install and configure the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) that runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries.
+    This module includes cmdlets to install and configure the [Azure Information Protection scanner](../deploy-aip-scanner.md) that runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries.
 
 - The Rights Management client that communicates with Azure Rights Management (Azure RMS) or Active Directory Rights Management Services (AD RMS).
 
-The Azure Information Protection client is best suited to work with its Azure services; Azure Information Protection and its data protection service, Azure Rights Management. However, with some limitations, the Azure Information Protection client also works with the on-premises version of Rights Management, AD RMS. For a comprehensive comparison of features that are supported by Azure Information Protection and AD RMS, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). 
+The Azure Information Protection client is best suited to work with its Azure services; Azure Information Protection and its data protection service, Azure Rights Management. However, with some limitations, the Azure Information Protection client also works with the on-premises version of Rights Management, AD RMS. For a comprehensive comparison of features that are supported by Azure Information Protection and AD RMS, see [Comparing Azure Information Protection and AD RMS](../compare-on-premise.md). 
 
-If you have AD RMS and want to migrate to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+If you have AD RMS and want to migrate to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md).
 
 
 ## Should you deploy the Azure Information Protection client?
@@ -99,7 +97,7 @@ Example showing the Azure Information Protection client add-in for an Office app
 
 ## Installing and supporting the Azure Information Protection client
 
-You can install the Azure Information Protection client by using Windows Update, an executable, or a Windows installer file. For more information about each choice, and instructions, see [Install the Azure Information Protection client for users](client-admin-guide-install.md).  
+You can install the Azure Information Protection client by using an executable or a Windows installer file. For more information about each choice, and instructions, see [Install the Azure Information Protection client for users](client-admin-guide-install.md).  
 
 Use the following sections for supporting information about installing the client. 
 
@@ -113,9 +111,9 @@ When the client is installed, use the **Help and Feedback** option to open the *
 
 #### **Help and Feedback** section
 
-The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website but you can configure it for a custom URL as one of the [policy settings](../deploy-use/configure-policy-settings.md) in the Azure Information Protection policy.
+The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website but you can configure it for a custom URL as one of the [policy settings](../configure-policy-settings.md) in the Azure Information Protection policy.
 
-Use the **Send Us Feedback** link to send suggestions or requests to the Information Protection team. Do not use this option for technical support but instead, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources). 
+The **Report an Issue** link displays only if you specify an [advanced client setting](client-admin-guide-customizations.md#add-report-an-issue-for-users). When you configure this setting, you specify an HTTP link such as the email address of your help desk.
 
 The **Export Logs** automatically collects and attaches log files for the Azure Information Protection client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk.
 
@@ -169,7 +167,29 @@ The Azure Information Protection client supports the same languages that Office 
 
 For these languages, menu options, dialog boxes, and messages from the Azure Information Protection client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection client for different languages. 
 
-However, label names and descriptions that you specify are not automatically translated when you configure labels in the Azure Information Protection policy. Beginning with August 30, 2017, the current [default policy](../deploy-use/configure-policy-default.md) includes support for some languages. For users to see labels in their preferred language, provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md). Visual markings are not translated and do not support more than one language.
+However, label names and descriptions that you specify are not automatically translated when you configure labels in the Azure Information Protection policy. Beginning with August 30, 2017, the current [default policy](../configure-policy-default.md) includes support for some languages. For users to see labels in their preferred language, provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection](../configure-policy-languages.md). Visual markings are not translated and do not support more than one language.
+
+## Post installation tasks
+
+After you have installed the Azure Information Protection client, make sure that you give users instructions for how to label their documents and emails, and guidance for which labels to choose for specific scenarios. For example:
+
+- Online user instructions: [Azure Information Protection user guide](client-user-guide.md)
+
+- Download a customizable user guide: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+
+### Update macros in Excel spreadsheets
+
+If you have Excel spreadsheets that contain macros, edit the macros as follows to ensure that they continue to work as expected after the Azure Information Protection client is installed:
+
+1. At the beginning of the macro, add:
+
+		Application.EnableEvents = False
+
+2. At the end of the macro, add:
+
+		Application.EnableEvents = True
+
+For more information, see [Application.EnableEvents Property (Excel)](https://msdn.microsoft.com/vba/excel-vba/articles/application-enableevents-property-excel).
 
 ## Upgrading and maintaining the Azure Information Protection client
 
@@ -181,13 +201,73 @@ Alternatively, you can manually upgrade the client by downloading the new releas
 
 When you manually upgrade, uninstall the previous version first only if you're changing the installation method. For example, you change from the executable (.exe) version of the client to the Windows installer (.msi) version of the client. Or, if you need to install a previous version of the client. For example, you have the current preview version installed for testing and now need to revert to the current general availability version.
 
-Use the [Version release history and support policy](../rms-client/client-version-release-history.md) to understand the support policy for the Azure Information Protection client, which versions are currently supported, and what's new and changed for the supported releases. 
+Use the [Version release history and support policy](client-version-release-history.md) to understand the support policy for the Azure Information Protection client, which versions are currently supported, and what's new and changed for the supported releases. 
 
 ### Upgrading the Azure Information Protection scanner
 
-To upgrade the Azure Information Protection scanner, install the latest version of the Azure Information Protection client.
+How to upgrade the scanner depends on whether you are upgrading to the current GA version, or to the current preview version.
 
-Then, if your previously installed version of the client was 1.26.6.0 or earlier, rerun the scanner installation command with [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner). Your configuration settings for the scanner and repositories will be retained. Reinstalling the scanner grants the scanner service account delete permissions for the scanner database, which will be required for reports.
+#### To upgrade the scanner to the current GA version
+
+To upgrade the Azure Information Protection scanner, install the latest version of the Azure Information Protection client. Then do the following one-time action. After you have done this, there is no need to rescan already scanned files.
+
+- Run [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) after you have upgraded the Azure Information Protection client. Your configuration settings for the scanner and repositories will be retained. Running this cmdlet is required to update the database schema for the scanner and if required, the scanner service account is also granted delete permissions for the scanner database. 
+    
+    Until you run this update cmdlet, the scanner does not run and you typically see Event ID **1000** in the Windows event log, with the following error message: **Invalid object name 'ScannerStatus'**.
+
+#### To upgrade the scanner to the current preview version
+
+> [!IMPORTANT]
+> For a smooth upgrade path, do not install the preview version of the Azure Information Protection client on the computer running the scanner as your first step to upgrade the scanner. Instead, use the following upgrade instructions.
+
+For the current preview version of the scanner, the upgrade process is different from previous versions. Upgrading the scanner automatically changes the scanner to gets its configuration settings from the Azure portal. In addition, the schema is updated for the scanner's configuration database, and this database is also renamed from AzInfoProtection:
+
+- If you do not specify your own profile name, the configuration database is renamed **AIPScanner_\<computer_name>**. 
+
+- If you specify your own profile name, the configuration database is renamed **AIPScanner_\<profile_name>**.
+
+Although it's possible to upgrade the scanner in a different order, we recommend the following steps:
+
+1. Use the Azure portal to create a new scanner profile that includes settings for the scanner and your data repositories with any settings that they need. For help with this step, see the [Configure the scanner in the Azure portal](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal) section from the preview scanner deployment instructions.
+    
+    If the computer running the scanner is disconnected from the Internet, you still need to do this step. Then, from the Azure portal, use the **Export** option to export your scanner profile to a file.
+
+2. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
+
+3. Upgrade the Azure Information Protection client by installing the current preview version from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+4. In a PowerShell session, run the Update-AIPScanner command with the same profile name that you specified in step 1. For example: `Update-AIPScanner –Profile USWest`
+
+5. Only if the scanner is running on a disconnected computer: Now run [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) and specify the file that contains the exported settings.
+
+6. Restart the Azure Information Protection Scanner service, **Azure Information Protection Scanner**.
+
+##### Upgrading in a different order to the recommended steps
+
+If you don't configure the scanner in the Azure portal before you run the Update-AIPScanner command, you won't have a profile name to specify that identifies your scanner configuration settings for the upgrade process. 
+
+In this scenario, when you configure the scanner in the Azure portal, you must specify exactly the same profile name that was used when you ran the Update-AIPScanner command. If the name doesn't match, the scanner will not be configured for your settings. 
+
+> [!TIP]
+> To identify scanners that have this misconfiguration, use the **Azure Information Protection - Nodes** blade in the Azure portal.
+>  
+> For scanners that have Internet connectivity, they display their computer name with the preview version number of the Azure Information Protection client, but no profile name. Only scanners that have a version number 1.41.51.0 should display no profile name on this blade. 
+
+If you didn't specify a profile name when you ran the Update-AIPScanner command, the computer name is used to automatically create the profile name for the scanner.
+
+#### Moving the scanner configuration database to a different SQL Server instance
+
+In the current preview version, there is a known issue if you try to move the scanner configuration database to a new SQL Server instance after you run the upgrade command.
+
+If you know that you want move the scanner configuration database for the preview version, do the following:
+
+1. Uninstall the scanner by using [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner).
+
+2. If you haven't yet upgraded to the preview version of the Azure Information Protection client, upgrade the client now.
+
+3. Install the scanner by using [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), specifying the new SQL Server instance and profile name.
+
+4. Optional: If you do not want the scanner to rescan all files, export the ScannerFiles table and import it to the new database.
 
 ## Uninstalling the Azure Information Protection client
 
@@ -215,4 +295,3 @@ If you've already installed the client, see the following for additional informa
 - [PowerShell commands](client-admin-guide-powershell.md)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -4,14 +4,12 @@
 title: How-to set the API security mode | Azure RMS
 description: Choose which security mode your File API application runs.
 keywords:
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
 # optional metadata
 
@@ -40,5 +38,3 @@ For more information on *server mode*, see [Application types](application-types
 * [Application types](application-types.md)
 * [API mode values](https://msdn.microsoft.com/library/hh535236.aspx)
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

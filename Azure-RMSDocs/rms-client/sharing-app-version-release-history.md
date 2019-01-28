@@ -7,10 +7,8 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/03/2017
-ms.topic: article
-ms.prod:
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.custom: askipteam
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 
@@ -87,7 +85,7 @@ Versions before January 1, 2015 are not listed.
 
 -   Support for multi-factor authentication (MFA) for Azure RMS, which also removes the dependency on the Microsoft Sign-in Assistant for applications that use modern authentication.
 
-    For more information, see the [Multi-factor authentication (MFA) and Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection) section from  [Azure Active Directory requirements for Azure Information Protection](../get-started/requirements-azure-ad.md).
+    For more information, see the [Multi-factor authentication (MFA) and Azure RMS](../requirements-servers.md) section from  [Azure Active Directory requirements for Azure Information Protection](../requirements-servers.md).
 
 ## Version 1.0.1784.0
 **Released**: 7/30/2015
@@ -136,4 +134,3 @@ Versions before January 1, 2015 are not listed.
 
 -   **Support for multiple email domains within your organization**: If you use AD RMS and users in your organization have multiple email domains, this update lets your users consume content that has been protected by users in your organization in other domains. For more information, see the [AD RMS only: Support for multiple email domains within your organization](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) section in the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
