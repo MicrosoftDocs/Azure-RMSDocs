@@ -18,7 +18,7 @@ This article provides answers to Frequently Asked Questions (FAQs), and troubles
 
 The MIP SDK is supported on the following platforms:
 
-[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
+[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ### Question: how does the SDK handle strings, and what string type should I be using in my code?
 
