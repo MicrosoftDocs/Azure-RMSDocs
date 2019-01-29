@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
@@ -52,7 +52,7 @@ Information about the table columns:
 
 |**Device operating system**|Word, Excel, PowerPoint|Email|Other file types|
 |---------------------------|-----------------------|-----------------|---------|
-|**Windows**|Office 365 apps [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office Online (viewing protected documents) [[2]](#footnote-2)<br /><br />Web browser [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office 365 ProPlus<br /><br />Web browser [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Azure Information Protection client for Windows: Text, images, pfile<br /><br />RMS sharing application for Windows: Text, images, pfile<br /><br />SealPath RMS plugin for AutoCAD: .dwg|
+|**Windows**|Office 365 apps [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office Online (viewing protected documents) [[2]](#footnote-2)<br /><br />Web browser [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office 365 ProPlus<br /><br />Web browser [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Azure Information Protection client for Windows: Text, images, pfile<br /><br />SealPath RMS plugin for AutoCAD: .dwg|
 |**iOS**|GigaTrust<br /><br /> Office Mobile (viewing and editing protected documents)<br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs<br /><br />Web browser [[3]](#footnote-3)|Azure Information Protection app (viewing protected email)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook for iPad and iPhone [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Web browser [[4]](#footnote-4)|Azure Information Protection app (viewing protecting text and images)<br /><br />TITUS Docs: Pfile|
 |**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile <br /><br />Web browser [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />Azure Information Protection app (viewing protected emails)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[5]](#footnote-5)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook for Android [[5]](#footnote-5)<br /><br />Samsung Email (S3 and later) [[5]](#footnote-5)<br /><br />TITUS Classification for Mobile <br /><br />Web browser [[4]](#footnote-4)|Azure Information Protection app (viewing protected text and images)|
 |**macOS**|Office 365 apps<br /><br />Office 2019 for Mac<br /><br />Office 2016 for Mac<br /><br />Office Online [[2]](#footnote-2)<br /><br />Web browser [[3]](#footnote-3)|Outlook 2019 for Mac<br /><br /> Outlook 2016 for Mac<br /><br />Web browser [[4]](#footnote-4)|RMS sharing app (viewing protected text, images, generically protected files)|
@@ -108,7 +108,7 @@ All editions of Office (with the exception of Office 2007) support consuming pro
 
 When you use the Azure Rights Management service with Office Professional Plus 2010 and Service Pack 2 or Office Professional 2010 with Service Pack 2:
 
-- Requires the Azure Information Protection client for Windows or the Rights Management sharing application for Windows.
+- Requires the Azure Information Protection client for Windows.
 
 - Not supported on Windows 10.
 
@@ -141,8 +141,6 @@ For more information about how to use app, see the [FAQ for Microsoft Azure Info
 
 ### More information about the Azure Information Protection client for Windows
 
-This client now replaces the Rights Management sharing application for Windows.
-
 For more information, see the following resources:
 
 - [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md)
@@ -153,17 +151,11 @@ For more information, see the following resources:
 
 Download the relevant app by using the links on the [Microsoft Azure Information Protection page](https://go.microsoft.com/fwlink/?LinkId=303970).
 
-### More information about the Rights Management sharing application
+### More information about the Rights Management sharing app
 
-This application is being replaced by the Azure Information Protection client.
-
-For Mac computers, the Rights Management sharing application offers a viewer for protected PDF files (.ppdf), protected text images, and generically protected files. It can also protect image files, but not other files. To protect Office files on these computers, use Office for Mac. 
+For Mac computers, the Rights Management sharing app offers a viewer for protected PDF files (.ppdf), protected text images, and generically protected files. It can also protect image files, but not other files. To protect Office files on these computers, use Office for Mac or Office 365 ProPlus. 
 
 For more information, see the following resources:
-
--   [Rights Management sharing application administrator guide](./rms-client/sharing-app-admin-guide.md)
-
--   [Rights Management sharing application user guide](./rms-client/sharing-app-user-guide.md)
 
 -   [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](https://technet.microsoft.com/dn451248)
 
@@ -184,13 +176,13 @@ For more information, see the [Azure Information Protection Developer's Guide](.
 
 The following applications that are not currently supported by Azure RMS include the following:
 
--   Microsoft OneDrive for Business for SharePoint Server 2013
+- Microsoft OneDrive for Business for SharePoint Server 2013
 
--   XPS Viewer
+- XPS Viewer
 
-In addition, the RMS sharing application and the Azure Information Protection client have the following restrictions:
+In addition, the Azure Information Protection client has the following restrictions:
 
--   For Windows computers: Requires a minimum version of Windows 7 Service Pack 1
+- For Windows computers: Requires a minimum version of Windows 7 Service Pack 1
 
 ## RMS-enlightened solutions
 
