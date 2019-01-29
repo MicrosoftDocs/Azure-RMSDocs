@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2018
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
@@ -67,10 +67,10 @@ Use the following table for a list of these permissions levels and a complete li
 
 |Permissions level|Applications|Usage rights included|
 |---------------------|----------------|---------------------------------|
-|Viewer|Azure classic portal <br /><br />Azure portal<br /><br /> Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; View Rights; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Allow Macros [[2]](#footnote-2)<br /><br />Note: For emails, use Reviewer rather than this permission level to ensure that an email reply is received as an email message rather than an attachment. Reviewer is also required when you send an email to another organization that uses the Outlook client or Outlook web app. Or, for users in your organization that are exempt from using the Azure Rights Management service because you have implemented [onboarding controls](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
-|Reviewer|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; View Rights; Reply: Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3); Allow Macros [[2]](#footnote-2)|
-|Co-Author|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export [[4]](#footnote-4); Print; Reply [[3]](#footnote-3); Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3)|
-|Co-Owner|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [[3]](#footnote-3); Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3); Full Control|
+|Viewer|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; View Rights; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Allow Macros [[2]](#footnote-2)<br /><br />Note: For emails, use Reviewer rather than this permission level to ensure that an email reply is received as an email message rather than an attachment. Reviewer is also required when you send an email to another organization that uses the Outlook client or Outlook web app. Or, for users in your organization that are exempt from using the Azure Rights Management service because you have implemented [onboarding controls](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
+|Reviewer|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; View Rights; Reply: Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3); Allow Macros [[2]](#footnote-2)|
+|Co-Author|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export [[4]](#footnote-4); Print; Reply [[3]](#footnote-3); Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3)|
+|Co-Owner|Azure classic portal <br /><br />Azure portal<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [[3]](#footnote-3); Reply All [[3]](#footnote-3); Forward [[3]](#footnote-3); Full Control|
 
 ----
 
@@ -83,7 +83,7 @@ Not included in the Azure portal.
 For the Azure Information Protection client for Windows, this right is currently required for the Information Protection bar in Office apps.
 
 ###### Footnote 3
-Not applicable to the Azure Information Protection client for Windows or the Rights Management sharing application for Windows.
+Not applicable to the Azure Information Protection client for Windows.
 
 ###### Footnote 4
 Not included in the Azure portal or the Azure Information Protection client for Windows.
