@@ -27,8 +27,6 @@ public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const st
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::ostream\>& stdOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::ostream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::iostream\>& stdIOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::iostream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an [Stream](class_mip_stream.md) from a buffer.
-public ActionType operator &(ActionType a, ActionType b)       |  And (&) operator for [Action](class_mip_action.md) type enum.
-public ActionType operator^(ActionType a, ActionType b)       |  Xor (^) operator for [Action](class_mip_action.md) type enum.
  | 
 **Namespace `mip::auditmetadatakeys` :** |
 public std::string Sender()       |  Audit metadata keys in string representation.
@@ -187,15 +185,6 @@ Parameters:
   
 **Returns**: Size Size of buffer
   
-### operator| function
-Or (|) operator for [Action](class_mip_action.md) type enum.
-  
-### operator & function
-And (&) operator for [Action](class_mip_action.md) type enum.
-  
-### operator^ function
-Xor (^) operator for [Action](class_mip_action.md) type enum.
-
 
 
 

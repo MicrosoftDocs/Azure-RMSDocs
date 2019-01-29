@@ -8,19 +8,17 @@
   href: setup-configure-mip.md
 - name: Quickstarts
   items:
-  - name: C++
+  - name: Application initialization (C++)
+    href: quick-app-initialization-cpp.md
+  - name: Application initialization (C#)
+  - name: File API
     items:
-    - name: Application initialization (C++)
-      href: quick-app-initialization-cpp.md
-    - name: Application initialization (C#)
-    - name: File API
-      items:
-      - name: List sensitivity labels (C++)
-        href: quick-file-list-labels-cpp.md
-      - name: List sensitivity labels (C#)
-      - name: Set/get sensitivity labels (C++)
-        href: quick-file-set-get-label-cpp.md      
-      - name: Set/get sensitivity labels (C#)
+    - name: List sensitivity labels (C++)
+      href: quick-file-list-labels-cpp.md
+    - name: List sensitivity labels (C#)
+    - name: Set/get sensitivity labels (C++)
+      href: quick-file-set-get-label-cpp.md      
+    - name: Set/get sensitivity labels (C#)
 - name: Concepts
   items:
   - name: The APIs
