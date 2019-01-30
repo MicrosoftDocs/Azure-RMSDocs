@@ -117,16 +117,16 @@
         ]
       },
       "ECMA2Yaml": {
-        "SourceXmlFolder": "dotnet/xml",
-        "OutputYamlFolder": "dotnet/api",
+        "SourceXmlFolder": "mip/develop/reference/dotnet/xml",
+        "OutputYamlFolder": "mip/develop/reference/dotnet/api",
         "Flatten": true,
-        "id": "dotnet-template"
+        "id": "mip-sdk-ref-dotnet"
       },
       "SplitTOC": [
-        "dotnet/api/dotnet-template/toc.yml"
+        "mip/develop/reference/dotnet/api/mip-sdk-ref-dotnet/toc.yml"
       ],
       "DiffFolder": [
-        "dotnet/api"
+        "mip/develop/reference/dotnet/api"
       ]
     }
   ],
