@@ -10,38 +10,11 @@
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
         "LandingData": "Content",
         "ContextObject": "Toc"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-      "customized_template_paths": [
-        "_dependentPackages/memberpage.plugins/content"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
-          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
-          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
-        ],
-        "docset_postbuild": [
-          "_dependentPackages/ECMA2Yaml/tools/PostBuild.ps1"
-        ]
-      },
-      "ECMA2Yaml": {
-        "SourceXmlFolder": "dotnet/xml",
-        "OutputYamlFolder": "dotnet/api",
-        "Flatten": true,
-        "id": "dotnet-template"
-      },
-      "SplitTOC": [
-        "dotnet/api/dotnet-template/toc.yml"
-      ],
-      "DiffFolder": [
-        "dotnet/api"
-      ],
       "version": 0
     },
     {
@@ -60,31 +33,6 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-      "customized_template_paths": [
-        "_dependentPackages/memberpage.plugins/content"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
-          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
-          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
-        ],
-        "docset_postbuild": [
-          "_dependentPackages/ECMA2Yaml/tools/PostBuild.ps1"
-        ]
-      },
-      "ECMA2Yaml": {
-        "SourceXmlFolder": "dotnet/xml",
-        "OutputYamlFolder": "dotnet/api",
-        "Flatten": true,
-        "id": "dotnet-template"
-      },
-      "SplitTOC": [
-        "dotnet/api/dotnet-template/toc.yml"
-      ],
-      "DiffFolder": [
-        "dotnet/api"
-      ]
     },
     {
       "docset_name": "mip-sdk-ref-dotnet",
