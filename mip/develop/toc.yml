@@ -7,6 +7,7 @@
 - name: Setup
   href: setup-configure-mip.md
 - name: Quickstarts
+  expanded: true
   items:
   - name: Application initialization (C++)
     href: quick-app-initialization-cpp.md

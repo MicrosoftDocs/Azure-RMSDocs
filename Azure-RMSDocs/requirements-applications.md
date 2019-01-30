@@ -61,7 +61,7 @@ Information about the table columns:
 
 ###### Footnote 1
 Includes: 
-- Office apps from Office 365 Business or Microsoft 365 Business when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
+- Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
 - Office 365 ProPlus apps
 
 ###### Footnote 2
