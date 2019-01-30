@@ -6,6 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/04/2019
 ms.author: tommos
+#Customer intent: As a an application developer, I want to learn how to do SDK .NET wrapper initialization, so that I can use the SDK APIs.
 ---
 
 # Quickstart: Client application initialization (C#)
@@ -13,7 +14,7 @@ ms.author: tommos
 This quickstart will show you how to implement the client initialization pattern, used by the MIP SDK .NET wrapper at runtime.
 
 > [!NOTE]
-> The steps outlined in this quickstart are required for any client application that uses the MIP C# wrapper's File or Policy APIs. The Protection API is not yet available. Although this Quickstart demonstrates usage of the File APIs, this same pattern is applicable to clients using the Policy and Protection APIs. Future Quickstarts should be done serially, as each one builds on the previous one, with this one being the first.
+> The steps outlined in this quickstart are required for any client application that uses the MIP .NET wrapper's File or Policy APIs. The Protection API is not yet available. Although this Quickstart demonstrates usage of the File APIs, this same pattern is applicable to clients using the Policy and Protection APIs. Future Quickstarts should be done serially, as each one builds on the previous one, with this one being the first.
 
 ## Prerequisites
 
@@ -27,7 +28,7 @@ If you haven't already, be sure to:
 
 ## Create a Visual Studio solution and project
 
-First we create and configure the initial Visual Studio solution and project, upon which the other Quickstarts will build. 
+First we create and configure the initial Visual Studio solution and project, upon which the other Quickstarts will build.
 
 1. Open Visual Studio 2017, select the **File** menu, **New**, **Project**. In the **New Project** dialog:
    - In the left pane, under **Installed**, **Visual C#**, select **Windows Desktop**.
@@ -44,8 +45,6 @@ First we create and configure the initial Visual Studio solution and project, up
      - Enter "Microsoft.InformationProtection" in the search box.
      - Select the "Microsoft.InformationProtection.File" package.
      - Click "Install", then click "OK" when the **Preview changes** confirmation dialog displays.
-  
-     [![Visual Studio add NuGet package](media/quick-app-initialization-csharp/add-nuget-package.png)](media/quick-app-initialization-csharp/add-nuget-package.png#lightbox)
 
 3. Repeat the steps above for adding the MIP SDK File API package, but instead add "Microsoft.IdentityModel.Clients.ActiveDirectory" to the application.
 
@@ -57,7 +56,7 @@ Now create an implementation for an authentication delegate, by extending the SD
 
 1. Right-click the project name in Visual Studio, select **Add** then **Class**.
 2. Enter "AuthDelegateImplementation" in the **Name** field. Click **Add**.
-3. Add using statements for the ADAL library and the MIP library:
+3. Add using statements for the Active Directory Authentication Library (ADAL) and the MIP library:
 
      ```csharp
      using Microsoft.InformationProtection;
@@ -78,7 +77,7 @@ Now create an implementation for an authentication delegate, by extending the SD
      }
      ```
 
-The `ApplicationInfo` object contains two properties. The `_appInfo.ApplicationId` will be used in the `AuthDelegateImplementation` class to provide the client ID to the auth library. 
+The `ApplicationInfo` object contains two properties. The `_appInfo.ApplicationId` will be used in the `AuthDelegateImplementation` class to provide the client ID to the auth library.
 
 5. Add the `public string AcquireToken()` class. This class should accept `Microsoft.InformationProtection.Identity`, and two strings: authority and resource. These string variables will be passed in to the authentication library by the API and shouldn't be manipulated. Editing may result in a failure to authenticate.
 
@@ -145,7 +144,7 @@ namespace mip_sdk_dotnet_quickstart
 
 ## Construct a File Profile and Engine
 
-As mentioned, profile and engine object are required for SDK clients using MIP APIs. Complete the coding portion of this Quickstart, by adding code to load the native DLLs then instantiate the profile and engine objects.
+As mentioned, profile and engine objects are required for SDK clients using MIP APIs. Complete the coding portion of this Quickstart, by adding code to load the native DLLs then instantiate the profile and engine objects.
 
    ```csharp
 using System;
