@@ -1,12 +1,13 @@
 ---
 title: Quickstart - Set and get a sensitivity label on a file using the C# MIP SDK
-description: A quickstart showing you how to use the Microsoft Information Protection C++ SDK to set and get a sensitivity label on a file.
+description: A quickstart showing you how to use the Microsoft Information Protection SDK .NET Wrapper to set and get a sensitivity label on a file.
 services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/09/2019
 ms.author: bryanla
+#Customer intent: As a an application developer, I want to learn how to set labels with the MIP SDK, so that I can use the SDK APIs to apply labels and protection to my own files.
 ---
 
 # Quickstart: Set and get a sensitivity label (C#)
@@ -62,7 +63,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
      Console.ReadKey();
    ```
 
-4. Replace the placeholder values in the source code that you just pasted in, using the following values:
+3. Replace the placeholder values in the source code that you just pasted in, using the following values:
 
    | Placeholder | Value |
    |:----------- |:----- |

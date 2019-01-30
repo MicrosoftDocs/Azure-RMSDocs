@@ -6,11 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/04/2019
 ms.author: bryanla
+#Customer intent: As a an application developer, I want to learn how to list labels in the MIP SDK, so that I can use the SDK APIs to apply labels later on.
 ---
 
 # Quickstart: List sensitivity labels (C#)
 
-This Quickstart shows you how to use the MIP File API, to list the sensitivity labels configured for your organization.
+This Quickstart shows you how to use the MIP SDK File API to list the sensitivity labels configured for your organization.
 
 ## Prerequisites
 
@@ -80,13 +81,6 @@ Finally, build and test your client application.
    > Copy and save the ID of one or more of the sensitivity labels (for example, `f42a3342-8706-4288-bd31-ebb85995028z`), as you will use it in the next Quickstart.
 
 ## Troubleshooting
-
-### Problems during execution of PowerShell script 
-
-| Summary | Error message | Solution |
-|---------|---------------|----------|
-| Incorrect redirect URI in application registration or PowerShell script (AADSTS50011) |*AADSTS50011: The reply url specified in the request does not match the reply urls configured for the application: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.* | Verify the redirect URI being used, by completing one of the following steps:<br><br><li>Update the Redirect URI in your Azure AD application configuration, to match your PowerShell script. See [MIP SDK setup and configuration](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) to verify that you've correctly configured the Redirect URI property.<br><li>Update the `redirectUri` variable in your PowerShell script, to match your application registration. |
-| Incorrect permissions in application registration (AADSTS65005) | *AADSTS65005: Invalid resource. The client has requested access to a resource, which is not listed in the requested permissions in the client's application registration. Client app ID: 0edbblll-8773-44de-b87c-b8c6276d41eb. Resource value from request: https://syncservice.o365syncservice.com/. Resource app ID: 870c4f2e-85b6-4d43-bdda-6ed9a579b725. List of valid resources from app registration: 00000002-0000-0000-c000-000000000000.* | Update the permission requests in your Azure AD application configuration. See [MIP SDK setup and configuration](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) to verify that you've correctly configured the permission requests in your application registration. |
 
 ### Problems during execution of C# application
 
