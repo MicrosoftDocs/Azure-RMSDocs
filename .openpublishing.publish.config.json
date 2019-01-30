@@ -10,7 +10,7 @@
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
-        "LandingData": "Content",
+	"LandingData": "Content",
         "ContextObject": "Toc"
       },
       "build_entry_point": "docs",
@@ -32,50 +32,7 @@
         "ContextObject": "Toc"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes",
-    },
-    {
-      "docset_name": "mip-sdk-ref-dotnet",
-      "build_source_folder": "mip/develop/reference/dotnet",
-      "build_output_subfolder": "mip-sdk-ref-dotnet",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "base_path": "dotnet",
-      "site_name": "Docs",
-      "customized_template_paths": [
-        "_dependentPackages/memberpage.plugins/content"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
-          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
-          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
-        ],
-        "docset_postbuild": [
-          "_dependentPackages/ECMA2Yaml/tools/PostBuild.ps1"
-        ]
-      },
-      "ECMA2Yaml": {
-        "SourceXmlFolder": "mip/develop/reference/dotnet/xml",
-        "OutputYamlFolder": "mip/develop/reference/dotnet/api",
-        "Flatten": true,
-        "id": "mip-sdk-ref-dotnet"
-      },
-      "SplitTOC": [
-        "mip/develop/reference/dotnet/api/mip-sdk-ref-dotnet/toc.yml"
-      ],
-      "DiffFolder": [
-        "mip/develop/reference/dotnet/api"
-      ]
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [
@@ -116,6 +73,8 @@
       "template_folder": "_themes.pdf"
     }
   },
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
   "enable_branch_build_custom_validation": true,
   "enable_pull_request_custom_validation": true,
   "template_folder": "_themes"
