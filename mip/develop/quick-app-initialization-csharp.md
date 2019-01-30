@@ -34,7 +34,7 @@ First we create and configure the initial Visual Studio solution and project, up
    - In the left pane, under **Installed**, **Visual C#**, select **Windows Desktop**.
    - In the center pane, select **Console App (.NET Framework)**
    - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
-   - When finished, click the **OK** button in the lower right.
+   - When finished, click the **OK** button in the lower right. 
 
      [![Visual Studio solution creation](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
