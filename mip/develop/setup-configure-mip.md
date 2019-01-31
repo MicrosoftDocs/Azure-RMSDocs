@@ -4,7 +4,7 @@ description: Provides the setup and configuration prerequisites, in order to use
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/18/2019
+ms.date: 01/30/2019
 ms.author: bryanla
 #Customer intent: As a an application developer, I want to learn about setup and configuration, so that I can use the SDK to build applications.
 ---
@@ -124,7 +124,7 @@ Next, complete the following steps to ensure your client computer is set up and 
    - On the **Edit environment variable** dialog, click **New**, which creates a new editable row. Using the full path to each of the `file\bins\debug\amd64`, `protection\bins\debug\amd64`, and `upe\bins\debug\amd64` subdirectories, add a new row for each. The SDK directories are stored in a `<API>\bins\<target>\<platform>` format, where:
      - \<API\> = `file`, `protection`, `upe`
      - \<target\> = `debug`, `release`
-     - \<platform\> = `amd64` (aka: x64), `x86`, etc.
+     - \<platform\> = `amd64` (x64), `x86`, etc.
    
    - When finished updating the **Path** variable, click **OK**. Then click **OK** when returned to the **Environment Variables** dialog.
 
@@ -160,7 +160,7 @@ To register an application account in Azure AD for use with the Quickstarts and 
    - On the **Required permissions** page, click **Add**. 
    - On the **Add API access** page, click **Select an API**.
    - On the **Select an API** page, click the "**Microsoft Rights Management Services**" API, and click **Select**.
-   - On the **Enable Access** page for the API's available permissions, click "**Create and access protected content for users**", and click **Select**, then **Done**.
+   - On the **Enable Access** page for the API's available permissions, click "**Create and access protected content for users**", then **Select**, then **Done**.
 
 5. Repeat step #4, but this time when you get to the **Select an API** page, you'll need to search for the API.
    - On the **Select an API** page, in the search box type "**Microsoft Information Protection Sync Service**", then click the API and click **Select**.
@@ -173,7 +173,7 @@ When finished, application registration and API permissions should look similar 
    [![Azure AD app registration](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-For more information on adding APIs and permissions to a registration, see [Updating an application in Azure AD, Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Here you'll find information on adding the APIs and permissions needed by a client application.  
+For more information on adding APIs and permissions to a registration, see [Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Here you'll find information on adding the APIs and permissions needed by a client application.  
 
 ## Request an Information Protection Integration Agreement (IPIA)
 
@@ -210,15 +210,17 @@ for an application you are releasing, send an email to [IPIA@microsoft.com](mail
 
 - Name of the Company Application
 - Brief Description of the Application
-- Azure Tenant ID (even if it the same one as before)
+- Azure Tenant ID (even if the same one as before)
 - App ID for the application
 - Company contacts, email, and phone for Critical Situation Correspondence
 
-Upon the sending of the email, please allow up to 72 hours for an acknowledgement of the receipt.
+Upon the sending of the email, allow up to 72 hours for an acknowledgement of the receipt.
 
 ## Next Steps
 
-- Before starting the Quickstarts section, be sure to read about [Observers in the MIP SDK](concept-async-observers.md), as the MIP SDK is designed to be almost entirely asynchronous.
-- If you're ready to get some hands-on experience with the SDK, start with [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md).
+- If you're a C++ developer
+  - Be sure to read about [Observers concepts](concept-async-observers.md) before you start the Quickstart section, to learn about the asynchronous nature of the C++ APIs.
+  - When you're ready to get some experience with the SDK, start with [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md).
+- If you're a C# developer, when you're ready to get some experience with the SDK, start with [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md).
 
 
