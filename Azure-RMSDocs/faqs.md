@@ -45,7 +45,7 @@ For more information, see [Announcing availability of information protection cap
 
 Originally, Office 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that let you classify documents and emails for auditing and retention when that content is in Office 365 services. In comparison, Azure Information Protection labels let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud.
 
-Announced at Microsoft Ignite 2018 in Orlando, you now have an option to create and configure [sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) in addition to retention labels in the Office 365 Security & Compliance Center. Now in preview, you can migrate your existing Azure Information Protection labels to the new unified labeling store, to be used as sensitivity labels with Office 365. 
+Announced at Microsoft Ignite 2018 in Orlando, you now have an option to create and configure [sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) in addition to retention labels in the Office 365 Security & Compliance Center. Currently in preview, you can migrate your existing Azure Information Protection labels to the new unified labeling store, to be used as sensitivity labels with Office 365. 
 
 For more information about unified labeling management and how these labels will be supported, see the blog post, [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
