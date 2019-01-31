@@ -53,7 +53,7 @@ Because the Azure Information Protection app uses the Microsoft Intune App Softw
     
     - For Android: You must specify the following **Appstore URL**:
         
-        https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
+            https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
 
 2. Do one or both of the following actions:
     
