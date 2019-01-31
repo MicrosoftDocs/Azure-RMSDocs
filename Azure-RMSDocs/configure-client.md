@@ -6,7 +6,7 @@ description: Information for admins about deploying the Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/17/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
@@ -47,19 +47,21 @@ To install the Azure Information Protection client for these popular mobile plat
 
 Because the Azure Information Protection app uses the Microsoft Intune App Software Development Kit, when iOS and Android devices are enrolled by Intune, you can deploy and manage the Azure Information Protection app for these devices:
 
-- To deploy the app, [add the Azure Information Protection app to Intune](/intune/apps-add) and [assign it to users](/intune/apps-deploy).
+1. [Add the Azure Information Protection app to Intune](/intune/apps-add) 
 
-- To manage the app, use Intune's [app protection policies](/intune/app-protection-policies).
+2. Do one or both of the following actions:
+    
+    - Deploy the app by [assigning it to users](/intune/apps-deploy)
+    
+    - Manage the app by using [app protection policies](/intune/app-protection-policies)
 
-When you add the Azure Information Protection app to Intune, you must specify the **Appstore URL**:
+When you add the Azure Information Protection app to Intune:
 
-For Android:
+- For iOS: Search for the app, and the values that you need are specified for you.
 
-	com.microsoft.ipviewer
-
-For iOS:
-
-	com.microsoft.rms-sharing
+- For Android: You must specify the following **Appstore URL**:
+        
+        https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
 
 When the Azure Information Protection app is configured for an app protection policy for Android devices, in addition to opening protected text, images, and PDF documents, this app can also open audio and video files. For more information, see [View media files with the Azure Information Protection app](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app).
 
