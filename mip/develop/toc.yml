@@ -22,10 +22,13 @@
   - name: C#
     items:
     - name: Application initialization (C#)
+      href: quick-app-initialization-csharp.md
     - name: File API
       items:
       - name: List sensitivity labels (C#)
+        href: quick-file-list-labels-csharp.md
       - name: Set/get sensitivity labels (C#)
+        href: quick-file-set-get-label-csharp.md
 - name: Concepts
   items:
   - name: The APIs

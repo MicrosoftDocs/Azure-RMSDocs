@@ -219,8 +219,8 @@ Upon the sending of the email, allow up to 72 hours for an acknowledgement of th
 ## Next Steps
 
 - If you're a C++ developer
-  - Be sure to read about [Observers concepts](concept-async-observers.md) before you start the Quickstart section, to learn about the asynchronous nature of the C++ APIs.
+  - Be sure to read [Observers concepts](concept-async-observers.md) before you start the Quickstart section, to learn about the asynchronous nature of the C++ APIs.
   - When you're ready to get some experience with the SDK, start with [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md).
-- If you're a C# developer, when you're ready to get some experience with the SDK, start with [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md).
+- If you're a C# developer, when you're ready to get some experience with the SDK, start with [Quickstart: Client application initialization (C#)](quick-app-initialization-csharp.md).
 
 
