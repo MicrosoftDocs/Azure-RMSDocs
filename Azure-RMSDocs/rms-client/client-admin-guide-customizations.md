@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -57,6 +57,7 @@ Some of these settings require editing the registry and some use advanced settin
 |EnablePDFv2Protection|[Don't protect PDF files by using the ISO standard for PDF encryption](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
+|LogLevel|[Change the local logging level](#change-the-local-logging-level)
 |OutlookDefaultLabel|[Set a different default label for Outlook](#set-a-different-default-label-for-outlook)|
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
@@ -358,11 +359,11 @@ To use PowerShell commands to convert existing .ppdf files to protected .pdf fil
 
 2. From the output, take a note of the following parameter values:
     
-    - The value (GUID) for **SubLabelId**, if there is one. If this value is blank, a sublabel wasn't used, so note the value for **MainLabelId** instead.
+   - The value (GUID) for **SubLabelId**, if there is one. If this value is blank, a sublabel wasn't used, so note the value for **MainLabelId** instead.
     
-    Note: If there is no value for **MainLabelId** either, the file isn't labeled. In this case, you can use the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) command and [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) command instead of the commands in step 3 and 4.
+     Note: If there is no value for **MainLabelId** either, the file isn't labeled. In this case, you can use the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) command and [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) command instead of the commands in step 3 and 4.
     
-    - The value for **RMSTemplateId**. If this value is **Restricted Access**, a user has protected the file using custom permissions rather than the protection settings that are configured for the label. If you continue, those custom permissions will be overwritten by the label's protection settings. Decide whether to continue or ask the user (value displayed for the **RMSIssuer**) to remove the label and reapply it, together with their original custom permissions.
+   - The value for **RMSTemplateId**. If this value is **Restricted Access**, a user has protected the file using custom permissions rather than the protection settings that are configured for the label. If you continue, those custom permissions will be overwritten by the label's protection settings. Decide whether to continue or ask the user (value displayed for the **RMSIssuer**) to remove the label and reapply it, together with their original custom permissions.
 
 3. Remove the label by using [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) with the *RemoveLabel* parameter. If you are using the [policy setting](../configure-policy-settings.md) of **Users must provide justification to set a lower classification label, remove a label, or remove protection**, you must also specify the *Justification* parameter with the reason. For example: 
     
@@ -609,7 +610,7 @@ Now, when a user opens and saves one of these Office documents, it is labeled  *
 
 ## Disable the low integrity level for the scanner
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 By default, the Azure Information Protection scanner runs with a low integrity level. This setting provides higher security isolation but at the cost of performance. A low integrity level is suitable if you run the scanner with an account that has privileged rights (such as a local administrator account) because this setting helps to protect the computer running the scanner.
 
@@ -623,6 +624,32 @@ To configure this advanced setting so that the scanner runs with an integrity le
 
 - Value: **False**
 
+
+## Change the local logging level
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+
+By default, the Azure Information Protection client writes client log files to the **%localappdata%\Microsoft\MSIP** folder. These files are intended for troubleshooting by Microsoft Support.
+ 
+To change the logging level for these files, configure the following advanced client setting:
+
+- Key: **LogLevel**
+
+- Value: **\<logging level>**
+
+Set the logging level to one of the following values:
+
+- **Off**: No local logging.
+
+- **Error**: Errors only.
+
+- **Info**: Minimum logging, which includes no event IDs.
+
+- **Debug**: Full information (the default setting).
+
+- **Trace**: Very detailed logging that has a performance impact and should be enabled only if requested by Microsoft Support. If you are instructed to set this level of logging, remember to set a different value when the relevant logs have been collected.
+
+This advanced client setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md), or change the information that's written to the local [event log](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
 
 ## Integration with Exchange message classification for a mobile device labeling solution
 

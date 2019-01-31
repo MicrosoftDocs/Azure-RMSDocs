@@ -6,7 +6,7 @@ description: An introduction tutorial that steps you through configuring Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/24/2019
 ms.topic: tutorial
 ms.service: information-protection
 
@@ -55,11 +55,13 @@ To complete this tutorial, you need:
     
     To install the client, go to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
 
-4. A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you are signed in to Office apps from one of the following categories :
+4. A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you are signed in to Office apps from one of the following categories:
     
-    - Office 365 with Office 2016 apps (minimum version 1805, build 9330.2078). To use this option, your account must be assigned a license for Azure Rights Management. This license is included with the Azure Information Protection subscription.
+    - Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when you are assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365).
     
-    - Office 365 ProPlus with 2016 apps or 2013 apps (Click-to-Run or Windows Installer-based installation).
+    - Office 365 ProPlus.
+    
+    - Office Professional Plus 2019.
     
     - Office Professional Plus 2016.
     

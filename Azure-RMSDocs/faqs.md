@@ -50,7 +50,7 @@ Azure Information Protection provides classification, labeling, and protection f
 A user must have a valid user name and password to access content that is protected by Azure Information Protection. To read more about how Azure Information Protection helps to secure your data, see [The role of Azure Information Protection in securing data](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
 
 ## What subscription do I need for Azure Information Protection and what features are included?
-See the subscription information and feature list on the [Azure Information Protection pricing](https://azure.microsoft.com/en-us/pricing/details/information-protection) page. 
+See the subscription information and feature list on the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection) page. 
 
 If you have an Office 365 subscription that includes Azure Rights Management data protection, download the [Azure Information Protection licensing datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf), which also includes some frequently asked questions for licensing.
 
@@ -128,7 +128,7 @@ Yes, as a public preview offering, you can now receive an alert for **Azure Info
 
 Such alerts can help you to detect advanced data-related attacks and insider threats in your environment. These alerts use machine learning to profile the behavior of users who access your protected data. 
 
-The Azure Information Protection alerts can be accessed by [using the Microsoft Graph Security API](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview), or you can [stream alerts](https://developer.microsoft.com/en-us/graph/docs/concepts/security_siemintegration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
+The Azure Information Protection alerts can be accessed by [using the Microsoft Graph Security API](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview), or you can [stream alerts](https://developer.microsoft.com/graph/docs/concepts/security_siemintegration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
 
 For more information about the Microsoft Graph Security API, see [Microsoft Graph Security API overview](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview).
 
@@ -201,7 +201,7 @@ In addition, there are FAQs designed for end users:
 
 - [FAQ for Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md)
 
-- [FAQ for RMS sharing app for Mac computers and Windows Phone](https://technet.microsoft.com/dn451248)
+- [FAQ for RMS sharing app for Mac computers](https://technet.microsoft.com/dn451248)
 
 - [FAQ for Rights Management Sharing Application for Windows](https://technet.microsoft.com/dn467883)
 

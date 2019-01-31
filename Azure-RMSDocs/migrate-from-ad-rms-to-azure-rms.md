@@ -55,23 +55,23 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 - **A supported RMS deployment:**
     
-    - The following releases of AD RMS support a migration to Azure Information Protection:
+  - The following releases of AD RMS support a migration to Azure Information Protection:
     
-        - Windows Server 2008 R2 (x64)
+      - Windows Server 2008 R2 (x64)
         
-        - Windows Server 2012 (x64)
+      - Windows Server 2012 (x64)
         
-        - Windows Server 2012 R2 (x64)
+      - Windows Server 2012 R2 (x64)
         
-        - Windows Server 2016 (x64)
+      - Windows Server 2016 (x64)
         
-    - All valid AD RMS topologies are supported:
+  - All valid AD RMS topologies are supported:
     
-        - Single forest, single RMS cluster
+      - Single forest, single RMS cluster
         
-        - Single forest, multiple licensing-only RMS clusters
+      - Single forest, multiple licensing-only RMS clusters
         
-        - Multiple forests, multiple RMS clusters
+      - Multiple forests, multiple RMS clusters
         
     Note: By default, multiple AD RMS clusters migrate to a single tenant for Azure Information Protection. If you want separate tenants for Azure Information Protection, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one tenant.
 
@@ -86,15 +86,15 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 - **Preparation for Azure Information Protection:**
 
-	- Directory synchronization between your on-premises directory and Azure Active Directory
+  - Directory synchronization between your on-premises directory and Azure Active Directory
 
-	- Mail-enabled groups in Azure Active Directory
+  - Mail-enabled groups in Azure Active Directory
 
 	See [Preparing users and groups for Azure Information Protection](prepare.md).
 
 - **If you have used the Information Rights Management (IRM) functionality of Exchange Server** (for example, transport rules and Outlook Web Access) or SharePoint Server with AD RMS:
 
-	- Plan for a short period of time when IRM will not be available on these servers
+  - Plan for a short period of time when IRM will not be available on these servers
  
 	You can continue to use IRM on these servers after the migration. However, one of the migration steps is to temporarily disable the IRM service, install and configure a connector, reconfigure the servers, and then re-enable IRM.
 
@@ -209,7 +209,7 @@ The migration steps can be divided into five phases that can be done at differen
 
 - **Step 11: Complete client migration tasks**
 
-    If you have deployed the [mobile device extension](https://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phone, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS. 
+    If you have deployed the [mobile device extension](https://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phones and tablets, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS. 
     
     The onboarding controls that you configured during the preparation phase are no longer needed. However, if you did not use onboarding controls because you chose to migrate everything at the same time rather than do a phased migration, you can skip the instructions to remove the onboarding controls.
     

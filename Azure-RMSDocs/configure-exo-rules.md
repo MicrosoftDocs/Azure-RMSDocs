@@ -35,7 +35,7 @@ Use the following information to help you configure mail flow rules in Exchange 
 
 Mail flow rules that apply protection as an action are ignored if the email is already protected. For example, an email message that has been protected by Do Not Forward cannot be changed by an Exchange mail flow rule to use the Encrypt-Only option.  
 
-You can extend these examples as well as modify them. For example, add more conditions. For more information about configuring mail flow rules, see [Mail flow rules (transport rules) in Exchange Online](https://technet.microsoft.com/library/jj919238(v=exchg.150\).aspx) from the Exchange Online documentation.
+You can extend these examples as well as modify them. For example, add more conditions. For more information about configuring mail flow rules, see [Mail flow rules (transport rules) in Exchange Online](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx) from the Exchange Online documentation.
 
 For more information about configuring mail flow rules to encrypt email messages, see [Define mail flow rules to encrypt email messages in Office 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) from the Office documentation. 
 
@@ -66,7 +66,7 @@ For the following examples, create a new mail flow rule by using the following s
 > [!TIP]
 > If you have problems with the user interface when you configure your rules, try a different browser, such as Internet Explorer.
 
-The examples have a single condition that applies protection when an email is sent outside the organization. For more information about other conditions that you can select, see [Mail flow rule conditions and exceptions (predicates) in Exchange Online](https://technet.microsoft.com/library/jj919235(v=exchg.150\).aspx).
+The examples have a single condition that applies protection when an email is sent outside the organization. For more information about other conditions that you can select, see [Mail flow rule conditions and exceptions (predicates) in Exchange Online](https://technet.microsoft.com/library/jj919235(v=exchg.150).aspx).
 
 
 ### Example 1: Rule that applies the Do Not Forward option to emails that are labeled **General** when they are sent outside the organization

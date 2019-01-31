@@ -41,7 +41,7 @@ For an enterprise installation and configuration of the client for Windows, see 
 To install the Azure Information Protection client for these popular mobile platforms, you can download the relevant app by using the links on the [Microsoft Azure Information Protection page](https://go.microsoft.com/fwlink/?LinkId=303970). No configuration is required.
 
 > [!NOTE]
-> For Mac computers and Windows Phone, links from this page download the RMS sharing apps for mobile devices. These devices do not currently support the Azure Information Protection client.
+> For Mac computers, links from this page download the RMS sharing apps for mobile devices. These computers do not support the Azure Information Protection client.
 
 ### Integration with Intune
 

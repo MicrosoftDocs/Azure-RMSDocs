@@ -41,7 +41,7 @@ Following are **Objective C** code examples from a larger sample application rep
 
 - **Step 1**: Create an [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) object
 
- **Description**: Instantiate an [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) object, through its create method which implements service authentication using the [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) in the following example code section.
+  **Description**: Instantiate an [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) object, through its create method which implements service authentication using the [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) in the following example code section.
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -98,19 +98,19 @@ Following are **Objective C** code examples from a larger sample application rep
                           }];
        }
 
--   **Step 3**: Check if the Edit right exists for this user with this content via the [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) method of a [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) object.
+- **Step 3**: Check if the Edit right exists for this user with this content via the [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) method of a [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) object.
 
-        - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
-        {
-            //check if user has edit rights and apply enforcements
-            if (!protectedData.userPolicy.accessCheck(EditableDocumentRights.Edit))
-            {
-                // enforce on the UI
-                textEditor.focusableInTouchMode = NO;
-                textEditor.focusable = NO;
-                textEditor.enabled = NO;
-            }
-        }
+      - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
+      {
+          //check if user has edit rights and apply enforcements
+          if (!protectedData.userPolicy.accessCheck(EditableDocumentRights.Edit))
+          {
+              // enforce on the UI
+              textEditor.focusableInTouchMode = NO;
+              textEditor.focusable = NO;
+              textEditor.enabled = NO;
+          }
+      }
 
 ### Scenario: Create a new protected file using a template
 
