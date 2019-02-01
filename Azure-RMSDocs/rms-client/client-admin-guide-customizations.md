@@ -430,7 +430,7 @@ Note that this setting does not remove the original label from the document or a
 
 ### Example 1: One-to-one mapping of the same label name
 
-Documents that have a Secure Islands label of "Confidential" should be relabeled as "Confidential" by Azure Information Protection.
+Requirement: Documents that have a Secure Islands label of "Confidential" should be relabeled as "Confidential" by Azure Information Protection.
 
 In this example:
 
@@ -447,7 +447,7 @@ The advanced client setting:
 
 ### Example 2: One-to-one mapping for a different label name
 
-Documents labeled as "Sensitive" by Secure Islands should be relabeled as "Highly Confidential" by Azure Information Protection.
+Requirement: Documents labeled as "Sensitive" by Secure Islands should be relabeled as "Highly Confidential" by Azure Information Protection.
 
 In this example:
 
@@ -465,7 +465,7 @@ The advanced client setting:
 
 ### Example 3: Many-to-one mapping of label names
 
-You have two Secure Islands labels that include the word "Internal" and you want documents that have either of these Secure Islands labels to be relabeled as "General" by Azure Information Protection.
+Requirement: You have two Secure Islands labels that include the word "Internal" and you want documents that have either of these Secure Islands labels to be relabeled as "General" by Azure Information Protection.
 
 In this example:
 
