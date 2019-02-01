@@ -34,7 +34,7 @@ The profile itself provides the following functionality:
 - `Path`: File path under which logging, telemetry, and other persistent state is stored.
 - `useInMemoryStorage`: A bool that defines whether state should be stored in memory, or on disk.
 - `authDelegate`: A shared pointer of class `mip::AuthDelegate`. 
-- `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_consentdelegate.md). 
+- `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md). 
 - `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 - `applicationInfo`: A [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) object. Information about the application that is consuming the SDK, which matches your Azure Active Directory application registration ID and name.
 
