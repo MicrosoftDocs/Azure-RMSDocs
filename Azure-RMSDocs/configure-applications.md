@@ -6,7 +6,7 @@ description: Instructions for admins to configure applications and services to s
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
@@ -50,9 +50,6 @@ After you have deployed Azure Information Protection for your organization, use 
 	-   [Office 2010](configure-office-apps.md#office2010)
 
 -   [Azure Information Protection client: Installation and configuration for clients](configure-client.md)
-
--   [Rights Management sharing application: Installation and configuration for clients](configure-sharing-app.md)
-
 
 To configure on-premises servers such as Exchange Server and SharePoint Server, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
