@@ -1,30 +1,38 @@
 ---
-title: class mip ApplyLabelAction 
-description: Reference for class mip ApplyLabelAction 
+title: class mip::ApplyLabelAction 
+description: Documents the mip::applylabelaction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/28/2019
 ---
+
 # class mip::ApplyLabelAction 
 Apply label actions requires the calling application to apply a specific label.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetLabelId() const  |  Get the label ID required.
- public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+public const std::string& GetLabelId() const  |  Get the label ID required.
+public const std::vector\<std::string\>& GetClassificationIds() const  |  Get the Classification IDs that matched and caused this label to appear.
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   
-### GetLabelId
+### GetLabelId function
 Get the label ID required.
 
   
 **Returns**: The label ID.
   
-### ActionType
+### GetClassificationIds function
+Get the Classification IDs that matched and caused this label to appear.
+
+  
+**Returns**: Const std::vector<std::string>& a list of classification IDs that caused this label to appear.
+  
+### GetType function
 Get the type of [Action](class_mip_action.md).
 
   

@@ -4,8 +4,9 @@ description: A quickstart showing you how to use the Microsoft Information Prote
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
+#Customer intent: As a an application developer, I want to learn how to list sensitivity labels, so that I can implement this logic in my own application.
 ---
 
 # Quickstart: List sensitivity labels (C++)
@@ -33,7 +34,7 @@ Add logic to list your organization's sensitivity labels, using the File engine 
    using std::endl;
    ```
 
-4. Toward the end of the `main()` body, below the closing brace `}` of the `catch` block and above `return 0;` (where you left off in the previous Quickstart), insert the following code:
+4. Toward the end of the `main()` body, below the closing brace `}` of the last `catch` block and above `return 0;` (where you left off in the previous Quickstart), insert the following code:
 
    ```cpp
    // List sensitivity labels
@@ -53,23 +54,23 @@ Add logic to list your organization's sensitivity labels, using the File engine 
 
 ## Create a PowerShell script to generate access tokens
 
-You use the following PowerShell script to generate access tokens, as requested by the SDK. The script uses the `Get-ADALToken` cmdlet from the ADAL.PS module you installed earlier, in "MIP SDK Setup and configuration". 
+Use the following PowerShell script to generate access tokens, which are requested by the SDK in your `AuthDelegateImpl::AcquireOAuth2Token` implementation. The script uses the `Get-ADALToken` cmdlet from the ADAL.PS module you installed earlier, in "MIP SDK Setup and configuration". 
 
 1. Create a PowerShell Script file (.ps1 extension), and copy/paste the following script into the file:
 
-   - Update the `$appId` and `$redirectUri` variables, to match the values specified in your Azure AD app registration. 
    - `$authority` and `$resourceUrl` are updated later, in the following section.
+   - Update `$appId` and `$redirectUri`, to match the values you specified in your Azure AD app registration. 
 
    ```powershell
-   $authority = '<authority-url>'                   # Enforced by MIP SDK
-   $resourceUrl = '<resource-url>'                  # Enforced by MIP SDK; matches a resource/API URL requested in the app registration
+   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token() 
+   $resourceUrl = '<resource-url>'                  # Specified when SDK calls AcquireOAuth2Token()
    $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'  # App ID of the Azure AD app registration
-   $redirectUri = 'bltest://authorize'              # Must match the redirect URI of the Azure AD app registration
+   $redirectUri = 'bltest://authorize'              # Redirect URI of the Azure AD app registration
    $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
    $response.AccessToken | clip                     # Copy the access token text to the clipboard
    ```
 
-2. Save the script file so you can run it later, as requested by your client application.
+2. Save the script file so you can run it later, when requested by your client application.
 
 ## Build and test the application
 
@@ -77,22 +78,22 @@ Finally, build and test your client application.
 
 1. Use F6 (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application will prompt for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. You can reuse a previously generated token, if prompted multiple times and the requested values are the same:
+2. If your project builds and runs successfully, the application prompts for an access token, each time the SDK calls your `AcquireOAuth2Token()` method. You can reuse a previously generated token, if prompted multiple times and the requested values are the same:
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
    Set $authority to: https://login.windows.net/common/oauth2/authorize
    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Be sure to sign in with user account: user1@tenant.onmicrosoft.com
+   Sign in with user account: user1@tenant.onmicrosoft.com
    Enter access token:
    ```
 
-3. To provide a response to the above prompt, go back to your PowerShell script and:
+3. To generate an access token for the prompt, go back to your PowerShell script and:
 
    - Update the `$authority` and `$resourceUrl` variables. They must match the values that are specified in the console output in step #2. These values are provided by the MIP SDK in the `challenge` parameter of `AcquireOAuth2Token()`:
      - `$authority` should be `https://login.windows.net/common/oauth2/authorize`
      - `$resourceUrl` should be `https://syncservice.o365syncservice.com/` or `https://aadrm.com`
-   - Run the PowerShell script. The `Get-ADALToken` cmdlet triggers an Azure AD authentication prompt similar to the following example. Specify the same account provided in the console output in step #2. After successful sign-in, the access token will be placed on the clipboard.
+   - Run the PowerShell script. The `Get-ADALToken` cmdlet triggers an Azure AD authentication prompt, similar to the example below. Specify the same account provided in the console output in step #2. After successful sign-in, the access token will be placed on the clipboard.
 
      [![Visual Studio acquire token sign-in](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
@@ -100,7 +101,7 @@ Finally, build and test your client application.
 
      [![Visual Studio consent](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png#lightbox)
 
-4. After supplying the access token(s), your console output should show the sensitivity labels, similar to the following example:
+4. After pasting the access token into the prompt from step #2, your console output should show the sensitivity labels, similar to the following example:
 
    ```console
    Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
