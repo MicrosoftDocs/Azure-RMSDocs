@@ -6,7 +6,7 @@ description: Instructions and information for admins to configure and use docume
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2018
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
@@ -80,20 +80,20 @@ These URLs are standard for the Azure Rights Management service, with the except
 
 ## Tracking and revoking documents for users
 
-When users sign in to the document tracking site, they can track and revoke documents that they have protected by using the Azure Information Protection client or shared by using the Rights Management sharing application. When you sign in as an Azure AD global administrator for your tenant, you can click the Admin icon, which switches to Administrator mode. Other administrator roles do not support this mode for the document tracking site. 
+When users sign in to the document tracking site, they can track and revoke documents that they have protected by using the Azure Information Protection client. When you sign in as an Azure AD global administrator for your tenant, you can click the Admin icon, which switches to Administrator mode. Other administrator roles do not support this mode for the document tracking site. 
 
 ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
 
-The Administrator mode lets you see the documents that users in your organization have selected to track by using the Azure Information Protection client, or shared by using the Rights Management sharing application.
+The Administrator mode lets you see the documents that users in your organization have selected to track by using the Azure Information Protection client.
 
 > [!NOTE] 
 > If you do not see this icon, despite being a global administrator, it's because you haven't yet shared any documents yourself. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
 
 Actions that you take in Administrator mode are audited and logged in the usage log files, and you must confirm to continue. For more information about this logging, see the next section.
 
-When you are in Administrator mode, you can then search by user or document. If you search by user, you see all the documents that the specified user has selected to track by using the Azure Information Protection client, or shared by using the Rights Management sharing application. 
+When you are in Administrator mode, you can then search by user or document. If you search by user, you see all the documents that the specified user has selected to track by using the Azure Information Protection client. 
 
-If you search by document, you see all the users in your organization who tracked that document by using the Azure Information Protection client, or shared by using the Rights Management sharing application. You can then drill into the search results to track the documents that users have protected and revoke these documents, if necessary. 
+If you search by document, you see all the users in your organization who tracked that document by using the Azure Information Protection client. You can then drill into the search results to track the documents that users have protected and revoke these documents, if necessary. 
 
 To leave the Administrator mode, click **X** next to **Exit administrator mode**:
 
@@ -105,7 +105,7 @@ For instructions how to use the document tracking site, see [Track and revoke yo
 
 This option is only available for the current preview version of the Azure Information Protection client.
 
-To be able to track and revoke a document, it must first be registered with the document tracking site. This action occurs when users select the **Track and revoke** option from File Explorer or their Office apps when they use the Azure Information Protection client. For the Rights Management sharing application, this action occurs automatically when users select the **Share Protected** option.
+To be able to track and revoke a document, it must first be registered with the document tracking site. This action occurs when users select the **Track and revoke** option from File Explorer or their Office apps when they use the Azure Information Protection client.
 
 If you label and protect files for users by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. For example:
 

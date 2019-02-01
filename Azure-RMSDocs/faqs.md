@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
@@ -59,8 +59,6 @@ If you have an Office 365 subscription that includes Azure Rights Management dat
 No. Although most of the presentations and demos you've seen of the Azure Information Protection client show how it supports classification and labeling, it can also be used with subscriptions that include just the Azure Rights Management service to protect data.
 
 When the Azure Information Protection client for Windows is installed and it doesn't have an Azure Information Protection policy, the client automatically operates in [protection-only mode](./rms-client/client-protection-only-mode.md). In this mode, users can easily apply Rights Management templates and custom permissions. If you later purchase a subscription that does include classification and labeling, the client automatically switches to standard mode when it downloads the Azure Information Protection policy.
-
-If you currently use the Rights Management sharing application for Windows, we recommend that you replace this application with the Azure Information Protection client. Support for the sharing application will end January 31, 2019. To help with the transition, see [Tasks that you used to do with the RMS sharing application](./rms-client/upgrade-client-app.md).
 
 ## Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?
 
@@ -202,8 +200,4 @@ In addition, there are FAQs designed for end users:
 - [FAQ for Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md)
 
 - [FAQ for RMS sharing app for Mac computers](https://technet.microsoft.com/dn451248)
-
-- [FAQ for Rights Management Sharing Application for Windows](https://technet.microsoft.com/dn467883)
-
-
 
