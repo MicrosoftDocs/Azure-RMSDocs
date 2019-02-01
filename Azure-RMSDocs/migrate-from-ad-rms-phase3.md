@@ -6,7 +6,7 @@ description: Phase 3 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/11/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
@@ -30,15 +30,15 @@ Use the following information for Phase 3 of migrating from AD RMS to Azure Info
 
 ## Step 7. Reconfigure Windows computers to use Azure Information Protection
 
-For Windows computers that use Office 2016 click-to-run desktop apps:
+For Windows computers that use Office 365 apps, Office 2019, or Office 2016 click-to-run desktop apps:
 
 - You can reconfigure these clients to use Azure Information Protection by using DNS redirection. This is the preferred method for client migration because it is the simplest. However, this method is restricted to Office 2016 (or later) click-to-run desktop apps for Windows computers.
     
     This method requires you to create a new SRV record, and set an NTFS deny permission for users on the AD RMS publishing endpoint.
 
-- For Windows computers that don't use Office 2016 click-to-run:
+- For Windows computers that don't use Office 2019 or Office 2016 click-to-run:
     
-    You cannot use DNS redirection and instead, must use registry edits. If you have a mix of Office 2016 and other versions of Office, you can use this single method for all Windows computers, or a combination of DNS redirection and editing the registry. 
+    You cannot use DNS redirection and instead, must use registry edits. If you have a mix of Office versions that can and cannot use DNS redirection, you can use this single method for all Windows computers, or a combination of DNS redirection and editing the registry. 
     
     The registry changes are made easier for you by editing and deploying scripts that you can download. 
 
@@ -46,7 +46,7 @@ See the following sections for more information about how to reconfigure Windows
 
 ## Client reconfiguration by using DNS redirection
 
-This method is suitable only for Windows clients that run Office 2016 (or later) click-to-run desktop apps. 
+This method is suitable only for Windows clients that run Office 365 apps and Office 2016 (or later) click-to-run desktop apps. 
 
 1. Create a DNS SRV record using the following format:
     
@@ -72,7 +72,7 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
 	|**Port number**|80|  
 	|**Host offering this service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
-2. Set a deny permission for the Office 2016 users on the AD RMS publishing endpoint:
+2. Set a deny permission on the AD RMS publishing endpoint for users running Office 365 apps or Office 2016 (or later):
 
     a. On one of your AD RMS servers in the cluster, start the Internet Information Services (IIS) Manager console.
 
@@ -82,18 +82,18 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
 
     d. In the **Permissions for licensing.asmx** dialog box, either select **Users** if you want to set redirection for all users, or click **Add** and then specify a group that contains the users that you want to redirect.
     
-    Even if all your users are using Office 2016, you might prefer to initially specify a subset of users for a phased migration.
+    Even if all your users are using a version of Office that supports DNS redirection, you might prefer to initially specify a subset of users for a phased migration.
     
     e. For your selected group, select **Deny** for the **Read & Execute** and the **Read** permission, and then click **OK** twice.
 
-    f. To confirm this configuration is working as expected, try to connect to the licensing.asmx file directly from a browser. You should see the following error message, which triggers the client running Office 2016 to look for the SRV record:
+    f. To confirm this configuration is working as expected, try to connect to the licensing.asmx file directly from a browser. You should see the following error message, which triggers the client running Office 365 apps or Office 2019 or Office 2016 to look for the SRV record:
     
     **Error message 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists).**
 
 
 ## Client reconfiguration by using registry edits
 
-This method is suitable for all Windows clients and should be used if they do not run Office 2016 but an earlier version. This method uses two migration scripts to reconfigure AD RMS clients:
+This method is suitable for all Windows clients and should be used if they do not run Office 365 apps, or Office 2019. or Office 2016, but instead, an earlier version of Office. This method uses two migration scripts to reconfigure AD RMS clients:
 
 - Migrate-Client.cmd
 

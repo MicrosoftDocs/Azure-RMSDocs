@@ -36,7 +36,7 @@ As an example, employees might email a document to a partner company, or save a 
 
 But very importantly, authorized people and services (such as search and indexing) can continue to read and inspect the protected data. This capability is not easily accomplished with other information protection solutions that use peer-to-peer encryption. You might have heard this capability referred to as "reasoning over data" and it is a crucial element in maintaining control of your organization’s data.
 
-The following picture shows how this service offers a protection solution for Office 365, as well as for on-premises servers and services. You also see that protection is supported by the popular end-user devices that run Windows, Mac OS, iOS, Android, and Windows Phone.
+The following picture shows how this service offers a protection solution for Office 365, as well as for on-premises servers and services. You also see that protection is supported by the popular end-user devices that run Windows, macOS, iOS, and Android.
 
 
 ![How Azure RMS works](./media/AzRMS_elements.png)

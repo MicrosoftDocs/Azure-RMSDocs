@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/17/20198
+ms.date: 01/26/2019
 ms.topic: article
 ms.service: information-protection
 
@@ -27,7 +27,7 @@ ms.suite: ems
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
-> This feature is in preview, and migrates your tenant to a new platform that is also in preview. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by multiple clients and services.
+> This feature is in preview, and migrates your tenant to a new platform. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by multiple clients and services.
 
 Migrate your labels if you want to be able to use them in the Office 365 Security & Compliance Center, where they can be published and then downloaded by [clients that support unified labeling](#clients-that-support-unified-labeling). The Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
 
@@ -118,7 +118,7 @@ The clients that currently support unified labeling include:
 
 - The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md) - in preview
 
-- Apps from the Office Insiders program. For more information, see the [Where the feature is available today?](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US#bkmk_whereavailable) section from the Office documentation.
+- Apps from Office that are in different stages of availability. For more information, see the **Where the feature is available today?** section from [Apply sensitivity labels to your documents and email within Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in the Office documentation.
     
 - Clients from software vendors and developers that use the [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference).
 

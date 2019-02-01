@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 02/02/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
@@ -200,7 +200,7 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 ## Run a discovery cycle and view reports for the scanner
 
-1. In your PowerShell session, restart the **Azure Information Protection Scanner** service by running the following command:
+1. In your PowerShell session, start the scanner by running the following command:
     
         Start-AIPScan
     

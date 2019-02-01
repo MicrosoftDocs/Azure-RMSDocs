@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 02/02/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -57,6 +57,7 @@ Some of these settings require editing the registry and some use advanced settin
 |EnablePDFv2Protection|[Don't protect PDF files by using the ISO standard for PDF encryption](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
+|LogLevel|[Change the local logging level](#change-the-local-logging-level)
 |OutlookDefaultLabel|[Set a different default label for Outlook](#set-a-different-default-label-for-outlook)|
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
@@ -425,18 +426,17 @@ This configuration requires you to specify an advanced client setting named **La
 The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. To specify a sublabel, the parent label must be in the same scope, or in the global policy.
 
 Specify your choice of a migration rule name. Use a descriptive name that helps you to identify how one or more labels from your previous labeling solution should be mapped to an Azure Information Protection label. The name displays in the scanner reports and in Event Viewer. 
-
-Note that this setting does not remove any visual markings that the old label might have applied. To remove headers and footers, see the next section, [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions).
+Note that this setting does not remove the original label from the document or any visual markings in the document that the original label might have applied. To remove headers and footers, see the next section, [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions).
 
 ### Example 1: One-to-one mapping of the same label name
 
-Documents that have a Secure Islands label of "Confidential" should be relabeled as "Confidential" by Azure Information Protection.
+Requirement: Documents that have a Secure Islands label of "Confidential" should be relabeled as "Confidential" by Azure Information Protection.
 
 In this example:
 
-- The Azure Information Protection label of **Confidential** has a label ID of 1ace2cc3-14bc-4142-9125-bf946a70542c. 
+- The Azure Information Protection label that you want to use is named **Confidential** and has a label ID of **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
-- The Secure Islands label is stored in the custom property named **Classification**.
+- The Secure Islands label is named **Confidential** and stored in the custom property named **Classification**.
 
 The advanced client setting:
 
@@ -447,13 +447,13 @@ The advanced client setting:
 
 ### Example 2: One-to-one mapping for a different label name
 
-Documents labeled as "Sensitive" by Secure Islands should be relabeled as "Highly Confidential" by Azure Information Protection.
+Requirement: Documents labeled as "Sensitive" by Secure Islands should be relabeled as "Highly Confidential" by Azure Information Protection.
 
 In this example:
 
-- The Azure Information Protection label **Highly Confidential** has a label ID of 3e9df74d-3168-48af-8b11-037e3021813f.
+- The Azure Information Protection label that you want to use is named **Highly Confidential** and has a label ID of **3e9df74d-3168-48af-8b11-037e3021813f**.
 
-- The Secure Islands label is stored in the custom property named **Classification**.
+- The Secure Islands label is named **Sensitive** and stored in the custom property named **Classification**.
 
 The advanced client setting:
 
@@ -465,13 +465,13 @@ The advanced client setting:
 
 ### Example 3: Many-to-one mapping of label names
 
-You have two Secure Islands labels that include the word "Internal" and you want documents that have either of these Secure Islands labels to be relabeled as "General" by Azure Information Protection.
+Requirement: You have two Secure Islands labels that include the word "Internal" and you want documents that have either of these Secure Islands labels to be relabeled as "General" by Azure Information Protection.
 
 In this example:
 
-- The Azure Information Protection label **General** has a label ID of 2beb8fe7-8293-444c-9768-7fdc6f75014d.
+- The Azure Information Protection label that you want to use is named **General** and has a label ID of **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
-- The Secure Islands label is stored in the custom property named **Classification**.
+- The Secure Islands labels include the word **Internal**  and are stored in the custom property named **Classification**.
 
 The advanced client setting:
 
@@ -609,7 +609,7 @@ Now, when a user opens and saves one of these Office documents, it is labeled  *
 
 ## Disable the low integrity level for the scanner
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 By default, the Azure Information Protection scanner runs with a low integrity level. This setting provides higher security isolation but at the cost of performance. A low integrity level is suitable if you run the scanner with an account that has privileged rights (such as a local administrator account) because this setting helps to protect the computer running the scanner.
 
@@ -623,6 +623,32 @@ To configure this advanced setting so that the scanner runs with an integrity le
 
 - Value: **False**
 
+
+## Change the local logging level
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+
+By default, the Azure Information Protection client writes client log files to the **%localappdata%\Microsoft\MSIP** folder. These files are intended for troubleshooting by Microsoft Support.
+ 
+To change the logging level for these files, configure the following advanced client setting:
+
+- Key: **LogLevel**
+
+- Value: **\<logging level>**
+
+Set the logging level to one of the following values:
+
+- **Off**: No local logging.
+
+- **Error**: Errors only.
+
+- **Info**: Minimum logging, which includes no event IDs.
+
+- **Debug**: Full information (the default setting).
+
+- **Trace**: Very detailed logging that has a performance impact and should be enabled only if requested by Microsoft Support. If you are instructed to set this level of logging, remember to set a different value when the relevant logs have been collected.
+
+This advanced client setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md), or change the information that's written to the local [event log](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
 
 ## Integration with Exchange message classification for a mobile device labeling solution
 

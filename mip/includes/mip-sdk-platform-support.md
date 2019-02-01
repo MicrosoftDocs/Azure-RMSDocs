@@ -13,3 +13,4 @@ ms.date: 01/10/2019
 | Debian  | 9 | [C++ tar.gz](https://aka.ms/mipsdkbinaries) |
 | macOS   | High Sierra and later | [C++ .zip](https://aka.ms/mipsdkbinaries) |
 | Windows | All supported versions, 32/64 bit | [C++/.NET .zip](https://aka.ms/mipsdkbinaries)<br>[C++/.NET NuGet](https://www.nuget.org/packages/Microsoft.InformationProtection.Protection/) |
+

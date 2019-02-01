@@ -58,7 +58,7 @@ For more information about Azure Key Vault, see [What is Azure Key Vault?](/azur
 
 ## Restrictions when using BYOK
 
-BYOK and usage logging work seamlessly with every application that integrates with the Azure Rights Management service that is used by Azure Information Protection. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that use the Azure Rights Management service by using the RMS connector, and client applications such as Office 2016 and Office 2013. You get key usage logs regardless of which application makes requests to the Azure Rights Management service.
+BYOK and usage logging work seamlessly with every application that integrates with the Azure Rights Management service that is used by Azure Information Protection. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that use the Azure Rights Management service by using the RMS connector, and client applications such as Office 2019, Office 2016, and Office 2013. You get key usage logs regardless of which application makes requests to the Azure Rights Management service.
 
 If you have previously enabled Exchange Online IRM by importing your trusted publishing domain (TPD) from Azure RMS, follow the instructions in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) to enable the new capabilities in Exchange Online that support using BYOK for Azure Information Protection.
 

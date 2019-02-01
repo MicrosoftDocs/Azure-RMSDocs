@@ -6,7 +6,7 @@ description: Information to help you provide guidance for users, administrators,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
@@ -72,24 +72,24 @@ Use the following sections for application-specific information to help users pr
 
 ## Using information protection with the Azure Information Protection client
 
-If users have Office 2010, the Azure Information Protection client (or the older application, RMS sharing application) is required to protect and consume protected documents and emails. However, the Azure Information Protection client is also recommended for all computers and mobile devices that support this service.
+If users have Office 2010, the Azure Information Protection client is required to protect and consume protected documents and emails. However, the Azure Information Protection client is also recommended for all computers and mobile devices that support this service.
 
 In addition to making it easier for users to protect documents and emails, the Azure Information Protection client lets users track the documents that they have protected. Tracked documents can also be revoked if the previously authorized users should no longer have access to them.
 
 For instructions to use this client for Windows computers, see the [Azure Information Protection client user guide](./rms-client/client-user-guide.md).
 
 
-## Using information protection with Office 365, Office 2016, or Office 2013
+## Using information protection with Office 365, Office 2019, Office 2016, or Office 2013
 If you are using the Azure Rights Management service and have not installed the Azure Information Protection client, users do not see the Azure Information Protection bar in their Office desktop apps. They also don't see the **Protect** button on the ribbon, or **Classify and protect** from File Explorer. These additions make it easier for users to protect documents and emails. For these users, they must follow instructions similar to the steps that follow.
 
 > [!TIP]
 > To find application-specific help and instructions for using information protection with these applications, search for **IRM** and the application name and version.
 
-#### To protect a document in Word 2013
+#### To protect a document in Word from Office 365 ProPlus
 
 1.  Within Microsoft Word, create a document.
 
-2.  From the **File** menu, click **Info**, click **Protect Document**, and then click **Restrict Access**.
+2.  From the **File** menu: **Info** > **Protect Document** >  **Restrict Access**.
 
 3. Choose a template to quickly apply the appropriate usage rights, or select **Restrict Access** and select the usage rights yourself.
 
@@ -104,11 +104,11 @@ For example, a usage right of View-only does not allow the user to edit or save 
 
 The usage rights are displayed at the top of the document by using a restriction banner. The banner might display the permissions that are applied to the document, or it might provide a link to display them.
 
-#### To protect an email message using Outlook 2013 and Exchange Online
+#### To protect an email message using Outlook from Office 365 ProPlus, connecting to Exchange Online
 
 1.  Within Outlook, create a mail message that is addressed to a recipient within your organization.
 
-2.  From the **OPTIONS** tab,  click **Permission**, and then select an option. For example: **Do Not Forward**, or **\<Company Name>- Confidential**, or **\<Company Name> - Confidential View Only**.
+2.  From the **OPTIONS** tab: **Permission** > Select an option. For example: **Do Not Forward**, or **\<Company Name>- Confidential**, or **\<Company Name> - Confidential View Only**.
 
 3.  Send the message.
 
@@ -118,14 +118,12 @@ For example, if the email message is protected by using the **Do Not Forward** o
 
 #### To protect an email message using Outlook on the web
 
-1.  Using Outlook on the web, create a mail message addressed to a recipient within your organization.
+1. Using Outlook on the web, create a mail message addressed to a recipient within your organization.
 
-2.  Click  **…**,  click **set permission**, and then select an option. For example: **Do Not Forward** or **Do Not Reply All**. Or, **\<Company Name>- Confidential** or **\<Company Name> - Confidential View Only**.
+2. Select **Protect**. Unless the default has been changed by an administrator, the **Do Not Forward** option is automatically selected. If you want to change the default, select **Change Permissions** and then select an option from the drop down. For example: **Encrypt** or **\<Company Name>- Confidential**.
 
-3.  Send the message.
+3. Send the message.
 
 Similarly to viewing a protected document, when the recipients open the email message, they are first authenticated. If they are authorized to see the email message, it opens with the restricted [usage rights](configure-usage-rights.md) that were specified for that user. 
 
-For example, if you selected **Do Not Reply All**, the **REPLY ALL** option in the message window is not available.
-
-
+For example, with the default **Do Not Forward** option, the **Forward** option in the message window is not available.
