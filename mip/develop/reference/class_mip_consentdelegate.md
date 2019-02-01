@@ -1,24 +1,25 @@
 ---
-title: class ConsentDelegate 
-description: Reference for class ConsentDelegate 
+title: class mip::ConsentDelegate 
+description: Documents the mip::consentdelegate class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/28/2019
 ---
-# class ConsentDelegate 
+
+# class mip::ConsentDelegate 
 Delegate for consent related operations.
 This delegate is implemented by a client application to know when a consent request notification should be displayed to the user.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public Consent GetUserConsent(const std::string& url)  |  Called when SDK requires user consent to connect to a service endpoint.
+public Consent GetUserConsent(const std::string& url)  |  Called when SDK requires user consent to connect to a service endpoint.
   
 ## Members
   
-### Consent
+### GetUserConsent function
 Called when SDK requires user consent to connect to a service endpoint.
 
 Parameters:  

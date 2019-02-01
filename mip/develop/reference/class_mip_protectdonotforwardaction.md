@@ -1,23 +1,24 @@
 ---
-title: class mip ProtectDoNotForwardAction 
-description: Reference for class mip ProtectDoNotForwardAction 
+title: class mip::ProtectDoNotForwardAction 
+description: Documents the mip::protectdonotforwardaction class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/28/2019
 ---
+
 # class mip::ProtectDoNotForwardAction 
 An action class that specifies adding do not forward protection to the document.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   
-### ActionType
+### GetType function
 Get the type of [Action](class_mip_action.md).
 
   
