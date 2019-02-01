@@ -263,5 +263,5 @@
     href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
   - name: Security best practices
     href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
-  - name: Version release history
-    href: version-release-history.md
+  - name: What's new in version 1.1
+    href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/MIP-SDK-1-1-Now-GA/ba-p/328325
