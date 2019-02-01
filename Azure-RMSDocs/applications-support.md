@@ -6,7 +6,7 @@ description: Understand how the most commonly used end-user applications (such a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/02/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
@@ -51,8 +51,6 @@ Search services can integrate with Rights Management in different ways. For exam
 ## Next steps
 
 Learn more about how each of the following applications and services supports the Azure Rights Management service:
-
--   [RMS sharing application for Windows and mobile platforms](sharing-app-support.md)
 
 -   [Office applications and services](office-apps-services-support.md)
 

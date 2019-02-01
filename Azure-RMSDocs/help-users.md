@@ -6,7 +6,7 @@ description: Information to help you provide guidance for users, administrators,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
@@ -72,7 +72,7 @@ Use the following sections for application-specific information to help users pr
 
 ## Using information protection with the Azure Information Protection client
 
-If users have Office 2010, the Azure Information Protection client (or the older application, RMS sharing application) is required to protect and consume protected documents and emails. However, the Azure Information Protection client is also recommended for all computers and mobile devices that support this service.
+If users have Office 2010, the Azure Information Protection client is required to protect and consume protected documents and emails. However, the Azure Information Protection client is also recommended for all computers and mobile devices that support this service.
 
 In addition to making it easier for users to protect documents and emails, the Azure Information Protection client lets users track the documents that they have protected. Tracked documents can also be revoked if the previously authorized users should no longer have access to them.
 
