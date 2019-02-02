@@ -89,7 +89,7 @@ To configure SharePoint Online and OneDrive for Business to support the Azure R
 
 To enable the information rights management (IRM) service for SharePoint Online, see the following instructions from the Office website:
 
-- [Set up Information Rights Management (IRM) in SharePoint admin center](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/set-up-information-rights-management-irm-insharepoint-online-HA102895193.aspx)
+- [Set up Information Rights Management (IRM) in SharePoint admin center](/office365/securitycompliance/set-up-irm-in-sp-admin-center)
 
 This configuration is done by the Office 365 administrator.
 
