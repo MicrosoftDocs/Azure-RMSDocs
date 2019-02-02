@@ -87,7 +87,7 @@ To configure SharePoint Online and OneDrive for Business to support the Azure R
 > [!NOTE]
 > IRM-protected libraries for SharePoint and OneDrive for Business require the latest version of the new OneDrive sync client (OneDrive.exe), and the version of the [RMS client from the Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=38396). Install this version of the RMS client even if you have installed the Azure Information Protection client. For more information about this deployment scenario, see [Deploy the new OneDrive sync client in an enterprise environment](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668).
 
-To enable the information rights management (IRM) service for SharePoint Online, see the following instructions from the Office website:
+To enable the information rights management (IRM) service for SharePoint Online, see the following instructions from the Office documentation:
 
 - [Set up Information Rights Management (IRM) in SharePoint admin center](/office365/securitycompliance/set-up-irm-in-sp-admin-center)
 
