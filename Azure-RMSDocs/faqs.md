@@ -82,8 +82,6 @@ No. Although most of the presentations and demos you've seen of the Azure Inform
 
 When the Azure Information Protection client for Windows is installed and it doesn't have an Azure Information Protection policy, the client automatically operates in [protection-only mode](./rms-client/client-protection-only-mode.md). In this mode, users can easily apply Rights Management templates and custom permissions. If you later purchase a subscription that does include classification and labeling, the client automatically switches to standard mode when it downloads the Azure Information Protection policy.
 
-If you currently use the Rights Management sharing application for Windows, we recommend that you replace this application with the Azure Information Protection client. Support for the sharing application will end January 31, 2019. To help with the transition, see [Tasks that you used to do with the RMS sharing application](./rms-client/upgrade-client-app.md).
-
 ## Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?
 
 Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection. However, if you want to assign administrative permissions to other users, you have the following options:
@@ -214,8 +212,4 @@ In addition, there are FAQs designed for end users:
 - [FAQ for Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md)
 
 - [FAQ for RMS sharing app for Mac computers](https://technet.microsoft.com/dn451248)
-
-- [FAQ for Rights Management Sharing Application for Windows](https://technet.microsoft.com/dn467883)
-
-
 

@@ -222,7 +222,7 @@ For the general availability version:
 
 For the current preview version: 
 
-    - .rtf, and .rar, are also excluded
+- .rtf, and .rar, are also excluded
 
 You can change the file types included or excluded for file inspection by the scanner:
 

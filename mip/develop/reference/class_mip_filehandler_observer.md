@@ -1,12 +1,13 @@
 ---
-title: class mip FileHandler Observer 
-description: Reference for class mip FileHandler Observer 
+title: class mip::FileHandler::Observer 
+description: Documents the mip::filehandler class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/28/2019
 ---
+
 # class mip::FileHandler::Observer 
 [Observer](class_mip_filehandler_observer.md) interface for clients to get notifications events related to file handler.
 All errors inherit from [mip::Error](class_mip_error.md). 
@@ -15,37 +16,37 @@ Client should not call the engine back on the thread that calls the observer.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnCreateFileHandlerSuccess(const std::shared_ptr<FileHandler>& fileHandler, const std::shared_ptr<void>& context)  |  Called when the handler is created successfully.
-public virtual void OnCreateFileHandlerFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when creating the handler failed.
-public virtual void OnGetLabelSuccess(const std::shared_ptr<ContentLabel>& label, const std::shared_ptr<void>& context)  |  Called when the label is retrieved successfully.
-public virtual void OnGetLabelFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when retrieving the label failed.
-public virtual void OnGetProtectionSuccess(const std::shared_ptr<ProtectionHandler>& protectionHandler, const std::shared_ptr<void>& context)  |  Called when the protection policy is retrieved successfully.
-public virtual void OnGetProtectionFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when retrieving the protection policy failed.
-public virtual void OnCommitSuccess(bool committed, const std::shared_ptr<void>& context)  |  Called when committing the changes to the file were successful.
-public virtual void OnCommitFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Called when committing the changes to the file failed.
+public virtual void OnCreateFileHandlerSuccess(const std::shared_ptr\<FileHandler\>& fileHandler, const std::shared_ptr\<void\>& context)  |  Called when the handler is created successfully.
+public virtual void OnCreateFileHandlerFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when creating the handler failed.
+public virtual void OnClassifySuccess(const std::vector\<std::shared_ptr\<Action\>\>& actions, const std::shared_ptr\<void\>& context)  |  Called when classify success.
+public virtual void OnClassifyFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when classify failed.
+public virtual void OnGetDecryptedTemporaryFileSuccess(const std::string& decryptedFilePath, const std::shared_ptr\<void\>& context)  |  Called when getting the decrypted temporary file success.
+public virtual void OnGetDecryptedTemporaryFileFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when getting the decrypted temporary file failed.
+public virtual void OnCommitSuccess(bool committed, const std::shared_ptr\<void\>& context)  |  Called when committing the changes to the file were successful.
+public virtual void OnCommitFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when committing the changes to the file failed.
   
 ## Members
   
-### OnCreateFileHandlerSuccess
+### OnCreateFileHandlerSuccess function
 Called when the handler is created successfully.
   
-### OnCreateFileHandlerFailure
+### OnCreateFileHandlerFailure function
 Called when creating the handler failed.
   
-### OnGetLabelSuccess
-Called when the label is retrieved successfully.
+### OnClassifySuccess function
+Called when classify success.
   
-### OnGetLabelFailure
-Called when retrieving the label failed.
+### OnClassifyFailure function
+Called when classify failed.
   
-### OnGetProtectionSuccess
-Called when the protection policy is retrieved successfully.
+### OnGetDecryptedTemporaryFileSuccess function
+Called when getting the decrypted temporary file success.
   
-### OnGetProtectionFailure
-Called when retrieving the protection policy failed.
+### OnGetDecryptedTemporaryFileFailure function
+Called when getting the decrypted temporary file failed.
   
-### OnCommitSuccess
+### OnCommitSuccess function
 Called when committing the changes to the file were successful.
   
-### OnCommitFailure
+### OnCommitFailure function
 Called when committing the changes to the file failed.

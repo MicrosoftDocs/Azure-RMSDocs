@@ -23,7 +23,6 @@
 ### [How applications support Azure Rights Management protection](applications-support.md)
 #### [Office applications and services](office-apps-services-support.md)
 #### [File servers that run Windows Server and use File Classification Infrastructure](file-server-support.md)
-#### [RMS sharing application for Windows and mobile platforms](sharing-app-support.md)
 #### [Other applications that support the RMS APIs](api-support.md)
 ## [RMS for individuals and Azure Information Protection](rms-for-individuals.md)
 ## [Also known as ...](aka.md)
