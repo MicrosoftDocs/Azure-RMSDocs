@@ -4,7 +4,7 @@ description: This article will help you understand how to use Python to acquire 
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 09/27/2018
+ms.date: 02/04/2019
 ms.author: bryanla
 ---
 
@@ -20,7 +20,8 @@ To run the sample below, the following must be complete:
 
 - Install Python 2.7.
 - Implement utils.h/cpp in your project. 
-- auth.py should be added to your project and exist in same directory as the binaries at build.
+- Auth.py should be added to your project and exist in same directory as the binaries at build.
+- Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. The application ID (also known as client ID) provided by Azure AD, will be used in your token aquisition logic in a following section.
 
 ## sample::auth::AcquireToken()
 
@@ -41,7 +42,7 @@ namespace sample {
     std::string AcquireToken(
         const std::string& userName, //A string value containing the user's UPN.
         const std::string& password, //The user's password in plaintext
-        const std::string& clientId, //The AAD client ID of your application.
+        const std::string& clientId, //The Azure AD client ID (also known as Application ID) of your application.
         const std::string& resource, //The resource URL for which an OAuth2 token is required. Provided by challenge object.
         const std::string& authority); //The authentication authority endpoint. Provided by challenge object.
     }
@@ -99,7 +100,8 @@ namespace sample {
     cmd += " -r ";
     cmd += resource;
     cmd += " -c ";
-    cmd += (!clientId.empty() ? clientId : "0edbblll-8773-44de-b87c-b8c6276d41eb");
+    // Replace <application-id> with the Application ID provided during your Azure AD application registration.
+    cmd += (!clientId.empty() ? clientId : "<application-id>");
 
     string result = sample::Execute(cmd.c_str());
     if (result.empty())

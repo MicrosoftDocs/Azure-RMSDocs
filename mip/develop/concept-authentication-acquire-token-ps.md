@@ -4,7 +4,7 @@ description: This article will help you understand how to use PowerShell to acqu
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 09/27/2018
+ms.date: 02/04/2019
 ms.author: bryanla
 ---
 
@@ -13,6 +13,10 @@ ms.author: bryanla
 This example demonstrates how to call an external PowerShell script to obtain an OAuth2 token. This is required by the implementation of the authentication delegate.
 
 This code is not intended for production use, but may be used for development and understanding auth concepts. 
+
+## Prerequisites
+
+- Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. The application ID (also known as client ID) provided by Azure AD, will be used in your token aquisition logic in a following section.
 
 ## sample::auth::AcquireToken()
 
@@ -52,9 +56,11 @@ namespace sample {
 
 ## Mint a token
 
-Finally, mint a token to put in the mToken variable. The example below demonstrates a PowerShell script that can be used to quickly obtain the OAuth2 token via ADAL and PowerShell on Windows. This token is granted for the Office 365 Security and Compliance Center endpoint only. Consequently, protection actions will fail unless the resource URL is updated. It's recommended to skip to the [next steps](#next-steps) section if you would like to test with both labeling and protection at this point.
+Finally, mint a token to put in the mToken variable. The example below demonstrates a PowerShell script that can be used to quickly obtain the OAuth2 token via ADAL and PowerShell on Windows. This token is granted for the Office 365 Security and Compliance Center endpoint only. Consequently, protection actions will fail unless the resource URL is updated. 
 
 ### Install [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) from PS Gallery
+
+You can skip this step if you completed it previously in [(MIP) SDK setup and configuration](setup-configure-mip.md).
 
 ```PowerShell
 Install-Module -Name ADAL.PS
@@ -69,10 +75,9 @@ if(!(Get-Package adal.ps)) { Install-Package -Name adal.ps }
 $authority = "https://login.windows.net/common/oauth2/authorize" 
 #this is the security and compliance center endpoint
 $resourceUrl = "https://dataservice.o365filtering.com"
-#clientId and redirectUri are from the RMS Sharing Application. 
-#Once custom app registration is supported, a custom id and uri will be required. 
-$clientId = "0edbblll-8773-44de-b87c-b8c6276d41eb"
-$redirectUri = "com.microsoft.rms-sharing-for-win://authorize"
+#replace <application-id> and <redirect-uri>, with the Redirect URI and Application ID from your Azure AD application registration.
+$clientId = "<application-id>"
+$redirectUri = "<redirect-uri>"
 
 $response = Get-ADALToken -Resource $resourceUrl -ClientId $clientId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:Always
 $response.AccessToken | clip
