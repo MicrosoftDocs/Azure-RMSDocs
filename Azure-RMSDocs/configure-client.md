@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Information Protection client &colon; Install & configure
+title: Azure Information Protection client - Install & configure
 description: Information for admins about deploying the Azure Information Protection client on Windows computers and mobile devices.
 author: cabailey
 ms.author: cabailey
@@ -27,7 +27,7 @@ ms.suite: ems
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Computers running Office 2010 require the Azure Information Protection client (or the Rights Management sharing application) to authenticate to the Azure Rights Management service and the Azure Information Protection service. This client is also recommended for all Windows computers and iOS and Android devices that support the Azure Rights Management service and Azure Information Protection. 
+Computers running Office 2010 require the Azure Information Protection client to authenticate to the Azure Rights Management service and the Azure Information Protection service. This client is also recommended for all Windows computers and iOS and Android devices that support the Azure Rights Management service and Azure Information Protection. 
 
 The Azure Information Protection client integrates with Office applications by installing an Office add-in so that users can easily label and protect documents and emails directly from the Office ribbon. This client also offers labeling and protection for files types that are not natively supported by the Azure Rights Management service, a viewer for protected files, and a document tracking site for users to track and revoke files that they have protected.
 
@@ -41,7 +41,7 @@ For an enterprise installation and configuration of the client for Windows, see 
 To install the Azure Information Protection client for these popular mobile platforms, you can download the relevant app by using the links on the [Microsoft Azure Information Protection page](https://go.microsoft.com/fwlink/?LinkId=303970). No configuration is required.
 
 > [!NOTE]
-> For Mac computers, links from this page download the RMS sharing apps for mobile devices. These computers do not support the Azure Information Protection client.
+> For Mac computers, links from this page download the RMS sharing app. These computers do not support the Azure Information Protection client.
 
 ### Integration with Intune
 

@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure Office apps to
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
@@ -31,12 +31,12 @@ ms.suite: ems
 Use this information to determine what you need to do so that Office apps work with the Azure Rights Management service from Azure Information Protection.
 
 ## Office 2016 and Office 2013
-Because these later versions of Office natively support the Azure Rights Management service, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook, and Outlook on the web. All users have to do, is sign in to their Office applications with their Rights Management credentials. They can then can protect files and emails, and use files and emails that have been protected by others.
+Because these later versions of Office natively support the Azure Rights Management service, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook, and Outlook on the web. All users have to do, is sign in to their Office applications with their Office 365 credentials. They can then can protect files and emails, and use files and emails that have been protected by others.
 
 However, we recommend that you supplement these applications with the Azure Information Protection client, so that users get the benefit of the Office add-in and support for additional file types. For more information, see [Azure Information Protection client: Installation and configuration for clients](configure-client.md).
 
 ## Office 2010
-For client computers to use the Azure Rights Management service with Office 2010, they must have the Azure Information Protection client or the Rights Management sharing application for Windows. No further configuration is required other than users must sign in with their Rights Management credentials and they can then protect files and use files that have been protected by others.
+For client computers to use the Azure Rights Management service with Office 2010, they must have the Azure Information Protection client. No further configuration is required other than users must sign in with their Office 365 credentials and they can then protect files and use files that have been protected by others.
 
 For more information about the Azure Information Protection client, see [Azure Information Protection client: Installation and configuration for clients](configure-client.md).
 
