@@ -9,14 +9,26 @@
 - name: Quickstarts
   expanded: true
   items:
-  - name: Application initialization (C++)
-    href: quick-app-initialization-cpp.md
-  - name: File API
+  - name: C++
     items:
-    - name: List sensitivity labels (C++)
-      href: quick-file-list-labels-cpp.md
-    - name: Set/get sensitivity labels (C++)
-      href: quick-file-set-get-label-cpp.md      
+    - name: Application initialization (C++)
+      href: quick-app-initialization-cpp.md
+    - name: File API
+      items:
+      - name: List sensitivity labels (C++)
+        href: quick-file-list-labels-cpp.md
+      - name: Set/get sensitivity labels (C++)
+        href: quick-file-set-get-label-cpp.md      
+  - name: C#
+    items:
+    - name: Application initialization (C#)
+      href: quick-app-initialization-csharp.md
+    - name: File API
+      items:
+      - name: List sensitivity labels (C#)
+        href: quick-file-list-labels-csharp.md
+      - name: Set/get sensitivity labels (C#)
+        href: quick-file-set-get-label-csharp.md
 - name: Concepts
   items:
   - name: The APIs
@@ -99,12 +111,20 @@
         href: reference/class_mip_addwatermarkaction.md
       - name: ApplyLabelAction
         href: reference/class_mip_applylabelaction.md
+      - name: AuthDelegate
+        href: reference/class_mip_authdelegate.md 
+      - name: AuthDelegate::OAuth2Challenge
+        href: reference/class_mip_authdelegate_oauth2challenge.md        
+      - name: AuthDelegate::OAuth2Token
+        href: reference/class_mip_authdelegate_oauth2token.md 
       - name: BadInputError
         href: reference/class_mip_badinputerror.md
+      - name: ClassificationRequest
+        href: reference/class_mip_classificationrequest.md
       - name: ClassificationResult
         href: reference/class_mip_classificationresult.md
       - name: ConsentDelegate
-        href: reference/class_consentdelegate.md
+        href: reference/class_mip_consentdelegate.md
       - name: ConsentDeniedError
         href: reference/class_mip_consentdeniederror.md
       - name: ContentLabel
@@ -119,6 +139,8 @@
         href: reference/class_mip_fileengine.md
       - name: FileEngine::Settings
         href: reference/class_mip_fileengine_settings.md
+      - name: FileExecutionState
+        href: reference/class_mip_fileexecutionstate.md        
       - name: FileHandler
         href: reference/class_mip_filehandler.md
       - name: FileHandler::Observer
@@ -137,6 +159,8 @@
         href: reference/class_mip_httprequest.md
       - name: HttpResponse
         href: reference/class_mip_httpresponse.md
+      - name: Identity
+        href: reference/class_mip_identity.md
       - name: InternalError
         href: reference/class_mip_internalerror.md
       - name: JustificationRequiredError
@@ -153,6 +177,12 @@
         href: reference/class_mip_metadataaction.md
       - name: NetworkError
         href: reference/class_mip_networkerror.md
+      - name: NoAuthTokenError
+        href: reference/class_mip_noauthtokenerror.md
+      - name: NoPermissionsError
+        href: reference/class_mip_nopermissionserror.md
+      - name: NoPolicyError
+        href: reference/class_mip_nopolicyerror.md
       - name: NotSupportedError
         href: reference/class_mip_notsupportederror.md
       - name: PolicyEngine
@@ -181,12 +211,12 @@
         href: reference/class_mip_protectiondescriptor.md
       - name: ProtectionDescriptorBuilder
         href: reference/class_mip_protectiondescriptorbuilder.md
+      - name: ProtectionEngine
+        href: reference/class_mip_protectionengine.md
       - name: ProtectionEngine::Observer
         href: reference/class_mip_protectionengine_observer.md
       - name: ProtectionEngine::Settings
         href: reference/class_mip_protectionengine_settings.md
-      - name: ProtectionEngine
-        href: reference/class_mip_protectionengine.md
       - name: ProtectionHandler
         href: reference/class_mip_protectionhandler.md
       - name: ProtectionHandler::Observer
@@ -197,6 +227,8 @@
         href: reference/class_mip_protectionprofile_observer.md
       - name: ProtectionProfile::Settings
         href: reference/class_mip_protectionprofile_settings.md
+      - name: ProxyAuthenticationError
+        href: reference/class_mip_proxyauthenticationerror.md
       - name: RecommendLabelAction
         href: reference/class_mip_recommendlabelaction.md
       - name: RemoveContentFooterAction
@@ -207,6 +239,10 @@
         href: reference/class_mip_removeprotectionaction.md
       - name: RemoveWatermarkAction
         href: reference/class_mip_removewatermarkaction.md
+      - name: SensitivityTypesRulePackage
+        href: reference/class_mip_sensitivitytypesrulepackage.md
+      - name: ServiceDisabledError
+        href: reference/class_mip_servicedisablederror.md
       - name: Stream
         href: reference/class_mip_stream.md
       - name: TransientNetworkError
@@ -225,7 +261,7 @@
     href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
   - name: Samples
     href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
-  - name: SDK (public preview)
-    href: http://aka.ms/mipsdk
   - name: Security best practices
     href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
+  - name: What's new in version 1.1
+    href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/MIP-SDK-1-1-Now-GA/ba-p/328325

@@ -4,17 +4,14 @@ description: Provides the setup and configuration prerequisites, in order to use
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/08/2019
+ms.date: 01/30/2019
 ms.author: bryanla
+#Customer intent: As a an application developer, I want to learn about setup and configuration, so that I can use the SDK to build applications.
 ---
 
 # Microsoft Information Protection (MIP) SDK setup and configuration 
 
 The Quickstart and Tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Office 365 subscription and client workstation, in preparation for using the SDK.
-
-The MIP SDK is supported on the following platforms:  
-
-[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ## Prerequisites
 
@@ -71,7 +68,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 
      [![Visual Studio setup](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. Install the [ADAL.PS PowerShell Module](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2). 
+3. Install the [ADAL.PS PowerShell Module](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2): 
 
    - Because administrator rights are required to install modules, first you need to either:
 
@@ -92,25 +89,21 @@ Next, complete the following steps to ensure your client computer is set up and 
      PS C:\WINDOWS\system32>
      ```
 
-4. Download SDK samples from GitHub 
+4. Download SDK files:
 
-   - If you don't have one already, first create a [GitHub profile](https://github.com/join).
-   - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
-   - Using Git Bash, download the sample(s) of interest:
-     - Use the following query to view the repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
-     - Using Git Bash, use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repository.
+   The MIP SDK is supported on the following platforms, with separate downloads for each supported platform/language:  
 
-5. Download SDK binary and header files
+   [!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
-   A .zip file containing SDK binaries and headers for all platforms can be found at https://aka.ms/mipsdkbinaries. The .zip contains several additional .zip files, one for each platform and API. The files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`.
+   **Tar.gz/.Zip downloads**
 
-   For example, the .zip for protection API binaries and headers on Debian would be: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`.
+   Tar.gz and .Zip downloads contain additional compressed files, one for each API. The compressed files are named as follows, where \<API\> = `file`, `protection`, or `upe`, and \<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. For example, the file for protection API binaries and headers on Debian would be: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Each contained .tar.gz/.zip is split into three directories:
 
-   Each .zip or tarball contains three directories:
-
-   - **Bins:** The compiled binaries for each platform architecture, where applicable.
-   - **Include:** The Microsoft Information Protection SDK header files
-   - **Samples:** Source code for sample applications
+   - **Bins:** Compiled binaries for each platform architecture, where applicable.
+   - **Include:** Header files (C++).
+   - **Samples:** Source code for sample applications.
+    
+   **NuGet packages**
 
    If you're doing Visual Studio development, the SDK can be also installed via the NuGet Package Manager Console:
 
@@ -119,8 +112,11 @@ Next, complete the following steps to ensure your client computer is set up and 
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
     ```  
-    
-6. Add the paths of the SDK binaries (dynamic link libraries (.dll)), to the PATH environment variable. The PATH variable allows the dependent DLLs to be found at runtime, by client applications:
+
+5. If you're not using the NuGet package, add the paths of the SDK binaries to the PATH environment variable. The PATH variable allows the dependent binaries (DLLs) to be found at runtime, by client applications (OPTIONAL):
+
+   If you're using a Windows 10 workstation:
+
    - Click the Windows icon in the lower left.
    - Type "Path" and press the "Enter" key, when you see the **Edit the system environment variables** item show.
    - On the **System Properties** dialog, click **Environment Variables**.
@@ -128,9 +124,17 @@ Next, complete the following steps to ensure your client computer is set up and 
    - On the **Edit environment variable** dialog, click **New**, which creates a new editable row. Using the full path to each of the `file\bins\debug\amd64`, `protection\bins\debug\amd64`, and `upe\bins\debug\amd64` subdirectories, add a new row for each. The SDK directories are stored in a `<API>\bins\<target>\<platform>` format, where:
      - \<API\> = `file`, `protection`, `upe`
      - \<target\> = `debug`, `release`
-     - \<platform\> = `amd64` (aka: x64), `x86`, etc.
+     - \<platform\> = `amd64` (x64), `x86`, etc.
    
    - When finished updating the **Path** variable, click **OK**. Then click **OK** when returned to the **Environment Variables** dialog.
+
+6. Download SDK samples from GitHub (OPTIONAL):
+
+   - If you don't have one already, first create a [GitHub profile](https://github.com/join).
+   - Then install the latest version of [Software Freedom Conservancy's Git client tools (Git Bash)](https://git-scm.com/download/)
+   - Using Git Bash, download the sample(s) of interest:
+     - Use the following query to view the repositories: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
+     - Using Git Bash, use `git clone https://github.com/azure-samples/<repo-name>` to download each sample repository.
 
 ## Register a client application with Azure Active Directory
 
@@ -156,7 +160,7 @@ To register an application account in Azure AD for use with the Quickstarts and 
    - On the **Required permissions** page, click **Add**. 
    - On the **Add API access** page, click **Select an API**.
    - On the **Select an API** page, click the "**Microsoft Rights Management Services**" API, and click **Select**.
-   - On the **Enable Access** page for the API's available permissions, click "**Create and access protected content for users**", and click **Select**, then **Done**.
+   - On the **Enable Access** page for the API's available permissions, click "**Create and access protected content for users**", then **Select**, then **Done**.
 
 5. Repeat step #4, but this time when you get to the **Select an API** page, you'll need to search for the API.
    - On the **Select an API** page, in the search box type "**Microsoft Information Protection Sync Service**", then click the API and click **Select**.
@@ -169,7 +173,7 @@ When finished, application registration and API permissions should look similar 
    [![Azure AD app registration](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-For more information on adding APIs and permissions to a registration, see [Updating an application in Azure AD, Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Here you'll find information on adding the APIs and permissions needed by a client application.  
+For more information on adding APIs and permissions to a registration, see [Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Here you'll find information on adding the APIs and permissions needed by a client application.  
 
 ## Request an Information Protection Integration Agreement (IPIA)
 
@@ -206,15 +210,17 @@ for an application you are releasing, send an email to [IPIA@microsoft.com](mail
 
 - Name of the Company Application
 - Brief Description of the Application
-- Azure Tenant ID (even if it the same one as before)
+- Azure Tenant ID (even if the same one as before)
 - App ID for the application
 - Company contacts, email, and phone for Critical Situation Correspondence
 
-Upon the sending of the email, please allow up to 72 hours for an acknowledgement of the receipt.
+Upon the sending of the email, allow up to 72 hours for an acknowledgement of the receipt.
 
 ## Next Steps
 
-- Before starting the Quickstarts section, be sure to read about [Observers in the MIP SDK](concept-async-observers.md), as the MIP SDK is designed to be almost entirely asynchronous.
-- If you're ready to get some hands-on experience with the SDK, start with [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md).
+- If you're a C++ developer
+  - Be sure to read [Observers concepts](concept-async-observers.md) before you start the Quickstart section, to learn about the asynchronous nature of the C++ APIs.
+  - When you're ready to get some experience with the SDK, start with [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md).
+- If you're a C# developer, when you're ready to get some experience with the SDK, start with [Quickstart: Client application initialization (C#)](quick-app-initialization-csharp.md).
 
 

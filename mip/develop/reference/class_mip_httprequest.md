@@ -1,44 +1,45 @@
 ---
-title: class mip HttpRequest 
-description: Reference for class mip HttpRequest 
+title: class mip::HttpRequest 
+description: Documents the mip::httprequest class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/28/2019
 ---
+
 # class mip::HttpRequest 
 Interface that describes a single HTTP request.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public HttpRequestType GetRequestType() const  |  Get request type.
- public const std::string& GetUrl() const  |  Get request url.
- public const std::string& GetBody() const  |  Get request body.
-public const std::map<std::string, std::string, CaseInsensitiveComparator>& GetHeaders() const  |  Get request headers.
+public HttpRequestType GetRequestType() const  |  Get request type.
+public const std::string& GetUrl() const  |  Get request url.
+public const std::string& GetBody() const  |  Get request body.
+public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Get request headers.
   
 ## Members
   
-### HttpRequestType
+### GetRequestType function
 Get request type.
 
   
 **Returns**: Request type
   
-### GetUrl
+### GetUrl function
 Get request url.
 
   
 **Returns**: Request url
   
-### GetBody
+### GetBody function
 Get request body.
 
   
 **Returns**: Request body
   
-### GetHeaders
+### GetHeaders function
 Get request headers.
 
   

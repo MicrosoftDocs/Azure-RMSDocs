@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/01/2019
+ms.date: 02/06/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
@@ -40,6 +40,44 @@ Unlike Azure Information Protection, Microsoft Information Protection isn't a su
 - The integrated capabilities in this framework include unified label management, end-user labeling experiences built into Office apps, the ability for Windows to understand unified labels and apply protection to data, the Microsoft Information Protection SDK, and new functionality in Adobe Acrobat Reader to view labeled and protected PDFs.
 
 For more information, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
+
+## What’s the difference between labels in Azure Information Protection and labels in Office 365?
+
+Originally, Office 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that let you classify documents and emails for auditing and retention when that content is in Office 365 services. In comparison, Azure Information Protection labels let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud.
+
+Announced at Microsoft Ignite 2018 in Orlando, you now have an option to create and configure [sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) in addition to retention labels in the Office 365 Security & Compliance Center. Currently in preview, you can migrate your existing Azure Information Protection labels to the new unified labeling store, to be used as sensitivity labels with Office 365. 
+
+For more information about unified labeling management and how these labels will be supported, see the blog post, [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
+
+For more information about migrating your existing labels, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](configure-policy-migrate-labels.md).
+
+## When is the right time to migrate my labels to Office 365?
+
+Sensitivity labels in the Office 365 Security & Compliance Center are generally available but the option to migrate your Azure Information Protection labels is still in preview. When the labels are migrated to the unified labeling store, they can be published and then downloaded by [clients that support unified labeling](configure-policy-migrate-labels.md#clients-that-support-unified-labeling). Today, not all clients support unified labels or are generally available.
+
+We recommend that you first test preview functionality with a test tenant and then migrate your production tenant. In addition:
+
+- **If you are new to Azure Information Protection:** 
+    
+    Because Azure Information Protection has default labels to accelerate your deployment, we recommend you first migrate those default labels, and then manage them from the Office 365 Security & Compliance Center.
+
+- **If you are not new to Azure Information Protection but in the middle of defining and configuring the labels that you want to use:**
+    
+    We recommend that you complete your label configuration in the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in the Security & Compliance Center.
+
+Before you migrate your labels, be sure you understand the [considerations and label settings that are not supported by the Security & Compliance Center](configure-policy-migrate-labels.md#considerations-for-unified-labels).
+
+## After I've migrated my labels, which management portal do I use?
+
+After you've migrated your labels in the Azure portal:
+
+- If you have [unified labeling clients](configure-policy-migrate-labels.md#clients-that-support-unified-labeling), go the Office 365 Security & Compliance Center to publish these labels, and to configure the policy settings for unified labeling clients. For label changes going forward, use the Security & Compliance Center. Unified labeling clients download the labels and policy settings from the Security & Compliance Center.
+
+- If you have [Azure Information Protection clients](./rms-client/aip-client.md), continue to use the Azure portal to edit your labels and policy settings. Azure Information Protection clients continue to download the labels and policy settings from Azure.
+
+- If you have both [unified labeling clients](configure-policy-migrate-labels.md#clients-that-support-unified-labeling) and [Azure Information Protection clients](./rms-client/aip-client.md), you can use either portal to make label changes. However, for Azure Information Protection clients to pick up the label changes that you make in the Security & Compliance Center, you must return to the Azure portal: Use the **Publish** option from the **Azure Information Protection - Unified labeling** blade in the Azure portal. 
+
+Continue to use the Azure portal for [central reporting](reports-aip.md) and the [scanner](deploy-aip-scanner-preview.md).
 
 ## What's the difference between Azure Information Protection and Azure Rights Management?
 
@@ -129,16 +167,6 @@ Such alerts can help you to detect advanced data-related attacks and insider thr
 The Azure Information Protection alerts can be accessed by [using the Microsoft Graph Security API](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview), or you can [stream alerts](https://developer.microsoft.com/graph/docs/concepts/security_siemintegration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
 
 For more information about the Microsoft Graph Security API, see [Microsoft Graph Security API overview](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview).
-
-## What’s the difference between labels in Azure Information Protection and labels in Office 365?
-
-Until recently, Office 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that let you classify documents and emails for auditing and retention when that content is in Office 365 services. In comparison, Azure Information Protection labels let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud.
-
-Announced at Microsoft Ignite 2018, you will now start to see an option to create and configure [sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) in addition to retention labels in the Office 365 Security & Compliance Center. In addition, now in preview, you can migrate your existing Azure Information Protection labels to the new unified labeling store. 
-
-For more information about unified labeling management and how these labels will be supported, see the blog post, [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
-
-For more information about migrating your existing labels, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](configure-policy-migrate-labels.md).
 
 ## What’s the difference between Windows Server FCI and the Azure Information Protection scanner?
 

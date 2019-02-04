@@ -200,7 +200,7 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 ## Run a discovery cycle and view reports for the scanner
 
-1. In your PowerShell session, restart the **Azure Information Protection Scanner** service by running the following command:
+1. In your PowerShell session, start the scanner by running the following command:
     
         Start-AIPScan
     

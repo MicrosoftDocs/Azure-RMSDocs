@@ -1,23 +1,25 @@
 ---
-title: class mip HttpDelegate 
-description: Reference for class mip HttpDelegate 
+title: class mip::HttpDelegate 
+description: Documents the mip::httpdelegate class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
+ms.date: 01/28/2019
 ---
+
 # class mip::HttpDelegate 
 Interface for overriding HTTP handling.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr<HttpResponse> Send(const std::shared_ptr<HttpRequest>& request, const std::shared_ptr<void>& context)  |  Send HTTP request.
+public std::shared_ptr\<HttpResponse\> Send(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context)  |  Send HTTP request.
+public void SendAsync(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context, const std::function\<void(std::shared_ptr\<HttpResponse\>)\>& fnCallback)  | _Not yet documented._
   
 ## Members
   
-### HttpResponse
+### Send function
 Send HTTP request.
 
 Parameters:  
@@ -30,3 +32,6 @@ Parameters:
 
   
 **Returns**: HTTP response
+  
+### SendAsync function
+_Not documented yet._
