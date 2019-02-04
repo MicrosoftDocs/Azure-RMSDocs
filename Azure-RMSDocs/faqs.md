@@ -57,11 +57,11 @@ Sensitivity labels in the Office 365 Security & Compliance Center are generally 
 
 We recommend that you first test preview functionality with a test tenant and then migrate your production tenant. In addition:
 
-- If you are new to Azure Information Protection: 
+- **If you are new to Azure Information Protection:** 
     
     Because Azure Information Protection has default labels to accelerate your deployment, we recommend you first migrate those default labels, and then manage them from the Office 365 Security & Compliance Center.
 
-- If you are not new to Azure Information Protection but in the middle of defining and configuring the labels that you want to use:
+- **If you are not new to Azure Information Protection but in the middle of defining and configuring the labels that you want to use:**
     
     We recommend that you complete your label configuration in the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in the Security & Compliance Center.
 
