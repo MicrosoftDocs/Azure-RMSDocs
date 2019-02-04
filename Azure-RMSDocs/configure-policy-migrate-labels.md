@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/26/2019
+ms.date: 02/05/2019
 ms.topic: article
 ms.service: information-protection
 
@@ -32,6 +32,14 @@ ms.suite: ems
 Migrate your labels if you want to be able to use them in the Office 365 Security & Compliance Center, where they can be published and then downloaded by [clients that support unified labeling](#clients-that-support-unified-labeling). The Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
 
 After you have migrated your labels, you can then make changes to them in the Azure portal or the Office 365 Security & Compliance Center, and the respective clients will download the same change.
+
+Before you read detailed instructions about how to migrate your labels, you might find the following frequently asked questions useful:
+
+- [What’s the difference between labels in Azure Information Protection and labels in Office 365?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
+
+- [When is the right time to migrate my labels to Office 365?](faqs.md#when-is-the-right-time-to-migrate-my-labels-to-office-365)
+
+- [After I've migrated my labels, which management portal do I use?](faqs.md?#after-ive-migrated-my-labels-which-management-portal-do-i-use )
 
 ### Important information about administrative roles
 
