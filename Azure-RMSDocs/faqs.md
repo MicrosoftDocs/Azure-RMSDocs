@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/04/2019
+ms.date: 02/06/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
@@ -50,6 +50,22 @@ Announced at Microsoft Ignite 2018 in Orlando, you now have an option to create 
 For more information about unified labeling management and how these labels will be supported, see the blog post, [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 For more information about migrating your existing labels, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](configure-policy-migrate-labels.md).
+
+## When is the right time to migrate my labels to Office 365?
+
+Sensitivity labels in the Office 365 Security & Compliance Center are generally available but the option to migrate your Azure Information Protection labels is still in preview. When the labels are migrated to the unified labeling store, they can be published and then downloaded by [clients that support unified labeling](configure-policy-migrate-labels.md#clients-that-support-unified-labeling). Today, not all clients support unified labels or are generally available.
+
+We recommend that you first test preview functionality with a test tenant and then migrate your production tenant. In addition:
+
+- **If you are new to Azure Information Protection:** 
+    
+    Because Azure Information Protection has default labels to accelerate your deployment, we recommend you first migrate those default labels, and then manage them from the Office 365 Security & Compliance Center.
+
+- **If you are not new to Azure Information Protection but in the middle of defining and configuring the labels that you want to use:**
+    
+    We recommend that you complete your label configuration in the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in the Security & Compliance Center.
+
+Before you migrate your labels, be sure you understand the [considerations and label settings that are not supported by the Security & Compliance Center](configure-policy-migrate-labels.md#considerations-for-unified-labels).
 
 ## After I've migrated my labels, which management portal do I use?
 
