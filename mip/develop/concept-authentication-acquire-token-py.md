@@ -10,22 +10,22 @@ ms.author: bryanla
 
 # Acquire an access token (Python)
 
-This example demonstrates how to call an external Python script to obtain an OAuth2 token. This is required by the implementation of the authentication delegate.
-
-This code is not intended for production use, but may be used for development and understanding auth concepts. The sample is cross-platform.
+This example demonstrates how to call an external Python script to obtain an OAuth2 token. A valid OAuth2 access token is required by the implementation of the authentication delegate.
 
 ## Prerequisites
 
-To run the sample below, the following must be complete:
+To run the sample below:
 
 - Install Python 2.7.
 - Implement utils.h/cpp in your project. 
 - Auth.py should be added to your project and exist in same directory as the binaries at build.
-- Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. The application ID (also known as client ID) provided by Azure AD, will be used in your token aquisition logic in a following section.
+- Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. Azure AD will provide an application ID, also known as client ID, which is used in your token acquisition logic.
+
+This code isn't intended for production use. It may only be used for development and understanding auth concepts. The sample is cross-platform.
 
 ## sample::auth::AcquireToken()
 
-In the simple authentication example, we demonstrated a simple `AcquireToken()` function that took no parameters and returned a hard coded token value. In this example, we'll overload AcquireToken() to accept authentication parameters and call an external Python script to return the token.
+In the simple authentication example, we demonstrated a simple `AcquireToken()` function that took no parameters and returned a hard-coded token value. In this example, we'll overload AcquireToken() to accept authentication parameters and call an external Python script to return the token.
 
 ### auth.h
 

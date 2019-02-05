@@ -12,11 +12,11 @@ ms.author: bryanla
 
 The example shown demonstrates how to call an external PowerShell script to obtain an OAuth2 token. A valid OAuth2 access token is required by the implementation of the authentication delegate.
 
-This code is not intended for production use. It may only be used for development and understanding auth concepts. 
-
 ## Prerequisites
 
-- Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. The application ID (also known as client ID) provided by Azure AD, will be used in your token acquisition logic in a following section.
+- Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. Azure AD will provide an application ID, also known as client ID, which is used in your token acquisition logic.
+
+This code isn't intended for production use. It may only be used for development and understanding auth concepts. 
 
 ## sample::auth::AcquireToken()
 
