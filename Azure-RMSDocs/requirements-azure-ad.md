@@ -65,7 +65,7 @@ To use multi-factor authentication (MFA) with Azure Information Protection requi
 
 - Azure Information Protection client:
 
-    - The [Azure Information Protection client](./rms-client/aip-client.md) for Windows and for iOS and Android has always supported MFA; no minimum version is required. 
+    - The [Azure Information Protection client](./rms-client/aip-client.md) for Windows and the viewer app for iOS and Android has always supported MFA; no minimum version is required. 
 
 -   Rights Management sharing app for Mac computers:
 
