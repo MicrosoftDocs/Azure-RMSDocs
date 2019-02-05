@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/15/2019
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -133,7 +133,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - Excel now also supports [visual marking](../configure-policy-markings.md)s in different colors.
 
-- For existing S/MIME deployments, a new advanced client setting (in preview) to configure a label to automatically apply S/MIME protection in Outlook. [More information](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
+- For existing S/MIME deployments, a new advanced client setting to configure a label to automatically apply S/MIME protection in Outlook. [More information](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
 - A new advanced client setting, as an alternative to editing the registry to prevent sign-in prompts for the Azure Information Protection service for [disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
 
