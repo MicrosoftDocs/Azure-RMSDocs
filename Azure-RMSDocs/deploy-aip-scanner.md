@@ -133,7 +133,7 @@ You can have one account to run the scanner service and use another account to a
 3. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner: 
     
     ```
-    Install-AIPScanner -SqlServerInstance "name"
+    Install-AIPScanner -SqlServerInstance <name>
     ```
     
     Examples:
