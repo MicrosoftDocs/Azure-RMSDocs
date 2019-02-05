@@ -4,27 +4,28 @@ description: This article will help you understand how to use Python to acquire 
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 09/27/2018
+ms.date: 02/04/2019
 ms.author: bryanla
 ---
 
 # Acquire an access token (Python)
 
-This example demonstrates how to call an external Python script to obtain an OAuth2 token. This is required by the implementation of the authentication delegate.
-
-This code is not intended for production use, but may be used for development and understanding auth concepts. The sample is cross-platform.
+This example demonstrates how to call an external Python script to obtain an OAuth2 token. A valid OAuth2 access token is required by the implementation of the authentication delegate.
 
 ## Prerequisites
 
-To run the sample below, the following must be complete:
+To run the sample below:
 
 - Install Python 2.7.
 - Implement utils.h/cpp in your project. 
-- auth.py should be added to your project and exist in same directory as the binaries at build.
+- Auth.py should be added to your project and exist in same directory as the binaries at build.
+- Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. Azure AD will provide an application ID, also known as client ID, which is used in your token acquisition logic.
+
+This code isn't intended for production use. It may only be used for development and understanding auth concepts. The sample is cross-platform.
 
 ## sample::auth::AcquireToken()
 
-In the simple authentication example, we demonstrated a simple `AcquireToken()` function that took no parameters and returned a hard coded token value. In this example, we'll overload AcquireToken() to accept authentication parameters and call an external Python script to return the token.
+In the simple authentication example, we demonstrated a simple `AcquireToken()` function that took no parameters and returned a hard-coded token value. In this example, we'll overload AcquireToken() to accept authentication parameters and call an external Python script to return the token.
 
 ### auth.h
 
@@ -41,7 +42,7 @@ namespace sample {
     std::string AcquireToken(
         const std::string& userName, //A string value containing the user's UPN.
         const std::string& password, //The user's password in plaintext
-        const std::string& clientId, //The AAD client ID of your application.
+        const std::string& clientId, //The Azure AD client ID (also known as Application ID) of your application.
         const std::string& resource, //The resource URL for which an OAuth2 token is required. Provided by challenge object.
         const std::string& authority); //The authentication authority endpoint. Provided by challenge object.
     }
@@ -99,7 +100,8 @@ namespace sample {
     cmd += " -r ";
     cmd += resource;
     cmd += " -c ";
-    cmd += (!clientId.empty() ? clientId : "0edbblll-8773-44de-b87c-b8c6276d41eb");
+    // Replace <application-id> with the Application ID provided during your Azure AD application registration.
+    cmd += (!clientId.empty() ? clientId : "<application-id>");
 
     string result = sample::Execute(cmd.c_str());
     if (result.empty())
