@@ -10,19 +10,19 @@ ms.author: bryanla
 
 # Acquire an access token (PowerShell)
 
-This example demonstrates how to call an external PowerShell script to obtain an OAuth2 token. This is required by the implementation of the authentication delegate.
+The example shown demonstrates how to call an external PowerShell script to obtain an OAuth2 token. A valid OAuth2 access token is required by the implementation of the authentication delegate.
 
-This code is not intended for production use, but may be used for development and understanding auth concepts. 
+This code is not intended for production use. It may only be used for development and understanding auth concepts. 
 
 ## Prerequisites
 
-- Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. The application ID (also known as client ID) provided by Azure AD, will be used in your token aquisition logic in a following section.
+- Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. The application ID (also known as client ID) provided by Azure AD, will be used in your token acquisition logic in a following section.
 
 ## sample::auth::AcquireToken()
 
 ### auth.h
 
-We create a single function called AcquireToken. Since the return value will be hard coded for this tutorial, we accept no parameters and simply return a string (the token).
+We create a single function called AcquireToken. Since the return value will be hard-coded for this tutorial, we accept no parameters and return a string (the token).
 
 ```cpp
 //auth.h
@@ -37,7 +37,7 @@ namespace sample {
 
 ### auth.cpp
 
-Our source file returns a token value that will be hard coded in a future step.
+Our source file returns a token value that will be hard-coded in a future step.
 
 ```cpp
 //auth.cpp
