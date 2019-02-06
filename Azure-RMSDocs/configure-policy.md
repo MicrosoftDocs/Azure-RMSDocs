@@ -71,8 +71,8 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
     
     > [!NOTE] 
     > If your tenant has been migrated to the unified labeling store, to manage labels from the Azure portal, your account must also have permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
-
-In addition, for [Azure Information Protection analytics](reports-aip.md) only, the Azure AD **Security Reader** role is also supported.
+    
+    - Use **Security Reader** for [Azure Information Protection analytics](reports-aip.md) only.
 
 ## To access the Azure Information Protection blade for the first time
 
