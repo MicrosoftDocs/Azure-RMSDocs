@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2019
+ms.date: 02/07/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
@@ -88,9 +88,9 @@ Azure Information Protection provides classification, labeling, and protection f
 A user must have a valid user name and password to access content that is protected by Azure Information Protection. To read more about how Azure Information Protection helps to secure your data, see [The role of Azure Information Protection in securing data](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
 
 ## What subscription do I need for Azure Information Protection and what features are included?
-See the subscription information and feature list on the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection) page. 
+See the subscription information and feature list on the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection) page. This page also includes some frequently asked questions for licensing.
 
-If you have an Office 365 subscription that includes Azure Rights Management data protection, download the [Azure Information Protection licensing datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf), which also includes some frequently asked questions for licensing.
+If you have an Office 365 subscription that includes Azure Rights Management data protection, download the [Azure Information Protection licensing datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 ## Is the Azure Information Protection client only for subscriptions that include classification and labeling?
 
