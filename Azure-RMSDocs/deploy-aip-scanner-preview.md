@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current preview ver
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/05/2019
+ms.date: 02/06/2019
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -221,7 +221,7 @@ You're now ready to install the scanner with the scanner profile that you've jus
 3. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner, and the scanner profile name that you specified in the preceding section: 
     
     ```
-    Install-AIPScanner -SqlServerInstance <database name> -Profile <profile name>
+    Install-AIPScanner -SqlServerInstance <name> -Profile <profile name>
     ```
     
     Examples, using the profile name of **Europe**:
