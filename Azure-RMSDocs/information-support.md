@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2018
+ms.date: 02/07/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
@@ -34,6 +34,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |Learn about new and upcoming releases|See the [Information about new releases and updates](#information-about-new-releases-and-updates) section on this page.|
 |Get help with the product|See the [Support options and community resources](#support-options-and-community-resources) section on this page.|
 |Check subscription information and what features are supported|Use the subscription information and feature list from the [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection) page.|
+|See commonly asked questions about licensing answered|Read through the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing.|
 |Request a new feature or change of functionality|Visit the [UserVoice](https://msip.uservoice.com) site for Azure Information Protection, and use your company email address to sign in.|
 |Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
 |Understand a specific Azure Information Protection term|Search for the term or abbreviation on the [terminology](terminology.md) page.|
