@@ -42,11 +42,11 @@ If you have questions about licensing, read through the [frequently asked questi
 > [!TIP]
 > Looking to see if your Office 365 plan or Exchange Online standalone plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
 >
-> [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
+> - [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
 >
-> [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
+> - [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
 >
-> [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
+> - [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
 
 If you have questions about subscriptions or licensing, do not post them on this page. Instead, see if they are answered in the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing. If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
