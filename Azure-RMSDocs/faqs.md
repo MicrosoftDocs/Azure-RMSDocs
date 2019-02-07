@@ -88,9 +88,12 @@ Azure Information Protection provides classification, labeling, and protection f
 A user must have a valid user name and password to access content that is protected by Azure Information Protection. To read more about how Azure Information Protection helps to secure your data, see [The role of Azure Information Protection in securing data](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
 
 ## What subscription do I need for Azure Information Protection and what features are included?
-See the subscription information and feature list on the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection) page. This page also includes some [frequently asked questions for licensing](https://azure.microsoft.com/pricing/details/information-protection#faq).
+
+See the subscription information and feature list on the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection) page.
 
 If you have an Office 365 subscription that includes Azure Rights Management data protection, download the [Azure Information Protection licensing datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+
+Still have questions about licensing? See if they are answered in the [frequently asked questions for licensing](https://azure.microsoft.com/pricing/details/information-protection#faq) section.
 
 ## Is the Azure Information Protection client only for subscriptions that include classification and labeling?
 
