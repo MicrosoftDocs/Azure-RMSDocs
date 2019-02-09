@@ -125,9 +125,7 @@ To view the Azure Information Protection reports and create your own, make sure 
 
 Specific to Azure Information Protection analytics, you can use the Azure AD administrator role of Security Reader as an alternative to the other Azure AD roles that support managing Azure Information Protection.
 
-Because this feature uses Azure Log Analytics, role-based access control (RBAC) for Azure also controls access to your workspace.
-
-If you are new to Azure roles, you might find it useful to read [Differences between Azure RBAC roles and Azure AD administrator roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
+Because this feature uses Azure Log Analytics, role-based access control (RBAC) for Azure also controls access to your workspace. If you are new to Azure roles, you might find it useful to read [Differences between Azure RBAC roles and Azure AD administrator roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
 
 Details:
 
