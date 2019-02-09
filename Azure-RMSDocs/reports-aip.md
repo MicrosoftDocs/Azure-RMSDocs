@@ -145,8 +145,8 @@ Details:
     
     - To create a Log Analytics workspace or to create custom queries, one of the following:
     
-    - **Azure Owner** or **Azure Contributor**
-    - **Log Analytics Contributor**
+        - **Azure Owner** or **Azure Contributor**
+        - **Log Analytics Contributor**
     
     - To view the data in an existing Log Analytics workspace:
     
