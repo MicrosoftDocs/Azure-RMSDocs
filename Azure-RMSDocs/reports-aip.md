@@ -146,7 +146,7 @@ Details:
         - **Log Analytics Contributor**
         - Azure role: **Owner**
     
-    - To view the data in a Log Analytics workspace that another admin has created for Azure Information Protection:
+    - To view the data in a Log Analytics workspace that another admin has created:
     
         - **Log Analytics Reader**
         - Azure role: **Reader**
