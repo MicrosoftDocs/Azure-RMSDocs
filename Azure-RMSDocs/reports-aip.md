@@ -142,11 +142,10 @@ Details:
     - **Global Administrator**
 
 2. To use Azure Log Analytics, you must have one of the following [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
-
-- **Owner** or **Contributor** - to create a Log Analytics workspace or to create custom queries
-
-- **Reader** - to view the data in an existing Log Analytics workspace
-
+    
+    - **Owner** or **Contributor** - to create a Log Analytics workspace or to create custom queries
+    
+    - **Reader** - to view the data in an existing Log Analytics workspace
 
 ## Configure a Log Analytics workspace for the reports
 
