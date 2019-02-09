@@ -6,7 +6,7 @@ description: How to use central reporting to track adoption of your Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/05/2019
+ms.date: 02/12/2019
 ms.topic: article
 ms.prod:
 ms.service: information-protection
