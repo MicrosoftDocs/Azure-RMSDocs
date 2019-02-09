@@ -74,7 +74,7 @@ if(!(Get-Package adal.ps)) { Install-Package -Name adal.ps }
 
 $authority = "https://login.windows.net/common/oauth2/authorize" 
 #this is the security and compliance center endpoint
-$resourceUrl = "https://dataservice.o365filtering.com"
+$resourceUrl = "https://syncservice.o365syncservice.com/"
 #replace <application-id> and <redirect-uri>, with the Redirect URI and Application ID from your Azure AD application registration.
 $clientId = "<application-id>"
 $redirectUri = "<redirect-uri>"
