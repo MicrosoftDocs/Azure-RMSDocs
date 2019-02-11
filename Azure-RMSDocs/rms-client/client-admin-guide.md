@@ -75,7 +75,7 @@ Deploy the Azure Information Protection client if any of the following applies:
 
 - You want to classify (and optionally, protect) documents and email messages by selecting labels from within your Office applications (Word, Excel, PowerPoint, Outlook).
 
-- You want to classify (and optionally, protect) documents and email messages by using File Explorer, which supports additional file types, multi-select, and folders.
+- You want to classify (and optionally, protect) files by using File Explorer, supporting additional file types than those supported by Office, multi-select, and folders.
 
 - You want to run scripts that classify (and optionally, protect) documents by using PowerShell commands.
 

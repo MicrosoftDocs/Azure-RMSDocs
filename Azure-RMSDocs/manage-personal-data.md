@@ -207,7 +207,7 @@ You can turn off logging information for the Azure Information Protection client
 
 - For the Azure Information Protection client: Create an [advanced client setting](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) that configures the **LogLevel** to **Off**.
 
-- For the Azure Information Protection scanner: Use the [Set-AIPScannerConfiguration](/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the *ReportLevel* parameter to **Off**.
+- For the Azure Information Protection scanner: Use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the *ReportLevel* parameter to **Off**.
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 
