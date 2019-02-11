@@ -5,7 +5,7 @@ title: Overview of Azure Rights Management protection from Azure Information Pro
 description: Information about Azure Rights Management (Azure RMS), the protection technology used by Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection

@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/05/2019
 ms.topic: article
 ms.prod:

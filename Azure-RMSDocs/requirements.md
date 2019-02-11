@@ -5,7 +5,7 @@ title: Requirements for Azure Information Protection - AIP
 description: Identify the prerequisites to deploy Azure Information Protection for your organization.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/07/2019
 ms.topic: conceptual
 ms.service: information-protection

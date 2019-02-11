@@ -6,7 +6,7 @@ description: Android applications can use the Microsoft Rights Management SDK 4
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
 ms.service: information-protection

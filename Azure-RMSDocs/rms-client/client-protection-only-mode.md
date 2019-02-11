@@ -5,7 +5,7 @@ title: Protection-only mode for Azure Information Protection
 description: Information for users who run the Azure Information Protection client in protection-only mode. 
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection

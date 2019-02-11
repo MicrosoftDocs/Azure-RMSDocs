@@ -5,7 +5,7 @@ title: File types supported by Azure Information Protection
 description: Technical details about supported file types, file name extensions, and levels of protection for admins who are are responsible for the Azure Information Protection client for Windows.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/29/2019
 ms.topic: conceptual
 ms.service: information-protection

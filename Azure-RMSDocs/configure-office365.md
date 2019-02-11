@@ -5,7 +5,7 @@ title: Configuration for Office 365 clients and online services to use Azure RM
 description: Information and instructions for admins to configure Office 365 to work with the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/02/2019
 ms.topic: conceptual
 ms.service: information-protection

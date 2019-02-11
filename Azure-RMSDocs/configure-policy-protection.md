@@ -5,7 +5,7 @@ title: Configure an Azure Information Protection label for protection - AIP
 description: You can protect your most sensitive documents and emails when you configure a label to use Rights Management protection. 
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection

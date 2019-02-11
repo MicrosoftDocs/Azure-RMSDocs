@@ -5,7 +5,7 @@ title: Install PowerShell for AADRM - AIP
 description: Instructions to install Windows PowerShell for the Azure Rights Management service from Azure Information Protection. The name of this module is AADRM.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection

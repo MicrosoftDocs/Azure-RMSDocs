@@ -5,7 +5,7 @@ title: What's new and release notes
 description: Outlines important changes and features in this and previous versions.
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection

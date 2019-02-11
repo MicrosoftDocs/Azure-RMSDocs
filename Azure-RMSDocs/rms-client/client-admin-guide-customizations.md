@@ -5,7 +5,7 @@ title: Custom configurations for the Azure Information Protection client
 description: Information about customizing the Azure Information Protection client for Windows.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/02/2019
 ms.topic: conceptual
 ms.service: information-protection

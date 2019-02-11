@@ -6,7 +6,7 @@ description: Windows Phone applications can use the Microsoft Rights Management 
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
