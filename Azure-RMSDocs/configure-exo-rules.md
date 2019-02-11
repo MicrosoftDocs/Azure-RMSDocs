@@ -5,7 +5,7 @@ title: Configure Exchange Online mail flow rules for Azure Information Protectio
 description: Instructions and examples to configure Exchange Online mail flow rules for Azure Information Protection labels.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection

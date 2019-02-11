@@ -5,7 +5,7 @@ title: Configuring secure document collaboration with Azure Information Protecti
 description: End-to-end workflow for collaborating on documents that are protected by Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection

@@ -6,7 +6,7 @@ description: Azure Information Protection is well supported by a growing communi
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.service: information-protection

@@ -5,7 +5,7 @@ title: Azure RMS protection with Windows Server FCI - AIP
 description: Instructions to use the Rights Management (RMS) client with the Azure Information Protection client to configure File Server Resource Manager and file classification infrastructure (FCI).
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection

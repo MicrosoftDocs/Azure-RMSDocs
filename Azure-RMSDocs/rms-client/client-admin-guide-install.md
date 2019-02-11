@@ -5,7 +5,7 @@ title: Install the Azure Information Protection client for users
 description: Instructions and information for admins to deploy the Azure Information Protection client for Windows on enterprise networks.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection

@@ -5,7 +5,7 @@ title: Activate Azure RMS with the Office 365 admin center - AIP
 description: Activation instructions for the Azure Rights Management service when you use the new version of the Office 365 admin center.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/29/2018
 ms.topic: conceptual
 ms.service: information-protection

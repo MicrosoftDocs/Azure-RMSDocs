@@ -5,7 +5,7 @@ title: Download & install the Azure Information Protection unified labeling clie
 description: Instructions for users to install the preview version of the Azure Information Protection unified labeling client for Windows, so that you can classify and protect your documents and emails. 
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/17/2018
 ms.topic: conceptual
 ms.service: information-protection

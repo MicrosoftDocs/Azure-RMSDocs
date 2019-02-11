@@ -4,7 +4,7 @@ description: Create and configure a new label that classifies documents & emails
 author: cabailey
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/14/2018
 ms.topic: quickstart
 ms.service: information-protection

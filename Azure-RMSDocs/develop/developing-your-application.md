@@ -6,7 +6,7 @@ description: Guidance thorugh a basic console app implementing document protecti
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 03/13/2017
 ms.topic: conceptual
 ms.service: information-protection

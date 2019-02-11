@@ -5,7 +5,7 @@ title: How-to instructions for common scenarios that use Azure Information Prote
 description: Identify use cases that classify and protect your organization's data by using for Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/08/2018
 ms.topic: conceptual
 ms.service: information-protection

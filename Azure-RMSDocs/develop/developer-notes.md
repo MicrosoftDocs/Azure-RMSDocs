@@ -6,7 +6,7 @@ description: A collection of how-to topics for developing with the AIP SDK 2.1
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.service: information-protection
