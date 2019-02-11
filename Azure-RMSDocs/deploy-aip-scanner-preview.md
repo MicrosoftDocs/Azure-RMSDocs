@@ -5,7 +5,7 @@ title: Deploy the Azure Information Protection scanner (PREVEW)
 description: Instructions to install, configure, and run the current preview version of the Azure Information Protection scanner to discover, classify, and protect files on data stores.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/06/2019
 ms.topic: conceptual
 ms.service: information-protection

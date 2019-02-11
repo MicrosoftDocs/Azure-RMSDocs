@@ -6,7 +6,7 @@ description: This article describes the process of deploying a service applicati
 keywords:
 author: kkanakas
 ms.author: kartikka
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/27/2017
 ms.topic: conceptual
 ms.service: information-protection

@@ -5,7 +5,7 @@ title: Use PowerShell with the Azure Information Protection client
 description: Instructions and information for admins to manage the Azure Information Protection client by using PowerShell.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/25/2018
 ms.topic: conceptual
 ms.service: information-protection

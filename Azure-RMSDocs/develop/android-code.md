@@ -6,7 +6,7 @@ description: This topic will introduce you to important code elements for the An
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection

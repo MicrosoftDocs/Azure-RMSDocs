@@ -5,7 +5,7 @@ title: Migrate Azure Information Protection labels to the Office 365 Security & 
 description: Migrate Azure Information Protection labels to the Office 365 Security & Compliance Center for client that support unified labeling. 
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/05/2019
 ms.topic: article
 ms.service: information-protection

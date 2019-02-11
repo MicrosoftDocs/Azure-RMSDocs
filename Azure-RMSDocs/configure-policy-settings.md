@@ -5,7 +5,7 @@ title: Configure Azure Information Protection policy settings - AIP
 description: Configure settings in the Azure Information Protection policy that apply to all users, all devices.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/12/2019
 ms.topic: conceptual
 ms.service: information-protection

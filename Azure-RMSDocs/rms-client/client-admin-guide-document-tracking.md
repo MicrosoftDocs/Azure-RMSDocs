@@ -5,7 +5,7 @@ title: Document tracking for Azure Information Protection
 description: Instructions and information for admins to configure and use document tracking for Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2018
 ms.topic: conceptual
 ms.service: information-protection

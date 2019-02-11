@@ -6,7 +6,7 @@ description: The File API's behavior can be configured through settings in the r
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/11/2017
 ms.topic: conceptual
 ms.service: information-protection

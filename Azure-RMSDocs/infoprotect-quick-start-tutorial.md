@@ -5,7 +5,7 @@ title: Tutorial - Edit the Azure Information Protection policy and create a new 
 description: An introduction tutorial that edits the Azure Information Protection policy for your organization that should take you about 15 minutes to complete.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/29/2019
 ms.topic: tutorial
 ms.service: information-protection
