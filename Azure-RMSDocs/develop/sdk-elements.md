@@ -6,7 +6,7 @@ description: This topic shows the development environment files and their relati
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
 ms.service: information-protection

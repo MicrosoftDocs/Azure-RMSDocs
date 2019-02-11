@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 01/08/2019
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ---
 
 # Microsoft Information Protection (MIP) SDK version release history and support policy

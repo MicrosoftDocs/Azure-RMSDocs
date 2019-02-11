@@ -5,7 +5,7 @@ title: Deploy the Azure Information Protection scanner
 description: Instructions to install, configure, and run the Azure Information Protection scanner to discover, classify, and protect files on data stores.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/05/2019
 ms.topic: conceptual
 ms.service: information-protection

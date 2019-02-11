@@ -5,7 +5,7 @@ title: Manage personal data for Azure Information Protection
 description: Information about the personal data that is used by Azure Information Protection and how you can view, export, and delete it.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection

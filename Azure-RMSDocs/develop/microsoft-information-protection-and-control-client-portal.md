@@ -6,7 +6,7 @@ description: The RMS SDK 2.1 platform enables developers to build applications
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
 ms.service: information-protection

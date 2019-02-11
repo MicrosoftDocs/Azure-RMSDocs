@@ -5,7 +5,7 @@ title: HYOK protection for Azure Information Protection
 description: Overview of HYOK (AD RMS) protection with Azure Information Protection, its supported scenarios, limitations, prerequisites, and recommendations.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection

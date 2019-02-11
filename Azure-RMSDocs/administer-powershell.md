@@ -5,7 +5,7 @@ title: Administering Azure Rights Management with PowerShell - AIP
 description: Learn how you can use the PowerShell module for the Azure Rights Management service (AADRM) for Azure Information Protection, to administer this service for your organization.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection

@@ -5,7 +5,7 @@ title: Add-AadrmKey
 description: Help for Add-AadrmKey from the AADRM module.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.service: information-protection

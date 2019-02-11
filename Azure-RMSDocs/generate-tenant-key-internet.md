@@ -5,7 +5,7 @@ title: Generate and transfer your tenant key – over the Internet&#58; RETIRED 
 description: The information in this article has been removed because it is no longer relevant now that Azure Rights Management uses Azure Key Vault for customer-managed tenant keys (also known as bring your own key, or BYOK). 
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.service: information-protection
