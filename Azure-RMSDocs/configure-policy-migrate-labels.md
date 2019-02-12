@@ -66,6 +66,8 @@ Before you migrate your labels, make sure that you are aware of the following ch
     
     - Templates that use a cloud-based key and that are part of a label configuration are also migrated with the label. Other protection templates are not migrated. 
     
+    - If you have labels that are configured for a predefined template, [convert these templates to labels](configure-policy-templates.md#to-convert-templates-to-labels) before you migrate your labels. This configuration will not block label migration but is not supported in the Security & Compliance Center.
+    
     - After a label with cloud-based protection settings has been migrated, the resulting scope of the protection template is the scoped that is defined in the Azure portal (or by using the AADRM PowerShell module) and the scope that is defined in the Security & Compliance Center. 
 
 - When you migrate your labels, you will see the migration results display whether a label was **created**, **updated**, or **renamed** because of duplication:
