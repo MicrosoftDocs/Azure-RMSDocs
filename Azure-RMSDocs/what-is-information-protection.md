@@ -5,7 +5,7 @@ title: What is Azure Information Protection? - AIP
 description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection

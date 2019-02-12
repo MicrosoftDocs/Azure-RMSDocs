@@ -5,7 +5,7 @@ title: Manage personal data for Azure Information Protection
 description: Information about the personal data that is used by Azure Information Protection and how you can view, export, and delete it.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection
@@ -207,7 +207,7 @@ You can turn off logging information for the Azure Information Protection client
 
 - For the Azure Information Protection client: Create an [advanced client setting](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) that configures the **LogLevel** to **Off**.
 
-- For the Azure Information Protection scanner: Use the [Set-AIPScannerConfiguration](/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the *ReportLevel* parameter to **Off**.
+- For the Azure Information Protection scanner: Use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the *ReportLevel* parameter to **Off**.
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 

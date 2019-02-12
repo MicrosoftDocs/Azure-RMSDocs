@@ -5,7 +5,7 @@ title: Log & analyze usage of the Azure RMS service - AIP
 description: Information and instructions how to use usage logging with Azure Rights Management (Azure RMS). 
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection

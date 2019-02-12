@@ -5,7 +5,7 @@ title: Classify files & emails by using Azure Information Protection
 description: Instructions how to classify your documents and emails.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection

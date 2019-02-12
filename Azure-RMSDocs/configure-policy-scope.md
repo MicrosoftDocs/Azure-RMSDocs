@@ -5,7 +5,7 @@ title: Configure scoped policies for Azure Information Protection - AIP
 description: To configure different settings and labels for specific users, you must configure a scoped policy for Azure Information Protection. 
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection

@@ -6,7 +6,7 @@ description: Email notification allows for a protected content owner to be notif
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
 ms.service: information-protection

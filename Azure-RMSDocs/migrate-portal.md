@@ -5,7 +5,7 @@ title: Migrating from the Azure classic portal - AIP
 description: At-a-glance admin tasks in the Azure portal that you used to do in the Azure classic portal
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/07/2018
 ms.topic: conceptual
 ms.service: information-protection

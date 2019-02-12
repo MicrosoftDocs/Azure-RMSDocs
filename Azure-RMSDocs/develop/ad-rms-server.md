@@ -6,7 +6,7 @@ description: The server component of Rights Management Services (RMS) is impleme
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
 ms.service: information-protection
