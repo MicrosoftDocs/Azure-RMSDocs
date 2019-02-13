@@ -4,6 +4,7 @@ description: The MIP SDK is designed to be almost entirely asynchronous. This ar
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
 ---

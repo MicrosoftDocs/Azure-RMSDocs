@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Rights Management SDK 4.2 - AIP
@@ -9,6 +9,7 @@ ms.author: bryanla
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4ee4fa26-b4f7-478f-b360-be6f421c5718
 # optional metadata

@@ -4,6 +4,7 @@ description: This article will help you understand how Policy API handlers are c
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/16/2018
 ms.author: tommos
 ---

@@ -4,6 +4,7 @@ description: Documents the mip::identity class of the Microsoft Information Prot
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
 ---
