@@ -30,7 +30,7 @@ ms.suite: ems
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!NOTE]
-> This feature is currently in preview and subject to change. Any data collected during this preview might not be supported when the feature moves to general availability.
+> This feature is currently in preview and subject to change.
 
 Use Azure Information Protection analytics for central reporting to track the adoption of your Azure Information Protection labels. In addition:
 
