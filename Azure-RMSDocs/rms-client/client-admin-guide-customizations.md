@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/12/2019
+ms.date: 02/14/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -222,6 +222,22 @@ Even though the Azure Information Protection bar remains hidden, users can still
 To configure this advanced setting, enter the following strings:
 
 - Key: **EnableBarHiding**
+
+- Value: **True**
+
+## Enable order support for sublabels
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
+
+By default, the order of sublabels is not taken into account when you use the following [policy settings](../configure-policy-settings.md):
+
+- **Users must provide justification to set a lower classification label, remove a label, or remove protection**
+
+- **For email messages with attachments, apply a label that matches the highest classification of those attachments**
+
+Configure the following advanced setting to support ordering of the sublabels for these settings:
+
+- Key: **CompareSubLabelsInAttachmentAction**
 
 - Value: **True**
 
