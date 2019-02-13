@@ -230,7 +230,7 @@ To configure this advanced setting, enter the following strings:
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
-Use this setting when you have sublabels and you have configured the following [policy settings](../configure-policy-settings.md):
+Use this setting when you have sublabels and you have configured the following [policy setting](../configure-policy-settings.md):
 
 - **For email messages with attachments, apply a label that matches the highest classification of those attachments**
 
@@ -239,6 +239,8 @@ Configure the following strings:
 - Key: **CompareSubLabelsInAttachmentAction**
 
 - Value: **True**
+
+Without this setting, the first sublabel that's found from the highest parent label is applied to the email.
 
 ## Enable recommended classification in Outlook
 
