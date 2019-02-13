@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/12/2019
+ms.date: 02/13/2019
 ms.topic: conceptual
 ms.service: information-protection
 
@@ -136,6 +136,10 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 - For existing S/MIME deployments, a new advanced client setting to configure a label to automatically apply S/MIME protection in Outlook. [More information](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
 - A new advanced client setting, as an alternative to editing the registry to prevent sign-in prompts for the Azure Information Protection service for [disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
+
+- A new advanced client setting to [support the order of sublabels](client-admin-guide-customizations.md#enable-order-support-for-sublabels)) when you use the following policy settings:
+    - Users must provide justification to set a lower classification label, remove a label, or remove protection
+    - For email messages with attachments, apply a label that matches the highest classification of those attachments
 
 **Fixes**:
 
