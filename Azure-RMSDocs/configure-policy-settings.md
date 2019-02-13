@@ -65,7 +65,7 @@ To configure these settings:
         
    - **For email messages with attachments, apply a label that matches the highest classification of those attachments**: When you set this option to **Recommended**, users are prompted to apply a label to their email message. The label is dynamically chosen, based on the classification labels that are applied to the attachments, and the highest classification label is selected. The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on SharePoint or OneDrive for Business). Users can accept the recommendation or dismiss it. When you set this option to **Automatic**, the label is automatically applied but users can remove the label or select a different label before sending the email.
         
-        To take the ordering of sublabels into consideration when you use this policy setting, you must [configure an advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-with-attachments).
+        To take the ordering of sublabels into consideration when you use this policy setting, you must [configure an advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments).
         
         When the attachment with the highest classification label is configured for protection with the preview setting of user-defined permissions, the email message is labeled with the same classification, but protection is not applied.
     
