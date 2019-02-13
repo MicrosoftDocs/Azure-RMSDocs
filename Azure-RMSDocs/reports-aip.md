@@ -5,8 +5,8 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
+ms.date: 02/15/2019
 manager: barbkess
-ms.date: 02/13/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.prod:
@@ -30,7 +30,7 @@ ms.suite: ems
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!NOTE]
-> This feature is currently in preview and subject to change. Any data collected during this preview might not be supported when the feature moves to general availability.
+> This feature is currently in preview and subject to change.
 
 Use Azure Information Protection analytics for central reporting to track the adoption of your Azure Information Protection labels. In addition:
 
@@ -121,6 +121,36 @@ To view the Azure Information Protection reports and create your own, make sure 
 |An Azure subscription that includes Log Analytics|See the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
 |The current generally available version or preview version of the Azure Information Protection client|If you haven't already installed this client, you can download and install it from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
 |For the **Discovery and risk** report: <br /><br />- To display data from on-premises data stores, you have deployed at least one instance of the Azure Information Protection scanner (current generally availability or preview version) <br /><br />- To display data from Windows 10 computers, they must be a minimum build of 1809, you are using Windows Defender Advanced Threat Protection (Windows Defender ATP), and you have enabled the Azure Information Protection integration feature from Windows Defender Security Center|For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). If you're upgrading from a previous version of the scanner, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).<br /><br />For information about configuring and using the Azure Information Protection integration feature from Windows Defender Security Center, see [Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
+
+### Permissions required for Azure Information Protection analytics
+
+Specific to Azure Information Protection analytics, you can use the Azure AD administrator role of Security Reader as an alternative to the other Azure AD roles that support managing Azure Information Protection.
+
+Because this feature uses Azure Log Analytics, role-based access control (RBAC) for Azure also controls access to your workspace. If you are new to Azure roles, you might find it useful to read [Differences between Azure RBAC roles and Azure AD administrator roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
+
+Details:
+
+1. To access the Azure Information Protection analytics blade in the Azure portal, you must have one of the following [Azure AD administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+    
+    - **Security Reader**
+    
+    - **Information Protection Administrator**
+    
+   - **Security Administrator**
+    
+    - **Global Administrator**
+
+2. To use Azure Log Analytics, you must have one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
+    
+    - To create a Log Analytics workspace or to create custom queries, one of the following:
+    
+        - **Log Analytics Contributor**
+        - Azure role: **Owner** or **Contributor**
+    
+    - To view the data in a Log Analytics workspace that another admin has created:
+    
+        - **Log Analytics Reader**
+        - Azure role: **Reader**
 
 ## Configure a Log Analytics workspace for the reports
 
