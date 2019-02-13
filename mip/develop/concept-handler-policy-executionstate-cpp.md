@@ -5,6 +5,7 @@ services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
 ---

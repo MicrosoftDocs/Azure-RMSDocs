@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Get started | Azure RMS
@@ -9,6 +9,7 @@ ms.author: bryanla
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
 # optional metadata
