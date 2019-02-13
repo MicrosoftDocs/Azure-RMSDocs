@@ -8,6 +8,7 @@ ms.author: cabailey
 manager: barbkess
 ms.date: 02/12/2019
 ms.topic: article
+ms.collection: M365-security-compliance
 ms.service: information-protection
 
 # optional metadata

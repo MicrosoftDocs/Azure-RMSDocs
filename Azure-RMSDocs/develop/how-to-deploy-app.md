@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: How to deploy an app - AIP
@@ -9,6 +9,7 @@ ms.author: kartikka
 manager: barbkess
 ms.date: 02/27/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 # optional metadata

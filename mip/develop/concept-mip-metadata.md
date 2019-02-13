@@ -4,6 +4,7 @@ description: This article will help you understand the metadata that is generate
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
 ---

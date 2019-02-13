@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: How-to add explicit owner rights | Azure RMS
@@ -9,6 +9,7 @@ ms.author: bryanla
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
 # optional metadata

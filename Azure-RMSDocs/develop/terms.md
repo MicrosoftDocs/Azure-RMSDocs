@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: AIP Developer Terminology | Microsoft Docs
@@ -9,6 +9,7 @@ ms.author: bryanla
 manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
 # optional metadata

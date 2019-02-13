@@ -4,6 +4,7 @@ description: A quick overview on how to get started with the MIP SDK .NET wrappe
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
 ---
