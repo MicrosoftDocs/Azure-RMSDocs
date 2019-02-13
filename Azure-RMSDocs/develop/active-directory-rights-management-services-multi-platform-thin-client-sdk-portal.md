@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Rights Management SDK 4.2 - AIP
@@ -6,9 +6,10 @@ description: RMS SDK 4.2 is a simplified, next-generation API that enables a li
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4ee4fa26-b4f7-478f-b360-be6f421c5718
 # optional metadata

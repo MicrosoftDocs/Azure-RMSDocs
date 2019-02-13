@@ -4,9 +4,10 @@ description: Use the Azure Information Protection scanner to find what sensitive
 author: cabailey
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/16/2019
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: information-protection
 
 # optional metadata

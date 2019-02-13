@@ -5,9 +5,10 @@ title: How-to instructions for common scenarios that use Azure Information Prote
 description: Identify use cases that classify and protect your organization's data by using for Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 12/08/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 
 # optional metadata
@@ -45,7 +46,13 @@ The most successful deployments are those that identify specific use cases that 
 
 ## Additional deployment instructions
 
-Our [Azure Information Protection technical blog](https://aka.ms/AIPblog) has additional step-by-step instructions from our Customer Experience Engineering team. For example:
+Our [Azure Information Protection technical blog](https://aka.ms/AIPblog) has additional guidance from our Customer Experience Engineering team.
+
+For example, a methodology with best practices for business decision makers and IT implementers:
+
+- [Azure Information Protection Deployment Acceleration Guide](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
+
+Step-by-step instructions:
 
 - [Using Azure Information Protection to protect PDF’s and Adobe Acrobat Reader to view them](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010)
 

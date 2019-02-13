@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: How to register your app with Azure AD - AIP
@@ -6,9 +6,10 @@ description: Describes the basics of user authentication for your RMS-enabled ap
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 03/13/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 # optional metadata

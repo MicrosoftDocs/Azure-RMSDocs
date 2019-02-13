@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: How-to work with encryption settings | Azure RMS
@@ -6,9 +6,10 @@ description: Orientation for the Azure RMS encryption packages and code snips fo
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 # optional metadata

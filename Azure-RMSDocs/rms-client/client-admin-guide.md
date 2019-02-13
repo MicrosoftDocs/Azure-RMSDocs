@@ -5,9 +5,10 @@ title: Azure Information Protection client admin guide
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Azure Information Protection client for Windows.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/18/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 
@@ -75,7 +76,7 @@ Deploy the Azure Information Protection client if any of the following applies:
 
 - You want to classify (and optionally, protect) documents and email messages by selecting labels from within your Office applications (Word, Excel, PowerPoint, Outlook).
 
-- You want to classify (and optionally, protect) documents and email messages by using File Explorer, which supports additional file types, multi-select, and folders.
+- You want to classify (and optionally, protect) files by using File Explorer, supporting additional file types than those supported by Office, multi-select, and folders.
 
 - You want to run scripts that classify (and optionally, protect) documents by using PowerShell commands.
 

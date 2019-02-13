@@ -5,9 +5,10 @@ title: Azure Information Protection client for Windows
 description: Information resources for the Azure Information Protection client for Windows. This free, downloadable client is for organizations that want to classify and protect documents and emails. 
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 

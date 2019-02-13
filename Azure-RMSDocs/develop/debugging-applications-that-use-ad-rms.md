@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: How-to debug a rights-enabled application | Azure RMS
@@ -6,9 +6,10 @@ description: The following topic shows how to debug your application and use the
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 # optional metadata

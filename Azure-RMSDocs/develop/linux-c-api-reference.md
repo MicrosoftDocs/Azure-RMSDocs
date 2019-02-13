@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Linux API reference | Azure RMS
@@ -6,9 +6,10 @@ description: API reference for our Linux flavored operating system support is ho
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2BD4F55D-BA88-4516-86FB-E2E6535D1690
 # optional metadata

@@ -5,9 +5,10 @@ title: Tutorial - Configure Azure Information Protection policy settings to help
 description: An introduction tutorial that steps you through configuring Azure Information Protection policy settings to help classify your organization's documents and emails.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.service: information-protection
 
 # optional metadata

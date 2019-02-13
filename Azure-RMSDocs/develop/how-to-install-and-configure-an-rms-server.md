@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: How-to install, configure and test with an RMS server | Azure RMS
@@ -6,9 +6,10 @@ description: Install and configure and RMS Sever for testing your rights-enabled
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 # optional metadata

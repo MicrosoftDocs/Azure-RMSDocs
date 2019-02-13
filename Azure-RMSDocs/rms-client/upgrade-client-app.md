@@ -5,9 +5,10 @@ title: Tasks that you did with the RMS sharing application - AIP
 description: Instructions for users who have upgraded from the RMS sharing application to the Azure Information Protection client. 
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 

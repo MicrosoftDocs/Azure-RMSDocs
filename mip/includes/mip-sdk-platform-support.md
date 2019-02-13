@@ -3,6 +3,7 @@ author: BryanLa
 ms.author: bryanla
 ms.service: information-protection  
 ms.topic: include
+ms.collection: M365-security-compliance
 ms.date: 02/01/2019
 ---
 

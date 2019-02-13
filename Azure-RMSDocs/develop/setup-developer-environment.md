@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Setup developer environment | Azure RMS
@@ -6,9 +6,10 @@ description: Show you how to setup you your development environment to work with
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 296FC4C0-99C6-4997-AD97-5CEE01221B1A
 # optional metadata

@@ -4,9 +4,10 @@ description: If your organization is brand new to Azure Information Protection, 
 author: cabailey
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/15/2018
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: information-protection
 
 # optional metadata

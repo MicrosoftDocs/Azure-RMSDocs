@@ -5,9 +5,10 @@ title: Activate Azure RMS with the Azure portal - AIP
 description: Instructions for protection activation in the Azure portal so that your organization can start to protect documents and emails.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e

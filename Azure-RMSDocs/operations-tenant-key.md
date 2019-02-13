@@ -5,9 +5,10 @@ title: Operations for your Azure Information Protection tenant key
 description: Identify the different levels of control and responsibility that you have for your Azure Information Protection tenant key.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 

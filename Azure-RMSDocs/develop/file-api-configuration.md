@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: File API configuration | Azure RMS
@@ -6,9 +6,10 @@ description: The File API's behavior can be configured through settings in the r
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/11/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 # optional metadata

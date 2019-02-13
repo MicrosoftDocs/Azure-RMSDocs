@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Application types | Azure RMS
@@ -6,9 +6,10 @@ description: This topic covers types of applications that you might choose to cr
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
 # optional metadata

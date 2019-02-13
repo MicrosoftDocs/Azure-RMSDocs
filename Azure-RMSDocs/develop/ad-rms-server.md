@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: AD RMS Server | Azure RMS
@@ -6,9 +6,10 @@ description: The server component of Rights Management Services (RMS) is impleme
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 17B05780-B0EF-4805-8304-52DCDEB3AADB
 # optional metadata

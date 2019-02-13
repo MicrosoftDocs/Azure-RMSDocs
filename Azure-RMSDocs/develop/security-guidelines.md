@@ -5,9 +5,10 @@ title: Security Best Practices for Information Protection
 description: RMS-enabled applications are best built using Information Protection best practices.
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/13/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems

@@ -5,9 +5,10 @@ title: Help bot for Azure Information Protection
 description: Help bot for Azure Information Protection to help answer your questions, search the docs, or open a support ticket if you need technical support. 
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/21/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 98105d30-ff81-4b9c-9f41-9e9ffd6e7aa6
 

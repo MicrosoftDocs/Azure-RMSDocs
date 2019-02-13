@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: How to&#58; Enable error and performance logging | Azure RMS
@@ -6,9 +6,10 @@ description: The Microsoft Rights Management SDK 4.2 manages diagnosis and perf
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 # optional metadata

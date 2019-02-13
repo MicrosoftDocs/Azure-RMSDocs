@@ -5,9 +5,10 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 02/12/2019
+ms.date: 02/13/2019
+manager: barbkess
 ms.topic: article
+ms.collection: M365-security-compliance
 ms.prod:
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
@@ -73,7 +74,7 @@ For example, you'll be able to see the following:
     
     - Which files contain sensitive information for known categories, such as financial data and personal information, and the location of files by these categories
     
-The reports use [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) to store the data in a workspace that your organization owns. If you're familiar with the query language, you can modify the queries, and create new reports and Power BI dashboards. You might find the following tutorial helpful to understand the query language: [Getting Started with the Analytics Portal](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
+The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to store the data in a Log Analytics workspace that your organization owns. If you're familiar with the query language, you can modify the queries, and create new reports and Power BI dashboards. You might find the following tutorial helpful to understand the query language: [Get started with Azure Monitor log queries](/azure/azure-monitor/log-query/get-started-queries). 
 
 For more information, read the following blog posts: 
 
@@ -105,7 +106,7 @@ To generate these reports, the endpoints send the following types of information
 
 - The client operating system version.
 
-This information is stored in an Azure Log Analytics workspace that your organization owns and can be viewed by users who have access rights to this workspace. For information about configuring access to your workspace, see the [Manage accounts and users](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) section from the Azure documentation.
+This information is stored in an Azure Log Analytics workspace that your organization owns and can be viewed by users who have access rights to this workspace. For information about configuring access to your workspace, see the [Manage accounts and users](/azure/azure-monitor/platform/manage-access#manage-accounts-and-users) section from the Azure documentation.
 
 > [!NOTE]
 > Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for document content matches. When you select this checkbox, the actual data that's identified by the sensitive information types or your custom conditions is also collected. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to collect this data, do not select this checkbox.
@@ -117,7 +118,7 @@ To view the Azure Information Protection reports and create your own, make sure 
 
 |Requirement|More information|
 |---------------|--------------------|
-|An Azure subscription that includes Log Analytics|See the [Azure Log Analytics pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
+|An Azure subscription that includes Log Analytics|See the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
 |The current generally available version or preview version of the Azure Information Protection client|If you haven't already installed this client, you can download and install it from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
 |For the **Discovery and risk** report: <br /><br />- To display data from on-premises data stores, you have deployed at least one instance of the Azure Information Protection scanner (current generally availability or preview version) <br /><br />- To display data from Windows 10 computers, they must be a minimum build of 1809, you are using Windows Defender Advanced Threat Protection (Windows Defender ATP), and you have enabled the Azure Information Protection integration feature from Windows Defender Security Center|For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). If you're upgrading from a previous version of the scanner, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).<br /><br />For information about configuring and using the Azure Information Protection integration feature from Windows Defender Security Center, see [Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
 
@@ -144,7 +145,7 @@ Details:
     - To create a Log Analytics workspace or to create custom queries, one of the following:
     
         - **Log Analytics Contributor**
-        - Azure role: **Owner**
+        - Azure role: **Owner** or **Contributor**
     
     - To view the data in a Log Analytics workspace that another admin has created:
     

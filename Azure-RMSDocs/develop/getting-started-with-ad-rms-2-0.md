@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Getting started | Azure RMS
@@ -6,9 +6,10 @@ description: The RMS SDK 2.1 platform enables developers to build applications
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 728113C9-FCF9-4280-BE1D-6AF5C15E449E
 # optional metadata

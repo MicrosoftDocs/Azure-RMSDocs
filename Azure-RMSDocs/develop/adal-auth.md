@@ -6,9 +6,10 @@ description: Steps for configuring Azure Information Protection app to use Azure
 keywords: authentication, RMS, ADAL, Informatin Protection,
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 03/13/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 

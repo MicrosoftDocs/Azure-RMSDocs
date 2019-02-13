@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Code examples | Azure RMS
@@ -6,9 +6,10 @@ description: RMS SDK 4.2 includes example code and working projects for some su
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 634df601-79d2-4bc2-b845-4df886d7c589
 # optional metadata

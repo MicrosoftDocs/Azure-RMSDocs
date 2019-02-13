@@ -4,6 +4,7 @@ description: This article will help you understand 3 types of APIs in the MIP SD
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 10/16/2018
 ms.author: bryanla
 ---

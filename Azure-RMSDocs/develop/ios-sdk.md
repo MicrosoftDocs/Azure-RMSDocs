@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: iOS and OS X setup | Azure RMS
@@ -6,9 +6,10 @@ description: iOS and OS X applications can use the RMS SDK 4.2 to enable integr
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 # optional metadata

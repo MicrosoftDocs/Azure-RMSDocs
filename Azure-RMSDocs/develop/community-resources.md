@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Developer community resources | Microsoft Docs
@@ -6,9 +6,10 @@ description: Azure Information Protection is well supported by a growing communi
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3bdaa6d-e8ca-421a-a429-553bfc54b78b
 # optional metadata

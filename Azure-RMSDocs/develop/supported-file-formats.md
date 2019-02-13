@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Supported file formats | Azure RMS
@@ -6,9 +6,10 @@ description: The current version of the File API supports native protection for 
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: EC831494-7F2C-4C70-9063-B02CDDEA14EE
 # optional metadata

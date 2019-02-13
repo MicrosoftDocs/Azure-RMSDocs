@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: API SDK 2.1 reference | Microsoft Docs
@@ -6,9 +6,10 @@ description: Azure Information Protection SDK 2.1 supports RMS enablement of Wi
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 6dcfa840-026b-4728-b53c-2c9c730fcf84
 # optional metadata

@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: How to enable document tracking and revocation | Azure RMS
@@ -7,9 +7,10 @@ description: Basic guidance for implementing document tracking of content as wel
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 # optional metadata

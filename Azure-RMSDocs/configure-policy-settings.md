@@ -5,9 +5,10 @@ title: Configure Azure Information Protection policy settings - AIP
 description: Configure settings in the Azure Information Protection policy that apply to all users, all devices.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/16/2018
+manager: barbkess
+ms.date: 02/12/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
@@ -45,7 +46,9 @@ To configure these settings:
 
 3. On the **Policy** blade, configure the settings:
     
-   - **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sublabels. 
+   - **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sublabels.
+        
+        This setting applies to Office apps and the scanner. It does not apply to File Explorer, or PowerShell.
     
    - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option).
         

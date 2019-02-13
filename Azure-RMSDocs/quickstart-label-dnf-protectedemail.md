@@ -4,9 +4,10 @@ description: Configure a label that protects an email for a user by automaticall
 author: cabailey
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/29/2019
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: information-protection
 
 # optional metadata

@@ -5,9 +5,10 @@ title: FAQs for Azure Information Protection app for iOS & Android
 description: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 08/31/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d

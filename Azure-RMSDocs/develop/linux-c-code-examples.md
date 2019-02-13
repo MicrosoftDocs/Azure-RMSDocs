@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Linux code examples | Azure RMS
@@ -6,9 +6,10 @@ description: This topic introduces you to important scenarios and code elements 
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
 # optional metadata
@@ -78,7 +79,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
     // create authentication context
     AuthCallback auth(clientId, redirectUrl);
     
-    // process convertion
+    // process conversion
     auto pfs = PFileConverter::ConvertFromPFile(
       clientEmail,
       inFile,
@@ -197,7 +198,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
     // create authentication callback
     AuthCallback auth(clientId, redirectUrl);
     
-    // process convertion
+    // process conversion
     PFileConverter::ConvertToPFileTemplates(
       clientEmail, inFile, fileExt, outFile, auth,
       this->consent, this->templates);
@@ -351,7 +352,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
     // create authentication callback
     AuthCallback auth(clientId, redirectUrl);
     
-    // process convertion
+    // process conversion
     PFileConverter::ConvertToPFilePredefinedRights(
       clientEmail,
       inFile,

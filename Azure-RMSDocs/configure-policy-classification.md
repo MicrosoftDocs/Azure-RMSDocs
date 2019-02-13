@@ -5,9 +5,10 @@ title: Configure conditions for an Azure Information Protection label - AIP
 description: Conditions for a label let you automatically assign a label to a document or email. Or, you can prompt users to select a recommended label.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/16/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 

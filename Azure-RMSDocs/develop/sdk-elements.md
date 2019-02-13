@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Development environment files | Azure RMS
@@ -6,9 +6,10 @@ description: This topic shows the development environment files and their relati
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 # optional metadata

@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Azure Information Protection SDK 2.1 developer guidance | Microsoft Docs
@@ -6,9 +6,10 @@ description: A collection of how-to topics for developing with the AIP SDK 2.1
 keywords:
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5A9F04FD-0FCD-482F-8671-36FE93B783B0
 # optional metadata
