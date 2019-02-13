@@ -73,7 +73,7 @@ For example, you'll be able to see the following:
     
     - Which files contain sensitive information for known categories, such as financial data and personal information, and the location of files by these categories
     
-The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to store the data in a workspace that your organization owns. If you're familiar with the query language, you can modify the queries, and create new reports and Power BI dashboards. You might find the following tutorial helpful to understand the query language: [Get started with Azure Monitor log queries](/azure/azure-monitor/log-query/get-started-queries). 
+The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to store the data in a Log Analytics workspace that your organization owns. If you're familiar with the query language, you can modify the queries, and create new reports and Power BI dashboards. You might find the following tutorial helpful to understand the query language: [Get started with Azure Monitor log queries](/azure/azure-monitor/log-query/get-started-queries). 
 
 For more information, read the following blog posts: 
 
