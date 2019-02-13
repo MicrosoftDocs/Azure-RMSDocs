@@ -4,6 +4,7 @@ description: Microsoft Information Protection (MIP) SDK FAQs and troubleshooting
 author: BryanLa
 ms.service: information-protection
 ms.topic: troubleshooting
+ms.collection: M365-security-compliance
 ms.date: 10/19/2018
 ms.author: bryanla
 ---

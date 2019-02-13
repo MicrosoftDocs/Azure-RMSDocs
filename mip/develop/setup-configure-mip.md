@@ -4,6 +4,7 @@ description: Provides the setup and configuration prerequisites, in order to use
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/30/2019
 ms.author: bryanla
 #Customer intent: As a an application developer, I want to learn about setup and configuration, so that I can use the SDK to build applications.

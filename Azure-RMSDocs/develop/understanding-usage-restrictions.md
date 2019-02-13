@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Understanding usage restrictions | Azure RMS
@@ -9,6 +9,7 @@ ms.author: bryanla
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 # optional metadata

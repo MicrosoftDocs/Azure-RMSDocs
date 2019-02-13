@@ -8,6 +8,7 @@ ms.author: cabailey
 manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 

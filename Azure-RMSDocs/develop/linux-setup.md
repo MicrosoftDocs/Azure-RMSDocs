@@ -1,4 +1,4 @@
-﻿---
+---
 title: Linux setup 
 description: Several flavors of Linux operating systems can now use Rights Management SDK 4.x.
 keywords:
@@ -7,6 +7,7 @@ ms.author: bryanla
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
 audience: developer

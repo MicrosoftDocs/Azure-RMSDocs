@@ -9,6 +9,7 @@ ms.author: bryanla
 manager: barbkess
 ms.date: 03/13/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 # optional metadata
