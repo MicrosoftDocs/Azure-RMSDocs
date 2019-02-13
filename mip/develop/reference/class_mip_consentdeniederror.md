@@ -4,6 +4,7 @@ description: Documents the mip::consentdeniederror class of the Microsoft Inform
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
 ---

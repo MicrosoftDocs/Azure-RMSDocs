@@ -5,6 +5,7 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/09/2019
 ms.author: bryanla
 #Customer intent: As a an application developer, I want to learn how to set labels with the MIP SDK, so that I can use the SDK APIs to apply labels and protection to my own files.
