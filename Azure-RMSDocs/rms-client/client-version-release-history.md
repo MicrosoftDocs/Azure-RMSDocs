@@ -138,8 +138,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 - A new advanced client setting, as an alternative to editing the registry to prevent sign-in prompts for the Azure Information Protection service for [disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
 
 - A new advanced client setting to [support the order of sublabels](client-admin-guide-customizations.md#enable-order-support-for-sublabels)) when you use the following policy settings:
-    - Users must provide justification to set a lower classification label, remove a label, or remove protection
-    - For email messages with attachments, apply a label that matches the highest classification of those attachments
+    - **Users must provide justification to set a lower classification label, remove a label, or remove protection**
+    - **For email messages with attachments, apply a label that matches the highest classification of those attachments**
 
 **Fixes**:
 
