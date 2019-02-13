@@ -61,11 +61,11 @@ To configure these settings:
         
        ![Azure Information Protection prompt if new classification is lower](./media/info-protect-lower-justification.png)
         
-       This option is not applicable for lowering the classification of sublabels under the same parent label, unless you [configure an advanced client setting](../rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels).
+       This option is not applicable for lowering the classification of sublabels under the same parent label, unless you [configure an advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels).
         
    - **For email messages with attachments, apply a label that matches the highest classification of those attachments**: When you set this option to **Recommended**, users are prompted to apply a label to their email message. The label is dynamically chosen, based on the classification labels that are applied to the attachments, and the highest classification label is selected. The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on SharePoint or OneDrive for Business). Users can accept the recommendation or dismiss it. When you set this option to **Automatic**, the label is automatically applied but users can remove the label or select a different label before sending the email.
     
-     When the attachment with the highest classification label is configured for protection with the preview setting of user-defined permissions, the email message is labeled with the same classification, but protection is not applied unless you [configure an advanced client setting](../rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels).
+     When the attachment with the highest classification label is configured for protection with the preview setting of user-defined permissions, the email message is labeled with the same classification, but protection is not applied unless you [configure an advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels).
     
    - **Display the Information Protection bar in Office apps**: When this setting is off, users cannot select labels from a bar in Word, Excel, PowerPoint, and Outlook. Instead, users must select labels from the **Protect** button on the ribbon. When this setting is on, users can select labels from either the bar or the button.
         
