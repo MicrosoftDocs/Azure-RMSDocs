@@ -52,7 +52,7 @@ Some of these settings require editing the registry and some use advanced settin
 |Setting|Scenario and instructions|
 |----------------|---------------|
 |DisableDNF|[Hide or show the Do Not Forward button in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
-|CompareSubLabelsInAttachmentAction|[Enable order support for sublabels](#enable-order-support-for-sublabels) 
+|CompareSubLabelsInAttachmentAction|[Enable order support for sublabels](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Permanently hide the Azure Information Protection bar](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Make the custom permissions options available or unavailable to users](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnablePDFv2Protection|[Don't protect PDF files by using the ISO standard for PDF encryption](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
@@ -226,22 +226,19 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
-## Enable order support for sublabels
+## Enable order support for sublabels on attachments
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
-By default, the order of sublabels is not taken into account when you use the following [policy settings](../configure-policy-settings.md):
-
-- **Users must provide justification to set a lower classification label, remove a label, or remove protection**
+Use this setting when you have sublabels and you have configured the following [policy settings](../configure-policy-settings.md):
 
 - **For email messages with attachments, apply a label that matches the highest classification of those attachments**
 
-Configure the following advanced setting to support ordering of the sublabels for these settings:
+Configure the following strings:
 
 - Key: **CompareSubLabelsInAttachmentAction**
 
 - Value: **True**
-
 
 ## Enable recommended classification in Outlook
 
