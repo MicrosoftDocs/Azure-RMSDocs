@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/12/2019
+ms.date: 02/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -53,6 +53,7 @@ Some of these settings require editing the registry and some use advanced settin
 |Setting|Scenario and instructions|
 |----------------|---------------|
 |DisableDNF|[Hide or show the Do Not Forward button in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
+|CompareSubLabelsInAttachmentAction|[Enable order support for sublabels](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Permanently hide the Azure Information Protection bar](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Make the custom permissions options available or unavailable to users](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnablePDFv2Protection|[Don't protect PDF files by using the ISO standard for PDF encryption](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
@@ -226,6 +227,21 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
+## Enable order support for sublabels on attachments
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+
+Use this setting when you have sublabels and you have configured the following [policy setting](../configure-policy-settings.md):
+
+- **For email messages with attachments, apply a label that matches the highest classification of those attachments**
+
+Configure the following strings:
+
+- Key: **CompareSubLabelsInAttachmentAction**
+
+- Value: **True**
+
+Without this setting, the first sublabel that's found from the highest parent label is applied to the email.
 
 ## Enable recommended classification in Outlook
 
