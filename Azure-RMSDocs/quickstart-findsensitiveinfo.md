@@ -24,6 +24,8 @@ ms.service: information-protection
 
 # Quickstart: Find what sensitive information you have in files stored on-premises
 
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
 In this quickstart, you'll install and configure the Azure Information Protection scanner to find what sensitive information you have in files that are stored in an on-premises data store. For example, a local folder, network share, or SharePoint Server.
 
 Note: This quickstart uses the current general availability version of the scanner and not the preview version, which uses the Azure portal for configuration.
