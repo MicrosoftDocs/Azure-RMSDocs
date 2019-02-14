@@ -109,7 +109,7 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     If you don't select any users, the label is configured to apply protection such that only the person who applies the label can open the document or email with no usage restrictions. In some cases, this might be the required outcome, so that a user can save a file to any location and be assured that only they can open it. If this outcome matches your requirement and others are not required to collaborate on the protected content, do not select **Add permissions**. Next time you open this **Protection** blade, you will see **IPC_USER_ID_OWNER** displayed for **Users**, and **Custom** displayed for **Permisisons** to reflect this configuration.
     
-    To specify the users you want to be able to open protected docuents and emails, select **Add permissions**. Then on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
+    To specify the users you want to be able to open protected documents and emails, select **Add permissions**. Then on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
     
    - Choose **Select from the list** where you can then add all users from your organization by selecting **Add \<organization name> - All members**. This setting excludes guest accounts. Or, you can select **Add any authenticated users**, or browse the directory.
         
