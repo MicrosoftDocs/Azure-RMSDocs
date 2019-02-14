@@ -166,7 +166,7 @@ The Information Protection bar then displays again, for users to select an alter
 
 Because the label is selected before sending the email, there's no need to actually send the email to see how this policy setting works. You can close the email without sending or saving it.
 
-However, you might want to try repeating this exercise but also attach another document that has a higher classification (a sublabel from the **Highly Confidential** label). Then, you'll see how the prompt changes to apply the higher classification label. If you test multiple attachments with sublabels that have same parent label, you must configure [an advanced client setting](../rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) to support their ordering in the Azure portal.
+However, you might want to try repeating this exercise but also attach another document that has a higher classification (a sublabel from the **Highly Confidential** label). Then, you'll see how the prompt changes to apply the higher classification label. If you test multiple attachments with sublabels that have same parent label, you must configure [an advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) to support their ordering in the Azure portal.
 
 ## Clean up resources
 
