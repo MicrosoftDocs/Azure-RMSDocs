@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/29/2019
+ms.date: 02/15/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -23,6 +23,8 @@ ms.service: information-protection
 ---
 
 # Quickstart: Configure a label for users to easily protect emails that contain sensitive information
+
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 In this quickstart, you'll configure an existing label to automatically apply the Do Not Forward protection setting.
 
