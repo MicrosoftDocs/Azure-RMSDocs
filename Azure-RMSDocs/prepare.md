@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/06/2018
+ms.date: 02/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -42,7 +42,9 @@ There are different ways to create these accounts for users and groups, which in
 
 - You create the users and groups in another directory and synchronize them to Azure AD.
 
-When you create users and groups by using the first three methods from this list, they are automatically created in Azure AD, and Azure Information Protection can use these accounts directly. However, many enterprise networks use an on-premises directory to create and manage users and groups. Azure Information Protection cannot use these accounts directly; you must synchronize them to Azure AD.
+When you create users and groups by using the first three methods from this list, with one exception, they are automatically created in Azure AD, and Azure Information Protection can use these accounts directly. However, many enterprise networks use an on-premises directory to create and manage users and groups. Azure Information Protection cannot use these accounts directly; you must synchronize them to Azure AD.
+
+The exception referred to in the previous paragraph is dynamic distribution lists that you can create for Exchange Online. Unlike static distribution lists, these groups are not replicated to Azure AD and so cannot be used by Azure Information Protection. 
 
 ## How users and groups are used by Azure Information Protection
 
@@ -102,7 +104,7 @@ For assigning labels:
 
 - To configure scoped policies that assign additional labels to group members, you can use any type of group in Azure AD that has an email address that contains a verified domain for the user's tenant. A group that has an email address is often referred to as a mail-enabled group.
 
-    For example, you can use a mail-enabled security group, a distribution group (which can be static or dynamic), and an Office 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address.
+    For example, you can use a mail-enabled security group, a static distribution group, and an Office 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address. You also cannot use a dynamic distribution list from Exchange Online because this group isn't replicated to Azure AD.
 
 For assigning usage rights and access controls:
 
