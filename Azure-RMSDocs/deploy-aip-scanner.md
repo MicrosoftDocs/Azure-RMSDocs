@@ -227,7 +227,7 @@ With the scanner's default configuration, you're now ready to run your first sca
     > [!NOTE]
     > You can change the level of logging by using the *ReportLevel* parameter with [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration), but you can't change the report folder location or name. Consider using a directory junction for the folder if you want to store the reports on a different volume or partition.
     >
-    > For example, using the [Mklink](/windows-server/administration/windows-commands/mklink) command: `mklink D:\Scanner_reports /j C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
+    > For example, using the [Mklink](/windows-server/administration/windows-commands/mklink) command: `mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
     
     With the default setting, only files that meet the conditions you've configured for automatic classification are included in the detailed reports. If you don't see any labels applied in these reports, check your label configuration includes automatic rather than recommended classification.
     
