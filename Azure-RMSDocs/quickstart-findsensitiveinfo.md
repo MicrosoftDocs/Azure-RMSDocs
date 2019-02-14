@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/16/2019
+ms.date: 02/15/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
