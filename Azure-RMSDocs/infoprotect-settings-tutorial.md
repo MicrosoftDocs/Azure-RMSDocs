@@ -6,7 +6,7 @@ description: An introduction tutorial that steps you through configuring Azure I
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 02/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -166,7 +166,7 @@ The Information Protection bar then displays again, for users to select an alter
 
 Because the label is selected before sending the email, there's no need to actually send the email to see how this policy setting works. You can close the email without sending or saving it.
 
-However, you might want to try repeating this exercise but also attach another document that has a higher classification (a sublabel from the **Highly Confidential** label). Then, you'll see how the prompt changes to apply the higher classification label.
+However, you might want to try repeating this exercise but also attach another document that has a higher classification (a sublabel from the **Highly Confidential** label). Then, you'll see how the prompt changes to apply the higher classification label. If you test multiple attachments with sublabels that have same parent label, you must configure [an advanced client setting](../rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) to support their ordering in the Azure portal.
 
 ## Clean up resources
 
@@ -180,6 +180,6 @@ Restart your Word and Outlook apps to download these changes.
 
 ## Next steps
 
-For more information about editing the Azure Information Protection policy settings see [How to configure the policy settings for Azure Information Protection](configure-policy-settings.md).
+For more information about editing the Azure Information Protection policy settings, see [How to configure the policy settings for Azure Information Protection](configure-policy-settings.md).
 
 The policy settings that we changed helped to ensure a base level of classification, as well as encourage users to select an appropriate label. The next step is to augment this strategy by inspecting the contents of documents and emails, and then recommending or automatically applying an appropriate label. You do this by configuring labels for conditions. To learn more, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md).
