@@ -73,7 +73,7 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
   - **Global Administrator / Company Administrator**
     
     > [!NOTE] 
-    > If your tenant has been migrated to the unified labeling store, to manage Azure Information Protection from the Azure portal, your account must be a global administrator or one of the lisedt roles plus permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > If your tenant has been migrated to the unified labeling store, to manage Azure Information Protection from the Azure portal, your account must be a global administrator or one of the listed roles plus permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 
 ## To access the Azure Information Protection blade for the first time
