@@ -35,6 +35,10 @@ High-level MIP SDK use cases include:
 
 For a more exhaustive list, review [API concepts](concept-apis-use-cases.md).
 
+The MIP SDK is supported on the following platforms:
+
+[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
+
 ## Next Steps
 
 Now you're ready to get started with the SDK. The first thing you'll need to do is [complete the MIP SDK setup and configuration steps](setup-configure-mip.md). These steps will ensure your Office 365 subscription and client machine are set up correctly.
