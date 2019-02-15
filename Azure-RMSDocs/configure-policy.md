@@ -64,12 +64,12 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
 
 - Use an account that has one of the following [administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-  - **Information Protection Administrator**
-
+    - **Information Protection Administrator**
+    
     - **Security Reader** for [Azure Information Protection analytics](reports-aip.md) only
-
+    
   - **Security Administrator**
-
+    
   - **Global Administrator / Company Administrator**
     
     > [!NOTE] 
