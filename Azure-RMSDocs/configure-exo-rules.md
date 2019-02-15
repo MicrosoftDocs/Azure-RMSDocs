@@ -42,9 +42,11 @@ For more information about configuring mail flow rules to encrypt email messages
 
 ## Prerequisite: Know your label GUID
 
-Because an Azure Information Protection label is stored in [metadata](configure-policy.md#label-information-stored-in-emails-and-documents), mail flow rules in Exchange Online can read this information for messages and Office document attachments. Inspecting the metadata for PDF documents is not supported by mail flow rules.
+Because an Azure Information Protection label is stored in metadata, mail flow rules in Exchange Online can read this information for messages and Office document attachments. Mail flow rules do not support inspecting the metadata for PDF documents.
 
-Before you configure mail flow rules to identify messages and labels that are labeled, make sure that you know the GUID of the Azure Information Protection label that you want to use.
+Before you configure mail flow rules to identify messages and documents that are labeled, make sure that you know the GUID of the Azure Information Protection label that you want to use. 
+
+For more information about the metadata stored by a label and how to identify label GUIDs, see [Label information stored in emails and documents](configure-policy.md#label-information-stored-in-emails-and-documents).
 
 ## Example configurations
 
