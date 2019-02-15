@@ -15,12 +15,6 @@ This article provides answers to Frequently Asked Questions (FAQs), and troubles
 
 ## Frequently Asked Questions 
 
-### Question: which platforms are supported by the MIP SDK?
-
-The MIP SDK is supported on the following platforms:
-
-[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
-
 ### Question: how does the SDK handle strings, and what string type should I be using in my code?
 
 The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transformation Format - 8-bit)](https://wikipedia.org/wiki/UTF-8) for string handling. Specific guidance depends on the platform you're using:
