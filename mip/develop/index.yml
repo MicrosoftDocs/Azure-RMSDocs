@@ -35,10 +35,8 @@ sections:
       columns:
         - image:
             src: ./media/index/logo_Cplusplus.svg
-          title: C++
         - image:
             src: media/index/logo_Csharp.svg
-          title: C#
       rows:
         - title: Application initialization
           values:
