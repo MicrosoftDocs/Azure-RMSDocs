@@ -57,19 +57,6 @@ The Azure Information Protection labels can be used with the full range of data 
 
 You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels. For full instructions, see [Configuring the Azure Information Protection policy](configure-policy.md).
 
-## Label information stored in emails and documents
-
-When a label is applied to a document or email, under the covers, the label is stored in metadata so that applications and services can read the label:
-
-- In emails, this information is stored in the x-header: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
-
-- For Word documents (.doc and .docx), Excel spreadsheets (.xls and .xlsx), PowerPoint presentations (.ppt and .pptx), and PDF documents, this metadata is stored in the following custom property: **MSIP_Label_\<GUID>_Enabled=True**  
-
-To identify the GUID for a label, locate the Label ID value on the **Label** blade in the Azure portal, when you view or configure the Azure Information Protection policy. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the GUID (MainLabelId or SubLabelId). When a label has sublabels, always specify the GUID of just a sublabel and not the parent label.
-
-
-
-
 ## Next steps
 
 For examples of how to customize the Azure Information Protection policy, and see the resulting behavior for users, try the following tutorials:

@@ -6,7 +6,7 @@ description: Instructions and examples to configure Exchange Online mail flow ru
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -40,17 +40,11 @@ You can extend these examples as well as modify them. For example, add more cond
 
 For more information about configuring mail flow rules to encrypt email messages, see [Define mail flow rules to encrypt email messages in Office 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) from the Office documentation. 
 
-## Where labels are stored in emails and documents
+## Prerequisite: Know your label GUID
 
-Because an Azure Information Protection label is stored in metadata, mail flow rules in Exchange Online can read this information for messages and document attachments:
+Because an Azure Information Protection label is stored in [metadata](configure-policy.md#label-information-stored-in-emails-and-documents), mail flow rules in Exchange Online can read this information for messages and Office document attachments. Inspecting the metadata for PDF documents is not supported by mail flow rules.
 
-- In emails, this information is stored in the x-header: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
-
-- For Word documents (.doc and .docx), Excel spreadsheets (.xls and .xlsx), and PowerPoint presentations (.ppt and .pptx), this metadata is stored in the following custom property: **MSIP_Label_\<GUID>_Enabled=True**  
-
-To identify the GUID for a label, locate the Label ID value on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the GUID (MainLabelId or SubLabelId). When a label has sublabels, always specify the GUID of just a sublabel and not the parent label.
-
-Before you configure your mail flow rules, make sure that you know the GUID of the Azure Information Protection label that you want to use.
+Before you configure mail flow rules to identify messages and labels that are labeled, make sure that you know the GUID of the Azure Information Protection label that you want to use.
 
 ## Example configurations
 
