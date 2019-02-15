@@ -35,27 +35,20 @@ sections:
     columns:
       - image:
           src: media/index/logo_Cplusplus.svg
-    rows:
-      - title: Application initialization
-        values: 
-        - href: quick-app-initialization-cpp.md
-      - title: Use the File API to list sensitivity labels
-        values: 
-        - href: quick-file-list-labels-cpp.md
-      - title: Use the File API to set/get a label on a file
-        values: 
-        - href: quick-file-set-get-label-cpp.md
       - image:
           src: media/index/logo_Csharp.svg
     rows:
       - title: Application initialization
         values: 
+        - href: quick-app-initialization-cpp.md
         - href: quick-app-initialization-csharp.md
       - title: Use the File API to list sensitivity labels
         values: 
+        - href: quick-file-list-labels-cpp.md
         - href: quick-file-list-labels-csharp.md
       - title: Use the File API to set/get a label on a file
         values: 
+        - href: quick-file-set-get-label-cpp.md
         - href: quick-file-set-get-label-csharp.md
    
 - title: Reference
