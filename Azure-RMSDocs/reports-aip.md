@@ -126,19 +126,22 @@ To view the Azure Information Protection reports and create your own, make sure 
 
 Specific to Azure Information Protection analytics, you can use the Azure AD administrator role of Security Reader as an alternative to the other Azure AD roles that support managing Azure Information Protection.
 
-Because this feature uses Azure Log Analytics, role-based access control (RBAC) for Azure also controls access to your workspace. If you are new to Azure roles, you might find it useful to read [Differences between Azure RBAC roles and Azure AD administrator roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
+Because this feature uses Azure Log Analytics, role-based access control (RBAC) for Azure also controls access to your workspace. If you're new to Azure roles, you might find it useful to read [Differences between Azure RBAC roles and Azure AD administrator roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
 
 Details:
 
 1. To access the Azure Information Protection analytics blade in the Azure portal, you must have one of the following [Azure AD administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Security Reader**
-    
     - **Information Protection Administrator**
     
+    - **Security Reader**
+  
    - **Security Administrator**
     
     - **Global Administrator**
+    
+    > [!NOTE] 
+    > If your tenant has been migrated to the unified labeling store, your account must be a global administrator or one of the listed roles plus permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 2. To use Azure Log Analytics, you must have one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
     
@@ -154,7 +157,7 @@ Details:
 
 ## Configure a Log Analytics workspace for the reports
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](https://portal.azure.com) with an account that has the [permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics). Then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
     
@@ -177,8 +180,6 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
 - **Usage report (Preview)**: Use this report to see how your labels are being used. 
 
 - **Activity logs (Preview)**: Use this report to see labeling actions from users, and on devices and file paths.
-    
-    This report is currently rolling out to tenants, so if you do not see it, try again in a few days.
     
     This report has a **Columns** option, that lets you display more activity information than the default display.
 
