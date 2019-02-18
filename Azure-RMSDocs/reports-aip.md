@@ -132,10 +132,10 @@ Details:
 
 1. To access the Azure Information Protection analytics blade in the Azure portal, you must have one of the following [Azure AD administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Security Reader**
-    
     - **Information Protection Administrator**
     
+    - **Security Reader**
+  
    - **Security Administrator**
     
     - **Global Administrator**
