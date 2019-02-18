@@ -139,6 +139,9 @@ Details:
    - **Security Administrator**
     
     - **Global Administrator**
+    
+    > [!NOTE] 
+    > If your tenant has been migrated to the unified labeling store, your account must be a global administrator or one of the listed roles plus permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 2. To use Azure Log Analytics, you must have one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
     
@@ -154,7 +157,7 @@ Details:
 
 ## Configure a Log Analytics workspace for the reports
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](https://portal.azure.com) with an account that has the [permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics). Then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
     
