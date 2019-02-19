@@ -661,9 +661,9 @@ Set the logging level to one of the following values:
 
 - **Error**: Errors only.
 
-- **Info**: Minimum logging, which includes no event IDs.
+- **Info**: Minimum logging, which includes no event IDs (the default setting for the scanner).
 
-- **Debug**: Full information (the default setting for the scanner).
+- **Debug**: Full information.
 
 - **Trace**: Detailed logging (the default setting for clients). For the scanner, this setting has a significant performance impact and should be enabled for the scanner only if requested by Microsoft Support. If you are instructed to set this level of logging for the scanner, remember to set a different value when the relevant logs have been collected.
 
