@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/14/2019
+ms.date: 02/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -663,9 +663,9 @@ Set the logging level to one of the following values:
 
 - **Info**: Minimum logging, which includes no event IDs.
 
-- **Debug**: Full information (the default setting).
+- **Debug**: Full information (the default setting for the scanner).
 
-- **Trace**: Very detailed logging that has a performance impact and should be enabled only if requested by Microsoft Support. If you are instructed to set this level of logging, remember to set a different value when the relevant logs have been collected.
+- **Trace**: Detailed logging (the default setting for clients). For the scanner, this setting has a significant performance impact and should be enabled for the scanner only if requested by Microsoft Support. If you are instructed to set this level of logging for the scanner, remember to set a different value when the relevant logs have been collected.
 
 This advanced client setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md), or change the information that's written to the local [event log](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
 
