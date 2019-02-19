@@ -57,7 +57,6 @@ The Azure Information Protection labels can be used with the full range of data 
 
 You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels. For full instructions, see [Configuring the Azure Information Protection policy](configure-policy.md).
 
-
 ## Next steps
 
 For examples of how to customize the Azure Information Protection policy, and see the resulting behavior for users, try the following tutorials:
