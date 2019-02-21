@@ -265,19 +265,19 @@ This configuration uses multiple [advanced client settings](#how-to-configure-ad
 
 When you create and configure the following advanced client settings, users see pop-up messages in Outlook that can warn them before sending an email, or ask them to provide justification why they are sending an email, or prevent them from sending an email for either of the following scenarios:
 
-- Their email or attachment for the email has a specific label:
+- **Their email or attachment for the email has a specific label**:
     - The attachment can be any file type
 
-- The email or attachment for the email doesn't have a label:
+- **The email or attachment for the email doesn't have a label**:
     - The attachment can be an Office document or PDF document
 
-When these conditions are met, if the recipient's email address is not included in a list of allowed domain names, the user sees a pop-up messages with one of the following actions:
+When these conditions are met and the recipient's email address is not included in a list of allowed domain names that you have specified, the user sees a pop-up messages with one of the following actions:
 
-- Warn: The user can confirm and send, or cancel.
+- **Warn**: The user can confirm and send, or cancel.
 
-- Justify: The user is prompted for justification (predefined options or free-form).  The user can then send or cancel the email. The justification text is written to the email x-header, so that it can be read by other systems. For example, data loss prevention (DLP) services.
+- **Justify**: The user is prompted for justification (predefined options or free-form).  The user can then send or cancel the email. The justification text is written to the email x-header, so that it can be read by other systems. For example, data loss prevention (DLP) services.
 
-- Block: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
+- **Block**: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
 
 
 ### To implement the warn, justify, or block pop-up messages for a specific label:
