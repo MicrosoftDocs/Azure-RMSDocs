@@ -52,7 +52,7 @@ Some of these settings require editing the registry and some use advanced settin
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
-|[Block, Warn, or Justify messages for emails]( )
+|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](##implement-pop-up-messages-in-outlook-that-warn-justify-or-block-users-sending-emails)|
 |DisableDNF|[Hide or show the Do Not Forward button in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
 |CompareSubLabelsInAttachmentAction|[Enable order support for sublabels](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Permanently hide the Azure Information Protection bar](#permanently-hide-the-azure-information-protection-bar)|
