@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -55,7 +55,7 @@ If you have a version 1 of the client that is later than 1.41.51.0, it is a prev
 > [!TIP]
 > Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
 
-**Released**: 01/15/2019
+**Released**: 03/05/2019
 
 This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
@@ -82,6 +82,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - Azure DocumentDB Auth Key
     - Azure Publish Setting Password
     - Azure Storage Account Key (Generic)
+
+- New advanced client settings that support 
 
 **Fixes**:
 
