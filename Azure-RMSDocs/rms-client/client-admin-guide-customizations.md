@@ -60,12 +60,12 @@ Some of these settings require editing the registry and some use advanced settin
 |LabelbyCustomProperty|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Change the local logging level](#change-the-local-logging-level)
-|OutlookBlockUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-users-sending-emails)|
-|OutlookCollaborationTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-users-sending-emails)|
+|OutlookBlockUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookCollaborationTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Set a different default label for Outlook](#set-a-different-default-label-for-outlook)|
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
-|OutlookJustifyUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-users-sending-emails)|
-|OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-users-sending-emails)|
+|OutlookJustifyUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[Disable the low integrity level for the scanner](#disable-the-low-integrity-level-for-the-scanner)|
 |PullPolicy|[Support for disconnected computers](#support-for-disconnected-computers)
@@ -265,11 +265,11 @@ This configuration uses multiple [advanced client settings](#how-to-configure-ad
 
 When you create and configure the following advanced client settings, users see pop-up messages in Outlook that can warn them before sending an email, or ask them to provide justification why they are sending an email, or prevent them from sending an email for either of the following scenarios:
 
-- Their email or attachment for the email has a specific label
+- Their email or attachment for the email has a specific label:
     - The attachment can be any file type
 
-- The email or attachment for the email doesn't have a label
--     - The attachment can be an Office document or PDF document
+- The email or attachment for the email doesn't have a label:
+    - The attachment can be an Office document or PDF document
 
 When these conditions are met, if the recipient's email address is not included in a list of allowed domain names, the user sees a pop-up messages with one of the following actions:
 

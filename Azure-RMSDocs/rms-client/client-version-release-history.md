@@ -83,7 +83,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - Azure Publish Setting Password
     - Azure Storage Account Key (Generic)
 
-- New advanced client settings that implement pop-up messages in Outlook that can warn, justify, or block emails being sent. [More information](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-users-sending-emails)
+- New advanced client settings that implement pop-up messages in Outlook that can warn, justify, or block emails being sent. [More information](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
 **Fixes**:
 
