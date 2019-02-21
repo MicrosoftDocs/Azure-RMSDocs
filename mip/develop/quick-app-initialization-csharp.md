@@ -79,7 +79,7 @@ Now create an implementation for an authentication delegate, by extending the SD
 
 The `ApplicationInfo` object contains two properties. The `_appInfo.ApplicationId` will be used in the `AuthDelegateImplementation` class to provide the client ID to the auth library.
 
-5. Add the `public string AcquireToken()` class. This class should accept `Microsoft.InformationProtection.Identity`, and two strings: authority and resource. These string variables will be passed in to the authentication library by the API and shouldn't be manipulated. Editing may result in a failure to authenticate.
+5. Add the `public string AcquireToken()` method. This method should accept `Microsoft.InformationProtection.Identity` and two strings: authority and resource. These string variables will be passed in to the authentication library by the API and shouldn't be manipulated. Editing may result in a failure to authenticate.
 
      ```csharp
      public string AcquireToken(Identity identity, string authority, string resource)
