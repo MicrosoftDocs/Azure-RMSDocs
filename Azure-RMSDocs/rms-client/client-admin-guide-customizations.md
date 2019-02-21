@@ -256,7 +256,7 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
-## Implement pop-up messages in Outlook that warn, justify, or block users sending emails
+## Implement pop-up messages in Outlook that warn, justify, or block emails being sent
 
 This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This configuration is in preview and might change.
 
@@ -268,11 +268,11 @@ When you create and configure the following advanced client settings, users see 
 - The email or attachment for the email doesn't have a label
 -     - The attachment can be an Office document or PDF document
 
-When these conditions are met, if the recipient's email address is not included in a list of allowed domain names, the user sees one of the following pop-up messages:
+When these conditions are met, if the recipient's email address is not included in a list of allowed domain names, the user sees a pop-up messages with one of the following actions:
 
-- Warn: The user can confirm and send, or cancel
+- Warn: The user can confirm and send, or cancel.
 
-- Justify:  The user is prompted for justification (predefined options or freeform). They can then send or cancel. The justification text is written to the email x-header, so that it can be read by other systems. For example, data loss prevention (DLP) services.
+- Justify: The user is prompted for justification (predefined options or free-form).  The user can then send or cancel the email. The justification text is written to the email x-header, so that it can be read by other systems. For example, data loss prevention (DLP) services.
 
 - Block: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
 
@@ -291,8 +291,6 @@ Create the following advanced client setting with the following values:
 
 - Justification messages:
     
-    - Warn messages:
-    
     - Key: **OutlookJustifyUntrustedCollaborationLabel**
     
     - Value: \<**label ID**>
@@ -304,9 +302,9 @@ Create the following advanced client setting with the following values:
     - Value: \<**label ID**>
 
 
-### To implement the warn, justify, or block pop-up messages for emails or attachments that doesn't have a label:
+### To implement the warn, justify, or block pop-up messages for emails or attachments that don't have a label:
 
-Create the following advanced client setting with the following value:
+Create the following advanced client setting with one of the following values:
 
 - Warn messages:
     
@@ -328,7 +326,7 @@ Create the following advanced client setting with the following value:
 
 ### To specify the allowed domain names for recipients exempt from the pop-up messages
 
-When you specify a domain name in an advanced client setting, users do not see the pop-up messages for recipients from the domain. You can specify multiple domains, with an advanced client setting for each one. To display the pop-up messages only for recipients external to your organization, specify all the domain names that are used by your organization.
+When you specify a domain name in an advanced client setting, users do not see the pop-up messages for recipients that include the domain name in their email address. You can specify multiple domains, by creating an advanced client setting for each one. To display the pop-up messages only for recipients external to your organization, specify all the domain names that are used by your organization.
 
 For each domain to be exempt from displaying the pop-up messages, create the following advanced client setting with the following value:
 
