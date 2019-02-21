@@ -331,9 +331,9 @@ Create the following advanced client setting with one of the following values:
 
 When you specify a domain name in an advanced client setting, users do not see the pop-up messages for recipients who have have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, create multiple advanced client settings, one for each domain.
 
-A typical configuration is to display the popu-up messages only for recipients who are external to your organization, or who are authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
+A typical configuration is to display the pop-up messages only for recipients who are external to your organization, or who are authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
 
-For each domain to be exempt from displaying the pop-up messages, create the following advanced client setting with the following value:
+For each domain to exempt, create the following advanced client setting with the following value:
 
 - Key: **OutlookCollaborationTrustedDomains**
 
