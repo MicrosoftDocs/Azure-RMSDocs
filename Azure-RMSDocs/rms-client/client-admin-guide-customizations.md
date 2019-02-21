@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/20/2019
+ms.date: 02/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -419,7 +419,7 @@ As a result of this registry edit, the following scenarios are supported:
 
 ## Migrate labels from Secure Islands and other labeling solutions
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 This configuration is currently not compatible with the new default behavior that protects PDF files by using the ISO standard for PDF encryption. In this scenario, .ppdf files cannot be opened by File Explorer, PowerShell, or the scanner. To resolve this, use the advanced client setting to [don't use the ISO standard for PDF encryption](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
