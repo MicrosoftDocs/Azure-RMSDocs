@@ -52,6 +52,7 @@ Some of these settings require editing the registry and some use advanced settin
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
+|[Block, Warn, or Justify messages for emails]( )
 |DisableDNF|[Hide or show the Do Not Forward button in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
 |CompareSubLabelsInAttachmentAction|[Enable order support for sublabels](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Permanently hide the Azure Information Protection bar](#permanently-hide-the-azure-information-protection-bar)|
@@ -255,6 +256,87 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
+## Implement pop-up messages in Outlook that warn, justify, or block users sending emails
+
+This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This configuration is in preview and might change.
+
+When you create and configure the following advanced client settings, users see pop-up messages in Outlook that can warn them before sending an email, or ask them to provide justification why they are sending an email, or prevent them from sending an email for either of the following scenarios:
+
+- Their email or attachment for the email has a specific label
+    - The attachment can be any file type
+
+- The email or attachment for the email doesn't have a label
+-     - The attachment can be an Office document or PDF document
+
+When these conditions are met, if the recipient's email address is not included in a list of allowed domain names, the user sees one of the following pop-up messages:
+
+- Warn: The user can confirm and send, or cancel
+
+- Justify:  The user is prompted for justification (predefined options or freeform). They can then send or cancel. The justification text is written to the email x-header, so that it can be read by other systems. For example, data loss prevention (DLP) services.
+
+- Block: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
+
+
+### To implement the warn, justify, or block pop-up messages for a specific label:
+
+To implement the pop-up messages for specific labels, you must know the label ID. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
+
+Create the following advanced client setting with the following values:
+
+- Warn messages:
+    
+    - Key: **OutlookWarnUntrustedCollaborationLabel**
+    
+    - Value: \<**label ID**>
+
+- Justification messages:
+    
+    - Warn messages:
+    
+    - Key: **OutlookJustifyUntrustedCollaborationLabel**
+    
+    - Value: \<**label ID**>
+
+- Block messages:
+    
+    - Key: **OutlookBlockUntrustedCollaborationLabel**
+    
+    - Value: \<**label ID**>
+
+
+### To implement the warn, justify, or block pop-up messages for emails or attachments that doesn't have a label:
+
+Create the following advanced client setting with the following value:
+
+- Warn messages:
+    
+    - Key: **OutlookWarnUntrustedCollaborationLabel**
+    
+    - Value: **Warn**
+
+- Justification messages:
+    
+    - Key: **OOutlookWarnUntrustedCollaborationLabel**
+    
+    - Value: **Justify**
+
+- Block messages:
+    
+    - Key: **OutlookWarnUntrustedCollaborationLabel**
+    
+    - Value: **Block**
+
+### To specify the allowed domain names for recipients exempt from the pop-up messages
+
+When you specify a domain name in an advanced client setting, users do not see the pop-up messages for recipients from the domain. You can specify multiple domains, with an advanced client setting for each one. To display the pop-up messages only for recipients external to your organization, specify all the domain names that are used by your organization.
+
+For each domain to be exempt from displaying the pop-up messages, create the following advanced client setting with the following value:
+
+- Key: **OutlookCollaborationTrustedDomains**
+
+- Value: **\<**domain name**>**
+
+For example, if you specify the domain name of contoso.com, users do not see the pop-up messages in Outlook when they send an email to john@sales.contoso.com.
 
 ## Set a different default label for Outlook
 
