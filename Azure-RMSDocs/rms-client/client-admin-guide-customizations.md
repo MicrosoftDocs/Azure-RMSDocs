@@ -284,7 +284,7 @@ When these conditions are met and the recipient's email address is not included 
 
 To implement the pop-up messages for specific labels, you must know the label ID. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
 
-Create the following advanced client setting with the following values:
+Create one or more of the following advanced client settings with the following values:
 
 - Warn messages:
     
@@ -317,7 +317,7 @@ Create the following advanced client setting with one of the following values:
 
 - Justification messages:
     
-    - Key: **OOutlookWarnUntrustedCollaborationLabel**
+    - Key: **OutlookWarnUntrustedCollaborationLabel**
     
     - Value: **Justify**
 
@@ -329,7 +329,9 @@ Create the following advanced client setting with one of the following values:
 
 ### To specify the allowed domain names for recipients exempt from the pop-up messages
 
-When you specify a domain name in an advanced client setting, users do not see the pop-up messages for recipients that include the domain name in their email address. You can specify multiple domains, by creating an advanced client setting for each one. To display the pop-up messages only for recipients external to your organization, specify all the domain names that are used by your organization.
+When you specify a domain name in an advanced client setting, users do not see the pop-up messages for recipients who have have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, create multiple advanced client settings, one for each domain.
+
+A typical configuration is to display the popu-up messages only for recipients who are external to your organization, or who are authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
 
 For each domain to be exempt from displaying the pop-up messages, create the following advanced client setting with the following value:
 
