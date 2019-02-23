@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -56,7 +56,7 @@ For more information about migrating your existing labels, see [How to migrate A
 
 Sensitivity labels in the Office 365 Security & Compliance Center are generally available but the option to migrate your Azure Information Protection labels is still in preview. When the labels are migrated to the unified labeling store, they can be published and then downloaded by [clients that support unified labeling](configure-policy-migrate-labels.md#clients-that-support-unified-labeling). Today, not all clients support unified labels or are generally available.
 
-We recommend that you first test preview functionality with a test tenant and then migrate your production tenant. In addition:
+We recommend that you first test preview functionality with a test tenant, and then migrate your production tenant. In addition:
 
 - **If you are new to Azure Information Protection:** 
     
@@ -67,6 +67,8 @@ We recommend that you first test preview functionality with a test tenant and th
     We recommend that you complete your label configuration in the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in the Security & Compliance Center.
 
 Before you migrate your labels, be sure you understand the [considerations and label settings that are not supported by the Security & Compliance Center](configure-policy-migrate-labels.md#considerations-for-unified-labels).
+
+See also [Which preview client do I install for testing new functionality?](faqs-infoprotect.md#which-preview-client-do-i-install-for-testing-new-functionality)
 
 ## After I've migrated my labels, which management portal do I use?
 
