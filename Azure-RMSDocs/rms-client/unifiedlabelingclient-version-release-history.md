@@ -84,7 +84,7 @@ Includes:
 
 - Labels that are migrated from the Azure portal and configured for HYOK protection display in the client when they are published, but these labels do not apply protection.
 
-- The full set of cmdlets from the AzureInformationProtection module aren't available, which includes Set-AIPFileClassification and cmdlets that connect directly to a protection service.
+- The full set of cmdlets from the AzureInformationProtection module aren't available, which includes cmdlets that connect directly to a protection service. For example, Unprotect-RMSFile, to unprotect files in bulk.
 
 For full details, see the [comparison tables](use-client.md#feature-comparisons-for-the-clients).
 
