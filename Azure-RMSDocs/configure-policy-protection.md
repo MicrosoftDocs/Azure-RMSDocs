@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,7 +17,7 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: eymanor
+#ms.reviewer: demizets
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -103,11 +103,11 @@ Exchange does not have to be configured for Azure Information Protection before 
     
      To select a predefined template, the template must be published (not archived) and must not be linked already to another label. When you select this option, you can use an **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
     
-     Tip: If you are used to creating and editing custom templates, you might find it useful to reference [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
+     If you are used to creating and editing custom templates, you might find it useful to reference [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
 
 7. If you selected **Set permissions** for **Azure (cloud key)**, this option lets you select users and usage rights. 
     
-    If you don't select any users, the label is configured to apply protection such that only the person who applies the label can open the document or email with no usage restrictions. In some cases, this might be the required outcome, so that a user can save a file to any location and be assured that only they can open it. If this outcome matches your requirement and others are not required to collaborate on the protected content, do not select **Add permissions**. Next time you open this **Protection** blade, you will see **IPC_USER_ID_OWNER** displayed for **Users**, and **Custom** displayed for **Permissions** to reflect this configuration.
+    If you don't select any users and select **OK** on this blade, followed by **Save** on the **Label** blade: The label is configured to apply protection such that only the person who applies the label can open the document or email with no restrictions. This configuration is sometimes referred to as "Just for me" and might be the required outcome, so that a user can save a file to any location and be assured that only they can open it. If this outcome matches your requirement and others are not required to collaborate on the protected content, do not select **Add permissions**. After saving the label, the next time you open this **Protection** blade, you see **IPC_USER_ID_OWNER** displayed for **Users**, and **Co-Owner** displayed for **Permissions** to reflect this configuration.
     
     To specify the users you want to be able to open protected documents and emails, select **Add permissions**. Then on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
     
