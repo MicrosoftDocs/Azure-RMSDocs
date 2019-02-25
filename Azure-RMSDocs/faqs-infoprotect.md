@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/25/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -48,6 +48,18 @@ Look out for announcements on the [Enterprise Mobility + Security blog](https://
 > - Labeling ability built in to Office apps for mobile devices (iOS and Android) and Mac computers. For more information, see [Apply sensitivity labels to your documents and email within Office](https://aka.ms/officemipdocs).
 
 Request new features and vote on requests by visiting the [UserVoice site](https://msip.uservoice.com/) for Azure Information Protection.
+
+## Which preview client do I install for testing new functionality?
+
+Currently, there are two preview clients for Windows: 
+
+- The **Azure Information Protection client** that downloads labels and policy settings from the Azure portal. This client builds on the general availability version of the client.
+
+- The **Azure Information Protection unified labeling client** that downloads labels and policy settings from the Office 365 Security & Compliance Center. This client is in its second preview.
+
+We recommend you test with the Azure Information Protection unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](configure-policy-migrate-labels.md), use the Azure Information Protection client.
+
+For more information, including a feature and functionality comparison table, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 
 ## Do I need to be a global admin to configure classification and labels?
 
