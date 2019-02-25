@@ -132,28 +132,40 @@ Details:
 
 1. To access the Azure Information Protection analytics blade in the Azure portal, you must have one of the following [Azure AD administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Information Protection Administrator**
+    - To create your Log Analytics workspace or to create custom queries, one of the following:
     
-    - **Security Reader**
-  
-   - **Security Administrator**
+        - **Information Protection Administrator**
+        - **Security Administrator**
+        - **Global Administrator**
     
-    - **Global Administrator**
+    - To view the data after the Log Analytics workspace has been created, one of the following:
+    
+        - **Security Reader**
+        - **Information Protection Administrator**
+        - **Security Administrator**
+        - **Global Administrator**
     
     > [!NOTE] 
     > If your tenant has been migrated to the unified labeling store, your account must be a global administrator or one of the listed roles plus permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
-2. To use Azure Monitoring, you must have one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
+2. To access your Azure Log Analytics workspace, you must have one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
     
     - To create a Log Analytics workspace or to create custom queries, one of the following:
     
         - **Log Analytics Contributor**
         - Azure role: **Owner** or **Contributor**
     
-    - To view the data in a Log Analytics workspace that another admin has created:
+    - To view the data in a Log Analytics workspace after the workspace has been created:
     
         - **Log Analytics Reader**
         - Azure role: **Reader**
+
+#### Minimum roles to view the reports
+
+After you have configured your workspace for Azure Information Protection analytics, the minimum roles needed to view the reports are:
+
+- Azure AD administrator role: **Security Reader** (or Global Administrator if you are using unified labeling)
+- Azure role: **Log Analytics Reader**
 
 ## Configure a Log Analytics workspace for the reports
 
