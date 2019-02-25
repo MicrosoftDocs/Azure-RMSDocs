@@ -251,8 +251,8 @@
         href: reference/class_mip_userrights.md
       - name: UserRoles
         href: reference/class_mip_userroles.md
-    - name: .NET API Browser
-      href: /dotnet/api/?term=microsoft.informationprotection
+  - name: .NET API Browser
+    href: /dotnet/api/?term=microsoft.informationprotection
 - name: Resources
   items:
   - name: Developer blog
