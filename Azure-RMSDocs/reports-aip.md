@@ -124,9 +124,9 @@ To view the Azure Information Protection reports and create your own, make sure 
 
 ### Permissions required for Azure Information Protection analytics
 
-Specific to Azure Information Protection analytics, you can use the Azure AD administrator role of Security Reader as an alternative to the other Azure AD roles that support managing Azure Information Protection.
+Specific to Azure Information Protection analytics, after you have configured your Azure Log Analytics workspace, you can use the Azure AD administrator role of Security Reader as an alternative to the other Azure AD roles that support managing Azure Information Protection in the Azure portal.
 
-Because this feature uses Azure Log Analytics, role-based access control (RBAC) for Azure also controls access to your workspace. If you're new to Azure roles, you might find it useful to read [Differences between Azure RBAC roles and Azure AD administrator roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
+Because this feature uses Azure Monitoring, role-based access control (RBAC) for Azure also controls access to your workspace. You therefore need an Azure role as well as an Azure AD administrator role to manage Azure Information Protection analytics. If you're new to Azure roles, you might find it useful to read [Differences between Azure RBAC roles and Azure AD administrator roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
 
 Details:
 
@@ -143,7 +143,7 @@ Details:
     > [!NOTE] 
     > If your tenant has been migrated to the unified labeling store, your account must be a global administrator or one of the listed roles plus permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
-2. To use Azure Log Analytics, you must have one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
+2. To use Azure Monitoring, you must have one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
     
     - To create a Log Analytics workspace or to create custom queries, one of the following:
     
