@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -56,7 +56,7 @@ Additional information about these visual markings:
 
 ## When visual markings are applied
 
-For email messages, the visual markings are applied when the email message is sent from Outlook.
+For email messages, the visual markings are applied when the email message is sent from Outlook. If that email message is forwarded or replied to with a change of label, the original visual markings are retained.
 
 For documents, the visual markings are applied as follows:
 
