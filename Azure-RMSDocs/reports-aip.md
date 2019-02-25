@@ -155,14 +155,14 @@ Details:
         - **Log Analytics Contributor**
         - Azure role: **Owner** or **Contributor**
     
-    - To view the data in a Log Analytics workspace after the workspace has been created:
+    - To view the data in a Log Analytics workspace after the workspace has been created, one of the following:
     
         - **Log Analytics Reader**
         - Azure role: **Reader**
 
 #### Minimum roles to view the reports
 
-After you have configured your workspace for Azure Information Protection analytics, the minimum roles needed to view the reports are:
+After you have configured your workspace for Azure Information Protection analytics, the minimum roles needed to view the reports are both of the following:
 
 - Azure AD administrator role: **Security Reader**
 - Azure role: **Log Analytics Reader**
