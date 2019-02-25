@@ -56,7 +56,7 @@ Additional information about these visual markings:
 
 ## When visual markings are applied
 
-For email messages, the visual markings are applied when the email message is sent from Outlook. If that email message is forwarded or replied to with a change of label, the original visual markings are retained.
+For email messages, the visual markings are applied when an email message is sent from Outlook. If that email message is forwarded or replied to with a change of label, the original visual markings are always retained.
 
 For documents, the visual markings are applied as follows:
 
