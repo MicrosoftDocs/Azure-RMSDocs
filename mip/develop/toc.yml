@@ -4,11 +4,11 @@
   items:
   - name: About Microsoft Information Protection SDK
     href: overview.md
-- name: Setup
-  href: setup-configure-mip.md
 - name: Quickstarts
   expanded: true
   items:
+  - name: Setup and configure MIP SDK
+    href: setup-configure-mip.md
   - name: C++
     items:
     - name: Application initialization (C++)
@@ -251,6 +251,8 @@
         href: reference/class_mip_userrights.md
       - name: UserRoles
         href: reference/class_mip_userroles.md
+  - name: .NET API Browser
+    href: /dotnet/api/?term=microsoft.informationprotection
 - name: Resources
   items:
   - name: Developer blog
