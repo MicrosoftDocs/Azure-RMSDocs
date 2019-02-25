@@ -6,7 +6,7 @@ description: Instructions for users to install the preview version of the Azure 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/17/2018
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -49,18 +49,15 @@ If you have labels that are currently published from the Azure portal for Azure 
 
 2. Run the executable file that was downloaded, **AzInfoProtection_For_Unified_Labeling.exe**. If you are prompted to continue, click **Yes**.    
 
-3. On the **Install the Azure Information Protection client** page:     
-    - Select the option to install a demo policy if you cannot connect to the cloud but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to the Office 365 Security & Compliance Center, this demo policy is replaced with your organization's label policy.
+3. On the **Install the Azure Information Protection client** page, click **I agree** when you have read the license terms and conditions.
 
-    - Click **I agree** when you have read the license terms and conditions.    
+4. If you are prompted to continue, click **Yes**, and wait for the installation to finish.
 
-4. If you are prompted to continue, click **Yes**, and wait for the installation to finish.    
-
-6. Click **Close**. Before you start to use the Azure Information Protection unified labeling client:    
+6. Click **Close**. Before you start to use the Azure Information Protection unified labeling client:
 
     - If your computer runs Office 2010, restart your computer and then go to the next section for your final step.    
         
-    - For other versions of Office, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.    
+    - For other versions of Office, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.
 
 ### Installing the Azure Information Protection unified labeling client with Office 2010
 
@@ -77,4 +74,3 @@ Your installation is now complete and you can use the Azure Information Protecti
 ## Next steps
 
 To learn more about the unified labeling store that the Office 365 Security & Compliance center now uses, read the following blog post: [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
-
