@@ -280,29 +280,29 @@ When these conditions are met and the recipient's email address is not included 
 - **Block**: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
 
 
-### To implement the warn, justify, or block pop-up messages for a specific label:
+### To implement the warn, justify, or block pop-up messages for specific labels:
 
-To implement the pop-up messages for specific labels, you must know the label ID. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
+To implement the pop-up messages for specific labels, you must know the label ID for those labels. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
 
-Create one or more of the following advanced client settings with the following values:
+Create one or more of the following advanced client settings with the following keys. For the values, specify one or more labels by their IDs, each one separated by a comma.
 
 - Warn messages:
     
     - Key: **OutlookWarnUntrustedCollaborationLabel**
     
-    - Value: \<**label ID**>
+    - Value: \<**label IDs, comma-separated**>
 
 - Justification messages:
     
     - Key: **OutlookJustifyUntrustedCollaborationLabel**
     
-    - Value: \<**label ID**>
+    - Value: \<**label IDs, comma-separated**>
 
 - Block messages:
     
     - Key: **OutlookBlockUntrustedCollaborationLabel**
     
-    - Value: \<**label ID**>
+    - Value: \<**label IDs, comma-separated**>
 
 
 ### To implement the warn, justify, or block pop-up messages for emails or attachments that don't have a label:
@@ -311,33 +311,39 @@ Create the following advanced client setting with one of the following values:
 
 - Warn messages:
     
-    - Key: **OutlookWarnUntrustedCollaborationLabel**
+    - Key: **OutlookUnlabeledCollaborationAction**
     
     - Value: **Warn**
 
 - Justification messages:
     
-    - Key: **OutlookWarnUntrustedCollaborationLabel**
+    - Key: **OutlookUnlabeledCollaborationAction**
     
     - Value: **Justify**
 
 - Block messages:
     
-    - Key: **OutlookWarnUntrustedCollaborationLabel**
+    - Key: **OutlookUnlabeledCollaborationAction**
     
     - Value: **Block**
 
+- Turn off these messages:
+    
+    - Key: **OutlookUnlabeledCollaborationAction**
+    
+    - Value: **Off**
+
 ### To specify the allowed domain names for recipients exempt from the pop-up messages
 
-When you specify a domain name in an advanced client setting, users do not see the pop-up messages for recipients who have have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, create multiple advanced client settings, one for each domain.
+When you specify a domain name in an advanced client setting, users do not see the pop-up messages for recipients who have have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
 
-A typical configuration is to display the pop-up messages only for recipients who are external to your organization, or who are authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
+A typical configuration is to display the pop-up messages only for recipients who are external to your organization or who are authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
 
-For each domain to exempt, create the following advanced client setting with the following value:
+Create the following advanced client setting key. For the value, specify one or more domains, each one separated by a comma:
 
 - Key: **OutlookCollaborationTrustedDomains**
 
-- Value: **\<**domain name**>**
+- Value: **\<**domain names, comma separated**>**
 
 For example, if you specify the domain name of contoso.com, users do not see the pop-up messages in Outlook when they send an email to john@sales.contoso.com.
 
