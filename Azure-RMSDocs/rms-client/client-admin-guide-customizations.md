@@ -340,11 +340,11 @@ Create the following advanced client setting with one of the following values:
 
 When you specify a domain name in an advanced client setting, users do not see the pop-up messages for recipients who have have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
 
-Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
-
 A typical configuration is to display the pop-up messages only for recipients who are external to your organization or who aren't authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
 
-Create the following advanced client setting key. For the value, specify one or more domains, each one separated by a comma:
+Create the following advanced client setting key. For the value, specify one or more domains, each one separated by a comma.
+
+Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
 
 - Key: **OutlookCollaborationTrustedDomains**
 
