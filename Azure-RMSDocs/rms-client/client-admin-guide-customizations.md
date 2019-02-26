@@ -286,6 +286,9 @@ To implement the pop-up messages for specific labels, you must know the label ID
 
 Create one or more of the following advanced client settings with the following keys. For the values, specify one or more labels by their IDs, each one separated by a comma.
 
+Example value for multiple label IDs as a comma-separated string: `dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
+
+
 - Warn messages:
     
     - Key: **OutlookWarnUntrustedCollaborationLabel**
@@ -336,6 +339,8 @@ Create the following advanced client setting with one of the following values:
 ### To specify the allowed domain names for recipients exempt from the pop-up messages
 
 When you specify a domain name in an advanced client setting, users do not see the pop-up messages for recipients who have have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
+
+Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
 
 A typical configuration is to display the pop-up messages only for recipients who are external to your organization or who aren't authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
 
