@@ -635,15 +635,11 @@ By default, the scanner uses all available processor resources on the computer r
 
 For the value, specify the number of concurrent threads that the scanner can run in parallel. The scanner uses a separate thread for each file that it scans, so this throttling configuration also defines the number of files that can be scanned in parallel. 
 
-When you first configure the value for testing, we recommend you specify 2 per core and monitor the results. Increase or decrease that number, according to the resulting performance you require for the scanner computer. 
+When you first configure the value for testing, we recommend you specify 2 per core, and then monitor the results. If necessary, increase or decrease that number, according to the resulting performance you require for the scanner computer and your scanning rates. 
 
 - Key: **ScannerConcurrencyLevel**
 
 - Value: **\<number of concurrent threads>**
-
-
-number of threads opened by scanner and as each file scanned by scanner is using separate thread it also defines number of files scanned by scanner in parallel
-
 
 ## Disable the low integrity level for the scanner
 
