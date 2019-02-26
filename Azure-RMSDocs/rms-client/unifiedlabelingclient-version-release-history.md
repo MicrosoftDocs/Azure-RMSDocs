@@ -55,8 +55,8 @@ This preview version of the Azure Information Protection unified labeling client
 - A viewer for protected text and image files, protected PDF files, and files that are generically protected.
 
 - PowerShell commands to do the following:
-    - [Set a label on a document or email](/powershell/module/azureinformationprotection/set-aipfilelabel)
-    - [Label a document or email after inspecting its contents](/powershell/module/azureinformationprotection/set-aipfileclassification)
+    - [Set or remove a label on a document](/powershell/module/azureinformationprotection/set-aipfilelabel)
+    - [Label a document after inspecting its contents](/powershell/module/azureinformationprotection/set-aipfileclassification)
     - [Read label information applied to a document](/powershell/module/azureinformationprotection/get-aipfilestatus)
     - [Authenticate to support unattended PowerShell sessions](/powershell/module/azureinformationprotection/set-aipauthentication)
 
