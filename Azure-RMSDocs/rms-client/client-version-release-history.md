@@ -99,6 +99,15 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - Documents open correctly in Office without a recovery message after protection has been removed by File Explorer and right-click, PowerShell, and the scanner.
 
+- To let users see and change custom permissions that are already configured for a document that they open in Office, display **Custom Permissions** from the **Protect** button, even when the policy setting of **Make the custom permissions option available to users** is not set.
+
+- Using PowerShell or the scanner to label a document that's checked out from SharePoint Server fails as expected, and doesn't generate a change label event in the local Windows event log, or in Azure Information Protection analytics.
+
+When you use the [policy setting](../configure-policy-settings.md) **For email messages with attachments, apply a label that matches the highest classification of those attachments** and the label with the highest classification is configured for user-defined permissions, the outcome previously was that the label was applied to the email, but the protection was not. Now:
+- When the label's user-defined permissions include Outlook (Do Not Forward): Apply that label and its Do Not Forward protection to the email.
+- When the label's user-defined permissions are just for Word, Excel, PowerPoint, and File Explorer: Do not apply the label and do not apply any protection to the email.
+
+
 **Additional changes:**
 
 - The following sensitive information types are no longer supported for labels that you configure for recommended or automatic classification:
