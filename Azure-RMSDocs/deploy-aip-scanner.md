@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -374,6 +374,8 @@ There are two alternative scenarios that the Azure Information Protection scanne
     The following quickstart uses this configuration: [Quickstart: Find what sensitive information you have](quickstart-findsensitiveinfo.md).
 
 ## Optimizing the performance of the scanner
+
+Use the following guidance to help you optimize the performance of the scanner. However, if your priority is the responsiveness of the scanner computer rather than the scanner performance, you can use an advanced client setting to [limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner).
 
 To maximize the scanner performance:
 
