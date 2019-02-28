@@ -56,6 +56,7 @@ Some of these settings require editing the registry and some use advanced settin
 |CompareSubLabelsInAttachmentAction|[Enable order support for sublabels](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Permanently hide the Azure Information Protection bar](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Make the custom permissions options available or unavailable to users](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
+|EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnablePDFv2Protection|[Don't protect PDF files by using the ISO standard for PDF encryption](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
@@ -215,6 +216,19 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True** to make the custom permissions option visible, or **False** to hide this option
 
+## For files protected with custom permissions, always display custom permissions to users in File Explorer
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. The setting is in preview and requires the preview version of the client.
+
+When you configure the [policy setting](../configure-policy-settings.md) **Make the custom permissions option available for users** or the equivalent advanced client setting in the previous section, users are not able to see or change custom permissions that are already set in a protected document. 
+
+When you create and configure this advanced client setting, users can see and change custom permissions for a protected document when they use File Explorer, and right-click the file. The **Custom Permissions** option from the **Protect** button on the Office ribbon remains hidden.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **EnableCustomPermissionsForCustomProtectedFiles**
+
+- Value: **True**
 
 ## Permanently hide the Azure Information Protection bar
 
