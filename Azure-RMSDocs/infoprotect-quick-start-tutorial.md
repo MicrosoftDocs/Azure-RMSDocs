@@ -6,7 +6,7 @@ description: An introduction tutorial that edits the Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/29/2019
+ms.date: 02/29/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -116,7 +116,7 @@ We'll now create a new sublabel for **Confidential**.
     
     This text describes how the selected label is intended to be used and it's visible to users as a tooltip, to help them decide which label to select.
 
-3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection**:
+3. For **Set permissions for documents and emails containing this label**, select **Protect**, which automatically opens the **Protection** blade by selecting the **Protection** option for you:
     
     ![Configuing an Azure Information Protection label for protection](./media/info-protect-protection-bar-configured.png) 
     
