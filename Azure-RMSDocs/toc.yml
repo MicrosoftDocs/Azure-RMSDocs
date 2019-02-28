@@ -165,7 +165,7 @@
     - name: Deploying the Azure Information Protection scanner
       href: deploy-aip-scanner.md
     - name: Deploying the Azure Information Protection scanner (PREVIEW)
-      href: PREVIEW)](deploy-aip-scanner-preview.md
+      href: deploy-aip-scanner-preview.md
     - name: Reporting for Azure Information Protection
       href: reports-aip.md
     - name: Deploying the RMS connector
@@ -248,10 +248,10 @@
         - name: Tasks that you used to do with the RMS sharing application
           href: ./rms-client/upgrade-client-app.md
       - name: Azure Information Protection unified labeling client (PREVIEW)
-        href: PREVIEW)](./rms-client/unifiedlabelingclient-version-release-history.md
+        href: ./rms-client/unifiedlabelingclient-version-release-history.md
         items:
         - name: Download & install the Azure Information Protection unified labeling client (PREVIEW)
-          href: PREVIEW)](./rms-client/install-unifiedlabelingclient-app.md
+          href: ./rms-client/install-unifiedlabelingclient-app.md
       - name: Protected PDF readers
         href: ./rms-client/protected-pdf-readers.md
       - name: RMS client deployment notes
