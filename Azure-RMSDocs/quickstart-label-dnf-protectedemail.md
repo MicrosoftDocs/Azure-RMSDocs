@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/29/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -84,7 +84,9 @@ For a full list of prerequisites to use Azure Information Protection, see [Requi
 
 2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label you want to configure to apply the protection. 
 
-3. On the **Label** blade, locate **Set permissions for documents and emails containing this label**. Select **Protect**, and then **Protection**:
+3. On the **Label** blade, locate **Set permissions for documents and emails containing this label**. Select **Protect** and the **Protection** blade automatically opens if one of the other options were previously selected. 
+    
+    If the **Protection** blade does not automatically open, select **Protection**:
     
     ![Configure protection for an Azure Information Protection label](./media/info-protect-protection-bar-configured.png).
 

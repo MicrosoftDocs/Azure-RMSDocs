@@ -81,7 +81,7 @@ Exchange does not have to be configured for Azure Information Protection before 
         
         If users do not have permissions to remove Rights Management protection, and they select a label that is configured with this **Remove Protection** option, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
 
-4. If you selected **Protect**, now select **Protection** to open the **Protection** blade:
+4. If you selected **Protect**, the **Protection** blade automatically opens if one of the other options were selected. If this new blade does not automatically open, select **Protection**:
     
     ![Configure protection for an Azure Information Protection label](./media/info-protect-protection-bar-configured.png)
 
@@ -187,7 +187,9 @@ When you clicked **Save**, your changes are automatically available to users and
 
 The **All Employees** and **Recipients Only** sublabels from the **Confidential** and **High Confidential** labels from the [default policy](configure-policy-default.md) provide examples of how you can configure labels that apply protection. You can also use the following examples to help you configure protection for different scenarios. 
 
-For each example that follows, on your \<*label name*> blade, select **Protect** and then select **Protection** to open the **Protection** blade.
+For each example that follows, on your \<*label name*> blade, select **Protect**. If the **Protection** blade doesn't automatically open, select **Protection** to open this blade that lets you select your protection configuration options:
+
+![Configuing an Azure Information Protection label for protection](./media/info-protect-protection-bar-configured.png)
 
 ### Example 1: Label that applies Do Not Forward to send a protected email to a Gmail account
 
