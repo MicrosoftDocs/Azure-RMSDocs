@@ -85,6 +85,9 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - New advanced client settings that implement pop-up messages in Outlook that can warn, justify, or block emails being sent. [More information](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
+- New advanced client setting that's applicable only when you configure the policy setting to not display custom permissions: When there's a file that's protected with custom permissions, display the custom permissions option in File Explorer so that users can see and change them (if they have permissions to change the protection settings). [More information](client-version-release-history.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+
+
 **Fixes**:
 
 - New visual markings are consistently applied when a user adds new sections to a Word document, and then relabels the document.
@@ -99,7 +102,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - Documents open correctly in Office without a recovery message after protection has been removed by File Explorer and right-click, PowerShell, and the scanner.
 
-- To let users see and change custom permissions that are already configured for a document that they open in Office, display **Custom Permissions** from the **Protect** button, even when the policy setting of **Make the custom permissions option available to users** is not set.
+- When you use the advanced client setting to set a [default label for Outlook](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook), you can apply a parent label that has sublabels when all those sublabels are disabled for the user.
 
 When you use the [policy setting](../configure-policy-settings.md) **For email messages with attachments, apply a label that matches the highest classification of those attachments** and the label with the highest classification is configured for user-defined permissions, the outcome previously was that the label was applied to the email, but the protection was not. Now:
 - When the label's user-defined permissions include Outlook (Do Not Forward): Apply that label and its Do Not Forward protection to the email.
