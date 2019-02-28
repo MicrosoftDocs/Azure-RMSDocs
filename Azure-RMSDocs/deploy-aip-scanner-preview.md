@@ -295,7 +295,7 @@ You're now ready to run your first scan in discovery mode.
         
     If the results are not as you expect, you might need to reconfigure the conditions that you specified for you labels in your Azure Information Protection policy. If that's the case, repeat steps 1 through 3 until you are ready to change the configuration to apply the classification and optionally, protection. 
 
-When you view your scanner results from the **Azure Information Protection - Nodes** blade in the Azure portal, you see the results of the last scan only. If you need to see the results of previous scans, return to the reports that are stored on the scanner computer, in the %*localappdata*%\Microsoft\MSIP\Scanner\Reports folder.
+The Azure portal displays information about the last scan only. If you need to see the results of previous scans, return to the reports that are stored on the scanner computer, in the %*localappdata*%\Microsoft\MSIP\Scanner\Reports folder.
 
 When you're ready to automatically label the files that the scanner discovers, continue to the next procedure. 
 
