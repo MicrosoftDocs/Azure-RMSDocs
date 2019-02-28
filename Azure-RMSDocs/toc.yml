@@ -1,3 +1,5 @@
+- name: Azure Information Protection Documentation
+  href: index.yml
 - name: Overview
   href: /azure/information-protection/what-is-information-protection
   items:
@@ -17,6 +19,7 @@
     - name: On-premises server support for data protection
       href: requirements-servers.md
 - name: Quickstarts
+  expanded: true
   href: /azure/information-protection/quickstart-viewpolicy
   items:
   - name: Get started in the Azure portal
@@ -113,8 +116,6 @@
         href: configure-office-apps.md
       - name: Azure Information Protection client
         href: configure-client.md
-      - name: RMS sharing app
-        href: configure-sharing-app.md
     - name: Configuring usage rights
       href: configure-usage-rights.md
     - name: Configuring super users for discovery services or data recovery
