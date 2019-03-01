@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 03/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -49,7 +49,7 @@ Azure Information Protection client|The client side of Azure Information Protect
 |BYOK|See *bring your own key*.|
 |bring your own key|Frequently abbreviated to *BYOK*.<br /><br />A configuration and topology option chosen by an organization that wants to generate and manage their own tenant key for Azure Information Protection.|
 |content key|A unique key that is created by RMS-enlightened applications for each document or email that is protected by using Rights Management and that helps to limit the risk of information disclosure.|
-|consume|To open a document or email to read or use it when that content has been protected by Rights Management. For a document, consuming includes editing and adding new content to a protected document. For an email message, consuming includes replying to a protected message.|
+|consume|In the context of protection only: To open a document or email to read or use it when that content has been protected by a rights management service. For a document, consuming includes editing and adding new content to a protected document. For an email message, consuming includes replying to a protected message.<br /><br />In the context of labeling (with or without protection): To read and potentially act on the label information stored in the metadata of files and emails.|
 |deactivate|To disable the Rights Management service so that the organization can no longer use Azure Information Protection.|
 |departmental template|A protection template that you create and that is configured to be visible for selected users rather than all users in your organization. Also known as a *scoped template*.|
 |enlightened applications|Applications that natively support Rights Management, which includes Office applications, such as Word and Excel. Independent software vendors (ISVs) and developers can also write applications that natively support Rights Management.|
