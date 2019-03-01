@@ -309,7 +309,7 @@ The label configuration is deceptively simple:
 
 1. On the **Protection** blade, make sure **Azure (cloud key)** is selected.
     
-2. Select **OK** without making any changes on this blade.
+2. Select **OK** without selecting any users, or configuring any settings on this blade.
     
     Although you can configure settings for **Content expiration** and **Allow offline access**, when you do not specify users and their permisisons, these access settings are not applicable. That's because the person who applies the protection is the [Rights Management issuer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for the content, and this role is exempt from these access restrictions.
 
