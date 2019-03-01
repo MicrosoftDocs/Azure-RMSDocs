@@ -363,7 +363,7 @@ For the Azure Information Protection scanner to use the new setting, the scanner
 
 For more information about the new PDF encryption, see the blog post [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
-For a list of PDF readers that support the ISO standard for PDF encryption, and readers that support older formats, see [Supported PDF readers for Microsoft Information Protection](protected-pdf-readers).
+For a list of PDF readers that support the ISO standard for PDF encryption, and readers that support older formats, see [Supported PDF readers for Microsoft Information Protection](protected-pdf-readers.md).
 
 ### To convert existing .ppdf files to protected .pdf files
 
