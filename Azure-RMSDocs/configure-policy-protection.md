@@ -301,7 +301,7 @@ This configuration has the advantage that you don't need to specify users, group
 6. On the **Label** blade, select **Save**.
 
 
-### Example 6: Label that offers "Just for me" protection
+### Example 6: Label that applies "Just for me" protection
 
 This configuration offers the opposite of secure collaboration for documents: With the exception of a [super user](configure-super-users.md), only the person who applies the label can open the protected content, without any restrictions. This configuration is often referred to as "Just for me" protection and is suitable when a user wants to save a file to any location and be assured that only they can open it.
 
@@ -311,7 +311,7 @@ The label configuration is deceptively simple:
     
 2. Select **OK** without making any changes on this blade.
     
-    Although you can configure settings for **Content expiration** and **Allow offline access**, when you do not specify any users and their permisisons, these access settings are not applicable. That's because the person who applies the protection is the [Rights Management issuer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for the content, and this role is exempt from these access restrictions.
+    Although you can configure settings for **Content expiration** and **Allow offline access**, when you do not specify users and their permisisons, these access settings are not applicable. That's because the person who applies the protection is the [Rights Management issuer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for the content, and this role is exempt from these access restrictions.
 
 3. On the **Label** blade, select **Save**.
 
