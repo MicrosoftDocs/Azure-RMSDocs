@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/18/2019
+ms.date: 03/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -177,20 +177,6 @@ After you have installed the Azure Information Protection client, make sure that
 - Online user instructions: [Azure Information Protection user guide](client-user-guide.md)
 
 - Download a customizable user guide: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
-
-### Update macros in Excel spreadsheets
-
-If you have Excel spreadsheets that contain macros, edit the macros as follows to ensure that they continue to work as expected after the Azure Information Protection client is installed:
-
-1. At the beginning of the macro, add:
-
-		Application.EnableEvents = False
-
-2. At the end of the macro, add:
-
-		Application.EnableEvents = True
-
-For more information, see [Application.EnableEvents Property (Excel)](https://msdn.microsoft.com/vba/excel-vba/articles/application-enableevents-property-excel).
 
 ## Upgrading and maintaining the Azure Information Protection client
 
