@@ -39,7 +39,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 AzureInformationProtection|The name of the PowerShell module for the Azure Information Protection client and the Azure Information Protection unified labeling client.
 |Azure Information Protection|A cloud-based service that uses labels to classify and protect documents and emails. Azure Rights Management provides the protection by using encryption, identity, and authorization policies.|
 Azure Information Protection client|The client side of Azure Information Protection that lets users, administrators, and services use the labels and settings from your Azure Information Protection policy.|
-|Azure Information Protection label|An item that applies a classification value to documents and emails, and can optionally protect them.|
+|Azure Information Protection label|An item that always applies a classification value to documents and emails, and can also protect them. When a label is applied, the label information is stored in the metadata for applications and services to read and optionally, act on it.|
 |Azure Information Protection policy|Administrator-defined configuration for clients and services that use Azure Information Protection labels and policy settings.|
 |Azure Information Protection scanner|A service that runs on Windows Server and lets you discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries.|
 |Azure Information Protection unified labeling client|Currently in preview: The client for Windows computers that lets users, administrators, and services use the sensitivity labels and policy settings from the Office 365 Security & Compliance Center.|
