@@ -4,8 +4,8 @@
 title: Android code examples | Azure RMS
 description: This topic will introduce you to important code elements for the Android version of the RMS SDK.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 12/10/2018
 ms.topic: conceptual

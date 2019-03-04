@@ -1,12 +1,12 @@
 ---
 title: Concepts - Policy API observers in the MIP SDK.
 description: The MIP SDK is designed to be almost entirely asynchronous. This article will help you understand how Policy API observers are implemented and used for asynchronicity.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
+ms.author: mbaldwin
 ---
 
 # Microsoft Information Protection SDK - Policy API Observers

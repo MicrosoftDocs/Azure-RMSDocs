@@ -1,12 +1,12 @@
 ---
 title: Concepts - APIs in the MIP SDK.
 description: This article will help you understand 3 types of APIs in the MIP SDK, how they're related, and use-cases for using each.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 10/16/2018
-ms.author: bryanla
+ms.author: mbaldwin
 ---
 
 # Microsoft Information Protection SDK - API concepts

@@ -1,12 +1,12 @@
 ---
 title: Functions
 description: Functions
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.date: 01/28/2019
-ms.author: bryanla
+ms.author: mbaldwin
 ---
 # Functions
 

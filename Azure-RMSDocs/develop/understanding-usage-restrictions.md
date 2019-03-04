@@ -4,8 +4,8 @@
 title: Understanding usage restrictions | Azure RMS
 description: All RMS enabled applications must enforce usage restrictions.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual

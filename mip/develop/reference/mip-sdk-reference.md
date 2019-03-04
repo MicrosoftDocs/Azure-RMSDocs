@@ -1,11 +1,11 @@
 ---
 title: MIP SDK for C++ Reference
 description: MIP SDK for C++ Reference
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
 ---
 # MIP SDK for C++ Reference

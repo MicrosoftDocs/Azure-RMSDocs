@@ -1,12 +1,12 @@
 ---
 title: Concepts - Authentication in the MIP SDK.
 description: This article will help you understand how the MIP SDK implements authentication, and the requirements for client applications to provide OAuth2 access token acquisition logic.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
+ms.author: mbaldwin
 ---
 
 # Microsoft Information Protection SDK - Authentication concepts
