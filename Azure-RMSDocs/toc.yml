@@ -212,7 +212,7 @@
       - name: Azure Information Protection client
         href: ./rms-client/aip-client.md
         items:
-        - name: Azure Information Protection client&#58; Version release history
+        - name: Azure Information Protection client: Version release history
           href: ./rms-client/client-version-release-history.md
         - name: Azure Information Protection client administrator guide
           href: ./rms-client/client-admin-guide.md
