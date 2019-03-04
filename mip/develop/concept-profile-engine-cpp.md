@@ -1,12 +1,12 @@
 ---
 title: Concepts - The core concepts in the MIP SDK - Profile and Engine
 description: This article will help you understand the core SDK concepts called the Profile and Engine, which are created during application initialization.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
+ms.author: mbaldwin
 ---
 
 # Microsoft Information Protection SDK - Profile and Engine object concepts

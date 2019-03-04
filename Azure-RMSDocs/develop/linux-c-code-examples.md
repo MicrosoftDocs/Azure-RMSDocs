@@ -4,8 +4,8 @@
 title: Linux code examples | Azure RMS
 description: This topic introduces you to important scenarios and code elements for the Linux version of the RMS SDK.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual

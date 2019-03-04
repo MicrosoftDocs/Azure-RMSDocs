@@ -1,12 +1,12 @@
 ---
 title: Concepts - Protection handlers in the MIP SDK.
 description: This article will help you understand how Protection API handlers are created and used for calling operations.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
+ms.author: mbaldwin
 ---
 # Microsoft Information Protection SDK - Protection handler concepts
 

@@ -4,8 +4,8 @@
 title: Development environment files | Azure RMS
 description: This topic shows the development environment files and their relative installation locations on your computer.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual

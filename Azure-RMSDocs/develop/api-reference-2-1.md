@@ -4,8 +4,8 @@
 title: API SDK 2.1 reference | Microsoft Docs
 description: Azure Information Protection SDK 2.1 supports RMS enablement of Windows clients.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual

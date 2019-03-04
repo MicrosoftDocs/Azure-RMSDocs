@@ -4,8 +4,8 @@
 title: How to register your app with Azure AD - AIP
 description: Describes the basics of user authentication for your RMS-enabled app.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 03/13/2017
 ms.topic: conceptual

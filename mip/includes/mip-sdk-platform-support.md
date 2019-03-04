@@ -1,6 +1,6 @@
 ---
-author: BryanLa
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 ms.service: information-protection  
 ms.topic: include
 ms.collection: M365-security-compliance
