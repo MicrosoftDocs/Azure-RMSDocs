@@ -1,12 +1,12 @@
 ---
 title: Concepts - The Policy API profile object
 description: This article will help you understand the concepts around the Policy profile object, which is created during application initialization.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
+ms.author: mbaldwin
 ---
 
 # Microsoft Information Protection SDK - Policy API profile concepts

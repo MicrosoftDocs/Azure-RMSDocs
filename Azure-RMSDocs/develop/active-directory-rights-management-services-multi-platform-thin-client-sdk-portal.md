@@ -4,8 +4,8 @@
 title: Rights Management SDK 4.2 - AIP
 description: RMS SDK 4.2 is a simplified, next-generation API that enables a lightweight development experience in upgrading your device apps with rights management technology.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual

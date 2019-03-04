@@ -4,8 +4,8 @@
 title: Release notes
 description: SDK updates by revision and other developer information.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 10/18/2017
 ms.topic: conceptual
