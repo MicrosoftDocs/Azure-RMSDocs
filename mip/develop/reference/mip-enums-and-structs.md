@@ -1,11 +1,11 @@
 ---
 title: MIP SDK for C++ Reference structs and enums
 description: Reference documentation for MIP C++ SDK structs and enums.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
 ---
 

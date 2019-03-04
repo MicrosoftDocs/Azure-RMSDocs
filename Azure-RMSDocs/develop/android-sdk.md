@@ -4,8 +4,8 @@
 title: Android setup | Azure RMS
 description: Android applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their applications.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual

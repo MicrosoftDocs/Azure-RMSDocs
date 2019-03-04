@@ -4,8 +4,8 @@
 title: AIP Developer Terminology | Microsoft Docs
 description: A collection of developer terminology definitions specific to Rights Management Services.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual

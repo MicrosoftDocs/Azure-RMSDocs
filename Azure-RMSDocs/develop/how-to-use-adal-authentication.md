@@ -4,8 +4,8 @@
 title: ADAL authentication for your RMS enabled application | Azure RMS
 description: Outlines the process for authentication with ADAL
 keywords: authentication, RMS, ADAL
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual

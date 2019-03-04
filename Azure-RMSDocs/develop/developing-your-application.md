@@ -4,8 +4,8 @@
 title: Developing your application - AIP
 description: Guidance thorugh a basic console app implementing document protection with AIP
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 03/13/2017
 ms.topic: conceptual

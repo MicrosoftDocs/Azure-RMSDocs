@@ -1,12 +1,12 @@
 ---
 title: Microsoft Information Protection (MIP) SDK version release history and support policy
 description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection (MIP) SDK client applications.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 01/08/2019
-ms.author: bryanla
+ms.author: mbaldwin
 manager: barbkess
 ---
 

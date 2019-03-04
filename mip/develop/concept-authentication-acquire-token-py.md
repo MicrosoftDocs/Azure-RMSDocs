@@ -1,12 +1,12 @@
 ---
 title: Concepts - Using Python to acquire an access token.
 description: This article will help you understand how to use Python to acquire an OAuth2 access token. This is required by the implementation of the authentication delegate.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 02/04/2019
-ms.author: bryanla
+ms.author: mbaldwin
 ---
 
 # Acquire an access token (Python)
