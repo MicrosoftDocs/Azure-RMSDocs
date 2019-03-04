@@ -4,8 +4,8 @@
 title: Azure Information Protection SDK 4.2 developer guidance | Microsoft Docs
 description: A collection of how-to topics for developing the AIP SDK 4.2
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual

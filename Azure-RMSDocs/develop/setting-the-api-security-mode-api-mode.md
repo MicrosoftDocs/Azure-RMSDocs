@@ -4,8 +4,8 @@
 title: How-to set the API security mode | Azure RMS
 description: Choose which security mode your File API application runs.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual

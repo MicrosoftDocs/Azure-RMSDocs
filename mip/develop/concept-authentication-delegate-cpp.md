@@ -1,12 +1,12 @@
 ---
 title: Concepts - Authentication delegate implementation (C++)
 description: This article will help you understand how to implement an authentication delegate in C++.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
+ms.author: mbaldwin
 ---
 # Microsoft Information Protection SDK - Implementing an authentication delegate (C++)
 

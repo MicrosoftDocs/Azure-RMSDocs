@@ -4,8 +4,8 @@
 title: iOS/OS X code examples | Azure RMS
 description: This topic will introduce you to important code elements for the iOS/OS X version of the RMS SDK.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual

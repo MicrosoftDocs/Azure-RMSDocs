@@ -4,8 +4,8 @@
 title: Application types | Azure RMS
 description: This topic covers types of applications that you might choose to create as rights-enabled.
 keywords:
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
