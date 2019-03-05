@@ -17,7 +17,7 @@ This article provides answers to Frequently Asked Questions (FAQs), and troubles
 
 ### SDK string handling
 
-Question: How does the SDK handle strings, and what string type should I be using in my code?
+**Question**: How does the SDK handle strings, and what string type should I be using in my code?
 
 The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transformation Format - 8-bit)](https://wikipedia.org/wiki/UTF-8) for string handling. Specific guidance depends on the platform you're using:
 
@@ -31,7 +31,7 @@ The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transfor
 
 ### Error: "File format not supported"  
 
-Question: Why do I get the following error when attempting to protect or label a PDF file?
+**Question**: Why do I get the following error when attempting to protect or label a PDF file?
 
 > File format not supported
 
@@ -39,7 +39,7 @@ This exception results from attempting to protect or label a PDF file that has b
 
 ### Error: "Failed to parse the acquired Compliance Policy"  
 
-Question: Why do I get the following error after downloading the MIP SDK and attempting to use the file sample to list all labels?
+**Question**: Why do I get the following error after downloading the MIP SDK and attempting to use the file sample to list all labels?
 
 > Something bad happened: Failed to parse the acquired Compliance Policy. Failed with: [class mip::CompliancePolicyParserException] Tag not found: policy, NodeType: 15, Name: No Name Found, Value: , Ancestors: <SyncFile><Content>, correlationId:[34668a40-blll-4ef8-b2af-00005aa674z9]
 
@@ -47,7 +47,7 @@ This indicates that you haven't migrated your labels from Azure Information Prot
 
 ### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
 
-Question: Why do I get the following error when using the MIP SDK .NET Wrapper?
+**Question**: Why do I get the following error when using the MIP SDK .NET Wrapper?
 
 > System.ComponentModel.Win32Exception: LoadLibrary failed for: [sdk_wrapper_dotnet.dll] when calling MIP.Initialize().
 
