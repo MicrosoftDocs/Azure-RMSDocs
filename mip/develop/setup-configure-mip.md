@@ -217,7 +217,7 @@ for an application you are releasing, send an email to [IPIA@microsoft.com](mail
 
 Upon the sending of the email, allow up to 72 hours for an acknowledgement of the receipt.
 
-## Ensure your app has the requires runtime
+## Ensure your app has the required runtime
 
 > [!NOTE]
 > This step is necessary only if deploying the application to a machine without Visual Studio, or if the Visual Studio installation lacks the Visual C++ Runtime components.
