@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/30/2019
+ms.date: 03/01/2019
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn about setup and configuration, so that I can use the SDK to build applications.
 ---
@@ -216,6 +216,17 @@ for an application you are releasing, send an email to [IPIA@microsoft.com](mail
 - Company contacts, email, and phone for Critical Situation Correspondence
 
 Upon the sending of the email, allow up to 72 hours for an acknowledgement of the receipt.
+
+## Ensure your app has the requires runtime
+
+> [!NOTE]
+> This step is necessary only if deploying the application to a machine without Visual Studio, or if the Visual Studio installation lacks the Visual C++ Runtime components.
+
+Applications built with the MIP SDK require the Visual C++ 2015 or Visual C++ 2017 runtime to be installed, if not already present.
+- [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=53587)
+- [Microsoft Visual C++ Redistributable for Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
+
+These will only work if the application has been built as Release. If the application is built as Debug, then the Visual C++ runtime debug DLLs must be included with the application or installed on the machine. 
 
 ## Next Steps
 
