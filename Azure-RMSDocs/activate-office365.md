@@ -40,7 +40,7 @@ If you have questions about the subscription requirements, or you need help acti
     If you are prompted to sign in, use an account that is a global administrator for Office 365.
     
     > [!TIP]
-    > For admin center help, see [About the Office 365 admin center](https://support.office.com/article/About-the-Office-365-Admin-Center-758befc4-0888-4009-9f14-0d147402fd23).
+    > For admin center help, see [About the Office 365 admin center](/office365/admin/admin-overview/about-the-admin-center).
     
     If you prefer to navigate to the **rights management** page from the admin center: **Settings** > **Services & add-ins** > **Microsoft Azure Information Protection** > **Manage Microsoft Azure Information Protection settings**
 
