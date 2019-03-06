@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -55,7 +55,7 @@ If you have a version 1 of the client that is later than 1.41.51.0, it is a prev
 > [!TIP]
 > Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
 
-**Released**: 01/15/2019
+**Released**: 03/05/2019
 
 This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
@@ -83,6 +83,11 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - Azure Publish Setting Password
     - Azure Storage Account Key (Generic)
 
+- New advanced client settings that implement pop-up messages in Outlook that can warn, justify, or block emails being sent. [More information](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+
+- New advanced client setting that's applicable only when you configure the policy setting to not display custom permissions: When there's a file that's protected with custom permissions, display the custom permissions option in File Explorer so that users can see and change them (if they have permissions to change the protection settings). [More information](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+
+
 **Fixes**:
 
 - New visual markings are consistently applied when a user adds new sections to a Word document, and then relabels the document.
@@ -96,6 +101,12 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 - The Azure Information Protection client correctly displays labels that have been applied by [clients that support unified labeling](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
 
 - Documents open correctly in Office without a recovery message after protection has been removed by File Explorer and right-click, PowerShell, and the scanner.
+
+- When you use the advanced client setting to set a [default label for Outlook](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook), you can apply a parent label that has sublabels when all those sublabels are disabled for the user.
+
+- When you use the [policy setting](../configure-policy-settings.md) **For email messages with attachments, apply a label that matches the highest classification of those attachments** and the label with the highest classification is configured for user-defined permissions, the outcome previously was that the label was applied to the email, but the protection was not. Now:
+    - When the label's user-defined permissions include Outlook (Do Not Forward): Apply that label and its Do Not Forward protection to the email.
+    - When the label's user-defined permissions are just for Word, Excel, PowerPoint, and File Explorer: Do not apply the label and do not apply any protection to the email.
 
 **Additional changes:**
 
