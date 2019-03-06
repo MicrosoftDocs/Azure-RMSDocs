@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/06/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -85,7 +85,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - New advanced client settings that implement pop-up messages in Outlook that can warn, justify, or block emails being sent. [More information](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
-- New advanced client setting that's applicable only when you configure the policy setting to not display custom permissions: When there's a file that's protected with custom permissions, display the custom permissions option in File Explorer so that users can see and change them (if they have permissions to change the protection settings). [More information](client-version-release-history.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+- New advanced client setting that's applicable only when you configure the policy setting to not display custom permissions: When there's a file that's protected with custom permissions, display the custom permissions option in File Explorer so that users can see and change them (if they have permissions to change the protection settings). [More information](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
 
 **Fixes**:
