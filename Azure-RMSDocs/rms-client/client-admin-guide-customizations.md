@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/27/2019
+ms.date: 03/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -56,12 +56,17 @@ Some of these settings require editing the registry and some use advanced settin
 |CompareSubLabelsInAttachmentAction|[Enable order support for sublabels](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Permanently hide the Azure Information Protection bar](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Make the custom permissions options available or unavailable to users](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
+|EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnablePDFv2Protection|[Don't protect PDF files by using the ISO standard for PDF encryption](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Change the local logging level](#change-the-local-logging-level)
+|OutlookBlockUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookCollaborationTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Set a different default label for Outlook](#set-a-different-default-label-for-outlook)|
+|OutlookJustifyUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
+|OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[Disable the low integrity level for the scanner](#disable-the-low-integrity-level-for-the-scanner)|
 |PullPolicy|[Support for disconnected computers](#support-for-disconnected-computers)
@@ -211,6 +216,19 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True** to make the custom permissions option visible, or **False** to hide this option
 
+## For files protected with custom permissions, always display custom permissions to users in File Explorer
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. The setting is in preview and requires the preview version of the client.
+
+When you configure the [policy setting](../configure-policy-settings.md) **Make the custom permissions option available for users** or the equivalent advanced client setting in the previous section, users are not able to see or change custom permissions that are already set in a protected document. 
+
+When you create and configure this advanced client setting, users can see and change custom permissions for a protected document when they use File Explorer, and right-click the file. The **Custom Permissions** option from the **Protect** button on the Office ribbon remains hidden.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **EnableCustomPermissionsForCustomProtectedFiles**
+
+- Value: **True**
 
 ## Permanently hide the Azure Information Protection bar
 
@@ -256,6 +274,98 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
+## Implement pop-up messages in Outlook that warn, justify, or block emails being sent
+
+This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This configuration is in preview and might change.
+
+When you create and configure the following advanced client settings, users see pop-up messages in Outlook that can warn them before sending an email, or ask them to provide justification why they are sending an email, or prevent them from sending an email for either of the following scenarios:
+
+- **Their email or attachment for the email has a specific label**:
+    - The attachment can be any file type
+
+- **The email or attachment for the email doesn't have a label**:
+    - The attachment can be an Office document or PDF document
+
+When these conditions are met and the recipient's email address is not included in a list of allowed domain names that you have specified, the user sees a pop-up messages with one of the following actions:
+
+- **Warn**: The user can confirm and send, or cancel.
+
+- **Justify**: The user is prompted for justification (predefined options or free-form).  The user can then send or cancel the email. The justification text is written to the email x-header, so that it can be read by other systems. For example, data loss prevention (DLP) services.
+
+- **Block**: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
+
+
+### To implement the warn, justify, or block pop-up messages for specific labels:
+
+To implement the pop-up messages for specific labels, you must know the label ID for those labels. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
+
+Create one or more of the following advanced client settings with the following keys. For the values, specify one or more labels by their IDs, each one separated by a comma.
+
+Example value for multiple label IDs as a comma-separated string: `dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
+
+
+- Warn messages:
+    
+    - Key: **OutlookWarnUntrustedCollaborationLabel**
+    
+    - Value: \<**label IDs, comma-separated**>
+
+- Justification messages:
+    
+    - Key: **OutlookJustifyUntrustedCollaborationLabel**
+    
+    - Value: \<**label IDs, comma-separated**>
+
+- Block messages:
+    
+    - Key: **OutlookBlockUntrustedCollaborationLabel**
+    
+    - Value: \<**label IDs, comma-separated**>
+
+
+### To implement the warn, justify, or block pop-up messages for emails or attachments that don't have a label:
+
+Create the following advanced client setting with one of the following values:
+
+- Warn messages:
+    
+    - Key: **OutlookUnlabeledCollaborationAction**
+    
+    - Value: **Warn**
+
+- Justification messages:
+    
+    - Key: **OutlookUnlabeledCollaborationAction**
+    
+    - Value: **Justify**
+
+- Block messages:
+    
+    - Key: **OutlookUnlabeledCollaborationAction**
+    
+    - Value: **Block**
+
+- Turn off these messages:
+    
+    - Key: **OutlookUnlabeledCollaborationAction**
+    
+    - Value: **Off**
+
+### To specify the allowed domain names for recipients exempt from the pop-up messages
+
+When you specify a domain name in an advanced client setting, users do not see the pop-up messages for recipients who have have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
+
+A typical configuration is to display the pop-up messages only for recipients who are external to your organization or who aren't authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
+
+Create the following advanced client setting key. For the value, specify one or more domains, each one separated by a comma.
+
+Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
+
+- Key: **OutlookCollaborationTrustedDomains**
+
+- Value: **\<**domain names, comma separated**>**
+
+For example, if you specify the domain name of contoso.com, users do not see the pop-up messages in Outlook when they send an email to john@sales.contoso.com.
 
 ## Set a different default label for Outlook
 
