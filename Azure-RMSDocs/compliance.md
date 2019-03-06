@@ -6,7 +6,7 @@ description: Supporting information for Azure Information Protection that inclu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/06/2018
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -38,7 +38,7 @@ However, some relevant information that can help your legal adviser make a deter
 
 - Azure Information Protection uses AES 256 and AES 128 to encrypt documents. [More information](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- All encryption keys used by Azure Information Protection are protected with a customer-specific root key that uses RSA 2048 bits. RSA 1024 but is also supported for backwards compatibility. [More information](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
+- All encryption keys used by Azure Information Protection are protected with a customer-specific root key that uses RSA 2048 bits. RSA 1024 bit is also supported for backwards compatibility. [More information](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
 - Customer-specific root keys are either managed by Microsoft or provisioned by the customer in a Thales HSM by using "[bring your own key](plan-implement-tenant-key.md)" (BYOK). Azure Information Protection also supports limited functionality with an on-premises key by using "[hold your own key](configure-adrms-restrictions.md)" (HYOK) for content that is affected by requirements that indicate that it should not be protected with a cloud-based key.
 
