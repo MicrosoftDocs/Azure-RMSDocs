@@ -59,11 +59,11 @@ Even if you don't need to know in detail how this technology works, you might be
 
 256 bits is used by the Azure Information Protection client in the following scenarios:
 
-- Generic protection (.pfile)
+- Generic protection (.pfile).
 
-- Native protection for PDF documents when the document has been protected with the ISO standard for PDF encryption or the resulting protected document has a .ppdf file name extension.
+- Native protection for PDF documents when the document has been protected with the ISO standard for PDF encryption, or the resulting protected document has a .ppdf file name extension.
 
-- Native protection for text or image file (such as .ptxt or .pjpg).
+- Native protection for text or image files (such as .ptxt or .pjpg).
 
 ###### Footnote 2
 
