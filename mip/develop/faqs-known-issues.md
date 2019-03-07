@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: troubleshooting
 ms.collection: M365-security-compliance
-ms.date: 10/19/2018
+ms.date: 03/05/2019
 ms.author: mbaldwin
 ---
 
@@ -15,7 +15,9 @@ This article provides answers to Frequently Asked Questions (FAQs), and troubles
 
 ## Frequently Asked Questions 
 
-### Question: how does the SDK handle strings, and what string type should I be using in my code?
+### SDK string handling
+
+**Question**: How does the SDK handle strings, and what string type should I be using in my code?
 
 The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transformation Format - 8-bit)](https://wikipedia.org/wiki/UTF-8) for string handling. Specific guidance depends on the platform you're using:
 
@@ -29,14 +31,24 @@ The SDK is intended to be used cross-platform, and uses [UTF-8 (Unicode Transfor
 
 ### Error: "File format not supported"  
 
-| Error | Solution |
-|-|-|
-|*File format not supported*| This exception results from attempting to protect or label a PDF file, that has been digitally signed or password protected. See [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) for more information on protecting and labeling PDF files.|
+**Question**: Why do I get the following error when attempting to protect or label a PDF file?
+
+> File format not supported
+
+This exception results from attempting to protect or label a PDF file that has been digitally signed or password protected. See [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) for more information on protecting and labeling PDF files.
 
 ### Error: "Failed to parse the acquired Compliance Policy"  
 
-You downloaded the MIP SDK and ran the sample applications. You use the file sample to try to list all labels, but you get the following error:
+**Question**: Why do I get the following error after downloading the MIP SDK and attempting to use the file sample to list all labels?
 
-| Error | Solution |
-|-|-|
-|*Something bad happened: Failed to parse the acquired Compliance Policy. Failed with: [class mip::CompliancePolicyParserException] Tag not found: policy, NodeType: 15, Name: No Name Found, Value: , Ancestors: <SyncFile><Content>, correlationId:[34668a40-blll-4ef8-b2af-00005aa674z9]*| This indicates that you haven't migrated your labels from Azure Information Protection, to the unified labeling experience. Follow [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels) to migrate the labels, then create a Label Policy in Office 365 Security and Compliance Center. Once that's complete, the sample will run successfully.|
+> Something bad happened: Failed to parse the acquired Compliance Policy. Failed with: [class mip::CompliancePolicyParserException] Tag not found: policy, NodeType: 15, Name: No Name Found, Value: , Ancestors: <SyncFile><Content>, correlationId:[34668a40-blll-4ef8-b2af-00005aa674z9]
+
+This indicates that you haven't migrated your labels from Azure Information Protection to the unified labeling experience. Follow [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels) to migrate the labels, then create a Label Policy in Office 365 Security and Compliance Center. 
+
+### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
+
+**Question**: Why do I get the following error when using the MIP SDK .NET Wrapper?
+
+> System.ComponentModel.Win32Exception: LoadLibrary failed for: [sdk_wrapper_dotnet.dll] when calling MIP.Initialize().
+
+Your application does not have the required runtime, or was not built as Release. See [Ensure your app has the required runtime](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) for more information. 
