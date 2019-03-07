@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -53,10 +53,13 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     Resolutions 800x600 and lower can't fully display the **Classify and protect - Azure Information Protection** dialog box when you right-click a file or folder in File Explorer.
 
-
 - Microsoft Online Services Sign-in Assistant 7.250.4303.0
     
     Computers running Office 2010 require Microsoft Online Services Sign-in Assistant version 7.250.4303.0. This version is included with the client installation. If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
+
+- KB 4482887
+    
+    For Windows 10 build 1809 (and later), install [March 1, 2019—KB4482887 (OS Build 17763.348)](https://support.microsoft.com/en-us/help/4482887/windows-10-update-kb4482887) to ensure the Information Protection bar displays correctly in Office applications.
 
 - KB 2533623
     
