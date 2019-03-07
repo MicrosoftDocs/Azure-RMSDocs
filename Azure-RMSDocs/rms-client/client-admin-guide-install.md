@@ -59,7 +59,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
 - KB 4482887
     
-    For Windows 10 build 1809 (and later), install [March 1, 2019—KB4482887 (OS Build 17763.348)](https://support.microsoft.com/en-us/help/4482887/windows-10-update-kb4482887) to ensure the Information Protection bar displays correctly in Office applications.
+    For Windows 10 version 1809 only, operation system builds older than 17763.348, install [March 1, 2019—KB4482887 (OS Build 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) to ensure the Information Protection bar displays correctly in Office applications. This update is not needed if you have Office 365 1902 or later.
 
 - KB 2533623
     
