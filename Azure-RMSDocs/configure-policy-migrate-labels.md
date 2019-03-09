@@ -53,7 +53,7 @@ Global administrators for your tenant can continue to manage labels and polices 
 
 Before you migrate your labels, make sure that you are aware of the following changes and considerations:
 
-- Not all clients currently support unified labels. Make sure that you have [supported clients](#clients-that-support-unified-labeling) and be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the Security & Compliance Center (for client that do support unified labels).
+- Not all clients currently support unified labels. Make sure that you have [supported clients](#clients-and-services-that-support-unified-labeling) and be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the Security & Compliance Center (for client that do support unified labels).
 
 - If you are in the middle of defining and configuring the labels that you want to use, we recommend that you complete this process by using the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in the Security & Compliance Center.
 
@@ -116,12 +116,12 @@ You must be a global administrator to migrate your labels.
 
 3. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
 
-For the labels that successfully migrated, they can now be used by [clients that support unified labeling](#clients-that-support-unified-labeling). However, you must first publish these labels in the Security & Compliance Center.
+For the labels that successfully migrated, they can now be used by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). However, you must first publish these labels in the Security & Compliance Center.
 
 > [!IMPORTANT]
 > If you edit the labels outside the Azure portal, for Azure Information Protection clients, return to this **Azure Information Protection - Unified labeling** blade, and select **Publish**.
 
-### Clients that support unified labeling
+### Clients and services that support unified labeling
 
 The clients that currently support unified labeling include:
 
@@ -131,6 +131,20 @@ The clients that currently support unified labeling include:
     
 - Clients from software vendors and developers that use the [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference).
 
+Services that currently support unified labeling include:
+
+- Windows Information Protection
+
+- SharePoint Online
+
+- Microsoft Cloud App Security
+    
+    This service supports labels both before the migration to the unified labeling store, and after the migrationm, using the following logic:
+    
+    - If the Office 365 Security & Compliance Center has the same labels as those in the Azure portal, and the labels have been published from the Security & Compliance Center: Unified labels are used.
+    - If the Office 365 Security & Compliance Center doesn't have the same labels as those in the Azure portal: Unified labels are not used.
+
+- Services from software vendors and developers that use the [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference).
 
 ## Next steps
 
