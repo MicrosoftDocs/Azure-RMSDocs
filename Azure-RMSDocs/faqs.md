@@ -54,7 +54,7 @@ For more information about migrating your existing labels, see [How to migrate A
 
 ## When is the right time to migrate my labels to Office 365?
 
-Sensitivity labels in the Office 365 Security & Compliance Center are generally available but the option to migrate your Azure Information Protection labels is still in preview. When the labels are migrated to the unified labeling store, they can be published and then downloaded by [clients that support unified labeling](configure-policy-migrate-labels.md#clients-that-support-unified-labeling). Today, not all clients support unified labels or are generally available.
+Sensitivity labels in the Office 365 Security & Compliance Center are generally available but the option to migrate your Azure Information Protection labels is still in preview. When the labels are migrated to the unified labeling store, they can be published and then used by [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Today, not all clients support unified labels or are generally available.
 
 We recommend that you first test preview functionality with a test tenant, and then migrate your production tenant. In addition:
 
@@ -74,7 +74,7 @@ See also [Which preview client do I install for testing new functionality?](faqs
 
 After you've migrated your labels in the Azure portal:
 
-- If you have [unified labeling clients](configure-policy-migrate-labels.md#clients-that-support-unified-labeling), go the Office 365 Security & Compliance Center to publish these labels, and to configure the policy settings for unified labeling clients. For label changes going forward, use the Security & Compliance Center. Unified labeling clients download the labels and policy settings from the Security & Compliance Center.
+- If you have [unified labeling clients and services](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), go the Office 365 Security & Compliance Center to publish these labels, and to configure their policy settings. For label changes going forward, use the Security & Compliance Center. Unified labeling clients download the labels and policy settings from the Security & Compliance Center.
 
 - If you have [Azure Information Protection clients](./rms-client/aip-client.md), continue to use the Azure portal to edit your labels and policy settings. Azure Information Protection clients continue to download the labels and policy settings from Azure.
 

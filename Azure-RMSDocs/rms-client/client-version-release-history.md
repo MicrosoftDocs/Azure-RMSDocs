@@ -98,7 +98,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - Sublabels are correctly applied by PowerShell and the scanner when the parent label is configured for user-defined permissions.
 
-- The Azure Information Protection client correctly displays labels that have been applied by [clients that support unified labeling](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
+- The Azure Information Protection client correctly displays labels that have been applied by [clients that support unified labeling](../configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 - Documents open correctly in Office without a recovery message after protection has been removed by File Explorer and right-click, PowerShell, and the scanner.
 
