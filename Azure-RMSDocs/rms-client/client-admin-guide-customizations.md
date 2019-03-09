@@ -294,6 +294,7 @@ When these conditions are met and the recipient's email address is not included 
 
 - **Block**: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
 
+The resulting action is logged to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**.
 
 ### To implement the warn, justify, or block pop-up messages for specific labels:
 
