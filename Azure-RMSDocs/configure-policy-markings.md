@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -44,7 +44,7 @@ Additional information about these visual markings:
 
 - Maximum string lengths:
     
-    - The maximum string length that you can enter for headers and footers is 1024 characters. However, Excel has a total limit of 255 characters for headers and footers. This limit includes characters that aren't visible in Excel, such as formatting codes. When you enter a long string for headers and footers, in Excel, this text can be truncated to 255 characters or less.
+    - The maximum string length that you can enter for headers and footers is 1024 characters. However, Excel has a total limit of 255 characters for headers and footers. This limit includes characters that aren't visible in Excel, such as formatting codes. If that limit is reached, the string you enter is not displayed in Excel.
     
     - The maximum string length for watermarks that you can enter is 255 characters.
 
