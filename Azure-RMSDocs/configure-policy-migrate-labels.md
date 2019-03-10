@@ -123,6 +123,8 @@ For the labels that successfully migrated, they can now be used by [clients and 
 
 ### Clients and services that support unified labeling
 
+To confirm whether the clients and services you use support unified labeling, refer to their documentation to check whether they can use sensitivity labels that are published from the Office 365 Security & Compliance Center. 
+
 The clients that currently support unified labeling include:
 
 - The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md) - in preview
