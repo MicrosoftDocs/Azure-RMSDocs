@@ -2,12 +2,12 @@
     "redirections": [
         {
             "source_path": "Azure-RMSDocs/deploy-use/activate-office365-preview.md",
-            "redirect_url": "/information-protection/deploy-use/activate-office365",
+            "redirect_url": "/azure/information-protection/deploy-use/activate-office365",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/quick-start-tutorial.md",
-            "redirect_url": "/information-protection/get-started/infoprotect-quick-start-tutorial",
+            "redirect_url": "/azure/information-protection/get-started/infoprotect-quick-start-tutorial",
             "redirect_document_id": false
         },
         {
@@ -22,22 +22,22 @@
         },
         {
             "source_path": "Azure-RMSDocs/get-started/tutorial-step1.md",
-            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step1",
+            "redirect_url": "/azure/information-protection/get-started/infoprotect-tutorial-step1",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/tutorial-step2.md",
-            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step3",
+            "redirect_url": "/azure/information-protection/get-started/infoprotect-tutorial-step3",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/tutorial-step3.md",
-            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step3",
+            "redirect_url": "/azure/information-protection/get-started/infoprotect-tutorial-step3",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/tutorial-step4.md",
-            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step3",
+            "redirect_url": "/azure/information-protection/get-started/infoprotect-tutorial-step3",
             "redirect_document_id": false
         },
         {
@@ -47,112 +47,112 @@
         },
         {
             "source_path": "Azure-RMSDocs/get-started/tutorial-step5.md",
-            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step5",
+            "redirect_url": "/azure/information-protection/get-started/infoprotect-tutorial-step5",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/configure-adrms-restrictions.md",
-            "redirect_url": "/information-protection/deploy-use/configure-adrms-restrictions",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-adrms-restrictions",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/configure-policy-change-label.md",
-            "redirect_url": "/information-protection/deploy-use/configure-policy-change-label",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-policy-change-label",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/configure-policy-classification.md",
-            "redirect_url": "/information-protection/deploy-use/configure-policy-classification",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-policy-classification",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/configure-policy-default.md",
-            "redirect_url": "/information-protection/deploy-use/configure-policy-default",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-policy-default",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/configure-policy-delete-reorder.md",
-            "redirect_url": "/information-protection/deploy-use/configure-policy-delete-reorder",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-policy-delete-reorder",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/configure-policy-new-label.md",
-            "redirect_url": "/information-protection/deploy-use/configure-policy-new-label",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-policy-new-label",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/configure-policy-protection.md",
-            "redirect_url": "/information-protection/deploy-use/configure-policy-protection",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-policy-protection",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/configure-policy-settings.md",
-            "redirect_url": "/information-protection/deploy-use/configure-policy-settings",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-policy-settings",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/configure-policy-markings.md",
-            "redirect_url": "/information-protection/deploy-use/configure-policy-markings",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-policy-markings",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/configure-policy.md",
-            "redirect_url": "/information-protection/deploy-use/configure-policy",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-policy",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/faq.md",
-            "redirect_url": "/information-protection/get-started/faqs-infoprotect",
+            "redirect_url": "/azure/information-protection/get-started/faqs-infoprotect",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/info-protect-client.md",
-            "redirect_url": "/information-protection/rms-client/info-protect-client",
+            "redirect_url": "/azure/information-protection/rms-client/info-protect-client",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/infoprotect-quick-start-tutorial.md",
-            "redirect_url": "/information-protection/get-started/infoprotect-quick-start-tutorial",
+            "redirect_url": "/azure/information-protection/get-started/infoprotect-quick-start-tutorial",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/infoprotect-tutorial-step1.md",
-            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step1",
+            "redirect_url": "/azure/information-protection/get-started/infoprotect-tutorial-step1",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/infoprotect-tutorial-step2.md",
-            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step2",
+            "redirect_url": "/azure/information-protection/get-started/infoprotect-tutorial-step2",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/infoprotect-tutorial-step3.md",
-            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step3",
+            "redirect_url": "/azure/information-protection/get-started/infoprotect-tutorial-step3",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/infoprotect-tutorial-step4.md",
-            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step4",
+            "redirect_url": "/azure/information-protection/get-started/infoprotect-tutorial-step4",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/requirements-azure-infoprotect.md",
-            "redirect_url": "/information-protection/get-started/requirements-azure-rms",
+            "redirect_url": "/azure/information-protection/get-started/requirements-azure-rms",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/what-is-information-protection-oldpreview.md",
-            "redirect_url": "/information-protection/understand-explore/what-is-information-protection",
+            "redirect_url": "/azure/information-protection/understand-explore/what-is-information-protection",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/information-protection/what-is-information-protection.md",
-            "redirect_url": "/information-protection/understand-explore/what-is-information-protection",
+            "redirect_url": "/azure/information-protection/understand-explore/what-is-information-protection",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/azure-rights-management.md",
-            "redirect_url": "/information-protection/understand-explore/what-is-information-protection",
+            "redirect_url": "/azure/information-protection/understand-explore/what-is-information-protection",
             "redirect_document_id": false
         },
         {
@@ -177,885 +177,1090 @@
         },
         {
             "source_path": "Azure-RMSDocs/get-started/faqs-infoprotect.md",
-            "redirect_url": "/information-protection/faqs-infoprotect",
+            "redirect_url": "/azure/information-protection/faqs-infoprotect",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/faqs-rms.md",
-            "redirect_url": "/information-protection/faqs-rms",
+            "redirect_url": "/azure/information-protection/faqs-rms",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/faqs.md",
-            "redirect_url": "/information-protection/faqs",
+            "redirect_url": "/azure/information-protection/faqs",
             "redirect_document_id": false
         },
         {
-            "source_path": "Azure-RMSDocs/get-started/help-bot.md",
-            "redirect_url": "/information-protection/help-bot",
+            "source_path": "Azure-RMSDocs/help-bot.md",
+            "redirect_url": "/azure/information-protection/information-support#support-options-and-community-resources",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/infoprotect-quick-start-tutorial.md",
-            "redirect_url": "/information-protection/infoprotect-quick-start-tutorial",
+            "redirect_url": "/azure/information-protection/infoprotect-quick-start-tutorial",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/infoprotect-tutorial-step1.md",
-            "redirect_url": "/information-protection/infoprotect-tutorial-step1",
+            "redirect_url": "/azure/information-protection/infoprotect-tutorial-step1",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/infoprotect-tutorial-step2.md",
-            "redirect_url": "/information-protection/infoprotect-tutorial-step2",
+            "redirect_url": "/azure/information-protection/infoprotect-tutorial-step2",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/infoprotect-tutorial-step3.md",
-            "redirect_url": "/information-protection/infoprotect-tutorial-step3",
+            "redirect_url": "/azure/information-protection/infoprotect-tutorial-step3",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/infoprotect-tutorial-step4.md",
-            "redirect_url": "/information-protection/infoprotect-tutorial-step4",
+            "redirect_url": "/azure/information-protection/infoprotect-tutorial-step4",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/infoprotect-tutorial-step5.md",
-            "redirect_url": "/information-protection/infoprotect-tutorial-step5",
+            "redirect_url": "/azure/information-protection/infoprotect-tutorial-step5",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/information-support.md",
-            "redirect_url": "/information-protection/information-support",
+            "redirect_url": "/azure/information-protection/information-support",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/rapid-deployment-guide.md",
-            "redirect_url": "/information-protection/rapid-deployment-guide",
+            "redirect_url": "/azure/information-protection/rapid-deployment-guide",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/requirements-applications.md",
-            "redirect_url": "/information-protection/requirements-applications",
+            "redirect_url": "/azure/information-protection/requirements-applications",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/requirements-azure-ad.md",
-            "redirect_url": "/information-protection/requirements-azure-ad",
+            "redirect_url": "/azure/information-protection/requirements-azure-ad",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/requirements-client-devices.md",
-            "redirect_url": "/information-protection/requirements-client-devices",
+            "redirect_url": "/azure/information-protection/requirements-client-devices",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/requirements-full.md",
-            "redirect_url": "/information-protection/requirements-full",
+            "redirect_url": "/azure/information-protection/requirements-full",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/requirements-servers.md",
-            "redirect_url": "/information-protection/requirements-servers",
+            "redirect_url": "/azure/information-protection/requirements-servers",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/requirements.md",
-            "redirect_url": "/information-protection/requirements",
+            "redirect_url": "/azure/information-protection/requirements",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/scenario-company-confidential-email.md",
-            "redirect_url": "/information-protection/scenario-company-confidential-email",
+            "redirect_url": "/azure/information-protection/scenario-company-confidential-email",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/scenario-executives-email.md",
-            "redirect_url": "/information-protection/scenario-executives-email",
+            "redirect_url": "/azure/information-protection/scenario-executives-email",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/scenario-fci.md",
-            "redirect_url": "/information-protection/scenario-fci",
+            "redirect_url": "/azure/information-protection/scenario-fci",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/scenario-secure-most-valuable-files.md",
-            "redirect_url": "/information-protection/scenario-secure-most-valuable-files",
+            "redirect_url": "/azure/information-protection/scenario-secure-most-valuable-files",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/scenario-share-office-file-externally.md",
-            "redirect_url": "/information-protection/scenario-share-office-file-externally",
+            "redirect_url": "/azure/information-protection/scenario-share-office-file-externally",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/scenario-sharepoint.md",
-            "redirect_url": "/information-protection/scenario-sharepoint",
+            "redirect_url": "/azure/information-protection/scenario-sharepoint",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/scenario-work-folders.md",
-            "redirect_url": "/information-protection/scenario-work-folders",
+            "redirect_url": "/azure/information-protection/scenario-work-folders",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/secure-collaboration-documents.md",
-            "redirect_url": "/information-protection/secure-collaboration-documents",
+            "redirect_url": "/azure/information-protection/secure-collaboration-documents",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/get-started/terminology.md",
-            "redirect_url": "/information-protection/terminology",
+            "redirect_url": "/azure/information-protection/terminology",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/aka.md",
-            "redirect_url": "/information-protection/aka",
+            "redirect_url": "/azure/information-protection/aka",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/api-support.md",
-            "redirect_url": "/information-protection/api-support",
+            "redirect_url": "/azure/information-protection/api-support",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/applications-support.md",
-            "redirect_url": "/information-protection/applications-support",
+            "redirect_url": "/azure/information-protection/applications-support",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/azure-rms-problems-it-solves.md",
-            "redirect_url": "/information-protection/azure-rms-problems-it-solves",
+            "redirect_url": "/azure/information-protection/azure-rms-problems-it-solves",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/compare-on-premise.md",
-            "redirect_url": "/information-protection/compare-on-premise",
+            "redirect_url": "/azure/information-protection/compare-on-premise",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/compliance.md",
-            "redirect_url": "/information-protection/compliance",
+            "redirect_url": "/azure/information-protection/compliance",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/file-server-support.md",
-            "redirect_url": "/information-protection/file-server-support",
+            "redirect_url": "/azure/information-protection/file-server-support",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/how-does-it-work.md",
-            "redirect_url": "/information-protection/how-does-it-work",
+            "redirect_url": "/azure/information-protection/how-does-it-work",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/office-apps-services-support.md",
-            "redirect_url": "/information-protection/office-apps-services-support",
+            "redirect_url": "/azure/information-protection/office-apps-services-support",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/rms-for-individuals-identify-sign-up.md",
-            "redirect_url": "/information-protection/rms-for-individuals-identify-sign-up",
+            "redirect_url": "/azure/information-protection/rms-for-individuals-identify-sign-up",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/rms-for-individuals-take-control.md",
-            "redirect_url": "/information-protection/rms-for-individuals-take-control",
+            "redirect_url": "/azure/information-protection/rms-for-individuals-take-control",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/rms-for-individuals-user-sign-up.md",
-            "redirect_url": "/information-protection/rms-for-individuals-user-sign-up",
+            "redirect_url": "/azure/information-protection/rms-for-individuals-user-sign-up",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/rms-for-individuals.md",
-            "redirect_url": "/information-protection/rms-for-individuals",
+            "redirect_url": "/azure/information-protection/rms-for-individuals",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/sharing-app-support.md",
-            "redirect_url": "/information-protection/sharing-app-support",
+            "redirect_url": "/azure/information-protection/sharing-app-support",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/what-admins-users-see.md",
-            "redirect_url": "/information-protection/what-admins-users-see",
+            "redirect_url": "/azure/information-protection/what-admins-users-see",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/what-is-azure-rms.md",
-            "redirect_url": "/information-protection/what-is-azure-rms",
+            "redirect_url": "/azure/information-protection/what-is-azure-rms",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/understand-explore/what-is-information-protection.md",
-            "redirect_url": "/information-protection/what-is-information-protection",
+            "redirect_url": "/azure/information-protection/what-is-information-protection",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/Add-AadrmKey.md",
-            "redirect_url": "/information-protection/Add-AadrmKey",
+            "redirect_url": "/azure/information-protection/Add-AadrmKey",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/activate-azure-classic.md",
-            "redirect_url": "/information-protection/activate-azure-classic",
+            "redirect_url": "/azure/information-protection/activate-azure-classic",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/activate-azure.md",
-            "redirect_url": "/information-protection/activate-azure",
+            "redirect_url": "/azure/information-protection/activate-azure",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/activate-office365-classic.md",
-            "redirect_url": "/information-protection/activate-office365-classic",
+            "redirect_url": "/azure/information-protection/activate-office365-classic",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/activate-office365.md",
-            "redirect_url": "/information-protection/activate-office365",
+            "redirect_url": "/azure/information-protection/activate-office365",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/activate-service.md",
-            "redirect_url": "/information-protection/activate-service",
+            "redirect_url": "/azure/information-protection/activate-service",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/administer-powershell.md",
-            "redirect_url": "/information-protection/administer-powershell",
+            "redirect_url": "/azure/information-protection/administer-powershell",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-adrms-restrictions.md",
-            "redirect_url": "/information-protection/configure-adrms-restrictions",
+            "redirect_url": "/azure/information-protection/configure-adrms-restrictions",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-applications.md",
-            "redirect_url": "/information-protection/configure-applications",
+            "redirect_url": "/azure/information-protection/configure-applications",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-client.md",
-            "redirect_url": "/information-protection/configure-client",
+            "redirect_url": "/azure/information-protection/configure-client",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-custom-templates.md",
-            "redirect_url": "/information-protection/configure-custom-templates",
+            "redirect_url": "/azure/information-protection/configure-custom-templates",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-exchange-with-imported-tpd.md",
-            "redirect_url": "/information-protection/configure-exchange-with-imported-tpd",
+            "redirect_url": "/azure/information-protection/configure-exchange-with-imported-tpd",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-exo-rules.md",
-            "redirect_url": "/information-protection/configure-exo-rules",
+            "redirect_url": "/azure/information-protection/configure-exo-rules",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-office-apps.md",
-            "redirect_url": "/information-protection/configure-office-apps",
+            "redirect_url": "/azure/information-protection/configure-office-apps",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-office365.md",
-            "redirect_url": "/information-protection/configure-office365",
+            "redirect_url": "/azure/information-protection/configure-office365",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy-add-remove-label.md",
-            "redirect_url": "/information-protection/configure-policy-add-remove-label",
+            "redirect_url": "/azure/information-protection/configure-policy-add-remove-label",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy-change-label.md",
-            "redirect_url": "/information-protection/configure-policy-change-label",
+            "redirect_url": "/azure/information-protection/configure-policy-change-label",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy-classification.md",
-            "redirect_url": "/information-protection/configure-policy-classification",
+            "redirect_url": "/azure/information-protection/configure-policy-classification",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy-default.md",
-            "redirect_url": "/information-protection/configure-policy-default",
+            "redirect_url": "/azure/information-protection/configure-policy-default",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy-delete-reorder.md",
-            "redirect_url": "/information-protection/configure-policy-delete-reorder",
+            "redirect_url": "/azure/information-protection/configure-policy-delete-reorder",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy-languages.md",
-            "redirect_url": "/information-protection/configure-policy-languages",
+            "redirect_url": "/azure/information-protection/configure-policy-languages",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy-markings.md",
-            "redirect_url": "/information-protection/configure-policy-markings",
+            "redirect_url": "/azure/information-protection/configure-policy-markings",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy-new-label.md",
-            "redirect_url": "/information-protection/configure-policy-new-label",
+            "redirect_url": "/azure/information-protection/configure-policy-new-label",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy-protection.md",
-            "redirect_url": "/information-protection/configure-policy-protection",
+            "redirect_url": "/azure/information-protection/configure-policy-protection",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy-scope.md",
-            "redirect_url": "/information-protection/configure-policy-scope",
+            "redirect_url": "/azure/information-protection/configure-policy-scope",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy-settings.md",
-            "redirect_url": "/information-protection/configure-policy-settings",
+            "redirect_url": "/azure/information-protection/configure-policy-settings",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy-templates.md",
-            "redirect_url": "/information-protection/configure-policy-templates",
+            "redirect_url": "/azure/information-protection/configure-policy-templates",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-policy.md",
-            "redirect_url": "/information-protection/configure-policy",
+            "redirect_url": "/azure/information-protection/configure-policy",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-servers-rms-connector.md",
-            "redirect_url": "/information-protection/configure-servers-rms-connector",
+            "redirect_url": "/azure/information-protection/configure-servers-rms-connector",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-sharing-app.md",
-            "redirect_url": "/information-protection/configure-sharing-app",
+            "redirect_url": "/azure/information-protection/configure-sharing-app",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-super-users.md",
-            "redirect_url": "/information-protection/configure-super-users",
+            "redirect_url": "/azure/information-protection/configure-super-users",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-templates-with-powershell.md",
-            "redirect_url": "/information-protection/configure-templates-with-powershell",
+            "redirect_url": "/azure/information-protection/configure-templates-with-powershell",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/configure-usage-rights.md",
-            "redirect_url": "/information-protection/configure-usage-rights",
+            "redirect_url": "/azure/information-protection/configure-usage-rights",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/copy-template.md",
-            "redirect_url": "/information-protection/copy-template",
+            "redirect_url": "/azure/information-protection/copy-template",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/create-template.md",
-            "redirect_url": "/information-protection/create-template",
+            "redirect_url": "/azure/information-protection/create-template",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/decommission-deactivate.md",
-            "redirect_url": "/information-protection/decommission-deactivate",
+            "redirect_url": "/azure/information-protection/decommission-deactivate",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/deploy-aip-scanner.md",
-            "redirect_url": "/information-protection/deploy-aip-scanner",
+            "redirect_url": "/azure/information-protection/deploy-aip-scanner",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/deploy-rms-connector.md",
-            "redirect_url": "/information-protection/deploy-rms-connector",
+            "redirect_url": "/azure/information-protection/deploy-rms-connector",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/help-users.md",
-            "redirect_url": "/information-protection/help-users",
+            "redirect_url": "/azure/information-protection/help-users",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/infoprotect-configure-policy.md",
-            "redirect_url": "/information-protection/infoprotect-configure-policy",
+            "redirect_url": "/azure/information-protection/infoprotect-configure-policy",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/install-configure-rms-connector.md",
-            "redirect_url": "/information-protection/install-configure-rms-connector",
+            "redirect_url": "/azure/information-protection/install-configure-rms-connector",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/install-powershell.md",
-            "redirect_url": "/information-protection/install-powershell",
+            "redirect_url": "/azure/information-protection/install-powershell",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/log-analyze-usage.md",
-            "redirect_url": "/information-protection/log-analyze-usage",
+            "redirect_url": "/azure/information-protection/log-analyze-usage",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/manage-personal-data.md",
-            "redirect_url": "/information-protection/manage-personal-data",
+            "redirect_url": "/azure/information-protection/manage-personal-data",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/migrate-portal.md",
-            "redirect_url": "/information-protection/migrate-portal",
+            "redirect_url": "/azure/information-protection/migrate-portal",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/monitor-rms-connector.md",
-            "redirect_url": "/information-protection/monitor-rms-connector",
+            "redirect_url": "/azure/information-protection/monitor-rms-connector",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/operations-customer-managed-tenant-key.md",
-            "redirect_url": "/information-protection/operations-customer-managed-tenant-key",
+            "redirect_url": "/azure/information-protection/operations-customer-managed-tenant-key",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/operations-microsoft-managed-tenant-key.md",
-            "redirect_url": "/information-protection/operations-microsoft-managed-tenant-key",
+            "redirect_url": "/azure/information-protection/operations-microsoft-managed-tenant-key",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/operations-tenant-key.md",
-            "redirect_url": "/information-protection/operations-tenant-key",
+            "redirect_url": "/azure/information-protection/operations-tenant-key",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/prepare-environment-adrms.md",
-            "redirect_url": "/information-protection/prepare-environment-adrms",
+            "redirect_url": "/azure/information-protection/prepare-environment-adrms",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/refresh-templates.md",
-            "redirect_url": "/information-protection/refresh-templates",
+            "redirect_url": "/azure/information-protection/refresh-templates",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/remove-template.md",
-            "redirect_url": "/information-protection/remove-template",
+            "redirect_url": "/azure/information-protection/remove-template",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/deploy-use/rms-connector-registry-settings.md",
-            "redirect_url": "/information-protection/rms-connector-registry-settings",
+            "redirect_url": "/azure/information-protection/rms-connector-registry-settings",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/byok-price-restrictions.md",
-            "redirect_url": "/information-protection/byok-price-restrictions",
+            "redirect_url": "/azure/information-protection/byok-price-restrictions",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/deployment-roadmap.md",
-            "redirect_url": "/information-protection/deployment-roadmap",
+            "redirect_url": "/azure/information-protection/deployment-roadmap",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/generate-tenant-key-in-person.md",
-            "redirect_url": "/information-protection/generate-tenant-key-in-person",
+            "redirect_url": "/azure/information-protection/generate-tenant-key-in-person",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/generate-tenant-key-internet.md",
-            "redirect_url": "/information-protection/generate-tenant-key-internet",
+            "redirect_url": "/azure/information-protection/generate-tenant-key-internet",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase1.md",
-            "redirect_url": "/information-protection/migrate-from-ad-rms-phase1",
+            "redirect_url": "/azure/information-protection/migrate-from-ad-rms-phase1",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase2.md",
-            "redirect_url": "/information-protection/migrate-from-ad-rms-phase2",
+            "redirect_url": "/azure/information-protection/migrate-from-ad-rms-phase2",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase3.md",
-            "redirect_url": "/information-protection/migrate-from-ad-rms-phase3",
+            "redirect_url": "/azure/information-protection/migrate-from-ad-rms-phase3",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase4.md",
-            "redirect_url": "/information-protection/migrate-from-ad-rms-phase4",
+            "redirect_url": "/azure/information-protection/migrate-from-ad-rms-phase4",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/migrate-from-ad-rms-phase5.md",
-            "redirect_url": "/information-protection/migrate-from-ad-rms-phase5",
+            "redirect_url": "/azure/information-protection/migrate-from-ad-rms-phase5",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/migrate-from-ad-rms-to-azure-rms.md",
-            "redirect_url": "/information-protection/migrate-from-ad-rms-to-azure-rms",
+            "redirect_url": "/azure/information-protection/migrate-from-ad-rms-to-azure-rms",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/migrate-hsmkey-to-hsmkey.md",
-            "redirect_url": "/information-protection/migrate-hsmkey-to-hsmkey",
+            "redirect_url": "/azure/information-protection/migrate-hsmkey-to-hsmkey",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/migrate-softwarekey-to-hsmkey.md",
-            "redirect_url": "/information-protection/migrate-softwarekey-to-hsmkey",
+            "redirect_url": "/azure/information-protection/migrate-softwarekey-to-hsmkey",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/migrate-softwarekey-to-softwarekey.md",
-            "redirect_url": "/information-protection/migrate-softwarekey-to-softwarekey",
+            "redirect_url": "/azure/information-protection/migrate-softwarekey-to-softwarekey",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/plan-implement-tenant-key.md",
-            "redirect_url": "/information-protection/plan-implement-tenant-key",
+            "redirect_url": "/azure/information-protection/plan-implement-tenant-key",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/plan-design/prepare.md",
-            "redirect_url": "/information-protection/prepare",
+            "redirect_url": "/azure/information-protection/prepare",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/houserules.md",
-            "redirect_url": "/information-protection/information-support",
+            "redirect_url": "/azure/information-protection/information-support",
             "redirect_document_id": false
         },        {
             "source_path": "Azure-RMSDocs/plan-design/thales-hsm.md",
-            "redirect_url": "/information-protection/thales-hsm",
+            "redirect_url": "/azure/information-protection/thales-hsm",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_consentdelegate.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_accessdeniederror.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_action.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_addcontentfooteraction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_addcontentheaderaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_addwatermarkaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_applylabelaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_badinputerror.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },       
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_classificationresult.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_contentlabel.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
 		{
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_customaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_error.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_executionstate.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_fileengine.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_fileengine_settings.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_filehandler.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_filehandler_observer.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_fileioerror.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },       
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_fileprofile.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_fileprofile_observer.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_fileprofile_settings.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_internalerror.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },       
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_justificationrequirederror.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_justifyaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
 		{
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_label.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_labelingoptions.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_loggerdelegate.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_metadataaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_networkerror.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_notsupportederror.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_policyengine.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_policyengine_settings.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },       
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_privilegedrequirederror.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_profile.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
 		{
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_profile_observer.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_profile_settings.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectadhocaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectbytemplateaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectdonotforwardaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectiondescriptor.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectiondescriptorbuilder.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionengine.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },       
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionengine_observer.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionengine_settings.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionhandler.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionhandler_observer.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },       
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionprofile.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionprofile_observer.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
 		{
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_protectionprofile_settings.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_recommendlabelaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_removecontentfooteraction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_removecontentheaderaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_removeprotectionaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_removewatermarkaction.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_stream.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_userrights.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },       
         {
             "source_path": "Azure-RMSDocs/Develop/mip/class_mip_userroles.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/mip-enums-and-structs.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
 		{
             "source_path": "Azure-RMSDocs/Develop/mip/mip-functions.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "Azure-RMSDocs/Develop/mip/mip-sdk-reference.md",
-            "redirect_url": "/information-protection/develop/reference/mip-sdk-reference",
+            "redirect_url": "/azure/information-protection/develop/reference/mip-sdk-reference",
             "redirect_document_id": false
         },
         {
-            "source_path": "information-protection/develop/concept-auditing-policy-cpp.md",
+            "source_path": "Azure-RMSDocs/activate-azure-classic.md",
+            "redirect_url": "/azure/information-protection/deploy-use/activate-azure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/activate-office365-classic.md",
+            "redirect_url": "/azure/information-protection//deploy-use/activate-office365",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/azure-rms-problems-it-solves.md",
+            "redirect_url": "/azure/information-protection/what-is-azure-rms#business-problems-solved-by-azure-rights-management",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/configure-custom-templates.md",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-policy-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/configure-exchange-with-imported-tpd.md",
+            "redirect_url": "https://docs.microsoft.com/azure/information-protection/deploy-use/configure-office365#exchange-online-irm-configuration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/copy-template.md",
+            "redirect_url": "/azure/information-protection//deploy-use/configure-policy-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/create-template.md",
+            "redirect_url": "/azure/information-protection//deploy-use/configure-policy-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/infoprotect-configure-policy.md",
+            "redirect_url": "/azure/information-protection/configure-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/infoprotect-tutorial-step1.md",
+            "redirect_url": "/azure/information-protection/infoprotect-quick-start-tutorial",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/infoprotect-tutorial-step2.md",
+            "redirect_url": "/azure/information-protection/infoprotect-quick-start-tutorial",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/infoprotect-tutorial-step3.md",
+            "redirect_url": "/azure/information-protection/infoprotect-quick-start-tutorial",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/infoprotect-tutorial-step4.md",
+            "redirect_url": "/azure/information-protection/infoprotect-quick-start-tutorial",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/infoprotect-tutorial-step5.md",
+            "redirect_url": "/azure/information-protection/infoprotect-quick-start-tutorial",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rapid-deployment-guide.md",
+            "redirect_url": "https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/remove-template.md",
+            "redirect_url": "/azure/information-protection//deploy-use/configure-policy-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/requirements-full.md",
+            "redirect_url": "/azure/information-protection/get-started/requirements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-for-individuals-identify-sign-up.md",
+            "redirect_url": "/azure/information-protection/rms-for-individuals",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-for-individuals-take-control.md",
+            "redirect_url": "/azure/information-protection/rms-for-individuals",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-for-individuals-user-sign-up.md",
+            "redirect_url": "/azure/information-protection/rms-for-individuals",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-company-confidential-email.md",
+            "redirect_url": "https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-executives-email.md",
+            "redirect_url": "https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-fci.md",
+            "redirect_url": "/azure/information-protection/rms-client/configure-fci",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-secure-most-valuable-files.md",
+            "redirect_url": "https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-share-office-file-externally.md",
+            "redirect_url": "https://myignite.microsoft.com/videos/53230",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-sharepoint.md",
+            "redirect_url": "https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-work-folders.md",
+            "redirect_url": "https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/sharing-app-support.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/what-admins-users-see.md",
+            "redirect_url": "/azure/information-protection/understand-explore/what-is-azure-rms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/install-sharing-app.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-admin-guide-technical.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-admin-guide.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-dialog-box.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-keyboard-shortcuts.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-protect-by-email.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-protect-in-place.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-remove-protection.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-reprotect-files.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-track-revoke.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-user-guide.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-version-release-history.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-view-use-files.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "mip/develop/concept-auditing-policy-cpp.md",
             "redirect_url": "/information-protection/develop/concept-handler-policy-auditing-cpp",
             "redirect_document_id": false
         },
         {
-            "source_path": "information-protection/develop/concept-auditing-policy-computeactions-cpp.md",
+            "source_path": "mip/develop/concept-auditing-policy-computeactions-cpp.md",
             "redirect_url": "/information-protection/develop/concept-handler-policy-computeactions-cpp",
             "redirect_document_id": false
         },
         {
-            "source_path": "information-protection/develop/concept-auditing-policy-executionstate-cpp.md",
+            "source_path": "mip/develop/concept-auditing-policy-executionstate-cpp.md",
             "redirect_url": "/information-protection/develop/concept-handler-policy-executionstate-cpp",
             "redirect_document_id": false
         }
