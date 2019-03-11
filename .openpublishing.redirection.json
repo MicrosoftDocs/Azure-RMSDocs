@@ -191,8 +191,8 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "Azure-RMSDocs/get-started/help-bot.md",
-            "redirect_url": "/azure/information-protection/help-bot",
+            "source_path": "Azure-RMSDocs/help-bot.md",
+            "redirect_url": "/azure/information-protection/information-support#support-options-and-community-resources",
             "redirect_document_id": false
         },
         {
