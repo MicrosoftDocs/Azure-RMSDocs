@@ -69,7 +69,7 @@ Use the following table to help compare which features are supported by the two 
 |HYOK support:| Yes | No<br /><br /> Labels that you migrate from the Azure portal and that are configured for HYOK protection are displayed by the Azure Information Protection unified labeling client, but do not apply protection. |
 |Usage logging to Event Viewer:| Yes | No|
 |Label inheritance from email attachments:| Yes | No |
-|Display Do Not Forward button in Outlook| Yes | No |
+|Display the Do Not Forward button in Outlook| Yes | No |
 |[Customizations](client-admin-guide-customizations.md#available-advanced-client-settings) that include:<br />- Default label for email<br />- Enable custom permissions <br />- S/MIME support<br />- Report an Issue option| Yes | No |
 |Scanner for on-premises data stores:| Yes | No |
 |Track and revoke:| Yes | No |
