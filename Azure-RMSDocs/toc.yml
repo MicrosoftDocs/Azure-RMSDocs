@@ -412,9 +412,6 @@
       href: faqs-rms.md
   - name: Information and support
     href: information-support.md
-    items:
-    - name: Fast help
-      href: help-bot.md
   - name: Compliance and supporting information
     href: compliance.md
   - name: PowerShell reference
