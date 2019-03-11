@@ -6,7 +6,7 @@ description: Breaking down how Azure RMS works, the cryptographic controls that 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -57,7 +57,13 @@ Even if you don't need to know in detail how this technology works, you might be
 
 ###### Footnote 1 
 
-256 bits is used by the Azure Information Protection client for generic protection and native protection when the file has a .ppdf file name extension or is a protected text or image file (such as .ptxt or .pjpg).
+256 bits is used by the Azure Information Protection client in the following scenarios:
+
+- Generic protection (.pfile).
+
+- Native protection for PDF documents when the document has been protected with the ISO standard for PDF encryption, or the resulting protected document has a .ppdf file name extension.
+
+- Native protection for text or image files (such as .ptxt or .pjpg).
 
 ###### Footnote 2
 
