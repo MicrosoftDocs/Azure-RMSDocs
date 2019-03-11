@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -57,11 +57,11 @@ Use the following table to help compare which features are supported by the two 
 |Feature|Azure Information Protection client|Azure Information Protection<br /> unified labeling client|
 |-------|-----------------------------------|----------------------------------------------------|
 |Labeling actions: Manual, recommended, automatic| Yes | Yes |
-|Information Protection bar in Office apps<br />with customizable tooltip:| Yes | Yes|
 |Central reporting (analytics):| Yes | Yes |
 |Reset settings and export logs:| Yes | Yes |
 |User-defined permissions:| Yes | For Outlook only (Do Not Forward) |
 |Custom permissions:| Yes | File Explorer only <br /><br /> In Office apps, as an alternative, users can select **File Info** > **Protect Document** > **Restrict Access** |
+|Information Protection bar in Office apps:| Yes | Yes with limitations:<br /><br /> - No title or customizable tooltip<br /><br /> - Label color not displayed for applied label|
 |File Explorer, right-click actions:| Yes | Yes with limitations:<br /><br /> - Can't protect PDF documents for .ppdf format <br /><br />  - No support for protection-only mode|
 |A viewer for protected files:| Yes | Yes with limitations:<br /><br /> - For generically protected files (.pfile), unlike the viewer from the Azure Information Protection client, there's no ability to save changes to the originally opened file.|
 |PowerShell commands:| Yes | Yes with limitations:<br /><br />- Cmdlets included: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />- Cmdlets that connect directly to a protection service are not included|
@@ -69,11 +69,12 @@ Use the following table to help compare which features are supported by the two 
 |HYOK support:| Yes | No<br /><br /> Labels that you migrate from the Azure portal and that are configured for HYOK protection are displayed by the Azure Information Protection unified labeling client, but do not apply protection. |
 |Usage logging to Event Viewer:| Yes | No|
 |Label inheritance from email attachments:| Yes | No |
-|Display Do Not Forward button in Outlook| Yes | No |
+|Display the Do Not Forward button in Outlook| Yes | No |
 |[Customizations](client-admin-guide-customizations.md#available-advanced-client-settings) that include:<br />- Default label for email<br />- Enable custom permissions <br />- S/MIME support<br />- Report an Issue option| Yes | No |
 |Scanner for on-premises data stores:| Yes | No |
 |Track and revoke:| Yes | No |
 |Protection-only mode (no labels):| Yes | No |
+|Do Not Forward button in Outlook:| Yes | No |
 |Multilanguage support:| Yes | No |
 |Support for AD RMS:| Yes | The following action only is supported:<br /><br /> - The viewer can open protected documents|
 
