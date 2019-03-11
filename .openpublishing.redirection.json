@@ -1045,6 +1045,211 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "Azure-RMSDocs/activate-azure-classic.md",
+            "redirect_url": "/azure/information-protection/deploy-use/activate-azure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/activate-office365-classic.md",
+            "redirect_url": "/azure/information-protection//deploy-use/activate-office365",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/azure-rms-problems-it-solves.md",
+            "redirect_url": "/azure/information-protection/what-is-azure-rms#business-problems-solved-by-azure-rights-management",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/configure-custom-templates.md",
+            "redirect_url": "/azure/information-protection/deploy-use/configure-policy-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/configure-exchange-with-imported-tpd.md",
+            "redirect_url": "https://docs.microsoft.com/azure/information-protection/deploy-use/configure-office365#exchange-online-irm-configuration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/copy-template.md",
+            "redirect_url": "/azure/information-protection//deploy-use/configure-policy-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/create-template.md",
+            "redirect_url": "/azure/information-protection//deploy-use/configure-policy-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/infoprotect-configure-policy.md",
+            "redirect_url": "/azure/information-protection/configure-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/infoprotect-tutorial-step1.md",
+            "redirect_url": "/azure/information-protection/infoprotect-quick-start-tutorial",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/infoprotect-tutorial-step2.md",
+            "redirect_url": "/azure/information-protection/infoprotect-quick-start-tutorial",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/infoprotect-tutorial-step3.md",
+            "redirect_url": "/azure/information-protection/infoprotect-quick-start-tutorial",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/infoprotect-tutorial-step4.md",
+            "redirect_url": "/azure/information-protection/infoprotect-quick-start-tutorial",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/infoprotect-tutorial-step5.md",
+            "redirect_url": "/azure/information-protection/infoprotect-quick-start-tutorial",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rapid-deployment-guide.md",
+            "redirect_url": "https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/remove-template.md",
+            "redirect_url": "/azure/information-protection//deploy-use/configure-policy-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/requirements-full.md",
+            "redirect_url": "/azure/information-protection/get-started/requirements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-for-individuals-identify-sign-up.md",
+            "redirect_url": "/azure/information-protection/rms-for-individuals",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-for-individuals-take-control.md",
+            "redirect_url": "/azure/information-protection/rms-for-individuals",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-for-individuals-user-sign-up.md",
+            "redirect_url": "/azure/information-protection/rms-for-individuals",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-company-confidential-email.md",
+            "redirect_url": "https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-executives-email.md",
+            "redirect_url": "https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-fci.md",
+            "redirect_url": "/azure/information-protection/rms-client/configure-fci",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-secure-most-valuable-files.md",
+            "redirect_url": "https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-share-office-file-externally.md",
+            "redirect_url": "https://myignite.microsoft.com/videos/53230",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-sharepoint.md",
+            "redirect_url": "https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/scenario-work-folders.md",
+            "redirect_url": "https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/sharing-app-support.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/what-admins-users-see.md",
+            "redirect_url": "/azure/information-protection/understand-explore/what-is-azure-rms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/install-sharing-app.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-admin-guide-technical.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-admin-guide.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-dialog-box.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-keyboard-shortcuts.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-protect-by-email.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-protect-in-place.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-remove-protection.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-reprotect-files.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-track-revoke.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-user-guide.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-version-release-history.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/sharing-app-view-use-files.md",
+            "redirect_url": "/azure/information-protection/rms-client/sharing-app-windows",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "mip/develop/concept-auditing-policy-cpp.md",
             "redirect_url": "/information-protection/develop/concept-handler-policy-auditing-cpp",
             "redirect_document_id": false
