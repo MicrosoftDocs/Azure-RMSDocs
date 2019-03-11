@@ -92,7 +92,7 @@ When both clients support the same feature, use the following table to help iden
 |Supported formats for PDF:| Protection: <br /><br /> - ISO standard for PDF encryption (default) <br /><br /> - .ppdf <br /><br /> Consumption: <br /><br /> - ISO standard for PDF encryption <br /><br />- .ppdf<br /><br />- SharePoint IRM protection| Protection: <br /><br /> - ISO standard for PDF encryption <br /><br /> <br /><br /> Consumption: <br /><br /> - ISO standard for PDF encryption <br /><br />- .ppdf<br /><br />- SharePoint IRM protection|
 |Supported cmdlets:| All the cmdlets documented for [AzureInformatioProtection](/powershell/module/azureinformationprotection) | Set-AIPFileClassification and Set-AIPFileLabel don't support the *Owner* parameter or SharePoint Server libraries <br /><br /> In addition, there is a single comment of "No label to apply" for all scenarios where a label isn't applied <br /><br /> Set-AIPFileLabel doesn't support the *EnableTracking* parameter <br /><br /> Get-AIPFileStatus doesn't return label information from other tenants and doesn't display the *RMSIssuedTime* parameter<br /><br />In addition, the *LabelingMethod* parameter for Get-AIPFileStatus displays **Privileged**, **Standard**, or **Auto** instead of **Manual** or **Automatic**. For more information, see the [online documentation](/powershell/module/azureinformationprotection/get-aipfilestatus).|
 |Justification prompts (if configured) per action in Office: | Frequency: Per file <br /><br /> Lowering the sensitivity level <br /><br /> Removing a label<br /><br /> Removing protection | Frequency: Per session <br /><br /> Lowering the sensitivity level<br /><br /> Removing a label|
-|Remove label actions: | User is prompted to confirm <br /><br />Default label or automatic label (if configured) isn't automatically applied next time the Office app opens the file  <br /><br />| User isn't prompted to confirm<br /><br /> Default label or automatic label (if configured) is automatically applied next time the Office app opens the file|
+|Remove applied label actions: | User is prompted to confirm <br /><br />Default label or automatic label (if configured) isn't automatically applied next time the Office app opens the file  <br /><br />| User isn't prompted to confirm<br /><br /> Default label or automatic label (if configured) is automatically applied next time the Office app opens the file|
 |Automatic and recommended classification: | Configured as [label conditions](../configure-policy-classification.md) in the Azure portal with built-in information types and custom conditions that use phrases or regular expressions <br /><br />Configuration options include: <br /><br />- Unique / Not unique count <br /><br /> - Minimum count| Configured in the Security & Compliance Center with built-in sensitive information types and [custom information types](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Configuration options include:  <br /><br />- Unique count only <br /><br />- Minimum and maximum count <br /><br />- AND and OR support with information types <br /><br />- Keyword dictionary<br /><br />- Customizable confidence level and character proximity|
 
 #### Features that will not be in the Azure Information Protection unified labeling client
@@ -101,17 +101,15 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Custom permissions in Office apps: Word, Excel, and PowerPoint
 
-- Protect PDF document as .ppdf format
+- Track and revoke from Office apps and File Explorer
 
 - Information Protection bar title and tooltip
 
 - Offline support for protection actions in PowerShell and File Explorer
 
+- Protect PDF document as .ppdf format
+
 - Display the Do Not Forward button in Outlook
-
-- Track and revoke from Office apps and File Explorer
-
-- Support for AD RMS
 
 - Demo policy
 
@@ -124,6 +122,8 @@ Although the Azure Information Protection unified labeling client is still under
 - Label an Office document by using an existing custom property (SyncPropertyName and SyncPropertyState advanced client settings)
 
 - Separate PowerShell cmdlets to connect to a Rights Management service
+
+- AD RMS only protection
 
 
 ##### Parent labels and their sublabels 
