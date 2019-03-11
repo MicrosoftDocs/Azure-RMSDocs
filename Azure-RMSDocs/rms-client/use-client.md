@@ -95,6 +95,37 @@ When both clients support the same feature, use the following table to help iden
 |Remove label actions: | User is prompted to confirm <br /><br />Default label or automatic label (if configured) isn't automatically applied next time the Office app opens the file  <br /><br />| User isn't prompted to confirm<br /><br /> Default label or automatic label (if configured) is automatically applied next time the Office app opens the file|
 |Automatic and recommended classification: | Configured as [label conditions](../configure-policy-classification.md) in the Azure portal with built-in information types and custom conditions that use phrases or regular expressions <br /><br />Configuration options include: <br /><br />- Unique / Not unique count <br /><br /> - Minimum count| Configured in the Security & Compliance Center with built-in sensitive information types and [custom information types](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Configuration options include:  <br /><br />- Unique count only <br /><br />- Minimum and maximum count <br /><br />- AND and OR support with information types <br /><br />- Keyword dictionary<br /><br />- Customizable confidence level and character proximity|
 
+#### Features that will not be in the Azure Information Protection unified labeling client
+
+Although the Azure Information Protection unified labeling client is still under development, the following features and behavior differences from the Azure Information Protection client will not be available in future releases for the Azure Information Protection unified labeling client: 
+
+- Custom permissions in Office apps: Word, Excel, and PowerPoint
+
+- Protect PDF document as .ppdf format
+
+- Information Protection bar title and tooltip
+
+- Offline support for protection actions in PowerShell and File Explorer
+
+- Display the Do Not Forward button in Outlook
+
+- Track and revoke from Office apps and File Explorer
+
+- Support for AD RMS
+
+- Demo policy
+
+- Justification for removing protection
+
+- Confirmation prompt before deleting an applied label
+
+- Report an Issue link in the Help and Feedback dialog box
+
+- Label an Office document by using an existing custom property (SyncPropertyName and SyncPropertyState advanced client settings)
+
+- Separate PowerShell cmdlets to connect to a Rights Management service
+
+
 ##### Parent labels and their sublabels 
 
 The Azure Information Protection client doesn't support configurations that specify a parent label that has sublabels. These configurations include specifying a default label, and a label for recommended or automatic classification. When a label has sublabels, you can specify one of the sublabels but not the parent label.
