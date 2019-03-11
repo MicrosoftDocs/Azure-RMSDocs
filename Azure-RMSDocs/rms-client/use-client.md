@@ -107,6 +107,8 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Offline support for protection actions in PowerShell and File Explorer
 
+- Protection-only mode (no labels)
+
 - Protect PDF document as .ppdf format
 
 - Display the Do Not Forward button in Outlook
