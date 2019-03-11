@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -74,6 +74,7 @@ Use the following table to help compare which features are supported by the two 
 |Scanner for on-premises data stores:| Yes | No |
 |Track and revoke:| Yes | No |
 |Protection-only mode (no labels):| Yes | No |
+|Do Not Forward button in Outlook:| Yes | No |
 |Multilanguage support:| Yes | No |
 |Support for AD RMS:| Yes | The following action only is supported:<br /><br /> - The viewer can open protected documents|
 
