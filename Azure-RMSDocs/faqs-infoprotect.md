@@ -87,7 +87,9 @@ No. When you label an email message that has attachments, those attachments do n
 
 Because Azure Information Protection uses persistent metadata for classification, which includes a clear-text label, this information can be read by DLP solutions and other applications. 
 
-For more information and examples of using this metadata with Exchange Online mail flow rules, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).
+For more information about this metadata, see [Label information stored in emails and documents](configure-policy.md#label-information-stored-in-emails-and-documents)
+
+For examples of using this metadata with Exchange Online mail flow rules, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).
 
 ## Can I create a document template that automatically includes the classification?
 
