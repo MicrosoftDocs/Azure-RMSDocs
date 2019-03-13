@@ -135,7 +135,7 @@ The clients that currently support unified labeling include:
 
 Services that currently support unified labeling include:
 
-- Windows Defender ATP
+- Windows Defender Azure Threat Protection
 
 - Microsoft Cloud App Security
     
