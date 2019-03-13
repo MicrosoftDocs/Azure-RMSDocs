@@ -44,7 +44,7 @@ To complete this tutorial, you need:
 
 1. A subscription that includes Azure Information Protection Plan 2.
     
-    If you don't have a subscription that includes Azure Information Protection Plan 2, you can create a [free](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
+    If you don't have a subscription that includes Azure Information Protection Plan 2, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
 2. You've added the Azure Information Protection blade to the Azure portal, and confirmed that the protection service is activated.
 

@@ -110,7 +110,7 @@ After you have enabled the IRM service for SharePoint Online, users' OneDrive fo
 #### Configuration for users
 Give users the following instructions so that they can configure their OneDrive for Business to protect their business files.
 
-1. Sign in to Office 365 with your work or school account and go to the [OneDrive website](https://portal.office.com/onedrive).
+1. Sign in to Office 365 with your work or school account and go to the [OneDrive website](https://admin.microsoft.com/onedrive).
 
 2. In the navigation pane, at the bottom, select **Return to classic OneDrive**.
 
