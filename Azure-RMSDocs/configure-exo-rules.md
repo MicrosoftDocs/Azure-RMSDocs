@@ -56,7 +56,7 @@ For the following examples, create a new mail flow rule by using the following s
 
 2. Choose the **Admin** tile.
 
-3. In the Office 365 admin center, choose **Admin centers** > **Exchange**.
+3. In the Microsoft 365 admin center, choose **Admin centers** > **Exchange**.
 
 4. In the Exchange admin center: **mail flow** > **rules** > **+** > **Create a new rule**. 
 

@@ -65,9 +65,9 @@ When the Azure Rights Management service is activated, all users in your organiz
 
 ## Choosing your activation method
 
-For instructions how to activate the Rights Management service from your management portal, select whether to use the Office 365 admin center or the Azure portal:
+For instructions how to activate the Rights Management service from your management portal, select whether to use the Microsoft 365 admin center or the Azure portal:
 
-- [Office 365 admin center](activate-office365.md) - requires Global Administrator account
+- [Microsoft 365 admin center](activate-office365.md) - requires Global Administrator account
 
 - [Azure portal](activate-azure.md) - does not require Global Administrator account
 
