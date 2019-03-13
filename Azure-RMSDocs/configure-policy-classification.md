@@ -40,7 +40,7 @@ An example prompt for when you configure a condition to apply a label as a recom
 
 In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by selecting **Dismiss**. If the user chooses to dismiss the recommendation and the condition still applies when the document is next opened, the label recommendation is displayed again.
 
-If you configure automatic classification rather than recommended, the label is automatically applied and the user still sees a notification in Word, Excel, and PowerPoint. However, the **Change now** and **Dismiss** buttons are replace with **OK**. In Outlook, there is no notification because the label is applied at the time the email is sent.
+If you configure automatic classification rather than recommended, the label is automatically applied and the user still sees a notification in Word, Excel, and PowerPoint. However, the **Change now** and **Dismiss** buttons are replace with **OK**. In Outlook, there is no notification for automatic classification and the label is applied at the time the email is sent.
 
 > [!IMPORTANT]
 >Do not configure a label for automatic classification and a user-defined permission. The user-defined permissions option is a [protection setting](configure-policy-protection.md) that lets users specify who should be granted permissions.
