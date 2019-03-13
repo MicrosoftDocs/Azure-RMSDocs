@@ -71,7 +71,7 @@ Exchange does not have to be configured for Azure Information Protection before 
         
         The previously configured protection settings are retained as an archived protection template, and will be displayed again if you change the option back to **Protect**. You do not see this template in the Azure portal but if necessary, you can still manage the template by using [PowerShell](configure-templates-with-powershell.md). This behavior means that content remains accessible if it has this label with the previously applied protection settings.
         
-         When a label has this setting is applied: 
+         When a label has this **Not configured** protection setting is applied: 
          
          - If the content was previously protected without using a label, that protection is preserved. 
          
