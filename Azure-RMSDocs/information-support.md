@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/07/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -67,8 +67,6 @@ For additional support options, ask your Microsoft contact.
 
 
 ### Self-help
-
-Try the [Azure Information Protection help bot](help-bot.md), currently in beta.
 
 Hands-on labs: See [Azure Information Protection Hands On Lab](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)
 

@@ -97,7 +97,7 @@ Azure Information Protection clients can use these label settings without any pr
 |Cloud-based protection using user-defined permissions in Word, Excel, and PowerPoint |No|Yes|
 |HYOK-based protection using user-defined permissions in Outlook for Do Not Forward |No|Yes|
 |Remove protection |No|Yes|
-|Visual markings (header, footer, watermark): Custom font and custom font color by RGB code|No|Recommended if you use variables<br /><br />- On clients, variables display as text rather than display the dynamic values|
+|Custom font and custom font color by RGB code for visual markings (header, footer, watermark)|No|Recommended if you use variables<br /><br />- On clients, variables display as text rather than display the dynamic values|
 |Visual markings per app|No|Recommended if you use variables<br /><br />- On clients, variables display as text rather than display the dynamic values|
 |Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and their tooltips|Not applicable|No|
 

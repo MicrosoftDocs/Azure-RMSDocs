@@ -283,7 +283,7 @@ When you create and configure the following advanced client settings, users see 
 - **Their email or attachment for the email has a specific label**:
     - The attachment can be any file type
 
-- **The email or attachment for the email doesn't have a label**:
+- **Their email or attachment for the email doesn't have a label**:
     - The attachment can be an Office document or PDF document
 
 When these conditions are met and the recipient's email address is not included in a list of allowed domain names that you have specified, the user sees a pop-up messages with one of the following actions:
@@ -293,6 +293,28 @@ When these conditions are met and the recipient's email address is not included 
 - **Justify**: The user is prompted for justification (predefined options or free-form).  The user can then send or cancel the email. The justification text is written to the email x-header, so that it can be read by other systems. For example, data loss prevention (DLP) services.
 
 - **Block**: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
+
+The resulting action is logged to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**:
+
+- Warn messages: Information ID 301
+
+- Justify messages: Information ID 302
+
+- Block messages: Information ID 303
+
+Example event entry from a justify message:
+
+```
+Client Version: 1.48.1.0
+Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
+Item Full Path: Price list.msg
+Item Name: Price list
+Process Name: OUTLOOK
+Action: Justify
+User Justification: My manager approved sharing of this content
+Action Source: 
+User Response: Confirmed
+```
 
 
 ### To implement the warn, justify, or block pop-up messages for specific labels:

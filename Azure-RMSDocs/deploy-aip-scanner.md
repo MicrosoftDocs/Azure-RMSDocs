@@ -377,7 +377,7 @@ There are two alternative scenarios that the Azure Information Protection scanne
 
 ## Optimizing the performance of the scanner
 
-Use the following guidance to help you optimize the performance of the scanner. However, if your priority is the responsiveness of the scanner computer rather than the scanner performance, you can use an advanced client setting to [limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner).
+Use the following guidance to help you optimize the performance of the scanner. However, if your priority is the responsiveness of the scanner computer rather than the scanner performance, you can use an advanced client setting to limit the number of threads used by the scanner.
 
 To maximize the scanner performance:
 
@@ -496,5 +496,3 @@ Interested in how the Core Services Engineering and Operations team in Microsoft
 You might be wondering: [What’s the difference between Windows Server FCI and the Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 You can also use PowerShell to interactively classify and protect files from your desktop computer. For more information about this and other scenarios that use PowerShell, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md).
-
-
