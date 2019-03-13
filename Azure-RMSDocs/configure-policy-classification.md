@@ -6,7 +6,7 @@ description: Conditions for a label let you automatically assign a label to a do
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/16/2019
+ms.date: 03/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -40,7 +40,7 @@ An example prompt for when you configure a condition to apply a label as a recom
 
 In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by selecting **Dismiss**. If the user chooses to dismiss the recommendation and the condition still applies when the document is next opened, the label recommendation is displayed again.
 
-If you configure automatic classification rather than recommended, the label is automatically applied and the user still sees a notification in their Office apps. However, the **Change now** and **Dismiss** buttons are replace with **OK**.
+If you configure automatic classification rather than recommended, the label is automatically applied and the user still sees a notification in Word, Excel, and PowerPoint. However, the **Change now** and **Dismiss** buttons are replace with **OK**. In Outlook, there is no notification for automatic classification and the label is applied at the time the email is sent.
 
 > [!IMPORTANT]
 >Do not configure a label for automatic classification and a user-defined permission. The user-defined permissions option is a [protection setting](configure-policy-protection.md) that lets users specify who should be granted permissions.
