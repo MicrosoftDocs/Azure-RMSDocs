@@ -154,7 +154,7 @@ For a list of file name extensions that are natively supported by Azure Rights M
 
 ## How do I configure a Mac computer to protect and track documents?
 
-First, make sure that you have installed Office for Mac by using the software installation link from https://portal.office.com. For full instructions, see [Download and install or reinstall Office 365 or Office 2019 on a PC or Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+First, make sure that you have installed Office for Mac by using the software installation link from https://admin.microsoft.com. For full instructions, see [Download and install or reinstall Office 365 or Office 2019 on a PC or Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
 Open Outlook and create a profile by using your Office 365 work or school account. Then, create a new message and do the following to configure Office so that it can protect documents and emails by using the Azure Rights Management service:
 
