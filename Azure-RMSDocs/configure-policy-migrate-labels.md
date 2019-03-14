@@ -28,7 +28,7 @@ ms.suite: ems
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
-> This feature is in preview, and migrates your tenant to a new platform. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by multiple clients and services.
+> This feature is in preview, and migrates your tenant to a new platform. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by clients and services that support [Microsoft Information Protection solutions](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 Migrate your labels if you want to be able to use them as Office 365 sensitivity labels from the Office 365 Security & Compliance Center, to be used by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). After the migration, the Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
 
