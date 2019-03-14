@@ -142,9 +142,9 @@ To confirm whether the clients and services you use support unified labeling, re
     
     This service supports labels both before the migration to the unified labeling store, and after the migration, using the following logic:
     
-    - If the Office 365 Security & Compliance Center has the same labels as those in the Azure portal: Unified labels are used. To select them in Cloud App Security, at least one label must be published to at least one user.
+    - If the Office 365 Security & Compliance Center has the same labels as those in the Azure portal: Unified labels are retrieved from the Office 365 Security & Compliance Center. To select these labels in Cloud App Security, at least one label must be published to at least one user.
     
-    - If the Office 365 Security & Compliance Center doesn't have the same labels as those in the Azure portal: Unified labels are not used.
+    - If the Office 365 Security & Compliance Center doesn't have the same labels as those in the Azure portal: Unified labels are not used from the Office 365 Security & Compliance Center, and instead, labels are retrieved from the Azure portal.
 
 - Services from software vendors and developers that use the [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview).
 
