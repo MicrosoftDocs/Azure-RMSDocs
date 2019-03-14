@@ -71,13 +71,13 @@ Exchange does not have to be configured for Azure Information Protection before 
         
         The previously configured protection settings are retained as an archived protection template, and will be displayed again if you change the option back to **Protect**. You do not see this template in the Azure portal but if necessary, you can still manage the template by using [PowerShell](configure-templates-with-powershell.md). This behavior means that content remains accessible if it has this label with the previously applied protection settings.
         
-         When a label has this **Not configured** protection setting is applied: 
-         
+        When a label with this **Not configured** protection setting is applied:
+        
          - If the content was previously protected without using a label, that protection is preserved. 
          
-         - If the content was previously protected with a label, that protection is removed if users have permissions to remove Rights Management protection. This requirement means that users must have the **Export** or **Full Control** [usage right](configure-usage-rights.md). Or, they must be the Rights Management owner (which automatically grants the Full Control usage right), or be a [super user for Azure Rights Management](configure-super-users.md).
+         - If the content was previously protected with a label, that protection is removed if the user applying the label has permissions to remove Rights Management protection. This requirement means that the user must have the **Export** or **Full Control** [usage right](configure-usage-rights.md). Or, be the Rights Management owner (which automatically grants the Full Control usage right), or a [super user for Azure Rights Management](configure-super-users.md).
              
-             If users don't have permissions to remove protection, the label cannot be applied and users see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator**. 
+             If the user doesn't have permissions to remove protection, the label cannot be applied and the following message is displayed: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator**. 
     
     - **Protect**: Select this option to apply protection, and then go to step 4.
     
@@ -85,9 +85,9 @@ Exchange does not have to be configured for Azure Information Protection before 
         
         If the protection was applied with a label or protection template, the protection settings are retained as an archived protection template, and will be displayed again if you change the option back to **Protect**. You do not see this template in the Azure portal but if necessary, you can still manage the template by using [PowerShell](configure-templates-with-powershell.md). This behavior means that content remains accessible if it has this label with the previously applied protection settings.
         
-        Note that for users to apply a label that has this option, they must have permissions to remove Rights Management protection. This requirement means that users must have the **Export** or **Full Control** [usage right](configure-usage-rights.md). Or, they must be the Rights Management owner (which automatically grants the Full Control usage right), or be a [super user for Azure Rights Management](configure-super-users.md). 
+        Note that for a user to successfully apply a label that has this option, that user must have permissions to remove Rights Management protection. This requirement means that the user must have the **Export** or **Full Control** [usage right](configure-usage-rights.md). Or, be the Rights Management owner (which automatically grants the Full Control usage right), or a [super user for Azure Rights Management](configure-super-users.md). 
         
-        If users do not have permissions to remove Rights Management protection, and they select a label that is configured with this **Remove Protection** option, the label cannot be applied and they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
+        If the user applying the label with this setting does not have permissions to remove Rights Management protection, the label cannot be applied and the following message is displayed: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
 
 4. If you selected **Protect**, the **Protection** blade automatically opens if one of the other options were previously selected. If this new blade does not automatically open, select **Protection**:
     
