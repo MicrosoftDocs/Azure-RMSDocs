@@ -36,7 +36,7 @@ Use Azure Information Protection analytics for central reporting to track the ad
 
 - Monitor user access to labeled documents and emails, and any changes to their classification. 
 
-- Identify documents that contain sensitive information that might be putting your organization at risk if they are not protected.
+- Identify documents that contain sensitive information that might be putting your organization at risk if they are not protected, and mitigate your risk by following recommendations.
 
 Currently, the data that you see is aggregated from your Azure Information Protection clients and Azure Information Protection scanners, and from Windows computers running [Windows Defender Advanced Threat Protection (Windows Defender ATP)](/windows/security/threat-protection/windows-defender-atp/overview).
 
