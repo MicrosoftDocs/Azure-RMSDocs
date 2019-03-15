@@ -36,7 +36,7 @@ Use Azure Information Protection analytics for central reporting to track the ad
 
 - Monitor user access to labeled documents and emails, and any changes to their classification. 
 
-- Identify documents that contain sensitive information that must be protected.
+- Identify documents that contain sensitive information that might be putting your organization at risk if they are not protected.
 
 Currently, the data that you see is aggregated from your Azure Information Protection clients and Azure Information Protection scanners, and from Windows computers running [Windows Defender Advanced Threat Protection (Windows Defender ATP)](/windows/security/threat-protection/windows-defender-atp/overview).
 
@@ -74,6 +74,17 @@ For example, you'll be able to see the following:
     
     - Which files contain sensitive information for known categories, such as financial data and personal information, and the location of files by these categories
     
+
+- From the **Recommendations** report:
+    
+    - Identify unprotected files that contain a known sensitive information type. A recommendation lets you immediately configure the corresponding condition for one of your labels to apply automatic or recommended labeling.
+        
+        If you follow the recommendation: The next time the files are opened by a user or scanned by the Azure Information Protection scanner, the files can be automatically classified and protected.
+    
+    - Which data repositories have files with identified sensitive information but are not being scanned by the Azure Information Protection. A recommendation lets you immediately add the identified data store to one of your scanner's profiles.
+        
+        If you follow the recommendation: On the next scanner cycle, the files can be automatically classified and protected.
+
 The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to store the data in a Log Analytics workspace that your organization owns. If you're familiar with the query language, you can modify the queries, and create new reports and Power BI dashboards. You might find the following tutorial helpful to understand the query language: [Get started with Azure Monitor log queries](/azure/azure-monitor/log-query/get-started-queries). 
 
 For more information, read the following blog posts: 
@@ -121,6 +132,7 @@ To view the Azure Information Protection reports and create your own, make sure 
 |An Azure subscription that includes Log Analytics|See the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
 |The Azure Information Protection client (current generally available version, or preview version) or the preview version of the Azure Information Protection unified labeling client|If you haven't already installed one of these versions of the client, you can download and install them from the Microsoft Download Center:<br /> - [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) <br /> - [Azure Information Protection unified labeling client](https://www.microsoft.com/en-us/download/details.aspx?id=57440)|
 |For the **Discovery and risk** report: <br /><br />- To display data from on-premises data stores, you have deployed at least one instance of the Azure Information Protection scanner (current generally availability or preview version) <br /><br />- To display data from Windows 10 computers, they must be a minimum build of 1809, you are using Windows Defender Advanced Threat Protection (Windows Defender ATP), and you have enabled the Azure Information Protection integration feature from Windows Defender Security Center|For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). If you're upgrading from a previous version of the scanner, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).<br /><br />For information about configuring and using the Azure Information Protection integration feature from Windows Defender Security Center, see [Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
+|For the **Recommendations** report: <br /><br />- To add a new data repository from the Azure portal as a recommended action, you must be using the current preview version of the Azure Information Protection scanner |To deploy the preview version of the scanner, see [Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner-preview.md). If you're upgrading from a previous version of the scanner, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 
 ### Permissions required for Azure Information Protection analytics
 
@@ -196,6 +208,8 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
     This report has a **Columns** option, that lets you display more activity information than the default display.
 
 - **Data discovery (Preview)**: Use this report to see information about files found by scanners or Windows Defender ATP.
+
+- **Recommendations (Preview)**: Use this report to identify files that have sensitive information and mitigate your risk by following the recommendations.
 
 > [!NOTE]
 > There is currently a known problem displaying question marks (**?**) in paths and file names instead of non-ASCII characters when the sending operating system locale is English.
