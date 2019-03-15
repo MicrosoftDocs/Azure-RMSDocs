@@ -210,6 +210,8 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
 - **Data discovery (Preview)**: Use this report to see information about files found by scanners or Windows Defender ATP.
 
 - **Recommendations (Preview)**: Use this report to identify files that have sensitive information and mitigate your risk by following the recommendations.
+    
+    When you select an item, the **View data** option displays the audit activities that triggered the recommendation.
 
 > [!NOTE]
 > There is currently a known problem displaying question marks (**?**) in paths and file names instead of non-ASCII characters when the sending operating system locale is English.
