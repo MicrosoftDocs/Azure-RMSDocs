@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/07/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -59,7 +59,7 @@ For other customers, use the support channels in the following table, depending 
 |Subscription|Instructions|
 |----------------|---------------|
 |Azure Information Protection (standalone)|1. Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal.<br /><br />2. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. <br /><br />3. In addition, make sure that one of the following options are selected:<br /><br />- **Subscription with technical support included**: You see this option if you have a paid or trial subscription for Azure.<br /><br /> - **Technical support - Included**: You see this option if you don't have an Azure subscription.|
-|Azure Information Protection and an Office 365 subscription<br /><br />Azure Rights Management with an Office 365 subscription|See [Contact support for business products - Admin Help](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) for information about how to contact Support by using the Office 365 admin portal, and for contact telephone numbers.|
+|Azure Information Protection and an Office 365 subscription<br /><br />Azure Rights Management with an Office 365 subscription|See [Contact support for business products - Admin Help](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) for information about how to contact Support by using the Microsoft 365 admin center, and for contact telephone numbers.|
 |Azure Information Protection with Enterprise Mobility + Security (EMS)|1. Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal.<br /><br />2. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. <br /><br />3. In addition, make sure that one of the following options are selected:<br /><br />- **Subscription with technical support included**: You see this option if you have a paid or trial subscription for Azure.<br /><br /> - **Technical support - Included**: You see this option if you don't have an Azure subscription.|
 |Azure Information Protection with Microsoft 365 Enterprise|Use the [Office 365 support channels](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
@@ -67,8 +67,6 @@ For additional support options, ask your Microsoft contact.
 
 
 ### Self-help
-
-Try the [Azure Information Protection help bot](help-bot.md), currently in beta.
 
 Hands-on labs: See [Azure Information Protection Hands On Lab](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)
 

@@ -30,7 +30,7 @@ This topic outlines important changes and features in this new version of the RM
 -   [May 2015 update - Adds logging control](#may-2015-update---adds-logging-control)
 -   [February 2015 update - Adds Windows Store application support](#february-2015-update---adds-windows-store-application-support)
 -   [January 2015 Update - Adds WinPhone platform support](#january-2015-update---adds-winphone-platform-support)
--   [October 2014 update - Upgrade to Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-4-1)
+-   [October 2014 update - Upgrade to Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-41)
 -   [Release notes](#release-notes)
 -   [Frequently asked questions](#frequently-asked-questions)
 
@@ -237,4 +237,3 @@ This section outlines information about the current and previous releases of the
 **Q**: Sample app framework is adapted to Xcode 5, can I work with Xcode 4.6?
 
 **A**:The OS X SDK works with Xcode 4.6 and later only, as well as OS X 10.8 and later.
-

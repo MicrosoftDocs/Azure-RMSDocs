@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/06/2019
+ms.date: 03/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -218,7 +218,7 @@ To configure this advanced setting, enter the following strings:
 
 ## For files protected with custom permissions, always display custom permissions to users in File Explorer
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. The setting is in preview and requires the preview version of the client.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and requires the preview version of the client.
 
 When you configure the [policy setting](../configure-policy-settings.md) **Make the custom permissions option available for users** or the equivalent advanced client setting in the previous section, users are not able to see or change custom permissions that are already set in a protected document. 
 
@@ -276,14 +276,14 @@ To configure this advanced setting, enter the following strings:
 
 ## Implement pop-up messages in Outlook that warn, justify, or block emails being sent
 
-This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This configuration is in preview and might change.
+This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and requires the preview version of the client.
 
 When you create and configure the following advanced client settings, users see pop-up messages in Outlook that can warn them before sending an email, or ask them to provide justification why they are sending an email, or prevent them from sending an email for either of the following scenarios:
 
 - **Their email or attachment for the email has a specific label**:
     - The attachment can be any file type
 
-- **The email or attachment for the email doesn't have a label**:
+- **Their email or attachment for the email doesn't have a label**:
     - The attachment can be an Office document or PDF document
 
 When these conditions are met and the recipient's email address is not included in a list of allowed domain names that you have specified, the user sees a pop-up messages with one of the following actions:
@@ -293,6 +293,28 @@ When these conditions are met and the recipient's email address is not included 
 - **Justify**: The user is prompted for justification (predefined options or free-form).  The user can then send or cancel the email. The justification text is written to the email x-header, so that it can be read by other systems. For example, data loss prevention (DLP) services.
 
 - **Block**: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
+
+The resulting action is logged to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**:
+
+- Warn messages: Information ID 301
+
+- Justify messages: Information ID 302
+
+- Block messages: Information ID 303
+
+Example event entry from a justify message:
+
+```
+Client Version: 1.48.1.0
+Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
+Item Full Path: Price list.msg
+Item Name: Price list
+Process Name: OUTLOOK
+Action: Justify
+User Justification: My manager approved sharing of this content
+Action Source: 
+User Response: Confirmed
+```
 
 
 ### To implement the warn, justify, or block pop-up messages for specific labels:
@@ -469,6 +491,8 @@ If you need the client to revert to the behavior in older versions of the client
 
 - Value: **False**
 
+For example, you might need this setting for all users if you have a configuration or PDF reader that doesn't support the ISO standard for PDF encryption. Or, you might need to configure it for some users as you gradually phase in a change of PDF reader that supports the new format.
+
 For the Azure Information Protection scanner to use the new setting, the scanner service must be restarted. In addition, the scanner will no longer protect PDF documents by default. If you want PDF documents to be protected by the scanner when EnablePDFv2Protection is set to False, you must [edit the registry](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
 
 For more information about the new PDF encryption, see the blog post [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
@@ -509,7 +533,7 @@ The file retains the .pdf file name extension but is classified as before, and i
 
 ## Support for files protected by Secure Islands
 
-This configuration option is currently in preview and is subject to change.
+This configuration option is in preview and is subject to change.
 
 If you used Secure Islands to protect documents, you might have protected text and picture files, and generically protected files as a result of this protection. For example, files that have a file name extension of .ptxt, .pjpeg, or .pfile. When you edit the registry as follows, Azure Information Protection can decrypt these files:
 

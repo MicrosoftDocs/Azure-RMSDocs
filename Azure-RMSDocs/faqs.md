@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -54,7 +54,7 @@ For more information about migrating your existing labels, see [How to migrate A
 
 ## When is the right time to migrate my labels to Office 365?
 
-Sensitivity labels in the Office 365 Security & Compliance Center are generally available but the option to migrate your Azure Information Protection labels is still in preview. When the labels are migrated to the unified labeling store, they can be published and then downloaded by [clients that support unified labeling](configure-policy-migrate-labels.md#clients-that-support-unified-labeling). Today, not all clients support unified labels or are generally available.
+Sensitivity labels in the Office 365 Security & Compliance Center are generally available but the option to migrate your Azure Information Protection labels is still in preview. When the labels are migrated to the unified labeling store, they can be published and then used by [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Today, not all clients support unified labels or are generally available.
 
 We recommend that you first test preview functionality with a test tenant, and then migrate your production tenant. In addition:
 
@@ -74,11 +74,11 @@ See also [Which preview client do I install for testing new functionality?](faqs
 
 After you've migrated your labels in the Azure portal:
 
-- If you have [unified labeling clients](configure-policy-migrate-labels.md#clients-that-support-unified-labeling), go the Office 365 Security & Compliance Center to publish these labels, and to configure the policy settings for unified labeling clients. For label changes going forward, use the Security & Compliance Center. Unified labeling clients download the labels and policy settings from the Security & Compliance Center.
+- If you have [unified labeling clients and services](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), go the Office 365 Security & Compliance Center to publish these labels, and to configure their policy settings. For label changes going forward, use the Security & Compliance Center. Unified labeling clients download the labels and policy settings from the Security & Compliance Center.
 
 - If you have [Azure Information Protection clients](./rms-client/aip-client.md), continue to use the Azure portal to edit your labels and policy settings. Azure Information Protection clients continue to download the labels and policy settings from Azure.
 
-- If you have both [unified labeling clients](configure-policy-migrate-labels.md#clients-that-support-unified-labeling) and [Azure Information Protection clients](./rms-client/aip-client.md), you can use either portal to make label changes. However, for Azure Information Protection clients to pick up the label changes that you make in the Security & Compliance Center, you must return to the Azure portal: Use the **Publish** option from the **Azure Information Protection - Unified labeling** blade in the Azure portal. 
+- If you have both [unified labeling clients](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) and [Azure Information Protection clients](./rms-client/aip-client.md), you can use either portal to make label changes. However, for Azure Information Protection clients to pick up the label changes that you make in the Security & Compliance Center, you must return to the Azure portal: Use the **Publish** option from the **Azure Information Protection - Unified labeling** blade in the Azure portal. 
 
 Continue to use the Azure portal for [central reporting](reports-aip.md) and the [scanner](deploy-aip-scanner-preview.md).
 
@@ -200,7 +200,9 @@ When the scanner protects files on SharePoint sites and libraries, the Rights Ma
 
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
-The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services) and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office 365 blog](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog) and [Office Apps blog](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog).
+The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility + Security Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services).
+
+If it’s an Office release that you’re interested in, be sure to also check the [Office 365 blog](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog) and [Office Apps blog](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog).
 
 ## Is Azure Information Protection suitable for my country?
 
@@ -216,8 +218,6 @@ See [Compliance and supporting information for Azure Information Protection](./c
 ## How can I report a problem or send feedback for Azure Information Protection?
 
 For technical support, use your standard support channels or [contact Microsoft Support](information-support.md#to-contact-microsoft-support).
-
-For feedback such as suggestions for improvements or new features: In your Office application, on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and Feedback**. In the **Microsoft Azure Information Protection** dialog box, click **Send Us Feedback**. This option opens an email message to be sent to the Information Protection team.
 
 We also invite you to engage with our engineering team, on their [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/). 
 

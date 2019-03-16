@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/12/2019
+ms.date: 03/14/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,9 +28,9 @@ ms.suite: ems
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
-> This feature is in preview, and migrates your tenant to a new platform. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by multiple clients and services.
+> This feature is in preview, and migrates your tenant to a new platform. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by clients and services that support [Microsoft Information Protection solutions](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection).
 
-Migrate your labels if you want to be able to use them in the Office 365 Security & Compliance Center, where they can be published and then downloaded by [clients that support unified labeling](#clients-that-support-unified-labeling). The Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
+Migrate your labels if you want to be able to use them as Office 365 sensitivity labels from the Office 365 Security & Compliance Center, to be used by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). After the migration, the Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
 
 Before you read detailed instructions about how to migrate your labels, you might find the following frequently asked questions useful:
 
@@ -46,14 +46,14 @@ The [Azure AD roles](/azure/active-directory/active-directory-assign-admin-roles
 
 If you do not give these users access to the Security & Compliance Center by using one of these configurations, they will lose access to labels and policies in the Azure portal after your labels are migrated.
 
-Global administrators for your tenant can continue to manage labels and polices in both the Azure portal and the Security & Compliance Center after your labels are migrated.
+Global administrators for your tenant can continue to manage labels and policies in both the Azure portal and the Security & Compliance Center after your labels are migrated.
 
 
 ## Considerations for unified labels
 
 Before you migrate your labels, make sure that you are aware of the following changes and considerations:
 
-- Not all clients currently support unified labels. Make sure that you have [supported clients](#clients-that-support-unified-labeling) and be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the Security & Compliance Center (for client that do support unified labels).
+- Not all clients currently support unified labels. Make sure that you have [supported clients](#clients-and-services-that-support-unified-labeling) and be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the Security & Compliance Center (for client that do support unified labels).
 
 - If you are in the middle of defining and configuring the labels that you want to use, we recommend that you complete this process by using the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in the Security & Compliance Center.
 
@@ -61,7 +61,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
     
     For a more consistent user experience, we recommend you publish the same labels in the same scopes in the Security & Compliance Center.
 
-- Not all settings from a migrated label are supported by the Security & Compliance Center. Use the table in the [Label settings that are not supported in the Security & Compliance Center](#label-settings-that-are-not-supported-in-the-security--compliance-center) section to help you identify the settings that are not supported by the Security & Compliance Center.
+- Not all settings from a migrated label are supported by the Security & Compliance Center. Use the table in the [Label settings that are not supported in the Security & Compliance Center](#label-settings-that-are-not-supported-in-the-security--compliance-center) section to help you identify these settings and the recommended course of action.
 
 - Protection templates:
     
@@ -85,21 +85,22 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 ### Label settings that are not supported in the Security & Compliance Center
 
-Use the following table to identify which configuration settings of a migrated label are not supported by unified labeling clients, or are supported with limitations. To avoid confusion, we recommend that you don't configure the settings that have no effect on unified labeling clients.
+Use the following table to identify which configuration settings of a migrated label are not supported by the Security & Compliance Center. If you have labels with these settings, when the migration is complete, use the administration guidance in the final column before you publish your labels in the Office 365 Security & Compliance Center.
 
-Azure Information Protection clients can use these label settings without any problems because they continue to download the labels from the Azure portal.
+Azure Information Protection clients can use all label settings listed without any problems because they continue to download the labels from the Azure portal.
 
-|Label configuration|Supported by unified labeling clients|Exclude from editing in the Security & Compliance Center|
+|Label configuration|Supported by unified labeling clients| Guidance for the Security & Compliance Center|
 |-------------------|---------------------------------------------|-------------------------|
-|Status of enabled or disabled<br /><br />Notes: Not synchronized to the Security & Compliance Center |Not applicable|Not applicable|
-|Label color: Select from list or specify by using RGB code<br /><br />Notes: Label colors are not supported by the Security & Compliance Center |Not applicable|Not applicable|
-|Cloud-based protection or HYOK-based protection using a predefined template |No|Yes|
-|Cloud-based protection using user-defined permissions in Word, Excel, and PowerPoint |No|Yes|
-|HYOK-based protection using user-defined permissions in Outlook for Do Not Forward |No|Yes|
-|Remove protection |No|Yes|
-|Visual markings (header, footer, watermark): Custom font and custom font color by RGB code|No|Recommended if you use variables<br /><br />- On clients, variables display as text rather than display the dynamic values|
-|Visual markings per app|No|Recommended if you use variables<br /><br />- On clients, variables display as text rather than display the dynamic values|
-|Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and their tooltips|Not applicable|No|
+|Status of enabled or disabled<br /><br />Notes: Not synchronized to the Security & Compliance Center |Not applicable|The equivalent is whether the label is published or not. |
+|Label color that you select from list or specify by using RGB code |Yes|No configuration option for label colors. Instead, you can configure label colors in the Azure portal.|
+|Cloud-based protection or HYOK-based protection using a predefined template |No|No configuration option for predefined templates. We do not recommend you publish a label with this configuration.|
+|Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint |No|No configuration option for user-defined permissions for these Office apps. We do not recommend you publish a label with this configuration.|
+|HYOK-based protection using user-defined permissions for Outlook (Do Not Forward) |No|No configuration option for HYOK. We do not recommend you publish a label with this configuration.|
+|Remove protection |No|No configuration option to remove protection. We do not recommend you publish a label with this configuration.<br /><br /> If you do publish this label, when it is applied, protection will be removed if was previously applied by a label. If protection was previously applied independently from a label, the protection is preserved.|
+|Custom font and custom font color by RGB code for visual markings (header, footer, watermark)|Yes|Configuration for visual markings is limited to a list of colors and font sizes. You can publish this label without changes although you cannot see the configured values in the Security & Compliance Center. <br /><br />To change these options, you can use the Azure portal. However, for easier administration, consider changing the color to one of the listed options in the Security & Compliance Center.|
+|Variables in visual markings (header, footer)|No|If you publish this label without changes, variables display as text on clients rather than display the dynamic values. Before you publish the label, edit the strings to remove the variables.|
+|Visual markings per app|No|If you publish this label without changes, the app variables display as text on clients in all apps rather than display your text strings on chosen apps. Publish this label only if it is suitable for all apps, and edit the strings to remove the app variables.|
+|Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and their tooltips|Not applicable|Reconfigure your conditions by using auto labeling as a separate configuration from label settings.|
 
 
 ## To migrate Azure Information Protection labels
@@ -116,21 +117,36 @@ You must be a global administrator to migrate your labels.
 
 3. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
 
-For the labels that successfully migrated, they can now be used by [clients that support unified labeling](#clients-that-support-unified-labeling). However, you must first publish these labels in the Security & Compliance Center.
+For the labels that successfully migrated, they can now be used by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). However, you must first publish these labels in the Security & Compliance Center.
 
 > [!IMPORTANT]
 > If you edit the labels outside the Azure portal, for Azure Information Protection clients, return to this **Azure Information Protection - Unified labeling** blade, and select **Publish**.
 
-### Clients that support unified labeling
+### Clients and services that support unified labeling
 
-The clients that currently support unified labeling include:
+To confirm whether the clients and services you use support unified labeling, refer to their documentation to check whether they can use sensitivity labels that are published from the Office 365 Security & Compliance Center. 
+
+##### Clients that currently support unified labeling include:
 
 - The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md) - in preview
 
 - Apps from Office that are in different stages of availability. For more information, see the **Where the feature is available today?** section from [Apply sensitivity labels to your documents and email within Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in the Office documentation.
     
-- Clients from software vendors and developers that use the [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference).
+- Apps from software vendors and developers that use the [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview).
 
+##### Services that currently support unified labeling include:
+
+- Windows Defender Azure Threat Protection
+
+- Microsoft Cloud App Security
+    
+    This service supports labels both before the migration to the unified labeling store, and after the migration, using the following logic:
+    
+    - If the Office 365 Security & Compliance Center has the same labels as those in the Azure portal: Unified labels are retrieved from the Office 365 Security & Compliance Center. To select these labels in Cloud App Security, at least one label must be published to at least one user.
+    
+    - If the Office 365 Security & Compliance Center doesn't have the same labels as those in the Azure portal: Unified labels are not used from the Office 365 Security & Compliance Center, and instead, labels are retrieved from the Azure portal.
+
+- Services from software vendors and developers that use the [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview).
 
 ## Next steps
 

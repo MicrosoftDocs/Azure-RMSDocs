@@ -110,7 +110,7 @@ After you have enabled the IRM service for SharePoint Online, users' OneDrive fo
 #### Configuration for users
 Give users the following instructions so that they can configure their OneDrive for Business to protect their business files.
 
-1. Sign in to Office 365 with your work or school account and go to the [OneDrive website](https://portal.office.com/onedrive).
+1. Sign in to Office 365 with your work or school account and go to the [OneDrive website](https://admin.microsoft.com/onedrive).
 
 2. In the navigation pane, at the bottom, select **Return to classic OneDrive**.
 
@@ -508,7 +508,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
 
    2. Search for `$tenantAdmin` and replace the example value with your own fully qualified global administrator account for Office 365.
 
-      This value is the same as the one you use to sign in to the Office 365 admin portal as the global administrator and has the following format: user_name@*&lt;tenant domain name&gt;*.com
+      This value is the same as the one you use to sign in to the Microsoft 365 admin center as the global administrator and has the following format: user_name@*&lt;tenant domain name&gt;*.com
 
       For example, if the Office 365 global administrator user name is "admin" for the "contoso.com" tenant domain, you would specify: <strong>admin@contoso.com</strong>
 
