@@ -412,7 +412,9 @@ Other factors that affect the scanner performance:
 - The construction of regex expressions for custom conditions
     
     To avoid heavy memory consumption and the risk of timeouts (15 minutes per file), review your regex expressions for efficient pattern matching. For example:
+    
         - Avoid [greedy quantifiers](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
+        
         - Use non-capturing groups such as `(?:expression)` instead of `(expression)`
 
 - Your chosen logging level
