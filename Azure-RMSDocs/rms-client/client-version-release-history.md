@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/07/2019
+ms.date: 03/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -242,21 +242,6 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - The **Send Us Feedback** link in the **Help and Feedback** dialog box is removed. It was temporarily replaced with **Report an Issue** that by default, sent an email to Microsoft. From December 2018 onward, the  **Report an Issue** option is not displayed by default but can be added with an [advanced client setting](client-admin-guide-customizations.md#add-report-an-issue-for-users) where you specify an HTTP string for the link. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk. 
 
-## Version 1.29.5.0 
-
-**Released**: 06/26/2018
-
-This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
-
-**Fixes**:
-
-- For Outlook versions 16.0.9324.1000 and later (Click-to-Run), the Azure Information Protection bar supports the latest monitor display options that previously might result in the bar displaying outside the Outlook application.
-
-- Visual markings that you configure [per Office application type](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) now replace a header or footer that was previously applied by an Azure Information Protection label.
-
-- When an Excel file is already labeled and the label applies visual markings, a new sheet now also has the label's visual markings applied.
-
-- When you use the advanced client setting to [label an Office document by using an existing custom property](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property), automatic labeling doesn't override manual labeling.
 
 ## Next steps
 
