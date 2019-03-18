@@ -121,7 +121,13 @@ For your cloud data stores, use Microsoft Cloud App Security to apply your label
 
 See the latest information about how Azure Information Protection helps you to discover, classify, protect and monitor your sensitive information, wherever it lives:
 
-> [!VIDEO <iframe width="854" height="480" src="https://www.youtube.com/embed/UI0p9xqMNfI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]
+[!VIDEO <iframe width="854" height="480" src="https://www.youtube.com/embed/UI0p9xqMNfI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]
+
+
+## Test
+
+<iframe src="https://www.youtube-nocookie.com/embed/UI0p9xqMNfI" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+
 
 ## Resources for Azure Information Protection
 
