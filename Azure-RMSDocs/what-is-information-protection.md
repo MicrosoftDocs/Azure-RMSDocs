@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -116,6 +116,12 @@ For your on-premises data stores, use the Azure Information Protection scanner t
 For more information about deploying and using the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
 For your cloud data stores, use Microsoft Cloud App Security to apply your labels to documents in Box, SharePoint Online, and OneDrive for Business. For more information, see [Automatically apply Azure Information Protection classification labels](/cloud-app-security/use-case-information-protection) and [Azure Information Protection integration](/cloud-app-security/azip-integration).
+
+## Latest labeling updates with Office 365
+
+See the latest information about how Azure Information Protection helps you to discover, classify, protect and monitor your sensitive information, wherever it lives:
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=UI0p9xqMNfI&feature=youtu.be"></iframe>
 
 
 ## Resources for Azure Information Protection
