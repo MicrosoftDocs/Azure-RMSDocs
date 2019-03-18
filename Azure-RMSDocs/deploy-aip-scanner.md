@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/29/2019
+ms.date: 03/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -408,6 +408,14 @@ Other factors that affect the scanner performance:
 - You change the conditions in the Azure Information Protection
     
     Your first scan cycle when the scanner must inspect every file will obviously take longer than subsequent scan cycles that by default, inspect only new and changed files. However, if you change the conditions in the Azure Information Protection policy, all files are scanned again, as described in the [preceding section](#when-files-are-rescanned).
+
+- The construction of regex expressions for custom conditions
+    
+    To avoid heavy memory consumption and the risk of timeouts (15 minutes per file), review your regex expressions for efficient pattern matching. For example:
+    
+    - Avoid [greedy quantifiers](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
+    
+    - Use non-capturing groups such as `(?:expression)` instead of `(expression)`
 
 - Your chosen logging level
     
