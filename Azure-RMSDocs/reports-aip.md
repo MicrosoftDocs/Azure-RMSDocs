@@ -148,7 +148,7 @@ Details:
     > [!NOTE] 
     > If your tenant has been migrated to the unified labeling store, your account must be a global administrator or one of the listed roles plus permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
-2. To access your Azure Log Analytics workspace, you must have one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
+2. To access your Azure Log Analytics workspace, you must have one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-accounts-and-users) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
     
     - To create a Log Analytics workspace or to create custom queries, one of the following:
     
