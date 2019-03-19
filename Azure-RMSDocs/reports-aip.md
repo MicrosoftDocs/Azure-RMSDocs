@@ -106,7 +106,7 @@ To generate these reports, the endpoints send the following types of information
 
 - The client operating system version.
 
-This information is stored in an Azure Log Analytics workspace that your organization owns and can be viewed independently from Azure Information Protection by users who have access rights to this workspace. For details, see the [Permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics) section. For information about managing access to your workspace, see the [Manage accounts and users](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-accounts-and-users) section from the Azure documentation.
+This information is stored in an Azure Log Analytics workspace that your organization owns and can be viewed independently from Azure Information Protection by users who have access rights to this workspace. For details, see the [Permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics) section. For information about managing access to your workspace, see the [Manage access to Log Analytics Workspace using Azure permissions](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) section from the Azure documentation.
 
 > [!NOTE]
 > Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for document content matches. When you select this checkbox, the actual data that's identified by the sensitive information types or your custom conditions is also collected. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to collect this data, do not select this checkbox.
@@ -148,7 +148,7 @@ Details:
     > [!NOTE] 
     > If your tenant has been migrated to the unified labeling store, your account must be a global administrator or one of the listed roles plus permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
-2. To access your Azure Log Analytics workspace, you must have one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-accounts-and-users) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
+2. To access your Azure Log Analytics workspace, you must have one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
     
     - To create a Log Analytics workspace or to create custom queries, one of the following:
     
