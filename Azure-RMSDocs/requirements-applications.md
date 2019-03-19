@@ -34,7 +34,7 @@ Use the following tables to identify the applications and solutions that nativel
 
 For these applications and solutions, Rights Management support is tightly integrated by using the Rights Management APIs to support usage restrictions. These applications and solutions are also known as "RMS-enlightened."
 
-Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, macOS, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11\)).
+Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, macOS, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 ## RMS-enlightened applications
 
