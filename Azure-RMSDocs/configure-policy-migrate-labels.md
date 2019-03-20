@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/18/2019
+ms.date: 03/20/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -67,7 +67,9 @@ Before you migrate your labels, make sure that you are aware of the following ch
     
     - Templates that use a cloud-based key and that are part of a label configuration are also migrated with the label. Other protection templates are not migrated. 
     
-    - If you have labels that are configured for a predefined template, [convert these templates to labels](configure-policy-templates.md#to-convert-templates-to-labels) before you migrate your labels. This configuration will not block label migration but is not supported in the Security & Compliance Center.
+    - If you have labels that are configured for a predefined template, edit these labels and select the **Set permissions** option to configure the same protection settings that you had in your template. Labels with predefined templates will not block label migration but this label configuration is not supported in the Security & Compliance Center.
+        
+        Tip: To help you reconfigure these labels, you might find it useful to have two browser windows: One window in which you select the **Edit Template** button for the label to view the protection settings, and the other window to configure the same settings when you select **Set permissions**.
     
     - After a label with cloud-based protection settings has been migrated, the resulting scope of the protection template is the scoped that is defined in the Azure portal (or by using the AADRM PowerShell module) and the scope that is defined in the Security & Compliance Center. 
 
