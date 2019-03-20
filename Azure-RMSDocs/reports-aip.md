@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 03/18/2019
+ms.date: 03/21/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -73,7 +73,6 @@ For example, you'll be able to see the following:
     - Which files are labeled and protected, and the location of files by labels
     
     - Which files contain sensitive information for known categories, such as financial data and personal information, and the location of files by these categories
-    
 
 - From the **Recommendations** report:
     
@@ -210,6 +209,8 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
 - **Data discovery (Preview)**: Use this report to see information about files found by scanners or Windows Defender ATP.
 
 - **Recommendations (Preview)**: Use this report to identify files that have sensitive information and mitigate your risk by following the recommendations.
+    
+    This report is currently rolling out to tenants, so if you do not see it, try again in a few days.
     
     When you select an item, the **View data** option displays the audit activities that triggered the recommendation.
 
