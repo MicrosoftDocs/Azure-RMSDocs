@@ -6,7 +6,7 @@ description: Configure settings in the Azure Information Protection policy that 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/06/2019
+ms.date: 03/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -53,7 +53,7 @@ To configure these settings:
     - **Send audit data to Azure Information Protection analytics**: Before you create an Azure Log Analytics workspace for [Azure Information analytics](reports-aip.md), the values for this setting display **Off** and **Not configured**. When you create the workspace, the values change to **Off** and **On**.
     
     When the setting is **On**, endpoints that support central reporting send their audit data to the Azure Information Protection service. 
-    For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](#information-collected-and=sent=to-microsoft) section. Set this option to **Off** to prevent this data from being sent.
+    For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](./rms-client/client-admin-guide-customizations.md#information-collected-and-sent-to-microsoft) section. Set this option to **Off** to prevent this data from being sent.
     
     - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option).
         

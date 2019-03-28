@@ -6,7 +6,7 @@ description: An introduction tutorial that edits the Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/05/2019
+ms.date: 03/29/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
