@@ -6,7 +6,7 @@ description: An introduction tutorial that steps you through configuring Azure I
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 03/29/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
