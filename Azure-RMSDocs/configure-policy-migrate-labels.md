@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to the Office 365 Secur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/20/2019
+ms.date: 04/30/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -106,9 +106,11 @@ Azure Information Protection clients can use all label settings listed without a
 
 ### Comparing the behavior of protection settings for a label
 
-Use the following table to identify how the same protection setting for a label behaves differently, depending on whether it's used by the Azure Information Protection client (general availability versions and current preview version), the current preview version of the Azure Information Protection unified labeling client, or by Office apps that have labeling built in (also known as "native Office labeling"). 
+Use the following table to identify how the same protection setting for a label can behave differently, depending on whether it's used by the Azure Information Protection client (general availability versions and current preview version), the current preview version of the Azure Information Protection unified labeling client, or by Office apps that have labeling built in (also known as "native Office labeling"). 
 
-Protection settings that behave the same way are not listed.
+With the following exceptions, protection settings that behave the same way are not listed:
+- When you use Office apps with built in labeling, labels are not visible in File Explorer
+- When you use Office apps with built in labeling, if protection was previously applied independently from a label, that protection is preserved [[1]](#footnote-1)
 
 |Protection setting for a label |Azure Information Protection client|Azure Information Protection unified labeling client| Office apps with built in labeling
 |-------------------|-----------------------------------|-----------------------------------------------------------|---------------
