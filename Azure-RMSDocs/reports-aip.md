@@ -126,6 +126,12 @@ To prevent Azure Information Protection clients from sending this data, set the 
 - For only a subset of users to send auditing data: 
     - Set **Send audit data to Azure Information Protection log analytics** to **Off** in the global policy, and **On** in a scoped policy for the subset of users. This configuration is typical for testing scenarios.
 
+#### Content matches for deeper analysis 
+
+Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for also collecting and storing the data that's identified by the sensitive information types or your custom conditions. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to send this additional data, do not select this checkbox. If you want most users to send this additional data and a subset of users cannot send it, select the checkbox and configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
+
+After collecting the content matches, they are displayed in the reports when you drill down into files from the Activity logs, to display **Activity Details**. This information can also be viewed and retrieved with queries.
+
 ## Prerequisites for Azure Information Protection analytics
 To view the Azure Information Protection reports and create your own, make sure that the following requirements are in place.
 
