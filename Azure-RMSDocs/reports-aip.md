@@ -240,3 +240,5 @@ The logged data for Azure Information Protection is stored in the following tabl
 
 ## Next steps
 After reviewing the information in the reports, you might decide to make changes to your Azure Information Protection policy. For instructions, see [Configuring the Azure Information Protection policy](configure-policy.md).
+
+If you have a Microsoft 365 subscription, you can also view label usage in the Microsoft 365 compliance center and Microsoft 365 security center. For more information, see [View label usage with label analytics](/Office365/SecurityCompliance/label-analytics).
