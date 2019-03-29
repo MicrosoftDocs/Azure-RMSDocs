@@ -769,7 +769,7 @@ Now, when a user opens and saves one of these Office documents, it is labeled  *
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal and requires the current preview version of the Azure Information Protection client.
 
-Azure Information Protection analytics can discover and report documents saved by Azure Information Protection clients when that content contain sensitive information. By default, this information is not sent to Azure Information Protection analytics.
+[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection clients when that content contain sensitive information. By default, this information is not sent to Azure Information Protection analytics.
 
 To change this behavior so that this information is sent, enter the following strings:
 
