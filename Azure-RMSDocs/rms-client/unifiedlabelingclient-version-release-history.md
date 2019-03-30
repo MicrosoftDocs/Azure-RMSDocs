@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/28/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 > [!NOTE]
-> This client is in preview and is subject to changes. It uses the unified labeling store and downloads policy with labels from the Office 365 Security & Compliance Center. [More information](/Office365/SecurityCompliance/sensitivity-labels)
+> This client is in preview and is subject to changes. It uses the unified labeling store and downloads policy with labels from the admin centers: The Office 365 Security & Compliance Center, Microsoft 365 security center, and Microsoft 365 compliance center. [More information](/Office365/SecurityCompliance/sensitivity-labels)
 
 You can download the latest preview version of the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=57440).
 
@@ -48,7 +48,7 @@ This preview version of the Azure Information Protection unified labeling client
 
 - Upgrade from the Azure Information Protection client.
 
-- Manual, automatic, and recommended labeling: Use **Auto labeling** from the Office 365 Security & Compliance Center to configure automatic and recommended labeling. For more information, see [Apply a sensitivity label to content automatically](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
+- Manual, automatic, and recommended labeling: Use **Auto labeling** from the admin centers to configure automatic and recommended labeling. For more information, see [Apply a sensitivity label to content automatically](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
 
 - File Explorer, right-click actions to classify and protect files, remove protection, and apply custom permissions.
 
@@ -69,7 +69,7 @@ This preview version of the Azure Information Protection unified labeling client
     - Justification prompts if users lower the classification level or remove a label
     - Colors for the labels
 
-- Policy refresh from the Security & Compliance Center:
+- Policy refresh from the admin centers:
     - Each time an Office app starts and every 4 hours
     - When you right-click to classify and protect a file or folder
     - When you run the PowerShell cmdlets for labeling and protection

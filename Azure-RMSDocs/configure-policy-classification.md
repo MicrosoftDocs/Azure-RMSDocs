@@ -83,7 +83,7 @@ You can change this behavior so that the Azure Information Protection client per
         
         The information types use the Office 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](/office365/securitycompliance/what-the-sensitive-information-types-look-for) from the Office 365 documentation.
         
-        The list of information types that you can select from the Azure portal is periodically updated to include any new Office DLP additions. However, the list excludes any custom sensitive information types that you have defined and uploaded as a rule package to the Office 365 Security & Compliance Center.
+        The list of information types that you can select from the Azure portal is periodically updated to include any new Office DLP additions. However, the list excludes any custom sensitive information types that you have defined and uploaded as a rule package to the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center.
         
         > [!IMPORTANT]
         > Some of the information types require a minimum version of the client. [More information](#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
@@ -107,19 +107,6 @@ You can change this behavior so that the Azure Information Protection client per
 When you click **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
 
 ### Sensitive information types that require a minimum version of the client
-
-The following sensitive information types require a minimum version of 1.37.19.0 for the Azure Information Protection client:
-
-- **EU Mobile Phone Number**
-- **EU Passport Number**
-- **EU Driver's License Number**
-- **EU National Identification Number**
-- **EU Social Security Number (SSN) or Equivalent ID**
-- **EU Tax Identification Number (TIN)**
-- **Thai Population Identification Code**
-- **Turkish National Identification number**
-- **Japanese Residence Card Number**
-
 
 The following sensitive information types require the current preview version of the Azure Information Protection client:
 
