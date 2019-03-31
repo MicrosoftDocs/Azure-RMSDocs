@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/28/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -121,6 +121,8 @@ Although the Azure Information Protection unified labeling client is still under
 - Justification for removing protection
 
 - Confirmation prompt before deleting an applied label
+
+- Support for variables in headers and footers, which includes different visual markings for different Office apps
 
 - Report an Issue link in the Help and Feedback dialog box
 
