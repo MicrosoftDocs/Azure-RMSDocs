@@ -108,6 +108,8 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Information Protection bar title and tooltip
 
+- Dynamic values in headers and footers by using variables, and different visual markings for Word, Excel, PowerPoint, and Outlook
+
 - Offline support for protection actions in PowerShell and File Explorer
 
 - Protection-only mode (no labels)
@@ -121,8 +123,6 @@ Although the Azure Information Protection unified labeling client is still under
 - Justification for removing protection
 
 - Confirmation prompt before deleting an applied label
-
-- Support for variables in headers and footers, which includes different visual markings for different Office apps
 
 - Report an Issue link in the Help and Feedback dialog box
 
