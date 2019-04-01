@@ -2,7 +2,7 @@
 # required metadata
 
 title: Migrate Azure Information Protection labels to Office 365 - AIP
-description: Migrate Azure Information Protection labels to Office sensitivity labels for clients and services that support unified labels. 
+description: Migrate Azure Information Protection labels to Office 365 sensitivity labels for clients and services that support unified labels. 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -30,7 +30,7 @@ ms.suite: ems
 > [!IMPORTANT]
 > This feature is in preview, and migrates your tenant to a new platform. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by clients and services that support [Microsoft Information Protection solutions](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection).
 
-Migrate your labels if you want to be able to use them as Office 365 sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). You manage and publish these labels from the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center. After the migration, the Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
+Migrate your labels if you want to be able to use them as Office 365 sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). You manage and publish these labels from the Office 365 Security & Compliance Center, or the Microsoft 365 security center and the Microsoft 365 compliance center. After the migration, the Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
 
 Before you read detailed instructions about how to migrate your labels, you might find the following frequently asked questions useful:
 
