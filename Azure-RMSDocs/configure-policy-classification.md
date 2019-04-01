@@ -6,7 +6,7 @@ description: Conditions for a label let you automatically assign a label to a do
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/14/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -83,7 +83,7 @@ You can change this behavior so that the Azure Information Protection client per
         
         The information types use the Office 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](/office365/securitycompliance/what-the-sensitive-information-types-look-for) from the Office 365 documentation.
         
-        The list of information types that you can select from the Azure portal is periodically updated to include any new Office DLP additions. However, the list excludes any custom sensitive information types that you have defined and uploaded as a rule package to the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center.
+        The list of information types that you can select from the Azure portal is periodically updated to include any new Office DLP additions. However, the list excludes any custom sensitive information types that you have defined and uploaded as a rule package to the Office 365 Security & Compliance Center.
         
         > [!IMPORTANT]
         > Some of the information types require a minimum version of the client. [More information](#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
