@@ -23,7 +23,7 @@ ms.suite: ems
 This topic outlines important changes and features in this new version of the RMS  SDK v4.x.
 
 -   [New for July 2017](#new-for-july-2017)
--   [October 2016 update](#October-2016-update)
+-   [October 2016 update](#october-2016-update)
 -   [June 2016 update](#june-2016-update)
 -   [December 2015 update](#december-2015-update)
 -   [July 2015 update - Adds support for Linux / C++ development](#july-2015-update---adds-support-for-linux--c-development)
