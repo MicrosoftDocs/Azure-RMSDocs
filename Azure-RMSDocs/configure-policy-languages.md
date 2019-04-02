@@ -6,7 +6,7 @@ description: You can add support for different languages for the labels that use
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/03/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -44,7 +44,7 @@ You can also configure templates for different languages when either of the foll
 
 - You do not have a subscription that supports labels, so you can only create and manage templates in the Azure portal.
 
-Select the languages that match your users' language setting for Office and Windows. These label names and descriptions then display in the Azure Information Protection bar in Office apps, and in the **Classify and protection - Azure Information Protection** dialog box, respectively. For more information about which language is chosen, see the [How the Azure Information Protection client determines the language to display](#how-the-azure-information-protection-client-determines-the-language-to- display) section on this page. 
+Select the languages that match your users' language setting for Office and Windows. These label names and descriptions then display in the Azure Information Protection bar in Office apps, and in the **Classify and protect - Azure Information Protection** dialog box, respectively. For more information about which language is chosen, see the [How the Azure Information Protection client determines the language to display](#how-the-azure-information-protection-client-determines-the-language-to- display) section on this page. 
 
 ## To configure labels and templates for different languages
 
@@ -67,15 +67,19 @@ Select the languages that match your users' language setting for Office and Wind
     
     The downloaded file is named **exported localization.zip** and is saved in your local Downloads folder. It can also be accessed by selecting this file name on the status bar of the Azure portal.
 
-5. Extract the files from **exported localization.zip** so that you have  .xml files for each language that you selected for download. 
+5. Extract the files from **exported localization.zip** so that you have .xml files for each language that you selected for download. 
 
 6. Edit each .xml file: For each string within `<LocalizedText>` tags, provide the translations that you want for each chosen language. 
 
 7. When you have edited each .xml file, create a new compressed (zipped) folder that contains these files. The compressed folder can have any name, but must have a .zip extension.
+    
+    Tip: You don't have to wait until you've edited each language file that you've downloaded. Instead, you could roll out different languages in a phased mannor, by including in the .zip file a subset of the total files you downloaded. Then repeat steps 7 and 8 when you have completed the translations for more languages.
 
 8. Return to the **Azure Information Protection - Languages** blade, and select **Import**. Note that if this option is unavailable, first clear the check box for **LANGUAGE NAME** or the check boxes for the individually selected languages.
     
     When the import completes, the localized names and descriptions download to users.
+
+You must repeat this procedure if you need to support a new language, create new labels, or you change the name or description of labels in the Azure portal.
 
 ## How the Azure Information Protection client determines the language to display
 
