@@ -89,6 +89,8 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 Use the following table to identify which configuration settings of a migrated label are not supported by the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft compliance center. If you have labels with these settings, when the migration is complete, use the administration guidance in the final column before you publish your labels in one of the admin centers.
 
+If you are not sure how your labels are configured, view their settings in the Azure portal. If you need help with this step, see [Configuring the Azure Information Protection policy](configure-policy.md).
+
 Azure Information Protection clients can use all label settings listed without any problems because they continue to download the labels from the Azure portal.
 
 |Label configuration|Supported by unified labeling clients| Guidance for the admin centers|
