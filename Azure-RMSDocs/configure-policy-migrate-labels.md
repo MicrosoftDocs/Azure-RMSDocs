@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/03/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -106,11 +106,13 @@ Azure Information Protection clients can use all label settings listed without a
 
 ### Comparing the behavior of protection settings for a label
 
-Use the following table to identify how the same protection setting for a label behaves differently, depending on whether it's used by the Azure Information Protection client (general availability versions and current preview version), the current preview version of the Azure Information Protection unified labeling client, or by Office apps that have labeling built in (also known as "native Office labeling"). 
+Use the following table to identify how the same protection setting for a label can behave differently, depending on whether it's used by the Azure Information Protection client (general availability versions and current preview version), the current preview version of the Azure Information Protection unified labeling client, or by Office apps that have labeling built in (also known as "native Office labeling"). 
 
-Protection settings that behave the same way are not listed.
+Protection settings that behave the same way are not listed in the table, with the following exceptions:
+- When you use Office apps with built-in labeling, labels are not visible in File Explorer unless you also install the Azure Information Protection unified labeling client.
+- When you use Office apps with built-in labeling, if protection was previously applied independently from a label, that protection is preserved [[1]](#footnote-1).
 
-|Protection setting for a label |Azure Information Protection client|Azure Information Protection unified labeling client| Office apps with built in labeling
+|Protection setting for a label |Azure Information Protection client|Azure Information Protection unified labeling client| Office apps with built-in labeling
 |-------------------|-----------------------------------|-----------------------------------------------------------|---------------
 |Azure (cloud key) with user-defined permissions for Word, Excel, PowerPoint, and File Explorer:| Visible in Word, Excel, PowerPoint, and File Explorer <br /><br /> When the label is applied:<br /><br /> - Users are prompted for custom permissions that are then applied as protection using a cloud-based key| Not visible |Visible in Word, Excel, PowerPoint, and Outlook: <br /><br /> When the label is applied:<br /><br /> - Users are not prompted for custom permissions and no protection is applied <br /><br /> - If protection was previously applied independently from a label, that protection is preserved [[1]](#footnote-1)|
 |HYOK (AD RMS) with a template:| Visible in Word, Excel, PowerPoint, Outlook, and File Explorer<br /><br /> When this label is applied: <br /><br />- HYOK protection is applied to documents and emails | Visible in Word, Excel, PowerPoint, Outlook, and File Explorer  <br /><br /> When this label is applied: <br /><br />- No protection is applied and protection is removed [[2]](#footnote-2) if it was previously applied by a label <br /><br />- If protection was previously applied independently from a label, that protection is preserved |Visible in Word, Excel, PowerPoint, and Outlook <br /><br /> When this label is applied: <br /><br />- No protection is applied and protection is removed [[2]](#footnote-2) if it was previously applied by a label <br /><br />- If protection was previously applied independently from a label, that protection is preserved [[1]](#footnote-1) |
