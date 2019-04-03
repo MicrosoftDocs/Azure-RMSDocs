@@ -103,7 +103,19 @@ The protection permissions match those in the [default template](configure-polic
 
 ### Settings
 
-See [Configure Azure Information Protection policy settings](configure-policy-settings.md).
+Some of the settings were added after July 31, 2017.
+
+|Setting|Value|
+|-------------------------------|---------------------------|
+|Select the default label|None|
+|Send audit data to Azure Information Protection analytics|Off|
+|All documents and emails must have a label (applied automatically or by users)|Off|
+|Users must provide justification to set a lower classification label, remove a label, or remove protection|Off|
+|For email messages with attachments, apply a label that matches the highest classification of those attachments|Off|
+|Display the Information Protection bar in Office apps|Off|
+|Add the Do Not Forward button to the Outlook ribbon|Off|
+|Make the custom permissions option available for users|Off|
+|Provide a custom URL for the Azure Information Protection client "Tell me more" web page|Blank|
 
 ## Default policy before July 31, 2017
 
