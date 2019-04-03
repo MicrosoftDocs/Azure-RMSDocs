@@ -6,7 +6,7 @@ description: Understand how the default policy for Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/06/2018
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -103,14 +103,7 @@ The protection permissions match those in the [default template](configure-polic
 
 ### Settings
 
-|Setting|Value|
-|-------------------------------|---------------------------|
-|All documents and emails must have a label (applied automatically or by users)|Off|
-|Select the default label|None|
-|Users must provide justification to set a lower classification label, remove a label, or remove protection|Off|
-|For email messages with attachments, apply a label that matches the highest classification of those attachments|Off|
-|Provide a custom URL for the Azure Information Protection client "Tell me more" web page|Blank|
-
+See [Configure Azure Information Protection policy settings](configure-policy-settings.md).
 
 ## Default policy before July 31, 2017
 
