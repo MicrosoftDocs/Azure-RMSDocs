@@ -6,7 +6,7 @@ description: At-a-glance admin tasks in the Azure portal that you used to do in 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/07/2018
+ms.date: 04/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -63,7 +63,7 @@ New functionality in the Azure portal:
 
 - You can convert templates to labels, so that you manage a single object rather than manage a template and label independently. For instructions, see [To convert templates to labels](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Support for other admin roles: Whereas you had to sign in to the Azure classic portal as a Global Administrator to configure Azure Rights Management, you can sign in to the Azure portal to configure Azure Information Protection by using an account that has any of the following administrative roles: **Global Administrator**, **Security Administrator**, or **Information Protection Administrator**. For more information about each of these roles, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
+- Support for other admin roles: Whereas you had to sign in to the Azure classic portal as a Global administrator to configure Azure Rights Management, you can sign in to the Azure portal to configure Azure Information Protection by using an account that has any of the following administrative roles: **Global administrator**, **Security administrator**, **Compliance administrator**, or **Information Protection Administrator**. For more information about each of these roles, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
 
 The PowerShell cmdlets to create and manage templates, and to activate or deactivate the service, remain supported without changes.
 
