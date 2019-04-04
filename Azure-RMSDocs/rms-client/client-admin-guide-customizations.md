@@ -263,7 +263,7 @@ Configure the following strings:
 
 Without this setting, the first label that's found from the parent label with the highest classification is applied to the email. 
 
-With this setting, the sublabel that's ordered last from the parent label with the highest classification is applied to the email. If you need to reorder your labels to apply the label that you want to support for this scenario, see [How to delete or reorder a label for Azure Information Protection](../configure-policy-delete-reorder.md).
+With this setting, the sublabel that's ordered last from the parent label with the highest classification is applied to the email. If you need to reorder your labels to apply the label that you want for this scenario, see [How to delete or reorder a label for Azure Information Protection](../configure-policy-delete-reorder.md).
 
 ## Enable recommended classification in Outlook
 
