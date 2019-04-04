@@ -153,13 +153,14 @@ Details:
     
     - To create your Log Analytics workspace or to create custom queries:
     
-        - **Information Protection Administrator**
-        - **Security Administrator**
-        - **Global Administrator**
+        - **Information Protection administrator**
+        - **Security administrator**
+        - **Compliance administrator**
+        - **Global administrator**
     
     - After the workspace has been created, you can then use the following role with fewer permissions to view the data collected:
     
-        - **Security Reader**
+        - **Security reader**
     
     > [!NOTE] 
     > If your tenant has been migrated to the unified labeling store, your account must be a global administrator or one of the listed roles plus permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
