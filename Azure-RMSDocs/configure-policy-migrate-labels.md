@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/03/2019
+ms.date: 04/04/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
