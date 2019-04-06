@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 04/02/2019
+ms.date: 04/06/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -163,7 +163,7 @@ Details:
         - **Security reader**
     
     > [!NOTE] 
-    > If your tenant has been migrated to the unified labeling store, your account must be a global administrator or one of the listed roles plus permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > If your tenant has been migrated to the unified labeling store, you cannot use the Information Protection administrator role. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 2. In addition, you need one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) to access your Azure Log Analytics workspace:
     
