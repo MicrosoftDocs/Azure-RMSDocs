@@ -166,11 +166,7 @@ Details:
     
     - After the workspace has been created, you can then use the following role with fewer permissions to view the data collected:
     
-<<<<<<< HEAD
-        - **Security Reader**
-=======
         - **Security reader**
->>>>>>> b2f8b2aedd430a74db05670781d94c845074ea1f
     
     > [!NOTE] 
     > If your tenant has been migrated to the unified labeling store, you cannot use the Information Protection administrator role. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
@@ -192,10 +188,10 @@ Details:
 
 After you have configured your workspace for Azure Information Protection analytics, the minimum roles needed to view the Azure Information Protection analytics reports are both of the following:
 
-- Azure AD administrator role: **Security Reader**
+- Azure AD administrator role: **Security reader**
 - Azure role: **Log Analytics Reader**
 
-However, a typical role assignment for many organizations is the Azure AD role of **Security Reader** and the Azure role of **Reader**.
+However, a typical role assignment for many organizations is the Azure AD role of **Security reader** and the Azure role of **Reader**.
 
 ## Configure a Log Analytics workspace for the reports
 
@@ -227,6 +223,8 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
 
 - **Data discovery (Preview)**: Use this report to see information about labeled files found by scanners and supported endpoints.
     
+    Note: Discovery for endpoint is gradually rolling to tenants, so you might not yet see this discovery data.
+    
     You can configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) for the preview version of the Azure Information Protection client to report files that contain sensitive information.
     
     Tip: From the information collected, you might find users accessing files that contain sensitive information from location that you didn't know about or aren't currently scanning:
@@ -235,8 +233,6 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
     - If the locations are in the cloud, consider using Microsoft Cloud App Security to manage them. 
     
 - **Recommendations (Preview)**: Use this report to identify files that have sensitive information and mitigate your risk by following the recommendations.
-    
-    This report is currently rolling out to tenants, so if you do not see it, try again in a few days.
     
     When you select an item, the **View data** option displays the audit activities that triggered the recommendation.
 
