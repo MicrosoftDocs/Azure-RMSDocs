@@ -223,7 +223,7 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
 
 - **Data discovery (Preview)**: Use this report to see information about labeled files found by scanners and supported endpoints.
     
-    Note: Discovery for endpoint is gradually rolling to tenants, so you might not yet see this discovery data.
+    Note: Discovery for endpoint is gradually rolling to tenants. You will start to see data from the supported endpoints in this report when this feature is rolled out to your tenant.
     
     You can configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) for the preview version of the Azure Information Protection client to report files that contain sensitive information.
     
