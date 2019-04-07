@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/03/2019
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -262,7 +262,9 @@ Configure the following strings:
 
 - Value: **True**
 
-Without this setting, the first sublabel that's found from the highest parent label is applied to the email.
+Without this setting, the first label that's found from the parent label with the highest classification is applied to the email. 
+
+With this setting, the sublabel that's ordered last from the parent label with the highest classification is applied to the email. If you need to reorder your labels to apply the label that you want for this scenario, see [How to delete or reorder a label for Azure Information Protection](../configure-policy-delete-reorder.md).
 
 ## Enable recommended classification in Outlook
 

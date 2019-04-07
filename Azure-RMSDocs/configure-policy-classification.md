@@ -6,7 +6,7 @@ description: Conditions for a label let you automatically assign a label to a do
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/14/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -107,19 +107,6 @@ You can change this behavior so that the Azure Information Protection client per
 When you click **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
 
 ### Sensitive information types that require a minimum version of the client
-
-The following sensitive information types require a minimum version of 1.37.19.0 for the Azure Information Protection client:
-
-- **EU Mobile Phone Number**
-- **EU Passport Number**
-- **EU Driver's License Number**
-- **EU National Identification Number**
-- **EU Social Security Number (SSN) or Equivalent ID**
-- **EU Tax Identification Number (TIN)**
-- **Thai Population Identification Code**
-- **Turkish National Identification number**
-- **Japanese Residence Card Number**
-
 
 The following sensitive information types require the current preview version of the Azure Information Protection client:
 

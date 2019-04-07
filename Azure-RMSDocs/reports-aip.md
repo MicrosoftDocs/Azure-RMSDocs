@@ -6,10 +6,9 @@ description: How to use central reporting to track adoption of your Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/03/2019
+ms.date: 04/09/2019
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 
@@ -160,16 +159,21 @@ Details:
     
     - To create your Log Analytics workspace or to create custom queries:
     
-        - **Information Protection Administrator**
-        - **Security Administrator**
-        - **Global Administrator**
+        - **Information Protection administrator**
+        - **Security administrator**
+        - **Compliance administrator**
+        - **Global administrator**
     
     - After the workspace has been created, you can then use the following role with fewer permissions to view the data collected:
     
+<<<<<<< HEAD
         - **Security Reader**
+=======
+        - **Security reader**
+>>>>>>> b2f8b2aedd430a74db05670781d94c845074ea1f
     
     > [!NOTE] 
-    > If your tenant has been migrated to the unified labeling store, your account must be a global administrator or one of the listed roles plus permissions to access the Office 365 Security & Compliance Center. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > If your tenant has been migrated to the unified labeling store, you cannot use the Information Protection administrator role. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 2. In addition, you need one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) to access your Azure Log Analytics workspace:
     

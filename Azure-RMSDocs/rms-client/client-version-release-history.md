@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/03/2019
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -53,7 +53,7 @@ Use the following information to see what’s new or changed for a supported rel
 If you have a version 1 of the client that is later than 1.41.51.0, it is a preview build for testing and evaluation purposes.  
 
 > [!TIP]
-> Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
+> Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
 
 **Released**: 03/05/2019
 
