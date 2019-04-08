@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/09/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -95,15 +95,15 @@ Your organization might already have labels because they were automatically crea
 
 4. Then, to publish the labels for all users, from **Classifications** > **Policies** > **Global**:
     
-    a. Select **Add or remove labels**
+    a. Select **Add or remove labels**.
     
     b. From the **Policy: Add or remove labels** blade, select all the labels, and then select **OK**.
     
-    c. Back on the **Policy:Global blade**, select **Save**.
+    c. Back on the **Policy: Global blade**, select **Save**.
 
 ## View your labels
 
-From **Classifications** > **Labels**: Spend a few minutes familiarizing yourself with the labels that are displayed on the **Azure Information Protection - Labels** blade.
+Select **Classifications** > **Labels**, and spend a few minutes familiarizing yourself with the labels that are displayed on the **Azure Information Protection - Labels** blade.
 
 If they don't look similar to the labels in the picture from the previous section, you aren't using default labels from Azure Information Protection but labels that have been created from the Office 365 Security & Compliance Center, the Microsoft 365 Security center, or the Microsoft 365 Compliance center.
 
@@ -131,13 +131,13 @@ If you are using the Azure Information Protection unified labeling client, this 
 
 To view the default Azure Information Protection policy settings:
 
-1. Select **Classifications** > **Policies** > **Global** to display the default Azure Information Protection policy that's created for your tenant.
+1. Select **Classifications** > **Policies** > **Global** to display the default Azure Information Protection policy settings that are created for your tenant.
     
 2. After the labels, in the **Configure settings to display and apply on Information Protection end users** section, you see the policy settings. For example, there is no default label set, documents and emails are not required to have a label, and users do not have to provide justification when they change labels:
     
     ![Azure Information Protection policy global settings](./media/info-protect-policy-default-settingsv3.png)
 
-3. Because you are only viewing the settings, you can close any blades that you have opened.
+3. Because you are only viewing the settings, you can close any blades in the portal that you have opened.
 
 ## Next steps
 

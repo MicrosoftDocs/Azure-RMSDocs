@@ -152,6 +152,8 @@ You must be a global administrator to migrate your labels.
 2. From the **Manage** menu option, select **Unified labeling (Preview)**.
 
 3. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
+    
+    If the option to activate is not available, check the **Unified labeling status**: If you see **Activated**, your tenant is already using the unified labeling store and there is no need to migrate your labels.
 
 For the labels that successfully migrated, they can now be used by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). However, you must first publish these labels in one of the admin centers: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center.
 
