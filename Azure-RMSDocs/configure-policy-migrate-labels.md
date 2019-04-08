@@ -46,7 +46,7 @@ The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-
 
 Alternatively to using roles, in the admin centers, you can create a new role group for these users and add either **Retention Management** or **Organization Configuration** roles to this group.
 
-If you do not give these users access to the admin centers by using one of these configurations, they will lose access to labels and policies in the Azure portal after your labels are migrated.
+If you do not give these users access to the admin centers by using one of these configurations, these users will no longer be able to configure Azure Information Protection in the Azure portal after your labels are migrated.
 
 Global administrators for your tenant can continue to manage labels and policies in both the Azure portal and the admin centers after your labels are migrated.
 
