@@ -28,7 +28,7 @@ ms.service: information-protection
 
 In this quickstart, you'll add Azure Information Protection to the Azure portal, confirm the protection service is activated, create default labels if you don't already have labels, and view the policy settings for Azure Information Protection.
 
-You can finish this quickstart in 5 minutes.
+You can finish this quickstart in less than 10 minutes.
 
 ## Prerequisites
 
@@ -103,13 +103,13 @@ Your organization might already have labels because they were automatically crea
 
 ## View your labels
 
-From **Classifications** > **Labels**: Spend a few minutes familiarizing yourself with the labels that are displayed.
+From **Classifications** > **Labels**: Spend a few minutes familiarizing yourself with the labels that are displayed on the **Azure Information Protection - Labels** blade.
 
 If they don't look similar to the labels in the picture from the previous section, you aren't using default labels from Azure Information Protection but labels that have been created from the Office 365 Security & Compliance Center, the Microsoft 365 Security center, or the Microsoft 365 Compliance center.
 
 > [!TIP]
 > If you don't want to use your custom labels, but instead, use default labels from Azure Information Protection: 
-> - Delete the custom labels and you then see the option to generate default labels in the **Labels** blade. Next, add these labels to the global policy, as described in the [previous section](#create-labels---if-necessary). 
+> - Delete the custom labels and you then see the option to generate default labels in the **Labels** blade, as described in the [previous section](#create-labels---if-necessary). 
 
 From the **Azure Information Protection - Labels** blade:
 
