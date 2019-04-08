@@ -89,7 +89,7 @@ Your organization might already have labels because they were automatically crea
     
     If you don't see this option to generate default labels, you already have labels, probably similar to those in the following picture, which are the default labels for Azure Information Protection:
     
-    ![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-defaultlabels.png)
+    ![Azure Information Protection default labels](./media/info-protect-defaultlabels.png)
 
 2. If you do have labels, go to the next section to view your labels. If you don't yet have labels, select that option to **Generate default labels**.
 
@@ -119,7 +119,7 @@ From the **Azure Information Protection - Labels** blade:
 
 For example: 
 
-![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-policy-default-labelsv2.png)
+![Azure Information Protection quickstart overview of default labels](./media/info-protect-policy-default-labelsv2.png)
 
 If you select a label, you see details for that label configuration on a new blade.
 
