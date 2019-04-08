@@ -59,7 +59,7 @@ Azure Information Protection isn't automatically available in the Azure portal. 
 
 ## Confirm the protection service is activated
 
-The protection service is now automatically activated for new tenants, but it's a good idea to confirm it doesn't need manually activating. 
+The protection service is now automatically activated for new customers, but it's a good idea to confirm it doesn't need manually activating. 
 
 1. On the **Azure Information Protection** blade, select **Manage** > **Protection activation**.
 
@@ -91,7 +91,7 @@ Your organization might already have labels because they were automatically crea
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-defaultlabels.png)
 
-2. If you do have labels, go to the next section to view your labels. If you don't yet have labels, select **Generate default labels**.
+2. If you do have labels, go to the next section to view your labels. If you don't yet have labels, select that option to **Generate default labels**.
 
 4. Then, to publish the labels for all users, from **Classifications** > **Policies** > **Global**:
     
@@ -107,14 +107,16 @@ From **Classifications** > **Labels**: Spend a few minutes familiarizing yoursel
 
 If they don't look similar to the labels in the picture from the previous section, you aren't using default labels from Azure Information Protection but labels that have been created from the Office 365 Security & Compliance Center, the Microsoft 365 Security center, or the Microsoft 365 Compliance center.
 
-Tip: If you don't want to use your custom labels, but instead, use default labels from Azure Information Protection: Delete the custom labels and then you see the option to generate default labels in the **Labels** blade. You can then add these labels to the global policy, as described in the previous section. 
+> [!TIP]
+> If you don't want to use your custom labels, but instead, use default labels from Azure Information Protection: 
+> - Delete the custom labels and you then see the option to generate default labels in the **Labels** blade. Next, add these labels to the global policy, as described in the [previous section](#create-labels---if-necessary). 
 
 From the **Azure Information Protection - Labels** blade:
 
 - The default labels for classification are **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sublabels, which provide examples of how a classification can have subcategories.
 
 - From the **MARKING** and **PROTECTION** columns, you can see that some labels have visual markings configured. The visual markers are a footer, header, and watermark. Some labels might also have protection set. 
-- 
+
 For example: 
 
 ![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-policy-default-labelsv2.png)
