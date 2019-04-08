@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/05/2019
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -73,6 +73,7 @@ Some of these settings require editing the registry and some use advanced settin
 |PullPolicy|[Support for disconnected computers](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
+|RunAuditInformationTypeDiscovery|[Enable Azure Information Protection analytics to discover sensitive information in documents](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
 |RunPolicyInBackground|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Label an Office document by using an existing custom property](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -765,6 +766,28 @@ As an example, you have a SharePoint column named **Classification** that has po
 To label an Office document with one of these classification values, set **SyncPropertyName** to **Classification**, and **SyncPropertyState** to **OneWay**. 
 
 Now, when a user opens and saves one of these Office documents, it is labeled  **Public**, **General**, or **Highly Confidential \ All Employees** if you have labels with these names in your Azure Information Protection policy. If you do not have labels with these names, the document remains unlabeled.
+
+## Enable Azure Information Protection analytics to discover sensitive information in documents
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal and requires the current preview version of the Azure Information Protection client.
+
+[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection clients when that content contain sensitive information. By default, this information is not sent to Azure Information Protection analytics.
+
+To change this behavior so that this information is sent, enter the following strings:
+
+- Key: **RunAuditInformationTypeDiscovery**
+
+- Value: **True**
+
+If you do not set this advanced client setting, audit results are still sent from the Azure Information Protection client but the information is limited to reporting when a user has accessed labeled content.
+
+For example:
+
+- Without this setting, you can see that a user accessed Financial.docx that is labeled **Confidential \ Sales**.
+
+- With this setting, you can see that Financial.docx contains 6 credit card numbers.
+    
+    - If you also enable [content matches for deeper analysis](../reports-aip.md#content-matches-for-deeper-analysis), you will additionally be able to see what those credit card numbers are.
 
 ## Disable sending information type matches for a subset of users
 
