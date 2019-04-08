@@ -1,6 +1,6 @@
 ---
 title: Quickstart - Get started with Azure Information Protection in the Azure portal - AIP
-description: If your organization is brand new to Azure Information Protection, start here to add the service to the Azure portal, confirm the protection service is activated, and view the policy.
+description: If your organization is brand new to Azure Information Protection, start here to add the service to the Azure portal, confirm the protection service is activated, and view labels and policy settings.
 author: cabailey
 author: cabailey
 ms.author: cabailey
@@ -26,7 +26,7 @@ ms.service: information-protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-In this quickstart, you'll add Azure Information Protection to the Azure portal, confirm the protection service is activated, and view your organization's default policy. 
+In this quickstart, you'll add Azure Information Protection to the Azure portal, confirm the protection service is activated, create default labels if you don't already have labels, and view the policy settings for Azure Information Protection.
 
 You can finish this quickstart in 5 minutes.
 
@@ -77,28 +77,68 @@ The protection service is now automatically activated for new tenants, but it's 
 
     When activation is complete, the information bar displays **Activation finished successfully**.
 
-## View your organization's default policy - labels and policy settings
+## Create labels - if necessary
 
-The first time you connect to the Azure Information Protection service by using the Azure portal, a default policy for your tenant is created. The default policy contains labels and settings that you can use as-is, or customize.
+Your organization might already have labels because they were automatically created for your tenant, or because you have sensitivity labels in the Office 365 Security & Compliance center, the Microsoft security center, or the Microsoft compliance center. Let's take a look:
+
+1. Select **Classifications** > **Labels**:
+    
+    If you see the option **Generate default labels**, you don't yet have any labels:
+    
+     ![Azure Information Protection no default labels](./media/info-protect-nodefaultlabels.png)
+    
+    If you don't see this option to generate default labels, you already have labels, probably similar to those in the following picture, which are the default labels for Azure Information Protection:
+    
+    ![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-defaultlabels.png)
+
+2. If you do have labels, go to the next section to view your labels. If you don't yet have labels, select **Generate default labels**.
+
+4. Then, to publish the labels for all users, from **Classifications** > **Policies** > **Global**:
+    
+    a. Select **Add or remove labels**
+    
+    b. From the **Policy: Add or remove labels** blade, select all the labels, and then select **OK**.
+    
+    c. Back on the **Policy:Global blade**, select **Save**.
+
+## View your labels
+
+From **Classifications** > **Labels**: Spend a few minutes familiarizing yourself with the labels that are displayed.
+
+If they don't look similar to the labels in the picture from the previous section, you aren't using default labels from Azure Information Protection but labels that have been created from the Office 365 Security & Compliance Center, the Microsoft 365 Security center, or the Microsoft 365 Compliance center.
+
+Tip: If you don't want to use your custom labels, but instead, use default labels from Azure Information Protection: Delete the custom labels and then you see the option to generate default labels in the **Labels** blade. You can then add these labels to the global policy, as described in the previous section. 
+
+From the **Azure Information Protection - Labels** blade:
+
+- The default labels for classification are **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sublabels, which provide examples of how a classification can have subcategories.
+
+- From the **MARKING** and **PROTECTION** columns, you can see that some labels have visual markings configured. The visual markers are a footer, header, and watermark. Some labels might also have protection set. 
+- 
+For example: 
+
+![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-policy-default-labelsv2.png)
+
+If you select a label, you see details for that label configuration on a new blade.
+
+## View your policy settings
+
+The first time you connect to the Azure Information Protection service by using the Azure portal, default policy settings are always created for you that are used by the Azure Information Protection client. For this client, policy settings and the labels we viewed are downloaded to the client in the Azure Information Protection policy.
+
+If you are using the Azure Information Protection unified labeling client, this client does not use these policy settings. Instead, this client downloads labels and policy settings from the Office 365 Compliance & Security Center, the Microsoft 365 Compliance center, or the Microsoft 365 Security center.
+
+To view the default Azure Information Protection policy settings:
 
 1. Select **Classifications** > **Policies** > **Global** to display the default Azure Information Protection policy that's created for your tenant.
     
-2. Spend a few minutes familiarizing yourself with the labels that are displayed:
+2. After the labels, in the **Configure settings to display and apply on Information Protection end users** section, you see the policy settings. For example, there is no default label set, documents and emails are not required to have a label, and users do not have to provide justification when they change labels:
     
-   - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sublabels, which provide examples of how a classification can have subcategories:
-    
-   - With the default configuration, some labels do not have visual markings configured. The visual markers are a footer, header, and watermark. Depending on your default policy, some labels might also have protection set. For example: 
-    
-     ![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-policy-default-labelsv2.png)
-    
-3. After the labels, in the **Configure settings to display and apply on Information Protection end users** section, you also see some policy settings. For example, there is no default label set, documents and emails are not required to have a label, and users do not have to provide justification when they change labels:
-    
-    ![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-policy-default-settings-quickstart.png) 
+    ![Azure Information Protection policy global settings](./media/info-protect-policy-default-settingsv3.png)
 
-4. Because you are only viewing the labels and settings, you can close any blades that you have opened.
+3. Because you are only viewing the settings, you can close any blades that you have opened.
 
 ## Next steps
 
-Now that you've seen the labels and policy settings in the Azure portal, you might find the following tutorial helpful as your next step: [Edit the policy and create a new label for Azure Information Protection](infoprotect-quick-start-tutorial.md).
+Now that you've seen the default labels and policy settings in the Azure portal, you might find the following tutorial helpful as your next step: [Edit the policy and create a new label for Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
 Alternatively, for detailed instructions for configuring all aspects of the Azure Information Protection policy, see [Configuring the Azure Information Protection policy](configure-policy.md).
