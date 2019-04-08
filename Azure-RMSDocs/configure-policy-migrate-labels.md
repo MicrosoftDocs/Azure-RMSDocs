@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/04/2019
+ms.date: 04/09/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -42,7 +42,9 @@ Before you read detailed instructions about how to migrate your labels, you migh
 
 ### Important information about administrative roles
 
-The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Information Protection administrator** is not supported by the unified labeling platform. If this administrative role is used in your organization, before you migrate your labels, add the users who have this role to the Azure AD roles of **Security administrator** or **Compliance administrator**. If you need help with this step, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). You also assign these roles in the Azure AD portal and the Microsoft 365 security center.
+The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Information Protection administrator** is not supported by the unified labeling platform. If this administrative role is used in your organization, before you migrate your labels, add the users who have this role to the Azure AD roles of **Security administrator** or **Compliance administrator**. If you need help with this step, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal, the Microsoft 365 security center, and the Microsoft 365 compliance center.
+
+Alternatively to using roles, in the admin centers, you can create a new role group for these users and add either **Retention Management** or **Organization Configuration** roles to this group. For instructions, see Give users access to the Office 365 Security & Compliance Center.
 
 If you do not give these users access to the admin centers by using one of these configurations, they will lose access to labels and policies in the Azure portal after your labels are migrated.
 
