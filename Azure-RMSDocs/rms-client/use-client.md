@@ -127,8 +127,6 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Separate PowerShell cmdlets to connect to a Rights Management service
 
-- AD RMS only protection
-
 
 #### Parent labels and their sublabels 
 
