@@ -44,7 +44,7 @@ Before you read detailed instructions about how to migrate your labels, you migh
 
 The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Information Protection administrator** is not supported by the unified labeling platform. If this administrative role is used in your organization, before you migrate your labels, add the users who have this role to the Azure AD roles of **Security administrator** or **Compliance administrator**. If you need help with this step, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal, the Microsoft 365 security center, and the Microsoft 365 compliance center.
 
-Alternatively to using roles, in the admin centers, you can create a new role group for these users and add either **Retention Management** or **Organization Configuration** roles to this group.
+Alternatively to using roles, in the admin centers, you can create a new role group for these users and add either **Sensitivity Label Administrator** or **Organization Configuration** roles to this group.
 
 If you do not give these users access to the admin centers by using one of these configurations, they won't be able to configure Azure Information Protection in the Azure portal after your labels are migrated.
 
@@ -152,6 +152,8 @@ You must be a global administrator to migrate your labels.
 2. From the **Manage** menu option, select **Unified labeling (Preview)**.
 
 3. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
+    
+    If the option to activate is not available, check the **Unified labeling status**: If you see **Activated**, your tenant is already using the unified labeling store and there is no need to migrate your labels.
 
 For the labels that successfully migrated, they can now be used by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). However, you must first publish these labels in one of the admin centers: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center.
 
