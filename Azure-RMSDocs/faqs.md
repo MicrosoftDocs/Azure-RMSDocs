@@ -135,7 +135,7 @@ Some things to note:
 
 - Users who are assigned an administrative role cannot automatically remove protection from documents or emails that were protected by Azure Information Protection. Only users who are assigned super users can do this, and when the super user feature is enabled. However, any user that you assign administrative permissions to Azure Information Protection can assign users as super users, including their own account. They can also enable the super user feature. These actions are recorded in an administrator log. For more information, see the security best practices section in [Configuring super users for Azure Rights Management and discovery services or data recovery](configure-super-users.md). 
 
-- If you are migrating your Azure Information Protection labels to Office 365, be sure to read the following section from the label migration documentation: [Important information about administrative roles](configure-policy-migrate-labels.md#important-information-about-administrative-roles).
+- If you are migrating your Azure Information Protection labels to the unified labeling store, be sure to read the following section from the label migration documentation: [Important information about administrative roles](configure-policy-migrate-labels.md#important-information-about-administrative-roles).
 
 ## Does Azure Information Protection support on-premises and hybrid scenarios?
 
