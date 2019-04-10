@@ -33,12 +33,14 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    ```csharp
      //Set paths and label ID
      string inputFilePath = "<input-file-path>";
+     string actualFilePath = inputFilePath;
      string labelId = "<label-id>";
      string outputFilePath = "<output-file-path>";
+     string actualOutputFilePath = outputFilePath;
 
      //Create a file handler for that file
      //Note: the 2nd inputFilePath is used to provide a human-readable content identifier for admin auditing. 
-     var handler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, inputFilePath, ContentState.Rest, true)).Result;
+     var handler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, actualFilePath, true)).Result;
 
      //Set Labeling Options
      LabelingOptions labelingOptions = new LabelingOptions()
@@ -54,7 +56,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
      var result = Task.Run(async () => await handler.CommitAsync(outputFilePath)).Result;
 
      // Create a new handler to read the labeled file metadata
-     var handlerModified = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(outputFilePath, outputFilePath, ContentState.Rest, true)).Result;
+     var handlerModified = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(outputFilePath, actualOutputFilePath, true)).Result;
 
      // Get the label from output file
      var contentLabel = handlerModified.Label;

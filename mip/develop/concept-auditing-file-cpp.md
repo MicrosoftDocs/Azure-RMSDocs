@@ -44,7 +44,7 @@ The example below creates a new `mip::FileHandler` with audit discovery enabled.
 // Create FileHandler with discovery enabled
 auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
 auto handlerFuture = handlerPromise->get_future();
-fileEngine->CreateFileHandlerAsync(filePath, contentId, mip::ContentState::REST, true /*AuditDiscoveryEnabled*/, make_shared<FileHandlerObserver>(), createFileHandlerPromise);
+fileEngine->CreateFileHandlerAsync(inputFilePath, actualFilePath, true /*AuditDiscoveryEnabled*/, make_shared<FileHandlerObserver>(), createFileHandlerPromise);
 auto handler = handlerFuture.get();
 
 // Read label. This generates the discovery audit.
