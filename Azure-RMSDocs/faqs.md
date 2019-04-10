@@ -121,11 +121,11 @@ Global administrators for an Office 365 tenant or Azure AD tenant can obviously 
 
 - **Security reader**: For [Azure Information Protection analytics](reports-aip.md) only. This Azure Active Directory administrator role lets an administrator view how your labels are being used, monitor user access to labeled documents and emails, and any changes to their classification, and can identify documents that contain sensitive information that must be protected. Because this feature uses Azure Log Analytics, you must also have a supporting [RBAC role](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 
-- **Security administrator**: This Azure Active Directory administrator role lets an administrator configure Azure Information Protection in the Azure portal, in addition to configuring some aspects of other Azure services. An administrator with this role cannot run any of the [PowerShell cmdlets from the AADRM module](administer-powershell.md), or track and revok documents for users.
+- **Security administrator**: This Azure Active Directory administrator role lets an administrator configure Azure Information Protection in the Azure portal, in addition to configuring some aspects of other Azure services. An administrator with this role cannot run any of the [PowerShell cmdlets from the AADRM module](administer-powershell.md), or track and revoke documents for users.
     
     To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). To see what other permissions a user with this role has, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
 
-- Azure Rights Management **Global Administrator** and **Connector Administrator**: For these Azure Rights Management administrator roles, the first grants users permissions to run all [PowerShell cmdlets from the AADRM module](administer-powershell.md) without making them a global administrator for other cloud services, and the second role grants permissions to run only the Rights Management (RMS) connector. Neither of these administrative roles grant permissions to management consoles or to use the Admin mode in the document tracking site.
+- Azure Rights Management **Global Administrator** and **Connector Administrator**: For these Azure Rights Management administrator roles, the first grants users permissions to run all [PowerShell cmdlets from the AADRM module](administer-powershell.md) without making them a global administrator for other cloud services, and the second role grants permissions to run only the Rights Management (RMS) connector. Neither of these administrative roles grant permissions to management consoles or support tracking and revoking documents for users.
 
     To assign either of these administrative roles, use the AADRM PowerShell cmdlet, [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator).
 
@@ -135,7 +135,7 @@ Some things to note:
 
 - Users who are assigned an administrative role cannot automatically remove protection from documents or emails that were protected by Azure Information Protection. Only users who are assigned super users can do this, and when the super user feature is enabled. However, any user that you assign administrative permissions to Azure Information Protection can assign users as super users, including their own account. They can also enable the super user feature. These actions are recorded in an administrator log. For more information, see the security best practices section in [Configuring super users for Azure Rights Management and discovery services or data recovery](configure-super-users.md). 
 
-- If you are migrating your Azure Information Protection labels to Office 365, be sure to read the following section from the label migration documentation: [Important information about administrative roles](configure-policy-migrate-labels.md#important-information-about-administrative-roles).
+- If you are migrating your Azure Information Protection labels to the unified labeling store, be sure to read the following section from the label migration documentation: [Important information about administrative roles](configure-policy-migrate-labels.md#important-information-about-administrative-roles).
 
 ## Does Azure Information Protection support on-premises and hybrid scenarios?
 
