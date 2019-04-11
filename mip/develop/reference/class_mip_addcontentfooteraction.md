@@ -62,7 +62,7 @@ Get the alignment of the footer.
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### GetMargin function
 Get the margin of the footer from the bottom.
