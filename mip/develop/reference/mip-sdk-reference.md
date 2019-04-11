@@ -18,6 +18,8 @@ The MIP SDK for C++ includes:
 - [Functions](mip-functions.md)
 - The following classes:
 
+ Class                         | Description                                
+--------------------------------|---------------------------------------------
 class mip::AccessDeniedError  |  The user could not get access to the content. For example, no permissions, content revoked.
 class mip::Action  |  Interface for an action. Each action translates to a step that needs to be taken by the application to apply the label (as defined in the policy)
 class mip::AddContentFooterAction  |  An action class that specifies adding a content footer to the document.
@@ -98,4 +100,3 @@ class mip::TaskDispatcherDelegate  |  A class that defines the interface to the 
 class mip::TransientNetworkError  |  Transient networking error. Caused by unexpected behavior when making network calls to service endpoints. The operation can be retried as this error is a transient error.
 class mip::UserRights  |  A group of users and the rights associated with them.
 class mip::UserRoles  |  A group of users and the roles associated with them.
-

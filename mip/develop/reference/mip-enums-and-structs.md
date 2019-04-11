@@ -109,15 +109,14 @@ Alignment for content marks (content header or content footer).
 LEFT            | Content marking is aligned to the left
 RIGHT            | Content marking is aligned to the right
 CENTER            | Content marking is centered
-Alignment for content marks (content header or content footer).
- 
+
 ### DataState enum
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 REST            | Inactive data stored physically in databases/file/warehouses
 MOTION            | Data traversing a network or temporarily residing in computer memory to be read or updated
 USE            | Active data under constant change stored physically in databases/file/warehouses etc
-Defines what state of the data is the application acting upon.
+
 
 ### ErrorType enum
  Values                         | Descriptions                                
@@ -171,7 +170,7 @@ None            | None
 OfflineOnly            | Do not allow UI and network operations.
 AllowAuditedExtraction            | Content can be opened in a non-protection-SDK-aware app
 PreferDeprecatedAlgorithms            | Use deprecated crypto algorithms (ECB) for backwards compatibility
-Bit flags that dictate additional policy creation behavior.
+
 
 ### ProtectionType enum
 
@@ -181,7 +180,7 @@ Describes whether protection is based off a template or ad-hoc (custom).
 --------------------------------|---------------------------------------------
 TemplateBased            | Handle was created from a template
 Custom            | Handle was created ad hoc
-Describes whether protection is based off a template or ad-hoc (custom)
+
   
 ### WatermarkLayout enum
 
