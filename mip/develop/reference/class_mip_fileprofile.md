@@ -4,7 +4,7 @@ description: Documents the mip::fileprofile class of the Microsoft Information P
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: msmbaldwin
+ms.author: mbaldwin
 ms.date: 04/11/2019
 ---
 

@@ -4,7 +4,7 @@ description: Documents the mip::httpoperation class of the Microsoft Information
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: msmbaldwin
+ms.author: mbaldwin
 ms.date: 04/11/2019
 ---
 
@@ -25,7 +25,7 @@ Gets operation ID.
 
   
 **Returns**: Operation ID
-The corresponding [HttpRequest](#classmip_1_1_http_request) and [HttpResponse](#classmip_1_1_http_response) will have the same ID
+The corresponding [HttpRequest](class_mip_httprequest.md) and [HttpResponse](class_mip_httpresponse.md) will have the same ID
   
 ### GetResponse function
 Get response, if any.

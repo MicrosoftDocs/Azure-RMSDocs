@@ -4,7 +4,7 @@ description: Documents the mip::accessdeniederror class of the Microsoft Informa
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: msmbaldwin
+ms.author: mbaldwin
 ms.date: 04/11/2019
 ---
 

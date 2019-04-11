@@ -109,14 +109,16 @@
         href: reference/class_mip_addcontentheaderaction.md
       - name: AddWatermarkAction
         href: reference/class_mip_addwatermarkaction.md
+      - name: AdhocProtectionRequiredError
+        href: reference/class_mip_adhocprotectionrequirederror.md
       - name: ApplyLabelAction
         href: reference/class_mip_applylabelaction.md
       - name: AuthDelegate
-        href: reference/class_mip_authdelegate.md 
+        href: reference/class_mip_authdelegate.md
       - name: AuthDelegate::OAuth2Challenge
-        href: reference/class_mip_authdelegate_oauth2challenge.md        
+        href: reference/class_mip_authdelegate_oauth2challenge.md
       - name: AuthDelegate::OAuth2Token
-        href: reference/class_mip_authdelegate_oauth2token.md 
+        href: reference/class_mip_authdelegate_oauth2token.md
       - name: BadInputError
         href: reference/class_mip_badinputerror.md
       - name: ClassificationRequest
@@ -140,7 +142,7 @@
       - name: FileEngine::Settings
         href: reference/class_mip_fileengine_settings.md
       - name: FileExecutionState
-        href: reference/class_mip_fileexecutionstate.md        
+        href: reference/class_mip_fileexecutionstate.md
       - name: FileHandler
         href: reference/class_mip_filehandler.md
       - name: FileHandler::Observer
@@ -155,6 +157,8 @@
         href: reference/class_mip_fileprofile_settings.md
       - name: HttpDelegate
         href: reference/class_mip_httpdelegate.md
+      - name: HttpOperation
+        href: reference/class_mip_httpoperation.md
       - name: HttpRequest
         href: reference/class_mip_httprequest.md
       - name: HttpResponse
@@ -185,6 +189,8 @@
         href: reference/class_mip_nopolicyerror.md
       - name: NotSupportedError
         href: reference/class_mip_notsupportederror.md
+      - name: OperationCancelledError
+        href: reference/class_mip_operationcancellederror.md
       - name: PolicyEngine
         href: reference/class_mip_policyengine.md
       - name: PolicyEngine::Settings
@@ -245,6 +251,8 @@
         href: reference/class_mip_servicedisablederror.md
       - name: Stream
         href: reference/class_mip_stream.md
+      - name: TaskDispatcherDelegate
+        href: reference/class_mip_taskdispatcherdelegate.md
       - name: TransientNetworkError
         href: reference/class_mip_transientnetworkerror.md
       - name: UserRights
