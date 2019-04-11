@@ -17,25 +17,30 @@ ms.author: mbaldwin
 **Namespace `mip` :** |
 public std::string GetAssignmentMethodString(AssignmentMethod method)       |  Converts AssignmentMethod enum to a string description.
 public static std::string GetActionSourceString(ActionSource actionSource)       |  Get the action source name.
-public static std::string GetContentStateString(mip::ContentState state)       |  Get the content state name.
+public static std::string GetDataStateString(mip::DataState state)       |  Get the content state name.
 public const std::string& GetCustomSettingPolicyDataName()       |  Name of the setting to explicitly specify policy data.
 public const std::string& GetCustomSettingExportPolicyFileName()       |  Name of the setting to explicitly specify file path to export SCC policy data to.
 public const std::string& GetCustomSettingSensitivityTypesDataName()       |  Name of the setting to explicitly specify sensitivity data.
 public const std::string& GetCustomSettingPolicyDataFile()       |  Name of the setting to explicitly specify policy data file path.
 public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  Name of the setting to explicitly specify sensitivity types data file path.
-public MIP_API void __CDECL ReleaseAllResources()       |  Release all resources (threads, etc) before shutdown.
+public const std::string& GetCustomSettingExternalLabelsEnabled()       |  Name of the setting that allows to enable "external labels" feature.
+public MIP_API void __CDECL ReleaseAllResources()       |  Releases all resources (threads, etc) before shutdown.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::istream\>& stdIStream)       |  Creates a [Stream](class_mip_stream.md) from a std::istream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::ostream\>& stdOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::ostream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::iostream\>& stdIOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::iostream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an [Stream](class_mip_stream.md) from a buffer.
  | 
 **Namespace `mip::auditmetadatakeys` :** |
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
 public std::string Sender()       |  Audit metadata keys in string representation.
 public std::string Recipients()       | _Not yet documented._
 public std::string LastModifiedBy()       | _Not yet documented._
 public std::string LastModifiedDate()       | _Not yet documented._
  | 
 **Namespace `mip::rights` :** |
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
 public std::string Owner()       |  Gets string identifier for 'owner' right.
 public std::string View()       |  Gets string identifier for 'view' right.
 public std::string AuditedExtract()       |  Gets string identifier for 'audited extract' right.
@@ -52,6 +57,8 @@ public std::vector\<std::string\> EditableDocumentRights()       |  Gets a list 
 public std::vector\<std::string\> CommonRights()       |  Gets a list of rights that apply in all scenarios.
  | 
 **Namespace `mip::roles` :** |
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
 public std::string Viewer()       |  Gets string identifier for 'viewer' role.
 public std::string Reviewer()       |  Gets string identifier for 'reviewer' role.
 public std::string Author()       |  Gets string identifier for 'author' role.
@@ -83,7 +90,7 @@ Parameters:
   
 **Returns**: A string representation of the action source.
   
-### GetContentStateString function
+### GetDataStateString function
 Get the content state name.
 
 Parameters:  
@@ -124,23 +131,16 @@ Name of the setting to explicitly specify sensitivity types data file path.
   
 **Returns**: The custom settings key.
   
+### GetCustomSettingExternalLabelsEnabled function
+Name of the setting that allows to enable "external labels" feature.
+
+  
+**Returns**: The custom settings key.
+  
 ### ReleaseAllResources function
-Release all resources (threads, etc) before shutdown.
-If MIP dynamic libraries are delay-loaded by an application, this function must be called before the application explicitly unloading those MIP libraries to avoid deadlock. For example, on win32, this function must be called before any calls to explictly unload MIP DLLs via FreeLibrary or __FUnloadDelayLoadedDLL2. Applications must release references to all MIP objects (for example, Profiles, Engines, Handlers) before calling this function.
-  
-### operator| function
-ProtectionHandlerCreationOptions bitwise OR operator.
-
-Parameters:  
-* **a**: Left value 
-
-
-* **b**: Right value
-
-
-
-  
-**Returns**: Bitwise OR of ProtectionHandlerCreationOptions
+Releases all resources (threads, etc) before shutdown.
+This function must be called exactly once prior to process termination. It provides MIP the opportunity to uninitialize itself in a moment where its dependent libraries are still guaranteed to be loaded and thread joining is still possible. Applications must release references to all MIP objects (for example, Profiles, Engines, Handlers) before calling this function.
+If this function is not called, MIP will be naturally unloaded as part of standard process teardown. On some platforms, this may result in deadlock (for example, threads cannot be joined on win32 in response to process teardown) or crashes (for example, the DLL unload order for delay-loaded libraries on win32 is not controlled by MIP, so its dependent libraries may have been unloaded by the time MIP shutdown code executes, resulting in invalid read failures).
   
 ### CreateStreamFromStdStream function
 Creates a [Stream](class_mip_stream.md) from a std::istream.
@@ -200,9 +200,11 @@ _Not documented yet._
   
 ### LastModifiedBy function
 _Not documented yet._
+
   
 ### LastModifiedDate function
 _Not documented yet._
+
 
 
 
@@ -293,8 +295,6 @@ Gets a list of rights that apply in all scenarios.
 
   
 **Returns**: A list of rights that apply in all scenarios
-
-
 
 
 ## Namespace `mip::roles`

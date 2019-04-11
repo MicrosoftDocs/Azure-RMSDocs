@@ -20,21 +20,21 @@ enum AssignmentMethod       |  The assignment method of the label on the documen
 enum Consent       |  A user's response when consent is requested to connect to a service endpoint.
 enum ContentFormat       |  Content format.
 enum ContentMarkAlignment       |  Alignment for content marks (content header or content footer).
-enum ContentState       |  Defines what state of the data is the application acting upon.
+enum DataState       |  Defines what state of the data is the application acting upon.
 enum ErrorType       | _Not yet documented._
 enum HttpRequestType       |  HTTP request type.
 enum LogLevel       |  Different log levels used across the MIP SDK.
 enum ProtectionHandlerCreationOptions       |  Bit flags that dictate additional policy creation behavior.
 enum ProtectionType       |  Describes whether protection is based off a template or ad-hoc (custom)
 enum WatermarkLayout       |  Layout for watermarks.
-struct ApplicationInfo  |  A struct that includes application specific information.
-struct PublishingLicenseContext | Holds the details of a Publishing License used to create a protection handler.
+struct mip::ApplicationInfo  |  A struct that includes application specific information.
+struct mip::PublishingLicenseContext  |  Holds the details of a Publishing License used to create a protection handler.
   
 ## Enumerations (`mip`)
 
-### ActionSource enum
+### ActionSource
 
-Defines what triggered the SetLabel event
+Defines what triggered the SetLabel event.
 
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
@@ -43,6 +43,7 @@ AUTOMATIC            | Set by policy conditions
 RECOMMENDED            | Set by user after label was recommended by policy conditions
 DEFAULT            | Set by default in policy
 MANDATORY            | Set by user after policy enforced to set a label
+
 
 
 ### ActionType enum
@@ -66,6 +67,7 @@ REMOVE_PROTECTION            | Remove protection action type.
 REMOVE_WATERMARK            | Remove watermarking action type.
 APPLY_LABEL            | Apply label action type.
 RECOMMEND_LABEL            | Recommend label action type.
+
 
 ### AssignmentMethod enum
 
@@ -107,19 +109,17 @@ Alignment for content marks (content header or content footer).
 LEFT            | Content marking is aligned to the left
 RIGHT            | Content marking is aligned to the right
 CENTER            | Content marking is centered
-
-### ContentState enum
-
-Defines what state of the data is the application acting upon.
-
+Alignment for content marks (content header or content footer).
+ 
+### DataState enum
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 REST            | Inactive data stored physically in databases/file/warehouses
 MOTION            | Data traversing a network or temporarily residing in computer memory to be read or updated
 USE            | Active data under constant change stored physically in databases/file/warehouses etc
+Defines what state of the data is the application acting upon.
 
 ### ErrorType enum
-
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 BAD_INPUT_ERROR            | Caller passed bad input.
@@ -138,6 +138,8 @@ NO_AUTH_TOKEN            | The user could not get access to the content due to a
 DISABLED_SERVICE            | The user could not get access to the content due to the service being disabled
 PROXY_AUTH_ERROR            | Proxy authentication failed.
 NO_POLICY_ERROR            | No policy is configured for user/tenant
+OPERATION_CANCELLED            | Operation cancelled
+ADHOC_PROTECTION_REQUIRED            | Adhoc protection should be set to complete the action on the file
   
 ### HttpRequestType enum
 
@@ -158,8 +160,6 @@ Different log levels used across the MIP SDK.
 Trace            | 
 Info            | 
 Warning            | 
-Error            | 
-
   
 ### ProtectionHandlerCreationOptions enum
 
@@ -171,7 +171,8 @@ None            | None
 OfflineOnly            | Do not allow UI and network operations.
 AllowAuditedExtraction            | Content can be opened in a non-protection-SDK-aware app
 PreferDeprecatedAlgorithms            | Use deprecated crypto algorithms (ECB) for backwards compatibility
-  
+Bit flags that dictate additional policy creation behavior.
+
 ### ProtectionType enum
 
 Describes whether protection is based off a template or ad-hoc (custom).
@@ -180,6 +181,7 @@ Describes whether protection is based off a template or ad-hoc (custom).
 --------------------------------|---------------------------------------------
 TemplateBased            | Handle was created from a template
 Custom            | Handle was created ad hoc
+Describes whether protection is based off a template or ad-hoc (custom)
   
 ### WatermarkLayout enum
 
@@ -193,23 +195,46 @@ DIAGONAL            | Watermark layout is diagonal
 
 ## Structures 
 
-### `mip::ApplicationInfo` 
-
+# struct mip::ApplicationInfo 
 A struct that includes application specific information.
   
+## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public std::string applicationId  |  Application identifier as set in the AAD portal, (Should be a GUID without brackets).
- public std::string applicationName  |  Application name, (Should only contain valid ASCII character excluding ';')
- public std::string applicationVersion  |  The version of the application being used, (Should only contain valid ASCII character excluding ';')
+public std::string applicationId  |  Application identifier as set in the AAD portal, (Should be a GUID without brackets).
+public std::string applicationName  |  Application name, (Should only contain valid ASCII character excluding ';')
+public std::string applicationVersion  |  The version of the application being used, (Should only contain valid ASCII character excluding ';')
   
-### `mip::PublishingLicenseContext` 
+## Members
+  
+### applicationId struct member
+Application identifier as set in the AAD portal, (Should be a GUID without brackets).
+  
+### applicationName struct member
+Application name, (Should only contain valid ASCII character excluding ';')
+  
+### applicationVersion struct member
+The version of the application being used, (Should only contain valid ASCII character excluding ';')  
 
+# struct mip::PublishingLicenseContext 
 Holds the details of a Publishing License used to create a protection handler.
   
+## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::vector\<uint8_t\> licenseInfo  | _Not yet documented._
 public const std::vector\<uint8_t\> serializedPublishingLicense  | _Not yet documented._
 public PublishingLicenseContext(const std::vector\<uint8_t\>& licenseInfo, const std::vector\<uint8_t\>& serializedPublishingLicense)  | _Not yet documented._
   
+## Members
+  
+### licenseInfo struct member
+_Not documented yet._
+
+  
+### serializedPublishingLicense struct member
+_Not documented yet._
+
+  
+### PublishingLicenseContext function
+_Not documented yet._
