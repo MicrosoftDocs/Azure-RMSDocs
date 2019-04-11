@@ -1,10 +1,10 @@
 ---
 title: class mip::TransientNetworkError 
 description: Documents the mip::transientnetworkerror class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: msmbaldwin
 ms.date: 04/11/2019
 ---
 
