@@ -98,7 +98,7 @@ Gets the content format.
   
 **Returns**: DEFAULT, EMAIL 
   
-**See also**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat-enum)
+**See also**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat)
   
 ### GetSupportedActions function
 Gets a masked enum describing all the supported action types.
