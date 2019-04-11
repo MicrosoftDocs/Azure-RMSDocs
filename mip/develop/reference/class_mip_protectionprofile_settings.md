@@ -1,12 +1,11 @@
 ---
 title: class mip::ProtectionProfile::Settings 
 description: Documents the mip::protectionprofile class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 04/11/2019
 ---
 
 # class mip::ProtectionProfile::Settings 
@@ -29,8 +28,8 @@ public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Get the l
 public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Override default logger.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
-public bool GetSkipTelemetryInit() const  |  Gets if telemetry initialization should be skipped or not.
-public void SetSkipTelemetryInit()  |  Disables telemetry initialization.
+public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
+public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Override default asynchonous task dispatching handling with client's own.
 public void SetNewFeaturesDisabled()  |  Disables new features.
 public bool AreNewFeaturesDisabled() const  |  Gets if new features are disabled or not.
 public void SetSessionId(const std::string& sessionId)  |  Sets the session ID.
@@ -151,15 +150,19 @@ Parameters:
 
 
   
-### GetSkipTelemetryInit function
-Gets if telemetry initialization should be skipped or not.
+### GetTaskDispatcherDelegate function
+Get the TaskDispatcher delegate (if any) provided by the application.
 
   
-**Returns**: If telemetry initialization should be skipped or not
+**Returns**: TaskDispatcher delegate to be used for executing asynchronous tasks
   
-### SetSkipTelemetryInit function
-Disables telemetry initialization.
-This method is not typically called by client applications, rather it is used by File SDK to prevent duplicate initialization
+### SetTaskDispatcherDelegate function
+Override default asynchonous task dispatching handling with client's own.
+
+Parameters:  
+* **taskDispatcherDelegate**: Task dispatching callback interface implemented by client application
+
+
   
 ### SetNewFeaturesDisabled function
 Disables new features.

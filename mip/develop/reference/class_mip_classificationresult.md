@@ -1,12 +1,11 @@
 ---
 title: class mip::ClassificationResult 
 description: Documents the mip::classificationresult class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 04/11/2019
 ---
 
 # class mip::ClassificationResult 
@@ -18,6 +17,7 @@ Class that contains the result of a classification call on the Execution State.
 public std::string GetId() const  |  Get the ID of the classification policy.
 public int GetCount() const  |  Get the instance count.
 public int GetConfidenceLevel() const  |  Get the confidence in the result.
+public std::string GetSensitiveInformationDetections() const  |  Get the sensitive information detections.
   
 ## Members
   
@@ -35,3 +35,9 @@ Get the instance count.
   
 ### GetConfidenceLevel function
 Get the confidence in the result.
+  
+### GetSensitiveInformationDetections function
+Get the sensitive information detections.
+
+  
+**Returns**: Json string of all the sensitive information detections.

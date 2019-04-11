@@ -1,12 +1,11 @@
 ---
 title: class mip::PolicyHandler 
 description: Documents the mip::policyhandler class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 04/11/2019
 ---
 
 # class mip::PolicyHandler 
@@ -25,7 +24,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  Called once 
 Get the sensitivity label from existing content.
 
 Parameters:  
-* **state**: Current state of the content 
+* **state**: Current state of the content. 
 
 
 
@@ -47,7 +46,7 @@ Parameters:
 Called once the computed actions have been applied, and the data committed to disk.
 
 Parameters:  
-* **state**: the current execution state of the content after the actions have been committed 
+* **state**: the current execution state of the content after the actions have been committed. 
 
 
-: This call sends an audit event
+: This call sends an audit event.

@@ -1,12 +1,11 @@
 ---
 title: class mip::PolicyEngine 
 description: Documents the mip::policyengine class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 04/11/2019
 ---
 
 # class mip::PolicyEngine 
@@ -25,6 +24,9 @@ public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler(bool isAuditDiscover
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Logs an application specific event to the audit pipeline.
 public const std::string& GetPolicyDataXml() const  |  Gets policy data XML which describes the settings, labels, and rules associated with this policy.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Gets a list of custom settings.
+public const std::string& GetPolicyId() const  |  Gets the policy ID.
+public bool HasClassificationRules() const  |  Gets if the policy has automatic or recommendation rules.
+public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
   
 ## Members
   
@@ -72,25 +74,25 @@ Get the default sensitivity label.
 Create a Policy Handler to execute policy-related functions on a file's execution state.
 
 Parameters:  
-* **A**: bool representing whether audit discovery is enabled or not
+* **A**: bool representing whether audit discovery is enabled or not.
 
 
 
   
 **Returns**: Policy Handler.
-Application needs to keep the policy handler object for the lifetime of the document
+Application needs to keep the policy handler object for the lifetime of the document.
   
 ### SendApplicationAuditEvent function
 Logs an application specific event to the audit pipeline.
 
 Parameters:  
-* **level**: of the log level : Info/Error/Warning 
+* **level**: of the log level: Info/Error/Warning. 
 
 
-* **eventType**: a description of the type of event 
+* **eventType**: a description of the type of event. 
 
 
-* **eventData**: the data associated with the event
+* **eventData**: the data associated with the event.
 
 
   
@@ -98,10 +100,28 @@ Parameters:
 Gets policy data XML which describes the settings, labels, and rules associated with this policy.
 
   
-**Returns**: Policy data XML
+**Returns**: Policy data XML.
   
 ### GetCustomSettings function
 Gets a list of custom settings.
 
   
-**Returns**: A vector of custom settings
+**Returns**: A vector of custom settings.
+  
+### GetPolicyId function
+Gets the policy ID.
+
+  
+**Returns**: A string that represnt the policy ID
+  
+### HasClassificationRules function
+Gets if the policy has automatic or recommendation rules.
+
+  
+**Returns**: A bool that will tell if there any automatic or recommandation rules in the policy
+  
+### GetLastPolicyFetchTime function
+Gets the time when the policy was last fetched.
+
+  
+**Returns**: The time when the policy was last fetched

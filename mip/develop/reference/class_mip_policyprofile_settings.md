@@ -1,12 +1,11 @@
 ---
 title: class mip::PolicyProfile::Settings 
 description: Documents the mip::policyprofile class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 04/11/2019
 ---
 
 # class mip::PolicyProfile::Settings 
@@ -25,6 +24,8 @@ public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Get the l
 public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Override default logger.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
+public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
+public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Override default asynchonous task dispatching handling with client's own.
 public void OptOutTelemetry()  |  Opts out of all telemetry gathering.
 public bool IsTelemetryOptedOut() const  |  Gets if telemetry gathering should be disabled or not.
 public void SetMinimumLogLevel(LogLevel logLevel)  |  Set the minimum log level that will trigger a logging event.
@@ -108,6 +109,20 @@ Override default HTTP stack with client's own.
 
 Parameters:  
 * **httpDelegate**: Http callback interface implemented by client application
+
+
+  
+### GetTaskDispatcherDelegate function
+Get the TaskDispatcher delegate (if any) provided by the application.
+
+  
+**Returns**: TaskDispatcher delegate to be used for executing asynchronous tasks
+  
+### SetTaskDispatcherDelegate function
+Override default asynchonous task dispatching handling with client's own.
+
+Parameters:  
+* **taskDispatcherDelegate**: Task dispatching callback interface implemented by client application
 
 
   

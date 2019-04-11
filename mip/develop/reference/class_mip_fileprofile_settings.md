@@ -1,12 +1,11 @@
 ---
 title: class mip::FileProfile::Settings 
 description: Documents the mip::fileprofile class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 04/11/2019
 ---
 
 # class mip::FileProfile::Settings 
@@ -22,14 +21,14 @@ public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Gets the auth
 public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Gets the consent delegate used to request user consent connecting to services.
 public std::shared_ptr\<Observer\> GetObserver() const  |  Gets the observer that receives notifications of events related to [FileProfile](class_mip_fileprofile.md).
 public const ApplicationInfo GetApplicationInfo() const  |  Gets info about application that is consuming the SDK.
-public bool GetSkipTelemetryInit() const  |  Gets if telemetry initialization should be skipped or not.
-public void SetSkipTelemetryInit()  |  Disables telemetry initialization.
 public void SetNewFeaturesDisabled()  |  Disables new features.
 public bool AreNewFeaturesDisabled() const  |  Gets if new features are disabled or not.
 public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Get the logger delegate (if any) provided by the application.
 public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Override default logger.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
+public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
+public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Override default asynchonous task dispatching handling with client's own.
 public void OptOutTelemetry()  |  Opts out of all telemetry gathering.
 public bool IsTelemetryOptedOut() const  |  Gets if telemetry gathering should be disabled or not.
 public void SetSessionId(const std::string& sessionId)  |  Sets the session ID.
@@ -95,16 +94,6 @@ Gets info about application that is consuming the SDK.
   
 **Returns**: Info about application that is consuming the SDK
   
-### GetSkipTelemetryInit function
-Gets if telemetry initialization should be skipped or not.
-
-  
-**Returns**: If telemetry initialization should be skipped or not
-  
-### SetSkipTelemetryInit function
-Disables telemetry initialization.
-This method is not typically called by client applications, rather it is used by File SDK to prevent duplicate initialization
-  
 ### SetNewFeaturesDisabled function
 Disables new features.
 For applications that don't want to try new features
@@ -141,6 +130,20 @@ Override default HTTP stack with client's own.
 
 Parameters:  
 * **httpDelegate**: HTTP callback interface implemented by client application
+
+
+  
+### GetTaskDispatcherDelegate function
+Get the TaskDispatcher delegate (if any) provided by the application.
+
+  
+**Returns**: TaskDispatcher delegate to be used for executing asynchronous tasks
+  
+### SetTaskDispatcherDelegate function
+Override default asynchonous task dispatching handling with client's own.
+
+Parameters:  
+* **taskDispatcherDelegate**: Task dispatching callback interface implemented by client application
 
 
   

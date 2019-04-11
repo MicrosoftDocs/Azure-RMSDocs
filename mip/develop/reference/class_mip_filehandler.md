@@ -1,12 +1,11 @@
 ---
 title: class mip::FileHandler 
 description: Documents the mip::filehandler class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 04/11/2019
 ---
 
 # class mip::FileHandler 
@@ -26,7 +25,7 @@ public void RemoveProtection()  |  Removes protection from the file. If the file
 public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  parameter.
 public void CommitAsync(const std::shared_ptr\<Stream\>& outputStream, const std::shared_ptr\<void\>& context) | Writes the changes to the stream specified by the \|outputStream\ |  parameter.
 public void GetDecryptedTemporaryFileAsync(const std::shared_ptr\<void\>& context)  |  Returns a path to a temporary file (that will be deleted if possible) - representing the decrypted content.
-public void NotifyCommitSuccessful(const std::string& contentIdentifier)  |  To be called when the changes have been committed to disk.
+public void NotifyCommitSuccessful(const std::string& actualFilePath)  |  To be called when the changes have been committed to disk.
 public std::string GetOutputFileName()  |  Calculates the output file name and extension based on the original file name and the accumulated changes.
   
 ## Members
@@ -81,7 +80,7 @@ Returns a path to a temporary file (that will be deleted if possible) - represen
 To be called when the changes have been committed to disk.
 
 Parameters:  
-* **contentIdentifier**: example for a file: "C:\mip-sdk-for-cpp\files\audit.docx" [path\filename] example for an email: "RE: Audit design:user1@contoso.com" [Subject:Sender] 
+* **actualFilePath**: The actual file path for the output file 
 
 
 Fires an Audit event

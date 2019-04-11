@@ -1,12 +1,11 @@
 ---
 title: class mip::PolicyEngine::Settings 
 description: Documents the mip::policyengine class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 04/11/2019
 ---
 
 # class mip::PolicyEngine::Settings 
@@ -29,6 +28,8 @@ public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSett
 public void SetSessionId(const std::string& sessionId)  |  Set the session ID, used for client defined telemetry.
 public const std::string& GetSessionId() const  |  Get the session ID, a unique identifier.
 public bool IsLoadSensitivityTypesEnabled() const  |  Get the the flag indicating if load sensitivity labels is enabled.
+public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Optionally sets the cloud endpoint base URL.
+public const std::string& GetCloudEndpointBaseUrl() const  |  Gets the cloud base URL used by all service requests, if specified.
   
 ## Members
   
@@ -151,3 +152,17 @@ Get the the flag indicating if load sensitivity labels is enabled.
 
   
 **Returns**: True if enabled else false.
+  
+### SetCloudEndpointBaseUrl function
+Optionally sets the cloud endpoint base URL.
+
+Parameters:  
+* **cloudEndpointBaseUrl**: the base URL used by all service requests (for example, "https://dataservice.protection.outlook.com")
+
+
+  
+### GetCloudEndpointBaseUrl function
+Gets the cloud base URL used by all service requests, if specified.
+
+  
+**Returns**: Base URL
