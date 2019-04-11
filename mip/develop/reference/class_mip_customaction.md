@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/11/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::CustomAction 
@@ -16,7 +16,8 @@ ms.date: 04/11/2019
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  |  Get action name.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetProperties() const  |  Get the properties key value pair list.
-  
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+
 ## Members
   
 ### GetName function
@@ -30,3 +31,9 @@ Get the properties key value pair list.
 
   
 **Returns**: A key value pair list.
+
+### GetType function
+Get the type of [Action](class_mip_action.md).
+
+  
+**Returns**: ActionType The type of derived action this base class can be cast to.

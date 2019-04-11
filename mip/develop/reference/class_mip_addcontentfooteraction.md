@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/11/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::AddContentFooterAction 
@@ -21,7 +21,8 @@ public int GetFontSize() const  |  Get the font size used to display the content
 public const std::string& GetFontColor() const  |  Get the font color used to display the content footer.
 public ContentMarkAlignment GetAlignment() const  |  Get the alignment of the footer.
 public int GetMargin() const  |  Get the margin of the footer from the bottom.
-  
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+
 ## Members
   
 ### GetUIElementName function
@@ -67,3 +68,9 @@ Get the margin of the footer from the bottom.
 
   
 **Returns**: The margins from the bottom of the document (for example, 10 mm).
+
+### GetType function
+Get the type of [Action](class_mip_action.md).
+
+  
+**Returns**: ActionType The type of derived action this base class can be cast to.

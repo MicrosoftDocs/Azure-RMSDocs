@@ -9,11 +9,12 @@ ms.author: mbaldwin
 ms.date: 01/28/2019
 ---
 
-# Summary
+# Enumerations and Structures
+
+## Namespace mip
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-**Namespace `mip` :** |
 enum ActionSource       |  defines what triggered the SetLabel event
 enum ActionType       |  Different action types.
 enum AssignmentMethod       |  The assignment method of the label on the document. Whether the Assignment of the label was done automatically, standard or as a privileged operation (The equivalent to an administrator operation).
@@ -30,7 +31,7 @@ enum WatermarkLayout       |  Layout for watermarks.
 struct mip::ApplicationInfo  |  A struct that includes application specific information.
 struct mip::PublishingLicenseContext  |  Holds the details of a Publishing License used to create a protection handler.
   
-## Enumerations (`mip`)
+## Enumerations (mip)
 
 ### ActionSource
 

@@ -10,11 +10,11 @@ ms.author: mbaldwin
 ---
 # Functions
 
-## Summary
+## Summary 
 
+### Namespace mip
 | Functions by namespace scope   | Descriptions                                |
 |--------------------------------|---------------------------------------------|
-**Namespace `mip` :** |
 public std::string GetAssignmentMethodString(AssignmentMethod method)       |  Converts AssignmentMethod enum to a string description.
 public static std::string GetActionSourceString(ActionSource actionSource)       |  Get the action source name.
 public static std::string GetDataStateString(mip::DataState state)       |  Get the content state name.
@@ -29,16 +29,19 @@ public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const st
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::ostream\>& stdOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::ostream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::iostream\>& stdIOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::iostream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an [Stream](class_mip_stream.md) from a buffer.
- | 
-**Namespace `mip::auditmetadatakeys` :** |
+
+
+### Namespace mip::auditmetadatakeys
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string Sender()       |  Audit metadata keys in string representation.
 public std::string Recipients()       | _Not yet documented._
 public std::string LastModifiedBy()       | _Not yet documented._
 public std::string LastModifiedDate()       | _Not yet documented._
- | 
-**Namespace `mip::rights` :** |
+
+
+### Namespace mip::rights
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string Owner()       |  Gets string identifier for 'owner' right.
@@ -55,8 +58,9 @@ public std::string Forward()       |  Gets string identifier for 'forward' right
 public std::vector\<std::string\> EmailRights()       |  Gets a list of rights that apply to emails.
 public std::vector\<std::string\> EditableDocumentRights()       |  Gets a list of rights that apply to documents.
 public std::vector\<std::string\> CommonRights()       |  Gets a list of rights that apply in all scenarios.
- | 
-**Namespace `mip::roles` :** |
+
+### Namespace mip::roles
+
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string Viewer()       |  Gets string identifier for 'viewer' role.
@@ -64,9 +68,7 @@ public std::string Reviewer()       |  Gets string identifier for 'reviewer' rol
 public std::string Author()       |  Gets string identifier for 'author' role.
 public std::string CoOwner()       |  Gets string identifier for 'co-owner' role.
 
-
-
-## Namespace `mip`
+## Namespace mip
 
 ### GetAssignmentMethodString function
 Converts AssignmentMethod enum to a string description.
@@ -189,7 +191,7 @@ Parameters:
 
 
 
-## Namespace `mip::auditmetadatakeys`
+## Namespace mip::auditmetadatakeys
 
 ### Sender function
 Audit metadata keys in string representation.
@@ -210,7 +212,7 @@ _Not documented yet._
 
 
 
-## Namespace `mip::rights`
+## Namespace mip::rights
 
 ### Owner function
 Gets string identifier for 'owner' right.
@@ -297,7 +299,7 @@ Gets a list of rights that apply in all scenarios.
 **Returns**: A list of rights that apply in all scenarios
 
 
-## Namespace `mip::roles`
+## Namespace mip::roles
 
 ### Viewer function
 Gets string identifier for 'viewer' role.

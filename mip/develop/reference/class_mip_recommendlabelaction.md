@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/11/2019
+ms.date: 01/28/2019
 ---
 
 # class mip::RecommendLabelAction 
@@ -16,7 +16,8 @@ Recommend label actions is meant to suggest a label to the users. Suppressing th
 --------------------------------|---------------------------------------------
 public const std::string& GetLabelId() const  |  Get the label ID suggested.
 public const std::vector\<std::string\>& GetClassificationIds() const  |  Get the Classification IDs that matched and caused this label to appear.
-  
+public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
+
 ## Members
   
 ### GetLabelId function
@@ -30,3 +31,9 @@ Get the Classification IDs that matched and caused this label to appear.
 
   
 **Returns**: Const std::vector<std::string>& a list of classification IDs that caused this label to appear.
+
+### GetType function	
+Get the type of [Action](class_mip_action.md).	
+
+
+ **Returns**: ActionType The type of derived action this base class can be cast to.
