@@ -36,12 +36,6 @@ Get the error message.
   
 **Returns**: The error message
   
-### Clone function
-Clone the error.
-
-  
-**Returns**: A clone of the error.
-  
 ### GetErrorType function
 Get the error type.
 

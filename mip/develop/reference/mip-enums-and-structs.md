@@ -28,8 +28,8 @@ enum LogLevel       |  Different log levels used across the MIP SDK.
 enum ProtectionHandlerCreationOptions       |  Bit flags that dictate additional policy creation behavior.
 enum ProtectionType       |  Describes whether protection is based off a template or ad-hoc (custom)
 enum WatermarkLayout       |  Layout for watermarks.
-struct mip::ApplicationInfo  |  A struct that includes application specific information.
-struct mip::PublishingLicenseContext  |  Holds the details of a Publishing License used to create a protection handler.
+struct ApplicationInfo  |  A struct that includes application specific information.
+struct PublishingLicenseContext  |  Holds the details of a Publishing License used to create a protection handler.
   
 ## Enumerations (mip)
 
@@ -47,7 +47,7 @@ MANDATORY            | Set by user after policy enforced to set a label
 
 
 
-### ActionType enum
+### ActionType
 
 Different action types. CUSTOM is the generic action type. Every other action type is a specific action with a specific meaning.
 
@@ -70,7 +70,7 @@ APPLY_LABEL            | Apply label action type.
 RECOMMEND_LABEL            | Recommend label action type.
 
 
-### AssignmentMethod enum
+### AssignmentMethod
 
 The assignment method of the label on the document. Whether the Assignment of the label was done automatically, standard or as a privileged operation (The equivalent to an administrator operation).
 
@@ -81,7 +81,7 @@ PRIVILEGED            | [Label](class_mip_label.md) assignment method is privile
 AUTO            | [Label](class_mip_label.md) assignment method is automatic
 
 
-### Consent enum
+### Consent
 
 A user's response when consent is requested to connect to a service endpoint.
 
@@ -92,7 +92,7 @@ Accept            | Consent, just one time
 Reject            | Do not consent
 
 
-### ContentFormat enum
+### ContentFormat
 
 Content format.
 
@@ -101,7 +101,7 @@ Content format.
 DEFAULT            | Content format is standard file format
 EMAIL            | Content format is email format
 
-### ContentMarkAlignment enum
+### ContentMarkAlignment
 
 Alignment for content marks (content header or content footer).
 
@@ -111,7 +111,7 @@ LEFT            | Content marking is aligned to the left
 RIGHT            | Content marking is aligned to the right
 CENTER            | Content marking is centered
 
-### DataState enum
+### DataState
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 REST            | Inactive data stored physically in databases/file/warehouses
@@ -119,7 +119,7 @@ MOTION            | Data traversing a network or temporarily residing in compute
 USE            | Active data under constant change stored physically in databases/file/warehouses etc
 
 
-### ErrorType enum
+### ErrorType
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 BAD_INPUT_ERROR            | Caller passed bad input.
@@ -141,7 +141,7 @@ NO_POLICY_ERROR            | No policy is configured for user/tenant
 OPERATION_CANCELLED            | Operation cancelled
 ADHOC_PROTECTION_REQUIRED            | Adhoc protection should be set to complete the action on the file
   
-### HttpRequestType enum
+### HttpRequestType
 
 HTTP request type.
 
@@ -151,7 +151,7 @@ Get            | GET
 Post            | POST
 
   
-### LogLevel enum
+### LogLevel
 
 Different log levels used across the MIP SDK.
 
@@ -161,7 +161,7 @@ Trace            |
 Info            | 
 Warning            | 
   
-### ProtectionHandlerCreationOptions enum
+### ProtectionHandlerCreationOptions
 
 Bit flags that dictate additional policy creation behavior.
 
@@ -173,7 +173,7 @@ AllowAuditedExtraction            | Content can be opened in a non-protection-SD
 PreferDeprecatedAlgorithms            | Use deprecated crypto algorithms (ECB) for backwards compatibility
 
 
-### ProtectionType enum
+### ProtectionType
 
 Describes whether protection is based off a template or ad-hoc (custom).
 
@@ -183,7 +183,7 @@ TemplateBased            | Handle was created from a template
 Custom            | Handle was created ad hoc
 
   
-### WatermarkLayout enum
+### WatermarkLayout
 
 Layout for watermarks.
 
@@ -195,7 +195,7 @@ DIAGONAL            | Watermark layout is diagonal
 
 ## Structures 
 
-### struct mip::ApplicationInfo 
+### mip::ApplicationInfo 
 A struct that includes application specific information.
   
 #### Summary
@@ -216,7 +216,7 @@ Application name, (Should only contain valid ASCII character excluding ';')
 ##### applicationVersion struct member
 The version of the application being used, (Should only contain valid ASCII character excluding ';')  
 
-### struct mip::PublishingLicenseContext 
+### mip::PublishingLicenseContext 
 Holds the details of a Publishing License used to create a protection handler.
   
 #### Summary
