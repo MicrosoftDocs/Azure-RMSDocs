@@ -195,46 +195,46 @@ DIAGONAL            | Watermark layout is diagonal
 
 ## Structures 
 
-# struct mip::ApplicationInfo 
+### struct mip::ApplicationInfo 
 A struct that includes application specific information.
   
-## Summary
+#### Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string applicationId  |  Application identifier as set in the AAD portal, (Should be a GUID without brackets).
 public std::string applicationName  |  Application name, (Should only contain valid ASCII character excluding ';')
 public std::string applicationVersion  |  The version of the application being used, (Should only contain valid ASCII character excluding ';')
   
-## Members
+#### Members
   
-### applicationId struct member
+##### applicationId struct member
 Application identifier as set in the AAD portal, (Should be a GUID without brackets).
   
-### applicationName struct member
+##### applicationName struct member
 Application name, (Should only contain valid ASCII character excluding ';')
   
-### applicationVersion struct member
+##### applicationVersion struct member
 The version of the application being used, (Should only contain valid ASCII character excluding ';')  
 
-# struct mip::PublishingLicenseContext 
+### struct mip::PublishingLicenseContext 
 Holds the details of a Publishing License used to create a protection handler.
   
-## Summary
+#### Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::vector\<uint8_t\> licenseInfo  | _Not yet documented._
 public const std::vector\<uint8_t\> serializedPublishingLicense  | _Not yet documented._
 public PublishingLicenseContext(const std::vector\<uint8_t\>& licenseInfo, const std::vector\<uint8_t\>& serializedPublishingLicense)  | _Not yet documented._
   
-## Members
+#### Members
   
-### licenseInfo struct member
+##### licenseInfo struct member
 _Not documented yet._
 
   
-### serializedPublishingLicense struct member
+##### serializedPublishingLicense struct member
 _Not documented yet._
 
   
-### PublishingLicenseContext function
+##### PublishingLicenseContext function
 _Not documented yet._
