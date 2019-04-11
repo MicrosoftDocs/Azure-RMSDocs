@@ -4,6 +4,7 @@ description: Documents the mip::notsupportederror class of the Microsoft Informa
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ---
