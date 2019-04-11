@@ -22,5 +22,4 @@ public ActionType GetType() const  |  Get the type of [Action](class_mip_action.
 ### GetType function	
 Get the type of [Action](class_mip_action.md).	
 
-
- **Returns**: ActionType The type of derived action this base class can be cast to.
+**Returns**: ActionType The type of derived action this base class can be cast to.

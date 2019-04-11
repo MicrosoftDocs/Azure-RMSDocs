@@ -19,7 +19,8 @@ Justify [Action](class_mip_action.md) requires providing a justification to a la
 --------------------------------|---------------------------------------------
 public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
 
-
+## Members
+  
 ### GetType function
 Get the type of [Action](class_mip_action.md).
 
