@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/05/2019
+ms.date: 04/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -50,7 +50,7 @@ Which client should you install?
     
     Currently, the preview versions of the Azure Information Protection client and the Azure Information Protection unified labeling client don't have parity for their features. However, expect this gap to close and then, new features to be added only to the Azure Information Protection unified labeling client. For this reason, we recommend you test with the Azure Information Protection unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](../configure-policy-migrate-labels.md), use the Azure Information Protection client.
 
-### Feature comparisons for the clients
+### Compare the clients
 
 Use the following table to help compare which features are supported by the two current preview versions.
 
@@ -80,7 +80,7 @@ Use the following table to help compare which features are supported by the two 
 |Multilanguage support:| Yes | No |
 |Support for AD RMS:| Yes | The following action only is supported:<br /><br /> - The viewer can open protected documents when you deploy the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))|
 
-#### Functional comparison for the clients
+#### Detailed comparisons for the clients
 
 When both clients support the same feature, use the following table to help identify some functional differences between the two current preview versions.
 
@@ -99,7 +99,7 @@ When both clients support the same feature, use the following table to help iden
 
 For a more detailed comparison of behavior differences for specific protection settings, see [Comparing the behavior of protection settings for a label](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
-#### Features that will not be in the Azure Information Protection unified labeling client
+#### Features not planned to be in the Azure Information Protection unified labeling client
 
 Although the Azure Information Protection unified labeling client is still under development, the following features and behavior differences from the Azure Information Protection client are not planned to be available in future releases for the Azure Information Protection unified labeling client: 
 
