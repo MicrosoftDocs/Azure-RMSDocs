@@ -18,7 +18,7 @@ ms.date: 01/28/2019
 public const std::string& GetName() const  |  Get action name.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetProperties() const  |  Get the properties key value pair list.
 public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
-  
+
 ## Members
   
 ### GetName function
@@ -32,7 +32,7 @@ Get the properties key value pair list.
 
   
 **Returns**: A key value pair list.
-  
+
 ### GetType function
 Get the type of [Action](class_mip_action.md).
 
