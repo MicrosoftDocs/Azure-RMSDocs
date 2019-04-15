@@ -1,6 +1,6 @@
 ---
-title: class mip::ProxyAuthenticationError 
-description: Documents the mip::proxyauthenticationerror class of the Microsoft Information Protection (MIP) SDK.
+title: class mip::AdhocProtectionRequiredError 
+description: Documents the mip::adhocprotectionrequirederror class of the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
@@ -9,8 +9,8 @@ ms.author: mbaldwin
 ms.date: 01/28/2019
 ---
 
-# class mip::ProxyAuthenticationError 
-Proxy authentication failure.
+# class mip::AdhocProtectionRequiredError 
+Adhoc protection should be set to complete the action on the file.
   
 ## Summary
  Members                        | Descriptions                                

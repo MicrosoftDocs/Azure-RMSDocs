@@ -17,7 +17,7 @@ An action class that specifies adding protection by template to the document.
 --------------------------------|---------------------------------------------
 public const std::string& GetTemplateId() const  |  Get the protection template ID associated with the action.
 public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
-  
+
 ## Members
   
 ### GetTemplateId function
@@ -25,7 +25,8 @@ Get the protection template ID associated with the action.
 
   
 **Returns**: The protection template ID.
-  
+
+
 ### GetType function
 Get the type of [Action](class_mip_action.md).
 

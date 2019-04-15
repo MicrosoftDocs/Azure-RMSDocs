@@ -21,6 +21,7 @@ public std::string GetName() const  |  Gets protection name.
 public std::string GetDescription() const  |  Gets protection description.
 public std::string GetTemplateId() const  |  Gets the protection template ID, if any.
 public std::string GetLabelId() const  |  Gets the label ID, if any.
+public std::string GetContentId() const  |  Gets the Content ID, if any.
 public std::vector\<UserRights\> GetUserRights() const  |  Gets collection of users-to-rights mappings.
 public std::vector\<UserRoles\> GetUserRoles() const  |  Gets collection of users-to-roles mappings.
 public bool DoesContentExpire() const  |  Checks if content has an expiration time or not.
@@ -69,6 +70,12 @@ Gets the label ID, if any.
 **Returns**: [Label](class_mip_label.md) ID
 This property will only be populated in ProtectionDescriptors for preexisting protected content. It is a field populated by the server at the moment protected content is consumed.
   
+### GetContentId function
+Gets the Content ID, if any.
+
+  
+**Returns**: Content ID
+  
 ### GetUserRights function
 Gets collection of users-to-rights mappings.
 
@@ -112,7 +119,7 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata-function)
+A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via ProtectionDescriptor::GetSignedAppData.
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.
