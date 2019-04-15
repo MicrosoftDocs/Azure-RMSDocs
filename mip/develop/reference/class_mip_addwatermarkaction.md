@@ -22,7 +22,7 @@ public const std::string& GetFontName() const  |  Get the font name used to disp
 public int GetFontSize() const  |  Get the font size used to display the watermark.
 public const std::string& GetFontColor() const  |  Get the font color used to display the watermark.
 public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
-  
+
 ## Members
   
 ### GetUIElementName function
@@ -60,7 +60,7 @@ Get the font color used to display the watermark.
 
   
 **Returns**: Font color as a string (for example, "#000000").
-  
+
 ### GetType function
 Get the type of [Action](class_mip_action.md).
 

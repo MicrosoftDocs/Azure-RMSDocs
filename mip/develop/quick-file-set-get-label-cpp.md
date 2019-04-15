@@ -101,17 +101,16 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
 
    ```cpp
    // Set up async FileHandler for input file operations
-   string filePathIn = "<input-file-path>";
-   string contentIdentifier = "<content-identifier>";
+   string inputFilePath = "<input-file-path>";
+   string actualFilePath = "<content-identifier>";
    std::shared_ptr<FileHandler> handler;
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
         engine->CreateFileHandlerAsync(
-             filePathIn, 
-             contentIdentifier,
-             mip::ContentState::REST, 
+             inputFilePath,
+             actualFilePath,                       
              true, 
              std::make_shared<FileHandlerObserver>(), 
              handlerPromise);
@@ -164,15 +163,14 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    system("pause");
 
    // Set up async FileHandler for output file operations
-   contentIdentifier = "<content-identifier>";
+   actualFilePath = "<content-identifier>";
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
         engine->CreateFileHandlerAsync(
-             filePathOut, 
-             contentIdentifier,
-             mip::ContentState::REST,
+             filePathOut,
+             actualFilePath,
              true,
              std::make_shared<FileHandlerObserver>(),
              handlerPromise);

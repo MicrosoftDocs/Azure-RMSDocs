@@ -16,6 +16,7 @@ Abstraction for identity.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public Identity()  |  Default [Identity](class_mip_identity.md) constructor used when a user email address is not known.
+public Identity(const Identity& other)  |  [Identity](class_mip_identity.md) copy constructor.
 public explicit Identity(const std::string& email)  |  [Identity](class_mip_identity.md) constructor used when a user email address is known.
 public const std::string& GetEmail() const  |  Get the email.
 public void SetDelegatedEmail(const std::string& delegatedEmail)  |  Sets the delegated email, A delegated email address is an on behalf of user for which the opertations are performed.
@@ -25,6 +26,14 @@ public const std::string& GetDelegatedEmail() const  |  Get the delegated email,
   
 ### Identity function
 Default [Identity](class_mip_identity.md) constructor used when a user email address is not known.
+  
+### Identity function
+[Identity](class_mip_identity.md) copy constructor.
+
+Parameters:  
+* **[Identity](class_mip_identity.md)**: used to create the copy.
+
+
   
 ### Identity function
 [Identity](class_mip_identity.md) constructor used when a user email address is known.
