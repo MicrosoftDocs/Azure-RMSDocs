@@ -117,7 +117,7 @@ For more information about deploying and using the scanner, see [Deploying the A
 
 For your cloud data stores, use Microsoft Cloud App Security to apply your labels to documents in Box, SharePoint Online, and OneDrive for Business. For more information, see [Automatically apply Azure Information Protection classification labels](/cloud-app-security/use-case-information-protection) and [Azure Information Protection integration](/cloud-app-security/azip-integration).
 
-## Latest labeling updates in Office 365
+## Latest labeling updates for Microsoft 365
 
 See the latest information about how Azure Information Protection helps you to discover, classify, protect, and monitor your sensitive information, wherever it lives:
 
