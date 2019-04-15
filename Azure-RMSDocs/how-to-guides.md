@@ -46,7 +46,7 @@ The most successful deployments are those that identify specific use cases that 
 
 ## Additional deployment instructions
 
-Our [Azure Information Protection technical blog](https://aka.ms/AIPblog) has additional guidance from our Customer Experience Engineering team.
+Our [Azure Information Protection technical blog](https://aka.ms/AIPblog) includes additional guidance from the trenches.
 
 For example, a methodology with best practices for business decision makers and IT implementers:
 
