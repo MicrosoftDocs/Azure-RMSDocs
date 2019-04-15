@@ -186,6 +186,12 @@ namespace mip_sdk_dotnet_quickstart
                var engineSettings = new FileEngineSettings("user1@tenant.com", "", "en-US");
                engineSettings.Identity = new Identity("user1@tenant.com");
                var fileEngine = Task.Run(async () => await fileProfile.AddEngineAsync(engineSettings)).Result;
+
+               // Application Shutdown
+               // handler = null; // This will be used in later quick starts.
+               fileEngine = null;
+               fileProfile = null;
+               MIP.ReleaseAllResources();
           }
      }
 }
