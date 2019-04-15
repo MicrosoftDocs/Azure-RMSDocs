@@ -250,7 +250,8 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
    using std::make_shared;
    using std::shared_ptr;
    using std::string;
-   using std::cout;   using mip::ApplicationInfo; 
+   using std::cout;   
+   using mip::ApplicationInfo; 
    using mip::FileProfile;
    using mip::FileEngine;
 
