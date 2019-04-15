@@ -27,7 +27,7 @@ Passing information into the MIP SDK to compute an action that should be taken, 
 | Member                                                                           | Returns                                                                                                              |
 |----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | `std::string GetNewLabelId()`                                                      | Returns the label ID to be applied to the object.                                                                    |
-| `mip::ContentState GetContentState()`                                              | Returns the mip::ContentState of the object.                                                                         |
+| `mip::DataState GetDataState()`                                              | Returns the mip::DataState of the object.                                                                         |
 | `std::pair<bool, std::string> IsDowngradeJustified()`                              | Returns a std::pair expressing whether downgrade is justified and the justification.                                 |
 | `std::string GetContentIdentifier()`                                               | Returns the content identifier. Should be a human-readable identifier, indicating the location of the object.   |
 | `mip::ActionSource GetNewLabelActionSource()`                                      | Returns the mip::ActionSource of the label.                                                                          |
@@ -48,7 +48,7 @@ struct ExecutionStateOptions {
     std::string newLabelId;
     std::string contentIdentifier;
     mip::ActionSource actionSource = mip::ActionSource::MANUAL;
-    mip::ContentState contentState = mip::ContentState::REST;
+    mip::DataState dataState = mip::DataState::USE;
     mip::AssignmentMethod assignmentMethod = mip::AssignmentMethod::STANDARD;
     bool isDowngradeJustified = false;
     std::string downgradeJustification;

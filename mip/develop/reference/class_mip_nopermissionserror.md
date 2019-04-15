@@ -25,7 +25,7 @@ public virtual const std::string& GetMessage() const  |  Get the error message.
 public virtual void SetMessage(const std::string& msg)  |  Set the error message.
   
 ## Members
-  
+
 ### GetReferrer function
 Gets the contact in case of missing rights to the document.
 
@@ -35,7 +35,6 @@ Gets the contact in case of missing rights to the document.
 ### GetOwner function
 _Not documented yet._
 
-  
 ### what function
 Get the error message.
 
@@ -71,4 +70,3 @@ Set the error message.
 
 Parameters:  
 * **msg**: the error message.
-

@@ -16,7 +16,7 @@ It also holds properties for a specific applied label instance.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetCreationTime() const  |  Get the creation time of the label.
+public std::chrono::time_point\<std::chrono::system_clock\> GetCreationTime() const  |  Get the creation time of the label.
 public AssignmentMethod GetAssignmentMethod() const  |  Get the assignment method of the label.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  |  Gets extended properties.
 public bool IsProtectionAppliedFromLabel() const  |  Gets if protection was applied by the label or not.
@@ -28,7 +28,7 @@ public std::shared_ptr\<Label\> GetLabel() const  |  Get the actual label object
 Get the creation time of the label.
 
   
-**Returns**: Creation time as a GMT string.
+**Returns**: Creation time.
   
 ### GetAssignmentMethod function
 Get the assignment method of the label.
@@ -36,7 +36,7 @@ Get the assignment method of the label.
   
 **Returns**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
   
-**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod)
   
 ### GetExtendedProperties function
 Gets extended properties.

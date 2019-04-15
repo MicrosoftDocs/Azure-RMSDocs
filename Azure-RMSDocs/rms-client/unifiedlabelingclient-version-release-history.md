@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -38,7 +38,7 @@ Use the following information to see what’s supported for the latest preview v
 
 This client installs an Office add-on for Windows computers, an extension for File Explorer, and a PowerShell module. This client has the same [prerequisites](../requirements.md) as the Azure Information Protection client that downloads policy from Azure.
 
-To compare features and functionality with the Azure Information Protection client, see [Feature comparisons for the clients](use-client.md#feature-comparisons-for-the-clients).
+To compare features and functionality with the Azure Information Protection client, see [Feature comparisons for the clients](use-client.md#compare-the-clients).
 
 ## Current preview version
 
@@ -86,7 +86,7 @@ Includes:
 
 - The full set of cmdlets from the AzureInformationProtection module aren't available, which includes cmdlets that connect directly to a protection service. For example, Unprotect-RMSFile, to unprotect files in bulk.
 
-For full details, see the [comparison tables](use-client.md#feature-comparisons-for-the-clients).
+For full details, see the [comparison tables](use-client.md#compare-the-clients).
 
 ## Instructions
 
