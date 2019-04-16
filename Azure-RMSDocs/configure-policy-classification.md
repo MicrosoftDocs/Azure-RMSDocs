@@ -110,7 +110,7 @@ When you click **Save**, your changes are automatically available to users and s
 
 ### Sensitive information types that require a minimum version of the client
 
-The following sensitive information types require the [current general availability version](./rms-client/client-version-release-history#version-1482040) of the Azure Information Protection client:
+The following sensitive information types require the [current general availability version](./rms-client/client-version-release-history.md#version-1482040) of the Azure Information Protection client:
 
 - **Azure Service Bus Connection String**
 - **Azure IoT Connection String**
