@@ -6,7 +6,7 @@ description: You can delete or reorder the Azure Information Protection labels t
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/28/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,6 +27,8 @@ ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 # How to delete or reorder a label for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 You can delete or reorder the Azure Information Protection labels that users see in their Office applications by selecting these actions for the labels.
 

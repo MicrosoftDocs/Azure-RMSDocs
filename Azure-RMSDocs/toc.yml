@@ -37,6 +37,8 @@
     href: infoprotect-quick-start-tutorial.md
   - name: Configure policy settings that work together
     href: infoprotect-settings-tutorial.md
+  - name: Configure client settings to control oversharing
+    href: infoprotect-oversharing-tutorial.md
 - name: Concepts
   href: overview-policy.md
   items:
@@ -165,8 +167,6 @@
       href: configure-exo-rules.md
     - name: Deploying the Azure Information Protection scanner
       href: deploy-aip-scanner.md
-    - name: Deploying the Azure Information Protection scanner (PREVIEW)
-      href: deploy-aip-scanner-preview.md
     - name: Reporting for Azure Information Protection
       href: reports-aip.md
     - name: Deploying the RMS connector
@@ -209,12 +209,43 @@
     - name: Client deployment solutions
       href: ./rms-client/use-client.md
       items:
+      - name: Azure Information Protection unified labeling client
+        href: ./rms-client/aip-clientv2.md
+        items:
+        - name: Version history - Azure Information Protection unified labeling client
+          href: ./rms-client/unifiedlabelingclient-version-release-history.md
+        - name: Admin guide - Azure Information Protection unified labeling client
+          href: ./rms-client/clientv2-admin-guide.md
+          items:
+          - name: Install the client for users
+            href: ./rms-client/clientv2-admin-guide-install.md
+          - name: Customizations
+            href: ./rms-client/clientv2-admin-guide-customizations.md
+          - name: Client files and usage logging
+            href: ./rms-client/clientv2-admin-guide-files-and-logging.md
+          - name: File types supported
+            href: ./rms-client/clientv2-admin-guide-file-types.md
+          - name: PowerShell commands
+            href: ./rms-client/clientv2-admin-guide-powershell.md
+        - name: User guide - Azure Information Protection unified labeling client
+          href: ./rms-client/clientv2-user-guide.md
+          items:
+          - name: Download and install the client
+            href: ./rms-client/install-unifiedlabelingclient-app.md
+          - name: Classify a file or email
+            href: ./rms-client/clientv2-classify.md
+          - name: Classify and protect a file or email
+            href: ./rms-client/clientv2-classify-protect.md
+          - name: Open files that have been protected
+            href: ./rms-client/clientv2-view-use-files.md
+          - name: Remove labels and protection
+            href: ./rms-client/clientv2-remove-label-protection.md
       - name: Azure Information Protection client
         href: ./rms-client/aip-client.md
         items:
-        - name: Azure Information Protection client - Version release history
+        - name: Version history - Azure Information Protection client
           href: ./rms-client/client-version-release-history.md
-        - name: Azure Information Protection client administrator guide
+        - name: Admin guide - Azure Information Protection client
           href: ./rms-client/client-admin-guide.md
           items:
           - name: Install the client for users
@@ -229,7 +260,7 @@
             href: ./rms-client/client-admin-guide-file-types.md
           - name: PowerShell commands
             href: ./rms-client/client-admin-guide-powershell.md
-        - name: Azure Information Protection user guide
+        - name: User guide - Azure Information Protection client
           href: ./rms-client/client-user-guide.md
           items:
           - name: Download and install the client
@@ -248,11 +279,6 @@
             href: ./rms-client/client-protection-only-mode.md
         - name: Tasks that you used to do with the RMS sharing application
           href: ./rms-client/upgrade-client-app.md
-      - name: Azure Information Protection unified labeling client (PREVIEW)
-        href: ./rms-client/unifiedlabelingclient-version-release-history.md
-        items:
-        - name: Download & install the Azure Information Protection unified labeling client (PREVIEW)
-          href: ./rms-client/install-unifiedlabelingclient-app.md
       - name: Protected PDF readers
         href: ./rms-client/protected-pdf-readers.md
       - name: RMS client deployment notes
