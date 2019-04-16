@@ -142,7 +142,7 @@ To view the Azure Information Protection reports and create your own, make sure 
 |Requirement|More information|
 |---------------|--------------------|
 |An Azure subscription that includes Log Analytics and that is for the same tenant as Azure Information Protection|See the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
-|The Azure Information Protection client or the Azure Information Protection unified labeling client|If you don't already have one of these clients, you can download and install them from the [Microsoft Download Center]((https://www.microsoft.com/en-us/download/details.aspx?id=53018)). <br /><br /> Make sure you have the latest version to support all the features that Azure Information Protection analytics supports.|
+|The Azure Information Protection client or the Azure Information Protection unified labeling client|If you don't already have one of these clients, you can download and install them from the [Microsoft Download Center]((https://www.microsoft.com/en-us/download/details.aspx?id=53018)). <br /><br /> Make sure you have the latest version to support [all the features](#features-that-require-a-minimum-version-of-the-client) for Azure Information Protection analytics.|
 |For the **Discovery and risk** report: <br /><br />- To display data from on-premises data stores, you have deployed at least one instance of the Azure Information Protection scanner <br /><br />- To display data from Windows 10 computers, they must be a minimum build of 1809, you are using Windows Defender Advanced Threat Protection (Windows Defender ATP), and you have enabled the Azure Information Protection integration feature from Windows Defender Security Center|For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). <br /><br />For information about configuring and using the Azure Information Protection integration feature from Windows Defender Security Center, see [Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
 |For the **Recommendations** report: <br /><br />- To add a new data repository from the Azure portal as a recommended action, you must be using the latest general availability version of the Azure Information Protection scanner |To deploy the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).|
 
@@ -191,6 +191,19 @@ After you have configured your workspace for Azure Information Protection analyt
 - Azure role: **Log Analytics Reader**
 
 However, a typical role assignment for many organizations is the Azure AD role of **Security reader** and the Azure role of **Reader**.
+
+### Features that require a minimum version of the client
+
+You can use the version history information for the [Azure Information Protection unified labeling client](./rms-client/unifiedlabelingclient-version-release-history.md) and the [Azure Information Protection client](./rms-client/client-version-release-history.md) to confirm whether your version of the client supports all the central reporting features. The minimum versions for the clients:
+
+For the Azure Information Protection unified labeling client:
+
+- Support for auditing and endpoint discovery: Version 2.0.778
+
+For the Azure Information Protection client:
+
+- Support for auditing: 1.41.51.0
+- Support for endpoint discovery: Version 1.48.204.0
 
 ## Configure a Log Analytics workspace for the reports
 
