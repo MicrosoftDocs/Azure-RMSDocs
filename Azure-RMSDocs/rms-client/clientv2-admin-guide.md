@@ -177,7 +177,7 @@ You can use any of the following options to uninstall the client:
 
 - Use Control Panel to uninstall a program: Click **Microsoft Azure Information Protection** > **Uninstall**
 
-- Rerun the executable (for example, **AzInfoProtection_ul.exe**), and from the **Modify Setup** page, click **Uninstall**. 
+- Rerun the executable (for example, **AzInfoProtection_UL.exe**), and from the **Modify Setup** page, click **Uninstall**. 
 
 - Run the executable with **/uninstall**. For example: `AzInfoProtection.exe /uninstall`
 

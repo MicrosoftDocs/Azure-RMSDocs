@@ -40,7 +40,7 @@ In addition:
 
 Before you install the Azure Information Protection unified labeling client, confirm with your administrator or help desk that you are using Office 365 sensitivity labels.
 
-1. Download **AzInfoProtection_ul.exe** from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+1. Download **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 2. Run the executable file that was downloaded, and if you are prompted to continue, click **Yes**.
 

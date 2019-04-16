@@ -108,15 +108,15 @@ After the Azure Information Protection unified labeling client is installed, you
 
 Use the following instructions to install the client when you're not using the Microsoft Update catalog, or deploying the .msi by using a central deployment method such as Intune.
 
-1. Download the executable version of the Azure Information Protection unified labeling client (file name of AzInfoProtection_ul) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+1. Download the executable version of the Azure Information Protection unified labeling client (file name of AzInfoProtection_UL) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
     If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment. 
 
-2. For a default installation, simply run the executable, for example, **AzInfoProtection_ul.exe**. However, to see the installation options, first run the executable with **/help**: `AzInfoProtection_ul.exe /help`
+2. For a default installation, simply run the executable, for example, **AzInfoProtection_UL.exe**. However, to see the installation options, first run the executable with **/help**: `AzInfoProtection_UL.exe /help`
 
-    Example to silently install the client: `AzInfoProtection_ul.exe /quiet`
+    Example to silently install the client: `AzInfoProtection_UL.exe /quiet`
     
-    Example to silently install only the PowerShell cmdlets: `AzInfoProtection_ul.exe  PowerShellOnly=true /quiet`
+    Example to silently install only the PowerShell cmdlets: `AzInfoProtection_UL.exe  PowerShellOnly=true /quiet`
     
     Additional parameters that are not listed on the help screen:
     
@@ -170,7 +170,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
     The remaining string is the value to specify for your ServiceLocation parameter.
 
-Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection_ul.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
+Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 
 #### More information about the DowngradeDotNetRequirement installation parameter
@@ -179,7 +179,7 @@ To support automatic upgrades by using Windows Update, and for reliable integrat
 
 If installing this later version of the Microsoft .NET Framework is not practical, you can install the client with the **DowngradeDotNetRequirement=True** parameter and value, which bypasses this requirement if Microsoft .NET Framework version 4.5.1 is installed.
 
-For example: `AzInfoProtection_ul.exe DowngradeDotNetRequirement=True`
+For example: `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
 
 We recommend that you use this parameter with caution, and with the knowledge that there are reported issues with Office applications hanging when the Azure Information Protection unified labeling client is used with this older version of the Microsoft .NET Framework. If you do experience hanging problems, upgrade to the recommended version before you try other troubleshooting solutions. 
 
@@ -191,7 +191,7 @@ For central deployment, use the following information that is specific to the .m
 
 If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/deploy-use/add-apps).
 
-1. Download the .msi version of the Azure Information Protection unified labeling client (AzInfoProtection_ul)from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+1. Download the .msi version of the Azure Information Protection unified labeling client (AzInfoProtection_UL)from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
     If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment. 
 
@@ -209,7 +209,7 @@ If you use Intune for your software deployment method, use these instructions to
     |Not applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Install|
     |Not applicable|Windows 7|KB2627273 <br /><br /> Version number included in file name: v4|Uninstall|
 
-3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection_ul.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).  
+3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection_UL.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).  
 
 
 ## Next steps
