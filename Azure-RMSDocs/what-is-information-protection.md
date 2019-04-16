@@ -6,11 +6,11 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/18/2019
-ms.topic: conceptual
+ms.date: 04/17/2019
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
+Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
 
 # optional metadata
 

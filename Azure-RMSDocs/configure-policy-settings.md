@@ -6,7 +6,7 @@ description: Configure settings in the Azure Information Protection policy that 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,6 +27,8 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 # How to configure the policy settings for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In addition to the Information Protection bar title and tooltip, there are some settings in the Azure Information Protection policy that you can configure independently from the labels:
 
@@ -72,9 +74,8 @@ To configure these settings:
         
         To take the ordering of sublabels into consideration when you use this policy setting, you must [configure an advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments).
         
-        When the attachment with the highest classification label is configured for protection with the preview setting of user-defined permissions: 
-            - For the generally availability version of the client: The email message is labeled with the same classification, but protection is not applied.
-            - For the preview version of the client: When the label's user-defined permissions include Outlook (Do Not Forward), that label is applied and Do Not Forward protection is applied to the email. When the label's user-defined permissions are just for Word, Excel, PowerPoint, and File Explorer, that label is not applied to the email, and neither is protection.
+        When the attachment with the highest classification label is configured for protection with the preview setting of user-defined permissions:
+            - When the label's user-defined permissions include Outlook (Do Not Forward), that label is applied and Do Not Forward protection is applied to the email. When the label's user-defined permissions are just for Word, Excel, PowerPoint, and File Explorer, that label is not applied to the email, and neither is protection.
     
    - **Display the Information Protection bar in Office apps**: When this setting is off, users cannot select labels from a bar in Word, Excel, PowerPoint, and Outlook. Instead, users must select labels from the **Protect** button on the ribbon. When this setting is on, users can select labels from either the bar or the button.
         
