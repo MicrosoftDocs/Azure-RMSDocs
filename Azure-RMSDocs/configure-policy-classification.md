@@ -110,7 +110,7 @@ When you click **Save**, your changes are automatically available to users and s
 
 ### Sensitive information types that require a minimum version of the client
 
-The following sensitive information types require the current general availability version (1.48.204.0) of the Azure Information Protection client:
+The following sensitive information types require the [current general availability version](./rms-client/client-version-release-history.md#version-1482040) of the Azure Information Protection client:
 
 - **Azure Service Bus Connection String**
 - **Azure IoT Connection String**
@@ -135,5 +135,3 @@ Additionally, the following sensitive information types are not supported for th
 Consider deploying the [Azure Information Protection scanner](deploy-aip-scanner.md), which can use your automatic classification rules to discover, classify, and protect files on network shares and on-premises file stores.  
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.
-
-
