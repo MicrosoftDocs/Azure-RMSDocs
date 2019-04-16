@@ -201,7 +201,18 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    system("pause");
    ```
 
-4. Replace the placeholder values in the source code that you just pasted in as follows, using string constants:
+4. At the end of `main()` find the application shutdown block created in the first quick start and uncomment the handler line:
+
+   ```cpp
+   // Application shutdown. Null out profile and engine, call ReleaseAllResources();
+   // Application may crash at shutdown if resources aren't properly released.
+   profile = nullptr;
+   engine = nullptr;
+   handler = nullptr;
+   mip::ReleaseAllResources();
+   ```
+
+5. Replace the placeholder values in the source code that you just pasted in as follows, using string constants:
 
    | Placeholder | Value |
    |:----------- |:----- |

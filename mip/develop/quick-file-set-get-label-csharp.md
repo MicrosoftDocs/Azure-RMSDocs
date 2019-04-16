@@ -66,7 +66,17 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
      Console.ReadKey();
    ```
 
-3. Replace the placeholder values in the source code that you just pasted in, using the following values:
+3. At the end of `Main()` find the application shutdown block created in the first quick start and uncomment the handler line:
+
+   ```csharp
+   // Application Shutdown
+   handler = null;
+   fileEngine = null;
+   fileProfile = null;
+   MIP.ReleaseAllResources();
+   ```
+
+4. Replace the placeholder values in the source code that you just pasted in, using the following values:
 
    | Placeholder | Value |
    |:----------- |:----- |
