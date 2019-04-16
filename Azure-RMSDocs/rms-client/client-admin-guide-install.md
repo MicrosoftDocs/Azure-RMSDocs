@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/08/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,6 +28,8 @@ ms.suite: ems
 # Admin Guide: Install the Azure Information Protection client for users
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Before you install the Azure Information Protection client on your enterprise network, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../requirements.md). 
 
@@ -219,7 +221,7 @@ If you use Intune for your software deployment method, use these instructions to
 
 The PowerShell module that is included with the Azure Information Protection client has cmdlets to install and configure the scanner. However, to use the scanner, you must install the full version of the client and cannot install just the PowerShell module.
 
-To install the client for the scanner, follow the same instructions in the preceding sections. You're then ready to install the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
+To install the client for the scanner, follow the same instructions in the preceding sections. You're then ready to configure and then install the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
 
 ## Next steps
 Now that you've installed the Azure Information Protection client, see the following for additional information that you might need to support this client:

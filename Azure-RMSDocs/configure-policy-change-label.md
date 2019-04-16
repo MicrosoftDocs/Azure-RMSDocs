@@ -6,7 +6,7 @@ description: You can change or refine any of the labels that users see on the In
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,6 +27,8 @@ ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 # How to change or customize an existing label for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 You can change or refine any of the labels that users see on the Information Protection bar or from the **Protect** button on the Office ribbon, by configuring the labels in the Azure portal.
 

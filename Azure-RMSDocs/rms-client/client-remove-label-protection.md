@@ -6,7 +6,7 @@ description: Instructions to remove classification labels and protection from fi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,6 +27,8 @@ ms.suite: ems
 # User Guide: Remove labels and protection from files and emails that have been labeled by Azure Information Protection or protected by Rights Management
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>
+> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 When the [Azure Information Protection client is installed on your computer](install-client-app.md), you can remove classification labels and protection from files and emails.
 
@@ -51,7 +53,7 @@ If the **Delete Label** icon is not immediately available, first click the **Edi
 
 ![Azure Information Protection bar - Edit Label](../media/edit-label.png)
 
-If you still do not see the **Delete Label** icon, your administrator does not allow you to use this option.
+If you still do not see the **Delete Label** icon, your administrator does not allow you to use this option because all documents and email must have a label.
 
 > [!NOTE]
 > If you don't see this Information Protection bar in your Office apps:

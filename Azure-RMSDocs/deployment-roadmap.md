@@ -6,7 +6,7 @@ description: Use these steps to prepare for, implement, and manage Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/05/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -34,8 +34,6 @@ However, if you are looking for scenario-based instructions, see [How to guides 
 
 > [!NOTE]
 > If you are looking for a product release roadmap, see our [Information about new releases and updates](information-support.md#information-about-new-releases-and-updates) section.
-> 
-> For information about the unified labeling experiences that are currently in preview and announced at Microsoft Ignite 2018, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ### Identify your deployment roadmap
 
@@ -59,6 +57,7 @@ Review the subscription information and feature list from the [Azure Information
 Note: Do not manually assign user licenses from the free RMS for individuals subscription and do not use this license to administer the Azure Rights Management service for your organization. These licenses display as **Rights Management Adhoc** in the Microsoft 365 admin center, and **RIGHTSMANAGEMENT_ADHOC** when you run the Azure AD PowerShell cmdlet, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). For more information about how the RMS for individuals subscription is automatically granted and assigned to users, see [RMS for individuals and Azure Information Protection](./rms-for-individuals.md).
 
 ### Step 2: Prepare your tenant to use Azure Information Protection
+
 Before you begin using Azure Information Protection, make sure that you have user accounts and groups in Office 365 or Azure Active Directory. These user accounts and groups will be used by Azure Information Protection to authenticate and authorize users from your organization. If necessary, create these account and groups, or synchronize them from your on-premises directory. 
 
 For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
@@ -74,7 +73,11 @@ If you do not already have a classification strategy, review the [default Azure 
 
 Reconfigure the default Azure Information Protection labels to make any changes you need to support your classification decisions. Configure the policy for manual labeling by users, and write user guidance that explains which label to apply and when. If your default policy was created with labels that automatically apply protection, temporarily remove the protection settings or disable the label. For more information about how to configure Azure Information Protection policy, see [Configuring Azure Information Protection policy](./configure-policy.md).
 
-Then deploy the Azure Information Protection client for users, and support it by providing user training and your instructions for when to select the labels. For more information about installing and supporting the client, see the [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md).
+Then deploy the [Azure Information Protection client or the Azure Information Protection unified labeling client for users](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) for users, and provide user training and specific instructions when to select the labels. For more information about installing and supporting the client, see the admin guides:
+
+- [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md)
+
+- [Azure Information Protection unified labeling client administrator guide](./rms-client/clientv2-admin-guide.md)
 
 After a period of time, when users are comfortable labeling their documents and emails, introduce more advanced configurations. These might include the following:
 
@@ -108,9 +111,11 @@ Optionally, consider configuring the following:
 
 ### Step 5: Configure your Azure Information Protection policy, applications, and services for data protection
 
-1. Update your Azure Information Protection policy to apply data protection
+1. Update your labels to apply protection
     
-    Modify your Azure Information Protection policy so that one or more labels apply protection. For more information, see [How to configure a label for Rights Management protection](./configure-policy-protection.md).
+    For the Azure Information Protection client, see [How to configure a label for Rights Management protection](./configure-policy-protection.md).
+    
+    For the Azure Information Protection unified labeling client, see [Restrict access to content by using encryption in sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels).
     
     Note that users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). However, until Exchange is configured for IRM or [Office 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in the following list (2 for Exchange Online, and 5 for Exchange on-premises). 
 
@@ -137,11 +142,12 @@ You’re now ready to monitor how your organization is using the labels that you
 
 - [Reporting for Azure Information Protection](reports-aip.md) - currently in preview
 
-- [Client files and usage logging](./rms-client/client-admin-guide-files-and-logging.md)
+- Client files and usage logging for the [Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md)
 
 - [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md)
 
 ### Step 7: Administer the protection service for your tenant account as needed
+
 As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. PowerShell might also be needed for some of the advanced configurations. 
 
 For more information, see [Administering the Azure Rights Management service by using Windows PowerShell](./administer-powershell.md).
@@ -150,12 +156,14 @@ For more information, see [Administering the Azure Rights Management service by 
 ## Deployment roadmap for data protection only
 
 ### Step 1: Confirm that you have a subscription that includes the protection service from Azure Information Protection
+
 Review the subscription information and feature list from the [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection) page to confirm that your organization has a subscription that includes the functionality and features that you expect. Then, assign a license from this subscription to each user in your organization who will protect documents and emails.
 
 Note: Do not manually assign user licenses from the free RMS for individuals subscription and do not use this license to administer the Azure Rights Management service for your organization. These licenses display as **Rights Management Adhoc** in the Microsoft 365 admin center, and **RIGHTSMANAGEMENT_ADHOC** when you run the Azure AD PowerShell cmdlet, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). For more information about how the RMS for individuals subscription is automatically granted and assigned to users, see [RMS for individuals and Azure Information Protection](./rms-for-individuals.md).
 
 
 ### Step 2: Prepare your tenant to use Azure Information Protection
+
 Before you begin using the protection service from Azure Information Protection, do the following preparation:
 
 1. Make sure that your Office 365 tenant contains the user accounts and groups that will be used by Azure Information Protection to authenticate and authorize users from your organization. If necessary, create these account and groups, or synchronize them from your on-premises directory. For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
@@ -174,7 +182,7 @@ Optionally, consider configuring the following:
 
 - Usage logging so that you can monitor how your organization is using the protection service. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md).
 
-### Step 3: Install the client and configure applications and services for Rights Management
+### Step 3: Install the Azure Information Protection client and configure applications and services for Rights Management
 
 1. Deploy the Azure Information Protection client
     
@@ -199,9 +207,11 @@ Optionally, consider configuring the following:
     If you have on-premises services that you want to use with the protection service, install and configure the Rights Management connector. For more information, see [Deploying the Azure Rights Management connector](./deploy-rms-connector.md).
 
 ### Step 4: Use and monitor your data protection solutions
+
 You’re now ready to protect your data, and log how your company is using the protection service. For addition information to support this deployment phase, see [Helping users to protect files by using the Azure Rights Management service](./help-users.md) and [Logging and analyzing usage of the Azure Rights Management service](./log-analyze-usage.md).
 
 ### Step 5: Administer the protection service for your tenant account as needed
+
 As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. PowerShell might also be needed for some of the advanced configurations. 
 
 For more information, see [Administering the Azure Rights Management service by using Windows PowerShell](./administer-powershell.md).

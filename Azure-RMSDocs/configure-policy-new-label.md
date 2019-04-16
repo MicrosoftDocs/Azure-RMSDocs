@@ -6,7 +6,7 @@ description: Although Azure Information Protection comes with default labels tha
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,6 +27,8 @@ ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 # How to create a new label for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Although Azure Information Protection comes with default labels that you can customize, you can also create your own labels.
 

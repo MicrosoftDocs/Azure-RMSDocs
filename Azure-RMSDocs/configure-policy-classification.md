@@ -6,7 +6,7 @@ description: Conditions for a label let you automatically assign a label to a do
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,6 +27,8 @@ ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 # How to configure conditions for automatic and recommended classification for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend. 
 
@@ -108,7 +110,7 @@ When you click **Save**, your changes are automatically available to users and s
 
 ### Sensitive information types that require a minimum version of the client
 
-The following sensitive information types require the current preview version of the Azure Information Protection client:
+The following sensitive information types require the [current general availability version](./rms-client/client-version-release-history.md#version-1482040) of the Azure Information Protection client:
 
 - **Azure Service Bus Connection String**
 - **Azure IoT Connection String**
@@ -121,7 +123,9 @@ The following sensitive information types require the current preview version of
 - **Azure Publish Setting Password**
 - **Azure Storage Account Key (Generic)**
 
-Additionally, the following sensitive information types are not supported for the current preview version of the Azure Information Protection client, and no longer display in the Azure portal:
+For more information about these sensitive information types, see the following blog post: [Azure Information Protection helps you to be more secure by automatically discovering credentials](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
+
+Additionally, the following sensitive information types are not supported for the current general availability version of the Azure Information Protection client, and no longer display in the Azure portal:
 
 - **EU Phone Number**
 - **EU GPS Coordinates**
@@ -131,5 +135,3 @@ Additionally, the following sensitive information types are not supported for th
 Consider deploying the [Azure Information Protection scanner](deploy-aip-scanner.md), which can use your automatic classification rules to discover, classify, and protect files on network shares and on-premises file stores.  
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.
-
-
