@@ -6,7 +6,7 @@ description: You can add support for different languages for the labels that use
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/03/2018
+ms.date: 4/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,6 +27,8 @@ ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 # How to configure labels and templates for different languages in Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Although the default labels for Azure Information Protection support multiple languages, you must configure support for label names and descriptions that you specify. This configuration requires you to do the following:
 

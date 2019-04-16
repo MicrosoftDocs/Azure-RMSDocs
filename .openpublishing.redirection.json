@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "Azure-RMSDocs/deploy-use/deploy-aip-scanner-preview.md",
+            "redirect_url": "/azure/information-protection/deploy-use/deploy-aip-scanner",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "Azure-RMSDocs/deploy-use/activate-office365-preview.md",
             "redirect_url": "/azure/information-protection/deploy-use/activate-office365",
             "redirect_document_id": false

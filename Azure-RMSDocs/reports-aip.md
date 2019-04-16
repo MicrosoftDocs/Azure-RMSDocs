@@ -5,8 +5,8 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
+ms.date: 04/17/2019
 manager: barbkess
-ms.date: 04/10/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -73,7 +73,7 @@ For example, you'll be able to see the following:
 
 - From the **Data discovery** report:
 
-    - What files are on your scanned data repositories, Windows 10 computers, or computers running the preview version of the Azure Information Protection client or [clients that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)
+    - What files are on your scanned data repositories, Windows 10 computers, or computers running the Azure Information Protection client or [clients that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)
     
     - Which files are labeled and protected, and the location of files by labels
     
@@ -141,11 +141,10 @@ To view the Azure Information Protection reports and create your own, make sure 
 
 |Requirement|More information|
 |---------------|--------------------|
-|An Azure subscription that includes Log Analytics and that is for the same tenant as Azure Information Protection|See the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription for the same tenant, or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
-|The Azure Information Protection client (current general availability version, or preview version) or the preview version of the Azure Information Protection unified labeling client|If you haven't already installed one of these versions of the client, you can download and install them from the Microsoft Download Center:<br /> - [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) <br /> - [Azure Information Protection unified labeling client](https://www.microsoft.com/en-us/download/details.aspx?id=57440)|
-|For the **Discovery and risk** report: <br /><br />- To display data from on-premises data stores, you have deployed at least one instance of the Azure Information Protection scanner (current general availability or preview version) <br /><br />- To display data from Windows 10 computers, they must be a minimum build of 1809, you are using Windows Defender Advanced Threat Protection (Windows Defender ATP), and you have enabled the Azure Information Protection integration feature from Windows Defender Security Center|For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). <br /><br />For information about configuring and using the Azure Information Protection integration feature from Windows Defender Security Center, see [Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
-|For the **Recommendations** report: <br /><br />- To add a new data repository from the Azure portal as a recommended action, you must be using the current preview version of the Azure Information Protection scanner |To deploy the preview version of the scanner, see [Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner-preview.md).|
-
+|An Azure subscription that includes Log Analytics and that is for the same tenant as Azure Information Protection|See the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
+|The Azure Information Protection client or the Azure Information Protection unified labeling client|If you don't already have one of these clients, you can download and install them from the [Microsoft Download Center]((https://www.microsoft.com/en-us/download/details.aspx?id=53018)). <br /><br /> Make sure you have the latest version to support all the features that Azure Information Protection analytics supports.|
+|For the **Discovery and risk** report: <br /><br />- To display data from on-premises data stores, you have deployed at least one instance of the Azure Information Protection scanner <br /><br />- To display data from Windows 10 computers, they must be a minimum build of 1809, you are using Windows Defender Advanced Threat Protection (Windows Defender ATP), and you have enabled the Azure Information Protection integration feature from Windows Defender Security Center|For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). <br /><br />For information about configuring and using the Azure Information Protection integration feature from Windows Defender Security Center, see [Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
+|For the **Recommendations** report: <br /><br />- To add a new data repository from the Azure portal as a recommended action, you must be using the latest general availability version of the Azure Information Protection scanner |To deploy the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).|
 
 ### Permissions required for Azure Information Protection analytics
 
@@ -228,7 +227,7 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
     
     Note: Discovery for endpoint is gradually rolling out to tenants. You start to see data from the supported endpoints in this report when this feature has rolled out to your tenant.
     
-    You can configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) for the preview version of the Azure Information Protection client to report files that contain sensitive information.
+    You can configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) for the Azure Information Protection client to report files that contain sensitive information.
     
     Tip: From the information collected, you might find users accessing files that contain sensitive information from location that you didn't know about or aren't currently scanning:
     
@@ -239,8 +238,6 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
     
     When you select an item, the **View data** option displays the audit activities that triggered the recommendation.
 
-> [!NOTE]
-> There is currently a known problem displaying question marks (**?**) in paths and file names instead of non-ASCII characters when the sending operating system locale is English.
 
 ## How to modify the reports and create custom queries
 
@@ -335,6 +332,6 @@ In this example, a downgraded label is counted only if the label name before the
 
 
 ## Next steps
-After reviewing the information in the reports, you might decide to make changes to your Azure Information Protection policy. For instructions, see [Configuring the Azure Information Protection policy](configure-policy.md).
+After reviewing the information in the reports, if you are using the Azure Information Protection client, you might decide to make changes to your Azure Information Protection policy. For instructions, see [Configuring the Azure Information Protection policy](configure-policy.md).
 
 If you have a Microsoft 365 subscription, you can also view label usage in the Microsoft 365 compliance center and Microsoft 365 security center. For more information, see [View label usage with label analytics](/Office365/SecurityCompliance/label-analytics).

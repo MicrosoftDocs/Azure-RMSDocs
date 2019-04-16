@@ -5,7 +5,7 @@ title: Configure the Azure Information Protection policy - AIP
 description: To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. 
 author: cabailey
 ms.author: cabailey
-ms.date: 04/05/2019
+ms.date: 04/17/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -27,6 +27,8 @@ ms.suite: ems
 # Configuring the Azure Information Protection policy
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. This policy is then downloaded to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 

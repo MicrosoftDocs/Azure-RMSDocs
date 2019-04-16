@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 04/17/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,11 +26,13 @@ ms.suite: ems
 # How to migrate Azure Information Protection labels to Office 365 sensitivity labels
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!IMPORTANT]
 > This feature is in preview, and migrates your tenant to a new platform. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by clients and services that support [Microsoft Information Protection solutions](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection).
 
-Migrate your labels if you want to be able to use them as Office 365 sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). You manage and publish these labels from the Office 365 Security & Compliance Center, or the Microsoft 365 security center and the Microsoft 365 compliance center. After the migration, the Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
+Migrate your labels if you want to be able to use them as Office 365 sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). You manage and publish these labels from the Office 365 Security & Compliance Center, or the Microsoft 365 security center and the Microsoft 365 compliance center. After the migration, the Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal.
 
 Before you read detailed instructions about how to migrate your labels, you might find the following frequently asked questions useful:
 
@@ -110,7 +112,7 @@ Azure Information Protection clients can use all label settings listed without a
 
 ### Comparing the behavior of protection settings for a label
 
-Use the following table to identify how the same protection setting for a label can behave differently, depending on whether it's used by the Azure Information Protection client (general availability versions and current preview version), the current preview version of the Azure Information Protection unified labeling client, or by Office apps that have labeling built in (also known as "native Office labeling").
+Use the following table to identify how the same protection setting for a label behaves differently, depending on whether it's used by the Azure Information Protection client, the Azure Information Protection unified labeling client, or by Office apps that have labeling built in (also known as "native Office 
 
 If you are not sure how your protection settings are configured, view their settings in the **Protection** blade, in the Azure portal. If you need help with this step, see [To configure a label for protection settings](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 
@@ -166,7 +168,7 @@ To confirm whether the clients and services you use support unified labeling, re
 
 ##### Clients that currently support unified labeling include:
 
-- The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md) - in preview
+- The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md)
 
 - Apps from Office that are in different stages of availability. For more information, see the **Where the feature is available today?** section from [Apply sensitivity labels to your documents and email within Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in the Office documentation.
     

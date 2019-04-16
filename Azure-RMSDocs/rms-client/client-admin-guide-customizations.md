@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/08/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,6 +27,8 @@ ms.suite: ems
 # Admin Guide: Custom configurations for the Azure Information Protection client
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection client.
 
@@ -62,11 +64,14 @@ Some of these settings require editing the registry and some use advanced settin
 |LabelToSMIME|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Change the local logging level](#change-the-local-logging-level)
 |LogMatchedContent|[Disable sending information type matches for a subset of users](#disable-sending-information-type-matches-for-a-subset-of-users)|
+|OutlookBlockTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookCollaborationTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Set a different default label for Outlook](#set-a-different-default-label-for-outlook)|
+|OutlookJustifyTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookJustifyUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
+|OutlookOverrideUnlabeledCollaborationExtensions|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookWarnTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[Disable the low integrity level for the scanner](#disable-the-low-integrity-level-for-the-scanner)|
@@ -192,7 +197,7 @@ When you export the policy from the Azure portal, a zipped file is downloaded th
     
 2. Rename the identified file to **Policy.msip**, and then copy it to the **%LocalAppData%\Microsoft\MSIP** folder on computers that have the Azure Information Protection client installed. 
 
-If your disconnected computer is running the preview version of the Azure Information Protection scanner, there are additional configuration steps you must take. For more information, see [Restriction: The scanner server cannot have Internet connectivity](../deploy-aip-scanner-preview.md#restriction-the-scanner-server-cannot-have-internet-connectivity) from the scanner deployment instructions.
+If your disconnected computer is running the current GA version of the Azure Information Protection scanner, there are additional configuration steps you must take. For more information, see [Restriction: The scanner server cannot have Internet connectivity](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) from the scanner deployment instructions.
 
 ## Hide or show the Do Not Forward button in Outlook
 
@@ -220,7 +225,7 @@ To configure this advanced setting, enter the following strings:
 
 ## For files protected with custom permissions, always display custom permissions to users in File Explorer
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and requires the preview version of the client.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
 
 When you configure the [policy setting](../configure-policy-settings.md) **Make the custom permissions option available for users** or the equivalent advanced client setting in the previous section, users are not able to see or change custom permissions that are already set in a protected document. 
 
@@ -280,7 +285,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Implement pop-up messages in Outlook that warn, justify, or block emails being sent
 
-This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and requires the preview version of the client.
+This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 When you create and configure the following advanced client settings, users see pop-up messages in Outlook that can warn them before sending an email, or ask them to provide justification why they are sending an email, or prevent them from sending an email for either of the following scenarios:
 
@@ -309,7 +314,7 @@ The resulting action is logged to the local Windows event log **Applications and
 Example event entry from a justify message:
 
 ```
-Client Version: 1.48.1.0
+Client Version: 1.48.204.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Price list.msg
 Item Name: Price list
@@ -319,7 +324,7 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
-
+The following sections contain configuration instructions for each advanced client setting, and you can see them in action for yourself with [Tutorial: Configure Azure Information Protection to control oversharing of information using Outlook](../infoprotect-oversharing-tutorial.md).
 
 ### To implement the warn, justify, or block pop-up messages for specific labels:
 
@@ -377,21 +382,49 @@ Create the following advanced client setting with one of the following values:
     
     - Value: **Off**
 
+#### To define specific file name extensions for the warn, justify, or block pop-up messages for email attachments that don't have a label
+
+By default, the warn, justify, or block pop-up messages apply to all Office documents and PDF documents. You can refine this list by specifying which file name extensions should display the warn, justify, or block messages with an additional advanced client property and a comma-separated list of file name extensions.
+
+Example value for multiple file name extensions to define as a comma-separated string: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM, .DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+
+In this example, an unlabeled PDF document will not result in warn, justify, or block pop-up messages.
+
+
+- Key: **OutlookOverrideUnlabeledCollaborationExtensions**
+
+- Value: **\<**file name extensions to display messages, comma separated**>**
+
+
 ### To specify the allowed domain names for recipients exempt from the pop-up messages
 
-When you specify a domain name in an advanced client setting, users do not see the pop-up messages for recipients who have have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
+When you specify domain names in an additional advanced client setting, users do not see the pop-up messages for recipients who have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
 
 A typical configuration is to display the pop-up messages only for recipients who are external to your organization or who aren't authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
 
-Create the following advanced client setting key. For the value, specify one or more domains, each one separated by a comma.
+Create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
 
 Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
 
-- Key: **OutlookCollaborationTrustedDomains**
+- Warn messages:
+    
+    - Key: **OutlookWarnTrustedDomains**
+    
+    - Value: **\<**domain names, comma separated**>**
 
-- Value: **\<**domain names, comma separated**>**
+- Justification messages:
+    
+    - Key: **OutlookJustifyTrustedDomains**
+    
+    - Value: **\<**domain names, comma separated**>**
 
-For example, if you specify the domain name of contoso.com, users do not see the pop-up messages in Outlook when they send an email to john@sales.contoso.com.
+- Block messages:
+    
+    - Key: **OutlookBlockTrustedDomains**
+    
+    - Value: **\<**domain names, comma separated**>**
+
+For example, to never block emails sent to users who have a contoso.com email address, specify the advanced client setting of **OutlookBlockTrustedDomains** and **contoso.com**. As a result, users do not see the warning pop-up messages in Outlook when they send an email to john@sales.contoso.com.
 
 ## Set a different default label for Outlook
 
@@ -537,7 +570,7 @@ The file retains the .pdf file name extension but is classified as before, and i
 
 ## Support for files protected by Secure Islands
 
-This configuration option is in preview and is subject to change.
+This configuration option is in preview and might change.
 
 If you used Secure Islands to protect documents, you might have protected text and picture files, and generically protected files as a result of this protection. For example, files that have a file name extension of .ptxt, .pjpeg, or .pfile. When you edit the registry as follows, Azure Information Protection can decrypt these files:
 
@@ -769,7 +802,7 @@ Now, when a user opens and saves one of these Office documents, it is labeled  *
 
 ## Enable Azure Information Protection analytics to discover sensitive information in documents
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal and requires the current preview version of the Azure Information Protection client.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 [Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection clients when that content contain sensitive information. By default, this information is not sent to Azure Information Protection analytics.
 
@@ -791,7 +824,7 @@ For example:
 
 ## Disable sending information type matches for a subset of users
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal and requires the current preview version of the Azure Information Protection client.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users. If you have some users who should not send this data, create the following advanced client setting in a [scoped policy](../configure-policy-scope.md) for these users: 
 

@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 04/17/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,6 +26,8 @@ ms.service: information-protection
 # Quickstart: Create a new Azure Information Protection label for specific users
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In this quickstart, you'll create a new label that only specific users can see and apply to classify and protect their documents and emails.
 

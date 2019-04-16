@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/08/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,12 +26,17 @@ ms.suite: ems
 # Azure Information Protection client: Version release history and support policy
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. 
 
 You can download the latest general availability release version and the current preview version (if available) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). After a short delay of typically a couple of weeks, the latest general availability version is also included in the Microsoft Update Catalog (category: **Azure Information Protection**). This inclusion in the catalog means that you can upgrade the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
 
 For more information, see [Upgrading and maintaining the Azure Information Protection client](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
+
+> [!TIP]
+> Interested in using the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center? When you download and then install the unified labeling client from the Microsoft Download Center, you can upgrade your Azure Information Protection client to this [unified labeling client](unifiedlabelingclient-version-release-history.md).
 
 ### Servicing information and timelines
 
@@ -44,32 +49,23 @@ Preview versions should not be deployed for end users on production networks. In
 Use the following information to see what’s new or changed for a supported release of the Azure Information Protection client for Windows. The most current release is listed first. 
 
 > [!NOTE]
-> Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version.
+> Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Versions later than 1.41.51.0
+## Version 1.48.204.0
 
-If you have a version 1 of the client that is later than 1.41.51.0, it is a preview build for testing and evaluation purposes.  
-
-> [!TIP]
-> Interested in evaluating the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center? See [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
-
-**Released**: 03/05/2019
+**Released**: 04/16/2019
 
 This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **New features:**
 
-- The Azure Information Protection scanner is now configured from the Azure portal, rather than by using PowerShell:
+- The Azure Information Protection scanner is now configured from the Azure portal, rather than by using PowerShell.
     
-    - If you are upgrading from a general availability version of the scanner, the upgrade process is different from previous versions, so be sure to read [Upgrading the Azure Information Protection scanner](client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
-    
-    - If you are installing the scanner for the first time, rather than upgrading, see [Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner-preview.md).
+    If you are upgrading from a general availability version of the scanner, the upgrade process is different from previous versions, so be sure to read [Upgrading the Azure Information Protection scanner](client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
 
-- If you label and protect files by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. [More information](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
-
-- The Azure Information Protection scanner now supports multiple configuration databases on the same SQL server instance when you specify a profile name.
+- The scanner now supports multiple configuration databases on the same SQL server instance when you specify a profile name.
 
 - Support for the following sensitive information types that help to identify credentials in documents and emails:
     - Azure Service Bus Connection String
@@ -84,21 +80,27 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - Azure Storage Account Key (Generic)
 
 - New advanced client settings that implement pop-up messages in Outlook that can warn, justify, or block emails being sent. [More information](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+    
+    Note that if you configured the advanced client property of OutlookCollaborationTrustedDomains for the preview version, this setting is now replaced by three new settings, so that domains can be exempt per action: OutlookWarnTrustedDomains, OutlookJustifyTrustedDomains, and OutlookBlockTrustedDomains.
+
+- If you label and protect files by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. [More information](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
 - New advanced client setting that's applicable only when you configure the policy setting to not display custom permissions: When there's a file that's protected with custom permissions, display the custom permissions option in File Explorer so that users can see and change them (if they have permissions to change the protection settings). [More information](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
-- Two new advanced client settings for Azure Information Protection analytics, for the following scenarios:
+- Endpoint discovery for [Azure Information Protection analytics](../reports-aip.md).
+    
+- Two new advanced client settings for analytics, for the following scenarios:
     
     - Prevent sending information type matches for a subset of users when you have selected the checkbox in the Azure portal to collect content matches. [More information](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-    - For the discovery report, display whether files contain sensitive information. [More information](client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - For the **Data discovery** report, display whether files contain sensitive information. [More information](client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
 
 **Fixes**:
+
+- Paths and file names do not display question marks (**?**) instead of non-ASCII characters in Azure Information Protection analytics when the sending operating system locale is English.
 
 - New visual markings are consistently applied when a user adds new sections to a Word document, and then relabels the document.
 
 - The Azure Information Protection client correctly removes protection from a PDF document that was protected by the Rights Management sharing application.
-
-- Paths and file names do not display question marks (**?**) instead of non-ASCII characters in Azure Information Protection analytics when the sending operating system locale is English.
 
 - Sublabels are correctly applied by PowerShell and the scanner when the parent label is configured for user-defined permissions.
 
@@ -145,7 +147,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     
     If you want the client to revert to protecting PDF files by using a .ppdf file name extension, use the same [advanced client setting](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), but specify **False**.
 
-- Support for [central reporting](../reports-aip.md) for the Azure Information Protection analytics feature announced at Microsoft Ignite.
+- Auditing data support for [central reporting](../reports-aip.md) by using Azure Information Protection analytics, announced at Microsoft Ignite 2018.
 
 - Excel now also supports [visual marking](../configure-policy-markings.md)s in different colors.
 
