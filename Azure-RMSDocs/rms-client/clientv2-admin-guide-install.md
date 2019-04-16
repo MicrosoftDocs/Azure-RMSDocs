@@ -191,7 +191,7 @@ For central deployment, use the following information that is specific to the .m
 
 If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/deploy-use/add-apps).
 
-1. Download the .msi version of the Azure Information Protection unified labeling client (AzInfoProtection_UL)from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+1. Download the .msi version of the Azure Information Protection unified labeling client (AzInfoProtection_UL) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
     If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment. 
 
