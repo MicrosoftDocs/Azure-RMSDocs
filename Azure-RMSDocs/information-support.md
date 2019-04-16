@@ -72,7 +72,7 @@ Hands-on labs: See [Azure Information Protection Hands On Lab](https://techcommu
 
 On-demand videos:
 
-- Tech Community recorded webinars for [Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014)
+- Tech Community recorded webinars for [Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014).
 
 - Microsoft Ignite 2018 sessions for [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection):
     
