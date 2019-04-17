@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Information & support for Azure Information Protection
+title: Information & support for Azure Information Protection - AIP
 description: Resources for administrators, which includes information about new releases, support options, and how to contact Microsoft to report a problem. 
 author: cabailey
 ms.author: cabailey
