@@ -25,7 +25,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  Called once 
 Get the sensitivity label from existing content.
 
 Parameters:  
-* **state**: Current state of the content 
+* **state**: Current state of the content. 
 
 
 
@@ -47,7 +47,7 @@ Parameters:
 Called once the computed actions have been applied, and the data committed to disk.
 
 Parameters:  
-* **state**: the current execution state of the content after the actions have been committed 
+* **state**: the current execution state of the content after the actions have been committed. 
 
 
-: This call sends an audit event
+: This call sends an audit event.

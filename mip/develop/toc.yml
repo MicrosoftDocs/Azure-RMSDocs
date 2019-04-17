@@ -33,9 +33,10 @@
   items:
   - name: The APIs
     href: concept-apis-use-cases.md
-  - name: The profile and engine (C++)
-    href: concept-profile-engine-cpp.md  
+  - name: Profile and Engine (C++)
     items: 
+      - name: Profile and Engine object concepts
+        href: concept-profile-engine-cpp.md
       - name: File API profile (C++)
         href: concept-profile-engine-file-profile-cpp.md
       - name: File API engine (C++)
@@ -49,8 +50,9 @@
       - name: Protection API engine (C++)
         href: concept-profile-engine-protection-engine-cpp.md            
   - name: Authentication (C++)
-    href: concept-authentication-cpp.md
     items:
+    - name: Authentication concepts
+      href: concept-authentication-cpp.md
     - name: Implementing an authentication delegate (C++)
       href: concept-authentication-delegate-cpp.md
     - name: Acquiring an access token (PowerShell)
@@ -60,13 +62,15 @@
   - name: Handlers
     items:
     - name: File API handler (C++)
-      href: concept-handler-file-cpp.md
       items:
+      - name: File handler concepts
+        href: concept-handler-file-cpp.md
       - name: Auditing 
         href: concept-auditing-file-cpp.md
     - name: Policy API handler (C++)
-      href: concept-handler-policy-cpp.md
       items:
+      - name: Policy handler concepts
+        href: concept-handler-policy-cpp.md
       - name: Execution state 
         href: concept-handler-policy-executionstate-cpp.md  
       - name: Compute actions 
@@ -80,8 +84,9 @@
   - name: Metadata
     href: concept-mip-metadata.md
   - name: Observers for async (C++)
-    href: concept-async-observers.md
     items:
+    - name: Observer concepts
+      href: concept-async-observers.md
     - name: File API observers (C++)
       href: concept-async-observers-file-cpp.md
     - name: Policy API observers (C++)
@@ -91,8 +96,9 @@
 - name: Reference
   items:
   - name: C++ library
-    href: reference/mip-sdk-reference.md
     items:
+    - name: C++ library Overview
+      href: reference/mip-sdk-reference.md
     - name: Enums and structs
       href: reference/mip-enums-and-structs.md
     - name: Functions
@@ -109,14 +115,16 @@
         href: reference/class_mip_addcontentheaderaction.md
       - name: AddWatermarkAction
         href: reference/class_mip_addwatermarkaction.md
+      - name: AdhocProtectionRequiredError
+        href: reference/class_mip_adhocprotectionrequirederror.md
       - name: ApplyLabelAction
         href: reference/class_mip_applylabelaction.md
       - name: AuthDelegate
-        href: reference/class_mip_authdelegate.md 
+        href: reference/class_mip_authdelegate.md
       - name: AuthDelegate::OAuth2Challenge
-        href: reference/class_mip_authdelegate_oauth2challenge.md        
+        href: reference/class_mip_authdelegate_oauth2challenge.md
       - name: AuthDelegate::OAuth2Token
-        href: reference/class_mip_authdelegate_oauth2token.md 
+        href: reference/class_mip_authdelegate_oauth2token.md
       - name: BadInputError
         href: reference/class_mip_badinputerror.md
       - name: ClassificationRequest
@@ -140,7 +148,7 @@
       - name: FileEngine::Settings
         href: reference/class_mip_fileengine_settings.md
       - name: FileExecutionState
-        href: reference/class_mip_fileexecutionstate.md        
+        href: reference/class_mip_fileexecutionstate.md
       - name: FileHandler
         href: reference/class_mip_filehandler.md
       - name: FileHandler::Observer
@@ -155,6 +163,8 @@
         href: reference/class_mip_fileprofile_settings.md
       - name: HttpDelegate
         href: reference/class_mip_httpdelegate.md
+      - name: HttpOperation
+        href: reference/class_mip_httpoperation.md
       - name: HttpRequest
         href: reference/class_mip_httprequest.md
       - name: HttpResponse
@@ -185,6 +195,8 @@
         href: reference/class_mip_nopolicyerror.md
       - name: NotSupportedError
         href: reference/class_mip_notsupportederror.md
+      - name: OperationCancelledError
+        href: reference/class_mip_operationcancellederror.md
       - name: PolicyEngine
         href: reference/class_mip_policyengine.md
       - name: PolicyEngine::Settings
@@ -245,6 +257,8 @@
         href: reference/class_mip_servicedisablederror.md
       - name: Stream
         href: reference/class_mip_stream.md
+      - name: TaskDispatcherDelegate
+        href: reference/class_mip_taskdispatcherdelegate.md
       - name: TransientNetworkError
         href: reference/class_mip_transientnetworkerror.md
       - name: UserRights

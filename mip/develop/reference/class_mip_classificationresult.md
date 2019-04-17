@@ -18,6 +18,7 @@ Class that contains the result of a classification call on the Execution State.
 public std::string GetId() const  |  Get the ID of the classification policy.
 public int GetCount() const  |  Get the instance count.
 public int GetConfidenceLevel() const  |  Get the confidence in the result.
+public std::string GetSensitiveInformationDetections() const  |  Get the sensitive information detections.
   
 ## Members
   
@@ -35,3 +36,9 @@ Get the instance count.
   
 ### GetConfidenceLevel function
 Get the confidence in the result.
+  
+### GetSensitiveInformationDetections function
+Get the sensitive information detections.
+
+  
+**Returns**: Json string of all the sensitive information detections.

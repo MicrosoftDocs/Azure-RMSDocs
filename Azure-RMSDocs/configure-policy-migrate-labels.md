@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/04/2019
+ms.date: 04/09/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -42,9 +42,11 @@ Before you read detailed instructions about how to migrate your labels, you migh
 
 ### Important information about administrative roles
 
-The [Azure AD roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Security Administrator** and **Information Protection Administrator** are not supported by the unified labeling platform. If these administrative roles are used in your organization, before you migrate your labels, add the users who have these roles to the **Compliance Administrator** or the **Organization Management** role groups for the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center. As an alternative, you can create a new role group for these users and add either **Retention Management** or **Organization Configuration** roles to this group. For instructions, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
+The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Information Protection administrator** is not supported by the unified labeling platform. If this administrative role is used in your organization, before you migrate your labels, add the users who have this role to the Azure AD roles of **Security administrator** or **Compliance administrator**. If you need help with this step, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal, the Microsoft 365 security center, and the Microsoft 365 compliance center.
 
-If you do not give these users access to the admin centers by using one of these configurations, they will lose access to labels and policies in the Azure portal after your labels are migrated.
+Alternatively to using roles, in the admin centers, you can create a new role group for these users and add either **Sensitivity Label Administrator** or **Organization Configuration** roles to this group.
+
+If you do not give these users access to the admin centers by using one of these configurations, they won't be able to configure Azure Information Protection in the Azure portal after your labels are migrated.
 
 Global administrators for your tenant can continue to manage labels and policies in both the Azure portal and the admin centers after your labels are migrated.
 
@@ -150,6 +152,8 @@ You must be a global administrator to migrate your labels.
 2. From the **Manage** menu option, select **Unified labeling (Preview)**.
 
 3. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
+    
+    If the option to activate is not available, check the **Unified labeling status**: If you see **Activated**, your tenant is already using the unified labeling store and there is no need to migrate your labels.
 
 For the labels that successfully migrated, they can now be used by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). However, you must first publish these labels in one of the admin centers: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center.
 

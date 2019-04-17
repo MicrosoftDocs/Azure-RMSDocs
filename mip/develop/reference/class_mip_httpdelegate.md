@@ -15,8 +15,10 @@ Interface for overriding HTTP handling.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr\<HttpResponse\> Send(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context)  |  Send HTTP request.
-public void SendAsync(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context, const std::function\<void(std::shared_ptr\<HttpResponse\>)\>& fnCallback)  | _Not yet documented._
+public std::shared_ptr\<HttpOperation\> Send(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context)  |  Send HTTP request.
+public std::shared_ptr\<HttpOperation\> SendAsync(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context, const std::function\<void(std::shared_ptr\<HttpOperation\>)\>& callbackFn)  |  Send HTTP request asynchronously.
+public void CancelOperation(const std::string& requestId)  |  Cancel a specific HTTP operation.
+public void CancelAllOperations()  |  Cancel ongoing HTTP requests.
   
 ## Members
   
@@ -32,7 +34,32 @@ Parameters:
 
 
   
-**Returns**: HTTP response
+**Returns**: HTTP operation container
   
 ### SendAsync function
-_Not documented yet._
+Send HTTP request asynchronously.
+
+Parameters:  
+* **request**: HTTP request 
+
+
+* **context**: The same opaque client context that was passed to the API that resulted in this HTTP request 
+
+
+* **callbackFn**: Function that will be executed upon completion
+
+
+
+  
+**Returns**: HTTP operation container
+  
+### CancelOperation function
+Cancel a specific HTTP operation.
+
+Parameters:  
+* **requestId**: ID of request to cancel
+
+
+  
+### CancelAllOperations function
+Cancel ongoing HTTP requests.
