@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Deploy the Azure Information Protection scanner
+title: Deploy the Azure Information Protection scanner - AIP
 description: Instructions to install, configure, and run the current GA version of the Azure Information Protection scanner to discover, classify, and protect files on data stores.
 author: cabailey
 ms.author: cabailey
