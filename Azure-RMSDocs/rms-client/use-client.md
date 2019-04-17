@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: The client for Azure Information Protection
+title: The client for Azure Information Protection - AIP
 description: Microsoft Azure Information Protection provides a client-server solution that helps to protect an organization's data. The client (the Azure Information Protection client or the Rights Management client) is integrated with applications that you run on computers and mobile devices.
 author: cabailey
 ms.author: cabailey
@@ -89,7 +89,6 @@ Use the following table to help compare which features are supported by the two 
 |Scanner for on-premises data stores:| Yes | No |
 |Track and revoke:| Yes | No |
 |Protection-only mode (no labels):| Yes | No |
-|Do Not Forward button in Outlook:| Yes | No |
 |Multilanguage support:| Yes | No |
 |Support for AD RMS:| Yes | The following action only is supported:<br /><br /> - The viewer can open protected documents when you deploy the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))|
 
