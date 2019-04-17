@@ -38,7 +38,7 @@ Two minor changes are required if your application is using ADAL and the File AP
 
 ### Update the File Engine Settings to use AD RMS with an Identity
 
-If the DNS SRV record for MDE has been published and `Microsoft.InformationProtection.Identity` has been provided as part of the engine settings, the only required code change is to set `FileEngineSettings.ProtectionOnlyEngine = true`. This must be set as labeling (policy) operations are not supported for AD RMS protection endpoints.
+If the DNS SRV record for MDE has been published and `Microsoft.InformationProtection.Identity` has been provided as part of the engine settings, the only required code change is to set `FileEngineSettings.ProtectionOnlyEngine = true`. This property must be set as labeling (policy) operations are not supported for AD RMS protection endpoints.
 
 ```csharp
 // Configure FileEngineSettings as protection only engine.
@@ -53,7 +53,7 @@ var engineSettings = new FileEngineSettings("", "", "en-US")
 
 ### Update the File Engine Settings to use AD RMS with an explicit endpoint
 
-If the DNS SRV record for MDE has not been published or `Microsoft.InformationProtection.Identity` isn't available to pass in when creating the `FileEngine`, there are two required code changes. is to set `FileEngineSettings.ProtectionOnlyEngine = true`. This must be set as labeling (policy) operations are not supported for AD RMS protection endpoints.
+If the DNS SRV record for MDE has not been published, or `Microsoft.InformationProtection.Identity` isn't available to pass in when creating the `FileEngine`, there are two required code changes. is to set `FileEngineSettings.ProtectionOnlyEngine = true`. This property must be set as labeling (policy) operations are not supported for AD RMS protection endpoints.
 
 ```csharp
 // Configure FileEngineSettings as protection only engine.
@@ -68,7 +68,7 @@ var engineSettings = new FileEngineSettings("", "", "en-US")
 
 ### Update the authentication delegate
 
-If you're using the Active Directory Authentication Library (ADAL) in your .NET application, you'll need to make a  change to the `Microsoft.InformationProtection.AuthDelegate` implementation to disable authority validation. Do this by setting `validateAuthority` in the `AuthenticationContext` constructor to **false**.
+If you're using the Active Directory Authentication Library (ADAL) in your .NET application, you'll need to make a  change to the `Microsoft.InformationProtection.AuthDelegate` implementation to disable authority validation. Disable authority validation by setting `validateAuthority` in the `AuthenticationContext` constructor to **false**.
 
    ```csharp
    AuthenticationContext authContext = new AuthenticationContext(authority, false, tokenCache);
@@ -78,7 +78,7 @@ If you're using the Active Directory Authentication Library (ADAL) in your .NET 
 
 ### Update the FileEngine::Settings to use AD RMS with an Identity
 
-If the DNS SRV record for MDE has been published and `mip::Identity` is provided in the `FileEngine::Settings`
+If the DNS SRV record for MDE has been published and `mip::Identity` is provided in the `FileEngine::Settings`, then the only action is to set the engine to a protection-only engine.
 
 ```cpp
 FileEngine::Settings engineSettings(mip::Identity(mUsername), "");
@@ -86,6 +86,8 @@ engineSettings.SetProtectionOnlyEngine = true;
 ```
 
 ### Update the FileEngine::Settings to use AD RMS with an explicit endpoint
+
+If the DNS SRV record for MDE is not published, or an identity is not available for service discovery, then the engine must be set to protection only and the explicit cloud endpoint URL provided via `SetProtectionCloudEndpointBaseUrl()`.
 
 ```cpp
 FileEngine::Settings engineSettings("", "");
@@ -105,7 +107,7 @@ ProtectionEngine::Settings engineSettings(mip::Identity(mUsername), "");
 
 ### Update the ProtectionEngine::Settings to use AD RMS with an explicit endpoint
 
-If the DNS SRV record is not published or an identity is **not** provided in the `ProtectionEngine::Settings`, then the protection endpoint URL must be set explicitly via `SetProtectionCloudEndpointBaseUrl()`.
+If the DNS SRV record is not published or an identity is not provided in the `ProtectionEngine::Settings`, then the protection endpoint URL must be set explicitly via `SetProtectionCloudEndpointBaseUrl()`.
 
 ```cpp
 ProtectionEngine::Settings engineSettings("", "");
@@ -114,7 +116,7 @@ engineSettings.SetProtectionCloudEndpointBaseUrl("https://RMS.CONTOSO.COM");
 
 ## Remove or Comment Label References
 
-If you build the application from one of the quickstart guides, you'll find that your application has references to labels in the form of `fileEngine.SensitivityLabels` or `engine->ListSensitivityLabels();`. These blocks of code must be commented out or removed as running them will cause an exception. This is because the engine has been set to **protection only** and no longer supports labeling operations.
+If you build the application from one of the quickstart guides, you'll find that your application has references to labels in the form of `fileEngine.SensitivityLabels` or `engine->ListSensitivityLabels();`. Because the application has been set to protection only, these blocks of code must be commented out or removed as running them will cause an exception.
 
 ## Next Steps
 
