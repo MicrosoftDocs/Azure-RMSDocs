@@ -147,7 +147,6 @@ You can have one account to run the scanner service and use another account to a
     
     For SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
     
-    Use the online help for this cmdlet if you need more [detailed examples](/powershell/module/azureinformationprotection/install-aipscanner#examples).
     
     When you are prompted, provide the credentials for the scanner service account (\<domain\user name>) and password.
 
@@ -191,7 +190,7 @@ Supported versions for SharePoint: SharePoint Server 2016 and SharePoint Server 
     
     For example: `Add-AIPScannerRepository -Path \\NAS\Documents`
     
-    For other examples, see the [online help](/powershell/module/azureinformationprotection/Add-AIPScannerRepository#examples) for this cmdlet.
+    For other examples, use the PowerShell help command `Get-Help Add-AIPScannerRepository -examples` for this cmdlet.
 
 2. Repeat this command for all the data stores that you want to scan. If you need to remove a data store that you added, use the [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository) cmdlet.
 
@@ -249,7 +248,7 @@ In its default setting, the scanner runs one time and in the reporting-only mode
     
     	Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
-    There are other configuration settings that you might want to change. For example, whether file attributes are changed and what is logged in the reports. In addition, if your Azure Information Protection policy includes the setting that requires a justification message to lower the classification level or remove protection, specify that message by using this cmdlet. Use the [online help](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#optional-parameters) for more information about each configuration setting. 
+    There are other configuration settings that you might want to change. For example, whether file attributes are changed and what is logged in the reports. In addition, if your Azure Information Protection policy includes the setting that requires a justification message to lower the classification level or remove protection, specify that message by using this cmdlet. Use the PowerShell help, `Get-Help Set-AIPScannerConfiguration - detailed`, for more information about each configuration setting. 
 
 2. Make a note of the current time and start the scanner again by running the following command:
     
