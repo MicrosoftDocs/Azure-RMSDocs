@@ -133,7 +133,7 @@ You can have one account to run the scanner service and use another account to a
 
 2. Open a Windows PowerShell session with the **Run as an administrator** option.
 
-3. Run the `Install-AIPScanner` cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner: 
+3. Run the **Install-AIPScanner** cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner: 
     
     ```
     Install-AIPScanner -SqlServerInstance <name>
@@ -179,7 +179,7 @@ You're now ready to specify the data stores to scan.
 
 ## Specify data stores for the scanner
 
-Use the `Add-AIPScannerRepository` cmdlet to specify the data stores to be scanned by the Azure Information Protection scanner. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
+Use the **Add-AIPScannerRepository** cmdlet to specify the data stores to be scanned by the Azure Information Protection scanner. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
 
 Supported versions for SharePoint: SharePoint Server 2016 and SharePoint Server 2013. SharePoint Server 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
@@ -247,7 +247,7 @@ In its default setting, the scanner runs one time and in the reporting-only mode
     
     	Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
-    There are other configuration settings that you might want to change. For example, whether file attributes are changed and what is logged in the reports. In addition, if your Azure Information Protection policy includes the setting that requires a justification message to lower the classification level or remove protection, specify that message by using this cmdlet. Use the PowerShell help, `Get-Help Set-AIPScannerConfiguration - detailed`, for more information about each configuration setting.
+    There are other configuration settings that you might want to change. For example, whether file attributes are changed and what is logged in the reports. In addition, if your Azure Information Protection policy includes the setting that requires a justification message to lower the classification level or remove protection, specify that message by using this cmdlet. Use the PowerShell help, `Get-Help Set-AIPScannerConfiguration -detailed`, for more information about each configuration setting.
 
 2. Make a note of the current time and start the scanner again by running the following command:
     
@@ -271,9 +271,9 @@ The scanner runs through the following processes when it scans files.
 ### 1. Determine whether files are included or excluded for scanning 
 The scanner automatically skips files that are [excluded from classification and protection](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection), such as executable files and system files.
 
-You can change this behavior by defining a list of file types to scan, or exclude from scanning. When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. To specify this list, use `Set-AIPScannerScannedFileTypes`. 
+You can change this behavior by defining a list of file types to scan, or exclude from scanning. When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. To specify this list, use **Set-AIPScannerScannedFileTypes**. 
 
-After you have specified your file types list, you can add a new file type to the list by using `Add-AIPScannerScannedFileTypes`, and remove a file type from the list by using `Remove-AIPScannerScannedFileTypes`.
+After you have specified your file types list, you can add a new file type to the list by using **Add-AIPScannerScannedFileTypes**, and remove a file type from the list by using **Remove-AIPScannerScannedFileTypes**.
 
 ### 2. Inspect and label files
 
@@ -339,7 +339,7 @@ For files that don't support native protection, specify the file name extension 
 
 For the first scan cycle, the scanner inspects all files in the configured data stores and then for subsequent scans, only new or modified files are inspected. 
 
-You can force the scanner to inspect all files again by running `Start-AIPScan` with the `-Reset` parameter. The scanner must be configured for a manual schedule, which requires the `-Schedule` parameter to be set to **Manual** with `Set-AIPScannerConfiguration`.
+You can force the scanner to inspect all files again by running **Start-AIPScan** with the *Reset* parameter. The scanner must be configured for a manual schedule, which requires the *Schedule* parameter to be set to **Manual** with **Set-AIPScannerConfiguration**.
 
 Alternatively, you can force the scanner to inspect all files again from the **Azure Information Protection - Nodes** blade in the Azure portal. Select your scanner from the list, and then select the **Rescan all files** option:
 
@@ -361,18 +361,18 @@ If the scanner downloaded a policy that had no automatic conditions configured, 
 There are two alternative scenarios that the Azure Information Protection scanner supports where labels do not need to be configured for any conditions: 
 - Apply a default label to all files in a data repository.
     
-    For this configuration, use the `Set-AIPScannerRepository` cmdlet, and set the *MatchPolicy* parameter to **Off**. 
+    For this configuration, use the **Set-AIPScannerRepository** cmdlet, and set the *MatchPolicy* parameter to **Off**. 
     
     The contents of the files are not inspected and all files in the data repository are labeled according to the default label that you specify for the data repository (with the *SetDefaultLabel* parameter) or if this is not specify, the default label that is specified as a policy setting for the scanner account.
     
 
 - Identify all custom conditions and known sensitive information types.
     
-    For this configuration, use the `Set-AIPScannerConfiguration` cmdlet, and set the *DiscoverInformationTypes* parameter to **All**.
+    For this configuration, use the **Set-AIPScannerConfiguration** cmdlet, and set the *DiscoverInformationTypes* parameter to **All**.
     
     The scanner uses any custom conditions that you have specified for labels in the Azure Information Protection policy, and the list of information types that are available to specify for labels in the Azure Information Protection policy.
     
-    The following quickstart uses this configuration, although it's for the current general availability version of the scanner: [Quickstart: Find what sensitive information you have](quickstart-findsensitiveinfo.md).
+    The following quickstart uses this configuration, although it's for the current version of the scanner: [Quickstart: Find what sensitive information you have](quickstart-findsensitiveinfo.md).
 
 ## Optimizing the performance of the scanner
 
@@ -418,7 +418,7 @@ Other factors that affect the scanner performance:
 
 - Your chosen logging level
     
-    You can choose between **Debug**, **Info**, **Error** and **Off** for the scanner reports. **Off** results in the best performance; **Debug** considerably slows down the scanner and should be used only for troubleshooting. For more information, see the *ReportLevel* parameter for the Set-AIPScannerConfiguration cmdlet by running Get-Help Set-AIPScannerConfiguration -detailed`.
+    You can choose between **Debug**, **Info**, **Error** and **Off** for the scanner reports. **Off** results in the best performance; **Debug** considerably slows down the scanner and should be used only for troubleshooting. For more information, see the *ReportLevel* parameter for the Set-AIPScannerConfiguration cmdlet by running `Get-Help Set-AIPScannerConfiguration -detailed`.
 
 - The files themselves:
     
@@ -492,7 +492,7 @@ Information **911**
 
 This event is logged when the scanner has finished a manual scan, or the scanner has finished a cycle for a continuous schedule.
 
-If the scanner was configured to run manually rather than continuously, to run a new scan, use the`Start-AIPScan` cmdlet. To change the schedule, use the `Set-AIPScannerConfiguration` cmdlet and the **Schedule** parameter.
+If the scanner was configured to run manually rather than continuously, to run a new scan, use the **Start-AIPScan** cmdlet. To change the schedule, use the **Set-AIPScannerConfiguration** cmdlet and the *Schedule* parameter.
 
 ----
 
