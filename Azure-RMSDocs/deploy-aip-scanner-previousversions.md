@@ -58,7 +58,7 @@ You can run the scanner in discovery mode only, where you use the reports to che
 
 Note that the scanner does not discover and label in real time. It systematically crawls through files on data stores that you specify, and you can configure this cycle to run once, or repeatedly.
 
-You can specify which file types to scan, or exclude from scanning. To restrict which files the scanner inspects, define a file types list by using `Set-AIPScannerScannedFileTypes`.
+You can specify which file types to scan, or exclude from scanning. To restrict which files the scanner inspects, define a file types list by using **Set-AIPScannerScannedFileTypes**.
 
 
 ## Prerequisites for the Azure Information Protection scanner
