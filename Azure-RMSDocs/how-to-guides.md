@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: How-to instructions for common scenarios that use Azure Information Protection. 
-description: Identify use cases that classify and protect your organization's data by using for Azure Information Protection.
+title: How-to instructions for Azure Information Protection common scenarios 
+description: Identify use cases that classify and protect your organization's data by using Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
