@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Classify files & emails by using Azure Information Protection
+title: Classify by using Azure Information Protection - AIP
 description: Instructions how to classify your documents and emails.
 author: cabailey
 ms.author: cabailey
