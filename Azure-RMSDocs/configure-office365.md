@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Configuration for Office 365 clients and online services to use Azure RMS from AIP
+title: Configuration for Office 365 to use Azure RMS - AIP
 description: Information and instructions for admins to configure Office 365 to work with the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/02/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

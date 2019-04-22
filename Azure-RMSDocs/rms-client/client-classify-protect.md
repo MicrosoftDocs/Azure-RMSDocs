@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Classify & protect files & emails by using Azure Information Protection
+title: Classify & protect by using Azure Information Protection - AIP
 description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
@@ -45,7 +45,7 @@ Files that are protected are safe to share with others. For example, you attach 
 
 Before you share files with people outside your organization, check with your help desk or administrator how to protect files for external users.
 
-For example, if your organization regularly communicates with people in another organization, your administrator might have configured labels that sets protection such that these people can read and use protected documents. Then, select these labels to classify and protect the documents to share.
+For example, if your organization regularly communicates with people in another organization, your administrator might have configured labels such that these people can read and use protected documents. If that's the case, select these labels to classify and protect the documents to share.
 
 Alternatively, if the external users have [business-to-business (B2B) accounts](/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) created for them, you can use your [Office app to set custom permissions](#set-custom-permissions-for-a-document) or use [File Explorer to set custom permissions](#using-file-explorer-to-classify-and-protect-files) for a document before you share it. If you set your own custom permissions and the document is already protected for internal use, first make a copy of it to retain the original permissions. Then use the copy to set the custom permissions.
 
@@ -96,7 +96,7 @@ If allowed by your administrator, you can specify your own protection settings f
 
 1. On the **Home** tab, in the **Protection** group, click **Protect** > **Custom Permissions**:
 
-    ![Custom Permisisons option](../media/custom-permissions-callout.png)
+    ![Custom Permissions option](../media/custom-permissions-callout.png)
     
     If you do not see **Custom Permissions**, your administrator does not allow you to use this option.
     
@@ -112,7 +112,7 @@ If allowed by your administrator, you can specify your own protection settings f
         
         You can also use the address book icon to select users or groups from the Outlook address book.
     
-    - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
+    - **Expire access**: Select this option only for time-sensitive files so that the people you specified can't open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
 
 5. Click **Apply** and wait for the **Custom permissions applied** message. Then click **Close**.
 
