@@ -1,8 +1,23 @@
 {
     "redirections": [
         {
-            "source_path": "Azure-RMSDocs/deploy-use/deploy-aip-scanner-preview.md",
-            "redirect_url": "/azure/information-protection/deploy-use/deploy-aip-scanner",
+            "source_path": "Azure-RMSDocs/generate-tenant-key-internet.md",
+            "redirect_url": "/azure/information-protection/plan-implement-tenant-key",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/generate-tenant-key-in-person.md",
+            "redirect_url": "/azure/information-protection/plan-implement-tenant-key",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/thales-hsm.md",
+            "redirect_url": "/azure/information-protection/plan-implement-tenant-key",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/deploy-aip-scanner-preview.md",
+            "redirect_url": "/azure/information-protection/deploy-aip-scanner",
             "redirect_document_id": false
         },
         {
