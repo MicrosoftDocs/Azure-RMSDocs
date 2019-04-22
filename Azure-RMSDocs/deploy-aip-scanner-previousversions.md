@@ -30,7 +30,7 @@ ms.suite: ems
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
-> This article is for versions of the Azure Information Protection scanner that are earlier than version **1.48.204.0** but still in support.
+> This article is for versions of the Azure Information Protection scanner that are earlier than version **1.48.204.0** but still in support. To upgrade earlier versions to the current version, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
 > 
 > If you are looking for deployment instructions for the current version of the scanner, which includes configuration from the Azure portal, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
@@ -471,6 +471,8 @@ Other cmdlets for the scanner let you change the service account and database fo
 
 - Update-AIPScanner
 
+> [!NOTE]
+> Many of these cmdlets are now deprecated in the current version of the scanner, and the online help for the scanner cmdlets reflects this change. For cmdlet help earlier than version 1.48.204.0 of the scanner, use the built-in `Get-Help <cmdlet name>` command in your PowerShell session.
 
 ## Event log IDs and descriptions for the scanner
 
