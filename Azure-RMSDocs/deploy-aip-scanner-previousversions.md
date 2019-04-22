@@ -30,9 +30,9 @@ ms.suite: ems
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
-> This article is for versions of the Azure Information Protection scanner that are earlier than the current general availability version, but still in support.
+> This article is for versions of the Azure Information Protection scanner that are earlier than version **1.48.204.0** but still in support.
 > 
-> If you are looking for deployment instructions for the general availability version of the scanner, which includes configuration from the Azure portal, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
+> If you are looking for deployment instructions for the current version of the scanner, which includes configuration from the Azure portal, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
 Use this information to learn about the Azure Information Protection scanner, and then how to successfully install, configure, and run it.
 
