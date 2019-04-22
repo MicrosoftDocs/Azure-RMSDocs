@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Tutorial - Configure Azure Information Protection to control oversharing of information using Outlook - AIP
+title: Tutorial - Configure Azure Information Protection to control oversharing of information - AIP
 description: An introduction tutorial to configure and see advanced client settings for the Azure Information Protection client to warn, prompt for justification, or block messages from being sent from Outlook.
 author: cabailey
 ms.author: cabailey
