@@ -52,7 +52,7 @@ Actions you can take in the document tracking site:
      
     - Click **Settings** and select how and whether to be emailed when the document is accessed:
         
-        ![Export to CSV icon in the document tracking site](../media/tracking-site-settings-email.png)
+        ![Configure email notifications in the document tracking site](../media/tracking-site-settings-email.png)
 
 - If you want to track and revoke shared documents for others:
     

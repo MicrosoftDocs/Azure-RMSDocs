@@ -6,7 +6,7 @@ description: An introduction tutorial that edits the Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/23/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -172,7 +172,7 @@ We'll now create a new sublabel for **Confidential**.
 
 10. On the **Sub-label** blade, you see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
     
-    ![Azure Information Protection tutorial - configure credit card condition](./media/step2-see-condition.png)
+    ![Azure Information Protection tutorial - summary of credit card condition](./media/step2-see-condition.png)
 
 11. For **Select how this label is applied**: Keep the default of **Recommended**, and don't change the default policy tip. 
 
