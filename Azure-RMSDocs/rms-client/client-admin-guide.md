@@ -194,9 +194,9 @@ Use the [Version release history and support policy](client-version-release-hist
 
 ### Upgrading the Azure Information Protection scanner
 
-Use the following instructions to upgrade the scanner from a  general availability version lower than 1.48.204.0 to the current version of the scanner.
+Use the following instructions to upgrade the scanner from a general availability version lower than 1.48.204.0 to the current version of the scanner.
 
-#### To upgrade the scanner to the current GA version
+#### To upgrade the scanner to the current version
 
 > [!IMPORTANT]
 > For a smooth upgrade path, do not install the the Azure Information Protection client on the computer running the scanner as your first step to upgrade the scanner. Instead, use the following upgrade instructions.
