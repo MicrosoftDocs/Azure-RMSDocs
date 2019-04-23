@@ -194,7 +194,7 @@ Use the [Version release history and support policy](client-version-release-hist
 
 ### Upgrading the Azure Information Protection scanner
 
-Use the following instructions to upgrade the scanner from a general availability version lower than 1.48.204.0 to the current version of the scanner.
+Use the following instructions to upgrade the scanner from a general availability version older than 1.48.204.0 to the current version of the scanner.
 
 #### To upgrade the scanner to the current version
 
@@ -215,7 +215,7 @@ Although it's possible to upgrade the scanner in a different order, we recommend
 
 2. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
 
-3. Upgrade the Azure Information Protection client by installing the current GA version from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+3. Upgrade the Azure Information Protection client by installing the current general availability (GA) version from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 4. In a PowerShell session, run the Update-AIPScanner command with the same profile name that you specified in step 1. For example: `Update-AIPScanner –Profile Europe`
 
