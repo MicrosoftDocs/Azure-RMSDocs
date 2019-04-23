@@ -200,7 +200,7 @@ On your client computer, we'll now see the results of this new advanced client s
 
 4. This time, you see the following message that prevents the email from being sent. For example:
     
-    ![Azure Information Protection tutorial - create OutlookBlockUntrustedCollaborationLabel advanced client setting ](./media/see-blockmessage.png)
+    ![Azure Information Protection tutorial - block email popup message](./media/see-blockmessage.png)
 
 5. Acting as your user, you see the only option available is **OK**, which takes you back to the email message where you can make changes. Select **OK**, and cancel this email message.
 
