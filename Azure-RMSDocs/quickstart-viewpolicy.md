@@ -69,11 +69,11 @@ The protection service is now automatically activated for new customers, but it'
     
     - If protection is activated, you see the following confirmation:
         
-        ![Azure Information Protection status for Azure RMS](./media/info-protect-azurerms-activated.png)
+        ![Azure Information Protection status for Azure RMS - activated](./media/info-protect-azurerms-activated.png)
         
     - If protection is not activated, you see this reflected in the status information, and the option to activate:
         
-        ![Azure Information Protection status for Azure RMS](./media/info-protect-azurerms-deactivated.png)
+        ![Azure Information Protection status for Azure RMS - not activated](./media/info-protect-azurerms-deactivated.png)
 
 3. If protection isn't activated, select **Activate**. 
 
