@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -74,7 +74,7 @@ Use the **Version** number displayed to identify the client:
 
 ## When is the right time to migrate my labels to Office 365?
 
-Sensitivity labels in the admin centers (Office 365 Security & Compliance Center, Microsoft 365 security center, and Microsoft 365 compliance center) are generally available but the option to migrate your Azure Information Protection labels is still in preview. When the labels are migrated to the unified labeling store, they can be published and then used by [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)..
+The option to migrate labels in the Azure portal to sensitivity labels that can be used by [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) is now in general availability. Use the following guidance to help you determine if you should migrate your labels.
 
 - **If you are new to Azure Information Protection:**
     
