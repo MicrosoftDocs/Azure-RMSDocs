@@ -306,7 +306,7 @@ This configuration has the advantage that you don't need to specify users, group
 
 4. Select the permissions you want, and click **OK**.
 
-5. Back on the **Protection** blade, configure settings for **Content expiration** and **Allow offline access**, if needed, and then click **OK**.
+5. Back on the **Protection** blade, configure settings for **File Content Expiration** and **Allow offline access**, if needed, and then click **OK**.
 
 6. On the **Label** blade, select **Save**.
 
@@ -321,7 +321,7 @@ The label configuration is deceptively simple:
     
 2. Select **OK** without selecting any users, or configuring any settings on this blade.
     
-    Although you can configure settings for **Content expiration** and **Allow offline access**, when you do not specify users and their permisisons, these access settings are not applicable. That's because the person who applies the protection is the [Rights Management issuer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for the content, and this role is exempt from these access restrictions.
+    Although you can configure settings for **File Content Expiration** and **Allow offline access**, when you do not specify users and their permisisons, these access settings are not applicable. That's because the person who applies the protection is the [Rights Management issuer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for the content, and this role is exempt from these access restrictions.
 
 3. On the **Label** blade, select **Save**.
 
