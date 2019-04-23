@@ -6,7 +6,7 @@ description: Instructions and examples to configure Exchange Online mail flow ru
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/16/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -89,7 +89,7 @@ In the Azure Information Protection policy, this label has been configured as th
 5. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Do Not Forward**, and then select **OK**.
     
     Your rule configuration should now look similar to the following:
-    ![Exchange Online mail flow rule configured for an Azure Information Protection label - example1](./media/aip-exo-rule-ex1.png)
+    ![Exchange Online mail flow rule configured for an Azure Information Protection label - example 1](./media/aip-exo-rule-ex1.png)
 
 7. Select **Save** 
 
@@ -120,7 +120,7 @@ This label is used to classify and protect documents that you use for partner co
 5. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Encrypt**, and then select **OK**.
     
     Your rule configuration should now look similar to the following:
-    ![Exchange Online mail flow rule configured for an Azure Information Protection label - example1](./media/aip-exo-rule-ex2.png)
+    ![Exchange Online mail flow rule configured for an Azure Information Protection label - example 2](./media/aip-exo-rule-ex2.png)
 
 6. Select **Save** 
 
