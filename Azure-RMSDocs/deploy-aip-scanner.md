@@ -33,7 +33,7 @@ ms.suite: ems
 > This article is for the current general availability version of the Azure Information Protection scanner.
 > 
 > To upgrade from a general availability version of the scanner that is older than 1.48.204.0, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner). You can then use the instructions on this page, omitting the step to install the scanner.
-
+> 
 > If you are not ready to upgrade from a previous version, see [Deploying previous versions of the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner-previousversions.md).
 
 
