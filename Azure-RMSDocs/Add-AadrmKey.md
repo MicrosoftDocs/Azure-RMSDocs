@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Add-AadrmKey
-description: Help for Add-AadrmKey from the AADRM module.
+title: Add-AadrmKey from previous versions of the AADRM module
+description: Help for Add-AadrmKey from the AADRM module for Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/19/2018
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

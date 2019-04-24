@@ -1,11 +1,11 @@
 ---
-title: Quickstart - Configure a label for users to easily protect emails that contain sensitive information - AIP
+title: Quickstart - Configure a label for users to easily protect emails - AIP
 description: Configure a label that protects an email for a user by automatically applying the Do Not Forward protection.
 author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/25/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
