@@ -1,6 +1,6 @@
 ---
 title: Quickstart - New Azure Information Protection label for specific users - AIP
-description: Create and configure a new label that classifies documents & emails for specific users by using a scoped policy.
+description: Create & configure a new label that classifies documents & emails for a subset of users by using a scoped policy.
 author: cabailey
 author: cabailey
 ms.author: cabailey

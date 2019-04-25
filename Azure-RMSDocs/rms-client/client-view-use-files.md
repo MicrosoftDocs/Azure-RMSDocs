@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: View and use protected documents with the AIP client
-description: Instructions to view and use a protected document that requires you to have the Azure Information Protection client installed.
+title: View protected documents with the Azure Information Protection viewer
+description: Instructions to view and use a protected file that requires you to have the Azure Information Protection viewer installed.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -30,7 +30,7 @@ ms.suite: ems
 >
 > *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-You can often view a protected document by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
+You can often view a protected file by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
 If the files don't immediately open, the **Azure Information Protection viewer** might be able to open it. This viewer can open protected text files, protected image files, protected PDF files, and all files that have a **.pfile** file name extension.
 

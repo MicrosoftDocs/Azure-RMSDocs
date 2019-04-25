@@ -2,7 +2,7 @@
 # required metadata
 
 title: What is Azure Information Protection? - AIP
-description: An overview of the Azure Information Protection service.
+description: An technical overview of the Azure Information Protection service, which helps an organization label documents and emails to classify and protect its data, wherever it resides.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
