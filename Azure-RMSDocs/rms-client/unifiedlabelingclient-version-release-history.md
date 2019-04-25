@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Information Protection unified labeling client - Version release history and support policy
+title: Azure Information Protection unified labeling client - Version history & support policy
 description: See the release information for the Azure Information Protection unified labeling client for Windows. 
 author: cabailey
 ms.author: cabailey
