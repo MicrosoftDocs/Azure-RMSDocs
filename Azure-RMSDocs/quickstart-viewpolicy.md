@@ -1,11 +1,11 @@
 ---
-title: Quickstart - Get started with Azure Information Protection in the Azure portal - AIP
+title: Quickstart - View Azure Information Protection in the Azure portal - AIP
 description: If your organization is brand new to Azure Information Protection, start here to add the service to the Azure portal, confirm the protection service is activated, and view labels and policy settings.
 author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/25/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
