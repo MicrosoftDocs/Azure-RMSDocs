@@ -26,7 +26,7 @@ ms.service: information-protection
 # Tutorial: Configure Azure Information Protection to control oversharing of information using Outlook
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
+>
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In this tutorial, you learn how to:
