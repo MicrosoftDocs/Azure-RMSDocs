@@ -47,7 +47,7 @@ Use the following information to see what’s supported for the general availabi
 
 This client installs an Office add-on for Windows computers, an extension for File Explorer, and a PowerShell module. This client has the same [prerequisites](../requirements.md) as the Azure Information Protection client that downloads policy from Azure.
 
-To compare features and functionality with the Azure Information Protection client, see [Feature comparisons for the clients](use-client.md#compare-the-clients).
+To compare features and functionality with the Azure Information Protection client, see [Compare the clients](use-client.md#compare-the-clients).
 
 ## Version 2.0.778
 
