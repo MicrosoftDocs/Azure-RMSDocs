@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Custom configurations for the Azure Information Protection unified labeling client
+title: Custom configurations - Azure Information Protection unified labeling client
 description: Information about customizing the Azure Information Protection unified labeling client for Windows.
 author: cabailey
 ms.author: cabailey
