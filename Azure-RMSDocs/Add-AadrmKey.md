@@ -2,7 +2,7 @@
 # required metadata
 
 title: Add-AadrmKey from previous versions of the AADRM module
-description: Help for Add-AadrmKey from the AADRM module for Azure Information Protection.
+description: Help for Add-AadrmKey from previous versions of the AADRM module for Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# Add-AadrmKey
+# Add-AadrmKey from previous versions of the AADRM module
 
 This cmdlet is now removed from the latest version of the Azure Rights Management module, because the Azure Rights Management service uses Azure Key Vault for customer-managed keys.
 
