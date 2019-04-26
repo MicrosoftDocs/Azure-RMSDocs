@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -131,7 +131,7 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Justification for removing protection
 
-- Confirmation prompt before deleting an applied label
+- Confirmation prompt **Do you want to delete this label?** for users when you don't use the policy setting for justification
 
 - Report an Issue link in the Help and Feedback dialog box
 
