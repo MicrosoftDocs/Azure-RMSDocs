@@ -22,7 +22,7 @@ ms.suite: ems
 
 ---
 
-# User Guide: Classify and protect a file or email by using the Azure Information Protection unified labeling client for Windows
+# User Guide: Classify and protect with the Azure Information Protection unified labeling client
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 >
