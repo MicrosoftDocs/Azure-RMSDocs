@@ -202,7 +202,7 @@ For the Azure Information Protection unified labeling client:
 
 For the Azure Information Protection client:
 
-- Support for auditing: 1.41.51.0
+- Support for auditing: Version 1.41.51.0
 - Support for endpoint discovery: Version 1.48.204.0
 
 ## Configure a Log Analytics workspace for the reports
