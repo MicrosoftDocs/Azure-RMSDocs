@@ -105,9 +105,9 @@ engineSettings.SetProtectionCloudEndpointBaseUrl("https://rms.contoso.com");
 
 ## Configuring Protection API in C++ to use AD RMS
 
-If you've deployed the mobile device extension DNS SRV record and plan to pass in a user principal name or email address, [follow the instructions for using an identity](#update-the-protectionenginesettings-to-use-ad-rms-with-an-identity).
+If you've deployed the mobile device extension DNS SRV record and plan to pass in a user principal name or email address, [follow the instructions for using an identity](#set-the-protectionenginesettings-to-use-ad-rms-with-an-identity).
 
-If you don't have the mobile device extension DNS SRV record, or won't have an identity at runtime, [follow the explicit endpoint instructions](#update-the-protectionenginesettings-to-use-ad-rms-with-an-explicit-endpoint).
+If you don't have the mobile device extension DNS SRV record, or won't have an identity at runtime, [follow the explicit endpoint instructions](#set-the-protectionenginesettings-to-use-ad-rms-with-an-explicit-endpoint).
 
 ### Set the ProtectionEngine::Settings to use AD RMS with an Identity
 
@@ -117,7 +117,7 @@ If the DNS SRV record for mobile device extension has been published, and an ide
 ProtectionEngine::Settings engineSettings(mip::Identity(mUsername), "");
 ```
 
-### Update the ProtectionEngine::Settings to use AD RMS with an explicit endpoint
+### Set the ProtectionEngine::Settings to use AD RMS with an explicit endpoint
 
 If the DNS SRV record isn't published or an identity isn't provided in the `ProtectionEngine::Settings`, then the protection endpoint URL must be set explicitly via `SetProtectionCloudEndpointBaseUrl()`.
 
