@@ -201,7 +201,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    system("pause");
    ```
 
-4. At the end of `main()` find the application shutdown block created in the first quick start and uncomment the handler line:
+4. Toward the end of `main()` find the application shutdown block created in the first quickstart and uncomment the handler line:
 
    ```cpp
    // Application shutdown. Null out profile and engine, call ReleaseAllResources();
@@ -212,7 +212,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    mip::ReleaseAllResources();
    ```
 
-5. Replace the placeholder values in the source code that you just pasted in as follows, using string constants:
+5. Replace the placeholder values in the source code that you as follows, using string constants:
 
    | Placeholder | Value |
    |:----------- |:----- |
@@ -274,7 +274,7 @@ Build and test your client application.
 You can verify the application of the label, by opening the output file and visually inspecting the document's information protection settings.
 
 > [!NOTE]
-> If you're labeling an Office document, but not signed in using an account from the Azure Active Directory (AD) tenant where the access token was obtained (and sensitivity labels are configured), you may be prompted to sign-in before you can open the labelled document. 
+> If you're labeling an Office document, but not signed in using an account from the Azure Active Directory (AD) tenant where the access token was obtained (and sensitivity labels are configured), you may be prompted to sign in before you can open the labelled document. 
 
 
 
