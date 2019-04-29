@@ -16,7 +16,7 @@ An action class that specifies adding adhoc protection to the document.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
-  
+
 ## Members
   
 ### GetType function

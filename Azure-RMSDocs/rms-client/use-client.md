@@ -67,6 +67,7 @@ Use the following table to help compare which features are supported by the two 
 |A viewer for protected files:| Yes | Yes with limitations:<br /><br /> - For generically protected files (.pfile), unlike the viewer from the Azure Information Protection client, there's no ability to save changes to the originally opened file.|
 |PowerShell commands:| Yes | Yes with limitations:<br /><br />- Cmdlets included: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />- Cmdlets that connect directly to a protection service are not included|
 |Offline support for protection actions:| Yes | Yes with limitations: <br /><br />- For File Explorer and PowerShell commands, the user must be connected to the Internet to protect files. |
+|Support for disconnected computers with manual policy file management:| Yes |No |
 |HYOK support:| Yes | No<br /><br /> Labels that you migrate from the Azure portal and that are configured for HYOK protection are displayed by the Azure Information Protection unified labeling client, but do not apply protection. |
 |Usage logging to Event Viewer:| Yes | No|
 |Label inheritance from email attachments:| Yes | No |
@@ -100,7 +101,7 @@ For a more detailed comparison of behavior differences for specific protection s
 
 #### Features that will not be in the Azure Information Protection unified labeling client
 
-Although the Azure Information Protection unified labeling client is still under development, the following features and behavior differences from the Azure Information Protection client will not be available in future releases for the Azure Information Protection unified labeling client: 
+Although the Azure Information Protection unified labeling client is still under development, the following features and behavior differences from the Azure Information Protection client are not planned to be available in future releases for the Azure Information Protection unified labeling client: 
 
 - Custom permissions in Office apps: Word, Excel, and PowerPoint
 
@@ -125,8 +126,6 @@ Although the Azure Information Protection unified labeling client is still under
 - Label an Office document by using an existing custom property (SyncPropertyName and SyncPropertyState advanced client settings)
 
 - Separate PowerShell cmdlets to connect to a Rights Management service
-
-- AD RMS only protection
 
 
 #### Parent labels and their sublabels 

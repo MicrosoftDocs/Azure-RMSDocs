@@ -23,7 +23,7 @@ public const std::string& GetFontColor() const  |  Get the font color used to di
 public ContentMarkAlignment GetAlignment() const  |  Get the alignment of the header.
 public int GetMargin() const  |  Get the margin of the header from the bottom.
 public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
-  
+
 ## Members
   
 ### GetUIElementName function
@@ -62,14 +62,14 @@ Get the alignment of the header.
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### GetMargin function
 Get the margin of the header from the bottom.
 
   
 **Returns**: The margins from the bottom of the document (for example, 10 mm).
-  
+
 ### GetType function
 Get the type of [Action](class_mip_action.md).
 

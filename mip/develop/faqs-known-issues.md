@@ -59,4 +59,4 @@ Your application does not have the required runtime, or was not built as Release
 
 > "ProxyAuthenticatonError: Proxy authentication is unsupported"
 
-The MIP SDK doesn't support the use of authenticated proxies. To fix this message, proxy administrators should set the Microsoft Information Protection service endpoints to bypass the proxy. A list of those endpoints are available at the [Office 365 URLs and IP address ranges](https://docs.microsoft.com/en-us/office365/enterprise/urls-and-ip-address-ranges) page. MIP SDK requires that `*.protection.outlook.com` (row 9) and the Azure Information Protection service endpoints (row 73) bypass proxy authentication.
+The MIP SDK doesn't support the use of authenticated proxies. To fix this message, proxy administrators should set the Microsoft Information Protection service endpoints to bypass the proxy. A list of those endpoints are available at the [Office 365 URLs and IP address ranges](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges) page. MIP SDK requires that `*.protection.outlook.com` (row 9) and the Azure Information Protection service endpoints (row 73) bypass proxy authentication.
