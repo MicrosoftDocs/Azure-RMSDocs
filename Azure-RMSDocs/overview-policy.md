@@ -2,7 +2,7 @@
 # required metadata
 
 title: Overview of the Azure Information Protection policy
-description: Understand labels and settings in an Azure Information Protection policy. 
+description: Understand labels and settings in an Azure Information Protection policy that gets downloaded to the Azure Information Protection client. 
 author: cabailey
 ms.author: cabailey
 manager: barbkess

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: View protected documents with the Azure Information Protection viewer
+title: View protected files with the Azure Information Protection viewer
 description: Instructions to view and use a protected file that requires you to have the Azure Information Protection viewer installed.
 author: cabailey
 ms.author: cabailey
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# User Guide: View and use files that have been protected by Rights Management
+# User Guide: View protected files with the Azure Information Protection viewer
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 >

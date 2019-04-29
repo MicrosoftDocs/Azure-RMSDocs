@@ -23,7 +23,7 @@ ms.suite: ems
 
 ---
 
-# Deploying previous versions of the Azure Information Protection scanner to automatically classify and protect files
+# Deploying previous versions of the Azure Information Protection scanner
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2*
 >

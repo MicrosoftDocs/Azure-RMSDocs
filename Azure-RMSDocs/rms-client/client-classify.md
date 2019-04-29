@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Classify a file or email - Azure Information Protection client
+title: Classify - Azure Information Protection client
 description: Instructions how to classify your documents and emails.
 author: cabailey
 ms.author: cabailey
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# User Guide: Classify a file or email by using the Azure Information Protection client
+# User Guide: Classify a file or email with the Azure Information Protection client
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 >
