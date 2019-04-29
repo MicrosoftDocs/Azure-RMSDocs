@@ -61,7 +61,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
      // Get the label from output file
      var contentLabel = handlerModified.Label;
      Console.WriteLine(string.Format("Getting the label committed to file: {0}", outputFilePath));
-     Console.WriteLine(string.Format("File Label: {0} \r\nIsProtected: {1}", contentLabel.Label, contentLabel.IsProtectionAppliedFromLabel.ToString()));
+     Console.WriteLine(string.Format("File Label: {0} \r\nIsProtected: {1}", contentLabel.Label.Name, contentLabel.IsProtectionAppliedFromLabel.ToString()));
      Console.WriteLine("Press a key to continue.");
      Console.ReadKey();
    ```

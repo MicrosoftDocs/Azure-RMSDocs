@@ -23,7 +23,7 @@ If you haven't already, be sure to:
 
 - Complete [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution.
 - Complete [Quickstart: List sensitivity labels (C++)](quick-file-list-labels-cpp.md) or [Quickstart: List sensitivity labels (C#)](quick-file-list-labels-csharp.md)
-- Deploy AD RMS with [Mobile Device Extensions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)).
+- Deploy AD RMS with [Mobile Device Extension](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)).
 - Optionally, ensure that the [DNS SRV record for AD RMS MDE](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn673574(v%3dws.11)#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) is published.
 
 ## Service Discovery
@@ -35,6 +35,10 @@ If an identity isn't available, or the DNS SRV record for MDE hasn't been publis
 ## Configuring File API in C# to use AD RMS
 
 Two minor changes are required if your application is using Active Directory Authentication Library (ADAL) and the File API on C#. The `FileEngineSettings` object and `AuthenticationContext` constructor must be updated to function with AD RMS and Active Directory Federations Services (ADFS).
+
+If you've deployed the mobile device extension DNS SRV record and plan to pass in a user's user principal name or email address, [follow the instructions for using an identity](#update-the-file-engine-settings-to-use-ad-rms-with-an-identity).
+
+If you don't have the mobile device extension DNS SRV record, or won't have an identity at runtime, [follow the explicit endpoint instructions](#update-the-file-engine-settings-to-use-ad-rms-with-an-explicit-endpoint).
 
 ### Update the File Engine Settings to use AD RMS with an Identity
 
@@ -76,6 +80,10 @@ If you're using the ADAL in your .NET application, you'll need to make a  change
 
 ## Configuring File API in C++ to use AD RMS
 
+If you've deployed the mobile device extension DNS SRV record and plan to pass in a user's user principal name or email address, [follow the instructions for using an identity](#update-the-fileenginesettings-to-use-ad-rms-with-an-identity).
+
+If you don't have the mobile device extension DNS SRV record, or won't have an identity at runtime, [follow the explicit endpoint instructions](#update-the-fileenginesettings-to-use-ad-rms-with-an-explicit-endpoint).
+
 ### Update the FileEngine::Settings to use AD RMS with an Identity
 
 If the DNS SRV record for MDE has been published and `mip::Identity` is provided in the `FileEngine::Settings`, then the only action is to set the engine to a protection-only engine.
@@ -96,6 +104,10 @@ engineSettings.SetProtectionCloudEndpointBaseUrl("https://rms.contoso.com");
 ```
 
 ## Configuring Protection API in C++ to use AD RMS
+
+If you've deployed the mobile device extension DNS SRV record and plan to pass in a user's user principal name or email address, [follow the instructions for using an identity](#update-the-protectionenginesettings-to-use-ad-rms-with-an-identity).
+
+If you don't have the mobile device extension DNS SRV record, or won't have an identity at runtime, [follow the explicit endpoint instructions](#update-the-protectionenginesettings-to-use-ad-rms-with-an-explicit-endpoint).
 
 ### Set the ProtectionEngine::Settings to use AD RMS with an Identity
 
