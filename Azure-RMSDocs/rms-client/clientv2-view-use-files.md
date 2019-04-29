@@ -22,7 +22,7 @@ ms.suite: ems
 
 ---
 
-# User Guide: View files that have been protected by Rights Management by using the Azure Information Protection unified labeling client
+# User Guide: View protected files with the Azure Information Protection unified labeling client
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 >
