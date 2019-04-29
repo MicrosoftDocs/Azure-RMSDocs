@@ -2,7 +2,7 @@
 # required metadata
 
 title: Classify - Azure Information Protection client
-description: Instructions how to classify your documents and emails.
+description: Instructions how to classify your documents and emails when you use the Azure Information Protection client for Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
