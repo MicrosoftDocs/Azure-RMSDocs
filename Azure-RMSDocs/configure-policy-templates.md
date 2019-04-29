@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configure and manage templates for Azure Information Protection - AIP
-description: Configure and manage rights management templates from the Azure portal. 
+description: Configure and manage protection templates, also known as rights management templates, from the Azure portal.
 author: cabailey
 ms.author: cabailey
 manager: barbkess

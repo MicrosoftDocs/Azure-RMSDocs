@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -41,6 +41,9 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |Understand a specific Azure Information Protection term|Search for the term or abbreviation on the [terminology](terminology.md) page.|
 
 ## Information about new releases and updates
+
+The official roadmap for Azure Information Protection is now on the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent).
+
 The Azure Information Protection product team posts announcements about major new releases on the [Enterprise Mobility + Security blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection). Smaller releases are announced on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam), and you might also find it useful to check the [UserVoice site](https://msip.uservoice.com) for the status of requested features.
 
 You'll find additional and more detailed information on the [Azure Information Protection technical blog](https://aka.ms/AIPblog). For example, a summary of documentation changes is published each month to let you know about information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These doc updates posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
