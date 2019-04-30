@@ -49,8 +49,6 @@ This client installs an Office add-on for Windows computers, an extension for Fi
 
 To compare features and functionality with the Azure Information Protection client, see [Compare the clients](use-client.md#compare-the-clients).
 
-This release was first released 04/16/2019 as version 2.0.778.0, and subsequently updated to fix a race-condition issue where sometimes, no labels display in Office apps or File Explorer.
-
 ## Version 2.0.779.0
 
 **Released**: 05/01/2019
