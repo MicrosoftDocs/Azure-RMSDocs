@@ -70,7 +70,7 @@ Use the **Version** number displayed to identify the client:
 
 - A version **1**, for example, **1.48.204.0**, identifies the Azure Information Protection client.
 
-- A version **2**, for example, **2.0 684.0**, identifies the Azure Information Protection unified labeling client.
+- A version **2**, for example, **2.0.778.0**, identifies the Azure Information Protection unified labeling client.
 
 ## When is the right time to migrate my labels to Office 365?
 
