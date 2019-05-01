@@ -50,7 +50,7 @@ You'll find additional and more detailed information on the [Azure Information P
 
 ### What's new in the documentation
 
-The [Azure Information Protection technical blog](https://aka.ms/AIPblog) also has a summary of documentation changes each month. These changes can include new and updated documentation for new release, changes to support statements, and also corrections and clarifications for existing releases.
+The Azure Information Protection technical blog also has a summary of [documentation changes each month](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs). These changes can include new and updated documentation for new release, changes to support statements, and also corrections and clarifications for existing releases.
 
 These doc updates posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
 
