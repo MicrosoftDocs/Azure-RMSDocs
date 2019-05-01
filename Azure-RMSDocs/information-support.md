@@ -48,7 +48,7 @@ The Azure Information Protection product team posts announcements about major ne
 
 You'll find additional and more detailed information on the [Azure Information Protection technical blog](https://aka.ms/AIPblog). 
 
-### What's new in the documentation
+## What's new in the documentation
 
 The Azure Information Protection technical blog also has a summary of [documentation changes each month](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs). These changes can include new and updated documentation for new release, changes to support statements, and also corrections and clarifications for existing releases.
 
