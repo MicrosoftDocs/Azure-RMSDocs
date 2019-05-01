@@ -139,6 +139,8 @@ See the latest information about how Azure Information Protection helps you to d
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
+- What's new in the documentation: [Azure Information Protection technical blog](https://aka.ms/AIPblog)
+
 Additional resources: [Information and support for Azure Information Protection](information-support.md)
 
 ### Microsoft Ignite
