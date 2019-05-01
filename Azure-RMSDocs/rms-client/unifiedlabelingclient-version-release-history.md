@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -49,7 +49,13 @@ This client installs an Office add-on for Windows computers, an extension for Fi
 
 To compare features and functionality with the Azure Information Protection client, see [Compare the clients](use-client.md#compare-the-clients).
 
-## Version 2.0.778
+## Version 2.0.779.0
+
+**Released**: 05/01/2019
+
+This release has a single fix to resolve a race-condition issue where sometimes, no labels display in Office apps or File Explorer.
+
+## Version 2.0.778.0
 
 **Released**: 04/16/2019
 
