@@ -151,7 +151,7 @@ Use the following instructions to migrate your tenant and Azure Information Prot
 You must be a Compliance administrator, Security administrator, or Global administrator to migrate your labels.
 
 > [!NOTE]
-> If you have retention labels for Office 365, we recommend that you have the Compliance administrator role, or Global security role to migrate your labels.
+> If you have retention labels for Office 365, we recommend that you have the Compliance administrator role, or Global administrator role to migrate your labels.
 > 
 > Security administrators don't have access to retention labels, so if you have retention labels with the same name as your Azure Information Protection labels, the migration process can't complete until you manually rename one of the duplicates. However, if you have one of the other roles, the migration process can rename the Azure Information Protection label for you, so that migration can complete.
 
