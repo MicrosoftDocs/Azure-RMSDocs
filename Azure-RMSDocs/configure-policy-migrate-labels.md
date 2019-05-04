@@ -31,7 +31,7 @@ ms.suite: ems
 
 > [!IMPORTANT]
 >
-> This feature is now in general availability for all tenants, although the word **Preview** might still be visible in the Azure portal for a couple of weeks.
+> This feature is now in general availability for all tenants, although you might still see the word **Preview** in the Azure portal for a couple of weeks.
 
 Migrate your labels in Azure Information Protection if you want to be able to use them as sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling).
 
