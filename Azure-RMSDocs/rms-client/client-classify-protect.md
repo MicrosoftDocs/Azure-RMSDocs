@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Classify & protect by using Azure Information Protection - AIP
-description: Instructions how to classify and protect your documents and emails.
+title: Classify & protect - Azure Information Protection client
+description: Instructions how to classify and protect your documents and emails when you use the Azure Information Protection client for Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# User Guide: Classify and protect a file or email by using Azure Information Protection
+# User Guide: Classify and protect with the Azure Information Protection client
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 >

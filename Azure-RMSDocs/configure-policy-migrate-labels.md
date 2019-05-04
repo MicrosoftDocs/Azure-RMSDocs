@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/01/2019
+ms.date: 05/07/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,9 +30,12 @@ ms.suite: ems
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!IMPORTANT]
-> This feature migrates your tenant to a new platform. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by clients and services that support [Microsoft Information Protection solutions](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection).
+>
+> This feature is now in general availability for all tenants, although the word **Preview** might still be visible in the Azure portal for a couple of weeks.
 
-Migrate your labels if you want to be able to use them as Office 365 sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). You manage and publish these labels from the Office 365 Security & Compliance Center, or the Microsoft 365 security center and the Microsoft 365 compliance center. After the migration, the Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal.
+Migrate your labels in Azure Information Protection if you want to be able to use them as sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling).
+
+After the migration, manage and publish these labels from the Office 365 Security & Compliance Center, or the Microsoft 365 security center and the Microsoft 365 compliance center. These labels can be used by the Azure Information Protection unified labeling client. If you continue to use the Azure Information Protection client, this client continues to download labels with the Azure Information Protection policy from the Azure portal.
 
 Before you read detailed instructions about how to migrate your labels, you might find the following frequently asked questions useful:
 
@@ -146,6 +149,11 @@ If the user doesn't have one of these usage rights or roles, the label is not ap
 Use the following instructions to migrate your tenant and Azure Information Protection labels to use the new unified labeling store.
 
 You must be a Compliance administrator, Security administrator, or Global administrator to migrate your labels.
+
+> [!NOTE]
+> If you have retention labels for Office 365, we recommend that you have the Compliance administrator role, or Global security role to migrate your labels.
+> 
+> Security administrators don't have access to retention labels, so if you have retention labels with the same name as your Azure Information Protection labels, the migration process can't complete until you manually rename one of the duplicates. However, if you have one of the other roles, the migration process can rename the Azure Information Protection label for you, so that migration can complete.
 
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
     

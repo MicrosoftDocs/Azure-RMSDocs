@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configure super users for Azure Rights Management - AIP
-description: Understand and implement the super user feature of the Azure Rights Management service from Azure Information Protection, so that authorized people and services can always read and inspect the data that Azure Rights Management protects for your organization. This ability is sometimes referred to as 'reasoning over data' and is a crucial element in maintaining control of your organization's data.
+description: Understand and implement the super user feature of the Azure Rights Management service from Azure Information Protection, so that authorized people and services can always read and inspect ("reason over") your organization's protected data.
 author: cabailey
 ms.author: cabailey
 manager: barbkess

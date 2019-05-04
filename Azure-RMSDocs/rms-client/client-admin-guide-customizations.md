@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Custom configurations for the Azure Information Protection client
+title: Custom configurations - Azure Information Protection client
 description: Information about customizing the Azure Information Protection client for Windows.
 author: cabailey
 ms.author: cabailey

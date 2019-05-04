@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current GA version 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -32,9 +32,10 @@ ms.suite: ems
 > [!NOTE]
 > This article is for the current general availability version of the Azure Information Protection scanner.
 > 
-> If you have an older version of the scanner installed, see [Deploying previous versions of the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner-previousversions.md).
+> To upgrade from a general availability version of the scanner that is older than 1.48.204.0, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner). You can then use the instructions on this page, omitting the step to install the scanner.
 > 
-> If you are upgrading from a previous general availability version of the scanner to the current general availability version, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
+> If you are not ready to upgrade from a previous version, see [Deploying previous versions of the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner-previousversions.md).
+
 
 Use this information to learn about the Azure Information Protection scanner, and then how to successfully install, configure, and run it.
 

@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -153,7 +153,7 @@ Exchange does not have to be configured for Azure Information Protection before 
     
      |Setting|More information|Recommended setting
      |-----------|--------------------|--------------------|
-     |**content expiration**|Define a date or number of days for when documents that are protected by these settings should not open for the selected users. For emails, expiration isn't always enforced because of caching mechanisms used by some email clients.<br /><br />You can specify a date or specify a number of days starting from the time that the protection is applied to the content.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|**Content never expires** unless the content has a specific time-bound requirement.|
+     |**File Content Expiration**|Define a date or number of days for when documents that are protected by these settings should not open for the selected users. For emails, expiration isn't always enforced because of caching mechanisms used by some email clients.<br /><br />You can specify a date or specify a number of days starting from the time that the protection is applied to the content.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|**Content never expires** unless the content has a specific time-bound requirement.|
      |**Allow offline access**|Use this setting to balance any security requirements that you have (includes access after revocation) with the ability for the selected users to open protected content when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, these users must be reauthenticated and their access is logged. When this happens, if their credentials are not cached, the users are prompted to sign in before they can open the document or email.<br /><br />In addition to reauthentication, the policy and the user group membership is reevaluated. This means that users could experience different access results for the same document or email if there are changes in the policy or group membership from when they last accessed the content. That could include no access if the document has been [revoked](./rms-client/client-track-revoke.md).|Depending on how sensitive the content is:<br /><br />- **Number of days the content is available without an Internet connection** = **7** for sensitive business data that could cause damage to the business if shared with unauthorized people. This recommendation offers a balanced compromise between flexibility and security. Examples include contracts, security reports, forecast summaries, and sales account data.<br /><br />- **Never** for very sensitive business data that would cause damage to the business if it was shared with unauthorized people. This recommendation prioritizes security over flexibility, and ensures that if the document is revoked, all authorized users immediately cannot open the document. Examples include employee and customer information, passwords, source code, and pre-announced financial reports.|
     
      When you have finished configuring the permissions and settings, click **OK**. 
@@ -306,7 +306,7 @@ This configuration has the advantage that you don't need to specify users, group
 
 4. Select the permissions you want, and click **OK**.
 
-5. Back on the **Protection** blade, configure settings for **Content expiration** and **Allow offline access**, if needed, and then click **OK**.
+5. Back on the **Protection** blade, configure settings for **File Content Expiration** and **Allow offline access**, if needed, and then click **OK**.
 
 6. On the **Label** blade, select **Save**.
 
@@ -321,7 +321,7 @@ The label configuration is deceptively simple:
     
 2. Select **OK** without selecting any users, or configuring any settings on this blade.
     
-    Although you can configure settings for **Content expiration** and **Allow offline access**, when you do not specify users and their permisisons, these access settings are not applicable. That's because the person who applies the protection is the [Rights Management issuer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for the content, and this role is exempt from these access restrictions.
+    Although you can configure settings for **File Content Expiration** and **Allow offline access**, when you do not specify users and their permisisons, these access settings are not applicable. That's because the person who applies the protection is the [Rights Management issuer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for the content, and this role is exempt from these access restrictions.
 
 3. On the **Label** blade, select **Save**.
 

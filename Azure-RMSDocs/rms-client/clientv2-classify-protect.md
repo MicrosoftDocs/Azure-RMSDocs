@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Classify & protect by using the Azure Information Protection unified labeling client for Windows
+title: Classify & protect - Azure Information Protection unified labeling client
 description: Instructions how to classify and protect your documents and emails when you use the Azure Information Protection unified labeling client for Windows.
 author: cabailey
 ms.author: cabailey
@@ -22,7 +22,7 @@ ms.suite: ems
 
 ---
 
-# User Guide: Classify and protect a file or email by using the Azure Information Protection unified labeling client for Windows
+# User Guide: Classify and protect with the Azure Information Protection unified labeling client
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 >

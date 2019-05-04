@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Remove sensitivity labels by using the Azure Information Protection unified labeling client for Windows
-description: Instructions to remove sensitivity labels and protection from files that have been labeled by Azure Information Protection.
+title: Remove labels using the Azure Information Protection unified labeling client
+description: Instructions to remove sensitivity labels and protection from files and emails by using the Azure Information Protection unified labeling client.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

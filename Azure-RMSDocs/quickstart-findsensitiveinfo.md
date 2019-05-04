@@ -1,5 +1,5 @@
 ---
-title: Quickstart - Find sensitive information by using the Azure Information Protection scanner - AIP
+title: Quickstart - Find sensitive info with the Azure Information Protection scanner
 description: Use the Azure Information Protection scanner to find what sensitive information you have in files stored on-premises.
 author: cabailey
 author: cabailey

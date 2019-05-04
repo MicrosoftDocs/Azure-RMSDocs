@@ -198,11 +198,11 @@ You can use the version history information for the [Azure Information Protectio
 
 For the Azure Information Protection unified labeling client:
 
-- Support for auditing and endpoint discovery: Version 2.0.778
+- Support for auditing and endpoint discovery: Version 2.0.778.0
 
 For the Azure Information Protection client:
 
-- Support for auditing: 1.41.51.0
+- Support for auditing: Version 1.41.51.0
 - Support for endpoint discovery: Version 1.48.204.0
 
 ## Configure a Log Analytics workspace for the reports

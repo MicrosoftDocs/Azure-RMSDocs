@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Azure Information Protection unified labeling client - Version release history and support policy
+title: Azure Information Protection unified labeling client - Version history & support policy
 description: See the release information for the Azure Information Protection unified labeling client for Windows. 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -47,9 +47,15 @@ Use the following information to see what’s supported for the general availabi
 
 This client installs an Office add-on for Windows computers, an extension for File Explorer, and a PowerShell module. This client has the same [prerequisites](../requirements.md) as the Azure Information Protection client that downloads policy from Azure.
 
-To compare features and functionality with the Azure Information Protection client, see [Feature comparisons for the clients](use-client.md#compare-the-clients).
+To compare features and functionality with the Azure Information Protection client, see [Compare the clients](use-client.md#compare-the-clients).
 
-## Version 2.0.778
+## Version 2.0.779.0
+
+**Released**: 05/01/2019
+
+This release has a single fix to resolve a race-condition issue where sometimes, no labels display in Office apps or File Explorer.
+
+## Version 2.0.778.0
 
 **Released**: 04/16/2019
 
