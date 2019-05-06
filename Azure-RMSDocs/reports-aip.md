@@ -198,7 +198,7 @@ You can use the version history information for the [Azure Information Protectio
 
 For the Azure Information Protection unified labeling client:
 
-- Support for auditing and endpoint discovery: Version 2.0.778
+- Support for auditing and endpoint discovery: Version 2.0.778.0
 
 For the Azure Information Protection client:
 
