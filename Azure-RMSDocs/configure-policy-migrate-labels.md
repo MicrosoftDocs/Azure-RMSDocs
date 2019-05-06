@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/30/2019
+ms.date: 05/07/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,9 +30,12 @@ ms.suite: ems
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!IMPORTANT]
-> This feature is in preview, and migrates your tenant to a new platform. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by clients and services that support [Microsoft Information Protection solutions](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection).
+>
+> This feature is now in general availability for all tenants, although you might still see the word **Preview** in the Azure portal for a couple of weeks.
 
-Migrate your labels if you want to be able to use them as Office 365 sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). You manage and publish these labels from the Office 365 Security & Compliance Center, or the Microsoft 365 security center and the Microsoft 365 compliance center. After the migration, the Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal.
+Migrate your labels in Azure Information Protection so that you can use them as sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling).
+
+After the migration, manage and publish these labels from the Office 365 Security & Compliance Center, or the Microsoft 365 security center and the Microsoft 365 compliance center. These labels can be used by the Azure Information Protection unified labeling client. If you continue to use the Azure Information Protection client, this client continues to download labels with the Azure Information Protection policy from the Azure portal.
 
 Before you read detailed instructions about how to migrate your labels, you might find the following frequently asked questions useful:
 
@@ -81,7 +84,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
     - When a label is created, you must then publish it in one of the admin centers to make it available to applications and services.
     
-    - When a label is renamed, you must then edit it, which you can do in one of the admin centers or the Azure portal. 
+    - When a label is renamed, you must then edit it, which you can do in one of the admin centers or the Azure portal.
 
 - For each label, the Azure portal displays only the label display name, which you can edit. The admin centers show both this display name for a label, and the label name. The label name is the initial name that you specified when the label was first created and this property is used by the back-end service for identification purposes.
 
@@ -148,15 +151,15 @@ Use the following instructions to migrate your tenant and Azure Information Prot
 You must be a Compliance administrator, Security administrator, or Global administrator to migrate your labels.
 
 > [!NOTE]
-> If you have retention labels for Office 365, we recommend that you have the Compliance administrator role, or Global security role to migrate your labels.
+> If you have retention labels or data loss prevention policies for Office 365, we recommend that you have the Compliance administrator role, or Global administrator role to migrate your labels.
 > 
-> Security administrators don't have access to retention labels, so if you have retention labels with the same name as your Azure Information Protection labels, the migration process can't complete until you manually rename one of the duplicates. However, if you have one of the other roles, the migration process can rename the Azure Information Protection label for you, so that migration can complete.
+> Security administrators don't have access to retention labels or data loss prevention policies, so if you have either of these and they have the same name as your Azure Information Protection labels, the migration process can't complete until you manually rename one of the duplicates. However, if you have one of the other roles, the migration process can rename the Azure Information Protection label for you, so that migration can complete.
 
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **Manage** menu option, select **Unified labeling (Preview)**.
+2. From the **Manage** menu option, select **Unified labeling**.
 
 3. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
     
@@ -197,4 +200,4 @@ To confirm whether the clients and services you use support unified labeling, re
 
 For more information about your migrated labels that can now be configured and published in one of the admin centers, see [Overview of sensitivity labels](/Office365/SecurityCompliance/sensitivity-labels).
 
-To read the announcement blog post: [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
+If you haven't already done so, install the Azure Information Protection unified labeling client. For release information, an admin guide, and user guide, see [Azure Information Protection unified labeling client for Windows](./rms-client/aip-clientv2.md).
