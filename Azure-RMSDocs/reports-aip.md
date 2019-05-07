@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 04/23/2019
+ms.date: 05/07/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -238,7 +238,7 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
 
 - **Data discovery (Preview)**: Use this report to see information about labeled files found by scanners and supported endpoints.
     
-    Note: Discovery for endpoint is gradually rolling out to tenants. You start to see data from the supported endpoints in this report when this feature has rolled out to your tenant.
+    Note: Discovery for endpoints is gradually rolling out to tenants. You start to see data from the supported endpoints in this report when this feature has rolled out to your tenant.
     
     You can configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) for the Azure Information Protection client to report files that contain sensitive information.
     

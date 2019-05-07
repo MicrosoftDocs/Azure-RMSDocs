@@ -74,19 +74,9 @@ Use the **Version** number displayed to identify the client:
 
 ## When is the right time to migrate my labels to Office 365?
 
-The option to migrate labels in the Azure portal to sensitivity labels that can be used by [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) is now in general availability. Use the following guidance to help you determine if you should migrate your labels.
+Now that the option to migrate labels in the Azure portal is in general availability, we recommend you activate the migration so that you can use your labels as sensitivity labels with [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
-- **If you are new to Azure Information Protection:**
-    
-    The default labels from Azure Information Protection can accelerate your deployment, so we recommend you migrate those default labels, and then manage them from one of the admin centers (Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center).
-
-- **If you are not new to Azure Information Protection but in the middle of defining and configuring the labels that you want to use:**
-    
-    We recommend that you complete your label configuration in the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in one of the admin centers.
-
-Before you migrate your labels, be sure you understand the [considerations and label settings that are not supported by the admin centers](configure-policy-migrate-labels.md#considerations-for-unified-labels).
-
-See also [Which client do I install for testing new functionality?](faqs-infoprotect.md#which-client-do-i-install-for-testing-new-functionality)
+For more information and instructions, see [How to migrate Azure Information Protection labels to Office 365 sensitivity labels](configure-policy-migrate-labels.md).
 
 ## After I've migrated my labels, which management portal do I use?
 
