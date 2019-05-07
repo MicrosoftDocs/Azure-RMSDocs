@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/07/2019
+ms.date: 05/08/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -61,8 +61,6 @@ Global administrators for your tenant can continue to manage labels and policies
 Before you migrate your labels, make sure that you are aware of the following changes and considerations:
 
 - Not all clients currently support unified labels. Make sure that you have [supported clients](#clients-and-services-that-support-unified-labeling) and be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the admin centers (for client that do support unified labels).
-
-- If you are in the middle of defining and configuring the labels that you want to use, we recommend that you complete this process by using the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in the admin centers.
 
 - Policies, including policy settings and who has access to them (scoped policies), and all advanced client settings are not migrated. For these changes that are not migrated, you will need to configure the relevant options in the admin centers after the labels are migrated.
     
