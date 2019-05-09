@@ -1,7 +1,6 @@
 - name: Azure Information Protection Documentation
   href: index.yml
 - name: Overview
-  href: /azure/information-protection/what-is-information-protection
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
@@ -20,7 +19,6 @@
       href: requirements-servers.md
 - name: Quickstarts
   expanded: true
-  href: /azure/information-protection/quickstart-viewpolicy
   items:
   - name: Get started in the Azure portal
     href: quickstart-viewpolicy.md
@@ -31,7 +29,6 @@
   - name: Create a new label for specific users
     href: quickstart-label-specificusers.md
 - name: Tutorials
-  href: infoprotect-quick-start-tutorial.md
   items:
   - name: Edit the policy and create a new label
     href: infoprotect-quick-start-tutorial.md
@@ -40,7 +37,6 @@
   - name: Configure client settings to control oversharing
     href: infoprotect-oversharing-tutorial.md
 - name: Concepts
-  href: overview-policy.md
   items:
   - name: Overview of the Azure Information Protection policy
     href: overview-policy.md
@@ -63,7 +59,6 @@
   - name: Also known as ...
     href: aka.md
 - name: How-to guides
-  href: how-to-guides.md
   items:
   - name: How-tos for common scenarios
     href: how-to-guides.md
@@ -100,7 +95,6 @@
     - name: Preparing users and groups
       href: prepare.md
   - name: Deploy & Use the Service
-    href: activate-service.md
     items:
     - name: Activating the service
       href: activate-service.md
@@ -204,7 +198,6 @@
       - name: Installing the AADRM PowerShell module
         href: install-powershell.md
   - name: Deploy & Use the Client
-    href: ./rms-client/use-client.md
     items:
     - name: Client deployment solutions
       href: ./rms-client/use-client.md
