@@ -221,9 +221,9 @@
         items:
         - name: Overview
           href: ./rms-client/aip-clientv2.md
-        - name: Version history - Azure Information Protection unified labeling client
+        - name: Version history
           href: ./rms-client/unifiedlabelingclient-version-release-history.md
-        - name: Admin guide - Azure Information Protection unified labeling client
+        - name: Admin guide
           items:
           - name: Overview
             href: ./rms-client/clientv2-admin-guide.md
@@ -237,7 +237,7 @@
             href: ./rms-client/clientv2-admin-guide-file-types.md
           - name: PowerShell commands
             href: ./rms-client/clientv2-admin-guide-powershell.md
-        - name: User guide - Azure Information Protection unified labeling client
+        - name: User guide
           items:
           - name: Overview
             href: ./rms-client/clientv2-user-guide.md
@@ -255,9 +255,9 @@
         items:
         - name: Overview
           href: ./rms-client/aip-client.md
-        - name: Version history - Azure Information Protection client
+        - name: Version history
           href: ./rms-client/client-version-release-history.md
-        - name: Admin guide - Azure Information Protection client
+        - name: Admin guide
           items:
           - name: Overview
             href: ./rms-client/client-admin-guide.md
@@ -273,7 +273,7 @@
             href: ./rms-client/client-admin-guide-file-types.md
           - name: PowerShell commands
             href: ./rms-client/client-admin-guide-powershell.md
-        - name: User guide - Azure Information Protection client
+        - name: User guide
           items:
           - name: Overview
             href: ./rms-client/client-user-guide.md
