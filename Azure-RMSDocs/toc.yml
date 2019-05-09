@@ -8,6 +8,8 @@
     href: compare-on-premise.md
   - name: Requirements
     items:
+    - name: Overview
+      href: requirements.md
     - name: Azure Active Directory requirements
       href: requirements-azure-ad.md
     - name: Client device support for data protection
@@ -41,13 +43,14 @@
     href: overview-policy.md
   - name: Rights Management protection
     items:
-    - name: Azure Rights Management
+    - name: Overview
       href: what-is-azure-rms.md
     - name: How does it work?
       href: how-does-it-work.md
     - name: How applications support Azure Rights Management protection
-      href: applications-support.md
       items:
+      - name: Overview
+        href: applications-support.md
       - name: Office applications and services
         href: office-apps-services-support.md
       - name: File servers that run Windows Server and use File Classification Infrastructure
@@ -73,8 +76,9 @@
       - name: Preparation
         href: migrate-from-ad-rms-phase1.md
       - name: Server-side configuration
-        href: migrate-from-ad-rms-phase2.md
         items:
+        - name: Overview
+          href: migrate-from-ad-rms-phase2.md
         - name: Software key to software key
           href: migrate-softwarekey-to-softwarekey.md
         - name: HSM key to HSM key
@@ -88,8 +92,9 @@
       - name: Post migration tasks
         href: migrate-from-ad-rms-phase5.md
     - name: Planning and implementing your tenant key
-      href: plan-implement-tenant-key.md
       items:
+      - name: Overview
+        href: plan-implement-tenant-key.md
       - name: BYOK pricing and restrictions
         href: byok-price-restrictions.md
     - name: Preparing users and groups
@@ -97,15 +102,17 @@
   - name: Deploy & Use the Service
     items:
     - name: Activating the service
-      href: activate-service.md
       items:
-      - name: Microsoft 365 admin center
+       - name: Overview
+        href: activate-service.md
+     - name: Microsoft 365 admin center
         href: activate-office365.md
       - name: Azure portal
         href: activate-azure.md
     - name: Configuring applications
-      href: configure-applications.md
       items:
+      - name: Overview
+        href: configure-applications.md
       - name: Office 365
         href: configure-office365.md
       - name: Office apps
@@ -117,8 +124,9 @@
     - name: Configuring super users for discovery services or data recovery
       href: configure-super-users.md
     - name: Configuring the Azure Information Protection policy
-      href: configure-policy.md
       items:
+      - name: Overview
+        href: configure-policy.md
       - name: The default policy
         href: configure-policy-default.md
       - name: Configure the policy settings
@@ -132,8 +140,9 @@
       - name: Change a label
         href: configure-policy-change-label.md
       - name: Configure protection
-        href: configure-policy-protection.md
         items:
+        - name: Overview
+          href: configure-policy-protection.md
         - name: HYOK
           href: configure-adrms-restrictions.md
       - name: Configure visual markings
@@ -143,8 +152,9 @@
       - name: Configure scoped policies
         href: configure-policy-scope.md
       - name: Configure and manage templates
-        href: configure-policy-templates.md
         items:
+        - name: Overview
+          href: configure-policy-templates.md
         - name: Refresh templates for users
           href: refresh-templates.md
         - name: PowerShell reference
@@ -164,13 +174,15 @@
     - name: Reporting for Azure Information Protection
       href: reports-aip.md
     - name: Deploying the RMS connector
-      href: deploy-rms-connector.md
       items:
+      - name: Overview
+        href: deploy-rms-connector.md
       - name: Install and configure the connector
         href: install-configure-rms-connector.md
       - name: Configure servers
-        href: configure-servers-rms-connector.md
         items:
+        - name: Overview
+          href: configure-servers-rms-connector.md
         - name: Registry settings
           href: rms-connector-registry-settings.md
       - name: Monitor the connector
@@ -182,8 +194,9 @@
     - name: Logging and analyzing usage
       href: log-analyze-usage.md
     - name: Operations for your tenant key
-      href: operations-tenant-key.md
       items:
+      - name: Overview
+        href: operations-tenant-key.md
       - name: Microsoft-managed
         href: operations-microsoft-managed-tenant-key.md
       - name: Customer-managed
@@ -193,15 +206,17 @@
     - name: Decommissioning and deactivating
       href: decommission-deactivate.md
     - name: Administering with PowerShell
-      href: administer-powershell.md
       items:
+      - name: Overview
+        href: administer-powershell.md
       - name: Installing the AADRM PowerShell module
         href: install-powershell.md
   - name: Deploy & Use the Client
     items:
     - name: Client deployment solutions
-      href: ./rms-client/use-client.md
       items:
+      - name: Overview
+        href: ./rms-client/use-client.md
       - name: Azure Information Protection unified labeling client
         href: ./rms-client/aip-clientv2.md
         items:
@@ -420,7 +435,6 @@
           href: https://msdn.microsoft.com/library/hh535248.aspx
     - name: Terms
 - name: Resources
-  href: faqs.md
   items:
   - name: Frequently asked questions
     href: faqs.md
