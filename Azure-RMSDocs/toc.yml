@@ -291,8 +291,8 @@
             href: ./rms-client/client-remove-label-protection.md
           - name: Protection-only mode
             href: ./rms-client/client-protection-only-mode.md
-        - name: Tasks that you used to do with the RMS sharing application
-          href: ./rms-client/upgrade-client-app.md
+          - name: Tasks that you used to do with the RMS sharing application
+            href: ./rms-client/upgrade-client-app.md
     - name: Protected PDF readers
       href: ./rms-client/protected-pdf-readers.md
     - name: RMS client deployment notes
