@@ -103,9 +103,9 @@
     items:
     - name: Activating the service
       items:
-       - name: Overview
+      - name: Overview
         href: activate-service.md
-     - name: Microsoft 365 admin center
+      - name: Microsoft 365 admin center
         href: activate-office365.md
       - name: Azure portal
         href: activate-azure.md
