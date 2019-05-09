@@ -293,16 +293,16 @@
             href: ./rms-client/client-protection-only-mode.md
         - name: Tasks that you used to do with the RMS sharing application
           href: ./rms-client/upgrade-client-app.md
-      - name: Protected PDF readers
-        href: ./rms-client/protected-pdf-readers.md
-      - name: RMS client deployment notes
-        href: ./rms-client/client-deployment-notes.md
-      - name: RMS protection with Windows Server FCI
-        items:
-        - name: Overview
-          href: ./rms-client/configure-fci.md
-        - name: PowerShell script
-          href: ./rms-client/fci-script.md
+    - name: Protected PDF readers
+      href: ./rms-client/protected-pdf-readers.md
+    - name: RMS client deployment notes
+      href: ./rms-client/client-deployment-notes.md
+    - name: RMS protection with Windows Server FCI
+      items:
+      - name: Overview
+        href: ./rms-client/configure-fci.md
+      - name: PowerShell script
+        href: ./rms-client/fci-script.md
   - name: Develop & Customize apps
     href: ./develop/developers-guide.md
     items:
