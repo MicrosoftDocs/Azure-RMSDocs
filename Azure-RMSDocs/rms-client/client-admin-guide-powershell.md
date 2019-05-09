@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -495,13 +495,26 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/).
 
-2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **App registrations**. 
-
-3. Select **New application registration**, to create your Web app /API application. On the **Create** label, specify the following values, and then click **Create**:
+2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **Manage** > **App registrations**. 
+3. Select **+ New registration**, to create your Web app /API application. On the **Register an application** blade, specify the following values, and then click **Register**:
 
    - Name: **AIPOnBehalfOf**
+    
+    If you prefer, specify a different name. It must be unique per tenant.
+    
+    - Supported account types: **Accounts in this organizational directory only**
+    
+    - Redirect URI (optional): **Web** and **https://localhost**
 
-     If you prefer, specify a different name. It must be unique per tenant.
+4. On the **AIPOnBehalfOf** blade, copy the value for the **Application (client) ID**.
+
+5. Still on the **AIPOnBehalfOf** blade, from the **Manage** menu, select **Authentication**.
+
+6. On the **AIPOnBehalfOf - Authentication** blade, select the **ID tokens** checkbox, and then select **Save**.
+
+7. Still on the **AIPOnBehalfOf - Authentication** blade, from the **Manage** menu, select **Certificates & secrets**.
+
+8. On the **AIPOnBehalfOf - Certificates & secrets** blade, specify the following settings
 
    - Application Type: **Web app /API**
 
