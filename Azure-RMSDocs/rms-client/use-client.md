@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/30/2019
+ms.date: 05/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -53,7 +53,7 @@ You can also install both clients in the same environment to support different b
 
 ##### Example deployment strategy:
 
-- For the majority of users, you deploy the Azure Information Protection unified labeling client because most users don't need features or functionality that are available only with the Azure Information Protection unified labeling client. 
+- For the majority of users, you deploy the Azure Information Protection unified labeling client because most users don't need features or functionality that are available only with the Azure Information Protection client. 
     
     For these users, their labeling experience is very similar if they also have devices that run MacOS, iOS, and Android, and these devices have a version of Office that supports sensitivity labels.
 
