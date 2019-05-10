@@ -507,7 +507,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     
     - **Redirect URI (optional)**: **Web** and `http://localhost`
 
-4. On the **AIPOnBehalfOf** blade, copy the value for the **Application (client) ID**. It looks similar to the following example: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *WebAppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
+4. On the **AIPOnBehalfOf** blade, copy the value for the **Application (client) ID**. The value looks similar to the following example: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *WebAppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
 5. Still on the **AIPOnBehalfOf** blade, from the **Manage** menu, select **Authentication**.
 
@@ -548,7 +548,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     - **Supported account types**: **Accounts in this organizational directory only**
     - **Redirect URI (optional)**: **Public client (mobile & desktop)** and `http://localhost`
 
-17. On the **AIPClient** blade, copy the value of the **Application (client) ID**. It looks similar to the following example: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f'. This value is used for the NativeAppId parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
+17. On the **AIPClient** blade, copy the value of the **Application (client) ID**. The value looks similar to the following example: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. This value is used for the NativeAppId parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
 18. Still on the **AIPClient** blade, from the **Manage** menu, select **Authentication**.
 
