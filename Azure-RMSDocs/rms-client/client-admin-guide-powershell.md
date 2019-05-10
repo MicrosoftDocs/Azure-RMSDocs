@@ -526,7 +526,9 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 10. Still on the **AIPOnBehalfOf - Certificates & secrets** blade, from the **Manage** menu, select **Expose an API**.
 
-11. On the **AIPOnBehalfOf - Expose an API** blade, select **Set** for the **Application ID URI** option, and in the **Application ID URI** value, change **api** to **http**. This string looks similar to the following example: `http://d244e75e-870b-4491-b70d-65534953099e`. Select **Save**.
+11. On the **AIPOnBehalfOf - Expose an API** blade, select **Set** for the **Application ID URI** option, and in the **Application ID URI** value, change **api** to **http**. This string looks similar to the following example: `http://d244e75e-870b-4491-b70d-65534953099e`. 
+    
+    Select **Save**.
 
 12. Back on the **AIPOnBehalfOf - Expose an API** blade, select **+ Add a scope**.
 
@@ -548,7 +550,9 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     - **Supported account types**: **Accounts in this organizational directory only**
     - **Redirect URI (optional)**: **Public client (mobile & desktop)** and `http://localhost`
 
-17. On the **AIPClient** blade, copy the value of the **Application (client) ID**. The value looks similar to the following example: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. This value is used for the NativeAppId parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
+17. On the **AIPClient** blade, copy the value of the **Application (client) ID**. The value looks similar to the following example: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+    
+    This value is used for the NativeAppId parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
 18. Still on the **AIPClient** blade, from the **Manage** menu, select **Authentication**.
 
