@@ -495,7 +495,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/).
 
-2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **App registrations**. 
+2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **App registrations (Legacy)**. 
 
 3. Select **New application registration**, to create your Web app /API application. On the **Create** label, specify the following values, and then click **Create**:
 
