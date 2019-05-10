@@ -496,17 +496,18 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/).
 
 2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **Manage** > **App registrations**. 
+
 3. Select **+ New registration**, to create your Web app /API application. On the **Register an application** blade, specify the following values, and then click **Register**:
 
-   - Name: **AIPOnBehalfOf**
+   - **Name**: `AIPOnBehalfOf`
+        
+        If you prefer, specify a different name. It must be unique per tenant.
     
-    If you prefer, specify a different name. It must be unique per tenant.
+    - **Supported account types**: **Accounts in this organizational directory only**
     
-    - Supported account types: **Accounts in this organizational directory only**
-    
-    - Redirect URI (optional): **Web** and **https://localhost**
+    - **Redirect URI (optional)**: **Web** and `http://localhost`
 
-4. On the **AIPOnBehalfOf** blade, copy the value for the **Application (client) ID**.
+4. On the **AIPOnBehalfOf** blade, copy the value for the **Application (client) ID**. It looks similar to the following example: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *WebAppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
 5. Still on the **AIPOnBehalfOf** blade, from the **Manage** menu, select **Authentication**.
 
@@ -514,46 +515,56 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 7. Still on the **AIPOnBehalfOf - Authentication** blade, from the **Manage** menu, select **Certificates & secrets**.
 
-8. On the **AIPOnBehalfOf - Certificates & secrets** blade, specify the following settings
+8. On the **AIPOnBehalfOf - Certificates & secrets** blade, select **+ New client secret**. For **Add a client secret**, specify the following, and then select **Add**:
+    
+    - **Description**: `Azure Information Protection client`
+    - **Expires**: Specify your choice of duration (1 year, 2 years, or never expires)
 
-   - Application Type: **Web app /API**
+9. Back on the **AIPOnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, copy the string for the **VALUE**. This string looks similar to the following example: `sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=`. To make sure you copy all the characters, select the icon to **Copy to clipboard**. 
+    
+    It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any sensitive information that you use, store the saved value securely and restrict access to it.
 
-   - Sign-on URL: **http://localhost**
+10. Still on the **AIPOnBehalfOf - Certificates & secrets** blade, from the **Manage** menu, select **Expose an API**.
 
-4. Select the application that you've just created, for example, **AIPOnBehalfOf**. Then, on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade. 
+11. On the **AIPOnBehalfOf - Expose an API** blade, select **Set** for the **Application ID URI** option, and in the **Application ID URI** value, change **api** to **http**. This string looks similar to the following example: `http://d244e75e-870b-4491-b70d-65534953099e`. Select **Save**.
 
-    This value is used for the `WebAppId` parameter when you run the Set-AIPAuthentication cmdlet. Paste and save it for later reference.
+12. Back on the **AIPOnBehalfOf - Expose an API** blade, select **+ Add a scope**.
 
-5. Back on the **Settings** blade, select **Required permissions**. On the **Required permissions** blade, select **Grant Permissions**, click **Yes** to confirm, and then close this blade.
+13. On the **Add a scope** blade, specify the following, and then select **Add scope**:
+    - **Scope name**: `user-impersonation`
+    - **Who can consent?**: **Admins and users**
+    - **Admin consent display name**: `Access Azure Information Protection scanner`
+    - **Admin consent description**: `Allow the application to access the scanner for the signed-in user`
+    - **User consent display name**: `Access Azure Information Protection scanner`
+    - **User consent description**: `Allow the application to access the scanner for the signed-in user`
+    - **State**: **Enabled** (the default)
 
-6. Back on the **Settings** blade again, select **Keys**. Add a new key by specifying a description and your choice of duration (1 year, 2 years, or never expires). Then select **Save**, and copy the string for the **Value** that is displayed. It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any key that you use, store the saved value securely and restrict access to it.
+14. Back on the **AIPOnBehalfOf - Expose an API** blade, close this blade.
 
-    This value is used for the `WebAppKey` parameter when you run the Set-AIPAuthentication cmdlet.
+15. On the **App registrations** blade, select **+ New application registration** to now create your native application.
 
-7. Back on the **App registrations** blade, select **New application registration**, to create your native application. On the **Create** label, specify the following values, and then click **Create**:
+16. On the **Register an application** blade, specify the following settings, and then select **Register**:
+    - **Name**: `AIPClient`
+    - **Supported account types**: **Accounts in this organizational directory only**
+    - **Redirect URI (optional)**: **Public client (mobile & desktop)** and `http://localhost`
 
-   - Name: **AIPClient**
+17. On the **AIPClient** blade, copy the value of the **Application (client) ID**. It looks similar to the following example: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f'. This value is used for the NativeAppId parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
-     If you prefer, specify a different name. It must be unique per tenant.
+18. Still on the **AIPClient** blade, from the **Manage** menu, select **Authentication**.
 
-   - Application Type: **Native**
+19. On the **AIPClient - Authentication** blade, specify the following, and then select **Save**:
+    - In the **Advanced settings** section, select **ID tokens**.
+    - In the **Default client type** section, select **Yes**.
 
-   - Sign-on URL: **http://localhost**
+20. Still on the **AIPClient - Authentication** blade, from the **Manage** menu, select **API permissions**.
 
-8. Select the application that you've just created, for example, **AIPClient**. Then, on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade.
+21. On the **AIPClient - permissions** blade, select **+ Add a permission**.
 
-    This value is used for the `NativeAppId` parameter when you run the Set-AIPAuthentication cmdlet. Paste and save it for later reference.
+22. On the **Request API permissions** blade, select **My APIs**.
 
-9. On the **Settings** blade, select **Required permissions**. 
+23. In the **Select an API** section, select **APIOnBehalfOf**, then select the checkbox for **user-impersonation**, as the permission. Select **Add permissions**. 
 
-10. On the **Required permissions** blade, click **Add**, and then click **Select an API**. In the search box, type **AIPOnBehalfOf**. Select this value in the list box, and then click **Select**.
-
-11. On the **Enable Access** blade, select **AIPOnBehalfOf**, click **Select**, and then click **Done**.
-
-12. Back on the **Required permissions** blade, select **Grant Permissions**, click **Yes** to confirm, and then close this blade.
-
-
-You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. For example:
+You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. From our examples:
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 
