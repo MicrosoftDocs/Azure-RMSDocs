@@ -511,16 +511,18 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 5. Still on the **AIPOnBehalfOf** blade, from the **Manage** menu, select **Authentication**.
 
-6. On the **AIPOnBehalfOf - Authentication** blade, select the **ID tokens** checkbox, and then select **Save**.
+6. On the **AIPOnBehalfOf - Authentication** blade, in the **Advanced settings** section, select the **ID tokens** checkbox, and then select **Save**.
 
 7. Still on the **AIPOnBehalfOf - Authentication** blade, from the **Manage** menu, select **Certificates & secrets**.
 
-8. On the **AIPOnBehalfOf - Certificates & secrets** blade, select **+ New client secret**. For **Add a client secret**, specify the following, and then select **Add**:
+8. On the **AIPOnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, select **+ New client secret**. 
+
+9. For **Add a client secret**, specify the following, and then select **Add**:
     
     - **Description**: `Azure Information Protection client`
     - **Expires**: Specify your choice of duration (1 year, 2 years, or never expires)
 
-9. Back on the **AIPOnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, copy the string for the **VALUE**. This string looks similar to the following example: `sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=`. To make sure you copy all the characters, select the icon to **Copy to clipboard**. 
+9. Back on the **AIPOnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, copy the string for the **VALUE**. This string looks similar to the following example: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`. To make sure you copy all the characters, select the icon to **Copy to clipboard**. 
     
     It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any sensitive information that you use, store the saved value securely and restrict access to it.
 
@@ -570,7 +572,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. From our examples:
 
-`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 
 Run this command in the context of the account that will label and protect the documents non-interactively. For example, a user account for your PowerShell scripts or the service account to run the Azure Information Protection scanner.  
 
