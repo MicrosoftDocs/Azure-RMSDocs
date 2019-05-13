@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 05/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -79,7 +79,7 @@ This first general availability version of the Azure Information Protection unif
 
 - The following label and policy settings:
     - Visual marking (headers, footers, watermarks)
-    - Default labeling
+    - Default labeling - currently limited to labels without sublabels
     - Labels that apply Do Not Forward and display in Outlook only
     - Justification prompts if users lower the classification level or remove a label
     - Colors for the labels
