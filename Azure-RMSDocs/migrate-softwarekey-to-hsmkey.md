@@ -35,7 +35,7 @@ If this is not your chosen configuration scenario, go back to [Step 4. Export co
 
 It’s a four-part procedure to import the AD RMS configuration to Azure Information Protection, to result in your Azure Information Protection tenant key that is managed by you (BYOK) in Azure Key Vault.
 
-You must first extract your server licensor certificate (SLC) key from the AD RMS configuration data and transfer the key to an on-premises Thales HSM, next package and transfer your HSM key to Azure Key Vault, then authorize the Azure Rights Management service from Azure Information Protection to access your key vault, and then import the configuration data.
+You must first extract your server licensor certificate (SLC) key from the AD RMS configuration data and transfer the key to an on-premises nCipher HSM, next package and transfer your HSM key to Azure Key Vault, then authorize the Azure Rights Management service from Azure Information Protection to access your key vault, and then import the configuration data.
 
 Because your Azure Information Protection tenant key will be stored and managed by Azure Key Vault, this part of the migration requires administration in Azure Key Vault, in addition to Azure Information Protection. If Azure Key Vault is managed by a different administrator than you for your organization, you must co-ordinate and work with that administrator to complete these procedures.
 
@@ -80,7 +80,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     - If you don't specify the password when you run this command (by using the **TpdPassword** full parameter name or **pwd** short parameter name), you are prompted to specify it.
 
-3. On the same disconnected workstation, attach and configure your Thales HSM, according to your Thales documentation. You can now import your key into your attached Thales HSM by using the following command where you need to substitute your own file name for ContosoTPD.pem:
+3. On the same disconnected workstation, attach and configure your nCipher HSM, according to your nCipher documentation. You can now import your key into your attached nCipher HSM by using the following command where you need to substitute your own file name for ContosoTPD.pem:
 
     	generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
@@ -109,7 +109,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     **Path to key: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
 
-This output confirms that the private key is now migrated to your on-premises Thales HSM device with an encrypted copy that is saved to a key (in our example, "key_simple_contosobyok"). 
+This output confirms that the private key is now migrated to your on-premises nCipher HSM device with an encrypted copy that is saved to a key (in our example, "key_simple_contosobyok"). 
 
 Now that your SLC key has been extracted and imported to your on-premises HSM, you’re ready to package the HSM-protected key and transfer it to Azure Key Vault.
 
