@@ -68,7 +68,7 @@ For more information about each of these steps:
 ## Backup and recover your tenant key
 Because you are managing your tenant key, you are responsible for backing up the key that Azure Information Protection uses. 
 
-If you generated your tenant key on premises, in a Thales HSM: To back up the key, back up the tokenized key file, the world file, and the administrator cards. When you transfer your key to Azure Key Vault, the service saves the tokenized key file, to protect against failure of any service nodes. This file is bound to the security world for the specific Azure region or instance. However, do not consider this tokenized key file to be a full backup. For example, if you ever need a plain text copy of your key to use outside a Thales HSM, Azure Key Vault cannot retrieve it for you, because it has only a non-recoverable copy.
+If you generated your tenant key on premises, in a nCipher HSM: To back up the key, back up the tokenized key file, the world file, and the administrator cards. When you transfer your key to Azure Key Vault, the service saves the tokenized key file, to protect against failure of any service nodes. This file is bound to the security world for the specific Azure region or instance. However, do not consider this tokenized key file to be a full backup. For example, if you ever need a plain text copy of your key to use outside a nCipher HSM, Azure Key Vault cannot retrieve it for you, because it has only a non-recoverable copy.
 
 Azure Key Vault has a [backup cmdlet](/powershell/module/az.keyvault/backup-azkeyvaultkey) that you can use to back up a key by downloading it and storing it in a file. Because the downloaded content is encrypted, it cannot be used outside Azure Key Vault. 
 
