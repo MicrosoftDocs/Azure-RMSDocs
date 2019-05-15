@@ -63,7 +63,7 @@ Redirection via local hosts file:
 
 - Add the following line in the local hosts file, replacing `<AD RMS URL FQDN>` with the value for your AD RMS cluster, without prefixes or web pages:
     
-    	127.0.0.1 <AD RMS URL FQDN >
+    	127.0.0.1 <AD RMS URL FQDN>
 
 Redirection via DNS:
     
