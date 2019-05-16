@@ -36,7 +36,7 @@ The MIP SDK applies the following set of metadata.
 | **Method**    | Standard or Privileged        | Set via [mip::AssignmentMethod](reference/mip-enums-and-structs.md#assignmentmethod). Standard implies that the label is applied by default or automatically. Privileged implies that the label was manually selected.                                                                                                                                                                                                                 | No        |
 | **SetDate**   | Extended ISO 8601 Date Format | The timestamp when the label was set.                                                                                                                                                                                                              | No        |
 | **Name**      | string                        | Label unique name within the tenant. It doesn't necessarily correspond to display name.                                                                                                                                                              | No      |
-| **ContentBits** | integer | Bitmask that describes the types of content marking that should be applied to a file. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4
+| **ContentBits** | integer | Bitmask that describes the types of content marking that should be applied to a file. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4, ENCRYPT = 0x8
  | No |
 
 When applied to a file, the result is similar to the table below.
