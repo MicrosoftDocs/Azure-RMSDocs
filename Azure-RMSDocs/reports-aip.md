@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 05/12/2019
+ms.date: 05/17/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -41,7 +41,7 @@ Use Azure Information Protection analytics for central reporting to help you tra
 
 - Identify documents that contain sensitive information that might be putting your organization at risk if they are not protected, and mitigate your risk by following recommendations.
 
-The data that you see is aggregated from your Azure Information Protection clients and Azure Information Protection scanners, from Windows computers running [Windows Defender Advanced Threat Protection (Windows Defender ATP)](/windows/security/threat-protection/windows-defender-atp/overview), and from [clients that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
+The data that you see is aggregated from your Azure Information Protection clients and Azure Information Protection scanners, from Windows computers running [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](/windows/security/threat-protection/microsoft-defender-atp/overview), and from [clients that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 For example, you'll be able to see the following:
 
@@ -94,7 +94,7 @@ The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to 
 For more information, read the following blog posts: 
 - [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)
 
-- [Discover and protect sensitive data through Azure Information Protection and Windows Defender ATP](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292)
+- [Discover and protect sensitive data through Azure Information Protection and Microsoft Defender ATP](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292)
 
 ### Information collected and sent to Microsoft
 
@@ -143,7 +143,7 @@ To view the Azure Information Protection reports and create your own, make sure 
 |---------------|--------------------|
 |An Azure subscription that includes Log Analytics and that is for the same tenant as Azure Information Protection|See the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
 |The Azure Information Protection client or the Azure Information Protection unified labeling client|If you don't already have one of these clients, you can download and install them from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Make sure you have the latest version to support [all the features](#features-that-require-a-minimum-version-of-the-client) for Azure Information Protection analytics.|
-|For the **Discovery and risk** report: <br /><br />- To display data from on-premises data stores, you have deployed at least one instance of the Azure Information Protection scanner <br /><br />- To display data from Windows 10 computers, they must be a minimum build of 1809, you are using Windows Defender Advanced Threat Protection (Windows Defender ATP), and you have enabled the Azure Information Protection integration feature from Windows Defender Security Center|For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). <br /><br />For information about configuring and using the Azure Information Protection integration feature from Windows Defender Security Center, see [Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
+|For the **Discovery and risk** report: <br /><br />- To display data from on-premises data stores, you have deployed at least one instance of the Azure Information Protection scanner <br /><br />- To display data from Windows 10 computers, they must be a minimum build of 1809, you are using Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP), and you have enabled the Azure Information Protection integration feature from Microsoft Defender Security Center|For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). <br /><br />For information about configuring and using the Azure Information Protection integration feature from Microsoft Defender Security Center, see [Information protection in Windows overview](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
 |For the **Recommendations** report: <br /><br />- To add a new data repository from the Azure portal as a recommended action, you must be using the latest general availability version of the Azure Information Protection scanner |To deploy the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).|
 
 ### Permissions required for Azure Information Protection analytics
