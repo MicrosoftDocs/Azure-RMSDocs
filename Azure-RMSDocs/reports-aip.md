@@ -207,7 +207,7 @@ For the Azure Information Protection client:
 
 ### Storage requirements and data retention
 
-The amount of data collected in the Azure Information Protection workspace will vary significantly for each tenant, depending on factors such as how many Azure Information Protection clients and other supported endpoints you have, whether you're collecting endpoint discovery data, you've deployed scanners, and so on.
+The amount of data collected and stored in your Azure Information Protection workspace will vary significantly for each tenant, depending on factors such as how many Azure Information Protection clients and other supported endpoints you have, whether you're collecting endpoint discovery data, you've deployed scanners, and so on.
 
 However, as a starting point, you might find the following estimates useful:
 
