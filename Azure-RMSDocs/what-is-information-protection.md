@@ -73,6 +73,8 @@ Azure Information Protection integrates with end users' existing workflows when 
 
 ![Example of the Azure Information Protection bar in Excel](./media/excelproplus-infoprotect-bar.png)
 
+####### Screenshot from the [Azure Information Protection unified labeling client](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) 
+
 This Information Protection bar makes it easy for end users to select labels for the correct classification. If required, labels can also be applied automatically to remove the guesswork for users, or to comply with your organization's policies.
 
 To classify and protect additional file types, and to support multiple files at once, users can right-click files or a folder from Windows File Explorer:
