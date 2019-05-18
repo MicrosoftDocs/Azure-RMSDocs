@@ -71,7 +71,7 @@ For more information about Azure Rights Management protection, see [What is Azur
 
 Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture that showed this bar in Word. The same Information Protection bar is added to Excel, PowerPoint, and Outlook. For example:
 
-![Example of the Azure Information Protection bar in Excel](./media/excel2016-infoprotect-barv2.png)
+![Example of the Azure Information Protection bar in Excel](./media/excelproplus-infoprotect-bar.png)
 
 This Information Protection bar makes it easy for end users to select labels for the correct classification. If required, labels can also be applied automatically to remove the guesswork for users, or to comply with your organization's policies.
 
