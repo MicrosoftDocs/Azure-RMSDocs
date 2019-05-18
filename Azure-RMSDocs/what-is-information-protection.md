@@ -34,7 +34,7 @@ The following picture shows an example of Azure Information Protection in action
 
 ![Example of recommended classification for Azure Information Protection](./media/info-protect-recommend-calloutsv2.png)
 
-####### Screenshot from the [Azure Information Protection client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+###### Screenshot from the [Azure Information Protection client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 After your content is classified (and optionally protected), you can then track and control how it is used. You can analyze data flows to gain insight into your business, detect risky behaviors and take corrective measures, track access to documents, prevent data leakage or misuse, and so on.
 
@@ -46,7 +46,7 @@ For example, the following email message has been classified as "General". The l
 
 ![Example email footer and headers showing Azure Information Protection classification](./media/example-email-footerv2.png)
 
-####### Screenshot from the [Azure Information Protection client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+###### Screenshot from the [Azure Information Protection client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ## How data is protected
 
@@ -76,7 +76,7 @@ Azure Information Protection integrates with end users' existing workflows when 
 
 ![Example of the Azure Information Protection bar in Excel](./media/excelproplus-infoprotect-bar.png)
 
-####### Screenshot from the [Azure Information Protection unified labeling client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) 
+###### Screenshot from the [Azure Information Protection unified labeling client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) 
 
 This Information Protection bar makes it easy for end users to select labels for the correct classification. If required, labels can also be applied automatically to remove the guesswork for users, or to comply with your organization's policies.
 
