@@ -5,7 +5,7 @@ title: Configure the Azure Information Protection policy - AIP
 description: To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. 
 author: cabailey
 ms.author: cabailey
-ms.date: 04/17/2019
+ms.date: 05/17/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -165,6 +165,8 @@ When a label is applied to a document or email, under the covers, the label is s
 - In emails, this information is stored in the x-header: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
 
 - For Word documents (.doc and .docx), Excel spreadsheets (.xls and .xlsx), PowerPoint presentations (.ppt and .pptx), and PDF documents, this metadata is stored in the following custom property: **MSIP_Label_\<GUID>_Enabled=True**  
+
+For emails, the label information is stored when the email is sent. For documents, the label information is stored when the file is saved. 
 
 To identify the GUID for a label, locate the Label ID value on the **Label** blade in the Azure portal, when you view or configure the Azure Information Protection policy. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the GUID (MainLabelId or SubLabelId). When a label has sublabels, always specify the GUID of just a sublabel and not the parent label.
 

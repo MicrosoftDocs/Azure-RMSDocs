@@ -178,7 +178,7 @@ To confirm whether the clients and services you use support unified labeling, re
 
 ##### Services that currently support unified labeling include:
 
-- Windows Defender Azure Threat Protection
+- Microsoft Defender Advanced Threat Protection
 
 - Microsoft Cloud App Security
     
