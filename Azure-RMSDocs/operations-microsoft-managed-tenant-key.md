@@ -53,9 +53,9 @@ To rekey, you can select a different Microsoft-managed key to become your tenant
 
 You have more than one Microsoft-managed key if you migrated from Active Directory Rights Management Services (AD RMS) and chose the Microsoft-managed key topology for Azure Information Protection. In this scenario, you have at least two Microsoft-managed keys for your tenant. One key, or more, is the key or keys that you imported from AD RMS. You will also have the default key that was automatically created for your Azure Information Protection tenant.
 
-To select a different key to be your active tenant key for Azure Information Protection, use the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet from the AADRM module. To help you identify which key to use, use the [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet. You can identify the default key that was automatically created for your Azure Information Protection tenant by running the following command:
+To select a different key to be your active tenant key for Azure Information Protection, use the [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) cmdlet from the AIPService module. To help you identify which key to use, use the [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) cmdlet. You can identify the default key that was automatically created for your Azure Information Protection tenant by running the following command:
 
-	(Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
+	(Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
 To change your key topology to be customer-managed (BYOK), see [Implementing BYOK for your Azure Information Protection tenant key](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 

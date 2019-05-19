@@ -87,11 +87,11 @@ In order to use your Rights Management Services SDK 2.1 service application with
 -   Install [Azure RMS powershell module](https://technet.microsoft.com/library/jj585012.aspx).
 -   Start Powershell and run the following commands to get the RMS configuration of the tenant.
 
-    `Import-Module aadrm`
+    `Import-Module AIPService`
 
-    `Connect-AadrmService` (type-in your admin credentials)
+    `Connect-AipService` (type-in your admin credentials)
 
-    `Get-AadrmConfiguration`
+    `Get-AipServiceConfiguration`
 
 
 - Create an instance of an  [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) and set a few members.
@@ -109,7 +109,7 @@ For more information see, [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microso
 
 -   Create an instance of an [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx) structure containing your [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) instance.
 
-**Note** - The *connectionInfo* members are set with URLs from the previous call to `Get-AadrmConfiguration` and noted here with those field names.
+**Note** - The *connectionInfo* members are set with URLs from the previous call to `Get-AipServiceConfiguration` and noted here with those field names.
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};

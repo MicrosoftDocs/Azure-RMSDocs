@@ -101,7 +101,7 @@
       href: prepare.md
   - name: Deploy & Use the Service
     items:
-    - name: Activating the service
+    - name: Activating protection
       items:
       - name: Overview
         href: activate-service.md
@@ -209,7 +209,7 @@
       items:
       - name: Overview
         href: administer-powershell.md
-      - name: Installing the AADRM PowerShell module
+      - name: Installing the AIPService PowerShell module
         href: install-powershell.md
   - name: Deploy & Use the Client
     items:
