@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/25/2019
+ms.date: 05/20/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -137,7 +137,7 @@ To view the default Azure Information Protection policy settings:
     
 2. After the labels, in the **Configure settings to display and apply on Information Protection end users** section, you see the policy settings. For example, there is no default label set, documents and emails are not required to have a label, and users do not have to provide justification when they change labels:
     
-    ![Azure Information Protection policy global settings](./media/info-protect-policy-default-settingsv3.png)
+    ![Azure Information Protection policy global settings](./media/defaultsettings-aip.png)
 
 3. Because you are only viewing the settings, you can close any blades in the portal that you have opened.
 
