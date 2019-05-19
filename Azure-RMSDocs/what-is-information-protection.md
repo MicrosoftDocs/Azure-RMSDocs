@@ -104,7 +104,7 @@ For example, a Gmail user sees the following in an email message:
 
 ![Gmail recipient experience for OME and AIP](./media/ome-message.png)
 
-For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected:
+For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected. For example:
 
 ![Selecting a label configured for Do Not Forward](./media/recipients-only-label2.png)
 
