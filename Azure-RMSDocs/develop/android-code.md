@@ -395,7 +395,7 @@ This scenario begins with getting a list of templates, selecting the first one t
                   …
                 }
             };
-
+    ```
 
 ~~~
 try
@@ -422,7 +422,6 @@ catch (IOException e)
 {
   ...
 }
-```
 ~~~
 
 
