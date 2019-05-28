@@ -68,10 +68,6 @@ Many software vendors already have solutions or are implementing solutions that 
 
 Although the Rights Management connector logs information, warning, and error messages to the event log, there isn’t a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Azure Rights Management connector](monitor-rms-connector.md).
 
-## Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?
-
-With the newly introduced Information Protection Administrator role, this question (and answer) has now moved to the main FAQ page: [Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?](faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators)
-
 ## How do I create a new custom template in the Azure portal?
 
 Custom templates have moved to the Azure portal where you can continue to manage them as templates, or convert them to labels. To create a new template, create a new label and configure the data protection settings for Azure RMS. Under the covers, this creates a new template that can then be accessed by services and applications that integrate with Rights Management templates.
