@@ -77,7 +77,7 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
   - **Global administrator**
     
     > [!NOTE] 
-    > If your tenant has been migrated to the unified labeling store, the Azure Information Protection administrator (formally "Information Protection administrator") is no longer supported. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > If your tenant has been migrated to the unified labeling store, the Azure Information Protection administrator (formerly "Information Protection administrator") is no longer supported. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 
 ## To access the Azure Information Protection blade for the first time
@@ -112,7 +112,7 @@ Next time you access the **Azure Information Protection** blade, it automaticall
 
 You can create any number of labels. However, when they start to get too many for users to easily see and select the right label, create scoped policies so that users see only the labels that are relevant to them. There is an upper limit for labels that apply protection, which is 500.
 
-When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. When you save changes in a policy, or make change changes to labels that are added to policies, those changes are automatically published. There's no separate publish option.
+When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. When you save changes in a policy, or make changes to labels that are added to policies, those changes are automatically published. There's no separate publish option.
 
 The Azure Information Protection client checks for any changes whenever a supported Office application starts, and downloads the changes as its latest Azure Information Protection policy. Additional triggers that refresh the policy on the client:
 

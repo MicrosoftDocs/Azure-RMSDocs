@@ -157,7 +157,7 @@ The Azure Rights Management service automatically generates and manages XrML ce
 
 Azure Information Protection can classify and protect email messages and documents, whether they are located on-premises or in the cloud. These documents include Word documents, Excel spreadsheets, PowerPoint presentations, PDF documents, text-based files, and image files. For a list of the document types supported, see the list of [file types supported](./rms-client/client-admin-guide-file-types.md) in the admin guide.
 
-Azure Information Protection cannot classify and protect structured data such as database files, calendar items, PowerBI reports, Yammer posts, Sway content, and OneNote notebooks.
+Azure Information Protection cannot classify and protect structured data such as database files, calendar items, Power BI reports, Yammer posts, Sway content, and OneNote notebooks.
 
 ## I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?
 
