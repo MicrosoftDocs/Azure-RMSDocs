@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/07/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -116,7 +116,7 @@ When the Azure Information Protection client for Windows is installed and it doe
 
 Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection. However, if you want to assign administrative permissions to other users, you have the following options:
 
-- **Information Protection administrator**: This Azure Active Directory administrator role lets an administrator configure Azure Information Protection but not other services. An administrator with this role can activate and deactivate the Azure Rights Management protection service, configure protection settings and labels, and configure the Azure Information Protection policy. In addition, an administrator with this role can run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) and from the [AADRM module](administer-powershell.md). However, this role doesn't support tracking and revoking documents for users.
+- **Azure Information Protection administrator**: This Azure Active Directory administrator role lets an administrator configure Azure Information Protection but not other services. An administrator with this role can activate and deactivate the Azure Rights Management protection service, configure protection settings and labels, and configure the Azure Information Protection policy. In addition, an administrator with this role can run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) and from the [AADRM module](administer-powershell.md). However, this role doesn't support tracking and revoking documents for users.
     
     > [!NOTE]
     > After you [migrate your tenant to the unified labeling store](configure-policy-migrate-labels.md), this role is no longer supported for the Azure portal.
@@ -157,7 +157,7 @@ The Azure Rights Management service automatically generates and manages XrML ce
 
 Azure Information Protection can classify and protect email messages and documents, whether they are located on-premises or in the cloud. These documents include Word documents, Excel spreadsheets, PowerPoint presentations, PDF documents, text-based files, and image files. For a list of the document types supported, see the list of [file types supported](./rms-client/client-admin-guide-file-types.md) in the admin guide.
 
-Azure Information Protection cannot classify and protect structured data such as database files, calendar items, PowerBI reports, Yammer posts, Sway content, and OneNote notebooks.
+Azure Information Protection cannot classify and protect structured data such as database files, calendar items, Power BI reports, Yammer posts, Sway content, and OneNote notebooks.
 
 ## I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?
 
