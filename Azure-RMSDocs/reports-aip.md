@@ -278,7 +278,7 @@ When you create your own queries, use the friendly schema names that have been i
 Use the following table to identify the friendly name of event functions that you can use for custom queries with Azure Information Protection analytics.
 
 |Column name|Description|
-|-----_-----|-----------|
+|-----------|-----------|
 |Time|Event time: UTC in format YYYY-MM-DDTHH:MM:SS|
 |User|User: Format UPN or DOMAIN\USER|
 |ItemPath|Full item path or email subject|
