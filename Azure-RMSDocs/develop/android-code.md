@@ -116,7 +116,6 @@ The *MSIPCSampleApp* sample application is available for use with this SDK for t
     **Description**: This step uses ADAL to implement an [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) with example authentication parameters. To learn more, see the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
 
 
-~~~
 ``` java
     class MsipcAuthenticationCallback implements AuthenticationRequestCallback
     {
@@ -190,7 +189,6 @@ The *MSIPCSampleApp* sample application is available for use with this SDK for t
                         );
                   }
 ```
-~~~
 
 - **Step 3**: Check if the **Edit** right exists for this user with this content via the [UserPolicy.accessCheck](https://msdn.microsoft.com/library/dn790885.aspx) method.
 
@@ -395,35 +393,31 @@ This scenario begins with getting a list of templates, selecting the first one t
                   …
                 }
             };
-    ```
+            try
+            {
+                ...
 
-~~~
-try
-{
-  ...
+                // Read the serializedContentPolicyLength from the inputStream.
+                long serializedContentPolicyLength = readUnsignedInt(inputStream);
 
-  // Read the serializedContentPolicyLength from the inputStream.
-  long serializedContentPolicyLength = readUnsignedInt(inputStream);
+                // Read the PL bytes from the input stream using the PL size.
+                byte[] serializedContentPolicy = new byte[(int)serializedContentPolicyLength];
+                inputStream.read(serializedContentPolicy);
 
-  // Read the PL bytes from the input stream using the PL size.
-  byte[] serializedContentPolicy = new byte[(int)serializedContentPolicyLength];
-  inputStream.read(serializedContentPolicy);
+                ...
 
-  ...
-
-  UserPolicy.acquire(serializedContentPolicy, null, mRmsAuthCallback, PolicyAcquisitionFlags.NONE,
-          userPolicyCreationCallbackFromSerializedContentPolicy);
-}
-catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
-{
-  ...
-}
-catch (IOException e)
-{
-  ...
-}
-~~~
-
+                UserPolicy.acquire(serializedContentPolicy, null, mRmsAuthCallback, PolicyAcquisitionFlags.NONE,
+                userPolicyCreationCallbackFromSerializedContentPolicy);
+            }
+            catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
+            {
+            ...
+            }
+            catch (IOException e)
+            {
+            ...
+            }
+```
 
 - **Step 2**: Create a [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) using the [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) from **Step 1**.
 
