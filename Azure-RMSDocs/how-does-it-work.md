@@ -6,7 +6,7 @@ description: Breaking down how Azure RMS works, the cryptographic controls that 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/08/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -71,11 +71,11 @@ Even if you don't need to know in detail how this technology works, you might be
 
 - During a migration from on-premises if the AD RMS cluster is running in Cryptographic Mode 1.
 
-- After a migration from on-premises, if the AD RMS cluster was using Exchange Online.
-
 - For archived keys that were created on-premises before the migration, so that content that was previously protected by AD RMS can continue to be opened by the Azure Rights Management service post migration.
 
 - If customers choose to bring their own key (BYOK) by using Azure Key Vault. Azure Information Protection supports key lengths of 1024 bits and 2048 bits. For higher security, we recommend a key length of 2048 bits.
+
+As a security best practice, don't use a 1024-bit key as your active tenant key, because this configuration is considered an inadequate level of protection. Microsoft doesn’t endorse the use of lower key lengths such as 1024-bit RSA keys and the associated use of protocols that offer inadequate levels of protection, such as SHA-1. We recommend moving to a higher key length.
 
 ### How the Azure RMS cryptographic keys are stored and secured
 
