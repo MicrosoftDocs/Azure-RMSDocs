@@ -449,7 +449,7 @@ There are two alternative scenarios that the Azure Information Protection scanne
 
 ## Optimizing the performance of the scanner
 
-Use the following guidance to help you optimize the performance of the scanner. However, if your priority is the responsiveness of the scanner computer rather than the scanner performance, you can use an advanced client setting to limit the number of threads used by the scanner.
+Use the following guidance to help you optimize the performance of the scanner. However, if your priority is the responsiveness of the scanner computer rather than the scanner performance, you can use an [advanced client setting](./rms-client/client-admin-guide-customizations#limit-the-number-of-threads-used-by-the-scanner) to limit the number of threads used by the scanner.
 
 To maximize the scanner performance:
 
