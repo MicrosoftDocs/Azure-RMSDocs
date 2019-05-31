@@ -55,11 +55,13 @@ Some of these settings require editing the registry and some use advanced settin
 |Setting|Scenario and instructions|
 |----------------|---------------|
 |DisableDNF|[Hide or show the Do Not Forward button in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
-|CompareSubLabelsInAttachmentAction|[Enable order support for sublabels](#enable-order-support-for-sublabels-on-attachments) 
+|CompareSubLabelsInAttachmentAction|[Change the timeout settings for the scanner and Set-AIPFileClassification](#change-the-timeout-settings-for-the-scanner-and-set-aipfileclassification)
+|ContentExtractionTimeout|[Change the timeout settings for the scanner and Set-AIPFileClassification](#change-the-timeout-settings-for-the-scanner-and-set-aipfileclassification)
 |EnableBarHiding|[Permanently hide the Azure Information Protection bar](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Make the custom permissions options available or unavailable to users](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnablePDFv2Protection|[Don't protect PDF files by using the ISO standard for PDF encryption](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
+|FileProcessingTimeout|[Change the timeout settings for the scanner and Set-AIPFileClassification](#change-the-timeout-settings-for-the-scanner-and-set-aipfileclassification)
 |LabelbyCustomProperty|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Change the local logging level](#change-the-local-logging-level)
@@ -867,7 +869,7 @@ To configure this advanced setting so that the scanner runs with an integrity le
 
 This configuration uses [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
-By default, the Azure Information Protection scanner and Set-AIPFileClassification have a timeout period of 00:15:00 (15 minutes) to inspect each file for sensitive information types or the regex expressions that you've configured for custom conditions. When the timeout period is reached for this content extraction process, any results before the timeout are returned and further inspection for the file stops.
+By default, the Azure Information Protection scanner and the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) PowerShell cmdlet have a timeout period of 00:15:00 (15 minutes) to inspect each file for sensitive information types or the regex expressions that you've configured for custom conditions. When the timeout period is reached for this content extraction process, any results before the timeout are returned and further inspection for the file stops.
 
 If you experience partial results and with large files, you might need to increase this timeout period for content extraction, which you can do by configuring the following advanced client setting:
 
@@ -885,9 +887,9 @@ If you see the scanner status change to disconnected in the Azure portal and it 
 
 For file inspection, the file type can influence how long it takes to scan a file. Example scanning times:
 
-- A typical 100 MB PDF document: 5-20 minutes
+- A typical 100 MB PDF file: 5-20 minutes
 
-- A typical 100 MB Excel spreadsheet: 12-30 min
+- A typical 100 MB Excel file: 12-30 min
 
 ## Change the local logging level
 
