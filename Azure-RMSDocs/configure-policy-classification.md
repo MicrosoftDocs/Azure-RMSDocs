@@ -125,7 +125,7 @@ The following sensitive information types require the [current general availabil
 
 For more information about these sensitive information types, see the following blog post: [Azure Information Protection helps you to be more secure by automatically discovering credentials](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
 
-Additionally, the following sensitive information types are not supported for the current general availability version of the Azure Information Protection client, and no longer display in the Azure portal. If you have labels that use these conditions, we recommend that you remove them because we cannot ensure correct detection for them and any references to them in the scanner reports should be ignored:
+Additionally, the following sensitive information types are not supported for the current general availability version of the Azure Information Protection client, and no longer display in the Azure portal. If you have labels that use these sensitive information types, we recommend that you remove them because we cannot ensure correct detection for them and any references to them in the scanner reports should be ignored:
 
 - **EU Phone Number**
 - **EU GPS Coordinates**
