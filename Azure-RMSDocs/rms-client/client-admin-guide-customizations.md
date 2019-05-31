@@ -889,7 +889,7 @@ For file inspection, the file type can influence how long it takes to scan a fil
 
 - A typical 100 MB PDF file: 5-20 minutes
 
-- A typical 100 MB Excel file: 12-30 min
+- A typical 100 MB Excel file: 12-30 minutes
 
 ## Change the local logging level
 
