@@ -877,6 +877,12 @@ If you experience partial results and with large files, you might need to increa
 
 - Value: **\<hh:min:sec>**
 
+The file type can influence how long it takes to scan a file. Example scanning times:
+
+- A typical 100 MB PDF file: 5-20 minutes
+
+- A typical 100 MB Excel file: 12-30 minutes
+
 In addition, the Azure Information Protection scanner has a timeout period of 00:30:00 (30 minutes) for each file that it processes. This value takes into account the time it can take to retrieve a file from a repository and temporarily save it locally for actions that can include decryption, content extraction for inspection, labeling, and encryption. 
 
 If you see the scanner status change to disconnected in the Azure portal and it is scanning large files, you might need to increase the timeout period for file processing, which you can do by configuring the following advanced client setting:
@@ -884,12 +890,6 @@ If you see the scanner status change to disconnected in the Azure portal and it 
 - Key: **FileProcessingTimeout**
 
 - Value: **\<hh:min:sec>**
-
-For file inspection, the file type can influence how long it takes to scan a file. Example scanning times:
-
-- A typical 100 MB PDF file: 5-20 minutes
-
-- A typical 100 MB Excel file: 12-30 minutes
 
 ## Change the local logging level
 
