@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -863,6 +863,31 @@ To configure this advanced setting so that the scanner runs with an integrity le
 
 - Value: **False**
 
+## Change the timeout settings for the scanner and Set-AIPFileClassification
+
+This configuration uses [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+
+By default, the Azure Information Protection scanner and Set-AIPFileClassification have a timeout period of 00:15:00 (15 minutes) to inspect each file for sensitive information types or the regex expressions that you've configured for custom conditions. When the timeout period is reached for this content extraction process, any results before the timeout are returned and further inspection for the file stops.
+
+If you experience partial results and with large files, you might need to increase this timeout period for content extraction, which you can do by configuring the following advanced client setting:
+
+- Key: **ContentExtractionTimeout**
+
+- Value: **\<hh:min:sec>**
+
+In addition, the Azure Information Protection scanner has a timeout period of 00:30:00 (30 minutes) for each file that it processes. This value takes into account the time it can take to retrieve a file from a repository and temporarily save it locally for actions that can include decryption, content extraction for inspection, labeling, and encryption. 
+
+If you see the scanner status change to disconnected in the Azure portal and it is scanning large files, you might need to increase the timeout period for file processing, which you can do by configuring the following advanced client setting:
+
+- Key: **FileProcessingTimeout**
+
+- Value: **\<hh:min:sec>**
+
+For file inspection, the file type can influence how long it takes to scan a file. Example scanning times:
+
+- A typical 100 MB PDF document: 5-20 minutes
+
+- A typical 100 MB Excel spreadsheet: 12-30 min
 
 ## Change the local logging level
 
