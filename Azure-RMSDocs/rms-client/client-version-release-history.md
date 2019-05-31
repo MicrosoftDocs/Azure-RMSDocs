@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/18/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -118,7 +118,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **Additional changes:**
 
-- The following sensitive information types are no longer supported for labels that you configure for recommended or automatic classification:
+- The following sensitive information types are [no longer supported](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) for labels that you configure for recommended or automatic classification:
     - EU Phone Number
     - EU GPS Coordinates
 
