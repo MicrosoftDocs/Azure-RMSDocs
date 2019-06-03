@@ -69,9 +69,11 @@ Use the instructions in the [Deploying the Azure Rights Management connector](./
 ### Disable IRM on Exchange Servers and remove AD RMS configuration
 
 > [!IMPORTANT]
-> If you haven't yet configured IRM on your Exchange servers, do just steps 1, 2, and 6.
+> If you haven't yet configured IRM on any of your Exchange servers, do just steps 1, 2, and 6.
+> 
+> Do all these steps if all the URLs of all your AD RMS clusters are not displayed in the *LicensingLocation* parameter when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps).
 
-1.  On each Exchange server, locate the following folder and delete all the entries in that folder: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
+1. On each Exchange server, locate the following folder and delete all the entries in that folder: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
 
 2. From one of the Exchange servers, run the following PowerShell commands to ensure that users will be able to read emails that are protected by using Azure Rights Management.
 
@@ -81,6 +83,8 @@ Use the instructions in the [Deploying the Azure Rights Management connector](./
 		$list = $irmConfig.LicensingLocation 
 		$list += "<Your Tenant URL>/_wmcs/licensing"
 		Set-IRMConfiguration -LicensingLocation $list
+    
+    Now when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), you should see all your AD RMS cluster URLs and your Azure Rights Management service URL displayed for the *LicensingLocation* parameter.
 
 3.  Now disable IRM features for messages that are sent to internal recipients:
 
