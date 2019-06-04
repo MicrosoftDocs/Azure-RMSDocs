@@ -61,7 +61,7 @@ Preview versions should not be deployed for end users on production networks. In
 |1.2.4.0|10/27/2016|
 |1.1.23.0|10/01/2016|
 
-Starting 6/2/2019, the Azure Information Protection service requires connections that use TLS 1.2.
+Starting 6/2/2019, the labeling service for Azure Information Protection requires connections that use TLS 1.2.
 
 All client versions from 1.4.21.0 released 03/15/2017 support TLS 1.2. Client versions **1.3.155.2**, **1.2.4.0**, and **1.1.23.0** do not use TLS 1.2 and therefore can no longer download the Azure Information Protection policy.
 
