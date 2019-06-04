@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/31/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -42,9 +42,28 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 ### Servicing information and timelines
 
-Each general availability (GA) version of the Azure Information Protection client is supported for up to six months after the release of the subsequent GA version. The documentation does not include information about unsupported versions of the client. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
+Each general availability (GA) version of the Azure Information Protection client is supported for up to six months after the release of the subsequent GA version. With the exception of this section, the documentation does not include information about unsupported versions of the client. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
 Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
+
+##### General availability versions that are no longer supported:
+
+|Client version|Date released|
+|--------------|--------------------------|
+|1.37.19.0|09/17/2018|
+|1.29.5.0|06/26/2018|
+|1.27.48.0|05/30/2018|
+|1.26.6.0|04/17/2018|
+|1.10.56.0|09/18/2017|
+|1.7.210.0|06/06/2017|
+|1.4.21.0|03/15/2017|
+|1.3.155.2|02/08/2017|
+|1.2.4.0|10/27/2016|
+|1.1.23.0|10/01/2016|
+
+Starting 6/2/2019, the labeling service for Azure Information Protection requires connections that use TLS 1.2.
+
+All client versions from 1.4.21.0 released 03/15/2017 support TLS 1.2. Client versions **1.3.155.2**, **1.2.4.0**, and **1.1.23.0** do not use TLS 1.2 and therefore can no longer download the Azure Information Protection policy.
 
 ### Release history
 
@@ -140,6 +159,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 ## Version 1.41.51.0
 
 **Released**: 11/27/2018
+
+Supported through 10/16/2019
 
 This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
