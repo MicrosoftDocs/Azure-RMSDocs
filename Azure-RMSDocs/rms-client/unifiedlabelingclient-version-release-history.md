@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/18/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -62,6 +62,8 @@ This release has a single fix to resolve a race-condition issue where sometimes,
 ## Version 2.0.778.0
 
 **Released**: 04/16/2019
+
+Supported through 11/01/2019
 
 This first general availability version of the Azure Information Protection unified labeling client for Windows supports the following features: 
 
