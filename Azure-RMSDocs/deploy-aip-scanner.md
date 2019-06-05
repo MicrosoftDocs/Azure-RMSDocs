@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/28/2019
+ms.date: 06/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -495,7 +495,7 @@ Other factors that affect the scanner performance:
 
 - The files themselves:
     
-    - Office files are more quickly scanned than PDF files.
+    - With the exception of Excel files, Office files are more quickly scanned than PDF files.
     
     - Unprotected files are quicker to scan than protected files.
     
