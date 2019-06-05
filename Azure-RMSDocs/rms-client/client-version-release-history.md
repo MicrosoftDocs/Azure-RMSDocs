@@ -74,6 +74,23 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
+## Versions later than 1.48.204.0
+
+If you have a version 1 of the client that is later than 1.48.204.0, it is a preview build for testing and evaluation purposes.
+
+**Released**: 07/??/2019
+
+This version includes the MSIPC version 1.?? of the RMS client.
+
+**New features:**
+
+
+**Fixes**:
+
+- The minimum [usage right](../configure-usage-rights.md#usage-rights-and-descriptions) to run the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet is now **Save As, Export** (EXPORT) rather than **Copy** (EXTRACT).
+
+
+
 ## Version 1.48.204.0
 
 **Released**: 04/16/2019
