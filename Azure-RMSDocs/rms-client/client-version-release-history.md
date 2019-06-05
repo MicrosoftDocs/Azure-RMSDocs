@@ -58,7 +58,7 @@ Preview versions should not be deployed for end users on production networks. In
 |1.7.210.0|06/06/2017|
 |1.4.21.0|03/15/2017|
 |1.3.155.2|02/08/2017|
-|1.2.4.0|10/27/2016|
+|1.2.4.0.0|10/27/2016|
 |1.1.23.0|10/01/2016|
 
 Starting 6/2/2019, the labeling service for Azure Information Protection requires connections that use TLS 1.2.
