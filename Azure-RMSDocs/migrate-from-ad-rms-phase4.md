@@ -6,7 +6,7 @@ description: Phase 4 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/02/2019
+ms.date: 06/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,8 +31,6 @@ ms.suite: ems
 
 
 Use the following information for Phase 4 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 8 through 9 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
-
-
 
 ## Step 8. Configure IRM integration for Exchange Online
 
@@ -64,12 +62,12 @@ This step covers installing and configuring the connector, disabling IRM for Exc
 
 ### Install and configure the RMS connector
 
-Use the instructions in the [Deploying the Azure Rights Management connector](./deploy-rms-connector.md) article, and do steps 1 though 4. Do not start step 5 yet from the connector instructions. 
+Use the instructions in the [Deploying the Azure Rights Management connector](./deploy-rms-connector.md) article, and do steps 1 though 4. Do not start step 5 yet from the connector instructions.
 
 ### Disable IRM on Exchange Servers and remove AD RMS configuration
 
 > [!IMPORTANT]
-> If you haven't yet configured IRM on any of your Exchange servers, do just steps 1, 2, and 6.
+> If you haven't yet configured IRM on any of your Exchange servers, do just steps 2 and 6.
 > 
 > Do all these steps if all the URLs of all your AD RMS clusters are not displayed in the *LicensingLocation* parameter when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps).
 
