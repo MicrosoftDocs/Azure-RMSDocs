@@ -6,7 +6,7 @@ description: Phase 4 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/06/2019
+ms.date: 06/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -69,7 +69,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](./
 > [!IMPORTANT]
 > If you haven't yet configured IRM on any of your Exchange servers, do just steps 2 and 6.
 > 
-> Do all these steps if all the URLs of all your AD RMS clusters are not displayed in the *LicensingLocation* parameter when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps).
+> Do all these steps if all the licensing URLs of all your AD RMS clusters are not displayed in the *LicensingLocation* parameter when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps).
 
 1. On each Exchange server, locate the following folder and delete all the entries in that folder: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
 
@@ -82,7 +82,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](./
 		$list += "<Your Tenant URL>/_wmcs/licensing"
 		Set-IRMConfiguration -LicensingLocation $list
     
-    Now when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), you should see all your AD RMS cluster URLs and your Azure Rights Management service URL displayed for the *LicensingLocation* parameter.
+    Now when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), you should see all your AD RMS cluster licensing URLs and your Azure Rights Management service URL displayed for the *LicensingLocation* parameter.
 
 3.  Now disable IRM features for messages that are sent to internal recipients:
 
