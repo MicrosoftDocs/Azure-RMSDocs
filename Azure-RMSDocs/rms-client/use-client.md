@@ -70,7 +70,7 @@ Use the following table to help compare which features are supported by the two 
 |Feature|Azure Information Protection client|Azure Information Protection<br /> unified labeling client|
 |-------|-----------------------------------|----------------------------------------------------|
 |Labeling actions: Manual, recommended, automatic| Yes | Yes |
-|Central reporting (analytics):| Yes | Yes with limitations:<br /><br /> - Does not support [information type matches](./reports-aip.md#content-matches-for-deeper-analysis ) |
+|Central reporting (analytics):| Yes | Yes with limitations:<br /><br /> - Does not support [information type matches](../reports-aip.md#content-matches-for-deeper-analysis) |
 |Reset settings and export logs:| Yes | Yes |
 |User-defined permissions:| Yes | For Outlook only (Do Not Forward) |
 |Custom permissions:| Yes | File Explorer only <br /><br /> In Office apps, as an alternative, users can select **File Info** > **Protect Document** > **Restrict Access** |
