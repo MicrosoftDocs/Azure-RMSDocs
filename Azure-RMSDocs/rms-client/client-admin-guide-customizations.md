@@ -55,6 +55,7 @@ Some of these settings require editing the registry and some use advanced settin
 |Setting|Scenario and instructions|
 |----------------|---------------|
 |DisableDNF|[Hide or show the Do Not Forward button in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
+|DisableMandatoryInOutlook|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)|
 |CompareSubLabelsInAttachmentAction|[Enable order support for sublabels](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Permanently hide the Azure Information Protection bar](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Make the custom permissions options available or unavailable to users](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
@@ -71,6 +72,7 @@ Some of these settings require editing the registry and some use advanced settin
 |OutlookJustifyUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
 |OutlookOverrideUnlabeledCollaborationExtensions|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
@@ -283,6 +285,19 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
+## Exempt Outlook messages from mandatory labeling
+
+This configuration use an [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. It also requires the preview version of the Azure Information Protection client.
+
+By default, when you enable the [policy setting](../configure-policy-settings.md) **All documents and emails must have a label**, all saved documents and sent emails must have a label applied. When you configure the following advanced setting, the policy setting applies only to Office documents and not to Outlook messages.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **DisableMandatoryInOutlook**
+
+- Value: **True**
+
+
 ## Implement pop-up messages in Outlook that warn, justify, or block emails being sent
 
 This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
@@ -395,6 +410,37 @@ In this example, an unlabeled PDF document will not result in warn, justify, or 
 
 - Value: **\<**file name extensions to display messages, comma separated**>**
 
+### To specify a different action for email messages without attachments
+
+By default, the value that you specify for OutlookUnlabeledCollaborationAction to warn, justify, or block pop-up messages applies to emails or attachments that don't have a label. You can refine this configuration by specifying another advanced client setting for email messages that don't have attachments. This additional client setting requires the preview version of the Azure Information Protection client.
+
+Create the following advanced client setting with one of the following values:
+
+- Warn messages:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Value: **Warn**
+
+- Justification messages:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Value: **Justify**
+
+- Block messages:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Value: **Block**
+
+- Turn off these messages:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Value: **Off**
+
+If you don't specify this client setting, the value that you specify for OutlookUnlabeledCollaborationAction is used for unlabeled email messages without attachments as well as unlabeled email messages with attachments.
 
 ### To specify the allowed domain names for recipients exempt from the pop-up messages
 
@@ -425,6 +471,8 @@ Example value for multiple domains as a comma-separated string: `contoso.com,fab
     - Value: **\<**domain names, comma separated**>**
 
 For example, to never block emails sent to users who have a contoso.com email address, specify the advanced client setting of **OutlookBlockTrustedDomains** and **contoso.com**. As a result, users do not see the warning pop-up messages in Outlook when they send an email to john@sales.contoso.com.
+
+
 
 ## Set a different default label for Outlook
 
