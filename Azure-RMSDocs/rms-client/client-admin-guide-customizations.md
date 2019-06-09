@@ -273,6 +273,18 @@ Without this setting, the first label that's found from the parent label with th
 
 With this setting, the sublabel that's ordered last from the parent label with the highest classification is applied to the email. If you need to reorder your labels to apply the label that you want for this scenario, see [How to delete or reorder a label for Azure Information Protection](../configure-policy-delete-reorder.md).
 
+## Exempt Outlook messages from mandatory labeling
+
+This configuration use an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and requires the preview version of the Azure Information Protection client.
+
+By default, when you enable the [policy setting](../configure-policy-settings.md) **All documents and emails must have a label**, all saved documents and sent emails must have a label applied. When you configure the following advanced setting, the policy setting applies only to Office documents and not to Outlook messages.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **DisableMandatoryInOutlook**
+
+- Value: **True**
+
 ## Enable recommended classification in Outlook
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
@@ -282,18 +294,6 @@ When you configure a label for recommended classification, users are prompted to
 To configure this advanced setting, enter the following strings:
 
 - Key: **OutlookRecommendationEnabled**
-
-- Value: **True**
-
-## Exempt Outlook messages from mandatory labeling
-
-This configuration use an [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. It also requires the preview version of the Azure Information Protection client.
-
-By default, when you enable the [policy setting](../configure-policy-settings.md) **All documents and emails must have a label**, all saved documents and sent emails must have a label applied. When you configure the following advanced setting, the policy setting applies only to Office documents and not to Outlook messages.
-
-To configure this advanced setting, enter the following strings:
-
-- Key: **DisableMandatoryInOutlook**
 
 - Value: **True**
 
@@ -410,9 +410,9 @@ In this example, an unlabeled PDF document will not result in warn, justify, or 
 
 - Value: **\<**file name extensions to display messages, comma separated**>**
 
-### To specify a different action for email messages without attachments
+#### To specify a different action for email messages without attachments
 
-By default, the value that you specify for OutlookUnlabeledCollaborationAction to warn, justify, or block pop-up messages applies to emails or attachments that don't have a label. You can refine this configuration by specifying another advanced client setting for email messages that don't have attachments. This additional client setting requires the preview version of the Azure Information Protection client.
+By default, the value that you specify for OutlookUnlabeledCollaborationAction to warn, justify, or block pop-up messages applies to emails or attachments that don't have a label. You can refine this configuration by specifying another advanced client setting for email messages that don't have attachments. This additional client setting is in preview and requires the preview version of the Azure Information Protection client.
 
 Create the following advanced client setting with one of the following values:
 
