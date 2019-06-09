@@ -17,7 +17,7 @@ ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: eymanor
+ms.reviewer: maayan
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -55,7 +55,7 @@ Some of these settings require editing the registry and some use advanced settin
 |Setting|Scenario and instructions|
 |----------------|---------------|
 |DisableDNF|[Hide or show the Do Not Forward button in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
-|CompareSubLabelsInAttachmentAction|[Change the timeout settings for the scanner and Set-AIPFileClassification](#change-the-timeout-settings-for-the-scanner-and-set-aipfileclassification)
+|CompareSubLabelsInAttachmentAction|[Change the timeout settings for the scanner](#change-the-timeout-settings-for-the-scanner)
 |ContentExtractionTimeout|[Change the timeout settings for the scanner and Set-AIPFileClassification](#change-the-timeout-settings-for-the-scanner-and-set-aipfileclassification)
 |EnableBarHiding|[Permanently hide the Azure Information Protection bar](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Make the custom permissions options available or unavailable to users](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
@@ -865,13 +865,13 @@ To configure this advanced setting so that the scanner runs with an integrity le
 
 - Value: **False**
 
-## Change the timeout settings for the scanner and Set-AIPFileClassification
+## Change the timeout settings for the scanner
 
 This configuration uses [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
-By default, the Azure Information Protection scanner and the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) PowerShell cmdlet have a timeout period of 00:15:00 (15 minutes) to inspect each file for sensitive information types or the regex expressions that you've configured for custom conditions. When the timeout period is reached for this content extraction process, any results before the timeout are returned and further inspection for the file stops.
+By default, the Azure Information Protection scanner has a timeout period of 00:15:00 (15 minutes) to inspect each file for sensitive information types or the regex expressions that you've configured for custom conditions. When the timeout period is reached for this content extraction process, any results before the timeout are returned and further inspection for the file stops, logging the message **Timeout occurred. Only using partial content**.
 
-If you experience partial results and with large files, you might need to increase this timeout period for content extraction, which you can do by configuring the following advanced client setting:
+If you experience this timeout problem because of large files, you can increase this timeout period for full content extraction:
 
 - Key: **ContentExtractionTimeout**
 
@@ -879,13 +879,21 @@ If you experience partial results and with large files, you might need to increa
 
 The file type can influence how long it takes to scan a file. Example scanning times:
 
+- A typical 100 MB Word file: 0.5-5 minutes
+
 - A typical 100 MB PDF file: 5-20 minutes
 
 - A typical 100 MB Excel file: 12-30 minutes
 
-In addition, the Azure Information Protection scanner has a timeout period of 00:30:00 (30 minutes) for each file that it processes. This value takes into account the time it can take to retrieve a file from a repository and temporarily save it locally for actions that can include decryption, content extraction for inspection, labeling, and encryption. 
+In addition, the Azure Information Protection scanner has a timeout period of 00:30:00 (30 minutes) for each file that it processes. This value takes into account the time it can take to retrieve a file from a repository and temporarily save it locally for actions that can include decryption, content extraction for inspection, labeling, and encryption.
 
-If you see the scanner status change to disconnected in the Azure portal and it is scanning large files, you might need to increase the timeout period for file processing, which you can do by configuring the following advanced client setting:
+Although the Azure Information Protection scanner can scan dozens to hundreds of files per minute, if you have a data repository that has a high number of very large files, the scanner can exceed this default timeout period and in the Azure portal, seem to stop after 30 minutes.
+
+A scanner with 4 core processors by default has 16 threads for scanning and the probability of encountering 16 large files in a 30 minute time period depends on the ratio of the large files. For example, if the scanning rate is 200 files per minute, and 1% of files exceed the 30 minute timeout, there is a probability of more than 85% that the scanner will encounter the 30 minute timeout situation. These timeouts can result in longer scanning times and higher memory consumption.
+
+In this situation, if you cannot add more core processors to the scanner computer, consider decreasing the timeout period for better scanning rates and lower memory consumption, but with the acknowledgment that some files will be excluded. Alternatively, consider increasing the timeout period for more accurate scanning results but with the acknowledgment that this configuration will result in lower scanning rates and high memory consumption.
+
+To change the timeout period for file processing, configure the following advanced client setting:
 
 - Key: **FileProcessingTimeout**
 
