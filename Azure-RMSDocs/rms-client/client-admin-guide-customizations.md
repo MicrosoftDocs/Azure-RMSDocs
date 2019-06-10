@@ -275,7 +275,7 @@ With this setting, the sublabel that's ordered last from the parent label with t
 
 ## Exempt Outlook messages from mandatory labeling
 
-This configuration use an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and requires the preview version of the Azure Information Protection client.
+This configuration use an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 By default, when you enable the [policy setting](../configure-policy-settings.md) **All documents and emails must have a label**, all saved documents and sent emails must have a label applied. When you configure the following advanced setting, the policy setting applies only to Office documents and not to Outlook messages.
 
@@ -412,7 +412,7 @@ In this example, an unlabeled PDF document will not result in warn, justify, or 
 
 #### To specify a different action for email messages without attachments
 
-By default, the value that you specify for OutlookUnlabeledCollaborationAction to warn, justify, or block pop-up messages applies to emails or attachments that don't have a label. You can refine this configuration by specifying another advanced client setting for email messages that don't have attachments. This additional client setting is in preview and requires the preview version of the Azure Information Protection client.
+By default, the value that you specify for OutlookUnlabeledCollaborationAction to warn, justify, or block pop-up messages applies to emails or attachments that don't have a label. You can refine this configuration by specifying another advanced client setting for email messages that don't have attachments.
 
 Create the following advanced client setting with one of the following values:
 
