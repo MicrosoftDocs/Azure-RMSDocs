@@ -78,7 +78,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 **Released**: 07/??/2019
 
-This version includes the MSIPC version 1.?? of the RMS client.
+This version includes the MSIPC version 1.0.3889.0419 of the RMS client.
 
 **New features:**
 
