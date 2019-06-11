@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 06/05/2019
+ms.date: 06/08/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -161,6 +161,7 @@ Details:
         - **Azure Information Protection administrator**
         - **Security administrator**
         - **Compliance administrator**
+        - **Compliance data administrator**
         - **Global administrator**
     
     - After the workspace has been created, you can then use the following role with fewer permissions to view the data collected:
