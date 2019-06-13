@@ -150,29 +150,31 @@ To register an application account in Azure AD for use with the Quickstarts and 
   > We recommend testing with a restricted account. Be sure the account only has rights to access the necessary SCC endpoints. Cleartext passwords passed via commandline may be collected by logging systems.
 
 1. Follow the steps in [Register an app with Azure AD, Register a new application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal) section. For testing purposes, use the following values for the given properties as you go through the guide steps: 
-    - **Application type** - Select "Native", as the applications demonstrated by the SDK are natively installed console applications. Native applications are considered "public" clients by OAuth2, as they are unable to store/use application credentials in a secure manner. Unlike a "confidential" server-based application, such as a web application, which is registered with its own credentials. 
-    - **Redirect URI** - Since the SDK uses simple console client applications, use a URI in the format `<app-name>://authorize`.
+    - **Supported Account Types** - Select "Accounts in this organizational directory only."
+    - **Redirect URI** - Set the redirect URI type to "Public client (mobile & desktop)." Since the SDK uses simple console client applications, use a URI in the format `<app-name>://authorize`.
 
-2. When finished, you'll be returned to the **Registered app** page for your new application registration. Copy and save the GUID in the **Application ID** field, as you will need it for the Quickstarts. 
+2. When finished, you'll be returned to the **Registered app** page for your new application registration. Copy and save the GUID in the **Application (client) ID** field, as you will need it for the Quickstarts. 
 
-3. Then click **Settings** to add the APIs and permissions to which the client will need access. On the **Settings** page, click **Required permissions**.
+3. Then click **API permissions** to add the APIs and permissions to which the client will need access. Click **Add a permission** to open the "Request API permissions" blade.
 
 4. Now you'll add the MIP APIs and permissions the application will require at runtime:
-   - On the **Required permissions** page, click **Add**. 
-   - On the **Add API access** page, click **Select an API**.
-   - On the **Select an API** page, click the "**Microsoft Rights Management Services**" API, and click **Select**.
-   - On the **Enable Access** page for the API's available permissions, click "**Create and access protected content for users**", then **Select**, then **Done**.
+   - On the **Select an API** page, click **Azure Rights Management Services**.
+   - On the **Azure Rights Management Services** API page, click **Delegated permissions**.   
+   - On the **Select permissions** section, check the **user_impersonation** permission. This allows the application to create and access protected content on behalf of a user.
+   - Click **Add permissions** to save.
 
 5. Repeat step #4, but this time when you get to the **Select an API** page, you'll need to search for the API.
-   - On the **Select an API** page, in the search box type "**Microsoft Information Protection Sync Service**", then click the API and click **Select**.
-   - On the **Enable Access** page for the API's available permissions, click "**Read all unified policies a user has access to**", and click **Select**, then **Done**
+   - On the **Select an API** page, click **APIs my organization uses** then in the search box type "**Microsoft Information Protection Sync Service**", and select it.
+   - On the **Microsoft Information Protection Sync Service** API page, click **Delegated permissions**.
+   - Expand the **UnifiedPolicy** node and check **UnifiedPolicy.User.Read** 
+   - Click **Add permissions** to save.
 
-6. When you're back on the **Required Permissions** page, click **Grant Permissions**, then **Yes**. This step gives pre-consent to the application using this registration, to access the APIs under the specified permissions. If you signed in as a global administrator, consent is recorded for all users in the tenant that run the application; otherwise, it applies only to your user account. 
+6. When you're back on the **API permissions** page, click **Grant admin consent for (Tenant Name)**, then **Yes**. This step gives pre-consent to the application using this registration, to access the APIs under the specified permissions. If you signed in as a global administrator, consent is recorded for all users in the tenant that run the application; otherwise, it applies only to your user account. 
 
-When finished, application registration and API permissions should look similar to the following example:
+When finished, application registration and API permissions should look similar to the following examples:
 
-   [![Azure AD app registration](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
-
+   [![Azure AD app registration](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox)
+   [![Azure AD app registration](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
 For more information on adding APIs and permissions to a registration, see [Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Here you'll find information on adding the APIs and permissions needed by a client application.  
 
