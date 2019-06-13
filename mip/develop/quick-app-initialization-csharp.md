@@ -85,7 +85,7 @@ The `ApplicationInfo` object contains two properties. The `_appInfo.ApplicationI
      public string AcquireToken(Identity identity, string authority, string resource)
      {
           AuthenticationContext authContext = new AuthenticationContext(authority);
-          var result = authContext.AcquireTokenAsync(resource, _appInfo.ApplicationId, new Uri(redirectUri), new PlatformParameters(PromptBehavior.Auto, null), UserIdentifier.AnyUser).Result;
+          var result = Task.Run(async() => await authContext.AcquireTokenAsync(resource, AppInfo.ApplicationId, new Uri(redirectUri), new PlatformParameters(PromptBehavior.Always))).Result;
           return result.AccessToken;
      }
      ```
@@ -124,7 +124,9 @@ Now create an implementation for a consent delegate, by extending the SDK's `Mic
 using System;
 using System.Threading.Tasks;
 using Microsoft.InformationProtection;
+using Microsoft.InformationProtection.Exceptions;
 using Microsoft.InformationProtection.File;
+using Microsoft.InformationProtection.Protection;
 
 namespace mip_sdk_dotnet_quickstart
 {
@@ -161,10 +163,10 @@ namespace mip_sdk_dotnet_quickstart
 
           static void Main(string[] args)
           {
-               //Initialize Wrapper for File API operations
+               // Initialize Wrapper for File API operations.
                MIP.Initialize(MipComponent.File);
 
-               //Create ApplicationInfo, setting the clientID from Azure AD App Registration as the ApplicationId
+               // Create ApplicationInfo, setting the clientID from Azure AD App Registration as the ApplicationId.
                ApplicationInfo appInfo = new ApplicationInfo()
                {
                     ApplicationId = clientId,
@@ -172,20 +174,26 @@ namespace mip_sdk_dotnet_quickstart
                     ApplicationVersion = "1.0.0"
                };
 
-               //Instatiate the AuthDelegateImpl object, passing in AppInfo. 
+               // Instantiate the AuthDelegateImpl object, passing in AppInfo. 
                AuthDelegateImplementation authDelegate = new AuthDelegateImplementation(appInfo);
 
-               //Initialize and instantiate the File Profile
-               //Create the FileProfileSettings object
+               // Initialize and instantiate the File Profile.
+               // Create the FileProfileSettings object.
                var profileSettings = new FileProfileSettings("mip_data", false, authDelegate, new ConsentDelegateImplementation(), appInfo, LogLevel.Trace);
 
-               //Load the Profile async and wait for the result
+               // Load the Profile async and wait for the result.
                var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
 
-               //Create a FileEngineSettings object, then use that to add an engine to the profile
+               // Create a FileEngineSettings object, then use that to add an engine to the profile.
                var engineSettings = new FileEngineSettings("user1@tenant.com", "", "en-US");
                engineSettings.Identity = new Identity("user1@tenant.com");
                var fileEngine = Task.Run(async () => await fileProfile.AddEngineAsync(engineSettings)).Result;
+
+               // Application Shutdown
+               // handler = null; // This will be used in later quick starts.
+               fileEngine = null;
+               fileProfile = null;
+               MIP.ReleaseAllResources();
           }
      }
 }
