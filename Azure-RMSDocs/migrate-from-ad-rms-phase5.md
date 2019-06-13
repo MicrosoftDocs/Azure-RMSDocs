@@ -121,7 +121,7 @@ Finally, if you are using Office 2010 and you have enabled the **AD RMS Rights P
 
 ## Step 12. Rekey your Azure Information Protection tenant key
 
-This step is recommended when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1 because this mode uses a 1024-bit key and SHA-1. This configuration is considered to offer an inadequate level of protection. Microsoft doesn’t endorse the use of lower key lengths such as 1024-bit RSA keys and the associated use of protocols that offer inadequate levels of protection, such as SHA-1. We recommend moving to a higher key length.
+This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1 because this mode uses a 1024-bit key and SHA-1. This configuration is considered to offer an inadequate level of protection. Microsoft doesn’t endorse the use of lower key lengths such as 1024-bit RSA keys and the associated use of protocols that offer inadequate levels of protection, such as SHA-1.
 
 Rekeying results in protection that uses RMS Cryptographic Mode 2, which results in a 2048-bit key and SHA-256. 
 
