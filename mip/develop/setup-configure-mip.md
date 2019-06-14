@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 03/01/2019
+ms.date: 06/13/2019
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn about setup and configuration, so that I can use the SDK to build applications.
 ---
