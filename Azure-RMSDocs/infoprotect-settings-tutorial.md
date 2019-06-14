@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Tutorial - Configure Azure Information Protection policy settings to help classify documents and emails - AIP
+title: Tutorial - Use Azure Information Protection policy settings to classify data
 description: An introduction tutorial that steps you through configuring Azure Information Protection policy settings to help classify your organization's documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 05/20/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,6 +26,8 @@ ms.service: information-protection
 # Tutorial: Configure Azure Information Protection policy settings that work together
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
@@ -121,7 +123,7 @@ With the Information Protection bar displayed and showing the available labels, 
 
 Instead of changing the label, close the Information Protection bar to compare the experience if the bar is not shown:
 
-![Azure Information Protection tutorial - new document with default label](./media/infoprotect-bar-close.png)
+![Azure Information Protection tutorial - close the bar](./media/infoprotect-bar-close.png)
 
 The **General** label is still selected, but it's much less obvious. It's also less obvious how to select a different label. To do that, users must select the **Protect** button:
 
@@ -140,7 +142,7 @@ You can change the currently selected **General** label to a different label, bu
 
 If we hadn't changed that setting, the Information Protection bar shows this icon:
 
-![Azure Information Protection tutorial - Protect button selected](./media/infoprotect-deletelabel-icon.png)
+![Azure Information Protection tutorial - close bar](./media/infoprotect-deletelabel-icon.png)
 
 Together with a default label, mandatory labeling ensures that new and edited documents (and emails) have a base classification of your choosing. 
 
@@ -158,9 +160,9 @@ Add the Word document you just labeled as an attachment to the email message. Yo
 
 If you click **Dismiss**, the new label is not applied but you see how the email is still labeled with the default label that we configured, **General**. The available labels are still visible to select as an alternative.
 
-If you select **Change now**, the email is relabeled to the  **Confidential** sublabel. However, users can still change the label before sending the email, by selecting the Edit Label:
+If you select **Change now**, the email is relabeled to the  **Confidential** sublabel. However, users can still change the label before sending the email, by selecting the Edit Label icon:
 
-![Azure Information Protection tutorial - prompt to relabel email to match labeled attachment](./media/infoprotect-editlabel-icon.png)
+![Azure Information Protection tutorial - Edit Label icon](./media/infoprotect-editlabel-icon.png)
 
 The Information Protection bar then displays again, for users to select an alternative label.
 

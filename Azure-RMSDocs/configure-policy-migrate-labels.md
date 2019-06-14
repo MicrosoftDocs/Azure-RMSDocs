@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 06/08/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,11 +26,12 @@ ms.suite: ems
 # How to migrate Azure Information Protection labels to Office 365 sensitivity labels
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-> [!IMPORTANT]
-> This feature is in preview, and migrates your tenant to a new platform. The migration cannot be reversed. The new platform supports unified labeling so that labels that you create and manage can be used by clients and services that support [Microsoft Information Protection solutions](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection).
+Migrate your labels in Azure Information Protection so that you can use them as sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling).
 
-Migrate your labels if you want to be able to use them as Office 365 sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling). You manage and publish these labels from the Office 365 Security & Compliance Center, or the Microsoft 365 security center and the Microsoft 365 compliance center. After the migration, the Azure Information Protection client continues to download the labels with their Azure Information Protection policy from the Azure portal. 
+After the migration, manage and publish these labels from the Office 365 Security & Compliance Center, or the Microsoft 365 security center and the Microsoft 365 compliance center. These labels can be used by the Azure Information Protection unified labeling client. If you continue to use the Azure Information Protection client, this client continues to download labels with the Azure Information Protection policy from the Azure portal.
 
 Before you read detailed instructions about how to migrate your labels, you might find the following frequently asked questions useful:
 
@@ -42,7 +43,7 @@ Before you read detailed instructions about how to migrate your labels, you migh
 
 ### Important information about administrative roles
 
-The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Information Protection administrator** is not supported by the unified labeling platform. If this administrative role is used in your organization, before you migrate your labels, add the users who have this role to the Azure AD roles of **Security administrator** or **Compliance administrator**. If you need help with this step, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal, the Microsoft 365 security center, and the Microsoft 365 compliance center.
+The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Azure Information Protection administrator** (formerly **Information Protection administrator**) is not supported by the unified labeling platform. If this administrative role is used in your organization, before you migrate your labels, add the users who have this role to the Azure AD roles of **Compliance administrator**, **Compliance data administrator**, or **Security administrator**. If you need help with this step, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal, the Microsoft 365 security center, and the Microsoft 365 compliance center.
 
 Alternatively to using roles, in the admin centers, you can create a new role group for these users and add either **Sensitivity Label Administrator** or **Organization Configuration** roles to this group.
 
@@ -56,8 +57,6 @@ Global administrators for your tenant can continue to manage labels and policies
 Before you migrate your labels, make sure that you are aware of the following changes and considerations:
 
 - Not all clients currently support unified labels. Make sure that you have [supported clients](#clients-and-services-that-support-unified-labeling) and be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the admin centers (for client that do support unified labels).
-
-- If you are in the middle of defining and configuring the labels that you want to use, we recommend that you complete this process by using the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in the admin centers.
 
 - Policies, including policy settings and who has access to them (scoped policies), and all advanced client settings are not migrated. For these changes that are not migrated, you will need to configure the relevant options in the admin centers after the labels are migrated.
     
@@ -79,7 +78,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
     - When a label is created, you must then publish it in one of the admin centers to make it available to applications and services.
     
-    - When a label is renamed, you must then edit it, which you can do in one of the admin centers or the Azure portal. 
+    - When a label is renamed, you must then edit it, which you can do in one of the admin centers or the Azure portal.
 
 - For each label, the Azure portal displays only the label display name, which you can edit. The admin centers show both this display name for a label, and the label name. The label name is the initial name that you specified when the label was first created and this property is used by the back-end service for identification purposes.
 
@@ -102,7 +101,7 @@ Azure Information Protection clients can use all label settings listed without a
 |Cloud-based protection or HYOK-based protection using a predefined template |No|No configuration option for predefined templates. We do not recommend you publish a label with this configuration.|
 |Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint |No|No configuration option for user-defined permissions for these Office apps. We do not recommend you publish a label with this configuration. If you do, the results of applying the label are listed in the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |HYOK-based protection using user-defined permissions for Outlook (Do Not Forward) |No|No configuration option for HYOK. We do not recommend you publish a label with this configuration. If you do, the results of applying the label are listed in the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
-|Remove protection |No|No configuration option to remove protection. We do not recommend you publish a label with this configuration.<br /><br /> If you do publish this label, when it is applied, protection will be removed if was previously applied by a label. If protection was previously applied independently from a label, the protection is preserved.|
+|Remove protection |No|No configuration option to remove protection. We do not recommend you publish a label with this configuration.<br /><br /> If you do publish this label, when it is applied, protection will be removed if it was previously applied by a label. If protection was previously applied independently from a label, the protection is preserved.|
 |Custom font and custom font color by RGB code for visual markings (header, footer, watermark)|Yes|Configuration for visual markings is limited to a list of colors and font sizes. You can publish this label without changes although you cannot see the configured values in the admin centers. <br /><br />To change these options, you can use the Azure portal. However, for easier administration, consider changing the color to one of the listed options in the admin centers.|
 |Variables in visual markings (header, footer)|No|If you publish this label without changes, variables display as text on clients rather than display the dynamic values. Before you publish the label, edit the strings to remove the variables.|
 |Visual markings per app|No|If you publish this label without changes, the app variables display as text on clients in all apps rather than display your text strings on chosen apps. Publish this label only if it is suitable for all apps, and edit the strings to remove the app variables.|
@@ -110,7 +109,7 @@ Azure Information Protection clients can use all label settings listed without a
 
 ### Comparing the behavior of protection settings for a label
 
-Use the following table to identify how the same protection setting for a label can behave differently, depending on whether it's used by the Azure Information Protection client (general availability versions and current preview version), the current preview version of the Azure Information Protection unified labeling client, or by Office apps that have labeling built in (also known as "native Office labeling").
+Use the following table to identify how the same protection setting for a label behaves differently, depending on whether it's used by the Azure Information Protection client, the Azure Information Protection unified labeling client, or by Office apps that have labeling built in (also known as "native Office 
 
 If you are not sure how your protection settings are configured, view their settings in the **Protection** blade, in the Azure portal. If you need help with this step, see [To configure a label for protection settings](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 
@@ -143,13 +142,18 @@ If the user doesn't have one of these usage rights or roles, the label is not ap
 
 Use the following instructions to migrate your tenant and Azure Information Protection labels to use the new unified labeling store.
 
-You must be a global administrator to migrate your labels.
+You must be a Compliance administrator, Compliance data administrator, Security administrator, or Global administrator to migrate your labels.
+
+> [!NOTE]
+> If you have retention labels or data loss prevention policies for Office 365, we recommend that you have the Compliance administrator role, Compliance data administrator role, or Global administrator role to migrate your labels.
+> 
+> Security administrators don't have access to retention labels or data loss prevention policies, so if you have either of these and they have the same name as your Azure Information Protection labels, the migration process can't complete until you manually rename one of the duplicates. However, if you have one of the other roles, the migration process can rename the Azure Information Protection label for you, so that migration can complete.
 
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **Manage** menu option, select **Unified labeling (Preview)**.
+2. From the **Manage** menu option, select **Unified labeling**.
 
 3. On the **Azure Information Protection - Unified labeling** blade, select **Activate** and follow the online instructions.
     
@@ -166,7 +170,7 @@ To confirm whether the clients and services you use support unified labeling, re
 
 ##### Clients that currently support unified labeling include:
 
-- The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md) - in preview
+- The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md). For a comparison of this client with the Azure Information Protection client, see [Compare the clients](./rms-client/use-client.md#compare-the-clients).
 
 - Apps from Office that are in different stages of availability. For more information, see the **Where the feature is available today?** section from [Apply sensitivity labels to your documents and email within Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in the Office documentation.
     
@@ -174,7 +178,7 @@ To confirm whether the clients and services you use support unified labeling, re
 
 ##### Services that currently support unified labeling include:
 
-- Windows Defender Azure Threat Protection
+- Microsoft Defender Advanced Threat Protection
 
 - Microsoft Cloud App Security
     
@@ -190,4 +194,4 @@ To confirm whether the clients and services you use support unified labeling, re
 
 For more information about your migrated labels that can now be configured and published in one of the admin centers, see [Overview of sensitivity labels](/Office365/SecurityCompliance/sensitivity-labels).
 
-To read the announcement blog post: [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
+If you haven't already done so, install the Azure Information Protection unified labeling client. For release information, an admin guide, and user guide, see [Azure Information Protection unified labeling client for Windows](./rms-client/aip-clientv2.md).

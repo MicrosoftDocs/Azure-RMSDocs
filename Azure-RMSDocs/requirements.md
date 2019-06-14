@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/07/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -69,7 +69,7 @@ For more information about the requirements for user and group accounts for auth
 
 Users must have client devices (computer or mobile device) that run an operating system that supports Azure Information Protection.
 
-The following devices support the Azure Information Protection client, which lets users classify and label their documents and emails:
+The following devices support the Azure Information Protection unified labeling client, and the Azure Information Protection client. [Both clients](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) let users classify and label their documents and emails:
 
 - Windows 10 (x86, x64)
     
@@ -87,17 +87,22 @@ The following devices support the Azure Information Protection client, which let
 
 - Windows Server 2008 R2 
 
-In addition to installing the Azure Information Protection client on physical computers, you can also install it on virtual machines. Check whether the software vendor for the virtual desktop solution has additional configuration that might be required to run the Azure Information Protection client. For example, for Citrix solutions, you might need to [disable Citrix Application Programming Interface (API) hooks](https://support.citrix.com/article/CTX107825) for Office (winword.exe, excel.exe, outlook.exe, powerpoint.exe) and the Azure Information Protection client (msip.app.exe, msip.viewer.exe).
+In addition to installing the client on physical computers, you can also install it on virtual machines. Check whether the software vendor for the virtual desktop solution has additional configuration that might be required to run the the Azure Information Protection unified labeling client or the Azure Information Protection client. For example, for Citrix solutions, you might need to [disable Citrix Application Programming Interface (API) hooks](https://support.citrix.com/article/CTX107825) for Office (winword.exe, excel.exe, outlook.exe, powerpoint.exe) and the executable for the the Azure Information Protection unified labeling client or Azure Information Protection client (msip.app.exe, msip.viewer.exe).
 
-For the listed server versions, the Azure Information Protection client is supported for Remote Desktop Services. If you delete user profiles when you use the Azure Information Protection client with Remote Desktop Services, do not delete the **%Appdata%\Microsoft\Protect** folder.
+For the listed server versions, the Azure Information Protection clients are supported for Remote Desktop Services. If you delete user profiles when you use the Azure Information Protection clients with Remote Desktop Services, do not delete the **%Appdata%\Microsoft\Protect** folder.
 
-When the Azure Information Protection client protects the data by using the Azure Rights Management service, the data can be consumed by the [same devices](requirements-client-devices.md) that support the Azure Rights Management service.
+When the Azure Information Protection clients protect the data by using the Azure Rights Management service, the data can be consumed by the [same devices](requirements-client-devices.md) that support the Azure Rights Management service.
 
-The Azure Information Protection client has [additional prerequisites](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client) that are listed in the admin guide.
+The Azure Information Protection clients have additional prerequisites that are listed in their respective admin guides:
+
+- Azure Information Protection unified labeling client: [Prerequisites](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+
+- Azure Information Protection client: [Prerequisites](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+
 
 ## Applications
 
-The Azure Information Protection client can label and protect documents and emails by using the Office applications **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
+The Azure Information Protection clients can label and protect documents and emails by using the Office applications **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
 
 - Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
 
@@ -113,7 +118,7 @@ The Azure Information Protection client can label and protect documents and emai
 
 Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only. Consequently, labels that apply protection do not display to users on the Azure Information Protection bar or from the **Protect** button on the Office ribbon. 
 
-The Azure Information Protection client does not support multiple versions of Office on the same computer. This client also does not support switching user accounts in Office.
+The Azure Information Protection clients do not support multiple versions of Office on the same computer. These clients also do not support switching user accounts in Office.
 
 For information about which Office editions support the protection service, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
 
@@ -152,7 +157,3 @@ The following deployment scenario is not supported unless you are using AD RMS f
 - Running AD RMS and Azure RMS side by side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 There is a supported migration path [from AD RMS to Azure Information Protection](https://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](decommission-deactivate.md).
-
-
-
-

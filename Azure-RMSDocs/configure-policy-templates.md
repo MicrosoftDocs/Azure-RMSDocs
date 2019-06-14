@@ -2,11 +2,11 @@
 # required metadata
 
 title: Configure and manage templates for Azure Information Protection - AIP
-description: Configure and manage rights management templates from the Azure portal. 
+description: Configure and manage protection templates, also known as rights management templates, from the Azure portal.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/28/2018
+ms.date: 06/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,6 +27,8 @@ ms.suite: ems
 # Configuring and managing templates for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Protection templates, also known as Rights Management templates, are a grouping of administrator-defined protection settings for Azure Information Protection. These settings include your chosen [usage rights](configure-usage-rights.md) for authorized users, and access controls for expiry and offline access. These templates are integrated with the Azure Information Protection policy: 
 
@@ -59,15 +61,15 @@ You can also create your own custom templates. Although you probably require onl
 
 If you recently obtained your subscription, your default templates are created with the following names:
 
-- **Confidential \ All Employees** that grants read and modify permissions for the protected content.
+- **Confidential \ All Employees**
 
-- **Highly Confidential \ All Employees** that grants read-only permission for the protected content.
+- **Highly Confidential \ All Employees**
 
-If you obtained your subscription some time ago, your default templates are created with the following names:
+If you obtained your subscription some time ago, your default templates might be created with the following names:
 
-- **\<organization name> - Confidential** that grants read and modify permissions for the protected content.
+- **\<organization name> - Confidential**
 
-- **\<organization name> - Confidential View Only** that grants read-only permission for the protected content. 
+- **\<organization name> - Confidential View Only** 
 
 You can rename (and reconfigure) these default templates when you use the Azure portal.
 

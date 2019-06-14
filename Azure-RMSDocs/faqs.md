@@ -6,18 +6,16 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 06/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -46,47 +44,57 @@ For more information, see [Announcing availability of information protection cap
 
 Originally, Office 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that let you classify documents and emails for auditing and retention when that content is in Office 365 services. In comparison, Azure Information Protection labels let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud.
 
-Announced at Microsoft Ignite 2018 in Orlando, you now have an option to create and configure [sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) in addition to retention labels in one of the admin centers: The Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center. Currently in preview, you can migrate your existing Azure Information Protection labels to the new unified labeling store, to be used as sensitivity labels with Office 365. 
+Announced at Microsoft Ignite 2018 in Orlando, you now have an option to create and configure [sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) in addition to retention labels in one of the admin centers: The Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center. You can migrate your existing Azure Information Protection labels to the new unified labeling store, to be used as sensitivity labels with Office 365. 
 
 For more information about unified labeling management and how these labels will be supported, see the blog post, [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 For more information about migrating your existing labels, see [How to migrate Azure Information Protection labels to Office 365](configure-policy-migrate-labels.md).
 
+## What's the difference between the Azure Information Protection client and the Azure Information Protection unified labeling client?
+
+The **Azure Information Protection client** has been available since Azure Information Protection was first announced as a new service for classifying and protecting files and emails. This client downloads labels and policy settings from Azure, and you configure the Azure Information Protection policy from the Azure portal. For more information, see [Overview of the Azure Information Protection policy](overview-policy.md). 
+
+The **Azure Information Protection unified labeling client** is a more recent addition, to support the unified labeling store that multiple applications and services support. This client downloads sensitivity labels and policy settings from the following admin centers: The Office 365 Security & Compliance Center, the Microsoft 365 security center, and the Microsoft 365 compliance center. For more information, see [Overview of sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels).
+
+If you're not sure which client to use, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
+
+### Identify which client you have installed
+
+Both clients, when they are installed, display **Azure Information Protection**. To help you identify which client you have installed, use the **Help and feedback** option to open the **Microsoft Azure Information Protection** dialog box:
+
+- From File Explorer: Right-select a file, files, or folder, select **Classify and protect**, and then select **Help and Feedback**.
+
+- From an Office application: From the **Protect** button (Azure Information Protection client) or **Sensitivity** button (Azure Information Protection unified labeling client), select **Help and Feedback**.
+
+Use the **Version** number displayed to identify the client:
+
+- A version **1**, for example, **1.48.204.0**, identifies the Azure Information Protection client.
+
+- A version **2**, for example, **2.0.778.0**, identifies the Azure Information Protection unified labeling client.
+
 ## When is the right time to migrate my labels to Office 365?
 
-Sensitivity labels in the admin centers (Office 365 Security & Compliance Center, Microsoft 365 security center, and Microsoft 365 compliance center) are generally available but the option to migrate your Azure Information Protection labels is still in preview. When the labels are migrated to the unified labeling store, they can be published and then used by [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Today, not all clients support unified labels or are generally available.
+Now that the option to migrate labels in the Azure portal is in general availability, we recommend you activate the migration so that you can use your labels as sensitivity labels with [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
-We recommend that you first test preview functionality with a test tenant, and then migrate your production tenant. In addition:
-
-- **If you are new to Azure Information Protection:** 
-    
-    Because Azure Information Protection has default labels to accelerate your deployment, we recommend you first migrate those default labels, and then manage them from one of the admin centers.
-
-- **If you are not new to Azure Information Protection but in the middle of defining and configuring the labels that you want to use:**
-    
-    We recommend that you complete your label configuration in the Azure portal, and then migrate the labels. This strategy avoids duplicating labels during the migration process, that will then need to be edited in one of the admin centers.
-
-Before you migrate your labels, be sure you understand the [considerations and label settings that are not supported by the admin centers](configure-policy-migrate-labels.md#considerations-for-unified-labels).
-
-See also [Which preview client do I install for testing new functionality?](faqs-infoprotect.md#which-preview-client-do-i-install-for-testing-new-functionality)
+For more information and instructions, see [How to migrate Azure Information Protection labels to Office 365 sensitivity labels](configure-policy-migrate-labels.md).
 
 ## After I've migrated my labels, which management portal do I use?
 
 After you've migrated your labels in the Azure portal:
 
-- If you have [unified labeling clients and services](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), go the one of the admin centers (Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center) to publish these labels, and to configure their policy settings. For label changes going forward, use one of these admin centers. Unified labeling clients download the labels and policy settings from these admin centers.
+- If you have [unified labeling clients and services](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), go to one of the admin centers (Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center) to publish these labels, and to configure their policy settings. For label changes going forward, use one of these admin centers. Unified labeling clients download the labels and policy settings from these admin centers.
 
 - If you have [Azure Information Protection clients](./rms-client/aip-client.md), continue to use the Azure portal to edit your labels and policy settings. Azure Information Protection clients continue to download the labels and policy settings from Azure.
 
 - If you have both [unified labeling clients](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) and [Azure Information Protection clients](./rms-client/aip-client.md), you can use the admin centers or the Azure portal to make label changes. However, for Azure Information Protection clients to pick up the label changes that you make in the admin centers, you must return to the Azure portal: Use the **Publish** option from the **Azure Information Protection - Unified labeling** blade in the Azure portal. 
 
-Continue to use the Azure portal for [central reporting](reports-aip.md) and the [scanner](deploy-aip-scanner-preview.md).
+Continue to use the Azure portal for [central reporting](reports-aip.md) and the [scanner](deploy-aip-scanner.md).
 
 ## What's the difference between Azure Information Protection and Azure Rights Management?
 
 Azure Information Protection provides classification, labeling, and protection for an organization's documents and emails. The protection technology uses the Azure Rights Management service; now a component of Azure Information Protection.
 
-## What is the role of identity management for Azure Information Protection?
+## What's the role of identity management for Azure Information Protection?
 
 A user must have a valid user name and password to access content that is protected by Azure Information Protection. To read more about how Azure Information Protection helps to secure your data, see [The role of Azure Information Protection in securing data](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
 
@@ -108,16 +116,16 @@ When the Azure Information Protection client for Windows is installed and it doe
 
 Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection. However, if you want to assign administrative permissions to other users, you have the following options:
 
-- **Information Protection administrator**: This Azure Active Directory administrator role lets an administrator configure Azure Information Protection but not other services. An administrator with this role can activate and deactivate the Azure Rights Management protection service, configure protection settings and labels, and configure the Azure Information Protection policy. In addition, an administrator with this role can run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) and from the [AADRM module](administer-powershell.md). However, this role doesn't support tracking and revoking documents for users.
+- **Azure Information Protection administrator**: This Azure Active Directory administrator role lets an administrator configure Azure Information Protection but not other services. An administrator with this role can activate and deactivate the Azure Rights Management protection service, configure protection settings and labels, and configure the Azure Information Protection policy. In addition, an administrator with this role can run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) and from the [AADRM module](administer-powershell.md). However, this role doesn't support tracking and revoking documents for users.
     
     > [!NOTE]
     > After you [migrate your tenant to the unified labeling store](configure-policy-migrate-labels.md), this role is no longer supported for the Azure portal.
     
     To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
-- **Compliance administrator**: This Azure Active Directory administrator role lets an administrator configure Azure Information Protection, which includes activate and deactivate the Azure Rights Management protection service, configure protection settings and labels, and configure the Azure Information Protection policy. In addition, an administrator with this role can run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) and from the [AADRM module](administer-powershell.md). However, this role doesn't support tracking and revoking documents for users.
+- **Compliance administrator** or **Compliance data administrator**: These Azure Active Directory administrator roles let an administrator configure Azure Information Protection, which includes activate and deactivate the Azure Rights Management protection service, configure protection settings and labels, and configure the Azure Information Protection policy. In addition, an administrator with either of these roles can run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) and from the [AADRM module](administer-powershell.md). However, these roles don't support tracking and revoking documents for users.
     
-    To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). To see what other permissions a user with this role has, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
+    To assign a user to one of these administrative roles, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). To see what other permissions a user with these roles have, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
 
 - **Security reader**: For [Azure Information Protection analytics](reports-aip.md) only. This Azure Active Directory administrator role lets an administrator view how your labels are being used, monitor user access to labeled documents and emails, and any changes to their classification, and can identify documents that contain sensitive information that must be protected. Because this feature uses Azure Log Analytics, you must also have a supporting [RBAC role](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 
@@ -149,7 +157,7 @@ The Azure Rights Management service automatically generates and manages XrML ce
 
 Azure Information Protection can classify and protect email messages and documents, whether they are located on-premises or in the cloud. These documents include Word documents, Excel spreadsheets, PowerPoint presentations, PDF documents, text-based files, and image files. For a list of the document types supported, see the list of [file types supported](./rms-client/client-admin-guide-file-types.md) in the admin guide.
 
-Azure Information Protection cannot classify and protect structured data such as database files, calendar items, PowerBI reports, Yammer posts, Sway content, and OneNote notebooks.
+Azure Information Protection cannot classify and protect structured data such as database files, calendar items, Power BI reports, Yammer posts, Sway content, and OneNote notebooks.
 
 ## I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?
 

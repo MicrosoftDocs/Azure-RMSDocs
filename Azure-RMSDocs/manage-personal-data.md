@@ -6,7 +6,7 @@ description: Information about the personal data that is used by Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/04/2019
+ms.date: 06/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -40,7 +40,7 @@ When you configure and use Azure Information Protection, email addresses and IP 
 
 - Document tracking logs
 
-- Usage logs for the Azure Information Protection client and RMS client 
+- Usage logs for the Azure Information Protection clients and RMS client 
 
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-intro-sentence.md)]
@@ -192,11 +192,11 @@ IsHiddenInfo         : False
 
 There is no search by ObjectID. However, you are not restricted by the `-UserEmail` parameter and the email address you provide doesn't need to be part of your tenant. If the email address provided is stored anywhere in the document tracking logs, the document tracking entry is returned in the cmdlet output.
 
-### Usage logs for the Azure Information Protection client and RMS client
+### Usage logs for the Azure Information Protection clients and RMS client
 
 When labels and protection are applied to documents and emails, email addresses and IP addresses can be stored in log files on a user's computer in the following locations:
 
-- For the Azure Information Protection client: %localappdata%\Microsoft\MSIP\Logs
+- For the Azure Information Protection unified labeling client and the Azure Information Protection client: %localappdata%\Microsoft\MSIP\Logs
 
 - For the RMS client: %localappdata%\Microsoft\MSIPC\msip\Logs
 
@@ -215,15 +215,17 @@ You can turn off logging information for the Azure Information Protection client
 ## Securing and controlling access to personal information
 Personal data that you view and specify in the Azure portal is accessible only to users who have been assigned one of the following [administrator roles from Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-- **Information Protection administrator**
+- **Azure Information Protection administrator**
 
 - **Compliance administrator**
+
+- **Compliance data administrator**
 
 - **Security administrator**
 
 - **Global administrator**
 
-Personal data that you view and specify by using the AADRM module is accessible only to users who have been assigned the **Information Protection administrator**, **Compliance administrator**, or **Global Administrator** roles from Azure Active Directory, or the global administrator role for the Azure Rights Management service.  
+Personal data that you view and specify by using the AADRM module is accessible only to users who have been assigned the **Azure Information Protection administrator**, **Compliance administrator**, **Compliance data administrator**, or **Global Administrator** roles from Azure Active Directory, or the global administrator role for the Azure Rights Management service.  
 
 ## Updating personal data
 

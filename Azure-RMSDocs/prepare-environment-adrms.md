@@ -2,11 +2,11 @@
 # required metadata
 
 title: Prepare the environment for Azure RMS and AD RMS
-description: Guidance if you have Azure Rights Management with AD RMS deployed.
+description: Guidance for administrators if you have Azure Rights Management with AD RMS deployed.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/29/2018
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# Preparing the environment for Azure Rights Management when you also have Active Directory Rights Management Services (AD RMS)
+# Prepare the environment for Azure Rights Management when you have AD RMS
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 

@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/11/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,6 +28,8 @@ ms.suite: ems
 # Admin Guide: Azure Information Protection client files and client usage logging
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 After you have installed the Azure Information Protection client, you might need to know where files are located and monitor how the client is being used.
 
@@ -99,7 +101,7 @@ The client logs user activity to the local Windows event log **Applications and 
 
 - Custom permissions (when applicable) that includes the [usage rights by their encoding name](../configure-usage-rights.md#usage-rights-and-descriptions) for the specified users, groups, or organizations
 
-The events for Outlook warn, justify, and block messages require the preview client and advanced client settings. For more information, see [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
+The events for Outlook warn, justify, and block messages require the current general availability client and advanced client settings. For more information, see [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
 For information about usage logging for the protection service, see [Logging and analyzing usage of the Azure Rights Management service](../log-analyze-usage.md).
 

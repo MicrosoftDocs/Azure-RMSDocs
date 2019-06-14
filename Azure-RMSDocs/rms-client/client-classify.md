@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Classify files & emails by using Azure Information Protection
-description: Instructions how to classify your documents and emails.
+title: Classify - Azure Information Protection client
+description: Instructions how to classify your documents and emails when you use the Azure Information Protection client for Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -24,9 +24,11 @@ ms.suite: ems
 
 ---
 
-# User Guide: Classify a file or email by using Azure Information Protection
+# User Guide: Classify a file or email with the Azure Information Protection client
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>
+> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Use these instructions to help you classify (but not protect) your documents and emails. If you need to also protect your documents and emails, see the [classify and protect instructions](client-classify-protect.md). If you are not sure which set of instructions to use, check with your administrator or help desk.

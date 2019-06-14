@@ -1,11 +1,11 @@
 ---
-title: Quickstart - Get started with Azure Information Protection in the Azure portal - AIP
+title: Quickstart - View Azure Information Protection in the Azure portal - AIP
 description: If your organization is brand new to Azure Information Protection, start here to add the service to the Azure portal, confirm the protection service is activated, and view labels and policy settings.
 author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 05/20/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -25,6 +25,8 @@ ms.service: information-protection
 # Quickstart: Get started with Azure Information Protection in the Azure portal
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In this quickstart, you'll add Azure Information Protection to the Azure portal, confirm the protection service is activated, create default labels if you don't already have labels, and view the policy settings for Azure Information Protection.
 
@@ -67,11 +69,11 @@ The protection service is now automatically activated for new customers, but it'
     
     - If protection is activated, you see the following confirmation:
         
-        ![Azure Information Protection status for Azure RMS](./media/info-protect-azurerms-activated.png)
+        ![Azure Information Protection status for Azure RMS - activated](./media/info-protect-azurerms-activated.png)
         
     - If protection is not activated, you see this reflected in the status information, and the option to activate:
         
-        ![Azure Information Protection status for Azure RMS](./media/info-protect-azurerms-deactivated.png)
+        ![Azure Information Protection status for Azure RMS - not activated](./media/info-protect-azurerms-deactivated.png)
 
 3. If protection isn't activated, select **Activate**. 
 
@@ -135,7 +137,7 @@ To view the default Azure Information Protection policy settings:
     
 2. After the labels, in the **Configure settings to display and apply on Information Protection end users** section, you see the policy settings. For example, there is no default label set, documents and emails are not required to have a label, and users do not have to provide justification when they change labels:
     
-    ![Azure Information Protection policy global settings](./media/info-protect-policy-default-settingsv3.png)
+    ![Azure Information Protection policy global settings](./media/defaultsettings-aip.png)
 
 3. Because you are only viewing the settings, you can close any blades in the portal that you have opened.
 

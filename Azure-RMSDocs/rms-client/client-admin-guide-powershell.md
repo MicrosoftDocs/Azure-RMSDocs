@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/25/2018
+ms.date: 05/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,7 +17,6 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: eymanor
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,6 +27,8 @@ ms.suite: ems
 # Admin Guide: Using PowerShell with the Azure Information Protection client
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 When you install the Azure Information Protection client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 
@@ -41,7 +42,7 @@ The cmdlets are installed with the PowerShell module **AzureInformationProtectio
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
 
 > [!TIP]
-> To use cmdlets with path lengths greater than 260 characters, use the following [group policy setting](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) that is available starting Windows 10, version 1607:<br /> **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **NTFS** > **Enable Win32 long paths** 
+> To use cmdlets with path lengths greater than 260 characters, use the following [group policy setting](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) that is available starting Windows 10, version 1607:<br /> **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths** 
 > 
 > For Windows Server 2016, you can use the same group policy setting when you install the latest Administrative Templates (.admx) for Windows 10.
 >
@@ -493,54 +494,84 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/).
 
-2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **App registrations**. 
+2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **Manage** > **App registrations**. 
 
-3. Select **New application registration**, to create your Web app /API application. On the **Create** label, specify the following values, and then click **Create**:
+3. Select **+ New registration**, to create your Web app /API application. On the **Register an application** blade, specify the following values, and then click **Register**:
 
-   - Name: **AIPOnBehalfOf**
+   - **Name**: `AIPOnBehalfOf`
+        
+        If you prefer, specify a different name. It must be unique per tenant.
+    
+    - **Supported account types**: **Accounts in this organizational directory only**
+    
+    - **Redirect URI (optional)**: **Web** and `http://localhost`
 
-     If you prefer, specify a different name. It must be unique per tenant.
+4. On the **AIPOnBehalfOf** blade, copy the value for the **Application (client) ID**. The value looks similar to the following example: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *WebAppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
-   - Application Type: **Web app /API**
+5. Still on the **AIPOnBehalfOf** blade, from the **Manage** menu, select **Authentication**.
 
-   - Sign-on URL: **http://localhost**
+6. On the **AIPOnBehalfOf - Authentication** blade, in the **Advanced settings** section, select the **ID tokens** checkbox, and then select **Save**.
 
-4. Select the application that you've just created, for example, **AIPOnBehalfOf**. Then, on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade. 
+7. Still on the **AIPOnBehalfOf - Authentication** blade, from the **Manage** menu, select **Certificates & secrets**.
 
-    This value is used for the `WebAppId` parameter when you run the Set-AIPAuthentication cmdlet. Paste and save it for later reference.
+8. On the **AIPOnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, select **+ New client secret**. 
 
-5. Back on the **Settings** blade, select **Required permissions**. On the **Required permissions** blade, select **Grant Permissions**, click **Yes** to confirm, and then close this blade.
+9. For **Add a client secret**, specify the following, and then select **Add**:
+    
+    - **Description**: `Azure Information Protection client`
+    - **Expires**: Specify your choice of duration (1 year, 2 years, or never expires)
 
-6. Back on the **Settings** blade again, select **Keys**. Add a new key by specifying a description and your choice of duration (1 year, 2 years, or never expires). Then select **Save**, and copy the string for the **Value** that is displayed. It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any key that you use, store the saved value securely and restrict access to it.
+9. Back on the **AIPOnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, copy the string for the **VALUE**. This string looks similar to the following example: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`. To make sure you copy all the characters, select the icon to **Copy to clipboard**. 
+    
+    It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any sensitive information that you use, store the saved value securely and restrict access to it.
 
-    This value is used for the `WebAppKey` parameter when you run the Set-AIPAuthentication cmdlet.
+10. Still on the **AIPOnBehalfOf - Certificates & secrets** blade, from the **Manage** menu, select **Expose an API**.
 
-7. Back on the **App registrations** blade, select **New application registration**, to create your native application. On the **Create** label, specify the following values, and then click **Create**:
+11. On the **AIPOnBehalfOf - Expose an API** blade, select **Set** for the **Application ID URI** option, and in the **Application ID URI** value, change **api** to **http**. This string looks similar to the following example: `http://d244e75e-870b-4491-b70d-65534953099e`. 
+    
+    Select **Save**.
 
-   - Name: **AIPClient**
+12. Back on the **AIPOnBehalfOf - Expose an API** blade, select **+ Add a scope**.
 
-     If you prefer, specify a different name. It must be unique per tenant.
+13. On the **Add a scope** blade, specify the following, and then select **Add scope**:
+    - **Scope name**: `user-impersonation`
+    - **Who can consent?**: **Admins and users**
+    - **Admin consent display name**: `Access Azure Information Protection scanner`
+    - **Admin consent description**: `Allow the application to access the scanner for the signed-in user`
+    - **User consent display name**: `Access Azure Information Protection scanner`
+    - **User consent description**: `Allow the application to access the scanner for the signed-in user`
+    - **State**: **Enabled** (the default)
 
-   - Application Type: **Native**
+14. Back on the **AIPOnBehalfOf - Expose an API** blade, close this blade.
 
-   - Sign-on URL: **http://localhost**
+15. On the **App registrations** blade, select **+ New application registration** to now create your native application.
 
-8. Select the application that you've just created, for example, **AIPClient**. Then, on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade.
+16. On the **Register an application** blade, specify the following settings, and then select **Register**:
+    - **Name**: `AIPClient`
+    - **Supported account types**: **Accounts in this organizational directory only**
+    - **Redirect URI (optional)**: **Public client (mobile & desktop)** and `http://localhost`
 
-    This value is used for the `NativeAppId` parameter when you run the Set-AIPAuthentication cmdlet. Paste and save it for later reference.
+17. On the **AIPClient** blade, copy the value of the **Application (client) ID**. The value looks similar to the following example: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+    
+    This value is used for the NativeAppId parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
-9. On the **Settings** blade, select **Required permissions**. 
+18. Still on the **AIPClient** blade, from the **Manage** menu, select **Authentication**.
 
-10. On the **Required permissions** blade, click **Add**, and then click **Select an API**. In the search box, type **AIPOnBehalfOf**. Select this value in the list box, and then click **Select**.
+19. On the **AIPClient - Authentication** blade, specify the following, and then select **Save**:
+    - In the **Advanced settings** section, select **ID tokens**.
+    - In the **Default client type** section, select **Yes**.
 
-11. On the **Enable Access** blade, select **AIPOnBehalfOf**, click **Select**, and then click **Done**.
+20. Still on the **AIPClient - Authentication** blade, from the **Manage** menu, select **API permissions**.
 
-12. Back on the **Required permissions** blade, select **Grant Permissions**, click **Yes** to confirm, and then close this blade.
+21. On the **AIPClient - permissions** blade, select **+ Add a permission**.
 
+22. On the **Request API permissions** blade, select **My APIs**.
 
-You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. For example:
+23. In the **Select an API** section, select **APIOnBehalfOf**, then select the checkbox for **user-impersonation**, as the permission. Select **Add permissions**. 
 
-`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. From our examples:
+
+`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 
 Run this command in the context of the account that will label and protect the documents non-interactively. For example, a user account for your PowerShell scripts or the service account to run the Azure Information Protection scanner.  
 

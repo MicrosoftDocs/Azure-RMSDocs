@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Information & support for Azure Information Protection
+title: Information & support for Azure Information Protection - AIP
 description: Resources for administrators, which includes information about new releases, support options, and how to contact Microsoft to report a problem. 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/08/2019
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -41,9 +41,18 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |Understand a specific Azure Information Protection term|Search for the term or abbreviation on the [terminology](terminology.md) page.|
 
 ## Information about new releases and updates
+
+The official roadmap for Azure Information Protection is now on the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent).
+
 The Azure Information Protection product team posts announcements about major new releases on the [Enterprise Mobility + Security blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection). Smaller releases are announced on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam), and you might also find it useful to check the [UserVoice site](https://msip.uservoice.com) for the status of requested features.
 
-You'll find additional and more detailed information on the [Azure Information Protection technical blog](https://aka.ms/AIPblog). For example, a summary of documentation changes is published each month to let you know about information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These doc updates posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
+You'll find additional and more detailed information on the [Azure Information Protection technical blog](https://aka.ms/AIPblog). 
+
+## What's new in the documentation
+
+The Azure Information Protection technical blog also has a summary of [documentation changes each month](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs). These changes can include new and updated documentation for new release, changes to support statements, and also corrections and clarifications for existing releases.
+
+These doc updates posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
 
 ## Support options and community resources
 The following sections provide information about support and troubleshooting options, and community resources.
@@ -71,6 +80,8 @@ For additional support options, ask your Microsoft contact.
 Hands-on labs: See [Azure Information Protection Hands On Lab](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)
 
 On-demand videos:
+
+- Tech Community recorded webinars for [Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014).
 
 - Microsoft Ignite 2018 sessions for [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection):
     

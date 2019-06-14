@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Azure Information Protection unified labeling client - Version release information
+title: Azure Information Protection unified labeling client - Version history & support policy
 description: See the release information for the Azure Information Protection unified labeling client for Windows. 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/12/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -23,28 +23,49 @@ ms.suite: ems
 
 ---
 
-# Azure Information Protection unified labeling client: Version release information
+# Azure Information Protection unified labeling client - Version release history and support policy
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+
+You can download the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+After a short delay of typically a couple of weeks, the latest general availability version is also included in the Microsoft Update Catalog with a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified Labeling Client**, and the classification of **Updates**. This inclusion in the catalog means that you can upgrade the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
+
+For more information, see [Upgrading and maintaining the Azure Information Protection unified labeling client](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
+
+### Servicing information and timelines
+
+Each general availability (GA) version of the Azure Information Protection unified labeling client is supported for up to six months after the release of the subsequent GA version. The documentation does not include information about unsupported versions of the client. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
+
+Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
 
 > [!NOTE]
-> This client is in preview and is subject to changes. It uses the unified labeling store and downloads policy with labels from the following admin centers: The Office 365 Security & Compliance Center, Microsoft 365 security center, and Microsoft 365 compliance center. [More information](/Office365/SecurityCompliance/sensitivity-labels)
-
-You can download the latest preview version of the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=57440).
+> For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 ### Release information
 
-Use the following information to see what’s supported for the latest preview version of the Azure Information Protection unified labeling client.
+Use the following information to see what’s supported for the general availability version of the Azure Information Protection unified labeling client.
 
 This client installs an Office add-on for Windows computers, an extension for File Explorer, and a PowerShell module. This client has the same [prerequisites](../requirements.md) as the Azure Information Protection client that downloads policy from Azure.
 
-To compare features and functionality with the Azure Information Protection client, see [Feature comparisons for the clients](use-client.md#compare-the-clients).
+To compare features and functionality with the Azure Information Protection client, see [Compare the clients](use-client.md#compare-the-clients).
 
-## Current preview version
+## Version 2.0.779.0
 
-**Released**: 02/25/2019
+**Released**: 05/01/2019
 
-This preview version of the Azure Information Protection unified labeling client for Windows supports the following features: 
+This release has a single fix to resolve a race-condition issue where sometimes, no labels display in Office apps or File Explorer.
+
+## Version 2.0.778.0
+
+**Released**: 04/16/2019
+
+Supported through 11/01/2019
+
+This first general availability version of the Azure Information Protection unified labeling client for Windows supports the following features: 
 
 - Upgrade from the Azure Information Protection client.
 
@@ -60,11 +81,11 @@ This preview version of the Azure Information Protection unified labeling client
     - [Read label information applied to a document](/powershell/module/azureinformationprotection/get-aipfilestatus)
     - [Authenticate to support unattended PowerShell sessions](/powershell/module/azureinformationprotection/set-aipauthentication)
 
-- Support for central reporting using [Azure Information Protection analytics](../reports-aip.md).
+- Auditing data and endpoint discovery support for central reporting by using [Azure Information Protection analytics](../reports-aip.md).
 
 - The following label and policy settings:
     - Visual marking (headers, footers, watermarks)
-    - Default labeling
+    - Default labeling - currently limited to labels without sublabels
     - Labels that apply Do Not Forward and display in Outlook only
     - Justification prompts if users lower the classification level or remove a label
     - Colors for the labels
@@ -76,34 +97,14 @@ This preview version of the Azure Information Protection unified labeling client
 
 - A Help and feedback dialog box, which includes reset settings and export logs.
 
-### Features that do not work in this preview version or are not available
 
-Includes:
-
-- The scanner to discover, label, and protect files on on-premises data stores is not available.
-
-- Labels that are migrated from the Azure portal and configured for HYOK protection display in the client when they are published, but these labels do not apply protection.
-
-- The full set of cmdlets from the AzureInformationProtection module aren't available, which includes cmdlets that connect directly to a protection service. For example, Unprotect-RMSFile, to unprotect files in bulk.
+## Next steps
 
 For full details, see the [comparison tables](use-client.md#compare-the-clients).
 
-## Instructions
+For more information about installing and using this client: 
 
-1. Install the client by using the following instructions: [User Guide: Download and install the Azure Information Protection client (Preview)](install-unifiedlabelingclient-app.md) 
+- For users: [Download and install the client](install-unifiedlabelingclient-app.md)
 
-2. Use the client as you would the Azure Information Protection client, with the following exceptions for Office apps:
-    - The button on the Office ribbon is named **Sensitivity** rather than **Protect**.
-    - Admins can't display the Information Protection bar by default, but users can display it by selecting **Show Bar** from the **Sensitivity** button. 
-    - Custom permissions are not available
-    - Track and revoke is not available
-    
-    For user instructions:
-    
-    - [Classify a file or email](client-classify.md) 
-    
-    - [Classify and protect a file or email](client-classify-protect.md)
+- For admins: [Azure Information Protection unified labeling client administrator guide](clientv2-admin-guide.md)
 
-3. Share your experience: 
-    
-    - To provide feedback or ask questions about this preview client, use the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam).

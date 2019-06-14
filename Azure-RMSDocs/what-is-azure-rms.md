@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Overview of Azure Rights Management protection from Azure Information Protection - AIP
+title: Overview of Azure Rights Management protection - AIP
 description: Information about Azure Rights Management (Azure RMS), the protection technology used by Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/06/2018
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -71,7 +71,7 @@ Azure Rights Management supports the following security, compliance and regulat
 
 √ Use of industry-standard cryptography and supports FIPS 140-2. For more information, see the [Cryptographic controls used by Azure RMS: Algorithms and key lengths](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths) information.
 
-√ Support for Thales Hardware Security Modules (HSMs) to store your tenant key in Microsoft Azure data centers. Azure Rights Management uses separate security worlds for its data centers in North America, EMEA (Europe, Middle East and Africa), and Asia, so your keys can be used only in your region.
+√ Support for nCipher nShield hardware security module (HSM) to store your tenant key in Microsoft Azure data centers. Azure Rights Management uses separate security worlds for its data centers in North America, EMEA (Europe, Middle East and Africa), and Asia, so your keys can be used only in your region.
 
 √ Certified for the following:
 

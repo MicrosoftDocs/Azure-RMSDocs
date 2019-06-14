@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Tutorial - Edit the Azure Information Protection policy and create a new label - AIP
-description: An introduction tutorial that edits the Azure Information Protection policy for your organization that should take you about 15 minutes to complete.
+title: Tutorial - Edit the Azure Information Protection policy - AIP
+description: An introduction tutorial that edits the Azure Information Protection policy for your organization, which should take you about 15 minutes to complete.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 05/20/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -23,9 +23,11 @@ ms.service: information-protection
 #Customer intent: As an administrator, I want to make it easy for users to classify data as it's created and protect it if it contains sensitive information
 ---
 
-# Tutorial: Edit the Azure Information Protection policy and create a new label
+# Tutorial: Configure Azure Information Protection policy settings and create a new label
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
@@ -170,7 +172,7 @@ We'll now create a new sublabel for **Confidential**.
 
 10. On the **Sub-label** blade, you see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
     
-    ![Azure Information Protection tutorial - configure credit card condition](./media/step2-see-condition.png)
+    ![Azure Information Protection tutorial - summary of credit card condition](./media/step2-see-condition.png)
 
 11. For **Select how this label is applied**: Keep the default of **Recommended**, and don't change the default policy tip. 
 

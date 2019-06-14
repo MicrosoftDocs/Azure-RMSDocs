@@ -6,7 +6,7 @@ description: Information about installation, supported operating systems, regist
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -24,11 +24,11 @@ ms.suite: ems
 
 ---
 
-# RMS client deployment notes
+# Rights Management Service client deployment notes
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 7 with SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016*
 
-The Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside  those managed boundaries. 
+The Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside those managed boundaries. 
 
 In addition to shipping with the [Azure Information Protection client for Windows](aip-client.md), the RMS client is available [as an optional download](https://www.microsoft.com/download/details.aspx?id=38396) that can, with acknowledgment and acceptance of its license agreement, be freely distributed with  third-party software so that clients can protect and consume content that has been protected by Rights Management services.
 
@@ -155,7 +155,7 @@ The RMS client can be limited to using only specific trusted AD RMS servers by m
 
     REG_SZ:*\<URL_or_HostName>*
 
-    **Value:** The string values in this registry key location can be either DNS domain name format (for example, **adrms.contoso.com**) or full URLs to trusted AD RMS servers (for example, **https://adrms.contoso.com**). If a specified URL starts with **https://**, the RMS client uses SSL or TLS to contact the specified AD RMS server.
+    **Value:** The string values in this registry key location can be either DNS domain name format (for example, **adrms.contoso.com**) or full URLs to trusted AD RMS servers (for example, **`https://adrms.contoso.com`**). If a specified URL starts with **https://**, the RMS client uses SSL or TLS to contact the specified AD RMS server.
 
 ## RMS service discovery
 RMS service discovery lets the RMS client check which RMS server or service to communicate with before protecting content. Service discovery might also happen when the RMS client consumes protected content, but this type of discovery is less likely to happen because the policy attached to the content contains the preferred RMS server or service. Only if those sources are unsuccessful does the client then run service discovery.
@@ -170,7 +170,7 @@ To perform service discovery, the RMS client checks the following:
 
     If an SCP is registered as documented in the [following section](#ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory), the URL of the AD RMS server is returned to the RMS client to use.
 
-3. **The Azure Rights Management discovery service**: The RMS client connects to **https://discover.aadrm.com**, which prompts the user to authenticate.
+3. **The Azure Rights Management discovery service**: The RMS client connects to **`https://discover.aadrm.com`**, which prompts the user to authenticate.
 
     When authentication is successful, the user name (and domain) from the authentication is used to identify the Azure Information Protection tenant to use. The Azure Information Protection URL to use for that user account is returned to the RMS client. The URL is in the following format: **https://**\<YourTenantURL\>**/_wmcs/licensing** 
 

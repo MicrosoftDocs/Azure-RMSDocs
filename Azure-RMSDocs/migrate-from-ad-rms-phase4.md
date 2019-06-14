@@ -6,7 +6,7 @@ description: Phase 4 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,8 +31,6 @@ ms.suite: ems
 
 
 Use the following information for Phase 4 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 8 through 9 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
-
-
 
 ## Step 8. Configure IRM integration for Exchange Online
 
@@ -64,11 +62,16 @@ This step covers installing and configuring the connector, disabling IRM for Exc
 
 ### Install and configure the RMS connector
 
-Use the instructions in the [Deploying the Azure Rights Management connector](./deploy-rms-connector.md) article, and do steps 1 though 4. Do not start step 5 yet from the connector instructions. 
+Use the instructions in the [Deploying the Azure Rights Management connector](./deploy-rms-connector.md) article, and do steps 1 though 4. Do not start step 5 yet from the connector instructions.
 
 ### Disable IRM on Exchange Servers and remove AD RMS configuration
 
-1.  On each Exchange server, locate the following folder and delete all the entries in that folder: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
+> [!IMPORTANT]
+> If you haven't yet configured IRM on any of your Exchange servers, do just steps 2 and 6.
+> 
+> Do all these steps if all the licensing URLs of all your AD RMS clusters are not displayed in the *LicensingLocation* parameter when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps).
+
+1. On each Exchange server, locate the following folder and delete all the entries in that folder: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
 
 2. From one of the Exchange servers, run the following PowerShell commands to ensure that users will be able to read emails that are protected by using Azure Rights Management.
 
@@ -78,6 +81,8 @@ Use the instructions in the [Deploying the Azure Rights Management connector](./
 		$list = $irmConfig.LicensingLocation 
 		$list += "<Your Tenant URL>/_wmcs/licensing"
 		Set-IRMConfiguration -LicensingLocation $list
+    
+    Now when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), you should see all your AD RMS cluster licensing URLs and your Azure Rights Management service URL displayed for the *LicensingLocation* parameter.
 
 3.  Now disable IRM features for messages that are sent to internal recipients:
 

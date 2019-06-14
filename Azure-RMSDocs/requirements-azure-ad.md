@@ -6,7 +6,7 @@ description: Identify the Azure AD requirements to use Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/05/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -39,7 +39,7 @@ To integrate your Azure AD directory with your on-premises AD forests, see [Inte
 
 Computers running Office 2010: 
 
-- These computers require the [Azure Information Protection client](./rms-client/aip-client.md) to authenticate to Azure Information Protection and its data protection service, Azure Rights Management.
+- These computers require the [Azure Information Protection unified labeling client](./rms-client/aip-clientv2.md) or [Azure Information Protection client](./rms-client/aip-client.md) to authenticate to Azure Information Protection and its data protection service, Azure Rights Management.
 
 - If your user accounts are federated (for example, you use AD FS), they must use Windows Integrated Authentication. Forms-based authentication in this scenario fails to authenticate users for Azure Information Protection.
 
@@ -66,7 +66,7 @@ To use multi-factor authentication (MFA) with Azure Information Protection requi
 
 - Azure Information Protection client:
 
-    - The [Azure Information Protection client](./rms-client/aip-client.md) for Windows and the viewer app for iOS and Android has always supported MFA; no minimum version is required. 
+    - The Azure Information Protection clients for Windows and the viewer app for iOS and Android has always supported MFA; no minimum version is required. 
 
 -   Rights Management sharing app for Mac computers:
 
@@ -82,7 +82,7 @@ Then, configure your MFA solution:
 
 - For federated tenants (you operate federation servers on-premises):
 
-    - Configure your federation servers for Azure Active Directory or Office 365. For example, if you are using AD FS, see [Configure Additional Authentication Methods for AD FS](https://technet.microsoft.com/library/dn758113.aspx) on TechNet.
+    - Configure your federation servers for Azure Active Directory or Office 365. For example, if you are using AD FS, see [Configure Additional Authentication Methods for AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs).
 
         For more information about this scenario, see  [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) on the Office blog.
 

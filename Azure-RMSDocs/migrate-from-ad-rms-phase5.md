@@ -55,6 +55,20 @@ After you have deprovisioned your AD RMS servers, you might want to take the opp
 >[!IMPORTANT]
 > At the end of this migration, your AD RMS cluster cannot be used with Azure Information Protection and the hold your own key (HYOK) option. If you decide to use HYOK for an Azure Information Protection label, because of the redirections that are now in place, the AD RMS cluster that you use must have different licensing URLs to the ones in the clusters that you migrated.
 
+### Addition configuration for computers that run Office 2010
+
+If migrated clients run Office 2010, users might experience delays in opening protected content after our AD RMS servers are deprovisioned. Or, users might see messages that they don't have credentials to open protected content. To resolve these problems, create a network redirection for these computers, which redirects the AD RMS URL FQDN to the local IP address of the computer (127.0.0.1). You can do this by configuring the local hosts file on each computer, or by using DNS.
+
+Redirection via local hosts file:
+
+- Add the following line in the local hosts file, replacing `<AD RMS URL FQDN>` with the value for your AD RMS cluster, without prefixes or web pages:
+    
+    	127.0.0.1 <AD RMS URL FQDN>
+
+Redirection via DNS:
+    
+- Create a new host (A) record for your AD RMS URL FQDN, which has the IP address of 127.0.0.1.
+
 ## Step 11. Complete client migration tasks
 
 For mobile device clients and Mac computers: Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](https://technet.microsoft.com/library/dn673574.aspx).

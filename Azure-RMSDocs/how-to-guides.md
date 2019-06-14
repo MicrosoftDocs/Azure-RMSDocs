@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: How-to instructions for common scenarios that use Azure Information Protection. 
-description: Identify use cases that classify and protect your organization's data by using for Azure Information Protection.
+title: How-to instructions for Azure Information Protection common scenarios 
+description: Identify use cases that classify and protect your organization's data by using Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/16/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,6 +26,8 @@ ms.suite: ems
 # How-to guides for common scenarios that use Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 There are many ways in which you can use Azure Information Protection to classify and optionally, protect your organization's documents and emails. 
 

@@ -2,11 +2,11 @@
 # required metadata
 
 title: Overview of the Azure Information Protection policy
-description: Understand labels and settings in an Azure Information Protection policy. 
+description: Understand labels and settings in an Azure Information Protection policy that gets downloaded to the Azure Information Protection client. 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/27/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,6 +26,8 @@ ms.suite: ems
 # Overview of the Azure Information Protection policy
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 An Azure Information Protection policy contains the following elements that you can configure:
     

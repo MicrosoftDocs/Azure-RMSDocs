@@ -6,7 +6,7 @@ description: Conditions for a label let you automatically assign a label to a do
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,6 +27,8 @@ ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 # How to configure conditions for automatic and recommended classification for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend. 
 
@@ -40,7 +42,7 @@ An example prompt for when you configure a condition to apply a label as a recom
 
 In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by selecting **Dismiss**. If the user chooses to dismiss the recommendation and the condition still applies when the document is next opened, the label recommendation is displayed again.
 
-If you configure automatic classification rather than recommended, the label is automatically applied and the user still sees a notification in Word, Excel, and PowerPoint. However, the **Change now** and **Dismiss** buttons are replace with **OK**. In Outlook, there is no notification for automatic classification and the label is applied at the time the email is sent.
+If you configure automatic classification rather than recommended, the label is automatically applied and the user still sees a notification in Word, Excel, and PowerPoint. However, the **Change now** and **Dismiss** buttons are replaced with **OK**. In Outlook, there is no notification for automatic classification and the label is applied at the time the email is sent.
 
 > [!IMPORTANT]
 >Do not configure a label for automatic classification and a user-defined permission. The user-defined permissions option is a [protection setting](configure-policy-protection.md) that lets users specify who should be granted permissions.
@@ -108,7 +110,7 @@ When you click **Save**, your changes are automatically available to users and s
 
 ### Sensitive information types that require a minimum version of the client
 
-The following sensitive information types require the current preview version of the Azure Information Protection client:
+The following sensitive information types require a minimum version of [1.48.204.0](./rms-client/client-version-release-history.md#version-1482040) of the Azure Information Protection client:
 
 - **Azure Service Bus Connection String**
 - **Azure IoT Connection String**
@@ -121,7 +123,9 @@ The following sensitive information types require the current preview version of
 - **Azure Publish Setting Password**
 - **Azure Storage Account Key (Generic)**
 
-Additionally, the following sensitive information types are not supported for the current preview version of the Azure Information Protection client, and no longer display in the Azure portal:
+For more information about these sensitive information types, see the following blog post: [Azure Information Protection helps you to be more secure by automatically discovering credentials](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
+
+Additionally, beginning with 1.48.204.0 of the Azure Information Protection client, the following sensitive information types are not supported and no longer display in the Azure portal. If you have labels that use these sensitive information types, we recommend that you remove them because we cannot ensure correct detection for them and any references to them in the scanner reports should be ignored:
 
 - **EU Phone Number**
 - **EU GPS Coordinates**
@@ -131,5 +135,3 @@ Additionally, the following sensitive information types are not supported for th
 Consider deploying the [Azure Information Protection scanner](deploy-aip-scanner.md), which can use your automatic classification rules to discover, classify, and protect files on network shares and on-premises file stores.  
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.
-
-

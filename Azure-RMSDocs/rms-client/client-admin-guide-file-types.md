@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: File types supported by Azure Information Protection
+title: File types supported - Azure Information Protection client
 description: Technical details about supported file types, file name extensions, and levels of protection for admins who are are responsible for the Azure Information Protection client for Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/29/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,6 +28,8 @@ ms.suite: ems
 # Admin Guide: File types supported by the Azure Information Protection client
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 The Azure Information Protection client can apply the following to documents and emails:
 
@@ -217,27 +219,11 @@ To help prevent users from changing files that are critical for computer operati
 
 By default, the scanner also excludes the same file types as the Azure Information Protection client with the following exceptions:
 
-For the general availability version:
-
-- .rtf, .rar, and .zip are also excluded
-
-For the current preview version: 
-
 - .rtf, and .rar, are also excluded
 
 You can change the file types included or excluded for file inspection by the scanner:
 
-For the general availability version, use the following PowerShell cmdlets:
-
-- [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes)
-
-- [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes)
-
-- [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes)
-
-For the current preview version:
-
-- Configure **File types to scan** in the scanner profile, by [using the Azure portal](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal).
+- Configure **File types to scan** in the scanner profile, by [using the Azure portal](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal).
 
 > [!NOTE]
 > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
@@ -290,9 +276,7 @@ The Azure Information Protection scanner and the [Set-AIPFileClassification](/po
 
 1. For the computer running the scanner or the PowerShell session, install the [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
 
-2. For the scanner: Unless you are running the current preview version of the scanner, include .zip files to be inspected, as described in the [Azure Information Protection scanner](#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner) section.
-
-3. For the scanner: After finding sensitive information, if the .zip file should be classified and protected with a label, add a registry entry for this file name extension to have generic protection (pfile), as described in [Editing the registry for the scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) from the scanner deployment instructions.
+2. For the scanner: After finding sensitive information, if the .zip file should be classified and protected with a label, add a registry entry for this file name extension to have generic protection (pfile), as described in [Editing the registry for the scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) from the scanner deployment instructions.
 
 Example scenario after doing these steps: 
 
