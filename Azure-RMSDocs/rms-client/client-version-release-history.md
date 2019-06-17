@@ -88,6 +88,12 @@ This version includes the MSIPC version 1.0.3889.0419 of the RMS client.
 
 **Fixes**:
 
+- When you use File Explorer, right-click to label a file that has protection applied independently from a label, that protection is preserved. For example, a user applied custom permissions to a file.
+
+- When you replace the Do Not Forward option on an email thread with a label that's configured for user-defined permissions and Do Not Forward, original recipients can still open the email message.
+
+- Users cannot relabel a document when they are outside the scope of the permissions for the applied label.
+
 - The minimum [usage right](../configure-usage-rights.md#usage-rights-and-descriptions) to run the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet is now **Save As, Export** (EXPORT) rather than **Copy** (EXTRACT).
 
 ## Version 1.48.204.0
