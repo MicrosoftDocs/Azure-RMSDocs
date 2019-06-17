@@ -120,7 +120,7 @@ We'll now create a new sublabel for **Confidential**.
 
 3. For **Set permissions for documents and emails containing this label**, select **Protect**, which automatically opens the **Protection** blade by selecting the **Protection** option for you:
     
-    ![Configuing an Azure Information Protection label for protection](./media/info-protect-protection-bar-configured.png) 
+    ![Configuring an Azure Information Protection label for protection](./media/info-protect-protection-bar-configured.png) 
     
 4. On the **Protection** blade, make sure that **Azure (cloud key)** is selected. This option uses the Azure Rights Management service to protect documents and emails. Also make sure that the **Set Permissions** option is selected. Then select **Add permissions**.
 
