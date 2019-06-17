@@ -6,7 +6,7 @@ description: How end-user Office applications such as Word and Outlook, and Offi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/13/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
