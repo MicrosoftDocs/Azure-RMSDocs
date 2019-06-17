@@ -6,7 +6,7 @@ description: Information about RMS for individuals, a free self-service subscrip
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/02/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
