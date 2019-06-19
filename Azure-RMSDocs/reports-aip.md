@@ -284,6 +284,8 @@ Use the following table to identify the friendly name of event functions that yo
 
 |Column name|Description|
 |-----------|-----------|
+|Access|A protected document was successfully opened, identified by file name if it is tracked, or ID if not tracked.|
+|AccessDenied|A protected document was denied access, identified by file name if it is tracked, or ID if not tracked.|
 |Time|Event time: UTC in format YYYY-MM-DDTHH:MM:SS|
 |User|User: Format UPN or DOMAIN\USER|
 |ItemPath|Full item path or email subject|
