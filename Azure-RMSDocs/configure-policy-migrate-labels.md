@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/08/2019
+ms.date: 06/20/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -97,9 +97,9 @@ Azure Information Protection clients can use all label settings listed without a
 |Label configuration|Supported by unified labeling clients| Guidance for the admin centers|
 |-------------------|---------------------------------------------|-------------------------|
 |Status of enabled or disabled<br /><br />Notes: Not synchronized to the admin centers |Not applicable|The equivalent is whether the label is published or not. |
-|Label color that you select from list or specify by using RGB code |Yes|No configuration option for label colors. Instead, you can configure label colors in the Azure portal.|
+|Label color that you select from list or specify by using RGB code |Yes|No configuration option for label colors. Instead, you can configure label colors in the Azure portal or use [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).|
 |Cloud-based protection or HYOK-based protection using a predefined template |No|No configuration option for predefined templates. We do not recommend you publish a label with this configuration.|
-|Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint |No|No configuration option for user-defined permissions for these Office apps. We do not recommend you publish a label with this configuration. If you do, the results of applying the label are listed in the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
+|Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint |No|The admin centers don't have a configuration option for user-defined permissions for these Office apps. Unless you are using the preview version of the unified labeling client, we do not recommend you publish a label with this configuration. If you do, the results of applying the label are listed in the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |HYOK-based protection using user-defined permissions for Outlook (Do Not Forward) |No|No configuration option for HYOK. We do not recommend you publish a label with this configuration. If you do, the results of applying the label are listed in the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Remove protection |No|No configuration option to remove protection. We do not recommend you publish a label with this configuration.<br /><br /> If you do publish this label, when it is applied, protection will be removed if it was previously applied by a label. If protection was previously applied independently from a label, the protection is preserved.|
 |Custom font and custom font color by RGB code for visual markings (header, footer, watermark)|Yes|Configuration for visual markings is limited to a list of colors and font sizes. You can publish this label without changes although you cannot see the configured values in the admin centers. <br /><br />To change these options, you can use the Azure portal. However, for easier administration, consider changing the color to one of the listed options in the admin centers.|
@@ -119,7 +119,7 @@ Protection settings that behave the same way are not listed in the table, with t
 
 |Protection setting for a label |Azure Information Protection client|Azure Information Protection unified labeling client| Office apps with built-in labeling
 |-------------------|-----------------------------------|-----------------------------------------------------------|---------------
-|Azure (cloud key) with user-defined permissions for Word, Excel, PowerPoint, and File Explorer:| Visible in Word, Excel, PowerPoint, and File Explorer <br /><br /> When the label is applied:<br /><br /> - Users are prompted for custom permissions that are then applied as protection using a cloud-based key| Not visible |Visible in Word, Excel, PowerPoint, and Outlook: <br /><br /> When the label is applied:<br /><br /> - Users are not prompted for custom permissions and no protection is applied <br /><br /> - If protection was previously applied independently from a label, that protection is preserved [[1]](#footnote-1)|
+|Azure (cloud key) with user-defined permissions for Word, Excel, PowerPoint, and File Explorer:| Visible in Word, Excel, PowerPoint, and File Explorer <br /><br /> When the label is applied:<br /><br /> - Users are prompted for custom permissions that are then applied as protection using a cloud-based key| For the general availability release: Not visible <br /><br />  For the preview release: Visible in Word, Excel, PowerPoint, and File Explorer <br /><br /> When the label is applied:<br /><br /> - Users are prompted for custom permissions that are then applied as protection using a cloud-based key|Visible in Word, Excel, PowerPoint, and Outlook: <br /><br /> When the label is applied:<br /><br /> - Users are not prompted for custom permissions and no protection is applied <br /><br /> - If protection was previously applied independently from a label, that protection is preserved [[1]](#footnote-1)|
 |HYOK (AD RMS) with a template:| Visible in Word, Excel, PowerPoint, Outlook, and File Explorer<br /><br /> When this label is applied: <br /><br />- HYOK protection is applied to documents and emails | Visible in Word, Excel, PowerPoint, Outlook, and File Explorer  <br /><br /> When this label is applied: <br /><br />- No protection is applied and protection is removed [[2]](#footnote-2) if it was previously applied by a label <br /><br />- If protection was previously applied independently from a label, that protection is preserved |Visible in Word, Excel, PowerPoint, and Outlook <br /><br /> When this label is applied: <br /><br />- No protection is applied and protection is removed [[2]](#footnote-2) if it was previously applied by a label <br /><br />- If protection was previously applied independently from a label, that protection is preserved [[1]](#footnote-1) |
 |HYOK (AD RMS) with user-defined permissions for Word, Excel, PowerPoint, and File Explorer:| Visible in Word, Excel, PowerPoint and File Explorer<br /><br /> When this label is applied:<br /><br /> - HYOK protection is applied to documents and emails| Visible in Word, Excel, and PowerPoint <br /><br /> When this label is applied: <br /><br />- Protection is not applied and protection is removed [[2]](#footnote-2) if it was previously applied by a label <br /><br />- If protection was previously applied independently from a label, that protection is preserved|Visible in Word, Excel, and PowerPoint <br /><br /> When this label is applied: <br /><br />- Protection is not applied and protection is removed [[2]](#footnote-2) if it was previously applied by a label <br /><br />- If protection was previously applied independently from a label, that protection is preserved |
 |HYOK (AD RMS) with user-defined permissions for Outlook:|Visible in Outlook<br /><br />When this label is applied:<br /><br />- Do Not Forward using HYOK protection is applied to emails|Visible in Outlook<br /><br />When this label is applied:<br /><br /> - Protection is not applied and removed [[2]](#footnote-2) if it was previously applied by a label <br /><br />- If protection was previously applied independently from a label, that protection is preserved|Visible in Outlook<br /><br />When this label is applied:<br /><br />- Protection is not applied and removed [[2]](#footnote-2) if it was previously applied by a label <br /><br />- If protection was previously applied independently from a label, that protection is preserved [[1]](#footnote-1)|
@@ -163,6 +163,28 @@ For the labels that successfully migrated, they can now be used by [clients and 
 
 > [!IMPORTANT]
 > If you edit the labels outside the Azure portal, for Azure Information Protection clients, return to this **Azure Information Protection - Unified labeling** blade, and select **Publish**.
+
+
+#### Copy your policies and policy settings
+
+> [!NOTE]
+> This option is gradually rolling out to tenants in preview and is subject to change. If you do not see the **Copy policies (preview)** option, try again in a few weeks.
+
+After you have migrated your labels, you can select an option to copy policies. If you select this option, a one-time copy of your policies with their [policy settings](configure-policy-settings.md) and any [advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) is sent to the admin center where you manage your labels: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center.
+
+Before you select the **Copy policies (preview)** option, be aware of the following:
+
+- You cannot selectively choose policies and settings to copy. All policies (the **Global** policy and any scoped policies) are copied, and all settings that are supported as label policy settings are copied. If you already have a label policy with the same name, it will be overwritten with the policy settings in the Azure portal.
+
+- Some advanced client settings are not copied because for the Azure Information Protection unified labeling client, these are supported as *label advanced settings* rather than policy settings. You can configure these label advanced settings with [Office 365 Security & Compliance Center PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell). The advanced client settings that are not copied include:
+    - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
+    - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
+
+- To support the advanced client properties that are copied, you must use the preview version of the Azure Information Protection client.
+
+- Unlike label migration where subsequent changes to labels are synchronized, the copy policies action doesn't synchronize any subsequent changes to your policies or policy settings. You can repeat the copy policy action after making changes in the Azure portal, and any existing policies and their settings will be overwritten again. Or, use the Set-LabelPolicy or Set-Label cmdlets with the *AdvancedSettings* parameter from Office 365 Security & Compliance Center PowerShell.
+
+For more information about configuring the policy settings, advanced client settings, and label settings for the Azure Information Protection unified labeling client, see [Custom configurations for the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-customizations.md) from the admin guide.
 
 ### Clients and services that support unified labeling
 
