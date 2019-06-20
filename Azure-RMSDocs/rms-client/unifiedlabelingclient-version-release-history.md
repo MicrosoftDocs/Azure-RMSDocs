@@ -55,7 +55,7 @@ To compare features and functionality with the Azure Information Protection clie
 
 ## Versions later than 2.0.779.0
 
-**Released**: 06/19/2019
+**Released**: 06/20/2019
 
 If you have a version 2 of the client that is later than 2.0.779.0, it is a preview build for testing and evaluation purposes. 
 
