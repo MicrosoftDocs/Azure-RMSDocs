@@ -533,7 +533,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 12. Back on the **AIPOnBehalfOf - Expose an API** blade, select **+ Add a scope**.
 
-13. On the **Add a scope** blade, specify the following, and then select **Add scope**:
+13. On the **Add a scope** blade, specify the following, using the suggested strings as examples, and then select **Add scope**:
     - **Scope name**: `user-impersonation`
     - **Who can consent?**: **Admins and users**
     - **Admin consent display name**: `Access Azure Information Protection scanner`
@@ -569,7 +569,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 23. In the **Select an API** section, select **APIOnBehalfOf**, then select the checkbox for **user-impersonation**, as the permission. Select **Add permissions**. 
 
-24. Back on the **API permissions** blade, in the **Grant consent** section, select **Grant admin consent for \<your tenant name>** and select **Yes** for the confirmation prompt.
+24. Back on the **API permissions** blade, in the **Grant consent** section, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
 
 You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. From our examples:
 

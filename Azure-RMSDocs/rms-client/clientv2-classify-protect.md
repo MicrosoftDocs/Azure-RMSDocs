@@ -58,7 +58,8 @@ Or, if you have selected **Show Bar** from the **Sensitivity** button, you can s
 
 ![Azure Information Protection bar example](../media/info-protect-barv2-not-set-callout.png)
 
-To set a label, such as "**Confidential** \ **All Employees**", select **Confidential** and then **All Employees**. If you're not sure which label to apply to the current document or email, use the label tooltips to learn more about each label and when to apply it. 
+To set a label, such as "**Confidential** \ **All Employees**", select **Confidential** and then **All Employees**. If you're not sure which label to apply to the current document or email, use the label tooltips to learn more about each label and when to apply it.
+
 If a label is already applied to the document and you want to change it, you can select a different label. If you have displayed the Azure Information Protection bar, and the labels are not displayed on the bar for you to select, first click the **Edit Label** icon, next to the current label value.
 
 In addition to manually selecting labels, labels can also be applied in the following ways:
