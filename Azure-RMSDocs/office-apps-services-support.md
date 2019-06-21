@@ -17,7 +17,6 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -36,13 +35,13 @@ These applications natively support Azure Rights Management and let users apply 
 
 For example, users can configure a Word document so that it can be accessed only by people in your organization. Or, control whether an Excel spreadsheet can be edited, or restricted to read-only, or prevent it from being printed. For time-sensitive files, an expiration time can be configured for when the file can no longer be accessed. This configuration can be made directly by users or by applying a protection template. For Outlook, users can also choose the **Do Not Forward** option to help prevent data leakage.
 
-In addition to native Office support for Azure Rights Management, these applications also support the Azure Information Protection bar that is installed with the [Azure Information Protection client](./rms-client/aip-client.md). This bar displays labels that makes it easier for users to automatically apply protection to documents and emails that contain sensitive data.
+In addition to native Office support for Azure Rights Management, these applications also support the Azure Information Protection bar that is installed with the [Azure Information Protection client (classic)](./rms-client/aip-client.md). This classic client supports a protection-only mode where an information protection bar under the ribbon displays templates that makes it easier for users to apply protection to documents and emails that contain sensitive data.
 
-If you are ready to configure Office apps and the Azure Information Protection client:
+If you are ready to configure Office apps and the Azure Information Protection client (classic):
 
 - To configure Office apps, see [Office apps: Configuration for clients](configure-office-apps.md).
 
-- To install and configure the Azure Information Protection client, see [Azure Information Protection client: Installation and configuration for clients](configure-client.md).
+- To install and configure one of the Azure Information Protection clients, see [The client side of Azure Information Protection](../rms-client/use-client.md).
 
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can configure options for Azure Information Protection. This configuration lets Exchange provide the following protection solutions:
@@ -100,6 +99,8 @@ For libraries that are not IRM-protected, if you protect a file that you then up
 When you use SharePoint IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive for Business and SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
 
 Although no longer new, the following post from the Office 365 blog has some additional information that you might find useful: [What’s New with Information Rights Management in SharePoint and SharePoint Online](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
+
+For changes that coming, see [Updates to SharePoint security, administration, and migration](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
 
 If you are ready to configure SharePoint for IRM:
 
