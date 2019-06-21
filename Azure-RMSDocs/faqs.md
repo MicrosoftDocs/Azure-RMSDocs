@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/08/2019
+ms.date: 06/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -52,7 +52,7 @@ For more information about migrating your existing labels, see [How to migrate A
 
 ## What's the difference between the Azure Information Protection client and the Azure Information Protection unified labeling client?
 
-The **Azure Information Protection client** has been available since Azure Information Protection was first announced as a new service for classifying and protecting files and emails. This client downloads labels and policy settings from Azure, and you configure the Azure Information Protection policy from the Azure portal. For more information, see [Overview of the Azure Information Protection policy](overview-policy.md). 
+The **Azure Information Protection client (classic)** has been available since Azure Information Protection was first announced as a new service for classifying and protecting files and emails. This client downloads labels and policy settings from Azure, and you configure the Azure Information Protection policy from the Azure portal. For more information, see [Overview of the Azure Information Protection policy](overview-policy.md). 
 
 The **Azure Information Protection unified labeling client** is a more recent addition, to support the unified labeling store that multiple applications and services support. This client downloads sensitivity labels and policy settings from the following admin centers: The Office 365 Security & Compliance Center, the Microsoft 365 security center, and the Microsoft 365 compliance center. For more information, see [Overview of sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels).
 
@@ -64,11 +64,11 @@ Both clients, when they are installed, display **Azure Information Protection**.
 
 - From File Explorer: Right-select a file, files, or folder, select **Classify and protect**, and then select **Help and Feedback**.
 
-- From an Office application: From the **Protect** button (Azure Information Protection client) or **Sensitivity** button (Azure Information Protection unified labeling client), select **Help and Feedback**.
+- From an Office application: From the **Protect** button (the classic client) or **Sensitivity** button (unified labeling client), select **Help and Feedback**.
 
 Use the **Version** number displayed to identify the client:
 
-- A version **1**, for example, **1.48.204.0**, identifies the Azure Information Protection client.
+- A version **1**, for example, **1.48.204.0**, identifies the Azure Information Protection client (classic).
 
 - A version **2**, for example, **2.0.778.0**, identifies the Azure Information Protection unified labeling client.
 
