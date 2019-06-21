@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 06/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -73,7 +73,7 @@ Use the following table to help compare which features are supported by the two 
 |Feature|Classic client|Unified labeling client|
 |-------|-----------------------------------|----------------------------------------------------|
 |Labeling actions: Manual, recommended, automatic| Yes | Yes |
-|Central reporting (analytics):| Yes | Yes with limitations:<br /><br /> - No support for [content matches](../reports-aip.md#content-matches-for-deeper-analysis) |
+|Central reporting (analytics):| Yes | Yes |
 |Reset settings and export logs:| Yes | Yes |
 |User-defined permissions:| Yes | Yes with limitations: <br /><br />- For Outlook only (Do Not Forward): Supported<br /><br />- For Word, Excel, PowerPoint, and File Explorer: Supported with the preview client when you configure the label in the Azure portal |
 |Custom permissions:| Yes | File Explorer and PowerShell (preview version) <br /><br /> In Office apps, as an alternative, users can select **File Info** > **Protect Document** > **Restrict Access** |
