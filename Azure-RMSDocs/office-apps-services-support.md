@@ -35,13 +35,7 @@ These applications natively support Azure Rights Management and let users apply 
 
 For example, users can configure a Word document so that it can be accessed only by people in your organization. Or, control whether an Excel spreadsheet can be edited, or restricted to read-only, or prevent it from being printed. For time-sensitive files, an expiration time can be configured for when the file can no longer be accessed. This configuration can be made directly by users or by applying a protection template. For Outlook, users can also choose the **Do Not Forward** option to help prevent data leakage.
 
-In addition to native Office support for Azure Rights Management, these applications also support the Azure Information Protection bar that is installed with the [Azure Information Protection client (classic)](./rms-client/aip-client.md). This classic client supports a protection-only mode where an information protection bar under the ribbon displays templates that makes it easier for users to apply protection to documents and emails that contain sensitive data.
-
-If you are ready to configure Office apps and the Azure Information Protection client (classic):
-
-- To configure Office apps, see [Office apps: Configuration for clients](configure-office-apps.md).
-
-- To install and configure one of the Azure Information Protection clients, see [The client side of Azure Information Protection](../rms-client/use-client.md).
+If you are ready to configure Office apps see [Office apps: Configuration for clients](configure-office-apps.md).
 
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can configure options for Azure Information Protection. This configuration lets Exchange provide the following protection solutions:
