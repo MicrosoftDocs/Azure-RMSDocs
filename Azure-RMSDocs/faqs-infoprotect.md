@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -55,9 +55,9 @@ Currently, there are two clients for Windows:
 
 - The **Azure Information Protection unified labeling client** that downloads labels and policy settings from one of the following admin centers: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center. This client is now in general availability, and has a preview version for you to test additional functionality for a future release.
 
-- The **Azure Information Protection client** that downloads labels and policy settings from the Azure portal. This client builds on previous general availability versions of the client.
+- The **Azure Information Protection client (classic)** that downloads labels and policy settings from the Azure portal. This client builds on previous general availability versions of the client.
 
-We recommend you test with the Azure Information Protection unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](configure-policy-migrate-labels.md), use the Azure Information Protection client.
+We recommend you test with the unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](configure-policy-migrate-labels.md), use the classic client.
 
 For more information, including a feature and functionality comparison table, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 
