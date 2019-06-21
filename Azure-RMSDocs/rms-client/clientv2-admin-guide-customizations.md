@@ -148,7 +148,7 @@ Example PowerShell command to check your label policy settings in effect for a l
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
-|color|[Specify a color for the label](##specify-a-color-for-the-label)|
+|color|[Specify a color for the label](#specify-a-color-for-the-label)|
 |customPropertyByLabel|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |DefaultSubLabelId|[Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label) 
 |labelByCustomProperties|[Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied)|
