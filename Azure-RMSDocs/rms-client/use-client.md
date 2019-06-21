@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,17 +27,16 @@ ms.suite: ems
 
 Azure Information Protection provides a client-server solution that helps to protect an organization's documents and emails:
 
-- The client can be the Azure Information Protection client, the Azure Information Protection unified labeling client, or the Rights Management client. Whichever of these clients you use, it integrates with applications that you run on computers and mobile devices. 
-
+- The client can be the Azure Information Protection client (classic), the Azure Information Protection unified labeling client, or the Rights Management client. Whichever of these clients you use, it integrates with applications that you run on computers and mobile devices. 
 - The service resides in the cloud (Azure Information Protection, which uses the Azure Rights Management service for the data protection) or on-premises (Active Directory Rights Management Services, more commonly known as AD RMS). 
 
-The Azure Information Protection client and the Azure Information Protection unified labeling client supports classification and protection with labeling. The Azure Information Protection client also supports protection without labeling. Both clients integrate with Office applications and must be installed separately.
+The Azure Information Protection client (classic) and the Azure Information Protection unified labeling client supports classification and protection with labeling. The classic client also supports protection without labeling. Both clients integrate with Office applications and must be installed separately.
 
-The Rights Management (RMS) client is automatically installed with some applications, such as Office applications, the Azure Information Protection client and Azure Information Protection unified labeling client, and RMS-enlightened applications from software vendors. However, it can also be [installed by itself](https://www.microsoft.com/en-us/download/details.aspx?id=38396), to support [synchronizing files from IRM-protected libraries and OneDrive for Business](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668), and for developers who want to integrate rights management protection into line-of-business applications.
+The Rights Management (RMS) client is automatically installed with some applications, such as Office applications, the Azure Information Protection client (classic) and Azure Information Protection unified labeling client, and RMS-enlightened applications from software vendors. However, it can also be [installed by itself](https://www.microsoft.com/en-us/download/details.aspx?id=38396), to support [synchronizing files from IRM-protected libraries and OneDrive for Business](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668), and for developers who want to integrate rights management protection into line-of-business applications.
 
 ## Choose which Azure Information Protection client to use
 
-The **Azure Information Protection client** downloads labels and policy settings from the Azure portal. For more information about this client, see the [Azure Information Protection client: Version release history and support policy](client-version-release-history.md).
+The **Azure Information Protection client (classic)** downloads labels and policy settings from the Azure portal. For more information about this client, see the [Azure Information Protection client: Version release history and support policy](client-version-release-history.md).
 
 The **Azure Information Protection unified labeling client** downloads labels and policy settings from the admin centers: The Office 365 Security & Compliance Center, Microsoft 365 security center, and Microsoft 365 compliance center. For more information about this client, see the [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
 
@@ -47,31 +46,31 @@ Which client should you install?
     
     The preview version of the Azure Information Protection unified labeling client supports advanced client settings and user-defined permissions, but not an on-premises key (HYOK) or the scanner for on-premises data stores.
 
-- Install the Azure Information Protection client if you need a version of the client that is in general availability with advanced features that are not yet available in the current general availability unified labeling client. Your tradeoff is that the labels can't be used on other client platforms.
+- Install the Azure Information Protection client (classic) if you need a version of the client that is in general availability with advanced features that are not yet available in the current general availability unified labeling client. Your tradeoff is that the labels can't be used on other client platforms.
 
-Currently, the Azure Information Protection client and the Azure Information Protection unified labeling client don't have parity for their features. However, with the current preview, this gap is closing and you can expect new features to be added only to the Azure Information Protection unified labeling client. For this reason, we recommend you deploy the Azure Information Protection unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](../configure-policy-migrate-labels.md), use the Azure Information Protection client.
+Currently, the classic client and the unified labeling client don't have parity for their features. However, with the current preview, this gap is closing and you can expect new features to be added only to the unified labeling client. For this reason, we recommend you deploy the unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](../configure-policy-migrate-labels.md), use the classic client.
 
 You can also install both clients in the same environment to support different business requirements, as demonstrated in the following example. For this scenario, we recommend you migrate the labels in the Azure portal so that both sets of clients share the same set of labels for ease of administration.
 
 ##### Example deployment strategy:
 
-- For the majority of users, you deploy the Azure Information Protection unified labeling client because most users don't need features or functionality that are available only with the Azure Information Protection client. 
+- For the majority of users, you deploy the Azure Information Protection unified labeling client because most users don't need features or functionality that are available only with the Azure Information Protection client (classic). 
     
     For these users, their labeling experience is very similar if they also have devices that run MacOS, iOS, and Android, and these devices have a version of Office that supports sensitivity labels.
 
-- Just for yourself, you install the preview version of the Azure Information Protection unified labeling client to test the new features that include user-defined permissions and advanced client settings.
+- Just for yourself, you install the preview version of the unified labeling client to test the new features that include user-defined permissions and advanced client settings.
 
-- For a subset of users, you deploy the Azure Information Protection client because these users require labels that apply hold your own key (HYOK) protection or prompt for user-defined permissions.
+- For a subset of users, you deploy the classic client because these users require labels that apply hold your own key (HYOK) protection or prompt for user-defined permissions.
     
     For these users, they have additional features and functionality, but a slightly different experience if they also have devices that run MacOS, iOS, and Android, and these devices have a version of Office that supports sensitivity labels. For example, they see a **Protect** button rather than a **Sensitivity** button on the Office ribbon, and the Information Protection bar can be displayed by default.
 
-- You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. You deploy the Azure Information Protection client on servers to run the Azure Information Protection scanner.
+- You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. You deploy the classic client on servers to run the Azure Information Protection scanner.
 
 ### Compare the clients
 
 Use the following table to help compare which features are supported by the two Azure Information Protection clients.
 
-|Feature|Azure Information Protection client|Azure Information Protection<br /> unified labeling client|
+|Feature|Classic client|Unified labeling client|
 |-------|-----------------------------------|----------------------------------------------------|
 |Labeling actions: Manual, recommended, automatic| Yes | Yes |
 |Central reporting (analytics):| Yes | Yes with limitations:<br /><br /> - No support for [content matches](../reports-aip.md#content-matches-for-deeper-analysis) |
@@ -81,8 +80,8 @@ Use the following table to help compare which features are supported by the two 
 |Information Protection bar in Office apps:| Yes | Yes with limitations:<br /><br /> - No title or customizable tooltip<br /><br /> - Label color not displayed for applied label|
 |Labels can apply visual markings (header, footer, watermark):| Yes | Yes with limitations:<br /><br /> - Headers and footers do not support variables for dynamic values <br /><br /> - No support for Word, Excel, PowerPoint, and Outlook to have different visual markings|
 |File Explorer, right-click actions:| Yes | Yes with limitations:<br /><br /> - Can't protect PDF documents for .ppdf format <br /><br />  - No support for protection-only mode|
-|A viewer for protected files:| Yes | Yes with limitations:<br /><br /> - For generically protected files (.pfile), unlike the viewer from the Azure Information Protection client, there's no ability to save changes to the originally opened file.|
-|PowerShell commands:| Yes | Yes with limitations:<br /><br />- Cmdlets included: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions)(preview client), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />- Currently, you cannot remove protection from container files (zip, .rar, .7z, .msg, and .pst)|
+|A viewer for protected files:| Yes | Yes with limitations:<br /><br /> - For generically protected files (.pfile), unlike the viewer from the classic client, there's no ability to save changes to the originally opened file.|
+|PowerShell commands:| Yes | Yes with limitations:<br /><br />- Cmdlets included: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) (preview client), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />- Currently, you cannot remove protection from container files (zip, .rar, .7z, .msg, and .pst)|
 |Offline support for protection actions:| Yes | Yes with limitations: <br /><br />- For File Explorer and PowerShell commands, the user must be connected to the Internet to protect files. |
 |Support for disconnected computers with manual policy file management:| Yes |No |
 |HYOK support:| Yes | No<br /><br /> Labels that you migrate from the Azure portal and that are configured for HYOK protection are displayed by the Azure Information Protection unified labeling client, but do not apply protection. |
@@ -100,7 +99,7 @@ Use the following table to help compare which features are supported by the two 
 
 When both clients support the same feature, use the following table to help identify some functional differences between the two clients.
 
-|Functionality |Azure Information Protection client|Azure Information Protection<br /> unified labeling client|
+|Functionality |Classic client|Unified labeling client|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Setup:| Option to install local demo policy | No local demo policy|
 |Label selection and display when applied in Office apps:|From the **Protect** button on the ribbon <br /><br /> From the Information Protection bar (horizontal bar under the ribbon)|From the **Sensitivity** button on the ribbon<br /><br /> From the Information Protection bar (horizontal bar under the ribbon)|
@@ -119,7 +118,7 @@ For a detailed comparison of behavior differences for specific protection settin
 
 #### Features not planned to be in the Azure Information Protection unified labeling client
 
-Although the Azure Information Protection unified labeling client is still under development, the following features and behavior differences from the Azure Information Protection client are not currently planned to be available in future releases for the Azure Information Protection unified labeling client: 
+Although the Azure Information Protection unified labeling client is still under development, the following features and behavior differences from the classic client are not currently planned to be available in future releases for the unified labeling client: 
 
 - Custom permissions in Office apps: Word, Excel, and PowerPoint
 
@@ -146,7 +145,7 @@ Although the Azure Information Protection unified labeling client is still under
 
 #### Parent labels and their sublabels 
 
-The Azure Information Protection client doesn't support configurations that specify a parent label that has sublabels. These configurations include specifying a default label, and a label for recommended or automatic classification. When a label has sublabels, you can specify one of the sublabels but not the parent label.
+The Azure Information Protection client (classic) doesn't support configurations that specify a parent label that has sublabels. These configurations include specifying a default label, and a label for recommended or automatic classification. When a label has sublabels, you can specify one of the sublabels but not the parent label.
 
 For parity, the Azure Information Protection unified labeling client also doesn't support applying parent labels that have sublabels, even though you can select these labels in the admin centers. In this scenario, the Azure Information Protection unified labeling client will not apply the parent label.
 
@@ -159,4 +158,4 @@ Use the following documentation when you need more information about how to depl
 
 - [RMS client deployment notes](client-deployment-notes.md)
 
-Although the Azure Information Protection client can be used with AD RMS, the Azure Information Protection client is best suited to work with its Azure services; Azure Information Protection and its data protection service, Azure Rights Management. For a comparison of the service side for Azure Information Protection, see [Comparing Azure Information Protection and AD RMS](../compare-on-premise.md).
+Although the Azure Information Protection client (classic) can be used with AD RMS, this client is best suited to work with its Azure services; Azure Information Protection and its data protection service, Azure Rights Management. For a comparison of the service side for Azure Information Protection, see [Comparing Azure Information Protection and AD RMS](../compare-on-premise.md).
