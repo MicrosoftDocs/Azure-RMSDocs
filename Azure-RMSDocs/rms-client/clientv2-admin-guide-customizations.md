@@ -583,27 +583,27 @@ Example PowerShell commands, where your label policy is named "Global":
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell. It is supported by the preview version of the unified labeling client only.
 
-[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection unified labeling clients when that content contains sensitive information. By default, this information is not sent to Azure Information Protection analytics.
+[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection unified labeling clients when that content contains sensitive information. By default, this information is sent to Azure Information Protection analytics.
 
-To change this behavior so that this information is sent by the unified labeling client, enter the following strings for the selected label policy:
+To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
 
 - Key: **RunAuditInformationTypeDiscovery**
 
-- Value: **True**
+- Value: **False**
 
-If you do not set this advanced client setting, audit results are still sent from the unified labeling client but the information is limited to reporting when a user has accessed labeled content.
+If you set this advanced client setting, audit results are still sent from the unified labeling client but the information is limited to reporting when a user has accessed labeled content.
 
 For example:
 
-- Without this setting, you can see that a user accessed Financial.docx that is labeled **Confidential \ Sales**.
+- With this setting, you can see that a user accessed Financial.docx that is labeled **Confidential \ Sales**.
 
-- With this setting, you can see that Financial.docx contains 6 credit card numbers.
+- Without this setting, you can see that Financial.docx contains 6 credit card numbers.
     
     - If you also enable [content matches for deeper analysis](../reports-aip.md#content-matches-for-deeper-analysis), you will additionally be able to see what those credit card numbers are.
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="True"}
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="False"}
 
 ## Disable sending information type matches for a subset of users
 
