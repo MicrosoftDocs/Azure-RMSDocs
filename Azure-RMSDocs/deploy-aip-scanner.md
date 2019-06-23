@@ -196,13 +196,13 @@ Before you install the scanner, or upgrade it from an older general availability
     
     Examples:
     
-    For a local path: `C:\Folder`
+    - For a local path: `C:\Folder`
     
-    For a network share: `C:\Folder\Filename`
+    - For a network share: `C:\Folder\Filename`
     
-    For a UNC path:`\\Server\Folder`
+    - For a UNC path:`\\Server\Folder`
     
-    For a SharePoint library: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
+    - For a SharePoint library: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
     > [!TIP]
     > If you add a SharePoint path for "Shared Documents":
