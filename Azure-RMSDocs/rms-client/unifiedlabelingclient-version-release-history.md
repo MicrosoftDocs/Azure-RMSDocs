@@ -62,7 +62,11 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 **New features:**
 
-- Support for the Azure Information Protection scanner as a preview build for testing and evaluation purposes. If you are upgrading from the Azure Information Protection client (classic), be sure to read [Upgrading the Azure Information Protection scanner](client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
+- Support for the Azure Information Protection scanner as a preview build for testing and evaluation purposes. There is a supported upgrade path if you have previously installed the scanner with the classic client. See [Upgrading the Azure Information Protection scanner](client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
+    
+    Changes from the Azure Information Protection client (classic) scanner:
+    - You must specify a profile name when you install the scanner and multiple computers can share the same profile.
+    - The scanner's configuration database name is named **AIPScannerUL_\<profile_name>**.
 
 - Support for [advanced settings](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you configure with PowerShell for the Security & Compliance Center.
     
