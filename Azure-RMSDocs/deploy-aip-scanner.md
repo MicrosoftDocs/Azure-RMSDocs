@@ -273,7 +273,7 @@ The Azure AD token lets the scanner service account authenticate to the Azure In
     
     -  For the classic client: See [Specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from that client's admin guide.
     
-    -  For the unified labeling client: Use the *OnBehalfOf* parameter with Set-AIPAuthentication, as described at the end of [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) in that client's admin guide.
+    -  For the unified labeling client: Use the *OnBehalfOf* parameter with Set-AIPAuthentication, as described at the end of [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from that client's admin guide.
 
 The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** in Azure AD. When the token expires, you must repeat steps 1 and 2.
 
