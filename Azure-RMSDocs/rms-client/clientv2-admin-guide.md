@@ -228,7 +228,7 @@ Beginning with version 1.48.204.0, the upgrade process from previous versions au
 
 You can now use the rest of the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md), omitting the step to install the scanner. Because the scanner is already installed, there's no reason to install it again.
 
-#####@ Upgrading in a different order to the recommended steps
+###### Upgrading in a different order to the recommended steps
 
 when you upgrade from a version earlier than 1.48.204.0 and you don't configure the scanner in the Azure portal before you run the Update-AIPScanner command, you won't have a profile name to specify that identifies your scanner configuration settings for the upgrade process. 
 
