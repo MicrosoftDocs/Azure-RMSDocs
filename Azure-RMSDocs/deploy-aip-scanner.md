@@ -350,9 +350,9 @@ The scanner runs through the following processes when it scans files.
 ### 1. Determine whether files are included or excluded for scanning 
 The scanner automatically skips files that are excluded from classification and protection, such as executable files and system files. For more information, see the following admin guides:
 
-- For the classic client: [File types that are excluded from classification and protection]((./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
+- For the classic client: [File types that are excluded from classification and protection](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
 
-- For the unified labeling client: [File types that are excluded from classification and protection]((./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
+- For the unified labeling client: [File types that are excluded from classification and protection](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
 
 You can change this behavior by defining a list of file types to scan, or exclude from scanning. You can specify this list for the scanner to apply to all data repositories by default, and you can specify a list for each data repository. To specify this list, use the **Files types to scan** setting in the scanner profile:
 
@@ -395,7 +395,7 @@ For the file types that can't be inspected, the scanner applies the default labe
 
 As in the preceding step, the scanner cannot label the files under the following circumstances:
 
-- If the label applies classification and not protection, and the file type does not support classification only by the [classic client]](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only) or [unified labeling client](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-classification-only).
+- If the label applies classification and not protection, and the file type does not support classification only by the [classic client](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only) or [unified labeling client](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-classification-only).
 
 - If the label applies classification and protection, but the scanner does not protect the file type.
     
