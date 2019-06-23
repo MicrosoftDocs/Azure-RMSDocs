@@ -183,9 +183,9 @@ Use the following instructions to upgrade the scanner after you have upgraded th
 
 How to upgrade the scanner depends on the version of the Azure Information Protection client (classic) that you are currently running:
 
-- Upgrade from version 1.48.204.0
+- [Upgrade from version 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-version-1482040)
 
-- Upgrade from versions earlier than 1.48.204.0
+- [Upgrade from versions earlier than 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
 
 ##### Upgrade from the Azure Information Protection client (classic) version 1.48.204.0
 
