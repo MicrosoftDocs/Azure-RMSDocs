@@ -210,7 +210,7 @@ You can now use the rest of the instructions in [Deploying the Azure Information
 > [!IMPORTANT]
 > For a smooth upgrade path, do not install the the Azure Information Protection unified labeling client on the computer running the scanner as your first step to upgrade the scanner. Instead, use the following upgrade instructions.
 
-Beginning with version 1.48.204.0, the upgrade process from previous versions automatically changes the scanner to gets its configuration settings from the Azure portal. In addition, a new database is created named **AIPScannerUL_\<profile_name>**, which has an updated schema.
+Beginning with version 1.48.204.0, the scanner to gets its configuration settings from the Azure portal. In addition, a new database is created named **AIPScannerUL_\<profile_name>**, which has an updated schema.
 
 1. Use the Azure portal to create a new scanner profile that includes settings for the scanner and your data repositories with any settings that they need. For help with this step, see the [Configure the scanner in the Azure portal](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) section from the scanner deployment instructions.
     
