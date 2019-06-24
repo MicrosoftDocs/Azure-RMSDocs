@@ -120,15 +120,15 @@ The **Reset Settings** signs out the user, deletes the currently downloaded sens
     
     Typically for enterprise networks, these settings are configured by using group policy, in which case they are automatically reapplied when group policy is refreshed on the computer. However, there might be some settings that are configured one time with a script, or manually configured. In these cases, you must take additional steps to reconfigure these settings. As an example, computers might run a script one time to configure settings for redirection to Azure Information Protection because you are migrating from AD RMS and still have a Service Connection Point on your network. After resetting the client, the computer must run this script again.
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
 
 - The currently signed in user is signed out.
 
@@ -152,7 +152,7 @@ However, the Azure Information Protection unified labeling client does not curre
 
 After you have installed the Azure Information Protection unified labeling client, make sure that you give users instructions for how to label their documents and emails, and guidance for which labels to choose for specific scenarios. For example:
 
-- Online user instructions: [Azure Information Protection user guide](client-user-guide.md)
+- Online user instructions: [Azure Information Protection unified labeling user guide](clientv2-user-guide.md)
 
 - Download a customizable user guide: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
