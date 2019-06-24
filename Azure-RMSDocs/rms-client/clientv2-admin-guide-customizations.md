@@ -583,7 +583,7 @@ Example PowerShell commands, where your label policy is named "Global":
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell. It is supported by the preview version of the unified labeling client only.
 
-[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection unified labeling clients when that content contains sensitive information. By default, this information is sent to Azure Information Protection analytics.
+[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection clients when that content contains sensitive information. By default, this information is sent by the Azure Information Protection unified labeling to Azure Information Protection analytics.
 
 To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
 
