@@ -12,11 +12,11 @@
       href: requirements.md
     - name: Azure Active Directory requirements
       href: requirements-azure-ad.md
-    - name: Client device support for data protection
+    - name: Client device support for protection
       href: requirements-client-devices.md
-    - name: Application support for data protection
+    - name: Application support for protection
       href: requirements-applications.md
-    - name: On-premises server support for data protection
+    - name: On-premises server support for protection
       href: requirements-servers.md
 - name: Quickstarts
   expanded: true
