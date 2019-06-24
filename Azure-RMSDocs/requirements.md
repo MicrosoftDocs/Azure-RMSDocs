@@ -128,7 +128,7 @@ If you have a firewall or similar intervening network devices that are configure
 
 In addition to the information in the Office article, specific to Azure Information Protection:
 
-- For the unified labeling client to download labels and label policies: Allow *.protection.outlook.com over HTTPS.
+- For the unified labeling client to download labels and label policies: Allow the URL ***.protection.outlook.com** over HTTPS.
 
 - If you use a web proxy that requires authentication, you must configure it to use integrated Windows authentication with the user's Active Directory logon credentials.
 
