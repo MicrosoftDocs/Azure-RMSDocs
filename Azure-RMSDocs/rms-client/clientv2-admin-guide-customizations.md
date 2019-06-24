@@ -138,7 +138,7 @@ Label policy advanced settings are applied in the reverse order: With one except
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Enable Azure Information Protection analytics to discover sensitive information in documents](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
+|RunAuditInformationTypeDiscovery|[Disable Azure Information Protection analytics discovering sensitive information in documents](#disable-azure-information-protection-analytics-discovering-sensitive-information-in-documents)|
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
 
@@ -579,7 +579,7 @@ Example PowerShell commands, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
-## Enable Azure Information Protection analytics to discover sensitive information in documents
+## Disable Azure Information Protection analytics discovering sensitive information in documents
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell. It is supported by the preview version of the unified labeling client only.
 
@@ -595,9 +595,9 @@ If you set this advanced client setting, audit results are still sent from the u
 
 For example:
 
-- With this setting, you can see that a user accessed Financial.docx that is labeled **Confidential \ Sales**.
+- Without this setting, you can see that a user accessed Financial.docx that is labeled **Confidential \ Sales**.
 
-- Without this setting, you can see that Financial.docx contains 6 credit card numbers.
+- With this setting, you can see that Financial.docx contains 6 credit card numbers.
     
     - If you also enable [content matches for deeper analysis](../reports-aip.md#content-matches-for-deeper-analysis), you will additionally be able to see what those credit card numbers are.
 
