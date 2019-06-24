@@ -82,7 +82,7 @@ This client is replacing the Azure Information Protection client (classic). To c
     - [For email messages with attachments, apply a label that matches the highest classification of those attachments](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
     - [Add "Report an Issue" for users](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
     - [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - [Enable Azure Information Protection analytics to discover sensitive information in documents](clientv2-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - [Disable sending discovered sensitive information in documents to Azure Information Protection analytics](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
     - [Disable sending information type matches for a subset of users](clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
     - [Migrate labels from Secure Islands and other labeling solutions](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [Apply a custom property when a label is applied](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
@@ -110,6 +110,8 @@ This client is replacing the Azure Information Protection client (classic). To c
 - When a label is removed from content, protection is also removed only when it was applied as part of the label configuration. If the protection was applied independently from the label, that protection is preserved. For example, a user applied custom permissions to a file.
 
 - When automatic labeling is configured, the label applies the first time a document is saved.
+
+- Default labeling supports sublabels.
 
 ## Version 2.0.779.0
 

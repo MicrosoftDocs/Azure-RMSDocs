@@ -156,7 +156,7 @@ However, the Azure Information Protection unified labeling client does not curre
 
 After you have installed the Azure Information Protection unified labeling client, make sure that you give users instructions for how to label their documents and emails, and guidance for which labels to choose for specific scenarios. For example:
 
-- Online user instructions: [Azure Information Protection user guide](client-user-guide.md)
+- Online user instructions: [Azure Information Protection unified labeling user guide](clientv2-user-guide.md)
 
 - Download a customizable user guide: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
