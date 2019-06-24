@@ -75,7 +75,7 @@ If you have a version 2 of the client that is later than 2.0.779.0, it is a prev
     - [For email messages with attachments, apply a label that matches the highest classification of those attachments](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
     - [Add "Report an Issue" for users](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
     - [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - [Disable Azure Information Protection analytics discovering sensitive information in documents](clientv2-admin-guide-customizations.md#disable-azure-information-protection-analytics-discovering-sensitive-information-in-documents)
+    - [Disable sending discovered sensitive information in documents to Azure Information Protection analytics](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
     - [Disable sending information type matches for a subset of users](clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
     - [Migrate labels from Secure Islands and other labeling solutions](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [Apply a custom property when a label is applied](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)

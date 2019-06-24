@@ -138,7 +138,7 @@ Label policy advanced settings are applied in the reverse order: With one except
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Disable Azure Information Protection analytics discovering sensitive information in documents](#disable-azure-information-protection-analytics-discovering-sensitive-information-in-documents)|
+|RunAuditInformationTypeDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
 
@@ -579,7 +579,7 @@ Example PowerShell commands, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
-## Disable Azure Information Protection analytics discovering sensitive information in documents
+## Disable sending discovered sensitive information in documents to Azure Information Protection analytics
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell. It is supported by the preview version of the unified labeling client only.
 
