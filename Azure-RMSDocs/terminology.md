@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -37,13 +37,13 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |Active Directory Rights Management Services|Frequently abbreviated to *AD RMS*.<br /><br />A Windows Server role that provides rights management protection by using encryption and policy to help secure documents, files, and email.|
 |AD RMS|See *Active Directory Rights Management Services*.|
 |AIPService|The current name of the PowerShell module for the protection service, which replaces with the older, AADRM module.|
-AzureInformationProtection|The name of the PowerShell module for the Azure Information Protection client.
+AzureInformationProtection|The name of the PowerShell module for the Azure Information Protection client (classic) and the Azure Information Protection unified labeling client.
 |Azure Information Protection|A cloud-based service that uses labels to classify and protect documents and emails. Azure Rights Management provides the protection by using encryption, identity, and authorization policies.|
-Azure Information Protection client|The client side of Azure Information Protection that lets users, administrators, and services use the labels and settings from your Azure Information Protection policy.|
+Azure Information Protection client (classic)|Sometimes abbreviated to *classic client*.<br /><br />The original client side of Azure Information Protection that lets users, administrators, and services use the labels and settings from your Azure Information Protection policy. Now being replaced with the Azure Information Protection unified labeling client.|
 |Azure Information Protection label|An item that always applies a classification value to documents and emails, and can also protect them. When a label is applied, the label information is stored in the metadata for applications and services to read and optionally, act on it.|
 |Azure Information Protection policy|Administrator-defined configuration for clients and services that use Azure Information Protection labels and policy settings.|
 |Azure Information Protection scanner|A service that runs on Windows Server and lets you discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries.|
-|Azure Information Protection unified labeling client|The client for Windows computers that lets users, administrators, and services use the sensitivity labels and policy settings from the Office 365 Security & Compliance Center, the Microsoft 365 security center, and the Microsoft 365 compliance center.|
+|Azure Information Protection unified labeling client|Sometimes abbreviated to *unified labeling client*.<br /><br />The client for Windows computers that lets users, administrators, and services use the sensitivity labels and policy settings from the Office 365 Security & Compliance Center, the Microsoft 365 security center, and the Microsoft 365 compliance center. Replaces the Azure Information Protection client (classic).|
 |Azure RMS|See *Azure Rights Management*.|
 |Azure Information Protection viewer|An app that runs on Windows computers and mobile devices, to display protected files.|
 |Azure Rights Management|Frequently abbreviated to *Azure RMS*.<br /><br />An Azure service used by Azure Information Protection that uses encryption and policy to help secure documents, files, and email.  Also known as *Azure Rights Management service*. Previous names have included:<br /><br />- *Windows Azure Active Directory Rights Management*: Frequently abbreviated to Windows Azure AD Rights Management Service.<br /><br />- *RMS Online*: The original, proposed name, which you might sometimes see in error messages and log file entries.|

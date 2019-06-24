@@ -6,7 +6,7 @@ description: An technical overview of the Azure Information Protection service, 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 06/21/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -34,6 +34,8 @@ The following picture shows an example of Azure Information Protection in action
 
 ![Example of recommended classification for Azure Information Protection](./media/info-protect-recommend-calloutsv2.png)
 
+###### Screenshot from the [Azure Information Protection client (classic)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+
 After your content is classified (and optionally protected), you can then track and control how it is used. You can analyze data flows to gain insight into your business, detect risky behaviors and take corrective measures, track access to documents, prevent data leakage or misuse, and so on.
 
 ## How labels apply classification
@@ -44,6 +46,7 @@ For example, the following email message has been classified as "General". The l
 
 ![Example email footer and headers showing Azure Information Protection classification](./media/example-email-footerv2.png)
 
+###### Screenshot from the [Azure Information Protection client (classic)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ## How data is protected
 
@@ -71,7 +74,9 @@ For more information about Azure Rights Management protection, see [What is Azur
 
 Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture that showed this bar in Word. The same Information Protection bar is added to Excel, PowerPoint, and Outlook. For example:
 
-![Example of the Azure Information Protection bar in Excel](./media/excel2016-infoprotect-barv2.png)
+![Example of the Azure Information Protection bar in Excel](./media/excelproplus-infoprotect-bar.png)
+
+###### Screenshot from the [Azure Information Protection unified labeling client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) 
 
 This Information Protection bar makes it easy for end users to select labels for the correct classification. If required, labels can also be applied automatically to remove the guesswork for users, or to comply with your organization's policies.
 
@@ -99,9 +104,11 @@ For example, a Gmail user sees the following in an email message:
 
 ![Gmail recipient experience for OME and AIP](./media/ome-message.png)
 
-For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected:
+For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected. For example:
 
-![Selecting a label configured for Do Not Forward](./media/recipients-only-label.png)
+![Selecting a label configured for Do Not Forward](./media/recipients-only-label2.png)
+
+###### Screenshot from the [Azure Information Protection unified labeling client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 Alternatively, you can automatically provide the protection for users, by using mail flow rules that apply rights protection. 
 

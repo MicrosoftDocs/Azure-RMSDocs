@@ -193,7 +193,7 @@ If you use Intune for your software deployment method, use these instructions to
 
 1. Download the .msi version of the Azure Information Protection unified labeling client (AzInfoProtection_UL) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
-    If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment. 
+    If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment.
 
 2. For each computer that runs the .msi file, you must make sure that the following software dependencies are in place. For example, package these with the .msi version of the client or only deploy to computers that meet these dependencies:
     

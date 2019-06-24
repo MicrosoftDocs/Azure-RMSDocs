@@ -6,7 +6,7 @@ description: Information to help you configure your on-premises servers that wil
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -174,10 +174,7 @@ If your Exchange servers are running an earlier version of the operating system,
 
    -   Make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
-3. Enable IRM functionality for Exchange by [enabling IRM for internal messages](https://technet.microsoft.com/library/bb124077(v=exchg.150).aspx#Anchor_1).
-
-    > [!NOTE]
-    > By default, after you run **Set-IRMConfiguration -InternalLicensingEnabled $true**, IRM is automatically enabled for the Outlook Web App and mobile devices, in addition to enabling IRM for mailboxes. However, administrators can disable IRM at different levels, for example, for a Client Access Server, for the Outlook Web App virtual directory or the Outlook Web App mailbox policy, and for a mobile device mailbox policy. If users cannot see any of the Azure RMS templates in the Outlook Web App (after waiting a day) or on mobile devices when they can see the templates in the Outlook client, check the relevant settings to make sure that IRM is not disabled. For more information, see [Enable or Disable Information Rights Management on Client Access Servers](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx) in the Exchange documentation. 
+3. Enable IRM functionality for Exchange by using the Exchange PowerShell cmdlet [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) and set `InternalLicensingEnabled $true` and `ClientAccessServerEnabled $true`.
 
 
 ## Configuring a SharePoint server to use the connector

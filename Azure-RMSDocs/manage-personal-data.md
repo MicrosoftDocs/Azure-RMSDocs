@@ -6,7 +6,7 @@ description: Information about the personal data that is used by Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -215,15 +215,17 @@ You can turn off logging information for the Azure Information Protection client
 ## Securing and controlling access to personal information
 Personal data that you view and specify in the Azure portal is accessible only to users who have been assigned one of the following [administrator roles from Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-- **Information Protection administrator**
+- **Azure Information Protection administrator**
 
 - **Compliance administrator**
+
+- **Compliance data administrator**
 
 - **Security administrator**
 
 - **Global administrator**
 
-Personal data that you view and specify by using the AIPService module (or the older module, AADRM) is accessible only to users who have been assigned the **Information Protection administrator**, **Compliance administrator**, or **Global Administrator** roles from Azure Active Directory, or the global administrator role for the protection service.  
+Personal data that you view and specify by using the AIPService module (or the older module, AADRM) is accessible only to users who have been assigned the **Azure Information Protection administrator**, **Compliance administrator**, **Compliance data administrator**, or **Global Administrator** roles from Azure Active Directory, or the global administrator role for the protection service.
 
 ## Updating personal data
 

@@ -6,7 +6,7 @@ description: Configure and manage protection templates, also known as rights man
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -61,15 +61,15 @@ You can also create your own custom templates. Although you probably require onl
 
 If you recently obtained your subscription, your default templates are created with the following names:
 
-- **Confidential \ All Employees** that grants read and modify permissions for the protected content.
+- **Confidential \ All Employees**
 
-- **Highly Confidential \ All Employees** that grants read-only permission for the protected content.
+- **Highly Confidential \ All Employees**
 
-If you obtained your subscription some time ago, your default templates are created with the following names:
+If you obtained your subscription some time ago, your default templates might be created with the following names:
 
-- **\<organization name> - Confidential** that grants read and modify permissions for the protected content.
+- **\<organization name> - Confidential**
 
-- **\<organization name> - Confidential View Only** that grants read-only permission for the protected content. 
+- **\<organization name> - Confidential View Only** 
 
 You can rename (and reconfigure) these default templates when you use the Azure portal.
 
