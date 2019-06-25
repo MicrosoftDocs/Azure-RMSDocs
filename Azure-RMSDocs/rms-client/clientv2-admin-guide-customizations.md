@@ -32,11 +32,11 @@ ms.suite: ems
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection unified labeling client.
 
-These settings require editing the registry or specifying advanced settings by using Office 365 Security & Compliance Center PowerShell.
+These settings require editing the registry or specifying advanced settings by using [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps).
 
 ### How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell
 
-When you use [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), you can configure advanced settings that support customizations for label policies and labels. For example:
+When you use Office 365 Security & Compliance Center PowerShell, you can configure advanced settings that support customizations for label policies and labels. For example:
 
 - The setting to display the Information Protection bar in Office apps is a ***label policy advanced setting***.
 - The setting to specify a label color is a ***label advanced setting***.
