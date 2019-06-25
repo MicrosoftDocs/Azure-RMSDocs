@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configuration for Office 365 to use Azure RMS - AIP
-description: Information and instructions for admins to configure Office 365 to work with the Azure Rights Management service from Azure Information Protection.
+title: Configuration for Office 365 services to use Azure RMS - AIP
+description: Information and instructions for admins to configure Office 365 services to work with the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -24,16 +24,14 @@ ms.suite: ems
 
 ---
 
-# Office 365: Configuration for clients and online services to use the Azure Rights Management service
+# Office 365: Configuration for online services to use the Azure Rights Management service
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Because Office 365 natively supports the Azure Rights Management service from Azure Information Protection, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook, and Outlook on the web. All users have to do, is sign in to their Office applications with their Rights Management credentials. Then, they can protect files and emails, and use files and emails that have been protected by others.
-
-However, we recommend that you supplement these applications with the Azure Information Protection client, so that users get the benefit of the Office add-in and support for additional file types. For more information, see [Azure Information Protection client: Installation and configuration for clients](configure-client.md).
+Use the following sections to help you configure Exchange Online and SharePoint Online to use the Azure Rights Management service from Azure Information Protection.
 
 ## Exchange Online: IRM Configuration
-For information about how Exchange Online IRM works with the Azure Rights Management service, see the [Exchange Online and Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) section from [How Office applications and services support Azure Rights Management](office-apps-services-support.md).
+For information about how Exchange Online works with the Azure Rights Management service, see the [Exchange Online and Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) section from [How Office applications and services support Azure Rights Management](office-apps-services-support.md).
 
 Exchange Online might already be enabled to use the Azure Rights Management service. To check, run the following commands:
 
