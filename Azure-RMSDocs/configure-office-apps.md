@@ -39,7 +39,7 @@ Users who have Office for Mac must first verify their credentials before they ca
 
 1. Open Outlook and create a profile by using your Office 365 work or school account. 
 
-2. Create a new message and on the **Options** tab, select **Permissions**, and then select **Verify Credentials**. When prompted, specify your Office 365 work or school account details again, and select Sign in.
+2. Create a new message and on the **Options** tab, select **Permissions**, and then select **Verify Credentials**. When prompted, specify your Office 365 work or school account details again, and select **Sign in**.
     
     This action downloads the Azure Rights Management templates and **Verify Credentials** is now replaced with options that include **No Restrictions**, **Do Not Forward**, and any Azure Rights Management templates that are published for your tenant. 
 
