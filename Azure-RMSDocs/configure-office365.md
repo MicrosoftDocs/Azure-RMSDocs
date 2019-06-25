@@ -28,7 +28,7 @@ ms.suite: ems
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Use the following sections to help you configure Exchange Online and SharePoint Online to use the Azure Rights Management service from Azure Information Protection.
+Use the following sections to help you configure Exchange Online, SharePoint Online, and OneDrive for Business to use the Azure Rights Management service from Azure Information Protection.
 
 ## Exchange Online: IRM Configuration
 For information about how Exchange Online works with the Azure Rights Management service, see the [Exchange Online and Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) section from [How Office applications and services support Azure Rights Management](office-apps-services-support.md).
