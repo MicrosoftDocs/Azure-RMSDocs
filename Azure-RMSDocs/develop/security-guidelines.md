@@ -6,7 +6,7 @@ description: RMS-enabled applications are best built using Information Protectio
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 12/13/2018
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
