@@ -113,7 +113,7 @@
       items:
       - name: Overview
         href: configure-applications.md
-      - name: Office 365
+      - name: Office 365 services
         href: configure-office365.md
       - name: Office apps
         href: configure-office-apps.md
