@@ -44,7 +44,7 @@ This table lists the prerequisites to install and use the AIPService PowerShell 
 
 The AIPService module replaces the older module, AADRM. If you have the older module installed, uninstall it and then install the AIPService module.
 
-The newer module has aliases to the cmdlet names in the older module so that any existing scripts will continue to work. However, plan to update these references before the old module falls out of support. Support for the AADRM module will end 31 January, 2020.
+The newer module has aliases to the cmdlet names in the older module so that any existing scripts will continue to work. However, plan to update these references before the old module falls out of support. Support for the AADRM module will end July 15, 2020.
 
 If you installed the AADRM module with the Azure Rights Management Administration Tool, use **Programs and Features** to uninstall **Windows Azure AD Rights Management Administration**.
 
