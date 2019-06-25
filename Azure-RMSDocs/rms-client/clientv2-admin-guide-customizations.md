@@ -41,7 +41,7 @@ When you use [Office 365 Security & Compliance Center PowerShell](https://docs.m
 - The setting to display the Information Protection bar in Office apps is a ***label policy advanced setting***.
 - The setting to specify a label color is a ***label advanced setting***.
 
-In both cases, after [connecting to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), you specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Use the following syntax:
+In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Use the following syntax:
 
 For a label policy setting, single string value:
 
