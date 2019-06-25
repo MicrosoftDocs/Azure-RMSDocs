@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -41,7 +41,7 @@ When you use [Office 365 Security & Compliance Center PowerShell](https://docs.m
 - The setting to display the Information Protection bar in Office apps is a ***label policy advanced setting***.
 - The setting to specify a label color is a ***label advanced setting***.
 
-In both cases, you specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables), using the following syntax:
+In both cases, after [connecting to Office 365 Security & Compliance Center PowerShelll](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), you specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables), using the following syntax:
 
 For a label policy setting, single string value:
 
@@ -145,6 +145,9 @@ Example PowerShell command to check your label policy settings in effect for a l
 	(Get-LabelPolicy -Identity Global).settings
 
 #### Available advanced settings for labels
+
+> [!NOTE]
+> The Set-Label cmdlet to configure the advanced settings for labels is gradually rolling out to tenants. If you do not have this cmdlet when you connect to Office 365 Security & Compliance Center PowerShell, try again in a few weeks.
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
