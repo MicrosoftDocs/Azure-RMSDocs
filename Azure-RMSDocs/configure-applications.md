@@ -6,7 +6,7 @@ description: Instructions for admins to configure applications and services to s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 06/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -38,7 +38,7 @@ After you have deployed Azure Information Protection for your organization, use 
 > [!IMPORTANT]
 > For information about supported versions and other requirements, see [Requirements for Azure Rights Management](requirements.md).
 
--   [Office 365: Configuration for clients and online services](configure-office365.md)
+-   [Office 365: Configuration for online services](configure-office365.md)
 
     -   [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration)
 
@@ -46,7 +46,7 @@ After you have deployed Azure Information Protection for your organization, use 
 
 - [Office applications: Configuration for clients](configure-office-apps.md)
 
-	-   [Office 2019, Office 2016, and Office 2013](configure-office-apps.md#office2019-office-2016-and-office-2013)
+	-   [Office 365 apps, Office 2019, Office 2016, and Office 2013](configure-office-apps.md#office365-apps-office-2019-office-2016-and-office-2013)
 
 	-   [Office 2010](configure-office-apps.md#office2010)
 
