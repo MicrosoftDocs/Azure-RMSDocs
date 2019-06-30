@@ -146,9 +146,6 @@ Example PowerShell command to check your label policy settings in effect for a l
 
 #### Available advanced settings for labels
 
-> [!NOTE]
-> The Set-Label cmdlet to configure the advanced settings for labels is still rolling out to tenants and is not yet available in all regions. If you do not have this cmdlet when you connect to Office 365 Security & Compliance Center PowerShell, try again in a few weeks.
-
 |Setting|Scenario and instructions|
 |----------------|---------------|
 |color|[Specify a color for the label](#specify-a-color-for-the-label)|
