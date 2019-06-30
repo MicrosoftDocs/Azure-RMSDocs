@@ -56,13 +56,9 @@ You can also install both clients in the same environment to support different b
     
     For these users, their labeling experience is very similar if they also have devices that run MacOS, iOS, and Android, and these devices have a version of Office that supports sensitivity labels.
 
-- You also install the unified labeling client for yourself, to test the preview version of the Azure Information Protection scanner.
-
 - For a subset of users, you deploy the classic client because these users require labels that apply hold your own key (HYOK) protection.
     
     For these users, they have a slightly different experience if they also have devices that run MacOS, iOS, and Android, and these devices have a version of Office that supports sensitivity labels. For example, they see a **Protect** button rather than a **Sensitivity** button on the Office ribbon, and the Information Protection bar can be displayed by default.
-
-- You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. For production use, you deploy the classic client on servers to run the Azure Information Protection scanner.
 
 ### Compare the clients
 
@@ -87,7 +83,7 @@ Use the following table to help compare which features are supported by the two 
 |Label inheritance from email attachments:| Yes | Yes  |
 |Display the Do Not Forward button in Outlook| Yes | No |
 |[Customizations](client-admin-guide-customizations.md#available-advanced-client-settings) that include:<br />- Default label for email<br />- Enable custom permissions <br />- S/MIME support<br />- Report an Issue option| Yes | Yes by using [PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
-|Scanner for on-premises data stores:| Yes | Yes (in preview) |
+|Scanner for on-premises data stores:| Yes | No |
 |Track and revoke:| Yes | No |
 |Protection-only mode (no labels) using templates:| Yes | No |
 |Multilanguage support:| Yes | No |

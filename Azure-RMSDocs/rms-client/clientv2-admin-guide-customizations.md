@@ -623,7 +623,7 @@ Example PowerShell command, where your label policy is named "Global":
 
 This configuration uses a label [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-This configuration is not compatible with protected PDF files that have a .ppdf file name extension. These files cannot be opened by File Explorer, PowerShell, or the scanner.
+This configuration is not compatible with protected PDF files that have a .ppdf file name extension. These files cannot be opened by the client using File Explorer or PowerShell.
 
 For Office documents that are labeled by Secure Islands, you can relabel these documents with a sensitivity label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents. 
 
@@ -639,7 +639,7 @@ This configuration requires you to specify an advanced setting named **labelByCu
 
 `[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
 
-Specify your choice of a migration rule name. Use a descriptive name that helps you to identify how one or more labels from your previous labeling solution should be mapped to sensitivity label. The name displays in the scanner reports and in Event Viewer.
+Specify your choice of a migration rule name. Use a descriptive name that helps you to identify how one or more labels from your previous labeling solution should be mapped to sensitivity label.
 
 Note that this setting does not remove the original label from the document or any visual markings in the document that the original label might have applied. To remove headers and footers, see the earlier section, [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions).
 
