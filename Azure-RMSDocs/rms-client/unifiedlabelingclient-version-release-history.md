@@ -56,9 +56,9 @@ Use the following information to see what’s new or changed for a supported rel
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the clients](use-client.md#compare-the-clients).
 
-## Version 2.0.xxx.0
+## Version 2.2.14.0
 
-**Released**: 07/09/2019
+**Released**: 07/16/2019
 
 **New features:**
 
