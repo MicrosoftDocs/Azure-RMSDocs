@@ -46,7 +46,7 @@ Which client should you install?
 
 - Install the Azure Information Protection client (classic) if you need a version of the client that has features that are not yet available with the unified labeling client. Your tradeoff is that the labels can't be used on other client platforms and administration using another management portal.
 
-The latest general availability version of the unified labeling client brings it to close parity in features with the classic client. As this gap closes, you can expect new features to be added only to the unified labeling client. For this reason, we recommend you deploy the unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](../configure-policy-migrate-labels.md), use the classic client.
+Currently, the classic client and the unified labeling client don't have parity for their features. However, this gap is closing and you can expect new features to be added only to the unified labeling client. For this reason, we recommend you deploy the unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](../configure-policy-migrate-labels.md), use the classic client.
 
 You can also install both clients in the same environment to support different business requirements, as demonstrated in the following example. For this scenario, we recommend you migrate the labels in the Azure portal so that both sets of clients share the same set of labels for ease of administration.
 
@@ -59,6 +59,8 @@ You can also install both clients in the same environment to support different b
 - For a subset of users, you deploy the classic client because these users require labels that apply hold your own key (HYOK) protection.
     
     For these users, they have a slightly different experience if they also have devices that run MacOS, iOS, and Android, and these devices have a version of Office that supports sensitivity labels. For example, they see a **Protect** button rather than a **Sensitivity** button on the Office ribbon, and the Information Protection bar can be displayed by default.
+
+- You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. You deploy the classic client on servers to run the Azure Information Protection scanner.
 
 ### Compare the clients
 
@@ -152,4 +154,4 @@ Use the following documentation when you need more information about how to depl
 
 - [RMS client deployment notes](client-deployment-notes.md)
 
-Although the Azure Information Protection client (classic) can be used with AD RMS, this client is best suited to work with its Azure services; Azure Information Protection and its data protection service, Azure Rights Management. For a comparison of the service side for Azure Information Protection, see [Comparing Azure Information Protection and AD RMS](../compare-on-premise.md).
+Although the Azure Information Protection client (classic) can be used with AD RMS, this client is best suited to work with its Azure services; Azure Information Protection and its protection service, Azure Rights Management. For a comparison of the service side for Azure Information Protection, see [Comparing Azure Information Protection and AD RMS](../compare-on-premise.md).
