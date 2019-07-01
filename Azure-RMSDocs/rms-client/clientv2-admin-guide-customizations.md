@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -32,16 +32,16 @@ ms.suite: ems
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection unified labeling client.
 
-These settings require editing the registry or specifying advanced settings by using Office 365 Security & Compliance Center PowerShell.
+These settings require editing the registry or specifying advanced settings. The advanced settings use [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps).
 
 ### How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell
 
-When you use [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), you can configure advanced settings that support customizations for label policies and labels. For example:
+When you use Office 365 Security & Compliance Center PowerShell, you can configure advanced settings that support customizations for label policies and labels. For example:
 
 - The setting to display the Information Protection bar in Office apps is a ***label policy advanced setting***.
 - The setting to specify a label color is a ***label advanced setting***.
 
-In both cases, you specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables), using the following syntax:
+In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Use the following syntax:
 
 For a label policy setting, single string value:
 
@@ -138,7 +138,7 @@ Label policy advanced settings are applied in the reverse order: With one except
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Enable Azure Information Protection analytics to discover sensitive information in documents](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
+|RunAuditInformationTypeDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
 
@@ -218,13 +218,13 @@ When you configure this setting, it removes the **Not now** option so that users
 
 For the selected label policy, specify the following strings:
 
-- Key: **PostponeMandatoryBeforeSaveProperty**
+- Key: **PostponeMandatoryBeforeSave**
 
 - Value: **False**
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSaveProperty="False"}
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
 
 ## Remove headers and footers from other labeling solutions
 
@@ -450,28 +450,6 @@ When these conditions are met and the recipient's email address is not included 
 
 - **Block**: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
 
-The resulting action is logged to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**:
-
-- Warn messages: Information ID 301
-
-- Justify messages: Information ID 302
-
-- Block messages: Information ID 303
-
-Example event entry from a justify message:
-
-```
-Client Version: 2.0.779.0
-Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
-Item Full Path: Price list.msg
-Item Name: Price list
-Process Name: OUTLOOK
-Action: Justify
-User Justification: My manager approved sharing of this content
-Action Source: 
-User Response: Confirmed
-```
-The following sections contain configuration instructions for each advanced client setting.
 
 > [!TIP]
 > Although the tutorial is for the Azure Information Protection client rather than the unified labeling client, you can see these advanced settings in action for yourself with [Tutorial: Configure Azure Information Protection to control oversharing of information using Outlook](../infoprotect-oversharing-tutorial.md).
@@ -601,19 +579,19 @@ Example PowerShell commands, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
-## Enable Azure Information Protection analytics to discover sensitive information in documents
+## Disable sending discovered sensitive information in documents to Azure Information Protection analytics
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell. It is supported by the preview version of the unified labeling client only.
 
-[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection unified labeling clients when that content contains sensitive information. By default, this information is not sent to Azure Information Protection analytics.
+[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection clients when that content contains sensitive information. By default, this information is sent by the Azure Information Protection unified labeling to Azure Information Protection analytics.
 
-To change this behavior so that this information is sent by the unified labeling client, enter the following strings for the selected label policy:
+To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
 
 - Key: **RunAuditInformationTypeDiscovery**
 
-- Value: **True**
+- Value: **False**
 
-If you do not set this advanced client setting, audit results are still sent from the unified labeling client but the information is limited to reporting when a user has accessed labeled content.
+If you set this advanced client setting, audit results are still sent from the unified labeling client but the information is limited to reporting when a user has accessed labeled content.
 
 For example:
 
@@ -625,7 +603,7 @@ For example:
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="True"}
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="False"}
 
 ## Disable sending information type matches for a subset of users
 
@@ -635,7 +613,7 @@ When you select the checkbox for [Azure Information Protection analytics](../rep
 
 - Key: **LogMatchedContent**
 
-- Value: **Disable**
+- Value: **False**
 
 Example PowerShell command, where your label policy is named "Global":
 
@@ -653,7 +631,7 @@ As a result of this configuration option, the new sensitivity label is applied b
 
 - For Office documents: When the document is opened in the desktop app, the new sensitivity label is shown as set and is applied when the document is saved.
 
-- For PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) can apply the new sensitivity label. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) doesn't display the new sensitivity label until it is set by another method.
+- For PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) can apply the new sensitivity label.
 
 - For File Explorer: In the Azure Information Protection dialog box, the new sensitivity label is shown but isn't set.
 
