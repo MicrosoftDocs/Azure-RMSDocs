@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -103,7 +103,7 @@ The client logs user activity to the local Windows event log **Applications and 
 
 The events for Outlook warn, justify, and block messages require the current general availability client and advanced client settings. For more information, see [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
-For information about usage logging for the protection service, see [Logging and analyzing usage of the Azure Rights Management service](../log-analyze-usage.md).
+For information about usage logging for the protection service, see [Logging and analyzing the protection usage from Azure Information Protection](../log-analyze-usage.md)
 
 ## Next steps
 Now that you've identified all the log files associated with the Azure Information Protection client, see the following for additional information that you might need to support this client:
