@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 07/03/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -72,7 +72,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
         
         Tip: To help you reconfigure these labels, you might find it useful to have two browser windows: One window in which you select the **Edit Template** button for the label to view the protection settings, and the other window to configure the same settings when you select **Set permissions**.
     
-    - After a label with cloud-based protection settings has been migrated, the resulting scope of the protection template is the scoped that is defined in the Azure portal (or by using the AADRM PowerShell module) and the scope that is defined in the admin centers. 
+    - After a label with cloud-based protection settings has been migrated, the resulting scope of the protection template is the scoped that is defined in the Azure portal (or by using the AIPService PowerShell module) and the scope that is defined in the admin centers. 
 
 - When you migrate your labels, you will see the migration results display whether a label was **created**, **updated**, or **renamed** because of duplication:
 
