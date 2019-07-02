@@ -6,7 +6,7 @@ description: Phase 2 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -112,11 +112,11 @@ Open a PowerShell session and run the following commands:
 
 1. Connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
     
-        Connect-Aadrmservice
+        Connect-AipService
 
 2. Activate the Azure Rights Management service:
     
-        Enable-Aadrm
+        Enable-AipService
 
 **What if your Azure Information Protection tenant is already activated?** If the Azure Rights Management service is already activated for your organization, and you have created custom templates that you want to use after the migration, you must export and import these templates. This procedure is covered in the next step. 
 
@@ -140,11 +140,11 @@ The template changes that you might need to make for this step:
 
 If you created custom templates before the migration, either before or after activating the Azure Rights Management service, templates will not be available to users after the migration, even if they were set to **Published**. To make them available to users, you must first do the following: 
 
-1. Identify these templates and make a note of their template ID, by running the [Get-AadrmTemplate](/powershell/aadrm/vlatest/get-aadrmtemplate). 
+1. Identify these templates and make a note of their template ID, by running the [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate). 
 
-2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate).
+2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate).
 
-3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate).
+3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd).
 
 You can then publish or archive these templates as you would any other template that you create after the migration.
 

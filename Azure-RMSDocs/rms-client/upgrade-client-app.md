@@ -6,7 +6,7 @@ description: Instructions for users who have upgraded from the RMS sharing appli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -52,7 +52,7 @@ If you're looking for a specific option that you're used to selecting with the R
 |-----------|--------------------|
 |**Share Protected**|This option is no longer available from the Office ribbon. Instead of sharing directly from within your Office application, use File Explorer's right-click option, **Classify and protect** to protect a copy of the document with custom permissions, and then share the file using your choice of email client, or sharing location. <br /><br /> You can also attach an unprotected Office document to an email that you protect, and the document is automatically protected with the same restrictions. However, you cannot track and revoke this document.
 |**Email me when somebody tries to open these documents**|Use the document tracking site to configure your preferred email notification setting: Locate the protected document that you shared > **Settings** > **Email notifications**
-|**Allow me to instantly revoke access to these documents**|This option is no longer available. Use administrator-defined protection settings that do not allow offline access. Additionally, an administrator can reduce the use license validity period for your tenant, by running [Set-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/set-aadrmmaxuselicensevaliditytime).
+|**Allow me to instantly revoke access to these documents**|This option is no longer available. Use administrator-defined protection settings that do not allow offline access. Additionally, an administrator can reduce the use license validity period for your tenant, by running [Set-AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime).
 |**Track Usage** in Outlook|The ability to access the document tracking site from Outlook is no longer available. Instead, use the **Track and revoke** option from Word, PowerPoint, Excel, or File Explorer. Or, using a browser, you can go directly to the [document tracking site](https://go.microsoft.com/fwlink/?LinkId=529562).
 
 ## Next steps
