@@ -1,12 +1,11 @@
 ---
 title: class mip::ExecutionState 
 description: Documents the mip::executionstate class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 07/02/2019
 ---
 
 # class mip::ExecutionState 
@@ -71,7 +70,7 @@ Get the new label's assignment method.
   
 **Returns**: The assignment method STANDARD, PRIVILEGED, AUTO. 
   
-**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod)
+**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod-enum)
   
 ### GetNewLabelExtendedProperties function
 Return new label's extended properties.
@@ -98,7 +97,7 @@ Gets the content format.
   
 **Returns**: DEFAULT, EMAIL 
   
-**See also**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat)
+**See also**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat-enum)
   
 ### GetSupportedActions function
 Gets a masked enum describing all the supported action types.

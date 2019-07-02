@@ -30,7 +30,6 @@ public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const st
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::iostream\>& stdIOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::iostream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an [Stream](class_mip_stream.md) from a buffer.
 
-
 ### Namespace mip::auditmetadatakeys
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
@@ -38,7 +37,6 @@ public std::string Sender()       |  Audit metadata keys in string representatio
 public std::string Recipients()       | _Not yet documented._
 public std::string LastModifiedBy()       | _Not yet documented._
 public std::string LastModifiedDate()       | _Not yet documented._
-
 
 ### Namespace mip::rights
 

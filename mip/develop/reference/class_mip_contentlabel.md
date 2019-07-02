@@ -1,12 +1,11 @@
 ---
 title: class mip::ContentLabel 
 description: Documents the mip::contentlabel class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 07/02/2019
 ---
 
 # class mip::ContentLabel 
@@ -36,7 +35,7 @@ Get the assignment method of the label.
   
 **Returns**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
   
-**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod)
+**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod-enum)
   
 ### GetExtendedProperties function
 Gets extended properties.

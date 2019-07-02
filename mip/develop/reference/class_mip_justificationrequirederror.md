@@ -1,12 +1,11 @@
 ---
 title: class mip::JustificationRequiredError 
 description: Documents the mip::justificationrequirederror class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 07/02/2019
 ---
 
 # class mip::JustificationRequiredError 
@@ -16,7 +15,6 @@ ms.date: 01/28/2019
 --------------------------------|---------------------------------------------
 public virtual std::shared_ptr\<Error\> Clone() const  |  Clone the error.
 public char const* what() const  |  Get the error message.
-public std::shared_ptr\<Error\> Clone() const  |  Clone the error.
 public virtual ErrorType GetErrorType() const  |  Get the error type.
 public virtual const std::string& GetErrorName() const  |  Get the error name.
 public virtual const std::string& GetMessage() const  |  Get the error message.
@@ -29,7 +27,7 @@ Clone the error.
 
   
 **Returns**: A clone of the error.
-
+  
 ### what function
 Get the error message.
 
@@ -59,3 +57,4 @@ Set the error message.
 
 Parameters:  
 * **msg**: the error message.
+

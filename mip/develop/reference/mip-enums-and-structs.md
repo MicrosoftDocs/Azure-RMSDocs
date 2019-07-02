@@ -15,21 +15,21 @@ ms.date: 01/28/2019
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-enum ActionSource       |  defines what triggered the SetLabel event
-enum ActionType       |  Different action types.
-enum AssignmentMethod       |  The assignment method of the label on the document. Whether the Assignment of the label was done automatically, standard or as a privileged operation (The equivalent to an administrator operation).
-enum Consent       |  A user's response when consent is requested to connect to a service endpoint.
-enum ContentFormat       |  Content format.
+enum WatermarkLayout       |  Layout for watermarks.
 enum ContentMarkAlignment       |  Alignment for content marks (content header or content footer).
+enum AssignmentMethod       |  The assignment method of the label on the document. Whether the Assignment of the label was done automatically, standard or as a privileged operation (The equivalent to an administrator operation).
+enum ActionSource       |  defines what triggered the SetLabel event
 enum DataState       |  Defines what state of the data is the application acting upon.
+enum ContentFormat       |  Content format.
+enum Consent       |  A user's response when consent is requested to connect to a service endpoint.
 enum ErrorType       | _Not yet documented._
 enum HttpRequestType       |  HTTP request type.
 enum LogLevel       |  Different log levels used across the MIP SDK.
 enum ProtectionHandlerCreationOptions       |  Bit flags that dictate additional policy creation behavior.
 enum ProtectionType       |  Describes whether protection is based off a template or ad-hoc (custom)
-enum WatermarkLayout       |  Layout for watermarks.
-struct ApplicationInfo  |  A struct that includes application specific information.
-struct PublishingLicenseContext  |  Holds the details of a Publishing License used to create a protection handler.
+enum ActionType       |  Different action types.
+struct mip::ApplicationInfo  |  A struct that includes application specific information.
+struct mip::PublishingLicenseContext  |  Holds the details of a Publishing License used to create a protection handler.
   
 ## Enumerations (mip)
 

@@ -1,12 +1,11 @@
 ---
 title: class mip::NoPermissionsError 
 description: Documents the mip::nopermissionserror class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 07/02/2019
 ---
 
 # class mip::NoPermissionsError 
@@ -25,7 +24,7 @@ public virtual const std::string& GetMessage() const  |  Get the error message.
 public virtual void SetMessage(const std::string& msg)  |  Set the error message.
   
 ## Members
-
+  
 ### GetReferrer function
 Gets the contact in case of missing rights to the document.
 
@@ -35,6 +34,7 @@ Gets the contact in case of missing rights to the document.
 ### GetOwner function
 _Not documented yet._
 
+  
 ### what function
 Get the error message.
 
@@ -70,3 +70,4 @@ Set the error message.
 
 Parameters:  
 * **msg**: the error message.
+

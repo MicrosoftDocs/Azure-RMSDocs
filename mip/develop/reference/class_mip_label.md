@@ -1,12 +1,11 @@
 ---
 title: class mip::Label 
 description: Documents the mip::label class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 07/02/2019
 ---
 
 # class mip::Label 
