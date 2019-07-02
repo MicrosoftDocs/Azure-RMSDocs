@@ -531,7 +531,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
 > [!TIP]
 > You can also use this script to configure IRM for a SharePoint Online library. For this configuration, you will likely want to enable the additional option **Do not allow users to upload documents that do not support IRM**, to ensure that the library contains only protected documents.    To do that, add the `-IrmReject` parameter to the Set-IrmConfiguration command in the script.
 >
-> You would also need to modify the `$webUrls` variable (for example, **https://contoso.sharepoint.com**) and  `$listTitle` variable (for example, **$Reports**).
+> You would also need to modify the `$webUrls` variable (for example, **https:\//contoso.sharepoint.com**) and  `$listTitle` variable (for example, **$Reports**).
 
 If you need to disable IRM for user's OneDrive for Business libraries, see the [Script to disable IRM for OneDrive for Business](#script-to-disable-irm-for-onedrive-for-business) section.
 
