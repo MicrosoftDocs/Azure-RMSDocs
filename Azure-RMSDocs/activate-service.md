@@ -77,7 +77,7 @@ Alternatively, you can use the following PowerShell commands:
 
 2. From a PowerShell session, run [Connect-AipService](/powershell/module/aipservice/connect-aipservice), and when prompted, provide the Global Administrator account details for your Azure Information Protection tenant.
 
-3. Run [get-aipservice](/powershell/aipservice/get-aipservice) to confirm whether the protection service is activated. A status of **Enabled** confirms activation; **Disabled** indicates that the service is deactivated.
+3. Run [Get-AipService](/powershell/aipservice/get-aipservice) to confirm whether the protection service is activated. A status of **Enabled** confirms activation; **Disabled** indicates that the service is deactivated.
 
 4. To activate the service, run [Enable-AipService](/powershell/aipservice/enable-aipservice).
 
