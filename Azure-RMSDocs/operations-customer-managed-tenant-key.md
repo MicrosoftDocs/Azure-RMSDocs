@@ -6,7 +6,7 @@ description: Information about the life cycle operations that are relevant if yo
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -53,9 +53,9 @@ To rekey to another key that you manage, you can either create a new key in Azur
 
 1. Only if the new key is in a different key vault to the one you are already using for Azure Information Protection: Authorize Azure Information Protection to use the key vault, by using the [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet.
 
-2. If Azure Information Protection doesn't already know about the key you want to use, run [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) cmdlet.
+2. If Azure Information Protection doesn't already know about the key you want to use, run [Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) cmdlet.
 
-3. Configure the tenant key object, by using the run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet.
+3. Configure the tenant key object, by using the run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) cmdlet.
 
 For more information about each of these steps:
 

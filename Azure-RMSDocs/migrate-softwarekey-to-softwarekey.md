@@ -6,7 +6,7 @@ description: Instructions that are part of the migration path from AD RMS to Azu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -38,14 +38,14 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
 
 ## To import the configuration data to Azure Information Protection
 
-1. On an Internet-connected workstation, use the [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet to connect to the Azure Rights Management service:
+1. On an Internet-connected workstation, use the [Connect-AipService](/powershell/aipservice/connect-aipservice) cmdlet to connect to the Azure Rights Management service:
 
     ```
-    Connect-AadrmService
+    Connect-AipService
     ```
     When prompted, enter your Azure Rights Management tenant administrator credentials (typically, you will use an account that is a global administrator for Azure Active Directory or Office 365).
 
-2. Use the [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) cmdlet to upload each exported trusted publishing domain (.xml) file. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. 
+2. Use the [Import-AipServiceTpd](/powershell/aipservice/import-aadrmtpd) cmdlet to upload each exported trusted publishing domain (.xml) file. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. 
     
     To run this cmdlet, you will need the password that you specified earlier for each configuration data file. 
     
@@ -55,15 +55,15 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     
     Enter the password that you specified to export the first configuration data file. Then, using E:\contosokey1.xml as an example for that configuration file, run the following command and confirm that you want to perform this action:
     ```
-    Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
+    Import-AipServiceTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
     ```
     
-3. When you have uploaded each file, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to identify the imported key that matches the currently active SLC key in AD RMS. This key will become the active tenant key for your Azure Rights Management service.
+3. When you have uploaded each file, run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) to identify the imported key that matches the currently active SLC key in AD RMS. This key will become the active tenant key for your Azure Rights Management service.
 
-4.  Use the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
+4.  Use the [Disconnect-AipServiceService](/powershell/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
-    Disconnect-AadrmService
+    Disconnect-AipServiceService
     ```
 
 You’re now ready to go to [Step 5. Activate the Azure Rights Management service](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).

@@ -7,7 +7,7 @@ keywords:
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 03/13/2017
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -39,24 +39,24 @@ Getting Azure set up for this app requires you to create a Tenant ID, a Symmetri
 
 ### Azure AD Tenant configuration
 
-To configure the Azure AD environment for Azure Information Protection, follow the guidance in [Activating Azure Rights Management](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
+To configure the Azure AD environment for Azure Information Protection, follow the guidance in [Activating the protection service from Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
 
-Once the service is activated you will need PowerShell components for the next steps. Follow [Administering the Azure Rights Management service by using Windows PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) to accomplish this.
+Once the service is activated you will need PowerShell components for the next steps. Follow [Administering protection from Azure Information Protection by using PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) to accomplish this.
 
 ### Getting your Tenant ID
 
 - As an administrator, run PowerShell.
-- Import the RMS module: `Import-Module AADRM`
-- Connect to the service with the assigned user credentials: `Connect-AadrmService –Verbose`
-- Ensure RMS is enabled: `Enable-AADRM`
-- Get your tenant ID by running: `Get-AadrmConfiguration`
+- Import the RMS module: `Import-Module AIPService`
+- Connect to the service with the assigned user credentials: `Connect-AipService –Verbose`
+- Ensure RMS is enabled: `enable-aipservice`
+- Get your tenant ID by running: `Get-AipServiceConfiguration`
 
 >Record the BPOSId (tenant ID) value. You will need it in future steps.
 
 *Example output*
 ![cmdlet output](../media/develop/output-of-Get-AadrmConfiguration.png)
 
-- Disconnect from the service: `Disconnect-AadrmService`
+- Disconnect from the service: `Disconnect-AipServiceService`
 
 ### Create a service Principal
 Follow these steps to create a Service Principal:
