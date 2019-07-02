@@ -1,10 +1,11 @@
 ---
 title: class mip::NoPolicyError 
 description: Documents the mip::nopolicyerror class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.collection: M365-security-compliance
+ms.author: mbaldwin
 ms.date: 07/02/2019
 ---
 

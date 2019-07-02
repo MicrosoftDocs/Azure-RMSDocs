@@ -1,10 +1,11 @@
 ---
 title: class mip::AdhocProtectionRequiredError 
 description: Documents the mip::adhocprotectionrequirederror class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.collection: M365-security-compliance
+ms.author: mbaldwin
 ms.date: 07/02/2019
 ---
 
