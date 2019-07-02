@@ -38,14 +38,14 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
 
 ## To import the configuration data to Azure Information Protection
 
-1. On an Internet-connected workstation, use the [Connect-AipService](/powershell/aipservice/connect-aipservice) cmdlet to connect to the Azure Rights Management service:
+1. On an Internet-connected workstation, use the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet to connect to the Azure Rights Management service:
 
     ```
     Connect-AipService
     ```
     When prompted, enter your Azure Rights Management tenant administrator credentials (typically, you will use an account that is a global administrator for Azure Active Directory or Office 365).
 
-2. Use the [Import-AipServiceTpd](/powershell/aipservice/import-aadrmtpd) cmdlet to upload each exported trusted publishing domain (.xml) file. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. 
+2. Use the [Import-AipServiceTpd](/powershell/module/aipservice/import-aadrmtpd) cmdlet to upload each exported trusted publishing domain (.xml) file. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. 
     
     To run this cmdlet, you will need the password that you specified earlier for each configuration data file. 
     
@@ -60,7 +60,7 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     
 3. When you have uploaded each file, run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) to identify the imported key that matches the currently active SLC key in AD RMS. This key will become the active tenant key for your Azure Rights Management service.
 
-4.  Use the [Disconnect-AipServiceService](/powershell/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
+4.  Use the [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
     Disconnect-AipServiceService

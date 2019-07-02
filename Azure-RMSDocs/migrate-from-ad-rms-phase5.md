@@ -137,7 +137,7 @@ To rekey your Azure Information Protection tenant key:
     
     	(Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **If your tenant key is managed by you (BYOK)**: In Azure Key Vault, repeat your key creation process for your Azure Information Protection tenant, and then run the [Use-AipServiceKeyVaultKey](/powershell/aipservice/use-aipservicekeyvaultkey) cmdlet again to specify the URI for this new key. 
+- **If your tenant key is managed by you (BYOK)**: In Azure Key Vault, repeat your key creation process for your Azure Information Protection tenant, and then run the [Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) cmdlet again to specify the URI for this new key. 
 
 For more information about managing your Azure Information Protection tenant key, see [Operations for your Azure Information Protection tenant key](./operations-tenant-key.md).
 
