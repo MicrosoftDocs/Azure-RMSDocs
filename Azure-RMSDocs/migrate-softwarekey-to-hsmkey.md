@@ -142,7 +142,7 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
 
 1. Azure Information Protection administrator: On the Internet-connected workstation and in the PowerShell session, copy over your new configuration data files (.xml) that have the SLC key removed after running the TpdUtil tool.
 
-2. Upload each .xml file, by using the [Import-AipServiceTpd](/powershell/aipservice/import-aadrmtpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
+2. Upload each .xml file, by using the [Import-AipServiceTpd](/powershell/module/aipservice/import-aadrmtpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
 
     To run this cmdlet, you need the password that you specified earlier for the configuration data file, and the URL for the key that was identified in the previous step.
 
@@ -162,13 +162,13 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
 
 3. When you have uploaded each file, run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) to specify which imported key matches the currently active SLC key in your AD RMS cluster.
 
-4. Use the [Disconnect-AipServiceService](/powershell/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
+4. Use the [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
     Disconnect-AipServiceService
     ```
 
-If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AipServiceKeys](/powershell/aipservice/get-aipservicekeys) Azure RMS cmdlet.
+If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Azure RMS cmdlet.
 
 
 You’re now ready to go to [Step 5. Activate the Azure Rights Management service](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
