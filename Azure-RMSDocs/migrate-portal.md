@@ -6,7 +6,7 @@ description: At-a-glance admin tasks in the Azure portal that you used to do in 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/08/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -47,9 +47,9 @@ Use the following information to help you quickly transition to the current port
 |Archive a template|Set the label status to **Disabled**.
 |Create a scoped template|Create a scoped policy and create a label in this scope that applies protection. <br /><br />For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md).
 |Copy a template|You can't copy a template in the Azure portal. If you want two labels to have the same protection settings, you must set the permissions on each label. <br /><br />For more information, see [To configure a label for protection settings](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
-|Delete a template|Deleting templates can result in inaccessible data, so the Azure portal doesn't support this action. However, you can delete the label and then use the PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet to remove the template. <br /><br />For more information, see [How to delete or reorder a label for Azure Information Protection](configure-policy-delete-reorder.md).
+|Delete a template|Deleting templates can result in inaccessible data, so the Azure portal doesn't support this action. However, you can delete the label and then use the PowerShell [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate) cmdlet to remove the template. <br /><br />For more information, see [How to delete or reorder a label for Azure Information Protection](configure-policy-delete-reorder.md).
 |Multi-language support|From the **Manage** menu selection, select **Languages** to export the customizable fields that include the template name and description. Translate the strings, and then import these strings into the portal. <br /><br />For more information, see [How to configure labels and templates for different languages in Azure Information Protection](configure-policy-languages.md).
-|Rights Management web reports|[Centralized reporting for Azure Information Protection](reports-aip.md) is now in preview.<br /><br />You can also use the PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet to download usage logs for the Azure Rights Management service. You can then use this data to create customized reports. For more information, see [Logging and analyzing usage of the Azure Rights Management service](log-analyze-usage.md).
+|Rights Management web reports|[Centralized reporting for Azure Information Protection](reports-aip.md) is now in preview.<br /><br />You can also use the PowerShell [get-aipserviceUsageLog](/powershell/module/aipservice/get-aipserviceUsageLog) cmdlet to download usage logs for the Azure Rights Management service. You can then use this data to create customized reports. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](log-analyze-usage.md).
 |Activate and deactivate the Rights Management service|From the **Manage** menu options, select **Protection activation**.<br /><br />For more information, see [How to activate Azure Rights Management from the Azure portal](activate-azure.md).
 
 Before you edit your templates or convert them to labels in the Azure portal, see [Considerations for templates in the Azure portal](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
