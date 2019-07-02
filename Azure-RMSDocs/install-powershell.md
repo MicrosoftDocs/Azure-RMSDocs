@@ -93,14 +93,14 @@ Get-Help Connect-AipService -online
 
 For more information:
 
--   Full list of cmdlets available: [AIPService Module](/powershell/aipservice/?view=azureipps#aipservice)
+-   Full list of cmdlets available: [AIPService Module](/powershell/module/aipservice/?view=azureipps#aipservice)
 
 -   List of main configuration scenarios that support PowerShell: [Administering protection from Azure Information Protection by using PowerShell](administer-powershell.md)
 
-Before you can run any commands that configure the protection service, you must connect to the service by using the [Connect-AipService](/powershell/aipservice/connect-aipservice) cmdlet.
+Before you can run any commands that configure the protection service, you must connect to the service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet.
 
-When you have finished running your configuration commands, as a best practice, disconnect from the service by using the [Disconnect-AipService](/powershell/aipservice/disconnect-aipservice) cmdlet. If you do not disconnect, the connection is automatically disconnected after a period of inactivity. Because of the automatic disconnection behavior, you might find that you need to occasionally reconnect in a PowerShell session. 
+When you have finished running your configuration commands, as a best practice, disconnect from the service by using the [Disconnect-AipService](/powershell/module/aipservice/disconnect-aipservice) cmdlet. If you do not disconnect, the connection is automatically disconnected after a period of inactivity. Because of the automatic disconnection behavior, you might find that you need to occasionally reconnect in a PowerShell session. 
 
 > [!NOTE]
-> If the protection service is not yet activated, you can do this after you have connected to the service, by using the [Enable-AipService](/powershell/aipservice/enable-aipservice) cmdlet.
+> If the protection service is not yet activated, you can do this after you have connected to the service, by using the [Enable-AipService](/powershell/module/aipservice/enable-aipservice) cmdlet.
 

@@ -73,7 +73,7 @@ To download your usage logs, you will use the AIPService PowerShell module for A
 
 ### To download your usage logs by using PowerShell
 
-1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AipService](/powershell/aipservice/connect-aipservice) cmdlet to connect to Azure Information Protection:
+1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet to connect to Azure Information Protection:
 
     ```
     Connect-AipService
