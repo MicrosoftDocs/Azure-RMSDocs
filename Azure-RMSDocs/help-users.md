@@ -61,7 +61,7 @@ After you have deployed and configured Azure Information Protection for your org
         
     - **Problems protecting or consuming content**
         
-        Make sure that users have the appropriate instructions for the applications that they use, and that they use applications and devices that are supported by the Azure Rights Management service. For more information about supported applications and devices, see [Requirements for Azure Rights Management](requirements.md).
+        Make sure that users have the appropriate instructions for the applications that they use, and that they use applications and devices that are supported by the Azure Rights Management service. For more information about supported applications and devices, see [Requirements for Azure Information Protection](requirements.md).
         
         To confirm that a specific user or group can be authorized by Azure Active Directory to protect or consume protected content, use the verification checks in [Preparing users and groups for Azure Information Protection](prepare.md).
         
