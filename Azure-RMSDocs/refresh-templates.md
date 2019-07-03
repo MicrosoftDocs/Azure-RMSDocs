@@ -88,7 +88,7 @@ By editing the registry on the computers running Office 365 apps, Office 2019, O
    > [!TIP]
    > In the registry path, <*MicrosoftRMS_FQDN*> refers to your Microsoft RMS service FQDN. If you want to verify this value:
    > 
-   > Run the [Get-AipServiceConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing the AIPService PowerShell module](install-powershell.md)
+   > Run the [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) cmdlet for Azure Information Protection. If you haven't already installed the AIPService PowerShell module, see [Installing the AIPService PowerShell module](install-powershell.md).
    > 
    > From the output, identify the **LicensingIntranetDistributionPointUrl** value.
    > 

@@ -45,7 +45,7 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     ```
     When prompted, enter your Azure Rights Management tenant administrator credentials (typically, you will use an account that is a global administrator for Azure Active Directory or Office 365).
 
-2. Use the [Import-AipServiceTpd](/powershell/module/aipservice/import-aadrmtpd) cmdlet to upload each exported trusted publishing domain (.xml) file. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. 
+2. Use the [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) cmdlet to upload each exported trusted publishing domain (.xml) file. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. 
     
     To run this cmdlet, you will need the password that you specified earlier for each configuration data file. 
     
