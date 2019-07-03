@@ -122,7 +122,7 @@ This first general availability version of the Azure Information Protection unif
 
 - Upgrade from the Azure Information Protection client.
 
-- Manual, automatic, and recommended labeling: For more information about configuring automatic and recommended labeling for this client, see [Apply a sensitivity label to content automatically](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
+- Manual, automatic, and recommended labeling: For more information about configuring automatic and recommended labeling for this client, see [Apply a sensitivity label to content automatically](/Office365/SecurityCompliance/apply-sensitivity-label-automatically).
 
 - File Explorer, right-click actions to classify and protect files, remove protection, and apply custom permissions.
 
