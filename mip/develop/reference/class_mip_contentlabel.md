@@ -36,7 +36,7 @@ Get the assignment method of the label.
   
 **Returns**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
   
-**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod)
   
 ### GetExtendedProperties function
 Gets extended properties.

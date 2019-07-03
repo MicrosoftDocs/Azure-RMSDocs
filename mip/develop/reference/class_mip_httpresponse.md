@@ -27,7 +27,7 @@ Gets response ID.
 
   
 **Returns**: Response ID
-The corresponding [HttpRequest](undefined) will have had the same ID
+The corresponding [HttpRequest](class_mip_httprequest.md) will have had the same ID
   
 ### GetStatusCode function
 Get response status code.

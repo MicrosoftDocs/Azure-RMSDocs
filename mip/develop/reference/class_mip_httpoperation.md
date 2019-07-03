@@ -26,7 +26,7 @@ Gets operation ID.
 
   
 **Returns**: Operation ID
-The corresponding [HttpRequest](undefined) and [HttpResponse](undefined) will have the same ID
+The corresponding [HttpRequest](class_mip_httprequest.md) and [HttpResponse](class_mip_httpresponse.md) will have the same ID
   
 ### GetResponse function
 Get response, if any.

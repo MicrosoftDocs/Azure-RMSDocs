@@ -71,7 +71,7 @@ Get the new label's assignment method.
   
 **Returns**: The assignment method STANDARD, PRIVILEGED, AUTO. 
   
-**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod)
   
 ### GetNewLabelExtendedProperties function
 Return new label's extended properties.
@@ -98,7 +98,7 @@ Gets the content format.
   
 **Returns**: DEFAULT, EMAIL 
   
-**See also**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat-enum)
+**See also**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat)
   
 ### GetSupportedActions function
 Gets a masked enum describing all the supported action types.
