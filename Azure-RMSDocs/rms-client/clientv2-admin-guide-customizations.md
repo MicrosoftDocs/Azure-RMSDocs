@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/29/2019
+ms.date: 07/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -583,7 +583,7 @@ Example PowerShell commands, where your label policy is named "Global":
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell. It is supported by the preview version of the unified labeling client only.
 
-[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection clients when that content contains sensitive information. By default, this information is sent by the Azure Information Protection unified labeling to Azure Information Protection analytics.
+[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection clients when that content contains sensitive information. By default, this information is sent by the Azure Information Protection unified labeling client to Azure Information Protection analytics.
 
 To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
 
@@ -595,9 +595,9 @@ If you set this advanced client setting, audit results are still sent from the u
 
 For example:
 
-- Without this setting, you can see that a user accessed Financial.docx that is labeled **Confidential \ Sales**.
+- With this setting, you can see that a user accessed Financial.docx that is labeled **Confidential \ Sales**.
 
-- With this setting, you can see that Financial.docx contains 6 credit card numbers.
+- Without this setting, you can see that Financial.docx contains 6 credit card numbers.
     
     - If you also enable [content matches for deeper analysis](../reports-aip.md#content-matches-for-deeper-analysis), you will additionally be able to see what those credit card numbers are.
 

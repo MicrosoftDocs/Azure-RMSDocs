@@ -135,7 +135,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 - Two new advanced client settings for analytics, for the following scenarios:
     
     - Prevent sending information type matches for a subset of users when you have selected the checkbox in the Azure portal to collect content matches. [More information](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-    - For the **Data discovery** report, display whether files contain sensitive information. [More information](client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - For the **Data discovery** report, display whether files contain sensitive information. [More information](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
 
 **Fixes**:
 
