@@ -100,6 +100,8 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 - Support for [content matches](../reports-aip.md#content-matches-for-deeper-analysis) for analytics and [Set-AIPFileClassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) with the *DiscoveryInfoTypes* parameter.
 
+- After you change to an alternative locale in Windows, you can still apply a label with protection to a PDF document.
+
 - When a label is removed from content, protection is also removed only when it was applied as part of the label configuration. If the protection was applied independently from the label, that protection is preserved. For example, a user applied custom permissions to a file.
 
 - When automatic labeling is configured, the label applies the first time a document is saved.
