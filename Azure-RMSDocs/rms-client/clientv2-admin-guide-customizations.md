@@ -124,6 +124,7 @@ Label policy advanced settings are applied in the reverse order: With one except
 |EnableCustomPermissions|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|HideBarByDefault|[Display the Information Protection bar in Office apps](##display-the-information-protection-bar-in-office-apps)|
 |labelByCustomProperties|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LogMatchedContent|[Disable sending information type matches for a subset of users](#disable-sending-information-type-matches-for-a-subset-of-users)|
 |OutlookBlockTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
