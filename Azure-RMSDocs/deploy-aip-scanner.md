@@ -555,6 +555,8 @@ The full list of cmdlets for the scanner:
 
 - [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
 
+- [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
+
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
 
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
