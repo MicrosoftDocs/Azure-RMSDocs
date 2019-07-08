@@ -174,6 +174,8 @@ Before you install the scanner, or upgrade it from an older general availability
     - **Label files based on content**: Keep the default of **On**
     - **Default label**: Keep the default of **Policy default**
     - **Relabel files**: Keep the default of **Off**
+    - ** Allow label downgrade**: Keep the default of selected
+    - ** Enforce default label**: Keep the default of not selected
     - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On**
     - **File types to scan**: Keep the default file types for **Exclude**
     - **Default owner**: Keep the default of **Scanner Account**
@@ -281,7 +283,7 @@ You're now ready to run your first scan in discovery mode.
 
 ## Run a discovery cycle and view reports for the scanner
 
-1. In the Azure portal, return to Azure Information Protection to start the scanner. From the **Scanner** menu option, select **Nodes**. Select your scanner node, and then the **Scan now** option:
+1. In the Azure portal, return to Azure Information Protection to start the scanner. From the **Scanner** menu option, select **Profiles**. Select your scanner's profile, and then the **Scan now** option:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
     
@@ -291,7 +293,7 @@ You're now ready to run your first scan in discovery mode.
 
 2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the scanner stops although the scanner service remains running:
     
-    - From the **Azure Information Protection - Nodes** blade, the value for the **STATUS** column changes from **Scanning** to **Idle**.
+    - From the **Scanner** menu option, select **Nodes** and identify your scanner node. The value for the **STATUS** column changes from **Scanning** to **Idle**.
     
     - Using PowerShell, you can run `Get-AIPScannerStatus` to monitor the status change.
     
@@ -328,7 +330,7 @@ If you are following these instructions, the scanner runs one time and in the re
     
      There are other configuration settings that you might want to change. For example, whether file attributes are changed and whether the scanner can relabel files. Use the information popup help to learn more information about each configuration setting.
 
-3. Make a note of the current time and start the scanner again from the **Azure Information Protection - Nodes** blade:
+3. Make a note of the current time and start the scanner again from the **Azure Information Protection - Profiles** blade:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
     
@@ -429,7 +431,7 @@ For files that don't support native protection, specify the file name extension 
 
 For the first scan cycle, the scanner inspects all files in the configured data stores and then for subsequent scans, only new or modified files are inspected. 
 
-You can force the scanner to inspect all files again from the **Azure Information Protection - Nodes** blade in the Azure portal. Select your scanner from the list, and then select the **Rescan all files** option:
+You can force the scanner to inspect all files again from the **Azure Information Protection - Profiles** blade in the Azure portal. Select your scanner profile from the list, and then select the **Rescan all files** option:
 
 ![Initiate rescan for the Azure Information Protection scanner](./media/scanner-rescan-files.png)
 
@@ -547,7 +549,7 @@ Because you now configure the scanner from the Azure portal, cmdlets from previo
 
 The cmdlets that remain include cmdlets that install and upgrade the scanner, change the scanner configuration database and profile, change the local reporting level, and import configuration settings for a disconnected computer. 
 
-The full list of cmdlets that the current version of the scanner supports: 
+The full list of cmdlets for the scanner: 
 
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
 
