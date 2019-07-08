@@ -64,7 +64,7 @@ In addition to the prerequisites for installing the AzureInformationProtection m
 
 #### Prerequisite 1: The Azure Rights Management service must be activated
 
-If your Azure Information Protection tenant is not activated to apply protection, see the instructions for [Activating Azure Rights Management](../activate-service.md).
+If your Azure Information Protection tenant is not activated, see the instructions for [[Activating the protection service from Azure Information Protection](../activate-service.md).
 
 #### Prerequisite 2: To remove protection from files for others using your own account
 
