@@ -55,7 +55,7 @@ Global administrators for your tenant can continue to manage labels and policies
 
 Before you migrate your labels, make sure that you are aware of the following changes and considerations:
 
-- Make sure that you have [supported clients](#clients-and-services-that-support-unified-labeling) and if you have a mix of clients, be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the admin centers (for client that do support unified labels).
+- Make sure that you have [clients that support unified labels](#clients-and-services-that-support-unified-labeling) and if necessary, be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the admin centers (for client that do support unified labels).
 
 - Policies, including policy settings and who has access to them (scoped policies), and all advanced client settings are not migrated. Your options to configure these settings after your label migration include the following:
     - The [Copy policies](#copy-your-policies-and-policy-settings) option.
