@@ -31,7 +31,7 @@ ms.suite: ems
 
 Migrate your labels in Azure Information Protection so that you can use them as sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling).
 
-After the migration, manage and publish these labels from the Office 365 Security & Compliance Center, or the Microsoft 365 security center and the Microsoft 365 compliance center. These labels can be used by the Azure Information Protection unified labeling client. If you continue to use the Azure Information Protection client (classic), this client continues to download labels with the Azure Information Protection policy from the Azure portal.
+After the migration, manage and publish these labels from one of the following admin centers: The Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center. These labels can be used by the Azure Information Protection unified labeling client. If you continue to use the Azure Information Protection client (classic), this client continues to download labels with the Azure Information Protection policy from the Azure portal.
 
 Before you read detailed instructions about how to migrate your labels, you might find the following frequently asked questions useful:
 
@@ -51,14 +51,13 @@ If you do not give these users access to the admin centers by using one of these
 
 Global administrators for your tenant can continue to manage labels and policies in both the Azure portal and the admin centers after your labels are migrated.
 
-
 ## Considerations for unified labels
 
 Before you migrate your labels, make sure that you are aware of the following changes and considerations:
 
-- Not all clients currently support unified labels. Make sure that you have [supported clients](#clients-and-services-that-support-unified-labeling) and be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the admin centers (for client that do support unified labels).
+- Make sure that you have [supported clients](#clients-and-services-that-support-unified-labeling) and if you have a mix of clients, be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the admin centers (for client that do support unified labels).
 
-- Policies, including policy settings and who has access to them (scoped policies), and all advanced client settings are not migrated. Your options to configure these settings for your sensitivity labels include the following:
+- Policies, including policy settings and who has access to them (scoped policies), and all advanced client settings are not migrated. Your options to configure these settings after your label migration include the following:
     - The [Copy policies](#copy-your-policies-and-policy-settings) option.
     - Your admin center for sensitivity labels.
     - [Office 365 Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), which you must use to configure [advanced client settings](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
@@ -102,9 +101,9 @@ Azure Information Protection clients (classic) can use all label settings listed
 |Status of enabled or disabled<br /><br />This status is not synchronized to the admin centers |Not applicable|The equivalent is whether the label is published or not. |
 |Label color that you select from list or specify by using RGB code |Yes|No configuration option for label colors. Instead, you can configure label colors in the Azure portal or use [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).|
 |Cloud-based protection or HYOK-based protection using a predefined template |No|No configuration option for predefined templates. We do not recommend you publish a label with this configuration.|
-|Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint |No|The admin centers don't have a configuration option for user-defined permissions for these Office apps. Unless you are using the preview version of the unified labeling client, we do not recommend you publish a label with this configuration. If you do, the results of applying the label are listed in the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
+|Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint |No|The admin centers don't have a configuration option for user-defined permissions for these Office apps. Unless you are using the preview version of the unified labeling client, we do not recommend you publish a label with this configuration. If you do publish a label with this configuration, check the results of applying the label from the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |HYOK-based protection using user-defined permissions for Outlook (Do Not Forward) |No|No configuration option for HYOK. We do not recommend you publish a label with this configuration. If you do, the results of applying the label are listed in the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
-|Remove protection |No|No configuration option to remove protection. We do not recommend you publish a label with this configuration.<br /><br /> If you do publish this label, when it is applied, protection will be removed if it was previously applied by a label. If protection was previously applied independently from a label, the protection is preserved.|
+|Remove protection |No|No configuration option to remove protection. We do not recommend you publish a label with this configuration.<br /><br /> If you do publish a label with this configuration, when it is applied, protection will be removed if it was previously applied by a label. If protection was previously applied independently from a label, the protection is preserved.|
 |Custom font and custom font color by RGB code for visual markings (header, footer, watermark)|Yes|Configuration for visual markings is limited to a list of colors and font sizes. You can publish this label without changes although you cannot see the configured values in the admin centers. <br /><br />To change these options, you can use the Azure portal. However, for easier administration, consider changing the color to one of the listed options in the admin centers.|
 |Variables in visual markings (header, footer)|No|If you publish this label without changes, variables display as text on clients rather than display the dynamic values. Before you publish the label, edit the strings to remove the variables.|
 |Visual markings per app|No|If you publish this label without changes, the app variables display as text on clients in all apps rather than display your text strings on chosen apps. Publish this label only if it is suitable for all apps, and edit the strings to remove the app variables.|
@@ -173,7 +172,7 @@ For the labels that successfully migrated, they can now be used by [clients and 
 > [!NOTE]
 > This option is gradually rolling out to tenants in preview and is subject to change. If you do not see the **Copy policies (preview)** option, try again in a few weeks.
 
-After you have migrated your labels, you can select an option to copy policies. If you select this option, a one-time copy of your policies with their [policy settings](configure-policy-settings.md) and any [advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) is sent to the admin center where you manage your labels: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center.
+After you have migrated your labels, you can select an option to copy policies. If you select this option, a one-time copy of your policies with their [policy settings](configure-policy-settings.md) and any [advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) is sent to the admin center where you manage your labels: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center.
 
 Before you select the **Copy policies (preview)** option, be aware of the following:
 
@@ -185,7 +184,7 @@ Before you select the **Copy policies (preview)** option, be aware of the follow
 
 - To support the advanced client properties that are copied, you must use the preview version of the Azure Information Protection unified labeling client.
 
-- Unlike label migration where subsequent changes to labels are synchronized, the copy policies action doesn't synchronize any subsequent changes to your policies or policy settings. You can repeat the copy policy action after making changes in the Azure portal, and any existing policies and their settings will be overwritten again. Or, use the Set-LabelPolicy or Set-Label cmdlets with the *AdvancedSettings* parameter from Office 365 Security & Compliance Center PowerShell.
+- Unlike label migration where subsequent changes to labels are synchronized, the copy policies action doesn't synchronize any subsequent changes to your policies or policy settings. You can repeat the copy policy action after making changes in the Azure portal, and any existing policies and their settings will be overwritten again. Or, use the [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps) or [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps) cmdlets with the *AdvancedSettings* parameter from Office 365 Security & Compliance Center PowerShell.
 
 For more information about configuring the policy settings, advanced client settings, and label settings for the Azure Information Protection unified labeling client, see [Custom configurations for the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-customizations.md) from the admin guide.
 
