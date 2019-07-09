@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/10/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -82,7 +82,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 - For each label, the Azure portal displays only the label display name, which you can edit. The admin centers show both this display name for a label, and the label name. The label name is the initial name that you specified when the label was first created and this property is used by the back-end service for identification purposes.
 
-- Any localized strings for the labels are not migrated. You must define new localized strings for the migrated labels in the admin centers.
+- Any localized strings for the labels are not migrated. Define new localized strings for the migrated labels by using Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
 
 - After the migration, when you edit a migrated label in the Azure portal, the same change is automatically reflected in the admin centers. However, when you edit a migrated label in one of the admin centers, you must return to the Azure portal, **Azure Information Protection - Unified labeling** blade, and select **Publish**. This additional action is needed for the Azure Information Protection clients (classic) to pick up the label changes.
 
