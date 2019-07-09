@@ -70,9 +70,10 @@ Use the following table to help compare which features are supported by the two 
 |-------|-----------------------------------|----------------------------------------------------|
 |Labeling actions: Manual, recommended, automatic| Yes | Yes |
 |Central reporting (analytics):| Yes | Yes |
+|Multilanguage support for labels:| Yes | Yes |
 |Reset settings and export logs:| Yes | Yes |
 |User-defined permissions:| Yes | Yes with limitations: <br /><br />- For Outlook only (Do Not Forward): Supported<br /><br />- For Word, Excel, PowerPoint, and File Explorer: Supported when you configure the label in the Azure portal |
-|Custom permissions:| Yes | File Explorer and PowerShell |
+|Custom permissions:| Yes | File Explorer and PowerShell <br /><br /> In Office apps, as an alternative, users can select **File Info** > **Protect Document** > **Restrict Access**  or admins can configure a label for user-defined permissions|
 |Information Protection bar in Office apps:| Yes | Yes with limitations:<br /><br /> - No title or customizable tooltip<br /><br /> - Label color not displayed for applied label|
 |Labels can apply visual markings (header, footer, watermark):| Yes | Yes with limitations:<br /><br /> - Headers and footers do not support variables for dynamic values <br /><br /> - No support for Word, Excel, PowerPoint, and Outlook to have different visual markings|
 |File Explorer, right-click actions:| Yes | Yes with limitations:<br /><br /> - Can't protect PDF documents for .ppdf format <br /><br />  - No support for protection-only mode|
@@ -88,7 +89,6 @@ Use the following table to help compare which features are supported by the two 
 |Scanner for on-premises data stores:| Yes | No |
 |Track and revoke:| Yes | No |
 |Protection-only mode (no labels) using templates:| Yes | No |
-|Multilanguage support:| Yes | No |
 |Support for AD RMS:| Yes | The following action only is supported:<br /><br /> - The viewer can open protected documents when you deploy the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))|
 
 #### Detailed comparisons for the clients
@@ -101,6 +101,7 @@ When both clients support the same feature, use the following table to help iden
 |Label selection and display when applied in Office apps:|From the **Protect** button on the ribbon <br /><br /> From the Information Protection bar (horizontal bar under the ribbon)|From the **Sensitivity** button on the ribbon<br /><br /> From the Information Protection bar (horizontal bar under the ribbon)|
 |Manage the Information Protection bar in Office apps:|For users: <br /><br />- Option to show or hide the bar from the **Protect** button on the ribbon<br /><br />- When a user selects to hide the bar, by default, the bar is hidden in that app, but continues to automatically display in newly opened apps <br /><br /> For admins: <br /><br />- Policy settings to automatically show or hide the bar when an app first opens, and control whether the bar automatically remains hidden for newly opened apps after a user selects to hide the bar|For users: <br /><br />- Option to show or hide the bar from the **Sensitivity** button on the ribbon<br /><br />- When a user selects to hide the bar, the bar is hidden in that app and also in newly opened apps <br /><br />For admins: <br /><br />- PowerShell setting to manage the bar |
 |Label color: | Configure in the Azure portal | Retained after label migration to Office 365 and configurable with PowerShell <br /><br /> Colors can be configured by using [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
+|Labels support different languages:| Configure in the Azure portal | Configure by using Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) and [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)|
 |Policy update: | When an Office app opens <br /><br /> When you right-click to classify and protect a file or folder <br /><br />When you run the PowerShell cmdlets for labeling and protection<br /><br />Every 24 hours | When an Office app opens <br /><br /> When you right-click to classify and protect a file or folder <br /><br />When you run the PowerShell cmdlets for labeling and protection<br /><br />Every 4 hours|
 |Supported formats for PDF:| Protection: <br /><br /> - ISO standard for PDF encryption (default) <br /><br /> - .ppdf <br /><br /> Consumption: <br /><br /> - ISO standard for PDF encryption <br /><br />- .ppdf<br /><br />- SharePoint IRM protection| Protection: <br /><br /> - ISO standard for PDF encryption <br /><br /> <br /><br /> Consumption: <br /><br /> - ISO standard for PDF encryption <br /><br />- .ppdf<br /><br />- SharePoint IRM protection|
 |Supported cmdlets:| All the cmdlets documented for [AzureInformatioProtection](/powershell/module/azureinformationprotection) | Set-AIPFileClassification, Set-AIPFileLabel, and Get-AIPFileStatus don't support SharePoint paths <br /><br /> Set-AIPFileClassification and Set-AIPFileLabel don't support the *Owner* parameter <br /><br /> In addition, there is a single comment of "No label to apply" for all scenarios where a label isn't applied <br /><br /> Set-AIPFileClassification supports the *WhatIf* parameter, so it can be run in discovery mode <br /><br /> Set-AIPFileLabel doesn't support the *EnableTracking* parameter <br /><br /> Get-AIPFileStatus doesn't return label information from other tenants and doesn't display the *RMSIssuedTime* parameter<br /><br />In addition, the *LabelingMethod* parameter for Get-AIPFileStatus displays **Privileged** or **Standard** instead of **Manual** or **Automatic**. For more information, see the [online documentation](/powershell/module/azureinformationprotection/get-aipfilestatus).|
@@ -118,7 +119,7 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Support Office apps for disconnected computers with manual policy file management
 
-- Custom permissions in Office apps: Word, Excel, and PowerPoint
+- Custom permissions as an option that users can select in Office apps: Word, Excel, and PowerPoint
 
 - Track and revoke from Office apps and File Explorer
 
