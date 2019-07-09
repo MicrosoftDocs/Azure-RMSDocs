@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/05/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -117,6 +117,8 @@ Label policy advanced settings are applied in the reverse order: With one except
 
 #### Available advanced settings for label policies
 
+Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) and [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
+
 |Setting|Scenario and instructions|
 |----------------|---------------|
 |AttachmentAction|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
@@ -146,6 +148,8 @@ Example PowerShell command to check your label policy settings in effect for a l
 	(Get-LabelPolicy -Identity Global).settings
 
 #### Available advanced settings for labels
+
+Use the *AdvancedSettings* parameter with [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) and [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
