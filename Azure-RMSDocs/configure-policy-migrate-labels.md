@@ -58,7 +58,10 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 - Not all clients currently support unified labels. Make sure that you have [supported clients](#clients-and-services-that-support-unified-labeling) and be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the admin centers (for client that do support unified labels).
 
-- Policies, including policy settings and who has access to them (scoped policies), and all advanced client settings are not migrated. For these changes that are not migrated, you will need to configure the relevant options in the admin centers after the labels are migrated.
+- Policies, including policy settings and who has access to them (scoped policies), and all advanced client settings are not migrated. Your options to configure these settings for your sensitivity labels include the following:
+    - The [Copy policies](#copy-your-policies-and-policy-settings) option.
+    - Your admin center for sensitivity labels.
+    - [Office 365 Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), which you must use to configure [advanced client settings](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
     
     For a more consistent user experience, we recommend you publish the same labels in the same scopes in the admin centers.
 
@@ -88,7 +91,7 @@ Before you migrate your labels, make sure that you are aware of the following ch
 
 ### Label settings that are not supported in the admin centers
 
-Use the following table to identify which configuration settings of a migrated label are not supported by the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft compliance center. If you have labels with these settings, when the migration is complete, use the administration guidance in the final column before you publish your labels in one of the admin centers.
+Use the following table to identify which configuration settings of a migrated label are not supported by the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft compliance center. If you have labels with these settings, when the migration is complete, use the administration guidance in the final column before you publish your labels in one of the referenced admin centers.
 
 If you are not sure how your labels are configured, view their settings in the Azure portal. If you need help with this step, see [Configuring the Azure Information Protection policy](configure-policy.md).
 
@@ -96,7 +99,7 @@ Azure Information Protection clients (classic) can use all label settings listed
 
 |Label configuration|Supported by unified labeling clients| Guidance for the admin centers|
 |-------------------|---------------------------------------------|-------------------------|
-|Status of enabled or disabled<br /><br />Notes: Not synchronized to the admin centers |Not applicable|The equivalent is whether the label is published or not. |
+|Status of enabled or disabled<br /><br />This status is not synchronized to the admin centers |Not applicable|The equivalent is whether the label is published or not. |
 |Label color that you select from list or specify by using RGB code |Yes|No configuration option for label colors. Instead, you can configure label colors in the Azure portal or use [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).|
 |Cloud-based protection or HYOK-based protection using a predefined template |No|No configuration option for predefined templates. We do not recommend you publish a label with this configuration.|
 |Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint |No|The admin centers don't have a configuration option for user-defined permissions for these Office apps. Unless you are using the preview version of the unified labeling client, we do not recommend you publish a label with this configuration. If you do, the results of applying the label are listed in the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
@@ -105,7 +108,7 @@ Azure Information Protection clients (classic) can use all label settings listed
 |Custom font and custom font color by RGB code for visual markings (header, footer, watermark)|Yes|Configuration for visual markings is limited to a list of colors and font sizes. You can publish this label without changes although you cannot see the configured values in the admin centers. <br /><br />To change these options, you can use the Azure portal. However, for easier administration, consider changing the color to one of the listed options in the admin centers.|
 |Variables in visual markings (header, footer)|No|If you publish this label without changes, variables display as text on clients rather than display the dynamic values. Before you publish the label, edit the strings to remove the variables.|
 |Visual markings per app|No|If you publish this label without changes, the app variables display as text on clients in all apps rather than display your text strings on chosen apps. Publish this label only if it is suitable for all apps, and edit the strings to remove the app variables.|
-|Conditions and associated settings <br /><br />Notes: Includes automatic and recommended labeling, and their tooltips|Not applicable|Reconfigure your conditions by using auto labeling as a separate configuration from label settings.|
+|Conditions and associated settings <br /><br /> Includes automatic and recommended labeling, and their tooltips|Not applicable|Reconfigure your conditions by using auto labeling as a separate configuration from label settings.|
 
 ### Comparing the behavior of protection settings for a label
 
