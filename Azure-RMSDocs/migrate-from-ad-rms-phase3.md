@@ -6,7 +6,7 @@ description: Phase 3 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -49,11 +49,11 @@ See the following sections for more information about how to reconfigure Windows
 
 This method is suitable only for Windows clients that run Office 365 apps and Office 2016 (or later) click-to-run desktop apps. 
 
-1. Create a DNS SRV record using the following format:
+1. Create a DNS SRV record for each email domain that your users use, using the following format:
     
-    `_rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.`
+    `_rmsredir._http._tcp.<email suffix>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.`
     
-    For *\<AD RMS cluster>*, specify the FQDN of your AD RMS cluster. For example, **rmscluster.contoso.com**.
+    For *\<email suffix>*, specify the domain name used for user email addresses. For example, **sales.contoso.com**.
     
     Alternatively, if you have just one AD RMS cluster in that domain, you can specify just the domain name of the AD RMS cluster. In our example, that would be **contoso.com**. When you specify the domain name in this record, the redirection applies to any and all AD RMS clusters in that domain.
     
