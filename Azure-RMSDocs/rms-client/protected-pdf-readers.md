@@ -29,7 +29,7 @@ If you need to open a PDF document that's been protected by Microsoft Informatio
 
 ## Choose your PDF reader
 
-The following PDF readers can open protected PDF files that adhere to the ISO standard for PDF encryption:
+The following PDF readers can open protected PDF documents that adhere to the ISO standard for PDF encryption:
 
 |Operating system|Supported readers and download link|
 |----------------|-----------------------------------|
@@ -40,10 +40,7 @@ The following PDF readers can open protected PDF files that adhere to the ISO st
 
 ### Support for previous formats
 
-The PDF readers in the next table support:
-
-- Protected PDF documents that have a .ppdf file name extension
-- Older formats that have a .pdf file name extension
+The PDF readers in the next table support protected PDF documents that have a .ppdf file name extension, and older formats that have a .pdf file name extension.
 
 Currently, SharePoint Online and SharePoint on-premises use an older format for PDF documents in IRM-protected libraries.
 
