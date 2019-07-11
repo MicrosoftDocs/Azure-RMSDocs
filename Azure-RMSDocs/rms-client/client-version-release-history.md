@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/04/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -154,7 +154,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - The Azure Information Protection scanner no longer excludes .zip files by default. To inspect and label .zip files, see the [To inspect .zip files](client-admin-guide-file-types.md#to-inspect-zip-files) section of the admin guide.
 
-- The [policy setting](../configure-policy-settings.md) **Users must provide justification to set a lower classification label, remove a label, or remove protection** no longer applies to the scanner. The scanner performs these actions when you configure the setting **Relabel files** to **On** in the scanner profile.
+- The [policy setting](../configure-policy-settings.md) **Users must provide justification to set a lower classification label, remove a label, or remove protection** no longer applies to the scanner. The scanner performs these actions when you configure the setting **Relabel files** to **On** in the scanner profile, and then select the **Allow label downgrade** checkbox.
 
 ## Version 1.41.51.0
 
