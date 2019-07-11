@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/04/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -117,6 +117,8 @@ Label policy advanced settings are applied in the reverse order: With one except
 
 #### Available advanced settings for label policies
 
+Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) and [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
+
 |Setting|Scenario and instructions|
 |----------------|---------------|
 |AttachmentAction|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
@@ -124,6 +126,7 @@ Label policy advanced settings are applied in the reverse order: With one except
 |EnableCustomPermissions|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|HideBarByDefault|[Display the Information Protection bar in Office apps](##display-the-information-protection-bar-in-office-apps)|
 |labelByCustomProperties|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LogMatchedContent|[Disable sending information type matches for a subset of users](#disable-sending-information-type-matches-for-a-subset-of-users)|
 |OutlookBlockTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -145,6 +148,8 @@ Example PowerShell command to check your label policy settings in effect for a l
 	(Get-LabelPolicy -Identity Global).settings
 
 #### Available advanced settings for labels
+
+Use the *AdvancedSettings* parameter with [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) and [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
