@@ -112,6 +112,8 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 **Released**: 05/01/2019
 
+Supported through 02/15/2020
+
 This release has a single fix to resolve a race-condition issue where sometimes, no labels display in Office apps or File Explorer.
 
 ## Version 2.0.778.0
