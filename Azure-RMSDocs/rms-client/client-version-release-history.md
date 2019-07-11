@@ -100,6 +100,8 @@ This version includes the MSIPC version 1.0.3889.0419 of the RMS client.
 
 **Released**: 04/16/2019
 
+Supported through 02/15/2020
+
 This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 **New features:**
