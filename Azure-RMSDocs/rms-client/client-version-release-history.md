@@ -82,7 +82,7 @@ This version includes the MSIPC version 1.0.3889.0419 of the RMS client.
 
 **New features:**
 
-- New advanced client setting to exempt Outlook messages from the policy setting **All documents and emails must have a label**. [More information](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling))
+- New advanced client setting to exempt Outlook messages from the policy setting **All documents and emails must have a label**. [More information](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
 
 - New advanced client setting to further customize settings that implement pop-up messages in Outlook that warn, justify, or block emails being sent. With this new advanced setting, you can set a different action for email messages without attachments. [More information](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
 
