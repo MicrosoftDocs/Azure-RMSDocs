@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/27/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -47,17 +47,18 @@ Preview versions should not be deployed for end users on production networks. In
 
 ### Release information
 
-Use the following information to see what’s supported for the general availability version of the Azure Information Protection unified labeling client.
+Use the following information to see what’s new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. 
 
-This client installs an Office add-on for Windows computers, an extension for File Explorer, and a PowerShell module. This client has the same [prerequisites](../requirements.md) as the Azure Information Protection client that downloads policy from Azure.
+> [!NOTE]
+> Minor fixes are not listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
+>  
+> For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-To compare features and functionality with the Azure Information Protection client, see [Compare the clients](use-client.md#compare-the-clients).
+This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the clients](use-client.md#compare-the-clients).
 
-## Versions later than 2.0.779.0
+## Version 2.2.14.0
 
-**Released**: 06/20/2019
-
-If you have a version 2 of the client that is later than 2.0.779.0, it is a preview build for testing and evaluation purposes. 
+**Released**: 07/15/2019
 
 **New features:**
 
@@ -97,6 +98,12 @@ If you have a version 2 of the client that is later than 2.0.779.0, it is a prev
 
 **Fixes:**
 
+- Support for [content matches](../reports-aip.md#content-matches-for-deeper-analysis) for analytics and [Set-AIPFileClassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) with the *DiscoveryInfoTypes* parameter.
+
+- After you change to an alternative locale in Windows, you can still apply a label with protection to a PDF document.
+
+- When a label is removed from content, protection is also removed only when it was applied as part of the label configuration. If the protection was applied independently from the label, that protection is preserved. For example, a user applied custom permissions to a file.
+
 - When automatic labeling is configured, the label applies the first time a document is saved.
 
 - Default labeling supports sublabels.
@@ -104,6 +111,8 @@ If you have a version 2 of the client that is later than 2.0.779.0, it is a prev
 ## Version 2.0.779.0
 
 **Released**: 05/01/2019
+
+Supported through 02/15/2020
 
 This release has a single fix to resolve a race-condition issue where sometimes, no labels display in Office apps or File Explorer.
 
