@@ -49,9 +49,6 @@ In addition, because Azure Information Protection is a cloud service, it can del
 
 For more details and other differences, use the following table for a side-by-side comparison of the features and benefits of Azure Information Protection and AD RMS. If you have security-specific comparison questions, see the [Cryptographic controls for signing and encryption](#cryptographic-controls-for-signing-and-encryption) section in this article.
 
-> [!NOTE]
-> To make this comparison easier, some information here is repeated from [Requirements for Azure Information Protection](requirements.md). Use that source for more specific support and version information for Azure Information Protection.
-
 |Azure Information Protection|AD RMS|
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------|
 |Supports information rights management (IRM) capabilities in both Microsoft Online services and on-premises Microsoft server products.|Supports information rights management (IRM) capabilities for on-premises Microsoft server products, and Exchange Online.|
@@ -76,6 +73,8 @@ For more information about the cryptographic controls, see [Cryptographic contro
 
 
 ## Next steps
+For more detailed requirements to use Azure Information Protection, such as device support and minimum versions, see [Requirements for Azure Information Protection](requirements.md).
+
 If you are looking to migrate from AD RMS to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
 
