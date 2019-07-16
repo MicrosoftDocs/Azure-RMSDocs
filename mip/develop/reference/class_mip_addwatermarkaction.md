@@ -1,12 +1,11 @@
 ---
 title: class mip::AddWatermarkAction 
 description: Documents the mip::addwatermarkaction class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 07/02/2019
+ms.author: bryanla
+ms.date: 07/16/2019
 ---
 
 # class mip::AddWatermarkAction 
@@ -21,7 +20,6 @@ public const std::string& GetText() const  |  Get the text that is meant to go i
 public const std::string& GetFontName() const  |  Get the font name used to display the watermark.
 public int GetFontSize() const  |  Get the font size used to display the watermark.
 public const std::string& GetFontColor() const  |  Get the font color used to display the watermark.
-public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   
@@ -60,9 +58,3 @@ Get the font color used to display the watermark.
 
   
 **Returns**: Font color as a string (for example, "#000000").
-  
-### GetType function
-Get the type of [Action](class_mip_action.md).
-
-  
-**Returns**: ActionType The type of derived action this base class can be cast to.

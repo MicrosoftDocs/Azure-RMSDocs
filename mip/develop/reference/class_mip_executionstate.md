@@ -1,12 +1,11 @@
 ---
 title: class mip::ExecutionState 
 description: Documents the mip::executionstate class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 07/02/2019
+ms.author: bryanla
+ms.date: 07/16/2019
 ---
 
 # class mip::ExecutionState 
@@ -16,8 +15,7 @@ Clients should only call the methods to obtain the state that is needed. Hence, 
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::string GetNewLabelId() const  |  Gets the sensitivity label ID that should be applied on the document.
-public ActionSource GetNewLabelActionSource() const  |  Gets the source for a new label action.
+public std::shared_ptr\<Label\> GetNewLabel() const  |  Gets the sensitivity label ID that should be applied on the document.
 public std::string GetContentIdentifier() const  |  Gets the content description that describes the document. example for a file: [path\filename] example for an email: [Subject:Sender].
 public virtual DataState GetDataState() const  |  Gets the state of the content while the application is interacting with it.
 public std::pair\<bool, std::string\> IsDowngradeJustified() const  |  Implementation should pass if justification to downgrade an existing label was given.
@@ -32,17 +30,11 @@ public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  | 
   
 ## Members
   
-### GetNewLabelId function
+### GetNewLabel function
 Gets the sensitivity label ID that should be applied on the document.
 
   
 **Returns**: Sensitivity label ID to be applied to the content if exists else empty to remove label.
-  
-### GetNewLabelActionSource function
-Gets the source for a new label action.
-
-  
-**Returns**: Action source.
   
 ### GetContentIdentifier function
 Gets the content description that describes the document. example for a file: [path\filename] example for an email: [Subject:Sender].
@@ -71,7 +63,7 @@ Get the new label's assignment method.
   
 **Returns**: The assignment method STANDARD, PRIVILEGED, AUTO. 
   
-**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod)
+**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod-enum)
   
 ### GetNewLabelExtendedProperties function
 Return new label's extended properties.
@@ -98,7 +90,7 @@ Gets the content format.
   
 **Returns**: DEFAULT, EMAIL 
   
-**See also**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat)
+**See also**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat-enum)
   
 ### GetSupportedActions function
 Gets a masked enum describing all the supported action types.

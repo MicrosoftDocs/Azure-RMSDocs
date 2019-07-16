@@ -1,12 +1,11 @@
 ---
 title: class mip::PolicyEngine::Settings 
 description: Documents the mip::policyengine class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 07/02/2019
+ms.author: bryanla
+ms.date: 07/16/2019
 ---
 
 # class mip::PolicyEngine::Settings 
@@ -31,6 +30,8 @@ public const std::string& GetSessionId() const  |  Get the session ID, a unique 
 public bool IsLoadSensitivityTypesEnabled() const  |  Get the the flag indicating if load sensitivity labels is enabled.
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Optionally sets the cloud endpoint base URL.
 public const std::string& GetCloudEndpointBaseUrl() const  |  Gets the cloud base URL used by all service requests, if specified.
+public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
+public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
   
 ## Members
   
@@ -167,3 +168,19 @@ Gets the cloud base URL used by all service requests, if specified.
 
   
 **Returns**: Base URL
+  
+### SetDelegatedUserEmail function
+Sets the delegated user.
+
+Parameters:  
+* **delegatedUserEmail**: the delegation email.
+
+
+A delegated user is specified when the authenticating user/application is acting on behalf of another user
+  
+### GetDelegatedUserEmail function
+Gets the delegated user.
+
+  
+**Returns**: Delegated user
+A delegated user is specified when the authenticating user/application is acting on behalf of another user

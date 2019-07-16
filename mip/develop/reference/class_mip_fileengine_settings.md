@@ -1,12 +1,11 @@
 ---
 title: class mip::FileEngine::Settings 
 description: Documents the mip::fileengine class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 07/02/2019
+ms.author: bryanla
+ms.date: 07/16/2019
 ---
 
 # class mip::FileEngine::Settings 
@@ -30,9 +29,13 @@ public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloud
 public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Gets the protection cloud endpoint base url.
 public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  Sets the policy cloud endpoint base url, used to specify cloud boundary.
 public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  Gets the policy cloud endpoint base url.
-public void SetProtectionOnlyEngine(const bool protectionOnly)  |  Sets protection only engine indicator - no policy/label.
+public void SetProtectionOnlyEngine(bool protectionOnly)  |  Sets protection only engine indicator - no policy/label.
 public const bool IsProtectionOnlyEngine() const  |  Return protection only engine indicator - no policy/label.
 public bool IsLoadSensitivityTypesEnabled() const  |  Get the the flag indicating if load sensitivity labels is enabled.
+public void EnablePFile(bool value)  |  Sets the flag indicating if produce PFiles.
+public const bool IsPFileEnabled()  |  Get the flag indicating if produce PFiles.
+public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
+public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
   
 ## Members
   
@@ -144,3 +147,28 @@ Get the the flag indicating if load sensitivity labels is enabled.
 
   
 **Returns**: True if enabled else false.
+  
+### EnablePFile function
+Sets the flag indicating if produce PFiles.
+  
+### IsPFileEnabled function
+Get the flag indicating if produce PFiles.
+
+  
+**Returns**: True if enabled else false.
+  
+### SetDelegatedUserEmail function
+Sets the delegated user.
+
+Parameters:  
+* **delegatedUserEmail**: the delegation email.
+
+
+A delegated user is specified when the authenticating user/application is acting on behalf of another user
+  
+### GetDelegatedUserEmail function
+Gets the delegated user.
+
+  
+**Returns**: Delegated user
+A delegated user is specified when the authenticating user/application is acting on behalf of another user
