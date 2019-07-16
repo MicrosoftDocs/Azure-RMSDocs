@@ -60,7 +60,7 @@ You can also install both clients in the same environment to support different b
 
 - For a subset of users, you deploy the classic client because these users require labels that apply hold your own key (HYOK) protection.
     
-    For these users, they have a slightly different experience if they also have devices that run MacOS, iOS, and Android, and these devices have a version of Office that supports sensitivity labels. For example, they see a **Protect** button rather than a **Sensitivity** button on the Office ribbon. For other differences, see the tables that follow.
+    For these users, they have a slightly different experience if they also have devices that run MacOS, iOS, and Android, and these devices have a version of Office that supports sensitivity labels. For example, they see a **Protect** button rather than a **Sensitivity** button on the Office ribbon. For differences between the classic client and the unified labeling client, see the tables that follow.
 
 - You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. You deploy the classic client on servers to run the Azure Information Protection scanner.
 
