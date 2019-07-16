@@ -142,7 +142,7 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
 
 1. Azure Information Protection administrator: On the Internet-connected workstation and in the PowerShell session, copy over your new configuration data files (.xml) that have the SLC key removed after running the TpdUtil tool.
 
-2. Upload each .xml file, by using the [Import-AipServiceTpd](/powershell/module/aipservice/import-aadrmtpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
+2. Upload each .xml file, by using the [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
 
     To run this cmdlet, you need the password that you specified earlier for the configuration data file, and the URL for the key that was identified in the previous step.
 

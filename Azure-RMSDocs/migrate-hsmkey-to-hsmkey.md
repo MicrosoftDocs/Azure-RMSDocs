@@ -72,7 +72,7 @@ These procedures are done by the administrator for Azure Information Protection.
 
 1. On the Internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connnect-AadrmService](/powershell/module/aipservice/connect-aipservice) cmdlet.
     
-    Then upload each trusted publishing domain (.xml) file, by using the [Import-AipServiceTpd](/powershell/module/aipservice/import-aadrmtpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
+    Then upload each trusted publishing domain (.xml) file, by using the [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
     
     To run this cmdlet, you need the password that you specified earlier for each configuration data file, and the URL for the key that was identified in the previous step.
     

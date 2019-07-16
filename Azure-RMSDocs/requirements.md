@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -128,6 +128,8 @@ If you have a firewall or similar intervening network devices that are configure
 
 In addition to the information in the Office article, specific to Azure Information Protection:
 
+- For the unified labeling client to download labels and label policies: Allow the URL ***.protection.outlook.com** over HTTPS.
+
 - If you use a web proxy that requires authentication, you must configure it to use integrated Windows authentication with the user's Active Directory logon credentials.
 
 - Do not terminate the TLS client-to-service connection (for example, to do packet-level inspection) to the **aadrm.com** URL. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
@@ -156,5 +158,5 @@ The following deployment scenario is not supported unless you are using AD RMS f
 
 - Running AD RMS and Azure RMS side by side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-There is a supported migration path [from AD RMS to Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](decommission-deactivate.md).
+There is a supported migration path [from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md), and from [Azure Information Protection to AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](decommission-deactivate.md).
 
