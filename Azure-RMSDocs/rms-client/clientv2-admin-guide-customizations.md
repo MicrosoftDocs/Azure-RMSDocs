@@ -153,7 +153,7 @@ Use the *AdvancedSettings* parameter with [New-Label](https://docs.microsoft.com
 |Setting|Scenario and instructions|
 |----------------|---------------|
 |color|[Specify a color for the label](#specify-a-color-for-the-label)|
-|customPropertyByLabel|[Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied)|
+|customPropertiesByLabel|[Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied)|
 |DefaultSubLabelId|[Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label) 
 |labelByCustomProperties|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |SMimeEncrypt|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
@@ -749,7 +749,7 @@ As a result of this configuration option, any additional custom properties are a
 
 - For File Explorer: When the user right-clicks the file and applies the label, the custom properties are applied.
 
-This configuration requires you to specify an advanced setting named **customPropertyByLabel** for each sensitivity label that you want to apply the additional custom properties. Then for each entry, set the value by using the following syntax:
+This configuration requires you to specify an advanced setting named **customPropertiesByLabel** for each sensitivity label that you want to apply the additional custom properties. Then for each entry, set the value by using the following syntax:
 
 `[custom property name],[custom property value]`
 
@@ -763,13 +763,13 @@ In this example:
 
 The advanced setting:
 
-- Key: **customPropertyByLabel**
+- Key: **customPropertiesByLabel**
 
 - Value: **Classification,Secret**
 
 Example PowerShell command, where your label is named "Confidential":
 
-	Set-Label -Identity Confidential -AdvancedSettings @{customPropertyByLabel="Classification,Secret"}
+	Set-Label -Identity Confidential -AdvancedSettings @{customPropertiesByLabel="Classification,Secret"}
 
 #### Example 2: Add multiple custom properties for a label
 
@@ -777,7 +777,7 @@ To add more than one custom property for the same label, you need to define mult
 
 Example PowerShell command, where your label is named "General" and you want to add one custom property named **Classification** with the value of **General** and a second custom property named **Sensitivity** with the value of **Internal**:
 
-	Set-Label -Identity General -AdvancedSettings @{customPropertyByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
+	Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
 
 ## Configure a label to apply S/MIME protection in Outlook
 
