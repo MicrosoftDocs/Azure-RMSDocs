@@ -27,7 +27,7 @@ Gets request ID.
 
   
 **Returns**: Request ID
-The corresponding [HttpResponse](undefined) will have the same ID
+The corresponding HttpResponse will have the same ID
   
 ### GetRequestType function
 Get request type.

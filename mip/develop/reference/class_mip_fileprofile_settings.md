@@ -62,7 +62,7 @@ Parameters:
 * **applicationInfo**: Info about application that is consuming the SDK
 
 
-> Deprecated: This constructor will soon be deprecated in favor of one requiring a [mip::MipContext](undefined) parameter
+> Deprecated: This constructor will soon be deprecated in favor of one requiring a mip::MipContext parameter
   
 ### Settings function
 [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor.
@@ -89,7 +89,7 @@ Gets the path under which logging, telemetry, and other persistent state is stor
 
   
 **Returns**: Path under which logging, telemetry, and other persistent state is stored
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### GetCacheStorageType function
 Get whether caches are stored in memory or on disk.
@@ -120,7 +120,7 @@ Gets info about application that is consuming the SDK.
 
   
 **Returns**: Info about application that is consuming the SDK
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### GetMipContext function
 Get MIP context which represents shared state across all profiles.
@@ -133,7 +133,7 @@ Get the logger delegate (if any) provided by the application.
 
   
 **Returns**: Logger
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### SetLoggerDelegate function
 Override default logger.
@@ -143,7 +143,7 @@ Parameters:
 
 
 This method should be called by client applications that use their own logger implementation 
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### GetHttpDelegate function
 Get the HTTP delegate (if any) provided by the application.
@@ -175,14 +175,14 @@ Parameters:
   
 ### OptOutTelemetry function
 Opts out of all telemetry gathering.
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### IsTelemetryOptedOut function
 Gets if telemetry gathering should be disabled or not.
 
   
 **Returns**: If telemetry gathering should be disabled or not
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### SetSessionId function
 Sets the session ID.
@@ -205,14 +205,14 @@ Parameters:
 * **logLevel**: lowest log level that will trigger a logging event.
 
 
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### GetMinimumLogLevel function
 Get the lowest log level that will trigger a logging event.
 
   
 **Returns**: Lowest log level that will trigger a logging event.
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### SetCanCacheLicenses function
 Configures whether or not end user licenses (EULs) will be cached locally.

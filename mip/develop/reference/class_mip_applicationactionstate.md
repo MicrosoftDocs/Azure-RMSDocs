@@ -29,7 +29,7 @@ Gets the new label state.
   
 **Returns**: The new label state. 
   
-**See also**: [mip::LabelState](undefined)
+**See also**: mip::LabelState
   
 ### GetNewLabel function
 Gets the sensitivity label ID that should be applied on the document.

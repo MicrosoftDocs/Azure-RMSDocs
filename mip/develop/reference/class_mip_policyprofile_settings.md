@@ -57,7 +57,7 @@ Parameters:
 * **applicationInfo**: The application identifiers used for service access.
 
 
-> Deprecated: This constructor will soon be deprecated in favor of one requiring a [mip::MipContext](undefined) parameter
+> Deprecated: This constructor will soon be deprecated in favor of one requiring a mip::MipContext parameter
   
 ### Settings function
 Interface for configuring the profile.
@@ -81,7 +81,7 @@ Get the path to the stored state.
 
   
 **Returns**: Path to stored state.
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext.
   
 ### GetCacheStorageType function
 Get whether caches are stored in memory or on disk.
@@ -106,7 +106,7 @@ Get the application info.
 
   
 **Returns**: The application info.
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext.
   
 ### GetMipContext function
 Get MIP context which represents shared state across all profiles.
@@ -119,7 +119,7 @@ Get the logger delegate (if any) provided by the application.
 
   
 **Returns**: Logger
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext.
   
 ### SetLoggerDelegate function
 Override default logger.
@@ -129,7 +129,7 @@ Parameters:
 
 
 This method should be called by client applications that use their own logger implementation 
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext.
   
 ### GetHttpDelegate function
 Get the HTTP delegate (if any) provided by the application.
@@ -161,14 +161,14 @@ Parameters:
   
 ### OptOutTelemetry function
 Opts out of all telemetry gathering.
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext.
   
 ### IsTelemetryOptedOut function
 Gets if telemetry gathering should be disabled or not.
 
   
 **Returns**: True if telemetry gathering should be disabled else false
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext.
   
 ### SetMinimumLogLevel function
 Set the minimum log level that will trigger a logging event.
@@ -177,14 +177,14 @@ Parameters:
 * **logLevel**: minimum log level that will trigger a logging event.
 
 
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext.
   
 ### GetMinimumLogLevel function
 Get the Minimum Log Level object.
 
   
 **Returns**: Minimum log level that will trigger a logging event.
-> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through [mip::MipContext](undefined)
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext.
   
 ### SetSessionId function
 _Not documented yet._

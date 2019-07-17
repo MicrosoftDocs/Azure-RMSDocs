@@ -70,7 +70,7 @@ class mip::LabelingOptions  |  Interface for configuring labeling options for th
 class mip::LabelNotFoundError  |  [Label](class_mip_label.md) ID is not recognized.
 class mip::LoggerDelegate  |  A class that defines the interface to the MIP SDK logger.
 class mip::MetadataAction  |  An [Action](class_mip_action.md) that adds metadata information to the content.
-class mip::MipContext  |  [MipContext](undefined) represents state that is shared across all profiles, engines, handlers.
+class mip::MipContext  | MipContext represents state that is shared across all profiles, engines, handlers.
 class mip::MsgAttachmentData  | _Not yet documented._
 class mip::MsgInspector  | _Not yet documented._
 class mip::NetworkError  |  Networking error. Caused by unexpected behavior when making network calls to service endpoints.
