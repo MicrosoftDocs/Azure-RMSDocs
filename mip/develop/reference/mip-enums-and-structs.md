@@ -54,62 +54,77 @@ DIAGONAL            | Watermark layout is diagonal
 Layout for watermarks.
   
 ### ContentMarkAlignment enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 LEFT            | Content marking is aligned to the left
 RIGHT            | Content marking is aligned to the right
 CENTER            | Content marking is centered
+
 Alignment for content marks (content header or content footer).
   
 ### AssignmentMethod enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 STANDARD            | [Label](class_mip_label.md) assignment method is standard
 PRIVILEGED            | [Label](class_mip_label.md) assignment method is privileged
 AUTO            | [Label](class_mip_label.md) assignment method is automatic
+
 The assignment method of the label on the document. Whether the Assignment of the label was done automatically, standard or as a privileged operation (The equivalent to an administrator operation).
   
 ### ActionSource enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 MANUAL            | Selected manually by user
 AUTOMATIC            | Set by policy conditions
 RECOMMENDED            | Set by user after label was recommended by policy conditions
 DEFAULT            | Set by default in policy
-defines what triggered the SetLabel event
+
+Defines what triggered the SetLabel event
   
 ### DataState enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 REST            | Inactive data stored physically in databases/file/warehouses
 MOTION            | Data traversing a network or temporarily residing in computer memory to be read or updated
 USE            | Active data under constant change stored physically in databases/file/warehouses etc
+
 Defines what state of the data is the application acting upon.
   
 ### ContentFormat enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 DEFAULT            | Content format is standard file format
 EMAIL            | Content format is email format
+
 Content format.
   
 ### Consent enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 AcceptAlways            | Consent, and remember this decision
 Accept            | Consent, just one time
 Reject            | Do not consent
+
 A user's response when consent is requested to connect to a service endpoint.
   
 ### CacheStorageType enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 InMemory            | In Memory storage
 OnDisk            | On Disk storage
 OnDiskEncrypted            | On Disk storage with encryption (if supported by the platform)
+
 Storage type for the caches.
   
 ### ErrorType enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 BAD_INPUT_ERROR            | Caller passed bad input.
@@ -136,63 +151,79 @@ LABEL_NOT_FOUND            | [Label](class_mip_label.md) ID is not recognized
 LABEL_DISABLED            | [Label](class_mip_label.md) is disabled or inactive
   
 ### InspectorType enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unkown file inspector.
 Msg            | Msg style file inspector, rpmsg / msg based.
+
 Inspector type correlating to supported file types.
   
 ### BodyType enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 UNKNOWN            | Unkown body type
 TXT            | Text style body type, encoding is returned as utf8
 HTML            | HTML style body type, encoding is returned as utf8
 RTF            | RTF style body type, a binary format
+
 Body type enumerator.
   
 ### FlightingFeature enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 ServiceDiscovery            | Rely on separate HTTP call to determine RMS service endpoints
 AuthInfoCache            | Cache OAuth2 challenges per domain/tenant to reduce unnecessary 401 responses. Disable for apps/services that manage their own HTTP auth (like SPO)
 LinuxEncryptedCache            | Enable encrypted caching for Linux platforms (Please read the prerequisites for this feature)
+
 Defines new features by name.
   
 ### HttpRequestType enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Get            | GET
 Post            | POST
+
 HTTP request type.
   
 ### LogLevel enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Trace            | 
 Info            | 
 Warning            | 
 Error            | 
+
 Different log levels used across the MIP SDK.
   
 ### ProtectionHandlerCreationOptions enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 None            | None
 OfflineOnly            | Do not allow UI and network operations
 AllowAuditedExtraction            | Content can be opened in a non-protection-SDK-aware app
 PreferDeprecatedAlgorithms            | Use deprecated crypto algorithms (ECB) for backwards compatibility
+
 Bit flags that dictate additional policy creation behavior.
+
 > Deprecated: This enum will soon be deprecated when CreateProtectionHandlerFromDescriptor and CreateProtectionHandlerFromPublishingLicense are removed
   
 ### ProtectionType enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 TemplateBased            | Handle was created from a template
 Custom            | Handle was created ad hoc
+
 Describes whether protection is based off a template or ad-hoc (custom)
   
 ### ActionType enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 ADD_CONTENT_FOOTER            | Add a content footer to the document action type.
@@ -210,10 +241,11 @@ REMOVE_PROTECTION            | Remove protection action type.
 REMOVE_WATERMARK            | Remove watermarking action type.
 APPLY_LABEL            | Apply label action type.
 RECOMMEND_LABEL            | Recommend label action type.
-Different action types.
-CUSTOM is the generic action type. Every other action type is a specific action with a specific meaning.
+
+Different action types. CUSTOM is the generic action type. Every other action type is a specific action with a specific meaning.
   
 ### LabelState enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 NoChange            | 
@@ -221,6 +253,7 @@ Remove            |
 Update            | 
   
 ### ActionDataType enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Custom            | 
@@ -230,24 +263,28 @@ AddWatermark            |
 Label            | 
   
 ### ConditionDataType enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Default            | 
 Sensitivity            | 
   
 ### ContentMarkPlacement enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Header            | 
 Footer            | 
   
 ### LabelActionDataType enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Recommend            | 
 Apply            | 
   
 ### ProtectionActionType enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Custom            | 
