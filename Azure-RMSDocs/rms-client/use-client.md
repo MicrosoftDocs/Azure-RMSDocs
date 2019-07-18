@@ -44,9 +44,9 @@ The **Azure Information Protection unified labeling client** downloads labels an
 
 Which client should you install?
 
-- Install the Azure Information Protection unified labeling client for labels that can also be used by MacOS, iOS, and Android, and if you don’t need the few features that aren't yet supported. These features include protecting content with an on-premises key (HYOK) and a scanner for on-premises data stores.
+- Install the Azure Information Protection unified labeling client for labels and policy settings that can also be used by MacOS, iOS, and Android, and if you don’t need the few features that aren't yet supported by the classic client. These features include protecting content with an on-premises key (HYOK) and a scanner for on-premises data stores.
 
-- Install the Azure Information Protection client (classic) if you need a version of the client that has features that are not yet available with the unified labeling client. Your tradeoff is that the labels can't be used on other client platforms and administration using another management portal.
+- Install the Azure Information Protection client (classic) if you need a version of the client that has features that are not yet available with the unified labeling client. Your tradeoff is that not all label settings can be used on other client platforms, and administration using another management portal.
 
 Currently, the classic client and the unified labeling client don't have parity for their features. However, this gap is closing and you can expect new features to be added only to the unified labeling client. For this reason, we recommend you deploy the unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](../configure-policy-migrate-labels.md), use the classic client.
 
