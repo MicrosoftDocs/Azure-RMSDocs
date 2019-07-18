@@ -45,10 +45,12 @@ struct mip::TelemetryConfiguration  |  Custom telemetry settings (not commonly u
 ## Enumerations (mip)
 
 ### WatermarkLayout enum
+
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 HORIZONTAL            | Watermark layout is horizontal
 DIAGONAL            | Watermark layout is diagonal
+
 Layout for watermarks.
   
 ### ContentMarkAlignment enum
