@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -312,7 +312,7 @@ When you create and configure the following advanced client settings, users see 
 - **Their email or attachment for the email doesn't have a label**:
     - The attachment can be an Office document or PDF document
 
-When these conditions are met and the recipient's email address is not included in a list of allowed domain names that you have specified, the user sees a pop-up messages with one of the following actions:
+When these conditions are met, the user sees a pop-up messages with one of the following actions:
 
 - **Warn**: The user can confirm and send, or cancel.
 
@@ -320,7 +320,9 @@ When these conditions are met and the recipient's email address is not included 
 
 - **Block**: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
 
-The resulting action is logged to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**:
+When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
+
+The resulting actions from the pop-up messages are logged to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**:
 
 - Warn messages: Information ID 301
 
@@ -331,7 +333,7 @@ The resulting action is logged to the local Windows event log **Applications and
 Example event entry from a justify message:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Price list.msg
 Item Name: Price list
@@ -370,6 +372,35 @@ Example value for multiple label IDs as a comma-separated string: `dcf781ba-727f
     
     - Value: \<**label IDs, comma-separated**>
 
+#### To exempt domain names for pop-up messages configured for specific labels
+
+For the labels that you've specified with these pop-up messages, you can exempt specific domain names so that users do not see the messages for recipients who have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
+
+A typical configuration is to display the pop-up messages only for recipients who are external to your organization or who aren't authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
+
+Create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
+
+Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
+
+- Warn messages:
+    
+    - Key: **OutlookWarnTrustedDomains**
+    
+    - Value: **\<**domain names, comma separated**>**
+
+- Justification messages:
+    
+    - Key: **OutlookJustifyTrustedDomains**
+    
+    - Value: **\<**domain names, comma separated**>**
+
+- Block messages:
+    
+    - Key: **OutlookBlockTrustedDomains**
+    
+    - Value: **\<**domain names, comma separated**>**
+
+For example, you have specified the **OutlookBlockUntrustedCollaborationLabel** advanced client setting for the **Confidential \ All Employees** label. You now specify the additional advanced client setting of **OutlookBlockTrustedDomains** and **contoso.com**. As a result, a user can send an email to john@sales.contoso.com when it is labeled **Confidential \ All Employees** but will be blocked from sending an email with the same label to a Gmail account.
 
 ### To implement the warn, justify, or block pop-up messages for emails or attachments that don't have a label:
 
@@ -443,37 +474,6 @@ Create the following advanced client setting with one of the following values:
     - Value: **Off**
 
 If you don't specify this client setting, the value that you specify for OutlookUnlabeledCollaborationAction is used for unlabeled email messages without attachments as well as unlabeled email messages with attachments.
-
-### To specify the allowed domain names for recipients exempt from the pop-up messages
-
-When you specify domain names in an additional advanced client setting, users do not see the pop-up messages for recipients who have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
-
-A typical configuration is to display the pop-up messages only for recipients who are external to your organization or who aren't authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
-
-Create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
-
-Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
-
-- Warn messages:
-    
-    - Key: **OutlookWarnTrustedDomains**
-    
-    - Value: **\<**domain names, comma separated**>**
-
-- Justification messages:
-    
-    - Key: **OutlookJustifyTrustedDomains**
-    
-    - Value: **\<**domain names, comma separated**>**
-
-- Block messages:
-    
-    - Key: **OutlookBlockTrustedDomains**
-    
-    - Value: **\<**domain names, comma separated**>**
-
-For example, to never block emails sent to users who have a contoso.com email address, specify the advanced client setting of **OutlookBlockTrustedDomains** and **contoso.com**. As a result, users do not see the warning pop-up messages in Outlook when they send an email to john@sales.contoso.com.
-
 
 
 ## Set a different default label for Outlook
