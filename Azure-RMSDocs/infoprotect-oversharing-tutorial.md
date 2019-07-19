@@ -292,7 +292,7 @@ To illustrate how this works, we'll create an additional advanced client setting
 
 5. Now repeat the [previous test to block users from sending an email that has the General label](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label), and you no longer see the block message when you use your own email address. The email is sent without interruption.
     
-    Repeat the test one more time but add a new recipient from outside your organization. This time, you see the block message again, but listing the new recipient address only as untrusted.
+    Repeat the test one more time but instead of using your own email address, specify a recipient from outside your organization. This time, you see the block message again, listing the new recipient address as untrusted.
 
 ## Configure and test an advanced client setting to warn, prompt for justification, or block emails that don't have a label
 
