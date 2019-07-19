@@ -31,9 +31,9 @@ ms.suite: ems
 
 Migrate your labels in Azure Information Protection so that you can use them as sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling).
 
-After the migration, manage and publish these labels from one of the following admin centers: The Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center. These labels can be used by the Azure Information Protection unified labeling client. If you continue to use the Azure Information Protection client (classic), this client continues to download labels with the Azure Information Protection policy from the Azure portal.
+These labels can then be used by the Azure Information Protection unified labeling client. If you continue to use the Azure Information Protection client (classic), this client continues to download the labels with the Azure Information Protection policy from the Azure portal.
 
-Before you read detailed instructions about how to migrate your labels, you might find the following frequently asked questions useful:
+Before you read the instructions to migrate your labels, you might find the following frequently asked questions useful:
 
 - [What’s the difference between labels in Azure Information Protection and labels in Office 365?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
 
@@ -41,9 +41,11 @@ Before you read detailed instructions about how to migrate your labels, you migh
 
 - [After I've migrated my labels, which management portal do I use?](faqs.md?#after-ive-migrated-my-labels-which-management-portal-do-i-use )
 
-### Important information about administrative roles
+### Administrative roles that support the unified labeling platform
 
-The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Azure Information Protection administrator** (formerly **Information Protection administrator**) is not supported by the unified labeling platform. If this administrative role is used in your organization, before you migrate your labels, add the users who have this role to the Azure AD roles of **Compliance administrator**, **Compliance data administrator**, or **Security administrator**. If you need help with this step, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal, the Microsoft 365 security center, and the Microsoft 365 compliance center.
+If you use admin roles for delegated administration in your organization, you might need to do some changes for the unified labeling platform:
+
+The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Azure Information Protection administrator** (formerly **Information Protection administrator**) is not supported by the unified labeling platform. If this administrative role is used in your organization, add the users who have this role to the Azure AD roles of **Compliance administrator**, **Compliance data administrator**, or **Security administrator**. If you need help with this step, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal, the Microsoft 365 security center, and the Microsoft 365 compliance center.
 
 Alternatively to using roles, in the admin centers, you can create a new role group for these users and add either **Sensitivity Label Administrator** or **Organization Configuration** roles to this group.
 
@@ -110,7 +112,7 @@ Azure Information Protection clients (classic) can use all label settings listed
 
 ### Comparing the behavior of protection settings for a label
 
-Use the following table to identify how the same protection setting for a label behaves differently, depending on whether it's used by the Azure Information Protection client (classic), the Azure Information Protection unified labeling client, or by Office apps that have labeling built in (also known as "native Office labeling". 
+Use the following table to identify how the same protection setting for a label behaves differently, depending on whether it's used by the Azure Information Protection client (classic), the Azure Information Protection unified labeling client, or by Office apps that have labeling built in (also known as "native Office labeling". The differences in label behavior might change your decision whether to publish the labels, especially when you have a mix of clients in your organization.
 
 If you are not sure how your protection settings are configured, view their settings in the **Protection** blade, in the Azure portal. If you need help with this step, see [To configure a label for protection settings](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 
@@ -146,7 +148,7 @@ Use the following instructions to migrate your tenant and Azure Information Prot
 You must be a Compliance administrator, Compliance data administrator, Security administrator, or Global administrator to migrate your labels.
 
 > [!NOTE]
-> If you have retention labels or data loss prevention policies for Office 365, we recommend that you have the Compliance administrator role, Compliance data administrator role, or Global administrator role to migrate your labels.
+> If you have retention labels or data loss prevention policies for Office 365, we recommend that you have the **Compliance administrator** role, **Compliance data administrator** role, or **Global administrator** role to migrate your labels.
 > 
 > Security administrators don't have access to retention labels or data loss prevention policies, so if you have either of these and they have the same name as your Azure Information Protection labels, the migration process can't complete until you manually rename one of the duplicates. However, if you have one of the other roles, the migration process can rename the Azure Information Protection label for you, so that migration can complete.
 
