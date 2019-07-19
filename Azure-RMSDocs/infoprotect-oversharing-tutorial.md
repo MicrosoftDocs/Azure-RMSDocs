@@ -278,9 +278,9 @@ Action Source:
 
 ### Optional: Create an additional advanced client setting to exempt these messages for internal recipients
 
-You tested your messages by using your own email address as the recipient. However, in a production environment, you might choose to display these messages for your specified labels only if recipients are external to your organization. You might extend that exemption to partners that your organization regularly works with.
+You tested your warn, justify, and block messages by using your own email address as the recipient. However, in a production environment, you might choose to display these messages for your specified labels only if recipients are external to your organization. You might extend that exemption to partners that your organization regularly works with.
 
-To illustrate how this works, we'll create a new advanced client setting named **OutlookBlockTrustedDomains** and specify your own domain name from your email address. This will prevent the block message you saw previously from displaying for recipients that share your domain name in their email address, but will still be shown for other recipients. You can similarly create advanced client settings for **OutlookWarnTrustedDomains** and **OutlookJustifyTrustedDomains**.
+To illustrate how this works, we'll create an additional advanced client setting named **OutlookBlockTrustedDomains** and specify your own domain name from your email address. This will prevent the block message you saw previously from displaying for recipients that share your domain name in their email address, but will still be shown for other recipients. You can similarly create additional advanced client settings for **OutlookWarnTrustedDomains** and **OutlookJustifyTrustedDomains**.
 
 1. In the Azure portal, on the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
 
