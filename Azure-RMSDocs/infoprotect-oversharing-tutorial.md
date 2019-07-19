@@ -203,8 +203,6 @@ On your client computer, we'll now see the results of this new advanced client s
 
 5. Acting as your user, you see the only option available is **OK**, which takes you back to the email message where you can make changes. Select **OK**, and cancel this email message.
 
-
-
 ### Use Event Log to identify the messages and user actions for the General label
 
 Before we move on to the next scenario for when an email or attachment doesn't have a label, start Event Viewer and navigate to **Applications and Services Logs** > **Azure Information Protection**.
@@ -278,7 +276,7 @@ Label ID After Action: 0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 Action Source: 
 ```
 
-### Create an advanced client setting to exempt these messages for internal recipients
+### Optional: Create an additional advanced client setting to exempt these messages for internal recipients
 
 You tested your messages by using your own email address as the recipient. However, in a production environment, you might choose to display these messages for your specified labels only if recipients are external to your organization. You might extend that exemption to partners that your organization regularly works with.
 
