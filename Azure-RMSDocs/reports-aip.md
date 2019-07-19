@@ -69,7 +69,7 @@ For example, you'll be able to see the following:
     
     - What labeling actions were performed by a specific application, such File Explorer and right-click, or the AzureInformationProtection PowerShell module
     
-    - Which protected documents were accessed successfully or denied access by Windows computers running the Azure Information Protection client
+    - Which protected documents were accessed successfully by users or denied access to users, even if those users are outside your organization
 
     - Drill down into reported files to view **Activity Details** for additional information
 
@@ -249,7 +249,7 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
 
 - **Usage report (Preview)**: Use this report to see how your labels are being used.
 
-- **Activity logs (Preview)**: Use this report to see labeling actions from users, and on devices and file paths. In addition, for labeled documents that are protected and opened by Windows computers running the Azure Information Protection client or the Azure Information Protection unified labeling client, you can see access attempts (successful or denied).
+- **Activity logs (Preview)**: Use this report to see labeling actions from users, and on devices and file paths. In addition, for protected documents, you can see access attempts (successful or denied).
     
     This report has a **Columns** option that lets you display more activity information than the default display. You can also see more details about a file by selecting it to display **Activity Details**.
 
