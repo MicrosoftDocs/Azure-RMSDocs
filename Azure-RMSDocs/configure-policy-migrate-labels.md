@@ -170,8 +170,7 @@ For the labels that successfully migrated, they can now be used by [clients and 
 
 #### Copy your policies and policy settings
 
-> [!NOTE]
-> This option is gradually rolling out to tenants in preview and is subject to change. If you do not see the **Copy policies (preview)** option, try again in a few weeks.
+This option is gradually rolling out to tenants in preview and is subject to change. If you do not see the **Copy policies (preview)** option, try again in a few weeks.
 
 After you have migrated your labels, you can select an option to copy policies. If you select this option, a one-time copy of your policies with their [policy settings](configure-policy-settings.md) and any [advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) is sent to the admin center where you manage your labels: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center.
 
