@@ -6,7 +6,7 @@ description: An introduction tutorial to configure and see in action advanced cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/19/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -16,7 +16,6 @@ ms.service: information-protection
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: eymanor
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -204,6 +203,8 @@ On your client computer, we'll now see the results of this new advanced client s
 
 5. Acting as your user, you see the only option available is **OK**, which takes you back to the email message where you can make changes. Select **OK**, and cancel this email message.
 
+
+
 ### Use Event Log to identify the messages and user actions for the General label
 
 Before we move on to the next scenario for when an email or attachment doesn't have a label, start Event Viewer and navigate to **Applications and Services Logs** > **Azure Information Protection**.
@@ -219,7 +220,7 @@ For each of the tests that you did, information events are created to record bot
 For example, the first test was to warn the user, and you selected **Cancel**, so the **User Response** displays **Dismissed** in the first Event 301. For example:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Warn message.msg
 Item Name: Testing the General label for the Warn message
@@ -234,7 +235,7 @@ User Response: Dismissed
 However, you then selected **Confirm and Send**, which is reflected in the next Event 301, where the **User Response** displays **Confirmed**:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Warn message.msg
 Item Name: Testing the General label for the Warn message
@@ -249,7 +250,7 @@ User Response: Confirmed
 The same pattern is repeated for the justify message, which has an Event 302. The first event has a **User Response** of **Dismissed**, and the second shows the justification that was selected. For example:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Justify message.msg
 Item Name: Testing the General label for the Justify message
@@ -266,7 +267,7 @@ User Response: Confirmed
 At the top of the event log, you see the block message logged, which has an Event 303. For example:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Block message.msg
 Item Name: Testing the General label for the Block message
@@ -276,6 +277,22 @@ Label After Action: General
 Label ID After Action: 0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 Action Source: 
 ```
+
+### Create an advanced client setting to exempt these messages for internal recipients
+
+You tested your messages by using your own email address as the recipient. However, in a production environment, you might choose to display these messages for your specified labels only if recipients are external to your organization. You might extend that exemption to partners that your organization regularly works with.
+
+To illustrate how this works, we'll create a new advanced client setting named **OutlookBlockTrustedDomains** and specify your own domain name from your email address. This will prevent the block message you saw previously from displaying for recipients that share your domain name in their email address, but will still be shown for other recipients. You can similarly create advanced client settings for **OutlookWarnTrustedDomains** and **OutlookJustifyTrustedDomains**.
+
+1. In the Azure portal, on the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
+
+2. On the **Advanced settings** blade, type the advanced setting name, **OutlookBlockTrustedDomains**, and paste your domain name from your email address for the value. For example:
+    
+    ![Azure Information Protection tutorial - create OutlookBlockTrustedDomains advanced client setting](./media/configure-exemptblockdomain.png)
+
+4. Select **Save and close**. Do not close the **Policies** blade, or the Azure portal.
+
+5. Now repeat the [previous test to block users from sending an email that has the General label](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label), and you no longer see the block message. However, if you add a new recipient from outside your organization, you see the block message again.
 
 ## Configure and test an advanced client setting to warn, prompt for justification, or block emails that don't have a label
 
@@ -388,7 +405,7 @@ As before, the messages and user responses are logged in Event Viewer, **Applica
 For example, the results of our justification prompt when the email didn't have a label:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing send an email without a label for the Justify message.msg
 Item Name: Testing send an email without a label for the Justify message
@@ -398,22 +415,6 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
-
-## Create an advanced client setting to exempt these messages for internal recipients
-
-We've been testing these messages by using your own email address as the recipient. However, in a production environment, you might choose to display these messages only if recipients are external to your organization. You might extend that exemption to partners that your organization regularly works with.
-
-To illustrate how this works, we'll create a new advanced client setting named **OutlookBlockTrustedDomains** and specify your own domain name from your email address. This will prevent the block message displaying for recipients that share your domain name in their email address. You can similarly create advanced client settings for **OutlookWarnTrustedDomains** and **OutlookJustifyTrustedDomains**.
-
-1. In the Azure portal, on the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
-
-2. On the **Advanced settings** blade, type the advanced setting name, **OutlookBlockTrustedDomains**, and paste your domain name from your email address for the value. For example:
-    
-    ![Azure Information Protection tutorial - create OutlookBlockTrustedDomains advanced client setting](./media/configure-exemptblockdomain.png)
-
-4. Select **Save and close**. Do not close the **Policies** blade, or the Azure portal.
-
-5. Now repeat the [previous test to send an unlabeled email to your own address](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-isnt-labeled), and you no longer see the block message. However, if you add a new recipient from outside your organization, you see the block message again.
 
 ## Clean up resources
 
