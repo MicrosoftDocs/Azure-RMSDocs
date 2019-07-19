@@ -60,7 +60,7 @@ You can also install both clients in the same environment to support different b
 
 - For a subset of users, you deploy the classic client because these users require one or more labels that apply hold your own key (HYOK) protection.
     
-    For these users, they have a slightly different labeling experience when they use this client. For example, they see a **Protect** button in their Windows apps rather than a **Sensitivity** button in Office for Mac. As an admin, you need to manage their labels for HYOK settings and policy settings in a different management portal to the labels and settings for the other client platforms.
+    For these users, they have a slightly different labeling experience when they use this client. For example, they see a **Protect** button rather than a **Sensitivity** button in Office apps. As an admin, you need to manage their labels for HYOK settings and policy settings in a different management portal to the labels and settings for the other client platforms.
 
 - You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. You deploy the classic client on servers to run the Azure Information Protection scanner.
 
