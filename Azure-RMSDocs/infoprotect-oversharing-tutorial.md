@@ -290,7 +290,7 @@ To illustrate how this works, we'll create an additional advanced client setting
 
 4. Select **Save and close**. Do not close the **Policies** blade, or the Azure portal.
 
-5. Now repeat the [previous test to block users from sending an email that has the General label](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label), and you no longer see the block message. However, if you add a new recipient from outside your organization, you see the block message again.
+5. Now repeat the [previous test to block users from sending an email that has the General label](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label), and you no longer see the block message when you use your own email address. However, if you add a new recipient from outside your organization, you see the block message again.
 
 ## Configure and test an advanced client setting to warn, prompt for justification, or block emails that don't have a label
 
