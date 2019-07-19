@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -101,7 +101,7 @@ In addition to the prerequisites for installing the AzureInformationProtection m
 
 This prerequisite applies whether you apply the data protection by using labels or by directly connecting to the Azure Rights Management service to apply the data protection.
 
-If your Azure Information Protection tenant is not activated, see the instructions for [Activating Azure Rights Management](../activate-service.md).
+If your Azure Information Protection tenant is not activated, see the instructions for [Activating the protection service from Azure Information Protection](../activate-service.md).
 
 #### Prerequisite 2: To remove protection from files for others using your own account
 
@@ -126,12 +126,12 @@ You can use the following PowerShell commands and commented instructions to auto
 To automatically get the values and run Set-RMSServerAuthentication:
 
 ````
-# Make sure that you have the AADRM and MSOnline modules installed
+# Make sure that you have the AIPService and MSOnline modules installed
 
 $ServicePrincipalName="<new service principal name>"
-Connect-AadrmService
-$bposTenantID=(Get-AadrmConfiguration).BPOSId
-Disconnect-AadrmService
+Connect-AipService
+$bposTenantID=(Get-AipServiceConfiguration).BPOSId
+Disconnect-AipServiceService
 Connect-MsolService
 New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 
@@ -146,39 +146,39 @@ The next sections explain how to manually get and specify these values, with mor
 
 ##### To get the BposTenantId
 
-Run the Get-AadrmConfiguration cmdlet from the Azure RMS
+Run the Get-AipServiceConfiguration cmdlet from the Azure RMS
 Windows PowerShell module:
 
 1. If this module is not already installed on your computer, see
-[Installing the AADRM PowerShell module](../install-powershell.md).
+[Installing the AIPService PowerShell module](../install-powershell.md).
 
 2. Start Windows PowerShell with the **Run as Administrator** option.
 
-3. Use the `Connect-AadrmService` cmdlet to connect to the Azure Rights Management service:
-
-        Connect-AadrmService
-
+3. Use the `Connect-AipService` cmdlet to connect to the Azure Rights Management service:
+    
+    	Connect-AipService
+    
     When prompted, enter your Azure Information Protection tenant administrator credentials. Typically, you use an account that is a global administrator for Azure Active Directory or Office 365.
-
-4. Run `Get-AadrmConfiguration` and make a copy of the BPOSId value.
-
-    An example of output from Get-AadrmConfiguration:
-
-            BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
-
-            RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
-
-            LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-
-            LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-
-            CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
-
-            CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+    
+4. Run `Get-AipServiceConfiguration` and make a copy of the BPOSId value.
+    
+    An example of output from Get-AipServiceConfiguration:
+    
+		    BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
+		
+		    RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
+		
+		    LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
+		
+		    LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
+		
+		    CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+		
+		    CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
 
 5. Disconnect from the service:
-
-        Disconnect-AadrmService
+    
+    	Disconnect-AipServiceService
 
 ##### To get the AppPrincipalId and Symmetric Key
 
@@ -242,9 +242,9 @@ Our example command would then look like the following:
 
 As shown in the previous command, you can supply the values with a single command, which you would do in a script to run non-interactively. But for testing purposes, you can just type Set-RMSServerAuthentication, and supply the values one-by-one when prompted. When the command completes, the client is now operating in "server mode", which is suitable for non-interactive use such as scripts and Windows Server File Classification Infrastructure.
 
-Consider making this service principal account a super user: To ensure that this service principal account can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/module/aadrm/add-aadrmsuperuser), but specify the **ServicePrincipalId** parameter with your AppPrincipalId value.
+Consider making this service principal account a super user: To ensure that this service principal account can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser), but specify the **ServicePrincipalId** parameter with your AppPrincipalId value.
 
-For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../configure-super-users.md).
+For more information about super users, see [Configuring super users for Azure Information Protection and discovery services or data recovery](../configure-super-users.md).
 
 > [!NOTE]
 > To use your own account to authenticate to the Azure Rights Management service, there's no need to run Set-RMSServerAuthentication before you protect or unprotect files, or get templates.
@@ -253,7 +253,7 @@ For more information about super users, see [Configuring super users for Azure R
 
 When you use a service principal account to protect files and download templates outside the Azure North America region, you must edit the registry: 
 
-1. Run the Get-AadrmConfiguration cmdlet again, and make a note of the values for **CertificationExtranetDistributionPointUrl** and **LicensingExtranetDistributionPointUrl**.
+1. Run the Get-AipServiceConfiguration cmdlet again, and make a note of the values for **CertificationExtranetDistributionPointUrl** and **LicensingExtranetDistributionPointUrl**.
 
 2. On each computer where you will run the AzureInformationProtection cmdlets, open the registry editor.
 
@@ -533,7 +533,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 12. Back on the **AIPOnBehalfOf - Expose an API** blade, select **+ Add a scope**.
 
-13. On the **Add a scope** blade, specify the following, and then select **Add scope**:
+13. On the **Add a scope** blade, specify the following, using the suggested strings as examples, and then select **Add scope**:
     - **Scope name**: `user-impersonation`
     - **Who can consent?**: **Admins and users**
     - **Admin consent display name**: `Access Azure Information Protection scanner`
@@ -569,7 +569,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 23. In the **Select an API** section, select **APIOnBehalfOf**, then select the checkbox for **user-impersonation**, as the permission. Select **Add permissions**. 
 
-24. Back on the **API permissions** blade, in the **Grant consent** section, select **Grant admin consent for \<your tenant name>** and select **Yes** for the confirmation prompt.
+24. Back on the **API permissions** blade, in the **Grant consent** section, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
 
 You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. From our examples:
 

@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/18/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -49,6 +49,9 @@ The cmdlets are installed with the PowerShell module **AzureInformationProtectio
 
 This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
 
+> [!IMPORTANT]
+> The AzureInformationProtection module doesn't support configuring advanced settings for labels or label policies. For these settings, you need the Office 365 Security & Compliance Center PowerShell. For more information, see [Custom configurations for the Azure Information Protection unified labeling client](clientv2-admin-guide-customizations.md).
+
 ### Prerequisites for using the AzureInformationProtection module
 
 In addition to the prerequisites for installing the AzureInformationProtection module, there are additional prerequisites for when you use the labeling cmdlets for Azure Information Protection:
@@ -69,6 +72,123 @@ Typical scenarios for removing protection from files for others include data dis
 
 You must have a Rights Management usage right to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../configure-super-users.md).
 
+## How to label files non-interactively for Azure Information Protection
+
+You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet.
+
+By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account for this purpose. Then, in the context of that user, run the Set-AIPAuthentication cmdlet to set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the protection service from Azure Information Protection. The account downloads the Azure Information Protection policy and any protection templates that the labels use.
+
+> [!NOTE]
+> If you use [scoped policies](../configure-policy-scope.md), remember that you might need to add this account to your scoped policies.
+
+The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended account. After that, this account can then run the labeling cmdlets non-interactively until the authentication token in Azure AD expires. 
+
+For the user account to be able to sign in interactively this first time, the account must have the **Log on locally** user right assignment. This right is standard for user accounts but your company policies might prohibit this configuration for service accounts. If that's the case, you can run Set-AIPAuthentication with the *OnBehalfOf* parameter so that authentication completes without the sign-in prompt.
+
+When the token in Azure AD expires, run the cmdlet again to acquire a new token.
+
+If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
+
+To control when the access token expires, run this cmdlet with parameters. This configuration lets you configure the access token in Azure AD for one year, two years, or to never expire. You require two applications registered in Azure Active Directory: A **Web app / API** application and a **native application**. The parameters for Set-AIPAuthentication use values from these applications.
+
+After you have run this cmdlet, you can run the labeling cmdlets in the context of the service account that you created.
+
+### To create and configure the Azure AD applications for Set-AIPAuthentication
+
+1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/).
+
+2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **Manage** > **App registrations**. 
+
+3. Select **+ New registration**, to create your Web app /API application. On the **Register an application** blade, specify the following values, and then click **Register**:
+
+   - **Name**: `AIPOnBehalfOf`
+        
+        If you prefer, specify a different name. It must be unique per tenant.
+    
+    - **Supported account types**: **Accounts in this organizational directory only**
+    
+    - **Redirect URI (optional)**: **Web** and `http://localhost`
+
+4. On the **AIPOnBehalfOf** blade, copy the value for the **Application (client) ID**. The value looks similar to the following example: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *WebAppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
+
+5. Still on the **AIPOnBehalfOf** blade, from the **Manage** menu, select **Authentication**.
+
+6. On the **AIPOnBehalfOf - Authentication** blade, in the **Advanced settings** section, select the **ID tokens** checkbox, and then select **Save**.
+
+7. Still on the **AIPOnBehalfOf - Authentication** blade, from the **Manage** menu, select **Certificates & secrets**.
+
+8. On the **AIPOnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, select **+ New client secret**. 
+
+9. For **Add a client secret**, specify the following, and then select **Add**:
+    
+    - **Description**: `Azure Information Protection client`
+    - **Expires**: Specify your choice of duration (1 year, 2 years, or never expires)
+
+9. Back on the **AIPOnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, copy the string for the **VALUE**. This string looks similar to the following example: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`. To make sure you copy all the characters, select the icon to **Copy to clipboard**. 
+    
+    It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any sensitive information that you use, store the saved value securely and restrict access to it.
+
+10. Still on the **AIPOnBehalfOf - Certificates & secrets** blade, from the **Manage** menu, select **Expose an API**.
+
+11. On the **AIPOnBehalfOf - Expose an API** blade, select **Set** for the **Application ID URI** option, and in the **Application ID URI** value, change **api** to **http**. This string looks similar to the following example: `http://d244e75e-870b-4491-b70d-65534953099e`. 
+    
+    Select **Save**.
+
+12. Back on the **AIPOnBehalfOf - Expose an API** blade, select **+ Add a scope**.
+
+13. On the **Add a scope** blade, specify the following, using the suggested strings as examples, and then select **Add scope**:
+    - **Scope name**: `user-impersonation`
+    - **Who can consent?**: **Admins and users**
+    - **Admin consent display name**: `Access Azure Information Protection scanner`
+    - **Admin consent description**: `Allow the application to access the scanner for the signed-in user`
+    - **User consent display name**: `Access Azure Information Protection scanner`
+    - **User consent description**: `Allow the application to access the scanner for the signed-in user`
+    - **State**: **Enabled** (the default)
+
+14. Back on the **AIPOnBehalfOf - Expose an API** blade, close this blade.
+
+15. On the **App registrations** blade, select **+ New application registration** to now create your native application.
+
+16. On the **Register an application** blade, specify the following settings, and then select **Register**:
+    - **Name**: `AIPClient`
+    - **Supported account types**: **Accounts in this organizational directory only**
+    - **Redirect URI (optional)**: **Public client (mobile & desktop)** and `http://localhost`
+
+17. On the **AIPClient** blade, copy the value of the **Application (client) ID**. The value looks similar to the following example: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+    
+    This value is used for the NativeAppId parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
+
+18. Still on the **AIPClient** blade, from the **Manage** menu, select **Authentication**.
+
+19. On the **AIPClient - Authentication** blade, specify the following, and then select **Save**:
+    - In the **Advanced settings** section, select **ID tokens**.
+    - In the **Default client type** section, select **Yes**.
+
+20. Still on the **AIPClient - Authentication** blade, from the **Manage** menu, select **API permissions**.
+
+21. On the **AIPClient - permissions** blade, select **+ Add a permission**.
+
+22. On the **Request API permissions** blade, select **My APIs**.
+
+23. In the **Select an API** section, select **APIOnBehalfOf**, then select the checkbox for **user-impersonation**, as the permission. Select **Add permissions**. 
+
+24. Back on the **API permissions** blade, in the **Grant consent** section, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
+
+You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. From our examples:
+
+`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+
+Run this command in the context of the account that will label and protect the documents non-interactively. For example, a user account for your PowerShell scripts or the service account to run the Azure Information Protection scanner.
+
+When you run this command for the first time, you are prompted to sign in, which creates and securely stores the access token for your account in %localappdata%\Microsoft\MSIP. After this initial sign-in, you can label and protect files non-interactively on the computer. However, if you use a service account to label and protect files, and this service account cannot sign in interactively, use the *OnBehalfOf* parameter with Set-AIPAuthentication:
+
+1. Create a variable to store the credentials of an Active Directory account that is granted the user right assignment to sign in interactively. For example:
+    
+    	$pscreds = Get-Credential "scv_scanner@contoso.com"
+
+2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. For example:
+    
+    	Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -OnBehalfOf $pscreds
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> -online`. For example: 

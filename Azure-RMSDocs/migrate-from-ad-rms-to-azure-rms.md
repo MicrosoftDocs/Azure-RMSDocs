@@ -6,7 +6,7 @@ description: Instructions to migrate your Active Directory Rights Management Ser
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -118,7 +118,7 @@ To confirm the AD RMS cryptographic mode:
 
 ### Migration limitations
 
-- If you have software and clients that are not supported by the Rights Management service that is used by Azure Information Protection, they will not be able to protect or consume content that is protected by Azure Rights Management. Be sure to check the supported applications and clients sections from [Requirements for Azure Rights Management](./requirements.md).
+- If you have software and clients that are not supported by the Rights Management service that is used by Azure Information Protection, they will not be able to protect or consume content that is protected by Azure Rights Management. Be sure to check the supported applications and clients sections from [Requirements for Azure Information Protection](./requirements.md).
 
 - If your AD RMS deployment is configured to collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure Information Protection either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using Azure Information Protection, they must make client configuration changes that are similar to those that you make, and included in this document.
     
@@ -134,7 +134,7 @@ Include your AD RMS partners in your planning phase for migration because they m
 
 - Their Azure Rights Management service is not yet activated but they know their Azure Rights Management service URL.
 
-    They can get this information by installing the Azure Rights Management Tool, connecting to the service ([Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice)), and then viewing their tenant information for the Azure Rights Management service ([Get-AadrmConfiguration](/powershell/aadrm/vlatest/get-aadrmconfiguration)).
+    They can get this information by installing the Azure Rights Management Tool, connecting to the service ([Connect-AipService](/powershell/module/aipservice/connect-aipservice)), and then viewing their tenant information for the Azure Rights Management service ([Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)).
 
 - They provide you with the URLs for their AD RMS cluster and their Azure Rights Management service URL, so that you can configure your migrated clients to redirect requests for their AD RMS protected content to their tenant's Azure Rights Management service. Instructions for configuring client redirection are in step 7.
 
@@ -146,9 +146,9 @@ The migration steps can be divided into five phases that can be done at differen
 
 [**PHASE 1: MIGRATION PREPARATION**](migrate-from-ad-rms-phase1.md)
 
-- **Step 1: Install the AADRM PowerShell module and identify your tenant URL**
+- **Step 1: Install the AIPService PowerShell module and identify your tenant URL**
 
-    The migration process requires you to run one or more of the PowerShell cmdlets from the AADRM module. You will need to know your tenant's Azure Rights Management service URL to complete many of the migration steps, and you can identity this value by using PowerShell.
+    The migration process requires you to run one or more of the PowerShell cmdlets from the AIPService module. You will need to know your tenant's Azure Rights Management service URL to complete many of the migration steps, and you can identity this value by using PowerShell.
 
 - **Step 2. Prepare for client migration**
 
@@ -162,7 +162,7 @@ The migration steps can be divided into five phases that can be done at differen
 
 - **Step 4. Export configuration data from AD RMS and import it to Azure Information Protection**
 
-    You export the configuration data (keys, templates, URLs) from AD RMS to an XML file, and then upload that file to the Azure Rights Management service from Azure Information Protection, by using the Import-AadrmTpd PowerShell cmdlet. Then, identify which imported Server Licensor Certificate (SLC) key to use as your tenant key for the Azure Rights Management service. Additional steps might be needed, depending on your AD RMS key configuration:
+    You export the configuration data (keys, templates, URLs) from AD RMS to an XML file, and then upload that file to the Azure Rights Management service from Azure Information Protection, by using the Import-AipServiceTpd PowerShell cmdlet. Then, identify which imported Server Licensor Certificate (SLC) key to use as your tenant key for the Azure Rights Management service. Additional steps might be needed, depending on your AD RMS key configuration:
 
 	- **Software-protected key to software-protected key migration**:
 

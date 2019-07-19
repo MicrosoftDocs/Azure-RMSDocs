@@ -6,7 +6,7 @@ description: Information about the registry settings on servers using the RMS co
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -36,7 +36,7 @@ Instructions for when you use these settings:
 
 -   *\<YourTenantURL>* is the Azure Rights Management service URL for your Azure Information Protection tenant. To find this value:
 
-    1.  Run the [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) cmdlet for the Azure Rights Management service. If you haven’t already installed the Windows PowerShell module for Azure RMS, see [Installing the AADRM PowerShell module](install-powershell.md).
+    1.  Run the [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) cmdlet for the Azure Rights Management service. If you haven’t already installed the AIPService module, see [Installing the AIPService PowerShell module](install-powershell.md).
 
     2.  From the output, identify the **LicensingIntranetDistributionPointUrl** value.
 
@@ -48,7 +48,7 @@ Instructions for when you use these settings:
         
         You can verify that you have correct value by running the following PowerShell command:
         
-            (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+            (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
 -   *\<ConnectorFQDN>* is the load-balancing name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
 

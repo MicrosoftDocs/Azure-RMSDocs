@@ -6,7 +6,7 @@ description: When you use the Azure Rights Management service, templates are aut
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -54,7 +54,7 @@ By editing the registry on the computers running Office 365 apps, Office 2019, O
 ### To change the automatic schedule
 
 1.  Using a registry editor, create and set one of the following registry values:
-
+    
     - To set an update frequency in days (minimum of 1 day):  Create a new registry value named **TemplateUpdateFrequency** and define an integer value for the data, which specifies the frequency in days to download any changes to a downloaded template. Use the following information to locate the registry path to create this new registry value.
 
         **Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
@@ -88,7 +88,7 @@ By editing the registry on the computers running Office 365 apps, Office 2019, O
    > [!TIP]
    > In the registry path, <*MicrosoftRMS_FQDN*> refers to your Microsoft RMS service FQDN. If you want to verify this value:
    > 
-   > Run the [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing the AADRM PowerShell module](install-powershell.md).
+   > Run the [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) cmdlet for Azure Information Protection. If you haven't already installed the AIPService PowerShell module, see [Installing the AIPService PowerShell module](install-powershell.md).
    > 
    > From the output, identify the **LicensingIntranetDistributionPointUrl** value.
    > 
@@ -101,7 +101,6 @@ By editing the registry on the computers running Office 365 apps, Office 2019, O
 2. Delete the following folder and all files it contains: **%localappdata%\Microsoft\MSIPC\Templates**
 
 3. Restart your Office applications and instances of File Explorer.
-
 
 ## See Also
 [Configuring and managing templates in the Azure Information Protection policy](configure-policy-templates.md)

@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/05/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -74,9 +74,33 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
+## Version 1.53.10.0
+
+**Released**: 07/15/2019
+
+This version includes the MSIPC version 1.0.3889.0419 of the RMS client.
+
+**New features:**
+
+- New advanced client setting to exempt Outlook messages from the policy setting **All documents and emails must have a label**. [More information](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
+
+- New advanced client setting to further customize settings that implement pop-up messages in Outlook that warn, justify, or block emails being sent. With this new advanced setting, you can set a different action for email messages without attachments. [More information](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
+
+**Fixes**:
+
+- When you use File Explorer, right-click to label a file that has protection applied independently from a label, that protection is preserved. For example, a user applied custom permissions to a file.
+
+- When you replace the Do Not Forward option on an email thread with a label that's configured for user-defined permissions and Do Not Forward, original recipients can still open the email message.
+
+- In the following scenario a user no longer sees in the label tooltip that the label was automatically set by them: A user receives a protected email with a document attached that isn't labeled, but automatically protected. When the user from the same organization as the sender opens the document, the corresponding label for the protection settings is applied to the document.
+
+- The minimum [usage right](../configure-usage-rights.md#usage-rights-and-descriptions) to run the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet is now **Save As, Export** (EXPORT) rather than **Copy** (EXTRACT).
+
 ## Version 1.48.204.0
 
 **Released**: 04/16/2019
+
+Supported through 02/15/2020
 
 This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
@@ -113,7 +137,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 - Two new advanced client settings for analytics, for the following scenarios:
     
     - Prevent sending information type matches for a subset of users when you have selected the checkbox in the Azure portal to collect content matches. [More information](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-    - For the **Data discovery** report, display whether files contain sensitive information. [More information](client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - For the **Data discovery** report, display whether files contain sensitive information. [More information](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
 
 **Fixes**:
 
@@ -154,7 +178,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - The Azure Information Protection scanner no longer excludes .zip files by default. To inspect and label .zip files, see the [To inspect .zip files](client-admin-guide-file-types.md#to-inspect-zip-files) section of the admin guide.
 
-- The [policy setting](../configure-policy-settings.md) **Users must provide justification to set a lower classification label, remove a label, or remove protection** no longer applies to the scanner. The scanner performs these actions when you configure the setting **Relabel files** to **On** in the scanner profile.
+- The [policy setting](../configure-policy-settings.md) **Users must provide justification to set a lower classification label, remove a label, or remove protection** no longer applies to the scanner. The scanner performs these actions when you configure the setting **Relabel files** to **On** in the scanner profile, and then select the **Allow label downgrade** checkbox.
 
 ## Version 1.41.51.0
 

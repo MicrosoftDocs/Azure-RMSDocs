@@ -6,7 +6,7 @@ description: Information to help you provide guidance for users, administrators,
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 05/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -49,7 +49,7 @@ After you have deployed and configured Azure Information Protection for your org
     
     If users have the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback** option for information such as whether the edition of Office is unable to support protection, and the currently signed in user account. You can also use this option to collect log files and reset the client. For more information, see the admin guide: [Install checks and troubleshooting](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
     
-    If there are legitimate requests to have full rights access to protected documents, make sure the help desk has processes to request this access by using the Azure Rights Management [super user feature](configure-super-users.md). For example, these requests might be from the legal department or a manager after an employee has left the organization.
+    If there are legitimate requests to have full rights access to protected documents, make sure the help desk has processes to request this access by using the Azure Information Protection [super user feature](configure-super-users.md). For example, these requests might be from the legal department or a manager after an employee has left the organization.
     
     In  addition, some of the typical problems that users might report include the following categories:
     
@@ -61,7 +61,7 @@ After you have deployed and configured Azure Information Protection for your org
         
     - **Problems protecting or consuming content**
         
-        Make sure that users have the appropriate instructions for the applications that they use, and that they use applications and devices that are supported by the Azure Rights Management service. For more information about supported applications and devices, see [Requirements for Azure Rights Management](requirements.md).
+        Make sure that users have the appropriate instructions for the applications that they use, and that they use applications and devices that are supported by the Azure Rights Management service. For more information about supported applications and devices, see [Requirements for Azure Information Protection](requirements.md).
         
         To confirm that a specific user or group can be authorized by Azure Active Directory to protect or consume protected content, use the verification checks in [Preparing users and groups for Azure Information Protection](prepare.md).
         
