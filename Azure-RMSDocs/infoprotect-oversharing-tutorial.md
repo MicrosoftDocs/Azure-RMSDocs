@@ -278,7 +278,7 @@ Action Source:
 
 ### Optional: Create an additional advanced client setting to exempt these messages for internal recipients
 
-You tested your warn, justify, and block messages by using your own email address as the recipient. However, in a production environment, you might choose to display these messages for your specified labels only if recipients are external to your organization. You might extend that exemption to partners that your organization regularly works with.
+You tested your warn, justify, and block messages by using your own email address as the recipient. In a production environment, you might choose to display these messages for your specified labels only if recipients are external to your organization. You might extend that exemption to partners that your organization regularly works with.
 
 To illustrate how this works, we'll create an additional advanced client setting named **OutlookBlockTrustedDomains** and specify your own domain name from your email address. This will prevent the block message you saw previously from displaying for recipients that share your domain name in their email address, but will still be shown for other recipients. You can similarly create additional advanced client settings for **OutlookWarnTrustedDomains** and **OutlookJustifyTrustedDomains**.
 
@@ -290,7 +290,9 @@ To illustrate how this works, we'll create an additional advanced client setting
 
 4. Select **Save and close**. Do not close the **Policies** blade, or the Azure portal.
 
-5. Now repeat the [previous test to block users from sending an email that has the General label](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label), and you no longer see the block message when you use your own email address. However, if you add a new recipient from outside your organization, you see the block message again.
+5. Now repeat the [previous test to block users from sending an email that has the General label](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label), and you no longer see the block message when you use your own email address. The email is sent without interruption.
+    
+    Repeat the test one more time but add a new recipient from outside your organization. This time, you see the block message again, but listing the new recipient address only as untrusted.
 
 ## Configure and test an advanced client setting to warn, prompt for justification, or block emails that don't have a label
 
