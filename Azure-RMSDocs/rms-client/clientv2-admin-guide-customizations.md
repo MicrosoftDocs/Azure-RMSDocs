@@ -446,7 +446,7 @@ When you create and configure the following advanced client settings, users see 
 - **Their email or attachment for the email doesn't have a label**:
     - The attachment can be an Office document or PDF document
 
-When these conditions are met and the recipient's email address is not included in a list of allowed domain names that you have specified, the user sees a pop-up message with one of the following actions:
+When these conditions are met, the user sees a pop-up message with one of the following actions:
 
 - **Warn**: The user can confirm and send, or cancel.
 
@@ -454,6 +454,7 @@ When these conditions are met and the recipient's email address is not included 
 
 - **Block**: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
 
+When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
 
 > [!TIP]
 > Although the tutorial is for the Azure Information Protection client rather than the unified labeling client, you can see these advanced settings in action for yourself with [Tutorial: Configure Azure Information Protection to control oversharing of information using Outlook](../infoprotect-oversharing-tutorial.md).

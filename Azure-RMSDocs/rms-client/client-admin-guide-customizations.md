@@ -312,7 +312,7 @@ When you create and configure the following advanced client settings, users see 
 - **Their email or attachment for the email doesn't have a label**:
     - The attachment can be an Office document or PDF document
 
-When these conditions are met and the recipient's email address is not included in a list of allowed domain names that you have specified, the user sees a pop-up messages with one of the following actions:
+When these conditions are met, the user sees a pop-up messages with one of the following actions:
 
 - **Warn**: The user can confirm and send, or cancel.
 
@@ -320,7 +320,9 @@ When these conditions are met and the recipient's email address is not included 
 
 - **Block**: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
 
-The resulting action is logged to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**:
+When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
+
+The resulting action from the pop-up messages is logged to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**:
 
 - Warn messages: Information ID 301
 
@@ -331,7 +333,7 @@ The resulting action is logged to the local Windows event log **Applications and
 Example event entry from a justify message:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Price list.msg
 Item Name: Price list
