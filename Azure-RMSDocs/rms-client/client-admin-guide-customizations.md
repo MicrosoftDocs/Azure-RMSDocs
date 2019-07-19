@@ -322,7 +322,7 @@ When these conditions are met, the user sees a pop-up messages with one of the f
 
 When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
 
-The resulting action from the pop-up messages is logged to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**:
+The resulting actions from the pop-up messages are logged to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**:
 
 - Warn messages: Information ID 301
 
