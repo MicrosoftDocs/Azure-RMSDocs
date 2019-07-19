@@ -93,7 +93,7 @@ This client is replacing the Azure Information Protection client (classic). To c
         -  *CustomPermissions* and *RemoveProtection* - added to [Set-AIPFileLabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)
         -  *OnBeHalfOf* - added to [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), to be used instead of the *Token* parameter for non-interactive sessions
         -  *WhatIf* and *DiscoveryInfoTypes* - added to [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), so that this cmdlet can run in discovery mode without applying labels
-    - Deprecated cmdlets: Clear-RMSAuthentication, Get-RMSFileStatus, Get-RMSServer, Get-RMSServerAuthentication, Get-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
+    - Deprecated cmdlets that connect directly to a protection service: Clear-RMSAuthentication, Get-RMSFileStatus, Get-RMSServer, Get-RMSServerAuthentication, Get-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
 
 
 **Fixes:**
