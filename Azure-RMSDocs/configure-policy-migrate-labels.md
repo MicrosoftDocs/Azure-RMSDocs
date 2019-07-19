@@ -51,9 +51,9 @@ If you do not give these users access to the admin centers by using one of these
 
 Global administrators for your tenant can continue to manage labels and policies in both the Azure portal and the admin centers after your labels are migrated.
 
-## Considerations for unified labels
+## Before you begin
 
-Before you migrate your labels, make sure that you are aware of the following changes and considerations:
+Because label migration is irreversible, make sure that you are aware of the following changes and considerations:
 
 - Make sure that you have [clients that support unified labels](#clients-and-services-that-support-unified-labeling) and if necessary, be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the admin centers (for client that do support unified labels).
 
