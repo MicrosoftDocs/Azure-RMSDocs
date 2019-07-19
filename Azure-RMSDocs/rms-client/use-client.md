@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 07/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -44,9 +44,9 @@ The **Azure Information Protection unified labeling client** downloads labels an
 
 Which client should you install?
 
-- Install the Azure Information Protection unified labeling client for labels that can also be used by MacOS, iOS, and Android, and if you don’t need the few features that aren't yet supported. These features include protecting content with an on-premises key (HYOK) and a scanner for on-premises data stores.
+- Install the Azure Information Protection unified labeling client for labels and policy settings that can also be used by MacOS, iOS, and Android, and if you don’t need the few features that aren't yet supported by the classic client. These features include protecting content with an on-premises key (HYOK) and a scanner for on-premises data stores.
 
-- Install the Azure Information Protection client (classic) if you need a version of the client that has features that are not yet available with the unified labeling client. Your tradeoff is that the labels can't be used on other client platforms and administration using another management portal.
+- Install the Azure Information Protection client (classic) if you need a version of the client that has features that are not yet available with the unified labeling client. Your tradeoff is that not all label settings can be used on other client platforms, and administration using another management portal.
 
 Currently, the classic client and the unified labeling client don't have parity for their features. However, this gap is closing and you can expect new features to be added only to the unified labeling client. For this reason, we recommend you deploy the unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](../configure-policy-migrate-labels.md), use the classic client.
 
@@ -56,11 +56,11 @@ You can also install both clients in the same environment to support different b
 
 - For the majority of users, you deploy the Azure Information Protection unified labeling client because this client meets the business needs for these users. 
     
-    For these users, their labeling experience is very similar if they also have devices that run MacOS, iOS, and Android, and these devices have a version of Office that supports sensitivity labels.
+    For these users, their labeling experience is very similar across Windows, Mac, iOS, and Android because they have the same labels published to them and the same policy settings. As an admin, you manage these labels and policy settings in the same management portal.
 
-- For a subset of users, you deploy the classic client because these users require labels that apply hold your own key (HYOK) protection.
+- For a subset of users, you deploy the classic client because these users require one or more labels that apply hold your own key (HYOK) protection.
     
-    For these users, they have a slightly different experience if they also have devices that run MacOS, iOS, and Android, and these devices have a version of Office that supports sensitivity labels. For example, they see a **Protect** button rather than a **Sensitivity** button on the Office ribbon. For differences between the classic client and the unified labeling client, see the tables that follow.
+    For these users, they have a slightly different labeling experience when they use this client. For example, they see a **Protect** button rather than a **Sensitivity** button in Office apps. As an admin, you need to manage their labels for HYOK settings and policy settings in a different management portal to the labels and settings for the other client platforms.
 
 - You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. You deploy the classic client on servers to run the Azure Information Protection scanner.
 

@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -446,7 +446,7 @@ When you create and configure the following advanced client settings, users see 
 - **Their email or attachment for the email doesn't have a label**:
     - The attachment can be an Office document or PDF document
 
-When these conditions are met and the recipient's email address is not included in a list of allowed domain names that you have specified, the user sees a pop-up message with one of the following actions:
+When these conditions are met, the user sees a pop-up message with one of the following actions:
 
 - **Warn**: The user can confirm and send, or cancel.
 
@@ -454,6 +454,7 @@ When these conditions are met and the recipient's email address is not included 
 
 - **Block**: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
 
+When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
 
 > [!TIP]
 > Although the tutorial is for the Azure Information Protection client rather than the unified labeling client, you can see these advanced settings in action for yourself with [Tutorial: Configure Azure Information Protection to control oversharing of information using Outlook](../infoprotect-oversharing-tutorial.md).
@@ -492,6 +493,45 @@ Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
 
+#### To exempt domain names for pop-up messages configured for specific labels
+
+For the labels that you've specified with these pop-up messages, you can exempt specific domain names so that users do not see the messages for recipients who have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
+
+A typical configuration is to display the pop-up messages only for recipients who are external to your organization or who aren't authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
+
+For the same label policy, create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
+
+Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
+
+For the same label policy, create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
+
+Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
+
+- Warn messages:
+    
+    - Key: **OutlookWarnTrustedDomains**
+    
+    - Value: **\<**domain names, comma separated**>**
+
+- Justification messages:
+    
+    - Key: **OutlookJustifyTrustedDomains**
+    
+    - Value: **\<**domain names, comma separated**>**
+
+- Block messages:
+    
+    - Key: **OutlookBlockTrustedDomains**
+    
+    - Value: **\<**domain names, comma separated**>**
+
+For example, you have specified the **OutlookBlockUntrustedCollaborationLabel** advanced client setting for the **Confidential \ All Employees** label. You now specify the additional advanced client setting of **OutlookJustifyTrustedDomains** and **contoso.com**. As a result, a user can send an email to john@sales.contoso.com when it is labeled **Confidential \ All Employees** but will be blocked from sending an email with the same label to a Gmail account.
+
+Example PowerShell commands, where your label policy is named "Global":
+
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
 ### To implement the warn, justify, or block pop-up messages for emails or attachments that don't have a label:
 
@@ -547,41 +587,6 @@ Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
 
-### To specify the allowed domain names for recipients exempt from the pop-up messages
-
-When you specify domain names in an additional advanced client setting, users do not see the pop-up messages for recipients who have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
-
-A typical configuration is to display the pop-up messages only for recipients who are external to your organization or who aren't authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
-
-For the same label policy, create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
-
-Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
-
-- Warn messages:
-    
-    - Key: **OutlookWarnTrustedDomains**
-    
-    - Value: **\<**domain names, comma separated**>**
-
-- Justification messages:
-    
-    - Key: **OutlookJustifyTrustedDomains**
-    
-    - Value: **\<**domain names, comma separated**>**
-
-- Block messages:
-    
-    - Key: **OutlookBlockTrustedDomains**
-    
-    - Value: **\<**domain names, comma separated**>**
-
-For example, to never block emails sent to users who have a contoso.com email address, specify the advanced client setting of **OutlookBlockTrustedDomains** and **contoso.com**. As a result, users do not see the warning pop-up messages in Outlook when they send an email to john@sales.contoso.com.
-
-Example PowerShell commands, where your label policy is named "Global":
-
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
-
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
 ## Disable sending discovered sensitive information in documents to Azure Information Protection analytics
 
