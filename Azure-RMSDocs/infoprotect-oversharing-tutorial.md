@@ -292,7 +292,7 @@ To illustrate how this works, we'll create an additional advanced client setting
 
 5. Now repeat the [previous test to block users from sending an email that has the General label](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label), and you no longer see the block message when you use your own email address. The email is sent without interruption.
     
-    Repeat the test one more time but instead of using your own email address, specify a recipient from outside your organization. This time, you see the block message again, listing the new recipient address as untrusted.
+    To confirm that the block message is still shown for external recipients, repeat the test one more time but specify a recipient from outside your organization. This time, you see the block message again, listing the new recipient address as untrusted.
 
 ## Configure and test an advanced client setting to warn, prompt for justification, or block emails that don't have a label
 
@@ -428,6 +428,6 @@ Restart Outlook so it's no longer configured for the settings we configured for 
 
 ## Next steps
 
-For quicker testing, this tutorial used an email message to a single recipient, and without attachments. But you can apply the same method with multiple recipients, multiple labels, and also apply the same logic to email attachments whose labeling status is often less obvious to users. For example, the email message itself is labeled Public but the PowerPoint presentation attached is labeled General. For more information, see the following section from the admin guide: [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+For quicker testing, this tutorial used an email message to a single recipient, and without attachments. But you can apply the same method with multiple recipients, multiple labels, and also apply the same logic to email attachments whose labeling status is often less obvious to users. For example, the email message itself is labeled Public but the PowerPoint presentation attached is labeled General. For more information about the configuration options, see the following section from the admin guide: [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
 The admin guide also contains information about other advanced client settings that you can use to customize the behavior of the client. For a full list, see [Available advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings).
