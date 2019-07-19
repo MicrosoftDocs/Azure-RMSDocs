@@ -5,7 +5,7 @@ title: Configure the Azure Information Protection policy - AIP
 description: To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. 
 author: cabailey
 ms.author: cabailey
-ms.date: 06/08/2019
+ms.date: 07/19/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -79,7 +79,7 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
   - **Global administrator**
     
     > [!NOTE] 
-    > If your tenant has been migrated to the unified labeling store, the Azure Information Protection administrator (formerly "Information Protection administrator") is no longer supported. [More information](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > If your tenant has been migrated to the unified labeling store, the Azure Information Protection administrator (formerly "Information Protection administrator") is no longer supported. [More information](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
 
 ## To access the Azure Information Protection blade for the first time
