@@ -83,11 +83,11 @@ Use the following table to help compare which features are supported by the two 
 |PowerShell commands:| Yes | Yes with limitations:<br /><br />- Cannot remove protection from container files (zip, .rar, .7z, .msg, and .pst)|
 |Offline support for protection actions:| Yes | Yes with limitations: <br /><br />- For File Explorer and PowerShell commands, the user must be connected to the Internet to protect files. |
 |Support for disconnected computers with manual policy file management:| Yes |No |
-|HYOK support:| Yes | No<br /><br /> Labels that you migrate from the Azure portal and that are configured for HYOK protection are displayed by the Azure Information Protection unified labeling client, but do not apply protection. |
+|HYOK support:| Yes | No <br /><br /> Labels that you migrate from the Azure portal and that are configured for HYOK protection are displayed by the Azure Information Protection unified labeling client, but do not apply protection. |
 |Usage logging to Event Viewer:| Yes | No|
 |Label inheritance from email attachments:| Yes | Yes  |
 |Display the Do Not Forward button in Outlook| Yes | No |
-|Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| Yes by using [advanced client settings in the Azure portal](client-admin-guide-customizations.md#available-advanced-client-settings) | Yes by using [AdvancedSettings in PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
+|Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| Yes <br /><br /> Configure these [advanced client settings in the Azure portal](client-admin-guide-customizations.md#available-advanced-client-settings) | Yes <br /><br /> Configure these using [AdvancedSettings in PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
 |Scanner for on-premises data stores:| Yes | No |
 |Track and revoke:| Yes | No |
 |Protection-only mode (no labels) using templates:| Yes | No |
