@@ -73,7 +73,7 @@ Use the following table to help compare which features are supported by the two 
 |Labeling actions: Manual, recommended, automatic| Yes | Yes |
 |Central reporting (analytics):| Yes | Yes |
 |Multilanguage support for labels:| Yes | Yes |
-|Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| Yes <br /><br /> Configure these [advanced client settings in the Azure portal](client-admin-guide-customizations.md#available-advanced-client-settings) | Yes <br /><br /> Configure these using [AdvancedSettings in PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
+|Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| Yes | Yes |
 |Reset settings and export logs:| Yes | Yes |
 |User-defined permissions:| Yes | Yes with limitations: <br /><br />- For Word, Excel, PowerPoint, and File Explorer: Supported when you configure the label in the Azure portal |
 |Custom permissions:| Yes | File Explorer and PowerShell <br /><br /> In Office apps, as an alternative, users can select **File Info** > **Protect Document** > **Restrict Access**  or admins can configure a label for user-defined permissions|
