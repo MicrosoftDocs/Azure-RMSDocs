@@ -87,7 +87,7 @@ Use the following table to help compare which features are supported by the two 
 |Usage logging to Event Viewer:| Yes | No|
 |Label inheritance from email attachments:| Yes | Yes  |
 |Display the Do Not Forward button in Outlook| Yes | No |
-|[Customizations](client-admin-guide-customizations.md#available-advanced-client-settings) that include:<br />- Default label for email<br />- Enable custom permissions <br />- S/MIME support<br />- Report an Issue option| Yes | Yes by using [PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
+|Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| Yes by using [advanced client settings in the Azure portal](client-admin-guide-customizations.md#available-advanced-client-settings) | Yes by using [AdvancedSettings in PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
 |Scanner for on-premises data stores:| Yes | No |
 |Track and revoke:| Yes | No |
 |Protection-only mode (no labels) using templates:| Yes | No |
