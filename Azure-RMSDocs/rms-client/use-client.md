@@ -75,6 +75,7 @@ Use the following table to help compare which features are supported by the two 
 |Multilanguage support for labels:| Yes | Yes |
 |Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| Yes | Yes |
 |Reset settings and export logs:| Yes | Yes |
+|Label inheritance from email attachments:| Yes | Yes  |
 |User-defined permissions:| Yes | Yes with limitations: <br /><br />- For Word, Excel, PowerPoint, and File Explorer: Supported when you configure the label in the Azure portal |
 |Custom permissions:| Yes | File Explorer and PowerShell <br /><br /> In Office apps, as an alternative, users can select **File Info** > **Protect Document** > **Restrict Access**  or admins can configure a label for user-defined permissions|
 |Information Protection bar in Office apps:| Yes | Yes with limitations:<br /><br /> - No title or customizable tooltip<br /><br /> - Label color not displayed for applied label|
@@ -86,7 +87,6 @@ Use the following table to help compare which features are supported by the two 
 |Support for disconnected computers with manual policy file management:| Yes |No |
 |HYOK support:| Yes | No <br /><br /> Labels that you migrate from the Azure portal and that are configured for HYOK protection are displayed by the Azure Information Protection unified labeling client, but do not apply protection. |
 |Usage logging to Event Viewer:| Yes | No|
-|Label inheritance from email attachments:| Yes | Yes  |
 |Display the Do Not Forward button in Outlook| Yes | No |
 |Scanner for on-premises data stores:| Yes | No |
 |Track and revoke:| Yes | No |
