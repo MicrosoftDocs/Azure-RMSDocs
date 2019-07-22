@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -396,7 +396,7 @@ You can configure this setting to **Recommended**, so that users are prompted to
 
 Note: When the attachment with the highest classification label is configured for protection with the setting of user-defined permissions:
 
-- When the label's user-defined permissions include Outlook (Do Not Forward), that label is selected and Do Not Forward protection is applied to the email. 
+- When the label's user-defined permissions include Outlook (Do Not Forward), that label is selected and Do Not Forward protection is applied to the email.
 - When the label's user-defined permissions are just for Word, Excel, PowerPoint, and File Explorer, that label is not applied to the email message, and neither is protection.
 
 To configure this advanced setting, enter the following strings for the selected label policy:
@@ -409,6 +409,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 - Key Value 2: "\<customized tooltip>"
 
+The customized tooltip supports a single language only.
 
 Example PowerShell command, where your label policy is named "Global":
 
