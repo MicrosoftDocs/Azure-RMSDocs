@@ -73,21 +73,20 @@ Use the following table to help compare which features are supported by the two 
 |Labeling actions: Manual, recommended, automatic| Yes | Yes |
 |Central reporting (analytics):| Yes | Yes |
 |Multilanguage support for labels:| Yes | Yes |
-|Reset settings and export logs:| Yes | Yes |
-|User-defined permissions:| Yes | Yes with limitations: <br /><br />- For Outlook only (Do Not Forward): Supported<br /><br />- For Word, Excel, PowerPoint, and File Explorer: Supported when you configure the label in the Azure portal |
+|Label inheritance from email attachments:| Yes | Yes  |
+|Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| Yes <br /><br /> Supported as [advanced client settings that you configure in the Azure portal](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)| Yes <br /><br /> Supported as [advanced settings that you configure with PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
+|User-defined permissions:| Yes | Yes with limitations: <br /><br />- For Word, Excel, PowerPoint, and File Explorer: Supported when you configure the label in the Azure portal |
 |Custom permissions:| Yes | File Explorer and PowerShell <br /><br /> In Office apps, as an alternative, users can select **File Info** > **Protect Document** > **Restrict Access**  or admins can configure a label for user-defined permissions|
 |Information Protection bar in Office apps:| Yes | Yes with limitations:<br /><br /> - No title or customizable tooltip<br /><br /> - Label color not displayed for applied label|
 |Labels can apply visual markings (header, footer, watermark):| Yes | Yes with limitations:<br /><br /> - Headers and footers do not support variables for dynamic values <br /><br /> - No support for Word, Excel, PowerPoint, and Outlook to have different visual markings|
 |File Explorer, right-click actions:| Yes | Yes with limitations:<br /><br /> - Can't protect PDF documents for .ppdf format <br /><br />  - No support for protection-only mode|
 |A viewer for protected files:| Yes | Yes with limitations:<br /><br /> - For generically protected files (.pfile), unlike the viewer from the classic client, there's no ability to save changes to the originally opened file.|
-|PowerShell commands:| Yes | Yes with limitations:<br /><br />- Cmdlets included: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />- Currently, you cannot remove protection from container files (zip, .rar, .7z, .msg, and .pst)|
+|PowerShell commands:| Yes | Yes with limitations:<br /><br />- Cannot remove protection from container files (zip, .rar, .7z, .msg, and .pst)|
 |Offline support for protection actions:| Yes | Yes with limitations: <br /><br />- For File Explorer and PowerShell commands, the user must be connected to the Internet to protect files. |
 |Support for disconnected computers with manual policy file management:| Yes |No |
-|HYOK support:| Yes | No<br /><br /> Labels that you migrate from the Azure portal and that are configured for HYOK protection are displayed by the Azure Information Protection unified labeling client, but do not apply protection. |
+|HYOK support:| Yes | No <br /><br /> Labels that you migrate from the Azure portal and that are configured for HYOK protection are displayed by the Azure Information Protection unified labeling client, but do not apply protection. |
 |Usage logging to Event Viewer:| Yes | No|
-|Label inheritance from email attachments:| Yes | Yes  |
 |Display the Do Not Forward button in Outlook| Yes | No |
-|[Customizations](client-admin-guide-customizations.md#available-advanced-client-settings) that include:<br />- Default label for email<br />- Enable custom permissions <br />- S/MIME support<br />- Report an Issue option| Yes | Yes by using [PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
 |Scanner for on-premises data stores:| Yes | No |
 |Track and revoke:| Yes | No |
 |Protection-only mode (no labels) using templates:| Yes | No |
@@ -121,7 +120,7 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Support Office apps for disconnected computers with manual policy file management
 
-- Custom permissions as an option that users can select in Office apps: Word, Excel, and PowerPoint
+- Custom permissions as a separate option that users can select in Office apps: Word, Excel, and PowerPoint
 
 - Track and revoke from Office apps and File Explorer
 

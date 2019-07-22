@@ -71,6 +71,9 @@ For more information about the cryptographic controls, see [Cryptographic contro
 ## Next steps
 For more detailed requirements to use Azure Information Protection, such as device support and minimum versions, see [Requirements for Azure Information Protection](requirements.md).
 
-If you are looking to migrate from AD RMS to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+If you are looking to migrate from AD RMS to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
+You might be interested in the following FAQs:
+- [What's the difference between Azure Information Protection and Microsoft Information Protection?](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection)
+- [What's the difference between Azure Information Protection and Azure Rights Management?](faqs.md#whats-the-difference-between-azure-information-protection-and-azure-rights-management)
 
