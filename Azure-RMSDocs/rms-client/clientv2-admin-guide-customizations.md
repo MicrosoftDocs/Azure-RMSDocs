@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -396,7 +396,7 @@ You can configure this setting to **Recommended**, so that users are prompted to
 
 Note: When the attachment with the highest classification label is configured for protection with the setting of user-defined permissions:
 
-- When the label's user-defined permissions include Outlook (Do Not Forward), that label is selected and Do Not Forward protection is applied to the email. 
+- When the label's user-defined permissions include Outlook (Do Not Forward), that label is selected and Do Not Forward protection is applied to the email.
 - When the label's user-defined permissions are just for Word, Excel, PowerPoint, and File Explorer, that label is not applied to the email message, and neither is protection.
 
 To configure this advanced setting, enter the following strings for the selected label policy:
@@ -409,6 +409,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 - Key Value 2: "\<customized tooltip>"
 
+The customized tooltip supports a single language only.
 
 Example PowerShell command, where your label policy is named "Global":
 
@@ -498,10 +499,6 @@ Example PowerShell command, where your label policy is named "Global":
 For the labels that you've specified with these pop-up messages, you can exempt specific domain names so that users do not see the messages for recipients who have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
 
 A typical configuration is to display the pop-up messages only for recipients who are external to your organization or who aren't authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
-
-For the same label policy, create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
-
-Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
 
 For the same label policy, create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
 
@@ -790,7 +787,7 @@ This configuration uses label [advanced settings](#how-to-configure-advanced-set
 
 Use these settings only when you have a working [S/MIME deployment](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
 
-To configure an advanced setting for an S/MIME digital signatures, enter the following strings for the selected label:
+To configure an advanced setting for an S/MIME digital signature, enter the following strings for the selected label:
 
 - Key: **SMimeSign**
 
