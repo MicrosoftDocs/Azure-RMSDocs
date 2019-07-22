@@ -724,7 +724,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 - Key: **EnableLabelByMailHeader**
 
-- Value: **Tue**
+- Value: **True**
 
 Example PowerShell command, where your label policy is named "Global":
 
