@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -66,6 +66,7 @@ This client is replacing the Azure Information Protection client (classic). To c
     
     These advanced settings support the following customizations:
      - [Display the Information Protection bar in Office apps](clientv2-admin-guide-customizations.md#display-the-information-protection-bar-in-office-apps)
+    - [Exempt Outlook messages from mandatory labeling](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
     - [Enable recommended classification in Outlook](clientv2-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
     - [Set a different default label for Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
     - [Remove "Not now" for documents when you use mandatory labeling](clientv2-admin-guide-customizations.md#remove-not-now-for-documents-when-you-use-mandatory-labeling)
