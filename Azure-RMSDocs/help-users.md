@@ -6,7 +6,7 @@ description: Information to help you provide guidance for users, administrators,
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/15/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -121,7 +121,7 @@ For example, if the email message is protected by using the **Do Not Forward** o
 
 1. Using Outlook on the web, create a mail message addressed to a recipient within your organization.
 
-2. Select **Protect**. Unless the default has been changed by an administrator, the **Do Not Forward** option is automatically selected. If you want to change the default, select **Change Permissions** and then select an option from the drop down. For example: **Encrypt** or **\<Company Name>- Confidential**.
+2. Select **Protect**. Unless the default has been changed by an administrator, the **Do Not Forward** option is automatically selected. If you want to change the default, select **Change Permissions** and then select an option from the drop-down. For example: **Encrypt** or **\<Company Name>- Confidential**.
 
 3. Send the message.
 
