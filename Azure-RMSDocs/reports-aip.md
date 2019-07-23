@@ -41,7 +41,7 @@ Use Azure Information Protection analytics for central reporting to help you tra
 
 - Identify documents that contain sensitive information that might be putting your organization at risk if they are not protected, and mitigate your risk by following recommendations.
 
-The data that you see is aggregated from your Azure Information Protection clients and Azure Information Protection scanners, from Windows computers running [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](/windows/security/threat-protection/microsoft-defender-atp/overview), and from [clients that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
+The data that you see is aggregated from your Azure Information Protection clients and Azure Information Protection scanners, from Windows computers running [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](/windows/security/threat-protection/microsoft-defender-atp/overview), from Microsoft Cloud App Security, and from [clients that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 For example, you'll be able to see the following:
 
@@ -67,7 +67,7 @@ For example, you'll be able to see the following:
     
     - What labeling actions were performed for a specific file path
     
-    - What labeling actions were performed by a specific application, such File Explorer and right-click, or the AzureInformationProtection PowerShell module
+    - What labeling actions were performed by a specific application, such File Explorer and right-click, PowerShell, the scanner, or Microsoft Cloud App Security
     
     - Drill down into reported files to view **Activity Details** for additional information
 
