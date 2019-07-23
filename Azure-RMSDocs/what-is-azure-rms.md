@@ -6,7 +6,7 @@ description: Information about Azure Rights Management (Azure RMS), the protecti
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
