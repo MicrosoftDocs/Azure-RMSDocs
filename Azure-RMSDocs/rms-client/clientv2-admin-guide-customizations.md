@@ -2,7 +2,6 @@
 # required metadata
 
 title: Custom configurations - Azure Information Protection unified labeling client
-description: Information about customizing the Azure Information Protection unified labeling client for Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -123,6 +122,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |----------------|---------------|
 |AttachmentAction|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
+|DisableMandatoryInOutlook|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
 |EnableCustomPermissions|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -135,6 +135,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |OutlookJustifyUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
 |OutlookOverrideUnlabeledCollaborationExtensions|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
@@ -178,6 +179,22 @@ For the selected label policy, specify the following strings:
 Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
+
+## Exempt Outlook messages from mandatory labeling
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+
+By default, when you enable the label policy setting of **All documents and emails must have a label**, all saved documents and sent emails must have a label applied. When you configure the following advanced setting, the policy setting applies only to Office documents and not to Outlook messages.
+
+For the selected label policy, specify the following strings:
+
+- Key: **DisableMandatoryInOutlook**
+
+- Value: **True**
+
+Example PowerShell command, where your label policy is named "Global":
+
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
 
 ## Enable recommended classification in Outlook
 
@@ -583,6 +600,42 @@ For the same label policy, enter the following strings:
 Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
+
+#### To specify a different action for email messages without attachments
+
+By default, the value that you specify for OutlookUnlabeledCollaborationAction to warn, justify, or block pop-up messages applies to emails or attachments that don't have a label. You can refine this configuration by specifying another advanced setting for email messages that don't have attachments.
+
+Create the following advanced client setting with one of the following values:
+
+- Warn messages:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Value: **Warn**
+
+- Justification messages:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Value: **Justify**
+
+- Block messages:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Value: **Block**
+
+- Turn off these messages:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Value: **Off**
+
+If you don't specify this client setting, the value that you specify for OutlookUnlabeledCollaborationAction is used for unlabeled email messages without attachments as well as unlabeled email messages with attachments.
+
+Example PowerShell command, where your label policy is named "Global":
+
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 
 
 ## Disable sending discovered sensitive information in documents to Azure Information Protection analytics
