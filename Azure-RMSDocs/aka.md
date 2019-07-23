@@ -6,7 +6,7 @@ description: Azure Information Protection has undergone many name changes, and y
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/21/2019
+ms.date: 07/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
