@@ -56,11 +56,15 @@ Use the following information to see what’s new or changed for a supported rel
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the clients](use-client.md#compare-the-clients).
 
-## Version 2.2.18.0 
+## Version 2.2.19.0
 
 **Released**: 08/06/2019
 
-Maintenance release for performance and stability improvements.
+**Fixes:**
+
+- After upgrading from a previous version of the unified labeling client, the client can successfully download its policy and display the current labels.
+
+- General performance and stability improvements.
 
 ## Version 2.2.14.0
 
