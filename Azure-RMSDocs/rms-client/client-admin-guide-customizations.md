@@ -277,7 +277,7 @@ With this setting, the sublabel that's ordered last from the parent label with t
 
 ## Exempt Outlook messages from mandatory labeling
 
-This configuration use an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 By default, when you enable the [policy setting](../configure-policy-settings.md) **All documents and emails must have a label**, all saved documents and sent emails must have a label applied. When you configure the following advanced setting, the policy setting applies only to Office documents and not to Outlook messages.
 
@@ -312,7 +312,7 @@ When you create and configure the following advanced client settings, users see 
 - **Their email or attachment for the email doesn't have a label**:
     - The attachment can be an Office document or PDF document
 
-When these conditions are met, the user sees a pop-up messages with one of the following actions:
+When these conditions are met, the user sees a pop-up message with one of the following actions:
 
 - **Warn**: The user can confirm and send, or cancel.
 
