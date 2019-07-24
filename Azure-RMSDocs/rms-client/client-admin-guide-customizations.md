@@ -82,7 +82,7 @@ Some of these settings require editing the registry and some use advanced settin
 |PullPolicy|[Support for disconnected computers](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|RunAuditInformationTypesDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Label an Office document by using an existing custom property](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -858,7 +858,7 @@ This configuration uses an [advanced client setting](#how-to-configure-advanced-
 
 To change this behavior so that this information is not sent by the classic client, enter the following strings:
 
-- Key: **RunAuditInformationTypeDiscovery**
+- Key: **RunAuditInformationTypesDiscovery**
 
 - Value: **False**
 
