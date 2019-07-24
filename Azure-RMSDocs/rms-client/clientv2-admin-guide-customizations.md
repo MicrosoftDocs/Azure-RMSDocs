@@ -5,7 +5,7 @@ title: Custom configurations - Azure Information Protection unified labeling cli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/22/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -85,7 +85,7 @@ Specifying the label policy name for the PowerShell *Identity* parameter is stra
 
 - **Name** is the original name of the label and it is unique across all your labels. If you change the name of your label after it is created, this value remains the same.
 
-- **Display name** is the name of the label that users see and it doesn't have to be unique across all your labels. For example, users see one **All Employees** sublabel for the **Confidential** label, and another **All Employees** sublabel for the **Highly Confidential** label. These sublabels both display the same name but are not the same label and have different settings.
+- **Display name** is the name of the label that users see and it doesn't have to be unique across all your labels. For example, users see one **All Employees** sublabel for the **Confidential** label, and another **All Employees** sublabel for the **Highly Confidential** label. These sublabels both display the same name, but are not the same label and have different settings.
 
 For configuring your label advanced settings, use the **Name** value. For example, to identify the label in the following picture, you would specify `-Identity "All Company"`:
 
@@ -141,7 +141,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|RunAuditInformationTypesDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
 
@@ -646,7 +646,7 @@ This configuration uses a policy [advanced setting](#how-to-configure-advanced-s
 
 To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
 
-- Key: **RunAuditInformationTypeDiscovery**
+- Key: **RunAuditInformationTypesDiscovery**
 
 - Value: **False**
 
@@ -662,7 +662,7 @@ For example:
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="False"}
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 
 ## Disable sending information type matches for a subset of users
 
