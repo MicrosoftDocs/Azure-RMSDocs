@@ -85,7 +85,7 @@ Specifying the label policy name for the PowerShell *Identity* parameter is stra
 
 - **Name** is the original name of the label and it is unique across all your labels. If you change the name of your label after it is created, this value remains the same.
 
-- **Display name** is the name of the label that users see and it doesn't have to be unique across all your labels. For example, users see one **All Employees** sublabel for the **Confidential** label, and another **All Employees** sublabel for the **Highly Confidential** label. These sublabels both display the same name but are not the same label and have different settings.
+- **Display name** is the name of the label that users see and it doesn't have to be unique across all your labels. For example, users see one **All Employees** sublabel for the **Confidential** label, and another **All Employees** sublabel for the **Highly Confidential** label. These sublabels both display the same name, but are not the same label and have different settings.
 
 For configuring your label advanced settings, use the **Name** value. For example, to identify the label in the following picture, you would specify `-Identity "All Company"`:
 
