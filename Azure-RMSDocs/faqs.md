@@ -86,7 +86,7 @@ After you've migrated your labels in the Azure portal:
 
 - If you have [unified labeling clients and services](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), go to one of the admin centers (Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center) to publish these labels, and to configure their policy settings. For label changes going forward, use one of these admin centers. Unified labeling clients download the labels and policy settings from these admin centers.
 
-- If you have the [Azure Information Protection client (classic)](./rms-client/aip-client.md), continue to use the Azure portal to edit your labels and policy settings. The classic client continue to download the labels and policy settings from Azure.
+- If you have the [Azure Information Protection client (classic)](./rms-client/aip-client.md), continue to use the Azure portal to edit your labels and policy settings. The classic client continues to download labels and policy settings from Azure.
 
 - If you have both [unified labeling clients](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) and [classic clients](./rms-client/aip-client.md), you can use the admin centers or the Azure portal to make label changes. However, for the classic clients to pick up the label changes that you make in the admin centers, you must return to the Azure portal: Use the **Publish** option from the **Azure Information Protection - Unified labeling** blade in the Azure portal. 
 
