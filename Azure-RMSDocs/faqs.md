@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -70,9 +70,9 @@ Both clients, when they are installed, display **Azure Information Protection**.
 
 Use the **Version** number displayed to identify the client:
 
-- A version **1**, for example, **1.48.204.0**, identifies the Azure Information Protection client (classic).
+- A version **1**, for example, **1.53.10.0**, identifies the Azure Information Protection client (classic).
 
-- A version **2**, for example, **2.0.778.0**, identifies the Azure Information Protection unified labeling client.
+- A version **2**, for example, **2.2.14.0**, identifies the Azure Information Protection unified labeling client.
 
 ## When is the right time to migrate my labels to Office 365?
 
@@ -86,9 +86,9 @@ After you've migrated your labels in the Azure portal:
 
 - If you have [unified labeling clients and services](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), go to one of the admin centers (Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center) to publish these labels, and to configure their policy settings. For label changes going forward, use one of these admin centers. Unified labeling clients download the labels and policy settings from these admin centers.
 
-- If you have [Azure Information Protection clients](./rms-client/aip-client.md), continue to use the Azure portal to edit your labels and policy settings. Azure Information Protection clients continue to download the labels and policy settings from Azure.
+- If you have the [Azure Information Protection client (classic)](./rms-client/aip-client.md), continue to use the Azure portal to edit your labels and policy settings. The classic client continue to download the labels and policy settings from Azure.
 
-- If you have both [unified labeling clients](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) and [Azure Information Protection clients](./rms-client/aip-client.md), you can use the admin centers or the Azure portal to make label changes. However, for Azure Information Protection clients to pick up the label changes that you make in the admin centers, you must return to the Azure portal: Use the **Publish** option from the **Azure Information Protection - Unified labeling** blade in the Azure portal. 
+- If you have both [unified labeling clients](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) and [classic clients](./rms-client/aip-client.md), you can use the admin centers or the Azure portal to make label changes. However, for the classic clients to pick up the label changes that you make in the admin centers, you must return to the Azure portal: Use the **Publish** option from the **Azure Information Protection - Unified labeling** blade in the Azure portal. 
 
 Continue to use the Azure portal for [central reporting](reports-aip.md) and the [scanner](deploy-aip-scanner.md).
 
@@ -110,9 +110,9 @@ Still have questions about licensing? See if they are answered in the [frequentl
 
 ## Is the Azure Information Protection client only for subscriptions that include classification and labeling?
 
-No. Although most of the presentations and demos you've seen of the Azure Information Protection client show how it supports classification and labeling, it can also be used with subscriptions that include just the Azure Rights Management service to protect data.
+No. The Azure Information Protection client (classic) can also be used with subscriptions that include just the Azure Rights Management service to protect data.
 
-When the Azure Information Protection client for Windows is installed and it doesn't have an Azure Information Protection policy, the client automatically operates in [protection-only mode](./rms-client/client-protection-only-mode.md). In this mode, users can easily apply Rights Management templates and custom permissions. If you later purchase a subscription that does include classification and labeling, the client automatically switches to standard mode when it downloads the Azure Information Protection policy.
+When the classic client is installed and it doesn't have an Azure Information Protection policy, this client automatically operates in [protection-only mode](./rms-client/client-protection-only-mode.md). In this mode, users can easily apply Rights Management templates and custom permissions. If you later purchase a subscription that does include classification and labeling, the client automatically switches to standard mode when it downloads the Azure Information Protection policy.
 
 ## Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?
 
