@@ -6,7 +6,7 @@ description: Information resources for the Azure Information Protection unified 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -19,6 +19,8 @@ ms.service: information-protection
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
+search.appverid:
+- MET150
 
 ---
 
@@ -28,7 +30,12 @@ ms.suite: ems
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-The Azure Information Protection unified labeling client for Windows is a free, downloadable client for organizations that use [Office 365 sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) to classify and protect documents and emails. This client also has a viewer for organizations that don’t have their own information protection infrastructure but want to consume content that has been protected by other organizations that use a Rights Management service from Microsoft.
+The Azure Information Protection unified labeling client for Windows is a downloadable client for organizations that use [Office 365 sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) to classify and protect documents and emails. This client also has a viewer for organizations that don’t have their own information protection infrastructure but want to consume content that has been protected by other organizations that use a Rights Management service from Microsoft.
+
+> [!NOTE]
+> This client, also known as just the unified labeling client, is replacing the Azure Information Protection client (classic). If you're not sure which client to use, see [Choose which Azure Information Protection client to use](use-client.md#choose-which-azure-information-protection-client-to-use).
+
+Use the following resources for the unified labeling client:
 
 - [Azure Information Protection unified labeling client: Version release history](unifiedlabelingclient-version-release-history.md)
 

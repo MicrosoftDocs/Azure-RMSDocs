@@ -6,7 +6,7 @@ description: Information to help you install and configure the Azure Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -35,8 +35,7 @@ Before you begin, make sure that you have reviewed and checked the [prerequisite
 
 ## Installing the RMS connector
 
-1.  Identify the computers (minimum of two) that wil
-2.  l run the RMS connector. They must meet the minimum specification listed in the prerequisites.
+1.  Identify the computers (minimum of two) to run the RMS connector. These computers must meet the minimum specification listed in the prerequisites.
 
     > [!NOTE]
     > You install a single RMS connector (consisting of multiple servers for high availability) per tenant (Office 365 tenant or Azure AD tenant). Unlike Active Directory RMS, you do not have to install an RMS connector in each forest.
@@ -70,40 +69,40 @@ In addition, if you have implemented [onboarding controls](activate-service.md#c
 
 You can use an account that has one of the following privileges:
 
-- **Global administrator for your tenant**: An account that is a global administrator for your Office 365 tenant or Azure AD tenant.
+-   **Global administrator for your tenant**: An account that is a global administrator for your Office 365 tenant or Azure AD tenant.
 
-- **Azure Rights Management global administrator**: An account in Azure Active Directory that has been assigned the Azure RMS global administrator role.
+-   **Azure Rights Management global administrator**: An account in Azure Active Directory that has been assigned the Azure RMS global administrator role.
 
-- **Azure Rights Management connector administrator**: An account in Azure Active Directory that has been granted rights to install and administer the RMS connector for your organization.
+-   **Azure Rights Management connector administrator**: An account in Azure Active Directory that has been granted rights to install and administer the RMS connector for your organization.
 
-  > [!NOTE]
-  > The Azure Rights Management global administrator role and Azure Rights Management connector administrator role are assigned to accounts by using the Azure RMS [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) cmdlet.
-  > 
-  > To run the RMS connector with least privileges, create a dedicated account for this purpose that you then assign the Azure RMS connector administrator role by doing the following:
-  > 
-  > 1. If you haven't already done so, download and install Windows PowerShell for Rights Management. For more information, see [Installing the AADRM PowerShell module](install-powershell.md).
-  > 
-  >    Start Windows PowerShell with the **Run as administrator** command, and connect to the Azure RMS service by using the [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice) command:
-  > 
-  >    ```
-  >    Connect-AadrmService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
-  >    ```
-  > 2. Then run the [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) command, using just one of the following parameters:
-  > 
-  >    ```
-  >    Add-AadrmRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
-  >    ```
-  > 
-  >    ```
-  >    Add-AadrmRoleBasedAdministrator -ObjectId <object id> -Role "ConnectorAdministrator"
-  >    ```
-  > 
-  >    ```
-  >    Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
-  >    ```
-  >    For example, type: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
-  > 
-  >    Although these commands assign the connector administrator role, you could also use the GlobalAdministrator role here, as well.
+    > [!NOTE]
+    > The Azure Rights Management global administrator role and Azure Rights Management connector administrator role are assigned to accounts by using the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) cmdlet.
+    > 
+    > To run the RMS connector with least privileges, create a dedicated account for this purpose that you then assign the Azure RMS connector administrator role by doing the following:
+    >
+    > 1.  If you haven't already done so, download and install the AIPService PowerShell module. For more information, see [Installing the AIPService PowerShell module](install-powershell.md).
+    >
+    >     Start Windows PowerShell with the **Run as administrator** command, and connect to the protection service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) command:
+    >
+    >     ```
+    >     Connect-AipService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
+    >     ```
+    > 2.  Then run the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) command, using just one of the following parameters:
+    >
+    >     ```
+    >     Add-AipServiceRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
+    >     ```
+    >
+    >     ```
+    >     Add-AipServiceRoleBasedAdministrator -ObjectId <object id> -Role "ConnectorAdministrator"
+    >     ```
+    >
+    >     ```
+    >     Add-AipServiceRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
+    >     ```
+    >     For example, type: **Add-AipServiceRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
+    >
+    >     Although these commands assign the connector administrator role, you could also use the GlobalAdministrator role here, as well.
 
 During the RMS connector installation process, all prerequisite software is validated and installed, Internet Information Services (IIS) is installed if not already present, and the connector software is installed and configured. In addition, Azure RMS is prepared for configuration by creating the following:
 
@@ -174,9 +173,9 @@ When you have finished adding servers to the list, click **Close**.
 If you haven’t already done so, you must now configure load balancing for the servers that have the RMS connector installed, and consider whether to use HTTPS for the connections between these servers and the servers that you have just authorized.
 
 ## Configuring load balancing and high availability
-After you have installed the second or final instance of the RMS connector, define a connector URL server name and configure a load balancing system.
+After you have installed the second or final instance of the RMS connector, define a connector URL server name and configure a load-balancing system.
 
-The connector URL server name can be any name under a namespace that you control. For example, you could create an entry in your DNS system for **rmsconnector.contoso.com** and configure this entry to use an IP address in your load balancing system. There are no special requirements for this name and it doesn’t need to be configured on the connector servers themselves. Unless your Exchange and SharePoint servers are going to be communicating with the connector over the Internet, this name doesn’t have to resolve on the Internet.
+The connector URL server name can be any name under a namespace that you control. For example, you could create an entry in your DNS system for **rmsconnector.contoso.com** and configure this entry to use an IP address in your load-balancing system. There are no special requirements for this name and it doesn’t need to be configured on the connector servers themselves. Unless your Exchange and SharePoint servers are going to be communicating with the connector over the Internet, this name doesn’t have to resolve on the Internet.
 
 > [!IMPORTANT]
 > We recommend that you don’t change this name after you have configured Exchange or SharePoint servers to use the connector, because you have to then clear these servers of all IRM configurations and then reconfigure them.

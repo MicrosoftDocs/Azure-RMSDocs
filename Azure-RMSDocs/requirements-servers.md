@@ -6,7 +6,7 @@ description: Identify the on-premises server products that can use the Azure Rig
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -67,4 +67,4 @@ The Rights Management connector is supported on Windows Server 2016, Windows Ser
 For more information about how to configure the Rights Management connector for these on-premises servers, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
 ## Next steps
-To check for other requirements, see [Requirements for Azure Rights Management](requirements.md).
+To check for other requirements, see [Requirements for Azure Information Protection](requirements.md).

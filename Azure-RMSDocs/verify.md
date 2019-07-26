@@ -2,11 +2,11 @@
 # required metadata
 
 title: Verifying Azure Rights Management - AIP
-description: Instructions to verify that the service is working as expected by protecting a file or email message by using one user account, and then attempting to open and use that protected content from another user account.
+description: Instructions to verify that the protection service from Azure Information Protection is working as expected.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-When the Azure Rights Management service of Azure Information Protection is activated and you have performed any additional configuration steps that are required for your organization, you are ready to verify that this protection service is working as expected. 
+When the protection service (Azure Rights Management) from Azure Information Protection is activated and you have performed any additional configuration steps that are required for your organization, you are ready to verify that this protection service is working as expected. 
 
 A simple verification test is to protect a document or email message by using one user account, and then attempt to open and use that protected content from another user account on a different computer.
 
@@ -41,7 +41,7 @@ If your testing is unsuccessful, review the configuration steps in [Azure Inform
 
 ## Next steps
 
-You can monitor how your organization is using the Azure Rights Management service by using usage logging. For more information, see [Logging and analyzing usage of the Azure Rights Management service](log-analyze-usage.md).
+You can monitor how your organization is using this protection service by using usage logging. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](log-analyze-usage.md).
 
 
 

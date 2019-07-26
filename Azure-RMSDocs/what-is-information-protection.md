@@ -6,7 +6,7 @@ description: An technical overview of the Azure Information Protection service, 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 06/21/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -21,6 +21,8 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
+search.appverid:
+- MET150
 
 ---
 
@@ -34,7 +36,7 @@ The following picture shows an example of Azure Information Protection in action
 
 ![Example of recommended classification for Azure Information Protection](./media/info-protect-recommend-calloutsv2.png)
 
-###### Screenshot from the [Azure Information Protection client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+###### Screenshot from the [Azure Information Protection client (classic)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 After your content is classified (and optionally protected), you can then track and control how it is used. You can analyze data flows to gain insight into your business, detect risky behaviors and take corrective measures, track access to documents, prevent data leakage or misuse, and so on.
 
@@ -46,7 +48,7 @@ For example, the following email message has been classified as "General". The l
 
 ![Example email footer and headers showing Azure Information Protection classification](./media/example-email-footerv2.png)
 
-###### Screenshot from the [Azure Information Protection client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+###### Screenshot from the [Azure Information Protection client (classic)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ## How data is protected
 

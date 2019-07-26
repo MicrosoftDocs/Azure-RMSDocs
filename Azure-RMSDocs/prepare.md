@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/03/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -221,5 +221,5 @@ When you have confirmed that your users and groups can be used with Azure Inform
 
 - If your subscription was obtained before February 2018: You must activate the service yourself. 
 
-For more information, which includes checking the activation status, see [Activating Azure Rights Management](./activate-service.md).
+For more information, which includes checking the activation status, see [Activating the protection service from Azure Information Protection](./activate-service.md).
 

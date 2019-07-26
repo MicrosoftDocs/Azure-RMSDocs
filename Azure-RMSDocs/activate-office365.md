@@ -2,11 +2,11 @@
 # required metadata
 
 title: Activate Azure RMS with the Microsoft 365 admin center - AIP
-description: Activation instructions for the Azure Rights Management service when you use the new version of the Microsoft 365 admin center.
+description: Activation instructions for the Azure Rights Management service when you use the Microsoft 365 admin center.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/29/2018
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# How to activate Azure Rights Management from the Microsoft 365 admin center
+# How to activate Rights Management protection from the Microsoft 365 admin center
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -51,5 +51,5 @@ If you have questions about the subscription requirements, or you need help acti
 You should now see **Rights management is activated** and the option to deactivate.
 
 ## Next steps
-Resume reading [Activating Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
+Resume reading [Activating the protection service from Azure Information Protection](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 

@@ -6,7 +6,7 @@ description: Information about installation, supported operating systems, regist
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -176,7 +176,7 @@ To perform service discovery, the RMS client checks the following:
 
     For example:  5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
-    *\<YourTenantURL\>* has the following format: **{GUID}.rms.[Region].aadrm.com**.You can find this value by identifying the **RightsManagementServiceId** value when you run the [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) cmdlet for Azure RMS.
+    *\<YourTenantURL\>* has the following format: **{GUID}.rms.[Region].aadrm.com**.You can find this value by identifying the **RightsManagementServiceId** value when you run the [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) cmdlet.
 
 > [!NOTE]
 > There are four important exceptions for this service discovery flow:

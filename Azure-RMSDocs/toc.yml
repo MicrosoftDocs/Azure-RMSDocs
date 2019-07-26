@@ -12,11 +12,11 @@
       href: requirements.md
     - name: Azure Active Directory requirements
       href: requirements-azure-ad.md
-    - name: Client device support for data protection
+    - name: Client device support for protection
       href: requirements-client-devices.md
-    - name: Application support for data protection
+    - name: Application support for protection
       href: requirements-applications.md
-    - name: On-premises server support for data protection
+    - name: On-premises server support for protection
       href: requirements-servers.md
 - name: Quickstarts
   expanded: true
@@ -101,7 +101,7 @@
       href: prepare.md
   - name: Deploy & Use the Service
     items:
-    - name: Activating the service
+    - name: Activating protection
       items:
       - name: Overview
         href: activate-service.md
@@ -113,7 +113,7 @@
       items:
       - name: Overview
         href: configure-applications.md
-      - name: Office 365
+      - name: Office 365 services
         href: configure-office365.md
       - name: Office apps
         href: configure-office-apps.md
@@ -209,7 +209,7 @@
       items:
       - name: Overview
         href: administer-powershell.md
-      - name: Installing the AADRM PowerShell module
+      - name: Installing the AIPService PowerShell module
         href: install-powershell.md
   - name: Deploy & Use the Client
     items:

@@ -6,7 +6,7 @@ description: Information about RMS for individuals, a free self-service subscrip
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/02/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -67,5 +67,5 @@ Now your account is created, if you're prompted to sign in to read protected fil
 
 
 ## Next steps
-RMS for individuals is an example of using self-service signup that is supported by Azure Active Directory. For more information about how this works, see [What is Self-Service Signup for Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup) in the Azure Active Directory documentation.
+RMS for individuals is an example of using the self-service signup feature that is supported by Azure Active Directory. For more information about how this feature works, see [What is Self-Service Signup for Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup) in the Azure Active Directory documentation.
 

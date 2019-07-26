@@ -6,7 +6,7 @@ description: Some frequently asked questions to help you use the Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/31/2018
+ms.date: 07/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -60,7 +60,7 @@ However, if you don't want to wait, you can use the following instructions to se
 
 ## What credentials should I use to sign in to this app?
 
-If your organization already has AD RMS on-premises (with the mobile device extension) or uses the Azure Rights Management service, use your work credentials to sign in. 
+If your organization already has AD RMS on-premises (with the mobile device extension) or uses Azure Information Protection, use your work credentials to sign in. 
 
 If your personal email address was used to protect the file, use credentials from a free [Microsoft account](https://signup.live.com) to sign in.
 
@@ -74,7 +74,7 @@ However, although this viewer can open protected files with this account, not al
 
 You can open .rpmsg, .pdf, .ppdf, .pjpg, .pjpeg, .ptiff, .ppng, .ptxt, .pxml, and several other text and image file formats.
 
-For the full list of text and image file name extensions, see the first table in the [Supported file types for classification and protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) section from the admin guide.
+For the full list of text and image file name extensions, see the first table in the [Supported file types for classification and protection](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) section from the admin guide.
 
 ##  How do I provide feedback about this app?
 
