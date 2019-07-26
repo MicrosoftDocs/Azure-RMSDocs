@@ -13,7 +13,7 @@ ms.author: mbaldwin
 
 ## Profiles
 
-The profile is the root class for all operations in the MIP SDK. Before using any of the three APIs, the client application must create a profile. Future operations are performed by the profile, or by other objects *added* to the profile.
+The profile is the root class for all MIP specific (nonoperations in the MIP SDK. Before using any of the three APIs, the client application must create a profile. Future operations are performed by the profile, or by other objects *added* to the profile.
 
 There are three types of profile in the MIP SDK:
 
@@ -25,15 +25,15 @@ The API used in the consuming application determines which profile class should 
 
 The profile itself provides the following functionality:
 
-- Defines storage location for SDK state. State data includes user details, downloaded user policies, logs, and telemetry data.
-- Defines whether state should be loaded in memory or persisted to disk.
+- Defines whether state should be loaded in memory or persisted to disk and, if persisted to disk, if it should be encrypted.
 - Handles authentication by accepting a `mip::AuthDelegate`.
-- Sets application ID and friendly name of the app consuming the SDK.
+- Defines the `mip::ConsentDelegate` that should be used for consent operations.
+- Defines the `mip::FileProfile::Observer` implementation that will be used for asynchronous callbacks for profile operations.
 
 ### Profile Settings
 
-- `Path`: File path under which logging, telemetry, and other persistent state is stored.
-- `useInMemoryStorage`: A bool that defines whether state should be stored in memory, or on disk.
+- `MipContext`: The `mip::MipContext` object that was initialized to store application info, state path, etc.
+- `mip::CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
 - `authDelegate`: A shared pointer of class `mip::AuthDelegate`. 
 - `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md). 
 - `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
@@ -41,7 +41,7 @@ The profile itself provides the following functionality:
 
 ## Engines
 
-The File, Profile, and Protection API engines provide an interface to operations performed on behalf of a specific identity. One engine is added to the Profile object, for each user that signs in to the application. All operations performed by the engine are in the context of that identity.
+The File, Profile, and Protection API engines provide an interface for operations performed on by a specific identity. One engine is added to the Profile object for each user or service principal that signs in to the application. It is possible to override the signed-in identity via `mip::FileEngine::Settings` or `mip::ProtectionSettings`. See [performing delegated actions](https://TODO) for more details.
 
 There are three engine classes in the SDK, one for each API. The following list shows the engine classes and a few of the functions associated with each:
 
@@ -74,6 +74,10 @@ The following table describes the possible engine states, and which methods can 
 ### Engine ID
 
 Each engine has a unique identifier, `id`, that is used in all engine management operations. The application can provide an `id`, or the SDK can generated one, if it's not provided by the application. All other engine properties (for example, email address in the identity info) are opaque payloads for the SDK. The SDK does NOT perform any logic to keep any of the other properties unique, or enforce any other constraints.
+
+
+> [!IMPORTANT]
+> As a best practice, use an engine Id that is unique to the user and use that each time the user performs an operation with the SDK. Failing to provide an existing engine Id will result in extra service round trips to fetch policy and will fetch licenses that may have already been cached for the existing engine.
 
 ### Engine Management Methods
 
