@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 07/04/2019
+ms.date: 07/28/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -237,9 +237,6 @@ Azure Monitor Logs has a **Usage and estimated costs** feature to help you estim
 If you need help with creating the Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
 When the workspace is configured, you're ready to view the reports.
-
-> [!NOTE] 
-> There is currently a known problem displaying data for the first time in the reports. If this happens to you, in the global policy, set the [policy setting](configure-policy-settings.md) of **Send audit data to Azure Information Protection log analytics** to **Off** and save the policy. Then change the same setting to **On** and save the policy. After clients have [downloaded the change](configure-policy.md#making-changes-to-the-policy), it can take up to 30 minutes for their audit events to be visible in your Log Analytics workspace.
 
 ## How to view the reports
 
