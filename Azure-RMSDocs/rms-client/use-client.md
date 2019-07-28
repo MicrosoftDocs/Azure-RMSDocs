@@ -79,7 +79,7 @@ Use the following table to help compare which features are supported by the two 
 |Custom permissions:| Yes | File Explorer and PowerShell <br /><br /> In Office apps, as an alternative, users can select **File Info** > **Protect Document** > **Restrict Access**  or admins can configure a label for user-defined permissions|
 |Information Protection bar in Office apps:| Yes | Yes with limitations:<br /><br /> - No title or customizable tooltip<br /><br /> - Label color not displayed for applied label|
 |Labels can apply visual markings (header, footer, watermark):| Yes | Yes with limitations:<br /><br /> - Headers and footers do not support variables for dynamic values <br /><br /> - No support for Word, Excel, PowerPoint, and Outlook to have different visual markings|
-|File Explorer, right-click actions:| Yes | Yes with limitations:<br /><br /> - Can't protect PDF documents for .ppdf format <br /><br />  - No support for protection-only mode|
+|File Explorer, right-click actions:| Yes | Yes with limitations:<br /><br /> - Can't protect PDF documents for the older .ppdf format <br /><br />  - No support for protection-only mode|
 |A viewer for protected files:| Yes | Yes with limitations:<br /><br /> - For generically protected files (.pfile), unlike the viewer from the classic client, there's no ability to save changes to the originally opened file.|
 |PowerShell commands:| Yes | Yes with limitations:<br /><br />- Cannot remove protection from container files (zip, .rar, .7z, .msg, and .pst)|
 |Offline support for protection actions:| Yes | Yes with limitations: <br /><br />- For File Explorer and PowerShell commands, the user must be connected to the Internet to protect files. |
