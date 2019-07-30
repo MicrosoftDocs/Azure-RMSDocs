@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 
@@ -29,7 +29,7 @@ With the `ProfileObserver`, `ConsentDelegateImpl`, and `AuthDelegateImpl` define
 
 The `FileProfile::Settings` constructor accepts five parameters, listed below:
 
-- `const std::shared_ptr<MipContext>`: The `mip::MipContext` object that was initialized to store application info, state path, etc.
+- `std::shared_ptr<MipContext>`: The `mip::MipContext` object that was initialized to store application info, state path, etc.
 - `mip::CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
 - `std::shared_ptr<mip::AuthDelegate>`: A shared pointer of class `mip::AuthDelegate`.
 - `std::shared_ptr<mip::ConsentDelegate>`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
@@ -120,7 +120,7 @@ int main()
         mip::CacheStorageType::OnDisk,                 // use on disk storage
         authDelegateImpl,                              // auth delegate object
         std::make_shared<ConsentDelegateImpl>(),       // new consent delegate
-        std::make_shared<FileProfileObserverImpl>());  // new protection profile observer
+        std::make_shared<FileProfileObserverImpl>());  // new file profile observer
 
         auto profilePromise = std::make_shared<promise<shared_ptr<FileProfile>>>();
         auto profileFuture = profilePromise->get_future();

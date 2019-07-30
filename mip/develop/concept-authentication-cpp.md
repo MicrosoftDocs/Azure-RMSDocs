@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 
@@ -69,7 +69,7 @@ public:
 
 #### consent_delegate_impl.cpp
 
-When the SDK requires consent, the `GetUserConsent` method is called *by the SDK*, and the URL passed in as a parameter. In the sample below, the user is notified that the SDK will connect to that provided URL, then returns `Consent::AcceptAlways`. This isn't a great example as the user wasn't presented with a real choice.
+When the SDK requires consent, the `GetUserConsent` method is called *by the SDK*, and the URL passed in as a parameter. In the sample below, the user is notified that the SDK will connect to that provided URL and provides the user with an option on the commandline. Based on the choice by the user, the user accepts or rejects consent and that is passed to the SDK. If the users declines to consent, the application will throw an exception and no call is made to the protection service. 
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
@@ -99,6 +99,16 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
   }  
 }
 ```
+
+For testing and development purposes, a simple `ConsentDelegate` can be implemented that looks like:
+
+```cpp
+Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
+  return Consent::AcceptAlways;
+}
+```
+
+However, in production code the user may be required to be presented with a choice to consent, depending on regional or business requirements and regulations. 
 
 ## Next steps
 

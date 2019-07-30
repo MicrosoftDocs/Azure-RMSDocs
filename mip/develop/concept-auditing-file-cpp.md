@@ -6,7 +6,7 @@ author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 11/01/2018
+ms.date: 07/30/2019
 ms.author: tommos
 ---
 
@@ -58,8 +58,8 @@ Change events provide information about the file, the label that was applied or 
 ```cpp
 // Create labeling options, set label
 string contentId = "C:\users\myuser\Documents\MyPlan.docx";
-mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
-handler->SetLabel(labelId, labelingOptions);
+mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+handler->SetLabel(labelId, labelingOptions, mip::ProtectionSettings());
 auto commitPromise = std::make_shared<std::promise<bool>>();
 auto commitFuture = commitPromise->get_future();
 
@@ -74,7 +74,7 @@ if(commitFuture.get()) {
 
 ## Audit Dashboard
 
-Events submitted to the Azure Information Protection audit pipeline will surface in reports at https://portal.azure.com. Azure Information Protection Analytics is in public preview and features/functionality are subject to change.
+Events submitted to the Azure Information Protection audit pipeline will surface in reports at https://portal.azure.com. 
 
 ## Next Steps
 

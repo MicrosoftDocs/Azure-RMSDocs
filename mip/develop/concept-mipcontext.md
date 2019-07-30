@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 07/29/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 

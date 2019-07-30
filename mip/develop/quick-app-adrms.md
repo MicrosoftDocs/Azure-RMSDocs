@@ -60,7 +60,7 @@ var engineSettings = new FileEngineSettings("", "", "en-US")
 If the DNS SRV record for MDE isn't published, or `Microsoft.InformationProtection.Identity` isn't available to pass in when creating the `FileEngine`, there are two required code changes. is to set `FileEngineSettings.ProtectionOnlyEngine = true`. This property must be set as labeling (policy) operations aren't  supported for AD RMS protection endpoints.
 
 ```csharp
-// Configure FileEngineSettings as protection only engine.
+// Configure FileEngineSettings as protection only engine and generate a unique engine id.
 var engineSettings = new FileEngineSettings("", "", "en-US")
 {
      // Set ProtectionOnlyEngine to true for AD RMS as labeling isn't supported

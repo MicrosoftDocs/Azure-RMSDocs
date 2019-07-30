@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 
@@ -79,7 +79,7 @@ If a profile is successfully loaded, `ProfileObserver::OnLoadSuccess`, our imple
 The *context* is a pointer to the `std::promise` we created to handle the async operation. The function simply sets the value of the promise to the Profile object that was passed in for the first parameter. When the main function uses `Future.get()`, the result can be stored in a new object in the calling thread.
 
 ```cpp
-//get the future value and store in profile. 
+//get the future value and store in profile.
 auto profile = profileFuture.get();
 ```
 

@@ -13,7 +13,7 @@ ms.author: mbaldwin
 
 ## Profiles
 
-The profile is the root class for all MIP labeling and protection-specific operations in the MIP SDK. Before using any of the three API sets, the client application must create a profile. Future operations are performed by the profile, or by other objects *added* to the profile.
+Where the `MipContext` is the class for storing SDK-specific settings, the profile is the root class for all MIP labeling and protection-specific operations in the MIP SDK. Before using any of the three API sets, the client application must create a profile. Future operations are performed by the profile, or by other objects *added* to the profile.
 
 There are three types of profile in the MIP SDK:
 
@@ -32,8 +32,8 @@ The profile itself provides the following functionality:
 
 ### Profile Settings
 
-- `MipContext`: The `mip::MipContext` object that was initialized to store application info, state path, etc.
-- `mip::CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
+- `MipContext`: The `MipContext` object that was initialized to store application info, state path, etc.
+- `CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
 - `authDelegate`: A shared pointer of class `mip::AuthDelegate`.
 - `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
 - `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
@@ -41,7 +41,7 @@ The profile itself provides the following functionality:
 
 ## Engines
 
-The File, Profile, and Protection API engines provide an interface for operations performed on by a specific identity. One engine is added to the Profile object for each user or service principal that signs in to the application. It is possible to override the signed-in identity via `mip::FileEngine::Settings` or `mip::ProtectionSettings`. See [performing delegated actions](https://TODO) for more details.
+The File, Profile, and Protection API engines provide an interface for operations performed on by a specific identity. One engine is added to the Profile object for each user or service principal that signs in to the application. It is possible to perform delegated operations via `mip::ProtectionSettings` and the file or protection handler. See [the protetion settings section in the FileHandler concepts](concept-handler-file-cpp.md#protectionsettings) for more details.
 
 There are three engine classes in the SDK, one for each API. The following list shows the engine classes and a few of the functions associated with each:
 
