@@ -20,7 +20,7 @@ Authentication in the MIP SDK is performed by extending the class `mip::AuthDele
 `mip::AuthDelegate::AcquireOAuth2Token` accepts the following parameters, and returns a bool indicating whether token acquisition was successful:
 
 - `mip::Identity`: The identity of the user or service to be authenticated, if known.
-- `mip::AuthDelegate::OAuth2Challenge`: Accepts two parameters, **authority** and **resource**. **Authority** is the service the token will be generated against. **Resource** is the service we're trying to access. The SDK will handle passing these parameters into the delegate when called.
+- `mip::AuthDelegate::OAuth2Challenge`: Accepts four parameters, **authority**, **resource**, **claims**, and **scopes**. **Authority** is the service the token will be generated against. **Resource** is the service we're trying to access. The SDK will handle passing these parameters into the delegate when called. **Claims** are the label-specific claims required by the protection service. **Scopes** are the Azure AD permission scopes required to access the resource. 
 - `mip::AuthDelegate::OAuth2Token`: The token result is written to this object. It will be consumed by the SDK when the engine is loaded. Outside of our authentication implementation, it shouldn't be necessary to get or set this value anywhere.
 
 **Important:** Applications don't call `AcquireOAuth2Token` directly. The SDK will call this function when required.

@@ -27,10 +27,24 @@ As covered in [Profile and Engine objects](concept-profile-engine-cpp.md), an en
 
 Similar to a profile, the engine also requires a settings object, `mip::FileEngine::Settings`. This object stores the unique engine identifier, customizable client data that can be used for debugging or telemetry, and, optionally, the locale.
 
-Here we create a `FileEngine::Settings` object called *engineSettings*. 
+Here we create a `FileEngine::Settings` object called *engineSettings* using the identity of the application user.
 
 ```cpp
-FileEngine::Settings engineSettings("UniqueID", "");
+FileEngine::Settings engineSettings(
+  mip::Identity(mUsername), // mip::Identity.
+  "",                       // Client data. Customizable by developer, stored with engine.
+  "en-US",                  // Locale.
+  false);                   // Load sensitive information types for driving classification.
+```
+
+Also valid is providing a custom engine ID:
+
+```cpp
+FileEngine::Settings engineSettings(
+  "myEngineId", // string
+  "",           // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",      // Locale. Default is en-US
+  false);       // Load sensitive information types for driving classification. Default is false.
 ```
 
 As a best practice, the first parameter, `id`, should be something that allows the engine to be easily connected to the associated user. Something like email address, UPN, or AAD object GUID would ensure that the ID is both unique and can be loaded from local state without calling the service.
@@ -67,7 +81,7 @@ Using the added engine, it's now possible to list all of the sensitivity labels 
 
 `ListSensitivityLabels()` will fetch the list of labels and attributes of those labels for a specific user from the service. The result is stored in a vector of `std::shared_ptr<mip::Label>`.
 
-Read more [here]() on `mip::Label`.
+Read more [here](reference/class_mip_label.md) on `mip::Label`.
 
 ### ListSensitivityLabels()
 
@@ -103,4 +117,3 @@ The collection of `mip::Label` returned by `GetSensitivityLabels()` can be used 
 ## Next Steps
 
 Now that the profile is loaded, the engine added, and we have labels, we can add a handler to begin to read, write, or remove labels from files. See [File handlers in the MIP SDK](concept-handler-file-cpp.md).
-

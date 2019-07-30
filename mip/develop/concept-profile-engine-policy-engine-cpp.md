@@ -19,10 +19,24 @@ ms.author: mbaldwin
 
 Similar to a profile, the engine also requires a settings object, `mip::PolicyEngine::Settings`. This object stores the unique engine identifier, customizable client data that can be used for debugging or telemetry, and, optionally, the locale.
 
-Here we create a `PolicyEngine::Settings` object called *engineSettings*.
+Here we create a `FileEngine::Settings` object called *engineSettings* using the identity of the application user:
 
 ```cpp
-PolicyEngine::Settings engineSettings("UniqueID", "");
+PolicyEngine::Settings engineSettings(
+  mip::Identity(mUsername), // mip::Identity.
+  "",                       // Client data. Customizable by developer, stored with engine.
+  "en-US",                  // Locale.
+  false);                   // Load sensitive information types for driving classification.
+```
+
+Also valid is providing a custom engine ID:
+
+```cpp
+PolicyEngine::Settings engineSettings(
+  "myEngineId", // string
+  "",           // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",      // Locale. Default is en-US
+  false);       // Load sensitive information types for driving classification. Default is false.
 ```
 
 As a best practice, the first parameter, **id**, should be something that allows the engine to be easily connected to the associated user, preferably the user principal name.
@@ -96,4 +110,3 @@ for (const auto& label : labels) {
 ```
 
 The collection of `mip::Label` returned by `GetSensitivityLabels()` can be used to display all labels available to the user and then, when selected, use the ID to apply labels to a file.
-

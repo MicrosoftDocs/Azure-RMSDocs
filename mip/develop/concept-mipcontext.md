@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/29/2019
 ms.author: mbaldwin
 ---
 
@@ -35,7 +35,7 @@ Once an object of `mip::MipContext` has been created, the `MipContext` object ca
 Creates a new MipContext instance to be used when initializing profiles. This function accepts:
 
 - `mip::ApplicationInfo`
-- A path for the MIP storage cache. 
+- A path for the MIP storage cache.
 - `mip::LogLevel`
 - (Optional) `mip::LoggerDelegate`
 - (Optional) `mip::TelemetryConfiguration`
@@ -45,7 +45,7 @@ Creates a new MipContext instance to be used when initializing profiles. This fu
 Creates a new MipContext instance to be used when initializing profiles, with custom feature settings enabled.
 
 - `mip::ApplicationInfo`
-- A path for the MIP storage cache. 
+- A path for the MIP storage cache.
 - `mip::LogLevel`
 - (Optional) `mip::LoggerDelegate`
 - (Optional) `mip::TelemetryConfiguration`
@@ -64,4 +64,4 @@ Releases all MIP resources. Should be called prior to app shutdown. The `MipCont
   - [Policy API profile concepts](concept-profile-engine-file-profile-cpp.md)
   - [Policy API engine concepts](concept-profile-engine-file-engine-cpp.md)
   - [Protection API profile concepts](concept-profile-engine-file-profile-cpp.md)
-  - [Protection API engine concepts](concept-profile-engine-file-engine-cpp.md)  
+  - [Protection API engine concepts](concept-profile-engine-file-engine-cpp.md)

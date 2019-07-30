@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/29/2019
 ms.author: mbaldwin
 ---
 
@@ -13,7 +13,7 @@ ms.author: mbaldwin
 
 ## Profiles
 
-The profile is the root class for all MIP specific (nonoperations in the MIP SDK. Before using any of the three APIs, the client application must create a profile. Future operations are performed by the profile, or by other objects *added* to the profile.
+The profile is the root class for all MIP labeling and protection-specific operations in the MIP SDK. Before using any of the three API sets, the client application must create a profile. Future operations are performed by the profile, or by other objects *added* to the profile.
 
 There are three types of profile in the MIP SDK:
 
@@ -34,8 +34,8 @@ The profile itself provides the following functionality:
 
 - `MipContext`: The `mip::MipContext` object that was initialized to store application info, state path, etc.
 - `mip::CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
-- `authDelegate`: A shared pointer of class `mip::AuthDelegate`. 
-- `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md). 
+- `authDelegate`: A shared pointer of class `mip::AuthDelegate`.
+- `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
 - `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 - `applicationInfo`: A [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) object. Information about the application that is consuming the SDK, which matches your Azure Active Directory application registration ID and name.
 
@@ -74,7 +74,6 @@ The following table describes the possible engine states, and which methods can 
 ### Engine ID
 
 Each engine has a unique identifier, `id`, that is used in all engine management operations. The application can provide an `id`, or the SDK can generated one, if it's not provided by the application. All other engine properties (for example, email address in the identity info) are opaque payloads for the SDK. The SDK does NOT perform any logic to keep any of the other properties unique, or enforce any other constraints.
-
 
 > [!IMPORTANT]
 > As a best practice, use an engine Id that is unique to the user and use that each time the user performs an operation with the SDK. Failing to provide an existing engine Id will result in extra service round trips to fetch policy and will fetch licenses that may have already been cached for the existing engine.
