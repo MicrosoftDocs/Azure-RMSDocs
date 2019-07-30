@@ -72,6 +72,7 @@ Use the following table to help compare which features are supported by the two 
 |-------|-----------------------------------|----------------------------------------------------|
 |Labeling actions: Manual, recommended, automatic| Yes | Yes |
 |Central reporting (analytics):| Yes | Yes |
+|A viewer for protected files:| Yes | Yes |
 |Multilanguage support for labels:| Yes | Yes |
 |Label inheritance from email attachments:| Yes | Yes  |
 |Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| Yes <br /><br /> Supported as [advanced client settings that you configure in the Azure portal](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)| Yes <br /><br /> Supported as [advanced settings that you configure with PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
@@ -80,7 +81,6 @@ Use the following table to help compare which features are supported by the two 
 |Information Protection bar in Office apps:| Yes | Yes with limitations:<br /><br /> - No title or customizable tooltip<br /><br /> - Label color not displayed for applied label|
 |Labels can apply visual markings (header, footer, watermark):| Yes | Yes with limitations:<br /><br /> - Headers and footers do not support variables for dynamic values <br /><br /> - No support for Word, Excel, PowerPoint, and Outlook to have different visual markings|
 |File Explorer, right-click actions:| Yes | Yes with limitations:<br /><br /> - Can't protect PDF documents for the older .ppdf format <br /><br />  - No support for protection-only mode|
-|A viewer for protected files:| Yes | Yes |
 |PowerShell commands:| Yes | Yes with limitations:<br /><br />- Cannot remove protection from container files (zip, .rar, .7z, .msg, and .pst)|
 |Offline support for protection actions:| Yes | Yes with limitations: <br /><br />- For File Explorer and PowerShell commands, the user must be connected to the Internet to protect files. |
 |Support for disconnected computers with manual policy file management:| Yes |No |
