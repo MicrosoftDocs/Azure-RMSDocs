@@ -31,7 +31,7 @@ ms.suite: ems
 > [!NOTE]
 > This feature is currently in preview and subject to change.
 
-Use Azure Information Protection analytics for central reporting to help you track the adoption of your Azure Information Protection labels. In addition:
+Use Azure Information Protection analytics for central reporting to help you track the adoption of your labels that classify and protect your organization's data. In addition:
 
 - Monitor labeled and protected documents and emails across your organization
 
