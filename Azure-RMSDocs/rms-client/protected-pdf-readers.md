@@ -55,7 +55,7 @@ Currently, SharePoint Online and SharePoint on-premises use an older format for 
 
 ## Using Adobe Acrobat Reader with the Adobe plug-in
 
-A collaboration between Microsoft and Adobe brings you a more simplified and consistent experience for PDF documents that have been classified and optionally, protected. This collaboration provides support for Adobe Acrobat native integration with Microsoft Information Protection solutions, such as [Azure Information Protection](../what-is-information-protection.md). 
+The collaboration between Microsoft and Adobe brings a more simplified and consistent experience for PDF documents that have been classified and optionally, protected. This collaboration provides support for Adobe Acrobat native integration with Microsoft Information Protection solutions, such as [Azure Information Protection](../what-is-information-protection.md). 
 
 This native integration has the following benefits:
 
