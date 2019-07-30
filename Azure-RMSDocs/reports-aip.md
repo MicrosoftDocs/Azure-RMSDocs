@@ -196,13 +196,13 @@ However, a typical role assignment for many organizations is the Azure AD role o
 
 ### Features that require a minimum version of the client
 
-You can use the version history information for the [Azure Information Protection unified labeling client](./rms-client/unifiedlabelingclient-version-release-history.md) and the [Azure Information Protection client](./rms-client/client-version-release-history.md) to confirm whether your version of the client supports all the central reporting features. The minimum versions for the clients:
+You can use the version history information for the [Azure Information Protection unified labeling client](./rms-client/unifiedlabelingclient-version-release-history.md) and the [Azure Information Protection client (classic)](./rms-client/client-version-release-history.md) to confirm whether your version of the client supports all the central reporting features. The minimum versions for the clients:
 
 For the Azure Information Protection unified labeling client:
 
 - Support for auditing and endpoint discovery: Version 2.0.778.0
 
-For the Azure Information Protection client:
+For the Azure Information Protection client (classic):
 
 - Support for auditing: Version 1.41.51.0
 - Support for endpoint discovery: Version 1.48.204.0
