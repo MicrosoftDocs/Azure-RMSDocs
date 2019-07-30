@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -82,7 +82,7 @@ Some of these settings require editing the registry and some use advanced settin
 |PullPolicy|[Support for disconnected computers](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|RunAuditInformationTypesDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Label an Office document by using an existing custom property](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -277,7 +277,7 @@ With this setting, the sublabel that's ordered last from the parent label with t
 
 ## Exempt Outlook messages from mandatory labeling
 
-This configuration use an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 By default, when you enable the [policy setting](../configure-policy-settings.md) **All documents and emails must have a label**, all saved documents and sent emails must have a label applied. When you configure the following advanced setting, the policy setting applies only to Office documents and not to Outlook messages.
 
@@ -312,7 +312,7 @@ When you create and configure the following advanced client settings, users see 
 - **Their email or attachment for the email doesn't have a label**:
     - The attachment can be an Office document or PDF document
 
-When these conditions are met, the user sees a pop-up messages with one of the following actions:
+When these conditions are met, the user sees a pop-up message with one of the following actions:
 
 - **Warn**: The user can confirm and send, or cancel.
 
@@ -858,7 +858,7 @@ This configuration uses an [advanced client setting](#how-to-configure-advanced-
 
 To change this behavior so that this information is not sent by the classic client, enter the following strings:
 
-- Key: **RunAuditInformationTypeDiscovery**
+- Key: **RunAuditInformationTypesDiscovery**
 
 - Value: **False**
 
