@@ -17,6 +17,7 @@ ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
