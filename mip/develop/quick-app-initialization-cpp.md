@@ -133,7 +133,7 @@ Now create an implementation for an authentication delegate, by extending the SD
      class AuthDelegateImpl final : public mip::AuthDelegate {
      public:
           AuthDelegateImpl() = delete;        // Prevents default constructor
-          
+
           AuthDelegateImpl(
             const std::string& appId)         // AppID for registered AAD app
             : mAppId(appId) {};
@@ -142,6 +142,7 @@ Now create an implementation for an authentication delegate, by extending the SD
             const mip::Identity& identity,    // Identity of the account to be authenticated, if known
             const OAuth2Challenge& challenge, // Authority (AAD tenant issuing token), and resource (API being accessed; "aud" claim).
             OAuth2Token& token) override;     // Token handed back to MIP SDK
+
      private:
           std::string mAppId;
           std::string mToken;
@@ -190,7 +191,8 @@ Now create an implementation for an authentication delegate, by extending the SD
           // True = successful token acquisition; False = failure
           return true;
      }
-     ``` 
+     ```
+
 3. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
 
 ## Implement a consent delegate
@@ -240,7 +242,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
 
    ```cpp
    #include "mip/mip_init.h"
-
+   #include "mip/mip_context.h"  
    #include "auth_delegate.h"
    #include "consent_delegate.h"
    #include "profile_observer.h"
@@ -250,8 +252,8 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
    using std::make_shared;
    using std::shared_ptr;
    using std::string;
-   using std::cout;   
-   using mip::ApplicationInfo; 
+   using std::cout;
+   using mip::ApplicationInfo;
    using mip::FileProfile;
    using mip::FileEngine;
 
@@ -261,18 +263,25 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
      ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, name, version)
                  "<application-name>",
                  "<application-version>"};
-     auto profileObserver = make_shared<ProfileObserver>();         // Observer object					
+
+     auto mMipContext = mip::MipContext::Create(mAppInfo,
+                         "file_sample",
+                         mip::LogLevel::Trace,
+                         nullptr /*loggerDelegateOverride*/,
+                         nullptr /*telemetryOverride*/);
+
+     auto profileObserver = make_shared<ProfileObserver>();         // Observer object
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
      auto consentDelegateImpl = make_shared<ConsentDelegateImpl>(); // Consent delegate object
  
      // Construct/initialize profile object
-     FileProfile::Settings profileSettings("",    // Path for logging/telemetry/state
-       true,                                      // true = use in-memory state storage (vs disk)
-       authDelegateImpl,							
-       consentDelegateImpl,						
-       profileObserver,							
-       appInfo);									
+     FileProfile::Settings profileSettings(
+       mMipContext,
+       mip::CacheStorageType::OnDiskEncrypted,
+       authDelegateImpl,
+       consentDelegateImpl,
+       profileObserver);
 
      // Set up promise/future connection for async profile operations; load profile asynchronously
      auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
