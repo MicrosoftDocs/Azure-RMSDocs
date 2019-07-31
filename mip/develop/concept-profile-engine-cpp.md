@@ -25,7 +25,7 @@ The API used in the consuming application determines which profile class should 
 
 The profile itself provides the following functionality:
 
-- Defines whether state should be loaded in memory or persisted to disk and, if persisted to disk, if it should be encrypted.
+- Defines whether state should be loaded in memory or persisted to disk and, if persisted to disk, should it be encrypted.
 - Handles authentication by accepting a `mip::AuthDelegate`.
 - Defines the `mip::ConsentDelegate` that should be used for consent operations.
 - Defines the `mip::FileProfile::Observer` implementation that will be used for asynchronous callbacks for profile operations.

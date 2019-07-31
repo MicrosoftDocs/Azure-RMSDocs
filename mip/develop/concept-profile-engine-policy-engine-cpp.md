@@ -11,7 +11,7 @@ ms.author: mbaldwin
 
 # Microsoft Information Protection SDK - Policy API engine concepts
 
-`mip::PolicyEngine` implements all operations that the Policy API can perform, with the exception of loading the profile. 
+`mip::PolicyEngine` implements all operations that the Policy API can perform, with the exception of loading the profile.
 
 ## Implementation: Add a Policy Engine
 

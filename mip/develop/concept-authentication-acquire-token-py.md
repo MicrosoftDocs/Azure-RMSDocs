@@ -112,7 +112,7 @@ namespace sample {
 
 ## Python Script
 
-This script acquires authentication tokens directly via [ADAL for Python](https://github.com/AzureAD/azure-activedirectory-library-for-python). This is included only as a means to acquire auth tokens for use by the sample apps and is not intended for use in production code. The script works only against tenants that support plain old username/password http authentication. MFA or certificate-based authentication will fail.
+This script acquires authentication tokens directly via [ADAL for Python](https://github.com/AzureAD/azure-activedirectory-library-for-python). This code is included only as a means to acquire auth tokens for use by the sample apps and is not intended for use in production. The script works only against tenants that support plain old username/password http authentication. MFA or certificate-based authentication will fail.
 
 > [!NOTE] 
 > Prior to running this sample, you must install ADAL for Python by running one of the following commands:

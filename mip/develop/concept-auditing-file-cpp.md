@@ -12,7 +12,7 @@ ms.author: tommos
 
 # Auditing in the MIP SDK File API
 
-The Azure Information Protection administration portal provides access to administrator reports. These reports provide visibility in to which labels users are applying, manually or automatically, across any applications any services that have integrated the MIP SDK. Development partners using the SDK can easily enable this functionality so that information from their applications will surface in customer reports.
+The Azure Information Protection administration portal provides access to administrator reports. These reports provide visibility in to which labels users are applying, manually or automatically, across any applications or services that have integrated the MIP SDK. Development partners using the SDK can enable this functionality to surface information from their applications in customer reports.
 
 ## Event Types
 
@@ -78,4 +78,4 @@ Events submitted to the Azure Information Protection audit pipeline will surface
 
 ## Next Steps
 
-For more details on the auditing experience in Azure Information Protection, take a look at the [preview announcement blog on Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
+For details on the auditing experience in Azure Information Protection, review the [preview announcement blog on Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
