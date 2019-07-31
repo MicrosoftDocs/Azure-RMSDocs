@@ -27,7 +27,8 @@ Here we create a `ProtectionEngine::Settings` object called *engineSettings*.
 ProtectionEngine::Settings engineSettings("UniqueID", "");
 ```
 
->[!NOTE] If using this method to create the protection settings object, you must also manually set the CloudEndpointBaseUrl to https://api.aadrm.com or tp the Active Directory Rights Management Service cluster URL.
+> [!NOTE]
+> If using this method to create the protection settings object, you must also manually set the CloudEndpointBaseUrl to https://api.aadrm.com or tp the Active Directory Rights Management Service cluster URL.
 
 As a best practice, the first parameter, **id**, should be something that allows the engine to be easily connected to the associated user, **or** a `mip::Identity` object. To initialize the settings with `mip::Identity`:
 
