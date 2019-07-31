@@ -41,7 +41,7 @@ The profile itself provides the following functionality:
 
 ## Engines
 
-The File, Profile, and Protection API engines provide an interface for operations performed on by a specific identity. One engine is added to the Profile object for each user or service principal that signs in to the application. It is possible to perform delegated operations via `mip::ProtectionSettings` and the file or protection handler. See [the protetion settings section in the FileHandler concepts](concept-handler-file-cpp.md#protectionsettings) for more details.
+The File, Profile, and Protection API engines provide an interface for operations performed on by a specific identity. One engine is added to the Profile object for each user or service principal that signs in to the application. It is possible to perform delegated operations via `mip::ProtectionSettings` and the file or protection handler. See [the protection settings section in the FileHandler concepts](concept-handler-file-cpp.md) for more details.
 
 There are three engine classes in the SDK, one for each API. The following list shows the engine classes and a few of the functions associated with each:
 
