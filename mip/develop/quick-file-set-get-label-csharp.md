@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/09/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to set labels with the MIP SDK, so that I can use the SDK APIs to apply labels and protection to my own files.
 ---
@@ -45,12 +45,11 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
      //Set Labeling Options
      LabelingOptions labelingOptions = new LabelingOptions()
      {
-          ActionSource = ActionSource.Manual,
           AssignmentMethod = AssignmentMethod.Standard
      };
 
      // Set a label on input file
-     handler.SetLabel(labelId, labelingOptions);
+     handler.SetLabel(engine.GetLabelById(labelId), labelingOptions, new ProtectionSettings());
 
      // Commit changes, save as outputFilePath
      var result = Task.Run(async () => await handler.CommitAsync(outputFilePath)).Result;
@@ -73,7 +72,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    handler = null;
    fileEngine = null;
    fileProfile = null;
-   MIP.ReleaseAllResources();
+   mipContext = null;
    ```
 
 4. Replace the placeholder values in the source code using the following values:

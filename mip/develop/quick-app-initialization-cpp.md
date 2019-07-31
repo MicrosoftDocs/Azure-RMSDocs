@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/18/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to do SDK initialization, so that I can use the SDK APIs.
 ---
@@ -230,6 +230,7 @@ Now create an implementation for a consent delegate, by extending the SDK's `mip
           return Consent::AcceptAlways;
      }
      ``` 
+     
 3. Optionally, use F6 (**Build Solution**) to run a test compile/link of your solution, to make sure it builds successfully before continuing.
 
 ## Construct a File profile and engine
@@ -264,7 +265,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
                  "<application-name>",
                  "<application-version>"};
 
-     auto mMipContext = mip::MipContext::Create(mAppInfo,
+     auto mipContext = mip::MipContext::Create(appInfo,
                          "file_sample",
                          mip::LogLevel::Trace,
                          nullptr /*loggerDelegateOverride*/,
@@ -277,8 +278,8 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
  
      // Construct/initialize profile object
      FileProfile::Settings profileSettings(
-       mMipContext,
-       mip::CacheStorageType::OnDiskEncrypted,
+       mipContext,
+       mip::CacheStorageType::OnDisk,
        authDelegateImpl,
        consentDelegateImpl,
        profileObserver);
@@ -303,7 +304,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
      // Construct/initialize engine object
      FileEngine::Settings engineSettings(
        mip::Identity("<engine-account>"),         // Engine identity (account used for authentication)
-       "<engine-state>",                          // User-defined engine state		
+       "<engine-state>",                          // User-defined engine state
        "en-US");                                  // Locale (default = en-US)
 
      // Set up promise/future connection for async engine operations; add engine to profile asynchronously
@@ -313,7 +314,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
      std::shared_ptr<FileEngine> engine; 
      try
      {
-       engine = engineFuture.get();				
+       engine = engineFuture.get();
      }
      catch (const std::exception& e)
      {
@@ -325,10 +326,10 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
 
    // Application shutdown. Null out profile and engine, call ReleaseAllResources();
    // Application may crash at shutdown if resources aren't properly released.
-   profile = nullptr;
-   engine = nullptr;
    // handler = nullptr; // This will be used in later quick starts.
-   mip::ReleaseAllResources();
+   engine = nullptr;
+   profile = nullptr;   
+   mipContext = nullptr;
 
    return 0;
    }

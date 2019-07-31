@@ -24,7 +24,7 @@ Now that the `MipContext`, `ProfileObserver`, and `AuthDelegateImpl` are defined
 The `PolicyProfile::Settings` constructor accepts four parameters, listed below:
 
 - `const std::shared_ptr<MipContext>`: The `mip::MipContext` object that was initialized to store application info, state path, etc.
-- `mip::CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
+- `mip::CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted. For more details, see the [Cache storage concepts](concept-cache-storage.md).
 - `std::shared_ptr<mip::AuthDelegate>`: A shared pointer of class `mip::AuthDelegate`.
 - `std::shared_ptr<mip::PolicyProfile::Observer> observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 
