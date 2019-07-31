@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/29/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -55,7 +55,7 @@ Global administrators for your tenant can continue to manage labels and policies
 
 ## Before you begin
 
-Because label migration is irreversible, make sure that you are aware of the following changes and considerations:
+Label migration has many benefits but is irreversible, so make sure that you are aware of the following changes and considerations:
 
 - Make sure that you have [clients that support unified labels](#clients-and-services-that-support-unified-labeling) and if necessary, be prepared for administration in both the Azure portal (for clients that don't support unified labels) and the admin centers (for client that do support unified labels).
 
@@ -76,13 +76,7 @@ Because label migration is irreversible, make sure that you are aware of the fol
     
     - After a label with cloud-based protection settings has been migrated, the resulting scope of the protection template is the scoped that is defined in the Azure portal (or by using the AIPService PowerShell module) and the scope that is defined in the admin centers. 
 
-- When you migrate your labels, you will see the migration results display whether a label was **created**, **updated**, or **renamed** because of duplication:
-
-    - When a label is created, you must then publish it in one of the admin centers to make it available to applications and services.
-    
-    - When a label is renamed, you must then edit it, which you can do in one of the admin centers or the Azure portal.
-
-- For each label, the Azure portal displays only the label display name, which you can edit. The admin centers show both this display name for a label, and the label name. The label name is the initial name that you specified when the label was first created and this property is used by the back-end service for identification purposes.
+- For each label, the Azure portal displays only the label display name, which you can edit. Users see this label name in their apps. The admin centers show both this display name for a label, and the label name. The label name is the initial name that you specify when the label is first created and this property is used by the back-end service for identification purposes. When you migrate your labels, the display name remains the same and the label name is renamed to the label ID from the Azure portal.
 
 - Any localized strings for the labels are not migrated. Define new localized strings for the migrated labels by using Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
 
@@ -145,11 +139,6 @@ If the user doesn't have one of these usage rights or roles, the label is not ap
 Use the following instructions to migrate your tenant and Azure Information Protection labels to use the new unified labeling store.
 
 You must be a Compliance administrator, Compliance data administrator, Security administrator, or Global administrator to migrate your labels.
-
-> [!NOTE]
-> If you have retention labels or data loss prevention policies for Office 365, we recommend that you have the **Compliance administrator** role, **Compliance data administrator** role, or **Global administrator** role to migrate your labels.
-> 
-> Security administrators don't have access to retention labels or data loss prevention policies, so if you have either of these and they have the same name as your Azure Information Protection labels, the migration process can't complete until you manually rename one of the duplicates. However, if you have one of the other roles, the migration process can rename the Azure Information Protection label for you, so that migration can complete.
 
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
     
