@@ -16,6 +16,7 @@ ms.service: information-protection
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 #ms.tgt_pltfrm:
