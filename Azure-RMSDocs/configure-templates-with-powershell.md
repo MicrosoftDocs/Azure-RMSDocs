@@ -21,7 +21,7 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 

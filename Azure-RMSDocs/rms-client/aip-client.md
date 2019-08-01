@@ -20,7 +20,7 @@ ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.subservice: v1client
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 

@@ -21,7 +21,7 @@ ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 ms.subservice: aiplabels
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 

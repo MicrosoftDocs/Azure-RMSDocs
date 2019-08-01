@@ -20,7 +20,7 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 

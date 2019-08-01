@@ -19,7 +19,7 @@ ms.service: information-protection
 ms.subservice: aiplabels
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 #Customer intent: As an administrator, I want to see Azure Information Protection in the Azure portal so that I can configure the service.
 ---
 

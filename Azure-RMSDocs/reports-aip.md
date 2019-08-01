@@ -21,7 +21,7 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 

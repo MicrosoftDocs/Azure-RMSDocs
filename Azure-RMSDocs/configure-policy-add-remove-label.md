@@ -22,7 +22,7 @@ ms.subservice: aiplabels
 #ms.reviewer: eymanor
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
