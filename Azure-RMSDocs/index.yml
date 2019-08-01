@@ -35,21 +35,21 @@ landingContent:
     linkLists:
       - linkListType: quickstart
         links:
-          - text: Azure portal
+          - text: Add Azure Information Protection to the Azure portal
             url: quickstart-viewpolicy.md
           - text: Find sensitive information
             url: quickstart-findsensitiveinfo.md
-          - text: Protect email
+          - text: Create a label to protect email
             url: quickstart-label-dnf-protectedemail.md
-          - text: Scoped label
+          - text: Create a label for specific users
             url: quickstart-label-specificusers.md
       - linkListType: tutorial
         links:
-          - text: Edit the policy, create label
+          - text: Edit the policy & create a new label
             url: infoprotect-quick-start-tutorial.md
-          - text: Configure policy settings
+          - text: Configure policy settings for baseline classification
             url: infoprotect-settings-tutorial.md
-          - text: Control over-sharing (email)
+          - text: Control over-sharing of emails
             url: infoprotect-oversharing-tutorial.md
 
   # Card
@@ -57,11 +57,11 @@ landingContent:
     linkLists:
       - linkListType: deploy
         links:
-          - text: Configure policy
+          - text: Configure policy settings and labels
             url: configure-policy.md
           - text: Deploy the client
             url: /rms-client/aip-client.md
-          - text: Reporting
+          - text: Use central reporting
             url: reports-aip.md
           - text: Migrate labels to Office 365
             url: configure-policy-migrate-labels.md
@@ -71,9 +71,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Deploy the scanner
+          - text: Deploy the scanner for on-premises data
             url: deploy-aip-scanner.md
-          - text: Secure collaboration
+          - text: Secure document collaboration
             url: secure-collaboration-documents.md
-          - text: Mail flow rules
+          - text: Configure mail flow rules for labels
             url: configure-exo-rules.md
