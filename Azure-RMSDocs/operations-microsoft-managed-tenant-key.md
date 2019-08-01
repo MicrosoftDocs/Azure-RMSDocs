@@ -17,6 +17,7 @@ ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:

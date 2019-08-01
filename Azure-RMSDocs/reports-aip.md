@@ -17,6 +17,7 @@ ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 #ms.tgt_pltfrm:

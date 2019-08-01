@@ -16,6 +16,7 @@ ms.service: information-protection
 #ROBOTS:
 #audience:git
 #ms.devlang:
+ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:

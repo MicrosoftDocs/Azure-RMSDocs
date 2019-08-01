@@ -17,6 +17,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: v2client
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:

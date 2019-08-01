@@ -17,6 +17,7 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: prereqs
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:

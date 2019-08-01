@@ -16,6 +16,7 @@ ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 #ms.tgt_pltfrm:
