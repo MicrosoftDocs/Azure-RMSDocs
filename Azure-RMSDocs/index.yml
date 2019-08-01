@@ -58,7 +58,7 @@ landingContent:
       - linkListType: deploy
         links:
           - text: Configure policy
-            url: configure-policy
+            url: configure-policy.md
           - text: Deploy the client
             url: /rms-client/aip-client.md
           - text: Reporting
