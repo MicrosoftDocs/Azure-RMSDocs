@@ -86,7 +86,7 @@ The MIP SDK maintains two databases for cache. One is for the protection APIs, a
 | Policies        | Stores label policy information for each user.                   | Yes       |
 | PoliciesUrl     | Stores backend policy service URL for specific user.             | No        |
 | Sensitivity     | Stores classification rules for a specific user policy.          | Yes       |
-| SensitivityUrls | Stores backend sensitivity policy service URL for specific user. | Yes       |
+| SensitivityUrls | Stores backend sensitivity policy service URL for specific user. | No        |
 
 ## Database size considerations
 
