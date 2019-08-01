@@ -1,75 +1,79 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
+
 title: Azure Information Protection Documentation
+summary: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection, no matter where it's stored or who it's shared with.
+
 metadata:
   title: Azure Information Protection Documentation
-  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. 
+  description: Control and help secure email, documents, and sensitive data that you share outside your company walls.
   services: information-protection
-  author: msmbaldwin
-  manager: barbkess
   ms.service: information-protection
-  ms.tgt_pltfrm: na
-  ms.devlang: na
-  ms.topic: landing-page
-  ms.date: 01/30/2019
-  ms.author: mbaldwin
-  layout: LandingPage
-abstract:
-  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection, no matter where it's stored or who it's shared with.
-sections:
-- title: 
-  items:
-  - type: list
-    style: cards
-    className: cardsFTitle
-    items:
-    - title: Learn more about Azure Information Protection
-      href: what-is-information-protection.md
-      image: 
-        src: https://docs.microsoft.com/media/common/i_learn-about.svg
-        href: what-is-information-protection.md
-    - title:  Get started with Azure Information Protection
-      href: quickstart-viewpolicy.md
-      image: 
-        src: https://docs.microsoft.com/media/common/i_quick-start.svg
-        href: quickstart-viewpolicy.md
-    - title: Explore Microsoft 365, a complete solution that includes Azure Information Protection
-      href: https://docs.microsoft.com/microsoft-365/
-      image: 
-        src: /office/media/icons/caret-right-blue.svg
-        href: https://docs.microsoft.com/microsoft-365/
-- title: 5-Minute Quickstarts
-  items:
-  - type: paragraph
-    text: Learn how to protect your data using the following quickstarts.
-  - type: list
-    style: icon48
-    items: 
-    - image: 
-        src: https://docs.microsoft.com/media/common/i_portal.svg
-      text: Azure Portal
-      href: quickstart-viewpolicy.md
-    - image: 
-        src: https://docs.microsoft.com/media/common/i_search.svg
-      text: Find your sensitive information
-      href: quickstart-findsensitiveinfo.md
-    - image: 
-        src: https://docs.microsoft.com/media/common/i_config-tools.svg
-      text: Configure a label
-      href: quickstart-label-dnf-protectedemail.md
-    - image: 
-        src: https://docs.microsoft.com/media/common/i_categorize.svg
-      text: Create a new label
-      href: quickstart-label-specificusers.md
-- title: Step-by-Step Tutorials
-  items:
-  - type: paragraph
-    text: Learn how to edit policies, create new labels and configure settings.
-  - type: list
-    style: unordered
-    items:
-    - html: <a href="/azure/information-protection/infoprotect-quick-start-tutorial">Edit the Azure Information Protection policy and create a new label</a>
-    - html: <a href="/azure/information-protection/infoprotect-settings-tutorial">Configure Azure Information Protection policy settings that work together</a>
+  ms.topic: landing-page # Required
+  ms.collection: M365-security-compliance
+  author: cabailey
+  ms.author: cabailey
+  manager: barbkess
+  ms.date: 08/01/2019 #Required; mm/dd/yyyy format.
 
+# linkListType: architecture | deploy | download | get-started | how-to-guide | learn | overview | quickstart | tutorial
 
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card
+  - title: Introducing Azure Information Protection
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Azure Information Protection?
+            url: what-is-information-protection.md
+          - text: Requirements
+            url: requirements.md
 
+  # Card
+  - title: Get started
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Azure portal
+            url: quickstart-viewpolicy.md
+          - text: Find sensitive information
+            url: quickstart-findsensitiveinfo.md
+          - text: Protect email
+            url: quickstart-label-dnf-protectedemail.md
+          - text: Scoped label
+            url: quickstart-label-specificusers.md
+      - linkListType: tutorial
+        links:
+          - text: Edit the policy, create label
+            url: infoprotect-quick-start-tutorial.md
+          - text: Configure policy settings
+            url: infoprotect-settings-tutorial.md
+          - text: Control over-sharing (email)
+            url: infoprotect-oversharing-tutorial.md
+
+  # Card
+  - title: Deploy the service & client
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Configure policy
+            url: configure-policy
+          - text: Deploy the client
+            url: /rms-client/aip-client.md
+          - text: Reporting
+            url: reports-aip.md
+          - text: Migrate labels to Office 365
+            url: configure-policy-migrate-labels.md
+
+  # Card
+  - title: How-to guides
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Deploy the scanner
+            url: deploy-aip-scanner.md
+          - text: Secure collaboration
+            url: secure-collaboration-documents.md
+          - text: Mail flow rules
+            url: configure-exo-rules.md
