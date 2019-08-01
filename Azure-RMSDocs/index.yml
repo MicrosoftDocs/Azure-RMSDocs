@@ -60,7 +60,7 @@ landingContent:
           - text: Configure policy settings and labels
             url: configure-policy.md
           - text: Deploy the client
-            url: /rms-client/aip-client.md
+            url: ./rms-client/aip-client.md
           - text: Use central reporting
             url: reports-aip.md
           - text: Migrate labels to Office 365
