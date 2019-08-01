@@ -17,6 +17,7 @@ ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 #ms.tgt_pltfrm:

@@ -16,6 +16,7 @@ ms.service: information-protection
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 #ms.tgt_pltfrm:

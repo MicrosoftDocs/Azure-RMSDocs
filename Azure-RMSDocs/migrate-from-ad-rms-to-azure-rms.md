@@ -17,6 +17,7 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:

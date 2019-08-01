@@ -16,6 +16,7 @@ ms.service: information-protection
 #audience:
 #ms.devlang:
 #ms.reviewer: demizets
+ms.subservice: aiplabels
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:

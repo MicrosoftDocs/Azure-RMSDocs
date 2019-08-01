@@ -17,6 +17,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 #ms.tgt_pltfrm:

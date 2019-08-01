@@ -17,6 +17,7 @@ ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
