@@ -35,7 +35,7 @@ landingContent:
     linkLists:
       - linkListType: quickstart
         links:
-          - text: Add Azure Information Protection to the Azure portal
+          - text: Add Azure Information Protection to the portal
             url: quickstart-viewpolicy.md
           - text: Find sensitive information
             url: quickstart-findsensitiveinfo.md
