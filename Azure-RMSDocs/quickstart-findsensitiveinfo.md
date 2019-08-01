@@ -18,7 +18,7 @@ ms.service: information-protection
 #ms.reviewer: demizets
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 ms.subservice: aiplabels
 #Customer intent: As an administrator, I want to find what sensitive information my organization stores on-premises
 ---

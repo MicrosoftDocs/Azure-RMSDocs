@@ -21,7 +21,7 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: dev
 experimental: true
 experiment_id: "priyamo-test-20160729"
 

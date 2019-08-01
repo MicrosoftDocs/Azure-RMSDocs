@@ -18,7 +18,7 @@ ms.service: information-protection
 #ms.devlang:
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 search.appverid:
 - MET150
 

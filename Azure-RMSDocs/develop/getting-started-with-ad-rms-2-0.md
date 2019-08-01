@@ -20,7 +20,7 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: dev
 
 ---
 # Getting started
