@@ -141,7 +141,7 @@ Global administrators for an Office 365 tenant or Azure AD tenant can obviously 
 
 Some things to note:
 
-- Microsoft accounts are not supported for delegated administration of Azure Information Protection, even if they are assigned to one of the administrative roles listed. 
+- Microsoft accounts are not supported for delegated administration of Azure Information Protection, even if these accounts are assigned to one of the administrative roles listed. 
 
 - If you have configured [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this configuration does not affect the ability to administer Azure Information Protection, except the RMS connector. For example, if you have configured onboarding controls such that the ability to protect content is restricted to the “IT department” group, the account that you use to install and configure the RMS connector must be a member of that group. 
 
