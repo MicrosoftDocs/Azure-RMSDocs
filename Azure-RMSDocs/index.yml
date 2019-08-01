@@ -39,7 +39,7 @@ landingContent:
             url: quickstart-viewpolicy.md
           - text: Find sensitive information
             url: quickstart-findsensitiveinfo.md
-          - text: Create a label to protect email
+          - text: Configure a label to protect email
             url: quickstart-label-dnf-protectedemail.md
           - text: Create a label for specific users
             url: quickstart-label-specificusers.md
