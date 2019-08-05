@@ -16,10 +16,11 @@ ms.service: information-protection
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: aiplabels
 #ms.reviewer: eymanor
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 #Customer intent: As an administrator, I want to make it easy for users to classify data as it's created and protect it if it contains sensitive information
 ---
 

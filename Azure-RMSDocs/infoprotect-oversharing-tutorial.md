@@ -14,11 +14,12 @@ ms.service: information-protection
 # optional metadata
 
 #ROBOTS:
+ms.subservice: aiplabels
 #audience:
 #ms.devlang:
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
