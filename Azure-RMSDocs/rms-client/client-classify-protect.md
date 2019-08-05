@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -38,7 +38,7 @@ The easiest way to classify and protect your documents and emails is when you ar
 
 However, you can also classify and protect files by using **File Explorer**. This method supports additional file types and is a convenient way to classify and protect multiple files at once. This method supports protecting Office documents, PDF files, text and image files, and a wide range of other files. 
 
-If your label applies protection to a document, the protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following for protected files: Co-authoring, Office Online, search, document preview, thumbnail, and eDiscovery. 
+If your label applies protection to a document, the protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following for protected files: Co-authoring, Office for the web, search, document preview, thumbnail, and eDiscovery. 
 
 ### Safely share a file with people outside your organization
 
