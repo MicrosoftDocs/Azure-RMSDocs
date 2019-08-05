@@ -125,7 +125,7 @@ For information about which Office editions support the protection service, see 
 
 ## Firewalls and network infrastructure
 
-If you have a firewall or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are included in the Office article, [Office 365 URLs and IP address ranges](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2). See the **Microsoft 365 Common and Office on the web** section.
+If you have a firewall or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are included in the Office article, [Office 365 URLs and IP address ranges](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2). See the **Microsoft 365 Common and Office for the web** section.
 
 In addition to the information in the Office article, specific to Azure Information Protection:
 
