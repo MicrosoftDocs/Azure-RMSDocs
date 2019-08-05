@@ -17,10 +17,11 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 search.appverid:
 - MET150
 
