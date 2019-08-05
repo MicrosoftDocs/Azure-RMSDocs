@@ -62,7 +62,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 **Fixes:**
 
-- After upgrading from a previous version of the unified labeling client, the client can successfully download its policy and display the current labels.
+- After upgrading from a previous version of the unified labeling client and you haven't configured any custom information types, the client can successfully download its policy and display the current labels.
 
 - General performance and stability improvements.
 
