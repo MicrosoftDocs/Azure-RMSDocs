@@ -36,7 +36,7 @@ Try our [Edit the policy and create a new label](infoprotect-quick-start-tutoria
 
 Look out for announcements on the [Enterprise Mobility + Security blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional classification features and capabilities become available. There are a few limitations with the current release, which include the following:
 
-- No labeling ability in the Office web apps (Office Online).
+- No labeling ability in the Office web apps (Office on the web).
 
 - No classification and labeling integration with Exchange Online or SharePoint Online.
 
