@@ -17,10 +17,11 @@ ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
