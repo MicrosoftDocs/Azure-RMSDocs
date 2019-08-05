@@ -18,9 +18,10 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 #audience:
 #ms.devlang:
 #ms.reviewer: demizets
+ms.subservice: aiplabels
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 

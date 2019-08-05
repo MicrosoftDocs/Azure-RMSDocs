@@ -17,10 +17,11 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 

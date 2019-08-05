@@ -19,7 +19,7 @@ ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 #ms.devlang:
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 

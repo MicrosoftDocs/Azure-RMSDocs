@@ -18,10 +18,11 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: hyok
 #ms.reviewer: eymanor
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
