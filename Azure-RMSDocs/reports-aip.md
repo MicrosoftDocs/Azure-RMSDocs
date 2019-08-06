@@ -139,7 +139,7 @@ Your Azure Log Analytics workspace for Azure Information Protection includes a c
 
 - For the classic client: Configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
 
-- For the unified labeling client: Configure an [advanced setting](./rms-client/lientv2-admin-guide-customizations#disable-sending-information-type-matches-for-a-subset-of-users) in a label policy for the subset of users.
+- For the unified labeling client: Configure an [advanced setting](./rms-client/lientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a label policy for the subset of users.
 
 After collecting the content matches, they are displayed in the reports when you drill down into files from the Activity logs, to display **Activity Details**. This information can also be viewed and retrieved with queries.
 
