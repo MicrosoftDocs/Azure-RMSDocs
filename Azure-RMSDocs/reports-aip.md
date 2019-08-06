@@ -125,7 +125,7 @@ To generate these reports, endpoints send the following types of information to 
 
 This information is stored in an Azure Log Analytics workspace that your organization owns and can be viewed independently from Azure Information Protection by users who have access rights to this workspace. For details, see the [Permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics) section. For information about managing access to your workspace, see the [Manage access to Log Analytics Workspace using Azure permissions](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) section from the Azure documentation.
 
-To prevent Azure Information Protection clients from sending this data, set the [policy setting](configure-policy-settings.md) of **Send audit data to Azure Information Protection log analytics** to **Off**:
+To prevent Azure Information Protection clients (classic) from sending this data, set the [policy setting](configure-policy-settings.md) of **Send audit data to Azure Information Protection log analytics** to **Off**:
 
 - For most users to send this data and a subset of users cannot send auditing data: 
     - Set **Send audit data to Azure Information Protection log analytics** to **Off** in a scoped policy for the subset of users. This configuration is typical for production scenarios.
@@ -135,7 +135,11 @@ To prevent Azure Information Protection clients from sending this data, set the 
 
 #### Content matches for deeper analysis 
 
-Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for also collecting and storing the data that's identified by the sensitive information types or your custom conditions. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to send this additional data, do not select the checkbox **Enable deeper analytics into your senstive data**. If you want most users to send this additional data and a subset of users cannot send it, select the checkbox and configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
+Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for also collecting and storing the data that's identified by the sensitive information types or your custom conditions. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to send this additional data, do not select the checkbox **Enable deeper analytics into your senstive data**. If you want most users to send this additional data and a subset of users cannot send it, select the checkbox and then:
+
+- For the classic client: Configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
+
+- For the unified labeling client: Configure an [advanced setting](./rms-client/lientv2-admin-guide-customizations#disable-sending-information-type-matches-for-a-subset-of-users) in a label policy for the subset of users.
 
 After collecting the content matches, they are displayed in the reports when you drill down into files from the Activity logs, to display **Activity Details**. This information can also be viewed and retrieved with queries.
 
