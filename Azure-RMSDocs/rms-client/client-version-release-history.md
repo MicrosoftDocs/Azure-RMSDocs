@@ -125,12 +125,12 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - Azure Publish Setting Password
     - Azure Storage Account Key (Generic)
 
-- Endpoint discovery support for [Azure Information Protection analytics](../reports-aip.md), to report sensitive information found in Office documents when they saved:
+- Endpoint discovery support for [Azure Information Protection analytics](../reports-aip.md), to report sensitive information found in Office documents (desktop apps for Word, Excel, and PowerPoint) when they are first saved:
     - The discovered information types are displayed in the **Data discovery** report.
     - To discover this information, the documents do not need to be labeled. However, after discovering this information, we encourage you to label and protect these documents.
     - The information types discovered include the default information types that you can select as conditions for labels, and any custom information types that you have configured in the Azure portal.
-    - Discovered information types are reported by default by this version of the Azure Information Protection client, but you can prevent this information from being sent with an [advanced client setting](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics).
-    - The information type matches are reported if you have enabled the checkbox in the Azure portal to collect content matches. If you need to prevent sending this information for a subset of users, you can use another [advanced client setting](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users). 
+    - Discovered information types are reported by default by the Azure Information Protection client, but you can prevent this information from being sent with an [advanced client setting](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics).
+    - The information type matches are reported if you have enabled the checkbox in the Azure portal to enable deeper analysis into your sensitive data. If you need to prevent sending this information for a subset of users, you can use another [advanced client setting](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users). 
 
 - New advanced client settings that implement pop-up messages in Outlook that can warn, justify, or block emails being sent. [More information](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     
