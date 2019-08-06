@@ -669,7 +669,7 @@ Example PowerShell command, where your label policy is named "Global":
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users. If you have some users who should not send this data, create the following advanced client setting in a label policy for these users: 
+When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that enables deeper analytics into your sensitive data collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users. If you have some users who should not send this data, create the following advanced client setting in a label policy for these users: 
 
 - Key: **LogMatchedContent**
 

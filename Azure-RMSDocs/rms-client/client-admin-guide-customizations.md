@@ -863,7 +863,7 @@ To change this behavior so that this information is not sent by the classic clie
 
 - Value: **False**
 
-If you set this advanced client setting, audit results are still sent from the classic client but the information is limited to reporting when a user has accessed labeled content.
+If you set this advanced client setting, auditing results are still sent from the classic client but the information is limited to reporting when a user has accessed labeled content.
 
 For example:
 
@@ -871,13 +871,13 @@ For example:
 
 - Without this setting, you can see that Financial.docx contains 6 credit card numbers.
     
-    - If you also enable [content matches for deeper analysis](../reports-aip.md#content-matches-for-deeper-analysis), you will additionally be able to see what those credit card numbers are.
+    - If you also enable [deeper analytics into your sensitive data](../reports-aip.md#content-matches-for-deeper-analysis), you will additionally be able to see what those credit card numbers are.
 
 ## Disable sending information type matches for a subset of users
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
-When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users. If you have some users who should not send this data, create the following advanced client setting in a [scoped policy](../configure-policy-scope.md) for these users: 
+When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that enables deeper analytics into your sensitive data collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users. If you have some users who should not send this data, create the following advanced client setting in a [scoped policy](../configure-policy-scope.md) for these users: 
 
 - Key: **LogMatchedContent**
 
