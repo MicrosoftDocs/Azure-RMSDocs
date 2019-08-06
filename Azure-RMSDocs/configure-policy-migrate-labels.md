@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to Office 365 sensitivi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/30/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -16,10 +16,11 @@ ms.service: information-protection
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
@@ -182,6 +183,8 @@ To confirm whether the clients and services you use support unified labeling, re
 - Services from software vendors and developers that use the [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview).
 
 ## Next steps
+
+For additional guidance and tips from our Customer Experience team, see the following blog post: [Understanding Unified Labeling Migration](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185).
 
 For more information about your migrated labels that can now be configured and published in one of the admin centers, see [Overview of sensitivity labels](/Office365/SecurityCompliance/sensitivity-labels).
 

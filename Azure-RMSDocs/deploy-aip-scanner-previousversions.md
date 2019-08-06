@@ -16,10 +16,11 @@ ms.service: information-protection
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
