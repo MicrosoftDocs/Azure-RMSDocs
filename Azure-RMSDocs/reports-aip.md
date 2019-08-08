@@ -95,8 +95,6 @@ The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to 
 For more information, read the following blog posts: 
 - [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)
 
-- [Auditing sensitive data on Windows endpoints using the Azure Information Protection client](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Auditing-sensitive-data-on-Windows-endpoints-using-the-Azure/ba-p/535459)
-
 - [Discover and protect sensitive data through Azure Information Protection and Microsoft Defender ATP](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292)
 
 ### Information collected and sent to Microsoft
