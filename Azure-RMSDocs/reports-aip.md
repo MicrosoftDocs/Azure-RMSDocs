@@ -133,7 +133,7 @@ To prevent Azure Information Protection clients (classic) from sending this data
 
 #### Content matches for deeper analysis 
 
-Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for also collecting and storing the data that's identified by the sensitive information types or your custom conditions. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to send this additional data, do not select the checkbox **Enable deeper analytics into your senstive data**. If you want most users to send this additional data and a subset of users cannot send it, select the checkbox and then:
+Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for also collecting and storing the data that's identified by the sensitive information types or your custom conditions. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to send this additional data, do not select the checkbox **Enable deeper analytics into your sensitive data**. If you want most users to send this additional data and a subset of users cannot send it, select the checkbox and then:
 
 - For the classic client: Configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
 
