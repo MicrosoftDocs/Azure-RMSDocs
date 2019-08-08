@@ -6,7 +6,7 @@ description: Overview of HYOK (AD RMS) protection with Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -95,7 +95,7 @@ The following table lists the supported scenarios for protecting content by usin
 |Android|Office Mobile <br /><br />- Outlook|Protection: No<br /><br />Consumption: No|
 |Android|Azure Information Protection Viewer|Protection: Not applicable<br /><br />Consumption: Yes|
 |Web|Outlook on the web|Protection: No<br /><br />Consumption: No|
-|Web|Office Online<br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: No|
+|Web|Office for the web<br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: No|
 |Universal|Office Universal apps<br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: No|
 
 
