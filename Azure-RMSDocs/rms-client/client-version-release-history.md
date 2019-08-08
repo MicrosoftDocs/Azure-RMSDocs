@@ -125,11 +125,10 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - Azure Publish Setting Password
     - Azure Storage Account Key (Generic)
 
-- Endpoint discovery support for [Azure Information Protection analytics](../reports-aip.md), to report sensitive information found in Office documents (using desktop apps for Word, Excel, and PowerPoint) when they are first saved:
-    - The discovered information types are displayed in the **Data discovery** report.
-    - To discover this information, the documents do not need to be labeled. However, after discovering this information, we encourage you to label and protect these documents.
-    - The information types discovered include the predefined information types that you can select as conditions for labels, and any custom information types that you have configured in the Azure portal.
-    - Discovered information types are reported by default by the Azure Information Protection client, but you can prevent this information from being sent with an [advanced client setting](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics).
+- Endpoint discovery support for [Azure Information Protection analytics](../reports-aip.md), to report sensitive information found when users first save an Office document (using desktop apps for Word, Excel, and PowerPoint):
+    - To discover this information, the documents do not need to be labeled.
+    - Sensitive information is identified by predefined and custom information types.
+    - If you don't want the sensitive information types found to be sent to Azure Information Protection analytics, you can disable endpoint discovery with an [advanced client setting](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics).
 
 - New advanced client settings that implement pop-up messages in Outlook that can warn, justify, or block emails being sent. [More information](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     
@@ -137,9 +136,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - If you label and protect files by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. [More information](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
-- New advanced client setting for analytics, for the following scenarios:
-    
-    - Prevent sending information type matches for a subset of users when you have selected the checkbox in the Azure portal to collect content matches. [More information](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+- A new advanced client setting for [Azure Information Protection analytics](../reports-aip.md), to prevent sending information type matches for a subset of users when you have selected the checkbox in the Azure portal that enables deeper analytics into your sensitive data. This setting is applicable to the client and the scanner. [More information](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
 
 - New advanced client setting that's applicable only when you configure the policy setting to not display custom permissions: When there's a file that's protected with custom permissions, display the custom permissions option in File Explorer so that users can see and change them (if they have permissions to change the protection settings). [More information](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 

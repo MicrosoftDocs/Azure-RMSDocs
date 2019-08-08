@@ -95,8 +95,6 @@ The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to 
 For more information, read the following blog posts: 
 - [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)
 
-- [Auditing sensitive data on Windows endpoints using the Azure Information Protection client](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Auditing-sensitive-data-on-Windows-endpoints-using-the-Azure/ba-p/535459)
-
 - [Discover and protect sensitive data through Azure Information Protection and Microsoft Defender ATP](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292)
 
 ### Information collected and sent to Microsoft
@@ -135,7 +133,7 @@ To prevent Azure Information Protection clients (classic) from sending this data
 
 #### Content matches for deeper analysis 
 
-Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for also collecting and storing the data that's identified by the sensitive information types or your custom conditions. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to send this additional data, do not select the checkbox **Enable deeper analytics into your sensitive data**. If you want most users to send this additional data and a subset of users cannot send it, select the checkbox and then:
+Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for also collecting and storing the data that's identified as being a sensitive information type (predefined or custom conditions). For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to send this additional data, do not select the checkbox **Enable deeper analytics into your sensitive data**. If you want most users to send this additional data and a subset of users cannot send it, select the checkbox and then:
 
 - For the classic client: Configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
 
