@@ -643,15 +643,15 @@ Example PowerShell command, where your label policy is named "Global":
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection clients when that content contains sensitive information. By default, this information is sent by the Azure Information Protection unified labeling client to Azure Information Protection analytics.
+When the Azure Information Protection unified labeling client is used in Office apps, it looks for sensitive information in documents when they are first saved. Any sensitive information types found (predefined or custom) are then sent to [Azure Information Protection analytics](../reports-aip.md).
 
-To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
+To change this behavior so that sensitive information types found by the unified labeling client are not sent to Azure Information Protection analytics, enter the following strings for the selected label policy:
 
 - Key: **RunAuditInformationTypesDiscovery**
 
 - Value: **False**
 
-If you set this advanced client setting, audit results are still sent from the unified labeling client but the information is limited to reporting when a user has accessed labeled content.
+If you set this advanced client setting, auditing information is still sent from the client, but the information is limited to reporting when a user has accessed labeled content.
 
 For example:
 
@@ -669,7 +669,7 @@ Example PowerShell command, where your label policy is named "Global":
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that enables deeper analytics into your sensitive data collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users. If you have some users who should not send this data, create the following advanced client setting in a label policy for these users: 
+When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that enables deeper analytics into your sensitive data collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users, which includes service accounts that run the Azure Information Protection scanner. If you have some users who should not send this data, create the following advanced client setting in a label policy for these users: 
 
 - Key: **LogMatchedContent**
 

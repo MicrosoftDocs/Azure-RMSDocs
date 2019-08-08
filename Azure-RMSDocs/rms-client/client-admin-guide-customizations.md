@@ -855,15 +855,15 @@ Now, when a user opens and saves one of these Office documents, it is labeled  *
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
-[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection clients when that content contains sensitive information. By default, this information is sent by the Azure Information Protection client (classic) to Azure Information Protection analytics.
+When the Azure Information Protection client is used in Office apps, it looks for sensitive information in documents when they are first saved. Any sensitive information types found (predefined or custom) are then sent to [Azure Information Protection analytics](../reports-aip.md).
 
-To change this behavior so that this information is not sent by the classic client, enter the following strings:
+To change this behavior so that sensitive information types found by the classic client are not sent to Azure Information Protection analytics, enter the following strings:
 
 - Key: **RunAuditInformationTypesDiscovery**
 
 - Value: **False**
 
-If you set this advanced client setting, auditing results are still sent from the classic client but the information is limited to reporting when a user has accessed labeled content.
+If you set this advanced client setting, auditing results are still sent from the client but the information is limited to reporting when a user has accessed labeled content.
 
 For example:
 
@@ -877,7 +877,7 @@ For example:
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
-When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that enables deeper analytics into your sensitive data collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users. If you have some users who should not send this data, create the following advanced client setting in a [scoped policy](../configure-policy-scope.md) for these users: 
+When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that enables deeper analytics into your sensitive data collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users, which includes service accounts that run the Azure Information Protection scanner. If you have some users who should not send this data, create the following advanced client setting in a [scoped policy](../configure-policy-scope.md) for these users: 
 
 - Key: **LogMatchedContent**
 
