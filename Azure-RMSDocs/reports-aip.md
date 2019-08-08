@@ -203,15 +203,15 @@ However, a typical role assignment for many organizations is the Azure AD role o
 
 ### Features that require a minimum version of the client
 
-The Azure Information Protection clients support auditing (label usage) and endpoint discovery (identifying sensitive information types).
+The Azure Information Protection clients support basic auditing (label usage) and endpoint discovery (identifying sensitive information types).
 
 Azure Information Protection unified labeling client:
 
-- Support for auditing and endpoint discovery: Minimum version of 2.0.778.0
+- Support for basic auditing and endpoint discovery: Minimum version of 2.0.778.0
 
 Azure Information Protection client (classic):
 
-- Support for auditing: Minimum version of 1.41.51.0
+- Support for basic auditing: Minimum version of 1.41.51.0
 - Support for endpoint discovery: Minimum version of 1.48.204.0
 
 ### Storage requirements and data retention
