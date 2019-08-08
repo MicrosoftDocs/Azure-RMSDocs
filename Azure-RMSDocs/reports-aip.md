@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 07/30/2019
+ms.date: 08/08/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -95,6 +95,8 @@ The reports use [Azure Monitor](/azure/log-analytics/log-analytics-overview) to 
 For more information, read the following blog posts: 
 - [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)
 
+- [Auditing sensitive data on Windows endpoints using the Azure Information Protection client](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Auditing-sensitive-data-on-Windows-endpoints-using-the-Azure/ba-p/535459)
+
 - [Discover and protect sensitive data through Azure Information Protection and Microsoft Defender ATP](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292)
 
 ### Information collected and sent to Microsoft
@@ -123,7 +125,7 @@ To generate these reports, endpoints send the following types of information to 
 
 This information is stored in an Azure Log Analytics workspace that your organization owns and can be viewed independently from Azure Information Protection by users who have access rights to this workspace. For details, see the [Permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics) section. For information about managing access to your workspace, see the [Manage access to Log Analytics Workspace using Azure permissions](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) section from the Azure documentation.
 
-To prevent Azure Information Protection clients from sending this data, set the [policy setting](configure-policy-settings.md) of **Send audit data to Azure Information Protection log analytics** to **Off**:
+To prevent Azure Information Protection clients (classic) from sending this data, set the [policy setting](configure-policy-settings.md) of **Send audit data to Azure Information Protection log analytics** to **Off**:
 
 - For most users to send this data and a subset of users cannot send auditing data: 
     - Set **Send audit data to Azure Information Protection log analytics** to **Off** in a scoped policy for the subset of users. This configuration is typical for production scenarios.
@@ -133,7 +135,11 @@ To prevent Azure Information Protection clients from sending this data, set the 
 
 #### Content matches for deeper analysis 
 
-Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for also collecting and storing the data that's identified by the sensitive information types or your custom conditions. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to send this additional data, do not select this checkbox. If you want most users to send this additional data and a subset of users cannot send it, select the checkbox and configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
+Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for also collecting and storing the data that's identified by the sensitive information types or your custom conditions. For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to send this additional data, do not select the checkbox **Enable deeper analytics into your senstive data**. If you want most users to send this additional data and a subset of users cannot send it, select the checkbox and then:
+
+- For the classic client: Configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
+
+- For the unified labeling client: Configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a label policy for the subset of users.
 
 After collecting the content matches, they are displayed in the reports when you drill down into files from the Activity logs, to display **Activity Details**. This information can also be viewed and retrieved with queries.
 
@@ -197,16 +203,16 @@ However, a typical role assignment for many organizations is the Azure AD role o
 
 ### Features that require a minimum version of the client
 
-You can use the version history information for the [Azure Information Protection unified labeling client](./rms-client/unifiedlabelingclient-version-release-history.md) and the [Azure Information Protection client (classic)](./rms-client/client-version-release-history.md) to confirm whether your version of the client supports all the central reporting features. The minimum versions for the clients:
+The Azure Information Protection clients support basic auditing (label usage) and endpoint discovery (identifying sensitive information types).
 
-For the Azure Information Protection unified labeling client:
+Azure Information Protection unified labeling client:
 
-- Support for auditing and endpoint discovery: Version 2.0.778.0
+- Support for basic auditing and endpoint discovery: Minimum version of 2.0.778.0
 
-For the Azure Information Protection client (classic):
+Azure Information Protection client (classic):
 
-- Support for auditing: Version 1.41.51.0
-- Support for endpoint discovery: Version 1.48.204.0
+- Support for basic auditing: Minimum version of 1.41.51.0
+- Support for endpoint discovery: Minimum version of 1.48.204.0
 
 ### Storage requirements and data retention
 
