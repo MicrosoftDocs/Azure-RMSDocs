@@ -643,7 +643,7 @@ Example PowerShell command, where your label policy is named "Global":
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-By default, the unified labeling client supports central reporting and sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](./reports-aip.md#information-collected-and-sent-to-microsoft) section.
+By default, the unified labeling client supports central reporting and sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](./reports-aip.md#information-collected-and-sent-to-microsoft) section from the central reporting documentation.
 
 To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
 
