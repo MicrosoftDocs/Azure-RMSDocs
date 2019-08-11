@@ -131,11 +131,13 @@ To prevent Azure Information Protection clients (classic) from sending this data
 - For only a subset of users to send auditing data: 
     - Set **Send audit data to Azure Information Protection log analytics** to **Off** in the global policy, and **On** in a scoped policy for the subset of users. This configuration is typical for testing scenarios.
 
+To prevent Azure Information Protection unified clients from sending this data, configure a label policy [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analyticsadvanced setting).
+
 #### Content matches for deeper analysis 
 
 Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for also collecting and storing the data that's identified as being a sensitive information type (predefined or custom conditions). For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to send this additional data, do not select the checkbox **Enable deeper analytics into your sensitive data**. If you want most users to send this additional data and a subset of users cannot send it, select the checkbox and then:
 
-- For the classic client: Configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
+- For the classic client and scanner: Configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
 
 - For the unified labeling client: Configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a label policy for the subset of users.
 
