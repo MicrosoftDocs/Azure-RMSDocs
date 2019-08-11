@@ -92,6 +92,7 @@ Azure Information Protection client (classic)|Sometimes abbreviated to *classic 
 |scanner|See *Azure Information Protection scanner*.|
 |super user|A group of highly trusted administrators who can decrypt and access files that the organization has protected by using a rights management service. Typically, this level of access is required for legal eDiscovery and by auditing teams.|
 |tenant key|Also known as the server licensor certificate (SLC) key.<br /><br />The key that is unique to an organization and ultimately secures all Rights Management cryptographic functions that chain to this tenant key.|
+|unified label| A label that can be applied by apps, clients, and services that support the Microsoft Information Protection framework, to apply classification and optionally, protection. In Office apps and services, unified labels are implemented as sensitivity labels.|
 |unprotect|Remove protection controls from files or email messages, which used encryption, identity, usage rights, and access control policies to help secure your data.|
 |use license|A per-document certificate that is granted to a user who opens a file or email message that has been protected by a rights management service. This certificate contains that user’s rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document’s policy.|
 
