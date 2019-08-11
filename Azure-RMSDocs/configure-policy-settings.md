@@ -55,7 +55,7 @@ To configure these settings:
     
     - **Send audit data to Azure Information Protection analytics**: Before you create an Azure Log Analytics workspace for [Azure Information analytics](reports-aip.md), the values for this setting display **Off** and **Not configured**. When you create the workspace, the values change to **Off** and **On**.
         
-        When the setting is **On**, clients that support central reporting send their audit data to the Azure Information Protection service. For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](reports-aip.md#information-collected-and-sent-to-microsoft) section. Set this option to **Off** to prevent this data from being sent.
+        When the setting is **On**, clients that support central reporting send data to the Azure Information Protection service. This information includes what labels are applied and when a user selects a label with a lower classification, or removes a label. For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](reports-aip.md#information-collected-and-sent-to-microsoft) section in the central reporting documentation. Set this policy setting to **Off** to prevent this data from being sent.
     
     - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option).
         
