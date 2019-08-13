@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 08/11/2019
+ms.date: 08/13/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -149,7 +149,7 @@ To view the Azure Information Protection reports and create your own, make sure 
 |Requirement|More information|
 |---------------|--------------------|
 |An Azure subscription that includes Log Analytics and that is for the same tenant as Azure Information Protection|See the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
-|Azure Information Protection clients|Both the unified labeling client and the classic client are supported. <br /><br />If you don't already have one of these clients, you can download and install them from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Make sure you have the latest version to support [all the features](#features-that-require-a-minimum-version-of-the-client) for Azure Information Protection analytics.|
+|Azure Information Protection clients|Both the unified labeling client and the classic client are supported. <br /><br />If you don't already have one of these clients, you can download and install them from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
 |Microsoft Cloud App Security |To display information from Microsoft Cloud App Security, configure [Azure Information Protection integration](https://docs.microsoft.com/cloud-app-security/azip-integration).|
 |For the **Discovery and risk** report: <br /><br />- To display data from on-premises data stores, you have deployed at least one instance of the Azure Information Protection scanner <br /><br />- To display data from Windows 10 computers, they must be a minimum build of 1809, you are using Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP), and you have enabled the Azure Information Protection integration feature from Microsoft Defender Security Center|For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). <br /><br />For information about configuring and using the Azure Information Protection integration feature from Microsoft Defender Security Center, see [Information protection in Windows overview](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
 |For the **Recommendations** report: <br /><br />- To add a new data repository from the Azure portal as a recommended action, you must be using a version of the Azure Information Protection scanner that is configured in the Azure portal |To deploy the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).|
@@ -200,19 +200,6 @@ After you have configured your workspace for Azure Information Protection analyt
 - Azure role: **Log Analytics Reader**
 
 However, a typical role assignment for many organizations is the Azure AD role of **Security reader** and the Azure role of **Reader**.
-
-### Features that require a minimum version of the client
-
-The Azure Information Protection clients support auditing (label usage) and endpoint discovery (identifying sensitive information).
-
-Azure Information Protection unified labeling client:
-
-- Support for auditing and endpoint discovery: Minimum version of 2.0.778.0
-
-Azure Information Protection client (classic):
-
-- Support for basic auditing: Minimum version of 1.41.51.0
-- Support for endpoint discovery: Minimum version of 1.48.204.0
 
 ### Storage requirements and data retention
 
