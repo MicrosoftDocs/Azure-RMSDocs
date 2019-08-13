@@ -74,11 +74,11 @@ Use the **Version** number displayed to identify the client:
 
 - A version **2**, for example, **2.2.14.0**, identifies the Azure Information Protection unified labeling client.
 
-## When is the right time to migrate my labels to Office 365?
+## When is the right time to migrate my labels?
 
 Now that the option to migrate labels in the Azure portal is in general availability, we recommend you activate the migration so that you can use your labels as sensitivity labels with [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
-For more information and instructions, see [How to migrate Azure Information Protection labels to Office 365 sensitivity labels](configure-policy-migrate-labels.md).
+For more information and instructions, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).
 
 ## After I've migrated my labels, which management portal do I use?
 
