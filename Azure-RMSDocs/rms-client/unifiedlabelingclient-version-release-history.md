@@ -57,9 +57,19 @@ Use the following information to see what’s new or changed for a supported rel
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the clients](use-client.md#compare-the-clients).
 
+## Version 2.2.21
+
+**Released**: 09/02/2019
+
+**Fixes:**
+
+- When you use the advanced setting [OutlookDefaultLabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook ) to set a different default label for Outlook, and the label you specify isn't a sublabel, the label is correctly applied.
+
 ## Version 2.2.19.0
 
 **Released**: 08/06/2019
+
+Supported through xxxx
 
 **Fixes:**
 
