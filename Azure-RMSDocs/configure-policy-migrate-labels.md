@@ -38,7 +38,7 @@ Before you read the instructions to migrate your labels, you might find the foll
 
 - [What’s the difference between labels in Azure Information Protection and labels in Office 365?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
 
-- [When is the right time to migrate my labels?](faqs.md#when-is-the-right-time-to-migrate-my-labels-to-office-365)
+- [When is the right time to migrate my labels?](faqs.md#when-is-the-right-time-to-migrate-my-labels)
 
 - [After I've migrated my labels, which management portal do I use?](faqs.md?#after-ive-migrated-my-labels-which-management-portal-do-i-use )
 
