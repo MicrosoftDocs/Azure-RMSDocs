@@ -6,7 +6,7 @@ description: Deployment instructions for versions of the Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/13/2019
+ms.date: 08/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -105,7 +105,7 @@ Note that in this configuration, the scanner cannot apply protection (or remove 
 
 If you can be granted the Sysadmin role temporarily to install the scanner, you can remove this role when the scanner installation is complete. When you use this configuration, the database is automatically created for you and the service account for the scanner is automatically granted the required permissions. However, the user account that configures the scanner requires the db_owner role for the AzInfoProtectionScanner database, and you must manually grant this role to the user account.
 
-If you cannot be granted the Sysadmin role even temporarily, you must manually create a database named AzInfoProtectionScanner before you install the scanner. When you use this configuration, assign the following roles:
+If you cannot be granted the Sysadmin role even temporarily, you must ask a user with Sysadmin rights to manually create a database named AzInfoProtectionScanner before you install the scanner. For this configuration, the following roles must be assigned:
     
 |Account|Database-level role|
 |--------------------------------|---------------------|
