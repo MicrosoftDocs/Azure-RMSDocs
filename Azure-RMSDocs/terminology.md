@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -45,7 +45,7 @@ Azure Information Protection client (classic)|Sometimes abbreviated to *classic 
 |Azure Information Protection label|An item that always applies a classification value to documents and emails, and can also protect them. When a label is applied, the label information is stored in the metadata for applications and services to read and optionally, act on it.|
 |Azure Information Protection policy|Administrator-defined configuration for clients and services that use Azure Information Protection labels and policy settings.|
 |Azure Information Protection scanner|A service that runs on Windows Server and lets you discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries.|
-|Azure Information Protection unified labeling client|Sometimes abbreviated to *unified labeling client*.<br /><br />The client for Windows computers that lets users, administrators, and services use the sensitivity labels and policy settings from the Office 365 Security & Compliance Center, the Microsoft 365 security center, and the Microsoft 365 compliance center. Replaces the Azure Information Protection client (classic).|
+|Azure Information Protection unified labeling client|Sometimes abbreviated to *unified labeling client*.<br /><br />The client for Windows computers that lets users, administrators, and services use the sensitivity labels and label policy settings from the Office 365 Security & Compliance Center, the Microsoft 365 security center, and the Microsoft 365 compliance center. Replaces the Azure Information Protection client (classic).|
 |Azure RMS|See *Azure Rights Management*.|
 |Azure Information Protection viewer|An app that runs on Windows computers and mobile devices, to display protected files.|
 |Azure Rights Management|Frequently abbreviated to *Azure RMS*.<br /><br />An Azure service used by Azure Information Protection that uses encryption and policy to help secure documents, files, and email.  Also known as *Azure Rights Management service*. Previous names have included:<br /><br />- *Windows Azure Active Directory Rights Management*: Frequently abbreviated to Windows Azure AD Rights Management Service.<br /><br />- *RMS Online*: The original, proposed name, which you might sometimes see in error messages and log file entries.|
@@ -68,6 +68,8 @@ Azure Information Protection client (classic)|Sometimes abbreviated to *classic 
 |Information Rights Management|Frequently abbreviated to *IRM*.<br /><br />A term used in conjunction with Office services, such as Exchange Server, Word, and SharePoint Online, to describe the ability to support the Microsoft Rights Management services.|
 |IRM|See *Information Rights Management*.|
 |Office Message Encryption|Frequently abbreviated to *OME*.<br /><br />The new Office 365 Message Encryption capabilities have native integration with the Azure Rights Management service to provide the same email protection for internal and external users, automatic refresh of templates, and support for the bring your own key (BYOK) scenario. The previous OME implementation was designed for external recipients only, required a mail flow rule, and did not support BYOK.|
+|Microsoft Information Protection| Sometimes abbreviated to *MIP*.<br /><br /> A framework for products and integrated capabilities that use the same labeling store ("unified labels") and help you protect your organization's sensitive information.|
+|MIP| See *Microsoft Information Protection*|
 |MSDRM|Sometimes seen as references for the RMS client 1.0, which is replaced with the newer client, MSIPC. This older client supports applications that are developed with the RMS SDK 1.0 and supports Office 2010 and Office 2007, Exchange 2010 and Exchange 2013, and SharePoint 2010 and SharePoint 2007.|
 |MSIPC|Sometimes seen as references for the RMS client 2.0, which replaced the older RMS client, MSDRM. This later client supports applications that are developed with the RMS SDK 2.0 and supports Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013, and the Azure Information Protection client.|
 |native protection|A level of protection available in all enlightened applications that prevents unauthorized people from opening a file and that can also enforce more stringent policies, such as read-only, and do not print. In addition, this protection stays with the file, even when the file is forwarded to other people or saved in a public location that others can access.|
@@ -89,7 +91,8 @@ Azure Information Protection client (classic)|Sometimes abbreviated to *classic 
 |protection-only mode|An operational mode for the Azure Information Protection client when there is no Azure Information Protection policy to apply labels. In this mode, classification labels are not displayed but users can still apply Rights Management protection.|
 |scanner|See *Azure Information Protection scanner*.|
 |super user|A group of highly trusted administrators who can decrypt and access files that the organization has protected by using a rights management service. Typically, this level of access is required for legal eDiscovery and by auditing teams.|
-|tenant key|Also known as the server licensor certificate (SLC) key.<br /><br />The key that is unique to an organization and ultimately secures all Rights Management cryptographic functions that chain to this tenant key.|
+|tenant key|Also known as the *server licensor certificate (SLC) key*.<br /><br />The key that is unique to an organization and ultimately secures all Rights Management cryptographic functions that chain to this tenant key.|
+|unified label| Also known as *unified sensitivity label*.<br /><br /> A label that can be applied by apps, clients, and services that support the Microsoft Information Protection framework, to apply classification and optionally, protection. In Office apps and services, unified labels are implemented as sensitivity labels.|
 |unprotect|Remove protection controls from files or email messages, which used encryption, identity, usage rights, and access control policies to help secure your data.|
 |use license|A per-document certificate that is granted to a user who opens a file or email message that has been protected by a rights management service. This certificate contains that user’s rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document’s policy.|
 
