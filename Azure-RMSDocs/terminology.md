@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/11/2019
+ms.date: 08/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -68,7 +68,7 @@ Azure Information Protection client (classic)|Sometimes abbreviated to *classic 
 |Information Rights Management|Frequently abbreviated to *IRM*.<br /><br />A term used in conjunction with Office services, such as Exchange Server, Word, and SharePoint Online, to describe the ability to support the Microsoft Rights Management services.|
 |IRM|See *Information Rights Management*.|
 |Office Message Encryption|Frequently abbreviated to *OME*.<br /><br />The new Office 365 Message Encryption capabilities have native integration with the Azure Rights Management service to provide the same email protection for internal and external users, automatic refresh of templates, and support for the bring your own key (BYOK) scenario. The previous OME implementation was designed for external recipients only, required a mail flow rule, and did not support BYOK.|
-|Microsoft Information Protection| Sometimes abbreviated to *MIP*.<br /><br /> A framework for products and integrated capabilities that use the same labeling store and help you protect your organization's sensitive information.|
+|Microsoft Information Protection| Sometimes abbreviated to *MIP*.<br /><br /> A framework for products and integrated capabilities that use the same labeling store ("unified labels") and help you protect your organization's sensitive information.|
 |MIP| See *Microsoft Information Protection*|
 |MSDRM|Sometimes seen as references for the RMS client 1.0, which is replaced with the newer client, MSIPC. This older client supports applications that are developed with the RMS SDK 1.0 and supports Office 2010 and Office 2007, Exchange 2010 and Exchange 2013, and SharePoint 2010 and SharePoint 2007.|
 |MSIPC|Sometimes seen as references for the RMS client 2.0, which replaced the older RMS client, MSDRM. This later client supports applications that are developed with the RMS SDK 2.0 and supports Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013, and the Azure Information Protection client.|
