@@ -863,7 +863,7 @@ The configuration that controls whether the client sends audit information is th
 
 - Value: **False**
 
-If you set this advanced client setting, auditing information is still sent from the client but the information is limited to labeling activity.
+If you set this advanced client setting, auditing information can still be sent from the client but the information is limited to labeling activity.
 
 For example:
 
