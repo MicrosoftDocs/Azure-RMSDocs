@@ -15,10 +15,11 @@ ms.service: information-protection
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: aiplabels
 #ms.reviewer: demizets
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 #Customer intent: As an administrator, I want to make it easy for users to protect their emails that contain sensitive information.
 ---
 

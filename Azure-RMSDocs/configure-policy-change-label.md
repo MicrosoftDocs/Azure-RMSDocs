@@ -18,9 +18,10 @@ ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 #audience:
 #ms.devlang:
 #ms.reviewer: eymanor
+ms.subservice: aiplabels
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 

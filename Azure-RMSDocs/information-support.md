@@ -6,7 +6,7 @@ description: Resources for administrators, which include information about new r
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,10 +17,11 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 search.appverid:
 - MET150
 
@@ -61,7 +62,7 @@ The following sections provide information about support and troubleshooting opt
 
 ### To contact Microsoft Support
 
-If you have Premier Support, visit the [portal for Premier Support customers](https://premier.microsoft.com/) to submit incidents, browse solutions, and get help.
+If you have Premier Support, visit the [Microsoft Services Hub](https://serviceshub.microsoft.com/support/contactsupport) to submit incidents, browse solutions, and get help.
 
 You might be eligible for **FastTrack**: You can use the FastTrack Center Benefit when you purchase at least 150 licenses in an eligible plan for Azure Information Protection. The FastTrack Center Benefit lets you work with Microsoft specialists to assess, remediate, and enable eligible services. For more information, see [FastTrack Center Benefit for Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 

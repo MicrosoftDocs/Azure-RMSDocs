@@ -6,7 +6,7 @@ description: How end-user Office applications such as Word and Outlook, and Offi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,9 +17,10 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: azurerms
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
@@ -87,7 +88,7 @@ If you use SharePoint Server, you can use this IRM protection by deploying the A
 > 
 > - Coauthoring, when more than one person edits a document at the same time, is not supported. To edit a document in an IRM-protected library, you must first check out the document and download it, and then edit it in your Office application. Consequently, only one person can edit the document at a time.
 
-For libraries that are not IRM-protected, if you protect a file that you then upload to SharePoint or OneDrive, the following do not work with this file: Co-authoring, Office Online, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP).
+For libraries that are not IRM-protected, if you protect a file that you then upload to SharePoint or OneDrive, the following do not work with this file: Co-authoring, Office for the web, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP).
 
 When you use SharePoint IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive for Business and SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
 

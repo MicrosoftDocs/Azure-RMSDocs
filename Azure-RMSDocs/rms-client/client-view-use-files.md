@@ -17,10 +17,11 @@ ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: user
 
 ---
 

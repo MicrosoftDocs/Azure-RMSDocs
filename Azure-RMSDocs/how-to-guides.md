@@ -19,7 +19,7 @@ ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
