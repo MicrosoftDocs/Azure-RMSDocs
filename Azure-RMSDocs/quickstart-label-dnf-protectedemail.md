@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/23/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,10 +15,11 @@ ms.service: information-protection
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: aiplabels
 #ms.reviewer: demizets
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 #Customer intent: As an administrator, I want to make it easy for users to protect their emails that contain sensitive information.
 ---
 
@@ -54,7 +55,7 @@ To complete this quickstart, you need:
 
 3. An existing Azure Information Protection label to configure. 
     
-    You can use one of the default labels, or a label that you've created. If you need help creating a new label, see [Quickstart: Create a new Azure Information Protection label for specific users](quickstart-label-specificusers.md).
+    You can use one of the default labels, or a label that you've created. If you need help with creating a new label, see [Quickstart: Create a new Azure Information Protection label for specific users](quickstart-label-specificusers.md).
 
 4. To test the new label: The Azure Information Protection client must be installed on computers for users. 
     
@@ -86,7 +87,7 @@ For a full list of prerequisites to use Azure Information Protection, see [Requi
 
 2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label you want to configure to apply the protection. 
 
-3. On the **Label** blade, locate **Set permissions for documents and emails containing this label**. Select **Protect** and the **Protection** blade automatically opens if one of the other options were previously selected. 
+3. On the **Label** blade, locate **Set permissions for documents and emails containing this label**. Select **Protect**, and the **Protection** blade automatically opens if **Not configured** or **Remove Protection** was previously selected.
     
     If the **Protection** blade does not automatically open, select **Protection**:
     

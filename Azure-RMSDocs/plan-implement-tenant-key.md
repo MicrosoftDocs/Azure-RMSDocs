@@ -6,7 +6,7 @@ description: Instead of Microsoft managing the root key for Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,10 +17,11 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
@@ -145,6 +146,8 @@ Use the following table to identify which Azure region or instance is recommende
 |rms.**ap**.aadrm.com​|**East Asia** or **Southeast Asia**|
 |rms.**sa**.aadrm.com|**West US** or **East US**|
 |rms.**govus**.aadrm.com​|**Central US** or **East US 2**|
+|rms.**aadrm.us**|**US Gov Virginia** or **US Gov Arizona**|
+|rms.**aadrm.cn**|**China East 2** or **China North 2**|
 
 
 ### Instructions for BYOK

@@ -6,7 +6,7 @@ description: Configure settings in the Azure Information Protection policy that 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -18,9 +18,10 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 #audience:
 #ms.devlang:
 #ms.reviewer: eymanor
+ms.subservice: aiplabels
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
@@ -54,7 +55,7 @@ To configure these settings:
     
     - **Send audit data to Azure Information Protection analytics**: Before you create an Azure Log Analytics workspace for [Azure Information analytics](reports-aip.md), the values for this setting display **Off** and **Not configured**. When you create the workspace, the values change to **Off** and **On**.
         
-        When the setting is **On**, endpoints that support central reporting send their audit data to the Azure Information Protection service. For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](reports-aip.md#information-collected-and-sent-to-microsoft) section. Set this option to **Off** to prevent this data from being sent.
+        When the setting is **On**, clients that support central reporting send data to the Azure Information Protection service. This information includes what labels are applied and when a user selects a label with a lower classification, or removes a label. For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](reports-aip.md#information-collected-and-sent-to-microsoft) section in the central reporting documentation. Set this policy setting to **Off** to prevent this data from being sent.
     
     - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option).
         
@@ -81,7 +82,7 @@ To configure these settings:
         
        When this setting is on, it can be used in conjunction with an advanced client setting so that users can [permanently hide the Azure Information Protection bar](./rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) if they choose not to show the bar. They can do this by clearing the **Show Bar** option from the **Protect** button.
     
-   - **Add the Do Not Forward button to the Outlook ribbon**: When this setting is on, users can select this button from the **Protection** group on the Outlook ribbon in addition to selecting the **Do Not Forward** option from Outlook menus. To help ensure that users classify their emails as well as protect them, you might prefer to not add this button but instead, [configure a label for protection](configure-policy-protection.md) and a user defined permission for Outlook. This protection setting is functionally the same as selecting the **Do Not Forward** button, but when this functionality is included with a label, emails are classified as well as protected.
+   - **Add the Do Not Forward button to the Outlook ribbon**: When this setting is on, users can select this button from the **Protection** group on the Outlook ribbon in addition to selecting the **Do Not Forward** option from Outlook menus. To help ensure that users classify their emails as well as protect them, you might prefer to not add this button but instead, [configure a label for protection](configure-policy-protection.md) and a user=defined permission for Outlook. This protection setting is functionally the same as selecting the **Do Not Forward** button, but when this functionality is included with a label, emails are classified as well as protected.
     
        This policy setting can also be configured with an advanced client setting as a [client customization](./rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook).
     

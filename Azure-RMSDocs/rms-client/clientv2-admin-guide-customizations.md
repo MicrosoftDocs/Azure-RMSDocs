@@ -2,11 +2,10 @@
 # required metadata
 
 title: Custom configurations - Azure Information Protection unified labeling client
-description: Information about customizing the Azure Information Protection unified labeling client for Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 08/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,10 +16,11 @@ ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
@@ -84,9 +84,9 @@ Example 4: Remove a label policy advanced setting by specifying a null string va
 
 Specifying the label policy name for the PowerShell *Identity* parameter is straightforward because you see only one policy name in the admin center where you manage your label policies. However, for labels, you see both a **Name** and **Display name** in the admin centers. In some cases, the value for both will be the same but they can be different:
 
-- **Name** is the original name of the label and it is unique across all your labels. If you change the name of your label after it is created, this value remains the same.
+- **Name** is the original name of the label and it is unique across all your labels. If you change the name of your label after it is created, this value remains the same. For labels that have been migrated from Azure Information Protection, you might see the label ID of the label from the Azure portal.
 
-- **Display name** is the name of the label that users see and it doesn't have to be unique across all your labels. For example, users see one **All Employees** sublabel for the **Confidential** label, and another **All Employees** sublabel for the **Highly Confidential** label. These sublabels both display the same name but are not the same label and have different settings.
+- **Display name** is the name of the label that users see and it doesn't have to be unique across all your labels. For example, users see one **All Employees** sublabel for the **Confidential** label, and another **All Employees** sublabel for the **Highly Confidential** label. These sublabels both display the same name, but are not the same label and have different settings.
 
 For configuring your label advanced settings, use the **Name** value. For example, to identify the label in the following picture, you would specify `-Identity "All Company"`:
 
@@ -123,6 +123,8 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |----------------|---------------|
 |AttachmentAction|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
+|DisableMandatoryInOutlook|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
+|EnableAudit|[Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
 |EnableCustomPermissions|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -135,12 +137,13 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |OutlookJustifyUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
 |OutlookOverrideUnlabeledCollaborationExtensions|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|RunAuditInformationTypesDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
 
@@ -178,6 +181,22 @@ For the selected label policy, specify the following strings:
 Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
+
+## Exempt Outlook messages from mandatory labeling
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+
+By default, when you enable the label policy setting of **All documents and emails must have a label**, all saved documents and sent emails must have a label applied. When you configure the following advanced setting, the policy setting applies only to Office documents and not to Outlook messages.
+
+For the selected label policy, specify the following strings:
+
+- Key: **DisableMandatoryInOutlook**
+
+- Value: **True**
+
+Example PowerShell command, where your label policy is named "Global":
+
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
 
 ## Enable recommended classification in Outlook
 
@@ -396,7 +415,7 @@ You can configure this setting to **Recommended**, so that users are prompted to
 
 Note: When the attachment with the highest classification label is configured for protection with the setting of user-defined permissions:
 
-- When the label's user-defined permissions include Outlook (Do Not Forward), that label is selected and Do Not Forward protection is applied to the email. 
+- When the label's user-defined permissions include Outlook (Do Not Forward), that label is selected and Do Not Forward protection is applied to the email.
 - When the label's user-defined permissions are just for Word, Excel, PowerPoint, and File Explorer, that label is not applied to the email message, and neither is protection.
 
 To configure this advanced setting, enter the following strings for the selected label policy:
@@ -409,6 +428,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 - Key Value 2: "\<customized tooltip>"
 
+The customized tooltip supports a single language only.
 
 Example PowerShell command, where your label policy is named "Global":
 
@@ -503,10 +523,6 @@ For the same label policy, create the following advanced client settings and for
 
 Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
 
-For the same label policy, create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
-
-Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
-
 - Warn messages:
     
     - Key: **OutlookWarnTrustedDomains**
@@ -587,20 +603,72 @@ Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
 
+#### To specify a different action for email messages without attachments
+
+By default, the value that you specify for OutlookUnlabeledCollaborationAction to warn, justify, or block pop-up messages applies to emails or attachments that don't have a label. You can refine this configuration by specifying another advanced setting for email messages that don't have attachments.
+
+Create the following advanced client setting with one of the following values:
+
+- Warn messages:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Value: **Warn**
+
+- Justification messages:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Value: **Justify**
+
+- Block messages:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Value: **Block**
+
+- Turn off these messages:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Value: **Off**
+
+If you don't specify this client setting, the value that you specify for OutlookUnlabeledCollaborationAction is used for unlabeled email messages without attachments as well as unlabeled email messages with attachments.
+
+Example PowerShell command, where your label policy is named "Global":
+
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
+
+## Disable sending audit data to Azure Information Protection analytics
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+
+The Azure Information Protection unified labeling client supports central reporting and by default, sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](../reports-aip.md#information-collected-and-sent-to-microsoft) section from the central reporting documentation.
+
+To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
+
+- Key: **EnableAudit**
+
+- Value: **False**
+
+Example PowerShell command, where your label policy is named "Global":
+
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
+
 
 ## Disable sending discovered sensitive information in documents to Azure Information Protection analytics
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-[Azure Information Protection analytics](../reports-aip.md) can discover and report documents saved by Azure Information Protection clients when that content contains sensitive information. By default, this information is sent by the Azure Information Protection unified labeling client to Azure Information Protection analytics.
+When the Azure Information Protection unified labeling client is used in Office apps, it looks for sensitive information in documents when they are first saved. Providing the [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) advanced setting is not set to **False**, any sensitive information types found (predefined or custom) are then sent to Azure Information Protection analytics.
 
-To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
+To change this behavior so that sensitive information types found by the unified labeling client are not sent to Azure Information Protection analytics, enter the following strings for the selected label policy:
 
-- Key: **RunAuditInformationTypeDiscovery**
+- Key: **RunAuditInformationTypesDiscovery**
 
 - Value: **False**
 
-If you set this advanced client setting, audit results are still sent from the unified labeling client but the information is limited to reporting when a user has accessed labeled content.
+If you set this advanced client setting, auditing information can still be sent from the client, but the information is limited to reporting when a user has accessed labeled content.
 
 For example:
 
@@ -612,13 +680,13 @@ For example:
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="False"}
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 
 ## Disable sending information type matches for a subset of users
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users. If you have some users who should not send this data, create the following advanced client setting in a label policy for these users: 
+When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that enables deeper analytics into your sensitive data collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users, which includes service accounts that run the Azure Information Protection scanner. If you have some users who should not send this data, create the following advanced client setting in a label policy for these users: 
 
 - Key: **LogMatchedContent**
 
@@ -724,7 +792,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 - Key: **EnableLabelByMailHeader**
 
-- Value: **Tue**
+- Value: **True**
 
 Example PowerShell command, where your label policy is named "Global":
 
@@ -790,7 +858,7 @@ This configuration uses label [advanced settings](#how-to-configure-advanced-set
 
 Use these settings only when you have a working [S/MIME deployment](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
 
-To configure an advanced setting for an S/MIME digital signatures, enter the following strings for the selected label:
+To configure an advanced setting for an S/MIME digital signature, enter the following strings for the selected label:
 
 - Key: **SMimeSign**
 

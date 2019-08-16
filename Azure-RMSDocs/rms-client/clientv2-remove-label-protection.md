@@ -6,7 +6,7 @@ description: Instructions to remove sensitivity labels and protection from files
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,9 +17,10 @@ ms.assetid:
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: v2client
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: user
 
 ---
 

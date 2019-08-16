@@ -17,10 +17,11 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 # Migration phase 3 - client-side configuration

@@ -6,7 +6,7 @@ description: Instructions for users to install the Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -16,9 +16,10 @@ ms.service: information-protection
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: v2client
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: user
 
 ---
 
@@ -38,7 +39,7 @@ In addition:
 
 ## To download and install the Azure Information Protection unified labeling client
 
-Before you install the Azure Information Protection unified labeling client, confirm with your administrator or help desk that you are using Office 365 sensitivity labels.
+Before you install the Azure Information Protection unified labeling client, confirm with your administrator or help desk that you are using [sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) to classify and protect documents and emails.
 
 1. Download **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
