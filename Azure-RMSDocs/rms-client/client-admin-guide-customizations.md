@@ -855,7 +855,7 @@ Now, when a user opens and saves one of these Office documents, it is labeled  *
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
-When the Azure Information Protection client is used in Office apps, it looks for sensitive information in documents when they are first saved. Providing the client isn't configured with the [policy setting](../configure-policy-setting.md) **Send audit data to Azure Information Protection log analytics** set to **Off**, any sensitive information types found (predefined or custom) are then sent to [Azure Information Protection analytics](../reports-aip.md).
+When the Azure Information Protection client is used in Office apps, it looks for sensitive information in documents when they are first saved. Providing the client isn't configured with the [policy setting](../configure-policy-settings.md) **Send audit data to Azure Information Protection log analytics** set to **Off**, any sensitive information types found (predefined or custom) are then sent to [Azure Information Protection analytics](../reports-aip.md).
 
 To change this behavior so that sensitive information types found by the classic client are not sent to Azure Information Protection analytics, enter the following strings:
 
