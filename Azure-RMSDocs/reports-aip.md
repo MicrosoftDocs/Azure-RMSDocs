@@ -207,7 +207,7 @@ However, a typical role assignment for many organizations is the Azure AD role o
 
 ### Storage requirements and data retention
 
-The amount of data collected and stored in your Azure Information Protection workspace will vary significantly for each tenant, depending on factors such as how many Azure Information Protection clients and other supported endpoints you have, whether you're collecting endpoint discovery data, you've deployed scanners, and so on.
+The amount of data collected and stored in your Azure Information Protection workspace will vary significantly for each tenant, depending on factors such as how many Azure Information Protection clients and other supported endpoints you have, whether you're collecting endpoint discovery data, you've deployed scanners, the number of protected documents that are accessed, and so on.
 
 However, as a starting point, you might find the following estimates useful:
 
