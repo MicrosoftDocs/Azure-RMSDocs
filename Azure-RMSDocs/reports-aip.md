@@ -42,6 +42,8 @@ Use Azure Information Protection analytics for central reporting to help you tra
 
 - Identify documents that contain sensitive information that might be putting your organization at risk if they are not protected, and mitigate your risk by following recommendations.
 
+- Identify when protected documents are accessed by internal or external users, and whether access was granted or denied.
+
 The data that you see is aggregated from your Azure Information Protection clients and scanners, from [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), and from [protection usage logs](log-analyze-usage.md).
 
 For example, you'll be able to see the following:
@@ -70,7 +72,7 @@ For example, you'll be able to see the following:
     
     - What labeling actions were performed by a specific application, such File Explorer and right-click, PowerShell, the scanner, or Microsoft Cloud App Security
     
-    - Which protected documents were accessed successfully by users or denied access to users, even if those users are outside your organization
+    - Which protected documents were accessed successfully by users or denied access to users, even if those users don't have the Azure Information Protection client installed or are outside your organization
 
     - Drill down into reported files to view **Activity Details** for additional information
 
@@ -241,7 +243,7 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
 
 - **Usage report (Preview)**: Use this report to see how your labels are being used.
 
-- **Activity logs (Preview)**: Use this report to see labeling actions from users, and on devices and file paths. In addition, for protected documents, you can see access attempts (successful or denied).
+- **Activity logs (Preview)**: Use this report to see labeling actions from users, and on devices and file paths. In addition, for protected documents, you can see access attempts (successful or denied) for users both inside and outside your organization, even if they don't have the Azure Information Protection client installed
     
     This report has a **Columns** option that lets you display more activity information than the default display. You can also see more details about a file by selecting it to display **Activity Details**.
 
