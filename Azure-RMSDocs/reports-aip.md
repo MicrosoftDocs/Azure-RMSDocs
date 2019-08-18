@@ -42,7 +42,7 @@ Use Azure Information Protection analytics for central reporting to help you tra
 
 - Identify documents that contain sensitive information that might be putting your organization at risk if they are not protected, and mitigate your risk by following recommendations.
 
-The data that you see is aggregated from your Azure Information Protection clients and scanners, and from [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
+The data that you see is aggregated from your Azure Information Protection clients and scanners, from [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), and from [protection usage logs](log-analyze-usage.md).
 
 For example, you'll be able to see the following:
 
