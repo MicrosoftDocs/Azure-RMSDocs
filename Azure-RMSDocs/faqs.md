@@ -56,9 +56,11 @@ For more information about migrating your existing labels, see [How to migrate A
 
 When your tenant is on the unified labeling platform, sensitivity labels can be used by [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). If you obtained your subscription for Azure Information Protection in June 2019 or later, your tenant is automatically on the unified labeling platform and no further action is needed. Your tenant might also be on this platform because somebody [migrated your Azure Information Protection labels](configure-policy-migrate-labels.md).
 
-To check the status, in the Azure portal: Go to **Azure Information Protection** > **Manage** > **Unified labeling**, and view the status of **Unified labeling**:
+To check the status, in the Azure portal, go to **Azure Information Protection** > **Manage** > **Unified labeling**, and view the status of **Unified labeling**:
+
 - If it displays **Activated**, your tenant is on the unified labeling platform.
-- If it displays **Not activated**, your tenant is not on the unified labeling platform. For more information and migration instructions, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).
+
+- If it displays **Not activated**, your tenant is not on the unified labeling platform. For migration instructions, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).
 
 ## What's the difference between the Azure Information Protection client and the Azure Information Protection unified labeling client?
 
