@@ -135,13 +135,13 @@ In addition to the information in the Office article, specific to Azure Informat
 
 - Do not terminate the TLS client-to-service connection (for example, to do packet-level inspection) to the **aadrm.com** URL. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
     
-    Tip: You can use the following PowerShell commands to help you determine whether your client connection is terminated before it reaches the Azure Rights Management service:
+    You can use the following PowerShell commands to help you determine whether your client connection is terminated before it reaches the Azure Rights Management service:
        
         	$request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
         	$request.GetResponse()
         	$request.ServicePoint.Certificate.Issuer
         
-    The result should show that the issuing CA is from a Microsoft Secure Server CA and if it is not, it is very likely your secure client-to-service connection is being terminated and needs reconfiguration on your firewall: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US` 
+    The result should show that the issuing CA is from a Microsoft CA, for example: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`. If you see an issuing CA name that is not from Microsoft, it is very likely your secure client-to-service connection is being terminated and needs reconfiguration on your firewall.
 
 ### On-premises servers
 
