@@ -6,7 +6,7 @@ description: Although Azure Information Protection comes with default labels tha
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,10 +17,11 @@ ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: aiplabels
 #ms.reviewer: eymanor
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
@@ -52,7 +53,7 @@ Use the following instructions to add a new label that can then be added to an A
     
     When you specify a display name, you are prevented from specifying some characters (such as a backslash and ampersand) because not all services and applications that use Azure Information Protection can support these characters. In addition to the characters that are blocked, do not specify the **#** character.    
     
-    Note that new labels are automatically assigned the color black. Choose a distinguishing color from the list of colors, or enter a hex triplet code for the red, green, and blue (RGB) components of the color. For example, **#DAA520**. If you need a reference for these codes, [Colors by Name](https://msdn.microsoft.com/library/aa358802(v=vs.85).aspx) from the MSDN documentation is a helpful starting point, and you'll find these codes in many picture editing programs such as Microsoft Paint, where you choose a custom color from a palette and it automatically displays the RGB values.
+    Note that new labels are automatically assigned the color black. Choose a distinguishing color from the list of colors, or enter a hex triplet code for the red, green, and blue (RGB) components of the color. For example, **#DAA520**. If you need a reference for these codes, you'll find a helpful table from the [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) page from the MSDN web docs. You also find these codes in many applications that let you edit pictures. For example, Microsoft Paint lets you choose a custom color from a palette and the RGB values are automatically displayed, which you can then copy.
 
 4. To make your new label available to users: From the **Classifications** > **Policies** menu option, select the policy to contain the new label. Select **Add or remove labels**. Select the label from the **Policy: Add or remove labels** blade, select **OK**, and then select **Save**.
     

@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/20/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -16,9 +16,10 @@ ms.service: information-protection
 #audience:
 #ms.devlang:
 #ms.reviewer: demizets
+ms.subservice: aiplabels
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 #Customer intent: As an administrator, I want to see Azure Information Protection in the Azure portal so that I can configure the service.
 ---
 

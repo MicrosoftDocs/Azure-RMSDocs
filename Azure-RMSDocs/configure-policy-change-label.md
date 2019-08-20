@@ -6,7 +6,7 @@ description: You can change or refine any of the labels that users see on the In
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -18,9 +18,10 @@ ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 #audience:
 #ms.devlang:
 #ms.reviewer: eymanor
+ms.subservice: aiplabels
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 

@@ -2,11 +2,11 @@
 # required metadata
 
 title: Information & support for Azure Information Protection - AIP
-description: Resources for administrators, which includes information about new releases, support options, and how to contact Microsoft to report a problem. 
+description: Resources for administrators, which include information about new releases, support options, and how to contact Microsoft to report a problem. 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,10 +17,11 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 search.appverid:
 - MET150
 
@@ -61,7 +62,7 @@ The following sections provide information about support and troubleshooting opt
 
 ### To contact Microsoft Support
 
-If you have Premier Support, visit the [portal for Premier Support customers](https://premier.microsoft.com/) to submit incidents, browse solutions, and get help.
+If you have Premier Support, visit the [Microsoft Services Hub](https://serviceshub.microsoft.com/support/contactsupport) to submit incidents, browse solutions, and get help.
 
 You might be eligible for **FastTrack**: You can use the FastTrack Center Benefit when you purchase at least 150 licenses in an eligible plan for Azure Information Protection. The FastTrack Center Benefit lets you work with Microsoft specialists to assess, remediate, and enable eligible services. For more information, see [FastTrack Center Benefit for Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 
@@ -69,9 +70,9 @@ For other customers, use the support channels in the following table, depending 
 
 |Subscription|Instructions|
 |----------------|---------------|
-|Azure Information Protection (standalone)|1. Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal.<br /><br />2. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. <br /><br />3. In addition, make sure that one of the following options are selected:<br /><br />- **Subscription with technical support included**: You see this option if you have a paid or trial subscription for Azure.<br /><br /> - **Technical support - Included**: You see this option if you don't have an Azure subscription.|
+|Azure Information Protection (standalone)|1. Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal.<br /><br />2. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. <br /><br />3. In addition, make sure that one of the following options is selected:<br /><br />- **Subscription with technical support included**: You see this option if you have a paid or trial subscription for Azure.<br /><br /> - **Technical support - Included**: You see this option if you don't have an Azure subscription.|
 |Azure Information Protection and an Office 365 subscription<br /><br />Azure Rights Management with an Office 365 subscription|See [Contact support for business products - Admin Help](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) for information about how to contact Support by using the Microsoft 365 admin center, and for contact telephone numbers.|
-|Azure Information Protection with Enterprise Mobility + Security (EMS)|1. Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal.<br /><br />2. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. <br /><br />3. In addition, make sure that one of the following options are selected:<br /><br />- **Subscription with technical support included**: You see this option if you have a paid or trial subscription for Azure.<br /><br /> - **Technical support - Included**: You see this option if you don't have an Azure subscription.|
+|Azure Information Protection with Enterprise Mobility + Security (EMS)|1. Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal.<br /><br />2. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. <br /><br />3. In addition, make sure that one of the following options is selected:<br /><br />- **Subscription with technical support included**: You see this option if you have a paid or trial subscription for Azure.<br /><br /> - **Technical support - Included**: You see this option if you don't have an Azure subscription.|
 |Azure Information Protection with Microsoft 365 Enterprise|Use the [Office 365 support channels](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
 For additional support options, ask your Microsoft contact. 

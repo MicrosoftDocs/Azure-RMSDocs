@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -16,10 +16,11 @@ ms.service: information-protection
 #ROBOTS:
 #audience:git
 #ms.devlang:
+ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
@@ -56,9 +57,21 @@ Use the following information to see what’s new or changed for a supported rel
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the clients](use-client.md#compare-the-clients).
 
+## Version 2.2.19.0
+
+**Released**: 08/06/2019
+
+**Fixes:**
+
+- The client can successfully download its policy and display the current sensitivity labels. This fix is required after upgrading from a previous version and you haven't configured any custom information types in your labeling center.
+
+- General performance and stability improvements.
+
 ## Version 2.2.14.0
 
 **Released**: 07/15/2019
+
+Supported through 04/06/2020
 
 **New features:**
 
@@ -66,6 +79,7 @@ This client is replacing the Azure Information Protection client (classic). To c
     
     These advanced settings support the following customizations:
      - [Display the Information Protection bar in Office apps](clientv2-admin-guide-customizations.md#display-the-information-protection-bar-in-office-apps)
+    - [Exempt Outlook messages from mandatory labeling](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
     - [Enable recommended classification in Outlook](clientv2-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
     - [Set a different default label for Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
     - [Remove "Not now" for documents when you use mandatory labeling](clientv2-admin-guide-customizations.md#remove-not-now-for-documents-when-you-use-mandatory-labeling)
@@ -93,7 +107,7 @@ This client is replacing the Azure Information Protection client (classic). To c
         -  *CustomPermissions* and *RemoveProtection* - added to [Set-AIPFileLabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)
         -  *OnBeHalfOf* - added to [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), to be used instead of the *Token* parameter for non-interactive sessions
         -  *WhatIf* and *DiscoveryInfoTypes* - added to [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), so that this cmdlet can run in discovery mode without applying labels
-    - Deprecated cmdlets: Clear-RMSAuthentication, Get-RMSFileStatus, Get-RMSServer, Get-RMSServerAuthentication, Get-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
+    - Deprecated cmdlets that connect directly to a protection service: Clear-RMSAuthentication, Get-RMSFileStatus, Get-RMSServer, Get-RMSServerAuthentication, Get-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
 
 
 **Fixes:**
