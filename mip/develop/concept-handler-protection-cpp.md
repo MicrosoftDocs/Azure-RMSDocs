@@ -5,20 +5,21 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 # Microsoft Information Protection SDK - Protection handler concepts
 
-In the MIP SDK Protection API, the `mip::ProtectionHandler` exposes the functions for encrypting and decrypting protected streams and buffers, performing access checks, obtaining the publishing license, and getting attributes from the protected information. 
+In the MIP SDK Protection API, the `mip::ProtectionHandler` exposes the functions for encrypting and decrypting protected streams and buffers, performing access checks, obtaining the publishing license, and getting attributes from the protected information.
 
 ## Requirements
 
 Creating a `ProtectionHandler` to work with a specific file requires:
 
-- A `ProtectionProfile`
-- A `ProtectionEngine` added to the `ProtectionProfile`
-- A class that inherits `mip::ProtectionHandler::Observer`, similar to the pattern outlined [here]().
+- A `mip::MipContext`
+- A `mip::ProtectionProfile`
+- A `mip::ProtectionEngine` added to the `ProtectionProfile`
+- A class that inherits `mip::ProtectionHandler::Observer`.
 - A `mip::ProtectionDescriptor` or publishing license
 
 ## Create a protection handler

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 
@@ -20,14 +20,14 @@ Authentication in the MIP SDK is performed by extending the class `mip::AuthDele
 `mip::AuthDelegate::AcquireOAuth2Token` accepts the following parameters, and returns a bool indicating whether token acquisition was successful:
 
 - `mip::Identity`: The identity of the user or service to be authenticated, if known.
-- `mip::AuthDelegate::OAuth2Challenge`: Accepts two parameters, **authority** and **resource**. **Authority** is the service the token will be generated against. **Resource** is the service we're trying to access. The SDK will handle passing these parameters into the delegate when called.
+- `mip::AuthDelegate::OAuth2Challenge`: Accepts four parameters, **authority**, **resource**, **claims**, and **scopes**. **Authority** is the service the token will be generated against. **Resource** is the service we're trying to access. The SDK will handle passing these parameters into the delegate when called. **Claims** are the label-specific claims required by the protection service. **Scopes** are the Azure AD permission scopes required to access the resource. 
 - `mip::AuthDelegate::OAuth2Token`: The token result is written to this object. It will be consumed by the SDK when the engine is loaded. Outside of our authentication implementation, it shouldn't be necessary to get or set this value anywhere.
 
 **Important:** Applications don't call `AcquireOAuth2Token` directly. The SDK will call this function when required.
 
 ## Consent
 
-Azure AD requires an application to be given consent, before it is granted permission to access secured resources/APIs under the identity of an account. Consent is recorded as a permanent acknowledgement of permission in the tenant of the account, for the specific account (user consent) or all accounts (admin consent). Consent occurs in various scenarios, based on the API being accessed and permissions the application is seeking, and the account used for sign-in: 
+Azure AD requires an application to be given consent, before it is granted permission to access secured resources/APIs under the identity of an account. Consent is recorded as a permanent acknowledgment of permission in the tenant of the account, for the specific account (user consent) or all accounts (admin consent). Consent occurs in various scenarios, based on the API being accessed and permissions the application is seeking, and the account used for sign-in: 
 
 - accounts from the *same tenant* where your application is registered, if you or an administrator didn't explicitly pre-consent access via the "Grant Permissions" feature.
 - accounts from a *different tenant* if your application is registered as multi-tenant, and the tenant administrator hasn't pre-consented for all users in advance.
@@ -69,7 +69,7 @@ public:
 
 #### consent_delegate_impl.cpp
 
-When the SDK requires consent, the `GetUserConsent` method is called *by the SDK*, and the URL passed in as a parameter. In the sample below, the user is notified that the SDK will connect to that provided URL, then returns `Consent::AcceptAlways`. This isn't a great example as the user wasn't presented with a real choice.
+When the SDK requires consent, the `GetUserConsent` method is called *by the SDK*, and the URL passed in as a parameter. In the sample below, the user is notified that the SDK will connect to that provided URL and provides the user with an option on the commandline. Based on the choice by the user, the user accepts or rejects consent and that is passed to the SDK. If the user declines to consent the application will throw an exception and no call is made to the protection service. 
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
@@ -99,6 +99,16 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
   }  
 }
 ```
+
+For testing and development purposes, a simple `ConsentDelegate` can be implemented that looks like:
+
+```cpp
+Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
+  return Consent::AcceptAlways;
+}
+```
+
+However, in production code the user may be required to be presented with a choice to consent, depending on regional or business requirements and regulations. 
 
 ## Next steps
 

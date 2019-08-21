@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 02/04/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 
@@ -17,7 +17,7 @@ This example demonstrates how to call an external Python script to obtain an OAu
 
 To run the sample below:
 
-- Install Python 2.7.
+- Install Python 2.7 or newer.
 - Implement utils.h/cpp in your project. 
 - Auth.py should be added to your project and exist in same directory as the binaries at build.
 - Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. Azure AD will provide an application ID, also known as client ID, which is used in your token acquisition logic.
@@ -37,9 +37,7 @@ In auth.h, `AcquireToken()` is overloaded and the overloaded function and update
 #include <string>
 
 namespace sample {
-  namespace auth {
-    std::string AcquireToken();
-
+  namespace auth {    
     std::string AcquireToken(
         const std::string& userName, //A string value containing the user's UPN.
         const std::string& password, //The user's password in plaintext
@@ -71,9 +69,6 @@ using std::runtime_error;
 
 namespace sample {
     namespace auth {
-
-    string AcquireToken() { //ignore in this sample
-    }
 
     //This function implements token acquisition in the application by calling an external Python script.
     //The Python script requires username, password, clientId, resource, and authority.
@@ -117,15 +112,22 @@ namespace sample {
 
 ## Python Script
 
-This script acquires authentication tokens directly via a simple http request. This is included only as a means to acquire auth tokens for use by the sample apps and is not intended for use in production code. The script works only against tenants that support plain old username/password http authentication. MFA or certificate-based authentication will fail.
+This script acquires authentication tokens directly via [ADAL for Python](https://github.com/AzureAD/azure-activedirectory-library-for-python). This code is included only as a means to acquire auth tokens for use by the sample apps and is not intended for use in production. The script works only against tenants that support plain old username/password http authentication. MFA or certificate-based authentication will fail.
+
+> [!NOTE] 
+> Prior to running this sample, you must install ADAL for Python by running one of the following commands:
+
+```shell
+pip install adal
+pip3 install adal
+```
 
 ```python
 import getopt
 import sys
 import json
-import urllib
-import urllib2
 import re
+from adal import AuthenticationContext
 
 def printUsage():
   print('auth.py -u <username> -p <password> -a <authority> -r <resource> -c <clientId>')
@@ -141,8 +143,9 @@ def main(argv):
   password = ''
   authority = ''
   resource = ''
-  clientId = ''
 
+  clientId = ''
+    
   for option, arg in options:
     if option == '-h':
       printUsage()
@@ -167,33 +170,13 @@ def main(argv):
     regex = re.compile('^(.*[\/])')
     match = regex.match(authority)
     authority = match.group()
-    authority = authority + 'token'
+    authority = authority + username.split('@')[1]
 
-  # Build REST call
-  headers = {
-    'Content-Type': 'application/x-www-form-urlencoded',
-    'Accept': 'application/json'
-  }
+  auth_context = AuthenticationContext(authority)
+  token = auth_context.acquire_token_with_username_password(resource, username, password, clientId)
+  print(token["accessToken"])
 
-  params = {
-    'resource': resource,
-    'client_id': clientId,
-    'grant_type': 'password',
-    'username': username,
-    'password': password
-  }
-
-  req = urllib2.Request(
-    url = authority,
-    headers = headers,
-    data = urllib.urlencode(params))
-
-  f = urllib2.urlopen(req)
-  response = f.read()
-  f.close()
-  sys.stdout.write(json.loads(response)['access_token'])
-
-if __name__ == '__main__':
+if __name__ == '__main__':  
   main(sys.argv[1:])
 ```
 
