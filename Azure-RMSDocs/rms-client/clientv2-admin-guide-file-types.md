@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/16/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -182,7 +182,7 @@ Without any additional configuration, the Azure Information Protection unified l
 
 |Application type|File type|
 |--------------------------------|-------------------------------------|
-|Word|.docx; .docm; .dotm; .dotx|
+|Word|.doc; docx; .docm; .dot; .dotm; .dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
 |PDF |.pdf|

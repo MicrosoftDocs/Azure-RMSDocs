@@ -23,13 +23,14 @@ public const std::string& GetCustomSettingExportPolicyFileName()       |  Name o
 public const std::string& GetCustomSettingSensitivityTypesDataName()       |  Name of the setting to explicitly specify sensitivity data.
 public const std::string& GetCustomSettingPolicyDataFile()       |  Name of the setting to explicitly specify policy data file path.
 public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  Name of the setting to explicitly specify sensitivity types data file path.
-public const std::string& GetCustomSettingExternalLabelsEnabled()       |  Name of the setting that allows to enable "external labels" feature.
+public const std::string& GetCustomSettingLabelCustomPropertiesSyncEnabled()       |  Name of the setting that allows to enable label by custom properties and custom properties by label features.
+public const std::map\<FlightingFeature, bool\>& GetDefaultFeatureSettings()       |  Gets whether or not a feature is enabled by default.
 public MIP_API void __CDECL ReleaseAllResources()       |  Releases all resources (threads, etc) before shutdown.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::istream\>& stdIStream)       |  Creates a [Stream](class_mip_stream.md) from a std::istream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::ostream\>& stdOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::ostream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::iostream\>& stdIOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::iostream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an [Stream](class_mip_stream.md) from a buffer.
-
+public MIP_API std::vector\<uint8_t\> ReadFromStream(const std::shared_ptr\<mip::Stream\>& stream)       |  Read all the bytes of stream.
 
 ### Namespace mip::auditmetadatakeys
  Members                        | Descriptions                                
