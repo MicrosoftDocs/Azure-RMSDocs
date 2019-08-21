@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/18/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to set and get a sensitivity label, so that I can implement this logic in my own application.
 ---
@@ -128,8 +128,8 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    {
         string labelId = "<label-id>";
         cout << "\nApplying Label ID " << labelId << " to " << filePathIn << endl;
-        mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
-        handler->SetLabel(labelId, labelingOptions);
+        mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+        handler->SetLabel(engine->GetLabelById(labelId), labelingOptions, new ProtectionSettings());
    }
    catch (const std::exception& e)
    {
@@ -209,7 +209,7 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
    profile = nullptr;
    engine = nullptr;
    handler = nullptr;
-   mip::ReleaseAllResources();
+   mipContext = nullptr;
    ```
 
 5. Replace the placeholder values in the source code that you as follows, using string constants:

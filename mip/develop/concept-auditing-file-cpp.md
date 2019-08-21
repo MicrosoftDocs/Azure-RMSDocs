@@ -6,13 +6,13 @@ author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 11/01/2018
+ms.date: 07/30/2019
 ms.author: tommos
 ---
 
 # Auditing in the MIP SDK File API
 
-The Azure Information Protection administration portal provides access to administrator reports. These reports provide visibility in to which labels users are applying, manually or automatically, across any applications any services that have integrated the MIP SDK. Development partners using the SDK can easily enable this functionality so that information from their applications will surface in customer reports.
+The Azure Information Protection administration portal provides access to administrator reports. These reports provide visibility in to which labels users are applying, manually or automatically, across any applications or services that have integrated the MIP SDK. Development partners using the SDK can enable this functionality to surface information from their applications in customer reports.
 
 ## Event Types
 
@@ -58,8 +58,8 @@ Change events provide information about the file, the label that was applied or 
 ```cpp
 // Create labeling options, set label
 string contentId = "C:\users\myuser\Documents\MyPlan.docx";
-mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
-handler->SetLabel(labelId, labelingOptions);
+mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+handler->SetLabel(labelId, labelingOptions, mip::ProtectionSettings());
 auto commitPromise = std::make_shared<std::promise<bool>>();
 auto commitFuture = commitPromise->get_future();
 
@@ -74,8 +74,8 @@ if(commitFuture.get()) {
 
 ## Audit Dashboard
 
-Events submitted to the Azure Information Protection audit pipeline will surface in reports at https://portal.azure.com. Azure Information Protection Analytics is in public preview and features/functionality are subject to change.
+Events submitted to the Azure Information Protection audit pipeline will surface in reports at https://portal.azure.com. 
 
 ## Next Steps
 
-For more details on the auditing experience in Azure Information Protection, take a look at the [preview announcement blog on Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
+For details on the auditing experience in Azure Information Protection, review the [preview announcement blog on Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).

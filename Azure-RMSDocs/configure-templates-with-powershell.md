@@ -18,9 +18,10 @@ ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 #audience:
 #ms.devlang:
 ms.reviewer: esaggese
+ms.subservice: azurerms
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 

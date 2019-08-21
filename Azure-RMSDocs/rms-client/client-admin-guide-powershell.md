@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,9 +17,10 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: v1client
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
@@ -131,7 +132,7 @@ To automatically get the values and run Set-RMSServerAuthentication:
 $ServicePrincipalName="<new service principal name>"
 Connect-AipService
 $bposTenantID=(Get-AipServiceConfiguration).BPOSId
-Disconnect-AipServiceService
+Disconnect-AipService
 Connect-MsolService
 New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 
@@ -178,7 +179,7 @@ Windows PowerShell module:
 
 5. Disconnect from the service:
     
-    	Disconnect-AipServiceService
+    	Disconnect-AipService
 
 ##### To get the AppPrincipalId and Symmetric Key
 

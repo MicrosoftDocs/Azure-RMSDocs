@@ -5,7 +5,7 @@ author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/04/2019
+ms.date: 07/30/2019
 ms.author: tommos
 #Customer intent: As a an application developer, I want to learn how to do SDK .NET wrapper initialization, so that I can use the SDK APIs.
 ---
@@ -77,12 +77,12 @@ Now create an implementation for an authentication delegate, by extending the SD
      }
      ```
 
-The `ApplicationInfo` object contains two properties. The `_appInfo.ApplicationId` will be used in the `AuthDelegateImplementation` class to provide the client ID to the auth library.
+The `ApplicationInfo` object contains three properties. The `_appInfo.ApplicationId` will be used in the `AuthDelegateImplementation` class to provide the client ID to the auth library. `ApplicationName` and `ApplicationVersion` will be surfaced in Azure Information Protection Analytics reports.
 
-5. Add the `public string AcquireToken()` method. This method should accept `Microsoft.InformationProtection.Identity` and two strings: authority and resource. These string variables will be passed in to the authentication library by the API and shouldn't be manipulated. Editing may result in a failure to authenticate.
+5. Add the `public string AcquireToken()` method. This method should accept `Microsoft.InformationProtection.Identity` and three strings: authority URL, resource URI, and claims, if required. These string variables will be passed in to the authentication library by the API and shouldn't be manipulated. Editing may result in a failure to authenticate.
 
      ```csharp
-     public string AcquireToken(Identity identity, string authority, string resource)
+     public string AcquireToken(Identity identity, string authority, string resource, string claims)
      {
           AuthenticationContext authContext = new AuthenticationContext(authority);
           var result = Task.Run(async() => await authContext.AcquireTokenAsync(resource, AppInfo.ApplicationId, new Uri(redirectUri), new PlatformParameters(PromptBehavior.Always))).Result;
@@ -116,7 +116,7 @@ Now create an implementation for a consent delegate, by extending the SDK's `Mic
 
 2. Remove the generated implementation of `main()`. 
 
-3. The managed wrapper includes a static class, `Microsoft.InformationProtection.MIP` used for initialization, loading profiles, and releasing resources. To initialize the wrapper for file API operations, call MIP.Initialize, passing in `MipComponent.File` to load the libraries necessary for file operations. 
+3. The managed wrapper includes a static class, `Microsoft.InformationProtection.MIP` used for initialization, creating a `MipContext`, loading profiles, and releasing resources. To initialize the wrapper for file API operations, call `MIP.Initialize()`, passing in `MipComponent.File` to load the libraries necessary for file operations. 
 
 4. In `Main()` in *Program.cs* add the following, replacing **\<application-id\>** with the ID of the Azure AD Application Registration created previously.
 
@@ -148,6 +148,8 @@ namespace mip_sdk_dotnet_quickstart
 
 As mentioned, profile and engine objects are required for SDK clients using MIP APIs. Complete the coding portion of this Quickstart, by adding code to load the native DLLs then instantiate the profile and engine objects.
 
+
+
    ```csharp
 using System;
 using System.Threading.Tasks;
@@ -174,12 +176,22 @@ namespace mip_sdk_dotnet_quickstart
                     ApplicationVersion = "1.0.0"
                };
 
-               // Instantiate the AuthDelegateImpl object, passing in AppInfo. 
+               // Instantiate the AuthDelegateImpl object, passing in AppInfo.
                AuthDelegateImplementation authDelegate = new AuthDelegateImplementation(appInfo);
+
+               MipContext mipContext = MIP.CreateMipContext(appInfo,
+                                        "mip_data",
+                                        LogLevel.Trace,
+                                        null,
+                                        null);
 
                // Initialize and instantiate the File Profile.
                // Create the FileProfileSettings object.
-               var profileSettings = new FileProfileSettings("mip_data", false, authDelegate, new ConsentDelegateImplementation(), appInfo, LogLevel.Trace);
+               // Initialize file profile settings to create/use local state.
+               var profileSettings = new FileProfileSettings(mipContext,
+                                        CacheStorageType.OnDiskEncrypted,
+                                        authDelegate,
+                                        new ConsentDelegateImplementation());
 
                // Load the Profile async and wait for the result.
                var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
@@ -193,11 +205,11 @@ namespace mip_sdk_dotnet_quickstart
                // handler = null; // This will be used in later quick starts.
                fileEngine = null;
                fileProfile = null;
-               MIP.ReleaseAllResources();
+               mipContext = null;
           }
      }
 }
-``` 
+```
 
 3. Replace the placeholder values in the source code that you pasted in, using the following values:
 
