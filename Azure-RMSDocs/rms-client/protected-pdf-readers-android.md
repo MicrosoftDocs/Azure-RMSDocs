@@ -26,6 +26,8 @@ search.appverid:
 
 # Install a PDF reader for Android
 
+[![Android icon](../media/develop/android-icon.png)](https://go.microsoft.com/fwlink/?LinkId=325340)
+
 If you need to open a protected PDF document on your Android device, download the [Azure Information Protection app](https://go.microsoft.com/fwlink/?LinkId=325340) from the Google Play store.
 
 ## Next steps

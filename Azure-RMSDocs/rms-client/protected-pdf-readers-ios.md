@@ -26,6 +26,8 @@ search.appverid:
 
 # Install a PDF reader for iOS
 
+[![iOS icon](../media/develop/ios-icon.png)](https://go.microsoft.com/fwlink/?LinkId=325338)
+
 If you need to open a protected PDF document on your iOS device, download the [Azure Information Protection app](https://go.microsoft.com/fwlink/?LinkId=325338) from the Apple App store.
 
 ## Next steps

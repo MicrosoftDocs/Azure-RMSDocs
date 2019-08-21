@@ -26,6 +26,8 @@ search.appverid:
 
 # Install a PDF reader for MacOS
 
+[![iOS icon](../media/develop/ios-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
+
 If you need to open a protected PDF document on your Mac computer, install the Adobe plug-in for the Adobe Acrobat Reader.
 
 Supported versions: 10.12 - 10.14
