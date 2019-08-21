@@ -33,13 +33,9 @@ If you need to open a PDF document that's been protected by Microsoft Informatio
 
 Choose the platform you're using to install a PDF reader that can open protected PDF documents. All these readers can open protected documents that adhere to the ISO standard for PDF encryption:
 
-- [Windows](protected-pdf-readers-windows.md)
+- **Computers**: [Windows](protected-pdf-readers-windows.md) | [MacOS](protected-pdf-readers-mac.md)
 
-- [MacOS](protected-pdf-readers-mac.md)
-
-- [Android](protected-pdf-readers-android.md)
-
-- [iOS](protected-pdf-readers-ios.md)
+- **Mobile devices**: [Android](protected-pdf-readers-android.md) | [iOS](protected-pdf-readers-ios.md)
 
 ### Support for previous formats
 
