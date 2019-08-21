@@ -1,12 +1,11 @@
 ---
 title: class mip::FileProfile::Settings 
 description: Documents the mip::fileprofile class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 07/16/2019
 ---
 
 # class mip::FileProfile::Settings 
@@ -15,15 +14,15 @@ ms.date: 01/28/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& path, bool useInMemoryStorage, std::shared_ptr\<AuthDelegate\> authDelegate, std::shared_ptr\<ConsentDelegate\> consentDelegate, std::shared_ptr\<Observer\> observer, const ApplicationInfo& applicationInfo)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor.
+public Settings(const std::string& path, CacheStorageType cacheStorageType, std::shared_ptr\<AuthDelegate\> authDelegate, std::shared_ptr\<ConsentDelegate\> consentDelegate, std::shared_ptr\<Observer\> observer, const ApplicationInfo& applicationInfo)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor.
+public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, std::shared_ptr\<AuthDelegate\> authDelegate, std::shared_ptr\<ConsentDelegate\> consentDelegate, std::shared_ptr\<Observer\> observer)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor.
 public const std::string& GetPath() const  |  Gets the path under which logging, telemetry, and other persistent state is stored.
-public bool GetUseInMemoryStorage() const  |  Gets if all state should be stored in memory (as opposed to on disk)
+public CacheStorageType GetCacheStorageType() const  |  Get whether caches are stored in memory or on disk.
 public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Gets the auth delegate used for acquiring authentication tokens.
 public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Gets the consent delegate used to request user consent connecting to services.
 public std::shared_ptr\<Observer\> GetObserver() const  |  Gets the observer that receives notifications of events related to [FileProfile](class_mip_fileprofile.md).
-public const ApplicationInfo GetApplicationInfo() const  |  Gets info about application that is consuming the SDK.
-public void SetNewFeaturesDisabled()  |  Disables new features.
-public bool AreNewFeaturesDisabled() const  |  Gets if new features are disabled or not.
+public const ApplicationInfo& GetApplicationInfo() const  |  Gets info about application that is consuming the SDK.
+public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
 public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Get the logger delegate (if any) provided by the application.
 public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Override default logger.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
@@ -36,6 +35,8 @@ public void SetSessionId(const std::string& sessionId)  |  Sets the session ID.
 public const std::string& GetSessionId() const  |  Gets the session ID.
 public void SetMinimumLogLevel(LogLevel logLevel)  |  Set the lowest log level that will trigger a logging event.
 public LogLevel GetMinimumLogLevel() const  |  Get the lowest log level that will trigger a logging event.
+public void SetCanCacheLicenses(bool canCacheLicenses)  |  Configures whether or not end user licenses (EULs) will be cached locally.
+public bool CanCacheLicenses() const  |  Gets whether or not end user licenses (EULs) are cached locally.
   
 ## Members
   
@@ -46,10 +47,13 @@ Parameters:
 * **path**: File path under which logging, telemetry, and other persistent state is stored 
 
 
-* **useInMemoryStorage**: true if all state should be stored in memory, false if state can be cached to disk 
+* **cacheStorageType**: Store any cached state in memory or on disk 
 
 
 * **authDelegate**: Auth delegate used for acquiring authentication tokens 
+
+
+* **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
 * **observer**: [Observer](class_mip_fileprofile_observer.md) instance that will receive notifications of events related to [FileProfile](class_mip_fileprofile.md)
@@ -58,18 +62,40 @@ Parameters:
 * **applicationInfo**: Info about application that is consuming the SDK
 
 
+> Deprecated: This constructor will soon be deprecated in favor of one requiring a mip::MipContext parameter
+  
+### Settings function
+[FileProfile::Settings](class_mip_fileprofile_settings.md) constructor.
+
+Parameters:  
+* **mipContext**: Global context settings 
+
+
+* **cacheStorageType**: Store any cached state in memory or on disk 
+
+
+* **authDelegate**: Auth delegate used for acquiring authentication tokens 
+
+
+* **consentDelegate**: Delegate used to obtain user permission to access external resources 
+
+
+* **observer**: [Observer](class_mip_fileprofile_observer.md) instance that will receive notifications of events related to [FileProfile](class_mip_fileprofile.md)
+
+
   
 ### GetPath function
 Gets the path under which logging, telemetry, and other persistent state is stored.
 
   
 **Returns**: Path under which logging, telemetry, and other persistent state is stored
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
-### GetUseInMemoryStorage function
-Gets if all state should be stored in memory (as opposed to on disk)
+### GetCacheStorageType function
+Get whether caches are stored in memory or on disk.
 
   
-**Returns**: If all state should be stored in memory (as opposed to on disk)
+**Returns**: Storage type used
   
 ### GetAuthDelegate function
 Gets the auth delegate used for acquiring authentication tokens.
@@ -94,22 +120,20 @@ Gets info about application that is consuming the SDK.
 
   
 **Returns**: Info about application that is consuming the SDK
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
-### SetNewFeaturesDisabled function
-Disables new features.
-For applications that don't want to try new features
-  
-### AreNewFeaturesDisabled function
-Gets if new features are disabled or not.
+### GetMipContext function
+Get MIP context which represents shared state across all profiles.
 
   
-**Returns**: If new features are disabled or not
+**Returns**: MIP context
   
 ### GetLoggerDelegate function
 Get the logger delegate (if any) provided by the application.
 
   
 **Returns**: Logger
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### SetLoggerDelegate function
 Override default logger.
@@ -118,7 +142,8 @@ Parameters:
 * **loggerDelegate**: Logging callback interface implemented by client applications
 
 
-This method should be called by client applications that use their own logger implementation
+This method should be called by client applications that use their own logger implementation 
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### GetHttpDelegate function
 Get the HTTP delegate (if any) provided by the application.
@@ -150,12 +175,14 @@ Parameters:
   
 ### OptOutTelemetry function
 Opts out of all telemetry gathering.
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### IsTelemetryOptedOut function
 Gets if telemetry gathering should be disabled or not.
 
   
 **Returns**: If telemetry gathering should be disabled or not
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### SetSessionId function
 Sets the session ID.
@@ -175,15 +202,29 @@ Gets the session ID.
 Set the lowest log level that will trigger a logging event.
 
 Parameters:  
-* **logLevel**: lowest log level that will trigger a logging event. 
+* **logLevel**: lowest log level that will trigger a logging event.
 
 
-
-  
-**Returns**: True
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
   
 ### GetMinimumLogLevel function
 Get the lowest log level that will trigger a logging event.
 
   
 **Returns**: Lowest log level that will trigger a logging event.
+> Deprecated: This method will soon be deprecated in favor of getting/setting common context data through mip::MipContext
+  
+### SetCanCacheLicenses function
+Configures whether or not end user licenses (EULs) will be cached locally.
+
+Parameters:  
+* **canCacheLicenses**: Whether or not engine should cache a license when opening protected content
+
+
+If true, opening protected content will cache the associated license locally. If false, opening protected content will always perform HTTP operation to acquire the license from the RMS service.
+  
+### CanCacheLicenses function
+Gets whether or not end user licenses (EULs) are cached locally.
+
+  
+**Returns**: License caching configuration

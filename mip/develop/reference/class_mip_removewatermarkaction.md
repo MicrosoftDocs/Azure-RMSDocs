@@ -1,12 +1,11 @@
 ---
 title: class mip::RemoveWatermarkAction 
 description: Documents the mip::removewatermarkaction class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 07/16/2019
 ---
 
 # class mip::RemoveWatermarkAction 
@@ -29,4 +28,5 @@ Gets a list of names that should be used to find the UI elements that should be 
 ### GetType function
 Get the type of [Action](class_mip_action.md).
 
+  
 **Returns**: ActionType The type of derived action this base class can be cast to.

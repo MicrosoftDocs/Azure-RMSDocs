@@ -27,9 +27,18 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
 
-## Version 1.1.0
+
+## Version 1.3.0
 
 **Release date**: TBD
+
+## Version 1.2.0
+
+**Release date**: April 15, 2019
+
+## Version 1.1.0
+
+**Release date**: January 15, 2019
 
 This version introduces support for the following platforms:
 
