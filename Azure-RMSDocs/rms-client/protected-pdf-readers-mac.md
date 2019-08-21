@@ -42,9 +42,6 @@ Instructions:
 
 4. If prompted, ask your admin to [authorize the plug-in](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)|
 
-
-If the document doesn't open, it might be because it has been protected with an older format. In this case, try one of the readers listed as [supported for previous formats](protected-pdf-readers.md#support-for-previous-formats).
-
 ## Next steps
 
 For more information about readers for protected documents, and links to download readers for other platforms, see [PDF readers that supports Microsoft Information Protection](protected-pdf-readers.md) 

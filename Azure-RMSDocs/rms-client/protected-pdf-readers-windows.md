@@ -28,7 +28,7 @@ search.appverid:
 
 [![Windows icon](../media/develop/windows-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
 
-If you need to open a protected PDF document on your Windows computer the following PDF readers can open protected PDF documents that adhere to the ISO standard for PDF encryption:
+If you need to open a protected PDF document on your Windows computer, install the Adobe plug-in for the Adobe Acrobat Reader.
 
 Supported versions: Windows 10 and previous versions through Windows 7 Service Pack 1
 
