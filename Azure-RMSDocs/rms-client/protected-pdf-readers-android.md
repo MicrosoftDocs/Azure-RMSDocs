@@ -32,5 +32,5 @@ If you need to open a protected PDF document on your Android device, download th
 
 ## Next steps
 
-For more information about readers for protected documents, and links to download readers for other platforms, see [PDF readers that supports Microsoft Information Protection](protected-pdf-readers.md) 
+For more information about readers for protected documents, and links to download readers for other platforms, see [PDF readers that supports Microsoft Information Protection](protected-pdf-readers.md).
 

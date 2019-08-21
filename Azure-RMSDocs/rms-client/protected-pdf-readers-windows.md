@@ -53,5 +53,5 @@ If the document doesn't open, it might be because it has been protected with an 
 
 ## Next steps
 
-For more information about readers for protected documents, and links to download readers for other platforms, see [PDF readers that supports Microsoft Information Protection](protected-pdf-readers.md) 
+For more information about readers for protected documents, and links to download readers for other platforms, see [PDF readers that supports Microsoft Information Protection](protected-pdf-readers.md).
 
