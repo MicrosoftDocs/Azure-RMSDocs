@@ -28,6 +28,13 @@ ms.custom: dev
 
 This article contains important information about this and previous releases of the RMS SDK 2.1.
 
+## April 2019 - update
+- Bug fixes in the File API.
+- File API updated to check the EXPORT right rather than the EXTRACT right when decrypting content.
+- Installer fix to ensure that the new PDF v2 protector is installed upon upgrade.
+- Telemetry changes. This change required an update to the installation package that installs the C runtime libraries.
+- Service backend authentication changes, please update to this SDK version to minmize disruption
+
 ## October 2017 - update
 
 - Addition of two new APIs for environment inintialization and uninitialization. For information, see [IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx) and [IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx).
