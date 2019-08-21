@@ -30,7 +30,7 @@ search.appverid:
 
 If you need to open a protected PDF document on your Mac computer, install the Adobe plug-in for the Adobe Acrobat Reader.
 
-Supported versions: 10.12 - 10.14
+**Supported versions**: 10.12 - 10.14
 
 Instructions:
 

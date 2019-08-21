@@ -30,7 +30,7 @@ search.appverid:
 
 If you need to open a protected PDF document on your Windows computer, install the Adobe plug-in for the Adobe Acrobat Reader.
 
-Supported versions: Windows 10 and previous versions through Windows 7 Service Pack 1
+**Supported versions**: Windows 10 and previous versions through Windows 7 Service Pack 1
 
 Instructions: 
 
