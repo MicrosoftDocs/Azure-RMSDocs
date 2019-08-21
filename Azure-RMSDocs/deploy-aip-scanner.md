@@ -129,7 +129,7 @@ Typically, you will use the same user account to install and configure the scann
 - If you specify your own profile name, the configuration database is named **AIPScanner_\<profile_name>**.
 
 To grant rights on this database for you to install the scanner, the Sysadmin must run the following SQL script for the service account that runs the scanner, and for you and any other user that installs or manages the scanner. Before running the script, replace *domain\user* with the domain and user account name of the service account or user account:
-:  
+
 	if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
 
 Additionally:
