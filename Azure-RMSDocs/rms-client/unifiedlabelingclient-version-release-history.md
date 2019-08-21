@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/06/2019
+ms.date: 09/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -65,11 +65,13 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 - When you use the advanced setting [OutlookDefaultLabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook ) to set a different default label for Outlook, and the label you specify isn't a sublabel, the label is correctly applied.
 
+- When the Azure Information Protection client is used for the first time and in an Office app, a user with an Active Directory account that isn't configured for single sign-on is prompted to authenticate for Azure Information Protection. As a result, the user can apply protection-based labels.
+
 ## Version 2.2.19.0
 
 **Released**: 08/06/2019
 
-Supported through xxxx
+Supported through 03/02/2020
 
 **Fixes:**
 
