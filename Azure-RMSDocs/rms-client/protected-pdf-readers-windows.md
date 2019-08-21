@@ -46,7 +46,7 @@ Alternative readers that open protected PDF documents that adhere to the ISO sta
 
 - Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)
 
-- Foxit Reader: [Download](https://www.foxitsoftware.com/pdf-reader/)|
+- Foxit Reader: [Download](https://www.foxitsoftware.com/pdf-reader/)
 
 
 If the document doesn't open, it might be because it has been protected with an older format. In this case, try one of the readers listed as [supported for previous formats](protected-pdf-readers.md#support-for-previous-formats).
