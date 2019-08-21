@@ -50,7 +50,7 @@ Currently, SharePoint Online and SharePoint on-premises use an older format for 
 |Android|Azure Information Protection app<br /><br />Foxit MobilePDF with RMS<br /><br />GigaTrust App for Android|
 |iOS|Azure Information Protection app<br /><br />Foxit MobilePDF with RMS<br /><br />TITUS Docs|
 
-## Using Adobe Acrobat Reader on Windows and MacOS with the Adobe plug-in
+## Using Adobe Acrobat Reader with the Adobe plug-in
 
 A collaboration between Microsoft and Adobe gives you a more simplified and consistent experience for PDF documents that have been classified and optionally, protected. This collaboration provides support for Adobe Acrobat native integration with Microsoft Information Protection solutions, such as [Azure Information Protection](../what-is-information-protection.md). 
 
@@ -63,6 +63,8 @@ This native integration has the following benefits:
 - Support for the ISO standard for PDF encryption.
     
     Unless this capability has been [disabled by an administrator](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), this protected PDF file format is enabled by default for the Azure Information Protection client (classic) and is always used by the Azure Information Protection unified labeling client.
+
+You can use the Adobe plug with [Windows](protected-pdf-readers-windows.md) and [MacOS](protected-pdf-readers-mac.md).
 
 For more information, see the following blog posts: 
 
