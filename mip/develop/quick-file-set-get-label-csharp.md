@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/09/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to set labels with the MIP SDK, so that I can use the SDK APIs to apply labels and protection to my own files.
 ---
@@ -45,12 +45,11 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
      //Set Labeling Options
      LabelingOptions labelingOptions = new LabelingOptions()
      {
-          ActionSource = ActionSource.Manual,
           AssignmentMethod = AssignmentMethod.Standard
      };
 
      // Set a label on input file
-     handler.SetLabel(labelId, labelingOptions);
+     handler.SetLabel(engine.GetLabelById(labelId), labelingOptions, new ProtectionSettings());
 
      // Commit changes, save as outputFilePath
      var result = Task.Run(async () => await handler.CommitAsync(outputFilePath)).Result;
@@ -61,12 +60,22 @@ Add logic to set and get a sensitivity label on a file, using the File engine ob
      // Get the label from output file
      var contentLabel = handlerModified.Label;
      Console.WriteLine(string.Format("Getting the label committed to file: {0}", outputFilePath));
-     Console.WriteLine(string.Format("File Label: {0} \r\nIsProtected: {1}", contentLabel.Label, contentLabel.IsProtectionAppliedFromLabel.ToString()));
+     Console.WriteLine(string.Format("File Label: {0} \r\nIsProtected: {1}", contentLabel.Label.Name, contentLabel.IsProtectionAppliedFromLabel.ToString()));
      Console.WriteLine("Press a key to continue.");
      Console.ReadKey();
    ```
 
-3. Replace the placeholder values in the source code that you just pasted in, using the following values:
+3. Toward the end of `Main()` find the application shutdown block created in the first quickstart and uncomment the handler line:
+
+   ```csharp
+   // Application Shutdown
+   handler = null;
+   fileEngine = null;
+   fileProfile = null;
+   mipContext = null;
+   ```
+
+4. Replace the placeholder values in the source code using the following values:
 
    | Placeholder | Value |
    |:----------- |:----- |
@@ -80,7 +89,7 @@ Build and test your client application.
 
 1. Use CTRL-SHIFT-B (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application *may* prompt for authentication via ADAL each time the SDK calls your `AcquireToken()` method. If cached credentials already exist, you won't be prompted to log on and see the list of labels, followed by the information on the applied label and modified file.
+2. If your project builds and runs successfully, the application *may* prompt for authentication via ADAL each time the SDK calls your `AcquireToken()` method. If cached credentials already exist, you won't be prompted to sign in and see the list of labels, followed by the information on the applied label and modified file.
 
   ```console   
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6
