@@ -32,14 +32,14 @@ If you need to open a protected PDF document on your Windows computer, install t
 
 Instructions: 
 
-1. Read the [Adobe General Terms of Use](https://www.adobe.com/legal/terms.html)
+1. Read the [Adobe General Terms of Use](https://www.adobe.com/legal/terms.html).
 
-2. If you haven't already, install the Adobe Reader for Windows from the [Adobe site](https://www.adobe.com/)
+2. If you haven't already, install the Adobe Reader for Windows from the [Adobe site](https://www.adobe.com/).
 
-3. Install the [Adobe plug-in](https://go.microsoft.com/fwlink/?linkid=2050049) for Windows
+3. Install the [Adobe plug-in](https://go.microsoft.com/fwlink/?linkid=2050049) for Windows.
 
-4. If prompted, ask your admin to [authorize the plug-in](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)
-
+4. If prompted, ask your admin to [authorize the plug-in](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
+5. 
 Alternative readers that open protected PDF documents that adhere to the ISO standard for PDF encryption:
 
 - Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)
