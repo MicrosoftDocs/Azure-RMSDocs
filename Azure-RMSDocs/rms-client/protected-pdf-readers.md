@@ -25,7 +25,7 @@ search.appverid:
 
 ---
 
-# PDF readers that supports Microsoft Information Protection
+# PDF readers that support Microsoft Information Protection
 
 If you need to open a PDF document that's been protected by Microsoft Information Protection, use the following links and information.
 
