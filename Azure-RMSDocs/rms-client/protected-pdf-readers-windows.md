@@ -39,7 +39,7 @@ Instructions:
 3. Install the [Adobe plug-in](https://go.microsoft.com/fwlink/?linkid=2050049) for Windows.
 
 4. If prompted, ask your admin to [authorize the plug-in](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
-5. 
+
 Alternative readers that open protected PDF documents that adhere to the ISO standard for PDF encryption:
 
 - Azure Information Protection viewer: [Download](https://go.microsoft.com/fwlink/?linkid=838993)
