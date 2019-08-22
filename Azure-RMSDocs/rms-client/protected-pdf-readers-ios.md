@@ -19,8 +19,6 @@ ms.reviewer: kartikka
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: user
-search.appverid:
-- MET150
 
 ---
 
