@@ -33,7 +33,9 @@ This article contains important information about this and previous releases of 
 - File API updated to check the EXPORT right rather than the EXTRACT right when decrypting content.
 - Installer fix to ensure that the new PDF v2 protector is installed upon upgrade.
 - Telemetry changes. This change required an update to the installation package that installs the C runtime libraries.
-- Service backend authentication changes, please update to this SDK version to minmize disruption
+- Service backend authentication changes, ######please update to this SDK version to minmize disruption if you use symmetric key authentication for your applications
+- Support for VC 15.9
+
 
 ## October 2017 - update
 
