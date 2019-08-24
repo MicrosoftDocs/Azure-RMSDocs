@@ -6,7 +6,7 @@ description: View emails or files with the Azure Information Protection app for 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -19,7 +19,7 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: user
 
 ---
 
@@ -40,11 +40,11 @@ To use the following instructions, you need access from your mobile device to on
 
 - **A .rpmsg file**: This is a rights-protected email message that displays as an attachment in an email message when your email app on your mobile device does not natively support rights management data protection. 
     
-    Use another device to send yourself a rights-protected email message that you can access from your mobile device. For example, use Outlook from a Windows computer. For a list of email clients that natively support rights management, see the EMAIL column from the [Applications that support Azure Rights Management data protection](../requirements-applications.md) page.
+    Use another device to send yourself a rights-protected email message that you can access from your mobile device. For example, use Outlook from a Windows computer. For a list of email clients that natively support rights management, see the **Email** column from the first table in [Applications that support Azure Rights Management data protection](../requirements-applications.md) page.
 
-- **A rights-protected PDF file**: From a Windows computer, use the Azure Information Protection client to [protect a PDF file](client-classify-protect.md) and then send yourself this rights-protected PDF file as an attachment in email. Alternatively, upload a PDF file to a SharePoint protected library and then share it, using your email address.
+- **A rights-protected PDF file**: From a Windows computer, use an Azure Information Protection client (either [classic](client-classify-protect.md) or [unified labeling client](clientv2-classify-protect.md)) to protect a PDF file, and then send yourself this rights-protected PDF file as an attachment in email. Alternatively, upload a PDF file to a SharePoint protected library and then share it, using your email address.
 
-- **A .ptxt or .pjpg or .ppng**: From a Windows computer, use the Azure Information Protection client to protect a text or image file and then send yourself this protected file as an email attachment. For the full list of file types that you can use for testing, see the first table in the [Supported file types for classification and protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) section from the Azure Information Protection client administration guide. 
+- **A .ptxt or .pjpg or .ppng**: From a Windows computer, use an Azure Information Protection client to protect a text or image file and then send yourself this protected file as an email attachment. For the full list of file types that you can use for testing, see the first table in the [Supported file types for classification and protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) section from the Azure Information Protection client administration guide. 
 
 To view these files in the Azure Information Protection viewer app, tap the email attachment or link. When you're prompted to select an app to open them with, select the **AIP Viewer** app. You will then be asked to sign in with your work or school account, or prompted to select a certificate. After these credentials are authenticated, the Azure Information Protection app displays the email or file for you to read.
 

@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,10 +17,11 @@ ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
@@ -87,7 +88,7 @@ The following devices support the Azure Information Protection unified labeling 
 
 - Windows Server 2008 R2 
 
-In addition to installing the client on physical computers, you can also install it on virtual machines. Check whether the software vendor for the virtual desktop solution has additional configuration that might be required to run the the Azure Information Protection unified labeling client or the Azure Information Protection client. For example, for Citrix solutions, you might need to [disable Citrix Application Programming Interface (API) hooks](https://support.citrix.com/article/CTX107825) for Office (winword.exe, excel.exe, outlook.exe, powerpoint.exe) and the executable for the the Azure Information Protection unified labeling client or Azure Information Protection client (msip.app.exe, msip.viewer.exe).
+In addition to installing the client on physical computers, you can also install it on virtual machines. Check whether the software vendor for the virtual desktop solution has additional configuration that might be required to run the Azure Information Protection unified labeling client or the Azure Information Protection client. For example, for Citrix solutions, you might need to [disable Citrix Application Programming Interface (API) hooks](https://support.citrix.com/article/CTX107825) for Office (winword.exe, excel.exe, outlook.exe, powerpnt.exe) and the executable for the Azure Information Protection unified labeling client or Azure Information Protection client (msip.app.exe, msip.viewer.exe).
 
 For the listed server versions, the Azure Information Protection clients are supported for Remote Desktop Services. If you delete user profiles when you use the Azure Information Protection clients with Remote Desktop Services, do not delete the **%Appdata%\Microsoft\Protect** folder.
 
@@ -128,15 +129,19 @@ If you have a firewall or similar intervening network devices that are configure
 
 In addition to the information in the Office article, specific to Azure Information Protection:
 
+- For the unified labeling client to download labels and label policies: Allow the URL ***.protection.outlook.com** over HTTPS.
+
 - If you use a web proxy that requires authentication, you must configure it to use integrated Windows authentication with the user's Active Directory logon credentials.
 
 - Do not terminate the TLS client-to-service connection (for example, to do packet-level inspection) to the **aadrm.com** URL. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
     
-    - Tip: Because of how Chrome displays secure connections in the address bar, you can use this browser to quickly check whether your client connection is terminated before it reaches the Azure Rights Management service. Enter the following URL into the browser address bar: `https://admin.na.aadrm.com/admin/admin.svc` 
+    You can use the following PowerShell commands to help you determine whether your client connection is terminated before it reaches the Azure Rights Management service:
+   
+    	$request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
+    	$request.GetResponse()
+    	$request.ServicePoint.Certificate.Issuer
     
-        Don't worry about what the browser window displays. Instead, click the padlock in the address bar to view the site information. The site information lets you see the issuing certification authority (CA). If the certificate is not issued by a Microsoft CA, it is very likely your secure client-to-service connection is being terminated and needs reconfiguration on your firewall. The following picture shows an example of a Microsoft issuing CA. If you see an internal CA issued the certificate, this configuration is not compatible with Azure Information Protection.
-        
-        ![Checking the issued certificate for Azure Information Protection connections](./media/certificate-checking.png)
+    The result should show that the issuing CA is from a Microsoft CA, for example: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`. If you see an issuing CA name that is not from Microsoft, it is very likely your secure client-to-service connection is being terminated and needs reconfiguration on your firewall.
 
 ### On-premises servers
 

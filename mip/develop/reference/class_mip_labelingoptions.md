@@ -1,12 +1,11 @@
 ---
 title: class mip::LabelingOptions 
 description: Documents the mip::labelingoptions class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.author: bryanla
+ms.date: 07/16/2019
 ---
 
 # class mip::LabelingOptions 
@@ -15,9 +14,8 @@ Interface for configuring labeling options for the SetLabel/DeleteLabel methods.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public LabelingOptions(AssignmentMethod method, ActionSource actionSource)  | _Not yet documented._
+public LabelingOptions(AssignmentMethod method)  | _Not yet documented._
 public AssignmentMethod GetAssignmentMethod() const  | _Not yet documented._
-public ActionSource GetActionSource() const  | _Not yet documented._
 public bool IsDowngradeJustified() const  | _Not yet documented._
 public const std::string& GetJustificationMessage() const  | _Not yet documented._
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  | _Not yet documented._
@@ -31,10 +29,6 @@ _Not documented yet._
 
   
 ### GetAssignmentMethod function
-_Not documented yet._
-
-  
-### GetActionSource function
 _Not documented yet._
 
   

@@ -6,7 +6,7 @@ description: Information about Azure Rights Management (Azure RMS), the protecti
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,10 +17,13 @@ ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 #ROBOTS:
 #audience:
 #ms.devlang:
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
+search.appverid:
+- MET150
 
 ---
 
@@ -35,7 +38,7 @@ This cloud-based protection service uses encryption, identity, and authorization
 
 As an example, employees might email a document to a partner company, or save a document to their cloud drive. The persistent protection that Azure RMS provides not only helps to secure your company data, but might also be legally mandated for compliance, legal discovery requirements, or simply for good information management practices.
 
-But very importantly, authorized people and services (such as search and indexing) can continue to read and inspect the protected data. This capability is not easily accomplished with other information protection solutions that use peer-to-peer encryption. You might have heard this capability referred to as "reasoning over data" and it is a crucial element in maintaining control of your organization’s data.
+But importantly, authorized people and services (such as search and indexing) can continue to read and inspect the protected data. This capability is not easily accomplished with other information protection solutions that use peer-to-peer encryption. You might have heard this capability referred to as "reasoning over data" and it is a crucial element in maintaining control of your organization’s data.
 
 The following picture shows how this service offers a protection solution for Office 365, as well as for on-premises servers and services. You also see that protection is supported by the popular end-user devices that run Windows, macOS, iOS, and Android.
 
@@ -67,7 +70,7 @@ Use the following table to identify business requirements or problems that your 
 > If you are familiar with the on-premises version of Rights Management, Active Directory Rights Management Services (AD RMS), you might be interested in the comparison table from [Comparing Azure Rights Management and AD RMS](compare-on-premise.md).
 
 ## Security, compliance, and regulatory requirements
-Azure Rights Management supports the following security, compliance and regulatory requirements:
+Azure Rights Management supports the following security, compliance, and regulatory requirements:
 
 √ Use of industry-standard cryptography and supports FIPS 140-2. For more information, see the [Cryptographic controls used by Azure RMS: Algorithms and key lengths](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths) information.
 

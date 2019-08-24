@@ -20,7 +20,7 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: dev
 
 ---
 # Deploy into production

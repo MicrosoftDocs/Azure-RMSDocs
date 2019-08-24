@@ -20,7 +20,9 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 #ms.reviewer: eymanor
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
+search.appverid:
+- MET150
 
 ---
 

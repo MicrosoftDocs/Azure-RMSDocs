@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/04/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -16,10 +16,11 @@ ms.service: information-protection
 #ROBOTS:
 #audience:git
 #ms.devlang:
+ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: admin
 
 ---
 
@@ -74,9 +75,33 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
+## Version 1.53.10.0
+
+**Released**: 07/15/2019
+
+This version includes the MSIPC version 1.0.3889.0419 of the RMS client.
+
+**New features:**
+
+- New advanced client setting to exempt Outlook messages from the policy setting **All documents and emails must have a label**. [More information](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
+
+- New advanced client setting to further customize settings that implement pop-up messages in Outlook that warn, justify, or block emails being sent. With this new advanced setting, you can set a different action for email messages without attachments. [More information](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
+
+**Fixes**:
+
+- When you use File Explorer, right-click to label a file that has protection applied independently from a label, that protection is preserved. For example, a user applied custom permissions to a file.
+
+- When you replace the Do Not Forward option on an email thread with a label that's configured for user-defined permissions and Do Not Forward, original recipients can still open the email message.
+
+- In the following scenario a user no longer sees in the label tooltip that the label was automatically set by them: A user receives a protected email with a document attached that isn't labeled, but automatically protected. When the user from the same organization as the sender opens the document, the corresponding label for the protection settings is applied to the document.
+
+- The minimum [usage right](../configure-usage-rights.md#usage-rights-and-descriptions) to run the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet is now **Save As, Export** (EXPORT) rather than **Copy** (EXTRACT).
+
 ## Version 1.48.204.0
 
 **Released**: 04/16/2019
+
+Supported through 01/15/2020
 
 This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
@@ -100,20 +125,21 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     - Azure Publish Setting Password
     - Azure Storage Account Key (Generic)
 
+- Endpoint discovery support for [Azure Information Protection analytics](../reports-aip.md), to report sensitive information found when users first save an Office document (using desktop apps for Word, Excel, and PowerPoint):
+    - To discover this information, the documents do not need to be labeled.
+    - Sensitive information is identified by predefined and custom information types.
+    - If you don't want the sensitive information types found to be sent to Azure Information Protection analytics, you can disable endpoint discovery with an [advanced client setting](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics).
+
 - New advanced client settings that implement pop-up messages in Outlook that can warn, justify, or block emails being sent. [More information](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     
     Note that if you configured the advanced client property of OutlookCollaborationTrustedDomains for the preview version, this setting is now replaced by three new settings, so that domains can be exempt per action: OutlookWarnTrustedDomains, OutlookJustifyTrustedDomains, and OutlookBlockTrustedDomains.
 
 - If you label and protect files by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. [More information](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
+- A new advanced client setting for [Azure Information Protection analytics](../reports-aip.md), to prevent sending information type matches for a subset of users when you have selected the checkbox in the Azure portal that enables deeper analytics into your sensitive data. This setting is applicable to the client and the scanner. [More information](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+
 - New advanced client setting that's applicable only when you configure the policy setting to not display custom permissions: When there's a file that's protected with custom permissions, display the custom permissions option in File Explorer so that users can see and change them (if they have permissions to change the protection settings). [More information](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
-- Endpoint discovery for [Azure Information Protection analytics](../reports-aip.md).
-    
-- Two new advanced client settings for analytics, for the following scenarios:
-    
-    - Prevent sending information type matches for a subset of users when you have selected the checkbox in the Azure portal to collect content matches. [More information](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-    - For the **Data discovery** report, display whether files contain sensitive information. [More information](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
 
 **Fixes**:
 
@@ -154,7 +180,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 - The Azure Information Protection scanner no longer excludes .zip files by default. To inspect and label .zip files, see the [To inspect .zip files](client-admin-guide-file-types.md#to-inspect-zip-files) section of the admin guide.
 
-- The [policy setting](../configure-policy-settings.md) **Users must provide justification to set a lower classification label, remove a label, or remove protection** no longer applies to the scanner. The scanner performs these actions when you configure the setting **Relabel files** to **On** in the scanner profile.
+- The [policy setting](../configure-policy-settings.md) **Users must provide justification to set a lower classification label, remove a label, or remove protection** no longer applies to the scanner. The scanner performs these actions when you configure the setting **Relabel files** to **On** in the scanner profile, and then select the **Allow label downgrade** checkbox.
 
 ## Version 1.41.51.0
 
@@ -170,7 +196,7 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
     
     If you want the client to revert to protecting PDF files by using a .ppdf file name extension, use the same [advanced client setting](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), but specify **False**.
 
-- Auditing data support for [central reporting](../reports-aip.md) by using Azure Information Protection analytics, announced at Microsoft Ignite 2018.
+- Auditing data support for [central reporting](../reports-aip.md) by using Azure Information Protection analytics. This information includes label usage to help you monitor how your labels are used, and user access to labeled documents and emails.
 
 - Excel now also supports [visual marking](../configure-policy-markings.md)s in different colors.
 

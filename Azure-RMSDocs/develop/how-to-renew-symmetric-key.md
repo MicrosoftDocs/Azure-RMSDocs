@@ -21,7 +21,7 @@ ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
 #ms.reviewer: kartikk
 #ms.suite: ems
 #ms.tgt_pltfrm:
-#ms.custom:
+ms.custom: dev
 ---
 
 # How-to: Renew the symmetric key in Azure Information Protection
