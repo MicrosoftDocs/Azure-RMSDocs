@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/14/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -104,7 +104,7 @@ Follow the instructions for a [disconnected computer](./rms-client/client-admin-
 
 1. Configure the scanner in the Azure portal, by creating a scanner profile. If you need help with this step, see [Configure the scanner in the Azure portal](#configure-the-scanner-in-the-azure-portal).
 
-2. Export your scanner profile from the **Azure Information Protection - Profiles (Preview)** blade, by using the **Export** option.
+2. Export your scanner profile from the **Azure Information Protection - Profiles** blade, by using the **Export** option.
 
 3. Finally, in a PowerShell session, run [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) and specify the file that contains the exported settings.
 
