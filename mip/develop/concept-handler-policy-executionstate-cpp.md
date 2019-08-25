@@ -23,20 +23,20 @@ Passing information into the MIP SDK to compute an action that should be taken, 
 
 `ExecutionState` exposes the following virtual members. Each provides some context to the policy engine to return information on which actions ought to be taken by the application. Additionally, this information may be used to provide audit information to the Azure Information Protection Reporting feature.
 
-
-| Member                                                                           | Returns                                                                                                              |
-|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| `std::string GetNewLabelId()`                                                      | Returns the label ID to be applied to the object.                                                                    |
-| `mip::DataState GetDataState()`                                              | Returns the mip::DataState of the object.                                                                         |
+| Member                                                                             | Returns                                                                                                              |
+| ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `std::shared_ptr<mip::Label> GetNewLabel()`                                        | Returns the label to be applied to the object.                                                                       |
+| `mip::DataState GetDataState()`                                                    | Returns the mip::DataState of the object.                                                                            |
 | `std::pair<bool, std::string> IsDowngradeJustified()`                              | Returns a std::pair expressing whether downgrade is justified and the justification.                                 |
-| `std::string GetContentIdentifier()`                                               | Returns the content identifier. Should be a human-readable identifier, indicating the location of the object.   |
+| `std::string GetContentIdentifier()`                                               | Returns the content identifier. Should be a human-readable identifier, indicating the location of the object.        |
 | `mip::ActionSource GetNewLabelActionSource()`                                      | Returns the mip::ActionSource of the label.                                                                          |
-| `mip::AssignmentMethod GetNewLabelAssignmentMethod()`                              | Returns the mip::AssignmentMethod of the label                                                                        |
+| `mip::AssignmentMethod GetNewLabelAssignmentMethod()`                              | Returns the mip::AssignmentMethod of the label                                                                       |
 | `std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties()` | Returns a std::vector of std::pairs of strings, containing the custom metadata that will be applied to the document. |
 | `std::vector<std::pair<std::string, std::string>> GetContentMetadata()`            | Returns a std::vector of std::pairs of string containing the current content metadata.                               |
-| `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`           | Returns a pointer to a mip::ProtectionDescriptor                                                                     |
+| `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`             | Returns a pointer to a mip::ProtectionDescriptor                                                                     |
 | `mip::ContentFormat GetContentFormat()`                                            | Returns mip::ContentFormat                                                                                           |
-| `mip::ActionType GetSupportedActions()`                                           | Returns mip::ActionTypes for the label.                                                                              |
+| `mip::ActionType GetSupportedActions()`                                            | Returns mip::ActionTypes for the label.                                                                              |
+| `std::shared_ptr<mip::ClassificationResults>`                                      | Returns a list of classification results, if implemented.                                                            |
 
 Each must be overridden in an implementation of a class derived from `mip::ExecutionState`. In the sample application linked above, this process is accomplished by implementing a struct called `ExecutionStateOptions`, and passing that to the constructor of the derived class.
 
@@ -54,6 +54,8 @@ struct ExecutionStateOptions {
     std::string downgradeJustification;
     std::string templateId;
     mip::ContentFormat contentFormat = mip::ContentFormat::DEFAULT;
+    mip::ActionType supportedActions;
+    bool generateAuditEvent;
 };
 ```
 
