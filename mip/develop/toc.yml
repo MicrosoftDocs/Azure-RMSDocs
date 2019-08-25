@@ -36,7 +36,7 @@
   - name: MipContext object concepts
     href: concept-mipcontext.md
   - name: Cache storage
-    href: concept-cache-storage
+    href: concept-cache-storage.md
   - name: Profile and Engine (C++)
     items: 
       - name: Profile and Engine object concepts
