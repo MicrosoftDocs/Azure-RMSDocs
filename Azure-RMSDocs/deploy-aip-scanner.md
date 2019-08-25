@@ -286,7 +286,7 @@ You're now ready to run your first scan in discovery mode.
 
 1. In the Azure portal, return to Azure Information Protection to start the scanner. From the **Scanner** menu option, select **Profiles**. Select your scanner's profile, and then the **Scan now** option:
     
-    ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
+    ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now2.png)
     
     Alternatively, in your PowerShell session, run the following command:
     
@@ -434,7 +434,7 @@ For the first scan cycle, the scanner inspects all files in the configured data 
 
 You can force the scanner to inspect all files again from the **Azure Information Protection - Profiles** blade in the Azure portal. Select your scanner profile from the list, and then select the **Rescan all files** option:
 
-![Initiate rescan for the Azure Information Protection scanner](./media/scanner-rescan-files.png)
+![Initiate rescan for the Azure Information Protection scanner](./media/scanner-rescan-files2.png)
 
 Inspecting all files again is useful when you want the reports to include all files and this configuration choice is typically used when the scanner runs in discovery mode. When a full scan is complete, the scan type automatically changes to incremental so that for subsequent scans, only new or modified files are scanned.
 
