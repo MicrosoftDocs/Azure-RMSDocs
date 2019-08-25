@@ -965,11 +965,11 @@ The preview version of the scanner selects the more secure protocol of TLS 1.2 t
 
 For 32-bit versions of Windows:
 
-- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`: Create a registry key (DWORD) named **SchUseStrongCrypto** and set the value to **1**
+- **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319**: Create a registry key (DWORD) named **SchUseStrongCrypto** and set the value to **1**
 
 For 64-bit versions of Windows:
 
-- `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319`: Create a registry key (DWORD) named **SchUseStrongCrypto** and set the value to **1**
+- **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319**: Create a registry key (DWORD) named **SchUseStrongCrypto** and set the value to **1**
 
 ## Next steps
 Now that you've customized the Azure Information Protection unified labeling client, see the following resources for additional information that you might need to support this client:
