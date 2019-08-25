@@ -175,8 +175,8 @@ Before you install the scanner, or upgrade it from an older general availability
     - **Label files based on content**: Keep the default of **On**
     - **Default label**: Keep the default of **Policy default**
     - **Relabel files**: Keep the default of **Off**
-    - ** Allow label downgrade**: Keep the default of selected
-    - ** Enforce default label**: Keep the default of not selected
+    - **Allow label downgrade**: Keep the default of selected
+    - **Enforce default label**: Keep the default of not selected
     - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On**
     - **File types to scan**: Keep the default file types for **Exclude**
     - **Default owner**: Keep the default of **Scanner Account**
@@ -333,7 +333,7 @@ If you are following these instructions, the scanner runs one time and in the re
 
 3. Make a note of the current time and start the scanner again from the **Azure Information Protection - Profiles** blade:
     
-    ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
+    ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now2.png)
     
     Alternatively, you can run the following command in your PowerShell session:
     
