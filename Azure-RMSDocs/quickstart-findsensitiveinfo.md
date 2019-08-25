@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 09/19/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -117,7 +117,7 @@ You're now ready to install the scanner with the scanner profile that you've jus
 
 ## Start the scan and confirm it finished
 
-1. Back in the Azure portal, return to Azure Information Protection to start the scanner. From the **Scanner** menu option, select **Nodes**. Select your computer name, and then the **Scan now** option:
+1. Back in the Azure portal, return to Azure Information Protection to start the scanner. From the **Scanner** menu option, select **Profiles**. Select your profile name, and then the **Scan now** option:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
 
@@ -151,7 +151,7 @@ In Excel, the first two columns display your data store repository and file name
         
         	http://sp2016/Shared Documents
 
-2. Restart the scanner again: From the **Scanner** menu option, select **Nodes**, select your computer name, and then the **Scan now** option:
+2. Restart the scanner again: From the **Scanner** menu option, select **Profiles**, select your computer name, and then the **Scan now** option:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
 

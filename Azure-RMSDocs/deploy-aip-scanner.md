@@ -286,7 +286,7 @@ You're now ready to run your first scan in discovery mode.
 
 1. In the Azure portal, return to Azure Information Protection to start the scanner. From the **Scanner** menu option, select **Profiles**. Select your scanner's profile, and then the **Scan now** option:
     
-    ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now2.png)
+    ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
     
     Alternatively, in your PowerShell session, run the following command:
     
@@ -333,7 +333,7 @@ If you are following these instructions, the scanner runs one time and in the re
 
 3. Make a note of the current time and start the scanner again from the **Azure Information Protection - Profiles** blade:
     
-    ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now2.png)
+    ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
     
     Alternatively, you can run the following command in your PowerShell session:
     
