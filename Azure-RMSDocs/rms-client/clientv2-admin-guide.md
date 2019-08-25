@@ -163,9 +163,9 @@ After you have installed the Azure Information Protection unified labeling clien
 
 ## Installing the Azure Information Protection scanner
 
-The current version of the scanner for the unified labeling client is in preview for testing. During this preview, it is available as a separate install, **AIPULScanner.exe**, from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+The current version of the scanner for the unified labeling client is in preview for testing. During this preview, install the current preview version of the unified labeling client, from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-If you are installing the scanner for the first time on a computer, download and install this separate executable and then follow the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
+If you are installing the scanner for the first time on a computer, download and install this client and then follow the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
 
 If you are upgrading the scanner from the Azure Information Protection client (classic), see the [Upgrading the Azure Information Protection scanner](#upgrading-the-azure-information-protection-scanner) section for instructions.
 
@@ -188,7 +188,7 @@ Use the [Version release history and support policy](unifiedlabelingclient-versi
 
 ### Upgrading the Azure Information Protection scanner
 
-If you are currently using have installed the Azure Information Protection scanner from the Azure Information Protection client (classic), you can upgrade it to use sensitivity labels that are published from the Office 365 Security & Compliance Center (or the Microsoft 365 security center or the Microsoft 365 compliance center).
+If you are currently using the Azure Information Protection scanner from the Azure Information Protection client (classic), you can upgrade it to use sensitivity labels that are published from the Office 365 Security & Compliance Center (or the Microsoft 365 security center or the Microsoft 365 compliance center).
 
 #### To upgrade the scanner to the preview version
 
@@ -204,7 +204,7 @@ Note that unlike the scanner from the Azure Information Protection client (class
 
 1. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
 
-2. Upgrade to the Azure Information Protection unified labeling client by downloading and installing **AIPULScanner.exe** from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+2. Upgrade to the Azure Information Protection unified labeling client by downloading and installing the preview version of the unifield labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 3. In a PowerShell session, run the Update-AIPScanner command with your scanner's profile. For example: `Update-AIPScanner –Profile Europe`.
     
@@ -225,7 +225,7 @@ Beginning with version 1.48.204.0, the scanner gets its configuration settings f
 
 2. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
 
-3. Upgrade to the Azure Information Protection unified labeling client by downloading and installing **AIPULScanner.exe** from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+3. Upgrade to the Azure Information Protection unified labeling client by downloading and installing the preview version of the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 4. In a PowerShell session, run the Update-AIPScanner command with the same profile name that you specified in step 1. For example: `Update-AIPScanner –Profile Europe`
 
