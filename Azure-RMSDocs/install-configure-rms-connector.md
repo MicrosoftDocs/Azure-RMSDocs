@@ -6,7 +6,7 @@ description: Information to help you install and configure the Azure Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -62,7 +62,7 @@ To continue, enter an account and password to configure the RMS connector.
 ## Entering credentials
 Before you can configure the RMS connector, you must enter credentials for an account that has sufficient privileges to configure the RMS connector. For example, you might type <strong>admin@contoso.com</strong> and then specify the password for this account.
 
-This account must not require multi-factor authentication (MFA) because the Microsoft Rights Management administration tool does not support MFA for this account. 
+This account must not require multi-factor authentication (MFA) because the Microsoft Rights Management administration tool does not support MFA for this account. In addition, do not block legacy authentication for this account, for example, by using an [Azure Active AD conditional access setting](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication).
 
 The connector also has some character restrictions for this password. You cannot use a password that has any of the following characters: Ampersand ( **&** ); left angle bracket ( **[** ); right angle bracket ( **]** ); straight quotation ( **"** ); and apostrophe ( **'** ). If your password has any of these characters, authentication fails for the RMS connector and you see the error message **That user name and password combination is not correct**, even though you can successfully sign in using this account and password for other scenarios. If this scenario applies to your password, either use a different account with a password that does not have any of these special characters, or reset your password so it doesn't have any of these special characters.
 
