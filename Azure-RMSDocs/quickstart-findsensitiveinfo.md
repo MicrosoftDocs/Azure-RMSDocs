@@ -43,7 +43,7 @@ To complete this quickstart, you need:
     
     If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
-2. The Azure Information Protection client is installed on your computer. 
+2. The Azure Information Protection client (classic) is installed on your computer. 
     
     To install the client, go to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
     
@@ -81,9 +81,9 @@ Before you install the scanner, create a profile for it in the Azure portal. Thi
     
     Optionally, specify a description for administrative purposes, to help you identify the scanner's profile name.
 
-5. For this quickstart, select just one setting: For **Policy enforcement**, select **Off**. Then select **Save** but do not close the blade.
+5. Locate the **Policy enforcement** section, where for this quickstart, select just one setting: For **Enforce**, select **Off**. Then select **Save** but do not close the blade.
     
-    The settings configure the scanner to do a one-time discovery of all files in your specified data repositories. This scan looks for all known sensitive information types, and doesn't require you to first configure your Azure Information Protection labels or policy settings
+    The settings configure the scanner to do a one-time discovery of all files in your specified data repositories. This scan looks for all known sensitive information types, and doesn't require you to first configure your Azure Information Protection labels or policy settings.
 
 6. Now that the profile is created and saved, you're ready to return to the **Configure repositories** option to specify your local folder as the data store to be scanned.
     
@@ -101,7 +101,9 @@ Before you install the scanner, create a profile for it in the Azure portal. Thi
     
     Select **Save**.
 
-9. You can now close the **Add a new profile** blade and you see your profile name displayed in the **Azure Information Protection - Profiles** blade, together with the **SCHEDULE** column showing **Manual** and the **ENFORCE** column is blank.
+9. Back on the **Azure Information Protection - Profiles** blade, you now see your profile  listed, together with the **SCHEDULE** column showing **Manual** and the **ENFORCE** column is blank. 
+    
+    The **NODES** columns shows **0** because you haven't yet installed the scanner for this profile.
 
 You're now ready to install the scanner with the scanner profile that you've just created.
 
@@ -117,13 +119,17 @@ You're now ready to install the scanner with the scanner profile that you've jus
 
 ## Start the scan and confirm it finished
 
-1. Back in the Azure portal, return to Azure Information Protection to start the scanner. From the **Scanner** menu option, select **Profiles**. Select your profile name, and then the **Scan now** option:
+1. Back in the Azure portal, refresh the **Azure Information Protection - Profiles** blade, and you should see the **NODES** column now display **1**.
+
+2. Select your profile name, and then the **Scan now** option:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
-
-2. There's only one small file to inspect, so this initial test scan will be very quick:
     
-    - From the **Azure Information Protection - Nodes** blade, the value for the **STATUS** column changes from **Scanning** to **Idle**.
+    If this option is not available after selecting your profile, the scanner is not connected to Azure Information Protection. Review your configuration and Internet connectivity.
+
+3. There's only one small file to inspect, so this initial test scan will be very quick:
+    
+    Wait until you see values displayed for the **LAST SCAN RESULTS** and **LAST SCAN (END TIME)** columns.
     
     - Alternatively, check the local Windows **Applications and Services** event log, **Azure Information Protection**. Confirm the informational event ID **911** for the **MSIP.Scanner** process. The event log entry also has a summary of results from the scan.
 
@@ -151,7 +157,7 @@ In Excel, the first two columns display your data store repository and file name
         
         	http://sp2016/Shared Documents
 
-2. Restart the scanner again: From the **Scanner** menu option, select **Profiles**, select your computer name, and then the **Scan now** option:
+2. Restart the scanner again: From the **Azure Information Protection - Profiles** blade, make sure your profile is selected, and then select the **Scan now** option:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
 
@@ -180,7 +186,7 @@ This command doesn't remove the following items and you must manually remove the
 
 ## Next steps
 
-This quickstart includes the minimum configuration so that you can quickly see how the scanner can find sensitive information in a network share. If you're ready to install the scanner in a production environment, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
+This quickstart includes the minimum configuration so that you can quickly see how the scanner can find sensitive information in on-premises data stores. If you're ready to install the scanner in a production environment, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
 If you want to classify and protect the files that contain sensitive information, you must configure Azure Information Protection labels for automatic classification and protection:
 
