@@ -168,15 +168,18 @@ Before you install the scanner, or upgrade it from an older general availability
 
 5. For this initial configuration, configure the following settings, and then select **Save** but do not close the blade:
     
+    For the **Profile settings** section:
     - **Schedule**: Keep the default of **Manual**
     - **Info types to be discovered**: Change to **Policy only**
     - **Configure repositories**: Do not configure at this time because the profile must first be saved.
+    
+    For the **Policy enforcement** section:
     - **Enforce**: Select **Off**
     - **Label files based on content**: Keep the default of **On**
     - **Default label**: Keep the default of **Policy default**
     - **Relabel files**: Keep the default of **Off**
-    - **Allow label downgrade**: Keep the default of selected
-    - **Enforce default label**: Keep the default of not selected
+    
+    For the **Configure file settings** section:
     - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On**
     - **File types to scan**: Keep the default file types for **Exclude**
     - **Default owner**: Keep the default of **Scanner Account**
@@ -220,7 +223,7 @@ Before you install the scanner, or upgrade it from an older general availability
 
 9. If you want to add another data repository, repeat steps 7 and 8.
 
-10. You can now close the **Add a new profile** blade and you see your profile name displayed in the **Azure Information Protection - Profiles** blade, together with the **SCHEDULE** column showing **Manual** and the **ENFORCE** column is blank.
+10. You can now close **Repositories** blade and your profile blade. Back on the **Azure Information Protection - Profiles** blade, you see your profile name displayed, together with the **SCHEDULE** column showing **Manual** and the **ENFORCE** column is blank.
 
 You're now ready to install the scanner with the scanner profile that you've just created.
 
@@ -284,7 +287,7 @@ You're now ready to run your first scan in discovery mode.
 
 ## Run a discovery cycle and view reports for the scanner
 
-1. In the Azure portal, return to Azure Information Protection to start the scanner. From the **Scanner** menu option, select **Profiles**. Select your scanner's profile, and then the **Scan now** option:
+1. In the Azure portal, on the **Azure Information Protection - Profiles** blade, select your scanner's profile, and then the **Scan now** option:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
     
@@ -294,7 +297,7 @@ You're now ready to run your first scan in discovery mode.
 
 2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the scanner stops although the scanner service remains running:
     
-    - From the **Scanner** menu option, select **Nodes** and identify your scanner node. The value for the **STATUS** column changes from **Scanning** to **Idle**.
+    - On the **Azure Information Protection - Profiles** blade, use the **Refresh** option and wait until you see values for the **LAST SCAN RESULTS** column and the **LAST SCAN (END TIME)** column.
     
     - Using PowerShell, you can run `Get-AIPScannerStatus` to monitor the status change.
     
@@ -326,8 +329,8 @@ If you are following these instructions, the scanner runs one time and in the re
 
 2. On the \<**profile name**> blade, change the following two settings, and then select **Save**:
     
-   - **Schedule**: Change to **Always**
-   - **Enforce**: Select **On**
+   - From the **Profile settings** section: Change the **Schedule** to **Always**
+   - From the **Policy enforcement** section: Change **Enforce**to **On**
     
      There are other configuration settings that you might want to change. For example, whether file attributes are changed and whether the scanner can relabel files. Use the information popup help to learn more information about each configuration setting.
 
@@ -344,7 +347,6 @@ If you are following these instructions, the scanner runs one time and in the re
     Then check the reports to see details of which files were labeled, what classification was applied to each file, and whether protection was applied to them. Or, use the Azure portal to more easily see this information.
 
 Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it automatically starts a new cycle so that any new and changed files are discovered.
-
 
 ## How files are scanned
 
