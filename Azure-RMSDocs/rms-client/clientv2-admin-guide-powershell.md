@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -80,7 +80,7 @@ You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthent
 By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account for this purpose. Then, in the context of that user, run the Set-AIPAuthentication cmdlet to set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the protection service from Azure Information Protection. The account downloads the Azure Information Protection policy and any protection templates that the labels use.
 
 > [!NOTE]
-> If you use [scoped policies](../configure-policy-scope.md), remember that you might need to add this account to your scoped policies.
+> If you use label policies for different users, remember that you might need to add this account to a specific label policy.
 
 The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended account. After that, this account can then run the labeling cmdlets non-interactively until the authentication token in Azure AD expires. 
 
