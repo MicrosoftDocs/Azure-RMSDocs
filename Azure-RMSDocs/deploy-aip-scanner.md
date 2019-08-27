@@ -259,7 +259,7 @@ Now that you have installed the scanner, you need to get an Azure AD token for t
 
 The Azure AD token lets the scanner service account authenticate to the Azure Information Protection service.
 
-1. Return to the Azure portal to create two Azure AD applications (just one Azure AD application for the unified labeling client) that are needed to specify an access token for authentication. After an initial interactive sign-in, this token lets the scanner run non-interactively.
+1. Return to the Azure portal to create two Azure AD applications (just one Azure AD application for the scanner from the unified labeling client) that are needed to specify an access token for authentication. After an initial interactive sign-in, this token lets the scanner run non-interactively.
     
     To create these applications, follow the instructions in the admin guides for the relevant clients:
     
