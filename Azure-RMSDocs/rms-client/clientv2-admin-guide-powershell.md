@@ -90,14 +90,14 @@ When the token in Azure AD expires, run the cmdlet again to acquire a new token.
 
 If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
 
-To control when the access token expires, run this cmdlet with parameters. This configuration lets you configure the access token in Azure AD for one year, two years, or to never expire. You require two applications registered in Azure Active Directory: A **Web app / API** application and a **native application**. The parameters for Set-AIPAuthentication use values from these applications.
+To control when the access token expires, run this cmdlet with parameters. This configuration lets you configure the access token in Azure AD for one year, two years, or to never expire. The parameters for Set-AIPAuthentication use values from an app registration process in Azure AD.
 
 After you have run this cmdlet, you can run the labeling cmdlets in the context of the service account that you created.
 
 ### To create and configure the Azure AD applications for Set-AIPAuthentication
 
 > [!NOTE]
-> This procedure is changed for the current preview version of the unified labeling client and the preview version of the scanner. For those new instructions, see [To create and configure the Azure AD applications for Set-AIPAuthentication - preview client](#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client).
+> If are using the current preview version of the unified labeling client don't use this procedure but instead, see [To create and configure the Azure AD applications for Set-AIPAuthentication - preview client](#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client).
 
 1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/).
 
