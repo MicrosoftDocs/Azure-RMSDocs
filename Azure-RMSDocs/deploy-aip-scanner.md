@@ -266,12 +266,20 @@ The Azure AD token lets the scanner service account authenticate to the Azure In
     - For the classic client: [How to label files non-interactively for Azure Information Protection](./rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
     
     - For the unified labeling client: [How to label files non-interactively for Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
+    > [!NOTE]
+    > Make sure you follow the second set of instructions that are new for the preview client.
 
 2. From the Windows Server computer, if your scanner service account has been granted the **Log on locally** right for the installation: Sign in with this account and start a PowerShell session. Run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
+    
+    For the classic client:
     
     ```
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application> -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application>
     ```
+    
+    For the unified labeling client in preview:
+    
+    Set-AIPAuthentication [-AppId <ID of the registered app>] [-AppSecret <client secret sting>] [-TenantId <your tenant ID>]
     
     When prompted, specify the password for your service account credentials for Azure AD, and then click **Accept**.
     
@@ -281,7 +289,7 @@ The Azure AD token lets the scanner service account authenticate to the Azure In
     
     -  For the unified labeling client: Use the *OnBehalfOf* parameter with Set-AIPAuthentication, as described at the end of [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from that client's admin guide.
 
-The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** in Azure AD. When the token expires, you must repeat steps 1 and 2.
+The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** (classic client) or client secret (unified labeling client) in Azure AD. When the token expires, you must repeat steps 1 and 2.
 
 You're now ready to run your first scan in discovery mode.
 
