@@ -48,7 +48,7 @@ This scanner runs as a service on Windows Server and lets you discover, classify
 
 - UNC paths for network shares that use the Server Message Block (SMB) protocol.
 
-- Sites and libraries for SharePoint Server 2019 through SharePoint Server 2013. SharePoint 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
+- Document libraries and folders for SharePoint Server 2019 through SharePoint Server 2013. SharePoint 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 To scan and label files on cloud repositories, use [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) instead of the scanner.
 
@@ -184,7 +184,7 @@ Before you install the scanner, or upgrade it from an older general availability
     - **File types to scan**: Keep the default file types for **Exclude**
     - **Default owner**: Keep the default of **Scanner Account**
 
-6. Now that the profile is created and saved, you're ready to return to the **Configure repositories** option to specify the data stores to be scanned. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint on-premises sites and libraries. 
+6. Now that the profile is created and saved, you're ready to return to the **Configure repositories** option to specify the data stores to be scanned. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint on-premises document libraries and folders. 
     
     SharePoint Server 2019, SharePoint Server 2016, and SharePoint Server 2013 are supported for SharePoint. SharePoint Server 2010 is also supported when you have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     

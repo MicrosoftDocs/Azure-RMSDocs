@@ -6,7 +6,7 @@ description: Information about the life cycle operations that are relevant if Mi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -68,7 +68,7 @@ You can export your Azure Information Protection configuration and tenant key by
 
 ### Step 1: Initiate export
 
-- [Contact Microsoft Support](information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request for an Azure Information Protection key export**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process takes several days to confirm. Standard support charges apply; exporting your tenant key is not a free-of-charge support service.
+- [Contact Microsoft Support](information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request for an Azure Information Protection key export**. You must prove you are a Global administrator for your tenant, and understand that this process takes several days to confirm. Standard support charges apply; exporting your tenant key is not a free-of-charge support service.
 
 ### Step 2: Wait for verification
 
@@ -105,7 +105,7 @@ If the reason for exporting your tenant key is because you no longer want to use
 ## Respond to a breach
 No security system, no matter how strong, is complete without a breach response process. Your tenant key might be compromised or stolen. Even when it’s protected well, vulnerabilities might be found in current generation key technology or in current key lengths and algorithms.
 
-Microsoft has a dedicated team to respond to security incidents in its products and services. As soon as there is a credible report of an incident, this team engages to investigate the scope, root cause, and mitigations. If this incident affects your assets, Microsoft will notify your Azure Information Protection tenant administrators by email, by using the email address that you supplied when you subscribed.
+Microsoft has a dedicated team to respond to security incidents in its products and services. As soon as there is a credible report of an incident, this team engages to investigate the scope, root cause, and mitigations. If this incident affects your assets, Microsoft will notify the Global administrators for your  tenant by email.
 
 If you have a breach, the best action that you or Microsoft can take depends on the scope of the breach; Microsoft will work with you through this process. The following table shows some typical situations and the likely response, although the exact response depends on all the information that is revealed during the investigation.
 

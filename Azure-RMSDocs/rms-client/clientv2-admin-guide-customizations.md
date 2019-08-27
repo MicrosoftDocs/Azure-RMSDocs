@@ -778,9 +778,7 @@ Example PowerShell command, where your label is named "General":
 
 When you need multiple rules for the same label, define multiple string values for the same key. 
 
-In this example:
-
-- The Secure Islands labels named "Confidential" and "Secret" are stored in the custom property named **Classification, and you want the Azure Information Protection unified labeling client to apply the sensitivity label named "Confidential":
+In this example, the Secure Islands labels named "Confidential" and "Secret" are stored in the custom property named **Classification**, and you want the Azure Information Protection unified labeling client to apply the sensitivity label named "Confidential":
 
 	Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 
