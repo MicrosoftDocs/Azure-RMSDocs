@@ -1,11 +1,11 @@
 ---
 title: class mip::FileHandler 
 description: Documents the mip::filehandler class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
+ms.author: mbaldwin
+ms.date: 08/27/2019
 ---
 
 # class mip::FileHandler 
@@ -20,6 +20,7 @@ public void ClassifyAsync(const std::shared_ptr\<void\>& context)  |  Executes t
 public void InspectAsync(const std::shared_ptr\<void\>& context)  |  Create a file inspector object, used to retrieve file contents from compatible file formats.
 public void SetLabel(const std::shared_ptr\<Label\>& label, const LabelingOptions& labelingOptions, const ProtectionSettings& protectionSettings)  |  Sets the sensitivity label to the file.
 public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Deletes the sensitivity label from the file.
+static bool IsProtected(const std::string& filePath, const std::shared_ptr<MipContext>& mipContext) | Checks whether a file is protected or not.
 public void SetProtection(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor, const ProtectionSettings& protectionSettings)  |  Sets either custom or template-based permissions (according to protectionDescriptor->GetProtectionType) to the file.
 public void RemoveProtection()  |  Removes protection from the file. If the file is labeled, the label will be lost.
 public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  parameter.
@@ -59,6 +60,10 @@ Deletes the sensitivity label from the file.
 Changes won't be written to the file until CommitAsync is called. Privileged and Auto method allows the API to override any existing label 
 Throws [JustificationRequiredError](class_mip_justificationrequirederror.md) when setting the label requires the operation to be justified (via the labelingOptions parameter).
   
+
+### IsProtected function
+Checks whether a file is protected or not.
+
 ### SetProtection function
 Sets either custom or template-based permissions (according to protectionDescriptor->GetProtectionType) to the file.
 Changes won't be written to the file until CommitAsync is called.

@@ -1,11 +1,11 @@
 ---
 title: class mip::AddContentHeaderAction 
 description: Documents the mip::addcontentheaderaction class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
+ms.author: mbaldwin
+ms.date: 08/27/2019
 ---
 
 # class mip::AddContentHeaderAction 
