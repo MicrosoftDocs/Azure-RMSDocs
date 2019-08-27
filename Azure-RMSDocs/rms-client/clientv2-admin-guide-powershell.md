@@ -97,7 +97,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 ### To create and configure the Azure AD applications for Set-AIPAuthentication
 
 > [!NOTE]
-> This procedure is changed for the current preview version of the unified labeling client and the preview version of the scanner. For those new instructions, see [To create and configure the Azure AD applications for Set-AIPAuthentication - preview client]( )
+> This procedure is changed for the current preview version of the unified labeling client and the preview version of the scanner. For those new instructions, see [To create and configure the Azure AD applications for Set-AIPAuthentication - preview client](#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication-previewclient).
 
 1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/).
 
