@@ -84,7 +84,6 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
 
 - When the scanner reapplies a label with protection on an already protected document, the protection is reapplied according to the new label.
 
-
 ## Version 2.2.19.0
 
 **Released**: 08/06/2019
