@@ -69,7 +69,7 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
     
     - Multiple scanners can share the same SQL Server database when you configure the scanners to use the same scanner profile. This configuration makes it easier to manage multiple scanners, and results in faster scanning times. When you use this configuration, always wait for a scanner to finish installing before installing another scanner with the same profile.
     
-    - You must specify a profile when you install the scanner and the scanner database is named **AIPScannerUL_\<profile_name>**.
+    - You must specify a profile when you install the scanner and the scanner database is named **AIPScannerUL_\<profile_name>**. The *Profile* parameter is also mandatory for Set-AIPScanner.
     
     - You can set a default label on all documents, even if documents are already labeled. This configuration is achieved in the scanner profile by setting **Label files based on content** to **Off**, and then select **Enforce default label**.
     
@@ -79,8 +79,6 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
 
 - The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters for when you want to [label files non-interactively](/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), and a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents.
 
-- PowerShell labeling cmdlets, File Explorer, and the scanner support an offline policy but must be connected to the Internet to apply protection. For instructions, see 
-
 - The applied label displays the configured color for the label, if a [color has been configured](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).
 
 - New cmdlet, [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs), to gather all log files from %localappdata%\Microsoft\MSIP\Logs and saves them to a single, compressed file that has a .zip format. This file can then be sent to Microsoft Support if you are requested to send log files to help investigate a reported issue.
@@ -88,6 +86,8 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
 **Fixes:**
 
 - You can successfully make changes to a protected file using File Explorer and right-click after a password for the file has been removed.
+
+- When you add or change protection settings to a label, the client (and scanner) reapplies the label with these latest protection settings.
 
 ## Version 2.2.19.0
 
