@@ -57,6 +57,34 @@ Use the following information to see what’s new or changed for a supported rel
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the clients](use-client.md#compare-the-clients).
 
+## Versions later than 2.2.21.0
+
+If you have a version 2 of the client that is later than 2.2.21.0, it is a preview build for testing and evaluation purposes.
+
+**Released**: 09/19/2019
+
+**New features:**
+
+- Support for the scanner, to inspect and label documents on-premises data stores. With this version of the scanner:
+    - Multiple scanners can share the same SQL Server database when you configure the scanners to use the same scanner profile. For this configuration, always wait for a scanner to finish installing before installing another scanner with the same profile.
+    - You must specify a profile when you install the scanner and the scanner database is named **AIPScannerUL_\<profile_name>**.
+    - You can set a default label on all documents, even if documents are already labeled. This configuration is achieved in the scanner profile by setting **Label files based on content** to **Off**, and then select **Enforce default label**.
+    
+    You can upgrade scanners from the Azure Information Protection client (classic). After the upgrade, which creates a new database, the scanner rescans all files the first time it runs. For instructions, see [Upgrading the Azure Information Protection scanner](./rms-client//clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) from the admin guide.
+
+- The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters for when you want to [label files non-interactively](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), and a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents.
+
+- The applied label displays the configured color for the label, if a [color has been configured](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).
+
+- New cmdlet, [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs), to gather all log files from %localappdata%\Microsoft\MSIP\Logs and saves them to a single, compressed file that has a .zip format. This file can then be sent to Microsoft Support if you are requested to send log files to help investigate a reported issue.
+
+**Fixes:**
+
+- You can successfully make changes to a protected file using File Explorer and right-click after a password for the file has been removed.
+
+- When the scanner reapplies a label with protection on an already protected document, the protection is reapplied according to the new label.
+
+
 ## Version 2.2.19.0
 
 **Released**: 08/06/2019

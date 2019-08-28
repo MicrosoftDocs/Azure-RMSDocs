@@ -475,9 +475,11 @@ There are two alternative scenarios that the Azure Information Protection scanne
 
 - Apply a default label to all files in a data repository.
     
-    For this configuration, set the **Default label** to **Custom**, and select the label to use.
+    For this configuration, set **Label files based on content** to **Off**. Then set the **Default label** to **Custom**, and select the label to use.
     
-    The contents of the files are not inspected and all files in the data repository are labeled according to the default label that you specify for the data repository or the scanner profile.
+    The contents of the files are not inspected and all unlabeled files in the data repository are labeled according to the default label that you specify for the data repository or the scanner profile. 
+    
+    For the scanner from the unified labeling client, you can also select **Enforce default label** if you want the default label to be applied on all files, even if they are already labeled.
     
 
 - Identify all custom conditions and known sensitive information types.
@@ -486,7 +488,7 @@ There are two alternative scenarios that the Azure Information Protection scanne
     
     For the classic client: The scanner uses any custom conditions that you have specified for labels in the Azure Information Protection policy, and the list of information types that are available to specify for labels in the Azure Information Protection policy. 
     
-    For the unified labeling client: The scanner uses any custom sensitive info types that you have specified and the list of built-in sensitive info types that are available to select in your labeling management portal.
+    For the unified labeling client: The scanner uses any custom sensitive info types that you have specified and the list of built-in sensitive info types that are available to select in your labeling management center.
     
     This setting helps you find sensitive information that you might not realize you had, but at the expense of scanning rates for the scanner.
     
