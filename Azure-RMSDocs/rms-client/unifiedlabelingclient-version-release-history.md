@@ -65,10 +65,14 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
 
 **New features:**
 
-- Support for the scanner, to inspect and label documents on-premises data stores. With this version of the scanner:
+- Support for the [scanner](../deploy-aip-scanner.md), to inspect and label documents on-premises data stores. With this version of the scanner:
+    
     - Multiple scanners can share the same SQL Server database when you configure the scanners to use the same scanner profile. This configuration makes it easier to manage multiple scanners, and results in faster scanning times. When you use this configuration, always wait for a scanner to finish installing before installing another scanner with the same profile.
+    
     - You must specify a profile when you install the scanner and the scanner database is named **AIPScannerUL_\<profile_name>**.
+    
     - You can set a default label on all documents, even if documents are already labeled. This configuration is achieved in the scanner profile by setting **Label files based on content** to **Off**, and then select **Enforce default label**.
+    
     - When you add or change protection settings to a label, the scanner reapplies the label with these latest protection settings.
     
     You can upgrade scanners from the Azure Information Protection client (classic). After the upgrade, which creates a new database, the scanner rescans all files the first time it runs. For instructions, see [Upgrading the Azure Information Protection scanner](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) from the admin guide.
@@ -84,8 +88,6 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
 **Fixes:**
 
 - You can successfully make changes to a protected file using File Explorer and right-click after a password for the file has been removed.
-
-- When the scanner reapplies a label with protection on an already protected document, the protection is reapplied according to the new label.
 
 ## Version 2.2.19.0
 
