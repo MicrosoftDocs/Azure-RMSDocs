@@ -128,7 +128,11 @@ Typically, you will use the same user account to install and configure the scann
 
 - If you specify your own profile name, the configuration database is named **AIPScanner_\<profile_name>**.
 
-To create a user and grant db_owner rights on this database, ask the Sysadmin to run the following SQL script twice. The first time, for the service account that runs the scanner, and the second time for you to install and manage the scanner. Before running the script, replace *domain\user* with the domain name and user account name of the service account or user account:
+To create a user and grant db_owner rights on this database, ask the Sysadmin to run the following SQL script twice. The first time, for the service account that runs the scanner, and the second time for you to install and manage the scanner. Before running the script:
+
+- Replace *domain\user* with the domain name and user account name of the service account or user account
+
+- Replace *DBName* with the name of the configuration database you're using for the scanner.
 
 	if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
 	USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
