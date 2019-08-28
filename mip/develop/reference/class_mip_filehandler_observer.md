@@ -4,9 +4,8 @@ description: Documents the mip::filehandler class of the Microsoft Information P
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.date: 08/27/2019
 ---
 
 # class mip::FileHandler::Observer 
@@ -23,8 +22,12 @@ public virtual void OnClassifySuccess(const std::vector\<std::shared_ptr\<Action
 public virtual void OnClassifyFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when classify failed.
 public virtual void OnGetDecryptedTemporaryFileSuccess(const std::string& decryptedFilePath, const std::shared_ptr\<void\>& context)  |  Called when getting the decrypted temporary file success.
 public virtual void OnGetDecryptedTemporaryFileFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when getting the decrypted temporary file failed.
+public virtual void OnGetDecryptedTemporaryStreamSuccess(const std::shared_ptr\<Stream\>& decryptedStream, const std::shared_ptr\<void\>& context)  |  Called when getting the decrypted temporary stream success.
+public virtual void OnGetDecryptedTemporaryStreamFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when getting the decrypted temporary stream failed.
 public virtual void OnCommitSuccess(bool committed, const std::shared_ptr\<void\>& context)  |  Called when committing the changes to the file were successful.
 public virtual void OnCommitFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when committing the changes to the file failed.
+public virtual void OnInspectSuccess(const std::shared_ptr\<FileInspector\>& fileInspector, const std::shared_ptr\<void\>& context)  |  Called when inspect success.
+public virtual void OnInspectFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Called when inspect failed.
   
 ## Members
   
@@ -46,8 +49,20 @@ Called when getting the decrypted temporary file success.
 ### OnGetDecryptedTemporaryFileFailure function
 Called when getting the decrypted temporary file failed.
   
+### OnGetDecryptedTemporaryStreamSuccess function
+Called when getting the decrypted temporary stream success.
+  
+### OnGetDecryptedTemporaryStreamFailure function
+Called when getting the decrypted temporary stream failed.
+  
 ### OnCommitSuccess function
 Called when committing the changes to the file were successful.
   
 ### OnCommitFailure function
 Called when committing the changes to the file failed.
+  
+### OnInspectSuccess function
+Called when inspect success.
+  
+### OnInspectFailure function
+Called when inspect failed.

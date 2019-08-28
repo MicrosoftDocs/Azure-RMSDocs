@@ -4,9 +4,8 @@ description: Documents the mip::addcontentheaderaction class of the Microsoft In
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.date: 08/27/2019
 ---
 
 # class mip::AddContentHeaderAction 
@@ -22,8 +21,7 @@ public int GetFontSize() const  |  Get the font size used to display the content
 public const std::string& GetFontColor() const  |  Get the font color used to display the content header.
 public ContentMarkAlignment GetAlignment() const  |  Get the alignment of the header.
 public int GetMargin() const  |  Get the margin of the header from the bottom.
-public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
-
+  
 ## Members
   
 ### GetUIElementName function
@@ -62,16 +60,10 @@ Get the alignment of the header.
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
+**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
 ### GetMargin function
 Get the margin of the header from the bottom.
 
   
 **Returns**: The margins from the bottom of the document (for example, 10 mm).
-
-### GetType function
-Get the type of [Action](class_mip_action.md).
-
-  
-**Returns**: ActionType The type of derived action this base class can be cast to.

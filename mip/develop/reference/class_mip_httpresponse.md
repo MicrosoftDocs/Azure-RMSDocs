@@ -4,9 +4,8 @@ description: Documents the mip::httpresponse class of the Microsoft Information 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.date: 08/27/2019
 ---
 
 # class mip::HttpResponse 
@@ -27,7 +26,7 @@ Gets response ID.
 
   
 **Returns**: Response ID
-The corresponding [HttpRequest](class_mip_httprequest.md) will have had the same ID
+The corresponding HttpRequest will have had the same ID
   
 ### GetStatusCode function
 Get response status code.

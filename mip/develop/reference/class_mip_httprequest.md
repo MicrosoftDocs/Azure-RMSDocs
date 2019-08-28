@@ -4,9 +4,8 @@ description: Documents the mip::httprequest class of the Microsoft Information P
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.date: 08/27/2019
 ---
 
 # class mip::HttpRequest 
@@ -28,7 +27,7 @@ Gets request ID.
 
   
 **Returns**: Request ID
-The corresponding [HttpResponse](class_mip_httpresponse.md) will have the same ID
+The corresponding HttpResponse will have the same ID
   
 ### GetRequestType function
 Get request type.

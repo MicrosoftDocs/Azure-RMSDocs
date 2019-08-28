@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
 # Microsoft Information Protection SDK - File handler concepts
@@ -88,35 +88,57 @@ Label data can be read from the `label` object and passed to any other component
 
 ## Set a label
 
-Setting a label is a two part process. First, having created a handler that points to the file in question, the label can be set by calling `FileHandler->SetLabel()` with a couple of parameters.
+Setting a label is a two part process. First, having created a handler that points to the file in question, the label can be set by calling `FileHandler->SetLabel()` with some parameters: `mip::Label`, `mip::LabelingOptions`, and `mip::ProtectionOptions`. First, we must resolve the label id to a label and then define the labeling options. 
+
+### Resolve label id to mip::Label
+
+The **SetLabel** function's first parameter is a `mip::Label`. Often, the application is working with label identifiers rather than labels. The label identifier can be resolved to the `mip::Label` by calling **GetLabelById** on the file or policy engine:
 
 ```cpp
-handler->SetLabel(label->GetId(), mip::LabelingOptions{ mip::AssignmentMethod::PRIVILEGED, "" });
+mip::Label label = mEngine->GetLabelById(labelId);
 ```
-
-The first parameters is simply the label identifier from `ListLabelsAsync()`. This value can be stored in a dedicated variable or by reading `mip::Label->GetId()`.
-
-The example above assumes we've stored the desired `mip::Label` in an object called `label`.
 
 ### Labeling options
 
-The second parameter required to set the label is a `mip::LabelingOptions` object that we create inline while calling the `SetLabel()` function. It could also be created ahead of time.
+The second parameter required to set the label is `mip::LabelingOptions`. 
 
 `LabelingOptions` specifies additional information about the label such as the `AssignmentMethod` and justification for an action.
 
 - `mip::AssignmentMethod` is simply an enumerator that has three values: `STANDARD`, `PRIVILEGED`, or `AUTO`. Review the `mip::AssignmentMethod` reference for more details.
 - Justification is required only if the service policy requires it *and* when lowering the *existing* sensitivity of a file.
 
+This snip demonstrates creating the `mip::LabelingOptions` object and setting downgrade justification and message.
+
 ```cpp
-auto labelingOptions = mip::LabelingOptions();
-labelingOptions.SetMethod(mip::AssignmentMethod::STANDARD);
-labelingOptions.SetJustificationMessage("Because I made an educated decision based upon the contents of this file.");
+auto labelingOptions = mip::LabelingOptions(mip::AssignmentMethod::STANDARD);
+labelingOptions.SetDowngradeJustification(true, "Because I made an educated decision based upon the contents of this file.");
 ```
 
-And now rather than creating labeling options inline, it can be passed in to the `SetLabel()` function.
+### Protection settings
+
+Some applications may need to perform operations on behalf of a delegated user identity. The `mip::ProtectionSettings` class allows the application to define the delegated identity *per handler*. Previously, the delegation was performed by the engine classes. This had significant disadvantages in application overhead and service round trips. By moving the delegated user settings to `mip::ProtectionSettings` and making that part of the handler class, we eliminate this overhead, resulting in better performance for applications that are performing many operations on behalf of diverse sets of user identities. 
+
+If delegation isn't required, then simply pass `mip::ProtectionSettings()` to the **SetLabel** function. If delegation is required, it can be achieved by creating a `mip::ProtectionSettings` object and setting the delegated mail address:
 
 ```cpp
-handler->SetLabel(label->GetId(), labelingOptions);
+mip::ProtectionSettings protectionSettings; 
+protectionSettings.SetDelegatedUserEmail("alice@contoso.com");
+```
+
+### Set the label
+
+Having fetched the `mip::Label` from the id, set the labeling options, and, optionally, set the protection settings, the label can now be set.
+
+If you didn't set protection settings, set the label by calling `SetLabel` on the handler:
+
+```cpp
+handler->SetLabel(label, labelingOptions, mip::ProtectionSettings());
+```
+
+If you did require protection settings to perform a delegated operation, then:
+
+```cpp
+handler->SetLabel(label, labelingOptions, protectionSettings);
 ```
 
 Having now set the label on the file referenced by the handler, there's still one more step to commit the change and write a file to disk or create an output stream.

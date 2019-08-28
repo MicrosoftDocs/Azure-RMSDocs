@@ -4,9 +4,8 @@ description: Documents the mip::label class of the Microsoft Information Protect
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.date: 08/27/2019
 ---
 
 # class mip::Label 
@@ -25,6 +24,7 @@ public bool IsActive() const  |  Gets a boolean signaling if the label is active
 public std::weak_ptr\<Label\> GetParent() const  |  Get the parent label.
 public const std::vector\<std::shared_ptr\<Label\>\>& GetChildren() const  |  Get the children labels of the current label.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings of a label.
+public ActionSource GetActionSource() const  |  Gets the action source of the label.
   
 ## Members
   
@@ -88,3 +88,9 @@ Get the custom settings of a label.
 
   
 **Returns**: A vector of key value pairs representing custom settings.
+  
+### GetActionSource function
+Gets the action source of the label.
+
+  
+**Returns**: [Action](class_mip_action.md) source

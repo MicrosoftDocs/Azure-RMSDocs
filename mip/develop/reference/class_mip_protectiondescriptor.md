@@ -4,9 +4,8 @@ description: Documents the mip::protectiondescriptor class of the Microsoft Info
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.date: 08/27/2019
 ---
 
 # class mip::ProtectionDescriptor 
@@ -119,7 +118,7 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via ProtectionDescriptor::GetSignedAppData.
+A [ProtectionHandler](class_mip_protectionhandler.md) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](#getsignedappdata-function)
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.

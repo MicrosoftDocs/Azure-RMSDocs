@@ -4,9 +4,8 @@ description: Documents the mip::policyengine class of the Microsoft Information 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.date: 08/27/2019
 ---
 
 # class mip::PolicyEngine 
@@ -21,11 +20,12 @@ public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& List
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
 public bool IsLabelingRequired() const  |  Checks if the policy dictates that a document must be labeled or not.
 public std::shared_ptr\<Label\> GetDefaultSensitivityLabel()  |  Get the default sensitivity label.
+public std::shared_ptr\<Label\> GetLabelById(const std::string& id) const  |  Gets the label according to the provided id.
 public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler(bool isAuditDiscoveryEnabled)  |  Create a Policy Handler to execute policy-related functions on a file's execution state.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Logs an application specific event to the audit pipeline.
 public const std::string& GetPolicyDataXml() const  |  Gets policy data XML which describes the settings, labels, and rules associated with this policy.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Gets a list of custom settings.
-public const std::string& GetPolicyId() const  |  Gets the policy ID.
+public const std::string& GetPolicyFileId() const  |  Gets the policy file ID.
 public bool HasClassificationRules() const  |  Gets if the policy has automatic or recommendation rules.
 public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
   
@@ -71,6 +71,9 @@ Get the default sensitivity label.
   
 **Returns**: Default sensitivity label if exists, nullptr if there is no default label set.
   
+### GetLabelById function
+Gets the label according to the provided id.
+  
 ### CreatePolicyHandler function
 Create a Policy Handler to execute policy-related functions on a file's execution state.
 
@@ -109,17 +112,17 @@ Gets a list of custom settings.
   
 **Returns**: A vector of custom settings.
   
-### GetPolicyId function
-Gets the policy ID.
+### GetPolicyFileId function
+Gets the policy file ID.
 
   
-**Returns**: A string that represnt the policy ID
+**Returns**: A string that represent the policy file ID
   
 ### HasClassificationRules function
 Gets if the policy has automatic or recommendation rules.
 
   
-**Returns**: A bool that will tell if there any automatic or recommandation rules in the policy
+**Returns**: A bool that will tell if there any automatic or recommendation rules in the policy
   
 ### GetLastPolicyFetchTime function
 Gets the time when the policy was last fetched.

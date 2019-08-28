@@ -5,7 +5,8 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
+
 ms.author: mbaldwin
 ---
 # Microsoft Information Protection SDK - Implementing an authentication delegate (C++)
@@ -33,21 +34,24 @@ class AuthDelegateImpl final : public mip::AuthDelegate { //extend mip::AuthDele
 public:
   AuthDelegateImpl() = delete;
 
-  //constructor accepts username, password, and clientId, all plain strings.
-  AuthDelegateImpl(
-    const std::string& userName,
-    const std::string& password,
-    const std::string& clientId
-  );
+//constructor accepts username, password, and mip::ApplicationInfo.
+  AuthDelegateImpl::AuthDelegateImpl(
+    const mip::ApplicationInfo& applicationInfo,
+    std::string& username,
+    const std::string& password)
+    : mApplicationInfo(applicationInfo),
+      mUserName(username),
+      mPassword(password) {
+  }
 
   bool AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) override;
 
-private:
-  std::string mUserName;
-  std::string mPassword;
-  std::string mClientId;
+  private:
+    std::string mUserName;
+    std::string mPassword;
+    std::string mClientId;
+    mip::ApplicationInfo mApplicationInfo;
 };
-
 }
 }
 ```
@@ -72,9 +76,9 @@ AuthDelegateImpl::AuthDelegateImpl(
     const string& userName,
     const string& password,
     const string& clientId)
-    : mUserName(userName),
-    mPassword(password),
-    mClientId(clientId)	{
+    : mApplicationInfo(applicationInfo),
+    mUserName(userName),
+    mPassword(password) {
 }
 
 //Here we could simply add our token acquisition code to AcquireOAuth2Token
@@ -91,7 +95,7 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
       string accessToken = sample::auth::AcquireToken();
 
       //Practical example for calling external OAuth2 library with provided authentication details.
-      string accessToken = sample::auth::AcquireToken(mUserName, mPassword, mClientId, challenge.GetAuthority(), challenge.GetResource());  
+      string accessToken = sample::auth::AcquireToken(mUserName, mPassword, mApplicationInfo.applicationId, challenge.GetAuthority(), challenge.GetResource());
 
       //set the passed in OAuth2Token value to the access token acquired by our provider
       token.SetAccessToken(accessToken);

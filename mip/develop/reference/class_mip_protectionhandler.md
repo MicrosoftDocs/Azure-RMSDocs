@@ -4,9 +4,8 @@ description: Documents the mip::protectionhandler class of the Microsoft Informa
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.date: 08/27/2019
 ---
 
 # class mip::ProtectionHandler 
@@ -30,7 +29,6 @@ public const std::string GetContentId()  |  Gets unique identifier for the docum
 public bool DoesUseDeprecatedAlgorithms()  |  Gets if protection handler uses deprecated crypto algorithms (ECB) for backward compatibility or not.
 public bool IsAuditedExtractAllowed()  |  Gets if protection handler grants user 'audited extract' right or not.
 public const std::vector\<uint8_t\> GetSerializedPublishingLicense()  |  Serialize [ProtectionHandler](class_mip_protectionhandler.md) into a publishing license (PL)
-public const std::vector\<uint8_t\> GetSerializedProtectionInfo()  |  Gets protection info.
   
 ## Members
   
@@ -187,9 +185,3 @@ Serialize [ProtectionHandler](class_mip_protectionhandler.md) into a publishing 
 
   
 **Returns**: Serialized publishing license
-  
-### GetSerializedProtectionInfo function
-Gets protection info.
-
-  
-**Returns**: Serialized protection info
