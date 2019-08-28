@@ -280,7 +280,7 @@ The Azure AD token lets the scanner service account authenticate to the Azure In
     For the unified labeling client in preview:
     
     ```
-    Set-AIPAuthentication [-AppId <ID of the registered app>] [-AppSecret <client secret sting>] [-TenantId <your tenant ID>]
+    Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID>
     ```
     
     When prompted, specify the password for your service account credentials for Azure AD, and then click **Accept**.
