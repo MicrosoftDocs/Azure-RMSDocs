@@ -129,8 +129,8 @@ Typically, you will use the same user account to install and configure the scann
 - If you specify your own profile name, the configuration database is named **AIPScanner_\<profile_name>**.
 
 To create a user and grant db_owner rights on this database, ask the Sysadmin to run the following SQL script twice. The first time, for the service account that runs the scanner, and the second time for you to install and manage the scanner. Before running the script:
-1. Replace *domain\user* with the domain name and user account name of the service account or user account
-2. Replace *DBName* with the name of the configuration database you're using for the scanner.
+1. Replace *domain\user* with the domain name and user account name of the service account or user account.
+2. Replace *DBName* with the name of the scanner configuration database.
 
 SQL script:
 
