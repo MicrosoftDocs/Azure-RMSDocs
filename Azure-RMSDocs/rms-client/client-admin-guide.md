@@ -124,7 +124,7 @@ The **Export Logs** automatically collects and attaches log files for the Azure 
 The **Reset Settings** signs out the user, deletes the currently downloaded Azure Information Protection policy, and resets the user settings for the Azure Rights Management service.
 
 > [!NOTE]
-> If you have technical problems with the client, see [Support options and community resources](../information-support#support-options-and-community-resources).
+> If you have technical problems with the client, see [Support options and community resources](../information-support.md#support-options-and-community-resources).
 
 ##### More information about the Reset Settings option
 
