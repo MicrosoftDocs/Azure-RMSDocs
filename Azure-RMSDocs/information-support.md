@@ -103,10 +103,10 @@ Troubleshooting:
 - If you have deployed the Rights Management connector for your on-premises servers: See the [monitoring](monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
 
 - For the Azure Information Protection client:
-
-    - Classic client: See the [Installation checks and troubleshooting](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) section from the administrator guide, and check that you're using a [supported version](./rms-client/client-version-release-history.md#servicing-information-and-timelines).
     
-    - Unified labeling client: See the [Installation checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) section from the administrator guide, and check that you're using a [supported version](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines).
+    - Unified labeling client: See the [Installation checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) section from the client's administrator guide, and check that you're using a [supported version](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines).
+    
+    - Classic client: See the [Installation checks and troubleshooting](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) section from the client's administrator guide, and check that you're using a [supported version](./rms-client/client-version-release-history.md#servicing-information-and-timelines).
 
 ### Community resources
 
