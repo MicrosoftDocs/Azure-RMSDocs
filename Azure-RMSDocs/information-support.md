@@ -104,9 +104,9 @@ Troubleshooting:
 
 - For the Azure Information Protection client:
     
-    - Unified labeling client: See the [Installation checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) section from this client's administrator guide, and check that you're using a [supported version](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines).
+    - Unified labeling client: See the [Installation checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) section from this client's administrator guide, and confirm that you're using a [supported version](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines). If there's a preview version available, try that to see if it fixes the issue—not all fixes are listed in the version history.
     
-    - Classic client: See the [Installation checks and troubleshooting](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) section from this client's administrator guide, and check that you're using a [supported version](./rms-client/client-version-release-history.md#servicing-information-and-timelines).
+    - Classic client: See the [Installation checks and troubleshooting](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) section from this client's administrator guide, and confirm that you're using a [supported version](./rms-client/client-version-release-history.md#servicing-information-and-timelines). If there's a preview version available, try that to see if it fixes the issue—not all fixes are listed in the version history.
 
 ### Community resources
 
