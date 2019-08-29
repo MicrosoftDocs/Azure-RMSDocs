@@ -132,6 +132,26 @@ Typically, you will use the same user account to install and configure the scann
 
 - If you specify your own profile name, the configuration database is named **AIPScanner_\<profile_name>** (classic client) or **AIPScannerUL_\<profile_name>** (unified labeling client).
 
+To create a user and grant db_owner rights on this database, ask the Sysadmin to run the following SQL script twice. The first time, for the service account that runs the scanner, and the second time for you to install and manage the scanner. Before running the script:
+1. Replace *domain\user* with the domain name and user account name of the service account or user account.
+2. Replace *DBName* with the name of the scanner configuration database.
+
+SQL script:
+
+	if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+	USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
+
+Additionally:
+
+- You must be a local administrator on the server that will run the scanner
+- The service account that will run the scanner must be granted Full Control permissions to the following registry keys:
+    
+    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
+
+If, after configuring these permissions, you see an error when you install the scanner, the error can be ignored and you can manually start the scanner service.
+
+
 #### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
 
 If your organization policies prohibit the **Log on locally** right for service accounts but allow the **Log on as a batch job** right, follow the instructions for  [Specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from the admin guide.
@@ -512,7 +532,7 @@ To maximize the scanner performance:
     
     If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.
 
-If necessary, install multiple instances of the scanner. The Azure Information Protection scanner supports multiple configuration databases on the same SQL server instance when you specify a custom profile name for the scanner.
+If necessary, install multiple instances of the scanner. The Azure Information Protection scanner supports multiple configuration databases on the same SQL server instance when you specify a custom profile name for the scanner. For the scanner from the unified labeling client, multiple scanners can share the same profile, which results in quicker scanning times.
 
 Other factors that affect the scanner performance:
 

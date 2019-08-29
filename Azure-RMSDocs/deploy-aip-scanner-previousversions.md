@@ -6,7 +6,7 @@ description: Deployment instructions for versions of the Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/27/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -114,6 +114,21 @@ If you cannot be granted the Sysadmin role even temporarily, you must ask a user
 |User account for scanner configuration |db_owner|
 
 Typically, you will use the same user account to install and configure the scanner. But if you use different accounts, they both require the db_owner role for the AzInfoProtectionScanner database.
+
+To create a user and grant db_owner rights on this database, ask the Sysadmin to run the following SQL script twice. The first time, for the service account that runs the scanner, and the second time for you to install and manage the scanner. Before running the script, replace *domain\user* with the domain name and user account name of the service account or user account:
+
+	if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+	USE AzInfoProtectionScanner IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
+
+Additionally:
+
+- You must be a local administrator on the server that will run the scanner
+- The service account that will run the scanner must be granted Full Control permissions to the following registry keys:
+    
+    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
+
+If, after configuring these permissions, you see an error when you install the scanner, the error can be ignored and you can manually start the scanner service.
 
 #### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
 
