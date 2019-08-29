@@ -6,7 +6,7 @@ description: Resources for administrators, which include information about new r
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/13/2019
+ms.date: 08/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -102,8 +102,12 @@ Troubleshooting:
 
 - If you have deployed the Rights Management connector for your on-premises servers: See the [monitoring](monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
 
-- For the Azure Information Protection client for Windows: See the [Installation checks and troubleshooting](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) section from the administrator guide, and check that you're using a [supported version](./rms-client/client-version-release-history.md#servicing-information-and-timelines).
+- For the Azure Information Protection client:
 
+    - **Classic client**: See the [Installation checks and troubleshooting](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) section from the administrator guide, and check that you're using a [supported version](./rms-client/client-version-release-history.md#servicing-information-and-timelines).
+    
+    - **unified labeling client**: See the [Installation checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) section from the administrator guide, and check that you're using a [supported version](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines).
+    - 
 ### Community resources
 
 We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam). This resource provides direct responses from the Azure Information Protection team in addition to the benefit of shared experience and knowledge from other admins and consultants.
