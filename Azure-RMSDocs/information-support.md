@@ -94,7 +94,7 @@ On-demand videos:
 
 Troubleshooting:
 
-- If you have a question about how something works: Check whether your question is already answered as a[Frequently asked question](faqs.md).
+- If you have a question about how something works: Check whether your question is already answered as a [frequently asked question](faqs.md).
 
 - If you have a question about a support statement for Azure Information Protection: See the [Requirements](requirements.md) information, which is regularly updated.
 
