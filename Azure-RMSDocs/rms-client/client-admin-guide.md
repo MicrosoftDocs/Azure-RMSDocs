@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 08/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -122,6 +122,9 @@ The **Report an Issue** link displays only if you specify an [advanced client se
 The **Export Logs** automatically collects and attaches log files for the Azure Information Protection client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk.
 
 The **Reset Settings** signs out the user, deletes the currently downloaded Azure Information Protection policy, and resets the user settings for the Azure Rights Management service.
+
+> [!NOTE]
+> If you have technical problems with the client, see [Support options and community resources](../information-support#support-options-and-community-resources).
 
 ##### More information about the Reset Settings option
 
