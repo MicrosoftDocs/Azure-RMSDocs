@@ -94,7 +94,7 @@ On-demand videos:
 
 Troubleshooting:
 
-- If you have a question about how something works: Check whether your question is already answered on the [Frequently asked questions](faqs.md) page.
+- If you have a question about how something works: Check whether your question is already answered as a[Frequently asked question](faqs.md).
 
 - If you have a question about a support statement for Azure Information Protection: See the [Requirements](requirements.md) information, which is regularly updated.
 
@@ -104,10 +104,10 @@ Troubleshooting:
 
 - For the Azure Information Protection client:
 
-    - **Classic client**: See the [Installation checks and troubleshooting](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) section from the administrator guide, and check that you're using a [supported version](./rms-client/client-version-release-history.md#servicing-information-and-timelines).
+    - Classic client: See the [Installation checks and troubleshooting](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) section from the administrator guide, and check that you're using a [supported version](./rms-client/client-version-release-history.md#servicing-information-and-timelines).
     
-    - **unified labeling client**: See the [Installation checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) section from the administrator guide, and check that you're using a [supported version](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines).
-    - 
+    - Unified labeling client: See the [Installation checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) section from the administrator guide, and check that you're using a [supported version](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines).
+
 ### Community resources
 
 We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam). This resource provides direct responses from the Azure Information Protection team in addition to the benefit of shared experience and knowledge from other admins and consultants.
