@@ -73,9 +73,9 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
     
     - You can set a default label on all documents, even if documents are already labeled. This configuration is achieved in the scanner profile by setting **Label files based on content** to **Off**, and then select **Enforce default label**.
     
-    - When you add or change protection settings to a label, the scanner reapplies the label with these latest protection settings.
-    
     You can upgrade scanners from the Azure Information Protection client (classic). After the upgrade, which creates a new database, the scanner rescans all files the first time it runs. For instructions, see [Upgrading the Azure Information Protection scanner](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) from the admin guide.
+
+- The scanner and PowerShell labeling cmdlets now support 
 
 - The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters for when you want to [label files non-interactively](/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), and a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents.
 
