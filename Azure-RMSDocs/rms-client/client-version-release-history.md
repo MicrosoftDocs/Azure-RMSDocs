@@ -17,7 +17,7 @@ ms.service: information-protection
 #audience:git
 #ms.devlang:
 ms.subservice: v1client
-ms.reviewer: esaggese
+ms.reviewer: elkamins
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
@@ -50,7 +50,7 @@ Preview versions should not be deployed for end users on production networks. In
 ##### General availability versions that are no longer supported:
 
 |Client version|Date released|
-|--------------|--------------------------|
+|--------------|-------------|
 |1.37.19.0|09/17/2018|
 |1.29.5.0|06/26/2018|
 |1.27.48.0|05/30/2018|
@@ -62,13 +62,15 @@ Preview versions should not be deployed for end users on production networks. In
 |1.2.4.0.0|10/27/2016|
 |1.1.23.0|10/01/2016|
 
+The date format used on this page is *month/day/year*.
+
 Starting 6/2/2019, the labeling service for Azure Information Protection requires connections that use TLS 1.2.
 
 All client versions from 1.4.21.0 released 03/15/2017 support TLS 1.2. Client versions **1.3.155.2**, **1.2.4.0**, and **1.1.23.0** do not use TLS 1.2 and therefore can no longer download the Azure Information Protection policy.
 
 ### Release history
 
-Use the following information to see what’s new or changed for a supported release of the Azure Information Protection client for Windows. The most current release is listed first. 
+Use the following information to see what’s new or changed for a supported release of the Azure Information Protection client for Windows. The most current release is listed first.
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
