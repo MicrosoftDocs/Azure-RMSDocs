@@ -17,7 +17,7 @@ ms.service: information-protection
 #audience:git
 #ms.devlang:
 ms.subservice: v2client
-ms.reviewer: maayan
+ms.reviewer: elkamins
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
@@ -48,7 +48,7 @@ Preview versions should not be deployed for end users on production networks. In
 
 ### Release information
 
-Use the following information to see what’s new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. 
+Use the following information to see what’s new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
@@ -71,7 +71,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 **Released**: 08/06/2019
 
-Supported through 03/02/2020
+Supported through 03/03/2020
 
 **Fixes:**
 
