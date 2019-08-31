@@ -71,8 +71,13 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
     
     - You must specify a profile when you install the scanner and the scanner database is named **AIPScannerUL_\<profile_name>**. The *Profile* parameter is also mandatory for Set-AIPScanner.
     
-    - You can set a default label on all documents, even if documents are already labeled. This configuration is achieved in the scanner profile by setting **Label files based on content** to **Off**, and then select **Enforce default label**.
+    - You can set a default label on all documents, even if documents are already labeled. Use the **Relabel files** option set to **On** with the new **Enforce default label** checkbox selected.
     
+    - You can remove existing labels from all documents and this act includes removing protection if it was previously applied by a label. This configuration is achieved in the scanner profile by setting the following:
+    - **Label files based on content**: **Off**
+    - **Default label**: **None**
+    - **Relabel files**: **On** with the **Enforce default label** checkbox selected
+
     You can upgrade scanners from the Azure Information Protection client (classic). After the upgrade, which creates a new database, the scanner rescans all files the first time it runs. For instructions, see [Upgrading the Azure Information Protection scanner](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) from the admin guide.
 
 - The scanner and PowerShell labeling cmdlets now support 
