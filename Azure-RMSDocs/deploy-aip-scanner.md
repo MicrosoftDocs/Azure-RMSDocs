@@ -489,7 +489,7 @@ Manually edit the file to make the change, and then use the **Import** option on
 
 ## Using the scanner with alternative configurations
 
-There are two alternative scenarios that the Azure Information Protection scanner supports where labels do not need to be configured for any conditions: 
+There are three alternative scenarios that the Azure Information Protection scanner supports where labels do not need to be configured for any conditions: 
 
 - Apply a default label to all files in a data repository.
     
@@ -500,13 +500,22 @@ There are two alternative scenarios that the Azure Information Protection scanne
     For the scanner from the unified labeling client, you can also select **Enforce default label** if you want the default label to be applied on all files, even if they are already labeled.
     
 
+- Remove existing labels from all files in a data repository.
+    
+    Applicable to the scanner from the unified labeling client only, this configuration lets you remove existing labels, and any protection if applied on those files. Use this configuration when .... 
+    
+    Configure the following settings:
+    - **Label files based on content**: **Off**
+    - **Default label**: **None**
+    - **Relabel files**: **On** with the **Enforce default label** checkbox selected
+
 - Identify all custom conditions and known sensitive information types.
     
     For this configuration, set the **Info types to be discovered** to **All**.
     
-    For the classic client: The scanner uses any custom conditions that you have specified for labels in the Azure Information Protection policy, and the list of information types that are available to specify for labels in the Azure Information Protection policy. 
+    For the scanner from the classic client: The scanner uses any custom conditions that you have specified for labels in the Azure Information Protection policy, and the list of information types that are available to specify for labels in the Azure Information Protection policy. 
     
-    For the unified labeling client: The scanner uses any custom sensitive info types that you have specified and the list of built-in sensitive info types that are available to select in your labeling management center.
+    For the scanner from the unified labeling client: The scanner uses any custom sensitive info types that you have specified and the list of built-in sensitive info types that are available to select in your labeling management center.
     
     This setting helps you find sensitive information that you might not realize you had, but at the expense of scanning rates for the scanner.
     

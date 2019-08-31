@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Azure Information Protection unified labeling client administrator guide
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -101,11 +101,16 @@ When the client is installed, use the **Help and Feedback** option to open the *
 
 #### **Help and Feedback** section
 
-The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can configure your own URL link that goes to a custom help page as one of the policy settings in your labeling management portal: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center.
+The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can configure your own URL link that goes to a custom help page as one of the policy settings in your labeling management center: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center.
 
-The **Export Logs** automatically collects and attaches log files for the Azure Information Protection unified labeling client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk.
+The **Report an Issue** link displays only if you specify an [advanced setting](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users). When you configure this setting, you specify an HTTP link such as the email address of your help desk. 
+
+The **Export Logs** automatically collects and attaches log files for the Azure Information Protection unified labeling client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk. Alternatively, you could use the [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) PowerShell cmdlet (requires the preview client).
 
 The **Reset Settings** signs out the user, deletes the currently downloaded sensitivity labels and label policies, and resets the user settings for the Azure Rights Management service.
+
+> [!NOTE]
+> If you have technical problems with the client, see [Support options and community resources](../information-support.md#support-options-and-community-resources).
 
 ##### More information about the Reset Settings option
 
