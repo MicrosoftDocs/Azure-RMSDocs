@@ -80,11 +80,11 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
 
     You can upgrade scanners from the Azure Information Protection client (classic). After the upgrade, which creates a new database, the scanner rescans all files the first time it runs. For instructions, see [Upgrading the Azure Information Protection scanner](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) from the admin guide.
 
-- The scanner and PowerShell labeling cmdlets now support 
-
 - The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters for when you want to [label files non-interactively](/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), and a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents.
 
 - The applied label displays the configured color for the label, if a [color has been configured](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).
+
+- The scanner, File Explorer, and PowerShell labeling cmdlets now support an offline policy file. However, offline protection is not supported so this configuration is suitable for discovery and labels that apply classification only. For instructions to configure clients with an offline policy file, see ....
 
 - New cmdlet, [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs), to gather all log files from %localappdata%\Microsoft\MSIP\Logs and saves them to a single, compressed file that has a .zip format. This file can then be sent to Microsoft Support if you are requested to send log files to help investigate a reported issue.
 
