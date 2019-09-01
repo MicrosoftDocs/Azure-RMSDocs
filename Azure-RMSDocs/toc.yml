@@ -163,7 +163,7 @@
           href: migrate-portal.md
       - name: Configure languages
         href: configure-policy-languages.md
-      - name: Migrate labels to Office 365
+      - name: Activate unified labels
         href: configure-policy-migrate-labels.md
     - name: Configure secure document collaboration
       href: secure-collaboration-documents.md

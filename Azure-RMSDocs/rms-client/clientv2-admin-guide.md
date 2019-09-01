@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/29/2019
+ms.date: 09/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -154,7 +154,7 @@ The Azure Information Protection unified labeling client supports the same langu
 
 For these languages, menu options, dialog boxes, and messages from the Azure Information Protection unified labeling client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection unified labeling client for different languages. 
 
-However, the Azure Information Protection unified labeling client does not currently support different languages for the labels. In addition, visual markings are not translated and do not support more than one language.
+However, label names and descriptions that you specify are not automatically translated when you configure labels in your labeling center. For users to see labels in their preferred language, provide your own translations and configure them for the labels by using [Office 365 Security & Compliance PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label). Visual markings are not translated and do not support more than one language.
 
 ## Post installation tasks
 
