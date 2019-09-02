@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 00/02/2019
+ms.date: 09/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
