@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/20/2019
+ms.date: 09/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -117,7 +117,7 @@ The Azure Information Protection clients can label and protect documents and ema
 
 - Office Professional Plus 2010 with Service Pack 2
 
-Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only. Consequently, labels that apply protection do not display to users on the Azure Information Protection bar or from the **Protect** button on the Office ribbon. 
+Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only. Consequently, labels that apply protection do not display to users on the Azure Information Protection bar or from the **Protect** button (classic client) or **Sensitivity** button (unified labeling client) on the Office ribbon. 
 
 The Azure Information Protection clients do not support multiple versions of Office on the same computer. These clients also do not support switching user accounts in Office.
 
