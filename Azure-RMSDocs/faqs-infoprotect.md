@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -44,7 +44,7 @@ Look out for announcements on the [Enterprise Mobility + Security blog](https://
 > **Now in preview**:
 > - Centralized reporting for classification and labeling. For more information, see [Central reporting for Azure Information Protection](reports-aip.md).
 >
->**Recently released**:
+>**Ongoing releases for Office**:
 > - Labeling ability built in to Office apps for mobile devices (iOS and Android) and Mac computers. For more information, see [Apply sensitivity labels to your documents and email within Office](https://aka.ms/officemipdocs).
 
 Request new features and vote on requests by visiting the [UserVoice site](https://msip.uservoice.com/) for Azure Information Protection.
@@ -53,7 +53,7 @@ Request new features and vote on requests by visiting the [UserVoice site](https
 
 Currently, there are two clients for Windows: 
 
-- The **Azure Information Protection unified labeling client** that downloads labels and policy settings from one of the following admin centers: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center. This client is now in general availability, and has a preview version for you to test additional functionality for a future release.
+- The **Azure Information Protection unified labeling client** that downloads labels and policy settings from one of the following admin centers: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center. This client is now in general availability, and might have a preview version for you to test additional functionality for a future release.
 
 - The **Azure Information Protection client (classic)** that downloads labels and policy settings from the Azure portal. This client builds on previous general availability versions of the client.
 
@@ -87,7 +87,7 @@ For examples of using this metadata with Exchange Online mail flow rules, see [C
 
 ## Can I create a document template that automatically includes the classification?
 
-Yes. You can configure a label to [apply a header or footer that includes the label name](configure-policy-markings.md). But if that doesn't meet your requirements, you can create a document template that has the formatting you want and add the classification as a field code. 
+Yes. You can configure a label to [apply a header or footer that includes the label name](configure-policy-markings.md). But if that doesn't meet your requirements, for the Azure Information Protection client (classic) only, you can create a document template that has the formatting you want and add the classification as a field code. 
 
 As an example, you might have a table in your document's header that displays the classification. Or, you use specific wording for an introduction that references the document's classification.
 
