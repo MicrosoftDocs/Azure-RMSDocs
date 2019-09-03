@@ -257,8 +257,6 @@ From our example with a tenant ID of 9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a:
 
 `Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a"`
 
-Run this command in the context of the account that will label and protect the documents non-interactively. For example, a user account for your PowerShell scripts or the service account to run the Azure Information Protection scanner.
-
 When you run this command for the first time, you are prompted to sign in, which creates and securely stores the access token for your account in %localappdata%\Microsoft\MSIP. After this initial sign-in, you can label and protect files non-interactively on the computer. However, if you use a service account to label and protect files, and this service account cannot sign in interactively, use the *OnBehalfOf* parameter with Set-AIPAuthentication:
 
 1. Create a variable to store the credentials of an Active Directory account that is granted the user right assignment to sign in interactively. For example:
