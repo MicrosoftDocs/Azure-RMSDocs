@@ -502,7 +502,7 @@ There are three alternative scenarios that the Azure Information Protection scan
 
 - Remove existing labels from all files in a data repository.
     
-    Applicable to the scanner from the unified labeling client only, this configuration lets you remove existing labels, and any protection if applied on those files. Use this configuration when .... 
+    Applicable to the scanner from the unified labeling client only, this configuration lets you remove existing labels, which includes protection if it was applied with that label. Protection that was applied independently from a label is retained. Use this configuration if you need to remove all labels from files in a repository.
     
     Configure the following settings:
     - **Label files based on content**: **Off**
