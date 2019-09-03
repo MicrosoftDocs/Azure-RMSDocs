@@ -56,7 +56,7 @@ You can also install both clients in the same environment to support different b
 
 - For the majority of users, you deploy the Azure Information Protection unified labeling client because this client meets the business needs for these users. 
     
-    For these users, their labeling experience is very similar across Windows, Mac, iOS, and Android because they have the same labels published to them and the same policy settings. As an admin, you manage these labels and policy settings in the same management portal
+    For these users, their labeling experience is very similar across Windows, Mac, iOS, and Android because they have the same labels published to them and the same policy settings. As an admin, you manage these labels and policy settings in the same management center.
 
 - You also install the unified labeling client for yourself, to test the preview version of the Azure Information Protection scanner and new client features.
 
