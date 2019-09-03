@@ -71,9 +71,9 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
     
     - You must specify a profile when you install the scanner and the scanner database is named **AIPScannerUL_\<profile_name>**. The *Profile* parameter is also mandatory for Set-AIPScanner.
     
-    - You can set a default label on all documents, even if documents are already labeled. Use the **Relabel files** option set to **On** with the new **Enforce default label** checkbox selected.
+    - You can set a default label on all documents, even if documents are already labeled. In the scanner profile or repository settings, set the **Relabel files** option to **On** with the new **Enforce default label** checkbox selected.
     
-    - You can remove existing labels from all documents and this act includes removing protection if it was previously applied by a label. This configuration is achieved in the scanner profile by setting the following:
+    - You can remove existing labels from all documents and this act includes removing protection if it was previously applied by a label. Protection applied independently from a label is preserved. This scanner configuration is achieved in the scanner profile or repository settings with the following settings:
     - **Label files based on content**: **Off**
     - **Default label**: **None**
     - **Relabel files**: **On** with the **Enforce default label** checkbox selected
