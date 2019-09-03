@@ -193,7 +193,7 @@ Use the [Version release history and support policy](unifiedlabelingclient-versi
 
 ### Upgrading the Azure Information Protection scanner
 
-If you are currently using the Azure Information Protection scanner from the Azure Information Protection client (classic), you can upgrade it to use sensitivity labels that are published from the Office 365 Security & Compliance Center (or the Microsoft 365 security center or the Microsoft 365 compliance center). This version of the scanner uses sensitive information types from the Office 365 Security & Compliance Center.
+If you are currently using the Azure Information Protection scanner from the Azure Information Protection client (classic), you can upgrade it to use sensitive information types and sensitivity labels that are published from the Office 365 Security & Compliance Center (or the Microsoft 365 security center or the Microsoft 365 compliance center).
 
 #### To upgrade the scanner to the preview version
 
@@ -204,6 +204,8 @@ How to upgrade the scanner depends on the version of the Azure Information Prote
 - [Upgrade from versions earlier than 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
 
 Note that unlike the scanner from the Azure Information Protection client (classic), this preview version of the scanner for the unified client doesn't support running on a disconnected computer.
+
+The upgrade creates a new database named **AIPScannerUL_\<profile_name>**, and the previous scanner database is retained in case you need it for the previous version. When you are confident you don't need the previous scanner database, you can delete it. Because the upgrade creates a new database, the scanner rescans all files the first time it runs.
 
 ##### Upgrade from the Azure Information Protection client (classic) version 1.48.204.0
 

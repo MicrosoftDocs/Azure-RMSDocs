@@ -92,7 +92,7 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
 
 - You can successfully make changes to a protected file using File Explorer and right-click after a password for the file has been removed.
 
-- When you add or change protection settings to a label, the client (and scanner) reapplies the label with these latest protection settings.
+- When you add or change protection settings to a label, the client reapplies the label with these latest protection settings when the document is next saved. Similarly, the scanner reapplies the label with these latest protection settings when the document is next scanned in enforce mode.
 
 ## Version 2.2.21.0
 
