@@ -58,11 +58,11 @@ You can also install both clients in the same environment to support different b
     
     For these users, their labeling experience is very similar across Windows, Mac, iOS, and Android because they have the same labels published to them and the same policy settings. As an admin, you manage these labels and policy settings in the same management portal
 
-- You also install the unified labeling client for yourself, to test the preview version of the Azure Information Protection scanner.
+- You also install the unified labeling client for yourself, to test the preview version of the Azure Information Protection scanner and new client features.
 
 - For a subset of users, you deploy the classic client because these users require labels that apply hold your own key (HYOK) protection.
     
-    For these users, they have a slightly different labeling experience when they use this client. For example, they see a **Protect** button rather than a **Sensitivity** button in Office apps. As an admin, you need to manage their labels for HYOK settings and policy settings in a different management portal to the labels and settings for the other client platforms.
+    For these users, they have a slightly different labeling experience when they use this client. For example, they see a **Protect** button rather than a **Sensitivity** button in Office apps. As an admin, you need to manage their labels for HYOK settings and policy settings in a different management center to the labels and settings for the other client platforms.
 
 - You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. For production use, you deploy the classic client on servers to run the Azure Information Protection scanner.
 
