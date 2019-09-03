@@ -83,7 +83,7 @@ Supported through 03/03/2020
 
 **Released**: 07/15/2019
 
-Supported through 04/06/2020
+Supported through 02/06/2020
 
 **New features:**
 
