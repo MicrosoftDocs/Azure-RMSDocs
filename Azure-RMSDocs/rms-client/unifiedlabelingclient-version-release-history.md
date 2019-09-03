@@ -17,7 +17,7 @@ ms.service: information-protection
 #audience:git
 #ms.devlang:
 ms.subservice: v2client
-ms.reviewer: maayan
+ms.reviewer: elkamins
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
@@ -48,7 +48,7 @@ Preview versions should not be deployed for end users on production networks. In
 
 ### Release information
 
-Use the following information to see what’s new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. 
+Use the following information to see what’s new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
@@ -57,9 +57,21 @@ Use the following information to see what’s new or changed for a supported rel
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the clients](use-client.md#compare-the-clients).
 
+## Version 2.2.21.0
+
+**Released**: 09/03/2019
+
+**Fixes:**
+
+- When you use the advanced setting [OutlookDefaultLabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook) to set a different default label for Outlook, and the label you specify doesn't have any sublabels for the label policy, the label is correctly applied.
+
+- When the Azure Information Protection client is used in an Office app, a user with an Active Directory account that isn't configured for single sign-on is prompted to authenticate for Azure Information Protection. After successfully authenticating, the client status correctly changes to online, which enables labeling functionality.
+
 ## Version 2.2.19.0
 
 **Released**: 08/06/2019
+
+Supported through 03/03/2020
 
 **Fixes:**
 
@@ -71,7 +83,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 **Released**: 07/15/2019
 
-Supported through 04/06/2020
+Supported through 02/06/2020
 
 **New features:**
 
