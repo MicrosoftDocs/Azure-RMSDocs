@@ -56,7 +56,7 @@ When you have configured labels that apply automatic classification, files that 
 
 ![Azure Information Protection scanner architecture overview](./media/infoprotect-scanner.png)
 
-The scanner can inspect any files that Windows can index, by using IFilters that are installed on the computer. Then, to determine if the files need labeling, the scanner uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns. Because the scanner uses the Azure Information Protection clients (the classic client or unified labeling client), it can classify and protect the same file types:
+The scanner can inspect any files that Windows can index, by using IFilters that are installed on the computer. Then, to determine if the files need labeling, the scanner uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns. Because the scanner uses the Azure Information Protection client (the classic client or unified labeling client), the scanner can classify and protect the same file types:
 
 - The classic client: [File types supported by the Azure Information Protection client](./rms-client/client-admin-guide-file-types.md)
 
@@ -154,7 +154,11 @@ If, after configuring these permissions, you see an error when you install the s
 
 #### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
 
-If your organization policies prohibit the **Log on locally** right for service accounts but allow the **Log on as a batch job** right, follow the instructions for  [Specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from the admin guide.
+If your organization policies prohibit the **Log on locally** right for service accounts but allow the **Log on as a batch job** right, use the following instructions:
+
+- For the classic client: See [Specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from that client's admin guide.
+
+- For the unified labeling client: Use the *OnBehalfOf* parameter with Set-AIPAuthentication, as described at the end of [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) in that client's admin guide.
 
 #### Restriction: The scanner service account cannot be synchronized to Azure Active Directory but the server has Internet connectivity
 
@@ -163,8 +167,8 @@ You can have one account to run the scanner service and use another account to a
 - For the scanner service account, you can use a local Windows account or an Active Directory account.
 
 - For the Azure Active Directory account, use the following instructions:
-    -  For the classic client: See [Specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from that client's admin guide.
-    -  For the unified labeling client: Use the *OnBehalfOf* parameter with Set-AIPAuthentication, as described at the end of [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) in that client's admin guide.
+    - For the classic client: See [Specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from that client's admin guide.
+    - For the unified labeling client: Use the *OnBehalfOf* parameter with Set-AIPAuthentication, as described at the end of [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) in that client's admin guide.
 
 ## Configure the scanner in the Azure portal
 
@@ -277,7 +281,7 @@ Now that you have installed the scanner, you need to get an Azure AD token for t
 
 The Azure AD token lets the scanner service account authenticate to the Azure Information Protection service.
 
-1. Return to the Azure portal to create two Azure AD applications (just one Azure AD application for the scanner from the unified labeling client) that are needed to specify an access token for authentication. After an initial interactive sign-in, this token lets the scanner run non-interactively.
+1. Return to the Azure portal to create two Azure AD applications (just one Azure AD application for the scanner from the unified labeling client) that are needed to specify an access token for authentication. This token lets the scanner run non-interactively.
     
     To create these applications, follow the instructions in the admin guides for the relevant clients:
     
@@ -358,7 +362,7 @@ If you are following these instructions, the scanner runs one time and in the re
 2. On the \<**profile name**> blade, change the following two settings, and then select **Save**:
     
    - From the **Profile settings** section: Change the **Schedule** to **Always**
-   - From the **Policy enforcement** section: Change **Enforce**to **On**
+   - From the **Policy enforcement** section: Change **Enforce** to **On**
     
      There are other configuration settings that you might want to change. For example, whether file attributes are changed and whether the scanner can relabel files. Use the information popup help to learn more information about each configuration setting.
 
@@ -596,6 +600,8 @@ The full list of cmdlets for the scanner:
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
 
 - [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
+
+- [Export-AIPLogs](/powershell/module/azureinformationprotection/Export-AIPLogs) - unified labeling client only
 
 - [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
