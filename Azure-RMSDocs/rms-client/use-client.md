@@ -71,7 +71,7 @@ Use the following table to help compare which features are supported by the two 
 |Feature|Classic client|Unified labeling client|
 |-------|-----------------------------------|----------------------------------------------------|
 |Labeling actions: Manual, recommended, automatic| Yes | Yes |
-|Central reporting (analytics):| Yes | Yes with limitations:<br /><br /> - Custom sensitive info types are not supported |
+|Central reporting (analytics):| Yes | Yes with limitations:<br /><br /> - Custom sensitive info types are not displayed |
 |A viewer for protected files (text, images, PDF, .pfile):| Yes | Yes |
 |Multilanguage support for labels:| Yes | Yes |
 |Label inheritance from email attachments:| Yes | Yes  |
