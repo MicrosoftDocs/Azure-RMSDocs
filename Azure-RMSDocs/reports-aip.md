@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 08/19/2019
+ms.date: 09/05/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -119,7 +119,9 @@ To generate these reports, endpoints send the following types of information to 
 
 - For emails: The email subject and email sender  for emails that are labeled. 
 
-- The sensitive information types ([predefined](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) and custom) that were detected in content.
+- The [predefined sensitive information types](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) that were detected in content.
+    
+    If you are using Azure Information Protection labels with custom conditions, the names of your custom information types are also sent. Custom sensitive info types that you create in the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center, are not sent.
 
 - The Azure Information Protection client version.
 
@@ -235,7 +237,13 @@ Azure Monitor Logs has a **Usage and estimated costs** feature to help you estim
 
 If you need help with creating the Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
-When the workspace is configured, you're ready to view the reports.
+When the workspace is configured, do the following if you publish sensitivity labels in one of the following management centers: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center:
+
+- In the Azure portal go to **Azure Information Protection** > **Manage** > **Unified labeling**, and select **Publish**.
+    
+    Select this **Publish** option every time you make a labeling change (create, modify, delete) in your labeling center. 
+
+You're now ready to view the reports.
 
 ## How to view the reports
 
