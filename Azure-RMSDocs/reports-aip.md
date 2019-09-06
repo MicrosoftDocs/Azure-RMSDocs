@@ -46,6 +46,9 @@ Use Azure Information Protection analytics for central reporting to help you tra
 
 The data that you see is aggregated from your Azure Information Protection clients and scanners, from [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), and from [protection usage logs](log-analyze-usage.md).
 
+> [!NOTE]
+> Currently, custom information types that you create in the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 security center are not sent to Azure Information Protection analytics.
+
 For example, you'll be able to see the following:
 
 - From the **Usage report**, where you can select a time period:
