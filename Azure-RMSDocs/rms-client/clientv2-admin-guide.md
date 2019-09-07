@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/01/2019
+ms.date: 09/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -120,7 +120,7 @@ The **Reset Settings** signs out the user, deletes the currently downloaded sens
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\Microsoft\MSIP\Policy.msip
+    - %LocalAppData%\Microsoft\MSIP\mip\\<app>\mip
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
