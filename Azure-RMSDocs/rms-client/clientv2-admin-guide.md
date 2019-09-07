@@ -75,8 +75,6 @@ Deploy the Azure Information Protection unified labeling client if you are using
 
 - You want to run scripts that classify (and optionally, protect) documents by using PowerShell commands.
 
-- You want to test a service currently in preview that discovers, classifies (and optionally, protects) files that are stored on-premises.
-
 - You want to view protected documents when a native application to display the file is not installed or cannot open these documents.
 
 Example showing the Office add-in for the Azure Information Protection unified labeling client, displaying the new **Sensitivity** button on the ribbon and the optional Azure Information Protection bar:
