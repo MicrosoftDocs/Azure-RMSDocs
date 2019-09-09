@@ -82,6 +82,8 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
 
 - The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters for when you want to [label files non-interactively](/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), and a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents.
 
+- Matched custom sensitive information types are sent to Azure Information Protection analytics.
+
 - The applied label displays the configured color for the label, if a [color has been configured](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).
 
 - New cmdlet, [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs), to gather all log files from %localappdata%\Microsoft\MSIP\Logs and saves them to a single, compressed file that has a .zip format. This file can then be sent to Microsoft Support if you are requested to send log files to help investigate a reported issue.

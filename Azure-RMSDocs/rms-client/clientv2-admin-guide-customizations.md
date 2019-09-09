@@ -672,9 +672,9 @@ If you set this advanced client setting, auditing information can still be sent 
 
 For example:
 
-- Without this setting, you can see that a user accessed Financial.docx that is labeled **Confidential \ Sales**.
+- With this setting, you can see that a user accessed Financial.docx that is labeled **Confidential \ Sales**.
 
-- With this setting, you can see that Financial.docx contains 6 credit card numbers.
+- Without this setting, you can see that Financial.docx contains 6 credit card numbers.
     
     - If you also enable [content matches for deeper analysis](../reports-aip.md#content-matches-for-deeper-analysis), you will additionally be able to see what those credit card numbers are.
 
