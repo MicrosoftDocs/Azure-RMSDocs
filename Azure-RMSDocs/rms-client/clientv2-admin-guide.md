@@ -116,7 +116,7 @@ The **Reset Settings** signs out the user, deletes the currently downloaded sens
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
-- Unless files are locked, this action deletes all the files in the following locations. These files include client certificates, protection templates, sensitivity labels and policies from your labeling management portal, and the cached user credentials. The client log files are not deleted.
+- Unless files are locked, this action deletes all the files in the following locations. These files include client certificates, protection templates, sensitivity labels and policies from your labeling management center, and the cached user credentials. The client log files are not deleted.
     
     - %LocalAppData%\Microsoft\DRM
     
@@ -124,9 +124,11 @@ The **Reset Settings** signs out the user, deletes the currently downloaded sens
     
     - %LocalAppData%\Microsoft\MSIP\mip\\*\<processname\>*\mip
     
+    - %LocalAppData%\Microsoft\MSIP\AppDetails
+    
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
-- The following registry keys and settings are deleted. If the settings for any of these registry keys have custom values, these must be reconfigured after you reset the client. 
+- The following registry keys and settings are deleted. If the settings for any of these registry keys have custom values, these must be reconfigured after you reset the client.
     
     Typically for enterprise networks, these settings are configured by using group policy, in which case they are automatically reapplied when group policy is refreshed on the computer. However, there might be some settings that are configured one time with a script, or manually configured. In these cases, you must take additional steps to reconfigure these settings. As an example, computers might run a script one time to configure settings for redirection to Azure Information Protection because you are migrating from AD RMS and still have a Service Connection Point on your network. After resetting the client, the computer must run this script again.
     
