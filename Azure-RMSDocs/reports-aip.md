@@ -47,7 +47,7 @@ Use Azure Information Protection analytics for central reporting to help you tra
 The data that you see is aggregated from your Azure Information Protection clients and scanners, from [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), and from [protection usage logs](log-analyze-usage.md).
 
 > [!NOTE]
-> Currently, custom information types are not sent to Azure Information Protection analytics from clients and services that support unified labeling.
+> Currently, Azure Information Protection analytics doesn't include custom information types for clients and services that support unified labeling.
 
 For example, you'll be able to see the following:
 

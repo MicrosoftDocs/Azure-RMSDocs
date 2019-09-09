@@ -5,7 +5,7 @@ title: Custom configurations - Azure Information Protection unified labeling cli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/06/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
