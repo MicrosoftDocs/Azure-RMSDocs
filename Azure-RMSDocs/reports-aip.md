@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 08/19/2019
+ms.date: 09/05/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -45,6 +45,9 @@ Use Azure Information Protection analytics for central reporting to help you tra
 - Identify when protected documents are accessed by internal or external users, and whether access was granted or denied.
 
 The data that you see is aggregated from your Azure Information Protection clients and scanners, from [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), and from [protection usage logs](log-analyze-usage.md).
+
+> [!NOTE]
+> Currently, Azure Information Protection analytics doesn't include custom information types for clients and services that support unified labeling.
 
 For example, you'll be able to see the following:
 
@@ -119,7 +122,9 @@ To generate these reports, endpoints send the following types of information to 
 
 - For emails: The email subject and email sender  for emails that are labeled. 
 
-- The sensitive information types ([predefined](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) and custom) that were detected in content.
+- The [predefined sensitive information types](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) that were detected in content.
+    
+    If you are using Azure Information Protection labels with custom conditions, the names of your custom information types are also sent. Custom sensitive info types that you create in the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center, are not sent.
 
 - The Azure Information Protection client version.
 
@@ -127,13 +132,13 @@ To generate these reports, endpoints send the following types of information to 
 
 This information is stored in an Azure Log Analytics workspace that your organization owns and can be viewed independently from Azure Information Protection by users who have access rights to this workspace. For details, see the [Permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics) section. For information about managing access to your workspace, see the [Manage access to Log Analytics Workspace using Azure permissions](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) section from the Azure documentation.
 
-To prevent Azure Information Protection clients (classic) from sending this data, set the [policy setting](configure-policy-settings.md) of **Send audit data to Azure Information Protection log analytics** to **Off**:
+To prevent Azure Information Protection clients (classic) from sending this data, set the [policy setting](configure-policy-settings.md) of **Send audit data to Azure Information Protection analytics** to **Off**:
 
 - For most users to send this data and a subset of users cannot send auditing data: 
-    - Set **Send audit data to Azure Information Protection log analytics** to **Off** in a scoped policy for the subset of users. This configuration is typical for production scenarios.
+    - Set **Send audit data to Azure Information Protection analytics** to **Off** in a scoped policy for the subset of users. This configuration is typical for production scenarios.
 
 - For only a subset of users to send auditing data: 
-    - Set **Send audit data to Azure Information Protection log analytics** to **Off** in the global policy, and **On** in a scoped policy for the subset of users. This configuration is typical for testing scenarios.
+    - Set **Send audit data to Azure Information Protection analytics** to **Off** in the global policy, and **On** in a scoped policy for the subset of users. This configuration is typical for testing scenarios.
 
 To prevent Azure Information Protection unified clients from sending this data, configure a label policy [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics).
 
@@ -235,7 +240,13 @@ Azure Monitor Logs has a **Usage and estimated costs** feature to help you estim
 
 If you need help with creating the Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
-When the workspace is configured, you're ready to view the reports.
+When the workspace is configured, do the following if you publish sensitivity labels in one of the following management centers: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center:
+
+- In the Azure portal go to **Azure Information Protection** > **Manage** > **Unified labeling**, and select **Publish**.
+    
+    Select this **Publish** option every time you make a labeling change (create, modify, delete) in your labeling center. 
+
+You're now ready to view the reports.
 
 ## How to view the reports
 
