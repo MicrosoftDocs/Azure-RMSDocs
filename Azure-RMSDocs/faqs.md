@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/13/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -51,6 +51,16 @@ Announced at Microsoft Ignite 2018 in Orlando, you now have an option to create 
 For more information about unified labeling management and how these labels will be supported, see the blog post, [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 For more information about migrating your existing labels, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).
+
+## How can I determine if my tenant is on the unified labeling platform?
+
+When your tenant is on the unified labeling platform, sensitivity labels can be used by [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). If you obtained your subscription for Azure Information Protection in June 2019 or later, your tenant is automatically on the unified labeling platform and no further action is needed. Your tenant might also be on this platform because somebody migrated your Azure Information Protection labels.
+
+To check the status, in the Azure portal, go to **Azure Information Protection** > **Manage** > **Unified labeling**, and view the status of **Unified labeling**:
+
+- If you see **Activated**, your tenant is on the unified labeling platform.
+
+- If you see **Not activated**, your tenant is not on the unified labeling platform. For migration instructions, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).
 
 ## What's the difference between the Azure Information Protection client and the Azure Information Protection unified labeling client?
 

@@ -163,7 +163,7 @@
           href: migrate-portal.md
       - name: Configure languages
         href: configure-policy-languages.md
-      - name: Migrate labels to Office 365
+      - name: Activate unified labels
         href: configure-policy-migrate-labels.md
     - name: Configure secure document collaboration
       href: secure-collaboration-documents.md
@@ -294,7 +294,17 @@
           - name: Tasks that you used to do with the RMS sharing application
             href: ./rms-client/upgrade-client-app.md
     - name: Protected PDF readers
-      href: ./rms-client/protected-pdf-readers.md
+      items:
+      - name: Overview
+        href: ./rms-client/protected-pdf-readers.md
+      - name: Windows
+        href: ./rms-client/protected-pdf-readers-windows.md
+      - name: MacOS
+        href: ./rms-client/protected-pdf-readers-mac.md
+      - name: iOS
+        href: ./rms-client/protected-pdf-readers-ios.md
+      - name: Android
+        href: ./rms-client/protected-pdf-readers-android.md
     - name: RMS client deployment notes
       href: ./rms-client/client-deployment-notes.md
     - name: RMS protection with Windows Server FCI

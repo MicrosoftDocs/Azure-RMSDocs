@@ -5,7 +5,7 @@ author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 11/16/2018
+ms.date: 07/30/2019
 ms.author: tommos
 ---
 # Microsoft Information Protection SDK - Policy handler concepts
@@ -25,9 +25,10 @@ In this article, the following methods will be covered:
 
 Creating a `PolicyHandler` requires:
 
-- A `PolicyProfile`
-- A `PolicyEngine` added to the `PolicyProfile`
-- A class that inherits `mip::PolicyHandler::Observer`
+- A `mip::MipContext`
+- A `mip::PolicyProfile`
+- A `mip::PolicyEngine` added to the `mip::PolicyProfile`
+- A class that implements `mip::PolicyHandler::Observer`
 
 ## Create a policy handler
 
@@ -35,7 +36,7 @@ The first step required in obtaining policy actions, is to create a `PolicyHandl
 
 Creating the `PolicyHandler` is as easy as calling the `PolicyEngine`'s `CreatePolicyHandlerAsync` function using the promise/future pattern.
 
-`CreatePolicyHandlerAsync` accepts a single parameter: **isAuditDiscoveryEnabled**. Set this value to **true** if the application should surface heartbeat events in audit logging.
+`CreatePolicyHandlerAsync` accepts a single parameter: **isAuditDiscoveryEnabled**. Set this value to **true** if the application should surface heartbeat and discovery events in audit logging.
 
 > [!NOTE]
 > The `mip::PolicyHandler::Observer` class must be implemented in a derived class as `CreatePolicyHandler` requires the `Observer` object. 

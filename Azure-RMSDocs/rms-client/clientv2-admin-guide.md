@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 09/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Azure Information Protection unified labeling client administrator guide
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -75,8 +75,6 @@ Deploy the Azure Information Protection unified labeling client if you are using
 
 - You want to run scripts that classify (and optionally, protect) documents by using PowerShell commands.
 
-- You want to test a service currently in preview that discovers, classifies (and optionally, protects) files that are stored on-premises.
-
 - You want to view protected documents when a native application to display the file is not installed or cannot open these documents.
 
 Example showing the Office add-in for the Azure Information Protection unified labeling client, displaying the new **Sensitivity** button on the ribbon and the optional Azure Information Protection bar:
@@ -99,23 +97,30 @@ When the client is installed, use the **Help and Feedback** option to open the *
 
 #### **Help and Feedback** section
 
-The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can configure your own URL link that goes to a custom help page as one of the policy settings in your labeling management portal: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center.
+The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can configure your own URL link that goes to a custom help page as one of the policy settings in your labeling management center: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center.
+
+The **Report an Issue** link displays only if you specify an [advanced setting](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users). When you configure this setting, you specify an HTTP link such as the email address of your help desk. 
 
 The **Export Logs** automatically collects and attaches log files for the Azure Information Protection unified labeling client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk.
 
 The **Reset Settings** signs out the user, deletes the currently downloaded sensitivity labels and label policies, and resets the user settings for the Azure Rights Management service.
 
+> [!NOTE]
+> If you have technical problems with the client, see [Support options and community resources](../information-support.md#support-options-and-community-resources).
+
 ##### More information about the Reset Settings option
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
-- Unless files are locked, this action deletes all the files in the following locations. These files include client certificates, protection templates, sensitivity labels and policies from your labeling management portal, and the cached user credentials. The client log files are not deleted.
+- Unless files are locked, this action deletes all the files in the following locations. These files include client certificates, protection templates, sensitivity labels and policies from your labeling management center, and the cached user credentials. The client log files are not deleted.
     
     - %LocalAppData%\Microsoft\DRM
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\Microsoft\MSIP\Policy.msip
+    - %LocalAppData%\Microsoft\MSIP\mip\\*\<processname\>*\mip
+    
+    - %LocalAppData%\Microsoft\MSIP\AppDetails
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
@@ -149,7 +154,7 @@ The Azure Information Protection unified labeling client supports the same langu
 
 For these languages, menu options, dialog boxes, and messages from the Azure Information Protection unified labeling client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection unified labeling client for different languages. 
 
-However, the Azure Information Protection unified labeling client does not currently support different languages for the labels. In addition, visual markings are not translated and do not support more than one language.
+However, label names and descriptions that you specify are not automatically translated when you configure labels in your labeling center. For users to see labels in their preferred language, provide your own translations and configure them for the labels by using by using Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps). Visual markings are not translated and do not support more than one language.
 
 ## Post installation tasks
 

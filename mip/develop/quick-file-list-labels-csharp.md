@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/04/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to list labels in the MIP SDK, so that I can use the SDK APIs to apply labels later on.
 ---
@@ -29,7 +29,7 @@ Add logic to list your organization's sensitivity labels, using the File engine 
 
 2. Using **Solution Explorer**, open the .cs file in your project that contains the implementation of the `Main()` method. It defaults to the same name as the project containing it, which you specified during project creation. 
 
-3. Toward the end of the `Main()` body, below the closing brace `}` of the `Main()` function (where you left off in the previous Quickstart), insert the following code:
+3. Toward the end of the `Main()` body, above the application shutdown section of the `Main()` function (where you left off in the previous Quickstart), insert the following code:
 
   ```csharp
   // List sensitivity labels from fileEngine and display name and id  
@@ -45,15 +45,15 @@ Add logic to list your organization's sensitivity labels, using the File engine 
           }
       }
   }
-  ``` 
+  ```
 
 ## Build and test the application
 
-Finally, build and test your client application. 
+Finally, build and test your client application.
 
 1. Use CTRL-SHIFT-B (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
-2. If your project builds and runs successfully, the application *may* prompt for authentication via ADAL each time the SDK calls your `AcquireToken()` method. If cached credentials already exist, you won't be prompted to log on and see the list of labels. 
+2. If your project builds and runs successfully, the application *may* prompt for authentication via ADAL each time the SDK calls your `AcquireToken()` method. If cached credentials already exist, you won't be prompted to sign in and see the list of labels. 
 
      [![Visual Studio acquire token sign-in](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 

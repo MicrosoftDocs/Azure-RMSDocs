@@ -4,9 +4,8 @@ description: Documents the mip::authdelegate class of the Microsoft Information 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.date: 08/27/2019
 ---
 
 # class mip::AuthDelegate::OAuth2Challenge 
@@ -15,10 +14,11 @@ a class that contains all the information required from the calling application 
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public OAuth2Challenge(const std::string& authority, const std::string& resource, const std::string& scope)  |  Construct a new [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) object.
+public OAuth2Challenge(const std::string& authority, const std::string& resource, const std::string& scope, const std::string& claims)  |  Construct a new [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) object.
 public const std::string& GetAuthority() const  |  Get the authority string.
 public const std::string& GetResource() const  |  Get the resource string.
 public const std::string& GetScope() const  |  Get the scope string.
+public const std::string& GetClaims() const  |  Get the claims string.
   
 ## Members
   
@@ -53,3 +53,9 @@ Get the scope string.
 
   
 **Returns**: The scope string.
+  
+### GetClaims function
+Get the claims string.
+
+  
+**Returns**: The claims string.

@@ -4,9 +4,8 @@ description: Documents the mip::fileexecutionstate class of the Microsoft Inform
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
+ms.date: 08/27/2019
 ---
 
 # class mip::FileExecutionState 
@@ -16,7 +15,6 @@ ms.date: 01/28/2019
 --------------------------------|---------------------------------------------
 public virtual DataState GetDataState() const  |  Gets the state of the content while the application is interacting with it.
 public virtual std::shared_ptr\<ClassificationResults\> GetClassificationResults(const std::shared_ptr\<FileHandler\> &, const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Return a map of classification results.
-public virtual std::vector\<uint8_t\> GetSerializedProtectionInfo() const  |  Return a buffer with the serialized PL.
 public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
   
 ## Members
@@ -40,12 +38,6 @@ Parameters:
 
   
 **Returns**: A list of classification results.
-  
-### GetSerializedProtectionInfo function
-Return a buffer with the serialized PL.
-
-  
-**Returns**: A buffer with the serialized PL.
   
 ### GetAuditMetadata function
 Return a map of application specific audit key-value pairs.

@@ -5,7 +5,7 @@ title: Custom configurations - Azure Information Protection unified labeling cli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/19/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Admin Guide: Custom configurations for the Azure Information Protection unified labeling client
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -660,7 +660,7 @@ Example PowerShell command, where your label policy is named "Global":
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When the Azure Information Protection unified labeling client is used in Office apps, it looks for sensitive information in documents when they are first saved. Providing the [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) advanced setting is not set to **False**, any sensitive information types found (predefined or custom) are then sent to Azure Information Protection analytics.
+When the Azure Information Protection unified labeling client is used in Office apps, it looks for sensitive information in documents when they are first saved. Providing the [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) advanced setting is not set to **False**, any predefined sensitive information types found are then sent to Azure Information Protection analytics.
 
 To change this behavior so that sensitive information types found by the unified labeling client are not sent to Azure Information Protection analytics, enter the following strings for the selected label policy:
 
@@ -778,9 +778,7 @@ Example PowerShell command, where your label is named "General":
 
 When you need multiple rules for the same label, define multiple string values for the same key. 
 
-In this example:
-
-- The Secure Islands labels named "Confidential" and "Secret" are stored in the custom property named **Classification, and you want the Azure Information Protection unified labeling client to apply the sensitivity label named "Confidential":
+In this example, the Secure Islands labels named "Confidential" and "Secret" are stored in the custom property named **Classification**, and you want the Azure Information Protection unified labeling client to apply the sensitivity label named "Confidential":
 
 	Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 

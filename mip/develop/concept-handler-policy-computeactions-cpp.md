@@ -6,13 +6,14 @@ author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 11/16/2018
+ms.date: 07/30/2019
 ms.author: tommos
 ---
 
 # Compute an Action
 
 As previously detailed, the primary functions of the Policy API are to:
+
 - list available labels
 - return a set of actions that should be taken, based on the current and desired state
 
@@ -20,7 +21,7 @@ The last step in the process is to provide a label identifier and, optionally, m
 
 Sample code for this article can be found on GitHub.
 
-* [mipsdk-policyapi-cpp-sample-basic](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic)
+- [mipsdk-policyapi-cpp-sample-basic](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic)
 
 ## Compute an Action for a New Label
 
@@ -31,8 +32,8 @@ Computing the `mip::Actions` for a new label, can be achieved by using the `Exec
 string newLabelId = "d7b93a40-4df3-47e4-b2fd-7862fc6b095c"; 
 sample::policy::ExecutionStateOptions options;
 
-// Set desired newLabelId in ExecutionStateOptions.
-options.newLabelId = newLabelId;
+// Resolve desired label id to mip::Label and set in ExecutionStateOptions.
+options.newLabel = mEngine->GetLabelById(newLabelId);
 
 // Initialize ExecutionStateImpl with options, create handler, call ComputeActions.
 std::unique_ptr<ExecutionStateImpl> state(new ExecutionStateImpl(options));
@@ -71,9 +72,9 @@ string newLabelId = "d7b93a40-4df3-47e4-b2fd-7862fc6b095c";
 // Comma and Pipe Delimited Metadata.
 string metadata = "MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_Enabled|true,MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_SetDate|2018-10-23T21:53:31-0800,MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_Method|Standard,MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_Name|Contoso FTEs (C),MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_SiteId|94f6984e-8d31-4794-bdeb-3ac89ad2b660,MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ActionId|b56491d9-155f-40ff-866f-0000acd85c31,MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ContentBits|7";
 
-// Create ExecutionStateOptions and set newLabelId.
+// Create ExecutionStateOptions and resolve newLabelId to mip::Label
 sample::policy::ExecutionStateOptions options;
-options.newLabelId = newLabelId;
+options.newLabel = mEngine->GetLabelById(newLabelId);
 
 // Split metadata string by commas, store in vector.
 vector<string> metadataPairs = sample::utils::SplitString(metadata, ','); 

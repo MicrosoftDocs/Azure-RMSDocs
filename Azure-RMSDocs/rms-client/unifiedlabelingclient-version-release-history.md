@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/06/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -17,7 +17,7 @@ ms.service: information-protection
 #audience:git
 #ms.devlang:
 ms.subservice: v2client
-ms.reviewer: maayan
+ms.reviewer: elkamins
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Azure Information Protection unified labeling client - Version release history and support policy
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -48,7 +48,7 @@ Preview versions should not be deployed for end users on production networks. In
 
 ### Release information
 
-Use the following information to see what’s new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. 
+Use the following information to see what’s new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
@@ -57,9 +57,21 @@ Use the following information to see what’s new or changed for a supported rel
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the clients](use-client.md#compare-the-clients).
 
+## Version 2.2.21.0
+
+**Released**: 09/03/2019
+
+**Fixes:**
+
+- When you use the advanced setting [OutlookDefaultLabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook) to set a different default label for Outlook, and the label you specify doesn't have any sublabels for the label policy, the label is correctly applied.
+
+- When the Azure Information Protection client is used in an Office app, a user with an Active Directory account that isn't configured for single sign-on is prompted to authenticate for Azure Information Protection. After successfully authenticating, the client status correctly changes to online, which enables labeling functionality.
+
 ## Version 2.2.19.0
 
 **Released**: 08/06/2019
+
+Supported through 03/03/2020
 
 **Fixes:**
 
@@ -71,7 +83,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 **Released**: 07/15/2019
 
-Supported through 04/06/2020
+Supported through 02/06/2020
 
 **New features:**
 
@@ -98,7 +110,6 @@ Supported through 04/06/2020
     - [Specify a color for the label](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
 - Support for labels that are configured for user-defined permissions for Word, Excel, PowerPoint, and File Explorer:
-    - If you have labels with this configuration from the Azure portal, they are now supported by the unified labeling client although there is currently no equivalent configuration in the admin centers.
     - When a user selects a label with this configuration, they are prompted to select users and protection settings for the document.
 
 - PowerShell changes in the AzureInformationProtection module:

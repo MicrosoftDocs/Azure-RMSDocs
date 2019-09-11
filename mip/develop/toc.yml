@@ -33,6 +33,10 @@
   items:
   - name: The APIs
     href: concept-apis-use-cases.md
+  - name: MipContext object concepts
+    href: concept-mipcontext.md
+  - name: Cache storage
+    href: concept-cache-storage.md
   - name: Profile and Engine (C++)
     items: 
       - name: Profile and Engine object concepts
@@ -109,16 +113,24 @@
         href: reference/class_mip_accessdeniederror.md
       - name: Action
         href: reference/class_mip_action.md
+      - name: ActionData
+        href: reference/class_mip_actiondata.md
       - name: AddContentFooterAction
         href: reference/class_mip_addcontentfooteraction.md
       - name: AddContentHeaderAction
         href: reference/class_mip_addcontentheaderaction.md
       - name: AddWatermarkAction
         href: reference/class_mip_addwatermarkaction.md
+      - name: AddWatermarkActionData
+        href: reference/class_mip_addwatermarkactiondata.md
       - name: AdhocProtectionRequiredError
         href: reference/class_mip_adhocprotectionrequirederror.md
+      - name: ApplicationActionState
+        href: reference/class_mip_applicationactionstate.md
       - name: ApplyLabelAction
         href: reference/class_mip_applylabelaction.md
+      - name: ArgumentData
+        href: reference/class_mip_argumentdata.md
       - name: AuthDelegate
         href: reference/class_mip_authdelegate.md
       - name: AuthDelegate::OAuth2Challenge
@@ -127,18 +139,34 @@
         href: reference/class_mip_authdelegate_oauth2token.md
       - name: BadInputError
         href: reference/class_mip_badinputerror.md
+      - name: ClassificationData
+        href: reference/class_mip_classificationdata.md
       - name: ClassificationRequest
         href: reference/class_mip_classificationrequest.md
       - name: ClassificationResult
         href: reference/class_mip_classificationresult.md
+      - name: ComputeEngine
+        href: reference/class_mip_computeengine.md
+      - name: ComputeEngineContext
+        href: reference/class_mip_computeenginecontext.md
+      - name: ComputeEngine::Settings
+        href: reference/class_mip_computeengine_settings.md
+      - name: ConditionData
+        href: reference/class_mip_conditiondata.md
       - name: ConsentDelegate
         href: reference/class_mip_consentdelegate.md
       - name: ConsentDeniedError
         href: reference/class_mip_consentdeniederror.md
       - name: ContentLabel
         href: reference/class_mip_contentlabel.md
+      - name: ContentMarkingActionData
+        href: reference/class_mip_contentmarkingactiondata.md
       - name: CustomAction
         href: reference/class_mip_customaction.md
+      - name: DeprecatedApiError
+        href: reference/class_mip_deprecatedapierror.md
+      - name: DocumentState
+        href: reference/class_mip_documentstate.md
       - name: Error
         href: reference/class_mip_error.md
       - name: ExecutionState
@@ -153,6 +181,8 @@
         href: reference/class_mip_filehandler.md
       - name: FileHandler::Observer
         href: reference/class_mip_filehandler_observer.md
+      - name: FileInspector
+        href: reference/class_mip_fileinspector.md
       - name: FileIOError
         href: reference/class_mip_fileioerror.md
       - name: FileProfile
@@ -179,12 +209,26 @@
         href: reference/class_mip_justifyaction.md
       - name: Label
         href: reference/class_mip_label.md
+      - name: LabelActionData
+        href: reference/class_mip_labelactiondata.md
+      - name: LabelDisabledError
+        href: reference/class_mip_labeldisablederror.md
+      - name: LabelGroupData
+        href: reference/class_mip_labelgroupdata.md
       - name: LabelingOptions
         href: reference/class_mip_labelingoptions.md
+      - name: LabelNotFoundError
+        href: reference/class_mip_labelnotfounderror.md
       - name: LoggerDelegate
         href: reference/class_mip_loggerdelegate.md
       - name: MetadataAction
         href: reference/class_mip_metadataaction.md
+      - name: MipContext
+        href: reference/class_mip_mipcontext.md
+      - name: MsgAttachmentData
+        href: reference/class_mip_msgattachmentdata.md
+      - name: MsgInspector
+        href: reference/class_mip_msginspector.md
       - name: NetworkError
         href: reference/class_mip_networkerror.md
       - name: NoAuthTokenError
@@ -203,22 +247,30 @@
         href: reference/class_mip_policyengine_settings.md
       - name: PolicyHandler
         href: reference/class_mip_policyhandler.md
+      - name: PolicyPackageData
+        href: reference/class_mip_policypackagedata.md
       - name: PolicyProfile
         href: reference/class_mip_policyprofile.md
       - name: PolicyProfile::Observer
         href: reference/class_mip_policyprofile_observer.md
       - name: PolicyProfile::Settings
         href: reference/class_mip_policyprofile_settings.md
+      - name: PolicyRuleData
+        href: reference/class_mip_policyruledata.md
       - name: PolicySyncError
         href: reference/class_mip_policysyncerror.md
       - name: PrivilegedRequiredError
         href: reference/class_mip_privilegedrequirederror.md
+      - name: PropertyData
+        href: reference/class_mip_propertydata.md
       - name: ProtectAdhocAction
         href: reference/class_mip_protectadhocaction.md
       - name: ProtectByTemplateAction
         href: reference/class_mip_protectbytemplateaction.md
       - name: ProtectDoNotForwardAction
         href: reference/class_mip_protectdonotforwardaction.md
+      - name: ProtectionActionData
+        href: reference/class_mip_protectionactiondata.md
       - name: ProtectionDescriptor
         href: reference/class_mip_protectiondescriptor.md
       - name: ProtectionDescriptorBuilder
@@ -231,16 +283,24 @@
         href: reference/class_mip_protectionengine_settings.md
       - name: ProtectionHandler
         href: reference/class_mip_protectionhandler.md
+      - name: ProtectionHandler::ConsumptionSettings
+        href: reference/class_mip_protectionhandler_consumptionsettings.md
       - name: ProtectionHandler::Observer
         href: reference/class_mip_protectionhandler_observer.md
+      - name: ProtectionHandler::PublishingSettings
+        href: reference/class_mip_protectionhandler_publishingsettings.md
       - name: ProtectionProfile
         href: reference/class_mip_protectionprofile.md
       - name: ProtectionProfile::Observer
         href: reference/class_mip_protectionprofile_observer.md
       - name: ProtectionProfile::Settings
         href: reference/class_mip_protectionprofile_settings.md
+      - name: ProtectionSettings
+        href: reference/class_mip_protectionsettings.md
       - name: ProxyAuthenticationError
         href: reference/class_mip_proxyauthenticationerror.md
+      - name: PublishingLicenseInfo
+        href: reference/class_mip_publishinglicenseinfo.md
       - name: RecommendLabelAction
         href: reference/class_mip_recommendlabelaction.md
       - name: RemoveContentFooterAction
@@ -251,14 +311,26 @@
         href: reference/class_mip_removeprotectionaction.md
       - name: RemoveWatermarkAction
         href: reference/class_mip_removewatermarkaction.md
+      - name: RulePackageData
+        href: reference/class_mip_rulepackagedata.md
+      - name: SensitivityConditionData
+        href: reference/class_mip_sensitivityconditiondata.md
       - name: SensitivityTypesRulePackage
         href: reference/class_mip_sensitivitytypesrulepackage.md
       - name: ServiceDisabledError
         href: reference/class_mip_servicedisablederror.md
       - name: Stream
         href: reference/class_mip_stream.md
+      - name: SyncFileBaseData
+        href: reference/class_mip_syncfilebasedata.md
+      - name: SyncFilePolicyData
+        href: reference/class_mip_syncfilepolicydata.md
+      - name: SyncFileSensitivityData
+        href: reference/class_mip_syncfilesensitivitydata.md
       - name: TaskDispatcherDelegate
         href: reference/class_mip_taskdispatcherdelegate.md
+      - name: TemplateNotFoundError
+        href: reference/class_mip_templatenotfounderror.md
       - name: TransientNetworkError
         href: reference/class_mip_transientnetworkerror.md
       - name: UserRights
