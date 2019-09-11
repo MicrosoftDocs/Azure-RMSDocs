@@ -474,14 +474,20 @@ You can force the scanner to inspect all files again from the **Azure Informatio
 
 Inspecting all files again is useful when you want the reports to include all files and this configuration choice is typically used when the scanner runs in discovery mode. When a full scan is complete, the scan type automatically changes to incremental so that for subsequent scans, only new or modified files are scanned.
 
-In addition, all files are inspected when the scanner downloads an Azure Information Protection policy (classic client) or label policy (unified labeling client) that has new or changed conditions. The scanner refreshes the policy every hour, and when the service starts and the policy is older than one hour.  
+In addition, all files are inspected when the scanner from the classic client downloads an Azure Information Protection policy that has new or changed conditions and the scanner from the unified labeling client has new or changed settings for automatic and recommended labeling. 
+
+The scanner refreshes the policy according to the following triggers:
+
+- Scanner from the classic client: Every hour and when the service starts and the policy is older than one hour. 
+
+- Scanner from the unified labeling client: Every four hours and when the service starts. 
 
 > [!TIP]
-> If you need to refresh the policy sooner than this one hour interval, for example, during a testing period: 
+> If you need to refresh the policy sooner than the default interval, for example, during a testing period: 
 >
-> For the scanner from the classic client: Manually delete the policy file, **Policy.msip** from **%LocalAppData%\Microsoft\MSIP\Policy.msip**.
+> Scanner from the classic client: Manually delete the policy file, **Policy.msip** from **%LocalAppData%\Microsoft\MSIP\Policy.msip**.
 >
-> For the scanner from the unified labeling client: Manually delete the contents from %LocalAppData%\Microsoft\MSIP\mip\<processname>\mip.
+> Scanner from the unified labeling client: Manually delete the contents from %LocalAppData%\Microsoft\MSIP\mip\<processname>\mip.
 >
 Then restart the Azure Information Scanner service. If you changed protection settings for your labels, also wait 15 minutes from when you saved the protection settings before you restart the service.
 
