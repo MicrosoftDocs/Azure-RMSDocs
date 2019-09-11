@@ -28,12 +28,21 @@ ms.custom: dev
 
 This article contains important information about this and previous releases of the RMS SDK 2.1.
 
+## September 2019 - update 
+
+- Fixed a deadlock that may occur when trying to call the initialization methods at the same time as some other RMS client methods.
+- Fixed an issue with determining whether password protected Office files are RMS protected.
+-	Update licensing validation for special purpose licenses.
+- Updates to the PDF protector.
+- Other bug fixes.
+- Update to link statically against the C runtime libraries.
+
 ## April 2019 - update
 - Bug fixes in the File API.
 - File API updated to check the EXPORT right rather than the EXTRACT right when decrypting content.
 - Installer fix to ensure that the new PDF v2 protector is installed upon upgrade.
 - Telemetry changes. This change required an update to the installation package that installs the C runtime libraries.
-- Service backend authentication changes, ######please update to this SDK version to minmize disruption if you use symmetric key authentication for your applications
+- Service backend authentication changes, **please update to this SDK version to minmize disruption if you use symmetric key authentication for your applications**
 - Support for VC 15.9
 
 

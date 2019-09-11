@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/13/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -96,7 +96,7 @@ Azure Information Protection clients (classic) can use all label settings listed
 |Status of enabled or disabled<br /><br />This status is not synchronized to the admin centers |Not applicable|The equivalent is whether the label is published or not. |
 |Label color that you select from list or specify by using RGB code |Yes|No configuration option for label colors. Instead, you can configure label colors in the Azure portal or use [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).|
 |Cloud-based protection or HYOK-based protection using a predefined template |No|No configuration option for predefined templates. We do not recommend you publish a label with this configuration.|
-|Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint |Yes|The admin centers don't have a configuration option for user-defined permissions for these Office apps. However, this setting is supported if you migrate a label with this configuration, or you configure the label after the migration by using the Azure portal. <br /><br /> If you publish a label with this configuration, check the results of applying the label from the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
+|Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint |Yes|The admin centers now have a configuration option for user-defined permissions. <br /><br /> If you publish a label with this configuration, check the results of applying the label from the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |HYOK-based protection using user-defined permissions for Outlook (Do Not Forward) |No|No configuration option for HYOK. We do not recommend you publish a label with this configuration. If you do, the results of applying the label are listed in the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Remove protection |No|No configuration option to remove protection. We do not recommend you publish a label with this configuration.<br /><br /> If you do publish a label with this configuration, when it is applied, protection will be removed if it was previously applied by a label. If protection was previously applied independently from a label, the protection is preserved.|
 |Custom font and custom font color by RGB code for visual markings (header, footer, watermark)|Yes|Configuration for visual markings is limited to a list of colors and font sizes. You can publish this label without changes although you cannot see the configured values in the admin centers. <br /><br />To change these options, you can use the Azure portal. However, for easier administration, consider changing the color to one of the listed options in the admin centers.|

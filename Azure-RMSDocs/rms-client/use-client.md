@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/27/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -76,7 +76,7 @@ Use the following table to help compare which features are supported by the two 
 |Multilanguage support for labels:| Yes | Yes |
 |Label inheritance from email attachments:| Yes | Yes  |
 |Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| Yes <br /><br /> Supported as [advanced client settings that you configure in the Azure portal](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)| Yes <br /><br /> Supported as [advanced settings that you configure with PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
-|User-defined permissions:| Yes | Yes <br /><br />For Word, Excel, PowerPoint, and File Explorer: Configure the label in the Azure portal |
+|User-defined permissions:| Yes | Yes |
 |Custom permissions:| Yes | File Explorer and PowerShell <br /><br /> In Office apps, as an alternative, users can select **File Info** > **Protect Document** > **Restrict Access**  or admins can configure a label for user-defined permissions|
 |Information Protection bar in Office apps:| Yes | Yes with limitations:<br /><br /> - No title or customizable tooltip<br /><br /> - Label color not displayed for applied label|
 |Labels can apply visual markings (header, footer, watermark):| Yes | Yes with limitations:<br /><br /> - Headers and footers do not support variables for dynamic values <br /><br /> - No support for Word, Excel, PowerPoint, and Outlook to have different visual markings|
