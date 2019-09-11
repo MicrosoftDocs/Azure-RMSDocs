@@ -149,7 +149,6 @@ Supported through 02/06/2020
     - [Specify a color for the label](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
 - Support for labels that are configured for user-defined permissions for Word, Excel, PowerPoint, and File Explorer:
-    - If you have labels with this configuration from the Azure portal, they are now supported by the unified labeling client although there is currently no equivalent configuration in the admin centers.
     - When a user selects a label with this configuration, they are prompted to select users and protection settings for the document.
 
 - PowerShell changes in the AzureInformationProtection module:
