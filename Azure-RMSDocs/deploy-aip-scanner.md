@@ -412,7 +412,7 @@ However, the scanner cannot label the files under the following circumstances:
 
 - If the label applies classification and protection, but the scanner does not protect the file type.
     
-    By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. Other file types can be protected when you [edit the registry](#editing-the-registry-for-the-scanner) as described in a following section.
+    By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. For the scanner from the classic client, other file types can be protected when you [edit the registry](#editing-the-registry-for-the-scanner) as described in a following section.
 
 For example, after inspecting files that have a file name extension of .txt, the scanner can't apply a label that's configured for classification but not protection, because the .txt file type doesn't support classification-only. If the label is configured for classification and protection, and the registry is edited for the .txt file type, the scanner can label the file. 
 
@@ -440,6 +440,8 @@ As in the preceding step, the scanner cannot label the files under the following
 
 
 ### Editing the registry for the scanner
+
+This section applies to the scanner from the classic client only.
 
 To change the default scanner behavior for protecting file types other than Office files and PDFs, you must manually edit the registry and specify the additional file types that you want to be protected, and the type of protection (native or generic). For instructions, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". In addition, specific for the scanner:
 
@@ -475,11 +477,14 @@ Inspecting all files again is useful when you want the reports to include all fi
 In addition, all files are inspected when the scanner downloads an Azure Information Protection policy (classic client) or label policy (unified labeling client) that has new or changed conditions. The scanner refreshes the policy every hour, and when the service starts and the policy is older than one hour.  
 
 > [!TIP]
-> If you need to refresh the policy sooner than this one hour interval, for example, during a testing period: Manually delete the policy file, **Policy.msip** from both **%LocalAppData%\Microsoft\MSIP\Policy.msip** and **%LocalAppData%\Microsoft\MSIP\Scanner**. Then restart the Azure Information Scanner service.
-> 
-> If you changed protection settings in the policy, also wait 15 minutes from when you saved the protection settings before you restart the service.
+> If you need to refresh the policy sooner than this one hour interval, for example, during a testing period: 
+>
+> For the scanner from the classic client: Manually delete the policy file, **Policy.msip** from **%LocalAppData%\Microsoft\MSIP\Policy.msip**.
+>
+> For the scanner from the unified labeling client: Manually delete the contents from %LocalAppData%\Microsoft\MSIP\mip\<processname>\mip.
+>
+Then restart the Azure Information Scanner service. If you changed protection settings for your labels, also wait 15 minutes from when you saved the protection settings before you restart the service.
 
-If the scanner downloaded a policy that had no automatic conditions configured, the copy of the policy file in the scanner folder does not update. In this scenario, you must delete the policy file, **Policy.msip** from both **%LocalAppData%\Microsoft\MSIP\Policy.msip** and **%LocalAppData%\Microsoft\MSIP\Scanner** before the scanner can use a newly downloaded policy file that has labels correctly figured for automatic conditions.
 
 ## Editing in bulk for the data repository settings
 
