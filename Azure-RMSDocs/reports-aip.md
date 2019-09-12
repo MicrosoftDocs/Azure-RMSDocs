@@ -124,7 +124,7 @@ To generate these reports, endpoints send the following types of information to 
 
 - The [predefined sensitive information types](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) that were detected in content.
     
-    If you are using Azure Information Protection labels with custom conditions, the names of your custom information types are also sent. With the exception of the preview version of the unified labeling client, custom sensitive info types that you create in the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center, are not sent.
+    If you are using Azure Information Protection labels with custom conditions, the names of your custom information types are also sent. With the exception of the preview version of the unified labeling client, custom sensitive info types that you create in your labeling center are not sent.
 
 - The Azure Information Protection client version.
 
