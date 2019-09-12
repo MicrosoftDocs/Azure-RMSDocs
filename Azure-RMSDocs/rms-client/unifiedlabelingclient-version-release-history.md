@@ -109,11 +109,7 @@ Supported through 02/06/2020
     - [Specify a default sublabel for a parent label](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
     - [Specify a color for the label](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
-- Support for labels that are configured for user-defined permissions for Word, Excel, PowerPoint, and File Explorer:
-    - When a user selects a label with this configuration, they are prompted to select users and protection settings for the document.
-    - To specify this label setting for the encryption options:
-        1. For **Assign permissions now or let users decide?** select **Let users assign permissions when they apply the label**.
-        2. Make sure that the following checkbox is selected: **In Word, PowerPoint, and Excel, prompt users to specify permissions**
+- Support for labels that are configured for user-defined permissions for Word, Excel, PowerPoint, and File Explorer. For more information, see the [Let users assign permissions](https://docs.microsoft.com/en-us/Office365/SecurityCompliance/encryption-sensitivity-labels#let-users-assign-permissions) section in the Office documentation.
 
 - PowerShell changes in the AzureInformationProtection module:
     - New cmdlet: [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) - replaces New-RMSProtectionLicense to create an ad-hoc policy for custom permissions
