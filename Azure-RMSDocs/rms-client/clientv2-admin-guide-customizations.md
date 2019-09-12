@@ -5,7 +5,7 @@ title: Custom configurations - Azure Information Protection unified labeling cli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/19/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -259,7 +259,7 @@ When the unified labeling client gets this configuration in its policy, the old 
 
 This configuration is not supported for Outlook, and be aware that when you use it with Word, Excel, and PowerPoint, it can negatively affect the performance of these apps for users. The configuration lets you define settings per application, for example, search for text in the headers and footers of Word documents but not Excel spreadsheets or PowerPoint presentations.
 
-Because the pattern matching affects the performance for users, we recommend that you limit the Office application types (**W**ord, **E**xcel, **P**owerPoint) to just those that need to be searched.
+Because the pattern matching affects the performance for users, we recommend that you limit the Office application types (**W**ord, E**X**cel, **P**owerPoint) to just those that need to be searched.
 
 For the selected label policy, specify the following strings:
 

@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/19/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -61,7 +61,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 If you have a version 2 of the client that is later than 2.2.21.0, it is a preview build for testing and evaluation purposes.
 
-**Released**: 09/19/2019
+**Released**: 09/17/2019
 
 **New features:**
 
