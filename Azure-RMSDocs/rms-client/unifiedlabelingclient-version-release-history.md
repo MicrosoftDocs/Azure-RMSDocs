@@ -111,6 +111,7 @@ Supported through 02/06/2020
 
 - Support for labels that are configured for user-defined permissions for Word, Excel, PowerPoint, and File Explorer:
     - When a user selects a label with this configuration, they are prompted to select users and protection settings for the document.
+    - To specify this label setting for the encryption options, for **Assign permissions now or let users decide?**, select **Let users assign permissions when they apply the label**. Then make sure that the following checkbox is selected: **In Word, PowerPoint, and Excel, prompt users to specify permissions**
 
 - PowerShell changes in the AzureInformationProtection module:
     - New cmdlet: [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) - replaces New-RMSProtectionLicense to create an ad-hoc policy for custom permissions
