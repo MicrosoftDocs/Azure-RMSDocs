@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 09/05/2019
+ms.date: 09/17/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -47,7 +47,7 @@ Use Azure Information Protection analytics for central reporting to help you tra
 The data that you see is aggregated from your Azure Information Protection clients and scanners, from [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), and from [protection usage logs](log-analyze-usage.md).
 
 > [!NOTE]
-> Currently, Azure Information Protection analytics doesn't include custom information types for clients and services that support unified labeling.
+> Currently, with the exception of the preview version of the unified labeling client, Azure Information Protection analytics doesn't include custom information types for clients and services that support unified labeling.
 
 For example, you'll be able to see the following:
 
@@ -124,7 +124,7 @@ To generate these reports, endpoints send the following types of information to 
 
 - The [predefined sensitive information types](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) that were detected in content.
     
-    If you are using Azure Information Protection labels with custom conditions, the names of your custom information types are also sent. Custom sensitive info types that you create in the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center, are not sent.
+    If you are using Azure Information Protection labels with custom conditions, the names of your custom information types are also sent. With the exception of the preview version of the unified labeling client, custom sensitive info types that you create in the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center, are not sent.
 
 - The Azure Information Protection client version.
 
