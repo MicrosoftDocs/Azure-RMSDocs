@@ -58,7 +58,7 @@ The Azure Information Protection unified labeling client includes the following:
 
 - A PowerShell module to discover sensitive information in files, and apply or remove classification labels and protection from files. 
     
-    There's currently a separate installation option that includes an updated version of this PowerShell module for a preview version of the [Azure Information Protection scanner](../deploy-aip-scanner.md). The scanner runs as a service on Windows Server and lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries. 
+    The preview version of the client includes cmdlets to install and configure the [Azure Information Protection scanner](../deploy-aip-scanner.md) that runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries
 
 - The Rights Management client that communicates with the protection service (Azure Rights Management) to encrypt and protect files.
 
