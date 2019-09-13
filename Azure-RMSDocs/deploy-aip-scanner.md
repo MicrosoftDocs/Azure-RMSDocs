@@ -454,11 +454,7 @@ For example, for the scanner to protect TIFF images in addition to Office files 
 
 ![Editing the registry for the scanner to apply protection](./media/editregistry-scanner.png)
 
-For a list of text and images file types that similarly support native protection but must be specified in the registry, see the following information from the admin guides:
-
-- For the classic client: [Supported file types for classification and protection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection)
-
-- For the unified labeling client: [Supported file types for classification and protection](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-protection)
+For a list of text and images file types that similarly support native protection but must be specified in the registry, see [Supported file types for classification and protection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection).
 
 For files that don't support native protection, specify the file name extension as a new key, and **PFile** for generic protection. The resulting file name extension for the protected file is .pfile.
 
