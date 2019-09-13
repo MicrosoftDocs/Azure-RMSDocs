@@ -482,7 +482,7 @@ The scanner refreshes the policy according to the following triggers:
 >
 > - Scanner from the classic client: Manually delete the policy file, **Policy.msip** from **%LocalAppData%\Microsoft\MSIP\Policy.msip**.
 >
-> - Scanner from the unified labeling client: Manually delete the contents from **%LocalAppData%\Microsoft\MSIP\mip\<*processname*>\mip**.
+> - Scanner from the unified labeling client: Manually delete the contents from **%LocalAppData%\Microsoft\MSIP\mip\\<*processname*>\mip**.
 >
 Then restart the Azure Information Scanner service. If you changed protection settings for your labels, also wait 15 minutes from when you saved the protection settings before you restart the service.
 
