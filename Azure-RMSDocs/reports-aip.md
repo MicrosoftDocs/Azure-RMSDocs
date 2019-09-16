@@ -188,7 +188,7 @@ Details:
     > [!NOTE] 
     > If your tenant has been migrated to the unified labeling store, you cannot use the Azure Information Protection administrator role. [More information](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
-2. In addition, you need one of the following [Azure Log Analytics roles](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-accounts-and-users) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) to access your Azure Log Analytics workspace:
+2. In addition, you need one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) to access your Azure Log Analytics workspace:
     
     - To create the workspace or to create custom queries, one of the following:
     
