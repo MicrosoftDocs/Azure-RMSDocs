@@ -947,9 +947,9 @@ Set the logging level to one of the following values:
 
 - **Off**: No local logging.
 
-- **Error**: Errors only (the default setting for the scanner)
+- **Error**: Errors only.
 
-- **Info**: Minimum logging, which includes no event IDs. For performance reasons, we do not recommend that you set this level for the scanner.
+- **Info**: Minimum logging, which includes no event IDs (the default setting for the scanner).
 
 - **Debug**: Full information.
 
