@@ -949,6 +949,8 @@ Set the logging level to one of the following values:
 
 - **Error**: Errors only.
 
+- **Warn**: Errors and warnings.
+
 - **Info**: Minimum logging, which includes no event IDs (the default setting for the scanner).
 
 - **Debug**: Full information.
