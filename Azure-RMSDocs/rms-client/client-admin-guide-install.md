@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -48,9 +48,9 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the executable installer does not download or install it.
 
-- Windows PowerShell version 4.0
+- Windows PowerShell minimum version 4.0
     
-    The PowerShell module for the client requires Windows PowerShell version 4.0, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type `$PSVersionTable` in a PowerShell session.
+    The PowerShell module for the client requires a minimum version of 4.0 for Windows PowerShell, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type `$PSVersionTable` in a PowerShell session.
 
 - Screen resolution greater than 800x600
     

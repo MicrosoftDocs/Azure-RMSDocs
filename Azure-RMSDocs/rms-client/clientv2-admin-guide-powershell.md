@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/27/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -39,7 +39,7 @@ The cmdlets are installed with the PowerShell module **AzureInformationProtectio
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|For a shared folder, identify all files with a specific label.|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|For a shared folder, inspect the file contents and then automatically label unlabeled files, according to the conditions that you have specified.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|For a shared folder, apply a specified label to all files that do not have a label.|
-|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Label files interactively, by using a different user account to your own.|
+|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
 
 > [!TIP]
 > To use cmdlets with path lengths greater than 260 characters, use the following [group policy setting](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) that is available starting Windows 10, version 1607:<br /> **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths** 
@@ -65,7 +65,7 @@ In addition to the prerequisites for installing the AzureInformationProtection m
 
 #### Prerequisite 1: The Azure Rights Management service must be activated
 
-If your Azure Information Protection tenant is not activated to apply protection, see the instructions for [Activating Azure Rights Management](../activate-service.md).
+If your Azure Information Protection tenant is not activated, see the instructions for [[Activating the protection service from Azure Information Protection](../activate-service.md).
 
 #### Prerequisite 2: To remove protection from files for others using your own account
 
@@ -90,11 +90,14 @@ When the token in Azure AD expires, run the cmdlet again to acquire a new token.
 
 If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
 
-To control when the access token expires, run this cmdlet with parameters. This configuration lets you configure the access token in Azure AD for one year, two years, or to never expire. You require two applications registered in Azure Active Directory: A **Web app / API** application and a **native application**. The parameters for Set-AIPAuthentication use values from these applications.
+To control when the access token expires, run this cmdlet with parameters. This configuration lets you configure the access token in Azure AD for one year, two years, or to never expire. The parameters for Set-AIPAuthentication use values from an app registration process in Azure AD.
 
 After you have run this cmdlet, you can run the labeling cmdlets in the context of the service account that you created.
 
 ### To create and configure the Azure AD applications for Set-AIPAuthentication
+
+> [!NOTE]
+> If are using the current preview version of the unified labeling client don't use this procedure but instead, see [To create and configure the Azure AD applications for Set-AIPAuthentication - preview client](#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client).
 
 1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/).
 
@@ -190,6 +193,80 @@ When you run this command for the first time, you are prompted to sign in, which
 2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. For example:
     
     	Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -OnBehalfOf $pscreds
+
+
+#### To create and configure the Azure AD applications for Set-AIPAuthentication - preview client
+
+Use the following procedure as alternative instructions only if you have installed the preview version of the unified labeling client. 
+
+For this version of the client, you must create a new app registration for the *AppId* and *AppSecret* parameters for Set-AIPAuthentication. If you upgraded from a previous version of the client and created an app registration for the previous *WebAppId* and *NativeAppId* parameters, they won't work with this version of the client.
+
+1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/).
+
+2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **Manage** > **App registrations**. 
+
+3. Select **+ New registration**. On the **Register an application** blade, specify the following values, and then click **Register**:
+
+   - **Name**: `AIPv2OnBehalfOf`
+        
+        If you prefer, specify a different name. It must be unique per tenant.
+    
+    - **Supported account types**: **Accounts in this organizational directory only**
+    
+    - **Redirect URI (optional)**: **Web** and `https://localhost`
+
+4. On the **AIPv2OnBehalfOf** blade, copy the value for the **Application (client) ID**. The value looks similar to the following example: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *AppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
+
+5. Still on the **AIPv2OnBehalfOf** blade, from the **Manage** menu, select **Certificates & secrets**.
+
+6. On the **AIPv2OnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, select **+ New client secret**.
+
+7. For **Add a client secret**, specify the following, and then select **Add**:
+    
+    - **Description**: `Azure Information Protection unified labeling client`
+    - **Expires**: Specify your choice of duration (1 year, 2 years, or never expires)
+
+8. Back on the **AIPv2OnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, copy the string for the **VALUE**. This string looks similar to the following example: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. To make sure you copy all the characters, select the icon to **Copy to clipboard**. 
+    
+    It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any sensitive information that you use, store the saved value securely and restrict access to it.
+
+9. From the **Manage** menu, select **API permissions**.
+
+10. On the **AIPv2OnBehalfOf - API permissions** blade, select **+ Add a permission**.
+
+11. On the **Request API permissions** blade, select **Azure Rights Management Services** and when you're prompted for the type of permissions that your application requires, select **Application permissions**.
+
+12. For **Select permissions**, expand **Content** and select the following:
+    
+    -  **Content.DelegatedWriter** (always required)
+    -  **Content.Writer** (always required)
+    -  **Content.SuperUser** (required if the [super user feature](../configure-super-users.md) is needed) 
+    
+    The super user feature allows the account to always decrypt content. For example, to reprotect files and inspect files that others have protected.
+
+13. Select **Add permissions**.
+
+14. Back on the **AIPv2OnBehalfOf - API permissions** blade, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
+
+You've now completed the registration of this app with a secret, you're ready to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *AppId*, and *AppSecret*. Additionally, you'll need your tenant ID. 
+
+> [!TIP]
+>You can quickly copy your tenant ID by using Azure portal: **Azure Active Directory** > **Manage** > **Properties** > **Directory ID**.
+
+From our example with a tenant ID of 9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a:
+
+`Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a"`
+
+When you run this command for the first time, you are prompted to sign in, which creates and securely stores the access token for your account in %localappdata%\Microsoft\MSIP. After this initial sign-in, you can label and protect files non-interactively on the computer. However, if you use a service account to label and protect files, and this service account cannot sign in interactively, use the *OnBehalfOf* parameter with Set-AIPAuthentication:
+
+1. Create a variable to store the credentials of an Active Directory account that is granted the user right assignment to sign in interactively. For example:
+    
+    	$pscreds = Get-Credential "scv_scanner@contoso.com"
+
+2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. For example:
+    
+    	Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> -online`. For example: 
