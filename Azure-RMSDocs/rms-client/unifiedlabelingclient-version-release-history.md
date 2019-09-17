@@ -82,7 +82,7 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
     
     You can upgrade scanners from the Azure Information Protection client (classic). After the upgrade, which creates a new database, the scanner rescans all files the first time it runs. For instructions, see [Upgrading the Azure Information Protection scanner](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) from the admin guide.
 
-- The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters for when you want to [label files non-interactively](/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), and a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents.
+- The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters for when you want to [label files non-interactively](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), and a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents.
 
 - Matched custom sensitive information types are sent to [Azure Information Protection analytics](../reports-aip.md).
 
