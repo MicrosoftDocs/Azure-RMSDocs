@@ -51,7 +51,14 @@ landingContent:
             url: https://docs.microsoft.com/Office365/SecurityCompliance/apply-sensitivity-label-automatically
           - text: Install & configure the client
             url: ./rms-client/clientv2-admin-guide.md
+
+  # Card
+  - title: How-to guides
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Use the scanner for on-premises data stores (preview)
+            url: deploy-aip-scanner.md
           - text: Use central reporting (preview)
             url: reports-aip.md
-
 
