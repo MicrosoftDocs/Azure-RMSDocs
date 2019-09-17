@@ -27,6 +27,8 @@ landingContent:
         links:
           - text: What is Azure Information Protection?
             url: what-is-information-protection.md
+          - text: Overview of sensitivity labels
+            url: https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels
           - text: Requirements
             url: requirements.md
 
@@ -37,43 +39,19 @@ landingContent:
         links:
           - text: Add Azure Information Protection to the portal
             url: quickstart-viewpolicy.md
-          - text: Find sensitive information
-            url: quickstart-findsensitiveinfo.md
-          - text: Configure a label to protect email
-            url: quickstart-label-dnf-protectedemail.md
-          - text: Create a label for specific users
-            url: quickstart-label-specificusers.md
-      - linkListType: tutorial
-        links:
-          - text: Edit the policy & create a new label
-            url: infoprotect-quick-start-tutorial.md
-          - text: Configure policy settings for baseline classification
-            url: infoprotect-settings-tutorial.md
-          - text: Control over-sharing of emails
-            url: infoprotect-oversharing-tutorial.md
 
   # Card
   - title: Deploy the service & client
     linkLists:
       - linkListType: deploy
         links:
-          - text: Configure policy settings and labels
-            url: configure-policy.md
-          - text: Deploy the client
-            url: ./rms-client/aip-client.md
+          - text: Restrict access to content
+            url: https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels
+          - text: Automatically apply a sensitivity label
+            url: https://docs.microsoft.com/Office365/SecurityCompliance/apply-sensitivity-label-automatically
+          - text: Install & configure the client
+            url: ./rms-client/clientv2-admin-guide.md
           - text: Use central reporting (preview)
             url: reports-aip.md
-          - text: Activate unified labeling
-            url: configure-policy-migrate-labels.md
 
-  # Card
-  - title: How-to guides
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Deploy the scanner for on-premises data
-            url: deploy-aip-scanner.md
-          - text: Secure document collaboration
-            url: secure-collaboration-documents.md
-          - text: Configure mail flow rules for labels
-            url: configure-exo-rules.md
+
