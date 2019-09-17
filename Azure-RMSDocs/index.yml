@@ -53,11 +53,11 @@ landingContent:
             url: ./rms-client/clientv2-admin-guide.md
 
   # Card
-  - title: How-to guides
+  - title: Operations
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Use the scanner for on-premises data stores (preview)
+          - text: Scan and label on-premises data stores (preview)
             url: deploy-aip-scanner.md
           - text: Use central reporting (preview)
             url: reports-aip.md
