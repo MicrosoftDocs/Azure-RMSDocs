@@ -29,8 +29,6 @@ landingContent:
             url: what-is-information-protection.md
           - text: Overview of sensitivity labels
             url: https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels
-          - text: Requirements
-            url: requirements.md
 
   # Card
   - title: Get started
@@ -45,6 +43,8 @@ landingContent:
     linkLists:
       - linkListType: deploy
         links:
+          - text: Requirements
+            url: requirements.md
           - text: Restrict access to content
             url: https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels
           - text: Automatically apply a sensitivity label
