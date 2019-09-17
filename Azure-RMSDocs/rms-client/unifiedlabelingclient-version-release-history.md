@@ -74,9 +74,9 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
     - You can set a default label on all documents, even if documents are already labeled. In the scanner profile or repository settings, set the **Relabel files** option to **On** with the new **Enforce default label** checkbox selected.
     
     - You can remove existing labels from all documents and this act includes removing protection if it was previously applied by a label. Protection applied independently from a label is preserved. This scanner configuration is achieved in the scanner profile or repository settings with the following settings:
-    - **Label files based on content**: **Off**
-    - **Default label**: **None**
-    - **Relabel files**: **On** with the **Enforce default label** checkbox selected
+        - **Label files based on content**: **Off**
+        - **Default label**: **None**
+        - **Relabel files**: **On** with the **Enforce default label** checkbox selected
     
     - As with the scanner from the classic client, the scanner protects Office files and PDF files. Currently, you can't configure other file types to be protected by this version of the scanner.
     
@@ -84,7 +84,7 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
 
 - The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters for when you want to [label files non-interactively](/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), and a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents.
 
-- Matched custom sensitive information types are sent to Azure Information Protection analytics.
+- Matched custom sensitive information types are sent to [Azure Information Protection analytics](../reports-aip.md).
 
 - The applied label displays the configured color for the label, if a [color has been configured](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).
 
