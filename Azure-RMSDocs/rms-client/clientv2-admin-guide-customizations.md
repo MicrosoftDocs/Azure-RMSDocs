@@ -5,7 +5,7 @@ title: Custom configurations - Azure Information Protection unified labeling cli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/12/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -660,7 +660,7 @@ Example PowerShell command, where your label policy is named "Global":
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When the Azure Information Protection unified labeling client is used in Office apps, it looks for sensitive information in documents when they are first saved. Providing the [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) advanced setting is not set to **False**, any predefined sensitive information types found are then sent to Azure Information Protection analytics.
+When the Azure Information Protection unified labeling client is used in Office apps, it looks for sensitive information in documents when they are first saved. Providing the [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) advanced setting is not set to **False**, any predefined and custom (preview client only) sensitive information types found are then sent to Azure Information Protection analytics.
 
 To change this behavior so that sensitive information types found by the unified labeling client are not sent to Azure Information Protection analytics, enter the following strings for the selected label policy:
 
@@ -949,14 +949,15 @@ Set the logging level to one of the following values:
 
 - **Error**: Errors only.
 
-- **Info**: Minimum logging, which includes no event IDs.
+- **Warn**: Errors and warnings.
+
+- **Info**: Minimum logging, which includes no event IDs (the default setting for the scanner).
 
 - **Debug**: Full information.
 
 - **Trace**: Detailed logging (the default setting for clients).
 
 This registry setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md).
-
 
 ## Next steps
 Now that you've customized the Azure Information Protection unified labeling client, see the following resources for additional information that you might need to support this client:
