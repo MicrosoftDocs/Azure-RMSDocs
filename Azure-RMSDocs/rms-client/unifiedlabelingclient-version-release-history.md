@@ -80,7 +80,7 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
     
     - As with the scanner from the classic client, the scanner protects Office files and PDF files. Currently, you can't configure other file types to be protected by this version of the scanner.
     
-    - Known issue: Newly created or renamed labels aren't available to select as a default label for the scanner profile or repository settings. Workarounds:
+    - Known issue: New and renamed labels aren't available to select as a default label for the scanner profile or repository settings. Workarounds:
         - For new labels: In the Azure portal, [add the label](../configure-policy-add-remove-label.md) you want to use to the global policy or a scoped policy.
         - For renamed labels: In the Azure portal, go to **Azure Information Protection** > **Manage** > **Unified labeling**, and select **Publish**.
     
