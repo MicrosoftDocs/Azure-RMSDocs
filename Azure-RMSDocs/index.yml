@@ -37,10 +37,10 @@ landingContent:
         links:
           - text: Requirements
             url: requirements.md
-          - text: Restrict access to content
-            url: https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels
           - text: Automatically apply a sensitivity label
             url: https://docs.microsoft.com/Office365/SecurityCompliance/apply-sensitivity-label-automatically
+          - text: Restrict access to content
+            url: https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels
           - text: Install & configure the client
             url: ./rms-client/clientv2-admin-guide.md
 
