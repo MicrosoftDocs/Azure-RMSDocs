@@ -21,7 +21,7 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
   # Card
-  - title: Introducing Azure Information Protection
+  - title: About Azure Information Protection
     linkLists:
       - linkListType: overview
         links:
@@ -32,14 +32,6 @@ landingContent:
 
   # Card
   - title: Get started
-    linkLists:
-      - linkListType: quickstart
-        links:
-          - text: Add Azure Information Protection to the portal
-            url: quickstart-viewpolicy.md
-
-  # Card
-  - title: Deploy the service & client
     linkLists:
       - linkListType: deploy
         links:
