@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/02/2019
+ms.date: 09/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -90,7 +90,11 @@ The following devices support the Azure Information Protection unified labeling 
 
 In addition to installing the client on physical computers, you can also install it on virtual machines. Check whether the software vendor for the virtual desktop solution has additional configuration that might be required to run the Azure Information Protection unified labeling client or the Azure Information Protection client. For example, for Citrix solutions, you might need to [disable Citrix Application Programming Interface (API) hooks](https://support.citrix.com/article/CTX107825) for Office (winword.exe, excel.exe, outlook.exe, powerpnt.exe) and the executable for the Azure Information Protection unified labeling client or Azure Information Protection client (msip.app.exe, msip.viewer.exe).
 
-For the listed server versions, the Azure Information Protection clients are supported for Remote Desktop Services. If you delete user profiles when you use the Azure Information Protection clients with Remote Desktop Services, do not delete the **%Appdata%\Microsoft\Protect** folder.
+For the listed server versions:
+
+- The Azure Information Protection clients are supported for Remote Desktop Services. If you delete user profiles when you use the Azure Information Protection clients with Remote Desktop Services, do not delete the **%Appdata%\Microsoft\Protect** folder.
+
+- Server Core is not supported.
 
 When the Azure Information Protection clients protect the data by using the Azure Rights Management service, the data can be consumed by the [same devices](requirements-client-devices.md) that support the Azure Rights Management service.
 
