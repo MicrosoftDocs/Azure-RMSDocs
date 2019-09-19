@@ -51,6 +51,6 @@ landingContent:
         links:
           - text: Scan and label on-premises data stores (preview)
             url: deploy-aip-scanner.md
-          - text: Use central reporting (preview)
+          - text: Monitor label usage with central reporting (preview)
             url: reports-aip.md
 
