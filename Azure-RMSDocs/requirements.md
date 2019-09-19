@@ -94,7 +94,7 @@ For the listed server versions:
 
 - The Azure Information Protection clients are supported for Remote Desktop Services. If you delete user profiles when you use the Azure Information Protection clients with Remote Desktop Services, do not delete the **%Appdata%\Microsoft\Protect** folder.
 
-- Server Core is not supported.
+- Server Core and Nano Server are not supported.
 
 When the Azure Information Protection clients protect the data by using the Azure Rights Management service, the data can be consumed by the [same devices](requirements-client-devices.md) that support the Azure Rights Management service.
 
