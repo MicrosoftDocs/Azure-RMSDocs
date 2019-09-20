@@ -103,7 +103,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 **Create a protected file stream**
 **Source**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**Description**: This method creates a protected file stream from the passed in backing stream through the SDK method, *ProtectedFileStream::Aquire*, which is then returned to the caller.
+**Description**: This method creates a protected file stream from the passed in backing stream through the SDK method, *ProtectedFileStream::Acquire*, which is then returned to the caller.
 
 **C++**:
 
@@ -533,7 +533,7 @@ Description: Specify Azure *authority URI* and *FileCache* object.
                               FileCachePtr);
 
 
-**Step 3**: Call **aquireToken** method of **authContext** object and specify next parameters:
+**Step 3**: Call **acquireToken** method of **authContext** object and specify next parameters:
 Description:
 
 -   *Requested resource* - protected resource you want to access
@@ -589,7 +589,7 @@ Description: Specify Azure authority *URI* and *FileCache* object
                         FileCachePtr);
 
 
-**Step 4**: Call the **aquireToken** method of **authContext** and specify parameters:
+**Step 4**: Call the **acquireToken** method of **authContext** and specify parameters:
 -   *Requested resource* - protected resource you want to access
 -   *Client unique ID* - usually a GUID
 -   *User credentials* - pass the created object
