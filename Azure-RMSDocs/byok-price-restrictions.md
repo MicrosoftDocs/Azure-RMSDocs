@@ -62,7 +62,7 @@ In addition to managing keys, Azure Key Vault offers your security administrator
 
 For more information about Azure Key Vault, see [What is Azure Key Vault?](/azure/key-vault/key-vault-whatis) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/) for the latest information and to learn how other services use this technology.
 
-## BYOK support for services and clients that use protection from Azure Information Protection
+## BYOK support for services and clients
 
 BYOK and [usage logging](log-analyze-usage.md) work seamlessly with every application that integrates with the Azure Rights Management service that is used by Azure Information Protection to protect data. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that use the Azure Rights Management service by using the RMS connector, and client applications such as Office 2019, Office 2016, and Office 2013. 
 
