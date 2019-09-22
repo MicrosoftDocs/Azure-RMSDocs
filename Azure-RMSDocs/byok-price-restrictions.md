@@ -32,7 +32,7 @@ ms.custom: admin
 
 Organizations that have a subscription that includes Azure Information Protection can configure their Azure Information Protection tenant to use a customer-managed key and [log its usage](log-analyze-usage.md). The customer-managed key configuration is often referred to as "bring you own key", or BYOK.
 
-This customer-manged key must be stored in Azure Key Vault, which requires an Azure subscription. To use an HSM-protected key, you must use the Azure Key Vault Premium service tier. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/pricing/details/key-vault/).
+This customer-managed key must be stored in Azure Key Vault, which requires an Azure subscription. To use an HSM-protected key, you must use the Azure Key Vault Premium service tier. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/pricing/details/key-vault/).
 
 When you use Azure Key Vault for your Azure Information Protection tenant key, we recommend that you use a dedicated key vault for this key to help ensure that it's used by only the Azure Rights Management service. This configuration ensures that calls by other services do not result in exceeding the [service limits](/azure/key-vault/key-vault-service-limits) for the key vault, which could throttle the response times for the Azure Rights Management service.  
 
