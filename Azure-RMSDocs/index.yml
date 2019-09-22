@@ -45,11 +45,11 @@ landingContent:
             url: ./rms-client/clientv2-admin-guide.md
 
   # Card
-  - title: Use your own key to protect your organization's data
+  - title: Bring your own key (BYOK)
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Bring you own key (BYOK)
+          - text: Plan & implement your tenant key
             url: plan-implement-tenant-key.md
 
   # Card
