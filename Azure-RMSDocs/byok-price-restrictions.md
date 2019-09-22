@@ -46,9 +46,9 @@ Alternatively, if the administrators who manage the keys for Customer Key or CRM
 
 ## Benefits of using Azure Key Vault
 
-In addition to using Azure Information Protection usage logging, for additional assurance, you can cross-reference this usage logging with [Azure Key Vault logging](/azure/key-vault/key-vault-logging). The Key Vault logs provide you with a method to independently monitor that only the Azure Rights Management service is using your key. If necessary, you can immediately revoke access to the key by removing the permissions on the key vault.
+For additional assurance, you can cross-reference your Azure Information Protection usage logging with [Azure Key Vault logging](/azure/key-vault/key-vault-logging). The Key Vault logs provide you with a method to independently monitor that only the Azure Rights Management service is using your key. If necessary, you can immediately revoke access to the key by removing the permissions on the key vault.
 
-Other benefits of using Azure Key Vault for your Azure Information Protection tenant key:
+Other benefits of using Azure Key Vault for your Azure Information Protection tenant key include:
 
 - Azure Key Vault provides a centralized key management solution that offers a consistent management solution for many cloud-based and even on-premises services that use encryption.
 
