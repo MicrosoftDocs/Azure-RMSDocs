@@ -45,12 +45,17 @@ landingContent:
             url: ./rms-client/clientv2-admin-guide.md
 
   # Card
-  - title: Scenarios
+  - title: Classify & protect data in on-premises data stores
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Scan and label on-premises data stores (preview)
+          - text: Deploy the scanner (preview)
             url: deploy-aip-scanner.md
-          - text: Monitor label usage with central reporting (preview)
-            url: reports-aip.md
 
+  # Card
+  - title: Monitor label usage & discover sensitive info
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Central reporting (preview)
+            url: reports-aip.md
