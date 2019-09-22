@@ -45,6 +45,14 @@ landingContent:
             url: ./rms-client/clientv2-admin-guide.md
 
   # Card
+  - title: Bring your own key (BYOK)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Plan & implement your tenant key
+            url: plan-implement-tenant-key.md
+
+  # Card
   - title: Classify & protect data in on-premises data stores
     linkLists:
       - linkListType: how-to-guide
