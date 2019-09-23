@@ -64,7 +64,7 @@ For an initial test to confirm that the scanner is working:
 
 1. Create a local folder on your computer. For example, **TestScanner** on your local C drive.
 
-2. Create and save a Word document in that folder, which has the text **Credit card: 4242-4242-4242-4242 **.
+2. Create and save a Word document in that folder, which has the text **Credit card: 4242-4242-4242-4242**.
 
 ## Configure a profile for the scanner
 
