@@ -106,7 +106,7 @@ Before you install the scanner, create a profile for it in the Azure portal. Thi
 
 9. Back on the **Azure Information Protection - Profiles** blade, you now see your profile  listed, together with the **SCHEDULE** column showing **Manual** and the **ENFORCE** column is blank. 
     
-    The **NODES** columns shows **0** because you haven't yet installed the scanner for this profile.
+    The **NODES** column shows **0** because you haven't yet installed the scanner for this profile.
 
 You're now ready to install the scanner with the scanner profile that you've just created.
 
