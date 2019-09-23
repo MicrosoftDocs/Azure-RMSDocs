@@ -10,7 +10,7 @@ ms.author: tommos
 #Customer intent: As a an application developer, I want to learn how to use the MIP SDK to connect to AD RMS so I can consume and protect using my on-premises service.
 ---
 
-# Quickstart: Active Directory Rights Management Server (ADFS) Protection
+# Quickstart: Active Directory Rights Management Server (AD RMS) Protection
 
 This quickstart will show you how to implement support for Active Directory Rights Management Server (AD RMS) using MIP SDK.
 
