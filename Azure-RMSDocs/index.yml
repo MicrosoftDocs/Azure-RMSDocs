@@ -67,3 +67,21 @@ landingContent:
         links:
           - text: Central reporting (preview)
             url: reports-aip.md
+
+# Card
+  - title: Microsoft Information Protection SDK
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: About the MIP SDK
+            url: /information-protection/develop/overview
+      - linkListType: quickstart
+        links:
+          - text: Setup and configuration
+            url: /information-protection/develop/setup-configure-mip        
+          - text: AD RMS Protection
+            url: /information-protection/develop/quick-app-adrms
+      - linkListType: reference
+        links:
+          - text: API reference for C++
+            url: /information-protection/develop/mip-sdk-reference       
