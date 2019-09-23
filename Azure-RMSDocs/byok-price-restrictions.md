@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: BYOK pricing & restrictions - Azure Information Protection
-description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure Information Protection.
+title: BYOK details - Azure Information Protection
+description: Understand details and restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 06/18/2019
+manager: rkarlin
+ms.date: 09/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -25,26 +25,30 @@ ms.custom: admin
 
 ---
 
-# BYOK pricing and restrictions
+# Bring your own key (BYOK) details for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-Organizations that have a subscription that includes Azure Information Protection can configure their Azure Information Protection tenant to use a customer-managed key (BYOK) and [log its usage](./log-analyze-usage.md). 
+Organizations that have a subscription that includes Azure Information Protection can configure their Azure Information Protection tenant to use a customer-managed key and [log its usage](log-analyze-usage.md). The customer-managed key configuration is often referred to as "bring you own key", or BYOK.
 
-The key must be stored in Azure Key Vault, which requires an Azure subscription. To use an HSM-protected key, you must use the Azure Key Vault Premium service tier. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/pricing/details/key-vault/).
+This customer-managed key must be stored in Azure Key Vault, which requires an Azure subscription. To use an HSM-protected key, you must use the Azure Key Vault Premium service tier. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/pricing/details/key-vault/).
 
 When you use Azure Key Vault for your Azure Information Protection tenant key, we recommend that you use a dedicated key vault for this key to help ensure that it's used by only the Azure Rights Management service. This configuration ensures that calls by other services do not result in exceeding the [service limits](/azure/key-vault/key-vault-service-limits) for the key vault, which could throttle the response times for the Azure Rights Management service.  
 
 In addition, because each service that uses Azure Key Vault typically has different key management requirements, we recommend a separate Azure subscription for this key vault to help safeguard against misconfiguration. 
 
-However, if you want to share an Azure subscription with other services that use Azure Key Vault, make sure that the subscription shares a common set of administrators. This precaution means that the administrators who use that subscription have a good understanding of all the keys that they have access to, so that they are less likely to misconfigure them. For example, a shared Azure subscription if the administrators for your Azure Information Protection tenant key are the same people who administer keys for Office 365 Customer Key and CRM Online. But if the administrators who manage the keys for Customer Key or CRM Online are not the same people who administer your Azure Information Protection tenant key, then we recommend you do not share your Azure subscription for Azure Information Protection.
+However, if you want to share an Azure subscription with other services that use Azure Key Vault, make sure that the subscription shares a common set of administrators. This precaution means that the administrators who use that subscription have a good understanding of all the keys that they have access to, so that they are less likely to misconfigure them. 
+
+For example, a shared Azure subscription if the administrators for your Azure Information Protection tenant key are the same people who administer keys for Office 365 Customer Key and CRM Online. 
+
+Alternatively, if the administrators who manage the keys for Customer Key or CRM Online are not the same people who administer your Azure Information Protection tenant key, then we recommend you do not share your Azure subscription for Azure Information Protection.
 
 ## Benefits of using Azure Key Vault
 
-In addition to using Azure Information Protection usage logging, for additional assurance, you can cross-reference this with [Azure Key Vault logging](/azure/key-vault/key-vault-logging) to independently monitor that only the Azure Rights Management service is using this key. If necessary, you can immediately revoke access to the key by removing the permissions on the key vault.
+For additional assurance, you can cross-reference your Azure Information Protection usage logging with [Azure Key Vault logging](/azure/key-vault/key-vault-logging). The Key Vault logs provide you with a method to independently monitor that only the Azure Rights Management service is using your key. If necessary, you can immediately revoke access to the key by removing the permissions on the key vault.
 
-Other benefits of using Azure Key Vault for your Azure Information Protection tenant key:
+Other benefits of using Azure Key Vault for your Azure Information Protection tenant key include:
 
 - Azure Key Vault provides a centralized key management solution that offers a consistent management solution for many cloud-based and even on-premises services that use encryption.
 
@@ -52,17 +56,17 @@ Other benefits of using Azure Key Vault for your Azure Information Protection te
 
 - Azure Key Vault provides role separation, as a recognized security best practice. Azure Information Protection administrators can focus on managing data classification and protection, and Azure Key Vault administrators can focus on managing encryption keys and any special policies that they might require for security or compliance.
 
-- Some organizations have restrictions where their master key must live. Azure Key Vault provides a high level of control where to store the master key because the service is available in many Azure regions. Currently, you can choose from 28 Azure regions and you can expect this number to increase. For more information, see the [Products available by region](https://azure.microsoft.com/regions/services/) page on the Azure site.
+- Some organizations have restrictions where their master key must live. Azure Key Vault provides a high level of control where to store the master key because the service is available in many Azure regions. You can choose from a number of Azure regions and you can expect this number to increase. For more information, see the [Products available by region](https://azure.microsoft.com/regions/services/) page on the Azure site.
 
 In addition to managing keys, Azure Key Vault offers your security administrators the same management experience to store, access, and manage certificates and secrets (such as passwords) for other services and applications that use encryption. 
 
 For more information about Azure Key Vault, see [What is Azure Key Vault?](/azure/key-vault/key-vault-whatis) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/) for the latest information and to learn how other services use this technology.
 
-## Restrictions when using BYOK
+## BYOK support for services and clients
 
-BYOK and usage logging work seamlessly with every application that integrates with the Azure Rights Management service that is used by Azure Information Protection. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that use the Azure Rights Management service by using the RMS connector, and client applications such as Office 2019, Office 2016, and Office 2013. You get key usage logs regardless of which application makes requests to the Azure Rights Management service.
+BYOK and [usage logging](log-analyze-usage.md) work seamlessly with every application that integrates with the Azure Rights Management service that is used by Azure Information Protection to protect data. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that use the Azure Rights Management service by using the RMS connector, and client applications such as Office 2019, Office 2016, and Office 2013. 
 
-If you have previously enabled Exchange Online IRM by importing your trusted publishing domain (TPD) from Azure RMS, follow the instructions in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) to enable the new capabilities in Exchange Online that support using BYOK for Azure Information Protection.
+You get key usage logs whatever application makes requests to the Azure Rights Management service.
 
 ## Next steps
 
