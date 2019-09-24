@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -217,7 +217,7 @@ For this version of the client, you must create a new app registration for the *
 
 4. On the **AIPv2OnBehalfOf** blade, copy the value for the **Application (client) ID**. The value looks similar to the following example: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *AppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
-5. Still on the **AIPv2OnBehalfOf** blade, from the **Manage** menu, select **Certificates & secrets**.
+5. Still on the **AIPv2OnBehalfOf** blade, from the **Manage** sidebar, select **Certificates & secrets**.
 
 6. On the **AIPv2OnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, select **+ New client secret**.
 
@@ -230,7 +230,7 @@ For this version of the client, you must create a new app registration for the *
     
     It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any sensitive information that you use, store the saved value securely and restrict access to it.
 
-9. From the **Manage** menu, select **API permissions**.
+9. From **Manage** on the sidebar, select **API permissions**.
 
 10. On the **AIPv2OnBehalfOf - API permissions** blade, select **+ Add a permission**.
 
@@ -239,14 +239,26 @@ For this version of the client, you must create a new app registration for the *
 12. For **Select permissions**, expand **Content** and select the following:
     
     -  **Content.DelegatedWriter** (always required)
+    -  **Content.SuperUser** (required if the [super user feature](../configure-super-users.md) is needed)
     -  **Content.Writer** (always required)
-    -  **Content.SuperUser** (required if the [super user feature](../configure-super-users.md) is needed) 
     
     The super user feature allows the account to always decrypt content. For example, to reprotect files and inspect files that others have protected.
 
 13. Select **Add permissions**.
 
-14. Back on the **AIPv2OnBehalfOf - API permissions** blade, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
+14. Back on the **AIPv2OnBehalfOf - API permissions** blade, select **+ Add a permission**.
+
+15. On the **Request AIP permissions** blade, select **APIs my organization uses**, and search for **Microsoft Information Protection Sync Service**.
+
+16. On the **Request API permissions** blade, select **Application permissions**.
+
+17. For **Select permissions**, expand **UnifiedPolicy** and select the following:
+    
+    -  **UnifiedPolicy.Tenant.Read** (always required)
+
+18. Select **Add permissions**.
+
+19. Back on the API permissions blade, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
 
 You've now completed the registration of this app with a secret, you're ready to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *AppId*, and *AppSecret*. Additionally, you'll need your tenant ID. 
 
