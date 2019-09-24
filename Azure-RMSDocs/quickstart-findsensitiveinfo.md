@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/24/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,12 +26,13 @@ ms.subservice: aiplabels
 # Quickstart: Find what sensitive information you have in files stored on-premises
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
->
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In this quickstart, you'll install and configure the Azure Information Protection scanner to find what sensitive information you have in files that are stored in an on-premises data store. For example, a local folder, network share, or SharePoint Server.
 
-Note: This quickstart uses the current general availability version of the scanner, which uses the Azure portal for configuration instead of PowerShell cmdlets that were used by previous versions.
+> [!NOTE]
+> You can use this quickstart with the current general availability version of the Azure Information Protection client (classic) or the current preview version of the Azure Information Protection unified labeling client.
+>  
+> Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 
 You can finish this configuration in less than 10 minutes.
 
@@ -43,9 +44,11 @@ To complete this quickstart, you need:
     
     If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
-2. The Azure Information Protection client (classic) is installed on your computer. 
+2. One of the following Azure Information Protection clients is installed on your computer:
     
-    To install the client, go to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
+    - The classic client: To install this client, go to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
+    
+    - The unified labeling client: To install this client, go the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection_UL_Preview.exe** from the Azure Information Protection page.
     
 3. SQL Server Express is also installed on your computer.
     
@@ -61,7 +64,7 @@ For an initial test to confirm that the scanner is working:
 
 1. Create a local folder on your computer. For example, **TestScanner** on your local C drive.
 
-2. Create and save a Word document in that folder, which has the text **4242-4242-4242-4242** (a known credit card number for testing).
+2. Create and save a Word document in that folder, which has the text **Credit card: 4242-4242-4242-4242**.
 
 ## Configure a profile for the scanner
 
@@ -71,7 +74,7 @@ Before you install the scanner, create a profile for it in the Azure portal. Thi
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
     
-2. Locate the **Scanner** menu options, and select **Profiles**.
+2. Locate the **Scanner** options from the left blade, and select **Profiles**.
 
 3. On the **Azure Information Protection - Profiles** blade, select **Add**:
     
@@ -103,7 +106,7 @@ Before you install the scanner, create a profile for it in the Azure portal. Thi
 
 9. Back on the **Azure Information Protection - Profiles** blade, you now see your profile  listed, together with the **SCHEDULE** column showing **Manual** and the **ENFORCE** column is blank. 
     
-    The **NODES** columns shows **0** because you haven't yet installed the scanner for this profile.
+    The **NODES** column shows **0** because you haven't yet installed the scanner for this profile.
 
 You're now ready to install the scanner with the scanner profile that you've just created.
 
@@ -131,7 +134,7 @@ You're now ready to install the scanner with the scanner profile that you've jus
     
     Wait until you see values displayed for the **LAST SCAN RESULTS** and **LAST SCAN (END TIME)** columns.
     
-    - Alternatively, check the local Windows **Applications and Services** event log, **Azure Information Protection**. Confirm the informational event ID **911** for the **MSIP.Scanner** process. The event log entry also has a summary of results from the scan.
+    Alternatively, check the local Windows **Applications and Services** event log, **Azure Information Protection**. Confirm the informational event ID **911** for the **MSIP.Scanner** process. The event log entry also has a summary of results from the scan.
 
 ## See detailed results
 
@@ -141,8 +144,7 @@ In Excel, the first two columns display your data store repository and file name
 
 ## Scan your own data
 
-1. Edit your scanner profile and add a new data repository, this time specifying your own on-premises data store that you want to scan for sensitive information. 
-    
+1. Edit your scanner profile and add a new data repository, this time specifying your own on-premises data store that you want to scan for sensitive information.     
     You can specify a local folder, a network share (UNC path), or a SharePoint Server URL for a SharePoint site or library. 
     
     - Example for a local folder:
@@ -177,7 +179,9 @@ Then restart your computer.
 
 This command doesn't remove the following items and you must manually remove them if you don't want them after this quickstart:
 
-- The SQL Server database named **AIPScanner_\<profile>** that was created by running the Install-AIPScanner cmdlet when the Azure Information Protection scanner was installed. 
+- The SQL Server database that was created by running the Install-AIPScanner cmdlet when the Azure Information Protection scanner was installed:
+    - For the classic client: **AIPScanner_\<profile>**
+    - For the unified labeling client: **AIPScannerUL_\<profile_name>**
 
 - The scanner reports located in %*localappdata*%\Microsoft\MSIP\Scanner\Reports.
 
@@ -188,8 +192,12 @@ This command doesn't remove the following items and you must manually remove the
 
 This quickstart includes the minimum configuration so that you can quickly see how the scanner can find sensitive information in on-premises data stores. If you're ready to install the scanner in a production environment, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
-If you want to classify and protect the files that contain sensitive information, you must configure Azure Information Protection labels for automatic classification and protection:
+If you want to classify and protect the files that contain sensitive information, you must configure labels for automatic classification and protection:
 
-- [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md)
+- For the classic client:
+    - [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md)
+    - [How to configure a label for Rights Management protection](configure-policy-protection.md)
 
-- [How to configure a label for Rights Management protection](configure-policy-protection.md)
+- For the unified labeling client:
+    - [Apply a sensitivity label to content automatically](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically)
+    - [Restrict access to content by using encryption in sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels)
