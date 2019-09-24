@@ -115,11 +115,11 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 4. On the **AIPOnBehalfOf** blade, copy the value for the **Application (client) ID**. The value looks similar to the following example: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *WebAppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
-5. Still on the **AIPOnBehalfOf** blade, from the **Manage** menu, select **Authentication**.
+5. Still on the **AIPOnBehalfOf** blade, from the **Manage** sidebar, select **Authentication**.
 
 6. On the **AIPOnBehalfOf - Authentication** blade, in the **Advanced settings** section, select the **ID tokens** checkbox, and then select **Save**.
 
-7. Still on the **AIPOnBehalfOf - Authentication** blade, from the **Manage** menu, select **Certificates & secrets**.
+7. Still on the **AIPOnBehalfOf - Authentication** blade, from the **Manage** sidebar, select **Certificates & secrets**.
 
 8. On the **AIPOnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, select **+ New client secret**. 
 
@@ -132,7 +132,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     
     It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any sensitive information that you use, store the saved value securely and restrict access to it.
 
-10. Still on the **AIPOnBehalfOf - Certificates & secrets** blade, from the **Manage** menu, select **Expose an API**.
+10. Still on the **AIPOnBehalfOf - Certificates & secrets** blade, from the **Manage** sidebar, select **Expose an API**.
 
 11. On the **AIPOnBehalfOf - Expose an API** blade, select **Set** for the **Application ID URI** option, and in the **Application ID URI** value, change **api** to **http**. This string looks similar to the following example: `http://d244e75e-870b-4491-b70d-65534953099e`. 
     
@@ -162,13 +162,13 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     
     This value is used for the NativeAppId parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
-18. Still on the **AIPClient** blade, from the **Manage** menu, select **Authentication**.
+18. Still on the **AIPClient** blade, from the **Manage** sidebar, select **Authentication**.
 
 19. On the **AIPClient - Authentication** blade, specify the following, and then select **Save**:
     - In the **Advanced settings** section, select **ID tokens**.
     - In the **Default client type** section, select **Yes**.
 
-20. Still on the **AIPClient - Authentication** blade, from the **Manage** menu, select **API permissions**.
+20. Still on the **AIPClient - Authentication** blade, from the **Manage** sidebar, select **API permissions**.
 
 21. On the **AIPClient - permissions** blade, select **+ Add a permission**.
 
@@ -234,7 +234,7 @@ For this version of the client, you must create a new app registration for the *
 
 10. On the **AIPv2OnBehalfOf - API permissions** blade, select **+ Add a permission**.
 
-11. On the **Request API permissions** blade, select **Azure Rights Management Services** and when you're prompted for the type of permissions that your application requires, select **Application permissions**.
+11. On the **Request API permissions** blade, make sure that you're on the **Microsoft APIs** tab, and select **Azure Rights Management Services**. When you're prompted for the type of permissions that your application requires, select **Application permissions**.
 
 12. For **Select permissions**, expand **Content** and select the following:
     
@@ -246,7 +246,7 @@ For this version of the client, you must create a new app registration for the *
 
 13. Select **Add permissions**.
 
-14. Back on the **AIPv2OnBehalfOf - API permissions** blade, select **+ Add a permission**.
+14. Back on the **AIPv2OnBehalfOf - API permissions** blade, select **+ Add a permission** again.
 
 15. On the **Request AIP permissions** blade, select **APIs my organization uses**, and search for **Microsoft Information Protection Sync Service**.
 
@@ -254,7 +254,7 @@ For this version of the client, you must create a new app registration for the *
 
 17. For **Select permissions**, expand **UnifiedPolicy** and select the following:
     
-    -  **UnifiedPolicy.Tenant.Read** (always required)
+    -  **UnifiedPolicy.Tenant.Read**
 
 18. Select **Add permissions**.
 
