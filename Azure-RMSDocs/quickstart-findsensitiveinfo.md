@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/23/2019
+ms.date: 09/24/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -74,7 +74,7 @@ Before you install the scanner, create a profile for it in the Azure portal. Thi
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
     
-2. Locate the **Scanner** menu options, and select **Profiles**.
+2. Locate the **Scanner** options from the left blade, and select **Profiles**.
 
 3. On the **Azure Information Protection - Profiles** blade, select **Add**:
     
