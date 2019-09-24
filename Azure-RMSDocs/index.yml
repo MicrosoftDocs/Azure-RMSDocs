@@ -55,6 +55,10 @@ landingContent:
   # Card
   - title: Classify & protect data in on-premises data stores
     linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Find sensitive info (preview)
+            url: deploy-aip-scanner.md
       - linkListType: how-to-guide
         links:
           - text: Deploy the scanner (preview)
