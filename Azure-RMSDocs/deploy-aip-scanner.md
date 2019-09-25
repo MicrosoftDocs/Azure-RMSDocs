@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -529,7 +529,7 @@ There are three alternative scenarios that the Azure Information Protection scan
     
     This setting helps you find sensitive information that you might not realize you had, but at the expense of scanning rates for the scanner.
     
-    The following quickstart for the classic client version of the scanner uses this configuration: [Quickstart: Find what sensitive information you have](quickstart-findsensitiveinfo.md).
+    The following quickstart for the scanner uses this configuration: [Quickstart: Find what sensitive information you have](quickstart-findsensitiveinfo.md).
 
 ## Optimizing the performance of the scanner
 
