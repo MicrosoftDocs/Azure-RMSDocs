@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/09/2019
+ms.date: 09/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -98,7 +98,7 @@ Azure Information Protection clients (classic) can use all label settings listed
 |Cloud-based protection or HYOK-based protection using a predefined template |No|No configuration option for predefined templates. We do not recommend you publish a label with this configuration.|
 |Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint |Yes|The admin centers now have a configuration option for user-defined permissions. <br /><br /> If you publish a label with this configuration, check the results of applying the label from the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |HYOK-based protection using user-defined permissions for Outlook (Do Not Forward) |No|No configuration option for HYOK. We do not recommend you publish a label with this configuration. If you do, the results of applying the label are listed in the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
-|Remove protection |No|No configuration option to remove protection. We do not recommend you publish a label with this configuration.<br /><br /> If you do publish a label with this configuration, when it is applied, protection will be removed if it was previously applied by a label. If protection was previously applied independently from a label, the protection is preserved.|
+|Remove protection |No|No configuration option to remove protection. We do not recommend you publish a label with this configuration.<br /><br /> If you do publish a label with this configuration, when it is applied, protection is always removed, whether the protection was previously applied by a label or independently from a label.|
 |Custom font and custom font color by RGB code for visual markings (header, footer, watermark)|Yes|Configuration for visual markings is limited to a list of colors and font sizes. You can publish this label without changes although you cannot see the configured values in the admin centers. <br /><br />To change these options, you can use the Azure portal. However, for easier administration, consider changing the color to one of the listed options in the admin centers.|
 |Variables in visual markings (header, footer)|No|If you publish this label without changes, variables display as text on clients rather than display the dynamic values. Before you publish the label, edit the strings to remove the variables.|
 |Visual markings per app|No|If you publish this label without changes, the app variables display as text on clients in all apps rather than display your text strings on chosen apps. Publish this label only if it is suitable for all apps, and edit the strings to remove the app variables.|
