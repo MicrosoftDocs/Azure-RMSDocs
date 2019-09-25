@@ -686,7 +686,7 @@ Example PowerShell command, where your label policy is named "Global":
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-By default, the unified labeling client and the scanner from this client does not send content matches for sensitive info types to [Azure Information Protection analytics](../reports-aip.md). To send this additional information that enables deeper analytics into your sensitive data, create the following advanced client setting in a label policy: 
+By default, the unified labeling client does not send content matches for sensitive info types to [Azure Information Protection analytics](../reports-aip.md). To send this additional information when sensitive information types are sent, create the following advanced client setting in a label policy: 
 
 - Key: **LogMatchedContent**
 
