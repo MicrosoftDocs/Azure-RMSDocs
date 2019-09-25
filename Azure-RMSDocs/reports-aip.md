@@ -151,7 +151,7 @@ This checkbox applies to the Azure Information Protection client (classic) only:
 
 - If you want most users who are using this client to send content matches and a subset of users cannot send it, select the checkbox and then configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
 
-The unified labeling client doesn't send content matches, by default.  You can change this by configuring an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a label policy.
+The unified labeling client doesn't send content matches, by default.  You can change this by configuring an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches) in a label policy.
 
 After collecting the content matches, they are displayed in the reports when you drill down into files from the Activity logs, to display **Activity Details**. This information can also be viewed and retrieved with queries.
 
