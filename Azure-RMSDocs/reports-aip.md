@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 09/18/2019
+ms.date: 09/27/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -142,15 +142,17 @@ To prevent Azure Information Protection clients (classic) from sending this data
 
 To prevent Azure Information Protection unified clients from sending this data, configure a label policy [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics).
 
-#### Content matches for deeper analysis 
+#### Content matches for deeper analysis
 
-Your Azure Log Analytics workspace for Azure Information Protection includes a checkbox for also collecting and storing the data that's identified as being a sensitive information type (predefined or custom conditions). For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. If you do not want to send this additional data, do not select the checkbox **Enable deeper analytics into your sensitive data**. If you want most users to send this additional data and a subset of users cannot send it, select the checkbox and then:
+Azure Information Protection lets you collect and store the actual data that's identified as being a sensitive information type (predefined or custom). For example, this can include credit card numbers that are found, as well as social security numbers, passport numbers, and bank account numbers. The content matches are displayed when you select an entry from **Activity logs**, and view the **Activity Details**. 
 
-- For the classic client and scanner: Configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
+By default, Azure Information Protection clients don't send content matches. To change this behavior so that content matches are sent:
 
-- For the unified labeling client: Configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a label policy for the subset of users.
+- For the classic client, select a checkbox as part of the [configuration](#configure-a-log-analytics-workspace-for-the-reports) for Azure Information Protection analytics. The checkbox is named **Enable deeper analytics into your sensitive data**.
+    
+    If you want most users who are using this client to send content matches but a subset of users cannot send content matches, select the checkbox and then configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
 
-After collecting the content matches, they are displayed in the reports when you drill down into files from the Activity logs, to display **Activity Details**. This information can also be viewed and retrieved with queries.
+- For the unified labeling client, configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches) in a label policy.
 
 ## Prerequisites
 To view the Azure Information Protection reports and create your own, make sure that the following requirements are in place.
@@ -237,10 +239,14 @@ Azure Monitor Logs has a **Usage and estimated costs** feature to help you estim
     - To create a new Log Analytics workspace: Select **Create new workspace**, and on the **Log analytics workspace** blade, supply the requested information.
     
     - To use an existing Log Analytics workspace: Select the workspace from the list.
+    
+    If you need help with creating the Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
-If you need help with creating the Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
+4. If you have Azure Information Protection clients (classic), select the checkbox **Enable deeper analytics into your sensitive data** if you want to store the actual data that's identified as being a sensitive information type. For more information about this setting, see the [Content matches for deeper analysis](#content-matches-for-deeper-analysis) section on this page.
 
-When the workspace is configured, do the following if you publish sensitivity labels in one of the following management centers: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center:
+5. Select **OK**.
+
+After the workspace is configured, do the following if you publish sensitivity labels in one of the following management centers: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center:
 
 - In the Azure portal go to **Azure Information Protection** > **Manage** > **Unified labeling**, and select **Publish**.
     
