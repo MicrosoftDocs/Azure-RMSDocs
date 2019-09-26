@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.custom: admin
 
 # Admin Guide: Install the Azure Information Protection client for users
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -214,7 +214,9 @@ If you use Intune for your software deployment method, use these instructions to
     |Not applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Install|
     |Not applicable|Windows 7|KB2627273 <br /><br /> Version number included in file name: v4|Uninstall|
 
-3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).  
+3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer) with one exception:
+    
+    - Instead of **AllowTelemetry=0** to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**, specify **ENABLETELEMETRY=0**. 
 
 
 ## How to install the Azure Information Protection scanner
