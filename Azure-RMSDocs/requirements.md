@@ -83,7 +83,7 @@ The following devices support the Azure Information Protection unified labeling 
 - Windows 7 Service Pack 1 (x86, x64)
 
 - Windows Server 2019
-- 
+
 - Windows Server 2016
 
 - Windows Server 2012 R2 and Windows Server 2012
