@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/18/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -82,7 +82,9 @@ The following devices support the Azure Information Protection unified labeling 
 
 - Windows 7 Service Pack 1 (x86, x64)
 
-- Windows Server 2016 
+- Windows Server 2019
+- 
+- Windows Server 2016
 
 - Windows Server 2012 R2 and Windows Server 2012
 
@@ -103,7 +105,6 @@ The Azure Information Protection clients have additional prerequisites that are 
 - Azure Information Protection unified labeling client: [Prerequisites](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
 - Azure Information Protection client: [Prerequisites](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
-
 
 ## Applications
 
