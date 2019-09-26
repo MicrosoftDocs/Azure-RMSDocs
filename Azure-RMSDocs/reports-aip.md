@@ -242,7 +242,7 @@ Azure Monitor Logs has a **Usage and estimated costs** feature to help you estim
     
     If you need help with creating the Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
-4. If you have Azure Information Protection clients (classic), consider whether to select the checkbox **Enable deeper analytics into your sensitive data**. For more information about this setting, see the [Content matches for deeper analysis](#content-matches-for-deeper-analysis) section on this page.
+4. If you have Azure Information Protection clients (classic), select the checkbox **Enable deeper analytics into your sensitive data** if you want to store the actual data that's identified as being a sensitive information type. For more information about this setting, see the [Content matches for deeper analysis](#content-matches-for-deeper-analysis) section on this page.
 
 5. Select **OK**.
 
