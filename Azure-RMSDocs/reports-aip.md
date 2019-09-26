@@ -154,8 +154,6 @@ By default, Azure Information Protection clients don't send content matches. To 
 
 - For the unified labeling client, configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches) in a label policy.
 
-After collecting the content matches, they are displayed in the reports when you drill down into files from the Activity logs, to display **Activity Details**. This information can also be viewed and retrieved with queries.
-
 ## Prerequisites
 To view the Azure Information Protection reports and create your own, make sure that the following requirements are in place.
 
