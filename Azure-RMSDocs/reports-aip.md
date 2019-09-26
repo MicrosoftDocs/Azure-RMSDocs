@@ -150,7 +150,7 @@ By default, Azure Information Protection clients don't send content matches. To 
 
 - For the classic client, select a checkbox as part of the configuration for Azure Information Protection analytics. The checkbox is named **Enable deeper analytics into your sensitive data**.
     
-    If you want most users who are using this client to send content matches and a subset of users cannot send it, select the checkbox and then configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
+    If you want most users who are using this client to send content matches but a subset of users cannot send content matches, select the checkbox and then configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in a scoped policy for the subset of users.
 
 - For the unified labeling client, configure an [advanced setting](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches) in a label policy.
 
