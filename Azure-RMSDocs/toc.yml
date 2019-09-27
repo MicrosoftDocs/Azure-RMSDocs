@@ -211,7 +211,7 @@
         href: administer-powershell.md
       - name: Installing the AIPService PowerShell module
         href: install-powershell.md
-  - name: Deploy & Use the Client
+  - name: Deploy & use the client
     items:
     - name: Client deployment solutions
       items:
