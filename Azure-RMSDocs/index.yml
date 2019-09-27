@@ -58,7 +58,7 @@ landingContent:
       - linkListType: quickstart
         links:
           - text: Find sensitive info (preview)
-            url: deploy-aip-scanner.md
+            url: quickstart-findsensitiveinfo.md
       - linkListType: how-to-guide
         links:
           - text: Deploy the scanner (preview)
