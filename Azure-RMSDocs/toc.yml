@@ -21,25 +21,25 @@
 - name: Quickstarts
   expanded: true
   items:
-  - name: Get started in the Azure portal - classic client
+  - name: Get started in the Azure portal (classic client)
     href: quickstart-viewpolicy.md
   - name: Find what sensitive information you have
     href: quickstart-findsensitiveinfo.md
-  - name: Configure a label to protect emails - classic client
+  - name: Configure a label to protect emails (classic client)
     href: quickstart-label-dnf-protectedemail.md
-  - name: Create a new label for specific users - classic client
+  - name: Create a new label for specific users (classic client)
     href: quickstart-label-specificusers.md
 - name: Tutorials
   items:
-  - name: Edit the policy and create a new label - classic client
+  - name: Edit the policy and create a new label (classic client)
     href: infoprotect-quick-start-tutorial.md
-  - name: Configure policy settings that work together - classic client
+  - name: Configure policy settings that work together (classic client)
     href: infoprotect-settings-tutorial.md
-  - name: Configure client settings to control oversharing - classic client
+  - name: Configure client settings to control oversharing (classic client)
     href: infoprotect-oversharing-tutorial.md
 - name: Concepts
   items:
-  - name: Overview of the Azure Information Protection policy
+  - name: Overview of the Azure Information Protection policy (classic client)
     href: overview-policy.md
   - name: Rights Management protection
     items:
@@ -123,7 +123,7 @@
       href: configure-usage-rights.md
     - name: Configuring super users for discovery services or data recovery
       href: configure-super-users.md
-    - name: Configuring the Azure Information Protection policy
+    - name: Configuring the Azure Information Protection policy (classic client)
       items:
       - name: Overview
         href: configure-policy.md
