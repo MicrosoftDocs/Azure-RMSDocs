@@ -65,7 +65,7 @@
   items:
   - name: How-tos for common scenarios
     href: how-to-guides.md
-  - name: Prepare the environment
+  - name: Prepare to use the service
     items:
     - name: Deployment roadmap
       href: deployment-roadmap.md
