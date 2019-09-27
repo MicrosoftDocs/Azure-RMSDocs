@@ -65,7 +65,7 @@
   items:
   - name: How-tos for common scenarios
     href: how-to-guides.md
-  - name: Plan & Design
+  - name: Preparation
     items:
     - name: Deployment roadmap
       href: deployment-roadmap.md
@@ -99,7 +99,7 @@
         href: byok-price-restrictions.md
     - name: Preparing users and groups
       href: prepare.md
-  - name: Deploy & Use the Service
+  - name: Configure & use the service
     items:
     - name: Activating protection
       items:
