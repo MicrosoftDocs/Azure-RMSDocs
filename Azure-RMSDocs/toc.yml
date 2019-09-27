@@ -65,7 +65,7 @@
   items:
   - name: How-tos for common scenarios
     href: how-to-guides.md
-  - name: Prepare to use the service
+  - name: Plan & prepare for the service
     items:
     - name: Deployment roadmap
       href: deployment-roadmap.md
@@ -313,7 +313,7 @@
         href: ./rms-client/configure-fci.md
       - name: PowerShell script
         href: ./rms-client/fci-script.md
-  - name: Develop & Customize apps
+  - name: Develop & customize apps
     href: ./develop/developers-guide.md
     items:
     - name: Developer's Guide
