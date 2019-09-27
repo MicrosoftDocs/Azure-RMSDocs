@@ -21,21 +21,21 @@
 - name: Quickstarts
   expanded: true
   items:
-  - name: Get started in the Azure portal
+  - name: Get started in the Azure portal - classic client
     href: quickstart-viewpolicy.md
   - name: Find what sensitive information you have
     href: quickstart-findsensitiveinfo.md
-  - name: Configure a label to protect emails
+  - name: Configure a label to protect emails - classic client
     href: quickstart-label-dnf-protectedemail.md
-  - name: Create a new label for specific users
+  - name: Create a new label for specific users - classic client
     href: quickstart-label-specificusers.md
 - name: Tutorials
   items:
-  - name: Edit the policy and create a new label
+  - name: Edit the policy and create a new label - classic client
     href: infoprotect-quick-start-tutorial.md
-  - name: Configure policy settings that work together
+  - name: Configure policy settings that work together - classic client
     href: infoprotect-settings-tutorial.md
-  - name: Configure client settings to control oversharing
+  - name: Configure client settings to control oversharing - classic client
     href: infoprotect-oversharing-tutorial.md
 - name: Concepts
   items:
@@ -73,7 +73,7 @@
       items:
       - name: Overview
         href: migrate-from-ad-rms-to-azure-rms.md
-      - name: Preparation
+      - name: Prepare the environment
         href: migrate-from-ad-rms-phase1.md
       - name: Server-side configuration
         items:
