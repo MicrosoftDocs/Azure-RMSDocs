@@ -65,7 +65,7 @@
   items:
   - name: How-tos for common scenarios
     href: how-to-guides.md
-  - name: Preparation
+  - name: Prepare the environment
     items:
     - name: Deployment roadmap
       href: deployment-roadmap.md
@@ -73,7 +73,7 @@
       items:
       - name: Overview
         href: migrate-from-ad-rms-to-azure-rms.md
-      - name: Prepare the environment
+      - name: Preparation
         href: migrate-from-ad-rms-phase1.md
       - name: Server-side configuration
         items:
