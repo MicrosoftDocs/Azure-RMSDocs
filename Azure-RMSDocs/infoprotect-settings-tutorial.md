@@ -24,7 +24,7 @@ ms.custom: admin
 
 ---
 
-# Tutorial: Configure Azure Information Protection policy settings that work together (classic client)
+# Tutorial: Configure Azure Information Protection policy settings that work together - classic client
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
@@ -35,7 +35,7 @@ In this tutorial, you learn how to:
 > * Configure policy settings that work together
 > * See your settings in action
 
-Rather than relying on users to manually label their documents and emails, you can use policy settings to:
+Rather than relying on users to manually label their documents and emails, you can use Azure Information Protection policy settings to:
 
 - Ensure a base level of classification for new and edited content
 

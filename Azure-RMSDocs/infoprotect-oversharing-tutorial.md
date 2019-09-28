@@ -23,7 +23,7 @@ ms.custom: admin
 
 ---
 
-# Tutorial: Configure Azure Information Protection to control oversharing of information using Outlook (classic client)
+# Tutorial: Configure Azure Information Protection to control oversharing of information using Outlook - classic client
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >

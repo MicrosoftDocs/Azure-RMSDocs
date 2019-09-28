@@ -21,10 +21,10 @@ ms.subservice: aiplabels
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
-#Customer intent: As an administrator, I want to create a new label for specific users only.
+#Customer intent: As an administrator, I want to create a new Azure Information Protection label for specific users only.
 ---
 
-# Quickstart: Create a new Azure Information Protection label for specific users (classic client)
+# Quickstart: Create a new Azure Information Protection label for specific users who use the classic client
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
