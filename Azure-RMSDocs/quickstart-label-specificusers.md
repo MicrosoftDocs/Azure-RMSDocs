@@ -24,7 +24,7 @@ ms.custom: admin
 #Customer intent: As an administrator, I want to create a new label for specific users only.
 ---
 
-# Quickstart: Create a new Azure Information Protection label for specific users
+# Quickstart: Create a new Azure Information Protection label for specific users (classic client)
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >

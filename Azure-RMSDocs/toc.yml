@@ -251,7 +251,7 @@
             href: ./rms-client/clientv2-view-use-files.md
           - name: Remove labels and protection
             href: ./rms-client/clientv2-remove-label-protection.md
-      - name: Azure Information Protection client
+      - name: Azure Information Protection client (classic)
         items:
         - name: Overview
           href: ./rms-client/aip-client.md

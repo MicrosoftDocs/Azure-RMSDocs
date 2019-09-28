@@ -23,7 +23,7 @@ ms.custom: admin
 #Customer intent: As an administrator, I want to make it easy for users to protect their emails that contain sensitive information.
 ---
 
-# Quickstart: Configure a label for users to easily protect emails that contain sensitive information
+# Quickstart: Configure a label for users to easily protect emails that contain sensitive information (classic client)
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
