@@ -6,7 +6,7 @@ description: An introduction tutorial that steps you through configuring Azure I
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/20/2019
+ms.date: 00/28/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -55,11 +55,11 @@ To complete this tutorial, you need:
 
     If you need help with these actions, see [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md)
 
-3. The Azure Information Protection client is installed on your computer. 
+3. The Azure Information Protection client (classic) is installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
     
-    To install the client, go to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
+    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. If are using a different labeling client to the classic client, see the [Office documentation](/microsoft-365/compliance/sensitivity-labels)  for equivalent instructions to this tutorial.
 
-4. A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you are signed in to Office apps from one of the following categories:
+4. You are signed in to Office apps from one of the following categories:
     
     - Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when you are assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365).
     
