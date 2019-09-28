@@ -59,7 +59,9 @@ To complete this quickstart, you need:
 
 4. To test the new label: The Azure Information Protection client (classic) must be installed on a Windows computer. 
     
-    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. If are using a different labeling client to the classic client, see the Office documentation for equivalent instructions to this quickstart.
+    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
+    
+    If are using a different labeling client to the classic client, see the Office documentation for equivalent instructions to this tutorial. For example, [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 5. To test the new label: A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you're signed in to Office apps from one of the following categories:
     
