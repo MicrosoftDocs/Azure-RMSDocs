@@ -21,7 +21,7 @@
 - name: Quickstarts
   expanded: true
   items:
-  - name: Get started in the Azure portal (classic client)
+  - name: Get started in the Azure portal
     href: quickstart-viewpolicy.md
   - name: Find what sensitive information you have
     href: quickstart-findsensitiveinfo.md
