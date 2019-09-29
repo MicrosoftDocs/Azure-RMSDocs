@@ -27,7 +27,7 @@ landingContent:
         links:
           - text: What is Azure Information Protection?
             url: what-is-information-protection.md
-          - text: FAQs
+          - text: Frequently asked questions
             url: faqs.md
 
   # Card
@@ -41,7 +41,7 @@ landingContent:
        links:
           - text: Get started in the Azure portal
             url: quickstart-viewpolicy.md
-          - text: Find sensitive info
+          - text: Find sensitive information
             url: quickstart-findsensitiveinfo.md
      - linkListType: deploy
        links:
@@ -53,9 +53,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Customize the classic client
+          - text: Advanced settings: Classic client
             url: ./rms-client/client-admin-guide-customizations.md
-          - text: Customize the unified labeling client
+          - text: Advanced settings: Unified labeling client
             url: ./rms-client/clientv2-admin-guide-customizations.md
 
   # Card
