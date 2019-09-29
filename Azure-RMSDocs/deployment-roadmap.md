@@ -155,9 +155,9 @@ Optionally, consider configuring the following:
 ### Step 6: Use and monitor your data protection solutions
 You’re now ready to monitor how your organization is using the labels that you've configured and confirm that you're protecting sensitive information. For addition information to support this deployment phase, see the following:
 
-- [Reporting for Azure Information Protection](reports-aip.md) - currently in preview
+- [Central reporting for Azure Information Protection](reports-aip.md) - currently in preview
 
-- Client files and usage logging for the [Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md)
+- Windows event logs for the [Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)
 
 - [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md)
 
