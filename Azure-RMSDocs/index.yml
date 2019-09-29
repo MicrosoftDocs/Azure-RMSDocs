@@ -36,8 +36,8 @@ landingContent:
        links:
           - text: Choose your client
             url: ./rms-client/use-aip.md#choose-which-azure-information-protection-client-to-use
-      - linkListType: how-to-guide
-        links:
+     - linkListType: how-to-guide
+       links:
           - text: Migrate Azure Information Protection labels
             url: configure-policy-migrate.md
 
