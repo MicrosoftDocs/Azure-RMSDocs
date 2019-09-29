@@ -53,9 +53,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Advanced settings: Classic client
+          - text: Advanced settings - Classic client
             url: ./rms-client/client-admin-guide-customizations.md
-          - text: Advanced settings: Unified labeling client
+          - text: Advanced settings - Unified labeling client
             url: ./rms-client/clientv2-admin-guide-customizations.md
 
   # Card
