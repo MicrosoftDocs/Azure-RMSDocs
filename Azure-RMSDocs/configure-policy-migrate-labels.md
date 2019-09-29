@@ -30,9 +30,12 @@ ms.custom: admin
 >
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Migrate your labels in Azure Information Protection so that you can use them as sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling).
+Migrate Azure Information Protection labels to the unified labeling platform so that you can use them as sensitivity labels by [clients and services that support unified labeling](#clients-and-services-that-support-unified-labeling).
 
-These labels can then be used by the Azure Information Protection unified labeling client. If you continue to use the Azure Information Protection client (classic), this client continues to download the labels with the Azure Information Protection policy from the Azure portal.
+> [!IMPORTANT]
+> If you have fairly recently got your subscription for Azure Information Protection, you might not need to migrate labels because your tenant is already on the unified labeling platform. For more information, see [How can I determine if my tenant is on the unified labeling platform?](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
+
+After you migrate your labels, you won't see any difference with the Azure Information Protection client (classic) because this client continues to download the labels with the Azure Information Protection policy from the Azure portal. However, you can now use the labels with the Azure Information Protection unified labeling client and other clients and services that use sensitivity labels
 
 Before you read the instructions to migrate your labels, you might find the following frequently asked questions useful:
 
@@ -137,7 +140,7 @@ If the user doesn't have one of these usage rights or roles, the label is not ap
 
 ## To migrate Azure Information Protection labels
 
-Use the following instructions to migrate your tenant and Azure Information Protection labels to use the new unified labeling store.
+Use the following instructions to migrate your tenant and Azure Information Protection labels to use the unified labeling store.
 
 You must be a Compliance administrator, Compliance data administrator, Security administrator, or Global administrator to migrate your labels.
 
