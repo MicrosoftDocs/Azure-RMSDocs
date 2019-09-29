@@ -32,9 +32,9 @@ Use the following steps as recommendations to help you prepare for, implement, a
 
 Alternatively: 
 
-- Looking for scenario-based instruction? See [How-to guides for common scenarios that use Azure Information Protection](how-to-guides.md)
+- Looking for scenario-based instruction for Azure Information Protection? See [How-to guides for common scenarios that use Azure Information Protection](how-to-guides.md)
 
-- Looking for the product release roadmap? See our [Information about new releases and updates](information-support.md#information-about-new-releases-and-updates) section.
+- Looking for the Azure Information Protection release roadmap? See [Information about new releases and updates](information-support.md#information-about-new-releases-and-updates)
 
 ### Identify your deployment roadmap
 
