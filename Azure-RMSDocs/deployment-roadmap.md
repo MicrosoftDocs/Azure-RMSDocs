@@ -6,7 +6,7 @@ description: Use these steps to prepare for, implement, and manage Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -89,7 +89,7 @@ After a period of time, when users are comfortable labeling their documents and 
 
 - Customized headers, footers, or watermarks
 
-- Conditions to support recommendations and automatic labeling
+- Recommended and automatic labeling
 
 At this stage, do not select the option to protect documents and emails. However, after you have configured labels for automatic labeling, run the [Azure Information Protection scanner](deploy-aip-scanner.md) on your local data stores in discovery mode and to match your policy. Running the scanner with this configuration tells you which labels would be applied to files. This information helps you fine-tune your label configuration and prepares you for classifying and protecting files in bulk. 
 
@@ -109,7 +109,7 @@ Optionally, consider configuring the following:
 
 - Usage logging so that you can monitor how your organization is using the protection service. You can do this step now, or later. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md).
 
-### Step 5: Configure your Azure Information Protection policy, applications, and services for data protection
+### Step 5: Configure labels and settings, applications, and services for data protection
 
 1. Update your labels to apply protection
     
@@ -131,8 +131,10 @@ Optionally, consider configuring the following:
     
     For your on-premises data stores, now run the [Azure Information Protection scanner](deploy-aip-scanner.md) in enforcement mode so that files are automatically labeled. For cloud-based data stores, use [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security).
     
-    For files on PCs, you can use PowerShell cmdlets to classify and protect files. For more information, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) from the admin guide.
-
+    For files on PCs, you can use PowerShell cmdlets to classify and protect files. For more information, see the following admin guides:
+    - Classic client: [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)
+    - Unified labeling client: [Using PowerShell with the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-powershell.md)
+    - 
 6. Deploy the connector for IRM-protected libraries on SharePoint Server, and IRM-protected emails for Exchange on-premises
     
     If you have SharePoint and Exchange on-premises and want to use their information rights management (IRM) features, install and configure the Rights Management connector. For more information, see [Deploying the Azure Rights Management connector](./deploy-rms-connector.md).
