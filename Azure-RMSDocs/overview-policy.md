@@ -6,7 +6,7 @@ description: Understand labels and settings in an Azure Information Protection p
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 09/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,6 +29,11 @@ ms.custom: admin
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE]
+> The Azure Information Protection policy applies to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
+> 
+> If you are looking for information about sensitivity labels, see the Office documentation. For example, [Overview of sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels).
 
 An Azure Information Protection policy contains the following elements that you can configure:
     
