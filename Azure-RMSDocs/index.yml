@@ -31,7 +31,7 @@ landingContent:
   # Card
   - title: Get started
     linkLists:
-      - linkListType: deploy
+      - linkListType: overview
         links:
           - text: Requirements
             url: requirements.md
@@ -39,20 +39,22 @@ landingContent:
         links:
           - text: Get started with Azure Information Protection in the Azure portal
             url: quickstart-viewpolicy.md
-     - linkListType: overview
+     - linkListType: deploy
         links:
           - text: Azure Information Protection deployment roadmap
             url: deployment-roadmap.md
-          - text: The client side of Azure Information Protection
-            url: ./rms-client/use-client.md
 
   # Card
-  - title: Bring your own key (BYOK)
+  - title: Activate unified labels
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Plan & implement your tenant key
-            url: plan-implement-tenant-key.md
+          - text: Migrate Azure Information Protection labels
+            url: configure-policy-migrate.md
+     - linkListType: overview
+        links:
+          - text: Choose your client
+            url: ./rms-client/use-aip.md#choose-which-azure-information-protection-client-to-use
 
   # Card
   - title: Classify & protect data in on-premises data stores
