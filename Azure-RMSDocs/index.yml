@@ -40,6 +40,8 @@ landingContent:
        links:
           - text: Get started in the Azure portal
             url: quickstart-viewpolicy.md
+          - text: Find sensitive info
+            url: quickstart-findsensitiveinfo.md
      - linkListType: deploy
        links:
           - text: Deployment roadmap
@@ -57,14 +59,9 @@ landingContent:
           - text: Migrate Azure Information Protection labels
             url: configure-policy-migrate-labels.md
 
-
   # Card
   - title: Classify & protect data in on-premises data stores
     linkLists:
-      - linkListType: quickstart
-        links:
-          - text: Find sensitive info
-            url: quickstart-findsensitiveinfo.md
       - linkListType: how-to-guide
         links:
           - text: Deploy the scanner
