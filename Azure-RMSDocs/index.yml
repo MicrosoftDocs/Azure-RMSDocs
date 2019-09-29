@@ -28,21 +28,6 @@ landingContent:
           - text: What is Azure Information Protection?
             url: what-is-information-protection.md
 
-  # Card
-  - title: Get started
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Requirements
-            url: requirements.md
-      - linkListType: quickstart
-        links:
-          - text: Get started with Azure Information Protection in the Azure portal
-            url: quickstart-viewpolicy.md
-     - linkListType: deploy
-        links:
-          - text: Azure Information Protection deployment roadmap
-            url: deployment-roadmap.md
 
   # Card
   - title: Activate unified labels
@@ -55,6 +40,22 @@ landingContent:
         links:
           - text: Choose your client
             url: ./rms-client/use-aip.md#choose-which-azure-information-protection-client-to-use
+
+  # Card
+  - title: Get started
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Requirements
+            url: requirements.md
+      - linkListType: quickstart
+        links:
+          - text: Get started in the Azure portal
+            url: quickstart-viewpolicy.md
+     - linkListType: deploy
+        links:
+          - text: Azure Information Protection deployment roadmap
+            url: deployment-roadmap.md
 
   # Card
   - title: Classify & protect data in on-premises data stores
