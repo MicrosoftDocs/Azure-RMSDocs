@@ -30,18 +30,6 @@ landingContent:
 
 
   # Card
-  - title: Activate unified labels
-    linkLists:
-     - linkListType: overview
-       links:
-          - text: Choose your client
-            url: ./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use
-     - linkListType: how-to-guide
-       links:
-          - text: Migrate Azure Information Protection labels
-            url: configure-policy-migrate-labels.md
-
-  # Card
   - title: Get started
     linkLists:
      - linkListType: overview
@@ -56,6 +44,19 @@ landingContent:
        links:
           - text: Deployment roadmap
             url: deployment-roadmap.md
+
+  # Card
+  - title: Activate unified labels
+    linkLists:
+     - linkListType: overview
+       links:
+          - text: Choose your client
+            url: ./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use
+     - linkListType: how-to-guide
+       links:
+          - text: Migrate Azure Information Protection labels
+            url: configure-policy-migrate-labels.md
+
 
   # Card
   - title: Classify & protect data in on-premises data stores
