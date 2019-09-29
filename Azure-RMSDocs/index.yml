@@ -49,6 +49,17 @@ landingContent:
             url: deployment-roadmap.md
 
   # Card
+  - title: Customize the client
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Classic client
+            url: ./rms-client/client-admin-guide-customizations.md
+        links:
+          - text: Unified labeling client
+            url: ./rms-client/clientv2-admin-guide-customizations.md
+
+  # Card
   - title: Activate unified labels
     linkLists:
      - linkListType: how-to-guide
@@ -65,7 +76,7 @@ landingContent:
             url: deploy-aip-scanner.md
 
   # Card
-  - title: Monitor label usage & discover sensitive info
+  - title: Monitor label usage & discover sensitive information
     linkLists:
       - linkListType: how-to-guide
         links:
