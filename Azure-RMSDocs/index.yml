@@ -43,8 +43,6 @@ landingContent:
         links:
           - text: Azure Information Protection deployment roadmap
             url: deployment-roadmap.md
-     - linkListType: overview
-        links:
           - text: The client side of Azure Information Protection
             url: ./rms-client/use-client.md
 
