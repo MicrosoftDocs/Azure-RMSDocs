@@ -42,9 +42,14 @@ Before you implement any of the following steps to deploy Azure Information Prot
 Then choose the deployment roadmap that's applicable for your organization and that matches the [subscription functionality and features](https://azure.microsoft.com/pricing/details/information-protection/) that you need:
 
 - [Use classification, labeling, and protection](#deployment-roadmap-for-classification-labeling-and-protection)
+    
+    The recommended path when you have a supporting subscription because the additional capabilities support discovering sensitive information, and labeling documents and emails with classification. The labels can also apply protection, abstracting this complexity from users.
+    
+    The deployment steps are suitable for Azure Information Protection labels, and sensitivity labels that use the [unified labeling platform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
 
 - [Use data protection only](#deployment-roadmap-for-data-protection-only)
-
+    
+    The path to use when you don't have a subscription that supports classification and labels, but does support protection without labels.
 
 ## Deployment roadmap for classification, labeling, and protection
 
