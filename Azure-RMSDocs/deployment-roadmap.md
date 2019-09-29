@@ -124,7 +124,7 @@ Optionally, consider configuring the following:
 
 1. Update your labels to apply protection
     
-    For the Azure Information Protection client, see [How to configure a label for Rights Management protection](./configure-policy-protection.md).
+    For the Azure Information Protection client (classic), see [How to configure a label for Rights Management protection](./configure-policy-protection.md).
     
     For the Azure Information Protection unified labeling client, see [Restrict access to content by using encryption in sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels).
     
@@ -143,9 +143,11 @@ Optionally, consider configuring the following:
     For your on-premises data stores, now run the [Azure Information Protection scanner](deploy-aip-scanner.md) in enforcement mode so that files are automatically labeled. For cloud-based data stores, use [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security).
     
     For files on PCs, you can use PowerShell cmdlets to classify and protect files. For more information, see the following admin guides:
-    - Classic client: [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)
-    - Unified labeling client: [Using PowerShell with the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-powershell.md)
-    - 
+    
+    - Azure Information Protection client (classic): [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)
+    
+    - Azure Information Protection unified labeling client: [Using PowerShell with the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-powershell.md)
+
 6. Deploy the connector for IRM-protected libraries on SharePoint Server, and IRM-protected emails for Exchange on-premises
     
     If you have SharePoint and Exchange on-premises and want to use their information rights management (IRM) features, install and configure the Rights Management connector. For more information, see [Deploying the Azure Rights Management connector](./deploy-rms-connector.md).
