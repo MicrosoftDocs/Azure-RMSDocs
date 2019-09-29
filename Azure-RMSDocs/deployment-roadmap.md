@@ -62,16 +62,16 @@ Before you begin using Azure Information Protection, make sure that you have use
 
 For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
 
-Next, decide which client you're going to use: The Azure Information Protection client (classic) or the Azure Information Protection unified labeling client. For more information, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
-
 ### Step 3: Configure and deploy classification and labeling
 
-> [!TIP]
-> **Optional but recommended**: Consider deploying the Azure Information Protection scanner to discover what sensitive information you have on your local data stores. We have a [quickstart](quickstart-findsensitiveinfo.md) that covers this scenario. The information that the scanner finds can help you with your classification taxonomy, provide valuable information about what labels you need, and which files need protecting.
-> 
-> The scanner can be configured to look for well-known sensitive information types in local files on Windows Server, files in network shares, and files in on-premises versions of SharePoint. Because this configuration doesn't require you to configure labels or even have your classification taxonomy defined, running the scanner in this way is suitable for this very early stage of your deployment. You can also use this configuration of the scanner in parallel with the following deployment steps, until you configure conditions for your labels.
+Before you configure labels and policy settings, decide which client you're going to use: The Azure Information Protection client (classic) or the Azure Information Protection unified labeling client. For more information, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 
-If you do not already have a classification strategy, review the [default Azure Information Protection policy](./configure-policy-default.md) and use this as the basis for deciding what classification labels to assign to your organization data. You can customize these to meet your business requirements.
+> [!TIP]
+> **Optional but recommended**: Consider using the [scanner quickstart](quickstart-findsensitiveinfo.md) to discover what sensitive information you have on your local data stores. The information that the scanner finds can help you with your classification taxonomy, provide valuable information about what labels you need, and which files need protecting.
+> 
+> Because the scanner discovery mode doesn't require you to configure labels or even have your classification taxonomy defined, running the scanner in this way is suitable for this very early stage of your deployment. You can also use this configuration of the scanner in parallel with the following deployment steps, until you configure recommended or automatic labeling.
+
+If you don't already have a classification strategy, review the [default Azure Information Protection policy](./configure-policy-default.md) and use this as the basis for deciding what classification labels to assign to your organization data. You can customize these to meet your business requirements.
 
 Reconfigure your labels to make any changes you need to support your classification decisions. Configure the policy for manual labeling by users, and write user guidance that explains which label to apply and when. If your default policy was created with labels that automatically apply protection, temporarily remove the protection settings or disable the label. For more information about how to configure the labels and policy settings, see the following documentation:
 
