@@ -71,7 +71,11 @@ For more information, see [Preparing users and groups for Azure Information Prot
 
 If you do not already have a classification strategy, review the [default Azure Information Protection policy](./configure-policy-default.md) and use this as the basis for deciding what classification labels to assign to your organization data. You can customize these to meet your business requirements.
 
-Reconfigure the default Azure Information Protection labels to make any changes you need to support your classification decisions. Configure the policy for manual labeling by users, and write user guidance that explains which label to apply and when. If your default policy was created with labels that automatically apply protection, temporarily remove the protection settings or disable the label. For more information about how to configure Azure Information Protection policy, see [Configuring Azure Information Protection policy](./configure-policy.md).
+Reconfigure your labels to make any changes you need to support your classification decisions. Configure the policy for manual labeling by users, and write user guidance that explains which label to apply and when. If your default policy was created with labels that automatically apply protection, temporarily remove the protection settings or disable the label. For more information about how to configure the labels and policy settings, see the following documentation:
+
+- For Azure Information Protection labels: [Configuring Azure Information Protection policy](./configure-policy.md)
+
+- For sensitivity labels: [Overview of sensitivity labels](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
 
 Then deploy the [Azure Information Protection client or the Azure Information Protection unified labeling client for users](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) for users, and provide user training and specific instructions when to select the labels. For more information about installing and supporting the client, see the admin guides:
 
