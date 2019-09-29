@@ -32,9 +32,9 @@ Use the following steps as recommendations to help you prepare for, implement, a
 
 Alternatively: 
 
-- Looking for scenario-based instruction for Azure Information Protection? See [How-to guides for common scenarios that use Azure Information Protection](how-to-guides.md)
+- Looking for scenario-based instruction for Azure Information Protection? See [How-to guides for common scenarios that use Azure Information Protection](how-to-guides.md).
 
-- Looking for the Azure Information Protection release roadmap? See [Information about new releases and updates](information-support.md#information-about-new-releases-and-updates)
+- Looking for the Azure Information Protection release roadmap? See [Information about new releases and updates](information-support.md#information-about-new-releases-and-updates).
 
 ### Identify your deployment roadmap
 
@@ -44,7 +44,7 @@ Then choose the deployment roadmap that's applicable for your organization and t
 
 - [Use classification, labeling, and protection](#deployment-roadmap-for-classification-labeling-and-protection)
     
-    The recommended path when you have a supporting subscription because the additional capabilities support discovering sensitive information, and labeling documents and emails with classification. The labels can also apply protection, abstracting this complexity from users.
+    The recommended path when you have a supporting subscription because the additional capabilities support discovering sensitive information, and labeling documents and emails for classification. The labels can also apply protection, abstracting this complexity from users.
     
     The deployment steps are suitable for Azure Information Protection labels, and sensitivity labels that use the [unified labeling platform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
 
@@ -70,7 +70,7 @@ For more information, see [Preparing users and groups for Azure Information Prot
 
 ### Step 3: Configure and deploy classification and labeling
 
-Before you configure labels and policy settings, decide which client you're going to use: The Azure Information Protection client (classic) or the Azure Information Protection unified labeling client. For more information, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
+Before you configure labels and policy settings, decide which Azure Information Protection client you're going to use: The classic client or the unified labeling client. Or you might need both clients. This client decision is needed now, so you know which management portal to use to configure labels and policy settings. For more information and to help you with this decision, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 
 > [!TIP]
 > **Optional but recommended**: Consider using the [scanner quickstart](quickstart-findsensitiveinfo.md) to discover what sensitive information you have on your local data stores. The information that the scanner finds can help you with your classification taxonomy, provide valuable information about what labels you need, and which files need protecting.
@@ -198,11 +198,11 @@ Optionally, consider configuring the following:
 
 - Usage logging so that you can monitor how your organization is using the protection service. You can do this step now, or later. For more information, see [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md).
 
-### Step 3: Install the Azure Information Protection client and configure applications and services for Rights Management
+### Step 3: Install the Azure Information Protection client (classic) and configure applications and services for Rights Management
 
-1. Deploy the Azure Information Protection client
+1. Deploy the Azure Information Protection client (classic)
     
-    Install the Azure Information Protection for users to support Office 2010, to protect files other than Office documents and emails, and to track protected documents. Provide user training for this client. For more information, see [Azure Information Protection client for Windows](./rms-client/aip-client.md).
+    Install the classic client for users to support Office 2010, to protect files other than Office documents and emails, and to track protected documents. Provide user training for this client. For more information, see [Azure Information Protection client for Windows](./rms-client/aip-client.md).
 
 2. Configure Office applications and services
     
