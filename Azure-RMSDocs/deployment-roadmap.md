@@ -158,7 +158,7 @@ You’re now ready to monitor how your organization is using the labels that you
 
 - [Central reporting for Azure Information Protection](reports-aip.md) - currently in preview
 
-- [Local usage logging for Windows event monitor](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) for the Azure Information Protection client (classic)
+- [Local usage logging with Windows event monitor](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) for the Azure Information Protection client (classic)
 
 - [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md)
 
