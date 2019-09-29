@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/20/2019
+ms.date: 09/28/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,10 +26,8 @@ ms.custom: admin
 # Quickstart: Get started with Azure Information Protection in the Azure portal
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
->
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-In this quickstart, you'll add Azure Information Protection to the Azure portal, confirm the protection service is activated, create default labels if you don't already have labels, and view the policy settings for Azure Information Protection.
+In this quickstart, you'll add Azure Information Protection to the Azure portal, confirm the protection service is activated, create default labels if you don't already have labels, and view the policy settings for the Azure Information Protection client (classic).
 
 You can finish this quickstart in less than 10 minutes.
 
@@ -128,11 +126,11 @@ If you select a label, you see details for that label configuration on a new bla
 
 ## View your policy settings
 
-The first time you connect to the Azure Information Protection service by using the Azure portal, default policy settings are always created for you that are used by the Azure Information Protection client. For this client, policy settings and the labels we viewed are downloaded to the client in the Azure Information Protection policy.
+The first time you connect to the Azure Information Protection service by using the Azure portal, default policy settings are always created for you that are used by the Azure Information Protection client (classic). For the classic client, policy settings and the labels we viewed are downloaded to the client in the Azure Information Protection policy.
 
-If you are using the Azure Information Protection unified labeling client, this client does not use these policy settings. Instead, this client downloads labels and policy settings from the Office 365 Compliance & Security Center, the Microsoft 365 Compliance center, or the Microsoft 365 Security center.
+If you are using the Azure Information Protection unified labeling client, this client does not use these policy settings. Instead, this client downloads labels and policy settings from the Office 365 Compliance & Security Center, the Microsoft 365 Compliance center, or the Microsoft 365 Security center. Use those admin centers to view the equivalent label policies instead of the Azure portal.
 
-To view the default Azure Information Protection policy settings:
+To view the default Azure Information Protection policy settings for the classic client:
 
 1. Select **Classifications** > **Policies** > **Global** to display the default Azure Information Protection policy settings that are created for your tenant.
     
@@ -144,6 +142,13 @@ To view the default Azure Information Protection policy settings:
 
 ## Next steps
 
-Now that you've seen the default labels and policy settings in the Azure portal, you might find the following tutorial helpful as your next step: [Edit the policy and create a new label for Azure Information Protection](infoprotect-quick-start-tutorial.md).
+If you are using the classic client:
 
-Alternatively, for detailed instructions for configuring all aspects of the Azure Information Protection policy, see [Configuring the Azure Information Protection policy](configure-policy.md).
+- You might find the following tutorial helpful as your next step: [Edit the policy and create a new label for Azure Information Protection](infoprotect-quick-start-tutorial.md).
+- Alternatively, for detailed instructions for configuring all aspects of the Azure Information Protection policy, see [Configuring the Azure Information Protection policy](configure-policy.md).
+
+If you are using the unified labeling client:
+
+- See [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Office documentation.
+
+Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).

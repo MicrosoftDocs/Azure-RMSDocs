@@ -6,7 +6,7 @@ description: An introduction tutorial to configure and see in action advanced cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 09/28/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -55,9 +55,11 @@ To complete this tutorial, you need:
 
 3. A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you can sign in to Outlook. Be prepared to restart Outlook multiple times during this tutorial.
 
-4. The Azure Information Protection client is installed on your computer.
+4. The Azure Information Protection client (classic) is installed on your Windows computer.
     
-    To install the client, go to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
+    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. 
+    
+    If are using the unified labeling client instead of the classic client, see the following instructions that explain how to use PowerShell advanced settings for the equivalent configurations in this tutorial: [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 

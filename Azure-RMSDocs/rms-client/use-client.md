@@ -40,7 +40,7 @@ The Rights Management (RMS) client is automatically installed with some applicat
 
 The **Azure Information Protection client (classic)** downloads labels and policy settings from the Azure portal. For more information about this client, see the [Azure Information Protection client: Version release history and support policy](client-version-release-history.md).
 
-The **Azure Information Protection unified labeling client** downloads labels and policy settings from the admin centers: The Office 365 Security & Compliance Center, Microsoft 365 security center, and Microsoft 365 compliance center. For more information about this client, see the [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md).
+The **Azure Information Protection unified labeling client** downloads labels and policy settings from the admin centers: The Office 365 Security & Compliance Center, Microsoft 365 security center, and Microsoft 365 compliance center. For more information about this client, see the [Azure Information Protection unified labeling client: Version release information](unifiedlabelingclient-version-release-history.md). 
 
 Which client should you install?
 
@@ -152,8 +152,9 @@ The Azure Information Protection client (classic) doesn't support configurations
 
 For parity, the Azure Information Protection unified labeling client also doesn't support applying parent labels that have sublabels, even though you can select these labels in the admin centers. In this scenario, the Azure Information Protection unified labeling client will not apply the parent label.
 
-## See also
-Use the following documentation when you need more information about how to deploy and use these clients:
+## Next steps
+
+To install and configure the clients, use the following documentation:
 
 - [Azure Information Protection client](AIP-client.md)
 
