@@ -27,8 +27,8 @@ landingContent:
         links:
           - text: What is Azure Information Protection?
             url: what-is-information-protection.md
-          - text: Choose your client
-            url: ./rms-client/use-client.md
+          - text: FAQs
+            url: faqs.md
 
   # Card
   - title: Get started
@@ -61,7 +61,10 @@ landingContent:
 
   # Card
   - title: Activate unified labels
-    linkLists:
+      - linkListType: overview
+        links:
+          - text: Choose your client
+            url: ./rms-client/use-client.md    linkLists:
      - linkListType: how-to-guide
        links:
           - text: Migrate Azure Information Protection labels
