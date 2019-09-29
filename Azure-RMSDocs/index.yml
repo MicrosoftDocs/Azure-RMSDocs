@@ -44,17 +44,17 @@ landingContent:
   # Card
   - title: Get started
     linkLists:
-      - linkListType: overview
-        links:
+     - linkListType: overview
+       links:
           - text: Requirements
             url: requirements.md
-      - linkListType: quickstart
-        links:
+     - linkListType: quickstart
+       links:
           - text: Get started in the Azure portal
             url: quickstart-viewpolicy.md
      - linkListType: deploy
-        links:
-          - text: Azure Information Protection deployment roadmap
+       links:
+          - text: Deployment roadmap
             url: deployment-roadmap.md
 
   # Card
