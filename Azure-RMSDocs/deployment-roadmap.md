@@ -79,7 +79,7 @@ Reconfigure your labels to make any changes you need to support your classificat
 
 - Sensitivity labels for the unified labeling client: [Overview of sensitivity labels](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
 
-Then deploy the Azure Information Protection client (classic) or the Azure Information Protection unified labeling client. Provide user training and specific instructions when to select the labels. For more information about installing and supporting the clients, see the admin guides:
+Then deploy the Azure Information Protection client (classic) or the Azure Information Protection unified labeling client for users. Provide user training and specific instructions when to select the labels. For more information about installing and supporting the clients, see the admin guides:
 
 - [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md)
 
