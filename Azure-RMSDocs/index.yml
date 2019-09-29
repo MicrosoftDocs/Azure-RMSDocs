@@ -63,7 +63,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Compre the clients
+          - text: Compare the clients
             url: ./rms-client/use-client.md
       - linkListType: how-to-guide
         links:
