@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/19/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Azure Information Protection unified labeling client - Version release history and support policy
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -148,7 +148,7 @@ Supported through 02/06/2020
     - [Add "Report an Issue" for users](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
     - [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     - [Disable sending discovered sensitive information in documents to Azure Information Protection analytics](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
-    - [Disable sending information type matches for a subset of users](clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+    - [Send information type matches](clientv2-admin-guide-customizations.md#send-information-type-matches)
     - [Migrate labels from Secure Islands and other labeling solutions](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [Apply a custom property when a label is applied](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
     - [Configure a label to apply S/MIME protection in Outlook](clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)

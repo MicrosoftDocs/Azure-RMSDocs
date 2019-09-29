@@ -50,7 +50,7 @@ The following mobile device operating systems support the Azure Rights Managem
 
 -   **Android phones and tablets**: Minimum version of Android 4.4
 
--   **iPhone and iPad**: Minimum version of iOS 8.0
+-   **iPhone and iPad**: Minimum version of iOS 11.0
 
 -   **Windows phones and tablets**: Windows 10 Mobile
 

@@ -44,7 +44,7 @@ This app can also open PDF files that have been protected outside SharePoint and
 
 ## Can my mobile device run the Azure Information Protection app?
 
-The Azure Information Protection app requires a minimum version of **iOS 8** or **Android 4.4**.
+The Azure Information Protection app requires a minimum version of **iOS 11** or **Android 4.4**.
 
 If you have these versions or higher, you can install the app to run on your mobile device:
 
