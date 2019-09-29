@@ -6,7 +6,7 @@ description: Configure settings in the Azure Information Protection policy that 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/11/2019
+ms.date: 09/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
