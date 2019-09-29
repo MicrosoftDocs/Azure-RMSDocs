@@ -30,10 +30,10 @@ ms.custom: admin
 
 Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization.
 
-However, if you are looking for scenario-based instructions, see [How to guides for common scenarios that use Azure Information Protection](how-to-guides.md).
-
 > [!NOTE]
-> If you are looking for a product release roadmap, see our [Information about new releases and updates](information-support.md#information-about-new-releases-and-updates) section.
+> Looking for scenario-based instruction? See [How to guides for common scenarios that use Azure Information Protection](how-to-guides.md)
+> 
+> Looking for the product release roadmap? See our [Information about new releases and updates](information-support.md#information-about-new-releases-and-updates) section.
 
 ### Identify your deployment roadmap
 
