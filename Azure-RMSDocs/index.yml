@@ -60,12 +60,13 @@ landingContent:
 
   # Card
   - title: Activate unified labels
+    linkLists:
       - linkListType: overview
         links:
           - text: Choose your client
             url: ./rms-client/use-client.md    linkLists:
-     - linkListType: how-to-guide
-       links:
+      - linkListType: how-to-guide
+        links:
           - text: Migrate Azure Information Protection labels
             url: configure-policy-migrate-labels.md
 
