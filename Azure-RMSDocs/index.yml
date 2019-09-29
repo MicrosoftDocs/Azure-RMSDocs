@@ -55,7 +55,6 @@ landingContent:
         links:
           - text: Classic client
             url: ./rms-client/client-admin-guide-customizations.md
-        links:
           - text: Unified labeling client
             url: ./rms-client/clientv2-admin-guide-customizations.md
 
