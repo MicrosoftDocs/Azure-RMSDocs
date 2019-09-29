@@ -30,10 +30,9 @@ ms.custom: admin
 
 Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization.
 
-> [!NOTE]
-> Looking for scenario-based instruction? See [How to guides for common scenarios that use Azure Information Protection](how-to-guides.md)
-> 
-> Looking for the product release roadmap? See our [Information about new releases and updates](information-support.md#information-about-new-releases-and-updates) section.
+Looking for scenario-based instruction? See [How-to guides for common scenarios that use Azure Information Protection](how-to-guides.md)
+
+Looking for the product release roadmap? See our [Information about new releases and updates](information-support.md#information-about-new-releases-and-updates) section.
 
 ### Identify your deployment roadmap
 
@@ -230,3 +229,7 @@ You’re now ready to protect your data, and log how your company is using the p
 As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. PowerShell might also be needed for some of the advanced configurations. 
 
 For more information, see [Administering protection from Azure Information Protection by using PowerShell](./administer-powershell.md).
+
+## Next steps
+
+As you deploy Azure Information Protection, you might find it helpful to check the [frequently asked questions](faqs.md), and the [information and support](information-support.md) page for additional resources.
