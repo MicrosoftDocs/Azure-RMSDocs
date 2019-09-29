@@ -53,9 +53,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Classic client
+          - text: Customize the classic client
             url: ./rms-client/client-admin-guide-customizations.md
-          - text: Unified labeling client
+          - text: Customize the unified labeling client
             url: ./rms-client/clientv2-admin-guide-customizations.md
 
   # Card
@@ -64,7 +64,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Choose your client
-            url: ./rms-client/use-client.md    linkLists:
+            url: ./rms-client/use-client.md
       - linkListType: how-to-guide
         links:
           - text: Migrate Azure Information Protection labels
