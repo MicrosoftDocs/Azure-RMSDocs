@@ -21,7 +21,7 @@ ms.subservice: aiplabels
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
-#Customer intent: As an administrator, I want to make it easy for users who use the classic client to classify data as it's created and protect it if it contains sensitive information
+#Customer intent: As an administrator, I want to make it easy for users to classify data as it's created and protect it if it contains sensitive information
 ---
 
 # Tutorial: Configure Azure Information Protection policy settings and create a new label - classic client

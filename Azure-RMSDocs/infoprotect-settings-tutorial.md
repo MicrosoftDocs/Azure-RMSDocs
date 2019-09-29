@@ -24,7 +24,7 @@ ms.custom: admin
 
 ---
 
-# Tutorial: Configure Azure Information Protection policy settings that work together - classic client
+# Tutorial: Configure Azure Information Protection policy settings that work together
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
