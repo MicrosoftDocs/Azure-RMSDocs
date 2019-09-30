@@ -56,6 +56,8 @@ For example, a methodology with best practices for business decision makers and 
 
 Step-by-step instructions:
 
+- [How to Build a Custom AIP Tracking Portal](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-Build-a-Custom-AIP-Tracking-Portal/ba-p/875849)
+
 - [Create richer reports with Microsoft Information Protection and Azure AD login data](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
 
 - [Leverage Microsoft Cloud App Security to apply Azure Information Protection labels in the cloud](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
