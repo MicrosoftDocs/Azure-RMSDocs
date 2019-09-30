@@ -6,7 +6,7 @@ description: Breaking down how Azure RMS works, the cryptographic controls that 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/15/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
