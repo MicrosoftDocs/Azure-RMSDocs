@@ -477,7 +477,7 @@ When these conditions are met, the user sees a pop-up message with one of the fo
 When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
 
 > [!TIP]
-> Although the tutorial is for the Azure Information Protection client rather than the unified labeling client, you can see these advanced settings in action for yourself with [Tutorial: Configure Azure Information Protection to control oversharing of information using Outlook](../infoprotect-oversharing-tutorial.md).
+> See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
 
 ### To implement the warn, justify, or block pop-up messages for specific labels:
 
