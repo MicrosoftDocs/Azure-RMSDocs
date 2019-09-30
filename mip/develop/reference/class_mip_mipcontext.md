@@ -1,11 +1,11 @@
 ---
 title: class mip::MipContext 
 description: Documents the mip::mipcontext class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
+ms.author: mbaldwin
+ms.date: 08/27/2019
 ---
 
 # class mip::MipContext 
@@ -20,7 +20,9 @@ public const ApplicationInfo& GetApplicationInfo() const  |  Get application des
 public const std::string& GetMipPath() const  |  Get file path for logs, caches, etc.
 public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate()  |  Get logger implementation.
 public LoggerDelegate* GetRawLoggerDelegate()  |  Get logger implementation.
-  
+public static MIP_API std::shared_ptr&lt;MipContext&gt; __CDECL mip::MipContext::Create | Create a new MipContext instance to be used when initializing profiles.
+public static MIP_API std::shared_ptr&lt;MipContext&gt; __CDECL mip::MipContext::CreateWithCustomFeatureSettings | Create a new MipContext instance with custom feature settings.
+
 ## Members
   
 ### ShutDown function
@@ -60,5 +62,15 @@ Get logger implementation.
 ### GetRawLoggerDelegate function
 Get logger implementation.
 
-  
 **Returns**: Logger
+
+### Create function
+Create a new MipContext instance to be used when initializing profiles.
+
+**Returns**: MipContext instance.
+
+### CreateWithCustomFeatureSettings function
+Create a new MipContext instance with custom feature settings.
+
+**Returns**: MipContext instance.
+

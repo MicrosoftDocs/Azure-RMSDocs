@@ -1,11 +1,11 @@
 ---
 title: class mip::ProtectionDescriptorBuilder 
 description: Documents the mip::protectiondescriptorbuilder class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
+ms.author: mbaldwin
+ms.date: 08/27/2019
 ---
 
 # class mip::ProtectionDescriptorBuilder 
@@ -23,7 +23,11 @@ public void SetReferrer(const std::string& uri)  |  Sets protection policy refer
 public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be encrypted.
 public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be signed.
 public virtual ~ProtectionDescriptorBuilder()  | _Not yet documented._
-  
+public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromUserRights | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and rights.
+public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromUserRoles | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and roles.
+public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromTemplate | Creates a ProtectionDescriptorBuilder whose access permissions are defined by the protection template. 
+
+
 ## Members
   
 ### Build function
@@ -46,8 +50,6 @@ Sets protection policy description.
 Parameters:  
 * **value**: Policy description
 
-
-  
 ### SetContentValidUntil function
 Sets protection policy expiration time.
 
@@ -62,8 +64,6 @@ Sets if protection policy allows offline content access or not.
 Parameters:  
 * **value**: If policy allows offline content access or not
 
-
-  
 ### SetReferrer function
 Sets protection policy referrer address.
 
@@ -93,3 +93,30 @@ An application can specify a dictionary of app-specific data that will be signed
   
 ### ~ProtectionDescriptorBuilder function
 _Not documented yet._
+
+### CreateFromUserRights function
+Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and rights.
+
+Parameters:
+* **usersAndRights**: Collection of users-to-rights mappings.
+
+**Returns**: New [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance 
+
+### CreateFromUserRoles function
+Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and roles.
+
+Parameters:
+* **usersAndRoles**: Collection of users-to-roles mappings.
+
+**Returns**: Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by users and roles.
+
+### CreateFromTemplate function
+Creates a ProtectionDescriptorBuilder whose access permissions are defined by the protection template. 
+
+Parameters:
+* **templateId**: A protection template ID.
+
+**Returns**: A new [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance.
+
+
+

@@ -25,17 +25,17 @@
     href: quickstart-viewpolicy.md
   - name: Find what sensitive information you have
     href: quickstart-findsensitiveinfo.md
-  - name: Configure a label to protect emails
+  - name: Configure a label to protect emails - classic client
     href: quickstart-label-dnf-protectedemail.md
-  - name: Create a new label for specific users
+  - name: Create a new label for specific users - classic client
     href: quickstart-label-specificusers.md
 - name: Tutorials
   items:
-  - name: Edit the policy and create a new label
+  - name: Edit the policy and create a new label - classic client
     href: infoprotect-quick-start-tutorial.md
-  - name: Configure policy settings that work together
+  - name: Configure policy settings that work together - classic client
     href: infoprotect-settings-tutorial.md
-  - name: Configure client settings to control oversharing
+  - name: Configure client settings to control oversharing - classic client
     href: infoprotect-oversharing-tutorial.md
 - name: Concepts
   items:
@@ -65,7 +65,7 @@
   items:
   - name: How-tos for common scenarios
     href: how-to-guides.md
-  - name: Plan & Design
+  - name: Plan & prepare for the service
     items:
     - name: Deployment roadmap
       href: deployment-roadmap.md
@@ -95,11 +95,11 @@
       items:
       - name: Overview
         href: plan-implement-tenant-key.md
-      - name: BYOK pricing and restrictions
+      - name: BYOK details
         href: byok-price-restrictions.md
     - name: Preparing users and groups
       href: prepare.md
-  - name: Deploy & Use the Service
+  - name: Configure & use the service
     items:
     - name: Activating protection
       items:
@@ -163,7 +163,7 @@
           href: migrate-portal.md
       - name: Configure languages
         href: configure-policy-languages.md
-      - name: Migrate labels to Office 365
+      - name: Activate unified labels
         href: configure-policy-migrate-labels.md
     - name: Configure secure document collaboration
       href: secure-collaboration-documents.md
@@ -211,7 +211,7 @@
         href: administer-powershell.md
       - name: Installing the AIPService PowerShell module
         href: install-powershell.md
-  - name: Deploy & Use the Client
+  - name: Deploy & use the client
     items:
     - name: Client deployment solutions
       items:
@@ -251,7 +251,7 @@
             href: ./rms-client/clientv2-view-use-files.md
           - name: Remove labels and protection
             href: ./rms-client/clientv2-remove-label-protection.md
-      - name: Azure Information Protection client
+      - name: Azure Information Protection client (classic)
         items:
         - name: Overview
           href: ./rms-client/aip-client.md
@@ -294,7 +294,17 @@
           - name: Tasks that you used to do with the RMS sharing application
             href: ./rms-client/upgrade-client-app.md
     - name: Protected PDF readers
-      href: ./rms-client/protected-pdf-readers.md
+      items:
+      - name: Overview
+        href: ./rms-client/protected-pdf-readers.md
+      - name: Windows
+        href: ./rms-client/protected-pdf-readers-windows.md
+      - name: MacOS
+        href: ./rms-client/protected-pdf-readers-mac.md
+      - name: iOS
+        href: ./rms-client/protected-pdf-readers-ios.md
+      - name: Android
+        href: ./rms-client/protected-pdf-readers-android.md
     - name: RMS client deployment notes
       href: ./rms-client/client-deployment-notes.md
     - name: RMS protection with Windows Server FCI
@@ -303,7 +313,7 @@
         href: ./rms-client/configure-fci.md
       - name: PowerShell script
         href: ./rms-client/fci-script.md
-  - name: Develop & Customize apps
+  - name: Develop & customize apps
     href: ./develop/developers-guide.md
     items:
     - name: Developer's Guide

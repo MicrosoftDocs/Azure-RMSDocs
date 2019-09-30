@@ -1,11 +1,11 @@
 ---
 title: class mip::FileHandler 
 description: Documents the mip::filehandler class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
+ms.author: mbaldwin
+ms.date: 08/27/2019
 ---
 
 # class mip::FileHandler 
@@ -28,7 +28,8 @@ public void GetDecryptedTemporaryFileAsync(const std::shared_ptr\<void\>& contex
 public void GetDecryptedTemporaryStreamAsync(const std::shared_ptr\<void\>& context)  |  Returns a stream - representing the decrypted content.
 public void NotifyCommitSuccessful(const std::string& actualFilePath)  |  To be called when the changes have been committed to disk.
 public std::string GetOutputFileName()  |  Calculates the output file name and extension based on the original file name and the accumulated changes.
-  
+public static bool IsProtected(const std::string& filePath, const std::shared_ptr<MipContext>& mipContext) | Checks whether a file is protected or not.
+public static FILE_API std::vector&lt;uint8_t&gt; __CDECL mip::FileHandler::GetSerializedPublishingLicense | Return Publishing License if file has it.
 ## Members
   
 ### GetLabel function
@@ -94,3 +95,10 @@ Fires an Audit event
   
 ### GetOutputFileName function
 Calculates the output file name and extension based on the original file name and the accumulated changes.
+
+### IsProtected function
+Checks whether a file is protected or not.
+
+
+### GetSerializedPublishingLicense function
+Return Publishing License if file has it.

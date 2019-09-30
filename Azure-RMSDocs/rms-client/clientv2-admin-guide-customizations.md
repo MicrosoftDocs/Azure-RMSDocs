@@ -5,7 +5,7 @@ title: Custom configurations - Azure Information Protection unified labeling cli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/19/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Admin Guide: Custom configurations for the Azure Information Protection unified labeling client
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -129,7 +129,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |HideBarByDefault|[Display the Information Protection bar in Office apps](##display-the-information-protection-bar-in-office-apps)|
-|LogMatchedContent|[Disable sending information type matches for a subset of users](#disable-sending-information-type-matches-for-a-subset-of-users)|
+|LogMatchedContent|[Send information type matches](#send-information-type-matches)|
 |OutlookBlockTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Set a different default label for Outlook](#set-a-different-default-label-for-outlook)|
@@ -259,7 +259,7 @@ When the unified labeling client gets this configuration in its policy, the old 
 
 This configuration is not supported for Outlook, and be aware that when you use it with Word, Excel, and PowerPoint, it can negatively affect the performance of these apps for users. The configuration lets you define settings per application, for example, search for text in the headers and footers of Word documents but not Excel spreadsheets or PowerPoint presentations.
 
-Because the pattern matching affects the performance for users, we recommend that you limit the Office application types (**W**ord, **E**xcel, **P**owerPoint) to just those that need to be searched.
+Because the pattern matching affects the performance for users, we recommend that you limit the Office application types (**W**ord, E**X**cel, **P**owerPoint) to just those that need to be searched.
 
 For the selected label policy, specify the following strings:
 
@@ -477,7 +477,7 @@ When these conditions are met, the user sees a pop-up message with one of the fo
 When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
 
 > [!TIP]
-> Although the tutorial is for the Azure Information Protection client rather than the unified labeling client, you can see these advanced settings in action for yourself with [Tutorial: Configure Azure Information Protection to control oversharing of information using Outlook](../infoprotect-oversharing-tutorial.md).
+> See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
 
 ### To implement the warn, justify, or block pop-up messages for specific labels:
 
@@ -660,7 +660,7 @@ Example PowerShell command, where your label policy is named "Global":
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When the Azure Information Protection unified labeling client is used in Office apps, it looks for sensitive information in documents when they are first saved. Providing the [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) advanced setting is not set to **False**, any sensitive information types found (predefined or custom) are then sent to Azure Information Protection analytics.
+When the Azure Information Protection unified labeling client is used in Office apps, it looks for sensitive information in documents when they are first saved. Providing the [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) advanced setting is not set to **False**, any predefined and custom (preview client only) sensitive information types found are then sent to Azure Information Protection analytics.
 
 To change this behavior so that sensitive information types found by the unified labeling client are not sent to Azure Information Protection analytics, enter the following strings for the selected label policy:
 
@@ -682,19 +682,19 @@ Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 
-## Disable sending information type matches for a subset of users
+## Send information type matches
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that enables deeper analytics into your sensitive data collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users, which includes service accounts that run the Azure Information Protection scanner. If you have some users who should not send this data, create the following advanced client setting in a label policy for these users: 
+By default, the unified labeling client does not send content matches for sensitive info types to [Azure Information Protection analytics](../reports-aip.md). To send this additional information when sensitive information types are sent, create the following advanced client setting in a label policy: 
 
 - Key: **LogMatchedContent**
 
-- Value: **False**
+- Value: **True**
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="Disable"}
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
 ## Migrate labels from Secure Islands and other labeling solutions
 
@@ -778,9 +778,7 @@ Example PowerShell command, where your label is named "General":
 
 When you need multiple rules for the same label, define multiple string values for the same key. 
 
-In this example:
-
-- The Secure Islands labels named "Confidential" and "Secret" are stored in the custom property named **Classification, and you want the Azure Information Protection unified labeling client to apply the sensitivity label named "Confidential":
+In this example, the Secure Islands labels named "Confidential" and "Secret" are stored in the custom property named **Classification**, and you want the Azure Information Protection unified labeling client to apply the sensitivity label named "Confidential":
 
 	Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 
@@ -951,14 +949,15 @@ Set the logging level to one of the following values:
 
 - **Error**: Errors only.
 
-- **Info**: Minimum logging, which includes no event IDs.
+- **Warn**: Errors and warnings.
+
+- **Info**: Minimum logging, which includes no event IDs (the default setting for the scanner).
 
 - **Debug**: Full information.
 
 - **Trace**: Detailed logging (the default setting for clients).
 
 This registry setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md).
-
 
 ## Next steps
 Now that you've customized the Azure Information Protection unified labeling client, see the following resources for additional information that you might need to support this client:

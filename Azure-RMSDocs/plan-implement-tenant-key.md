@@ -6,7 +6,7 @@ description: Instead of Microsoft managing the root key for Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 09/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -91,6 +91,8 @@ With this option, the following happens:
 > As an additional protection measure, Azure Key Vault uses separate security domains for its data centers in regions such as North America, EMEA (Europe, Middle East and Africa), and Asia. Azure Key Vault also uses different instances of Azure, such as Microsoft Azure Germany, and Azure Government. 
 
 Although it’s optional, you will also probably want to use the near real-time usage logs from Azure Information Protection to see exactly how and when your tenant key is being used.
+
+When you use BYOK for your Azure Information Protection tenant key, you can't export your trusted publishing domain (TPD). The TPD is needed if you decide to no longer use Azure Information Protection but must still be able to decrypt content that was protected by Azure Information Protection. To prepare for this scenario by creating a suitable TPD ahead of time, see the following instructions [How to prepare an Azure Information Protection "Cloud Exit" plan](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631).
 
 ### When you have decided your tenant key topology
 

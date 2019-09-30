@@ -6,7 +6,7 @@ description: Resources for administrators, which include information about new r
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/13/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -86,15 +86,11 @@ On-demand videos:
 
 - Tech Community recorded webinars for [Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014).
 
-- Microsoft Ignite 2018 sessions for [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection):
-    
-    - See our [top five](what-is-information-protection.md#microsoft-ignite) recommended sessions.
-
 - Microsoft Virtual Academy sessions that include [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection).
 
 Troubleshooting:
 
-- If you have a question about how something works: Check whether your question is already answered on the [Frequently asked questions](faqs.md) page.
+- If you have a question about how something works: Check whether your question is already answered as a [frequently asked question](faqs.md).
 
 - If you have a question about a support statement for Azure Information Protection: See the [Requirements](requirements.md) information, which is regularly updated.
 
@@ -102,7 +98,11 @@ Troubleshooting:
 
 - If you have deployed the Rights Management connector for your on-premises servers: See the [monitoring](monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
 
-- For the Azure Information Protection client for Windows: See the [Installation checks and troubleshooting](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) section from the administrator guide, and check that you're using a [supported version](./rms-client/client-version-release-history.md#servicing-information-and-timelines).
+- For the Azure Information Protection client:
+    
+    - Unified labeling client: See the [Installation checks and troubleshooting](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) section from this client's administrator guide, and confirm that you're using a [supported version](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines). If there's a preview version available, try that to see if it fixes the issue—not all fixes are listed in the version history.
+    
+    - Classic client: See the [Installation checks and troubleshooting](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) section from this client's administrator guide, and confirm that you're using a [supported version](./rms-client/client-version-release-history.md#servicing-information-and-timelines). If there's a preview version available, try that to see if it fixes the issue—not all fixes are listed in the version history.
 
 ### Community resources
 

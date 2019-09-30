@@ -6,7 +6,7 @@ description: Breaking down how Azure RMS works, the cryptographic controls that 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/15/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -106,7 +106,7 @@ When the user’s account is federated with Azure Active Directory, this authe
 
 **What's happening in step 2**: After the user is authenticated, the connection is automatically redirected to the organization’s Azure Information Protection tenant, which issues certificates that let the user authenticate to the Azure Rights Management service in order to consume protected content and to protect content offline.
 
-One of these certificates is the rights account certificate, often abbreviated to RAC. This certificate authenticates the user to Azure Active Directory and is valid for 31 day. The certificate is automatically renewed by the RMS client, providing the user account is still in Azure Active Directory and the account is enabled. This certificate is not configurable by an administrator. 
+One of these certificates is the rights account certificate, often abbreviated to RAC. This certificate authenticates the user to Azure Active Directory and is valid for 31 days. The certificate is automatically renewed by the RMS client, providing the user account is still in Azure Active Directory and the account is enabled. This certificate is not configurable by an administrator. 
 
 A copy of this certificate is stored in Azure so that if the user moves to another device, the certificates are created by using the same keys.
 
@@ -127,7 +127,7 @@ The RMS client then uses the organization’s key that was obtained when the use
 
 ![RMS document protection - step 3, policy is embedded in the document](./media/AzRMS_documentprotection3.png)
 
-**What's happening in step 3**: Finally, the RMs client embeds the policy into a file with the body of the document encrypted previously, which together comprise a protected document.
+**What's happening in step 3**: Finally, the RMS client embeds the policy into a file with the body of the document encrypted previously, which together comprise a protected document.
 
 This document can be stored anywhere or shared by using any method, and the policy always stays with the encrypted document.
 

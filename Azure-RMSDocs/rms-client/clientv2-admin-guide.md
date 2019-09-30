@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Azure Information Protection unified labeling client administrator guide
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -56,11 +56,13 @@ The Azure Information Protection unified labeling client includes the following:
 
 - A viewer to display protected files when a native application cannot open it.
 
-- A PowerShell module to apply and remove classification labels and protection from files. 
+- A PowerShell module to discover sensitive information in files, and apply or remove classification labels and protection from files. 
+    
+    The preview version of the client includes cmdlets to install and configure the [Azure Information Protection scanner](../deploy-aip-scanner.md) that runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries
 
-- The Rights Management client that communicates with the Azure Rights Management (Azure RMS) service to encrypt and protect files.
+- The Rights Management client that communicates with the protection service (Azure Rights Management) to encrypt and protect files.
 
-With the exception of the viewer, the Azure Information Protection unified labeling client cannot be used with applications and services that communicate directly with the Azure Rights Management service or Active Directory Rights Management Services.
+With the exception of the viewer, the Azure Information Protection unified labeling client cannot be used with applications and services that communicate directly with the protection service or Active Directory Rights Management Services.
 
 If you have AD RMS and want to migrate to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md).
 
@@ -99,27 +101,34 @@ When the client is installed, use the **Help and Feedback** option to open the *
 
 #### **Help and Feedback** section
 
-The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can configure your own URL link that goes to a custom help page as one of the policy settings in your labeling management portal: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center.
+The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can configure your own URL link that goes to a custom help page as one of the policy settings in your labeling management center: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center.
 
-The **Export Logs** automatically collects and attaches log files for the Azure Information Protection unified labeling client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk.
+The **Report an Issue** link displays only if you specify an [advanced setting](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users). When you configure this setting, you specify an HTTP link such as the email address of your help desk. 
+
+The **Export Logs** automatically collects and attaches log files for the Azure Information Protection unified labeling client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk. Alternatively, you could use the [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) PowerShell cmdlet (requires the preview client).
 
 The **Reset Settings** signs out the user, deletes the currently downloaded sensitivity labels and label policies, and resets the user settings for the Azure Rights Management service.
+
+> [!NOTE]
+> If you have technical problems with the client, see [Support options and community resources](../information-support.md#support-options-and-community-resources).
 
 ##### More information about the Reset Settings option
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
-- Unless files are locked, this action deletes all the files in the following locations. These files include client certificates, protection templates, sensitivity labels and policies from your labeling management portal, and the cached user credentials. The client log files are not deleted.
+- Unless files are locked, this action deletes all the files in the following locations. These files include client certificates, protection templates, sensitivity labels and policies from your labeling management center, and the cached user credentials. The client log files are not deleted.
     
     - %LocalAppData%\Microsoft\DRM
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\Microsoft\MSIP\Policy.msip
+    - %LocalAppData%\Microsoft\MSIP\mip\\*\<processname\>*\mip
+    
+    - %LocalAppData%\Microsoft\MSIP\AppDetails
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
-- The following registry keys and settings are deleted. If the settings for any of these registry keys have custom values, these must be reconfigured after you reset the client. 
+- The following registry keys and settings are deleted. If the settings for any of these registry keys have custom values, these must be reconfigured after you reset the client.
     
     Typically for enterprise networks, these settings are configured by using group policy, in which case they are automatically reapplied when group policy is refreshed on the computer. However, there might be some settings that are configured one time with a script, or manually configured. In these cases, you must take additional steps to reconfigure these settings. As an example, computers might run a script one time to configure settings for redirection to Azure Information Protection because you are migrating from AD RMS and still have a Service Connection Point on your network. After resetting the client, the computer must run this script again.
     
@@ -149,7 +158,7 @@ The Azure Information Protection unified labeling client supports the same langu
 
 For these languages, menu options, dialog boxes, and messages from the Azure Information Protection unified labeling client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection unified labeling client for different languages. 
 
-However, the Azure Information Protection unified labeling client does not currently support different languages for the labels. In addition, visual markings are not translated and do not support more than one language.
+However, label names and descriptions that you specify are not automatically translated when you configure labels in your labeling center. For users to see labels in their preferred language, provide your own translations and configure them for the labels by using by using Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps). Visual markings are not translated and do not support more than one language.
 
 ## Post installation tasks
 
@@ -158,6 +167,14 @@ After you have installed the Azure Information Protection unified labeling clien
 - Online user instructions: [Azure Information Protection unified labeling user guide](clientv2-user-guide.md)
 
 - Download a customizable user guide: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+
+## Installing the Azure Information Protection scanner
+
+The current version of the scanner for the unified labeling client is in preview for testing. During this preview, install the current preview version of the unified labeling client, from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+If you are installing the scanner for the first time on a computer, download and install this client and then follow the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
+
+If you are upgrading the scanner from the Azure Information Protection client (classic), see the [Upgrading the Azure Information Protection scanner](#upgrading-the-azure-information-protection-scanner) section for instructions.
 
 ## Upgrading and maintaining the Azure Information Protection unified labeling client
 
@@ -175,6 +192,66 @@ If you are upgrading from the Azure Information Protection client (classic) on W
 When you manually upgrade, uninstall the previous version first only if you're changing the installation method. For example, you change from the executable (.exe) version of the client to the Windows installer (.msi) version of the client. Or, if you need to install a previous version of the client. For example, you have the current preview version installed for testing and now need to revert to the current general availability version.
 
 Use the [Version release history and support policy](unifiedlabelingclient-version-release-history.md) to understand the support policy for the Azure Information Protection unified labeling client, which versions are currently supported, and what's new and changed for the supported releases. 
+
+### Upgrading the Azure Information Protection scanner
+
+If you are currently using the Azure Information Protection scanner from the Azure Information Protection client (classic), you can upgrade it to use sensitive information types and sensitivity labels that are published from the Office 365 Security & Compliance Center (or the Microsoft 365 security center or the Microsoft 365 compliance center).
+
+#### To upgrade the scanner to the preview version
+
+How to upgrade the scanner depends on the version of the Azure Information Protection client (classic) that you are currently running:
+
+- [Upgrade from version 1.48.204.0 and later versions](#upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client)
+
+- [Upgrade from versions earlier than 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
+
+Note that unlike the scanner from the Azure Information Protection client (classic), this preview version of the scanner for the unified client doesn't support running on a disconnected computer.
+
+The upgrade creates a new database named **AIPScannerUL_\<profile_name>**, and the previous scanner database is retained in case you need it for the previous version. When you are confident you don't need the previous scanner database, you can delete it. Because the upgrade creates a new database, the scanner rescans all files the first time it runs.
+
+##### Upgrade from the Azure Information Protection client (classic) version 1.48.204.0 and later versions of this client
+
+1. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
+
+2. Upgrade to the Azure Information Protection unified labeling client by downloading and installing the preview version of the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+3. In a PowerShell session, run the Update-AIPScanner command with your scanner's profile. For example: `Update-AIPScanner –Profile Europe`.
+    
+    This step creates a new database with the name **AIPScannerUL_\<profile_name>**
+
+4. Restart the Azure Information Protection Scanner service, **Azure Information Protection Scanner**.
+
+You can now use the rest of the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md), omitting the step to install the scanner. Because the scanner is already installed, there's no reason to install it again.
+
+##### Upgrade from the Azure Information Protection client (classic) versions earlier than 1.48.204.0
+
+> [!IMPORTANT]
+> For a smooth upgrade path, do not install the the Azure Information Protection unified labeling client on the computer running the scanner as your first step to upgrade the scanner. Instead, use the following upgrade instructions.
+
+Beginning with version 1.48.204.0, the scanner gets its configuration settings from the Azure portal, by using a configuration profile. Upgrading the scanner includes instructing the scanner to use this online configuration and for the unified labeling client, offline configuration for the scanner is not supported.
+
+1. Use the Azure portal to create a new scanner profile that includes settings for the scanner and your data repositories with any settings that they need. For help with this step, see the [Configure the scanner in the Azure portal](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) section from the scanner deployment instructions.
+
+2. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
+
+3. Upgrade to the Azure Information Protection unified labeling client by downloading and installing the preview version of the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+4. In a PowerShell session, run the Update-AIPScanner command with the same profile name that you specified in step 1. For example: `Update-AIPScanner –Profile Europe`
+
+5. Restart the Azure Information Protection Scanner service, **Azure Information Protection Scanner**.
+
+You can now use the rest of the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md), omitting the step to install the scanner. Because the scanner is already installed, there's no reason to install it again.
+
+###### Upgrading in a different order to the recommended steps
+
+when you upgrade from a version earlier than 1.48.204.0 and you don't configure the scanner in the Azure portal before you run the Update-AIPScanner command, you won't have a profile name to specify that identifies your scanner configuration settings for the upgrade process. 
+
+In this scenario, when you configure the scanner in the Azure portal, you must specify exactly the same profile name that was used when you ran the Update-AIPScanner command. If the name doesn't match, the scanner will not be configured for your settings. 
+
+> [!TIP]
+> To identify scanners that have this misconfiguration, use the **Azure Information Protection - Nodes** blade in the Azure portal.
+>  
+> For scanners that have Internet connectivity, they display their computer name with the GA version number of the Azure Information Protection client, but no profile name. Only scanners that have a version number 1.41.51.0 should display no profile name on this blade. 
 
 ## Uninstalling the Azure Information Protection unified labeling client
 
