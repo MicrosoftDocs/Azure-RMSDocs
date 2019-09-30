@@ -213,7 +213,7 @@ The upgrade creates a new database named **AIPScannerUL_\<profile_name>**, and t
 
 1. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
 
-2. Upgrade to the Azure Information Protection unified labeling client by downloading and installing the preview version of the unifield labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+2. Upgrade to the Azure Information Protection unified labeling client by downloading and installing the preview version of the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 3. In a PowerShell session, run the Update-AIPScanner command with your scanner's profile. For example: `Update-AIPScanner –Profile Europe`.
     
