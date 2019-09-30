@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -57,11 +57,9 @@ Use the following information to see what’s new or changed for a supported rel
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the clients](use-client.md#compare-the-clients).
 
-## Versions later than 2.2.21.0
+## Version 2.5.18.0
 
-If you have a version 2 of the client that is later than 2.2.21.0, it is a preview build for testing and evaluation purposes.
-
-**Released**: 09/17/2019
+**Released**: 10/23/2019
 
 **New features:**
 
@@ -88,7 +86,7 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
     
     For additional information, see the blog post announcement: [Unified labeling AIP scanner preview brings scaling out and more!](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
 
-- The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters for when you want to [label files non-interactively](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), and a [new procedure to register an app in Azure AD](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client). Example scenarios include the scanner and automated PowerShell scripts to label documents.
+- The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters for when you want to label files non-interactively and a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents. For instructions, see [How to label files non-interactively](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
 - Matched custom sensitive information types are sent to [Azure Information Protection analytics](../reports-aip.md).
 
@@ -101,6 +99,10 @@ If you have a version 2 of the client that is later than 2.2.21.0, it is a previ
 **Fixes:**
 
 - You can successfully make changes to a protected file using File Explorer and right-click after a password for the file has been removed.
+
+- You can successfully open natively protected files in the viewer without requiring the Save As, Export (EXPORT) [usage right](../configure-usage-rights.md#usage-rights-and-descriptions).
+
+- The Information Protection bar displays as expected in the latest version of Office apps.
 
 
 ## Version 2.2.21.0
