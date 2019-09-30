@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 09/28/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -21,7 +21,7 @@ ms.subservice: aiplabels
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
-#Customer intent: As an administrator, I want to create a new label for specific users only.
+#Customer intent: As an administrator, I want to create a new Azure Information Protection label for specific users only.
 ---
 
 # Quickstart: Create a new Azure Information Protection label for specific users
@@ -30,7 +30,7 @@ ms.custom: admin
 >
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-In this quickstart, you'll create a new label that only specific users can see and apply to classify and protect their documents and emails.
+In this quickstart, you'll create a new Azure Information Protection label that only specific users can see and apply to classify and protect their documents and emails.
 
 This configuration uses a scoped policy.
 
@@ -52,9 +52,11 @@ To complete this quickstart, you need:
     
     If you don't have a suitable group, create one named **Sales Team** and add at least one user.
 
-4. To test the new label: The Azure Information Protection client must be installed on computers for users. 
+4. To test the new label: The Azure Information Protection client (classic) must be installed on a Windows computer. 
     
-    To try the label for yourself, you can install the client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
+    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
+     
+    If are using a different labeling client to the classic client, see the Office documentation for equivalent instructions to this tutorial. For example, [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
     

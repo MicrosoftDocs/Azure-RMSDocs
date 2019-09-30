@@ -27,45 +27,59 @@ landingContent:
         links:
           - text: What is Azure Information Protection?
             url: what-is-information-protection.md
-          - text: Overview of sensitivity labels
-            url: https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels
+          - text: Frequently asked questions
+            url: faqs.md
 
   # Card
   - title: Get started
     linkLists:
-      - linkListType: deploy
-        links:
+     - linkListType: overview
+       links:
           - text: Requirements
             url: requirements.md
-          - text: Automatically apply a sensitivity label
-            url: https://docs.microsoft.com/Office365/SecurityCompliance/apply-sensitivity-label-automatically
-          - text: Restrict access to content
-            url: https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels
-          - text: Install & configure the unified labeling client
-            url: ./rms-client/clientv2-admin-guide.md
+     - linkListType: quickstart
+       links:
+          - text: Get started in the Azure portal
+            url: quickstart-viewpolicy.md
+          - text: Find sensitive information
+            url: quickstart-findsensitiveinfo.md
+     - linkListType: deploy
+       links:
+          - text: Deployment roadmap
+            url: deployment-roadmap.md
 
   # Card
-  - title: Bring your own key (BYOK)
+  - title: Customize the client
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Plan & implement your tenant key
-            url: plan-implement-tenant-key.md
+          - text: "Classic client: Advanced settings"
+            url: ./rms-client/client-admin-guide-customizations.md
+          - text: "Unified labeling client: Advanced settings"
+            url: ./rms-client/clientv2-admin-guide-customizations.md
+
+  # Card
+  - title: Activate unified labels
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Compare the clients
+            url: ./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use
+      - linkListType: how-to-guide
+        links:
+          - text: Migrate Azure Information Protection labels
+            url: configure-policy-migrate-labels.md
 
   # Card
   - title: Classify & protect data in on-premises data stores
     linkLists:
-      - linkListType: quickstart
-        links:
-          - text: Find sensitive info (preview)
-            url: quickstart-findsensitiveinfo.md
       - linkListType: how-to-guide
         links:
-          - text: Deploy the scanner (preview)
+          - text: Deploy the scanner
             url: deploy-aip-scanner.md
 
   # Card
-  - title: Monitor label usage & discover sensitive info
+  - title: Monitor label usage & discover sensitive information
     linkLists:
       - linkListType: how-to-guide
         links:
