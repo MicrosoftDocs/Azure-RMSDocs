@@ -6,7 +6,7 @@ description: Instructions to deploy the RMS connector, which provides the data p
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/09/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
