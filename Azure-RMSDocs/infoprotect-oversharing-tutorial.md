@@ -49,7 +49,7 @@ To complete this tutorial, you need:
     
     If you don't have a subscription that includes this plan, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
-2. The Azure Information Protection blade is added to the Azure portal and you have at least one label published in the global policy.
+2. The Azure Information Protection blade is added to the Azure portal and you have at least one label published in the Azure Information Protection global policy.
     
     Although this tutorial uses the default label, **General**, you can substitute this label for another one if you prefer. If you need help adding the Azure Information Protection blade, or don't yet have any labels published to the global policy, see [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
 
