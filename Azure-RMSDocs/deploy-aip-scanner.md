@@ -104,7 +104,13 @@ The scanner can accommodate these restrictions but they require additional confi
 
 #### Restriction: The scanner server cannot have Internet connectivity
 
-Supported by the classic client only: Follow the instructions for a [disconnected computer](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). Then, do the following:
+Follow the instructions from the admin guides to support a disconnected computer:
+
+- For the classic client: [Support for disconnected computers](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers)
+
+- For the unified labeling client: [Support for disconnected computers](./rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers )
+
+Then, do the following:
 
 1. Configure the scanner in the Azure portal, by creating a scanner profile. If you need help with this step, see [Configure the scanner in the Azure portal](#configure-the-scanner-in-the-azure-portal).
 

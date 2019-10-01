@@ -94,6 +94,8 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 - When you add or change protection settings to a label, the client reapplies the label with these latest protection settings when the document is next saved. Similarly, the scanner reapplies the label with these latest protection settings when the document is next scanned in enforce mode.
 
+- [Support for disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers) by exporting files from one client and manually copying them to the disconnected computer.
+
 - New cmdlet, [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs), to gather all log files from %localappdata%\Microsoft\MSIP\Logs and saves them to a single, compressed file that has a .zip format. This file can then be sent to Microsoft Support if you are requested to send log files to help investigate a reported issue.
 
 **Fixes:**

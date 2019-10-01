@@ -5,7 +5,7 @@ title: Custom configurations - Azure Information Protection unified labeling cli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -934,6 +934,28 @@ Additionally:
 
 - You can use the **Reset settings** option from **Help and Feedback** to sign out and delete the currently downloaded labels and policy settings from the Office 365 Security & Compliance Center, the Microsoft 365 Security center, or the Microsoft 365 Compliance center.
 
+
+## Support for disconnected computers
+
+By default, the Azure Information Protection unified labeling client automatically tries to connect to the Internet to download the labels and label policy settings from your labeling management center: The Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center. If you have computers that cannot connect to the Internet for a period of time, you can export and copy files that manually manages the policy for the unified labeling client.
+
+Note that without an Internet connection, the client cannot apply protection (or remove protection). Instead, the client is limited to using labels that apply classification only.
+
+Instructions:
+
+1. Export the log files from another computer that is running the unified labeling client and has downloaded the same labels and policies that you want to use on your disconnected computer.
+    
+    For example, run the [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs) cmdlet, or use the **Export Logs** option from the client's [Help and Feedback](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) dialog box. 
+    
+    The log files are exported as a single compressed file.
+
+2.  Open the compressed file, and from the MSIP folder, copy any files that have a .xml file name extension.
+
+3. Paste these files into the **%localappdata%\Microsoft\MSIP** folder on the disconnected computer.
+
+Be aware that if users select the **Reset Settings** option from [Help and feedback](clientv2-admin-guide.md#help-and-feedback-section), this action deletes the policy files and renders the client inoperable until you manually replace the files or the client connects to the Internet and downloads the files.
+
+If your disconnected computer is running the Azure Information Protection scanner, there are additional configuration steps you must take. For more information, see [Restriction: The scanner server cannot have Internet connectivity](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) from the scanner deployment instructions.
 
 ## Change the local logging level
 
