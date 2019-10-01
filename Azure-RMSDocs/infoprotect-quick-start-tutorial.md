@@ -99,7 +99,7 @@ Using the Azure portal, we'll first change a couple of policy settings, and then
 
 4. For **Select the default label**, select one of the labels, such as **General**. 
     
-    The **General** label is one of the default labels that Azure Information Protection can create for you. This step is covered in the [Create and publish labels](quickstart-viewpolicy.md#create-and-publish-labels) section from the quickstart.
+    The **General** label is one of the default labels that Azure Information Protection can create for you. This step is covered in the [Create and publish labels](quickstart-viewpolicy.md#create-and-publish-labels) section from the quickstart to add Azure Information Protection to the Azure portal.
 
 5. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this option to **On** if it is not already.
 
