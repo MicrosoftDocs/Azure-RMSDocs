@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 10/01/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -20,7 +20,7 @@ ms.subservice: aiplabels
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
-#Customer intent: As an administrator, I want to see Azure Information Protection in the Azure portal so that I can configure the service.
+#Customer intent: As an administrator, I want to see Azure Information Protection in the Azure portal so that I can use the service.
 ---
 
 # Quickstart: Get started with Azure Information Protection in the Azure portal
@@ -78,9 +78,9 @@ The protection service is now automatically activated for new customers, but it'
 
     When activation is complete, the information bar displays **Activation finished successfully**.
 
-## Create labels - if necessary
+## Create and publish labels
 
-Your organization might already have labels because they were automatically created for your tenant, or because you have sensitivity labels in the Office 365 Security & Compliance center, the Microsoft security center, or the Microsoft compliance center. Let's take a look:
+Your organization might already have labels because they were automatically created for your tenant, or because you have sensitivity labelsin the Office 365 Security & Compliance center, the Microsoft security center, or the Microsoft compliance center. Let's take a look:
 
 1. Select **Classifications** > **Labels**:
     
@@ -88,13 +88,13 @@ Your organization might already have labels because they were automatically crea
     
      ![Azure Information Protection no default labels](./media/info-protect-nodefaultlabels.png)
     
-    If you don't see this option to generate default labels, you already have labels, probably similar to those in the following picture, which are the default labels for Azure Information Protection:
+    If you don't see this option to generate default labels, you already have labels, perhaps similar to those in the following picture, which are the default labels for Azure Information Protection:
     
     ![Azure Information Protection default labels](./media/info-protect-defaultlabels.png)
 
-2. If you do have labels, go to the next section to view your labels. If you don't yet have labels, select that option to **Generate default labels**.
+2. If you don't yet have labels, select that option to **Generate default labels**.
 
-4. Then, to publish the labels for all users, from **Classifications** > **Policies** > **Global**:
+4. To publish the labels for all users, from **Classifications** > **Policies** > **Global**:
     
     a. Select **Add or remove labels**.
     
@@ -102,11 +102,13 @@ Your organization might already have labels because they were automatically crea
     
     c. Back on the **Policy: Global blade**, select **Save**.
 
+Publishing the labels in the Azure portal makes them available for the Azure Information Protection client (classic).
+
 ## View your labels
 
 Select **Classifications** > **Labels**, and spend a few minutes familiarizing yourself with the labels that are displayed on the **Azure Information Protection - Labels** blade.
 
-If they don't look similar to the labels in the picture from the previous section, you aren't using default labels from Azure Information Protection but labels that have been created from the Office 365 Security & Compliance Center, the Microsoft 365 Security center, or the Microsoft 365 Compliance center.
+If they don't look similar to the labels in the picture from the previous section, you aren't using default labels from Azure Information Protection but labels that might have been created from the Office 365 Security & Compliance Center, the Microsoft 365 Security center, or the Microsoft 365 Compliance center.
 
 > [!TIP]
 > If you don't want to use your custom labels, but instead, use default labels from Azure Information Protection: 
@@ -138,7 +140,7 @@ To view the default Azure Information Protection policy settings for the classic
     
     ![Azure Information Protection policy global settings](./media/defaultsettings-aip.png)
 
-3. Because you are only viewing the settings, you can close any blades in the portal that you have opened.
+3. You can now close any blades in the portal that you have opened.
 
 ## Next steps
 
