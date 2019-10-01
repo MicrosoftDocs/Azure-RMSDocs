@@ -80,7 +80,7 @@ The protection service is now automatically activated for new customers, but it'
 
 ## Create and publish labels
 
-Your organization might already have labels because they were automatically created for your tenant, or because you have sensitivity labelsin the Office 365 Security & Compliance center, the Microsoft security center, or the Microsoft compliance center. Let's take a look:
+Your organization might already have labels because they were automatically created for your tenant, or because you have sensitivity labels in the Office 365 Security & Compliance center, the Microsoft security center, or the Microsoft compliance center. Let's take a look:
 
 1. Select **Classifications** > **Labels**:
     
@@ -112,7 +112,7 @@ If they don't look similar to the labels in the picture from the previous sectio
 
 > [!TIP]
 > If you don't want to use your custom labels, but instead, use default labels from Azure Information Protection: 
-> - Delete the custom labels and you then see the option to generate default labels in the **Labels** blade, as described in the [previous section](#create-labels---if-necessary). 
+> - Delete the custom labels and you then see the option to generate default labels in the **Labels** blade, as described in the [previous section](#create-and-publish-labels). 
 
 From the **Azure Information Protection - Labels** blade:
 
@@ -130,7 +130,7 @@ If you select a label, you see details for that label configuration on a new bla
 
 The first time you connect to the Azure Information Protection service by using the Azure portal, default policy settings are always created for you that are used by the Azure Information Protection client (classic). For the classic client, policy settings and the labels we viewed are downloaded to the client in the Azure Information Protection policy.
 
-If you are using the Azure Information Protection unified labeling client, this client does not use these policy settings. Instead, this client downloads labels and policy settings from the Office 365 Compliance & Security Center, the Microsoft 365 Compliance center, or the Microsoft 365 Security center. Use those admin centers to view the equivalent label policies instead of the Azure portal.
+If you are using the Azure Information Protection unified labeling client, this client does not use these policy settings. Instead, this client downloads the same labels but different policy settings from the Office 365 Compliance & Security Center, the Microsoft 365 Compliance center, or the Microsoft 365 Security center. Use those admin centers to edit your labels and label policies instead of the Azure portal.
 
 To view the default Azure Information Protection policy settings for the classic client:
 
