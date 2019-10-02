@@ -145,7 +145,7 @@ Global administrators for an Office 365 tenant or Azure AD tenant can obviously 
     
     To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). To see what other permissions a user with this role has, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
 
-- **Global reader**: This newly introduced Azure Active Directory administrator role lets an administrator view but not change Azure Information Protection settings and reporting information in the Azure portal.
+- **Global reader**: This newly introduced Azure Active Directory administrator role lets an administrator view reporting information in the Azure portal.
     
     > [!NOTE]
     > This role is not supported if your tenant is on the [unified labeling platform](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).

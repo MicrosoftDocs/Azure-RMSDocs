@@ -80,12 +80,14 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
     
   - **Security administrator**
     
+    **Security reader** - [Azure Information Protection analytics](reports-aip.md) only
+    
+    **Global reader** - [Azure Information Protection analytics](reports-aip.md) only
+    
   - **Global administrator**
     
     > [!NOTE] 
-    > If your tenant is on the unified labeling platform, the Azure Information Protection administrator (formerly "Information Protection administrator") is no longer supported. [More information](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
-    
-    Additionally, unless your tenant is on the unified labeling platform, you can use the **Global reader** role to view but not change Azure Information Protection settings in the Azure portal. You can also use the **Security reader** role to view logging information for [Azure Information Protection analytics](reports-aip.md).
+    > If your tenant is on the unified labeling platform, the Azure Information Protection administrator (formerly "Information Protection administrator") and the Global reader role are not supported for the Azure portal. [More information](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
     Microsoft accounts cannot manage Azure Information Protection.
 
