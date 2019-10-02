@@ -6,7 +6,7 @@ description: Information about the personal data that is used by Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -222,6 +222,10 @@ Personal data that you view and specify in the Azure portal is accessible only t
 - **Compliance data administrator**
 
 - **Security administrator**
+
+- **Security reader**
+
+- **Global reader**
 
 - **Global administrator**
 
