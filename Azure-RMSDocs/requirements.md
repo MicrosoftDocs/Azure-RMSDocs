@@ -132,8 +132,6 @@ For information about which Office editions support the protection service, see 
 
 - The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.
 
-For information about which Office editions support the protection service, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
-
 ## Firewalls and network infrastructure
 
 If you have a firewall or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are included in the Office article, [Office 365 URLs and IP address ranges](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2). See the **Microsoft 365 Common and Office Online** section.
