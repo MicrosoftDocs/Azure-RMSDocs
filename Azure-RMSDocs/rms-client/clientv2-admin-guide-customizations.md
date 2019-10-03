@@ -682,8 +682,8 @@ Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 
-## Send information type matches
-
+## Send information type matches to Azure Information Protection analytics
+ 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, the unified labeling client does not send content matches for sensitive info types to [Azure Information Protection analytics](../reports-aip.md). For more information about content matches, see the [Content matches for deeper analysis](../reports-aip.md#content-matches-for-deeper-analysis) section.
