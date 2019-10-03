@@ -88,6 +88,8 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 - The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters for when you want to label files non-interactively and a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents. For instructions, see [How to label files non-interactively](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
+- New PowerShell label policy advanced setting to [label an Office document by using an existing SharePoint property](clientv2-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-sharepoint-property).
+
 - Matched custom sensitive information types are sent to [Azure Information Protection analytics](../reports-aip.md).
 
 - The applied label displays the configured color for the label, if a [color has been configured](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).
