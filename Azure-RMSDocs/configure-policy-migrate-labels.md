@@ -167,7 +167,7 @@ To confirm whether the clients and services you use support unified labeling, re
 
 - The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md). For a comparison of this client with the Azure Information Protection client (classic), see [Compare the clients](./rms-client/use-client.md#compare-the-clients).
 
-- Apps from Office that are in different stages of availability. For more information, see the **Where the feature is available today?** section from [Apply sensitivity labels to your documents and email within Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in the Office documentation.
+- Apps from Office that are in different stages of availability. For more information, see [What sensitivity label capabilities are supported in Office today?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) from the Office documentation.
     
 - Apps from software vendors and developers that use the [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview).
 
