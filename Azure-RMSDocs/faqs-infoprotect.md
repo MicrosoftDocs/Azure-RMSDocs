@@ -67,7 +67,7 @@ See the following resources from the Office documentation:
 
 - [How sensitivity labels work in Office apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
 
-- [Apply sensitivity labels to your documents and email within Office](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365).
+- [Apply sensitivity labels to your documents and email within Office](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
 
 
 ## Can a file have more than one classification?
