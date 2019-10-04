@@ -41,7 +41,7 @@ Look out for announcements on the [Enterprise Mobility + Security blog](https://
 - No classification and labeling integration with Exchange Online or SharePoint Online.
 
 > [!NOTE]
-> **Now in preview**:
+> **In preview**:
 > - Centralized reporting for classification and labeling. For more information, see [Central reporting for Azure Information Protection](reports-aip.md).
 >
 >**Sensitivity labels for Office**:
