@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/20/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -131,7 +131,7 @@ Global administrators for an Office 365 tenant or Azure AD tenant can obviously 
 - **Azure Information Protection administrator**: This Azure Active Directory administrator role lets an administrator configure Azure Information Protection but not other services. An administrator with this role can activate and deactivate the Azure Rights Management protection service, configure protection settings and labels, and configure the Azure Information Protection policy. In addition, an administrator with this role can run all the PowerShell cmdlets for the [Azure Information Protection client](./rms-client/client-admin-guide-powershell.md) and from the [AIPService module](administer-powershell.md). However, this role doesn't support tracking and revoking documents for users.
     
     > [!NOTE]
-    > After you [migrate your tenant to the unified labeling store](configure-policy-migrate-labels.md), this role is no longer supported for the Azure portal.
+    > This role is not supported in the Azure portal if your tenant is on the [unified labeling platform](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
     
     To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
@@ -139,7 +139,10 @@ Global administrators for an Office 365 tenant or Azure AD tenant can obviously 
     
     To assign a user to one of these administrative roles, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). To see what other permissions a user with these roles have, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
 
-- **Security reader**: For [Azure Information Protection analytics](reports-aip.md) only. This Azure Active Directory administrator role lets an administrator view how your labels are being used, monitor user access to labeled documents and emails, and any changes to their classification, and can identify documents that contain sensitive information that must be protected. Because this feature uses Azure Log Analytics, you must also have a supporting [RBAC role](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
+- **Security reader** or **Global reader**: For [Azure Information Protection analytics](reports-aip.md) only. This Azure Active Directory administrator role lets an administrator view how your labels are being used, monitor user access to labeled documents and emails, and any changes to their classification, and can identify documents that contain sensitive information that must be protected. Because this feature uses Azure Monitor, you must also have a supporting [RBAC role](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
+    
+    > [!NOTE]
+    > The Global reader role is not supported if your tenant is on the [unified labeling platform](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
 
 - **Security administrator**: This Azure Active Directory administrator role lets an administrator configure Azure Information Protection in the Azure portal, in addition to configuring some aspects of other Azure services. An administrator with this role cannot run any of the [PowerShell cmdlets from the AIPService module](administer-powershell.md), or track and revoke documents for users.
     

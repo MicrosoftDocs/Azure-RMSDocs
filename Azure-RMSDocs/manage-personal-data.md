@@ -6,7 +6,7 @@ description: Information about the personal data that is used by Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -223,7 +223,11 @@ Personal data that you view and specify in the Azure portal is accessible only t
 
 - **Security administrator**
 
+- **Security reader**
+
 - **Global administrator**
+
+- **Global reader**
 
 Personal data that you view and specify by using the AIPService module (or the older module, AADRM) is accessible only to users who have been assigned the **Azure Information Protection administrator**, **Compliance administrator**, **Compliance data administrator**, or **Global Administrator** roles from Azure Active Directory, or the global administrator role for the protection service.
 
