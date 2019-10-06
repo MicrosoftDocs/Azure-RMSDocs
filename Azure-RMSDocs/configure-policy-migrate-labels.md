@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/02/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -49,7 +49,7 @@ Before you read the instructions to migrate your labels, you might find the foll
 
 If you use admin roles for delegated administration in your organization, you might need to do some changes for the unified labeling platform:
 
-The [Azure AD role](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Azure Information Protection administrator** (formerly **Information Protection administrator**) is not supported by the unified labeling platform. If this administrative role is used in your organization, add the users who have this role to the Azure AD roles of **Compliance administrator**, **Compliance data administrator**, or **Security administrator**. If you need help with this step, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal, the Microsoft 365 security center, and the Microsoft 365 compliance center.
+The [Azure AD roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) of **Azure Information Protection administrator** (formerly **Information Protection administrator**) and **Global reader** are not supported by the unified labeling platform. If either of these administrative roles are used in your organization to manage Azure Information Protection, add the users who have this role to the Azure AD roles of **Compliance administrator**, **Compliance data administrator**, or **Security administrator**. If you need help with this step, see [Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). You can also assign these roles in the Azure AD portal, the Microsoft 365 security center, and the Microsoft 365 compliance center.
 
 Alternatively to using roles, in the admin centers, you can create a new role group for these users and add either **Sensitivity Label Administrator** or **Organization Configuration** roles to this group.
 

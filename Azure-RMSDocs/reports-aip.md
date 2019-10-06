@@ -183,12 +183,13 @@ Details:
         - **Compliance data administrator**
         - **Global administrator**
     
-    - After the workspace has been created, you can then use the following role with fewer permissions to view the data collected:
+    - After the workspace has been created, you can then use the following roles with fewer permissions to view the data collected:
     
         - **Security reader**
+        - **Global reader**
     
     > [!NOTE] 
-    > You cannot use the Azure Information Protection administrator role if your tenant is on the [unified labeling platform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
+    > You cannot use the Azure Information Protection administrator role or the Global reader role if your tenant is on the [unified labeling platform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
 
 2. In addition, you need one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) to access your Azure Log Analytics workspace:
     
