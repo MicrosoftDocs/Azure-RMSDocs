@@ -122,7 +122,7 @@ The **Reset Settings** signs out the user, deletes the currently downloaded sens
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\Microsoft\MSIP\mip\\*\<processname\>*\mip
+    - %LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName.exe\>*
     
     - %LocalAppData%\Microsoft\MSIP\AppDetails
     
