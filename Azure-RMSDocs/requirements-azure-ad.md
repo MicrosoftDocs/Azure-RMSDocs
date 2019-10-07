@@ -6,7 +6,7 @@ description: Identify the Azure AD requirements to use Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/23/2019
+ms.date: 10/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -50,7 +50,7 @@ Support for certificate-based authentication (CBA):
 
 Users' UPN value doesn't match their email address:
 
-- This is not a recommended configuration. If you cannot change the UPN value, configure alternate login ID for users, and instruct them how to sign in to Office by using this alternate login. For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) and [Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
+- This is not a recommended configuration and doesn't support single sign-on for Azure Information Protection. If you cannot change the UPN value, configure alternate login ID for users, and instruct them how to sign in to Office by using this alternate login. For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) and [Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
     
     When the domain name in the UPN value is a domain that is verified for your tenant, add the user's UPN value as another email address to the Azure AD proxyAddresses attribute. This lets the user be authorized for Azure Rights Management if their UPN value is specified at the time the usage rights are granted. For more information about this and how user accounts are authorized, see [Preparing users and groups for Azure Information Protection](prepare.md).
 
