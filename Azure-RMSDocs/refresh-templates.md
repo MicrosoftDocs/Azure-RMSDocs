@@ -105,6 +105,8 @@ By editing the registry on the computers running Office 365 apps, Office 2019, O
 
 ## Office 2019 for Mac and Office 2016 for Mac: How to force a refresh for templates
 
+If you need to force an immediate refresh of the templates in Office for Mac, use the following instructions.
+
 1. Open Terminal, and enter the following command:
     
     	defaults write ~/Library/Containers/com.microsoft.Outlook/Data/Library/Preferences/com.microsoft.Outlook ResetRMSCache 1
