@@ -105,13 +105,13 @@ By editing the registry on the computers running Office 365 apps, Office 2019, O
 
 ## Office 2019 for Mac and Office 2016 for Mac: How to force a refresh for templates
 
-1.	Open Terminal, and enter the following command:
+1. Open Terminal, and enter the following command:
     
     	defaults write ~/Library/Containers/com.microsoft.Outlook/Data/Library/Preferences/com.microsoft.Outlook ResetRMSCache 1
 
-2.	Restart Outlook for Mac.
+2. Restart Outlook for Mac.
 
-3.	Create a new email and select **Encrypt**, and then **Verify Credentials**.
+3. Create a new email and select **Encrypt**, and then **Verify Credentials**.
 
 
 ## See Also
