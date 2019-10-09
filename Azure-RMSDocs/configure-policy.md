@@ -87,7 +87,7 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
   - **Global administrator**
     
     > [!NOTE] 
-    > If your tenant is on the unified labeling platform, the Azure Information Protection administrator role(formerly "Information Protection administrator") and the Global reader role are not supported for the Azure portal. [More information](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > If your tenant is on the unified labeling platform, the Azure Information Protection administrator role (formerly "Information Protection administrator") and the Global reader role are not supported for the Azure portal. [More information](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
     Microsoft accounts cannot manage Azure Information Protection.
 
