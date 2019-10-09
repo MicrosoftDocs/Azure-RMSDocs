@@ -6,7 +6,7 @@ description: When you use the Azure Rights Management service, templates are aut
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/08/2019
+ms.date: 10/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -40,7 +40,7 @@ When you use the Azure Rights Management service from Azure Information Protecti
 |Office 365 apps, Office 2019, Office 2016, and Office 2013|Automatically refreshed - on a schedule:<br /><br />- For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />To force a refresh sooner than the schedule, see the following section, [Office 365 apps, Office 2019, Office 2016, and Office 2013: How to force a refresh for templates](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
 |Office 2010|Automatically refreshed when users sign out from Windows, sign back in, and wait up to 1 hour.|
 |Exchange on-premises with the Rights Management connector<br /><br />Applicable for transport rules and the Outlook web app|Automatically refreshed - no additional steps required. However, the Outlook web app caches the UI for a day.|
-|Office 2019 for Mac and Office 2016 for Mac|Automatically refreshed, for example when you open protected content or you protect content. <br /><br />However, if you need to force a refresh, see the following section, [Office 2019 for Mac and Office 2016 for Mac: How to force a refresh for templates](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates)|
+|Office 2019 for Mac and Office 2016 for Mac|Automatically refreshed. However, if you need to force a refresh, see the following section, [Office 2019 for Mac and Office 2016 for Mac: How to force a refresh for templates](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates)|
 |RMS sharing app for Mac computers|Automatically refreshed - no additional steps required.|
 |Office apps that [support the Sensitivity feature](https://support.office.com/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US&ui=en-US&rs=en-US#bkmk_whereavailable)|These clients do not download templates but access them online - no additional steps required.|
 
@@ -105,7 +105,7 @@ By editing the registry on the computers running Office 365 apps, Office 2019, O
 
 ## Office 2019 for Mac and Office 2016 for Mac: How to force a refresh for templates
 
-If you need to force an immediate refresh of the templates in Office for Mac, you can use the following instructions. However, use these instructions only if templates are not refreshed automatically by opening protected content, or by newly protecting content. In addition to deleting the templates, the RMS token cache in the keychain is reset and any use licenses for already opened content are deleted from the local disk.
+In these versions of Office for Mac, templates refresh when you open protected content or you protect content by using a template. If you need to force a refresh of the templates, you can use the following instructions. However, the command in the instructions deletes the templates, the RMS token cache in the key chain, and any use licenses for any previously opened protected content. As a result, you will need to authenticate again and you must have an Internet connection to open the previously opened protected content.
 
 1. Open Terminal, and enter the following command:
     
