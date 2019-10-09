@@ -105,7 +105,7 @@ By editing the registry on the computers running Office 365 apps, Office 2019, O
 
 ## Office 2019 for Mac and Office 2016 for Mac: How to force a refresh for templates
 
-In these versions of Office for Mac, templates refresh when you open protected content or you protect content by using a template. If you need to force a refresh of the templates, you can use the following instructions. However, the command in the instructions deletes the templates, the RMS token cache in the key chain, and any use licenses for any previously opened protected content. As a result, you will need to authenticate again and you must have an Internet connection to open the previously opened protected content.
+In these versions of Office for Mac, templates refresh when you open protected content or you protect content by using a template. If you need to force a refresh of the templates, you can use the following instructions. However, the command in the instructions deletes the templates, the RMS token cache in the key chain, and local use licenses for any previously opened protected content. As a result, you will need to authenticate again and you must have an Internet connection to open the previously opened protected content.
 
 1. Open Terminal, and enter the following command:
     
