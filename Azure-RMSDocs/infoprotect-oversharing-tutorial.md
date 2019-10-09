@@ -6,7 +6,7 @@ description: An introduction tutorial to configure and see in action advanced cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -49,9 +49,9 @@ To complete this tutorial, you need:
     
     If you don't have a subscription that includes this plan, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
-2. You've added the Azure Information Protection blade to the Azure portal, and have at least one label.
+2. The Azure Information Protection blade is added to the Azure portal and you have at least one label published in the Azure Information Protection global policy.
     
-    Although this tutorial uses the default label, **General**, you can substitute this label for another one if you prefer. If you need help adding the Azure Information Protection blade, or don't yet have any labels, see [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
+    Although this tutorial uses the default label, **General**, you can substitute this label for another one if you prefer. If you need help adding the Azure Information Protection blade, or don't yet have any labels published to the global policy, see [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
 
 3. A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you can sign in to Outlook. Be prepared to restart Outlook multiple times during this tutorial.
 

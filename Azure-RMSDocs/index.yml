@@ -47,6 +47,8 @@ landingContent:
        links:
           - text: Deployment roadmap
             url: deployment-roadmap.md
+          - text: Common scenarios
+            url: how-to-guides.md
 
   # Card
   - title: Customize the client
