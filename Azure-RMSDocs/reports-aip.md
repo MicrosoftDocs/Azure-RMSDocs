@@ -44,10 +44,7 @@ Use Azure Information Protection analytics for central reporting to help you tra
 
 - Identify when protected documents are accessed by internal or external users from Windows computers, and whether access was granted or denied.
 
-The data that you see is aggregated from your Azure Information Protection clients and scanners, from [clients and services that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), and from [protection usage logs](log-analyze-usage.md).
-
-> [!NOTE]
-> With the exception of the current general availability version of the unified labeling client, Azure Information Protection analytics doesn't include custom information types for clients and services that support unified labeling.
+The data that you see is aggregated from your Azure Information Protection clients and scanners, from Microsoft Cloud App Security, from Windows 10 computers using Microsoft Defender Advanced Threat Protection, and from [protection usage logs](log-analyze-usage.md).
 
 For example, you'll be able to see the following:
 
@@ -81,7 +78,7 @@ For example, you'll be able to see the following:
 
 - From the **Data discovery** report:
 
-    - What files are on your scanned data repositories, Windows 10 computers, or computers running the Azure Information Protection client or [clients that support unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)
+    - What files are on your scanned data repositories, Windows 10 computers, or computers running the Azure Information Protection clients
     
     - Which files are labeled and protected, and the location of files by labels
     
@@ -122,9 +119,7 @@ To generate these reports, endpoints send the following types of information to 
 
 - For emails: The email subject and email sender  for emails that are labeled. 
 
-- The [predefined sensitive information types](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) that were detected in content.
-    
-    If you are using Azure Information Protection labels with custom conditions, the names of your custom information types are also sent. Unless you are using the current general availability version of the unified labeling client, custom sensitive info types that you create in your labeling center are not sent.
+- The sensitive information types ([predefined](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) and custom) that were detected in content.
 
 - The Azure Information Protection client version.
 

@@ -860,9 +860,9 @@ Example PowerShell command, where your label is named "General" and you want to 
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When you configure this setting, you can classify (and optionally, protect) an Office document when it has an existing SharePoint property with a value that matches one of your label names.
+When you configure this setting, you can classify (and optionally, protect) an Office document using Word, Excel, and PowerPoint when that document has an existing SharePoint property with a value that matches one of your label names.
 
-As a result of this configuration, when a document without a sensitivity label is opened from SharePoint and saved by a user in their Office app, the document is then labeled to match the corresponding property value. 
+As a result of this configuration, when a document without a sensitivity label is opened from SharePoint and saved by a user in their Office desktop app, the document is then labeled to match the corresponding property value.
 
 The advanced setting:
 
@@ -874,8 +874,7 @@ Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="Classification"}
 
-For this example, you might have a SharePoint property named **Classification** that has possible values of **Public**, **General**, and **Confidential**. After configuring the advanced setting, when a user opens and saves one of these Office documents, it is labeled Public, General, or Confidential, according to the SharePoint property value. If you don't have label names that match the property values, the document remains unlabeled
-
+For this example, your SharePoint property is named **Classification** and has possible values of **Public**, **General**, and **Confidential**. After configuring the advanced setting, when a user opens and saves one of these Office documents, it is labeled Public, General, or Confidential, according to the SharePoint property value. If you don't have label names that match the property values, the document remains unlabeled.
 
 ## Configure a label to apply S/MIME protection in Outlook
 
