@@ -970,15 +970,23 @@ Note that without an Internet connection, the client cannot apply protection (or
 
 Instructions:
 
-1. Export the log files from another computer that is running the unified labeling client and has downloaded the same labels and policies that you want to use on your disconnected computer.
+1. Choose or create a user account that you will use to download labels and policy settings that you want to use on your disconnected computer.
+
+2. As an additional label policy setting, [disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) by using the **EnableAudit** advanced setting.
+
+3. From a computer running the unified labeling client and signed in with your user account from step 1, download the labels and policy settings.
+
+4. From this computer, export the log files.
     
     For example, run the [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs) cmdlet, or use the **Export Logs** option from the client's [Help and Feedback](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) dialog box. 
     
     The log files are exported as a single compressed file.
 
-2.  Open the compressed file, and from the MSIP folder, copy any files that have a .xml file name extension.
+5.  Open the compressed file, and from the MSIP folder, copy any files that have a .xml file name extension.
 
-3. Paste these files into the **%localappdata%\Microsoft\MSIP** folder on the disconnected computer.
+6. Paste these files into the **%localappdata%\Microsoft\MSIP** folder on the disconnected computer.
+
+7. If your chosen user account is one that usually connects to the Internet from another computer, enable sending audit data again, by setting the **EnableAudit** value to **True**.
 
 Be aware that if users select the **Reset Settings** option from [Help and feedback](clientv2-admin-guide.md#help-and-feedback-section), this action deletes the policy files and renders the client inoperable until you manually replace the files or the client connects to the Internet and downloads the files.
 
