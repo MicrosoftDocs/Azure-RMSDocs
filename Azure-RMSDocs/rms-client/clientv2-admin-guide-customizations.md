@@ -973,6 +973,8 @@ Instructions:
 1. Choose or create a user account that you will use to download labels and policy settings that you want to use on your disconnected computer.
 
 2. As an additional label policy setting, [disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) by using the **EnableAudit** advanced setting.
+    
+    We recommend this step because if the disconnected computer does have periodic Internet connectivity, it will send logging information to Azure Information Protection analytics that includes the user name from step 1. That user account is likely to be different from the account you're using on the disconnected computer.
 
 3. From a computer running the unified labeling client and signed in with your user account from step 1, download the labels and policy settings.
 
@@ -986,7 +988,7 @@ Instructions:
 
 6. Paste these files into the **%localappdata%\Microsoft\MSIP** folder on the disconnected computer.
 
-7. If your chosen user account is one that usually connects to the Internet from another computer, enable sending audit data again, by setting the **EnableAudit** value to **True**.
+7. If your chosen user account is one that usually connects to the Internet, enable sending audit data again, by setting the **EnableAudit** value to **True**.
 
 Be aware that if users select the **Reset Settings** option from [Help and feedback](clientv2-admin-guide.md#help-and-feedback-section), this action deletes the policy files and renders the client inoperable until you manually replace the files or the client connects to the Internet and downloads the files.
 
