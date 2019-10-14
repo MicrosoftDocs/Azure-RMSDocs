@@ -49,8 +49,6 @@ landingContent:
             url: deployment-roadmap.md
           - text: Common scenarios
             url: how-to-guides.md
-          - text: Central reporting (preview)
-            url: reports-aip.md
 
   # Card
   - title: Stay current
@@ -110,3 +108,11 @@ landingContent:
         links:
           - text: API reference for C++
             url: /information-protection/develop/mip-sdk-reference       
+
+  # Card
+  - title: Monitor label usage & discover sensitive information
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Central reporting (preview)
+            url: reports-aip.md
