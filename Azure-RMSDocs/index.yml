@@ -51,6 +51,14 @@ landingContent:
             url: how-to-guides.md
 
   # Card
+  - title: What's new
+    linkLists:
+     - linkListType: whats-new
+       links:
+          - text: Doc updates for September
+            url: https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Documentation-Update-for-September/ba-p/879826
+
+  # Card
   - title: Customize the client
     linkLists:
       - linkListType: how-to-guide
