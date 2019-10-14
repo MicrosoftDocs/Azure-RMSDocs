@@ -61,6 +61,14 @@ landingContent:
             url: ./rms-client/unifiedlabelingclient-version-release-history.md#versions-later-than-22210
 
   # Card
+  - title: Classify & protect data in on-premises data stores
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Deploy the scanner
+            url: deploy-aip-scanner.md
+
+  # Card
   - title: Customize the client
     linkLists:
       - linkListType: how-to-guide
@@ -69,27 +77,6 @@ landingContent:
             url: ./rms-client/client-admin-guide-customizations.md
           - text: "Unified labeling client: Advanced settings"
             url: ./rms-client/clientv2-admin-guide-customizations.md
-
-  # Card
-  - title: Activate unified labels
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Compare the clients
-            url: ./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use
-      - linkListType: how-to-guide
-        links:
-          - text: Migrate Azure Information Protection labels
-            url: configure-policy-migrate-labels.md
-
-  # Card
-  - title: Classify & protect data in on-premises data stores
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Deploy the scanner
-            url: deploy-aip-scanner.md
-
 
 # Card
   - title: Microsoft Information Protection SDK
@@ -108,6 +95,18 @@ landingContent:
         links:
           - text: API reference for C++
             url: /information-protection/develop/mip-sdk-reference       
+
+  # Card
+  - title: Activate unified labels
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Compare the clients
+            url: ./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use
+      - linkListType: how-to-guide
+        links:
+          - text: Migrate Azure Information Protection labels
+            url: configure-policy-migrate-labels.md
 
   # Card
   - title: Monitor label usage & discover sensitive information
