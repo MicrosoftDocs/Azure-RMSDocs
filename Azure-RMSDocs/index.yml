@@ -60,15 +60,6 @@ landingContent:
           - text: New preview version of the unified labeling client
             url: ./rms-client/unifiedlabelingclient-version-release-history.md#versions-later-than-22210
 
-  # Card
-  - title: Customize the client
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: "Classic client: Advanced settings"
-            url: ./rms-client/client-admin-guide-customizations.md
-          - text: "Unified labeling client: Advanced settings"
-            url: ./rms-client/clientv2-admin-guide-customizations.md
 
   # Card
   - title: Activate unified labels
@@ -111,3 +102,7 @@ landingContent:
             url: /information-protection/develop/setup-configure-mip        
           - text: AD RMS Protection
             url: /information-protection/develop/quick-app-adrms
+      - linkListType: reference
+        links:
+          - text: API reference for C++
+            url: /information-protection/develop/mip-sdk-reference       
