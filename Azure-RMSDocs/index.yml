@@ -90,13 +90,6 @@ landingContent:
           - text: Deploy the scanner
             url: deploy-aip-scanner.md
 
-  # Card
-  - title: Monitor label usage & discover sensitive information
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Central reporting (preview)
-            url: reports-aip.md
 
 # Card
   - title: Microsoft Information Protection SDK
