@@ -807,9 +807,9 @@ This setting is supported when you use Word, Excel, and PowerPoint.
 
 To configure this advanced setting, enter the following strings for the selected label policy:
 
-Key: **EnableLabelBySharePointProperties**
+- Key: **EnableLabelBySharePointProperties**
 
-Value: **True**
+- Value: **True**
 
 Example PowerShell command, where your label policy is named "Global":
 
