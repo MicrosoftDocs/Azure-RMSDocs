@@ -6,7 +6,7 @@ description: Conditions for a label let you automatically assign a label to a do
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -57,15 +57,15 @@ If you configure automatic classification rather than recommended, the label is 
 
 ## How automatic or recommended labels are applied
 
-- Automatic classification applies to Word, Excel, and PowerPoint when documents are saved, and apply to Outlook when emails are sent. 
+- Automatic classification applies to Word, Excel, and PowerPoint when you save documents, and apply to Outlook when you send emails. 
     
     You cannot use automatic classification for documents and emails that were previously manually labeled, or previously automatically labeled with a higher classification. 
 
-- Recommended classification applies to Word, Excel, and PowerPoint when documents are saved. You cannot use recommended classification for Outlook unless you configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook) that is currently in preview.
+- Recommended classification applies to Word, Excel, and PowerPoint when you save documents. You cannot use recommended classification for Outlook unless you configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook) that is currently in preview.
     
     You cannot use recommended classification for documents that were previously labeled with a higher classification. 
 
-You can change this behavior so that the Azure Information Protection client periodically checks documents for the condition rules that you specify. This configuration requires an [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) that is currently in preview.
+You can change this behavior so that the Azure Information Protection client periodically checks documents for the condition rules that you specify. For example, this would be appropriate if you're using [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps that are automatically saved in SharePoint Online, OneDrive, or OneDrive for Business. To support this scenario, you can configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) that is currently in preview. The setting turns on classification to run continuously in the background.
 
 ### How multiple conditions are evaluated when they apply to more than one label
 
