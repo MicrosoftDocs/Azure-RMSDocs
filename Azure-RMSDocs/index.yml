@@ -57,6 +57,8 @@ landingContent:
        links:
           - text: Doc updates for September
             url: https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Documentation-Update-for-September/ba-p/879826
+          - text: Preview version of the unified labeling client
+            url: ./rms-client/unifiedlabelingclient-version-release-history.md#versions-later-than-22210
 
   # Card
   - title: Customize the client
