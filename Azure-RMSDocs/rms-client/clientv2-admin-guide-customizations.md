@@ -128,7 +128,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |EnableCustomPermissions|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
-|EnableLabelBySharePointProperties|[Label an Office document by using an existing SharePoint property](#label-an-office-document-by-using-an-existing-sharepoint-property)
+|EnableLabelBySharePointProperties|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 |HideBarByDefault|[Display the Information Protection bar in Office apps](##display-the-information-protection-bar-in-office-apps)|
 |LogMatchedContent|[Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
 |OutlookBlockTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -799,6 +799,22 @@ Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
 
+### Extend your label migration rules to SharePoint properties
+
+You can use your labelByCustomProperties advanced settings with SharePoint properties that you might expose as columns to users.
+
+This setting is supported when you use Word, Excel, and PowerPoint.
+
+To configure this advanced setting, enter the following strings for the selected label policy:
+
+Key: **EnableLabelBySharePointProperties**
+
+Value: **True**
+
+Example PowerShell command, where your label policy is named "Global":
+
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
+
 ## Apply a custom property when a label is applied
 
 This configuration uses a label [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
@@ -852,29 +868,6 @@ To add more than one custom property for the same label, you need to define mult
 Example PowerShell command, where your label is named "General" and you want to add one custom property named **Classification** with the value of **General** and a second custom property named **Sensitivity** with the value of **Internal**:
 
 	Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
-
-## Label an Office document by using an existing SharePoint property
-
-> [!NOTE]
-> If you use this configuration and the configuration to [migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions), the labeling migration setting takes precedence. 
-
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
-
-When you configure this setting, you can classify (and optionally, protect) an Office document using Word, Excel, and PowerPoint when that document has an existing SharePoint property with a value that matches one of your label names.
-
-As a result of this configuration, when a document without a sensitivity label is opened from SharePoint and saved by a user in their Office desktop app, the document is then labeled to match the corresponding property value.
-
-The advanced setting:
-
-- Key: **EnableLabelBySharePointProperties**
-
-- Value: **\<**property name**>**
-
-Example PowerShell command, where your label policy is named "Global":
-
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="Classification"}
-
-For this example, your SharePoint property is named **Classification** and has possible values of **Public**, **General**, and **Confidential**. After configuring the advanced setting, when a user opens and saves one of these Office documents, it is labeled Public, General, or Confidential, according to the SharePoint property value. If you don't have label names that match the property values, the document remains unlabeled.
 
 ## Configure a label to apply S/MIME protection in Outlook
 
