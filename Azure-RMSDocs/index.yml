@@ -51,7 +51,7 @@ landingContent:
             url: how-to-guides.md
 
   # Card
-  - title: What's new
+  - title: Hot off the press
     linkLists:
      - linkListType: whats-new
        links:
