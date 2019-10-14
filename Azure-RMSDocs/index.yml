@@ -49,6 +49,8 @@ landingContent:
             url: deployment-roadmap.md
           - text: Common scenarios
             url: how-to-guides.md
+          - text: Central reporting (preview)
+            url: reports-aip.md
 
   # Card
   - title: Stay current
