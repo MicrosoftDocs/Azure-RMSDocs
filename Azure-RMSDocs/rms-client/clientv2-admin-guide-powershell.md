@@ -99,7 +99,7 @@ For the delegated user account:
 > [!IMPORTANT]
 > These instructions are for the current general availability version of the unified labeling client and also apply to the preview version of the scanner for this client.
 
-Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecret* parameters. If you upgraded from a previous version of the client and created an app registration for the previous *WebAppId* and *NativeAppId* parameters, they won't work with the current version of the unified labeling client. You must create a new app registration as follows:
+Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecret* parameters. If you upgraded from a previous version of the client and created an app registration for the previous *WebAppId* and *NativeAppId* parameters, they won't work with the unified labeling client. You must create a new app registration as follows:
 
 1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/).
 
@@ -157,24 +157,23 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
 
 19. Back on the API permissions blade, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
 
-You've now completed the registration of this app with a secret, you're ready to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *AppId*, and *AppSecret*. Additionally, you'll need your tenant ID. 
+Now you've completed the registration of this app with a secret, you're ready to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *AppId*, and *AppSecret*. Additionally, you'll need your tenant ID. 
 
 > [!TIP]
 >You can quickly copy your tenant ID by using Azure portal: **Azure Active Directory** > **Manage** > **Properties** > **Directory ID**.
 
-From our example with a tenant ID of 9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a:
 
-`Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a"`
+1. Open Windows PowerShell with the **Run as administrator option**. 
 
-When you run this command for the first time, you are prompted to sign in, which creates and securely stores the access token for your account in %localappdata%\Microsoft\MSIP. After this initial sign-in, you can label and protect files non-interactively on the computer. However, if you use a service account to label and protect files, and this service account cannot sign in interactively, use the *OnBehalfOf* parameter with Set-AIPAuthentication:
-
-1. Create a variable to store the credentials of an Active Directory account that is granted the user right assignment to sign in interactively. For example:
+2. In your PowerShell session, create a variable to store the credentials of your delegated user account that has an account in Active Directory with the user right assignment to sign in interactively. For example, if your account name is scv_scanner@contoso.com:
     
     	$pscreds = Get-Credential "scv_scanner@contoso.com"
-
-2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. For example:
     
-    	Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+    You're prompted for this account's password.
+
+2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. Also specify your app registration values and the delegated user account in Azure AD. For example:
+    
+    	Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scv_scanner@contoso.com -OnBehalfOf $pscreds
 
 
 ## Next steps
