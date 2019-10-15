@@ -66,37 +66,70 @@ You can also install both clients in the same environment to support different b
 
 - You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. For production use, you deploy the classic client on servers to run the Azure Information Protection scanner.
 
-### Compare the clients
+### Compare the labeling clients for Windows computers
 
-Use the following table to help compare which features are supported by the two Azure Information Protection clients.
+Use the following table to help compare which features are supported by the three labeling clients for Windows computers.
 
-|Feature|Classic client|Unified labeling client|
-|-------|-----------------------------------|----------------------------------------------------|
-|Labeling actions: Manual, recommended, automatic| Yes | Yes |
-|Central reporting (analytics):| Yes | Yes |
-|A viewer for protected files (text, images, PDF, .pfile):| Yes | Yes |
-|Multilanguage support for labels:| Yes | Yes |
-|Label inheritance from email attachments:| Yes | Yes  |
-|Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| Yes <br /><br /> Supported as [advanced client settings that you configure in the Azure portal](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)| Yes <br /><br /> Supported as [advanced settings that you configure with PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
-|User-defined permissions:| Yes | Yes |
-|Scanner for on-premises data stores:| Yes | Yes - preview version |
-|Custom permissions:| Yes | File Explorer and PowerShell <br /><br /> In Office apps, as an alternative, users can select **File Info** > **Protect Document** > **Restrict Access**  or admins can configure a label for user-defined permissions|
-|Information Protection bar in Office apps:| Yes | Yes with limitations:<br /><br /> - No title or customizable tooltip|
-|Labels can apply visual markings (header, footer, watermark):| Yes | Yes with limitations:<br /><br /> - Headers and footers do not support variables for dynamic values <br /><br /> - No support for Word, Excel, PowerPoint, and Outlook to have different visual markings|
-|File Explorer, right-click actions:| Yes | Yes with limitations:<br /><br /> - Can't protect PDF documents for the older .ppdf format <br /><br />  - No support for protection-only mode|
-|PowerShell commands:| Yes | Yes with limitations:<br /><br />- Cannot remove protection from container files (zip, .rar, .7z, .msg, and .pst)|
-|Offline support for protection actions:| Yes | Yes with limitations: <br /><br />- For File Explorer and PowerShell commands, the user must be connected to the Internet to protect files. |
-|Support for disconnected computers with manual policy file management:| Yes |No |
-|HYOK support:| Yes | No <br /><br /> Labels that you migrate from the Azure portal and that are configured for HYOK protection are displayed by the Azure Information Protection unified labeling client, but do not apply protection. |
-|Usage logging to Event Viewer:| Yes | No|
-|Display the Do Not Forward button in Outlook| Yes | No |
-|Track and revoke:| Yes | No |
-|Protection-only mode (no labels) using templates:| Yes | No |
-|Support for AD RMS:| Yes | The following action only is supported:<br /><br /> - The viewer can open protected documents when you deploy the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))|
+To compare the Office built-in sensitivity labeling features across different operating system platforms (Windows, MacOS, iOS, and Android) and for the web, see the Office documentation, [What sensitivity label capabilities are supported in Office today?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today)
+
+|Feature|Classic client|Unified labeling client|Office built-in labeling client|
+|:------|:------------:|:---------------------:|:-----------------------------:|
+|Manual labeling:| **Yes** | **Yes** |**Yes** |
+|Default label:| **Yes** | **Yes** | **Yes** |
+|Recommended or automatic labeling:| **Yes** | **Yes** | No |
+|Mandatory labeling:| **Yes** | **Yes** | No |
+|User-defined permissions for a label:<br />- Do Not Forward for emails<br />- Custom permissions for Word, Excel, PowerPoint, File Explorer| **Yes** | **Yes** | No |
+|Multilanguage support for labels:| **Yes** | **Yes** |**Yes** |
+|Label inheritance from email attachments:| **Yes** | **Yes**  |No |
+|Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| **Yes** <sup>1</sup> | **Yes** <sup>2</sup> | No |
+|Scanner for on-premises data stores:| **Yes** | **Yes <br />(preview)** | No |
+|Central reporting (analytics):| **Yes** | **Yes** | No |
+|Custom permissions set independently from a label:| **Yes** | **Yes** <sup>3</sup>| No |
+|Information Protection bar in Office apps:| **Yes** | **Yes**| No |
+|Visual markings as a label action (header, footer, watermark):| **Yes** | **Yes** | **Yes**|
+|Per app visual markings:| **Yes** | No | No |
+|Dynamic visual markings with variables:| **Yes** | No | No |
+|Label with File Explorer:| **Yes** | **Yes** | No |
+|A viewer for protected files (text, images, PDF, .pfile):| **Yes** | **Yes** | No|
+|PPDF support for applying labels:| **Yes** | No | No |
+|PowerShell labeling cmdlets:| **Yes** | **Yes** <sup>4</sup> | No |
+|Manual policy file management for disconnected computers:| **Yes** |**Yes** | No |
+|Offline support for protection actions:| **Yes** | **Yes** <sup>5</sup> | **Yes** |
+|HYOK support:| **Yes** | No | No |
+|Usage logging in Event Viewer:| **Yes** | No |No |
+|Display the Do Not Forward button in Outlook:| **Yes** | No | No |
+|Track protected documented:| **Yes** | **Yes** <sup>6</sup> | No |
+|Revoke protected documents:| **Yes** | No | No |
+|Protection-only mode (no labels):| **Yes** | No | No |
+|Support for AD RMS:| **Yes** | No <sup>7</sup> | No |
+
+Footnotes:
+
+<sup>1</sup>
+These settings, and many more are supported as [advanced client settings that you configure in the Azure portal](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal).
+
+<sup>2</sup>
+These settings, and many more are supported as [advanced settings that you configure with PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+
+<sup>3</sup>
+Supported by File Explorer and PowerShell. In Office apps, users can select **File Info** > **Protect Document** > **Restrict Access**.
+
+<sup>4</sup>
+No support to remove protection from container files (zip, .rar, .7z, .msg, and .pst).
+
+<sup>5</sup>
+For File Explorer and PowerShell commands, the user must be connected to the Internet to protect files.
+
+<sup>6</sup>
+The document tracking site that's supported by the classic client isn't supported by the unified labeling client. However, without the need to first register the document for tracking, administrators can use [central reporting](../reports-aip.md) to identify whether protected documented are accessed from Windows computers, and whether access was granted or denied. 
+
+<sup>7</sup>
+Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
+
 
 #### Detailed comparisons for the clients
 
-When both clients support the same feature, use the following table to help identify some functional differences between the two clients.
+When the Azure Information Protection client (classic) and the Azure Information Protection unified labeling client both support the same feature, use the following table to help identify some functional differences between the two clients.
 
 |Functionality |Classic client|Unified labeling client|
 |--------------|-----------------------------------|-----------------------------------------------------------|
