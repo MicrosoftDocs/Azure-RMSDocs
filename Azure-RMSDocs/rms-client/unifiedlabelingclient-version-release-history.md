@@ -111,6 +111,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 - [Reset Settings](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) now deletes the %LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName.exe\>* folders instead of the %LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName\>*\mip folder.
 
+- [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) now includes the content ID for a protected document.
 
 ## Version 2.2.21.0
 
