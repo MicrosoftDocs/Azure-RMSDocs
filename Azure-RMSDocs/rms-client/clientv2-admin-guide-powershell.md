@@ -71,35 +71,34 @@ If your Azure Information Protection tenant is not activated, see the instructio
 
 Typical scenarios for removing protection from files for others include data discovery or data recovery. If you are using labels to apply the protection, you could remove the protection by setting a new label that doesn't apply protection or by removing the label.
 
-You must have a Rights Management usage right to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../configure-super-users.md).
+You must have a Rights Management usage right to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Information Protection and discovery services or data recovery](../configure-super-users.md).
 
 ## How to label files non-interactively for Azure Information Protection
 
 You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet.
 
-By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account for this purpose. Then, in the context of that user, run the Set-AIPAuthentication cmdlet to set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the protection service from Azure Information Protection. The account downloads the Azure Information Protection policy and any protection templates that the labels use.
+By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account that will be used for delegated access and that requests an access token from Azure AD. 
+
+Then, run the Set-AIPAuthentication cmdlet to specify the delegated account, and set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the protection service from Azure Information Protection. The computer running the AIPAuthentication cmdlet downloads the label policies and labels that are assigned to that user account from the labeling center, such as the Office 365 Security & Compliance Center.
 
 > [!NOTE]
-> If you use label policies for different users, remember that you might need to add this account to a specific label policy.
+> If you use label policies for different users, you might need to create a new label policy that publishes all your labels, and publish it to just this delegated user account.
 
-The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended account. After that, this account can then run the labeling cmdlets non-interactively until the authentication token in Azure AD expires. 
+When the token in Azure AD expires, you must run the cmdlet again to acquire a new token. You can configure the access token in Azure AD for one year, two years, or to never expire. The parameters for Set-AIPAuthentication use values from an app registration process in Azure AD, as described in the next section.
 
-For the user account to be able to sign in interactively this first time, the account must have the **Log on locally** user right assignment. This right is standard for user accounts but your company policies might prohibit this configuration for service accounts. If that's the case, you can run Set-AIPAuthentication with the *OnBehalfOf* parameter so that authentication completes without the sign-in prompt.
+For the delegated user account:
 
-When the token in Azure AD expires, run the cmdlet again to acquire a new token.
+- Make sure that you have a label policy assigned to this account and that it contains the labels you want to use.
 
-If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
+- If this account needs to decrypt content, for example, to reprotect files and inspect files that others have protected, make it a [super user](https://docs.microsoft.com/azure/information-protection/configure-super-users) for Azure Information Protection and make sure the super user feature is enabled.
 
-To control when the access token expires, run this cmdlet with parameters. This configuration lets you configure the access token in Azure AD for one year, two years, or to never expire. The parameters for Set-AIPAuthentication use values from an app registration process in Azure AD.
-
-After you have run this cmdlet, you can run the labeling cmdlets in the context of the service account that you created.
 
 ### To create and configure the Azure AD applications for Set-AIPAuthentication
 
 > [!IMPORTANT]
 > These instructions are for the current general availability version of the unified labeling client and also apply to the preview version of the scanner for this client.
 
-Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecret* parameters. If you upgraded from a previous version of the client and created an app registration for the previous *WebAppId* and *NativeAppId* parameters, they won't work with the current version of the client.
+Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecret* parameters. If you upgraded from a previous version of the client and created an app registration for the previous *WebAppId* and *NativeAppId* parameters, they won't work with the current version of the unified labeling client. You must create a new app registration as follows:
 
 1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/).
 
@@ -138,11 +137,8 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
 
 12. For **Select permissions**, expand **Content** and select the following:
     
-    -  **Content.DelegatedWriter** (always required)
-    -  **Content.SuperUser** (required if the [super user feature](../configure-super-users.md) is needed)
-    -  **Content.Writer** (always required)
-    
-    The super user feature allows the account to always decrypt content. For example, to reprotect files and inspect files that others have protected.
+    -  **Content.DelegatedReader** 
+    -  **Content.DelegatedWriter**
 
 13. Select **Add permissions**.
 
