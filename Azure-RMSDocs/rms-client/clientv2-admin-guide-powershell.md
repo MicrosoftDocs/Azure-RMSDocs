@@ -75,14 +75,14 @@ You must have a Rights Management usage right to remove protection from files, o
 
 ## How to label files non-interactively for Azure Information Protection
 
-You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet.
+You can run the labeling cmdlets non-interactively by using the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet.
 
 By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account that will be used for delegated access and that requests an access token from Azure AD. 
 
-Then, run the Set-AIPAuthentication cmdlet to specify the delegated account, and set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the protection service from Azure Information Protection. The computer running the AIPAuthentication cmdlet downloads the label policies and labels that are assigned to that user account from the labeling center, such as the Office 365 Security & Compliance Center.
+Then, run the Set-AIPAuthentication cmdlet to specify the delegated account, and set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the protection service from Azure Information Protection. The computer running the AIPAuthentication cmdlet downloads the label policies and labels that are assigned to that user account from the labeling management center, such as the Office 365 Security & Compliance Center.
 
 > [!NOTE]
-> If you use label policies for different users, you might need to create a new label policy that publishes all your labels, and publish it to just this delegated user account.
+> If you use label policies for different users, you might need to create a new label policy that publishes all your labels, and publish the policy to just this delegated user account.
 
 When the token in Azure AD expires, you must run the cmdlet again to acquire a new token. You can configure the access token in Azure AD for one year, two years, or to never expire. The parameters for Set-AIPAuthentication use values from an app registration process in Azure AD, as described in the next section.
 
