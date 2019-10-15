@@ -85,7 +85,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 - The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters for when you want to label files non-interactively and a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents. For instructions, see [How to label files non-interactively](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
-- New PowerShell label policy advanced setting to [Extend your label migration rules to SharePoint properties](clientv2-client-admin-guide-customizations.md#extend-your-label-migration-rules-to-sharepoint-properties).
+- New PowerShell label policy advanced setting to [Extend your label migration rules to SharePoint properties](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-sharepoint-properties).
 
 - Matched custom sensitive information types are sent to [Azure Information Protection analytics](../reports-aip.md).
 
@@ -107,7 +107,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 **Additional changes**
 
-- [Reset Settings](clientv2-admin-guide.md#more-information-about-the[reset-settings-option) now deletes the %LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName.exe\>* folders instead of the %LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName\>*\mip folder.
+- [Reset Settings](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) now deletes the %LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName.exe\>* folders instead of the %LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName\>*\mip folder.
 
 
 ## Version 2.2.21.0
