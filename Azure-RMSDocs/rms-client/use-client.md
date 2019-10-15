@@ -203,7 +203,7 @@ For parity, the Azure Information Protection unified labeling client also doesn'
 
 ## Next steps
 
-To install and configure the clients, use the following documentation:
+To install and configure the Azure Information Protection clients, use the following documentation:
 
 - [Azure Information Protection client](AIP-client.md)
 
@@ -211,4 +211,4 @@ To install and configure the clients, use the following documentation:
 
 - [RMS client deployment notes](client-deployment-notes.md)
 
-Although the Azure Information Protection client (classic) can be used with AD RMS, this client is best suited to work with its Azure services; Azure Information Protection and its protection service, Azure Rights Management. For a comparison of the service side for Azure Information Protection, see [Comparing Azure Information Protection and AD RMS](../compare-on-premise.md).
+For more information about using the built-in labeling client for Office 365 apps, see [Sensitivity labels in Office apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps).
