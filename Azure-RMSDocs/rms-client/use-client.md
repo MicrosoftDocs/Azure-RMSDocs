@@ -190,8 +190,6 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Confirmation prompt **Do you want to delete this label?** for users when you don't use the policy setting for justification
 
-- Label an Office document by using an existing custom property (SyncPropertyName and SyncPropertyState advanced client settings)
-
 - Separate PowerShell cmdlets to connect to a Rights Management service
 
 
