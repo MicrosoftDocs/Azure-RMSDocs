@@ -68,7 +68,7 @@ The latest version of the unified labeling client brings it to close parity in f
 
 You can use different clients in the same environment to support different business requirements, as demonstrated in the following deployment example. In a mixed client environment, we recommend you use unified labels so that clients share the same set of labels for ease of administration. New customers have unified labels by default because their tenants are on the unified labeling platform. For more information, see [How can I determine if my tenant is on the unified labeling platform?](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
 
-##### Example deployment strategy:
+### Example deployment strategy:
 
 - For the majority of users, you deploy the Azure Information Protection unified labeling client because this client meets the business needs for these users. 
     
@@ -82,7 +82,7 @@ You can use different clients in the same environment to support different busin
 
 - You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. For production use, you deploy the classic client on servers to run the Azure Information Protection scanner.
 
-### Compare the labeling clients for Windows computers
+## Compare the labeling clients for Windows computers
 
 Use the following table to help compare which features are supported by the three labeling clients for Windows computers.
 
@@ -143,7 +143,7 @@ The document tracking site that's supported by the classic client isn't supporte
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 
-#### Detailed comparisons for the Azure Information Protection clients
+### Detailed comparisons for the Azure Information Protection clients
 
 When the Azure Information Protection client (classic) and the Azure Information Protection unified labeling client both support the same feature, use the following table to help identify some functional differences between the two clients.
 
@@ -166,7 +166,7 @@ When the Azure Information Protection client (classic) and the Azure Information
 
 For a detailed comparison of behavior differences for specific protection settings, see [Comparing the behavior of protection settings for a label](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
-#### Features not planned to be in the Azure Information Protection unified labeling client
+### Features not planned to be in the Azure Information Protection unified labeling client
 
 Although the Azure Information Protection unified labeling client is still under development, the following features and behavior differences from the classic client are not currently planned to be available in future releases for the unified labeling client: 
 
@@ -193,7 +193,7 @@ Although the Azure Information Protection unified labeling client is still under
 - Separate PowerShell cmdlets to connect to a Rights Management service
 
 
-#### Parent labels and their sublabels 
+### Parent labels and their sublabels 
 
 The Azure Information Protection client (classic) doesn't support configurations that specify a parent label that has sublabels. These configurations include specifying a default label, and a label for recommended or automatic classification. When a label has sublabels, you can specify one of the sublabels but not the parent label.
 
