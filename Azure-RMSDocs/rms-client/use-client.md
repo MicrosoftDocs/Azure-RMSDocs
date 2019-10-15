@@ -209,6 +209,4 @@ To install and configure the Azure Information Protection clients, use the follo
 
 - [Azure Information Protection unified labeling client](unifiedlabelingclient-version-release-history.md)
 
-- [RMS client deployment notes](client-deployment-notes.md)
-
 For more information about using the built-in labeling client for Office 365 apps, see [Sensitivity labels in Office apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps).
