@@ -73,7 +73,7 @@ Now that you’ve prepared your HSM key in Azure Key Vault for the Azure Rights 
 
 These procedures are done by the administrator for Azure Information Protection.
 
-1. On the Internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connect-AadrmService](/powershell/module/aipservice/connect-aipservice) cmdlet.
+1. On the Internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet.
     
     Then upload each trusted publishing domain (.xml) file, by using the [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
     
