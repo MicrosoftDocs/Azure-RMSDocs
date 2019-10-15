@@ -77,9 +77,9 @@ You must have a Rights Management usage right to remove protection from files, o
 
 You can run the labeling cmdlets non-interactively by using the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet.
 
-By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account that will be used for delegated access and that requests an access token from Azure AD. 
+By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, you use an account in Active Directory that can sign in interactively, and use an account in Azure AD that will be used for delegated access. For ease of administration, create a new, single account for this purpose, which means that the Active Directory account is synchronized to Azure AD. You also need to request an access token from Azure AD, which sets and stores credentials for authentication to Azure Information Protection. 
 
-Then, run the Set-AIPAuthentication cmdlet to specify the delegated account, and set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the protection service from Azure Information Protection. The computer running the AIPAuthentication cmdlet downloads the label policies and labels that are assigned to that user account from the labeling management center, such as the Office 365 Security & Compliance Center.
+The computer running the AIPAuthentication cmdlet downloads the label policies and labels that are assigned to the delegated user account by using your labeling management center, such as the Office 365 Security & Compliance Center.
 
 > [!NOTE]
 > If you use label policies for different users, you might need to create a new label policy that publishes all your labels, and publish the policy to just this delegated user account.
@@ -165,15 +165,15 @@ Now you've completed the registration of this app with a secret, you're ready to
 
 1. Open Windows PowerShell with the **Run as administrator option**. 
 
-2. In your PowerShell session, create a variable to store the credentials of your delegated user account that has an account in Active Directory with the user right assignment to sign in interactively. For example, if your account name is scv_scanner@contoso.com:
+2. In your PowerShell session, create a variable to store the credentials of your user account in Active Directory, and that user account has been granted the user right assignment to sign in interactively. For example, if this account name is scanner@contoso.com:
     
-    	$pscreds = Get-Credential "scv_scanner@contoso.com"
+    	$pscreds = Get-Credential "scanner@contoso.com"
     
     You're prompted for this account's password.
 
 2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. Also specify your app registration values and the delegated user account in Azure AD. For example:
     
-    	Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scv_scanner@contoso.com -OnBehalfOf $pscreds
+    	Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
 
 
 ## Next steps
