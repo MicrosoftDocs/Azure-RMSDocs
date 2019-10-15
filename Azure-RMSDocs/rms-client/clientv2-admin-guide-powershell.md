@@ -90,9 +90,9 @@ For the delegated user account:
 
 - Make sure that you have a label policy assigned to this account and that the policy contains the published labels you want to use.
 
-- If this account needs to decrypt content, for example, to reprotect files and inspect files that others have protected, make it a [super user](https://docs.microsoft.com/azure/information-protection/configure-super-users) for Azure Information Protection and make sure the super user feature is enabled.
+- If this account needs to decrypt content, for example, to reprotect files and inspect files that others have protected, make it a [super user](./configure-super-users.md) for Azure Information Protection and make sure the super user feature is enabled.
 
-- If you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) for a phased deployment, make sure that this account is included in your onboarding controls you've configured.
+- If you have implemented [onboarding controls](./activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) for a phased deployment, make sure that this account is included in your onboarding controls you've configured.
 
 ### To create and configure the Azure AD applications for Set-AIPAuthentication
 
