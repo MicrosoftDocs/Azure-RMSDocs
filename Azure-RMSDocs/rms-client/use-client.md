@@ -143,7 +143,7 @@ The document tracking site that's supported by the classic client isn't supporte
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 
-#### Detailed comparisons for the clients
+#### Detailed comparisons for the Azure Information Protection clients
 
 When the Azure Information Protection client (classic) and the Azure Information Protection unified labeling client both support the same feature, use the following table to help identify some functional differences between the two clients.
 
