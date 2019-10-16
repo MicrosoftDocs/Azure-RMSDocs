@@ -60,7 +60,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 **New features:**
 
-- Support for the [scanner](../deploy-aip-scanner.md), to inspect and label documents on-premises data stores. With this version of the scanner:
+- Preview version of the [scanner](../deploy-aip-scanner.md), to inspect and label documents on-premises data stores. With this version of the scanner:
     
     - Multiple scanners can share the same SQL Server database when you configure the scanners to use the same scanner profile. This configuration makes it easier to manage multiple scanners, and results in faster scanning times. When you use this configuration, always wait for a scanner to finish installing before installing another scanner with the same profile.
     
