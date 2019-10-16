@@ -39,11 +39,11 @@ All these clients integrate with Office applications but the unified labeling cl
 
 The RMS client provides protection only. This client is automatically installed with some applications, such as Office applications, the Azure Information Protection clients, and RMS-enlightened applications from software vendors. However, it can also be [installed by itself](https://www.microsoft.com/en-us/download/details.aspx?id=38396), to support [synchronizing files from IRM-protected libraries and OneDrive for Business](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668), and for developers who want to integrate rights management protection into line-of-business applications.
 
-## Choose which labeling client to use
+## Choose which labeling client to use for Windows computers
 
 Where possible, use one of the labeling clients because labels abstract the complexity of applying protection for users, and labels also provide classification so you can track and manage your data.
 
-Your choice of labeling client might be influenced by which management portal you use:
+Your choice of labeling client for your Windows computers might be influenced by which management portal you use:
 
 - The Office built-in labeling client and the Azure Information Protection unified labeling client download labels and policy settings from the following admin centers: 
     - Office 365 Security & Compliance Center
@@ -56,7 +56,7 @@ Because the unified labeling client and the classic client require a separate in
 
 Which client should you use?
 
-- Use the **labeling client built in to Office** when you have Office 365 apps that are a minimum version 1910, you want to use the same labels and policy settings that can also be used by MacOS, iOS, and Android, and you don't need features in your Office apps that require the unified labeling client or classic client. These features currently include automatic and recommended labeling, and the Information Protection bar under the ribbon for easier label selection and visibility.
+- Use the **labeling client built in to Office** for your Windows computers when you have Office 365 apps that are a minimum version 1910, you want to use the same labels and policy settings that can also be used by MacOS, iOS, and Android, and you don't need features in your Office apps that require the unified labeling client or classic client. These features currently include automatic and recommended labeling, and the Information Protection bar under the ribbon for easier label selection and visibility.
 
 - Use the **Azure Information Protection unified labeling client** on Windows computers for labels and policy settings that can also be used by MacOS, iOS, and Android, you want to label files independently from Office 365 apps, and you don’t need features that are only supported by the classic client. These features currently include protecting content with an on-premises key (HYOK) and a general availability version of the scanner for on-premises data stores.
     
