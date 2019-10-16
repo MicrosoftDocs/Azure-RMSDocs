@@ -52,7 +52,7 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the clients](use-client.md#compare-the-clients).
+This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md##compare-the-labeling-clients-for-windows-computers).
 
 ## Version 2.5.31.0
 
@@ -239,7 +239,7 @@ This first general availability version of the Azure Information Protection unif
 
 ## Next steps
 
-For full details, see the [comparison tables](use-client.md#compare-the-clients).
+For full details, see the [comparison tables](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
 For more information about installing and using this client: 
 
