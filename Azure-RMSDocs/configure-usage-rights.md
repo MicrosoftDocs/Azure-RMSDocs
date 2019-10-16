@@ -145,7 +145,7 @@ This configuration is currently rolling out to tenants.
 
 When Exchange Online uses the new capabilities for Office 365 Message Encryption, you can automatically encrypt unprotected PDF documents when they are attached to an encrypted email. The document inherits the same permissions as those for the email message. To enable this configuration, set **EnablePdfEncryption $True** with [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps).
 
-Recipients who don't already have a reader installed that supports the ISO standard for PDF encryption can install one of the readers listed in [PDF readers that support Microsoft Information Protection](./rms-client/protected-pdf-readers). Alternatively, they can read the protected PDF document in the OME portal.
+Recipients who don't already have a reader installed that supports the ISO standard for PDF encryption can install one of the readers listed in [PDF readers that support Microsoft Information Protection](./rms-client/protected-pdf-readers.md). Alternatively, they can read the protected PDF document in the OME portal.
 
 
 ## Rights Management issuer and Rights Management owner
