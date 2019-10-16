@@ -301,7 +301,7 @@ Use the following table to identify the friendly name of event functions that yo
 |LabelNameBefore |Label name before change (not localized) |
 |ProtectionType|Protection type [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
 |ProtectionBefore|Protection type before change [JSON] |
-|InformationTypesMatches|JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data where an empty array means no information types found, and null means no information available|
+|InformationTypesMatches|JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data where an empty array means no information types found, and null means no information available|
 |MachineName |FQDN when available; otherwise host name|
 |DeviceRisk|Device risk score from WDATP when available|
 |Platform|Device platform (Win, OSX, Android, iOS) |
@@ -314,12 +314,12 @@ Use the following table to identify the friendly name of event functions that yo
 |IsProtected|Whether protected: Yes/No |
 |ProtectionOwner |Rights Management owner in UPN format|
 |LabelIdBefore|Label GUID or null before change|
-|InformationTypesAbove55|JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data with confidence level 55 or above |
-|InformationTypesAbove65|JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data with confidence level 65 or above |
-|InformationTypesAbove75|JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data with confidence level 75 or above |
-|InformationTypesAbove85|JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data with confidence level 85 or above |
-|InformationTypesAbove95|JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data with confidence level 95 or above|
-|DiscoveredInformationTypes |JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data and their matched content (if enabled) where an empty array means no information types found, and null means no information available |
+|InformationTypesAbove55|JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 55 or above |
+|InformationTypesAbove65|JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 65 or above |
+|InformationTypesAbove75|JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 75 or above |
+|InformationTypesAbove85|JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 85 or above |
+|InformationTypesAbove95|JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data with confidence level 95 or above|
+|DiscoveredInformationTypes |JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data and their matched content (if enabled) where an empty array means no information types found, and null means no information available |
 |ProtectedBefore|Whether the content was protected before change: Yes/No |
 |ProtectionOwnerBefore|Rights Management owner before change |
 |UserJustification|Justification when downgrading or removing label|
@@ -369,4 +369,4 @@ In this example, a downgraded label is counted only if the label name before the
 ## Next steps
 After reviewing the information in the reports, if you are using the Azure Information Protection client, you might decide to make changes to your Azure Information Protection policy. For instructions, see [Configuring the Azure Information Protection policy](configure-policy.md).
 
-If you have a Microsoft 365 subscription, you can also view label usage in the Microsoft 365 compliance center and Microsoft 365 security center. For more information, see [View label usage with label analytics](/Office365/SecurityCompliance/label-analytics).
+If you have a Microsoft 365 subscription, you can also view label usage in the Microsoft 365 compliance center and Microsoft 365 security center. For more information, see [View label usage with label analytics](/microsoft-365/compliance/label-analytics).
