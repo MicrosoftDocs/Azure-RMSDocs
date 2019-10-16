@@ -189,5 +189,5 @@ For examples of how to customize the Azure Information Protection policy, and se
 
 - [Configure Azure Information Protection policy settings that work together](infoprotect-settings-tutorial.md)
 
-To see how your policy is performing, see [Reporting for Azure Information Protection](reports-aip.md).
+To see how your policy is performing, see [Central reporting for Azure Information Protection](reports-aip.md).
 
