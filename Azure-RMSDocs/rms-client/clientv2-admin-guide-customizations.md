@@ -957,6 +957,9 @@ Additionally:
 
 ## Support for disconnected computers
 
+> [!IMPORTANT]
+> Disconnected computers are supported for the following labeling scenarios only: File Explorer, PowerShell, and the scanner. To label documents in your Office apps, you must have connectivity to the Internet.
+
 By default, the Azure Information Protection unified labeling client automatically tries to connect to the Internet to download the labels and label policy settings from your labeling management center: The Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center. If you have computers that cannot connect to the Internet for a period of time, you can export and copy files that manually manages the policy for the unified labeling client.
 
 Note that without an Internet connection, the client cannot apply protection (or remove protection). Instead, the client is limited to using labels that apply classification only.

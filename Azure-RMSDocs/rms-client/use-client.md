@@ -109,15 +109,15 @@ To compare the Office built-in sensitivity labeling features across different op
 |A viewer for protected files (text, images, PDF, .pfile):| **Yes** | **Yes** | No|
 |PPDF support for applying labels:| **Yes** | No | No |
 |PowerShell labeling cmdlets:| **Yes** | **Yes** <sup>4</sup> | No |
-|Manual policy file management for disconnected computers:| **Yes** |**Yes** | No |
+|Manual policy file management for disconnected computers:| **Yes** |**Yes** <sup>6</sup>| No |
 |Offline support for protection actions:| **Yes** | **Yes** <sup>5</sup> | **Yes** |
 |HYOK support:| **Yes** | No | No |
 |Usage logging in Event Viewer:| **Yes** | No |No |
 |Display the Do Not Forward button in Outlook:| **Yes** | No | No |
-|Track protected documented:| **Yes** | **Yes** <sup>6</sup> | No |
+|Track protected documented:| **Yes** | **Yes** <sup>7</sup> | No |
 |Revoke protected documents:| **Yes** | No | No |
 |Protection-only mode (no labels):| **Yes** | No | No |
-|Support for AD RMS:| **Yes** | No <sup>7</sup> | No |
+|Support for AD RMS:| **Yes** | No <sup>8</sup> | No |
 
 Footnotes:
 
@@ -137,9 +137,12 @@ No support to remove protection from container files (zip, .rar, .7z, .msg, and 
 For File Explorer and PowerShell commands, the user must be connected to the Internet to protect files.
 
 <sup>6</sup>
-The document tracking site that's supported by the classic client isn't supported by the unified labeling client. However, without the need to first register the document for tracking, administrators can use [central reporting](../reports-aip.md) to identify whether protected documented are accessed from Windows computers, and whether access was granted or denied. 
+Supported for labeling with File Explorer, PowerShell, and the scanner. Not supported for labeling in Office apps.
 
 <sup>7</sup>
+The document tracking site that's supported by the classic client isn't supported by the unified labeling client. However, without the need to first register the document for tracking, administrators can use [central reporting](../reports-aip.md) to identify whether protected documented are accessed from Windows computers, and whether access was granted or denied. 
+
+<sup>8</sup>
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 
