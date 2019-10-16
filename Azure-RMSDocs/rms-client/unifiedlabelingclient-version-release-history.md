@@ -152,7 +152,7 @@ Supported through 02/06/2020
     - [Specify a default sublabel for a parent label](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
     - [Specify a color for the label](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
-- Support for labels that are configured for user-defined permissions for Word, Excel, PowerPoint, and File Explorer. For more information, see the [Let users assign permissions](/Office365/SecurityCompliance/encryption-sensitivity-labels#let-users-assign-permissions) section in the Office documentation.
+- Support for labels that are configured for user-defined permissions for Word, Excel, PowerPoint, and File Explorer. For more information, see the [Let users assign permissions](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions) section in the Office documentation.
 
 - PowerShell changes in the AzureInformationProtection module:
     - New cmdlet: [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) - replaces New-RMSProtectionLicense to create an ad-hoc policy for custom permissions
@@ -193,7 +193,7 @@ This first general availability version of the Azure Information Protection unif
 
 - Upgrade from the Azure Information Protection client.
 
-- Manual, automatic, and recommended labeling: For more information about configuring automatic and recommended labeling for this client, see [Apply a sensitivity label to content automatically](/Office365/SecurityCompliance/apply-sensitivity-label-automatically).
+- Manual, automatic, and recommended labeling: For more information about configuring automatic and recommended labeling for this client, see [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 
 - File Explorer, right-click actions to classify and protect files, remove protection, and apply custom permissions.
 
