@@ -199,5 +199,5 @@ If you want to classify and protect the files that contain sensitive information
     - [How to configure a label for Rights Management protection](configure-policy-protection.md)
 
 - For the unified labeling client:
-    - [Apply a sensitivity label to content automatically](https://docs.microsoft.com/microsoft-365/compliance/apply_sensitivity_label_automatically)
+    - [Apply a sensitivity label to content automatically](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
     - [Restrict access to content by using encryption in sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
