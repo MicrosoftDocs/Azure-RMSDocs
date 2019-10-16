@@ -115,7 +115,9 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 ## Version 2.2.21.0
 
-**Released**: 09/03/2019
+**Released**: 09/03/2020
+
+Supported through 04/23/2020
 
 **Fixes:**
 
