@@ -160,7 +160,7 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
     
     Your API permissions should look like the following:
     
-    ![API permissions for the registered app in Azure AD](./media/api-permissions-app.png)
+    ![API permissions for the registered app in Azure AD](../media/api-permissions-app.png)
 
 Now you've completed the registration of this app with a secret, you're ready to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *AppId*, and *AppSecret*. Additionally, you'll need your tenant ID. 
 
