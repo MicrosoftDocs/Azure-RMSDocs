@@ -6,7 +6,7 @@ description: Information resources for the Azure Information Protection client (
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 10/232019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
