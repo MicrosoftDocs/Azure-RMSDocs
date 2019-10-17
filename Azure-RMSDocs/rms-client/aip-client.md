@@ -5,8 +5,8 @@ title: Azure Information Protection client for Windows
 description: Information resources for the Azure Information Protection client (classic) for Windows.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 09/26/2019
+manager: rkarlin
+ms.date: 10/232019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -33,7 +33,7 @@ ms.custom: admin
 The Azure Information Protection client (classic) is the original downloadable client for organizations that use [Azure Information Protection](../what-is-information-protection.md) to classify and protect documents and emails, or use a Rights Management service to protect their data. This client also has a viewer for organizations that don’t have their own information protection infrastructure but want to consume content that has been protected by other organizations that use a Rights Management service from Microsoft.
 
 > [!NOTE]
-> This client, also known as the classic client, is being replaced by the Azure Information Protection unified labeling client. If you're not sure which client to use, see [Choose which Azure Information Protection client to use](use-client.md#choose-which-azure-information-protection-client-to-use).
+> This client, also known as the classic client, is being replaced by the Azure Information Protection unified labeling client. If you're not sure which client to use, see [Choose which labeling client to use for Windows computers](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 Use the following resources for the classic client:
 
