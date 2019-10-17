@@ -105,8 +105,6 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 - You can successfully open natively protected files in the viewer without requiring the Save As, Export (EXPORT) [usage right](../configure-usage-rights.md#usage-rights-and-descriptions).
 
-- The Information Protection bar displays as expected in the latest version of Office apps.
-
 **Additional changes**
 
 - [Reset Settings](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) now deletes the %LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName.exe\>* folders instead of the %LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName\>*\mip folder.

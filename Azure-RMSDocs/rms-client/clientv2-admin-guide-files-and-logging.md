@@ -47,7 +47,7 @@ Client logs files and currently installed policy files:
 
 ## Usage logging for the Azure Information Protection unified labeling client
 
-The unified labeling client doesn't logs user activity to the local Windows event log. Instead, use the [central reporting](./reports-aip.md) feature of Azure Information Protection. 
+The unified labeling client doesn't logs user activity to the local Windows event log. Instead, use the [central reporting](../reports-aip.md) feature of Azure Information Protection. 
 
 
 ## Next steps
