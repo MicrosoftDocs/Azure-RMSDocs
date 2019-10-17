@@ -5,8 +5,8 @@ title: Azure Information Protection client - Version history & support policy
 description: See what's new or changed in a release of the Azure Information Protection client for Windows, and understand the lifecycle policy for support. 
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 10/16/2019
+manager: rkarlin
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
