@@ -5,8 +5,8 @@ title: Azure Information Protection client - Version history & support policy
 description: See what's new or changed in a release of the Azure Information Protection client for Windows, and understand the lifecycle policy for support. 
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 09/26/2019
+manager: rkarlin
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -51,6 +51,7 @@ Preview versions should not be deployed for end users on production networks. In
 
 |Client version|Date released|
 |--------------|-------------|
+|1.41.51.0|11/27/2018|
 |1.37.19.0|09/17/2018|
 |1.29.5.0|06/26/2018|
 |1.27.48.0|05/30/2018|
@@ -183,51 +184,6 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 - The Azure Information Protection scanner no longer excludes .zip files by default. To inspect and label .zip files, see the [To inspect .zip files](client-admin-guide-file-types.md#to-inspect-zip-files) section of the admin guide.
 
 - The [policy setting](../configure-policy-settings.md) **Users must provide justification to set a lower classification label, remove a label, or remove protection** no longer applies to the scanner. The scanner performs these actions when you configure the setting **Relabel files** to **On** in the scanner profile, and then select the **Allow label downgrade** checkbox.
-
-## Version 1.41.51.0
-
-**Released**: 11/27/2018
-
-Supported through 10/16/2019
-
-This version includes the MSIPC version 1.0.3592.627 of the RMS client.
-
-**New features:**
-
-- The Azure Information Protection client by default, now protects PDF files by using the ISO standard for PDF encryption. Previously, you had to enable this support with an advanced client setting.
-    
-    If you want the client to revert to protecting PDF files by using a .ppdf file name extension, use the same [advanced client setting](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), but specify **False**.
-
-- Auditing data support for [central reporting](../reports-aip.md) by using Azure Information Protection analytics. This information includes label usage to help you monitor how your labels are used, and user access to labeled documents and emails.
-
-- Excel now also supports [visual marking](../configure-policy-markings.md)s in different colors.
-
-- For existing S/MIME deployments, a new advanced client setting to configure a label to automatically apply S/MIME protection in Outlook. [More information](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
-
-- A new advanced client setting, as an alternative to editing the registry to prevent sign-in prompts for the Azure Information Protection service for [disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers).
-
-- A new advanced client setting to [support the order of sublabels](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) when you use the following policy setting:
-    - **For email messages with attachments, apply a label that matches the highest classification of those attachments**
-
-**Fixes**:
-
-- The Azure Information Protection client no longer excludes .msg, .rar, and .zip file name extensions for File Explorer (right-click) and PowerShell commands. However, these file name extensions remain excluded by default for the scanner. 
-
-- The Azure Information Protection client can unprotect multiple files (multi-select and a folder that contains protected files) when you use File Explorer, right-click.
-
-- For Excel:
-    
-    - Visual markings are now applied if you save the spreadsheet while editing a cell.
-    
-    - Excel 2010: When a spreadsheet is protected by using the Co-Author [permission level](../configure-usage-rights.md#rights-included-in-permissions-levels), the **Delete Label** button is now available when you right-click the file and choose **Classify and Protect**.
-
-- The advanced client settings that can [remove headers and footers from other labeling solutions](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) now supports custom layouts.
-
-**Additional changes:**
-
-- When the scanner's schedule is set to **Always**, there is now a delay of 30 seconds between scans.
-
-- The scanner no longer changes the Rights Management owner for files that it labels when the file is already protected.
 
 ## Next steps
 
