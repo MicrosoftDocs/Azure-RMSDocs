@@ -40,9 +40,14 @@ Client files:
 
 - For 32-bit operating systems: **\Program Files\Microsoft Azure Information Protection**
 
-Client logs files:
+Client logs files and currently installed policy files:
 
-- For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP\Logs**
+- For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**
+
+
+## Usage logging for the Azure Information Protection unified labeling client
+
+The unified labeling client doesn't logs user activity to the local Windows event log. Instead, use the [central reporting](./reports-aip.md) feature of Azure Information Protection. 
 
 
 ## Next steps
