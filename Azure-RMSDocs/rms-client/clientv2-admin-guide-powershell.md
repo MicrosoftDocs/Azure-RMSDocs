@@ -179,6 +179,8 @@ Now you've completed the registration of this app with a secret, you're ready to
     
     	Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
 
+> [!NOTE]
+> If the computer cannot have Internet access, there's no need to create the app in Azure AD and run Set-AIPAuthentication. Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizationsmd#support-for-disconnected-computers).  
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> -online`. For example: 
