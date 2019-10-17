@@ -44,7 +44,7 @@ Some of the main differences for Azure Information Protection:
 
 - **Document tracking and revocation**: Azure Information Protection supports these features with the Azure Information Protection client (classic), whereas AD RMS does not.
 
-- **Classification and labeling**: Azure Information Protection supports labels that apply classification, and optionally, protection. These capabilities are provided with the [Azure Information Protection client (classic) and the Azure Information Protection unified labeling client](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use). Using these clients, classification and labeling can be integrated with Office applications, File Explorer, PowerShell, and a scanner for on-premises data stores. AD RMS does not support these classification and labeling capabilities.
+- **Classification and labeling**: Azure Information Protection supports labels that apply classification, and optionally, protection. These capabilities are provided with the [Azure Information Protection client (classic) and the Azure Information Protection unified labeling client](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers). Using these clients, classification and labeling can be integrated with Office applications, File Explorer, PowerShell, and a scanner for on-premises data stores. AD RMS does not support these classification and labeling capabilities.
 
 In addition, because Azure Information Protection is a cloud service, it can deliver new features and fixes more quickly than an on-premises server-based solution. There are no new features planned for AD RMS in Windows Server.
 
