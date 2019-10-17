@@ -118,7 +118,7 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
 
 4. On the **AIP-DelegatedUser** blade, copy the value for the **Application (client) ID**. The value looks similar to the following example: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *AppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
-5. Still on the **AIP-DelegatedUser** blade, from the **Manage** sidebar, select **Certificates & secrets**.
+5. From the sidebar, select **Manage** > **Certificates & secrets**.
 
 6. On the **AIP-DelegatedUser - Certificates & secrets** blade, in the **Client secrets** section, select **+ New client secret**.
 
@@ -131,7 +131,7 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
     
     It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any sensitive information that you use, store the saved value securely and restrict access to it.
 
-9. From **Manage** on the sidebar, select **API permissions**.
+9. From the sidebar, select **Manage** > **API permissions**.
 
 10. On the **AIP-DelegatedUser - API permissions** blade, select **+ Add a permission**.
 
@@ -156,7 +156,11 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
 
 18. Select **Add permissions**.
 
-19. Back on the API permissions blade, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
+19. Back on the **AIP-DelegatedUser - API permissions** blade, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
+    
+    Your API permissions should look like the following:
+    
+    ![API permissions for the registered app in Azure AD](./media/api-permissions-app.png)
 
 Now you've completed the registration of this app with a secret, you're ready to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *AppId*, and *AppSecret*. Additionally, you'll need your tenant ID. 
 
