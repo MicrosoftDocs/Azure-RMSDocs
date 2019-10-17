@@ -108,7 +108,7 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
 
 3. Select **+ New registration**. On the **Register an application** blade, specify the following values, and then click **Register**:
 
-   - **Name**: `AIPv2OnBehalfOf`
+   - **Name**: `AIP-DelegatedUser`
         
         If you prefer, specify a different name. It must be unique per tenant.
     
@@ -116,24 +116,24 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
     
     - **Redirect URI (optional)**: **Web** and `https://localhost`
 
-4. On the **AIPv2OnBehalfOf** blade, copy the value for the **Application (client) ID**. The value looks similar to the following example: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *AppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
+4. On the **AIP-DelegatedUser** blade, copy the value for the **Application (client) ID**. The value looks similar to the following example: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *AppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
-5. Still on the **AIPv2OnBehalfOf** blade, from the **Manage** sidebar, select **Certificates & secrets**.
+5. Still on the **AIP-DelegatedUser** blade, from the **Manage** sidebar, select **Certificates & secrets**.
 
-6. On the **AIPv2OnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, select **+ New client secret**.
+6. On the **AIP-DelegatedUser - Certificates & secrets** blade, in the **Client secrets** section, select **+ New client secret**.
 
 7. For **Add a client secret**, specify the following, and then select **Add**:
     
     - **Description**: `Azure Information Protection unified labeling client`
     - **Expires**: Specify your choice of duration (1 year, 2 years, or never expires)
 
-8. Back on the **AIPv2OnBehalfOf - Certificates & secrets** blade, in the **Client secrets** section, copy the string for the **VALUE**. This string looks similar to the following example: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. To make sure you copy all the characters, select the icon to **Copy to clipboard**. 
+8. Back on the **AIP-DelegatedUser - Certificates & secrets** blade, in the **Client secrets** section, copy the string for the **VALUE**. This string looks similar to the following example: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. To make sure you copy all the characters, select the icon to **Copy to clipboard**. 
     
     It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any sensitive information that you use, store the saved value securely and restrict access to it.
 
 9. From **Manage** on the sidebar, select **API permissions**.
 
-10. On the **AIPv2OnBehalfOf - API permissions** blade, select **+ Add a permission**.
+10. On the **AIP-DelegatedUser - API permissions** blade, select **+ Add a permission**.
 
 11. On the **Request API permissions** blade, make sure that you're on the **Microsoft APIs** tab, and select **Azure Rights Management Services**. When you're prompted for the type of permissions that your application requires, select **Application permissions**.
 
@@ -144,7 +144,7 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
 
 13. Select **Add permissions**.
 
-14. Back on the **AIPv2OnBehalfOf - API permissions** blade, select **+ Add a permission** again.
+14. Back on the **AIP-DelegatedUser - API permissions** blade, select **+ Add a permission** again.
 
 15. On the **Request AIP permissions** blade, select **APIs my organization uses**, and search for **Microsoft Information Protection Sync Service**.
 
