@@ -32,7 +32,7 @@ ms.custom: admin
 
 After you have installed the Azure Information Protection unified labeling client, you might need to know where files are located and monitor how the client is being used.
 
-## File locations for the Azure Information Protection client
+## File locations for the Azure Information Protection unified labeling client
 
 Client files:	
 
