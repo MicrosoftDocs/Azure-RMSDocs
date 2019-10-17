@@ -167,16 +167,15 @@ Now you've completed the registration of this app with a secret, you're ready to
 > [!TIP]
 >You can quickly copy your tenant ID by using Azure portal: **Azure Active Directory** > **Manage** > **Properties** > **Directory ID**.
 
-
 1. Open Windows PowerShell with the **Run as administrator option**. 
 
-2. In your PowerShell session, create a variable to store the credentials of your user account in Active Directory, and that user account has been granted the user right assignment to sign in interactively. For example, if this account name is scanner@contoso.com:
+2. In your PowerShell session, create a variable to store the credentials of the Windows user account that will run non-interactively. For example, if you created a service account for the scanner:
     
-    	$pscreds = Get-Credential "scanner@contoso.com"
+    	$pscreds = Get-Credential "CONTOSO\srv-scanner"
     
     You're prompted for this account's password.
 
-2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. Also specify your app registration values and the delegated user account in Azure AD. For example:
+2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. Also specify your app registration values, your tenant ID, and the name of the delegated user account in Azure AD. For example:
     
     	Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
 
