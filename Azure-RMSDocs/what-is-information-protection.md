@@ -6,7 +6,7 @@ description: An technical overview of the Azure Information Protection service, 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 10/18/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -152,20 +152,19 @@ Additional resources: [Information and support for Azure Information Protection]
 
 ### Microsoft Ignite
 
-Microsoft Ignite 2018 in Orlando had many sessions for Azure Information Protection. All sessions were recorded so if you couldn't join us there, you can still watch the sessions. Our top five sessions that we recommend:
+Microsoft Ignite 2019 in Orlando is just around the corner! There will be lots of good information about Azure Information Protection with the latest updates and improvements. We hope to see you there, but if you can't join us, sessions are recorded for viewing later.
 
-- [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle](https://youtu.be/gmHVF-1cLXA)
+See the following list for our top five sessions that we recommend. Links will be added when the recordings become available:
+
+- BRK2119 - Secure your sensitive data! Understanding the latest Microsoft Information Protection capabilities
  
-- [BRK3002 - Understanding how Microsoft Information Protection capabilities work together to protect sensitive information across devices, apps, and services](https://youtu.be/kL9Y7NGTyQQ)
+- BRK3100 - What does your sensitive data landscape look like? Best practices in data discovery, classification, analytics, and reports
 
-- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions](https://www.youtube.com/watch?v=JsCyIVyQJmE)
+- BRK3103 - Protecting sensitive files and data can be hard. Choose the right data protection options that balance security and worker productivity
 
-- [BRK3397 - Protect and control your sensitive emails with Office 365 Message Encryption](https://www.youtube.com/watch?v=Ld4b4pFua0g)
+- BRK2120 - Got Azure Information Protection? Navigating unified labeling, policy configuration, clients, and analytics
 
-- [THR2003 - Data discovery, Usage reporting and analytics for all your data with Microsoft Information Protection](https://www.youtube.com/watch?v=nzDIXd0XaeA)
-
-For a rollup of announcements that were made at this Ignite, see the blog post [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
-
+- BRK2121 - Extend the power of sensitivity labeling and protection to your own apps and ISV solutions with the Microsoft Information Protection SDK
 
 ## Next steps
 
