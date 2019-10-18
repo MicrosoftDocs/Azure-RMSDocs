@@ -118,7 +118,7 @@ Then, do the following:
 
 3. Finally, in a PowerShell session, run [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) and specify the file that contains the exported settings.
 
-Note that in this configuration, the scanner cannot apply protection (or remove protection) by using your organization's cloud-based key. Instead, the scanner is limited to using labels that apply classification only, or protection that uses [HYOK](configure-adrms-restrictions.md). 
+Note that in this configuration, the scanner cannot apply protection (or remove protection) by using your organization's cloud-based key. Instead, the scanner is limited to using labels that apply classification only, or for the scanner from the classic client, apply protection that uses [HYOK](configure-adrms-restrictions.md). 
 
 #### Restriction: You cannot be granted Sysadmin or databases must be created and configured manually
 
@@ -164,7 +164,7 @@ If your organization policies prohibit the **Log on locally** right for service 
 
 - For the classic client: See [Specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from that client's admin guide.
 
-- For the unified labeling client: Use the *OnBehalfOf* parameter with Set-AIPAuthentication, as described at the end of [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) in that client's admin guide.
+- For the unified labeling client: Use the *OnBehalfOf* parameter with Set-AIPAuthentication, as described in [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) in that client's admin guide.
 
 #### Restriction: The scanner service account cannot be synchronized to Azure Active Directory but the server has Internet connectivity
 
@@ -174,7 +174,7 @@ You can have one account to run the scanner service and use another account to a
 
 - For the Azure Active Directory account, use the following instructions:
     - For the classic client: See [Specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from that client's admin guide.
-    - For the unified labeling client: Use the *OnBehalfOf* parameter with Set-AIPAuthentication, as described at the end of [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) in that client's admin guide.
+    - For the unified labeling client: Use the *OnBehalfOf* parameter with Set-AIPAuthentication, as described in [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) in that client's admin guide.
 
 ## Configure the scanner in the Azure portal
 
@@ -285,7 +285,7 @@ Now that you have installed the scanner, you need to get an Azure AD token for t
 
 ## Get an Azure AD token for the scanner
 
-The Azure AD token lets the scanner service account authenticate to the Azure Information Protection service.
+The Azure AD token lets the scanner authenticate to the Azure Information Protection service.
 
 1. Return to the Azure portal to create two Azure AD applications (just one Azure AD application for the scanner from the unified labeling client) that are needed to specify an access token for authentication. This token lets the scanner run non-interactively.
     
@@ -297,25 +297,23 @@ The Azure AD token lets the scanner service account authenticate to the Azure In
 
 2. From the Windows Server computer, if your scanner service account has been granted the **Log on locally** right for the installation: Sign in with this account and start a PowerShell session. Run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
     
-    For the classic client:
+    **For the classic client:**
     
     ```
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application> -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application>
     ```
-    
-    For the unified labeling client:
-    
-    ```
-    Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID>
-    ```
-    
+
     When prompted, specify the password for your service account credentials for Azure AD, and then click **Accept**.
     
-    If your scanner service account cannot be granted the **Log on locally** right for the installation:
+    If your scanner service account cannot be granted the **Log on locally** right for the installation see [Specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from that client's admin guide.
     
-    -  For the classic client: See [Specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from that client's admin guide.
+    **For the unified labeling client:**
     
-    -  For the unified labeling client: Use the *OnBehalfOf* parameter with Set-AIPAuthentication, as described at the end of [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from that client's admin guide.
+    ```
+    Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
+    ```
+    
+    If your scanner service account cannot be granted the **Log on locally** right for the installation, uUse the *OnBehalfOf* parameter with Set-AIPAuthentication, as described in [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from that client's admin guide.
 
 The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** (classic client) or client secret (unified labeling client) in Azure AD. When the token expires, you must repeat steps 1 and 2.
 
