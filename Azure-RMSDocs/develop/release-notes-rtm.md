@@ -28,6 +28,11 @@ ms.custom: dev
 
 This article contains important information about this and previous releases of the RMS SDK 2.1.
 
+## October 2019 - update
+- Under some circumstances, using symmetric key authentication fails to authenticate the user with Azure RMS which prevents protecting     and unprotecting content.
+- The RMS client may crash when trying to check whether a some PDF documents that have been previously protected and unprotected are       currently protected.
+- Using DNS redirection for AD RMS servers that have been configured on special ports will not work correctly.
+
 ## September 2019 - update 
 
 - Fixed a deadlock that may occur when trying to call the initialization methods at the same time as some other RMS client methods.
