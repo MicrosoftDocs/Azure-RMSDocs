@@ -77,7 +77,9 @@ You must have a Rights Management usage right to remove protection from files, o
 
 You can run the labeling cmdlets non-interactively by using the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet.
 
-By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, you use a Windows account that can sign in interactively, and use an account in Azure AD that will be used for delegated access. For ease of administration, consider creating a new, single account for this purpose, which means that an Active Directory account is synchronized to Azure AD. You also need to request an access token from Azure AD, which sets and stores credentials for the delegated user to authenticate to Azure Information Protection.
+By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, use a Windows account that can sign in interactively, and use an account in Azure AD that will be used for delegated access. For ease of administration, use a single account that's synchronized from Active Directory to Azure AD.
+
+You also need to request an access token from Azure AD, which sets and stores credentials for the delegated user to authenticate to Azure Information Protection.
 
 The computer running the AIPAuthentication cmdlet downloads the label policies with labels that are assigned to the delegated user account by using your labeling management center, such as the Office 365 Security & Compliance Center.
 
@@ -93,7 +95,6 @@ For the delegated user account:
 - If this account needs to decrypt content, for example, to reprotect files and inspect files that others have protected, make it a [super user](../configure-super-users.md) for Azure Information Protection and make sure the super user feature is enabled.
 
 - If you have implemented [onboarding controls](../activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) for a phased deployment, make sure that this account is included in your onboarding controls you've configured.
-
 
 ### To create and configure the Azure AD applications for Set-AIPAuthentication
 
