@@ -174,7 +174,7 @@ The scanner for the unified labeling client is in preview for testing. During th
 
 If you are installing the scanner for the first time on a computer, download and install this client and then follow the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
 
-If you are upgrading the scanner from the Azure Information Protection client (classic), see the [Upgrading the Azure Information Protection scanner](#upgrading-the-azure-information-protection-scanner) section for instructions.
+If you are upgrading the scanner from the Azure Information Protection client (classic), or a previous version of the unified labeling client, see the [Upgrading the Azure Information Protection scanner](#upgrading-the-azure-information-protection-scanner) section for instructions.
 
 ## Upgrading and maintaining the Azure Information Protection unified labeling client
 
@@ -195,11 +195,25 @@ Use the [Version release history and support policy](unifiedlabelingclient-versi
 
 ### Upgrading the Azure Information Protection scanner
 
+Instructions for upgrading the scanner depend on whether you are upgrading from an earlier version of the scanner from the Azure Information Protection unified labeling client, or from the Azure Information Protection client (classic).
+
+#### To upgrade the scanner from an earlier version of the unified labeling client
+
+1. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
+
+2.	Upgrade the Azure Information Protection unified labeling client by downloading and installing the latest version of the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+3. In a PowerShell session, run the Update-AIPScanner command with your scanner's profile. For example: `Update-AIPScanner –Profile Europe`
+
+4. Restart the Azure Information Protection Scanner service, **Azure Information Protection Scanner**.
+
+You can now use the rest of the instructions in [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md), omitting the step to install the scanner. Because the scanner is already installed, there's no reason to install it again.
+
+#### To upgrade the scanner from the classic client
+
 If you are currently using the Azure Information Protection scanner from the Azure Information Protection client (classic), you can upgrade it to use sensitive information types and sensitivity labels that are published from the Office 365 Security & Compliance Center (or the Microsoft 365 security center or the Microsoft 365 compliance center).
 
-#### To upgrade the scanner to the preview version
-
-How to upgrade the scanner depends on the version of the Azure Information Protection client (classic) that you are currently running:
+How to upgrade the scanner depends on the version of the classic client that you are currently running:
 
 - [Upgrade from version 1.48.204.0 and later versions](#upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client)
 
