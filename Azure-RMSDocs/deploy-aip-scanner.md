@@ -107,8 +107,12 @@ The scanner can accommodate these restrictions but they require additional confi
 Follow the instructions from the admin guides to support a disconnected computer:
 
 - For the classic client: [Support for disconnected computers](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers)
+    
+    In this configuration, the scanner from the classic client cannot apply protection, remove protection, or inspect protected files by using your organization's cloud-based key. Instead, the scanner is limited to using labels that apply classification only, or apply protection that uses [HYOK](configure-adrms-restrictions.md)
 
 - For the unified labeling client: [Support for disconnected computers](./rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers)
+    
+    In this configuration, the scanner from the unified labeling client can apply protection, remove protection, and inspect protected files by using the *DelegatedUser* parameter with the Set-AIPAuthentication cmdlet.
 
 Then, do the following:
 
@@ -117,8 +121,6 @@ Then, do the following:
 2. Export your scanner profile from the **Azure Information Protection - Profiles** blade, by using the **Export** option.
 
 3. Finally, in a PowerShell session, run [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) and specify the file that contains the exported settings.
-
-Note that in this configuration, the scanner cannot apply protection (or remove protection) by using your organization's cloud-based key. Instead, the scanner is limited to using labels that apply classification only, or for the scanner from the classic client, apply protection that uses [HYOK](configure-adrms-restrictions.md). 
 
 #### Restriction: You cannot be granted Sysadmin or databases must be created and configured manually
 
