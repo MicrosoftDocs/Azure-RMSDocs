@@ -83,7 +83,7 @@ This client is replacing the Azure Information Protection client (classic). To c
     
     For additional information, see the blog post announcement: [Unified labeling AIP scanner preview brings scaling out and more!](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
 
-- The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters (*AppId*, *AppSecret*, *TenantId*, *DelegatedUser*, and *OnBehalfOf*) for when you want to label files non-interactively and a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents. For instructions, see [How to label files non-interactively](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
+- The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters (*AppId*, *AppSecret*, *TenantId*, *DelegatedUser*, and *OnBehalfOf*) for when you want to label files non-interactively, and also a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents. For instructions, see [How to label files non-interactively](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
     
     Note that *DelegatedUser* is a new parameter since the last preview version of the unified labeling client, and that the API permissions for the registered app have consequently changed.
 
@@ -95,7 +95,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 - When you add or change protection settings to a label, the client reapplies the label with these latest protection settings when the document is next saved. Similarly, the scanner reapplies the label with these latest protection settings when the document is next scanned in enforce mode.
 
-- [Support for disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers) by exporting files from one client and manually copying them to the disconnected computer. Note that this configuration is supported for labeling with File Explorer, PowerShell, and the scanner. It is not supported for labeling with Office apps.
+- [Support for disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers) by exporting files from one client and manually copying them to the disconnected computer. Note that this configuration is supported for labeling with File Explorer, PowerShell, and the scanner. This configuration is not supported for labeling with Office apps.
 
 - New cmdlet, [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs), to gather all log files from %localappdata%\Microsoft\MSIP\Logs and saves them to a single, compressed file that has a .zip format. This file can then be sent to Microsoft Support if you are requested to send log files to help investigate a reported issue.
 
@@ -105,7 +105,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 - You can successfully open natively protected files in the viewer without requiring the Save As, Export (EXPORT) [usage right](../configure-usage-rights.md#usage-rights-and-descriptions).
 
-- Labels and policy settings refresh as expected without having to run [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication?)
+- Labels and policy settings refresh as expected without having to run [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication?), or manually delete the %LocalAppData%\Microsoft\MSIP\mip folder.
 
 **Additional changes**
 
