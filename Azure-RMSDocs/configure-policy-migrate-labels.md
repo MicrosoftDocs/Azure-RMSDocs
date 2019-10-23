@@ -169,7 +169,7 @@ To confirm whether the clients and services you use support unified labeling, re
 
 - Apps from Office that are in different stages of availability. For more information, see [What sensitivity label capabilities are supported in Office today?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) from the Office documentation.
     
-- Apps from software vendors and developers that use the [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview).
+- Apps from software vendors and developers that use the [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview).
 
 ##### Services that currently support unified labeling include:
 
@@ -183,7 +183,7 @@ To confirm whether the clients and services you use support unified labeling, re
     
     - If the admin centers don't have the same labels as those in the Azure portal: Unified labels are not used from the admin centers, and instead, labels are retrieved from the Azure portal.
 
-- Services from software vendors and developers that use the [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview).
+- Services from software vendors and developers that use the [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview).
 
 ## Next steps
 

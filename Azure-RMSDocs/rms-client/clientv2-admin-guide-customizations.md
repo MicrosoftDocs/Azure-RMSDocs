@@ -478,7 +478,7 @@ When these conditions are met, the user sees a pop-up message with one of the fo
 When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
 
 > [!TIP]
-> See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
+> See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
 
 ### To implement the warn, justify, or block pop-up messages for specific labels:
 
