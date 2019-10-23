@@ -59,7 +59,7 @@ Currently, there are two Azure Information Protection clients for Windows:
 
 We recommend you test with the unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](configure-policy-migrate-labels.md), use the classic client.
 
-For more information, including a feature and functionality comparison table, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
+For more information, including a feature and functionality comparison table, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 ## Where can I find information about using sensitivity labels in Office?
 
