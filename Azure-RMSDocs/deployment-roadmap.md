@@ -70,7 +70,7 @@ For more information, see [Preparing users and groups for Azure Information Prot
 
 ### Step 3: Configure and deploy classification and labeling
 
-Before you configure labels and policy settings, decide which Azure Information Protection client you're going to use: The classic client or the unified labeling client. Or you might need both clients. This client decision is needed now, so you know which management portal to use to configure labels and policy settings. For more information and to help you with this decision, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
+Before you configure labels and policy settings, decide which Azure Information Protection client you're going to use: The classic client or the unified labeling client. Or you might need both clients. This client decision is needed now, so you know which management portal to use to configure labels and policy settings. For more information and to help you with this decision, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 > [!TIP]
 > **Optional but recommended**: Consider using the [scanner quickstart](quickstart-findsensitiveinfo.md) to discover what sensitive information you have on your local data stores. The information that the scanner finds can help you with your classification taxonomy, provide valuable information about what labels you need, and which files need protecting.
@@ -83,7 +83,7 @@ Reconfigure your labels to make any changes you need to support your classificat
 
 - Azure Information Protection labels for the classic client: [Configuring Azure Information Protection policy](./configure-policy.md)
 
-- Sensitivity labels for the unified labeling client: [Overview of sensitivity labels](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
+- Sensitivity labels for the unified labeling client: [Overview of sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
 
 Then deploy the Azure Information Protection client (classic) or the Azure Information Protection unified labeling client for users. Provide user training and specific instructions when to select the labels. For more information about installing and supporting the clients, see the admin guides:
 
