@@ -159,7 +159,7 @@ For the labels that successfully migrated, they can now be used by [clients and 
 > [!IMPORTANT]
 > If you edit the labels outside the Azure portal, for Azure Information Protection clients (classic), return to this **Azure Information Protection - Unified labeling** blade, and select **Publish**.
 
-#### Copy policies 
+### Copy policies 
 
 > [!NOTE]
 > This option is gradually rolling out to tenants. It is also in preview and subject to change.
