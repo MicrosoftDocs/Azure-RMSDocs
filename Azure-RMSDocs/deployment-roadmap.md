@@ -70,7 +70,7 @@ For more information, see [Preparing users and groups for Azure Information Prot
 
 ### Step 3: Configure and deploy classification and labeling
 
-Before you configure labels and policy settings, decide which Azure Information Protection client you're going to use: The classic client or the unified labeling client. Or you might need both clients. This client decision is needed now, so you know which management portal to use to configure labels and policy settings. For more information and to help you with this decision, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
+Before you configure labels and policy settings, decide which Azure Information Protection client you're going to use: The classic client or the unified labeling client. Or you might need both clients. This client decision is needed now, so you know which management portal to use to configure labels and policy settings. For more information and to help you with this decision, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 > [!TIP]
 > **Optional but recommended**: Consider using the [scanner quickstart](quickstart-findsensitiveinfo.md) to discover what sensitive information you have on your local data stores. The information that the scanner finds can help you with your classification taxonomy, provide valuable information about what labels you need, and which files need protecting.
@@ -83,7 +83,7 @@ Reconfigure your labels to make any changes you need to support your classificat
 
 - Azure Information Protection labels for the classic client: [Configuring Azure Information Protection policy](./configure-policy.md)
 
-- Sensitivity labels for the unified labeling client: [Overview of sensitivity labels](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
+- Sensitivity labels for the unified labeling client: [Overview of sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
 
 Then deploy the Azure Information Protection client (classic) or the Azure Information Protection unified labeling client for users. Provide user training and specific instructions when to select the labels. For more information about installing and supporting the clients, see the admin guides:
 
@@ -127,7 +127,7 @@ Optionally, consider configuring the following:
     
     For the Azure Information Protection client (classic), see [How to configure a label for Rights Management protection](./configure-policy-protection.md).
     
-    For the Azure Information Protection unified labeling client, see [Restrict access to content by using encryption in sensitivity labels](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels).
+    For the Azure Information Protection unified labeling client, see [Restrict access to content by using encryption in sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels).
     
     Note that users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). However, until Exchange is configured for IRM or [Office 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in the following list (2 for Exchange Online, and 5 for Exchange on-premises). 
 
