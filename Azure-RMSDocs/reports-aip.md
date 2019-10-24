@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 10/23/2019
+ms.date: 10/24/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -289,8 +289,6 @@ Use the following table to identify the friendly name of event functions that yo
 
 |Column name|Description|
 |-----------|-----------|
-|Access|A protected document was successfully opened, identified by file name if it is tracked, or ID if not tracked.|
-|AccessDenied|A protected document was denied access, identified by file name if it is tracked, or ID if not tracked.|
 |Time|Event time: UTC in format YYYY-MM-DDTHH:MM:SS|
 |User|User: Format UPN or DOMAIN\USER|
 |ItemPath|Full item path or email subject|
