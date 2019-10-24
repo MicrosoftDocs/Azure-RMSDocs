@@ -159,14 +159,14 @@ For the labels that successfully migrated, they can now be used by [clients and 
 > [!IMPORTANT]
 > If you edit the labels outside the Azure portal, for Azure Information Protection clients (classic), return to this **Azure Information Protection - Unified labeling** blade, and select **Publish**.
 
-### Copy policies 
+### Copy policies
 
 > [!NOTE]
 > This option is gradually rolling out to tenants. It is also in preview and subject to change.
 
 After you have migrated your labels, you can select an option to copy policies. If you select this option, a one-time copy of your policies with their [policy settings](configure-policy-settings.md) and any [advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) is sent to the admin center where you manage your labels: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center.
 
-Before you select the** Copy policies (preview)** option, be aware of the following:
+Before you select the **Copy policies (preview)** option on the **Azure Information Protection - Unified labeling** blade, be aware of the following:
 
 - You cannot selectively choose policies and settings to copy. All policies (the **Global** policy and any scoped policies) are copied, and all settings that are supported as label policy settings are copied. If you already have a label policy with the same name, it will be overwritten with the policy settings in the Azure portal.
 
@@ -175,6 +175,8 @@ Before you select the** Copy policies (preview)** option, be aware of the follow
     - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
 - Unlike label migration where subsequent changes to labels are synchronized, the copy policies action doesn't synchronize any subsequent changes to your policies or policy settings. You can repeat the copy policy action after making changes in the Azure portal, and any existing policies and their settings will be overwritten again. Or, use the Set-LabelPolicy or Set-Label cmdlets with the *AdvancedSettings* parameter from Office 365 Security & Compliance Center PowerShell.
+
+- The **Copy policies (Preview)** option is not available until unified labeling is activated for your tenant.
 
 For more information about configuring the policy settings, advanced client settings, and label settings for the Azure Information Protection unified labeling client, see [Custom configurations for the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-customizations.md) from the admin guide.
 
