@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -978,7 +978,9 @@ This advanced client setting does not change the information that's sent to Azur
 
 ## Integration with Exchange message classification for a mobile device labeling solution
 
-Although Outlook on the web doesn't yet natively support Azure Information Protection classification and protection, you can use Exchange message classification to extend your Azure Information Protection labels to your mobile users when they use Outlook on the web. Outlook Mobile does not support Exchange message classification.
+Outlook on the web now supports built-in labeling for Exchange Online, which is the recommended method to label emails in Outlook on the web. However, if you're not yet using sensitivity labels that are published from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft compliance center, you can use Exchange message classification to extend Azure Information Protection labels to your mobile users when they use Outlook on the web. You can also use this method for Exchange Server. 
+
+Outlook Mobile does not support Exchange message classification.
 
 To achieve this solution: 
 
