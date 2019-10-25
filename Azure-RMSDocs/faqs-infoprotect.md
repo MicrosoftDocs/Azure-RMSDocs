@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/04/2019
+ms.date: 10/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -112,12 +112,14 @@ To add this field code in your document:
 
 The current label's classification is displayed in the document and this value will be refreshed automatically whenever you open the document or use the template. So if the label changes, the classification that is displayed for this field code is automatically updated in the document.
 
-## How is Azure Information Protection classification for emails different from Exchange message classification?
+## How is classification for emails using Azure Information Protection different from Exchange message classification?
 
-Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection classification. 
+Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection labels or sensitivity labels that apply classification.
 
-However, you can integrate the two solutions so that when users classify an email by using Outlook on the web and by using some mobile mail applications, the Azure Information Protection classification and corresponding label markings are automatically added. 
+However, you can integrate this older feature with labels, so that when users classify an email by using Outlook on the web and by using some mobile mail applications, the label classification and corresponding label markings are automatically added.
 
 You can use this same technique to use your labels with Outlook on the web and these mobile mail applications.
 
-For configuration steps, see [Integrate Exchange message classification with Azure Information Protection for a mobile device labeling solution](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution).
+Note that there's no need to do this if you're using Outlook on the web with Exchange Online, because this combination supports built-in labeling when you publish sensitivity labels from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft compliance center.
+
+If you cannot use built-in labeling with Outlook on the web, see the configuration steps for this workaround: [Integrate Exchange message classification with Azure Information Protection for a mobile device labeling solution](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution).
