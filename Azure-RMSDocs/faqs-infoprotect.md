@@ -120,6 +120,6 @@ However, you can integrate this older feature with labels, so that when users cl
 
 You can use this same technique to use your labels with Outlook on the web and these mobile mail applications.
 
-Note that there's no need to do this if you're using Outlook on the web with Exchange Online, because this combination supports built-in labeling when you publish sensitivity labels from the Office 365 Security & Compliance center, Microsoft 365 security center, or Microsoft compliance center.
+Note that there's no need to do this if you're using Outlook on the web with Exchange Online, because this combination supports built-in labeling when you publish sensitivity labels from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft compliance center.
 
 If you cannot use built-in labeling with Outlook on the web, see the configuration steps for this workaround: [Integrate Exchange message classification with Azure Information Protection for a mobile device labeling solution](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution).
