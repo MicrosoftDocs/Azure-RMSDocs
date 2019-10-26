@@ -5,7 +5,7 @@ title: Custom configurations - Azure Information Protection unified labeling cli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -141,6 +141,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|PFileSupportedExtensions|[Change which file types get protected](#change-which-file-types-get-protected)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
@@ -230,6 +231,38 @@ For the selected label policy, specify the following strings:
 Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
+
+## Change which file types get protected
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+
+By default, the Azure Information Protection unified labeling client protects all file types, and the scanner from the client protects only Office file types and PDF files.
+
+For the selected label policy, specify the following:
+
+- Key: **PFileSupportedExtensions**
+
+- Value: **<string value>** 
+
+Use the following table to identify the string value to specify:
+
+| String value| Client| Scanner|
+|-------------|-------|--------|
+|\*|Default value: Apply protection to all file types|Apply protection to all file types|
+|\<null value>| Apply protection to Office file types and PDF files| Default value: Apply protection to Office file types and PDF files|
+|ConvertTo-Json(".jpg", ".png")|In addition to Office file types and PDF files, apply protection to the specified file name extensions | In addition to Office file types and PDF files, apply protection to the specified file name extensions
+
+Example PowerShell command for the unified client to protect only Office file types and PDF files, where your label policy is named "Client":
+
+	Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=" "}
+
+Example PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
+
+	Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions="*"}
+
+Example PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
+
+	Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
 
 
 ## Remove "Not now" for documents when you use mandatory labeling
