@@ -254,15 +254,15 @@ Use the following table to identify the string value to specify:
 
 Example PowerShell command for the unified client to protect only Office file types and PDF files, where your label policy is named "Client":
 
-	Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=" "}
+	Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
 
 Example PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
-	Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions="*"}
+	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 
 Example PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
 
-	Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
+	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
 
 
 ## Remove "Not now" for documents when you use mandatory labeling
