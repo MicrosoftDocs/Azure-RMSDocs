@@ -238,7 +238,7 @@ This configuration uses a policy [advanced setting](#how-to-configure-advanced-s
 
 By default, the Azure Information Protection unified labeling client protects all file types, and the scanner from the client protects only Office file types and PDF files.
 
-For the selected label policy, specify the following:
+You can change this default behavior for a selected label policy, by specifying the following:
 
 - Key: **PFileSupportedExtensions**
 
@@ -252,18 +252,19 @@ Use the following table to identify the string value to specify:
 |\<null value>| Apply protection to Office file types and PDF files| Default value: Apply protection to Office file types and PDF files|
 |ConvertTo-Json(".jpg", ".png")|In addition to Office file types and PDF files, apply protection to the specified file name extensions | In addition to Office file types and PDF files, apply protection to the specified file name extensions
 
-Example PowerShell command for the unified client to protect only Office file types and PDF files, where your label policy is named "Client":
+Example 1: PowerShell command for the unified client to protect only Office file types and PDF files, where your label policy is named "Client":
 
 	Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
 
-Example PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
+Example2:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
 	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 
-Example PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
+Example 3: PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
 
 	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
 
+With this setting, you can change which file types are protected but you cannot change the default protection level from native to generic. For example, for users running the unified labeling client, you can change the default setting so that only Office files and PDF files are protected instead of all file types. But you cannot change these file types to be generically protected with a .pfile file name extension.
 
 ## Remove "Not now" for documents when you use mandatory labeling
 
