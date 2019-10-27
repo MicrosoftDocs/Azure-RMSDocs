@@ -480,7 +480,7 @@ Example 2: PowerShell command for the scanner to protect .xml files and .tiff fi
 
 	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
 
-For detailed instructions, see [Change which file types get protected](clientv2-admin-guide-file-types.md#change-which-file-types-to-protect) from the admin guide.
+For detailed instructions, see [Change which file types to protect](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) from the admin guide.
 
 
 ## When files are rescanned
