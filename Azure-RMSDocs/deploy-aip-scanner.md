@@ -470,7 +470,10 @@ For files that don't support native protection, specify the file name extension 
 
 This section applies to the scanner from the unified labeling client only.
 
-For a label policy that applies to the scanner user account, specify a PowerShell advanced setting named **PFileSupportedExtensions**.
+For a label policy that applies to the user account downloading labels for the scanner, specify a PowerShell advanced setting named **PFileSupportedExtensions**. 
+
+> [!NOTE]
+> For a scanner that has access to the Internet, this user account is the account that you specify for the *DelegatedUser* parameter with the Set-AIPAuthentication command.
 
 Example 1:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
