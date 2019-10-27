@@ -446,7 +446,7 @@ As in the preceding step, the scanner cannot label the files under the following
 
 By default, the scanner protects Office file types and PDF files only. You can change this behavior so that for example, the scanner protects all file types (the same behavior as the client). For instructions, see the following sections.
 
-### Scanner from the classic client: Registry edits to change which file types are protected
+### Scanner from the classic client: Use the registry to change which file types are protected
 
 This section applies to the scanner from the classic client only.
 
@@ -466,7 +466,7 @@ For a list of text and images file types that similarly support native protectio
 
 For files that don't support native protection, specify the file name extension as a new key, and **PFile** for generic protection. The resulting file name extension for the protected file is .pfile.
 
-## Scanner from the unified labeling client: PowerShell configuration to change which file types are protected
+## Scanner from the unified labeling client: Use PowerShell to change which file types are protected
 
 This section applies to the scanner from the unified labeling client only.
 
@@ -480,7 +480,7 @@ Example 2: PowerShell command for the scanner to protect .xml files and .tiff fi
 
 	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
 
-For detailed instructions, see [Change which file types get protected](clientv2-admin-guide-file-types.md#change-which-file-types-get-protected) from the admin guide.
+For detailed instructions, see [Change which file types get protected](clientv2-admin-guide-file-types.md#change-which-file-types-to-protect) from the admin guide.
 
 
 ## When files are rescanned

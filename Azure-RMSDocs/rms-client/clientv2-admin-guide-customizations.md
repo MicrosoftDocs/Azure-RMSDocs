@@ -141,7 +141,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|PFileSupportedExtensions|[Change which file types get protected](#change-which-file-types-get-protected)|
+|PFileSupportedExtensions|[Change which file types to protect](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
@@ -232,7 +232,7 @@ Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
 
-## Change which file types get protected
+## Change which file types to protect
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
@@ -256,7 +256,7 @@ Example 1: PowerShell command for the unified client to protect only Office file
 
 	Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
 
-Example2:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
+Example 2:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
 	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 
