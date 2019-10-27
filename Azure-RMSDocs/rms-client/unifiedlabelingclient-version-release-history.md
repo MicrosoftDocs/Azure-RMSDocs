@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -73,7 +73,7 @@ This client is replacing the Azure Information Protection client (classic). To c
         - **Default label**: **None**
         - **Relabel files**: **On** with the **Enforce default label** checkbox selected
     
-    - As with the scanner from the classic client, the scanner protects Office files and PDF files. Currently, you can't configure other file types to be protected by this version of the scanner.
+    - As with the scanner from the classic client, by default, the scanner protects Office files and PDF files. You can protect other files types when you use a [PowerShell advanced setting](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
     
     - Known issue: New and renamed labels aren't available to select as a default label for the scanner profile or repository settings. Workarounds:
         - For new labels: In the Azure portal, [add the label](../configure-policy-add-remove-label.md) you want to use to the global policy or a scoped policy.
@@ -87,7 +87,9 @@ This client is replacing the Azure Information Protection client (classic). To c
     
     Note that *DelegatedUser* is a new parameter since the last preview version of the unified labeling client, and that the API permissions for the registered app have consequently changed.
 
-- New PowerShell label policy advanced setting to [Extend your label migration rules to SharePoint properties](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-sharepoint-properties).
+- New PowerShell label policy advanced setting to [change which file types to protect](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
+
+- New PowerShell label policy advanced setting to [extend your label migration rules to SharePoint properties](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-sharepoint-properties).
 
 - Matched custom sensitive information types are sent to [Azure Information Protection analytics](../reports-aip.md).
 
