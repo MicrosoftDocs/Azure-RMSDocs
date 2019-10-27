@@ -444,7 +444,9 @@ As in the preceding step, the scanner cannot label the files under the following
 
 ## Change which file types to protect
 
-By default, the scanner protects Office file types and PDF files only. You can change this behavior so that for example, the scanner protects all file types (the same behavior as the client). For instructions, see the following sections.
+By default, the scanner protects Office file types and PDF files only. You can change this behavior so that for example, the scanner protects all file types, which is the same protection behavior as the client. Or, the scanner protects additional file types that you specify, in addition to Office file types and PDF files. 
+
+For configuration instructions, see the following sections.
 
 ### Scanner from the classic client: Use the registry to change which file types are protected
 
