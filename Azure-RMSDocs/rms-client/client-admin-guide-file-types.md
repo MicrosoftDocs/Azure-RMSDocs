@@ -229,7 +229,7 @@ You can change the file types included or excluded for file inspection by the sc
 > [!NOTE]
 > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
 
-By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, edit the registry and specify the additional file types that you want to be protected. For instructions, see [Registry edits to change which file types are protected](../deploy-aip-scanner.md#scanner-from-the-classic-client-registry-edits-to-change-which-file-types-are-protected) from the scanner deployment instructions.
+By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, edit the registry and specify the additional file types that you want to be protected. For instructions, see [Registry edits to change which file types are protected](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) from the scanner deployment instructions.
 
 ### Files that cannot be protected by default
 
@@ -277,7 +277,7 @@ The Azure Information Protection scanner and the [Set-AIPFileClassification](/po
 
 1. For the computer running the scanner or the PowerShell session, install the [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
 
-2. For the scanner: After finding sensitive information, if the .zip file should be classified and protected with a label, add a registry entry for this file name extension to have generic protection (pfile), as described in [Registry edits to change which file types are protected](../deploy-aip-scanner.md#scanner-from-the-classic-client-registry-edits-to-change-which-file-types-are-protected) from the scanner deployment instructions.
+2. For the scanner: After finding sensitive information, if the .zip file should be classified and protected with a label, add a registry entry for this file name extension to have generic protection (pfile), as described in [Registry edits to change which file types are protected](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) from the scanner deployment instructions.
 
 Example scenario after doing these steps: 
 
@@ -289,7 +289,7 @@ After inspecting the file, the scanner classifies this file as **Confidential \ 
 
 The Azure Information Protection scanner and the [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) on the computer running the scanner or the PowerShell session.
 
-For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, add a registry entry for this file name extension to have native protection, as described in [Registry edits to change which file types are protected](../deploy-aip-scanner.md#scanner-from-the-classic-client-registry-edits-to-change-which-file-types-are-protected) from the scanner deployment instructions.
+For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, add a registry entry for this file name extension to have native protection, as described in [Registry edits to change which file types are protected](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) from the scanner deployment instructions.
 
 ## Next steps
 Now that you've identified the file types supported by the Azure Information Protection client, see the following resources for additional information that you might need to support this client:
