@@ -466,7 +466,7 @@ For a list of text and images file types that similarly support native protectio
 
 For files that don't support native protection, specify the file name extension as a new key, and **PFile** for generic protection. The resulting file name extension for the protected file is .pfile.
 
-## Scanner from the unified labeling client: Use PowerShell to change which file types are protected
+### Scanner from the unified labeling client: Use PowerShell to change which file types are protected
 
 This section applies to the scanner from the unified labeling client only.
 
