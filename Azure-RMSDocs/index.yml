@@ -66,7 +66,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Compare the clients
-            url: ./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use
+            url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
       - linkListType: how-to-guide
         links:
           - text: Migrate Azure Information Protection labels
