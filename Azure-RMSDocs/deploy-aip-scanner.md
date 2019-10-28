@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -416,9 +416,9 @@ However, the scanner cannot label the files under the following circumstances:
 
 - If the label applies classification and protection, but the scanner does not protect the file type.
     
-    By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. For the scanner from the classic client, other file types can be protected when you [edit the registry](#editing-the-registry-for-the-scanner) as described in a following section.
+    By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. Other file types can be protected when you [change which file types are protected](#change-which-file-types-to-protect) as described in a following section.
 
-For example, after inspecting files that have a file name extension of .txt, the scanner can't apply a label that's configured for classification but not protection, because the .txt file type doesn't support classification-only. If the label is configured for classification and protection, and the registry is edited for the .txt file type, the scanner can label the file. 
+For example, after inspecting files that have a file name extension of .txt, the scanner can't apply a label that's configured for classification but not protection, because the .txt file type doesn't support classification-only. If the label is configured for classification and protection, and the .txt file name extension is included for the scanner to protect, the scanner can label the file. 
 
 > [!TIP]
 > During this process, if the scanner stops and doesn't complete scanning a large number of the files in a repository:
@@ -440,13 +440,19 @@ As in the preceding step, the scanner cannot label the files under the following
 
 - If the label applies classification and protection, but the scanner does not protect the file type.
     
-    By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. For the scanner from the classic client, other file types can be protected when you [edit the registry](#editing-the-registry-for-the-scanner) as described next.
+    By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. Other file types can be protected when you change which file types to protect, as described next.
 
-### Editing the registry for the scanner
+## Change which file types to protect
+
+By default, the scanner protects Office file types and PDF files only. You can change this behavior so that for example, the scanner protects all file types, which is the same protection behavior as the client. Or, the scanner protects additional file types that you specify, in addition to Office file types and PDF files. 
+
+For configuration instructions, see the following sections.
+
+### Scanner from the classic client: Use the registry to change which file types are protected
 
 This section applies to the scanner from the classic client only.
 
-To change the default scanner behavior for protecting file types other than Office files and PDFs, you must manually edit the registry and specify the additional file types that you want to be protected, and the type of protection (native or generic). For instructions, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". In addition, specific for the scanner:
+To change the default scanner behavior for protecting file types other than Office files and PDFs, you must edit the registry and specify the additional file types that you want to be protected, and the type of protection (native or generic). For instructions, see [File API configuration](develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". In addition, specific for the scanner:
 
 - The scanner has its own default behavior: Only Office file formats and PDF documents are protected by default. If the registry is not modified, any other file types will not be labeled or protected by the scanner.
 
@@ -461,6 +467,25 @@ For example, for the scanner to protect TIFF images in addition to Office files 
 For a list of text and images file types that similarly support native protection but must be specified in the registry, see [Supported file types for classification and protection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection).
 
 For files that don't support native protection, specify the file name extension as a new key, and **PFile** for generic protection. The resulting file name extension for the protected file is .pfile.
+
+### Scanner from the unified labeling client: Use PowerShell to change which file types are protected
+
+This section applies to the scanner from the unified labeling client only.
+
+For a label policy that applies to the user account downloading labels for the scanner, specify a PowerShell advanced setting named **PFileSupportedExtensions**. 
+
+> [!NOTE]
+> For a scanner that has access to the Internet, this user account is the account that you specify for the *DelegatedUser* parameter with the Set-AIPAuthentication command.
+
+Example 1:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
+
+	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
+
+Example 2: PowerShell command for the scanner to protect .xml files and .tiff files in addition to Office files and PDF files, where your label policy is named "Scanner":
+
+	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
+
+For detailed instructions, see [Change which file types to protect](./rms-client/clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) from the admin guide.
 
 
 ## When files are rescanned
