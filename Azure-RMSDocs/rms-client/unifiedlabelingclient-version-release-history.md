@@ -77,7 +77,7 @@ This client is replacing the Azure Information Protection client (classic). To c
     
     - Known issue: New and renamed labels aren't available to select as a default label for the scanner profile or repository settings. Workarounds:
         - For new labels: In the Azure portal, [add the label](../configure-policy-add-remove-label.md) you want to use to the global policy or a scoped policy.
-        - For renamed labels: In the Azure portal, go to **Azure Information Protection** > **Manage** > **Unified labeling**, and select **Publish**.
+        - For renamed labels: Close and reopen the Azure portal.
     
     You can upgrade scanners from the Azure Information Protection client (classic). After the upgrade, which creates a new database, the scanner rescans all files the first time it runs. For instructions, see [Upgrading the Azure Information Protection scanner](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) from the admin guide.
     
