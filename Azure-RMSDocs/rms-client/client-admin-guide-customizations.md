@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/25/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -581,7 +581,7 @@ If you need the client to revert to the behavior in older versions of the client
 
 For example, you might need this setting for all users if you use a PDF reader that doesn't support the ISO standard for PDF encryption. Or, you might need to configure it for some users as you gradually phase in a change of PDF reader that supports the new format. Another potential reason to use this setting is if you need to add protection to signed PDF documents. Signed PDF documents can be additionally protected with the .ppdf format because this protection is implemented as a wrapper for the file. 
 
-For the Azure Information Protection scanner to use the new setting, the scanner service must be restarted. In addition, the scanner will no longer protect PDF documents by default. If you want PDF documents to be protected by the scanner when EnablePDFv2Protection is set to False, you must [edit the registry](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
+For the Azure Information Protection scanner to use the new setting, the scanner service must be restarted. In addition, the scanner will no longer protect PDF documents by default. If you want PDF documents to be protected by the scanner when EnablePDFv2Protection is set to False, you must [edit the registry](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected).
 
 For more information about the new PDF encryption, see the blog post [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
