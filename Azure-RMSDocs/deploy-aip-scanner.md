@@ -91,7 +91,7 @@ However, if you're ready to start deploying the scanner, go straight to [configu
 
 ### Storage requirements and capacity planning for SQL Server
 
-The amount of disk space required for the scanner's configuration database and the specification of the computer running SQL Server can vary for each environment, so we encourage you to do your own testing. However, you can use the following guidance as a starting point. 
+The amount of disk space required for the scanner's configuration database and the specification of the computer running SQL Server can vary for each environment, so we encourage you to do your own testing. However, you can use the following guidance as a starting point.
 
 See the [Optimizing the performance of the scanner](#optimizing-the-performance-of-the-scanner) section for additional information.
 
@@ -103,7 +103,7 @@ See the [Optimizing the performance of the scanner](#optimizing-the-performance-
 
 ##### Scanner from the classic client:
 
-- **Disk size**: Although the size of the scanner configuration database will vary for each deployment, you can use the following equation: `100 KB + <file count> *(1000 + 4*<average file name length>)`. 
+- **Disk size**: Although the size of the scanner configuration database will vary for each deployment, you can use the following equation as guidance: `100 KB + <file count> *(1000 + 4*<average file name length>)`. 
     
     For example, to scan 1 million files that have an average file name length of 250 bytes, allocate 2 GB disk space.
 
