@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 10/24/2019
+ms.date: 10/29/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -299,7 +299,6 @@ Use the following table to identify the friendly name of event functions that yo
 |LabelNameBefore |Label name before change (not localized) |
 |ProtectionType|Protection type [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
 |ProtectionBefore|Protection type before change [JSON] |
-|InformationTypesMatches|JSON array of [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) found in data where an empty array means no information types found, and null means no information available|
 |MachineName |FQDN when available; otherwise host name|
 |DeviceRisk|Device risk score from WDATP when available|
 |Platform|Device platform (Win, OSX, Android, iOS) |
