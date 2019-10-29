@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::FileEngine 
@@ -21,6 +21,7 @@ public std::shared_ptr\<Label\> GetLabelById(const std::string& id) const  |  Ge
 public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  Returns a list of sensitivity labels.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
 public const std::string& GetPolicyFileId() const  |  Gets the policy file ID.
+public const std::string& GetSensitivityFileId() const  |  Gets the sensitivity file ID.
 public bool IsLabelingRequired() const  |  Checks if the policy dictates that a document must be labeled.
 public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
 public void CreateFileHandlerAsync(const std::string& inputFilePath, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\<FileHandler::Observer\>& fileHandlerObserver, const std::shared_ptr\<void\>& context, const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Starts creating a file handler for given file path.
@@ -40,7 +41,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: [FileEngine::Settings](class_mip_fileengine_settings.md)).
+**See also**: [FileEngine::Settings](#classmip_1_1FileEngine_1_1Settings)).
   
 ### GetDefaultSensitivityLabel function
 Get the default sensitivity label.
@@ -62,6 +63,12 @@ Provide a url for looking up more information about the policy/labels.
   
 ### GetPolicyFileId function
 Gets the policy file ID.
+
+  
+**Returns**: A string that represent the policy file ID
+  
+### GetSensitivityFileId function
+Gets the sensitivity file ID.
 
   
 **Returns**: A string that represent the policy file ID
@@ -91,7 +98,7 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](class_mip_filehandler_observer.md) interface. 
+* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](undefined) interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer.
@@ -111,7 +118,7 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](class_mip_filehandler_observer.md) interface. 
+* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](undefined) interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer.

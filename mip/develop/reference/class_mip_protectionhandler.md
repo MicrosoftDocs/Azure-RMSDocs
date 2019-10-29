@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ProtectionHandler 
@@ -17,9 +17,9 @@ Manages protection-related actions for a specific protection configuration.
 public std::shared_ptr\<Stream\> CreateProtectedStream(const std::shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Create a protected stream that will allow for encryption/decryption of content.
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Encrypt a buffer.
 public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Decrypt a buffer.
-public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calculates size (in bytes) of content if it were to be encrypted with this [ProtectionHandler](class_mip_protectionhandler.md).
-public int64_t GetBlockSize()  |  Gets the block size (in bytes) for the cipher mode used by this [ProtectionHandler](class_mip_protectionhandler.md).
-public std::vector\<std::string\> GetRights() const  |  Gets the rights granted to the user/identity associated with this [ProtectionHandler](class_mip_protectionhandler.md).
+public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calculates size (in bytes) of content if it were to be encrypted with this [ProtectionHandler](undefined).
+public int64_t GetBlockSize()  |  Gets the block size (in bytes) for the cipher mode used by this [ProtectionHandler](undefined).
+public std::vector\<std::string\> GetRights() const  |  Gets the rights granted to the user/identity associated with this [ProtectionHandler](undefined).
 public bool AccessCheck(const std::string& right) const  |  Checks if protection handler grants user access to the specified right.
 public const std::string GetIssuedTo()  |  Gets user associated with the protection handler.
 public const std::string GetOwner()  |  Gets email address of content owner.
@@ -28,7 +28,7 @@ public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor()  |  Get
 public const std::string GetContentId()  |  Gets unique identifier for the document/content.
 public bool DoesUseDeprecatedAlgorithms()  |  Gets if protection handler uses deprecated crypto algorithms (ECB) for backward compatibility or not.
 public bool IsAuditedExtractAllowed()  |  Gets if protection handler grants user 'audited extract' right or not.
-public const std::vector\<uint8_t\> GetSerializedPublishingLicense()  |  Serialize [ProtectionHandler](class_mip_protectionhandler.md) into a publishing license (PL)
+public const std::vector\<uint8_t\> GetSerializedPublishingLicense()  |  Serialize [ProtectionHandler](undefined) into a publishing license (PL)
   
 ## Members
   
@@ -102,7 +102,7 @@ Parameters:
 **Returns**: Actual size (in bytes) of decrypted content
   
 ### GetProtectedContentLength function
-Calculates size (in bytes) of content if it were to be encrypted with this [ProtectionHandler](class_mip_protectionhandler.md).
+Calculates size (in bytes) of content if it were to be encrypted with this [ProtectionHandler](undefined).
 
 Parameters:  
 * **unprotectedLength**: Size (in bytes) of unprotected content 
@@ -116,13 +116,13 @@ Parameters:
 **Returns**: Size (in bytes) of protected content
   
 ### GetBlockSize function
-Gets the block size (in bytes) for the cipher mode used by this [ProtectionHandler](class_mip_protectionhandler.md).
+Gets the block size (in bytes) for the cipher mode used by this [ProtectionHandler](undefined).
 
   
 **Returns**: Block size (in bytes)
   
 ### GetRights function
-Gets the rights granted to the user/identity associated with this [ProtectionHandler](class_mip_protectionhandler.md).
+Gets the rights granted to the user/identity associated with this [ProtectionHandler](undefined).
 
   
 **Returns**: Rights granted to the user
@@ -181,7 +181,7 @@ Gets if protection handler grants user 'audited extract' right or not.
 **Returns**: If protection handler grants user 'audited extract' right or not
   
 ### GetSerializedPublishingLicense function
-Serialize [ProtectionHandler](class_mip_protectionhandler.md) into a publishing license (PL)
+Serialize [ProtectionHandler](undefined) into a publishing license (PL)
 
   
 **Returns**: Serialized publishing license

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ProtectionEngine 
@@ -19,10 +19,6 @@ public void GetTemplatesAsync(const std::shared_ptr\<ProtectionEngine::Observer\
 public std::vector\<std::string\> GetTemplates(const std::shared_ptr\<void\>& context)  |  Get collection of templates available to a user.
 public void GetRightsForLabelIdAsync(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::string& delegatedUserEmail, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Get collection of rights available to a user for a label ID.
 public std::vector\<std::string\> GetRightsForLabelId(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::string& delegatedUserEmail, const std::shared_ptr\<void\>& context)  |  Get collection of rights available to a user for a labelId.
-public void CreateProtectionHandlerFromDescriptorAsync(const std::shared_ptr\<ProtectionDescriptor\>& descriptor, const ProtectionHandlerCreationOptions& options, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
-public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromDescriptor(const std::shared_ptr\<ProtectionDescriptor\>& descriptor, const ProtectionHandlerCreationOptions& options, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
-public void CreateProtectionHandlerFromPublishingLicenseAsync(const std::vector\<uint8_t\>& serializedPublishingLicense, const ProtectionHandlerCreationOptions& options, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler from a serialized publishing license.
-public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromPublishingLicense(const std::vector\<uint8_t\>& serializedPublishingLicense, const ProtectionHandlerCreationOptions& options, const std::shared_ptr\<void\>& context)  |  Creates a protection handler from a serialized publishing license.
 public void CreateProtectionHandlerForPublishingAsync(const ProtectionHandler::PublishingSettings& settings, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
 public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerForPublishing(const ProtectionHandler::PublishingSettings& settings, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
 public void CreateProtectionHandlerForConsumptionAsync(const ProtectionHandler::ConsumptionSettings& settings, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
@@ -40,10 +36,10 @@ Gets the engine settings.
 Get collection of templates available to a user.
 
 Parameters:  
-* **observer**: A class implementing the [ProtectionEngine::Observer](class_mip_protectionengine_observer.md) interface 
+* **observer**: A class implementing the [ProtectionEngine::Observer](#classmip_1_1ProtectionEngine_1_1Observer) interface 
 
 
-* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](undefined)
 
 
   
@@ -51,7 +47,7 @@ Parameters:
 Get collection of templates available to a user.
 
 Parameters:  
-* **context**: Client context that will be opaquely passed to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely passed to optional [HttpDelegate](undefined)
 
 
 
@@ -65,7 +61,7 @@ Parameters:
 * **documentId**: Document ID associated with the document metadata 
 
 
-* **labelId**: [Label](class_mip_label.md) ID associated with the document metadata with which the document created 
+* **labelId**: [Label](undefined) ID associated with the document metadata with which the document created 
 
 
 * **ownerEmail**: owner of the document 
@@ -74,10 +70,10 @@ Parameters:
 * **A**: delegated user is specified when the authenticating user/application is acting on behalf of another user, empty if none 
 
 
-* **observer**: A class implementing the [ProtectionEngine::Observer](class_mip_protectionengine_observer.md) interface 
+* **observer**: A class implementing the [ProtectionEngine::Observer](undefined) interface 
 
 
-* **context**: This same context will be forwarded to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess-function) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure-function)
+* **context**: This same context will be forwarded to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](#classmip_1_1ProtectionEngine_1_1Observer_1ab70a702855d7018b60ab99127d31b610) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](#classmip_1_1ProtectionEngine_1_1Observer_1a16cab8682cca4c4d8d0fee65371ad404)
 
 
   
@@ -88,7 +84,7 @@ Parameters:
 * **documentId**: Document ID associated with the document metadata 
 
 
-* **labelId**: [Label](class_mip_label.md) ID associated with the document metadata with which the document created 
+* **labelId**: [Label](undefined) ID associated with the document metadata with which the document created 
 
 
 * **ownerEmail**: Owner of the document 
@@ -97,87 +93,12 @@ Parameters:
 * **A**: delegated user is specified when the authenticating user/application is acting on behalf of another user, empty if none 
 
 
-* **context**: This same context will be forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: This same context will be forwarded to optional [HttpDelegate](undefined)
 
 
 
   
 **Returns**: List of rights
-  
-### CreateProtectionHandlerFromDescriptorAsync function
-Creates a protection handler where rights/roles are assigned to specific users.
-
-Parameters:  
-* **descriptor**: A [ProtectionDescriptor](class_mip_protectiondescriptor.md) describing the protection configuration 
-
-
-* **options**: Creation options 
-
-
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
-
-
-* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
-
-
-> Deprecated: This method will soon be deprecated in favor of CreateProtectionHandlerForPublishingAsync
-  
-### CreateProtectionHandlerFromDescriptor function
-Creates a protection handler where rights/roles are assigned to specific users.
-
-Parameters:  
-* **descriptor**: A [ProtectionDescriptor](class_mip_protectiondescriptor.md) describing the protection configuration 
-
-
-* **options**: Creation options 
-
-
-* **context**: Client context that will be opaquely passed back to optional [HttpDelegate](class_mip_httpdelegate.md)
-
-
-
-  
-**Returns**: [ProtectionHandler](class_mip_protectionhandler.md)
-> Deprecated: This method will soon be deprecated in favor of CreateProtectionHandlerForPublishingAsync
-  
-### CreateProtectionHandlerFromPublishingLicenseAsync function
-Creates a protection handler from a serialized publishing license.
-
-Parameters:  
-* **serializedPublishingLicense**: A serialized publishing license 
-
-
-* **options**: Creation options 
-
-
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
-
-
-* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
-
-
-> Deprecated: This method will soon be deprecated in favor of CreateProtectionHandlerForConsumptionAsync
-  
-### CreateProtectionHandlerFromPublishingLicense function
-Creates a protection handler from a serialized publishing license.
-
-Parameters:  
-* **serializedPublishingLicense**: A serialized publishing license 
-
-
-* **options**: Creation options 
-
-
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
-
-
-* **context**: Client context that will be opaquely passed back to optional [HttpDelegate](class_mip_httpdelegate.md)
-
-
-
-  
-**Returns**: [ProtectionHandler](class_mip_protectionhandler.md)
-> Deprecated: This method will soon be deprecated in favor of CreateProtectionHandlerForConsumption
   
 ### CreateProtectionHandlerForPublishingAsync function
 Creates a protection handler where rights/roles are assigned to specific users.
@@ -186,10 +107,10 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](#classmip_1_1ProtectionHandler_1_1Observer) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
 
 
   
@@ -200,12 +121,12 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
 
 
 
   
-**Returns**: [ProtectionHandler](class_mip_protectionhandler.md)
+**Returns**: [ProtectionHandler](undefined)
   
 ### CreateProtectionHandlerForConsumptionAsync function
 Creates a protection handler where rights/roles are assigned to specific users.
@@ -214,10 +135,10 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
 
 
   
@@ -228,9 +149,9 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
 
 
 
   
-**Returns**: [ProtectionHandler](class_mip_protectionhandler.md)
+**Returns**: [ProtectionHandler](undefined)

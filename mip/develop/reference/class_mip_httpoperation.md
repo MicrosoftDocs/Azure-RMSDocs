@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::HttpOperation 
-Interface that describes a single HTTP operation, implemented by client app when overriding [HttpDelegate](class_mip_httpdelegate.md).
+Interface that describes a single HTTP operation, implemented by client app when overriding [HttpDelegate](undefined).
   
 ## Summary
  Members                        | Descriptions                                
@@ -25,7 +25,7 @@ Gets operation ID.
 
   
 **Returns**: Operation ID
-The corresponding HttpRequest and HttpResponse will have the same ID
+The corresponding [HttpRequest](#classmip_1_1HttpRequest) and [HttpResponse](#classmip_1_1HttpResponse) will have the same ID
   
 ### GetResponse function
 Get response, if any.

@@ -5,27 +5,27 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ProtectionHandler::ConsumptionSettings 
-Settings used to create a [ProtectionHandler](class_mip_protectionhandler.md) to consume existing content.
+Settings used to create a [ProtectionHandler](undefined) to consume existing content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ConsumptionSettings(const std::vector\<uint8_t\>& serializedPublishingLicense)  | ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
-public ConsumptionSettings(const std::shared_ptr\<PublishingLicenseInfo\>& licenseInfo)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
+public ConsumptionSettings(const std::vector\<uint8_t\>& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](#classmip_1_1ProtectionHandler_1_1ConsumptionSettings) constructor for creating a new handler.
+public ConsumptionSettings(const std::shared_ptr\<PublishingLicenseInfo\>& licenseInfo)  |  [ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
 public std::shared_ptr\<PublishingLicenseInfo\> GetPublishingLicenseInfo() const  |  Get the publishing license associated with the protected content.
-public bool GetIsOfflineOnly() const  |  Gets whether or not [ProtectionHandler](class_mip_protectionhandler.md) creation allows for online HTTP operations.
-public void SetIsOfflineOnly(bool isOfflineOnly)  |  Sets whether or not [ProtectionHandler](class_mip_protectionhandler.md) creation allows for online HTTP operations.
+public bool GetIsOfflineOnly() const  |  Gets whether or not [ProtectionHandler](undefined) creation allows for online HTTP operations.
+public void SetIsOfflineOnly(bool isOfflineOnly)  |  Sets whether or not [ProtectionHandler](undefined) creation allows for online HTTP operations.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
   
 ## Members
   
 ### ConsumptionSettings function
-ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
+[ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
 
 Parameters:  
 * **serializedPublishingLicense**: Serialized publishing license from protected content
@@ -33,13 +33,13 @@ Parameters:
 
   
 ### ConsumptionSettings function
-ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
+[ProtectionHandler::ConsumptionSettings](undefined) constructor for creating a new handler.
 
 Parameters:  
 * **licenseInfo**: Publishing license info from protected content
 
 
-Providing a PublishingLicenseInfo (as opposed to just a raw serialized publishing license) will remove the need for MIP SDK to parse the publishing license.
+Providing a [PublishingLicenseInfo](#classmip_1_1PublishingLicenseInfo) (as opposed to just a raw serialized publishing license) will remove the need for MIP SDK to parse the publishing license.
   
 ### GetPublishingLicenseInfo function
 Get the publishing license associated with the protected content.
@@ -48,20 +48,20 @@ Get the publishing license associated with the protected content.
 **Returns**: Publishing license information
   
 ### GetIsOfflineOnly function
-Gets whether or not [ProtectionHandler](class_mip_protectionhandler.md) creation allows for online HTTP operations.
+Gets whether or not [ProtectionHandler](undefined) creation allows for online HTTP operations.
 
   
 **Returns**: True if HTTP operations are disallowed, else false
-If this is set to true, [ProtectionHandler](class_mip_protectionhandler.md) creation will only succeed if content has already been previously decrypted and its unexpired license is cached. A mip::NetworkError= will be thrown if cached content is not found.
+If this is set to true, [ProtectionHandler](undefined) creation will only succeed if content has already been previously decrypted and its unexpired license is cached. A [mip::NetworkError](#classmip_1_1NetworkError) will be thrown if cached content is not found.
   
 ### SetIsOfflineOnly function
-Sets whether or not [ProtectionHandler](class_mip_protectionhandler.md) creation allows for online HTTP operations.
+Sets whether or not [ProtectionHandler](undefined) creation allows for online HTTP operations.
 
 Parameters:  
 * **isOfflineOnly**: True if HTTP operations are disallowed, else false
 
 
-If this is set to true, [ProtectionHandler](class_mip_protectionhandler.md) creation will only succeed if content has already been previously decrypted and its unexpired license is cached. A mip::NetworkError will be thrown if cached content is not found.
+If this is set to true, [ProtectionHandler](undefined) creation will only succeed if content has already been previously decrypted and its unexpired license is cached. A [mip::NetworkError](undefined) will be thrown if cached content is not found.
   
 ### SetDelegatedUserEmail function
 Sets the delegated user.

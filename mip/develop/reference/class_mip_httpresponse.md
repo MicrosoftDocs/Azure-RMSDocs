@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::HttpResponse 
-Interface that describes a single HTTP response, implemented by client app when overriding [HttpDelegate](class_mip_httpdelegate.md).
+Interface that describes a single HTTP response, implemented by client app when overriding [HttpDelegate](undefined).
   
 ## Summary
  Members                        | Descriptions                                
@@ -26,7 +26,7 @@ Gets response ID.
 
   
 **Returns**: Response ID
-The corresponding HttpRequest will have had the same ID
+The corresponding [HttpRequest](undefined) will have had the same ID
   
 ### GetStatusCode function
 Get response status code.

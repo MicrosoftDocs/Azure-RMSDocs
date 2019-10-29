@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ComputeEngine 
@@ -26,9 +26,11 @@ public static MIP_UPE_CORE_API std::shared_ptr&lt;ComputeEngineContext&gt; mip::
 ### ListSensitivityLabels function
 _Not documented yet._
 
+  
 ### GetSensitivityLabel function
 _Not documented yet._
 
+  
 ### ComputeActions function
 _Not documented yet._
 

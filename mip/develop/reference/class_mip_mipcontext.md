@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::MipContext 
-MipContext represents state that is shared across all profiles, engines, handlers.
+[MipContext](undefined) represents state that is shared across all profiles, engines, handlers.
   
 ## Summary
  Members                        | Descriptions                                
@@ -18,6 +18,7 @@ public void ShutDown()  |  Terminate MIP.
 public bool IsFeatureEnabled(FlightingFeature feature) const  |  Gets whether or not a feature is enabled.
 public const ApplicationInfo& GetApplicationInfo() const  |  Get application description.
 public const std::string& GetMipPath() const  |  Get file path for logs, caches, etc.
+public bool IsOfflineOnly()  |  Get offline-only setting.
 public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate()  |  Get logger implementation.
 public LoggerDelegate* GetRawLoggerDelegate()  |  Get logger implementation.
 public static MIP_API std::shared_ptr&lt;MipContext&gt; __CDECL mip::MipContext::Create | Create a new MipContext instance to be used when initializing profiles.
@@ -53,6 +54,12 @@ Get file path for logs, caches, etc.
   
 **Returns**: File path (with "mip" leaf directory)
   
+### IsOfflineOnly function
+Get offline-only setting.
+
+  
+**Returns**: Whether or not application is running in offline-only mode
+  
 ### GetLoggerDelegate function
 Get logger implementation.
 
@@ -62,6 +69,7 @@ Get logger implementation.
 ### GetRawLoggerDelegate function
 Get logger implementation.
 
+  
 **Returns**: Logger
 
 ### Create function
@@ -73,4 +81,3 @@ Create a new MipContext instance to be used when initializing profiles.
 Create a new MipContext instance with custom feature settings.
 
 **Returns**: MipContext instance.
-

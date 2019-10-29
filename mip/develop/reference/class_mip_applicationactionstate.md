@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ApplicationActionState 
@@ -29,7 +29,7 @@ Gets the new label state.
   
 **Returns**: The new label state. 
   
-**See also**: mip::LabelState
+**See also**: [mip::LabelState](#namespacemip_1aefa6fc690c08ef9e3beb26755bc1f68e)
   
 ### GetNewLabel function
 Gets the sensitivity label ID that should be applied on the document.
@@ -43,7 +43,7 @@ Implementation should pass if justification to downgrade an existing label was g
   
 **Returns**: True if downgrade is justifiedalong with the justification messageelse false 
   
-**See also**: [mip::JustifyAction](class_mip_justifyaction.md)
+**See also**: [mip::JustifyAction](#classmip_1_1JustifyAction)
   
 ### GetNewLabelAssignmentMethod function
 Get the new label's assignment method.

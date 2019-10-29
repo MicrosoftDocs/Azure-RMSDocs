@@ -5,16 +5,16 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ProtectionDescriptorBuilder 
-Constructs a [ProtectionDescriptor](class_mip_protectiondescriptor.md) that describes protection associated with a piece of content.
+Constructs a [ProtectionDescriptor](undefined) that describes protection associated with a piece of content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by this [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) instance.
+public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Creates a [ProtectionDescriptor](undefined) whose access permissions are defined by this [ProtectionDescriptorBuilder](#classmip_1_1ProtectionDescriptorBuilder) instance.
 public void SetName(const std::string& value)  |  Sets protection policy name.
 public void SetDescription(const std::string& value)  |  Sets protection policy description.
 public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  Sets protection policy expiration time.
@@ -27,14 +27,13 @@ public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::Pr
 public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromUserRoles | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and roles.
 public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromTemplate | Creates a ProtectionDescriptorBuilder whose access permissions are defined by the protection template. 
 
-
 ## Members
   
 ### Build function
-Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by this [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) instance.
+Creates a [ProtectionDescriptor](undefined) whose access permissions are defined by this [ProtectionDescriptorBuilder](undefined) instance.
 
   
-**Returns**: New [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance
+**Returns**: New [ProtectionDescriptor](undefined) instance
   
 ### SetName function
 Sets protection policy name.
@@ -50,6 +49,8 @@ Sets protection policy description.
 Parameters:  
 * **value**: Policy description
 
+
+  
 ### SetContentValidUntil function
 Sets protection policy expiration time.
 
@@ -64,6 +65,8 @@ Sets if protection policy allows offline content access or not.
 Parameters:  
 * **value**: If policy allows offline content access or not
 
+
+  
 ### SetReferrer function
 Sets protection policy referrer address.
 
@@ -117,6 +120,3 @@ Parameters:
 * **templateId**: A protection template ID.
 
 **Returns**: A new [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance.
-
-
-

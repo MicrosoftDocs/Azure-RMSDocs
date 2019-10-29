@@ -5,21 +5,21 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ProtectionEngine::Settings 
-[Settings](class_mip_protectionengine_settings.md) used by [ProtectionEngine](class_mip_protectionengine.md) during its creation and throughout its lifetime.
+[Settings](undefined) used by [ProtectionEngine](undefined) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for creating a new engine.
-public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for loading an existing engine.
+public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](undefined) constructor for creating a new engine.
+public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](undefined) constructor for loading an existing engine.
 public const std::string& GetEngineId() const  |  Gets the engine ID.
 public void SetEngineId(const std::string& engineId)  |  Sets the engine ID.
-public const Identity& GetIdentity() const  |  Gets the user [Identity](class_mip_identity.md) associated with the engine.
-public void SetIdentity(const Identity& identity)  |  Sets the user [Identity](class_mip_identity.md) associated with the engine.
+public const Identity& GetIdentity() const  |  Gets the user [Identity](undefined) associated with the engine.
+public void SetIdentity(const Identity& identity)  |  Sets the user [Identity](undefined) associated with the engine.
 public const std::string& GetClientData() const  |  Gets custom data specified by client.
 public void SetClientData(const std::string& clientData)  |  Sets custom data specified by client.
 public const std::string& GetLocale() const  |  Gets the locale in which engine data will be written.
@@ -33,10 +33,10 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  Gets the cloud bas
 ## Members
   
 ### Settings function
-[ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for creating a new engine.
+[ProtectionEngine::Settings](undefined) constructor for creating a new engine.
 
 Parameters:  
-* **identity**: [Identity](class_mip_identity.md) that will be associated with [ProtectionEngine](class_mip_protectionengine.md)
+* **identity**: [Identity](undefined) that will be associated with [ProtectionEngine](undefined)
 
 
 * **clientData**: customizable client data that can be stored with the engine when unloaded and can be retrieved from a loaded engine. 
@@ -47,7 +47,7 @@ Parameters:
 
   
 ### Settings function
-[ProtectionEngine::Settings](class_mip_protectionengine_settings.md) constructor for loading an existing engine.
+[ProtectionEngine::Settings](undefined) constructor for loading an existing engine.
 
 Parameters:  
 * **engineId**: Unique identifier of engine that will be loaded 
@@ -75,16 +75,16 @@ Parameters:
 
   
 ### GetIdentity function
-Gets the user [Identity](class_mip_identity.md) associated with the engine.
+Gets the user [Identity](undefined) associated with the engine.
 
   
-**Returns**: User [Identity](class_mip_identity.md) associated with the engine
+**Returns**: User [Identity](undefined) associated with the engine
   
 ### SetIdentity function
-Sets the user [Identity](class_mip_identity.md) associated with the engine.
+Sets the user [Identity](undefined) associated with the engine.
 
 Parameters:  
-* **identity**: User [Identity](class_mip_identity.md) associated with the engine
+* **identity**: User [Identity](undefined) associated with the engine
 
 
   
