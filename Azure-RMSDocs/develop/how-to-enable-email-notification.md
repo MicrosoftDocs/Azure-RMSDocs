@@ -30,22 +30,23 @@ Email notification allows for a protected content owner to be notified when his 
 
 To setup your email notification for a given license, use [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) with the property type parameter, *dwPropID*, as [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx) and the application data fields formatted as an [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx).
 
-    C++
+**C++**:
 
-    int numDataPairs = 3;
+```cpp
+int numDataPairs = 3;
 
-    IPC_NAME_VALUE propertyValuePairs [numDataPairs];
+IPC_NAME_VALUE propertyValuePairs [numDataPairs];
 
-    // lcid field set to 0 causes the default lcid to be used
+// lcid field set to 0 causes the default lcid to be used
 
-    propertyValuePairs[0] = {"MS.Conetent.Name", 0, "FinancialReport.docx"};
-    propertyValuePairs[1] = {"MS.Notify.Enabled",0 , "true"};
-    propertyValuePairs[2] = {"MS.Notify.Culture",0 , “en-US”};
+propertyValuePairs[0] = {"MS.Conetent.Name", 0, "FinancialReport.docx"};
+propertyValuePairs[1] = {"MS.Notify.Enabled",0 , "true"};
+propertyValuePairs[2] = {"MS.Notify.Culture",0 , "en-US"};
 
-    IPC_NAME_VALUE_LIST emailNotificationAppData = {numDataPairs, propertyValuePairs};
+IPC_NAME_VALUE_LIST emailNotificationAppData = {numDataPairs, propertyValuePairs};
 
-    result = IpcSetLicenseProperty( licenseHandle, FALSE, IPC_LI_APP_SPECIFIC_DATA, emailNotificationAppData);
-
+result = IpcSetLicenseProperty(licenseHandle, FALSE, IPC_LI_APP_SPECIFIC_DATA, emailNotificationAppData);
+```
 
 The following table contains the application data fields, property name and value pairs, for RMS email notification.
 
