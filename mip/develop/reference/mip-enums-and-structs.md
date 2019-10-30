@@ -13,9 +13,7 @@ ms.date: 01/28/2019
 
 ## Namespace mip
 
-## Summary
-
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 enum WatermarkLayout       |  Layout for watermarks.
 enum ContentMarkAlignment       |  Alignment for content marks (content header or content footer).
@@ -44,7 +42,7 @@ enum ProtectionActionType       | Not yet documented.
 struct mip::ApplicationInfo  |  A struct that includes application specific information.
 struct mip::TelemetryConfiguration  |  Custom telemetry settings (not commonly used)
 
-### Members (mip)
+### Enumerations
 
 #### WatermarkLayout enum
  Values                         | Descriptions                                
@@ -270,6 +268,73 @@ DoNotForwardWithPrompt            |
 Hyok            | 
 PredefinedTemplate            | 
 RemoveProtection            | 
+
+### Structures
+
+#### struct mip::ApplicationInfo 
+A struct that includes application specific information.
+  
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public std::string applicationId  |  Application identifier as set in the AAD portal, (Should be a GUID without brackets).
+public std::string applicationName  |  Application name, (Should only contain valid ASCII character excluding ';')
+public std::string applicationVersion  |  The version of the application being used, (Should only contain valid ASCII character excluding ';')
+  
+
+##### applicationId struct member
+Application identifier as set in the AAD portal, (Should be a GUID without brackets).
+  
+##### applicationName struct member
+Application name, (Should only contain valid ASCII character excluding ';')
+  
+##### applicationVersion struct member
+The version of the application being used, (Should only contain valid ASCII character excluding ';')
+
+#### struct mip::TelemetryConfiguration 
+Custom telemetry settings (not commonly used)
+  
+Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public std::string hostNameOverride  |  Host telemetry instance name. If not set, MIP will act as its own host.
+public std::string libraryNameOverride  |  Alternate telemetry library (DLL) filename.
+public std::shared_ptr\<HttpDelegate\> httpDelegateOverride  |  If set, HTTP handling will be managed by this instance
+public std::shared_ptr\<TaskDispatcherDelegate\> taskDispatcherDelegateOverride  |  If set, async task handling will be managed by this instance, taskDispatcherDelegateOverides should not be shared as they can hold telemetry objects, and prevent their release until taskDispatcher is freed.
+public bool isNetworkDetectionEnabled  |  If set, telemetry component will ping network status on background thread
+public bool isLocalCachingEnabled  |  If set, telemetry component will use on-disk caching
+public bool isTraceLoggingEnabled  |  If set, telemetry component will write warning/error logs to disk
+public bool isTelemetryOptedOut  |  If set, only necessary service data telemetry will be sent
+public bool isFastShutdownEnabled  |  If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
+public std::map\<std::string, std::string\> customSettings  |  Custom telemetry settings >
+    
+##### hostNameOverride struct member
+Host telemetry instance name. If not set, MIP will act as its own host.
+  
+##### libraryNameOverride struct member
+Alternate telemetry library (DLL) filename.
+  
+##### HttpDelegate
+If set, HTTP handling will be managed by this instance
+  
+##### TaskDispatcherDelegate
+If set, async task handling will be managed by this instance, taskDispatcherDelegateOverides should not be shared as they can hold telemetry objects, and prevent their release until taskDispatcher is freed.
+  
+##### isNetworkDetectionEnabled struct member
+If set, telemetry component will ping network status on background thread
+  
+##### isLocalCachingEnabled struct member
+If set, telemetry component will use on-disk caching
+  
+##### isTraceLoggingEnabled struct member
+If set, telemetry component will write warning/error logs to disk
+  
+##### isTelemetryOptedOut struct member
+If set, only necessary service data telemetry will be sent
+  
+##### isFastShutdownEnabled struct member
+If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
+  
+##### customSettings struct member
+Custom telemetry settings >
 
 ## namespace mip::auditmetadatakeys
   
