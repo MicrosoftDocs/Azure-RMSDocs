@@ -195,11 +195,11 @@ To confirm whether the clients and services you use support unified labeling, re
 
 ##### Services that currently support unified labeling include:
 
-- Power BI
+- Power BI (in preview)
 
-- Office Online and Outlook on the web
+- Office Online (in preview) and Outlook on the web
 
-- SharePoint Online sites and Office 365 groups
+- SharePoint Online sites and Office 365 groups (in preview)
 
 - Microsoft Defender Advanced Threat Protection
 
