@@ -42,7 +42,7 @@ Parameters:
 * **context**: Client context that will be opaquely passed back to observers
 
 
-[ProtectionProfile::Observer](#classmip_1_1ProtectionProfile_1_1Observer) will be called upon success or failure.
+ProtectionProfile::Observer will be called upon success or failure.
   
 ### ListEngines function
 List engines.

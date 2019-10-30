@@ -41,7 +41,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: [FileEngine::Settings](#classmip_1_1FileEngine_1_1Settings)).
+**See also**: FileEngine::Settings).
   
 ### GetDefaultSensitivityLabel function
 Get the default sensitivity label.

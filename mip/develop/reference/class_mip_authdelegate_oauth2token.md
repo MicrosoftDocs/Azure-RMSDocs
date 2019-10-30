@@ -14,7 +14,7 @@ A class defining how the MIP SDK expects the oauth2 token to be passed back into
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public OAuth2Token()  |  Construct a new [OAuth2Token](#classmip_1_1AuthDelegate_1_1OAuth2Token) object.
+public OAuth2Token()  |  Construct a new OAuth2Token object.
 public OAuth2Token(const std::string& accessToken)  |  Construct a new OAuth2Token object from an accessToken.
 public const std::string& GetAccessToken() const  |  Get the Access token string.
 public void SetAccessToken(const std::string& accessToken)  |  Set the Access Token string.

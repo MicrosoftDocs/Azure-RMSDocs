@@ -29,10 +29,10 @@ Parameters:
 * **templateIds**: A reference to the list of templates retrieved 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetTemplatesAsync](#classmip_1_1ProtectionEngine_1aa02e21ee00c5fd064b1b29d7f0ee7f86)
+* **context**: The same context that was passed to ProtectionEngine::GetTemplatesAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTemplatesAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetTemplatesSuccess](#classmip_1_1ProtectionEngine_1_1Observer_1ad75ef985a96a600aa3f29f796e3afc7f) or [ProtectionEngine::Observer::OnGetTemplatesFailure](#classmip_1_1ProtectionEngine_1_1Observer_1ac51f22e559dbf2796f0375fae540a5e2)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTemplatesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetTemplatesSuccess or ProtectionEngine::Observer::OnGetTemplatesFailure
   
 ### OnGetTemplatesFailure function
 Called when retrieving templates generated an error.
@@ -53,7 +53,7 @@ Parameters:
 * **rights**: A reference to the list of rights retrieved 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetRightsForLabelIdAsync](#classmip_1_1ProtectionEngine_1a73c3d2652d0e3b1ed4f6edb38eee1022)
+* **context**: The same context that was passed to ProtectionEngine::GetRightsForLabelIdAsync
 
 
 An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure

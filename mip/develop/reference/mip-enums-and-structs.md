@@ -23,7 +23,7 @@ enum AssignmentMethod       |  The assignment method of the label on the documen
 enum ActionSource       |  defines what triggered the SetLabel event
 enum DataState       |  Defines what state of the data is the application acting upon.
 enum ContentFormat       |  Content format.
-enum LabelFilterType       |  [Label](#classmip_1_1Label) filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
+enum LabelFilterType       |  Label filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
 enum Consent       |  A user's response when consent is requested to connect to a service endpoint.
 enum CacheStorageType       |  Storage type for the caches.
 enum PFileExtensionBehavior       |  Describes PFile extensions behavior.

@@ -56,7 +56,7 @@ Create a file inspector object, used to retrieve file contents from compatible f
 ### SetLabel function
 Sets the sensitivity label to the file.
 Changes won't be written to the file until CommitAsync is called. Privileged and Auto method allows the API to override any existing label 
-Throws [JustificationRequiredError](#classmip_1_1JustificationRequiredError) when setting the label requires the operation to be justified (via the labelingOptions parameter).
+Throws JustificationRequiredError when setting the label requires the operation to be justified (via the labelingOptions parameter).
   
 ### DeleteLabel function
 Deletes the sensitivity label from the file.

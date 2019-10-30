@@ -25,7 +25,7 @@ Gets operation ID.
 
   
 **Returns**: Operation ID
-The corresponding [HttpRequest](#classmip_1_1HttpRequest) and [HttpResponse](#classmip_1_1HttpResponse) will have the same ID
+The corresponding HttpRequest and HttpResponse will have the same ID
   
 ### GetResponse function
 Get response, if any.

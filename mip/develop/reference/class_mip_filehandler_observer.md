@@ -10,7 +10,7 @@ ms.date: 10/29/2019
 
 # class mip::FileHandler::Observer 
 Observer interface for clients to get notifications events related to file handler.
-All errors inherit from [mip::Error](#classmip_1_1Error). 
+All errors inherit from mip::Error. 
 Client should not call the engine back on the thread that calls the observer.
   
 ## Summary
