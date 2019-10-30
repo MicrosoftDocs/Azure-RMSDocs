@@ -27,7 +27,7 @@ enum LabelFilterType       |  Label filter types, optional set of properties tha
 enum Consent       |  A user's response when consent is requested to connect to a service endpoint.
 enum CacheStorageType       |  Storage type for the caches.
 enum PFileExtensionBehavior       |  Describes PFile extensions behavior.
-enum ErrorType       | _Not yet documented._
+enum ErrorType       | Not yet documented.
 enum InspectorType       |  Inspector type correlating to supported file types.
 enum BodyType       |  Body type enumerator.
 enum FlightingFeature       |  Defines new features by name.
@@ -35,12 +35,12 @@ enum HttpRequestType       |  HTTP request type.
 enum LogLevel       |  Different log levels used across the MIP SDK.
 enum ProtectionType       |  Describes whether protection is based off a template or ad-hoc (custom)
 enum ActionType       |  Different action types.
-enum LabelState       | _Not yet documented._
-enum ActionDataType       | _Not yet documented._
-enum ConditionDataType       | _Not yet documented._
-enum ContentMarkPlacement       | _Not yet documented._
-enum LabelActionDataType       | _Not yet documented._
-enum ProtectionActionType       | _Not yet documented._
+enum LabelState       | Not yet documented.
+enum ActionDataType       | Not yet documented.
+enum ConditionDataType       | Not yet documented.
+enum ContentMarkPlacement       | Not yet documented.
+enum LabelActionDataType       | Not yet documented.
+enum ProtectionActionType       | Not yet documented.
 struct mip::ApplicationInfo  |  A struct that includes application specific information.
 struct mip::TelemetryConfiguration  |  Custom telemetry settings (not commonly used)
 
@@ -277,9 +277,9 @@ RemoveProtection            |
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string Sender()       |  Audit metadata keys in string representation.
-public std::string Recipients()       | _Not yet documented._
-public std::string LastModifiedBy()       | _Not yet documented._
-public std::string LastModifiedDate()       | _Not yet documented._
+public std::string Recipients()       | Not yet documented.
+public std::string LastModifiedBy()       | Not yet documented.
+public std::string LastModifiedDate()       | Not yet documented.
   
 ### Members
   

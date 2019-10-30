@@ -13,9 +13,9 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetFileId() const  | _Not yet documented._
-public const std::string& GetTenantId() const  | _Not yet documented._
-public virtual ~SyncFileBaseData()  | _Not yet documented._
+public const std::string& GetFileId() const  | Not yet documented.
+public const std::string& GetTenantId() const  | Not yet documented.
+public virtual ~SyncFileBaseData()  | Not yet documented.
   
 ## Members
   

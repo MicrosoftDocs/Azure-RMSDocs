@@ -14,12 +14,12 @@ Interface for configuring protection options for the SetLabel method.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ProtectionSettings() = default  | _Not yet documented._
-public ProtectionSettings(const std::string& delegatedUserEmail, PFileExtensionBehavior pfileExtensionBehavior)  | _Not yet documented._
-public void SetDelegatedUserEmail(const std::string delegatedUserEmail)  | _Not yet documented._
-public std::string GetDelegatedUserEmail() const  | _Not yet documented._
-public void SetPFileExtensionBehavior(PFileExtensionBehavior pfileExtensionBehavior)  | _Not yet documented._
-public PFileExtensionBehavior GetPFileExtensionBehavior() const  | _Not yet documented._
+public ProtectionSettings() = default  | Not yet documented.
+public ProtectionSettings(const std::string& delegatedUserEmail, PFileExtensionBehavior pfileExtensionBehavior)  | Not yet documented.
+public void SetDelegatedUserEmail(const std::string delegatedUserEmail)  | Not yet documented.
+public std::string GetDelegatedUserEmail() const  | Not yet documented.
+public void SetPFileExtensionBehavior(PFileExtensionBehavior pfileExtensionBehavior)  | Not yet documented.
+public PFileExtensionBehavior GetPFileExtensionBehavior() const  | Not yet documented.
   
 ## Members
   

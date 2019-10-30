@@ -23,11 +23,11 @@ public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP 
 public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
 public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
 public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Override default asynchonous task dispatching handling with client's own.
-public void SetSessionId(const std::string& sessionId)  | _Not yet documented._
-public const std::string& GetSessionId() const  | _Not yet documented._
+public void SetSessionId(const std::string& sessionId)  | Not yet documented.
+public const std::string& GetSessionId() const  | Not yet documented.
 public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& customSettings)  |  Set the custom settings, used for feature gating and testing.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
-public ~Settings()  | _Not yet documented._
+public ~Settings()  | Not yet documented.
   
 ## Members
   

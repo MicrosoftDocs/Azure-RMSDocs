@@ -15,7 +15,7 @@ Settings used to create a ProtectionHandler to protect new content.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public PublishingSettings(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor)  |  ProtectionHandler::Settings constructor for creating a new engine.
-public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | _Not yet documented._
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | Not yet documented.
 public bool GetIsAuditedExtractionAllowed() const  |  Gets whether or not non-MIP-aware applications are allowed to open protected content.
 public void SetIsAuditedExtractionAllowed(bool isAuditedExtractionAllowed)  |  Sets whether or not non-MIP-aware applications are allowed to open protected content.
 public bool GetIsDeprecatedAlgorithmPreferred() const  |  Gets whether or not deprecated crypto algorithm (ECB) is preferred for backwards compatibility.

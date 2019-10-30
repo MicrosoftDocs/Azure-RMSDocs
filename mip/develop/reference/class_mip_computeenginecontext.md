@@ -13,8 +13,8 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual ~ComputeEngineContext()  | _Not yet documented._
-protected ComputeEngineContext()  | _Not yet documented._
+public virtual ~ComputeEngineContext()  | Not yet documented.
+protected ComputeEngineContext()  | Not yet documented.
   
 ## Members
   

@@ -13,12 +13,12 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | _Not yet documented._
-public const std::string& GetFontName() const  | _Not yet documented._
-public const std::string& GetFontColor() const  | _Not yet documented._
-public int GetFontSize() const  | _Not yet documented._
-public WatermarkLayout GetWatermarkLayout() const  | _Not yet documented._
-public virtual ~AddWatermarkActionData()  | _Not yet documented._
+public const std::string& GetText() const  | Not yet documented.
+public const std::string& GetFontName() const  | Not yet documented.
+public const std::string& GetFontColor() const  | Not yet documented.
+public int GetFontSize() const  | Not yet documented.
+public WatermarkLayout GetWatermarkLayout() const  | Not yet documented.
+public virtual ~AddWatermarkActionData()  | Not yet documented.
   
 ## Members
   

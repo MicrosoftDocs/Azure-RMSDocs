@@ -22,7 +22,7 @@ public void SetAllowOfflineAccess(bool value)  |  Sets if protection policy allo
 public void SetReferrer(const std::string& uri)  |  Sets protection policy referrer address.
 public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be encrypted.
 public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be signed.
-public virtual ~ProtectionDescriptorBuilder()  | _Not yet documented._
+public virtual ~ProtectionDescriptorBuilder()  | Not yet documented.
 public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromUserRights | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and rights.
 public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromUserRoles | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and roles.
 public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromTemplate | Creates a ProtectionDescriptorBuilder whose access permissions are defined by the protection template. 

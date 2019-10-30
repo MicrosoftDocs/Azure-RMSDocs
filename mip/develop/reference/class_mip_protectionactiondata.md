@@ -13,9 +13,9 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ProtectionActionType GetProtectionType() const  | _Not yet documented._
-public const std::string& GetTemplateId() const  | _Not yet documented._
-public virtual ~ProtectionActionData()  | _Not yet documented._
+public ProtectionActionType GetProtectionType() const  | Not yet documented.
+public const std::string& GetTemplateId() const  | Not yet documented.
+public virtual ~ProtectionActionData()  | Not yet documented.
   
 ## Members
   

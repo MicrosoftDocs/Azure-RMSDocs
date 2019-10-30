@@ -13,16 +13,16 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const ApplicationInfo& applicationInfo, const std::shared_ptr\<TelemetryDelegate\>& telemetryDelegate, const std::shared_ptr\<LoggerDelegate\>& loggerDelegate, const std::string& hostName, const std::vector\<std::pair\<std::string, std::string\>\>& customProperties, const std::vector\<LabelFilterType\>& labelFilter)  | _Not yet documented._
-public const ApplicationInfo& GetApplicationInfo() const  | _Not yet documented._
-public std::shared_ptr\<TelemetryDelegate\> GetTelemetryDelegate() const  | _Not yet documented._
-public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  | _Not yet documented._
-public const std::string& GetHostName() const  | _Not yet documented._
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomProperties() const  | _Not yet documented._
-public void SetParentCorrelationId(const std::string correlationId, const std::string description)  | _Not yet documented._
-public const std::string& GetParentCorrelationId() const  | _Not yet documented._
-public const std::string& GetParentCorrelationIdDescription() const  | _Not yet documented._
-public const std::vector\<LabelFilterType\>& GetLabelFilter() const  | _Not yet documented._
+public Settings(const ApplicationInfo& applicationInfo, const std::shared_ptr\<TelemetryDelegate\>& telemetryDelegate, const std::shared_ptr\<LoggerDelegate\>& loggerDelegate, const std::string& hostName, const std::vector\<std::pair\<std::string, std::string\>\>& customProperties, const std::vector\<LabelFilterType\>& labelFilter)  | Not yet documented.
+public const ApplicationInfo& GetApplicationInfo() const  | Not yet documented.
+public std::shared_ptr\<TelemetryDelegate\> GetTelemetryDelegate() const  | Not yet documented.
+public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  | Not yet documented.
+public const std::string& GetHostName() const  | Not yet documented.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomProperties() const  | Not yet documented.
+public void SetParentCorrelationId(const std::string correlationId, const std::string description)  | Not yet documented.
+public const std::string& GetParentCorrelationId() const  | Not yet documented.
+public const std::string& GetParentCorrelationIdDescription() const  | Not yet documented.
+public const std::vector\<LabelFilterType\>& GetLabelFilter() const  | Not yet documented.
   
 ## Members
   

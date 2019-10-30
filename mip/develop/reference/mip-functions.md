@@ -1,6 +1,6 @@
 ---
 title: Classes
-description: Classes
+description: Functions
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
@@ -8,124 +8,333 @@ ms.collection: M365-security-compliance
 ms.date: 01/28/2019
 ms.author: mbaldwin
 ---
-# Classes
+# Functions
 
-## Summary 
 
-### Namespace mip
+
+## Namespace mip
+
 | Functions by namespace scope   | Descriptions                                |
 |--------------------------------|---------------------------------------------|
-class mip::AccessDeniedError  |  The user could not get access to the content. For example, no permissions, content revoked.
-class mip::Action  |  Interface for an action. Each action translates to a step that needs to be taken by the application to apply the label (as defined in the policy)
-class mip::ActionData  | _Not yet documented._
-class mip::AddContentFooterAction  |  An action class that specifies adding a content footer to the document.
-class mip::AddContentHeaderAction  |  An action class that specifies adding content header.
-class mip::AddWatermarkAction  |  An action class that specifies adding watermark.
-class mip::AddWatermarkActionData  | _Not yet documented._
-class mip::AdhocProtectionRequiredError  |  Adhoc protection should be set to complete the action on the file.
-class mip::ApplicationActionState  | _Not yet documented._
-class mip::ApplyLabelAction  |  Apply label actions requires the calling application to apply a specific label.
-class mip::ArgumentData  | _Not yet documented._
-class mip::AuthDelegate  |  Delegate for auth related operations.
-class mip::AuthDelegate::OAuth2Challenge  |  a class that contains all the information required from the calling application in order to generate an oauth2 token.
-class mip::AuthDelegate::OAuth2Token  |  A class defining how the MIP SDK expects the oauth2 token to be passed back into the SDK.
-class mip::BadInputError  |  Bad input error, thrown when the input to an SDK API is invalid.
-class mip::ClassificationData  | _Not yet documented._
-class mip::ClassificationRequest  |  Class that contains the request of a classification call on the Execution State.
-class mip::ClassificationResult  |  Class that contains the result of a classification call on the Execution State.
-class mip::ComputeEngine  | _Not yet documented._
-class mip::ComputeEngine::Settings  | _Not yet documented._
-class mip::ComputeEngineContext  | _Not yet documented._
-class mip::ConditionData  | _Not yet documented._
-class mip::ConsentDelegate  |  Delegate for consent related operations.
-class mip::ConsentDeniedError  |  An operation that required consent from user was not granted consent.
-class mip::ContentLabel  |  Abstraction for a Microsoft Information Protection label that is applied to a piece of content, typically a document.
-class mip::ContentMarkingActionData  | _Not yet documented._
-class mip::CustomAction  |  CustomAction is a generic action class that captures all the sub-properties of the action as a property bag. The caller is responsible to understand the meaning of the action.
-class mip::DeprecatedApiError  |  Caller invoked a deprecated API.
-class mip::DocumentState  | _Not yet documented._
-class mip::Error  |  Base class for all errors that will be reported (thrown or returned) from MIP SDK.
-class mip::ExecutionState  |  Interface for all the state needed to execute the engine.
-class mip::FileEngine  |  This class provides an interface for all engine functions.
-class mip::FileEngine::Settings  | _Not yet documented._
-class mip::FileExecutionState  | _Not yet documented._
-class mip::FileHandler  |  Interface for all file handling functions.
-class mip::FileHandler::Observer  |  Observer interface for clients to get notifications events related to file handler.
-class mip::FileInspector  | _Not yet documented._
-class mip::FileIOError  |  File IO error.
-class mip::FileProfile  |  FileProfile class is the root class for using the Microsoft Information Protection operations.
-class mip::FileProfile::Observer  |  Observer interface for clients to get notifications for profile related events.
-class mip::FileProfile::Settings  |  Settings used by FileProfile during its creation and throughout its lifetime.
-class mip::HttpDelegate  |  Interface for overriding HTTP handling.
-class mip::HttpOperation  |  Interface that describes a single HTTP operation, implemented by client app when overriding HttpDelegate.
-class mip::HttpRequest  |  Interface that describes a single HTTP request.
-class mip::HttpResponse  |  Interface that describes a single HTTP response, implemented by client app when overriding HttpDelegate.
-class mip::Identity  |  Abstraction for identity.
-class mip::InternalError  |  Internal error. This error is thrown when something unexpected happens during execution.
-class mip::JustificationRequiredError  | _Not yet documented._
-class mip::JustifyAction  |  Justify Action requires providing a justification to a label downgrade and setting the response in the execution state.
-class mip::Label  |  Abstraction for a single Microsoft Information Protection label.
-class mip::LabelActionData  | _Not yet documented._
-class mip::LabelDisabledError  |  Label is disabled or inactive.
-class mip::LabelGroupData  | _Not yet documented._
-class mip::LabelingOptions  |  Interface for configuring labeling options for the SetLabel/DeleteLabel methods.
-class mip::LabelNotFoundError  |  Label ID is not recognized.
-class mip::LoggerDelegate  |  A class that defines the interface to the MIP SDK logger.
-class mip::MetadataAction  |  An Action that adds metadata information to the content.
-class mip::MipContext  |  MipContext represents state that is shared across all profiles, engines, handlers.
-class mip::MsgAttachmentData  | _Not yet documented._
-class mip::MsgInspector  | _Not yet documented._
-class mip::NetworkError  |  Networking error. Caused by unexpected behavior when making network calls to service endpoints.
-class mip::NoAuthTokenError  |  The user could not get access to the content due to missing authentication token.
-class mip::NoPermissionsError  |  The user could not get access to the content. For example, no permissions, content revoked.
-class mip::NoPolicyError  |  Tenant policy is not configured for classification/labels.
-class mip::NotSupportedError  |  The operation requested by the application is not supported by the SDK.
-class mip::OperationCancelledError  |  Operation was cancelled.
-class mip::PolicyEngine  |  This class provides an interface for all engine functions.
-class mip::PolicyEngine::Settings  |  Defines the settings associated with a PolicyEngine.
-class mip::PolicyHandler  |  This class provides an interface for all policy handler functions on a file.
-class mip::PolicyPackageData  | _Not yet documented._
-class mip::PolicyProfile  |  PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
-class mip::PolicyProfile::Observer  |  Observer interface for clients to get notifications for profile related events.
-class mip::PolicyProfile::Settings  |  Settings used by PolicyProfile during its creation and throughout its lifetime.
-class mip::PolicyRuleData  | _Not yet documented._
-class mip::PolicySyncError  |  An attempt to sync policy data failed.
-class mip::PrivilegedRequiredError  |  Current label was assigned as a privileged operation (The equivalent to an administrator operation), therefore it can't be overriden.
-class mip::PropertyData  | _Not yet documented._
-class mip::ProtectAdhocAction  |  An action class that specifies adding adhoc protection to the document.
-class mip::ProtectByTemplateAction  |  An action class that specifies adding protection by template to the document.
-class mip::ProtectDoNotForwardAction  |  An action class that specifies adding do not forward protection to the document.
-class mip::ProtectionActionData  | _Not yet documented._
-class mip::ProtectionDescriptor  |  Description of protection associated with a piece of content.
-class mip::ProtectionDescriptorBuilder  |  Constructs a ProtectionDescriptor that describes protection associated with a piece of content.
-class mip::ProtectionEngine  |  Manages protection-related actions related to a specific identity.
-class mip::ProtectionEngine::Observer  |  Interface that receives notifications related to ProtectionEngine.
-class mip::ProtectionEngine::Settings  |  Settings](#classmip_1_1ProtectionEngine_1_1Settings) used by [ProtectionEngine during its creation and throughout its lifetime.
-class mip::ProtectionHandler  |  Manages protection-related actions for a specific protection configuration.
-class mip::ProtectionHandler::ConsumptionSettings  |  Settings used to create a ProtectionHandler to consume existing content.
-class mip::ProtectionHandler::Observer  |  Interface that receives notifications related to ProtectionHandler.
-class mip::ProtectionHandler::PublishingSettings  |  Settings used to create a ProtectionHandler to protect new content.
-class mip::ProtectionProfile  |  ProtectionProfile is the root class for performing protection operations.
-class mip::ProtectionProfile::Observer  |  Interface that receives notifications related to ProtectionProfile.
-class mip::ProtectionProfile::Settings  |  Settings](#classmip_1_1ProtectionProfile_1_1Settings) used by [ProtectionProfile during its creation and throughout its lifetime.
-class mip::ProtectionSettings  |  Interface for configuring protection options for the SetLabel method.
-class mip::ProxyAuthenticationError  |  Proxy authentication failure.
-class mip::PublishingLicenseInfo  |  Holds the details of a Publishing License used to create a protection handler.
-class mip::RecommendLabelAction  |  Recommend label actions is meant to suggest a label to the users. Suppressing this call after a user ignores the recommended label should be done through the supported actions on the execution state.
-class mip::RemoveContentFooterAction  |  An action class that specifies removing the content footer from the document.
-class mip::RemoveContentHeaderAction  |  An action class that specifies removing the content header from the document.
-class mip::RemoveProtectionAction  |  An action class that specifies removing protection from the document.
-class mip::RemoveWatermarkAction  |  An action class that specifies removing the watermarking from the document.
-class mip::RulePackageData  | _Not yet documented._
-class mip::SensitivityConditionData  | _Not yet documented._
-class mip::SensitivityTypesRulePackage  | _Not yet documented._
-class mip::ServiceDisabledError  |  The user could not get access to the content due to a service being disabled.
-class mip::Stream  |  A class that defines the interface between the MIP SDK and stream-based content.
-class mip::SyncFileBaseData  | _Not yet documented._
-class mip::SyncFilePolicyData  | _Not yet documented._
-class mip::SyncFileSensitivityData  | _Not yet documented._
-class mip::TaskDispatcherDelegate  |  A class that defines the interface to the MIP SDK task dispatcher.
-class mip::TemplateNotFoundError  |  Template ID is not recognized by RMS service.
-class mip::TransientNetworkError  |  Transient networking error. Caused by unexpected behavior when making network calls to service endpoints. The operation can be retried as this error is a transient error.
-class mip::UserRights  |  A group of users and the rights associated with them.
-class mip::UserRoles  |  A group of users and the roles associated with them.
+public std::string GetAssignmentMethodString(AssignmentMethod method)       |  Converts AssignmentMethod enum to a string description.
+public static std::string GetActionSourceString(ActionSource actionSource)       |  Get the action source name.
+public static std::string GetDataStateString(mip::DataState state)       |  Get the content state name.
+public const std::string& GetCustomSettingPolicyDataName()       |  Name of the setting to explicitly specify policy data.
+public const std::string& GetCustomSettingExportPolicyFileName()       |  Name of the setting to explicitly specify file path to export SCC policy data to.
+public const std::string& GetCustomSettingSensitivityTypesDataName()       |  Name of the setting to explicitly specify sensitivity data.
+public const std::string& GetCustomSettingPolicyDataFile()       |  Name of the setting to explicitly specify policy data file path.
+public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  Name of the setting to explicitly specify sensitivity types data file path.
+public const std::string& GetCustomSettingLabelCustomPropertiesSyncEnabled()       |  Name of the setting that allows to enable label by custom properties and custom properties by label features.
+public const std::map\<FlightingFeature, bool\>& GetDefaultFeatureSettings()       |  Gets whether or not a feature is enabled by default.
+public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::istream\>& stdIStream)       |  Creates a Stream from a std::istream.
+public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::ostream\>& stdOStream)       |  Creates a Stream from a std::ostream.
+public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::iostream\>& stdIOStream)       |  Creates a Stream from a std::iostream.
+public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an Stream from a buffer.
+public MIP_API std::vector\<uint8_t\> ReadFromStream(const std::shared_ptr\<mip::Stream\>& stream)       |  Read all the bytes of stream.
+public ActionType operator&(ActionType a, ActionType b)       |  And (&) operator for Action type enum.
+public ActionType operator^(ActionType a, ActionType b)       |  Xor (^) operator for Action type enum.
+
+### GetAssignmentMethodString function
+Converts AssignmentMethod enum to a string description.
+
+Parameters:  
+* **method**: an assignment method. 
+
+
+
+  
+**Returns**: A string description of the assignment method.
+  
+### GetActionSourceString function
+Get the action source name.
+
+Parameters:  
+* **actionSource**: The action source. 
+
+
+
+  
+**Returns**: A string representation of the action source.
+  
+### GetDataStateString function
+Get the content state name.
+
+Parameters:  
+* **actionSource**: The state of the content being worked upon. 
+
+
+
+  
+**Returns**: A string representation of the content state.
+  
+### GetCustomSettingPolicyDataName function
+Name of the setting to explicitly specify policy data.
+
+  
+**Returns**: The custom settings key.
+  
+### GetCustomSettingExportPolicyFileName function
+Name of the setting to explicitly specify file path to export SCC policy data to.
+
+  
+**Returns**: The custom settings key.
+  
+### GetCustomSettingSensitivityTypesDataName function
+Name of the setting to explicitly specify sensitivity data.
+
+  
+**Returns**: The custom settings key.
+  
+### GetCustomSettingPolicyDataFile function
+Name of the setting to explicitly specify policy data file path.
+
+  
+**Returns**: The custom settings key.
+  
+### GetCustomSettingSensitivityTypesDataFile function
+Name of the setting to explicitly specify sensitivity types data file path.
+
+  
+**Returns**: The custom settings key.
+  
+### GetCustomSettingLabelCustomPropertiesSyncEnabled function
+Name of the setting that allows to enable label by custom properties and custom properties by label features.
+
+  
+**Returns**: The custom settings key.
+  
+### GetDefaultFeatureSettings function
+Gets whether or not a feature is enabled by default.
+
+  
+**Returns**: Default state of flighting features
+  
+### CreateStreamFromStdStream function
+Creates a Stream from a std::istream.
+
+Parameters:  
+* **stdIStream**: Backing std::istream
+
+
+
+  
+**Returns**: Stream wrapping a std::istream
+  
+### CreateStreamFromStdStream function
+Creates a Stream from a std::ostream.
+
+Parameters:  
+* **stdOStream**: Backing std::ostream
+
+
+
+  
+**Returns**: Stream wrapping a std::ostream
+  
+### CreateStreamFromStdStream function
+Creates a Stream from a std::iostream.
+
+Parameters:  
+* **stdIOStream**: Backing std::iostream
+
+
+
+  
+**Returns**: Stream wrapping a std::iostream
+  
+### CreateStreamFromBuffer function
+Creates an Stream from a buffer.
+
+Parameters:  
+* **buffer**: Pointer to a buffer
+
+
+
+  
+**Returns**: Size Size of buffer
+  
+### ReadFromStream function
+Read all the bytes of stream.
+
+Parameters:  
+* **pointer**: to a stream.
+
+
+
+  
+**Returns**: A vector of bytes.
+  
+### operator| function
+Or (|) operator for Action type enum.
+  
+### operator& function
+And (&) operator for Action type enum.
+  
+### operator^ function
+Xor (^) operator for Action type enum.
+
+## namespace mip::auditmetadatakeys
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public std::string Sender()       |  Audit metadata keys in string representation.
+public std::string Recipients()       | Not yet documented.
+public std::string LastModifiedBy()       | Not yet documented.
+public std::string LastModifiedDate()       | Not yet documented.
+  
+### Sender function
+Audit metadata keys in string representation.
+  
+### Recipients function
+_Not documented yet._
+
+  
+### LastModifiedBy function
+_Not documented yet._
+
+  
+### LastModifiedDate function
+_Not documented yet._
+
+
+## namespace `mip::rights` 
+  
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public std::string Owner()       |  Gets string identifier for 'owner' right.
+public std::string View()       |  Gets string identifier for 'view' right.
+public std::string AuditedExtract()       |  Gets string identifier for 'audited extract' right.
+public std::string Edit()       |  Gets string identifier for 'edit' right.
+public std::string Export()       |  Gets string identifier for 'export' right.
+public std::string Extract()       |  Gets string identifier for 'extract' right.
+public std::string Print()       |  Gets string identifier for 'print' right.
+public std::string Comment()       |  Gets string identifier for 'comment' right.
+public std::string Reply()       |  Gets string identifier for 'reply' right.
+public std::string ReplyAll()       |  Gets string identifier for 'reply all' right.
+public std::string Forward()       |  Gets string identifier for 'forward' right.
+public std::vector\<std::string\> EmailRights()       |  Gets a list of rights that apply to emails.
+public std::vector\<std::string\> EditableDocumentRights()       |  Gets a list of rights that apply to documents.
+public std::vector\<std::string\> CommonRights()       |  Gets a list of rights that apply in all scenarios.
+  
+
+### Owner function
+Gets string identifier for 'owner' right.
+
+  
+**Returns**: String identifier for 'owner' right
+  
+### View function
+Gets string identifier for 'view' right.
+
+  
+**Returns**: String identifier for 'view' right
+  
+### AuditedExtract function
+Gets string identifier for 'audited extract' right.
+
+  
+**Returns**: String identifier for 'audited extract' right
+  
+### Edit function
+Gets string identifier for 'edit' right.
+
+  
+**Returns**: String identifier for 'edit' right
+  
+### Export function
+Gets string identifier for 'export' right.
+
+  
+**Returns**: String identifier for 'export' right
+  
+### Extract function
+Gets string identifier for 'extract' right.
+
+  
+**Returns**: String identifier for 'extract' right
+  
+### Print function
+Gets string identifier for 'print' right.
+
+  
+**Returns**: String identifier for 'print' right
+  
+### Comment function
+Gets string identifier for 'comment' right.
+
+  
+**Returns**: String identifier for 'comment' right
+  
+### Reply function
+Gets string identifier for 'reply' right.
+
+  
+**Returns**: String identifier for 'reply' right
+  
+### ReplyAll function
+Gets string identifier for 'reply all' right.
+
+  
+**Returns**: String identifier for 'reply all' right
+  
+### Forward function
+Gets string identifier for 'forward' right.
+
+  
+**Returns**: String identifier for 'forward' right
+  
+### EmailRights function
+Gets a list of rights that apply to emails.
+
+  
+**Returns**: A list of rights that apply to emails
+  
+### EditableDocumentRights function
+Gets a list of rights that apply to documents.
+
+  
+**Returns**: A list of rights that apply to documents
+  
+### CommonRights function
+Gets a list of rights that apply in all scenarios.
+
+  
+**Returns**: A list of rights that apply in all scenarios
+
+## namespace mip::roles
+  
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public std::string Viewer()       |  Gets string identifier for 'viewer' role.
+public std::string Reviewer()       |  Gets string identifier for 'reviewer' role.
+public std::string Author()       |  Gets string identifier for 'author' role.
+public std::string CoOwner()       |  Gets string identifier for 'co-owner' role.
+  
+### Viewer function
+Gets string identifier for 'viewer' role.
+
+  
+**Returns**: String identifier for 'viewer' role
+A viewer can only view the content. They cannot edit, copy, or print it.
+  
+### Reviewer function
+Gets string identifier for 'reviewer' role.
+
+  
+**Returns**: String identifier for 'reviewer' role
+A reviewer can view and edit the content. They cannot copy, or print it.
+  
+### Author function
+Gets string identifier for 'author' role.
+
+  
+**Returns**: String identifier for 'author' role
+An author can view, edit, copy, and print the content.
+  
+### CoOwner function
+Gets string identifier for 'co-owner' role.
+
+  
+**Returns**: String identifier for 'co-owner' role
+A co-owner has all permissions
+

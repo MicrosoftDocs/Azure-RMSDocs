@@ -13,9 +13,9 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  | _Not yet documented._
-public bool IsClassificationDiscovered() const  | _Not yet documented._
-public virtual ~SensitivityConditionData()  | _Not yet documented._
+public const std::string& GetLabelId() const  | Not yet documented.
+public bool IsClassificationDiscovered() const  | Not yet documented.
+public virtual ~SensitivityConditionData()  | Not yet documented.
   
 ## Members
   

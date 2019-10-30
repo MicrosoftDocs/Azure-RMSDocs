@@ -13,10 +13,10 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const PolicyRuleData* GetRuleData() const  | _Not yet documented._
-public const std::pair\<std::string, std::string\>& GetLabelToTemplateId() const  | _Not yet documented._
-public const std::pair\<std::string, ProtectionActionType\>& GetLabelToProtectionType() const  | _Not yet documented._
-public virtual ~RulePackageData()  | _Not yet documented._
+public const PolicyRuleData* GetRuleData() const  | Not yet documented.
+public const std::pair\<std::string, std::string\>& GetLabelToTemplateId() const  | Not yet documented.
+public const std::pair\<std::string, ProtectionActionType\>& GetLabelToProtectionType() const  | Not yet documented.
+public virtual ~RulePackageData()  | Not yet documented.
   
 ## Members
   

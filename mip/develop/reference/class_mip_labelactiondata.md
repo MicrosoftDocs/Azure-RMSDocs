@@ -13,9 +13,9 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  | _Not yet documented._
-public LabelActionDataType GetLabelActionDataType() const  | _Not yet documented._
-public virtual ~LabelActionData()  | _Not yet documented._
+public const std::string& GetLabelId() const  | Not yet documented.
+public LabelActionDataType GetLabelActionDataType() const  | Not yet documented.
+public virtual ~LabelActionData()  | Not yet documented.
   
 ## Members
   

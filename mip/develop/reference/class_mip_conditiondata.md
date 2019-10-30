@@ -13,15 +13,15 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ConditionDataType GetType() const  | _Not yet documented._
-public const std::string& GetName() const  | _Not yet documented._
-public const std::map\<std::string, std::string\>& GetProperties() const  | _Not yet documented._
-public const std::vector\<std::unique_ptr\<ConditionData\>\>& GetSubConditionsData() const  | _Not yet documented._
-public bool HasKeyValueEntries() const  | _Not yet documented._
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetKeyValueEntries() const  | _Not yet documented._
-public bool HasClassificationData() const  | _Not yet documented._
-public const ClassificationData& GetClassificationData() const  | _Not yet documented._
-public virtual ~ConditionData()  | _Not yet documented._
+public ConditionDataType GetType() const  | Not yet documented.
+public const std::string& GetName() const  | Not yet documented.
+public const std::map\<std::string, std::string\>& GetProperties() const  | Not yet documented.
+public const std::vector\<std::unique_ptr\<ConditionData\>\>& GetSubConditionsData() const  | Not yet documented.
+public bool HasKeyValueEntries() const  | Not yet documented.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetKeyValueEntries() const  | Not yet documented.
+public bool HasClassificationData() const  | Not yet documented.
+public const ClassificationData& GetClassificationData() const  | Not yet documented.
+public virtual ~ConditionData()  | Not yet documented.
   
 ## Members
   

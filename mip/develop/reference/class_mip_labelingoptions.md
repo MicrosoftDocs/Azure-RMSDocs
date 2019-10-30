@@ -14,13 +14,13 @@ Interface for configuring labeling options for the SetLabel/DeleteLabel methods.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public LabelingOptions(AssignmentMethod method)  | _Not yet documented._
-public AssignmentMethod GetAssignmentMethod() const  | _Not yet documented._
-public bool IsDowngradeJustified() const  | _Not yet documented._
-public const std::string& GetJustificationMessage() const  | _Not yet documented._
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  | _Not yet documented._
-public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _Not yet documented._
-public void SetExtendedProperties(const std::vector\<std::pair\<std::string, std::string\>\>& extendedProperties)  | _Not yet documented._
+public LabelingOptions(AssignmentMethod method)  | Not yet documented.
+public AssignmentMethod GetAssignmentMethod() const  | Not yet documented.
+public bool IsDowngradeJustified() const  | Not yet documented.
+public const std::string& GetJustificationMessage() const  | Not yet documented.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  | Not yet documented.
+public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | Not yet documented.
+public void SetExtendedProperties(const std::vector\<std::pair\<std::string, std::string\>\>& extendedProperties)  | Not yet documented.
   
 ## Members
   

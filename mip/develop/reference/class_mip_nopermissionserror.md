@@ -15,7 +15,7 @@ The user could not get access to the content. For example, no permissions, conte
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string GetReferrer() const  |  Gets the contact in case of missing rights to the document.
-public std::string GetOwner() const  | _Not yet documented._
+public std::string GetOwner() const  | Not yet documented.
   
 ## Members
   

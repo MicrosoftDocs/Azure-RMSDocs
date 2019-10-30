@@ -13,8 +13,8 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& GetSensitivityTypesRulePackages() const  | _Not yet documented._
-public virtual ~SyncFileSensitivityData()  | _Not yet documented._
+public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& GetSensitivityTypesRulePackages() const  | Not yet documented.
+public virtual ~SyncFileSensitivityData()  | Not yet documented.
   
 ## Members
   
