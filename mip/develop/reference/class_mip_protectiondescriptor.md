@@ -66,7 +66,7 @@ Gets the protection template ID, if any.
 Gets the label ID, if any.
 
   
-**Returns**: [Label](undefined) ID
+**Returns**: Label ID
 This property will only be populated in ProtectionDescriptors for preexisting protected content. It is a field populated by the server at the moment protected content is consumed.
   
 ### GetContentId function
@@ -118,11 +118,11 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](undefined) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](#classmip_1_1ProtectionDescriptor_1a0755f43100a796e634c2181663d56a42)
+A ProtectionHandler may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](#classmip_1_1ProtectionDescriptor_1a0755f43100a796e634c2181663d56a42)
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](undefined) may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](#classmip_1_1ProtectionDescriptor_1abed333d9f6a7d7f958d07917180ce76c)
+A ProtectionHandler may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](#classmip_1_1ProtectionDescriptor_1abed333d9f6a7d7f958d07917180ce76c)

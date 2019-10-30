@@ -61,7 +61,7 @@ Throws [JustificationRequiredError](#classmip_1_1JustificationRequiredError) whe
 ### DeleteLabel function
 Deletes the sensitivity label from the file.
 Changes won't be written to the file until CommitAsync is called. Privileged and Auto method allows the API to override any existing label 
-Throws [JustificationRequiredError](undefined) when setting the label requires the operation to be justified (via the labelingOptions parameter).
+Throws JustificationRequiredError when setting the label requires the operation to be justified (via the labelingOptions parameter).
   
 ### SetProtection function
 Sets either custom or template-based permissions (according to protectionDescriptor->GetProtectionType) to the file.
@@ -77,11 +77,11 @@ Changes won't be written to the file until CommitAsync is called.
   
 ### CommitAsync function
 Writes the changes to the file specified by the |outputFilePath| parameter.
-[FileHandler::Observer](undefined) will be called upon success or failure.
+FileHandler::Observer will be called upon success or failure.
   
 ### CommitAsync function
 Writes the changes to the stream specified by the |outputStream| parameter.
-[FileHandler::Observer](undefined) will be called upon success or failure.
+FileHandler::Observer will be called upon success or failure.
   
 ### IsModified function
 Checks if there are changes to commit to the file.
@@ -89,11 +89,11 @@ Changes won't be written to the file until CommitAsync is called.
   
 ### GetDecryptedTemporaryFileAsync function
 Returns a path to a temporary file (that will be deleted if possible) - representing the decrypted content.
-[FileHandler::Observer](undefined) will be called upon success or failure.
+FileHandler::Observer will be called upon success or failure.
   
 ### GetDecryptedTemporaryStreamAsync function
 Returns a stream - representing the decrypted content.
-[FileHandler::Observer](undefined) will be called upon success or failure.
+FileHandler::Observer will be called upon success or failure.
   
 ### NotifyCommitSuccessful function
 To be called when the changes have been committed to disk.

@@ -9,7 +9,7 @@ ms.date: 10/29/2019
 ---
 
 # class mip::ProtectionProfile::Observer 
-Interface that receives notifications related to [ProtectionProfile](undefined).
+Interface that receives notifications related to ProtectionProfile.
 This interface must be implemented by applications using the protection SDK
   
 ## Summary
@@ -30,25 +30,25 @@ public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const
 Called when profile was loaded successfully.
 
 Parameters:  
-* **profile**: A reference to the newly created [ProtectionProfile](undefined)
+* **profile**: A reference to the newly created ProtectionProfile
 
 
 * **context**: The same context that was passed to [ProtectionProfile::LoadAsync](#classmip_1_1ProtectionProfile_1a0be7c009567e3cf9277d0acea9c5bc02)
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionProfile::LoadAsync](undefined) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](#classmip_1_1ProtectionProfile_1_1Observer_1a31e73965ffb0bd152b3954b013faa773) or [ProtectionProfile::Observer::OnLoadFailure](#classmip_1_1ProtectionProfile_1_1Observer_1acdad73bb6a2dcc93295e0e16e422f291)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](#classmip_1_1ProtectionProfile_1_1Observer_1a31e73965ffb0bd152b3954b013faa773) or [ProtectionProfile::Observer::OnLoadFailure](#classmip_1_1ProtectionProfile_1_1Observer_1acdad73bb6a2dcc93295e0e16e422f291)
   
 ### OnLoadFailure function
 Called when loading a profile caused an error.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred while loading 
+* **error**: Error that occurred while loading 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::LoadAsync](undefined)
+* **context**: The same context that was passed to ProtectionProfile::LoadAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionProfile::LoadAsync](undefined) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](undefined) or [ProtectionProfile::Observer::OnLoadFailure](undefined)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to ProtectionProfile::Observer::OnLoadSuccess or ProtectionProfile::Observer::OnLoadFailure
   
 ### OnListEnginesSuccess function
 Called when list of engines was generated successfully.
@@ -68,7 +68,7 @@ Parameters:
 * **error**: the error that caused the list engines operation to fail. 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::ListEnginesAsync](undefined)
+* **context**: The same context that was passed to ProtectionProfile::ListEnginesAsync
 
 
   
@@ -90,7 +90,7 @@ Parameters:
 * **error**: the error that caused the add engine operation to fail. 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](undefined)
+* **context**: The same context that was passed to ProtectionProfile::AddEngineAsync
 
 
   
@@ -109,5 +109,5 @@ Parameters:
 * **error**: the error that caused the delete engine operation to fail. 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::DeleteEngineAsync](undefined)
+* **context**: The same context that was passed to ProtectionProfile::DeleteEngineAsync
 

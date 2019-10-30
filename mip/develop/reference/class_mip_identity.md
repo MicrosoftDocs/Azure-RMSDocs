@@ -15,25 +15,25 @@ Abstraction for identity.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public Identity()  |  Default [Identity](#classmip_1_1Identity) constructor used when a user email address is not known.
-public Identity(const Identity& other)  |  [Identity](undefined) copy constructor.
-public explicit Identity(const std::string& email)  |  [Identity](undefined) constructor used when a user email address is known.
+public Identity(const Identity& other)  |  Identity copy constructor.
+public explicit Identity(const std::string& email)  |  Identity constructor used when a user email address is known.
 public const std::string& GetEmail() const  |  Get the email.
   
 ## Members
   
 ### Identity function
-Default [Identity](undefined) constructor used when a user email address is not known.
+Default Identity constructor used when a user email address is not known.
   
 ### Identity function
-[Identity](undefined) copy constructor.
+Identity copy constructor.
 
 Parameters:  
-* **[Identity](undefined)**: used to create the copy.
+* **Identity**: used to create the copy.
 
 
   
 ### Identity function
-[Identity](undefined) constructor used when a user email address is known.
+Identity constructor used when a user email address is known.
 
 Parameters:  
 * **email**: user email address.

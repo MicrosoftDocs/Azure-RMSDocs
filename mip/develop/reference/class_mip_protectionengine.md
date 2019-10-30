@@ -39,7 +39,7 @@ Parameters:
 * **observer**: A class implementing the [ProtectionEngine::Observer](#classmip_1_1ProtectionEngine_1_1Observer) interface 
 
 
-* **context**: Client context that will be opaquely passed back to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely passed back to observers and optional HttpDelegate
 
 
   
@@ -47,7 +47,7 @@ Parameters:
 Get collection of templates available to a user.
 
 Parameters:  
-* **context**: Client context that will be opaquely passed to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely passed to optional HttpDelegate
 
 
 
@@ -61,7 +61,7 @@ Parameters:
 * **documentId**: Document ID associated with the document metadata 
 
 
-* **labelId**: [Label](undefined) ID associated with the document metadata with which the document created 
+* **labelId**: Label ID associated with the document metadata with which the document created 
 
 
 * **ownerEmail**: owner of the document 
@@ -70,7 +70,7 @@ Parameters:
 * **A**: delegated user is specified when the authenticating user/application is acting on behalf of another user, empty if none 
 
 
-* **observer**: A class implementing the [ProtectionEngine::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionEngine::Observer interface 
 
 
 * **context**: This same context will be forwarded to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](#classmip_1_1ProtectionEngine_1_1Observer_1ab70a702855d7018b60ab99127d31b610) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](#classmip_1_1ProtectionEngine_1_1Observer_1a16cab8682cca4c4d8d0fee65371ad404)
@@ -84,7 +84,7 @@ Parameters:
 * **documentId**: Document ID associated with the document metadata 
 
 
-* **labelId**: [Label](undefined) ID associated with the document metadata with which the document created 
+* **labelId**: Label ID associated with the document metadata with which the document created 
 
 
 * **ownerEmail**: Owner of the document 
@@ -93,7 +93,7 @@ Parameters:
 * **A**: delegated user is specified when the authenticating user/application is acting on behalf of another user, empty if none 
 
 
-* **context**: This same context will be forwarded to optional [HttpDelegate](undefined)
+* **context**: This same context will be forwarded to optional HttpDelegate
 
 
 
@@ -110,7 +110,7 @@ Parameters:
 * **observer**: A class implementing the [ProtectionHandler::Observer](#classmip_1_1ProtectionHandler_1_1Observer) interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
   
@@ -121,12 +121,12 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
 
   
-**Returns**: [ProtectionHandler](undefined)
+**Returns**: ProtectionHandler
   
 ### CreateProtectionHandlerForConsumptionAsync function
 Creates a protection handler where rights/roles are assigned to specific users.
@@ -135,10 +135,10 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](undefined) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
-* **context**: Client context that will be opaquely forwarded to observers and optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
   
@@ -149,9 +149,9 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **context**: Client context that will be opaquely forwarded to optional [HttpDelegate](undefined)
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
 
 
 
   
-**Returns**: [ProtectionHandler](undefined)
+**Returns**: ProtectionHandler

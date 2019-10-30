@@ -9,16 +9,16 @@ ms.date: 10/29/2019
 ---
 
 # class mip::FileProfile::Settings 
-[Settings](undefined) used by [FileProfile](undefined) during its creation and throughout its lifetime.
+Settings used by FileProfile during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, std::shared_ptr\<AuthDelegate\> authDelegate, std::shared_ptr\<ConsentDelegate\> consentDelegate, std::shared_ptr\<Observer\> observer)  |  [FileProfile::Settings](undefined) constructor.
+public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, std::shared_ptr\<AuthDelegate\> authDelegate, std::shared_ptr\<ConsentDelegate\> consentDelegate, std::shared_ptr\<Observer\> observer)  |  FileProfile::Settings constructor.
 public CacheStorageType GetCacheStorageType() const  |  Get whether caches are stored in memory or on disk.
 public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Gets the auth delegate used for acquiring authentication tokens.
 public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Gets the consent delegate used to request user consent connecting to services.
-public std::shared_ptr\<Observer\> GetObserver() const  |  Gets the observer that receives notifications of events related to [FileProfile](undefined).
+public std::shared_ptr\<Observer\> GetObserver() const  |  Gets the observer that receives notifications of events related to FileProfile.
 public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
@@ -32,7 +32,7 @@ public bool CanCacheLicenses() const  |  Gets whether or not end user licenses (
 ## Members
   
 ### Settings function
-[FileProfile::Settings](undefined) constructor.
+FileProfile::Settings constructor.
 
 Parameters:  
 * **mipContext**: Global context settings 
@@ -47,7 +47,7 @@ Parameters:
 * **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
-* **observer**: [Observer](undefined) instance that will receive notifications of events related to [FileProfile](undefined)
+* **observer**: Observer instance that will receive notifications of events related to FileProfile
 
 
   
@@ -70,10 +70,10 @@ Gets the consent delegate used to request user consent connecting to services.
 **Returns**: Consent delegate used for requesting user consent
   
 ### GetObserver function
-Gets the observer that receives notifications of events related to [FileProfile](undefined).
+Gets the observer that receives notifications of events related to FileProfile.
 
   
-**Returns**: [Observer](undefined) that receives notifications of events related to [FileProfile](undefined)
+**Returns**: Observer that receives notifications of events related to FileProfile
   
 ### GetMipContext function
 Get MIP context which represents shared state across all profiles.

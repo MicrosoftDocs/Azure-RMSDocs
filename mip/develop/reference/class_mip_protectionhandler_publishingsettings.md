@@ -9,7 +9,7 @@ ms.date: 10/29/2019
 ---
 
 # class mip::ProtectionHandler::PublishingSettings 
-Settings used to create a [ProtectionHandler](undefined) to protect new content.
+Settings used to create a ProtectionHandler to protect new content.
   
 ## Summary
  Members                        | Descriptions                                

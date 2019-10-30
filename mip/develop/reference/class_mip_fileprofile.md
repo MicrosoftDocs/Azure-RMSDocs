@@ -9,7 +9,7 @@ ms.date: 10/29/2019
 ---
 
 # class mip::FileProfile 
-[FileProfile](undefined) class is the root class for using the Microsoft Information Protection operations.
+FileProfile class is the root class for using the Microsoft Information Protection operations.
 A typical application will only need one Profile.
   
 ## Summary
@@ -30,19 +30,19 @@ Returns the profile settings.
   
 ### ListEnginesAsync function
 Starts list engines operation.
-[FileProfile::Observer](undefined) will be called upon success or failure.
+FileProfile::Observer will be called upon success or failure.
   
 ### UnloadEngineAsync function
 Starts unloading the file engine with the given ID.
-[FileProfile::Observer](undefined) will be called upon success or failure.
+FileProfile::Observer will be called upon success or failure.
   
 ### AddEngineAsync function
 Starts adding a new file engine to the profile.
-[FileProfile::Observer](undefined) will be called upon success or failure.
+FileProfile::Observer will be called upon success or failure.
   
 ### DeleteEngineAsync function
 Starts deleting the file engine with the given ID. All data for the given profile will be deleted.
-[FileProfile::Observer](undefined) will be called upon success or failure.
+FileProfile::Observer will be called upon success or failure.
 
 ### LoadAsync function
 Starts loading a profile based on the provided settings.

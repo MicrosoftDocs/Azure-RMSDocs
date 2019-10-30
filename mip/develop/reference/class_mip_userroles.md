@@ -21,7 +21,7 @@ public const std::vector\<std::string\>& Roles() const  |  Gets roles associated
 ## Members
   
 ### UserRoles function
-[UserRoles](undefined) constructor.
+UserRoles constructor.
 
 Parameters:  
 * **users**: Group of users that share the same roles 

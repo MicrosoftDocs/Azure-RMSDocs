@@ -9,7 +9,7 @@ ms.date: 10/29/2019
 ---
 
 # class mip::FileHandler::Observer 
-[Observer](undefined) interface for clients to get notifications events related to file handler.
+Observer interface for clients to get notifications events related to file handler.
 All errors inherit from [mip::Error](#classmip_1_1Error). 
 Client should not call the engine back on the thread that calls the observer.
   

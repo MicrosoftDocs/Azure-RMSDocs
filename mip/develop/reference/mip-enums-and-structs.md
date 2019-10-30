@@ -64,9 +64,9 @@ Alignment for content marks (content header or content footer).
 #### AssignmentMethod enum
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
-STANDARD            | [Label](undefined) assignment method is standard
-PRIVILEGED            | [Label](undefined) assignment method is privileged
-AUTO            | [Label](undefined) assignment method is automatic
+STANDARD            | Label assignment method is standard
+PRIVILEGED            | Label assignment method is privileged
+AUTO            | Label assignment method is automatic
 The assignment method of the label on the document. Whether the Assignment of the label was done automatically, standard or as a privileged operation (The equivalent to an administrator operation).
   
 #### ActionSource enum
@@ -103,7 +103,7 @@ DoNotForwardProtection            | Filter labels that may result in template pr
 AdhocProtection            | Filter labels that may result in adhoc protection
 HyokProtection            | Filter labels that may result in hyok protection
 PredefinedTemplate            | Filter labels that may result in predefined template protection
-[Label](undefined) filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
+Label filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
   
 #### Consent enum
  Values                         | Descriptions                                
@@ -152,8 +152,8 @@ OPERATION_CANCELLED            | Operation cancelled
 ADHOC_PROTECTION_REQUIRED            | Adhoc protection should be set to complete the action on the file
 DEPRECATED_API            | Caller invoked a deprecated API
 TEMPLATE_NOT_FOUND            | Template ID is not recognized
-LABEL_NOT_FOUND            | [Label](undefined) ID is not recognized
-LABEL_DISABLED            | [Label](undefined) is disabled or inactive
+LABEL_NOT_FOUND            | Label ID is not recognized
+LABEL_DISABLED            | Label is disabled or inactive
   
 #### InspectorType enum
  Values                         | Descriptions                                
