@@ -5,8 +5,8 @@ title: Migrate Azure Information Protection labels to unified sensitivity labels
 description: Migrate Azure Information Protection labels to unified sensitivity labels for clients and services that support the Microsoft Information Protection framework. 
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 10/24/2019
+manager: rkarlin
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -193,6 +193,12 @@ To confirm whether the clients and services you use support unified labeling, re
 - Apps from software vendors and developers that use the [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview).
 
 ##### Services that currently support unified labeling include:
+
+- Power BI (in preview)
+
+- Office Online and Outlook on the web
+
+- SharePoint Online
 
 - Microsoft Defender Advanced Threat Protection
 

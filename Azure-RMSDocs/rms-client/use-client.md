@@ -56,7 +56,7 @@ Because the unified labeling client and the classic client require a separate in
 
 Which client should you use?
 
-- Use the **labeling client built in to Office** for your Windows computers when you have Office 365 apps that are a minimum version 1910, you want to use the same labels and policy settings that can also be used by MacOS, iOS, and Android, and you don't need features in your Office apps that require the unified labeling client or classic client. These features currently include automatic and recommended labeling, and the Information Protection bar under the ribbon for easier label selection and visibility. This client supports switching accounts, and because it doesn't use an Office add-in, it has better performance in Office apps than using either of the Azure Information Protection clients.
+- Use the **labeling client built in to Office** for your Windows computers when you have Office 365 apps that are a minimum version 1910, you want to use the same labels and policy settings that can also be used by MacOS, iOS, and Android, and you don't need features in your Office apps that require the unified labeling client or classic client. These features include the Information Protection bar under the ribbon for easier label selection and visibility. This client supports switching accounts, and because it doesn't use an Office add-in, it has better performance in Office apps than using either of the Azure Information Protection clients.
 
 - Use the **Azure Information Protection unified labeling client** on Windows computers for labels and policy settings that can also be used by MacOS, iOS, and Android, you want to label files independently from Office 365 apps, and you don’t need features that are only supported by the classic client. These features currently include protecting content with an on-premises key (HYOK) and a general availability version of the scanner for on-premises data stores.
 
@@ -82,9 +82,6 @@ When you have a Windows computer that runs Office 365 apps that are a minimum ve
 
 - You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. For production use, you deploy the classic client on servers to run the Azure Information Protection scanner.
 
-
-
-
 ## Compare the labeling clients for Windows computers
 
 Use the following table to help compare which features are supported by the three labeling clients for Windows computers.
@@ -95,7 +92,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manual labeling:| **Yes** | **Yes** |**Yes** |
 |Default label:| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling:| **Yes** | **Yes** | No |
+|Recommended or automatic labeling:| **Yes** | **Yes** | **Yes** |
 |Mandatory labeling:| **Yes** | **Yes** | No |
 |User-defined permissions for a label:<br />- Do Not Forward for emails<br />- Custom permissions for Word, Excel, PowerPoint, File Explorer| **Yes** | **Yes** | No |
 |Multilanguage support for labels:| **Yes** | **Yes** |**Yes** |
