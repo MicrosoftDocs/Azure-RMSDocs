@@ -43,6 +43,15 @@ Each general availability (GA) version of the Azure Information Protection unifi
 
 Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
 
+##### General availability versions that are no longer supported:
+
+|Client version|Date released|
+|--------------|-------------|
+|2.0.778.0|04/16/2019|
+
+The date format used on this page is *month/day/year*.
+
+
 ### Release information
 
 Use the following information to see what’s new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
