@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::PolicyPackageData 
@@ -13,8 +13,8 @@ ms.date: 08/27/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\<std::unique_ptr\<RulePackageData\>\>& GetRules() const  | _Not yet documented._
-public virtual ~PolicyPackageData()  | _Not yet documented._
+public const std::vector\<std::unique_ptr\<RulePackageData\>\>& GetRules() const  | Not yet documented.
+public virtual ~PolicyPackageData()  | Not yet documented.
   
 ## Members
   

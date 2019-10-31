@@ -1,5 +1,5 @@
 ---
-title: Functions
+title: Classes
 description: Functions
 author: msmbaldwin
 ms.service: information-protection
@@ -10,9 +10,10 @@ ms.author: mbaldwin
 ---
 # Functions
 
-## Summary 
 
-### Namespace mip
+
+## Namespace mip
+
 | Functions by namespace scope   | Descriptions                                |
 |--------------------------------|---------------------------------------------|
 public std::string GetAssignmentMethodString(AssignmentMethod method)       |  Converts AssignmentMethod enum to a string description.
@@ -25,51 +26,13 @@ public const std::string& GetCustomSettingPolicyDataFile()       |  Name of the 
 public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  Name of the setting to explicitly specify sensitivity types data file path.
 public const std::string& GetCustomSettingLabelCustomPropertiesSyncEnabled()       |  Name of the setting that allows to enable label by custom properties and custom properties by label features.
 public const std::map\<FlightingFeature, bool\>& GetDefaultFeatureSettings()       |  Gets whether or not a feature is enabled by default.
-public MIP_API void __CDECL ReleaseAllResources()       |  Releases all resources (threads, etc) before shutdown.
-public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::istream\>& stdIStream)       |  Creates a [Stream](class_mip_stream.md) from a std::istream.
-public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::ostream\>& stdOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::ostream.
-public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::iostream\>& stdIOStream)       |  Creates a [Stream](class_mip_stream.md) from a std::iostream.
-public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an [Stream](class_mip_stream.md) from a buffer.
+public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::istream\>& stdIStream)       |  Creates a Stream from a std::istream.
+public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::ostream\>& stdOStream)       |  Creates a Stream from a std::ostream.
+public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::iostream\>& stdIOStream)       |  Creates a Stream from a std::iostream.
+public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an Stream from a buffer.
 public MIP_API std::vector\<uint8_t\> ReadFromStream(const std::shared_ptr\<mip::Stream\>& stream)       |  Read all the bytes of stream.
-
-### Namespace mip::auditmetadatakeys
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-public std::string Sender()       |  Audit metadata keys in string representation.
-public std::string Recipients()       | _Not yet documented._
-public std::string LastModifiedBy()       | _Not yet documented._
-public std::string LastModifiedDate()       | _Not yet documented._
-
-
-### Namespace mip::rights
-
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-public std::string Owner()       |  Gets string identifier for 'owner' right.
-public std::string View()       |  Gets string identifier for 'view' right.
-public std::string AuditedExtract()       |  Gets string identifier for 'audited extract' right.
-public std::string Edit()       |  Gets string identifier for 'edit' right.
-public std::string Export()       |  Gets string identifier for 'export' right.
-public std::string Extract()       |  Gets string identifier for 'extract' right.
-public std::string Print()       |  Gets string identifier for 'print' right.
-public std::string Comment()       |  Gets string identifier for 'comment' right.
-public std::string Reply()       |  Gets string identifier for 'reply' right.
-public std::string ReplyAll()       |  Gets string identifier for 'reply all' right.
-public std::string Forward()       |  Gets string identifier for 'forward' right.
-public std::vector\<std::string\> EmailRights()       |  Gets a list of rights that apply to emails.
-public std::vector\<std::string\> EditableDocumentRights()       |  Gets a list of rights that apply to documents.
-public std::vector\<std::string\> CommonRights()       |  Gets a list of rights that apply in all scenarios.
-
-### Namespace mip::roles
-
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-public std::string Viewer()       |  Gets string identifier for 'viewer' role.
-public std::string Reviewer()       |  Gets string identifier for 'reviewer' role.
-public std::string Author()       |  Gets string identifier for 'author' role.
-public std::string CoOwner()       |  Gets string identifier for 'co-owner' role.
-
-## Namespace mip
+public ActionType operator&(ActionType a, ActionType b)       |  And (&) operator for Action type enum.
+public ActionType operator^(ActionType a, ActionType b)       |  Xor (^) operator for Action type enum.
 
 ### GetAssignmentMethodString function
 Converts AssignmentMethod enum to a string description.
@@ -134,19 +97,20 @@ Name of the setting to explicitly specify sensitivity types data file path.
   
 **Returns**: The custom settings key.
   
-### GetCustomSettingExternalLabelsEnabled function
-Name of the setting that allows to enable "external labels" feature.
+### GetCustomSettingLabelCustomPropertiesSyncEnabled function
+Name of the setting that allows to enable label by custom properties and custom properties by label features.
 
   
 **Returns**: The custom settings key.
   
-### ReleaseAllResources function
-Releases all resources (threads, etc) before shutdown.
-This function must be called exactly once prior to process termination. It provides MIP the opportunity to uninitialize itself in a moment where its dependent libraries are still guaranteed to be loaded and thread joining is still possible. Applications must release references to all MIP objects (for example, Profiles, Engines, Handlers) before calling this function.
-If this function is not called, MIP will be naturally unloaded as part of standard process teardown. On some platforms, this may result in deadlock (for example, threads cannot be joined on win32 in response to process teardown) or crashes (for example, the DLL unload order for delay-loaded libraries on win32 is not controlled by MIP, so its dependent libraries may have been unloaded by the time MIP shutdown code executes, resulting in invalid read failures).
+### GetDefaultFeatureSettings function
+Gets whether or not a feature is enabled by default.
+
+  
+**Returns**: Default state of flighting features
   
 ### CreateStreamFromStdStream function
-Creates a [Stream](class_mip_stream.md) from a std::istream.
+Creates a Stream from a std::istream.
 
 Parameters:  
 * **stdIStream**: Backing std::istream
@@ -154,10 +118,10 @@ Parameters:
 
 
   
-**Returns**: [Stream](class_mip_stream.md) wrapping a std::istream
+**Returns**: Stream wrapping a std::istream
   
 ### CreateStreamFromStdStream function
-Creates a [Stream](class_mip_stream.md) from a std::ostream.
+Creates a Stream from a std::ostream.
 
 Parameters:  
 * **stdOStream**: Backing std::ostream
@@ -165,10 +129,10 @@ Parameters:
 
 
   
-**Returns**: [Stream](class_mip_stream.md) wrapping a std::ostream
+**Returns**: Stream wrapping a std::ostream
   
 ### CreateStreamFromStdStream function
-Creates a [Stream](class_mip_stream.md) from a std::iostream.
+Creates a Stream from a std::iostream.
 
 Parameters:  
 * **stdIOStream**: Backing std::iostream
@@ -176,10 +140,10 @@ Parameters:
 
 
   
-**Returns**: [Stream](class_mip_stream.md) wrapping a std::iostream
+**Returns**: Stream wrapping a std::iostream
   
 ### CreateStreamFromBuffer function
-Creates an [Stream](class_mip_stream.md) from a buffer.
+Creates an Stream from a buffer.
 
 Parameters:  
 * **buffer**: Pointer to a buffer
@@ -189,11 +153,35 @@ Parameters:
   
 **Returns**: Size Size of buffer
   
+### ReadFromStream function
+Read all the bytes of stream.
+
+Parameters:  
+* **pointer**: to a stream.
 
 
 
-## Namespace mip::auditmetadatakeys
+  
+**Returns**: A vector of bytes.
+  
+### operator| function
+Or (|) operator for Action type enum.
+  
+### operator& function
+And (&) operator for Action type enum.
+  
+### operator^ function
+Xor (^) operator for Action type enum.
 
+## namespace mip::auditmetadatakeys
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public std::string Sender()       |  Audit metadata keys in string representation.
+public std::string Recipients()       | Not yet documented.
+public std::string LastModifiedBy()       | Not yet documented.
+public std::string LastModifiedDate()       | Not yet documented.
+  
 ### Sender function
 Audit metadata keys in string representation.
   
@@ -209,11 +197,25 @@ _Not documented yet._
 _Not documented yet._
 
 
-
-
-
-
-## Namespace mip::rights
+## namespace `mip::rights` 
+  
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public std::string Owner()       |  Gets string identifier for 'owner' right.
+public std::string View()       |  Gets string identifier for 'view' right.
+public std::string AuditedExtract()       |  Gets string identifier for 'audited extract' right.
+public std::string Edit()       |  Gets string identifier for 'edit' right.
+public std::string Export()       |  Gets string identifier for 'export' right.
+public std::string Extract()       |  Gets string identifier for 'extract' right.
+public std::string Print()       |  Gets string identifier for 'print' right.
+public std::string Comment()       |  Gets string identifier for 'comment' right.
+public std::string Reply()       |  Gets string identifier for 'reply' right.
+public std::string ReplyAll()       |  Gets string identifier for 'reply all' right.
+public std::string Forward()       |  Gets string identifier for 'forward' right.
+public std::vector\<std::string\> EmailRights()       |  Gets a list of rights that apply to emails.
+public std::vector\<std::string\> EditableDocumentRights()       |  Gets a list of rights that apply to documents.
+public std::vector\<std::string\> CommonRights()       |  Gets a list of rights that apply in all scenarios.
+  
 
 ### Owner function
 Gets string identifier for 'owner' right.
@@ -299,9 +301,15 @@ Gets a list of rights that apply in all scenarios.
   
 **Returns**: A list of rights that apply in all scenarios
 
-
-## Namespace mip::roles
-
+## namespace mip::roles
+  
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public std::string Viewer()       |  Gets string identifier for 'viewer' role.
+public std::string Reviewer()       |  Gets string identifier for 'reviewer' role.
+public std::string Author()       |  Gets string identifier for 'author' role.
+public std::string CoOwner()       |  Gets string identifier for 'co-owner' role.
+  
 ### Viewer function
 Gets string identifier for 'viewer' role.
 
@@ -329,3 +337,4 @@ Gets string identifier for 'co-owner' role.
   
 **Returns**: String identifier for 'co-owner' role
 A co-owner has all permissions
+
