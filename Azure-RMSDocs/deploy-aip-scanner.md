@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/27/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -101,7 +101,7 @@ See the [Optimizing the performance of the scanner](#optimizing-the-performance-
 
 - **For each scanner**: 4 core processors; 8 GB RAM recommended (4 GB minimum).
 
-##### Scanner from the classic client:
+##### Scanner from the unified labeling client:
 
 - **Disk size**: Although the size of the scanner configuration database will vary for each deployment, you can use the following equation as guidance: `100 KB + <file count> *(1000 + 4*<average file name length>)`. 
     
