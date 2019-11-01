@@ -6,7 +6,7 @@ description: Conditions for a label let you automatically assign a label to a do
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -57,15 +57,15 @@ If you configure automatic classification rather than recommended, the label is 
 
 ## How automatic or recommended labels are applied
 
-- Automatic classification applies to Word, Excel, and PowerPoint when documents are saved, and apply to Outlook when emails are sent. 
+- Automatic classification applies to Word, Excel, and PowerPoint when you save documents, and apply to Outlook when you send emails. 
     
     You cannot use automatic classification for documents and emails that were previously manually labeled, or previously automatically labeled with a higher classification. 
 
-- Recommended classification applies to Word, Excel, and PowerPoint when documents are saved. You cannot use recommended classification for Outlook unless you configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook) that is currently in preview.
+- Recommended classification applies to Word, Excel, and PowerPoint when you save documents. You cannot use recommended classification for Outlook unless you configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook) that is currently in preview.
     
     You cannot use recommended classification for documents that were previously labeled with a higher classification. 
 
-You can change this behavior so that the Azure Information Protection client periodically checks documents for the condition rules that you specify. This configuration requires an [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) that is currently in preview.
+You can change this behavior so that the Azure Information Protection client periodically checks documents for the condition rules that you specify. For example, this would be appropriate if you're using [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps that are automatically saved in SharePoint Online, OneDrive, or OneDrive for Business. To support this scenario, you can configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) that is currently in preview. The setting turns on classification to run continuously in the background.
 
 ### How multiple conditions are evaluated when they apply to more than one label
 
@@ -89,7 +89,7 @@ You can change this behavior so that the Azure Information Protection client per
 4. On the **Condition** blade, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own:
     - For **Information Types**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
-        The information types use the Office 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](/office365/securitycompliance/what-the-sensitive-information-types-look-for) from the Office 365 documentation.
+        The information types use the Office 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) from the Office 365 documentation.
         
         The list of information types that you can select from the Azure portal is periodically updated to include any new Office DLP additions. However, the list excludes any custom sensitive information types that you have defined and uploaded as a rule package to the Office 365 Security & Compliance Center.
         

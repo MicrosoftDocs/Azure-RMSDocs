@@ -6,7 +6,7 @@ description: An introduction tutorial that edits the Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -49,9 +49,9 @@ To complete this tutorial, you need:
     
     If you don't have a subscription that includes Azure Information Protection Plan 2, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
-2. You've added the Azure Information Protection blade to the Azure portal, and confirmed that the protection service is activated.
-
-    If you need help with these actions, see [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md)
+2. The Azure Information Protection blade is added to the Azure portal, the protection service is activated, and you have one or more labels published in the Azure Information Protection global policy.
+    
+    These steps are covered in the [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
 
 3. The Azure Information Protection client (classic) is installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
     
@@ -97,9 +97,9 @@ Using the Azure portal, we'll first change a couple of policy settings, and then
     
     We'll use these policy settings later in the tutorial when you will see them in action.
 
-4. For **Select the default label**, select **General**. 
-
-    If you don't have this label because you have an older version of the policy, choose **Internal** as the equivalent label.
+4. For **Select the default label**, select one of the labels, such as **General**. 
+    
+    The **General** label is one of the default labels that Azure Information Protection can create for you. This step is covered in the [Create and publish labels](quickstart-viewpolicy.md#create-and-publish-labels) section from the quickstart to add Azure Information Protection to the Azure portal.
 
 5. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this option to **On** if it is not already.
 

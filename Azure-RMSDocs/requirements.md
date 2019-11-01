@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -124,9 +124,13 @@ The Azure Information Protection clients can label and protect documents and ema
 
 Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only. Consequently, labels that apply protection do not display to users on the Azure Information Protection bar or from the **Protect** button (classic client) or **Sensitivity** button (unified labeling client) on the Office ribbon. 
 
-The Azure Information Protection clients do not support multiple versions of Office on the same computer. These clients also do not support switching user accounts in Office.
-
 For information about which Office editions support the protection service, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
+
+### Office features and capabilities not supported
+
+- The Azure Information Protection clients (classic client and unified labeling client) do not support multiple versions of Office on the same computer, or switching user accounts in Office.
+
+- The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.
 
 ## Firewalls and network infrastructure
 
