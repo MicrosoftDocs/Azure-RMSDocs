@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/24/2019
+ms.date: 11/01/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,7 +30,7 @@ ms.subservice: aiplabels
 In this quickstart, you'll install and configure the Azure Information Protection scanner to find what sensitive information you have in files that are stored in an on-premises data store. For example, a local folder, network share, or SharePoint Server.
 
 > [!NOTE]
-> You can use this quickstart with the current general availability version of the Azure Information Protection client (classic) or the current preview version of the Azure Information Protection unified labeling client.
+> You can use this quickstart with the current general availability version of the Azure Information Protection client (classic), or the current general availability version of the Azure Information Protection unified labeling client that includes a preview version of the scanner.
 >  
 > Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 
@@ -134,7 +134,7 @@ You're now ready to install the scanner with the scanner profile that you've jus
     
     Wait until you see values displayed for the **LAST SCAN RESULTS** and **LAST SCAN (END TIME)** columns.
     
-    Alternatively, check the local Windows **Applications and Services** event log, **Azure Information Protection**. Confirm the informational event ID **911** for the **MSIP.Scanner** process. The event log entry also has a summary of results from the scan.
+    Alternatively, for the scanner from the classic client only: Check the local Windows **Applications and Services** event log, **Azure Information Protection**. Confirm the informational event ID **911** for the **MSIP.Scanner** process. The event log entry also has a summary of results from the scan.
 
 ## See detailed results
 
