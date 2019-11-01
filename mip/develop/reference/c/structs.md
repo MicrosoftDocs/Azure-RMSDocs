@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: reference
 
 ms.author: mbaldwin
-ms.date: 10/31/2019
+ms.date: 11/1/2019
 ---
 
 # Structures
@@ -14,6 +14,8 @@ ms.date: 10/31/2019
 ## mip_cc_application_info
 
 ApplicationInfo definition
+
+From [application_info_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/application_info_cc.h)
 
 ```c
 typedef struct {
@@ -27,6 +29,8 @@ typedef struct {
 
 Defines auth callback functions
 
+From [auth_callback_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/auth_callback_cc.h)
+
 ```c
 typedef struct {
   const char* authority; /**< OAuth2 authority */
@@ -39,6 +43,8 @@ typedef struct {
 
 A file Containing the common types used by the upe, file and protection modules.
 
+From [common_types_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/common_types_cc.h)
+
 ```c
 typedef struct {
   char guid[37];
@@ -48,6 +54,8 @@ typedef struct {
 ## mip_cc_kv_pair
 
 Contains C API definitions for common string dictionary.
+
+From [dictionary_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/dictionary_cc.h)
 
 ```c
 typedef struct {
@@ -60,6 +68,8 @@ typedef struct {
 
 HTTP request/response header
 
+From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
+
 ```c
 typedef struct {
   const char* name;  /**< Header name/key */
@@ -70,6 +80,8 @@ typedef struct {
 ## mip_cc_http_request
 
 HTTP request
+
+From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
 
 ```c
 typedef struct {
@@ -87,6 +99,8 @@ typedef struct {
 
 HTTP response
 
+From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
+
 ```c
 typedef struct {
   const char* id;                    /**< Unique request ID--correlated with the same property in mip_cc_http_request */
@@ -102,6 +116,8 @@ typedef struct {
 
 Identity definition
 
+From [identity_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/identity_cc.h)
+
 ```c
 typedef struct {
   const char* email;          /**< User email address */
@@ -111,6 +127,8 @@ typedef struct {
 ## mip_cc_feature_override
 
 Defines C-Style MipContext functions
+
+From [mip_context_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/mip_context_cc.h)
 
 ```c
 typedef struct {
@@ -122,6 +140,8 @@ typedef struct {
 ## mip_cc_user_rights
 
 A group of users and the rights associated with them
+
+From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
 
 ```c
 typedef struct {
@@ -136,6 +156,8 @@ typedef struct {
 
 A group of users and the roles associated with them
 
+From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
+
 ```c
 typedef struct {
   const char** users;  /**< List of users */
@@ -149,6 +171,8 @@ typedef struct {
 
 Defines task dispatcher callback functions
 
+From [task_dispatcher_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/task_dispatcher_delegate_cc.h)
+
 ```c
 typedef struct {
   const char* id;                   /**< Task ID */
@@ -160,6 +184,8 @@ typedef struct {
 ## mip_cc_application_action_state
 
 Represents the current state of the application as it performs a label-related operation
+
+From [upe/application_action_state_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/application_action_state_cc.h)
 
 ```c
 typedef struct {
@@ -176,6 +202,8 @@ typedef struct {
 ## mip_cc_document_state
 
 Callback function definition for retrieving document metatdata, filtered by name/prefix
+
+From [upe/document_state_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/document_state_cc.h)
 
 ```c
 typedef struct {
