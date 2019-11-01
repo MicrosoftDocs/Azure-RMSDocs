@@ -680,10 +680,10 @@ The full list of cmdlets for the scanner:
 
 ## Event log IDs and descriptions for the scanner
 
+Use the following sections to identify the possible event IDs and descriptions for the scanner. These events are logged on the server that runs the scanner service, in the Windows **Applications and Services** event log, **Azure Information Protection**.
+
 > [!NOTE]
 > This section applies to the scanner from the classic client only. Currently, the scanner from the unified labeling client doesn't write information to the event log.
-
-Use the following sections to identify the possible event IDs and descriptions for the scanner. These events are logged on the server that runs the scanner service, in the Windows **Applications and Services** event log, **Azure Information Protection**.
 
 -----
 
