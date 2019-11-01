@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/27/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -75,6 +75,8 @@ This client is replacing the Azure Information Protection client (classic). To c
     
     - As with the scanner from the classic client, by default, the scanner protects Office files and PDF files. You can protect other files types when you use a [PowerShell advanced setting](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
     
+    This version of the scanner doesn't write to the Windows event log.
+
     - Known issue: New and renamed labels aren't available to select as a default label for the scanner profile or repository settings. Workarounds:
         - For new labels: In the Azure portal, [add the label](../configure-policy-add-remove-label.md) you want to use to the global policy or a scoped policy.
         - For renamed labels: Close and reopen the Azure portal.
