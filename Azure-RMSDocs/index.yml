@@ -13,7 +13,7 @@ metadata:
   author: cabailey
   ms.author: cabailey
   manager: rkarlin
-  ms.date: 09/17/2019 #Required; mm/dd/yyyy format.
+  ms.date: 11/01/2019 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | deploy | download | get-started | how-to-guide | learn | overview | quickstart | tutorial
 
@@ -60,7 +60,10 @@ landingContent:
           - text: New GA version of the unified labeling client
             url: ./rms-client/unifiedlabelingclient-version-release-history.md#version-25330
           - text: Compare labeling clients for Windows
-            url: ./rms-client/use-client#compare-the-labeling-clients-for-windows-computers
+            url: ./rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers
+          - text: To 5 recommended Ignite sessions
+            url: what-is-information-protection.md#microsoft-ignite
+
 
   # Card
   - title: Classify & protect data in on-premises data stores
