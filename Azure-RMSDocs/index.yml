@@ -64,7 +64,6 @@ landingContent:
           - text: To 5 recommended Ignite sessions
             url: what-is-information-protection.md#microsoft-ignite
 
-
   # Card
   - title: Classify & protect data in on-premises data stores
     linkLists:
