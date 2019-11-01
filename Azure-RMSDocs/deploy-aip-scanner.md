@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/31/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -362,7 +362,7 @@ You're now ready to run your first scan in discovery mode.
     
     - Using PowerShell, you can run `Get-AIPScannerStatus` to monitor the status change.
     
-    - Check the local Windows **Applications and Services** event log, **Azure Information Protection**. This log also reports when the scanner has finished scanning, with a summary of results. Look for the informational event ID **911**.
+    - Scanner from the classic client only: Check the local Windows **Applications and Services** event log, **Azure Information Protection**. This log also reports when the scanner has finished scanning, with a summary of results. Look for the informational event ID **911**.
 
 3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports. The .txt summary files include the time taken to scan, the number of scanned files, and how many files had a match for the information types. The .csv files have more details for each file. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
     
@@ -403,7 +403,7 @@ If you are following these instructions, the scanner runs one time and in the re
     
         Start-AIPScan
 
-4. Monitor the event log for the informational type **911** again, with a time stamp later than when you started the scan in the previous step. 
+4. Scanner from the classic client only: Monitor the event log for the informational type **911** again, with a time stamp later than when you started the scan in the previous step.
     
     Then check the reports to see details of which files were labeled, what classification was applied to each file, and whether protection was applied to them. Or, use the Azure portal to more easily see this information.
 
@@ -681,6 +681,9 @@ The full list of cmdlets for the scanner:
 ## Event log IDs and descriptions for the scanner
 
 Use the following sections to identify the possible event IDs and descriptions for the scanner. These events are logged on the server that runs the scanner service, in the Windows **Applications and Services** event log, **Azure Information Protection**.
+
+> [!NOTE]
+> This section applies to the scanner from the classic client only. Currently, the scanner from the unified labeling client doesn't write information to the event log.
 
 -----
 
