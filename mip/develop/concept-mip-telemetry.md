@@ -1,12 +1,12 @@
 ---
 title: Concepts - The core concepts in the MIP SDK - Telemetry Control
 description: This article will help you understand how to opt out of telemetry and which events are still sent when opted out.
-author: msmbaldwin
+author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 10/01/2019
-ms.author: tommoser
+ms.author: tommos
 ---
 
 # Microsoft Information Protection SDK - Telemetry Configuration
@@ -27,119 +27,116 @@ Review the tables below to see exactly what events and data are sent with minimu
 
 #### Event: Heartbeat
 
-| Name                                 | Description                                                   | Scrubbed |
-| ------------------------------------ | ------------------------------------------------------------- | -------- |
-| App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo. | No       |
-| App.ApplicationName                  | The application name provided via mip::ApplicationInfo.       | No       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.    | No       |
-| ApplicationId                        |                                                               | No       |
-| ApplicationName                      |                                                               | No       |
-| CreationTime                         |                                                               | No       |
-| DefaultLabel.Id                      |                                                               | No       |
-| Engine.TenantId                      |                                                               | No       |
-| Tenant ID                            |                                                               | No       |
-| Engine.UserObjectId                  |                                                               | No       |
-| User GUID                            |                                                               | No       |
-| Event.CorrelationId                  |                                                               | No       |
-| Event.CorrelationIdDescription       |                                                               | No       |
-| Event.ParentCorrelationId            |                                                               | No       |
-| Event.ParentCorrelationIdDescription |                                                               | No       |
-| Event.UniqueId                       |                                                               | No       |
-| MachineName                          |                                                               | **Yes**  |
-| MIP.Version                          |                                                               | No       |
-| Operation                            |                                                               | No       |
-| OrganizationId                       |                                                               | No       |
-| Tenant ID                            |                                                               | No       |
-| Platform                             |                                                               | No       |
-| ProcessName                          |                                                               | No       |
-| ProductVersion                       |                                                               | No       |
-| SDKVersion                           |                                                               | No       |
-| UserId                               |                                                               | **Yes**  |
-| UserObjectId                         |                                                               | No       |
-| Version                              |                                                               | No       |
+| Name                                 | Description                                                                            | Scrubbed |
+| ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
+| App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo.                          | No       |
+| App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | No       |
+| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | No       |
+| ApplicationId                        | The application version profided via mip::ApplicationInfo.                             | No       |
+| ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | No       |
+| CreationTime                         | Time event was generated.                                                              | No       |
+| DefaultLabel.Id                      | Tenant default label ID.                                                               | No       |
+| Engine.TenantId                      | Home tenant GUID of the authenticated user.                                            | No       |
+| Engine.UserObjectId                  | User object ID in Azure Active Directory.                                              | No       |
+| Event.CorrelationId                  | Generated unique ID associated with object that triggered the event.                   | No       |
+| Event.CorrelationIdDescription       | C++ class name of object that triggered the event.                                     | No       |
+| Event.ParentCorrelationId            | Parent event correlation ID.                                                           | No       |
+| Event.ParentCorrelationIdDescription | Generated Unique ID associated with the parent of the object that triggered the event. | No       |
+| Event.UniqueId                       | Generated unique ID assigned to the event.                                             | No       |
+| MachineName                          | Name of the system that generated the event.                                           | **Yes**  |
+| MIP.Version                          | Version of the MIP SDK.                                                                | No       |
+| Operation                            | Heartbeat                                                                              | No       |
+| OrganizationId                       | Home tenant GUID of the authenticated user.                                            | No       |
+| Platform                             | Operating system version.                                                              | No       |
+| ProcessName                          | Name of the process using the SDK.                                                     | No       |
+| ProductVersion                       | Same as “App.ApplicationVersion”.                                                      | No       |
+| SDKVersion                           | Same as MIP.Version.                                                                   | No       |
+| UserId                               | Email address of the user.                                                             | **Yes**  |
+| UserObjectId                         | Azure AD object ID of the user.                                                        | No       |
+| Version                              | Audit version schema (“1.1”).                                                          | No       |
 
 #### Event: Discovery
 
-| Name                                 | Description                                                   | Scrubbed |
-| ------------------------------------ | ------------------------------------------------------------- | -------- |
-| ActionId                             |                                                               | No       |
-| App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo. | No       |
-| App.ApplicationName                  | The application name provided via mip::ApplicationInfo.       | No       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.    | No       |
-| ApplicationId                        |                                                               | No       |
-| ApplicationName                      |                                                               | No       |
-| CreationTime                         |                                                               | No       |
-| DataState                            |                                                               | No       |
-| DefaultLabel.Id                      |                                                               | No       |
-| Engine.TenantId                      |                                                               | No       |
-| Engine.UserObjectId                  |                                                               | No       |
-| Event.CorrelationId                  |                                                               | No       |
-| Event.CorrelationIdDescription       |                                                               | No       |
-| Event.ParentCorrelationId            |                                                               | No       |
-| Event.ParentCorrelationIdDescription |                                                               | No       |
-| Event.UniqueId                       |                                                               | No       |
-| LabelId                              |                                                               | No       |
-| MachineName                          |                                                               | **Yes**  |
-| MIP.Version                          |                                                               | No       |
-| ObjectId                             |                                                               | **Yes**  |
-| Operation                            |                                                               | No       |
-| OrganizationId                       |                                                               | No       |
-| Platform                             |                                                               | No       |
-| ProcessName                          |                                                               | No       |
-| Protected                            |                                                               | No       |
-| Protection                           |                                                               | **Yes**  |
-| ProtectionOwner                      |                                                               | **Yes**  |
-| SDKVersion                           |                                                               | No       |
-| UserId                               |                                                               | **Yes**  |
-| UserObjectId                         |                                                               | No       |
-| Version                              |                                                               | No       |
+| Name                                 | Description                                                                            | Scrubbed |
+| ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
+| ActionId                             | Unique action ID for this event, used for event correlation.                           | No       |
+| App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo.                          | No       |
+| App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | No       |
+| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | No       |
+| ApplicationId                        | The application version profided via mip::ApplicationInfo.                             | No       |
+| ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | No       |
+| CreationTime                         | Time event was generated.                                                              | No       |
+| DataState                            | The state of the data as the application acts on it “REST”, “MOTION”, “USE”.           | No       |
+| DefaultLabel.Id                      | Tenant default label identifier.                                                       | No       |
+| Engine.TenantId                      | Home tenant GUID of the authenticated user.                                            | No       |
+| Engine.UserObjectId                  | User object identifier in Azure Active Directory.                                      | No       |
+| Event.CorrelationId                  | Generated unique ID associated with object that triggered the event.                   | No       |
+| Event.CorrelationIdDescription       | C++ class name of object that triggered the event.                                     | No       |
+| Event.ParentCorrelationId            | Parent event correlation ID.                                                           | No       |
+| Event.ParentCorrelationIdDescription | Generated Unique ID associated with the parent of the object that triggered the event. | No       |
+| Event.UniqueId                       | Generated unique ID assigned to the event.                                             | No       |
+| LabelId                              | Content label identifier on the opened file or data.                                   | No       |
+| MachineName                          | Name of the system that generated the event.                                           | **Yes**  |
+| MIP.Version                          | Version of the MIP SDK.                                                                | No       |
+| ObjectId                             | File path/description of the file or data.                                             | **Yes**  |
+| Operation                            | "Discovery".                                                                           | No       |
+| OrganizationId                       | Home tenant GUID of the authenticated user.                                            | No       |
+| Platform                             | Operating system version.                                                              | No       |
+| ProcessName                          | Name of the process using the SDK.                                                     | No       |
+| Protected                            | Bool indicating if the file is protected or not.                                       | No       |
+| Protection                           | The protection template identifier.                                                    | **Yes**  |
+| ProtectionOwner                      | Email address of the protection owner.                                                 | **Yes**  |
+| SDKVersion                           | Same as MIP.Version.                                                                   | No       |
+| UserId                               | Email address of the user.                                                             | **Yes**  |
+| UserObjectId                         | Azure AD object ID of the user.                                                        | No       |
+| Version                              | Audit version schema (“1.1”).                                                          | No       |
 
 #### Event: Label Change
 
-| Name                                 | Description                                                   | Scrubbed |
-| ------------------------------------ | ------------------------------------------------------------- | -------- |
-| ActionId                             |                                                               | No       |
-| ActionIdBefore                       |                                                               | No       |
-| ActionSource                         |                                                               | No       |
-| App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo. | No       |
-| App.ApplicationName                  | The application name provided via mip::ApplicationInfo.       | No       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.    | No       |
-| ApplicationId                        |                                                               | No       |
-| ApplicationName                      |                                                               | No       |
-| CreationTime                         |                                                               | No       |
-| DataState                            |                                                               | No       |
-| DefaultLabel.Id                      |                                                               | No       |
-| Engine.TenantId                      |                                                               | No       |
-| Engine.UserObjectId                  |                                                               | No       |
-| Event.CorrelationId                  |                                                               | No       |
-| Event.CorrelationIdDescription       |                                                               | No       |
-| Event.ParentCorrelationId            |                                                               | No       |
-| Event.ParentCorrelationIdDescription |                                                               | No       |
-| Event.UniqueId                       |                                                               | No       |
-| IsLabelChanged                       |                                                               | No       |
-| IsProtectionChanged                  |                                                               | No       |
-| LabelId                              |                                                               | No       |
-| LabelIdBefore                        |                                                               | No       |
-| MachineName                          |                                                               | **Yes**  |
-| MIP.Version                          |                                                               | No       |
-| ObjectId                             |                                                               | **Yes**  |
-| Operation                            |                                                               | No       |
-| OrganizationId                       |                                                               | No       |
-| Platform                             |                                                               | No       |
-| ProcessName                          |                                                               | No       |
-| Product Version                      |                                                               | No       |
-| Protected                            |                                                               | No       |
-| Protected Before                     |                                                               | No       |
-| Protection                           |                                                               | **Yes**  |
-| Protection Before                    |                                                               | **Yes**  |
-| ProtectionContentId                  |                                                               | No       |
-| ProtectionContentIdBefore            |                                                               | No       |
-| ProtectionOwner                      |                                                               | **Yes**  |
-| ProtectionOwnerBefore                |                                                               | **Yes**  |
-| SDKVersion                           |                                                               | No       |
-| UserId                               |                                                               | **Yes**  |
-| UserObjectId                         |                                                               | No       |
-| Version                              |                                                               | No       |
+| Name                                 | Description                                                                            | Scrubbed |
+| ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
+| ActionId                             | Unique action ID for this event, used for event correlation.                           | No       |
+| ActionIdBefore                       | Previous action ID. Used to chain to new action ID.                                    | No       |
+| ActionSource                         | Value of MIP::ActionSource.                                                            | No       |
+| App.ApplicationId                    | The application ID provided via mip::ApplicationInfo.                                  | No       |
+| App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | No       |
+| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | No       |
+| ApplicationId                        | The application ID provided via mip::ApplicationInfo.                                  | No       |
+| ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | No       |
+| CreationTime                         | Time the event was generated.                                                          | No       |
+| DataState                            | The state of the data as the application acts on it “REST”, “MOTION”, “USE”.           | No       |
+| DefaultLabel.Id                      | Tenant default label identifier.                                                       | No       |
+| Engine.TenantId                      | Home tenant GUID of the authenticated user.                                            | No       |
+| Engine.UserObjectId                  | User object identifier in Azure Active Directory.                                      | No       |
+| Event.CorrelationId                  | Generated unique ID associated with object that triggered the event.                   | No       |
+| Event.CorrelationIdDescription       | C++ class name of object that triggered the event.                                     | No       |
+| Event.ParentCorrelationId            | Parent event correlation ID.                                                           | No       |
+| Event.ParentCorrelationIdDescription | Generated Unique ID associated with the parent of the object that triggered the event. | No       |
+| Event.UniqueId                       | Generated unique ID assigned to the event.                                             | No       |
+| IsLabelChanged                       | Bool indicating if the label changed.                                                  | No       |
+| IsProtectionChanged                  | Bool indicating if protection changed.                                                 | No       |
+| LabelId                              | Label ID that is to be applied to the file or data.                                    | No       |
+| LabelIdBefore                        | Previous label ID that was on the file or data.                                        | No       |
+| MachineName                          | Name of the system that generated the event.                                           | **Yes**  |
+| MIP.Version                          | Version of the MIP SDK.                                                                | No       |
+| ObjectId                             | File path/description of the file or data.                                             | **Yes**  |
+| Operation                            | "Change".                                                                              | No       |
+| OrganizationId                       | Home tenant GUID of the authenticated user.                                            | No       |
+| Platform                             | Operating system version.                                                              | No       |
+| ProcessName                          | Name of the process using the SDK.                                                     | No       |
+| Product Version                      |                                                                                        | No       |
+| Protected                            | Bool indicating if the file is protected or not.                                       | No       |
+| Protected Before                     | Bool indicating if the file was previously protected or not.                           | No       |
+| Protection                           | The protection template identifier.                                                    | No       |
+| Protection Before                    | The previous protection template identifier.                                           | No       |
+| ProtectionContentId                  | The new content identifier (GUID).                                                     | No       |
+| ProtectionContentIdBefore            | The previous content identifier (GUID).                                                | No       |
+| ProtectionOwner                      | Email address of the protection owner.                                                 | **Yes**  |
+| ProtectionOwnerBefore                | Previous email address of the protection owner.                                        | **Yes**  |
+| SDKVersion                           | Same as MIP.Version.                                                                   | No       |
+| UserId                               | Email address of the user.                                                             | **Yes**  |
+| UserObjectId                         | Azure AD object ID of the user.                                                        | No       |
+| Version                              | Audit version schema (“1.1”).                                                          | No       |
 
 
 ### Opting out in C++
