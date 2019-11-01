@@ -80,7 +80,7 @@ The IRM service must first be enabled for SharePoint. Then, you specify IRM perm
 If you use SharePoint Server, you can use this IRM protection by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
 > [!NOTE]
-> Currently, there are some limitations when you use SharePoint IRM:
+> There are some limitations when you use SharePoint IRM:
 > 
 > - You cannot use the default or custom protection templates that you manage in the Azure portal. 
 > 
