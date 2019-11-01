@@ -30,7 +30,7 @@ ms.subservice: aiplabels
 In this quickstart, you'll install and configure the Azure Information Protection scanner to find what sensitive information you have in files that are stored in an on-premises data store. For example, a local folder, network share, or SharePoint Server.
 
 > [!NOTE]
-> You can use this quickstart with the current general availability version of the Azure Information Protection client (classic) or the current preview version of the Azure Information Protection unified labeling client.
+> You can use this quickstart with the current general availability version of the Azure Information Protection client (classic), or the current general availability version of the Azure Information Protection unified labeling client that includes a preview version of the scanner.
 >  
 > Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 
