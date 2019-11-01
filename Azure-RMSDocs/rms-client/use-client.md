@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/27/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -92,7 +92,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manual labeling:| **Yes** | **Yes** |**Yes** |
 |Default label:| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling:| **Yes** | **Yes** | **Yes** |
+|Recommended or automatic labeling:| **Yes** | **Yes** | No |
 |Mandatory labeling:| **Yes** | **Yes** | No |
 |User-defined permissions for a label:<br />- Do Not Forward for emails<br />- Custom permissions for Word, Excel, PowerPoint, File Explorer| **Yes** | **Yes** | No |
 |Multilanguage support for labels:| **Yes** | **Yes** |**Yes** |
