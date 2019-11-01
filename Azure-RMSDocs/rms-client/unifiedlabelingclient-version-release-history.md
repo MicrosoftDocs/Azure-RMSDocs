@@ -74,9 +74,9 @@ This client is replacing the Azure Information Protection client (classic). To c
         - **Relabel files**: **On** with the **Enforce default label** checkbox selected
     
     - As with the scanner from the classic client, by default, the scanner protects Office files and PDF files. You can protect other files types when you use a [PowerShell advanced setting](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
-
-- This version of the scanner doesn't write to the Windows event log.
-
+    
+    - This version of the scanner doesn't write to the Windows event log.
+    
     - Known issue: New and renamed labels aren't available to select as a default label for the scanner profile or repository settings. Workarounds:
         - For new labels: In the Azure portal, [add the label](../configure-policy-add-remove-label.md) you want to use to the global policy or a scoped policy.
         - For renamed labels: Close and reopen the Azure portal.
