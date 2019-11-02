@@ -83,7 +83,7 @@ For a full list of prerequisites to use Azure Information Protection, see [Requi
 
 1. Open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin. Then navigate to **Azure Information Protection**. 
     
-    For example, in the search box for resources, service, and docs: Start typing **Information** and select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
     
     If you are not the global admin, use the following link for alternative roles: [Signing in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal)
 

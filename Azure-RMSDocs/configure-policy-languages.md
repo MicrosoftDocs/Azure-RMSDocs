@@ -58,7 +58,7 @@ Select the languages that match your users' language setting for Office and Wind
 
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
     
-    For example, in the search box for resources, service, and docs: Start typing **Information** and select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
 
 2. From the **Manage** > **Languages** menu option: On the **Azure Information Protection - Languages** pane, select **Add a new language for translation**. Select the languages that you want to add and then select **OK**. You can either type the name of the language in the search box, or scroll through the list of available languages
 

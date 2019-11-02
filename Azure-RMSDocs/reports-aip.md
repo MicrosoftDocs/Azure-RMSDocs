@@ -226,7 +226,7 @@ Azure Monitor Logs has a **Usage and estimated costs** feature to help you estim
 
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](https://portal.azure.com) with an account that has the [permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics). Then navigate to the **Azure Information Protection** pane. 
     
-    For example, in the search box for resources, service, and docs: Start typing **Information** and select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
     
 2. Locate the **Manage** menu options, and select **Configure analytics (Preview)**.
 

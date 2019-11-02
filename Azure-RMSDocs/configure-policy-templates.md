@@ -107,7 +107,7 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection - Labels** pane.
     
-    For example, in the search box for resources, service, and docs: Start typing **Information** and select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
 
 2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** pane, expand **Protection templates**, and then locate the template that you want to configure.
     
