@@ -37,19 +37,19 @@ Some of these settings require editing the registry and some use advanced settin
 
 ### How to configure advanced client configuration settings in the portal
 
-1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** pane.
 
 2. From the **Classifications** > **Labels** menu option: Select **Policies**.
 
-3. On the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
+3. On the **Azure Information Protection - Policies** pane, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
     
     You can configure advanced settings for the Global policy, as well as for scoped policies.
 
-4. On the **Advanced settings** blade, type the advanced setting name and value, and then select **Save and close**.
+4. On the **Advanced settings** pane, type the advanced setting name and value, and then select **Save and close**.
 
 5. Make sure that users for this policy restart any Office applications that they had open.
 
-6. If you no longer need the setting and want to revert to the default behavior: On the **Advanced settings** blade, select the context menu (**...**) next to the setting you no longer need, and then select **Delete**. Then click **Save and close**.
+6. If you no longer need the setting and want to revert to the default behavior: On the **Advanced settings** pane, select the context menu (**...**) next to the setting you no longer need, and then select **Delete**. Then click **Save and close**.
 
 #### Available advanced client settings
 
@@ -348,7 +348,7 @@ The following sections contain configuration instructions for each advanced clie
 
 ### To implement the warn, justify, or block pop-up messages for specific labels:
 
-To implement the pop-up messages for specific labels, you must know the label ID for those labels. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
+To implement the pop-up messages for specific labels, you must know the label ID for those labels. The label ID value is displayed on the **Label** pane, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
 
 Create one or more of the following advanced client settings with the following keys. For the values, specify one or more labels by their IDs, each one separated by a comma.
 
@@ -483,7 +483,7 @@ This configuration uses an [advanced client setting](#how-to-configure-advanced-
 
 When you configure this setting, Outlook doesn't apply the default label that is configured in the Azure Information Protection policy for the setting **Select the default label**. Instead, Outlook can apply a different default label, or no label.
 
-To apply a different label, you must specify the label ID. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
+To apply a different label, you must specify the label ID. The label ID value is displayed on the **Label** pane, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
 
 So that Outlook doesn't apply the default label, specify **None**.
 
@@ -503,7 +503,7 @@ This configuration requires you to specify an advanced client setting named **La
 
 `[Azure Information Protection label ID];[S/MIME action]`
 
-The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. To use S/MIME with a sublabel, always specify the ID of just the sublabel and not the parent label. When you specify a sublabel, the parent label must be in the same scope, or in the global policy.
+The label ID value is displayed on the **Label** pane, when you view or configure the Azure Information Protection policy in the Azure portal. To use S/MIME with a sublabel, always specify the ID of just the sublabel and not the parent label. When you specify a sublabel, the parent label must be in the same scope, or in the global policy.
 
 The S/MIME action can be:
 
@@ -667,7 +667,7 @@ This configuration requires you to specify an advanced client setting named **La
 
 `[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
 
-The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. To specify a sublabel, the parent label must be in the same scope, or in the global policy.
+The label ID value is displayed on the **Label** pane, when you view or configure the Azure Information Protection policy in the Azure portal. To specify a sublabel, the parent label must be in the same scope, or in the global policy.
 
 Specify your choice of a migration rule name. Use a descriptive name that helps you to identify how one or more labels from your previous labeling solution should be mapped to an Azure Information Protection label. The name displays in the scanner reports and in Event Viewer. 
 Note that this setting does not remove the original label from the document or any visual markings in the document that the original label might have applied. To remove headers and footers, see the next section, [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions).

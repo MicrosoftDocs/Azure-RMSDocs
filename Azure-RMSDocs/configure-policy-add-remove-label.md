@@ -44,17 +44,17 @@ If you need to create a scoped policy so that the label applies to a subset of u
 
 ## To add or remove a label to or from a policy
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **Classifications** > **Policies** menu option: On the **Azure Information Protection** - **Policies** blade, select **Global** if the label to add or remove applies to all users.
+2. From the **Classifications** > **Policies** menu option: On the **Azure Information Protection** - **Policies** pane, select **Global** if the label to add or remove applies to all users.
 
     If the label to add or remove applies to a subset of users, select your scoped policy instead.
 
-3. On the **Policy** blade, select **Add or remove labels**.
+3. On the **Policy** pane, select **Add or remove labels**.
 
-4. On the **Policy: Add or remove labels** blade, you see all your labels with a checkbox selected if they are already in a policy, and the corresponding policy name in the **POLICY** column.
+4. On the **Policy: Add or remove labels** pane, you see all your labels with a checkbox selected if they are already in a policy, and the corresponding policy name in the **POLICY** column.
      
     Sublabels display as indented. In a scoped policy, labels that are inherited from the global policy display as unavailable.
     

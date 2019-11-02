@@ -52,11 +52,11 @@ This example walks through configuring an existing label to apply protection so 
 
 Because the scenario restricts access to specific people, it does not include the setting for any authenticated users. For an example of how you can configure a label with this setting, see [Example 5: Label that encrypts content but doesn't restrict who can access it](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
-1. Select your label that's already in the global policy or a scoped policy. On the **Protection** blade, make sure **Azure (cloud key)** is selected.
+1. Select your label that's already in the global policy or a scoped policy. On the **Protection** pane, make sure **Azure (cloud key)** is selected.
     
 2. Make sure **Set permissions** is selected, and select **Add permissions**.
 
-3. On the **Add permissions** blade: 
+3. On the **Add permissions** pane: 
     
    - For your internal group: Select **Browse directory** to select the group, which must be email-enabled.
     
@@ -72,11 +72,11 @@ Because the scenario restricts access to specific people, it does not include th
         
     ![Configuring permissions for secure collaboration](./media/collaboration-permissions.png)
 
-5. Click **OK** on the **Add permissions** blade.
+5. Click **OK** on the **Add permissions** pane.
 
-6. On the **Protection** blade, click **OK**.
+6. On the **Protection** pane, click **OK**.
 
-7. On the **Label** blade, select **Save**. 
+7. On the **Label** pane, select **Save**. 
 
 ## Applying the label that supports secure collaboration
 

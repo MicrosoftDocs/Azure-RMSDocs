@@ -142,7 +142,7 @@ Then, do the following:
 
 1. Configure the scanner in the Azure portal, by creating a scanner profile. If you need help with this step, see [Configure the scanner in the Azure portal](#configure-the-scanner-in-the-azure-portal).
 
-2. Export your scanner profile from the **Azure Information Protection - Profiles** blade, by using the **Export** option.
+2. Export your scanner profile from the **Azure Information Protection - Profiles** pane, by using the **Export** option.
 
 3. Finally, in a PowerShell session, run [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) and specify the file that contains the exported settings.
 
@@ -207,21 +207,21 @@ You can have one account to run the scanner service and use another account to a
 
 Before you install the scanner, or upgrade it from an older general availability version of the scanner, create a profile for the scanner in the Azure portal. You configure the profile for scanner settings, and the data repositories to scan.
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane. 
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
     
 2. Locate the **Scanner** menu options, and select **Profiles**.
 
-3. On the **Azure Information Protection - Profiles** blade, select **Add**:
+3. On the **Azure Information Protection - Profiles** pane, select **Add**:
     
     ![Add profile for the Azure Information Protection scanner](./media/scanner-add-profile.png)
 
-4. On the **Add a new profile** blade, specify a name for the scanner that is used to identify its configuration settings and data repositories to scan. For example, you might specify **Europe** to identify the geographical location of the data repositories that your scanner will cover. When you later install or upgrade the scanner, you will need to specify the same profile name.
+4. On the **Add a new profile** pane, specify a name for the scanner that is used to identify its configuration settings and data repositories to scan. For example, you might specify **Europe** to identify the geographical location of the data repositories that your scanner will cover. When you later install or upgrade the scanner, you will need to specify the same profile name.
     
     Optionally, specify a description for administrative purposes, to help you identify the scanner's profile name.
 
-5. For this initial configuration, configure the following settings, and then select **Save** but do not close the blade:
+5. For this initial configuration, configure the following settings, and then select **Save** but do not close the pane:
     
     For the **Profile settings** section:
     - **Schedule**: Keep the default of **Manual**
@@ -243,15 +243,15 @@ Before you install the scanner, or upgrade it from an older general availability
     
     SharePoint Server 2019, SharePoint Server 2016, and SharePoint Server 2013 are supported for SharePoint. SharePoint Server 2010 is also supported when you have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
-    To add your first data store, still on the **Add a new profile** blade, select **Configure repositories** to open the **Repositories** blade:
+    To add your first data store, still on the **Add a new profile** pane, select **Configure repositories** to open the **Repositories** pane:
     
     ![Configure data repositories for the Azure Information Protection scanner](./media/scanner-repositories-bar.png)
 
-7. On the **Repositories** blade, select **Add**:
+7. On the **Repositories** pane, select **Add**:
     
     ![Add data repository for the Azure Information Protection scanner](./media/scanner-repository-add.png)
 
-8. On the **Repository** blade, specify the path for the data repository. 
+8. On the **Repository** pane, specify the path for the data repository. 
     
     Wildcards are not supported and WebDav locations are not supported.
     
@@ -272,13 +272,13 @@ Before you install the scanner, or upgrade it from an older general availability
      >
      >- Specify **Documents** in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: `http://sp2013/Documents/Sales Reports`
     
-    For the remaining settings on this blade, do not change them for this initial configuration, but keep them as **Profile default**. This means that the data repository inherits the settings from the scanner profile. 
+    For the remaining settings on this pane, do not change them for this initial configuration, but keep them as **Profile default**. This means that the data repository inherits the settings from the scanner profile. 
     
     Select **Save**.
 
 9. If you want to add another data repository, repeat steps 7 and 8.
 
-10. You can now close **Repositories** blade and your profile blade. Back on the **Azure Information Protection - Profiles** blade, you see your profile name displayed, together with the **SCHEDULE** column showing **Manual** and the **ENFORCE** column is blank.
+10. You can now close **Repositories** pane and your profile pane. Back on the **Azure Information Protection - Profiles** pane, you see your profile name displayed, together with the **SCHEDULE** column showing **Manual** and the **ENFORCE** column is blank.
 
 You're now ready to install the scanner with the scanner profile that you've just created.
 
@@ -348,7 +348,7 @@ You're now ready to run your first scan in discovery mode.
 
 ## Run a discovery cycle and view reports for the scanner
 
-1. In the Azure portal, on the **Azure Information Protection - Profiles** blade, select your scanner's profile, and then the **Scan now** option:
+1. In the Azure portal, on the **Azure Information Protection - Profiles** pane, select your scanner's profile, and then the **Scan now** option:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
     
@@ -358,7 +358,7 @@ You're now ready to run your first scan in discovery mode.
 
 2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the scanner stops although the scanner service remains running:
     
-    - On the **Azure Information Protection - Profiles** blade, use the **Refresh** option and wait until you see values for the **LAST SCAN RESULTS** column and the **LAST SCAN (END TIME)** column.
+    - On the **Azure Information Protection - Profiles** pane, use the **Refresh** option and wait until you see values for the **LAST SCAN RESULTS** column and the **LAST SCAN (END TIME)** column.
     
     - Using PowerShell, you can run `Get-AIPScannerStatus` to monitor the status change.
     
@@ -386,16 +386,16 @@ When you're ready to automatically label the files that the scanner discovers, c
 
 If you are following these instructions, the scanner runs one time and in the reporting-only mode. To change these settings, edit the scanner profile:
 
-1. Back on the **Azure Information Protection - Profiles** blade, select the scanner profile to edit it.
+1. Back on the **Azure Information Protection - Profiles** pane, select the scanner profile to edit it.
 
-2. On the \<**profile name**> blade, change the following two settings, and then select **Save**:
+2. On the \<**profile name**> pane, change the following two settings, and then select **Save**:
     
    - From the **Profile settings** section: Change the **Schedule** to **Always**
    - From the **Policy enforcement** section: Change **Enforce** to **On**
     
      There are other configuration settings that you might want to change. For example, whether file attributes are changed and whether the scanner can relabel files. Use the information popup help to learn more information about each configuration setting.
 
-3. Make a note of the current time and start the scanner again from the **Azure Information Protection - Profiles** blade:
+3. Make a note of the current time and start the scanner again from the **Azure Information Protection - Profiles** pane:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
     
@@ -517,7 +517,7 @@ For detailed instructions, see [Change which file types to protect](./rms-client
 
 For the first scan cycle, the scanner inspects all files in the configured data stores and then for subsequent scans, only new or modified files are inspected. 
 
-You can force the scanner to inspect all files again from the **Azure Information Protection - Profiles** blade in the Azure portal. Select your scanner profile from the list, and then select the **Rescan all files** option:
+You can force the scanner to inspect all files again from the **Azure Information Protection - Profiles** pane in the Azure portal. Select your scanner profile from the list, and then select the **Rescan all files** option:
 
 ![Initiate rescan for the Azure Information Protection scanner](./media/scanner-rescan-files2.png)
 
@@ -545,11 +545,11 @@ Then restart the Azure Information Scanner service. If you changed protection se
 
 For the data repositories that you've added to a scanner profile, you can use the **Export** and **Import** options to quickly make changes to the settings. For example, for your SharePoint data repositories, you want to add a new file type to exclude from scanning.
 
-Instead of editing each data repository in the Azure portal, use the **Export** option from the **Repositories** blade:
+Instead of editing each data repository in the Azure portal, use the **Export** option from the **Repositories** pane:
 
 ![Exporting data repository settings for the scanner](./media/export-scanner-repositories.png)
 
-Manually edit the file to make the change, and then use the **Import** option on the same blade.
+Manually edit the file to make the change, and then use the **Import** option on the same pane.
 
 ## Using the scanner with alternative configurations
 

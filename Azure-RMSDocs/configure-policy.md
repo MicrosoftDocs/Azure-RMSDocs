@@ -91,13 +91,13 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
     
     Microsoft accounts cannot manage Azure Information Protection.
 
-## To access the Azure Information Protection blade for the first time
+## To access the Azure Information Protection pane for the first time
 
 1. Sign in to the Azure portal.
 
 2. On the hub menu, select **Create a resource**, and then, from the search box for the Marketplace, type **Azure Information Protection**. 
     
-3. From the results list, select **Azure Information Protection**. On the **Azure Information Protection** blade, click **Create**.
+3. From the results list, select **Azure Information Protection**. On the **Azure Information Protection** pane, click **Create**.
     
     > [!TIP] 
     > Optionally, select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
@@ -106,15 +106,15 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
 
 4. You see the **Quick start** page that automatically opens the first time you connect to the service. Browse the suggested resources, or use the other menu options. To configure the labels that users can select, use the following procedure.
 
-Next time you access the **Azure Information Protection** blade, it automatically selects the **Labels** option so that you can view and configure labels for all users. You can return to the **Quick start** page by selecting it from the **General** menu.
+Next time you access the **Azure Information Protection** pane, it automatically selects the **Labels** option so that you can view and configure labels for all users. You can return to the **Quick start** page by selecting it from the **General** menu.
 
 ## How to configure the Azure Information Protection policy
 
 1. Make sure that you are signed in to the Azure portal by using one of these administrative roles: Azure Information Protection administrator, Security administrator, or Global administration. See the [preceding section](#signing-in-to-the-azure-portal) for more information about these administrative roles.
 
-2. If necessary, navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **All services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
+2. If necessary, navigate to the **Azure Information Protection** pane: For example, on the hub menu, click **All services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
     
-    The **Azure Information Protection - Labels** blade automatically opens for you to view and edit the available labels. The labels can be made available to all users, selected users, or no users by adding or removing them from a policy.
+    The **Azure Information Protection - Labels** pane automatically opens for you to view and edit the available labels. The labels can be made available to all users, selected users, or no users by adding or removing them from a policy.
 
 3. To view and edit the policies, select **Policies** from the menu options. To view and edit the policy that all users get, select the **Global** policy. To create a custom policy for selected users, select **Add a new policy**.
     
@@ -123,7 +123,7 @@ Next time you access the **Azure Information Protection** blade, it automaticall
 
 You can create any number of labels. However, when they start to get too many for users to easily see and select the right label, create scoped policies so that users see only the labels that are relevant to them. There is an upper limit for labels that apply protection, which is 500.
 
-When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. When you save changes in a policy, or make changes to labels that are added to policies, those changes are automatically published. There's no separate publish option.
+When you make any changes on an Azure Information Protection pane, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. When you save changes in a policy, or make changes to labels that are added to policies, those changes are automatically published. There's no separate publish option.
 
 The Azure Information Protection client checks for any changes whenever a supported Office application starts, and downloads the changes as its latest Azure Information Protection policy. Additional triggers that refresh the policy on the client:
 
@@ -179,7 +179,7 @@ When a label is applied to a document or email, under the covers, the label is s
 
 For emails, the label information is stored when the email is sent. For documents, the label information is stored when the file is saved. 
 
-To identify the GUID for a label, locate the Label ID value on the **Label** blade in the Azure portal, when you view or configure the Azure Information Protection policy. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the GUID (MainLabelId or SubLabelId). When a label has sublabels, always specify the GUID of just a sublabel and not the parent label.
+To identify the GUID for a label, locate the Label ID value on the **Label** pane in the Azure portal, when you view or configure the Azure Information Protection policy. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the GUID (MainLabelId or SubLabelId). When a label has sublabels, always specify the GUID of just a sublabel and not the parent label.
 
 ## Next steps
 

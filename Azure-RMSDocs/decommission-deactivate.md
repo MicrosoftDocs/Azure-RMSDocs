@@ -79,12 +79,12 @@ You should now see **Rights Management is not activated** and the option to acti
 
 #### To deactivate Rights Management from the Azure portal
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
 
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the initial **Azure Information Protection** blade, select **Protection activation**. 
+2. On the initial **Azure Information Protection** pane, select **Protection activation**. 
 
-3.  On the **Azure Information Protection - Protection activation** blade, select **Deactivate**. Select **Yes** to confirm your choice.
+3.  On the **Azure Information Protection - Protection activation** pane, select **Deactivate**. Select **Yes** to confirm your choice.
 
 The information bar displays **Deactivation finished successfully** and **Deactivate** is now replaced with **Activate**. 

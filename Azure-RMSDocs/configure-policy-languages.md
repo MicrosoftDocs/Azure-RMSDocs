@@ -56,13 +56,13 @@ Select the languages that match your users' language setting for Office and Wind
 
 ## To configure labels and templates for different languages
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **Manage** > **Languages** menu option: On the **Azure Information Protection - Languages** blade, select **Add a new language for translation**. Select the languages that you want to add and then select **OK**. You can either type the name of the language in the search box, or scroll through the list of available languages
+2. From the **Manage** > **Languages** menu option: On the **Azure Information Protection - Languages** pane, select **Add a new language for translation**. Select the languages that you want to add and then select **OK**. You can either type the name of the language in the search box, or scroll through the list of available languages
 
-3. Your selected languages now display on the **Azure Information Protection - Languages** blade:
+3. Your selected languages now display on the **Azure Information Protection - Languages** pane:
     
     - To add another language, select **Add a new language for translation** and repeat the previous step. 
         
@@ -83,7 +83,7 @@ Select the languages that match your users' language setting for Office and Wind
     
     Tip: You don't have to wait until you've edited each language file that you've downloaded. Instead, you could roll out different languages in a phased mannor, by including in the .zip file a subset of the total files you downloaded. Then repeat steps 7 and 8 when you have completed the translations for more languages.
 
-8. Return to the **Azure Information Protection - Languages** blade, and select **Import**. Note that if this option is unavailable, first clear the check box for **LANGUAGE NAME** or the check boxes for the individually selected languages.
+8. Return to the **Azure Information Protection - Languages** pane, and select **Import**. Note that if this option is unavailable, first clear the check box for **LANGUAGE NAME** or the check boxes for the individually selected languages.
     
     When the import completes, the localized names and descriptions download to users.
 

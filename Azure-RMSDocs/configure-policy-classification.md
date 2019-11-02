@@ -78,15 +78,15 @@ You can change this behavior so that the Azure Information Protection client per
 
 ## To configure recommended or automatic classification for a label
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane. 
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label to configure.
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** pane, select the label to configure.
 
-3. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
+3. On the **Label** pane, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
 
-4. On the **Condition** blade, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own:
+4. On the **Condition** pane, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own:
     - For **Information Types**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
         The information types use the Office 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) from the Office 365 documentation.
@@ -106,7 +106,7 @@ You can change this behavior so that the Azure Information Protection client per
     
     Example of the occurrences options: You select the information type for the social security number, set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique value only** to **On**, the condition is not met. If you set this option to **Off**, the condition is met.
 
-6. Back on the **Label** blade, configure the following, and then click **Save**:
+6. Back on the **Label** pane, configure the following, and then click **Save**:
     
     - Choose automatic or recommended classification: For **Select how this label is applied: automatically or recommended to user**, select **Automatic** or **Recommended**.
     

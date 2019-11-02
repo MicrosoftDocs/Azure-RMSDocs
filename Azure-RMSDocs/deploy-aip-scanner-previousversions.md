@@ -221,7 +221,7 @@ With the scanner's default configuration, you're now ready to run your first sca
     
         Start-AIPScan
     
-    Alternatively, you can start the scanner from the Azure portal. From the **Azure Information Protection - Nodes** blade, select your scanner node, and then the **Scan now** option:
+    Alternatively, you can start the scanner from the Azure portal. From the **Azure Information Protection - Nodes** pane, select your scanner node, and then the **Scan now** option:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
 
@@ -229,7 +229,7 @@ With the scanner's default configuration, you're now ready to run your first sca
     
     	Get-AIPScannerStatus
     
-    Alternatively, you can view the status from the **Azure Information Protection - Nodes** blade in the Azure portal, by checking the **STATUS** column.
+    Alternatively, you can view the status from the **Azure Information Protection - Nodes** pane in the Azure portal, by checking the **STATUS** column.
     
     Look for the status to show **Idle** rather than **Scanning**.
     
@@ -269,7 +269,7 @@ In its default setting, the scanner runs one time and in the reporting-only mode
     
         Start-AIPScan
     
-    Alternatively, you can start the scanner from the Azure portal. From the **Azure Information Protection - Nodes** blade, select your scanner node, and then the **Scan now** option:
+    Alternatively, you can start the scanner from the Azure portal. From the **Azure Information Protection - Nodes** pane, select your scanner node, and then the **Scan now** option:
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
 
@@ -358,7 +358,7 @@ For the first scan cycle, the scanner inspects all files in the configured data 
 
 You can force the scanner to inspect all files again by running **Start-AIPScan** with the *Reset* parameter. The scanner must be configured for a manual schedule, which requires the *Schedule* parameter to be set to **Manual** with **Set-AIPScannerConfiguration**.
 
-Alternatively, you can force the scanner to inspect all files again from the **Azure Information Protection - Nodes** blade in the Azure portal. Select your scanner from the list, and then select the **Rescan all files** option:
+Alternatively, you can force the scanner to inspect all files again from the **Azure Information Protection - Nodes** pane in the Azure portal. Select your scanner from the list, and then select the **Rescan all files** option:
 
 ![Initiate rescan for the Azure Information Protection scanner](./media/scanner-rescan-files.png)
 

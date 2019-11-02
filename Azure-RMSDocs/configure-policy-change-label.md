@@ -37,15 +37,15 @@ For example, you can change a label or sublabel name, tooltip, color, and order.
 
 To change a label, use the following instructions:
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane. 
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label you want to change.
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** pane, select the label you want to change.
 
     The exception is if you want to reorder a label: Instead of selecting the label, either right-click the label or select the context menu for the label. Then, select the **Move up** or **Move down** options.
 
-3. Whenever you make changes on a new blade, click **Save** on that blade if you want to keep your changes.
+3. Whenever you make changes on a new pane, click **Save** on that pane if you want to keep your changes.
     
     When you click **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
 

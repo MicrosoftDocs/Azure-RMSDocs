@@ -51,7 +51,7 @@ Azure Information Protection isn't automatically available in the Azure portal. 
 
 2. On the hub menu, select **Create a resource**, and then, from the search box for the Marketplace, type **Azure Information Protection**. 
     
-3. From the results list, select **Azure Information Protection**. Then on the **Azure Information Protection** blade, click **Create**.
+3. From the results list, select **Azure Information Protection**. Then on the **Azure Information Protection** pane, click **Create**.
     
     > [!TIP] 
     > Optionally, select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
@@ -62,7 +62,7 @@ Azure Information Protection isn't automatically available in the Azure portal. 
 
 The protection service is now automatically activated for new customers, but it's a good idea to confirm it doesn't need manually activating. 
 
-1. On the **Azure Information Protection** blade, select **Manage** > **Protection activation**.
+1. On the **Azure Information Protection** pane, select **Manage** > **Protection activation**.
 
 2. Confirm whether protection is activated for your tenant: 
     
@@ -98,23 +98,23 @@ Your organization might already have labels because they were automatically crea
     
     a. Select **Add or remove labels**.
     
-    b. From the **Policy: Add or remove labels** blade, select all the labels, and then select **OK**.
+    b. From the **Policy: Add or remove labels** pane, select all the labels, and then select **OK**.
     
-    c. Back on the **Policy: Global blade**, select **Save**.
+    c. Back on the **Policy: Global pane**, select **Save**.
 
 Publishing the labels in the Azure portal makes them available for the Azure Information Protection client (classic).
 
 ## View your labels
 
-Select **Classifications** > **Labels**, and spend a few minutes familiarizing yourself with the labels that are displayed on the **Azure Information Protection - Labels** blade.
+Select **Classifications** > **Labels**, and spend a few minutes familiarizing yourself with the labels that are displayed on the **Azure Information Protection - Labels** pane.
 
 If they don't look similar to the labels in the picture from the previous section, you aren't using default labels from Azure Information Protection but labels that might have been created from the Office 365 Security & Compliance Center, the Microsoft 365 Security center, or the Microsoft 365 Compliance center.
 
 > [!TIP]
 > If you don't want to use your custom labels, but instead, use default labels from Azure Information Protection: 
-> - Delete the custom labels and you then see the option to generate default labels in the **Labels** blade, as described in the [previous section](#create-and-publish-labels). 
+> - Delete the custom labels and you then see the option to generate default labels in the **Labels** pane, as described in the [previous section](#create-and-publish-labels). 
 
-From the **Azure Information Protection - Labels** blade:
+From the **Azure Information Protection - Labels** pane:
 
 - The default labels for classification are **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sublabels, which provide examples of how a classification can have subcategories.
 
@@ -124,7 +124,7 @@ For example:
 
 ![Azure Information Protection quickstart overview of default labels](./media/info-protect-policy-default-labelsv2.png)
 
-If you select a label, you see details for that label configuration on a new blade.
+If you select a label, you see details for that label configuration on a new pane.
 
 ## View your policy settings
 
@@ -140,7 +140,7 @@ To view the default Azure Information Protection policy settings for the classic
     
     ![Azure Information Protection policy global settings](./media/defaultsettings-aip.png)
 
-3. You can now close any blades in the portal that you have opened.
+3. You can now close any panes in the portal that you have opened.
 
 ## Next steps
 
