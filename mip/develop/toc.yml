@@ -343,7 +343,7 @@
     items:
     - name: Enumerations
       href: reference/enums.md
-    - name: Structuress
+    - name: Structures
       href: reference/structs.md
     - name: Functions
       href: reference/functions.md

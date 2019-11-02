@@ -23,6 +23,7 @@ typedef enum {
   MIP_CACHE_STORAGE_TYPE_ON_DISK = 1,          /**< On-disk storage */
   MIP_CACHE_STORAGE_TYPE_ON_DISK_ENCRYPTED = 2 /**< On-disk storage with encryption (if supported by the platform) */
 } mip_cc_cache_storage_type;
+
 ```
 
 ## mip_cc_content_format
@@ -36,6 +37,7 @@ typedef enum {
   MIP_CONTENT_FORMAT_DEFAULT = 0, /**< Standard file format */
   MIP_CONTENT_FORMAT_EMAIL = 1,   /**< Email */
 } mip_cc_content_format;
+
 ```
 
 ## mip_cc_label_assignment_method
@@ -50,6 +52,7 @@ typedef enum {
   MIP_LABEL_ASSIGNMENT_METHOD_PRIVILEGED = 1, /**< A privileged label assignment will not be overridden by future standard assignments. */
   MIP_LABEL_ASSIGNMENT_METHOD_AUTO = 2,       /**< Reserved. Do not use. */
 } mip_cc_label_assignment_method;
+
 ```
 
 ## mip_cc_content_mark_alignment
@@ -64,6 +67,7 @@ typedef enum {
   MIP_CONTENT_MARK_ALIGNMENT_RIGHT = 1,  /**< Content marking is aligned to the right */
   MIP_CONTENT_MARK_ALIGNMENT_CENTER = 2, /**< Content marking is centered */
 } mip_cc_content_mark_alignment;
+
 ```
 
 ## mip_cc_watermark_layout
@@ -77,6 +81,7 @@ typedef enum {
   MIP_WATERMARK_LAYOUT_HORIZONTAL = 0, /**< Watermark layout is horizontal */
   MIP_WATERMARK_LAYOUT_DIAGONAL = 1,   /**< Watermark layout is diagonal */
 } mip_cc_watermark_layout;
+
 ```
 
 ## mip_cc_consent
@@ -91,6 +96,7 @@ typedef enum {
   MIP_CONSENT_ACCEPT = 1,        /**< Consent just one time */
   MIP_CONSENT_REJECT = 2         /**< Do not consent */
 } mip_cc_consent;
+
 ```
 
 ## mip_cc_flighting_feature
@@ -107,6 +113,7 @@ typedef enum {
   MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3,    /**< Enable single company name for dns lookup. e.g. https://corprights */
   MIP_FLIGHTING_FEATURE_POLICY_AUTH = 4,           /**< Enable automatic HTTP authentication for requests sent to Policy service. Disable for apps/services that manage their own HTTP auth (default true) */
 } mip_cc_flighting_feature;
+
 ```
 
 ## mip_cc_http_request_type
@@ -120,6 +127,7 @@ typedef enum {
   HTTP_REQUEST_TYPE_GET = 0,  /**< HTTP GET */
   HTTP_REQUEST_TYPE_POST = 1, /**< HTTP POST */
 } mip_cc_http_request_type;
+
 ```
 
 ## mip_cc_http_result
@@ -133,6 +141,7 @@ typedef enum {
   HTTP_RESULT_OK = 0,      /**< HTTP operation was completed successfull */
   HTTP_RESULT_FAILURE = 1, /**< HTTP operation failed (e.g. timeout, network failure, etc.) */
 } mip_cc_http_result;
+
 ```
 
 ## mip_cc_log_level
@@ -148,6 +157,7 @@ typedef enum {
   MIP_LOG_LEVEL_WARNING,    /**< Warning */
   MIP_LOG_LEVEL_ERROR,      /**< Error */
 } mip_cc_log_level;
+
 ```
 
 ## mip_cc_protection_type
@@ -161,6 +171,7 @@ typedef enum {
   MIP_PROTECTION_TYPE_TEMPLATE_BASED = 0, /**< Based on an RMS template */
   MIP_PROTECTION_TYPE_CUSTOM = 1,         /**< Custom, ad-hoc protection */
 } mip_cc_protection_type;
+
 ```
 
 ## mip_cc_result
@@ -201,6 +212,7 @@ typedef enum {
   MIP_RESULT_ERROR_LABEL_NOT_FOUND,           /**< Label ID is not recognized */
   MIP_RESULT_ERROR_LABEL_DISABLED,            /**< Label is disabled or inactive */
 } mip_cc_result;
+
 ```
 
 ## mip_cc_action_type
@@ -227,6 +239,7 @@ typedef enum {
   MIP_ACTION_TYPE_APPLY_LABEL = 1 << 13,           /**< Apply label action type.*/
   MIP_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14,       /**< Recommend label action type.*/
 } mip_cc_action_type;
+
 ```
 
 ## mip_cc_label_action_state
@@ -241,6 +254,7 @@ typedef enum {
   MIP_LABEL_ACTION_STATE_REMOVE = 1,    /**< The current label should be removed. */
   MIP_LABEL_ACTION_STATE_UPDATE = 2,    /**< The current label should be changed. */
 } mip_cc_label_action_state;
+
 ```
 
 ## mip_cc_label_action_type
@@ -267,6 +281,7 @@ typedef enum {
   MIP_LABEL_ACTION_TYPE_APPLY_LABEL = 1 << 13,           /**< Apply label action type. */
   MIP_LABEL_ACTION_TYPE_RECOMMEND_LABEL = 1 << 14,       /**< Recommend label action type. */
 } mip_cc_label_action_type;
+
 ```
 
 ## mip_cc_data_state
@@ -281,5 +296,6 @@ typedef enum {
   MIP_DATA_STATE_MOTION = 1, /**< Data traversing a network or temporarily residing in computer memory to be read or updated */
   MIP_DATA_STATE_USE = 2,    /**< Active data under constant change stored physically in databases/file/warehouses etc */
 } mip_cc_data_state;
+
 ```
 
