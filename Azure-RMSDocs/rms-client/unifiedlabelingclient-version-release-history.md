@@ -5,7 +5,7 @@ title: Azure Information Protection unified labeling client - Version history & 
 description: See the release information for the Azure Information Protection unified labeling client for Windows. 
 author: cabailey
 ms.author: cabailey
-manager: barbkess
+manager: rkarlin
 ms.date: 11/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -83,6 +83,8 @@ This client is replacing the Azure Information Protection client (classic). To c
         - **Relabel files**: **On** with the **Enforce default label** checkbox selected
     
     - As with the scanner from the classic client, by default, the scanner protects Office files and PDF files. You can protect other files types when you use a [PowerShell advanced setting](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
+    
+    - Event IDs for the scanner cycles starting and finishing are not written to the Windows event log. Instead, use the Azure portal for this information.
     
     - Known issue: New and renamed labels aren't available to select as a default label for the scanner profile or repository settings. Workarounds:
         - For new labels: In the Azure portal, [add the label](../configure-policy-add-remove-label.md) you want to use to the global policy or a scoped policy.
