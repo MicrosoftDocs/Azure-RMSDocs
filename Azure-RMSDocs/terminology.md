@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/14/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -32,6 +32,8 @@ search.appverid:
 
 Confused by a word, phrase, or acronym that's related to Microsoft Azure Information Protection? Find the definition here for terms and abbreviations that are either specific to Azure Information Protection or have a specific meaning when used in the context of this service.
 
+## Word, phrase, or acronym
+
 |Term|Definition|
 |--------|--------------|
 |AADRM|The name of the first PowerShell module for the protection service (Azure Rights Management), which was derived from the unofficial abbreviation for Azure Rights Management when it was previously named (Windows) Azure Active Directory Rights Management. This PowerShell module is now replaced with the AIPService module.|
@@ -52,6 +54,7 @@ Azure Information Protection client (classic)|Sometimes abbreviated to *classic 
 |default template|A protection template that is automatically created for you when you obtain a subscription for Azure Information Protection, so that you can immediately start protecting documents and emails that contain sensitive information.|
 |BYOK|See *bring your own key*.|
 |bring your own key|Frequently abbreviated to *BYOK*.<br /><br />A configuration and topology option chosen by an organization that wants to generate and manage their own tenant key for Azure Information Protection.|
+|built-in labeling|An Office 365 app or service capability to support sensitivity labels without the requirement to install an additional labeling client. Also known as *native labeling*.|
 |content key|A unique key that is created by RMS-enlightened applications for each document or email that is protected by using Rights Management and that helps to limit the risk of information disclosure.|
 |consume|In the context of protection only: To open a document or email to read or use it when that content has been protected by a rights management service. For a document, consuming includes editing and adding new content to a protected document. For an email message, consuming includes replying to a protected message.<br /><br />In the context of labeling (with or without protection): To read and potentially act on the label information stored in the metadata of files and emails.|
 |deactivate|To disable the Rights Management service so that the organization can no longer use Azure Information Protection.|
