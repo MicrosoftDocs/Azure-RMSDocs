@@ -5,8 +5,8 @@ title: Azure Information Protection unified labeling client - Version history & 
 description: See the release information for the Azure Information Protection unified labeling client for Windows. 
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 11/01/2019
+manager: rkarlin
+ms.date: 11/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -42,6 +42,15 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 Each general availability (GA) version of the Azure Information Protection unified labeling client is supported for up to six months after the release of the subsequent GA version. The documentation does not include information about unsupported versions of the client. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
 Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
+
+##### General availability versions that are no longer supported:
+
+|Client version|Date released|
+|--------------|-------------|
+|2.0.778.0|04/16/2019|
+
+The date format used on this page is *month/day/year*.
+
 
 ### Release information
 
@@ -202,48 +211,9 @@ Supported through 02/15/2020
 
 This release has a single fix to resolve a race-condition issue where sometimes, no labels display in Office apps or File Explorer.
 
-## Version 2.0.778.0
-
-**Released**: 04/16/2019
-
-Supported through 11/01/2019
-
-This first general availability version of the Azure Information Protection unified labeling client for Windows supports the following features: 
-
-- Upgrade from the Azure Information Protection client.
-
-- Manual, automatic, and recommended labeling: For more information about configuring automatic and recommended labeling for this client, see [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically).
-
-- File Explorer, right-click actions to classify and protect files, remove protection, and apply custom permissions.
-
-- A viewer for protected text and image files, protected PDF files, and files that are generically protected.
-
-- PowerShell commands to do the following:
-    - [Set or remove a label on a document](/powershell/module/azureinformationprotection/set-aipfilelabel)
-    - [Label a document after inspecting its contents](/powershell/module/azureinformationprotection/set-aipfileclassification)
-    - [Read label information applied to a document](/powershell/module/azureinformationprotection/get-aipfilestatus)
-    - [Authenticate to support unattended PowerShell sessions](/powershell/module/azureinformationprotection/set-aipauthentication)
-
-- Auditing data and endpoint discovery support for central reporting by using [Azure Information Protection analytics](../reports-aip.md).
-
-- The following label and policy settings:
-    - Visual marking (headers, footers, watermarks)
-    - Default labeling - currently limited to labels without sublabels
-    - Labels that apply Do Not Forward and display in Outlook only
-    - Justification prompts if users lower the classification level or remove a label
-    - Colors for the labels
-
-- Policy refresh from the admin centers:
-    - Each time an Office app starts and every 4 hours
-    - When you right-click to classify and protect a file or folder
-    - When you run the PowerShell cmdlets for labeling and protection
-
-- A Help and feedback dialog box, which includes reset settings and export logs.
-
-
 ## Next steps
 
-For full details, see the [comparison tables](use-client.md#compare-the-labeling-clients-for-windows-computers).
+Not sure if this is the right client to install?  See [Choose which labeling client to use for Windows computers](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 For more information about installing and using this client: 
 
