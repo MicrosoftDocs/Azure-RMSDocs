@@ -6,7 +6,7 @@ description: If you know or have previously deployed Active Directory Rights Man
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/23/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
