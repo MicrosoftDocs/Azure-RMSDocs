@@ -128,7 +128,7 @@ You're now ready to install the scanner with the scanner profile that you've jus
     
     ![Initiate scan for the Azure Information Protection scanner](./media/scanner-scan-now.png)
     
-    If this option is not available after selecting your profile, the scanner is not connected to Azure Information Protection. Review your configuration and Internet connectivity.
+    If this option is not available after selecting your profile, the scanner is not connected to Azure Information Protection. Review your configuration and internet connectivity.
 
 3. There's only one small file to inspect, so this initial test scan will be very quick:
     

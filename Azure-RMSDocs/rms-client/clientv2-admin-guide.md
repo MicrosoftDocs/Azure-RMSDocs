@@ -265,7 +265,7 @@ In this scenario, when you configure the scanner in the Azure portal, you must s
 > [!TIP]
 > To identify scanners that have this misconfiguration, use the **Azure Information Protection - Nodes** blade in the Azure portal.
 >  
-> For scanners that have Internet connectivity, they display their computer name with the GA version number of the Azure Information Protection client, but no profile name. Only scanners that have a version number 1.41.51.0 should display no profile name on this blade. 
+> For scanners that have internet connectivity, they display their computer name with the GA version number of the Azure Information Protection client, but no profile name. Only scanners that have a version number 1.41.51.0 should display no profile name on this blade. 
 
 ## Uninstalling the Azure Information Protection unified labeling client
 

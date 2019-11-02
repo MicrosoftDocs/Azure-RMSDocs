@@ -70,7 +70,7 @@ You can use the following cmdlets to download logging information from the docum
 
 ## Destination URLs used by the document tracking site
 
-The following URLs are used for document tracking and must be allowed on all devices and services between the clients that run the Azure Information Protection client and the Internet. For example, add these URLs to firewalls, or to your Trusted Sites if you're using Internet Explorer with Enhanced Security.
+The following URLs are used for document tracking and must be allowed on all devices and services between the clients that run the Azure Information Protection client and the internet. For example, add these URLs to firewalls, or to your Trusted Sites if you're using Internet Explorer with Enhanced Security.
 
 -  `https://*.azurerms.com`
 

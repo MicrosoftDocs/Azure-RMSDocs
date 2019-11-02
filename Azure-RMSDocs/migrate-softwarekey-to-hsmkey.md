@@ -51,9 +51,9 @@ Before you begin, make sure that your organization has a key vault that has been
 
 1.  Azure Key Vault administrator: For each exported SLC key that you want to store in Azure Key Vault, use the following steps in the [Implementing bring your own key (BYOK) for Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
 
-    -   **Generate and transfer your key to Azure Key Vault HSM**: [Step 1: Prepare your Internet-connected workstation](/azure/key-vault/key-vault-hsm-protected-keys#step-1-prepare-your-internet-connected-workstation)
+    -   **Generate and transfer your key to Azure Key Vault HSM**: [Step 1: Prepare your internet-connected workstation](/azure/key-vault/key-vault-hsm-protected-keys#step-1-prepare-your-internet-connected-workstation)
 
-    -   **Generate and transfer your tenant key – over the Internet**: [Step 2: Prepare your disconnected workstation](/azure/key-vault/key-vault-hsm-protected-keys#step-2-prepare-your-disconnected-workstation)
+    -   **Generate and transfer your tenant key – over the internet**: [Step 2: Prepare your disconnected workstation](/azure/key-vault/key-vault-hsm-protected-keys#step-2-prepare-your-disconnected-workstation)
 
     Do not follow the steps to generate your tenant key, because you already have the equivalent in the exported configuration data (.xml) file. Instead, you will run a tool to extract this key from the file and import it to your on-premises HSM. The tool creates two files when you run it:
 
@@ -141,7 +141,7 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
 
 ## Part 3: Import the configuration data to Azure Information Protection
 
-1. Azure Information Protection administrator: On the Internet-connected workstation and in the PowerShell session, copy over your new configuration data files (.xml) that have the SLC key removed after running the TpdUtil tool.
+1. Azure Information Protection administrator: On the internet-connected workstation and in the PowerShell session, copy over your new configuration data files (.xml) that have the SLC key removed after running the TpdUtil tool.
 
 2. Upload each .xml file, by using the [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
 
