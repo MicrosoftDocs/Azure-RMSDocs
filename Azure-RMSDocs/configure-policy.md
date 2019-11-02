@@ -95,7 +95,7 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
 
 1. Sign in to the Azure portal.
 
-2. On the hub menu, select **Create a resource**, and then, from the search box for the Marketplace, type **Azure Information Protection**. 
+2. Select **+ Create a resource**, and then, from the search box for the Marketplace, type **Azure Information Protection**. 
     
 3. From the results list, select **Azure Information Protection**. On the **Azure Information Protection** pane, click **Create**.
     

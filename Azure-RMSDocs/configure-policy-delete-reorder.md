@@ -65,7 +65,7 @@ Use the following instructions to make these changes.
 
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane. 
     
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, service, and docs: Start typing **Information** and select **Azure Information Protection**.
 
 2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** pane, do one or more of the following actions: 
 

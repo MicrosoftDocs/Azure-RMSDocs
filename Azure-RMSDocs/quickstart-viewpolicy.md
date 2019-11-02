@@ -49,7 +49,7 @@ Azure Information Protection isn't automatically available in the Azure portal. 
     
     If you are not the global admin, use the following link for alternative roles: [Signing in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. On the hub menu, select **Create a resource**, and then, from the search box for the Marketplace, type **Azure Information Protection**. 
+2. Select **+ Create a resource**, and then, from the search box for the Marketplace, type **Azure Information Protection**. 
     
 3. From the results list, select **Azure Information Protection**. Then on the **Azure Information Protection** pane, click **Create**.
     
