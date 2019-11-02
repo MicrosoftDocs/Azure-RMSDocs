@@ -213,7 +213,7 @@ This release has a single fix to resolve a race-condition issue where sometimes,
 
 ## Next steps
 
-For full details, see the [comparison tables](use-client.md#compare-the-labeling-clients-for-windows-computers).
+Not sure if this is the right client to install?  See [Choose which labeling client to use for Windows computers](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 For more information about installing and using this client: 
 
