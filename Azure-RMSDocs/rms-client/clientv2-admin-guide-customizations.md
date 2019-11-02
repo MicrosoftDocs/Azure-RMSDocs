@@ -5,7 +5,7 @@ title: Custom configurations - Azure Information Protection unified labeling cli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/27/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -907,7 +907,7 @@ Example PowerShell command, where your label is named "General" and you want to 
 
 This configuration uses label [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-Use these settings only when you have a working [S/MIME deployment](https://docs.microsoft.com/microsoft-365/compliance/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
+Use these settings only when you have a working [S/MIME deployment](https://docs.microsoft.com/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
 
 To configure an advanced setting for an S/MIME digital signature, enter the following strings for the selected label:
 
