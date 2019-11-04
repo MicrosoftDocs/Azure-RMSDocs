@@ -342,9 +342,9 @@
   - name: C library
     items:
     - name: Enumerations
-      href: reference/enums.md
+      href: reference/enumerations.md
     - name: Structures
-      href: reference/structs.md
+      href: reference/structures.md
     - name: Functions
       href: reference/functions.md
   - name: .NET API Browser
