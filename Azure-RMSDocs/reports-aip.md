@@ -168,7 +168,7 @@ Because this feature uses Azure Monitoring, role-based access control (RBAC) for
 
 Details:
 
-1. One of the following [Azure AD administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to access the Azure Information Protection analytics blade:
+1. One of the following [Azure AD administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to access the Azure Information Protection analytics pane:
     
     - To create your Log Analytics workspace or to create custom queries:
     
@@ -224,15 +224,15 @@ Azure Monitor Logs has a **Usage and estimated costs** feature to help you estim
 
 ## Configure a Log Analytics workspace for the reports
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](https://portal.azure.com) with an account that has the [permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics). Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](https://portal.azure.com) with an account that has the [permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics). Then navigate to the **Azure Information Protection** pane. 
     
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
     
 2. Locate the **Manage** menu options, and select **Configure analytics (Preview)**.
 
-3. On the **Azure Information Protection log analytics** blade, you see a list of any Log Analytics workspaces that are owned by your tenant. Do one of the following:
+3. On the **Azure Information Protection log analytics** pane, you see a list of any Log Analytics workspaces that are owned by your tenant. Do one of the following:
     
-    - To create a new Log Analytics workspace: Select **Create new workspace**, and on the **Log analytics workspace** blade, supply the requested information.
+    - To create a new Log Analytics workspace: Select **Create new workspace**, and on the **Log analytics workspace** pane, supply the requested information.
     
     - To use an existing Log Analytics workspace: Select the workspace from the list.
     
@@ -252,7 +252,7 @@ You're now ready to view the reports.
 
 ## How to view the reports
 
-From the Azure Information Protection blade, locate the **Dashboards** menu options, and select one of the following options:
+From the Azure Information Protection pane, locate the **Dashboards** menu options, and select one of the following options:
 
 - **Usage report (Preview)**: Use this report to see how your labels are being used.
 
@@ -274,7 +274,7 @@ From the Azure Information Protection blade, locate the **Dashboards** menu opti
 
 ## How to modify the reports and create custom queries
 
-Select the query icon in the dashboard to open a **Log Search** blade: 
+Select the query icon in the dashboard to open a **Log Search** pane: 
 
 ![Log Analytics icon to customize Azure Information Protection reports](./media/log-analytics-icon.png)
 

@@ -172,7 +172,7 @@ Configuration by using the Azure portal:
 
 1. Navigate to **Key vaults** > **\<*your key vault name*>** > **Access policies** > **Add new**.
 
-2. From the **Add access policy** blade, select **Azure Information Protection BYOK** from the **Configure from template (optional)** list box, and click **OK**.
+2. From the **Add access policy** pane, select **Azure Information Protection BYOK** from the **Configure from template (optional)** list box, and click **OK**.
     
     The selected template has the following configuration:
     

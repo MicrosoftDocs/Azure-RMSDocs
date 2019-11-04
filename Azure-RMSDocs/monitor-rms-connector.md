@@ -45,14 +45,14 @@ For example, Information events such as:
 
 If you have not configured the connector to use HTTPS, expect to see a Warning ID 2002 that a client is using a non-secure (HTTP) connection.
 
-If the connector fails to connect to the Azure Rights Management service, you will most likely see Error 3001. For example, this connection failure might be as a result of a DNS problem or lack of Internet access for one or more servers running the RMS connector. 
+If the connector fails to connect to the Azure Rights Management service, you will most likely see Error 3001. For example, this connection failure might be as a result of a DNS problem or lack of internet access for one or more servers running the RMS connector. 
 
 > [!TIP]
 > When RMS connector servers can't connect to Azure Rights Management service, web proxy configurations are often the reason.
 
 As with all event log entries, drill in to the message for more details.
 
-In addition to checking the event log when you first deploy the connector, check for warnings and errors on an ongoing basis. The connector might be working as expected initially, but other administrators might change dependent configurations. For example, another administrator changes the web proxy server configuration so that RMS connector servers can no longer access the Internet (Error 3001) or removes a computer account from a group that you specified as authorized to use the connector (Warning 2001).
+In addition to checking the event log when you first deploy the connector, check for warnings and errors on an ongoing basis. The connector might be working as expected initially, but other administrators might change dependent configurations. For example, another administrator changes the web proxy server configuration so that RMS connector servers can no longer access the internet (Error 3001) or removes a computer account from a group that you specified as authorized to use the connector (Warning 2001).
 
 ### Event log IDs and descriptions
 

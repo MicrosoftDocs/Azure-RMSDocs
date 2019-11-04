@@ -60,7 +60,7 @@ These procedures are done by the administrator for Azure Key Vault.
         
         When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includes the key ID. It will look similar to https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Make a note of this URL because the Azure Information Protection administrator needs it to tell the Azure Rights Management service to use this key for its tenant key.
 
-2. On the Internet-connected workstation, in a PowerShell session, use the [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet to authorize the Azure Rights Management service principal to access the key vault that will store the Azure Information Protection tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
+2. On the internet-connected workstation, in a PowerShell session, use the [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet to authorize the Azure Rights Management service principal to access the key vault that will store the Azure Information Protection tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
     
     For example, if the key vault that you have created for Azure Information Protection is named contoso-byok-ky, and your resource group is named contoso-byok-rg, run the following command:
     
@@ -73,7 +73,7 @@ Now that you’ve prepared your HSM key in Azure Key Vault for the Azure Rights 
 
 These procedures are done by the administrator for Azure Information Protection.
 
-1. On the Internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet.
+1. On the internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet.
     
     Then upload each trusted publishing domain (.xml) file, by using the [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
     
