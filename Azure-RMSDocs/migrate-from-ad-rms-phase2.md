@@ -96,7 +96,7 @@ Use the following table to identify which procedure to use for your migration.
 
 If you have an HSM-protected key that you cannot export, you can still migrate to Azure Information Protection by configuring your AD RMS cluster for a read-only mode. In this mode, previously protected content can still be opened but newly protected content uses a new tenant key that is managed by you (BYOK) or managed by Microsoft. For more information, see [An update is available for Office to support migrations from AD RMS to Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to).
 
-Before you start these key migration procedures, make sure that you can access the .xml files that you created earlier when you exported the trusted publishing domains. For example, these might be saved to a USB thumb drive that you move from the AD RMS server to the Internet-connected workstation.
+Before you start these key migration procedures, make sure that you can access the .xml files that you created earlier when you exported the trusted publishing domains. For example, these might be saved to a USB thumb drive that you move from the AD RMS server to the internet-connected workstation.
 
 > [!NOTE]
 > However you store these files, use security best practices to protect them because this data includes your private key.
@@ -157,7 +157,7 @@ When you manage templates and labels in the Azure portal, this group displays as
 
 If you're not sure whether your AD RMS templates include the ANYONE group, you can use the following sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
-You can easily add external users to templates when you convert these templates to labels in the Azure portal. Then, on the **Add permissions** blade, choose **Enter details** to manually specify the email addresses for these users. 
+You can easily add external users to templates when you convert these templates to labels in the Azure portal. Then, on the **Add permissions** pane, choose **Enter details** to manually specify the email addresses for these users. 
 
 For more information about this configuration, see [How to configure a label for Rights Management protection](./configure-policy-protection.md).
 

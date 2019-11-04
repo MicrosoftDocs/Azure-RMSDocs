@@ -6,7 +6,7 @@ description: Information to help you install and configure the Azure Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/26/2019
+ms.date: 10/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -176,7 +176,7 @@ If you haven’t already done so, you must now configure load balancing for the 
 ## Configuring load balancing and high availability
 After you have installed the second or final instance of the RMS connector, define a connector URL server name and configure a load-balancing system.
 
-The connector URL server name can be any name under a namespace that you control. For example, you could create an entry in your DNS system for **rmsconnector.contoso.com** and configure this entry to use an IP address in your load-balancing system. There are no special requirements for this name and it doesn’t need to be configured on the connector servers themselves. Unless your Exchange and SharePoint servers are going to be communicating with the connector over the Internet, this name doesn’t have to resolve on the Internet.
+The connector URL server name can be any name under a namespace that you control. For example, you could create an entry in your DNS system for **rmsconnector.contoso.com** and configure this entry to use an IP address in your load-balancing system. There are no special requirements for this name and it doesn’t need to be configured on the connector servers themselves. Unless your Exchange and SharePoint servers are going to be communicating with the connector over the internet, this name doesn’t have to resolve on the internet.
 
 > [!IMPORTANT]
 > We recommend that you don’t change this name after you have configured Exchange or SharePoint servers to use the connector, because you have to then clear these servers of all IRM configurations and then reconfigure them.
@@ -213,7 +213,7 @@ If you use the HTTPS option, ensure that all servers that run the connector have
 > - To configure IIS to use the certificate, see [Add a Binding to a Site (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx) in the [Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
 
 ## Configuring the RMS connector for a web proxy server
-If your connector servers are installed in a network that does not have direct Internet connectivity and requires manual configuration of a web proxy server for outbound Internet access, you must configure the registry on these servers for the RMS connector.
+If your connector servers are installed in a network that does not have direct internet connectivity and requires manual configuration of a web proxy server for outbound internet access, you must configure the registry on these servers for the RMS connector.
 
 #### To configure the RMS connector to use a web proxy server
 
@@ -238,7 +238,7 @@ You can run the RMS connector administration tool from a computer that does not 
 
 -   At least one network interface.
 
--   Access to the Internet via a firewall (or web proxy).
+-   Access to the internet via a firewall (or web proxy).
 
 To install the RMS connector administration tool, run the following files:
 

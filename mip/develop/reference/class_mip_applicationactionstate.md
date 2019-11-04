@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ApplicationActionState 
@@ -43,7 +43,7 @@ Implementation should pass if justification to downgrade an existing label was g
   
 **Returns**: True if downgrade is justifiedalong with the justification messageelse false 
   
-**See also**: [mip::JustifyAction](class_mip_justifyaction.md)
+**See also**: mip::JustifyAction
   
 ### GetNewLabelAssignmentMethod function
 Get the new label's assignment method.

@@ -63,15 +63,15 @@ Order the labels so that users see them in a logical progression in the Informat
 
 Use the following instructions to make these changes.
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane. 
     
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
 
-2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, do one or more of the following actions: 
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** pane, do one or more of the following actions: 
 
     - To delete a label: Right-click or select the context menu (**...**) for the label that you want to delete, click **Delete this label**, and click **OK** to confirm. 
 
-    - To disable a label: Select the label that you want to disable. On the **Label** blade, for **Enabled**, select **Off**, and then click **Save**.
+    - To disable a label: Select the label that you want to disable. On the **Label** pane, for **Enabled**, select **Off**, and then click **Save**.
 
     - To reorder a label: Right-click or select the context menu (**...**) for the label that you want to reorder, click **Move up** or **Move down** until the label is in the order that you want.  
 

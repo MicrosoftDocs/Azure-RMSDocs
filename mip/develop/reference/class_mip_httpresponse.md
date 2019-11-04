@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::HttpResponse 
-Interface that describes a single HTTP response, implemented by client app when overriding [HttpDelegate](class_mip_httpdelegate.md).
+Interface that describes a single HTTP response, implemented by client app when overriding HttpDelegate.
   
 ## Summary
  Members                        | Descriptions                                

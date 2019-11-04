@@ -263,9 +263,9 @@ when you upgrade from a version earlier than 1.48.204.0 and you don't configure 
 In this scenario, when you configure the scanner in the Azure portal, you must specify exactly the same profile name that was used when you ran the Update-AIPScanner command. If the name doesn't match, the scanner will not be configured for your settings. 
 
 > [!TIP]
-> To identify scanners that have this misconfiguration, use the **Azure Information Protection - Nodes** blade in the Azure portal.
+> To identify scanners that have this misconfiguration, use the **Azure Information Protection - Nodes** pane in the Azure portal.
 >  
-> For scanners that have Internet connectivity, they display their computer name with the GA version number of the Azure Information Protection client, but no profile name. Only scanners that have a version number 1.41.51.0 should display no profile name on this blade. 
+> For scanners that have internet connectivity, they display their computer name with the GA version number of the Azure Information Protection client, but no profile name. Only scanners that have a version number 1.41.51.0 should display no profile name on this pane. 
 
 ## Uninstalling the Azure Information Protection unified labeling client
 

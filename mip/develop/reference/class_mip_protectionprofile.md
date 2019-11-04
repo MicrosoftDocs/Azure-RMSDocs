@@ -5,17 +5,17 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ProtectionProfile 
-[ProtectionProfile](class_mip_protectionprofile.md) is the root class for performing protection operations.
-An application needs to create a [ProtectionProfile](class_mip_protectionprofile.md) before performing any protection operations
+ProtectionProfile is the root class for performing protection operations.
+An application needs to create a ProtectionProfile before performing any protection operations
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Gets settings used by [ProtectionProfile](class_mip_protectionprofile.md) during its initialization and throughout its lifetime.
+public const Settings& GetSettings() const  |  Gets settings used by ProtectionProfile during its initialization and throughout its lifetime.
 public void ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Starts list engines operation.
 public std::vector\<std::string\> ListEngines()  |  List engines.
 public void AddEngineAsync(const ProtectionEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  Starts adding a new protection engine to the profile.
@@ -27,14 +27,13 @@ public static MIP_API std::shared_ptr&lt;ProtectionProfile&gt; __CDECL mip::Prot
 public static const MIP_API char* __CDECL mip::ProtectionProfile::GetVersion | Gets library version.
 public static MIP_API std::shared_ptr&lt;PublishingLicenseInfo&gt; __CDECL mip::ProtectionProfile::GetPublishingLicenseInfo | Creates a holder for details of a Publishing License and can be used to create a Protection Handler. 
 
-
 ## Members
   
 ### GetSettings function
-Gets settings used by [ProtectionProfile](class_mip_protectionprofile.md) during its initialization and throughout its lifetime.
+Gets settings used by ProtectionProfile during its initialization and throughout its lifetime.
 
   
-**Returns**: [Settings](class_mip_protectionprofile_settings.md) used by [ProtectionProfile](class_mip_protectionprofile.md) during its initialization and throughout its lifetime
+**Returns**: Settings used by ProtectionProfile during its initialization and throughout its lifetime
   
 ### ListEnginesAsync function
 Starts list engines operation.
@@ -43,7 +42,7 @@ Parameters:
 * **context**: Client context that will be opaquely passed back to observers
 
 
-[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) will be called upon success or failure.
+ProtectionProfile::Observer will be called upon success or failure.
   
 ### ListEngines function
 List engines.
@@ -55,24 +54,24 @@ List engines.
 Starts adding a new protection engine to the profile.
 
 Parameters:  
-* **settings**: the [mip::ProtectionEngine::Settings](class_mip_protectionengine_settings.md) object that specifies the engine's settings. 
+* **settings**: the mip::ProtectionEngine::Settings object that specifies the engine's settings. 
 
 
 * **context**: Client context that will be opaquely passed back to observers
 
 
-[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) will be called upon success or failure.
+ProtectionProfile::Observer will be called upon success or failure.
   
 ### AddEngine function
 Add a new protection engine to the profile.
 
 Parameters:  
-* **settings**: the [mip::ProtectionEngine::Settings](class_mip_protectionengine_settings.md) object that specifies the engine's settings.
+* **settings**: the mip::ProtectionEngine::Settings object that specifies the engine's settings.
 
 
 
   
-**Returns**: Newly created [ProtectionEngine](class_mip_protectionengine.md)
+**Returns**: Newly created ProtectionEngine
   
 ### DeleteEngineAsync function
 Starts deleting the protection engine with the given ID. All data for the given engine will be deleted.
@@ -84,7 +83,7 @@ Parameters:
 * **context**: Client context that will be opaquely passed back to observers
 
 
-[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) will be called upon success or failure.
+ProtectionProfile::Observer will be called upon success or failure.
   
 ### DeleteEngine function
 Delete the protection engine with the given ID. All data for the given engine will be deleted.
