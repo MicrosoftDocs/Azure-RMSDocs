@@ -281,6 +281,7 @@ typedef struct {
 ## mip_cc_document_state
 
 Represents the current state of a label-aware document.
+
 | Field | Description |
 |---|---|
 | contentId | Human-readable document description visible in tenant audit portal. Example for a file: [path\filename]; example for an email: [Subject:Sender]. |
@@ -299,6 +300,3 @@ typedef struct {
   mip_cc_content_format contentFormat;
   mip_cc_dictionary auditMetadata;
 } mip_cc_document_state;
-
-```
-

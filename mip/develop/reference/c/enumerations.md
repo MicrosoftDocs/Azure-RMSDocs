@@ -13,7 +13,7 @@ ms.date: 11/4/2019
 
 ## mip_cc_cache_storage_type
 
-nStorage type for caches
+Storage type for caches
 
 | Field | Description |
 |---|---|
@@ -33,7 +33,7 @@ typedef enum {
 
 ## mip_cc_content_format
 
-nContent format
+Content format
 
 | Field | Description |
 |---|---|
@@ -51,7 +51,7 @@ typedef enum {
 
 ## mip_cc_label_assignment_method
 
-nDescribes how a new label is being applied
+Describes how a new label is being applied
 
 | Field | Description |
 |---|---|
@@ -71,7 +71,7 @@ typedef enum {
 
 ## mip_cc_content_mark_alignment
 
-nAlignment for content marks (content header or content footer)
+Alignment for content marks (content header or content footer)
 
 | Field | Description |
 |---|---|
@@ -91,7 +91,7 @@ typedef enum {
 
 ## mip_cc_watermark_layout
 
-nLayout for watermarks
+Layout for watermarks
 
 | Field | Description |
 |---|---|
@@ -109,7 +109,7 @@ typedef enum {
 
 ## mip_cc_consent
 
-nA user's response when consent is requested to connect to an unrecognized service endpoint
+A user's response when consent is requested to connect to an unrecognized service endpoint
 
 | Field | Description |
 |---|---|
@@ -129,7 +129,7 @@ typedef enum {
 
 ## mip_cc_flighting_feature
 
-nDefines new features by name
+Defines new features by name
 
 | Field | Description |
 |---|---|
@@ -153,7 +153,7 @@ typedef enum {
 
 ## mip_cc_http_request_type
 
-nHTTP request type
+HTTP request type
 
 | Field | Description |
 |---|---|
@@ -171,7 +171,7 @@ typedef enum {
 
 ## mip_cc_http_result
 
-nSuccess/failure state of the HTTP operation
+Success/failure state of the HTTP operation
 
 | Field | Description |
 |---|---|
@@ -189,7 +189,7 @@ typedef enum {
 
 ## mip_cc_log_level
 
-nLog level
+Log level
 
 | Field | Description |
 |---|---|
@@ -211,7 +211,7 @@ typedef enum {
 
 ## mip_cc_protection_type
 
-nA description of whether protection is defined by a template or ad-hoc
+A description of whether protection is defined by a template or ad-hoc
 
 | Field | Description |
 |---|---|
@@ -229,7 +229,7 @@ typedef enum {
 
 ## mip_cc_result
 
-nAPI success/failure result
+API success/failure result
 
 | Field | Description |
 |---|---|
@@ -296,7 +296,7 @@ typedef enum {
 
 ## mip_cc_action_type
 
-nAction type bit mask
+Action type bit mask
 
 | Field | Description |
 |---|---|
@@ -340,7 +340,7 @@ typedef enum {
 
 ## mip_cc_label_action_state
 
-nDescribes what the application is trying to do regarding the current label
+Describes what the application is trying to do regarding the current label
 
 | Field | Description |
 |---|---|
@@ -360,7 +360,7 @@ typedef enum {
 
 ## mip_cc_label_action_type
 
-nLabel-related actions an application understands and supports
+Label-related actions an application understands and supports
 
 | Field | Description |
 |---|---|
@@ -404,7 +404,7 @@ typedef enum {
 
 ## mip_cc_data_state
 
-nDefines the state of the data as an application is acting upon it
+Defines the state of the data as an application is acting upon it
 
 | Field | Description |
 |---|---|
