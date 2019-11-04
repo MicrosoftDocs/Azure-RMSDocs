@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ContentMarkingActionData 
@@ -13,14 +13,14 @@ ms.date: 08/27/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | _Not yet documented._
-public const std::string& GetFontName() const  | _Not yet documented._
-public const std::string& GetFontColor() const  | _Not yet documented._
-public ContentMarkAlignment GetContentMarkAlignment() const  | _Not yet documented._
-public int GetFontSize() const  | _Not yet documented._
-public int GetMargin() const  | _Not yet documented._
-public ContentMarkPlacement GetContentMarkPlacement() const  | _Not yet documented._
-public virtual ~ContentMarkingActionData()  | _Not yet documented._
+public const std::string& GetText() const  | Not yet documented.
+public const std::string& GetFontName() const  | Not yet documented.
+public const std::string& GetFontColor() const  | Not yet documented.
+public ContentMarkAlignment GetContentMarkAlignment() const  | Not yet documented.
+public int GetFontSize() const  | Not yet documented.
+public int GetMargin() const  | Not yet documented.
+public ContentMarkPlacement GetContentMarkPlacement() const  | Not yet documented.
+public virtual ~ContentMarkingActionData()  | Not yet documented.
   
 ## Members
   

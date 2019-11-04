@@ -5,23 +5,25 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ProtectionHandler::PublishingSettings 
-Settings used to create a [ProtectionHandler](class_mip_protectionhandler.md) to protect new content.
+Settings used to create a ProtectionHandler to protect new content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public PublishingSettings(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor)  |  ProtectionHandler::Settings constructor for creating a new engine.
-public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | _Not yet documented._
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | Not yet documented.
 public bool GetIsAuditedExtractionAllowed() const  |  Gets whether or not non-MIP-aware applications are allowed to open protected content.
 public void SetIsAuditedExtractionAllowed(bool isAuditedExtractionAllowed)  |  Sets whether or not non-MIP-aware applications are allowed to open protected content.
 public bool GetIsDeprecatedAlgorithmPreferred() const  |  Gets whether or not deprecated crypto algorithm (ECB) is preferred for backwards compatibility.
 public void SetIsDeprecatedAlgorithmPreferred(bool isDeprecatedAlgorithmPreferred)  |  Sets whether or not deprecated crypto algorithm (ECB) is preferred for backwards compatibility.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
+public bool IsPublishingFormatJson() const  |  Gets whether or not the returned pl is in json format (xml format is more widely accepted and is the default).
+public void SetPublishingFormatJson(bool isPublishingFormatJson)  |  whether or not the returned pl is in json format (xml format is more widely accepted and is the default).
   
 ## Members
   
@@ -80,3 +82,16 @@ Gets the delegated user.
   
 **Returns**: Delegated user
 A delegated user is specified when the authenticating user/application is acting on behalf of another user
+  
+### IsPublishingFormatJson function
+Gets whether or not the returned pl is in json format (xml format is more widely accepted and is the default).
+
+  
+**Returns**: True if is set to json format output.
+  
+### SetPublishingFormatJson function
+whether or not the returned pl is in json format (xml format is more widely accepted and is the default).
+
+Parameters:  
+* **isPublishingFormatJson**: if json format is enabled.
+
