@@ -6,16 +6,14 @@ ms.service: information-protection
 ms.topic: reference
 
 ms.author: mbaldwin
-ms.date: 11/1/2019
+ms.date: 11/4/2019
 ---
 
 # Structures
 
 ## mip_cc_application_info
 
-From [application_info_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/application_info_cc.h)
-
-ApplicationInfo definition
+A struct that includes application specific information 
 
 | Field | Description |
 |---|---|
@@ -35,9 +33,7 @@ typedef struct {
 
 ## mip_cc_oauth2_challenge
 
-From [auth_callback_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/auth_callback_cc.h)
-
-Defines auth callback functions
+Information provided by a server to generate an OAuth2 token
 
 | Field | Description |
 |---|---|
@@ -57,9 +53,7 @@ typedef struct {
 
 ## mip_cc_guid
 
-From [common_types_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/common_types_cc.h)
-
-A file Containing the common types used by the upe, file and protection modules.
+GUID
 
 ```c
 typedef struct {
@@ -70,9 +64,7 @@ typedef struct {
 
 ## mip_cc_kv_pair
 
-From [dictionary_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/dictionary_cc.h)
-
-Contains C API definitions for common string dictionary.
+Key/value pair
 
 | Field | Description |
 |---|---|
@@ -89,8 +81,6 @@ typedef struct {
 ```
 
 ## mip_cc_http_header
-
-From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
 
 HTTP request/response header
 
@@ -109,8 +99,6 @@ typedef struct {
 ```
 
 ## mip_cc_http_request
-
-From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
 
 HTTP request
 
@@ -140,8 +128,6 @@ typedef struct {
 
 ## mip_cc_http_response
 
-From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
-
 HTTP response
 
 | Field | Description |
@@ -168,9 +154,7 @@ typedef struct {
 
 ## mip_cc_identity
 
-From [identity_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/identity_cc.h)
-
-Identity definition
+A struct that includes application specific information 
 
 | Field | Description |
 |---|---|
@@ -186,9 +170,7 @@ typedef struct {
 
 ## mip_cc_feature_override
 
-From [mip_context_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/mip_context_cc.h)
-
-Defines C-Style MipContext functions
+Defines a single feature's enabled/disabled state
 
 | Field | Description |
 |---|---|
@@ -205,8 +187,6 @@ typedef struct {
 ```
 
 ## mip_cc_user_rights
-
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
 
 A group of users and the rights associated with them
 
@@ -230,8 +210,6 @@ typedef struct {
 
 ## mip_cc_user_roles
 
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
-
 A group of users and the roles associated with them
 
 | Field | Description |
@@ -254,9 +232,7 @@ typedef struct {
 
 ## mip_cc_async_task
 
-From [task_dispatcher_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/task_dispatcher_delegate_cc.h)
-
-Defines task dispatcher callback functions
+Defines a single async task dispatch request
 
 | Field | Description |
 |---|---|
@@ -275,8 +251,6 @@ typedef struct {
 ```
 
 ## mip_cc_application_action_state
-
-From [upe/application_action_state_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/application_action_state_cc.h)
 
 Represents the current state of the application as it performs a label-related operation
 
@@ -306,49 +280,23 @@ typedef struct {
 
 ## mip_cc_document_state
 
-From [upe/document_state_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/document_state_cc.h)
+Represents the current state of a label-aware document.
 
-Callback function definition for retrieving document metatdata, filtered by name/prefix
+| Field | Description |
+|---|---|
+| contentId | Human-readable document description visible in tenant audit portal. Example for a file: [path\filename]; example for an email: [Subject:Sender]. |
+| dataState | State of document data as application interacts with it  |
+| contentMetadataCallback | Document metadata callback  |
+| protectionDescriptor | Protection descriptor if document is currently protected, else null  |
+| contentFormat | Format of document (file vs. email)  |
+| auditMetadata | Optional application-specific metadata that is used when sending audit reports. Recognized values: 'Sender': Sender email address; 'Recipients': JSON array of email recipients; 'LastModifiedBy': Email address of the user who last modified a document; 'LastModifiedDate': Date a document was last modified. |
 
 ```c
 typedef struct {
-  /**
-   * Human-readable document description visible in tenant audit portal
-   *     Example for a file: [path\filename]
-   *     Example for an email: [Subject:Sender]
-   */
   const char* contentId;
-
-  /**
-   * State of document data as application interacts with it
-   */
   mip_cc_data_state dataState;
-
-  /**
-   * Document metadata callback
-   */
   mip_cc_metadata_callback contentMetadataCallback;
-
-  /**
-   * Protection descriptor if document is currently protected, else null
-   */
   mip_cc_protection_descriptor protectionDescriptor;
-
-  /**
-   * Format of document (file vs. email)
-   */
   mip_cc_content_format contentFormat;
-
-  /**
-   * Optional application-specific metadata that is used when sending audit reports
-   *     Recognized values:
-   *       'Sender': Sender email address
-   *       'Recipients': JSON array of email recipients
-   *       'LastModifiedBy': Email address of the user who last modified a document
-   *       'LastModifiedDate': Date a document was last modified
-   */
   mip_cc_dictionary auditMetadata;
 } mip_cc_document_state;
-
-```
-
