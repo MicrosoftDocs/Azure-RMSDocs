@@ -77,11 +77,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: A mip_cc_dictionary must be freed by calling MIP_CC_ReleaseDictionary
- 
+**Note**: A mip_cc_dictionary must be freed by calling MIP_CC_ReleaseDictionary 
 
 ```c
- MIP_CC_CreateDictionary(
+MIP_CC_API(mip_cc_result) MIP_CC_CreateDictionary(
     const mip_cc_kv_pair* entries,
     const int64_t count,
     mip_cc_dictionary* dictionary);
@@ -103,11 +102,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The memory for 'entries' is owned by the mip_cc_dictionary object, so it should not be freed independently
- 
+**Note**: The memory for 'entries' is owned by the mip_cc_dictionary object, so it should not be freed independently 
 
 ```c
- MIP_CC_Dictionary_GetEntries(
+MIP_CC_API(mip_cc_result) MIP_CC_Dictionary_GetEntries(
     const mip_cc_dictionary dictionary,
     mip_cc_kv_pair** entries,
     int64_t* count);
@@ -126,7 +124,7 @@ Parameter | Description
 | dictionary | Dictionary to be released |
 
 ```c
- MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
+MIP_CC_API(void) MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
 ```
 
 ## mip_cc_http_send_callback_fn
@@ -184,7 +182,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_CreateHttpDelegate(
+MIP_CC_API(mip_cc_result) MIP_CC_CreateHttpDelegate(
     const mip_cc_http_send_callback_fn sendCallback,
     const mip_cc_http_cancel_callback_fn cancelCallback,
     mip_cc_http_delegate* httpDelegate);
@@ -205,11 +203,10 @@ Parameter | Description
 | result | Success/failure state of operation |
 | response | The HTTP response if operation succeeded, else nullptr |
 
-**Note**: This function must be called by the application when an HTTP operation has completed. The ID of the HTTP response must match the ID of the HTTP request to allow MIP to correlate a response with its request
- 
+**Note**: This function must be called by the application when an HTTP operation has completed. The ID of the HTTP response must match the ID of the HTTP request to allow MIP to correlate a response with its request 
 
 ```c
- MIP_CC_NotifyHttpDelegateResponse(
+MIP_CC_API(void) MIP_CC_NotifyHttpDelegateResponse(
     const mip_cc_http_delegate httpDelegate,
     const char* requestId,
     const mip_cc_http_result result,
@@ -229,7 +226,7 @@ Parameter | Description
 | httpDelegate | HTTP delegate to be released |
 
 ```c
- MIP_CC_ReleaseHttpDelegate(mip_cc_http_delegate httpDelegate);
+MIP_CC_API(void) MIP_CC_ReleaseHttpDelegate(mip_cc_http_delegate httpDelegate);
 ```
 
 ## mip_cc_logger_init_callback_fn
@@ -294,7 +291,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_CreateLoggerDelegate(
+MIP_CC_API(mip_cc_result) MIP_CC_CreateLoggerDelegate(
     const mip_cc_logger_init_callback_fn initCallback,
     const mip_cc_logger_flush_callback_fn flushCallback,
     const mip_cc_logger_write_callback_fn writeCallback,
@@ -314,7 +311,7 @@ Parameter | Description
 | loggerDelegate | logger delegate to be released |
 
 ```c
- MIP_CC_ReleaseLoggerDelegate(mip_cc_logger_delegate loggerDelegate);
+MIP_CC_API(void) MIP_CC_ReleaseLoggerDelegate(mip_cc_logger_delegate loggerDelegate);
 ```
 
 ## MIP_CC_CreateMipContext
@@ -338,7 +335,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_CreateMipContext(
+MIP_CC_API(mip_cc_result) MIP_CC_CreateMipContext(
     const mip_cc_application_info* applicationInfo,
     const char* path,
     const mip_cc_log_level logLevel,
@@ -371,7 +368,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_CreateMipContextWithCustomFeatureSettings(
+MIP_CC_API(mip_cc_result) MIP_CC_CreateMipContextWithCustomFeatureSettings(
     const mip_cc_application_info* applicationInfo,
     const char* path,
     const mip_cc_log_level logLevel,
@@ -396,7 +393,7 @@ Parameter | Description
 | mipContext | MIP context to be released |
 
 ```c
- MIP_CC_ReleaseMipContext(mip_cc_mip_context mipContext);
+MIP_CC_API(void) MIP_CC_ReleaseMipContext(mip_cc_mip_context mipContext);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetProtectionType
@@ -415,7 +412,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionDescriptor_GetProtectionType(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetProtectionType(
     const mip_cc_protection_descriptor protectionDescriptor,
     mip_cc_protection_type* protectionType);
 ```
@@ -436,7 +433,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionDescriptor_GetOwnerSize(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetOwnerSize(
     const mip_cc_protection_descriptor protectionDescriptor,
     int64_t* ownerSize);
 ```
@@ -458,11 +455,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If ownerBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualOwnerSize will be set to the minimum required buffer size.
- 
+**Note**: If ownerBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualOwnerSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_ProtectionDescriptor_GetOwner(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetOwner(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* ownerBuffer,
     const int64_t ownerBufferSize,
@@ -485,7 +481,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionDescriptor_GetNameSize(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetNameSize(
     const mip_cc_protection_descriptor protectionDescriptor,
     int64_t* nameSize);
 ```
@@ -507,11 +503,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
- 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_ProtectionDescriptor_GetName(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetName(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -534,7 +529,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionDescriptor_GetDescriptionSize(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetDescriptionSize(
     const mip_cc_protection_descriptor protectionDescriptor,
     int64_t* descriptionSize);
 ```
@@ -556,11 +551,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If descriptionBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualDescriptionSize will be set to the minimum required buffer size.
- 
+**Note**: If descriptionBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualDescriptionSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_ProtectionDescriptor_GetDescription(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetDescription(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* descriptionBuffer,
     const int64_t descriptionBufferSize,
@@ -583,7 +577,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionDescriptor_GetTemplateId(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetTemplateId(
     const mip_cc_protection_descriptor protectionDescriptor,
     mip_cc_guid* templateId);
 ```
@@ -604,7 +598,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionDescriptor_GetLabelId(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetLabelId(
     const mip_cc_protection_descriptor protectionDescriptor,
     mip_cc_guid* labelId);
 ```
@@ -625,7 +619,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionDescriptor_GetContentId(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetContentId(
     const mip_cc_protection_descriptor protectionDescriptor,
     mip_cc_guid* contentId);
 ```
@@ -646,7 +640,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionDescriptor_DoesContentExpire(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_DoesContentExpire(
     const mip_cc_protection_descriptor protectionDescriptor,
     bool* doesContentExpire);
 ```
@@ -667,7 +661,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionDescriptor_GetContentValidUntil(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetContentValidUntil(
     const mip_cc_protection_descriptor protectionDescriptor,
     int64_t* contentValidUntil);
 ```
@@ -688,7 +682,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
     const mip_cc_protection_descriptor protectionDescriptor,
     bool* doesAllowOfflineAccess);
 ```
@@ -709,7 +703,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionDescriptor_GetReferrerSize(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetReferrerSize(
     const mip_cc_protection_descriptor protectionDescriptor,
     int64_t* referrerSize);
 ```
@@ -731,11 +725,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If referrerBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualReferrerSize will be set to the minimum required buffer size.
- 
+**Note**: If referrerBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualReferrerSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_ProtectionDescriptor_GetReferrer(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetReferrer(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* referrerBuffer,
     const int64_t referrerBufferSize,
@@ -755,7 +748,7 @@ Parameter | Description
 | protectionDescriptor | Protection descriptor to be released |
 
 ```c
- MIP_CC_ReleaseProtectionDescriptor(mip_cc_protection_descriptor protectionDescriptor);
+MIP_CC_API(void) MIP_CC_ReleaseProtectionDescriptor(mip_cc_protection_descriptor protectionDescriptor);
 ```
 
 ## MIP_CC_CreateStringList
@@ -774,11 +767,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: A mip_cc_string_list must be freed by calling MIP_CC_ReleaseStringList
- 
+**Note**: A mip_cc_string_list must be freed by calling MIP_CC_ReleaseStringList 
 
 ```c
- MIP_CC_CreateStringList(
+MIP_CC_API(mip_cc_result) MIP_CC_CreateStringList(
     const char** strings,
     const int64_t count,
     mip_cc_string_list* stringList);
@@ -800,11 +792,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The memory for 'strings' is owned by the mip_cc_string_list object, so it should not be freed independently
- 
+**Note**: The memory for 'strings' is owned by the mip_cc_string_list object, so it should not be freed independently 
 
 ```c
- MIP_CC_StringList_GetStrings(
+MIP_CC_API(mip_cc_result) MIP_CC_StringList_GetStrings(
     const mip_cc_string_list stringList,
     const char*** strings,
     int64_t* count);
@@ -823,7 +814,7 @@ Parameter | Description
 | stringList | String list to be released |
 
 ```c
- MIP_CC_ReleaseStringList(mip_cc_string_list stringList);
+MIP_CC_API(void) MIP_CC_ReleaseStringList(mip_cc_string_list stringList);
 ```
 
 ## mip_cc_dispatch_task_callback_fn
@@ -882,7 +873,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_CreateTaskDispatcherDelegate(
+MIP_CC_API(mip_cc_result) MIP_CC_CreateTaskDispatcherDelegate(
     const mip_cc_dispatch_task_callback_fn dispatchTaskCallback,
     const mip_cc_cancel_task_callback_fn cancelTaskCallback,
     const mip_cc_cancel_all_tasks_callback_fn cancelAllTasksCallback,
@@ -902,11 +893,10 @@ Parameter | Description
 | taskDispatcher | Handle to task dispatcher delegate object |
 | taskId | ID of async task associated with this operation |
 
-**Note**: This function must be called by the application when a task is scheduled to execute. It will result in immediate execution of the task on the current thread. The ID should match that of a previously-dispatched, non-cancelled task.
- 
+**Note**: This function must be called by the application when a task is scheduled to execute. It will result in immediate execution of the task on the current thread. The ID should match that of a previously-dispatched, non-cancelled task. 
 
 ```c
- MIP_CC_ExecuteDispatchedTask(const mip_cc_task_dispatcher_delegate taskDispatcher, const char* taskId);
+MIP_CC_API(void) MIP_CC_ExecuteDispatchedTask(const mip_cc_task_dispatcher_delegate taskDispatcher, const char* taskId);
 ```
 
 ## MIP_CC_ReleaseTaskDispatcherDelegate
@@ -922,7 +912,7 @@ Parameter | Description
 | taskDispatcher | Task dispatcher delegate to be released |
 
 ```c
- MIP_CC_ReleaseTaskDispatcherDelegate(mip_cc_task_dispatcher_delegate taskDispatcher);
+MIP_CC_API(void) MIP_CC_ReleaseTaskDispatcherDelegate(mip_cc_task_dispatcher_delegate taskDispatcher);
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetHostName
@@ -940,11 +930,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: This property is set when a client application uses the same Aria/1DS telemetry component and wishes for its internal telemetry settings (caching, logging, priority etc.) to be used instead of MIP's default settings
- 
+**Note**: This property is set when a client application uses the same Aria/1DS telemetry component and wishes for its internal telemetry settings (caching, logging, priority etc.) to be used instead of MIP's default settings 
 
 ```c
- MIP_CC_TelemetryConfiguration_SetHostName(
+MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetHostName(
     const mip_cc_telemetry_configuration telemetryConfig,
     const char* hostName);
 ```
@@ -964,11 +953,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: This property is set when a client has an existing telemetry DLL that implements the Aria/1DS SDK's C API that should be used instead of mip_ClientTelemetry.dll
- 
+**Note**: This property is set when a client has an existing telemetry DLL that implements the Aria/1DS SDK's C API that should be used instead of mip_ClientTelemetry.dll 
 
 ```c
- MIP_CC_TelemetryConfiguration_SetLibraryName(
+MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetLibraryName(
     const mip_cc_telemetry_configuration telemetryConfig,
     const char* libraryName);
 ```
@@ -988,11 +976,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If this property is not set, the telemetry component will use MIP's default HTTP stack
- 
+**Note**: If this property is not set, the telemetry component will use MIP's default HTTP stack 
 
 ```c
- MIP_CC_TelemetryConfiguration_SetHttpDelegate(
+MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetHttpDelegate(
     const mip_cc_telemetry_configuration telemetryConfig,
     const mip_cc_http_delegate httpDelegate);
 ```
@@ -1012,11 +999,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: Default is 'true'
- 
+**Note**: Default is 'true' 
 
 ```c
- MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
+MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
     const mip_cc_telemetry_configuration telemetryConfig,
     const bool isNetworkDetectionEnabled);
 ```
@@ -1036,11 +1022,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: Default is 'true'
- 
+**Note**: Default is 'true' 
 
 ```c
- MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
+MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
     const mip_cc_telemetry_configuration telemetryConfig,
     const bool isCachingEnabled);
 ```
@@ -1060,11 +1045,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: Default is 'true'
- 
+**Note**: Default is 'true' 
 
 ```c
- MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
+MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
     const mip_cc_telemetry_configuration telemetryConfig,
     const bool isTraceLoggingEnabled);
 ```
@@ -1084,11 +1068,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: Default is 'false'
- 
+**Note**: Default is 'false' 
 
 ```c
- MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
+MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
     const mip_cc_telemetry_configuration telemetryConfig,
     const bool isTelemetryOptedOut);
 ```
@@ -1109,7 +1092,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_TelemetryConfiguration_SetCustomSettings(
+MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetCustomSettings(
     const mip_cc_telemetry_configuration telemetryConfig,
     const mip_cc_dictionary customSettings);
 ```
@@ -1127,7 +1110,7 @@ Parameter | Description
 | profileSettings | Protection profile settings to be released |
 
 ```c
- MIP_CC_ReleaseTelemetryConfiguration(mip_cc_telemetry_configuration telemetryConfig);
+MIP_CC_API(void) MIP_CC_ReleaseTelemetryConfiguration(mip_cc_telemetry_configuration telemetryConfig);
 ```
 
 ## MIP_CC_ReleaseProtectionEngine
@@ -1143,7 +1126,7 @@ Parameter | Description
 | engine | Protection engine to release |
 
 ```c
- MIP_CC_ReleaseProtectionEngine(mip_cc_protection_engine engine);
+MIP_CC_API(void) MIP_CC_ReleaseProtectionEngine(mip_cc_protection_engine engine);
 ```
 
 ## MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing
@@ -1164,7 +1147,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
     const mip_cc_protection_engine engine,
     const mip_cc_protection_handler_publishing_settings settings,
     const void* context,
@@ -1189,7 +1172,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
   const mip_cc_protection_engine engine,
   const mip_cc_protection_handler_consumption_settings settings,
   const void* context,
@@ -1212,7 +1195,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionEngine_GetEngineIdSize(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetEngineIdSize(
     const mip_cc_protection_engine engine,
     int64_t* idSize);
 ```
@@ -1234,11 +1217,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If idBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualIdSize will be set to the minimum required buffer size.
- 
+**Note**: If idBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualIdSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_ProtectionEngine_GetEngineId(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetEngineId(
     const mip_cc_protection_engine engine,
     char* idBuffer,
     const int64_t idBufferSize,
@@ -1261,11 +1243,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: This API may result in an independent HTTP operation. Consider using 'MIP_CC_ProtectionEngine_GetTemplates' directly with a pre-defined buffer to avoid unnecessary extra HTTP operations.
- 
+**Note**: This API may result in an independent HTTP operation. Consider using 'MIP_CC_ProtectionEngine_GetTemplates' directly with a pre-defined buffer to avoid unnecessary extra HTTP operations. 
 
 ```c
- MIP_CC_ProtectionEngine_GetTemplatesSize(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetTemplatesSize(
     const mip_cc_protection_engine engine,
     const void* context,
     int64_t* templatesSize);
@@ -1289,11 +1270,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If templateBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTemplateSize will be set to the minimum required buffer size.
- 
+**Note**: If templateBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTemplateSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_ProtectionEngine_GetTemplates(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetTemplates(
     const mip_cc_protection_engine engine,
     const void* context,
     mip_cc_guid* templateBuffer,
@@ -1321,11 +1301,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The 'rights' variable must be released by the caller by calling MIP_CC_ReleaseStringList
- 
+**Note**: The 'rights' variable must be released by the caller by calling MIP_CC_ReleaseStringList 
 
 ```c
- MIP_CC_ProtectionEngine_GetRightsForLabelId(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetRightsForLabelId(
     const mip_cc_protection_engine engine,
     const void* context,
     const char* documentId,
@@ -1351,7 +1330,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionEngine_GetClientDataSize(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetClientDataSize(
     const mip_cc_protection_engine engine,
     int64_t* clientDataSize);
 ```
@@ -1373,11 +1352,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If clientDataBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualClientDataSize will be set to the minimum required buffer size.
- 
+**Note**: If clientDataBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualClientDataSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_ProtectionEngine_GetClientData(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetClientData(
     const mip_cc_protection_engine engine,
     char* clientDataBuffer,
     const int64_t clientDataBufferSize,
@@ -1402,7 +1380,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_CreateProtectionEngineSettingsWithIdentity(
+MIP_CC_API(mip_cc_result) MIP_CC_CreateProtectionEngineSettingsWithIdentity(
     const mip_cc_identity* identity,
     const char* clientData,
     const char* locale,
@@ -1425,7 +1403,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionEngineSettings_SetClientData(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngineSettings_SetClientData(
     const mip_cc_protection_engine_settings engineSettings,
     const char* clientData);
 ```
@@ -1446,7 +1424,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionEngineSettings_SetCustomSettings(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngineSettings_SetCustomSettings(
     const mip_cc_protection_engine_settings engineSettings,
     const mip_cc_dictionary customSettings);
 ```
@@ -1467,7 +1445,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionEngineSettings_SetSessionId(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngineSettings_SetSessionId(
     const mip_cc_protection_engine_settings engineSettings,
     const char* sessionId);
 ```
@@ -1488,7 +1466,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
     const mip_cc_protection_engine_settings engineSettings,
     const char* cloudEndpointBaseUrl);
 ```
@@ -1506,7 +1484,7 @@ Parameter | Description
 | engineSettings | Protection engine settings to be released |
 
 ```c
- MIP_CC_ReleaseProtectionEngineSettings(mip_cc_protection_engine_settings engineSettings);
+MIP_CC_API(void) MIP_CC_ReleaseProtectionEngineSettings(mip_cc_protection_engine_settings engineSettings);
 ```
 
 ## MIP_CC_CreateProtectionHandlerPublishingSettings
@@ -1525,7 +1503,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_CreateProtectionHandlerPublishingSettings(
+MIP_CC_API(mip_cc_result) MIP_CC_CreateProtectionHandlerPublishingSettings(
     const mip_cc_protection_descriptor descriptor,
     mip_cc_protection_handler_publishing_settings* settings);
 ```
@@ -1546,7 +1524,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorithmPreferred(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorithmPreferred(
     const mip_cc_protection_handler_publishing_settings settings,
     const bool isDeprecatedAlgorithmPreferred);
 ```
@@ -1567,7 +1545,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed(
     const mip_cc_protection_handler_publishing_settings settings,
     const bool isAuditedExtractionAllowed);
 ```
@@ -1588,7 +1566,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson(
     const mip_cc_protection_handler_publishing_settings settings,
     const bool isPublishingFormatJson);
 ```
@@ -1608,11 +1586,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: A delegated user is specified when the authenticating user/application is acting on behalf of another user
- 
+**Note**: A delegated user is specified when the authenticating user/application is acting on behalf of another user 
 
 ```c
- MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
     const mip_cc_protection_handler_publishing_settings settings,
     const char* delegatedUserEmail);
 ```
@@ -1636,7 +1613,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_CreateProtectionHandlerConsumptionSettings(
+MIP_CC_API(mip_cc_result) MIP_CC_CreateProtectionHandlerConsumptionSettings(
     const uint8_t* publishingLicenseBuffer,
     const int64_t publishingLicenseBufferSize,
     mip_cc_protection_handler_consumption_settings* settings);
@@ -1657,11 +1634,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If this is set to true, protection handler creation will only succeed if content has already been previously decrypted and its unexpired license is cached. A MIP_RESULT_ERROR_NETWORK result will be returned if cached content is not found.
- 
+**Note**: If this is set to true, protection handler creation will only succeed if content has already been previously decrypted and its unexpired license is cached. A MIP_RESULT_ERROR_NETWORK result will be returned if cached content is not found. 
 
 ```c
- MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
     const mip_cc_protection_handler_consumption_settings settings,
     const bool isOfflineOnly);
 ```
@@ -1681,11 +1657,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: A delegated user is specified when the authenticating user/application is acting on behalf of another user
- 
+**Note**: A delegated user is specified when the authenticating user/application is acting on behalf of another user 
 
 ```c
- MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
     const mip_cc_protection_handler_consumption_settings settings,
     const char* delegatedUserEmail);
 ```
@@ -1706,7 +1681,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
     const mip_cc_protection_handler handler,
     int64_t* publishingLicenseBufferSize);
 ```
@@ -1728,11 +1703,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If publishingLicenseBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualPublishingLicenseSize will be set to the minimum required buffer size.
- 
+**Note**: If publishingLicenseBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualPublishingLicenseSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
     const mip_cc_protection_handler handler,
     uint8_t* publishingLicenseBuffer,
     const int64_t publishingLicenseBufferSize,
@@ -1755,7 +1729,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionHandler_GetProtectionDescriptor(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetProtectionDescriptor(
     const mip_cc_protection_handler handler,
     mip_cc_protection_descriptor* descriptor);
 ```
@@ -1775,11 +1749,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The 'rights' variable must be released by the caller by calling MIP_CC_ReleaseStringList
- 
+**Note**: The 'rights' variable must be released by the caller by calling MIP_CC_ReleaseStringList 
 
 ```c
- MIP_CC_ProtectionHandler_GetRights(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetRights(
     const mip_cc_protection_handler handler,
     mip_cc_string_list* rights);
 ```
@@ -1802,7 +1775,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionHandler_GetProtectedContentSize(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetProtectedContentSize(
     const mip_cc_protection_handler handler,
     const int64_t unprotectedSize,
     const bool includesFinalBlock,
@@ -1825,7 +1798,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionHandler_GetBlockSize(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetBlockSize(
     const mip_cc_protection_handler handler,
     int64_t* blockSize);
 ```
@@ -1846,7 +1819,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionHandler_GetIssuedUserSize(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetIssuedUserSize(
     const mip_cc_protection_handler handler,
     int64_t* issuedUserSize);
 ```
@@ -1868,11 +1841,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If issuedUserBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualIssuedUserSize will be set to the minimum required buffer size.
- 
+**Note**: If issuedUserBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualIssuedUserSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_ProtectionHandler_GetIssuedUser(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetIssuedUser(
     const mip_cc_protection_handler handler,
     char* issuedUserBuffer,
     const int64_t issuedUserBufferSize,
@@ -1895,7 +1867,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionHandler_GetOwnerSize(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetOwnerSize(
     const mip_cc_protection_handler handler,
     int64_t* ownerSize);
 ```
@@ -1917,11 +1889,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If ownerBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualOwnerSize will be set to the minimum required buffer size.
- 
+**Note**: If ownerBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualOwnerSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_ProtectionHandler_GetOwner(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetOwner(
     const mip_cc_protection_handler handler,
     char* ownerBuffer,
     const int64_t ownerBufferSize,
@@ -1944,7 +1915,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionHandler_GetContentId(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetContentId(
     const mip_cc_protection_handler handler,
     mip_cc_guid* contentId);
 ```
@@ -1965,7 +1936,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
     const mip_cc_protection_handler handler,
     bool* doesUseDeprecatedAlgorithm);
 ```
@@ -1991,7 +1962,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionHandler_DecryptBuffer(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_DecryptBuffer(
     const mip_cc_protection_handler handler,
     const int64_t offsetFromStart,
     const uint8_t* inputBuffer,
@@ -2015,7 +1986,7 @@ Parameter | Description
 | settings | Protection handler settings to be released |
 
 ```c
- MIP_CC_ReleaseProtectionHandlerPublishingSettings(mip_cc_protection_handler_publishing_settings settings);
+MIP_CC_API(void) MIP_CC_ReleaseProtectionHandlerPublishingSettings(mip_cc_protection_handler_publishing_settings settings);
 ```
 
 ## MIP_CC_ReleaseProtectionHandlerConsumptionSettings
@@ -2031,7 +2002,7 @@ Parameter | Description
 | settings | Protection handler settings to be released |
 
 ```c
- MIP_CC_ReleaseProtectionHandlerConsumptionSettings(mip_cc_protection_handler_consumption_settings settings);
+MIP_CC_API(void) MIP_CC_ReleaseProtectionHandlerConsumptionSettings(mip_cc_protection_handler_consumption_settings settings);
 ```
 
 ## MIP_CC_ReleaseProtectionHandler
@@ -2047,7 +2018,7 @@ Parameter | Description
 | handler | Protection handler to be released |
 
 ```c
- MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
+MIP_CC_API(void) MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
 ```
 
 ## MIP_CC_LoadProtectionProfile
@@ -2066,7 +2037,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_LoadProtectionProfile(
+MIP_CC_API(mip_cc_result) MIP_CC_LoadProtectionProfile(
     const mip_cc_protection_profile_settings settings,
     mip_cc_protection_profile* profile);
 ```
@@ -2084,7 +2055,7 @@ Parameter | Description
 | profile | Protection profile to be released |
 
 ```c
- MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
+MIP_CC_API(void) MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
 ```
 
 ## MIP_CC_ProtectionProfileSettings_SetSessionId
@@ -2103,7 +2074,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionProfileSettings_SetSessionId(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionProfileSettings_SetSessionId(
     const mip_cc_protection_profile_settings settings,
     const char* sessionId);
 ```
@@ -2124,7 +2095,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
     const mip_cc_protection_profile_settings settings,
     const bool canCacheLicenses);
 ```
@@ -2145,7 +2116,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
     const mip_cc_protection_profile_settings settings,
     const mip_cc_http_delegate httpDelegate);
 ```
@@ -2166,7 +2137,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
     const mip_cc_protection_profile_settings settings,
     const mip_cc_task_dispatcher_delegate taskDispatcherDelegate);
 ```
@@ -2187,7 +2158,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectionProfileSettings_SetCustomSettings(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectionProfileSettings_SetCustomSettings(
     const mip_cc_protection_profile_settings settings,
     const mip_cc_dictionary customSettings);
 ```
@@ -2205,7 +2176,7 @@ Parameter | Description
 | settings | Protection profile settings to be released |
 
 ```c
- MIP_CC_ReleaseProtectionProfileSettings(mip_cc_protection_profile_settings profilsettingseSettings);
+MIP_CC_API(void) MIP_CC_ReleaseProtectionProfileSettings(mip_cc_protection_profile_settings profilsettingseSettings);
 ```
 
 ## MIP_CC_Action_GetType
@@ -2224,7 +2195,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_Action_GetType(
+MIP_CC_API(mip_cc_result) MIP_CC_Action_GetType(
     const mip_cc_action action,
     mip_cc_action_type* actionType);
 ```
@@ -2245,7 +2216,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_Action_GetId(
+MIP_CC_API(mip_cc_result) MIP_CC_Action_GetId(
     const mip_cc_action action,
     mip_cc_guid* id);
 ```
@@ -2266,11 +2237,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The memory for 'actions' is owned by the mip_cc_action_result object, so it should not be freed independently
- 
+**Note**: The memory for 'actions' is owned by the mip_cc_action_result object, so it should not be freed independently 
 
 ```c
- MIP_CC_ActionResult_GetActions(
+MIP_CC_API(mip_cc_result) MIP_CC_ActionResult_GetActions(
     const mip_cc_action_result actionResult,
     mip_cc_action** actions,
     int64_t* count);
@@ -2289,7 +2259,7 @@ Parameter | Description
 | actionResult | Action result to be released |
 
 ```c
- MIP_CC_ReleaseActionResult(mip_cc_action_result actionResult);
+MIP_CC_API(void) MIP_CC_ReleaseActionResult(mip_cc_action_result actionResult);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetUIElementNameSize
@@ -2308,7 +2278,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentFooterAction_GetUIElementNameSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetUIElementNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2330,11 +2300,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
- 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_AddContentFooterAction_GetUIElementName(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetUIElementName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2357,7 +2326,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentFooterAction_GetTextSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetTextSize(
     const mip_cc_action action,
     int64_t* textSize);
 ```
@@ -2379,11 +2348,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If textBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTextSize will be set to the minimum required buffer size.
- 
+**Note**: If textBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTextSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_AddContentFooterAction_GetText(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetText(
     const mip_cc_action action,
     char* textBuffer,
     const int64_t textBufferSize,
@@ -2406,7 +2374,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentFooterAction_GetFontNameSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetFontNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2428,11 +2396,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
- 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_AddContentFooterAction_GetFontName(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetFontName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2455,7 +2422,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentFooterAction_GetFontSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetFontSize(
     const mip_cc_action action,
     int32_t* fontSize);
 ```
@@ -2476,7 +2443,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentFooterAction_GetFontColorSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetFontColorSize(
     const mip_cc_action action,
     int64_t* colorSize);
 ```
@@ -2498,11 +2465,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If colorBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualColorSize will be set to the minimum required buffer size.
- 
+**Note**: If colorBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualColorSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_AddContentFooterAction_GetFontColor(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetFontColor(
     const mip_cc_action action,
     char* colorBuffer,
     const int64_t colorBufferSize,
@@ -2525,7 +2491,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentFooterAction_GetAlignment(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetAlignment(
     const mip_cc_action action,
     mip_cc_content_mark_alignment* alignment);
 ```
@@ -2546,7 +2512,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentFooterAction_GetMargin(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetMargin(
     const mip_cc_action action,
     int32_t* marginSize);
 ```
@@ -2567,7 +2533,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2589,11 +2555,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
- 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_AddContentHeaderAction_GetUIElementName(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetUIElementName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2616,7 +2581,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentHeaderAction_GetTextSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetTextSize(
     const mip_cc_action action,
     int64_t* textSize);
 ```
@@ -2638,11 +2603,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If textBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTextSize will be set to the minimum required buffer size.
- 
+**Note**: If textBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTextSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_AddContentHeaderAction_GetText(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetText(
     const mip_cc_action action,
     char* textBuffer,
     const int64_t textBufferSize,
@@ -2665,7 +2629,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentHeaderAction_GetFontNameSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetFontNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2687,11 +2651,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
- 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_AddContentHeaderAction_GetFontName(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetFontName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2714,7 +2677,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentHeaderAction_GetFontSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetFontSize(
     const mip_cc_action action,
     int32_t* fontSize);
 ```
@@ -2735,7 +2698,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentHeaderAction_GetFontColorSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetFontColorSize(
     const mip_cc_action action,
     int64_t* colorSize);
 ```
@@ -2757,11 +2720,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If colorBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualColorSize will be set to the minimum required buffer size.
- 
+**Note**: If colorBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualColorSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_AddContentHeaderAction_GetFontColor(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetFontColor(
     const mip_cc_action action,
     char* colorBuffer,
     const int64_t colorBufferSize,
@@ -2784,7 +2746,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentHeaderAction_GetAlignment(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetAlignment(
     const mip_cc_action action,
     mip_cc_content_mark_alignment* alignment);
 ```
@@ -2805,7 +2767,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddContentHeaderAction_GetMargin(
+MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetMargin(
     const mip_cc_action action,
     int32_t* marginSize);
 ```
@@ -2826,7 +2788,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddWatermarkAction_GetUIElementNameSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetUIElementNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2848,11 +2810,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
- 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_AddWatermarkAction_GetUIElementName(
+MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetUIElementName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2875,7 +2836,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddWatermarkAction_GetLayout(
+MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetLayout(
     const mip_cc_action action,
     mip_cc_watermark_layout* layout);
 ```
@@ -2896,7 +2857,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddWatermarkAction_GetTextSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetTextSize(
     const mip_cc_action action,
     int64_t* textSize);
 ```
@@ -2918,11 +2879,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If textBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTextSize will be set to the minimum required buffer size.
- 
+**Note**: If textBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTextSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_AddWatermarkAction_GetText(
+MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetText(
     const mip_cc_action action,
     char* textBuffer,
     const int64_t textBufferSize,
@@ -2945,7 +2905,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddWatermarkAction_GetFontNameSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetFontNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2967,11 +2927,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
- 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_AddWatermarkAction_GetFontName(
+MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetFontName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2994,7 +2953,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddWatermarkAction_GetFontSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetFontSize(
     const mip_cc_action action,
     int32_t* fontSize);
 ```
@@ -3015,7 +2974,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_AddWatermarkAction_GetFontColorSize(
+MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetFontColorSize(
     const mip_cc_action action,
     int64_t* colorSize);
 ```
@@ -3037,11 +2996,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If colorBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualColorSize will be set to the minimum required buffer size.
- 
+**Note**: If colorBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualColorSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_AddWatermarkAction_GetFontColor(
+MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetFontColor(
     const mip_cc_action action,
     char* colorBuffer,
     const int64_t colorBufferSize,
@@ -3061,7 +3019,7 @@ Parameter | Description
 | contentLabel | Label to be released |
 
 ```c
- MIP_CC_ReleaseContentLabel(mip_cc_content_label contentLabel);
+MIP_CC_API(void) MIP_CC_ReleaseContentLabel(mip_cc_content_label contentLabel);
 ```
 
 ## MIP_CC_ContentLabel_GetCreationTime
@@ -3080,7 +3038,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ContentLabel_GetCreationTime(
+MIP_CC_API(mip_cc_result) MIP_CC_ContentLabel_GetCreationTime(
     const mip_cc_content_label contentLabel,
     int64_t* creationTime);
 ```
@@ -3101,7 +3059,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ContentLabel_GetAssignmentMethod(
+MIP_CC_API(mip_cc_result) MIP_CC_ContentLabel_GetAssignmentMethod(
     const mip_cc_content_label contentLabel,
     mip_cc_label_assignment_method* assignmentMethod);
 ```
@@ -3121,11 +3079,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The 'properties' variable must be released by the caller by calling MIP_CC_ReleaseDictionary
- 
+**Note**: The 'properties' variable must be released by the caller by calling MIP_CC_ReleaseDictionary 
 
 ```c
- MIP_CC_ContentLabel_GetExtendedProperties(
+MIP_CC_API(mip_cc_result) MIP_CC_ContentLabel_GetExtendedProperties(
     const mip_cc_content_label contentLabel,
     mip_cc_dictionary* properties);
 ```
@@ -3146,7 +3103,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
+MIP_CC_API(mip_cc_result) MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
     const mip_cc_content_label contentLabel,
     bool* isProtectionAppliedByLabel);
 ```
@@ -3166,11 +3123,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The 'label' variable must be released by the caller by calling MIP_CC_ReleaseLabel
- 
+**Note**: The 'label' variable must be released by the caller by calling MIP_CC_ReleaseLabel 
 
 ```c
- MIP_CC_ContentLabel_GetLabel(
+MIP_CC_API(mip_cc_result) MIP_CC_ContentLabel_GetLabel(
     const mip_cc_content_label contentLabel,
     mip_cc_label* label);
 ```
@@ -3191,7 +3147,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_CustomAction_GetNameSize(
+MIP_CC_API(mip_cc_result) MIP_CC_CustomAction_GetNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -3213,11 +3169,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
- 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_CustomAction_GetName(
+MIP_CC_API(mip_cc_result) MIP_CC_CustomAction_GetName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -3239,11 +3194,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The 'properties' variable must be released by the caller by calling MIP_CC_ReleaseDictionary
- 
+**Note**: The 'properties' variable must be released by the caller by calling MIP_CC_ReleaseDictionary 
 
 ```c
- MIP_CC_CustomAction_GetProperties(
+MIP_CC_API(mip_cc_result) MIP_CC_CustomAction_GetProperties(
     const mip_cc_action action,
     mip_cc_dictionary* properties);
 ```
@@ -3289,7 +3243,7 @@ Parameter | Description
 | label | Label to be released |
 
 ```c
- MIP_CC_ReleaseLabel(mip_cc_label label);
+MIP_CC_API(void) MIP_CC_ReleaseLabel(mip_cc_label label);
 ```
 
 ## MIP_CC_Label_GetId
@@ -3308,7 +3262,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_Label_GetId(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetId(
     const mip_cc_label label,
     mip_cc_guid* labelId);
 ```
@@ -3329,7 +3283,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_Label_GetNameSize(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetNameSize(
     const mip_cc_label label,
     int64_t* nameSize);
 ```
@@ -3351,11 +3305,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
- 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_Label_GetName(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetName(
     const mip_cc_label label,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -3378,7 +3331,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_Label_GetDescriptionSize(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetDescriptionSize(
     const mip_cc_label label,
     int64_t* descriptionSize);
 ```
@@ -3400,11 +3353,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If descriptionBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualDescriptionSize will be set to the minimum required buffer size.
- 
+**Note**: If descriptionBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualDescriptionSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_Label_GetDescription(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetDescription(
     const mip_cc_label label,
     char* descriptionBuffer,
     const int64_t descriptionBufferSize,
@@ -3427,7 +3379,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_Label_GetColorSize(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetColorSize(
     const mip_cc_label label,
     int64_t* colorSize);
 ```
@@ -3449,11 +3401,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If colorBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualColorSize will be set to the minimum required buffer size.
- 
+**Note**: If colorBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualColorSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_Label_GetColor(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetColor(
     const mip_cc_label label,
     char* colorBuffer,
     const int64_t colorBufferSize,
@@ -3476,7 +3427,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_Label_GetSensitivity(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetSensitivity(
     const mip_cc_label label,
     int32_t* sensitivity);
 ```
@@ -3497,7 +3448,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_Label_GetTooltipSize(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetTooltipSize(
     const mip_cc_label label,
     int64_t* tooltipSize);
 ```
@@ -3519,11 +3470,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If tooltipBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTooltipSize will be set to the minimum required buffer size.
- 
+**Note**: If tooltipBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTooltipSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_Label_GetTooltip(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetTooltip(
     const mip_cc_label label,
     char* tooltipBuffer,
     const int64_t tooltipBufferSize,
@@ -3546,7 +3496,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_Label_GetAutoTooltipSize(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetAutoTooltipSize(
     const mip_cc_label label,
     int64_t* tooltipSize);
 ```
@@ -3568,11 +3518,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If tooltipBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTooltipSize will be set to the minimum required buffer size.
- 
+**Note**: If tooltipBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTooltipSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_Label_GetAutoTooltip(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetAutoTooltip(
     const mip_cc_label label,
     char* tooltipBuffer,
     const int64_t tooltipBufferSize,
@@ -3594,11 +3543,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: Only active labels can be applied. Inactivte labels cannot be applied and are used for display purposes only.
- 
+**Note**: Only active labels can be applied. Inactivte labels cannot be applied and are used for display purposes only. 
 
 ```c
- MIP_CC_Label_IsActive(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_IsActive(
     const mip_cc_label label,
     bool* isActive);
 ```
@@ -3619,7 +3567,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_Label_GetParent(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetParent(
     const mip_cc_label label,
     mip_cc_label* parent);
 ```
@@ -3640,7 +3588,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_Label_GetChildrenSize(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetChildrenSize(
     const mip_cc_label label,
     int64_t* childrenSize);
 ```
@@ -3662,11 +3610,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If childrenBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualChildrenSize will be set to the minimum required buffer size
- 
+**Note**: If childrenBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualChildrenSize will be set to the minimum required buffer size 
 
 ```c
- MIP_CC_Label_GetChildren(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetChildren(
     const mip_cc_label label,
     mip_cc_label* childrenBuffer,
     const int64_t childrenBufferSize,
@@ -3688,11 +3635,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The 'settings' variable must be released by the caller by calling MIP_CC_ReleaseDictionary
- 
+**Note**: The 'settings' variable must be released by the caller by calling MIP_CC_ReleaseDictionary 
 
 ```c
- MIP_CC_Label_GetCustomSettings(
+MIP_CC_API(mip_cc_result) MIP_CC_Label_GetCustomSettings(
     const mip_cc_label label,
     mip_cc_dictionary* settings);
 ```
@@ -3712,11 +3658,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The 'metadataNames' variable must be released by the caller by calling MIP_CC_ReleaseStringList @note Removing metadata should be done before adding metadata
- 
+**Note**: The 'metadataNames' variable must be released by the caller by calling MIP_CC_ReleaseStringList @note Removing metadata should be done before adding metadata 
 
 ```c
- MIP_CC_MetadataAction_GetMetadataToRemove(
+MIP_CC_API(mip_cc_result) MIP_CC_MetadataAction_GetMetadataToRemove(
     const mip_cc_action action,
     mip_cc_string_list* metadataNames);
 ```
@@ -3736,11 +3681,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The 'metadata' variable must be released by the caller by calling MIP_CC_ReleaseDictionary @note Removing metadata should be done before adding metadata
- 
+**Note**: The 'metadata' variable must be released by the caller by calling MIP_CC_ReleaseDictionary @note Removing metadata should be done before adding metadata 
 
 ```c
- MIP_CC_MetadataAction_GetMetadataToAdd(
+MIP_CC_API(mip_cc_result) MIP_CC_MetadataAction_GetMetadataToAdd(
     const mip_cc_action action,
     mip_cc_dictionary* metadata);
 ```
@@ -3758,7 +3702,7 @@ Parameter | Description
 | engine | Policy engine to release |
 
 ```c
- MIP_CC_ReleasePolicyEngine(mip_cc_policy_engine engine);
+MIP_CC_API(void) MIP_CC_ReleasePolicyEngine(mip_cc_policy_engine engine);
 ```
 
 ## MIP_CC_PolicyEngine_GetEngineIdSize
@@ -3777,7 +3721,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_GetEngineIdSize(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetEngineIdSize(
     const mip_cc_policy_engine engine,
     int64_t* idSize);
 ```
@@ -3799,11 +3743,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If idBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualIdSize will be set to the minimum required buffer size.
- 
+**Note**: If idBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualIdSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_PolicyEngine_GetEngineId(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetEngineId(
     const mip_cc_policy_engine engine,
     char* idBuffer,
     const int64_t idBufferSize,
@@ -3826,7 +3769,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
     const mip_cc_policy_engine engine,
     int64_t* moreInfoUrlSize);
 ```
@@ -3848,11 +3791,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If moreInfoUrlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualMoreInfoUrlSize will be set to the minimum required buffer size.
- 
+**Note**: If moreInfoUrlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualMoreInfoUrlSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_PolicyEngine_GetMoreInfoUrl(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetMoreInfoUrl(
     const mip_cc_policy_engine engine,
     char* moreInfoUrlBuffer,
     const int64_t moreInfoUrlBufferSize,
@@ -3875,7 +3817,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_IsLabelingRequired(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_IsLabelingRequired(
     const mip_cc_policy_engine engine,
     bool* isLabelingRequired);
 ```
@@ -3896,7 +3838,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_GetPolicyFileIdSize(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetPolicyFileIdSize(
     const mip_cc_policy_engine engine,
     int64_t* policyFileIdSize);
 ```
@@ -3918,11 +3860,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If policyFileIdBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualPolicyFileIdSize will be set to the minimum required buffer size.
- 
+**Note**: If policyFileIdBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualPolicyFileIdSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_PolicyEngine_GetPolicyFileId(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetPolicyFileId(
     const mip_cc_policy_engine engine,
     char* policyFileIdBuffer,
     const int64_t policyFileIdBufferSize,
@@ -3945,7 +3886,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
     const mip_cc_policy_engine engine,
     int64_t* sensitivityFileIdSize);
 ```
@@ -3967,11 +3908,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If sensitivityFileIdBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualSensitivityFileIdSize will be set to the minimum required buffer size.
- 
+**Note**: If sensitivityFileIdBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualSensitivityFileIdSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_PolicyEngine_GetSensitivityFileId(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityFileId(
     const mip_cc_policy_engine engine,
     char* sensitivityFileIdBuffer,
     const int64_t sensitivityFileIdBufferSize,
@@ -3994,7 +3934,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_HasClassificationRules(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_HasClassificationRules(
     const mip_cc_policy_engine engine,
     bool* hasClassificationRules);
 ```
@@ -4015,7 +3955,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
     const mip_cc_policy_engine engine,
     int64_t* lastPolicyFetchTime);
 ```
@@ -4036,7 +3976,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
     const mip_cc_policy_engine engine,
     int64_t* labelsSize);
 ```
@@ -4058,11 +3998,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If labelBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualLabelsSize will be set to the minimum required buffer size
- 
+**Note**: If labelBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualLabelsSize will be set to the minimum required buffer size 
 
 ```c
- MIP_CC_PolicyEngine_GetSensitivityLabels(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityLabels(
     const mip_cc_policy_engine engine,
     mip_cc_label* labelBuffer,
     const int64_t labelBufferSize,
@@ -4086,7 +4025,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_GetLabelById(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetLabelById(
     const mip_cc_policy_engine engine,
     const char* labelId,
     mip_cc_label* label);
@@ -4108,7 +4047,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_GetSensitivityTypesSize(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityTypesSize(
     const mip_cc_policy_engine engine,
     int64_t* sensitivityTypesSize);
 ```
@@ -4130,11 +4069,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If sensitivityTypeBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualSensitivityTypesSize will be set to the minimum required buffer size
- 
+**Note**: If sensitivityTypeBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualSensitivityTypesSize will be set to the minimum required buffer size 
 
 ```c
- MIP_CC_PolicyEngine_GetSensitivityTypes(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityTypes(
     const mip_cc_policy_engine engine,
     mip_cc_sensitivity_type* sensitivityTypeBuffer,
     const int64_t sensitivityTypeBufferSize,
@@ -4158,7 +4096,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_CreatePolicyHandler(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_CreatePolicyHandler(
     const mip_cc_policy_engine engine,
     const bool isAuditDiscoveryEnabled,
     mip_cc_policy_handler* handler);
@@ -4181,7 +4119,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_SendApplicationAuditEvent(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_SendApplicationAuditEvent(
     const mip_cc_policy_engine engine,
     const char* level,
     const char* eventType,
@@ -4204,7 +4142,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
     const mip_cc_policy_engine engine,
     int64_t* xmlSize);
 ```
@@ -4226,11 +4164,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If xmlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualXmlSize will be set to the minimum required buffer size.
- 
+**Note**: If xmlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualXmlSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_PolicyEngine_GetPolicyDataXml(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetPolicyDataXml(
     const mip_cc_policy_engine engine,
     char* xmlBuffer,
     const int64_t xmlBufferSize,
@@ -4253,7 +4190,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
     const mip_cc_policy_engine engine,
     int64_t* xmlSize);
 ```
@@ -4275,11 +4212,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If xmlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualXmlSize will be set to the minimum required buffer size.
- 
+**Note**: If xmlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualXmlSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
     const mip_cc_policy_engine engine,
     char* xmlBuffer,
     const int64_t xmlBufferSize,
@@ -4302,7 +4238,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngine_GetClientDataSize(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetClientDataSize(
     const mip_cc_policy_engine engine,
     int64_t* clientDataSize);
 ```
@@ -4324,11 +4260,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If clientDataBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualClientDataSize will be set to the minimum required buffer size.
- 
+**Note**: If clientDataBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualClientDataSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_PolicyEngine_GetClientData(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetClientData(
     const mip_cc_policy_engine engine,
     char* clientDataBuffer,
     const int64_t clientDataBufferSize,
@@ -4353,11 +4288,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: 'loadSensitivityTypes' should be 'true' only if application expects to later call MIP_CC_PolicyEngine_GetSensitivityTypes. Otherwise, it should be false to avoid an unnecessary HTTP operation.
- 
+**Note**: 'loadSensitivityTypes' should be 'true' only if application expects to later call MIP_CC_PolicyEngine_GetSensitivityTypes. Otherwise, it should be false to avoid an unnecessary HTTP operation. 
 
 ```c
- MIP_CC_CreatePolicyEngineSettingsWithIdentity(
+MIP_CC_API(mip_cc_result) MIP_CC_CreatePolicyEngineSettingsWithIdentity(
     const mip_cc_identity* identity,
     const char* clientData,
     const char* locale,
@@ -4381,7 +4315,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngineSettings_SetClientData(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngineSettings_SetClientData(
     const mip_cc_policy_engine_settings settings,
     const char* clientData);
 ```
@@ -4402,7 +4336,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngineSettings_SetCustomSettings(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngineSettings_SetCustomSettings(
     const mip_cc_policy_engine_settings settings,
     const mip_cc_dictionary customSettings);
 ```
@@ -4423,7 +4357,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngineSettings_SetSessionId(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngineSettings_SetSessionId(
     const mip_cc_policy_engine_settings settings,
     const char* sessionId);
 ```
@@ -4444,7 +4378,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
     const mip_cc_policy_engine_settings settings,
     const char* cloudEndpointBaseUrl);
 ```
@@ -4464,11 +4398,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: A delegated user is specified when the authenticating user/application is acting on behalf of another user
- 
+**Note**: A delegated user is specified when the authenticating user/application is acting on behalf of another user 
 
 ```c
- MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
     const mip_cc_policy_engine_settings settings,
     const char* delegatedUserEmail);
 ```
@@ -4486,7 +4419,7 @@ Parameter | Description
 | settings | Policy engine settings to be released |
 
 ```c
- MIP_CC_ReleasePolicyEngineSettings(mip_cc_policy_engine_settings settings);
+MIP_CC_API(void) MIP_CC_ReleasePolicyEngineSettings(mip_cc_policy_engine_settings settings);
 ```
 
 ## MIP_CC_ReleasePolicyHandler
@@ -4502,7 +4435,7 @@ Parameter | Description
 | handler | Policy handler to release |
 
 ```c
- MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
+MIP_CC_API(void) MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
 ```
 
 ## MIP_CC_PolicyHandler_GetSensitivityLabel
@@ -4523,7 +4456,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyHandler_GetSensitivityLabel(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyHandler_GetSensitivityLabel(
     const mip_cc_policy_handler handler,
     const mip_cc_document_state* documentState,
     const void* context,
@@ -4548,11 +4481,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The 'actionResult' variable must be released by the caller by calling MIP_CC_ReleaseActionResult
- 
+**Note**: The 'actionResult' variable must be released by the caller by calling MIP_CC_ReleaseActionResult 
 
 ```c
- MIP_CC_PolicyHandler_ComputeActions(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyHandler_ComputeActions(
     const mip_cc_policy_handler handler,
     const mip_cc_document_state* documentState,
     const mip_cc_application_action_state* applicationState,
@@ -4577,11 +4509,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: A call to this function is necessary to transmit complete label audit data.
- 
+**Note**: A call to this function is necessary to transmit complete label audit data. 
 
 ```c
- MIP_CC_PolicyHandler_NotifyCommittedActions(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyHandler_NotifyCommittedActions(
     const mip_cc_policy_handler handler,
     const mip_cc_document_state* documentState,
     const mip_cc_application_action_state* applicationState,
@@ -4604,7 +4535,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_LoadPolicyProfile(
+MIP_CC_API(mip_cc_result) MIP_CC_LoadPolicyProfile(
     const mip_cc_policy_profile_settings settings,
     mip_cc_policy_profile* profile);
 ```
@@ -4622,7 +4553,7 @@ Parameter | Description
 | profile | Policy profile to be released |
 
 ```c
- MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
+MIP_CC_API(void) MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
 ```
 
 ## MIP_CC_PolicyProfileSettings_SetSessionId
@@ -4641,7 +4572,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyProfileSettings_SetSessionId(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyProfileSettings_SetSessionId(
     const mip_cc_policy_profile_settings settings,
     const char* sessionId);
 ```
@@ -4662,7 +4593,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyProfileSettings_SetHttpDelegate(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyProfileSettings_SetHttpDelegate(
     const mip_cc_policy_profile_settings settings,
     const mip_cc_http_delegate httpDelegate);
 ```
@@ -4683,7 +4614,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
     const mip_cc_policy_profile_settings settings,
     const mip_cc_task_dispatcher_delegate taskDispatcherDelegate);
 ```
@@ -4704,7 +4635,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_PolicyProfileSettings_SetCustomSettings(
+MIP_CC_API(mip_cc_result) MIP_CC_PolicyProfileSettings_SetCustomSettings(
     const mip_cc_policy_profile_settings settings,
     const mip_cc_dictionary customSettings);
 ```
@@ -4722,7 +4653,7 @@ Parameter | Description
 | settings | Policy profile settings to be released |
 
 ```c
- MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profilsettingseSettings);
+MIP_CC_API(void) MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profilsettingseSettings);
 ```
 
 ## MIP_CC_ProtectByTemplateAction_GetTemplateId
@@ -4741,7 +4672,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_ProtectByTemplateAction_GetTemplateId(
+MIP_CC_API(mip_cc_result) MIP_CC_ProtectByTemplateAction_GetTemplateId(
     const mip_cc_action action,
     mip_cc_guid* templateId);
 ```
@@ -4761,11 +4692,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The 'names' variable must be released by the caller by calling MIP_CC_ReleaseStringList
- 
+**Note**: The 'names' variable must be released by the caller by calling MIP_CC_ReleaseStringList 
 
 ```c
- MIP_CC_RemoveContentFooterAction_GetUIElementNames(
+MIP_CC_API(mip_cc_result) MIP_CC_RemoveContentFooterAction_GetUIElementNames(
     const mip_cc_action action,
     mip_cc_string_list* names);
 ```
@@ -4785,11 +4715,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The 'names' variable must be released by the caller by calling MIP_CC_ReleaseStringList
- 
+**Note**: The 'names' variable must be released by the caller by calling MIP_CC_ReleaseStringList 
 
 ```c
- MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
+MIP_CC_API(mip_cc_result) MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
     const mip_cc_action action,
     mip_cc_string_list* names);
 ```
@@ -4809,11 +4738,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: The 'names' variable must be released by the caller by calling MIP_CC_ReleaseStringList
- 
+**Note**: The 'names' variable must be released by the caller by calling MIP_CC_ReleaseStringList 
 
 ```c
- MIP_CC_RemoveWatermarkAction_GetUIElementNames(
+MIP_CC_API(mip_cc_result) MIP_CC_RemoveWatermarkAction_GetUIElementNames(
     const mip_cc_action action,
     mip_cc_string_list* names);
 ```
@@ -4831,7 +4759,7 @@ Parameter | Description
 | sensitivityType | Sensitivity type to be released |
 
 ```c
- MIP_CC_ReleaseSensitivityType(mip_cc_sensitivity_type sensitivityType);
+MIP_CC_API(void) MIP_CC_ReleaseSensitivityType(mip_cc_sensitivity_type sensitivityType);
 ```
 
 ## MIP_CC_SensitivityType_GetRulePackageIdSize
@@ -4850,7 +4778,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_SensitivityType_GetRulePackageIdSize(
+MIP_CC_API(mip_cc_result) MIP_CC_SensitivityType_GetRulePackageIdSize(
     const mip_cc_sensitivity_type sensitivityType,
     int64_t* idSize);
 ```
@@ -4872,11 +4800,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If idBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualIdSize will be set to the minimum required buffer size.
- 
+**Note**: If idBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualIdSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_SensitivityType_GetRulePackageId(
+MIP_CC_API(mip_cc_result) MIP_CC_SensitivityType_GetRulePackageId(
     const mip_cc_sensitivity_type sensitivityType,
     char* idBuffer,
     const int64_t idBufferSize,
@@ -4899,7 +4826,7 @@ Parameter | Description
 **Return**: Result code indicating success or failure
 
 ```c
- MIP_CC_SensitivityType_GetRulePackageSize(
+MIP_CC_API(mip_cc_result) MIP_CC_SensitivityType_GetRulePackageSize(
     const mip_cc_sensitivity_type sensitivityType,
     int64_t* rulePackageSize);
 ```
@@ -4921,11 +4848,10 @@ Parameter | Description
 
 **Return**: Result code indicating success or failure
 
-**Note**: If rulePackageBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualRulePackageSize will be set to the minimum required buffer size.
- 
+**Note**: If rulePackageBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualRulePackageSize will be set to the minimum required buffer size. 
 
 ```c
- MIP_CC_SensitivityType_GetRulePackage(
+MIP_CC_API(mip_cc_result) MIP_CC_SensitivityType_GetRulePackage(
     const mip_cc_sensitivity_type sensitivityType,
     char* rulePackageBuffer,
     const int64_t rulePackageBufferSize,
