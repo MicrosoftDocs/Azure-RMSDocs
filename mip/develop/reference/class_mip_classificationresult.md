@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ClassificationResult 
@@ -15,6 +15,7 @@ Class that contains the result of a classification call on the Execution State.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string GetId() const  |  Get the ID of the classification policy.
+public std::string GetName() const  |  Get the name of the classification policy.
 public int GetCount() const  |  Get the instance count.
 public int GetConfidenceLevel() const  |  Get the confidence in the result.
 public std::string GetSensitiveInformationDetections() const  |  Get the sensitive information detections.
@@ -26,6 +27,12 @@ Get the ID of the classification policy.
 
   
 **Returns**: ID of the classification policy.
+  
+### GetName function
+Get the name of the classification policy.
+
+  
+**Returns**: Name of the classification policy.
   
 ### GetCount function
 Get the instance count.
