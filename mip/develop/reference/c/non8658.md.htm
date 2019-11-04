@@ -280,23 +280,56 @@ typedef struct {
 
 ## mip_cc_document_state
 
-Represents the current state of a label-aware document.
+Human-readable document description visible in tenant audit portal. Example for a file: [path\filename]; 
+
 | Field | Description |
 |---|---|
-| contentId | Human-readable document description visible in tenant audit portal. Example for a file: [path\filename]; example for an email: [Subject:Sender]. |
-| dataState | State of document data as application interacts with it  |
-| contentMetadataCallback | Document metadata callback  |
-| protectionDescriptor | Protection descriptor if document is currently protected, else null  |
-| contentFormat | Format of document (file vs. email)  |
-| auditMetadata | Optional application-specific metadata that is used when sending audit reports. Recognized values: 'Sender': Sender email address; 'Recipients': JSON array of email recipients; 'LastModifiedBy': Email address of the user who last modified a document; 'LastModifiedDate': Date a document was last modified. |
+| actionState | Describes if/how an application is attempting to change label state.  |
+| newLabel | If 'actionType' is 'UPDATE': New label.  |
+| newLabelExtendedProperties | If 'actionType' is 'UPDATE': Additional properties to be written to metadata.  |
+| newLabelAssignementMethod | If 'actionType' is 'UPDATE': The method of assignment of the new label.  |
+| isDowngradeJustified | If 'actionType' is 'UPDATE': Whether or not a label downgrade has been justified by user.  |
+| downgradeJustification | If 'actionType' is 'UPDATE': Label downgrade justification text provided by user.  |
+| supportedActions | Enum mask describing the label-related actions an application is able to perform.  |
+
 
 ```c
 typedef struct {
+  /**
+   * Human-readable document description visible in tenant audit portal
+   *     Example for a file: [path\filename]
+   *     
+   */
   const char* contentId;
+
+  /**
+   * State of document data as application interacts with it
+   */
   mip_cc_data_state dataState;
+
+  /**
+   * Document metadata callback
+   */
   mip_cc_metadata_callback contentMetadataCallback;
+
+  /**
+   * Protection descriptor if document is currently protected, else null
+   */
   mip_cc_protection_descriptor protectionDescriptor;
+
+  /**
+   * Format of document (file vs. email)
+   */
   mip_cc_content_format contentFormat;
+
+  /**
+   * Optional application-specific metadata that is used when sending audit reports
+   *     Recognized values:
+   *       'Sender': Sender email address
+   *       'Recipients': JSON array of email recipients
+   *       'LastModifiedBy': Email address of the user who last modified a document
+   *       'LastModifiedDate': Date a document was last modified
+   */
   mip_cc_dictionary auditMetadata;
 } mip_cc_document_state;
 

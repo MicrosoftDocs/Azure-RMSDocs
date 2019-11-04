@@ -1,21 +1,19 @@
 ---
 title: Enumerations
-description: Enumerations.
+description: Enumerations
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 
 ms.author: mbaldwin
-ms.date: 11/1/2019
+ms.date: 11/4/2019
 ---
 
 # Enumerations
 
 ## mip_cc_cache_storage_type
 
-From [common_types_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/common_types_cc.h)
-
-Storage type for caches
+nStorage type for caches
 
 | Field | Description |
 |---|---|
@@ -35,9 +33,7 @@ typedef enum {
 
 ## mip_cc_content_format
 
-From [common_types_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/common_types_cc.h)
-
-Content format
+nContent format
 
 | Field | Description |
 |---|---|
@@ -55,9 +51,7 @@ typedef enum {
 
 ## mip_cc_label_assignment_method
 
-From [common_types_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/common_types_cc.h)
-
-Describes how a new label is being applied
+nDescribes how a new label is being applied
 
 | Field | Description |
 |---|---|
@@ -77,9 +71,7 @@ typedef enum {
 
 ## mip_cc_content_mark_alignment
 
-From [common_types_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/common_types_cc.h)
-
-Alignment for content marks (content header or content footer)
+nAlignment for content marks (content header or content footer)
 
 | Field | Description |
 |---|---|
@@ -99,9 +91,7 @@ typedef enum {
 
 ## mip_cc_watermark_layout
 
-From [common_types_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/common_types_cc.h)
-
-Layout for watermarks
+nLayout for watermarks
 
 | Field | Description |
 |---|---|
@@ -119,9 +109,7 @@ typedef enum {
 
 ## mip_cc_consent
 
-From [consent_callback_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/consent_callback_cc.h)
-
-Defines consent callback functions
+nA user's response when consent is requested to connect to an unrecognized service endpoint
 
 | Field | Description |
 |---|---|
@@ -141,9 +129,7 @@ typedef enum {
 
 ## mip_cc_flighting_feature
 
-From [flighting_feature_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/flighting_feature_cc.h)
-
-Flighting feature definition
+nDefines new features by name
 
 | Field | Description |
 |---|---|
@@ -167,9 +153,7 @@ typedef enum {
 
 ## mip_cc_http_request_type
 
-From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
-
-Defines HTTP callback functions
+nHTTP request type
 
 | Field | Description |
 |---|---|
@@ -187,9 +171,7 @@ typedef enum {
 
 ## mip_cc_http_result
 
-From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
-
-Success/failure state of the HTTP operation
+nSuccess/failure state of the HTTP operation
 
 | Field | Description |
 |---|---|
@@ -207,9 +189,7 @@ typedef enum {
 
 ## mip_cc_log_level
 
-From [logger_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/logger_delegate_cc.h)
-
-Defines logger callback functions
+nLog level
 
 | Field | Description |
 |---|---|
@@ -231,9 +211,7 @@ typedef enum {
 
 ## mip_cc_protection_type
 
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
-
-Defines C-Style ProtectionDescriptor interface
+nA description of whether protection is defined by a template or ad-hoc
 
 | Field | Description |
 |---|---|
@@ -251,9 +229,7 @@ typedef enum {
 
 ## mip_cc_result
 
-From [result_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/result_cc.h)
-
-Defines success/error result codes
+nAPI success/failure result
 
 | Field | Description |
 |---|---|
@@ -320,9 +296,7 @@ typedef enum {
 
 ## mip_cc_action_type
 
-From [upe/action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/action_cc.h)
-
-Contains C API definitions for label policy actions
+nAction type bit mask
 
 | Field | Description |
 |---|---|
@@ -366,9 +340,7 @@ typedef enum {
 
 ## mip_cc_label_action_state
 
-From [upe/application_action_state_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/application_action_state_cc.h)
-
-Describes application state when performing a label-releated operation
+nDescribes what the application is trying to do regarding the current label
 
 | Field | Description |
 |---|---|
@@ -388,9 +360,7 @@ typedef enum {
 
 ## mip_cc_label_action_type
 
-From [upe/application_action_state_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/application_action_state_cc.h)
-
-Label-related actions an application understands and supports
+nLabel-related actions an application understands and supports
 
 | Field | Description |
 |---|---|
@@ -434,9 +404,7 @@ typedef enum {
 
 ## mip_cc_data_state
 
-From [upe/document_state_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/document_state_cc.h)
-
-Describes document state when performing a label-releated operation
+nDefines the state of the data as an application is acting upon it
 
 | Field | Description |
 |---|---|

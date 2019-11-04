@@ -342,7 +342,7 @@
   - name: C library
     items:
     - name: Overview
-      href: reference/c/c-client-overview.md
+      href: reference/c/overview.md
     - name: Enumerations
       href: reference/c/enumerations.md
     - name: Structures
