@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: reference
 
 ms.author: mbaldwin
-ms.date: 11/1/2019
+ms.date: 11/3/2019
 ---
 
 # Functions
@@ -15,11 +15,11 @@ ms.date: 11/1/2019
 
 From [auth_callback_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/auth_callback_cc.h)
 
-Defines auth callback functions
+callback function definition for acquiring OAuth2 token
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | identity | The email address for whom token will be acquired |
 | challenge | OAuth2 challenge |
@@ -31,45 +31,45 @@ Defines auth callback functions
 **Return**: True is token was retrieved, else false
 
 ```c
-MIP_CC_CALLBACK(mip_cc_auth_callback /*typename*/,
-    bool /*return*/,
-    const mip_cc_identity* /*identity*/,
-    const mip_cc_oauth2_challenge* /*challenge*/,
-    const void* /*context*/,
-    uint8_t* /*tokenBuffer*/,
-    const int64_t /*tokenBufferSize*/,
-    int64_t* /*actualTokenSize*/);
+MIP_CC_CALLBACK(mip_cc_auth_callback ,
+    bool ,
+    const mip_cc_identity* ,
+    const mip_cc_oauth2_challenge* ,
+    const void* ,
+    uint8_t* ,
+    const int64_t ,
+    int64_t* );
 ```
 
 ## mip_cc_consent_callback
 
 From [consent_callback_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/consent_callback_cc.h)
 
-Defines consent callback functions
+callback function definition for consent from user to access external service endpoint
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | url | The URL for which the SDK requires user consent |
 
 **Return**: User consent response
 
 ```c
-MIP_CC_CALLBACK(mip_cc_consent_callback /*typename*/,
-    mip_cc_consent /*return*/,
-    const char* /*url*/);
+MIP_CC_CALLBACK(mip_cc_consent_callback ,
+    mip_cc_consent ,
+    const char* );
 ```
 
 ## MIP_CC_CreateDictionary
 
 From [dictionary_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/dictionary_cc.h)
 
-Contains C API definitions for common string dictionary.
+Create a dictionary of string keys/values
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | entries | Array of key/value pairs |
 | count | Number of key/value pairs |
@@ -77,10 +77,11 @@ Contains C API definitions for common string dictionary.
 
 **Return**: Result code indicating success or failure
 
+**Note**: A mip_cc_dictionary must be freed by calling MIP_CC_ReleaseDictionary
+ 
+
 ```c
-MIP_CC_ReleaseDictionary
- */
-MIP_CC_API(mip_cc_result) MIP_CC_CreateDictionary(
+ MIP_CC_CreateDictionary(
     const mip_cc_kv_pair* entries,
     const int64_t count,
     mip_cc_dictionary* dictionary);
@@ -94,7 +95,7 @@ Get key/value pairs that compose a dictionary
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | dictionary | Source dictionary |
 | entries | [Output] Array of key/value pairs, memory owned by mip_cc_dictionary object |
@@ -102,26 +103,80 @@ Get key/value pairs that compose a dictionary
 
 **Return**: Result code indicating success or failure
 
+**Note**: The memory for 'entries' is owned by the mip_cc_dictionary object, so it should not be freed independently
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Dictionary_GetEntries(
+ MIP_CC_Dictionary_GetEntries(
     const mip_cc_dictionary dictionary,
     mip_cc_kv_pair** entries,
     int64_t* count);
+```
+
+## MIP_CC_ReleaseDictionary
+
+From [dictionary_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/dictionary_cc.h)
+
+Release resources associated with a dictionary
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| dictionary | Dictionary to be released |
+
+```c
+ MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
+```
+
+## mip_cc_http_send_callback_fn
+
+From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
+
+Callback function definition for issuing an HTTP request
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| request | The HTTP request to be performed by the application |
+| context | The same opaque context passed to MIP API call that resulted in this HTTP request |
+
+```c
+MIP_CC_CALLBACK(mip_cc_http_send_callback_fn ,
+    void ,
+    const mip_cc_http_request* ,
+    const void* );
+```
+
+## mip_cc_http_cancel_callback_fn
+
+From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
+
+Callback function definition for cancelling an HTTP request
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| requestId | The ID of the HTTP request to be cancelled |
+
+```c
+MIP_CC_CALLBACK(mip_cc_http_cancel_callback_fn ,
+    void ,
+    const char* );
 ```
 
 ## MIP_CC_CreateHttpDelegate
 
 From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
 
-Defines HTTP callback functions
+Creates an HTTP delegate which can be used to override MIP's default HTTP stack
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
-| request | The HTTP request to be performed by the application |
-| context | The same opaque context passed to MIP API call that resulted in this HTTP request |
-| requestId | The ID of the HTTP request to be cancelled |
 | sendCallback | Function pointer for issuing HTTP requests |
 | cancelCallback | Function pointer for cancelling HTTP requests |
 | httpDelegate | [Output] Handle to HTTP delegate object |
@@ -129,28 +184,108 @@ Defines HTTP callback functions
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateHttpDelegate(
+ MIP_CC_CreateHttpDelegate(
     const mip_cc_http_send_callback_fn sendCallback,
     const mip_cc_http_cancel_callback_fn cancelCallback,
     mip_cc_http_delegate* httpDelegate);
+```
+
+## MIP_CC_NotifyHttpDelegateResponse
+
+From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
+
+Notifies an HTTP delegate that an HTTP response is ready
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| httpDelegate | Handle to HTTP delegate object |
+| requestId | ID of HTTP request associated with this operation |
+| result | Success/failure state of operation |
+| response | The HTTP response if operation succeeded, else nullptr |
+
+**Note**: This function must be called by the application when an HTTP operation has completed. The ID of the HTTP response must match the ID of the HTTP request to allow MIP to correlate a response with its request
+ 
+
+```c
+ MIP_CC_NotifyHttpDelegateResponse(
+    const mip_cc_http_delegate httpDelegate,
+    const char* requestId,
+    const mip_cc_http_result result,
+    const mip_cc_http_response* response);
+```
+
+## MIP_CC_ReleaseHttpDelegate
+
+From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
+
+Release resources associated with an HTTP delegate handle
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| httpDelegate | HTTP delegate to be released |
+
+```c
+ MIP_CC_ReleaseHttpDelegate(mip_cc_http_delegate httpDelegate);
+```
+
+## mip_cc_logger_init_callback_fn
+
+From [logger_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/logger_delegate_cc.h)
+
+Callback function definition for initialization of logger
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| storagePath | File path where logs may be stored |
+
+```c
+MIP_CC_CALLBACK(mip_cc_logger_init_callback_fn ,
+    void ,
+    const char* );
+```
+
+## mip_cc_logger_write_callback_fn
+
+From [logger_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/logger_delegate_cc.h)
+
+Callback function definition for writing a log statement
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| level | the log level for the log statement. |
+| message | the message for the log statement. |
+| function | the function name for the log statement. |
+| file | the file name where log statement was generated. |
+| line | the line number where the log statement was generated. |
+
+```c
+MIP_CC_CALLBACK(mip_cc_logger_write_callback_fn ,
+    void ,
+    const mip_cc_log_level ,
+    const char* ,
+    const char* ,
+    const char* ,
+    const int32_t );
 ```
 
 ## MIP_CC_CreateLoggerDelegate
 
 From [logger_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/logger_delegate_cc.h)
 
-Defines logger callback functions
+Creates a logger delegate which can be used to override MIP's default logger
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
-| storagePath | File path where logs may be stored |
-| level | the log level for the log statement. |
-| message | the message for the log statement. |
-| function | the function name for the log statement. |
-| file | the file name where log statement was generated. |
-| line | the line number where the log statement was generated. |
 | initCallback | Function pointer for initialization |
 | flushCallback | Function pointer for flushing logs |
 | writeCallback | Function pointer for writing a log statement |
@@ -159,22 +294,38 @@ Defines logger callback functions
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateLoggerDelegate(
+ MIP_CC_CreateLoggerDelegate(
     const mip_cc_logger_init_callback_fn initCallback,
     const mip_cc_logger_flush_callback_fn flushCallback,
     const mip_cc_logger_write_callback_fn writeCallback,
     mip_cc_logger_delegate* loggerDelegate);
 ```
 
+## MIP_CC_ReleaseLoggerDelegate
+
+From [logger_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/logger_delegate_cc.h)
+
+Release resources associated with an logger delegate handle
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| loggerDelegate | logger delegate to be released |
+
+```c
+ MIP_CC_ReleaseLoggerDelegate(mip_cc_logger_delegate loggerDelegate);
+```
+
 ## MIP_CC_CreateMipContext
 
 From [mip_context_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/mip_context_cc.h)
 
-Defines C-Style MipContext functions
+Create a MIP context to manage state shared across all profile instances
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | applicationInfo | Info about application that is consuming the protection SDK |
 | path | File path under which logging, telemetry, and other protection collateral is stored |
@@ -187,7 +338,7 @@ Defines C-Style MipContext functions
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateMipContext(
+ MIP_CC_CreateMipContext(
     const mip_cc_application_info* applicationInfo,
     const char* path,
     const mip_cc_log_level logLevel,
@@ -205,7 +356,7 @@ Create a MIP context to manage state shared across all profile instances
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | applicationInfo | Info about application that is consuming the protection SDK |
 | path | File path under which logging, telemetry, and other protection collateral is stored |
@@ -220,7 +371,7 @@ Create a MIP context to manage state shared across all profile instances
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateMipContextWithCustomFeatureSettings(
+ MIP_CC_CreateMipContextWithCustomFeatureSettings(
     const mip_cc_application_info* applicationInfo,
     const char* path,
     const mip_cc_log_level logLevel,
@@ -232,99 +383,20 @@ MIP_CC_API(mip_cc_result) MIP_CC_CreateMipContextWithCustomFeatureSettings(
     mip_cc_mip_context* mipContext);
 ```
 
-## MIP_CC_CreateProtectionDescriptorFromTemplate
+## MIP_CC_ReleaseMipContext
 
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
+From [mip_context_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/mip_context_cc.h)
 
-Defines C-Style ProtectionDescriptor interface
-
-**Parameters**
-
- Parameter | Description
-|---|---|
-| templateId | Template ID |
-| signedAppData | App-specific data (cleartext) that is signed into the publishing license |
-| protectionDescriptor | [Output] Newly-created protection descriptor instance |
-
-**Return**: Result code indicating success or failure
-
-```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateProtectionDescriptorFromTemplate(
-    const char* templateId,
-    const mip_cc_dictionary signedAppData,
-    mip_cc_protection_descriptor* protectionDescriptor);
-```
-
-## MIP_CC_CreateProtectionDescriptorFromUserRights
-
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
-
-Creates a protection descriptor whose access permissions are defined by users and rights
+Release resources associated with a MIP context
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
-| userRights | Groups of users and their rights |
-| userRightsCount | Number of user/rights groups |
-| name | Protection name |
-| referrer | Referrer address (a URI displayable to a user that provides information on how to gain access) |
-| contentValidUntil | Protection expiration time |
-| allowOfflineAccess | Determines whether a license to consume content can be cached locally |
-| encryptedAppData | App-specific data (cleartext) that is encrypted into the publishing license |
-| signedAppData | App-specific data (cleartext) that is signed into the publishing license |
-| protectionDescriptor | [Output] Newly-created protection descriptor instance |
-
-**Return**: Result code indicating success or failure
+| mipContext | MIP context to be released |
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateProtectionDescriptorFromUserRights(
-    const mip_cc_user_rights* userRights,
-    const int64_t userRightsCount,
-    const char* name,
-    const char* description,
-    const char* referrer,
-    const time_t* contentValidUntil,
-    const bool allowOfflineAccess,
-    const mip_cc_dictionary encryptedAppData,
-    const mip_cc_dictionary signedAppData,
-    mip_cc_protection_descriptor* protectionDescriptor);
-```
-
-## MIP_CC_CreateProtectionDescriptorFromUserRoles
-
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
-
-Creates a protection descriptor whose access permissions are defined by users and roles
-
-**Parameters**
-
- Parameter | Description
-|---|---|
-| userRoles | Groups of users and their roles |
-| userRolesCount | Number of user/roles groups |
-| name | Protection policy name |
-| referrer | Referrer address (a URI displayable to a user that provides information on how to gain access) |
-| contentValidUntil | Protection expiration time |
-| allowOfflineAccess | Determines whether a license to consume content can be cached locally |
-| encryptedAppData | App-specific data (cleartext) that is encrypted into the publishing license |
-| signedAppData | App-specific data (cleartext) that is signed into the publishing license |
-| protectionDescriptor | [Output] Newly-created protection descriptor instance |
-
-**Return**: Result code indicating success or failure
-
-```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateProtectionDescriptorFromUserRoles(
-    const mip_cc_user_roles* userRoles,
-    const int64_t userRolesCount,
-    const char* name,
-    const char* description,
-    const char* referrer,
-    const time_t* contentValidUntil,
-    const bool allowOfflineAccess,
-    const mip_cc_dictionary encryptedAppData,
-    const mip_cc_dictionary signedAppData,
-    mip_cc_protection_descriptor* protectionDescriptor);
+ MIP_CC_ReleaseMipContext(mip_cc_mip_context mipContext);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetProtectionType
@@ -335,7 +407,7 @@ Gets type of protection, whether it is defined by an RMS template or not
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | protectionType | [Output] Protection type |
@@ -343,7 +415,7 @@ Gets type of protection, whether it is defined by an RMS template or not
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetProtectionType(
+ MIP_CC_ProtectionDescriptor_GetProtectionType(
     const mip_cc_protection_descriptor protectionDescriptor,
     mip_cc_protection_type* protectionType);
 ```
@@ -356,7 +428,7 @@ Gets size of buffer required to store owner
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | ownerSize | [Output] Size of buffer to hold owner (in number of chars) |
@@ -364,7 +436,7 @@ Gets size of buffer required to store owner
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetOwnerSize(
+ MIP_CC_ProtectionDescriptor_GetOwnerSize(
     const mip_cc_protection_descriptor protectionDescriptor,
     int64_t* ownerSize);
 ```
@@ -377,7 +449,7 @@ Gets protection owner
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | ownerBuffer | [Output] Buffer the owner will be copied into. |
@@ -386,8 +458,11 @@ Gets protection owner
 
 **Return**: Result code indicating success or failure
 
+**Note**: If ownerBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualOwnerSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetOwner(
+ MIP_CC_ProtectionDescriptor_GetOwner(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* ownerBuffer,
     const int64_t ownerBufferSize,
@@ -402,7 +477,7 @@ Gets size of buffer required to store name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | nameSize | [Output] Size of buffer to hold name (in number of chars) |
@@ -410,7 +485,7 @@ Gets size of buffer required to store name
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetNameSize(
+ MIP_CC_ProtectionDescriptor_GetNameSize(
     const mip_cc_protection_descriptor protectionDescriptor,
     int64_t* nameSize);
 ```
@@ -423,7 +498,7 @@ Gets protection name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | nameBuffer | [Output] Buffer the name will be copied into. |
@@ -432,8 +507,11 @@ Gets protection name
 
 **Return**: Result code indicating success or failure
 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetName(
+ MIP_CC_ProtectionDescriptor_GetName(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -448,7 +526,7 @@ Gets size of buffer required to store description
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | descriptionSize | [Output] Size of buffer to hold description (in number of chars) |
@@ -456,7 +534,7 @@ Gets size of buffer required to store description
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetDescriptionSize(
+ MIP_CC_ProtectionDescriptor_GetDescriptionSize(
     const mip_cc_protection_descriptor protectionDescriptor,
     int64_t* descriptionSize);
 ```
@@ -469,7 +547,7 @@ Gets protection description
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | descriptionBuffer | [Output] Buffer the description will be copied into. |
@@ -478,8 +556,11 @@ Gets protection description
 
 **Return**: Result code indicating success or failure
 
+**Note**: If descriptionBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualDescriptionSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetDescription(
+ MIP_CC_ProtectionDescriptor_GetDescription(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* descriptionBuffer,
     const int64_t descriptionBufferSize,
@@ -494,7 +575,7 @@ Gets template ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | templateId | [Output] Template ID associated with protection |
@@ -502,7 +583,7 @@ Gets template ID
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetTemplateId(
+ MIP_CC_ProtectionDescriptor_GetTemplateId(
     const mip_cc_protection_descriptor protectionDescriptor,
     mip_cc_guid* templateId);
 ```
@@ -515,7 +596,7 @@ Gets label ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | labelId | [Output] Label ID associated with protection |
@@ -523,7 +604,7 @@ Gets label ID
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetLabelId(
+ MIP_CC_ProtectionDescriptor_GetLabelId(
     const mip_cc_protection_descriptor protectionDescriptor,
     mip_cc_guid* labelId);
 ```
@@ -536,7 +617,7 @@ Gets content ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | contentId | [Output] Content ID associated with protection |
@@ -544,7 +625,7 @@ Gets content ID
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetContentId(
+ MIP_CC_ProtectionDescriptor_GetContentId(
     const mip_cc_protection_descriptor protectionDescriptor,
     mip_cc_guid* contentId);
 ```
@@ -557,7 +638,7 @@ Gets whether or not content has an expiration time or not
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | doesContentExpire | [Output] Whether or not content expires |
@@ -565,7 +646,7 @@ Gets whether or not content has an expiration time or not
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_DoesContentExpire(
+ MIP_CC_ProtectionDescriptor_DoesContentExpire(
     const mip_cc_protection_descriptor protectionDescriptor,
     bool* doesContentExpire);
 ```
@@ -578,7 +659,7 @@ Gets protection expiration time (in seconds since epoch)
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | contentValidUntil | [Output] Content expiration time (in seconds since epoch) |
@@ -586,7 +667,7 @@ Gets protection expiration time (in seconds since epoch)
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetContentValidUntil(
+ MIP_CC_ProtectionDescriptor_GetContentValidUntil(
     const mip_cc_protection_descriptor protectionDescriptor,
     int64_t* contentValidUntil);
 ```
@@ -599,7 +680,7 @@ Gets whether or not offline access is allowed
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | doesAllowOfflineAccess | [Output] Whether or not offline access is allowed |
@@ -607,7 +688,7 @@ Gets whether or not offline access is allowed
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
+ MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
     const mip_cc_protection_descriptor protectionDescriptor,
     bool* doesAllowOfflineAccess);
 ```
@@ -620,7 +701,7 @@ Gets size of buffer required to store referrer
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | referrerSize | [Output] Size of buffer to hold referrer (in number of chars) |
@@ -628,7 +709,7 @@ Gets size of buffer required to store referrer
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetReferrerSize(
+ MIP_CC_ProtectionDescriptor_GetReferrerSize(
     const mip_cc_protection_descriptor protectionDescriptor,
     int64_t* referrerSize);
 ```
@@ -641,7 +722,7 @@ Gets protection referrer
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | referrerBuffer | [Output] Buffer the referrer will be copied into. |
@@ -650,23 +731,42 @@ Gets protection referrer
 
 **Return**: Result code indicating success or failure
 
+**Note**: If referrerBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualReferrerSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionDescriptor_GetReferrer(
+ MIP_CC_ProtectionDescriptor_GetReferrer(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* referrerBuffer,
     const int64_t referrerBufferSize,
     int64_t* actualReferrerSize);
 ```
 
+## MIP_CC_ReleaseProtectionDescriptor
+
+From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
+
+Release resources associated with a protection descriptor
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| protectionDescriptor | Protection descriptor to be released |
+
+```c
+ MIP_CC_ReleaseProtectionDescriptor(mip_cc_protection_descriptor protectionDescriptor);
+```
+
 ## MIP_CC_CreateStringList
 
 From [string_list_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/string_list_cc.h)
 
-Contains C API definitions for common string list.
+Create a string list
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | strings | Array of strings |
 | count | Number of strings |
@@ -674,10 +774,11 @@ Contains C API definitions for common string list.
 
 **Return**: Result code indicating success or failure
 
+**Note**: A mip_cc_string_list must be freed by calling MIP_CC_ReleaseStringList
+ 
+
 ```c
-MIP_CC_ReleaseStringList
- */
-MIP_CC_API(mip_cc_result) MIP_CC_CreateStringList(
+ MIP_CC_CreateStringList(
     const char** strings,
     const int64_t count,
     mip_cc_string_list* stringList);
@@ -691,7 +792,7 @@ Get strings that compose a string list
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | stringList | Source string list |
 | strings | [Output] Array of strings, memory owned by mip_cc_string_list object |
@@ -699,43 +800,79 @@ Get strings that compose a string list
 
 **Return**: Result code indicating success or failure
 
+**Note**: The memory for 'strings' is owned by the mip_cc_string_list object, so it should not be freed independently
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_StringList_GetStrings(
+ MIP_CC_StringList_GetStrings(
     const mip_cc_string_list stringList,
     const char*** strings,
     int64_t* count);
+```
+
+## MIP_CC_ReleaseStringList
+
+From [string_list_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/string_list_cc.h)
+
+Release resources associated with a string list
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| stringList | String list to be released |
+
+```c
+ MIP_CC_ReleaseStringList(mip_cc_string_list stringList);
+```
+
+## mip_cc_dispatch_task_callback_fn
+
+From [task_dispatcher_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/task_dispatcher_delegate_cc.h)
+
+Callback function definition for dispatching an async task
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| taskId | Unique task identifier |
+
+```c
+MIP_CC_CALLBACK(mip_cc_dispatch_task_callback_fn ,
+    void ,
+    const mip_cc_async_task* );
 ```
 
 ## mip_cc_cancel_task_callback_fn
 
 From [task_dispatcher_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/task_dispatcher_delegate_cc.h)
 
-Defines task dispatcher callback functions
+Callback function for canceling a background tasks
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
-| taskId | Unique task identifier |
 | taskId | Unique task identifier |
 
 **Return**: True if task was successfully cancelled, else false
 
 ```c
-MIP_CC_CALLBACK(mip_cc_cancel_task_callback_fn /*typename*/,
-    bool /*return*/,
-    const char* /*taskId*/);
+MIP_CC_CALLBACK(mip_cc_cancel_task_callback_fn ,
+    bool ,
+    const char* );
 ```
 
 ## MIP_CC_CreateTaskDispatcherDelegate
 
 From [task_dispatcher_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/task_dispatcher_delegate_cc.h)
 
-Callback function for canceling all background tasks
+Creates a task dispatcher delegate which can be used to override MIP's default async task handling
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | dispatchTaskCallback | Function pointer for dispatching async tasks |
 | cancelTaskCallback | Function pointer for cancelling background tasks |
@@ -745,29 +882,47 @@ Callback function for canceling all background tasks
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateTaskDispatcherDelegate(
+ MIP_CC_CreateTaskDispatcherDelegate(
     const mip_cc_dispatch_task_callback_fn dispatchTaskCallback,
     const mip_cc_cancel_task_callback_fn cancelTaskCallback,
     const mip_cc_cancel_all_tasks_callback_fn cancelAllTasksCallback,
     mip_cc_task_dispatcher_delegate* taskDispatcher);
 ```
 
-## MIP_CC_CreateTelemetryConfiguration
+## MIP_CC_ExecuteDispatchedTask
 
-From [telemetry_configuration_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/telemetry_configuration_cc.h)
+From [task_dispatcher_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/task_dispatcher_delegate_cc.h)
 
-Defines custom telemetry settings
+Notifies a TaskDispatcher delegate that a task is scheduled to execute now on the current thread
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
-| telemetryConfig | [Output] Newly-created telemetry configuration instance containing default settings |
+| taskDispatcher | Handle to task dispatcher delegate object |
+| taskId | ID of async task associated with this operation |
 
-**Return**: Result code indicating success or failure
+**Note**: This function must be called by the application when a task is scheduled to execute. It will result in immediate execution of the task on the current thread. The ID should match that of a previously-dispatched, non-cancelled task.
+ 
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateTelemetryConfiguration(mip_cc_telemetry_configuration* telemetryConfig);
+ MIP_CC_ExecuteDispatchedTask(const mip_cc_task_dispatcher_delegate taskDispatcher, const char* taskId);
+```
+
+## MIP_CC_ReleaseTaskDispatcherDelegate
+
+From [task_dispatcher_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/task_dispatcher_delegate_cc.h)
+
+Release resources associated with an task dispatcher delegate handle
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| taskDispatcher | Task dispatcher delegate to be released |
+
+```c
+ MIP_CC_ReleaseTaskDispatcherDelegate(mip_cc_task_dispatcher_delegate taskDispatcher);
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetHostName
@@ -778,15 +933,18 @@ Set a telemetry host name which will override internal telemetry settings
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | hostName | Host name |
 
 **Return**: Result code indicating success or failure
 
+**Note**: This property is set when a client application uses the same Aria/1DS telemetry component and wishes for its internal telemetry settings (caching, logging, priority etc.) to be used instead of MIP's default settings
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetHostName(
+ MIP_CC_TelemetryConfiguration_SetHostName(
     const mip_cc_telemetry_configuration telemetryConfig,
     const char* hostName);
 ```
@@ -799,15 +957,18 @@ Set a telemetry shared library override
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | libraryName | Name of DLL that implements the Aria/1DS SDK's C API |
 
 **Return**: Result code indicating success or failure
 
+**Note**: This property is set when a client has an existing telemetry DLL that implements the Aria/1DS SDK's C API that should be used instead of mip_ClientTelemetry.dll
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetLibraryName(
+ MIP_CC_TelemetryConfiguration_SetLibraryName(
     const mip_cc_telemetry_configuration telemetryConfig,
     const char* libraryName);
 ```
@@ -820,15 +981,18 @@ Override default telemetry HTTP stack with client's own
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | httpDelegate | HTTP callback instance implemented by client application |
 
 **Return**: Result code indicating success or failure
 
+**Note**: If this property is not set, the telemetry component will use MIP's default HTTP stack
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetHttpDelegate(
+ MIP_CC_TelemetryConfiguration_SetHttpDelegate(
     const mip_cc_telemetry_configuration telemetryConfig,
     const mip_cc_http_delegate httpDelegate);
 ```
@@ -841,15 +1005,18 @@ Sets whether or not the telemetry component is allowed ping network status on a 
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | isCachingEnabled | Whether or not the telemetry component is allowed ping network status on a background thread |
 
 **Return**: Result code indicating success or failure
 
+**Note**: Default is 'true'
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
+ MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
     const mip_cc_telemetry_configuration telemetryConfig,
     const bool isNetworkDetectionEnabled);
 ```
@@ -862,15 +1029,18 @@ Sets whether or not the telemetry component is allowed to write caches to disk
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | isCachingEnabled | Whether or not the telemetry component is allowed to write caches to disk |
 
 **Return**: Result code indicating success or failure
 
+**Note**: Default is 'true'
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
+ MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
     const mip_cc_telemetry_configuration telemetryConfig,
     const bool isCachingEnabled);
 ```
@@ -883,15 +1053,18 @@ Sets whether or not the telemetry component is allowed to write logs to disk
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | isTraceLoggingEnabled | Whether or not the telemetry component is allowed to write logs to disk |
 
 **Return**: Result code indicating success or failure
 
+**Note**: Default is 'true'
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
+ MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
     const mip_cc_telemetry_configuration telemetryConfig,
     const bool isTraceLoggingEnabled);
 ```
@@ -904,38 +1077,20 @@ Sets whether or not an application/user has opted out of optional telemetry
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | isTelemetryOptedOut | Whether or not an application/user has opted out of optional telemetry |
 
 **Return**: Result code indicating success or failure
 
+**Note**: Default is 'false'
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
+ MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
     const mip_cc_telemetry_configuration telemetryConfig,
     const bool isTelemetryOptedOut);
-```
-
-## MIP_CC_TelemetryConfiguration_SetIsFastShutdownEnabled
-
-From [telemetry_configuration_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/telemetry_configuration_cc.h)
-
-Sets whether fast telemetry shutdown is enabled or not
-
-**Parameters**
-
- Parameter | Description
-|---|---|
-| telemetryConfig | Telemetry configuration |
-| isFastShutdownEnabled | Whether or not the telemetry fast shutdown is enabled |
-
-**Return**: Result code indicating success or failure
-
-```c
-MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetIsFastShutdownEnabled(
-    const mip_cc_telemetry_configuration telemetryConfig, 
-    const bool isFastShutdownEnabled);
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetCustomSettings
@@ -946,7 +1101,7 @@ Sets custom telemetry settings
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | customSettings | Custom telemetry settings |
@@ -954,22 +1109,53 @@ Sets custom telemetry settings
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_TelemetryConfiguration_SetCustomSettings(
+ MIP_CC_TelemetryConfiguration_SetCustomSettings(
     const mip_cc_telemetry_configuration telemetryConfig,
     const mip_cc_dictionary customSettings);
+```
+
+## MIP_CC_ReleaseTelemetryConfiguration
+
+From [telemetry_configuration_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/telemetry_configuration_cc.h)
+
+Release resources associated with a protection profile settings
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| profileSettings | Protection profile settings to be released |
+
+```c
+ MIP_CC_ReleaseTelemetryConfiguration(mip_cc_telemetry_configuration telemetryConfig);
+```
+
+## MIP_CC_ReleaseProtectionEngine
+
+From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
+
+Release resources associated with a protection engine
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| engine | Protection engine to release |
+
+```c
+ MIP_CC_ReleaseProtectionEngine(mip_cc_protection_engine engine);
 ```
 
 ## MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing
 
 From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
 
-Defines C-Style ProtectionEngine functions
+Creates a protection handler for publishing new content
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
-| engine | Protection engine to release |
 | engine | Engine under which a handler will be created |
 | settings | Protection handler settings |
 | context | Client context that will be opaquely passed to HttpDelegate and AuthDelegate |
@@ -978,7 +1164,7 @@ Defines C-Style ProtectionEngine functions
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
+ MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
     const mip_cc_protection_engine engine,
     const mip_cc_protection_handler_publishing_settings settings,
     const void* context,
@@ -993,7 +1179,7 @@ Creates a protection handler for consuming existing content
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Engine under which a handler will be created |
 | settings | Protection handler settings |
@@ -1003,7 +1189,7 @@ Creates a protection handler for consuming existing content
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
+ MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
   const mip_cc_protection_engine engine,
   const mip_cc_protection_handler_consumption_settings settings,
   const void* context,
@@ -1018,7 +1204,7 @@ Gets size of buffer required to engine ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Protection engine |
 | idSize | [Output] Size of buffer to hold engine ID (in number of chars) |
@@ -1026,7 +1212,7 @@ Gets size of buffer required to engine ID
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetEngineIdSize(
+ MIP_CC_ProtectionEngine_GetEngineIdSize(
     const mip_cc_protection_engine engine,
     int64_t* idSize);
 ```
@@ -1039,7 +1225,7 @@ Gets engine ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Protection engine |
 | idBuffer | [Output] Buffer the id will be copied into. |
@@ -1048,8 +1234,11 @@ Gets engine ID
 
 **Return**: Result code indicating success or failure
 
+**Note**: If idBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualIdSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetEngineId(
+ MIP_CC_ProtectionEngine_GetEngineId(
     const mip_cc_protection_engine engine,
     char* idBuffer,
     const int64_t idBufferSize,
@@ -1064,7 +1253,7 @@ Gets the number of RMS templates associated with a protection engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Protection engine |
 | context | Client context that will be opaquely passed to HttpDelegate and AuthDelegate |
@@ -1072,11 +1261,11 @@ Gets the number of RMS templates associated with a protection engine
 
 **Return**: Result code indicating success or failure
 
+**Note**: This API may result in an independent HTTP operation. Consider using 'MIP_CC_ProtectionEngine_GetTemplates' directly with a pre-defined buffer to avoid unnecessary extra HTTP operations.
+ 
+
 ```c
-MIP_CC_ProtectionEngine_GetTemplates'
- *       directly with a pre-defined buffer to avoid unnecessary extra HTTP operations.
- */
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetTemplatesSize(
+ MIP_CC_ProtectionEngine_GetTemplatesSize(
     const mip_cc_protection_engine engine,
     const void* context,
     int64_t* templatesSize);
@@ -1090,7 +1279,7 @@ Get collection of templates available to a user
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Protection engine |
 | context | Client context that will be opaquely passed to HttpDelegate and AuthDelegate |
@@ -1100,8 +1289,11 @@ Get collection of templates available to a user
 
 **Return**: Result code indicating success or failure
 
+**Note**: If templateBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTemplateSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetTemplates(
+ MIP_CC_ProtectionEngine_GetTemplates(
     const mip_cc_protection_engine engine,
     const void* context,
     mip_cc_guid* templateBuffer,
@@ -1117,7 +1309,7 @@ Get list of rights granted to a user for a label ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Protection engine |
 | context | Client context that will be opaquely passed to HttpDelegate and AuthDelegate |
@@ -1129,10 +1321,11 @@ Get list of rights granted to a user for a label ID
 
 **Return**: Result code indicating success or failure
 
+**Note**: The 'rights' variable must be released by the caller by calling MIP_CC_ReleaseStringList
+ 
+
 ```c
-MIP_CC_ReleaseStringList
- */
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetRightsForLabelId(
+ MIP_CC_ProtectionEngine_GetRightsForLabelId(
     const mip_cc_protection_engine engine,
     const void* context,
     const char* documentId,
@@ -1150,7 +1343,7 @@ Gets the size of client data associated with a protection engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Protection engine |
 | clientDataSize | [Output] Size of client data (in number of chars) |
@@ -1158,7 +1351,7 @@ Gets the size of client data associated with a protection engine
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetClientDataSize(
+ MIP_CC_ProtectionEngine_GetClientDataSize(
     const mip_cc_protection_engine engine,
     int64_t* clientDataSize);
 ```
@@ -1171,7 +1364,7 @@ Get client data associated with a protection engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Protection engine |
 | clientDataBuffer | [Output] Buffer the client data will be copied into |
@@ -1180,8 +1373,11 @@ Get client data associated with a protection engine
 
 **Return**: Result code indicating success or failure
 
+**Note**: If clientDataBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualClientDataSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngine_GetClientData(
+ MIP_CC_ProtectionEngine_GetClientData(
     const mip_cc_protection_engine engine,
     char* clientDataBuffer,
     const int64_t clientDataBufferSize,
@@ -1196,7 +1392,7 @@ Create a settings object used to create a brand new protection engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | identity | Identity that will be associated with ProtectionEngine |
 | clientData | Customizable client data that is stored alongside the engine |
@@ -1206,34 +1402,7 @@ Create a settings object used to create a brand new protection engine
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateProtectionEngineSettingsWithIdentity(
-    const mip_cc_identity* identity,
-    const char* clientData,
-    const char* locale,
-    mip_cc_protection_engine_settings* engineSettings);
-```
-
-## MIP_CC_CreateProtectionEngineSettingsWithEngineId
-
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
-
-Create a settings object used to load an existing protection engine by engine ID if it
-
-**Parameters**
-
- Parameter | Description
-|---|---|
-| engineId | ID of existing cached engine |
-| identity | (Optional) Identity that will be associated with ProtectionEngine |
-| clientData | Customizable client data that is stored alongside the engine |
-| locale | Locale in which text results will output |
-| engineSettings | [Output] Newly-created settings instance |
-
-**Return**: Result code indicating success or failure
-
-```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateProtectionEngineSettingsWithEngineId(
-    const char* engineId,
+ MIP_CC_CreateProtectionEngineSettingsWithIdentity(
     const mip_cc_identity* identity,
     const char* clientData,
     const char* locale,
@@ -1248,7 +1417,7 @@ Sets the client data that will be stored opaquely alongside this engine and pers
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Engine settings |
 | clientData | Client data |
@@ -1256,7 +1425,7 @@ Sets the client data that will be stored opaquely alongside this engine and pers
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngineSettings_SetClientData(
+ MIP_CC_ProtectionEngineSettings_SetClientData(
     const mip_cc_protection_engine_settings engineSettings,
     const char* clientData);
 ```
@@ -1269,7 +1438,7 @@ Configures custom settings, used for feature gating and testing.
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engineSettings | Engine settings |
 | customSettings | Key/value pairs of custom settings |
@@ -1277,7 +1446,7 @@ Configures custom settings, used for feature gating and testing.
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngineSettings_SetCustomSettings(
+ MIP_CC_ProtectionEngineSettings_SetCustomSettings(
     const mip_cc_protection_engine_settings engineSettings,
     const mip_cc_dictionary customSettings);
 ```
@@ -1290,7 +1459,7 @@ Sets the session ID that can be used to correlate logs and telemetry
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Engine settings |
 | sessionId | Session ID that represents the lifetime of a protection engine |
@@ -1298,7 +1467,7 @@ Sets the session ID that can be used to correlate logs and telemetry
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngineSettings_SetSessionId(
+ MIP_CC_ProtectionEngineSettings_SetSessionId(
     const mip_cc_protection_engine_settings engineSettings,
     const char* sessionId);
 ```
@@ -1311,7 +1480,7 @@ Sets base URL for all service requests
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Engine settings |
 | cloudEndpointBaseUrl | Base URL (e.g. 'https://api.aadrm.com') |
@@ -1319,20 +1488,36 @@ Sets base URL for all service requests
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
+ MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
     const mip_cc_protection_engine_settings engineSettings,
     const char* cloudEndpointBaseUrl);
+```
+
+## MIP_CC_ReleaseProtectionEngineSettings
+
+From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
+
+Release resources associated with a protection engine settings
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| engineSettings | Protection engine settings to be released |
+
+```c
+ MIP_CC_ReleaseProtectionEngineSettings(mip_cc_protection_engine_settings engineSettings);
 ```
 
 ## MIP_CC_CreateProtectionHandlerPublishingSettings
 
 From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
-Defines C-Style ProtectionHandler interface
+Create a settings object used to create a protection handler for publishing new content
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | descriptor | Protection details |
 | settings | [Output] Newly-created settings instance |
@@ -1340,7 +1525,7 @@ Defines C-Style ProtectionHandler interface
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateProtectionHandlerPublishingSettings(
+ MIP_CC_CreateProtectionHandlerPublishingSettings(
     const mip_cc_protection_descriptor descriptor,
     mip_cc_protection_handler_publishing_settings* settings);
 ```
@@ -1353,7 +1538,7 @@ Sets whether or not deprecated crypto algorithm (ECB) is preferred for backwards
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Protection handler settings |
 | isDeprecatedAlgorithmPreferred | Whether or not deprecated algorithm is preferred |
@@ -1361,7 +1546,7 @@ Sets whether or not deprecated crypto algorithm (ECB) is preferred for backwards
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorithmPreferred(
+ MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorithmPreferred(
     const mip_cc_protection_handler_publishing_settings settings,
     const bool isDeprecatedAlgorithmPreferred);
 ```
@@ -1374,7 +1559,7 @@ Sets whether or not non-MIP-aware applications are allowed to open protected con
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Protection handler settings |
 | isAuditedExtractionAllowed | Whether or not non-MIP-aware applications are allowed to open protected content |
@@ -1382,7 +1567,7 @@ Sets whether or not non-MIP-aware applications are allowed to open protected con
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed(
+ MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed(
     const mip_cc_protection_handler_publishing_settings settings,
     const bool isAuditedExtractionAllowed);
 ```
@@ -1395,7 +1580,7 @@ Sets whether or not PL is in JSON format (default is XML)
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Protection handler settings |
 | isPublishingFormatJson | Whether or not resulting PL should be in JSON format |
@@ -1403,7 +1588,7 @@ Sets whether or not PL is in JSON format (default is XML)
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson(
+ MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson(
     const mip_cc_protection_handler_publishing_settings settings,
     const bool isPublishingFormatJson);
 ```
@@ -1416,15 +1601,18 @@ Sets delegated user
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Protection handler settings |
 | delegatedUserEmail | Email address of delegated user |
 
 **Return**: Result code indicating success or failure
 
+**Note**: A delegated user is specified when the authenticating user/application is acting on behalf of another user
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
+ MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
     const mip_cc_protection_handler_publishing_settings settings,
     const char* delegatedUserEmail);
 ```
@@ -1437,7 +1625,7 @@ Create a settings object used to create a protection handler for consuming exist
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | publishingLicenseBuffer | Buffer containing raw publishing license |
 | publishingLicenseBufferSize | Size of publishing license buffer |
@@ -1448,7 +1636,7 @@ Create a settings object used to create a protection handler for consuming exist
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateProtectionHandlerConsumptionSettings(
+ MIP_CC_CreateProtectionHandlerConsumptionSettings(
     const uint8_t* publishingLicenseBuffer,
     const int64_t publishingLicenseBufferSize,
     mip_cc_protection_handler_consumption_settings* settings);
@@ -1462,15 +1650,18 @@ Sets whether or not protection handler creation permits online HTTP operations
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Protection handler settings |
 | isOfflineOnly | True if HTTP operations are forbidden, else false |
 
 **Return**: Result code indicating success or failure
 
+**Note**: If this is set to true, protection handler creation will only succeed if content has already been previously decrypted and its unexpired license is cached. A MIP_RESULT_ERROR_NETWORK result will be returned if cached content is not found.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
+ MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
     const mip_cc_protection_handler_consumption_settings settings,
     const bool isOfflineOnly);
 ```
@@ -1483,15 +1674,18 @@ Sets delegated user
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Protection handler settings |
 | delegatedUserEmail | Email address of delegated user |
 
 **Return**: Result code indicating success or failure
 
+**Note**: A delegated user is specified when the authenticating user/application is acting on behalf of another user
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
+ MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
     const mip_cc_protection_handler_consumption_settings settings,
     const char* delegatedUserEmail);
 ```
@@ -1504,7 +1698,7 @@ Gets size of publishing license (in bytes)
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | publishingLicenseBufferSize | [Output] Size of publishing license (in bytes) |
@@ -1512,7 +1706,7 @@ Gets size of publishing license (in bytes)
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
+ MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
     const mip_cc_protection_handler handler,
     int64_t* publishingLicenseBufferSize);
 ```
@@ -1525,7 +1719,7 @@ Gets publishing license
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | publishingLicenseBuffer | [Output] Buffer to which publishing license will be written |
@@ -1534,8 +1728,11 @@ Gets publishing license
 
 **Return**: Result code indicating success or failure
 
+**Note**: If publishingLicenseBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualPublishingLicenseSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
+ MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
     const mip_cc_protection_handler handler,
     uint8_t* publishingLicenseBuffer,
     const int64_t publishingLicenseBufferSize,
@@ -1550,7 +1747,7 @@ Gets protection descriptor
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | descriptor | [Output] Protection descriptor |
@@ -1558,7 +1755,7 @@ Gets protection descriptor
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetProtectionDescriptor(
+ MIP_CC_ProtectionHandler_GetProtectionDescriptor(
     const mip_cc_protection_handler handler,
     mip_cc_protection_descriptor* descriptor);
 ```
@@ -1571,17 +1768,18 @@ Gets list of rights granted to a user
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | rights | [Output] List of rights granted to a user, memory owned by caller |
 
 **Return**: Result code indicating success or failure
 
+**Note**: The 'rights' variable must be released by the caller by calling MIP_CC_ReleaseStringList
+ 
+
 ```c
-MIP_CC_ReleaseStringList
- */
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetRights(
+ MIP_CC_ProtectionHandler_GetRights(
     const mip_cc_protection_handler handler,
     mip_cc_string_list* rights);
 ```
@@ -1594,7 +1792,7 @@ Calculates size of protected content, factoring in padding, etc.
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | unprotectedSize | Size of unprotected/cleartext content (in bytes) |
@@ -1604,7 +1802,7 @@ Calculates size of protected content, factoring in padding, etc.
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetProtectedContentSize(
+ MIP_CC_ProtectionHandler_GetProtectedContentSize(
     const mip_cc_protection_handler handler,
     const int64_t unprotectedSize,
     const bool includesFinalBlock,
@@ -1619,7 +1817,7 @@ Gets the block size (in bytes) for the cipher mode used by a protection handler
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | blockSize | [Output] Block size (in bytes) |
@@ -1627,7 +1825,7 @@ Gets the block size (in bytes) for the cipher mode used by a protection handler
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetBlockSize(
+ MIP_CC_ProtectionHandler_GetBlockSize(
     const mip_cc_protection_handler handler,
     int64_t* blockSize);
 ```
@@ -1640,7 +1838,7 @@ Gets size of buffer required to store user that has been granted access to prote
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | issuedUserSize | [Output] Size of buffer to hold issued user (in number of chars) |
@@ -1648,7 +1846,7 @@ Gets size of buffer required to store user that has been granted access to prote
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetIssuedUserSize(
+ MIP_CC_ProtectionHandler_GetIssuedUserSize(
     const mip_cc_protection_handler handler,
     int64_t* issuedUserSize);
 ```
@@ -1661,7 +1859,7 @@ Gets the user that has been granted access to protected content
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | issuedUserBuffer | [Output] Buffer the issued user will be copied into. |
@@ -1670,8 +1868,11 @@ Gets the user that has been granted access to protected content
 
 **Return**: Result code indicating success or failure
 
+**Note**: If issuedUserBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualIssuedUserSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetIssuedUser(
+ MIP_CC_ProtectionHandler_GetIssuedUser(
     const mip_cc_protection_handler handler,
     char* issuedUserBuffer,
     const int64_t issuedUserBufferSize,
@@ -1686,7 +1887,7 @@ Gets size of buffer required to store the owner of protected content
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | ownerSize | [Output] Size of buffer to hold issued user (in number of chars) |
@@ -1694,7 +1895,7 @@ Gets size of buffer required to store the owner of protected content
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetOwnerSize(
+ MIP_CC_ProtectionHandler_GetOwnerSize(
     const mip_cc_protection_handler handler,
     int64_t* ownerSize);
 ```
@@ -1707,7 +1908,7 @@ Gets the owner of protected content
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | ownerBuffer | [Output] Buffer the issued user will be copied into. |
@@ -1716,8 +1917,11 @@ Gets the owner of protected content
 
 **Return**: Result code indicating success or failure
 
+**Note**: If ownerBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualOwnerSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetOwner(
+ MIP_CC_ProtectionHandler_GetOwner(
     const mip_cc_protection_handler handler,
     char* ownerBuffer,
     const int64_t ownerBufferSize,
@@ -1732,7 +1936,7 @@ Gets the content IE of protected content
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | contentId | [Output] Content ID |
@@ -1740,7 +1944,7 @@ Gets the content IE of protected content
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_GetContentId(
+ MIP_CC_ProtectionHandler_GetContentId(
     const mip_cc_protection_handler handler,
     mip_cc_guid* contentId);
 ```
@@ -1753,7 +1957,7 @@ Gets whether or not protection handler uses deprecated crypto algorithm (ECB) fo
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | doesUseDeprecatedAlgorithm | [Output] Whether or not protection handler uses deprecated crypto algorithm |
@@ -1761,41 +1965,9 @@ Gets whether or not protection handler uses deprecated crypto algorithm (ECB) fo
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
+ MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
     const mip_cc_protection_handler handler,
     bool* doesUseDeprecatedAlgorithm);
-```
-
-## MIP_CC_ProtectionHandler_EncryptBuffer
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
-Encrypt a buffer
-
-**Parameters**
-
- Parameter | Description
-|---|---|
-| offsetFromStart | Relative position of inputBuffer from the very beginning of the cleartext content |
-| inputBuffer | Buffer of cleartext content that will be encrypted |
-| inputBufferSize | Size (in bytes) of input buffer |
-| outputBuffer | [Output] Buffer into which encrypted content will be copied |
-| outputBufferSize | Size (in bytes) of output buffer |
-| isFinal | If input buffer contains the final cleartext bytes or not |
-| actualEncryptedSize | [Output] Actual size of encrypted content (in bytes) |
-
-**Return**: Result code indicating success or failure
-
-```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_EncryptBuffer(
-    const mip_cc_protection_handler handler,
-    const int64_t offsetFromStart,
-    const uint8_t* inputBuffer,
-    const int64_t inputBufferSize,
-    uint8_t* outputBuffer,
-    const int64_t outputBufferSize,
-    const bool isFinal,
-    int64_t* actualEncryptedSize);
 ```
 
 ## MIP_CC_ProtectionHandler_DecryptBuffer
@@ -1806,7 +1978,7 @@ Decrypt a buffer
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | offsetFromStart | Relative position of inputBuffer from the very beginning of the encrypted content |
 | inputBuffer | Buffer of encrypted content that will be decrypted |
@@ -1819,7 +1991,7 @@ Decrypt a buffer
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_DecryptBuffer(
+ MIP_CC_ProtectionHandler_DecryptBuffer(
     const mip_cc_protection_handler handler,
     const int64_t offsetFromStart,
     const uint8_t* inputBuffer,
@@ -1830,27 +2002,52 @@ MIP_CC_API(mip_cc_result) MIP_CC_ProtectionHandler_DecryptBuffer(
     int64_t *actualDecryptedSize);
 ```
 
-## MIP_CC_ProtectionProfile_AddEngine
+## MIP_CC_ReleaseProtectionHandlerPublishingSettings
 
-From [protection/protection_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_profile_cc.h)
+From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
-Defines C-Style ProtectionProfile functions
+Release resources associated with a protection handler settings
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
-| profile | Parent profile under which an engine will be added |
-| settings | Protection engine settings |
-| engine | [Output] Newly-created protection engine instance |
-
-**Return**: Result code indicating success or failure
+| settings | Protection handler settings to be released |
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionProfile_AddEngine(
-    const mip_cc_protection_profile profile,
-    const mip_cc_protection_engine_settings settings,
-    mip_cc_protection_engine* engine);
+ MIP_CC_ReleaseProtectionHandlerPublishingSettings(mip_cc_protection_handler_publishing_settings settings);
+```
+
+## MIP_CC_ReleaseProtectionHandlerConsumptionSettings
+
+From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
+
+Release resources associated with a protection handler settings
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| settings | Protection handler settings to be released |
+
+```c
+ MIP_CC_ReleaseProtectionHandlerConsumptionSettings(mip_cc_protection_handler_consumption_settings settings);
+```
+
+## MIP_CC_ReleaseProtectionHandler
+
+From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
+
+Release resources associated with a protection handler
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| handler | Protection handler to be released |
+
+```c
+ MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
 ```
 
 ## MIP_CC_LoadProtectionProfile
@@ -1861,7 +2058,7 @@ Load a profile
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Profile settings |
 | profile | [Output] Newly-created protection profile instance |
@@ -1869,12 +2066,12 @@ Load a profile
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_LoadProtectionProfile(
+ MIP_CC_LoadProtectionProfile(
     const mip_cc_protection_profile_settings settings,
     mip_cc_protection_profile* profile);
 ```
 
-## MIP_CC_CreateProtectionProfileSettings
+## MIP_CC_ReleaseProtectionProfile
 
 From [protection/protection_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_profile_cc.h)
 
@@ -1882,24 +2079,12 @@ Release resources associated with a protection profile
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | profile | Protection profile to be released |
-| mipContext | Global context shared across all profiles |
-| cacheStorageType | Storage cache configuration |
-| authCallback | Callback object to be used for authentication, implemented by client application |
-| consentCallback | Callback object to be used for consent, implemented by client application |
-| settings | [Output] Newly-created settings instance |
-
-**Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreateProtectionProfileSettings(
-    const mip_cc_mip_context mipContext,
-    const mip_cc_cache_storage_type cacheStorageType,
-    const mip_cc_auth_callback authCallback,
-    const mip_cc_consent_callback consentCallback,
-    mip_cc_protection_profile_settings* settings);
+ MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
 ```
 
 ## MIP_CC_ProtectionProfileSettings_SetSessionId
@@ -1910,7 +2095,7 @@ Sets the session ID that can be used to correlate logs and telemetry
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Profile settings |
 | sessionId | Session ID that represents the lifetime of a protection profile |
@@ -1918,7 +2103,7 @@ Sets the session ID that can be used to correlate logs and telemetry
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionProfileSettings_SetSessionId(
+ MIP_CC_ProtectionProfileSettings_SetSessionId(
     const mip_cc_protection_profile_settings settings,
     const char* sessionId);
 ```
@@ -1931,7 +2116,7 @@ Configures whether or not end user licenses (EULs) will be cached locally
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Profile settings |
 | canCacheLicenses | Whether or not engine should cache a license when opening protected content |
@@ -1939,7 +2124,7 @@ Configures whether or not end user licenses (EULs) will be cached locally
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
+ MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
     const mip_cc_protection_profile_settings settings,
     const bool canCacheLicenses);
 ```
@@ -1952,7 +2137,7 @@ Override default HTTP stack with client's own
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Profile settings to which HTTP delegate will be assigned |
 | httpDelegate | HTTP callback instance implemented by client application |
@@ -1960,7 +2145,7 @@ Override default HTTP stack with client's own
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
+ MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
     const mip_cc_protection_profile_settings settings,
     const mip_cc_http_delegate httpDelegate);
 ```
@@ -1973,7 +2158,7 @@ Override default async task dispatcher with client's own
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Profile settings to which task dispatcher delegate will be assigned |
 | taskDispatcherDelegate | Task dispatcher callback instance implemented by client application |
@@ -1981,7 +2166,7 @@ Override default async task dispatcher with client's own
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
+ MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
     const mip_cc_protection_profile_settings settings,
     const mip_cc_task_dispatcher_delegate taskDispatcherDelegate);
 ```
@@ -1994,7 +2179,7 @@ Configures custom settings, used for feature gating and testing.
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Profile settings |
 | customSettings | Key/value pairs of custom settings |
@@ -2002,20 +2187,36 @@ Configures custom settings, used for feature gating and testing.
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectionProfileSettings_SetCustomSettings(
+ MIP_CC_ProtectionProfileSettings_SetCustomSettings(
     const mip_cc_protection_profile_settings settings,
     const mip_cc_dictionary customSettings);
+```
+
+## MIP_CC_ReleaseProtectionProfileSettings
+
+From [protection/protection_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_profile_cc.h)
+
+Release resources associated with a protection profile settings
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| settings | Protection profile settings to be released |
+
+```c
+ MIP_CC_ReleaseProtectionProfileSettings(mip_cc_protection_profile_settings profilsettingseSettings);
 ```
 
 ## MIP_CC_Action_GetType
 
 From [upe/action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/action_cc.h)
 
-Contains C API definitions for label policy actions
+Gets an action's type
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | Action |
 | actionType | [Output] Type of action |
@@ -2023,7 +2224,7 @@ Contains C API definitions for label policy actions
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Action_GetType(
+ MIP_CC_Action_GetType(
     const mip_cc_action action,
     mip_cc_action_type* actionType);
 ```
@@ -2036,7 +2237,7 @@ Gets an action's ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | Action |
 | id | [Output] Unique action ID |
@@ -2044,7 +2245,7 @@ Gets an action's ID
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Action_GetId(
+ MIP_CC_Action_GetId(
     const mip_cc_action action,
     mip_cc_guid* id);
 ```
@@ -2053,11 +2254,11 @@ MIP_CC_API(mip_cc_result) MIP_CC_Action_GetId(
 
 From [upe/action_result_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/action_result_cc.h)
 
-A file containing definition of action result type
+Get actions that compose an action result
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | actionResult | Source action result |
 | actions | [Output] Array of actions, memory owned by mip_cc_action_result object |
@@ -2065,22 +2266,41 @@ A file containing definition of action result type
 
 **Return**: Result code indicating success or failure
 
+**Note**: The memory for 'actions' is owned by the mip_cc_action_result object, so it should not be freed independently
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ActionResult_GetActions(
+ MIP_CC_ActionResult_GetActions(
     const mip_cc_action_result actionResult,
     mip_cc_action** actions,
     int64_t* count);
+```
+
+## MIP_CC_ReleaseActionResult
+
+From [upe/action_result_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/action_result_cc.h)
+
+Release resources associated with an action result
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| actionResult | Action result to be released |
+
+```c
+ MIP_CC_ReleaseActionResult(mip_cc_action_result actionResult);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetUIElementNameSize
 
 From [upe/add_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_footer_action_cc.h)
 
-Contains C API definitions for "add content footer" label policy action
+Gets size of buffer required to store an "add content footer" action's UI element name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | nameSize | [Output] Size of buffer to hold UI element name (in number of chars) |
@@ -2088,7 +2308,7 @@ Contains C API definitions for "add content footer" label policy action
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetUIElementNameSize(
+ MIP_CC_AddContentFooterAction_GetUIElementNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2101,7 +2321,7 @@ Gets an "add content footer" action's UI element name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | nameBuffer | [Output] Buffer the UI element name will be copied into. |
@@ -2110,8 +2330,11 @@ Gets an "add content footer" action's UI element name
 
 **Return**: Result code indicating success or failure
 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetUIElementName(
+ MIP_CC_AddContentFooterAction_GetUIElementName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2126,7 +2349,7 @@ Gets size of buffer required to store an "add content footer" action's text
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | nameSize | [Output] Size of buffer to hold text (in number of chars) |
@@ -2134,7 +2357,7 @@ Gets size of buffer required to store an "add content footer" action's text
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetTextSize(
+ MIP_CC_AddContentFooterAction_GetTextSize(
     const mip_cc_action action,
     int64_t* textSize);
 ```
@@ -2147,7 +2370,7 @@ Gets an "add content footer" action's text
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | textBuffer | [Output] Buffer the text will be copied into. |
@@ -2156,8 +2379,11 @@ Gets an "add content footer" action's text
 
 **Return**: Result code indicating success or failure
 
+**Note**: If textBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTextSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetText(
+ MIP_CC_AddContentFooterAction_GetText(
     const mip_cc_action action,
     char* textBuffer,
     const int64_t textBufferSize,
@@ -2172,7 +2398,7 @@ Gets size of buffer required to store an "add content footer" action's font name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | nameSize | [Output] Size of buffer to hold font name (in number of chars) |
@@ -2180,7 +2406,7 @@ Gets size of buffer required to store an "add content footer" action's font name
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetFontNameSize(
+ MIP_CC_AddContentFooterAction_GetFontNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2193,7 +2419,7 @@ Gets an "add content footer" action's font name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | nameBuffer | [Output] Buffer the font name will be copied into. |
@@ -2202,8 +2428,11 @@ Gets an "add content footer" action's font name
 
 **Return**: Result code indicating success or failure
 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetFontName(
+ MIP_CC_AddContentFooterAction_GetFontName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2218,7 +2447,7 @@ Gets the integer font size
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | fontSize | [Output] Font size |
@@ -2226,7 +2455,7 @@ Gets the integer font size
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetFontSize(
+ MIP_CC_AddContentFooterAction_GetFontSize(
     const mip_cc_action action,
     int32_t* fontSize);
 ```
@@ -2239,7 +2468,7 @@ Gets size of buffer required to store an "add content footer" action's font colo
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | colorSize | [Output] Size of buffer to hold font color (in number of chars) |
@@ -2247,7 +2476,7 @@ Gets size of buffer required to store an "add content footer" action's font colo
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetFontColorSize(
+ MIP_CC_AddContentFooterAction_GetFontColorSize(
     const mip_cc_action action,
     int64_t* colorSize);
 ```
@@ -2260,7 +2489,7 @@ Gets an "add content footer" action's font color (for example, "#000000")
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | colorBuffer | [Output] Buffer the font color will be copied into. |
@@ -2269,8 +2498,11 @@ Gets an "add content footer" action's font color (for example, "#000000")
 
 **Return**: Result code indicating success or failure
 
+**Note**: If colorBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualColorSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetFontColor(
+ MIP_CC_AddContentFooterAction_GetFontColor(
     const mip_cc_action action,
     char* colorBuffer,
     const int64_t colorBufferSize,
@@ -2285,7 +2517,7 @@ Gets the alignment
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | alignment | [Output] Alignment |
@@ -2293,7 +2525,7 @@ Gets the alignment
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetAlignment(
+ MIP_CC_AddContentFooterAction_GetAlignment(
     const mip_cc_action action,
     mip_cc_content_mark_alignment* alignment);
 ```
@@ -2306,7 +2538,7 @@ Gets the margin size
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | marginSize | [Output] Margin size (in mm) |
@@ -2314,7 +2546,7 @@ Gets the margin size
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetMargin(
+ MIP_CC_AddContentFooterAction_GetMargin(
     const mip_cc_action action,
     int32_t* marginSize);
 ```
@@ -2323,11 +2555,11 @@ MIP_CC_API(mip_cc_result) MIP_CC_AddContentFooterAction_GetMargin(
 
 From [upe/add_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_header_action_cc.h)
 
-Contains C API definitions for "add content header" label policy action
+Gets size of buffer required to store an "add content header" action's UI element name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content header" action |
 | nameSize | [Output] Size of buffer to hold UI element name (in number of chars) |
@@ -2335,7 +2567,7 @@ Contains C API definitions for "add content header" label policy action
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
+ MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2348,7 +2580,7 @@ Gets an "add content header" action's UI element name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content header" action |
 | nameBuffer | [Output] Buffer the UI element name will be copied into. |
@@ -2357,8 +2589,11 @@ Gets an "add content header" action's UI element name
 
 **Return**: Result code indicating success or failure
 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetUIElementName(
+ MIP_CC_AddContentHeaderAction_GetUIElementName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2373,7 +2608,7 @@ Gets size of buffer required to store an "add content header" action's text
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content header" action |
 | nameSize | [Output] Size of buffer to hold text (in number of chars) |
@@ -2381,7 +2616,7 @@ Gets size of buffer required to store an "add content header" action's text
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetTextSize(
+ MIP_CC_AddContentHeaderAction_GetTextSize(
     const mip_cc_action action,
     int64_t* textSize);
 ```
@@ -2394,7 +2629,7 @@ Gets an "add content header" action's text
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content header" action |
 | textBuffer | [Output] Buffer the text will be copied into. |
@@ -2403,8 +2638,11 @@ Gets an "add content header" action's text
 
 **Return**: Result code indicating success or failure
 
+**Note**: If textBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTextSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetText(
+ MIP_CC_AddContentHeaderAction_GetText(
     const mip_cc_action action,
     char* textBuffer,
     const int64_t textBufferSize,
@@ -2419,7 +2657,7 @@ Gets size of buffer required to store an "add content header" action's font name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content header" action |
 | nameSize | [Output] Size of buffer to hold font name (in number of chars) |
@@ -2427,7 +2665,7 @@ Gets size of buffer required to store an "add content header" action's font name
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetFontNameSize(
+ MIP_CC_AddContentHeaderAction_GetFontNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2440,7 +2678,7 @@ Gets an "add content header" action's font name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content header" action |
 | nameBuffer | [Output] Buffer the font name will be copied into. |
@@ -2449,8 +2687,11 @@ Gets an "add content header" action's font name
 
 **Return**: Result code indicating success or failure
 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetFontName(
+ MIP_CC_AddContentHeaderAction_GetFontName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2465,7 +2706,7 @@ Gets the integer font size
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content header" action |
 | fontSize | [Output] Font size |
@@ -2473,7 +2714,7 @@ Gets the integer font size
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetFontSize(
+ MIP_CC_AddContentHeaderAction_GetFontSize(
     const mip_cc_action action,
     int32_t* fontSize);
 ```
@@ -2486,7 +2727,7 @@ Gets size of buffer required to store an "add content header" action's font colo
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content header" action |
 | colorSize | [Output] Size of buffer to hold font color (in number of chars) |
@@ -2494,7 +2735,7 @@ Gets size of buffer required to store an "add content header" action's font colo
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetFontColorSize(
+ MIP_CC_AddContentHeaderAction_GetFontColorSize(
     const mip_cc_action action,
     int64_t* colorSize);
 ```
@@ -2507,7 +2748,7 @@ Gets an "add content header" action's font color (for example, "#000000")
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content header" action |
 | colorBuffer | [Output] Buffer the font color will be copied into. |
@@ -2516,8 +2757,11 @@ Gets an "add content header" action's font color (for example, "#000000")
 
 **Return**: Result code indicating success or failure
 
+**Note**: If colorBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualColorSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetFontColor(
+ MIP_CC_AddContentHeaderAction_GetFontColor(
     const mip_cc_action action,
     char* colorBuffer,
     const int64_t colorBufferSize,
@@ -2532,7 +2776,7 @@ Gets the alignment
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content header" action |
 | alignment | [Output] Alignment |
@@ -2540,7 +2784,7 @@ Gets the alignment
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetAlignment(
+ MIP_CC_AddContentHeaderAction_GetAlignment(
     const mip_cc_action action,
     mip_cc_content_mark_alignment* alignment);
 ```
@@ -2553,7 +2797,7 @@ Gets the margin size
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add content header" action |
 | marginSize | [Output] Margin size (in mm) |
@@ -2561,7 +2805,7 @@ Gets the margin size
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetMargin(
+ MIP_CC_AddContentHeaderAction_GetMargin(
     const mip_cc_action action,
     int32_t* marginSize);
 ```
@@ -2570,11 +2814,11 @@ MIP_CC_API(mip_cc_result) MIP_CC_AddContentHeaderAction_GetMargin(
 
 From [upe/add_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_watermark_action_cc.h)
 
-Contains C API definitions for "add watermark" label policy action
+Gets size of buffer required to store an "add watermark" action's UI element name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | nameSize | [Output] Size of buffer to hold UI element name (in number of chars) |
@@ -2582,7 +2826,7 @@ Contains C API definitions for "add watermark" label policy action
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetUIElementNameSize(
+ MIP_CC_AddWatermarkAction_GetUIElementNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2595,7 +2839,7 @@ Gets an "add watermark" action's UI element name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | nameBuffer | [Output] Buffer the UI element name will be copied into. |
@@ -2604,8 +2848,11 @@ Gets an "add watermark" action's UI element name
 
 **Return**: Result code indicating success or failure
 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetUIElementName(
+ MIP_CC_AddWatermarkAction_GetUIElementName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2620,7 +2867,7 @@ Gets the watermark layout
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | layout | [Output] Watermark layout |
@@ -2628,7 +2875,7 @@ Gets the watermark layout
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetLayout(
+ MIP_CC_AddWatermarkAction_GetLayout(
     const mip_cc_action action,
     mip_cc_watermark_layout* layout);
 ```
@@ -2641,7 +2888,7 @@ Gets size of buffer required to store an "add watermark" action's text
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | nameSize | [Output] Size of buffer to hold text (in number of chars) |
@@ -2649,7 +2896,7 @@ Gets size of buffer required to store an "add watermark" action's text
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetTextSize(
+ MIP_CC_AddWatermarkAction_GetTextSize(
     const mip_cc_action action,
     int64_t* textSize);
 ```
@@ -2662,7 +2909,7 @@ Gets an "add watermark" action's text
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | textBuffer | [Output] Buffer the text will be copied into. |
@@ -2671,8 +2918,11 @@ Gets an "add watermark" action's text
 
 **Return**: Result code indicating success or failure
 
+**Note**: If textBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTextSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetText(
+ MIP_CC_AddWatermarkAction_GetText(
     const mip_cc_action action,
     char* textBuffer,
     const int64_t textBufferSize,
@@ -2687,7 +2937,7 @@ Gets size of buffer required to store an "add watermark" action's font name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | nameSize | [Output] Size of buffer to hold font name (in number of chars) |
@@ -2695,7 +2945,7 @@ Gets size of buffer required to store an "add watermark" action's font name
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetFontNameSize(
+ MIP_CC_AddWatermarkAction_GetFontNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2708,7 +2958,7 @@ Gets an "add watermark" action's font name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | nameBuffer | [Output] Buffer the font name will be copied into. |
@@ -2717,8 +2967,11 @@ Gets an "add watermark" action's font name
 
 **Return**: Result code indicating success or failure
 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetFontName(
+ MIP_CC_AddWatermarkAction_GetFontName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2733,7 +2986,7 @@ Gets the integer font size
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | fontSize | [Output] Font size |
@@ -2741,7 +2994,7 @@ Gets the integer font size
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetFontSize(
+ MIP_CC_AddWatermarkAction_GetFontSize(
     const mip_cc_action action,
     int32_t* fontSize);
 ```
@@ -2754,7 +3007,7 @@ Gets size of buffer required to store an "add watermark" action's font color
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | colorSize | [Output] Size of buffer to hold font color (in number of chars) |
@@ -2762,7 +3015,7 @@ Gets size of buffer required to store an "add watermark" action's font color
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetFontColorSize(
+ MIP_CC_AddWatermarkAction_GetFontColorSize(
     const mip_cc_action action,
     int64_t* colorSize);
 ```
@@ -2775,7 +3028,7 @@ Gets an "add watermark" action's font color (for example, "#000000")
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | colorBuffer | [Output] Buffer the font color will be copied into. |
@@ -2784,32 +3037,50 @@ Gets an "add watermark" action's font color (for example, "#000000")
 
 **Return**: Result code indicating success or failure
 
+**Note**: If colorBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualColorSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_AddWatermarkAction_GetFontColor(
+ MIP_CC_AddWatermarkAction_GetFontColor(
     const mip_cc_action action,
     char* colorBuffer,
     const int64_t colorBufferSize,
     int64_t* actualColorSize);
 ```
 
+## MIP_CC_ReleaseContentLabel
+
+From [upe/content_label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/content_label_cc.h)
+
+Release resources associated with a content label
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| contentLabel | Label to be released |
+
+```c
+ MIP_CC_ReleaseContentLabel(mip_cc_content_label contentLabel);
+```
+
 ## MIP_CC_ContentLabel_GetCreationTime
 
 From [upe/content_label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/content_label_cc.h)
 
-Contains C API definitions for content label
+Gets time when label was applied
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
-| contentLabel | Label to be released |
 | contentLabel | Label |
 | creationTime | [Output] Time when label was applied to document (in seconds since epoch) |
 
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ContentLabel_GetCreationTime(
+ MIP_CC_ContentLabel_GetCreationTime(
     const mip_cc_content_label contentLabel,
     int64_t* creationTime);
 ```
@@ -2822,7 +3093,7 @@ Gets label assignment method
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | contentLabel | Label |
 | assignmentMethod | [Output] Assignment method (e.g. 'standard' or 'privileged') |
@@ -2830,7 +3101,7 @@ Gets label assignment method
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ContentLabel_GetAssignmentMethod(
+ MIP_CC_ContentLabel_GetAssignmentMethod(
     const mip_cc_content_label contentLabel,
     mip_cc_label_assignment_method* assignmentMethod);
 ```
@@ -2843,17 +3114,18 @@ Gets extended properties
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | contentLabel | Label |
 | properties | [Output] Dictionary of extended properties, memory owned by caller |
 
 **Return**: Result code indicating success or failure
 
+**Note**: The 'properties' variable must be released by the caller by calling MIP_CC_ReleaseDictionary
+ 
+
 ```c
-MIP_CC_ReleaseDictionary
- */
-MIP_CC_API(mip_cc_result) MIP_CC_ContentLabel_GetExtendedProperties(
+ MIP_CC_ContentLabel_GetExtendedProperties(
     const mip_cc_content_label contentLabel,
     mip_cc_dictionary* properties);
 ```
@@ -2866,7 +3138,7 @@ Gets whether or not a protection was applied by a label.
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | contentLabel | Label |
 | isProtectionAppliedByLabel | [Output] If document is protected and the protection was explicity applied by this label. |
@@ -2874,7 +3146,7 @@ Gets whether or not a protection was applied by a label.
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
+ MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
     const mip_cc_content_label contentLabel,
     bool* isProtectionAppliedByLabel);
 ```
@@ -2887,17 +3159,18 @@ Gets generic label properties from a content label instance
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | contentLabel | Label |
 | label | [Output] Generic label, memory owned by caller |
 
 **Return**: Result code indicating success or failure
 
+**Note**: The 'label' variable must be released by the caller by calling MIP_CC_ReleaseLabel
+ 
+
 ```c
-MIP_CC_ReleaseLabel
- */
-MIP_CC_API(mip_cc_result) MIP_CC_ContentLabel_GetLabel(
+ MIP_CC_ContentLabel_GetLabel(
     const mip_cc_content_label contentLabel,
     mip_cc_label* label);
 ```
@@ -2906,11 +3179,11 @@ MIP_CC_API(mip_cc_result) MIP_CC_ContentLabel_GetLabel(
 
 From [upe/custom_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/custom_action_cc.h)
 
-Contains C API definitions for custom label policy action
+Gets size of buffer required to store a "custom" action's name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "custom" action |
 | nameSize | [Output] Size of buffer to hold name (in number of chars) |
@@ -2918,7 +3191,7 @@ Contains C API definitions for custom label policy action
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CustomAction_GetNameSize(
+ MIP_CC_CustomAction_GetNameSize(
     const mip_cc_action action,
     int64_t* nameSize);
 ```
@@ -2931,7 +3204,7 @@ Gets a "custom" action's name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "custom" action |
 | nameBuffer | [Output] Buffer the name will be copied into. |
@@ -2940,8 +3213,11 @@ Gets a "custom" action's name
 
 **Return**: Result code indicating success or failure
 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CustomAction_GetName(
+ MIP_CC_CustomAction_GetName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -2956,39 +3232,83 @@ Gets a "custom" action's properties
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "custom" action |
 | properties | [Output] Dictionary of properties, memory owned by caller |
 
 **Return**: Result code indicating success or failure
 
+**Note**: The 'properties' variable must be released by the caller by calling MIP_CC_ReleaseDictionary
+ 
+
 ```c
-MIP_CC_ReleaseDictionary
- */
-MIP_CC_API(mip_cc_result) MIP_CC_CustomAction_GetProperties(
+ MIP_CC_CustomAction_GetProperties(
     const mip_cc_action action,
     mip_cc_dictionary* properties);
+```
+
+## mip_cc_metadata_callback
+
+From [upe/document_state_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/document_state_cc.h)
+
+Callback function definition for retrieving document metatdata, filtered by name/prefix
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| names | Array of metadata key names to include in result |
+| namesSize | Number of values in 'names' array |
+| namePrefixes | Array of metadata key name prefixes to include in result |
+| namePrefixesSize | Number of values in 'namesPrefixes' array |
+| context | Application context opaquely passed from API call to callback |
+| metadata | [Output] Dictionary of metadata key/values, created by client application. This dictionary will be released by MIP. |
+
+```c
+MIP_CC_CALLBACK(mip_cc_metadata_callback ,
+    void ,
+    const char** ,
+    const int64_t ,
+    const char** ,
+    const int64_t ,
+    const void* ,
+    mip_cc_dictionary* );
+```
+
+## MIP_CC_ReleaseLabel
+
+From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
+
+Release resources associated with a label
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| label | Label to be released |
+
+```c
+ MIP_CC_ReleaseLabel(mip_cc_label label);
 ```
 
 ## MIP_CC_Label_GetId
 
 From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
 
-Contains C API definitions for label
+Gets label ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
-| label | Label to be released |
 | label | Label |
 | labelId | [Output] Label ID |
 
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetId(
+ MIP_CC_Label_GetId(
     const mip_cc_label label,
     mip_cc_guid* labelId);
 ```
@@ -3001,7 +3321,7 @@ Gets size of buffer required to store name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | nameSize | [Output] Size of buffer to hold name (in number of chars) |
@@ -3009,7 +3329,7 @@ Gets size of buffer required to store name
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetNameSize(
+ MIP_CC_Label_GetNameSize(
     const mip_cc_label label,
     int64_t* nameSize);
 ```
@@ -3022,7 +3342,7 @@ Gets label name
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | nameBuffer | [Output] Buffer the name will be copied into. |
@@ -3031,8 +3351,11 @@ Gets label name
 
 **Return**: Result code indicating success or failure
 
+**Note**: If nameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetName(
+ MIP_CC_Label_GetName(
     const mip_cc_label label,
     char* nameBuffer,
     const int64_t nameBufferSize,
@@ -3047,7 +3370,7 @@ Gets size of buffer required to store description
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | descriptionSize | [Output] Size of buffer to hold description (in number of chars) |
@@ -3055,7 +3378,7 @@ Gets size of buffer required to store description
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetDescriptionSize(
+ MIP_CC_Label_GetDescriptionSize(
     const mip_cc_label label,
     int64_t* descriptionSize);
 ```
@@ -3068,7 +3391,7 @@ Gets label description
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | descriptionBuffer | [Output] Buffer the description will be copied into. |
@@ -3077,8 +3400,11 @@ Gets label description
 
 **Return**: Result code indicating success or failure
 
+**Note**: If descriptionBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualDescriptionSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetDescription(
+ MIP_CC_Label_GetDescription(
     const mip_cc_label label,
     char* descriptionBuffer,
     const int64_t descriptionBufferSize,
@@ -3093,7 +3419,7 @@ Gets size of buffer required to store color
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | colorSize | [Output] Size of buffer to hold color (in number of chars) |
@@ -3101,7 +3427,7 @@ Gets size of buffer required to store color
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetColorSize(
+ MIP_CC_Label_GetColorSize(
     const mip_cc_label label,
     int64_t* colorSize);
 ```
@@ -3114,7 +3440,7 @@ Gets label color
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | colorBuffer | [Output] Buffer the color will be copied into (in #RRGGBB format). |
@@ -3123,8 +3449,11 @@ Gets label color
 
 **Return**: Result code indicating success or failure
 
+**Note**: If colorBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualColorSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetColor(
+ MIP_CC_Label_GetColor(
     const mip_cc_label label,
     char* colorBuffer,
     const int64_t colorBufferSize,
@@ -3139,7 +3468,7 @@ Gets sensitivity level of label. Higher value means more sensitive.
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | sensitivity | [Output] Sensitivity level |
@@ -3147,7 +3476,7 @@ Gets sensitivity level of label. Higher value means more sensitive.
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetSensitivity(
+ MIP_CC_Label_GetSensitivity(
     const mip_cc_label label,
     int32_t* sensitivity);
 ```
@@ -3160,7 +3489,7 @@ Gets size of buffer required to store tooltip
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | tooltipSize | [Output] Size of buffer to hold tooltip (in number of chars) |
@@ -3168,7 +3497,7 @@ Gets size of buffer required to store tooltip
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetTooltipSize(
+ MIP_CC_Label_GetTooltipSize(
     const mip_cc_label label,
     int64_t* tooltipSize);
 ```
@@ -3181,7 +3510,7 @@ Gets label tooltip
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | tooltipBuffer | [Output] Buffer the tooltip will be copied into. |
@@ -3190,8 +3519,11 @@ Gets label tooltip
 
 **Return**: Result code indicating success or failure
 
+**Note**: If tooltipBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTooltipSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetTooltip(
+ MIP_CC_Label_GetTooltip(
     const mip_cc_label label,
     char* tooltipBuffer,
     const int64_t tooltipBufferSize,
@@ -3206,7 +3538,7 @@ Gets size of buffer required to store auto-classification tooltip
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | tooltipSize | [Output] Size of buffer to hold tooltip (in number of chars) |
@@ -3214,7 +3546,7 @@ Gets size of buffer required to store auto-classification tooltip
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetAutoTooltipSize(
+ MIP_CC_Label_GetAutoTooltipSize(
     const mip_cc_label label,
     int64_t* tooltipSize);
 ```
@@ -3227,7 +3559,7 @@ Gets label auto-classification tooltip
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | tooltipBuffer | [Output] Buffer the tooltip will be copied into. |
@@ -3236,8 +3568,11 @@ Gets label auto-classification tooltip
 
 **Return**: Result code indicating success or failure
 
+**Note**: If tooltipBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTooltipSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetAutoTooltip(
+ MIP_CC_Label_GetAutoTooltip(
     const mip_cc_label label,
     char* tooltipBuffer,
     const int64_t tooltipBufferSize,
@@ -3252,15 +3587,18 @@ Gets whether or not a label is active
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | isActive | [Output] Whether or not a label is considered active. |
 
 **Return**: Result code indicating success or failure
 
+**Note**: Only active labels can be applied. Inactivte labels cannot be applied and are used for display purposes only.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_IsActive(
+ MIP_CC_Label_IsActive(
     const mip_cc_label label,
     bool* isActive);
 ```
@@ -3273,7 +3611,7 @@ Gets the parent label, if any
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | parent | [Output] Parent label, if any, else null |
@@ -3281,7 +3619,7 @@ Gets the parent label, if any
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetParent(
+ MIP_CC_Label_GetParent(
     const mip_cc_label label,
     mip_cc_label* parent);
 ```
@@ -3294,7 +3632,7 @@ Gets the number of children labels
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | childrenSize | [Output] Number of children |
@@ -3302,7 +3640,7 @@ Gets the number of children labels
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetChildrenSize(
+ MIP_CC_Label_GetChildrenSize(
     const mip_cc_label label,
     int64_t* childrenSize);
 ```
@@ -3315,7 +3653,7 @@ Gets the children labels
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | childrenBuffer | [Output] Buffer the children labels will be copied into. Children labels |
@@ -3324,8 +3662,11 @@ Gets the children labels
 
 **Return**: Result code indicating success or failure
 
+**Note**: If childrenBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualChildrenSize will be set to the minimum required buffer size
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetChildren(
+ MIP_CC_Label_GetChildren(
     const mip_cc_label label,
     mip_cc_label* childrenBuffer,
     const int64_t childrenBufferSize,
@@ -3340,17 +3681,18 @@ Gets policy-defined custom settings of a label
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | label | Label |
 | settings | [Output] Dictionary of settings, owned by the caller |
 
 **Return**: Result code indicating success or failure
 
+**Note**: The 'settings' variable must be released by the caller by calling MIP_CC_ReleaseDictionary
+ 
+
 ```c
-MIP_CC_ReleaseDictionary
- */
-MIP_CC_API(mip_cc_result) MIP_CC_Label_GetCustomSettings(
+ MIP_CC_Label_GetCustomSettings(
     const mip_cc_label label,
     mip_cc_dictionary* settings);
 ```
@@ -3359,22 +3701,22 @@ MIP_CC_API(mip_cc_result) MIP_CC_Label_GetCustomSettings(
 
 From [upe/metadata_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/metadata_action_cc.h)
 
-Contains C API definitions for "metadata" label policy action
+Gets a "metadata" action's metadata to remove
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "metadata" action |
 | metadataNames | [Output] Key names of metadata to remove, memory owned by caller |
 
 **Return**: Result code indicating success or failure
 
+**Note**: The 'metadataNames' variable must be released by the caller by calling MIP_CC_ReleaseStringList @note Removing metadata should be done before adding metadata
+ 
+
 ```c
-MIP_CC_ReleaseStringList
- * @note Removing metadata should be done before adding metadata
- */
-MIP_CC_API(mip_cc_result) MIP_CC_MetadataAction_GetMetadataToRemove(
+ MIP_CC_MetadataAction_GetMetadataToRemove(
     const mip_cc_action action,
     mip_cc_string_list* metadataNames);
 ```
@@ -3387,40 +3729,55 @@ Gets a "metadata" action's metadata to add
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "metadata" action |
 | metadata | [Output] Key/value pairs of metadata to add, memory owned by caller |
 
 **Return**: Result code indicating success or failure
 
+**Note**: The 'metadata' variable must be released by the caller by calling MIP_CC_ReleaseDictionary @note Removing metadata should be done before adding metadata
+ 
+
 ```c
-MIP_CC_ReleaseDictionary
- * @note Removing metadata should be done before adding metadata
- */
-MIP_CC_API(mip_cc_result) MIP_CC_MetadataAction_GetMetadataToAdd(
+ MIP_CC_MetadataAction_GetMetadataToAdd(
     const mip_cc_action action,
     mip_cc_dictionary* metadata);
+```
+
+## MIP_CC_ReleasePolicyEngine
+
+From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
+
+Release resources associated with a policy engine
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| engine | Policy engine to release |
+
+```c
+ MIP_CC_ReleasePolicyEngine(mip_cc_policy_engine engine);
 ```
 
 ## MIP_CC_PolicyEngine_GetEngineIdSize
 
 From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
-Contains C API definitions for policy engine
+Gets size of buffer required to engine ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
-| engine | Policy engine to release |
 | engine | Policy engine |
 | idSize | [Output] Size of buffer to hold engine ID (in number of chars) |
 
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetEngineIdSize(
+ MIP_CC_PolicyEngine_GetEngineIdSize(
     const mip_cc_policy_engine engine,
     int64_t* idSize);
 ```
@@ -3433,7 +3790,7 @@ Gets engine ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | idBuffer | [Output] Buffer the id will be copied into. |
@@ -3442,8 +3799,11 @@ Gets engine ID
 
 **Return**: Result code indicating success or failure
 
+**Note**: If idBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualIdSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetEngineId(
+ MIP_CC_PolicyEngine_GetEngineId(
     const mip_cc_policy_engine engine,
     char* idBuffer,
     const int64_t idBufferSize,
@@ -3458,7 +3818,7 @@ Gets the size of client data associated with a policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | moreInfoUrlSize | [Output] Size of client data (in number of chars) |
@@ -3466,7 +3826,7 @@ Gets the size of client data associated with a policy engine
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
+ MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
     const mip_cc_policy_engine engine,
     int64_t* moreInfoUrlSize);
 ```
@@ -3479,7 +3839,7 @@ Get client data associated with a policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | moreInfoUrlBuffer | [Output] Buffer the client data will be copied into |
@@ -3488,8 +3848,11 @@ Get client data associated with a policy engine
 
 **Return**: Result code indicating success or failure
 
+**Note**: If moreInfoUrlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualMoreInfoUrlSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetMoreInfoUrl(
+ MIP_CC_PolicyEngine_GetMoreInfoUrl(
     const mip_cc_policy_engine engine,
     char* moreInfoUrlBuffer,
     const int64_t moreInfoUrlBufferSize,
@@ -3504,7 +3867,7 @@ Gets whether or not the policy dictates that a document must be labeled.
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | isLabelingRequired | [Output] Whether or not policy dictates that a document must be labeled |
@@ -3512,7 +3875,7 @@ Gets whether or not the policy dictates that a document must be labeled.
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_IsLabelingRequired(
+ MIP_CC_PolicyEngine_IsLabelingRequired(
     const mip_cc_policy_engine engine,
     bool* isLabelingRequired);
 ```
@@ -3525,7 +3888,7 @@ Gets the size of client data associated with a policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | policyFileIdSize | [Output] Size of client data (in number of chars) |
@@ -3533,7 +3896,7 @@ Gets the size of client data associated with a policy engine
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetPolicyFileIdSize(
+ MIP_CC_PolicyEngine_GetPolicyFileIdSize(
     const mip_cc_policy_engine engine,
     int64_t* policyFileIdSize);
 ```
@@ -3546,7 +3909,7 @@ Get client data associated with a policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | policyFileIdBuffer | [Output] Buffer the client data will be copied into |
@@ -3555,8 +3918,11 @@ Get client data associated with a policy engine
 
 **Return**: Result code indicating success or failure
 
+**Note**: If policyFileIdBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualPolicyFileIdSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetPolicyFileId(
+ MIP_CC_PolicyEngine_GetPolicyFileId(
     const mip_cc_policy_engine engine,
     char* policyFileIdBuffer,
     const int64_t policyFileIdBufferSize,
@@ -3571,7 +3937,7 @@ Gets the size of client data associated with a policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | sensitivityFileIdSize | [Output] Size of client data (in number of chars) |
@@ -3579,7 +3945,7 @@ Gets the size of client data associated with a policy engine
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
+ MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
     const mip_cc_policy_engine engine,
     int64_t* sensitivityFileIdSize);
 ```
@@ -3592,7 +3958,7 @@ Get client data associated with a policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | sensitivityFileIdBuffer | [Output] Buffer the client data will be copied into |
@@ -3601,8 +3967,11 @@ Get client data associated with a policy engine
 
 **Return**: Result code indicating success or failure
 
+**Note**: If sensitivityFileIdBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualSensitivityFileIdSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityFileId(
+ MIP_CC_PolicyEngine_GetSensitivityFileId(
     const mip_cc_policy_engine engine,
     char* sensitivityFileIdBuffer,
     const int64_t sensitivityFileIdBufferSize,
@@ -3617,7 +3986,7 @@ Gets whether or not the policy has automatic or recommendation rules
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | hasClassificationRules | [Output] Whether or not policy has automatic or recommendation rules |
@@ -3625,7 +3994,7 @@ Gets whether or not the policy has automatic or recommendation rules
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_HasClassificationRules(
+ MIP_CC_PolicyEngine_HasClassificationRules(
     const mip_cc_policy_engine engine,
     bool* hasClassificationRules);
 ```
@@ -3638,7 +4007,7 @@ Gets the time when the policy was last fetched
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | lastPolicyFetchTime | [Output] Time when the policy was last fetched (in seconds since epoch) |
@@ -3646,7 +4015,7 @@ Gets the time when the policy was last fetched
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
+ MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
     const mip_cc_policy_engine engine,
     int64_t* lastPolicyFetchTime);
 ```
@@ -3659,7 +4028,7 @@ Gets the number of sensitivity labels associated with the policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | labelsSize | [Output] Number of labels |
@@ -3667,7 +4036,7 @@ Gets the number of sensitivity labels associated with the policy engine
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
+ MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
     const mip_cc_policy_engine engine,
     int64_t* labelsSize);
 ```
@@ -3680,7 +4049,7 @@ Gets the sensitivity labels associated with the policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | labelBuffer | [Output] Buffer the labels will be copied into. Labels are owned by the client |
@@ -3689,8 +4058,11 @@ Gets the sensitivity labels associated with the policy engine
 
 **Return**: Result code indicating success or failure
 
+**Note**: If labelBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualLabelsSize will be set to the minimum required buffer size
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityLabels(
+ MIP_CC_PolicyEngine_GetSensitivityLabels(
     const mip_cc_policy_engine engine,
     mip_cc_label* labelBuffer,
     const int64_t labelBufferSize,
@@ -3705,7 +4077,7 @@ Gets sensitivity label by ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | labelId | Label ID |
@@ -3714,7 +4086,7 @@ Gets sensitivity label by ID
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetLabelById(
+ MIP_CC_PolicyEngine_GetLabelById(
     const mip_cc_policy_engine engine,
     const char* labelId,
     mip_cc_label* label);
@@ -3728,7 +4100,7 @@ Gets the number of sensitivity types associated with the policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | sensitivityTypesSize | [Output] Number of sensitivity types |
@@ -3736,7 +4108,7 @@ Gets the number of sensitivity types associated with the policy engine
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityTypesSize(
+ MIP_CC_PolicyEngine_GetSensitivityTypesSize(
     const mip_cc_policy_engine engine,
     int64_t* sensitivityTypesSize);
 ```
@@ -3749,7 +4121,7 @@ Gets the sensitivity types associated with the policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | sensitivityTypeBuffer | [Output] Buffer the sensitivity types will be copied into. Sensitivity |
@@ -3758,8 +4130,11 @@ Gets the sensitivity types associated with the policy engine
 
 **Return**: Result code indicating success or failure
 
+**Note**: If sensitivityTypeBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualSensitivityTypesSize will be set to the minimum required buffer size
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityTypes(
+ MIP_CC_PolicyEngine_GetSensitivityTypes(
     const mip_cc_policy_engine engine,
     mip_cc_sensitivity_type* sensitivityTypeBuffer,
     const int64_t sensitivityTypeBufferSize,
@@ -3774,7 +4149,7 @@ Create a Policy Handler to execute policy-related functions
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | isAuditDiscoveryEnabled | Whether or not audit discovery is enabled |
@@ -3783,7 +4158,7 @@ Create a Policy Handler to execute policy-related functions
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_CreatePolicyHandler(
+ MIP_CC_PolicyEngine_CreatePolicyHandler(
     const mip_cc_policy_engine engine,
     const bool isAuditDiscoveryEnabled,
     mip_cc_policy_handler* handler);
@@ -3797,7 +4172,7 @@ Logs an application specific event to the audit pipeline
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | level | Level of the event: Info/Error/Warning |
 | eventType | A description of the type of event |
@@ -3806,7 +4181,7 @@ Logs an application specific event to the audit pipeline
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_SendApplicationAuditEvent(
+ MIP_CC_PolicyEngine_SendApplicationAuditEvent(
     const mip_cc_policy_engine engine,
     const char* level,
     const char* eventType,
@@ -3821,7 +4196,7 @@ Gets size of policy data xml
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | xmlSize | [Output] Size of policy data xml (in number of chars) |
@@ -3829,7 +4204,7 @@ Gets size of policy data xml
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
+ MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
     const mip_cc_policy_engine engine,
     int64_t* xmlSize);
 ```
@@ -3842,7 +4217,7 @@ Gets policy data xml
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | xmlBuffer | [Output] Buffer the xml will be copied into. |
@@ -3851,8 +4226,11 @@ Gets policy data xml
 
 **Return**: Result code indicating success or failure
 
+**Note**: If xmlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualXmlSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetPolicyDataXml(
+ MIP_CC_PolicyEngine_GetPolicyDataXml(
     const mip_cc_policy_engine engine,
     char* xmlBuffer,
     const int64_t xmlBufferSize,
@@ -3867,7 +4245,7 @@ Gets size of sensitivity types data xml
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | xmlSize | [Output] Size of policy data xml (in number of chars) |
@@ -3875,7 +4253,7 @@ Gets size of sensitivity types data xml
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
+ MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
     const mip_cc_policy_engine engine,
     int64_t* xmlSize);
 ```
@@ -3888,7 +4266,7 @@ Gets sensitivity types data xml
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | xmlBuffer | [Output] Buffer the xml will be copied into. |
@@ -3897,8 +4275,11 @@ Gets sensitivity types data xml
 
 **Return**: Result code indicating success or failure
 
+**Note**: If xmlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualXmlSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
+ MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
     const mip_cc_policy_engine engine,
     char* xmlBuffer,
     const int64_t xmlBufferSize,
@@ -3913,7 +4294,7 @@ Gets the size of client data associated with a policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | clientDataSize | [Output] Size of client data (in number of chars) |
@@ -3921,7 +4302,7 @@ Gets the size of client data associated with a policy engine
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetClientDataSize(
+ MIP_CC_PolicyEngine_GetClientDataSize(
     const mip_cc_policy_engine engine,
     int64_t* clientDataSize);
 ```
@@ -3934,7 +4315,7 @@ Get client data associated with a policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | engine | Policy engine |
 | clientDataBuffer | [Output] Buffer the client data will be copied into |
@@ -3943,8 +4324,11 @@ Get client data associated with a policy engine
 
 **Return**: Result code indicating success or failure
 
+**Note**: If clientDataBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualClientDataSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngine_GetClientData(
+ MIP_CC_PolicyEngine_GetClientData(
     const mip_cc_policy_engine engine,
     char* clientDataBuffer,
     const int64_t clientDataBufferSize,
@@ -3959,7 +4343,7 @@ Create a settings object used to create a brand new policy engine
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | identity | Identity that will be associated with PolicyEngine |
 | clientData | Customizable client data that is stored alongside the engine |
@@ -3969,44 +4353,11 @@ Create a settings object used to create a brand new policy engine
 
 **Return**: Result code indicating success or failure
 
-```c
-MIP_CC_PolicyEngine_GetSensitivityTypes. Otherwise, it should be false to avoid an unnecessary HTTP operation.
- */
-MIP_CC_API(mip_cc_result) MIP_CC_CreatePolicyEngineSettingsWithIdentity(
-    const mip_cc_identity* identity,
-    const char* clientData,
-    const char* locale,
-    bool loadSensitivityTypes,
-    mip_cc_policy_engine_settings* settings);
-```
-
-## MIP_CC_CreatePolicyEngineSettingsWithEngineId
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
-Create a settings object used to load an existing policy engine by engine ID if it
-
-**Parameters**
-
- Parameter | Description
-|---|---|
-| engineId | ID of existing cached engine |
-| identity | (Optional) Identity that will be associated with PolicyENgine |
-| clientData | Customizable client data that is stored alongside the engine |
-| locale | Locale in which text results will output |
-| loadSensitivityTypes | Whether or not sensitivity types data (for classification) should also be loaded |
-| settings | [Output] Newly-created settings instance |
-
-**Return**: Result code indicating success or failure
+**Note**: 'loadSensitivityTypes' should be 'true' only if application expects to later call MIP_CC_PolicyEngine_GetSensitivityTypes. Otherwise, it should be false to avoid an unnecessary HTTP operation.
+ 
 
 ```c
-MIP_CC_PolicyEngine_GetSensitivityTypes. Otherwise, it should be false to avoid an unnecessary HTTP operation.
- * 
- * @note 'identity' will only be used for new engines. If an engine with the specified engine id already exists in
- *       the local cache, the identity from the cached engine will be used instead.
- */
-MIP_CC_API(mip_cc_result) MIP_CC_CreatePolicyEngineSettingsWithEngineId(
-    const char* engineId,
+ MIP_CC_CreatePolicyEngineSettingsWithIdentity(
     const mip_cc_identity* identity,
     const char* clientData,
     const char* locale,
@@ -4022,7 +4373,7 @@ Sets the client data that will be stored opaquely alongside this engine and pers
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Engine settings |
 | clientData | Client data |
@@ -4030,7 +4381,7 @@ Sets the client data that will be stored opaquely alongside this engine and pers
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngineSettings_SetClientData(
+ MIP_CC_PolicyEngineSettings_SetClientData(
     const mip_cc_policy_engine_settings settings,
     const char* clientData);
 ```
@@ -4043,7 +4394,7 @@ Configures custom settings, used for feature gating and testing.
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Engine settings |
 | customSettings | Key/value pairs of custom settings |
@@ -4051,7 +4402,7 @@ Configures custom settings, used for feature gating and testing.
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngineSettings_SetCustomSettings(
+ MIP_CC_PolicyEngineSettings_SetCustomSettings(
     const mip_cc_policy_engine_settings settings,
     const mip_cc_dictionary customSettings);
 ```
@@ -4064,7 +4415,7 @@ Sets the session ID that can be used to correlate logs and telemetry
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Engine settings |
 | sessionId | Session ID that represents the lifetime of a policy engine |
@@ -4072,7 +4423,7 @@ Sets the session ID that can be used to correlate logs and telemetry
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngineSettings_SetSessionId(
+ MIP_CC_PolicyEngineSettings_SetSessionId(
     const mip_cc_policy_engine_settings settings,
     const char* sessionId);
 ```
@@ -4085,7 +4436,7 @@ Sets base URL for all service requests
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Engine settings |
 | cloudEndpointBaseUrl | Base URL (e.g. 'https://api.aadrm.com') |
@@ -4093,7 +4444,7 @@ Sets base URL for all service requests
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
+ MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
     const mip_cc_policy_engine_settings settings,
     const char* cloudEndpointBaseUrl);
 ```
@@ -4106,30 +4457,64 @@ Sets delegated user
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Engine settings |
 | delegatedUserEmail | Email address of delegated user |
 
 **Return**: Result code indicating success or failure
 
+**Note**: A delegated user is specified when the authenticating user/application is acting on behalf of another user
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
+ MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
     const mip_cc_policy_engine_settings settings,
     const char* delegatedUserEmail);
+```
+
+## MIP_CC_ReleasePolicyEngineSettings
+
+From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
+
+Release resources associated with a policy engine settings
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| settings | Policy engine settings to be released |
+
+```c
+ MIP_CC_ReleasePolicyEngineSettings(mip_cc_policy_engine_settings settings);
+```
+
+## MIP_CC_ReleasePolicyHandler
+
+From [upe/policy_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_handler_cc.h)
+
+Release resources associated with a policy handler
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| handler | Policy handler to release |
+
+```c
+ MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
 ```
 
 ## MIP_CC_PolicyHandler_GetSensitivityLabel
 
 From [upe/policy_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_handler_cc.h)
 
-Contains C API definitions for policy handler
+Gets a document's current label
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
-| handler | Policy handler to release |
 | handler | Policy handler |
 | documentState | Document state |
 | context | Application context opaquely forwarded to any callbacks |
@@ -4138,7 +4523,7 @@ Contains C API definitions for policy handler
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyHandler_GetSensitivityLabel(
+ MIP_CC_PolicyHandler_GetSensitivityLabel(
     const mip_cc_policy_handler handler,
     const mip_cc_document_state* documentState,
     const void* context,
@@ -4153,7 +4538,7 @@ Executes policy rules based on the provided state and determines corresponding a
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Policy handler |
 | documentState | Document state |
@@ -4163,10 +4548,11 @@ Executes policy rules based on the provided state and determines corresponding a
 
 **Return**: Result code indicating success or failure
 
+**Note**: The 'actionResult' variable must be released by the caller by calling MIP_CC_ReleaseActionResult
+ 
+
 ```c
-MIP_CC_ReleaseActionResult
- */
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyHandler_ComputeActions(
+ MIP_CC_PolicyHandler_ComputeActions(
     const mip_cc_policy_handler handler,
     const mip_cc_document_state* documentState,
     const mip_cc_application_action_state* applicationState,
@@ -4182,7 +4568,7 @@ Called by application after computed actions have been applied and data committe
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | handler | Policy handler |
 | documentState | Document state |
@@ -4191,37 +4577,15 @@ Called by application after computed actions have been applied and data committe
 
 **Return**: Result code indicating success or failure
 
+**Note**: A call to this function is necessary to transmit complete label audit data.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyHandler_NotifyCommittedActions(
+ MIP_CC_PolicyHandler_NotifyCommittedActions(
     const mip_cc_policy_handler handler,
     const mip_cc_document_state* documentState,
     const mip_cc_application_action_state* applicationState,
     const void* context);
-```
-
-## MIP_CC_PolicyProfile_AddEngine
-
-From [upe/policy_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_profile_cc.h)
-
-Contains C API definitions for policy profile
-
-**Parameters**
-
- Parameter | Description
-|---|---|
-| profile | Parent profile under which an engine will be added |
-| settings | Policy engine settings |
-| context | Client context that will be opaquely passed to HttpDelegate and AuthDelegate |
-| engine | [Output] Newly-created policy engine instance |
-
-**Return**: Result code indicating success or failure
-
-```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyProfile_AddEngine(
-    const mip_cc_policy_profile profile,
-    const mip_cc_policy_engine_settings settings,
-    const void* context,
-    mip_cc_policy_engine* engine);
 ```
 
 ## MIP_CC_LoadPolicyProfile
@@ -4232,7 +4596,7 @@ Load a profile
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Profile settings |
 | profile | [Output] Newly-created policy profile instance |
@@ -4240,12 +4604,12 @@ Load a profile
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_LoadPolicyProfile(
+ MIP_CC_LoadPolicyProfile(
     const mip_cc_policy_profile_settings settings,
     mip_cc_policy_profile* profile);
 ```
 
-## MIP_CC_CreatePolicyProfileSettings
+## MIP_CC_ReleasePolicyProfile
 
 From [upe/policy_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_profile_cc.h)
 
@@ -4253,22 +4617,12 @@ Release resources associated with a policy profile
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | profile | Policy profile to be released |
-| mipContext | Global context shared across all profiles |
-| cacheStorageType | Storage cache configuration |
-| authCallback | Callback object to be used for authentication, implemented by client application |
-| settings | [Output] Newly-created settings instance |
-
-**Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_CreatePolicyProfileSettings(
-    const mip_cc_mip_context mipContext,
-    const mip_cc_cache_storage_type cacheStorageType,
-    const mip_cc_auth_callback authCallback,
-    mip_cc_policy_profile_settings* settings);
+ MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
 ```
 
 ## MIP_CC_PolicyProfileSettings_SetSessionId
@@ -4279,7 +4633,7 @@ Sets the session ID that can be used to correlate logs and telemetry
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Profile settings |
 | sessionId | Session ID that represents the lifetime of a policy profile |
@@ -4287,7 +4641,7 @@ Sets the session ID that can be used to correlate logs and telemetry
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyProfileSettings_SetSessionId(
+ MIP_CC_PolicyProfileSettings_SetSessionId(
     const mip_cc_policy_profile_settings settings,
     const char* sessionId);
 ```
@@ -4300,7 +4654,7 @@ Override default HTTP stack with client's own
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Profile settings to which HTTP delegate will be assigned |
 | httpDelegate | HTTP callback instance implemented by client application |
@@ -4308,7 +4662,7 @@ Override default HTTP stack with client's own
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyProfileSettings_SetHttpDelegate(
+ MIP_CC_PolicyProfileSettings_SetHttpDelegate(
     const mip_cc_policy_profile_settings settings,
     const mip_cc_http_delegate httpDelegate);
 ```
@@ -4321,7 +4675,7 @@ Override default async task dispatcher with client's own
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Profile settings to which task dispatcher delegate will be assigned |
 | taskDispatcherDelegate | Task dispatcher callback instance implemented by client application |
@@ -4329,7 +4683,7 @@ Override default async task dispatcher with client's own
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
+ MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
     const mip_cc_policy_profile_settings settings,
     const mip_cc_task_dispatcher_delegate taskDispatcherDelegate);
 ```
@@ -4342,7 +4696,7 @@ Configures custom settings, used for feature gating and testing.
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | settings | Profile settings |
 | customSettings | Key/value pairs of custom settings |
@@ -4350,20 +4704,36 @@ Configures custom settings, used for feature gating and testing.
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_PolicyProfileSettings_SetCustomSettings(
+ MIP_CC_PolicyProfileSettings_SetCustomSettings(
     const mip_cc_policy_profile_settings settings,
     const mip_cc_dictionary customSettings);
+```
+
+## MIP_CC_ReleasePolicyProfileSettings
+
+From [upe/policy_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_profile_cc.h)
+
+Release resources associated with a policy profile settings
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| settings | Policy profile settings to be released |
+
+```c
+ MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profilsettingseSettings);
 ```
 
 ## MIP_CC_ProtectByTemplateAction_GetTemplateId
 
 From [upe/protect_by_template_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/protect_by_template_action_cc.h)
 
-Contains C API definitions for "protect by template" label policy action
+Gets a "protect by template" action's template ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "protect by template" action |
 | templateId | [Output] ID of template that defines protections |
@@ -4371,7 +4741,7 @@ Contains C API definitions for "protect by template" label policy action
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_ProtectByTemplateAction_GetTemplateId(
+ MIP_CC_ProtectByTemplateAction_GetTemplateId(
     const mip_cc_action action,
     mip_cc_guid* templateId);
 ```
@@ -4380,21 +4750,22 @@ MIP_CC_API(mip_cc_result) MIP_CC_ProtectByTemplateAction_GetTemplateId(
 
 From [upe/remove_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/remove_content_footer_action_cc.h)
 
-Contains C API definitions for "remove content footer" label policy action
+Gets a "remove content footer" action's UI element names to remove
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "remove content footer" action |
 | names | [Output] Names of UI elements to remove, memory owned by caller |
 
 **Return**: Result code indicating success or failure
 
+**Note**: The 'names' variable must be released by the caller by calling MIP_CC_ReleaseStringList
+ 
+
 ```c
-MIP_CC_ReleaseStringList
- */
-MIP_CC_API(mip_cc_result) MIP_CC_RemoveContentFooterAction_GetUIElementNames(
+ MIP_CC_RemoveContentFooterAction_GetUIElementNames(
     const mip_cc_action action,
     mip_cc_string_list* names);
 ```
@@ -4403,21 +4774,22 @@ MIP_CC_API(mip_cc_result) MIP_CC_RemoveContentFooterAction_GetUIElementNames(
 
 From [upe/remove_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/remove_content_header_action_cc.h)
 
-Contains C API definitions for "remove content header" label policy action
+Gets a "remove content header" action's UI element names to remove
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "remove content header" action |
 | names | [Output] Names of UI elements to remove, memory owned by caller |
 
 **Return**: Result code indicating success or failure
 
+**Note**: The 'names' variable must be released by the caller by calling MIP_CC_ReleaseStringList
+ 
+
 ```c
-MIP_CC_ReleaseStringList
- */
-MIP_CC_API(mip_cc_result) MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
+ MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
     const mip_cc_action action,
     mip_cc_string_list* names);
 ```
@@ -4426,43 +4798,59 @@ MIP_CC_API(mip_cc_result) MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
 
 From [upe/remove_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/remove_watermark_action_cc.h)
 
-Contains C API definitions for "remove watermark" label policy action
+Gets a "remove watermark" action's UI element names to remove
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | action | "remove watermark footer" action |
 | names | [Output] Names of UI elements to remove, memory owned by caller |
 
 **Return**: Result code indicating success or failure
 
+**Note**: The 'names' variable must be released by the caller by calling MIP_CC_ReleaseStringList
+ 
+
 ```c
-MIP_CC_ReleaseStringList
- */
-MIP_CC_API(mip_cc_result) MIP_CC_RemoveWatermarkAction_GetUIElementNames(
+ MIP_CC_RemoveWatermarkAction_GetUIElementNames(
     const mip_cc_action action,
     mip_cc_string_list* names);
+```
+
+## MIP_CC_ReleaseSensitivityType
+
+From [upe/sensitivity_type_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/sensitivity_type_cc.h)
+
+Release resources associated with a sensitivity type
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| sensitivityType | Sensitivity type to be released |
+
+```c
+ MIP_CC_ReleaseSensitivityType(mip_cc_sensitivity_type sensitivityType);
 ```
 
 ## MIP_CC_SensitivityType_GetRulePackageIdSize
 
 From [upe/sensitivity_type_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/sensitivity_type_cc.h)
 
-Contains C API definitions for sensitivity type
+Gets size of buffer required to store a sensitivity type's rule package ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
-| sensitivityType | Sensitivity type to be released |
 | sensitivityType | Sensitivity type |
 | idSize | [Output] Size of buffer to hold rule package ID (in number of chars) |
 
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_SensitivityType_GetRulePackageIdSize(
+ MIP_CC_SensitivityType_GetRulePackageIdSize(
     const mip_cc_sensitivity_type sensitivityType,
     int64_t* idSize);
 ```
@@ -4475,7 +4863,7 @@ Gets a sensitivity type's rule package ID
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | sensitivityType | Sensitivity type |
 | idBuffer | [Output] Buffer the ID will be copied into. |
@@ -4484,8 +4872,11 @@ Gets a sensitivity type's rule package ID
 
 **Return**: Result code indicating success or failure
 
+**Note**: If idBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualIdSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_SensitivityType_GetRulePackageId(
+ MIP_CC_SensitivityType_GetRulePackageId(
     const mip_cc_sensitivity_type sensitivityType,
     char* idBuffer,
     const int64_t idBufferSize,
@@ -4500,7 +4891,7 @@ Gets size of buffer required to store a sensitivity type's rule package
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | sensitivityType | Sensitivity type |
 | rulePackageSize | [Output] Size of buffer to hold rule package (in number of chars) |
@@ -4508,7 +4899,7 @@ Gets size of buffer required to store a sensitivity type's rule package
 **Return**: Result code indicating success or failure
 
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_SensitivityType_GetRulePackageSize(
+ MIP_CC_SensitivityType_GetRulePackageSize(
     const mip_cc_sensitivity_type sensitivityType,
     int64_t* rulePackageSize);
 ```
@@ -4521,7 +4912,7 @@ Gets a sensitivity type's rule package
 
 **Parameters**
 
- Parameter | Description
+Parameter | Description
 |---|---|
 | sensitivityType | Sensitivity type |
 | rulePackageBuffer | [Output] Buffer the rule package will be copied into. |
@@ -4530,8 +4921,11 @@ Gets a sensitivity type's rule package
 
 **Return**: Result code indicating success or failure
 
+**Note**: If rulePackageBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualRulePackageSize will be set to the minimum required buffer size.
+ 
+
 ```c
-MIP_CC_API(mip_cc_result) MIP_CC_SensitivityType_GetRulePackage(
+ MIP_CC_SensitivityType_GetRulePackage(
     const mip_cc_sensitivity_type sensitivityType,
     char* rulePackageBuffer,
     const int64_t rulePackageBufferSize,
