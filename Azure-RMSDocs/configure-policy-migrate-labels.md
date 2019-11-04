@@ -195,7 +195,7 @@ To confirm whether the clients and services you use support unified labeling, re
 
 ##### Services that currently support unified labeling include:
 
-- [Power BI (in preview)](https://docs.microsoft.com/power-bi/service-security-data-protection-overview)
+- [Power BI (in preview)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
 
 - Office Online (in preview) and Outlook on the web
 
