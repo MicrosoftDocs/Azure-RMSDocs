@@ -135,7 +135,7 @@ Supported by File Explorer and PowerShell. In Office apps, users can select **Fi
 No support to remove protection from container files (zip, .rar, .7z, .msg, and .pst).
 
 <sup>5</sup>
-For File Explorer and PowerShell commands, the user must be connected to the Internet to protect files.
+For File Explorer and PowerShell commands, the user must be connected to the internet to protect files.
 
 <sup>6</sup>
 Supported for labeling with File Explorer, PowerShell, and the scanner. Not supported for labeling in Office apps.
