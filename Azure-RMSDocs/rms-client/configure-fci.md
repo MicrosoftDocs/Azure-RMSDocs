@@ -59,7 +59,7 @@ Prerequisites for these instructions:
     
   - If you want to change the default level of protection (native or generic) for specific file name extensions, you have edited the registry as described in the [Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) section from the admin guide.
     
-  - You have an Internet connection, and you have configured your computer settings if these are required for a proxy server. For example: `netsh winhttp import proxy source=ie`
+  - You have an internet connection, and you have configured your computer settings if these are required for a proxy server. For example: `netsh winhttp import proxy source=ie`
     
 - You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email addresses. This is required for all users that might need to access files after they are protected by FCI and the Azure Rights Management service. If you do not do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this requirement, see [Preparing users and groups for Azure Information Protection](../prepare.md).
     

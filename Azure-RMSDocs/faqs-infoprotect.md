@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/25/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,25 +29,6 @@ ms.custom: admin
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Have a question about Azure Information Protection that is specifically about classification and labeling?  See if it's answered here. 
-
-## What can I do with the classification capabilities in Azure Information Protection?
-
-Try our [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md) tutorial to see this working in just a few minutes.
-
-Look out for announcements on the [Enterprise Mobility + Security blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional classification features and capabilities become available. There are a few limitations with the current releases, which include the following:
-
-- No labeling ability in the Office web apps (Office for the web).
-
-- No classification and labeling integration with Exchange Online or SharePoint Online.
-
-> [!NOTE]
-> **In preview**:
-> - Centralized reporting for classification and labeling. For more information, see [Central reporting for Azure Information Protection](reports-aip.md).
->
->**Sensitivity labels for Office**:
-> - For the latest information about which Office apps support sensitivity labels, see [What sensitivity label capabilities are supported in Office today?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) from the Office documentation.
-
-Request new features and vote on requests by visiting the [UserVoice site](https://msip.uservoice.com/) for Azure Information Protection.
 
 ## Which client do I install for testing new functionality?
 

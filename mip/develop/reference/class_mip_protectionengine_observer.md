@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ProtectionEngine::Observer 
-Interface that receives notifications related to [ProtectionEngine](class_mip_protectionengine.md).
+Interface that receives notifications related to ProtectionEngine.
 This interface must be implemented by applications using the protection SDK
   
 ## Summary
@@ -29,22 +29,22 @@ Parameters:
 * **templateIds**: A reference to the list of templates retrieved 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function)
+* **context**: The same context that was passed to ProtectionEngine::GetTemplatesAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetTemplatesSuccess](class_mip_protectionengine_observer.md#ongettemplatessuccess-function) or [ProtectionEngine::Observer::OnGetTemplatesFailure](class_mip_protectionengine_observer.md#ongettemplatesfailure-function)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTemplatesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetTemplatesSuccess or ProtectionEngine::Observer::OnGetTemplatesFailure
   
 ### OnGetTemplatesFailure function
 Called when retrieving templates generated an error.
 
 Parameters:  
-* **error**: [Error](class_mip_error.md) that occurred while retrieving templates 
+* **error**: Error that occurred while retrieving templates 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function)
+* **context**: The same context that was passed to ProtectionEngine::GetTemplatesAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetTemplatesSuccess](class_mip_protectionengine_observer.md#ongettemplatessuccess-function) or [ProtectionEngine::Observer::OnGetTemplatesFailure](class_mip_protectionengine_observer.md#ongettemplatesfailure-function)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTemplatesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetTemplatesSuccess or ProtectionEngine::Observer::OnGetTemplatesFailure
   
 ### OnGetRightsForLabelIdSuccess function
 Called when rights were retrieved successfully.
@@ -53,19 +53,19 @@ Parameters:
 * **rights**: A reference to the list of rights retrieved 
 
 
-* **context**: The same context that was passed to ProtectionEngine::GetRightsForLabelIdAsync.
+* **context**: The same context that was passed to ProtectionEngine::GetRightsForLabelIdAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync. and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess-function) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure-function)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
   
 ### OnGetRightsForLabelIdFailure function
 Called when retrieving rights for a label ID for the user.
 
 Parameters:  
-* **error**: [Error](class_mip_error.md) that occurred while retrieving rights 
+* **error**: Error that occurred while retrieving rights 
 
 
-* **context**: The same context that was passed to ProtectionEngine::GetRightsForLabelIdAsync.
+* **context**: The same context that was passed to ProtectionEngine::GetRightsForLabelIdAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess-function) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure-function)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure

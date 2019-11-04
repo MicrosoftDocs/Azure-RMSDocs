@@ -5,8 +5,8 @@ title: Install the AIPService PowerShell module for Azure Information Protection
 description: Instructions to install PowerShell for the protection service from Azure Information Protection. The name of this module is AIPService.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 08/27/2019
+manager: rkarlin
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,7 +30,7 @@ ms.custom: admin
 
 Use the following information to help you install the Windows PowerShell module for the protection service from Azure Information Protection. The name of this module is AIPService, and it replaces the previous version that was named AADRM.
 
-You can use this PowerShell module to administer the protection service (Azure Rights Management) from the command line by using any Windows computer that has an Internet connection and that meets the prerequisites listed in the next section. Windows PowerShell for Azure Information Protection supports scripting for automation or might be necessary for advanced configuration scenarios. For more information about the administration tasks and configurations that the module supports, see [Administering protection from Azure Information Protection by using PowerShell](administer-powershell.md).
+You can use this PowerShell module to administer the protection service (Azure Rights Management) from the command line by using any Windows computer that has an internet connection and that meets the prerequisites listed in the next section. Windows PowerShell for Azure Information Protection supports scripting for automation or might be necessary for advanced configuration scenarios. For more information about the administration tasks and configurations that the module supports, see [Administering protection from Azure Information Protection by using PowerShell](administer-powershell.md).
 
 ## Prerequisites
 This table lists the prerequisites to install and use the AIPService PowerShell module for the protection service from Azure Information Protection.
@@ -54,11 +54,11 @@ If you installed the AADRM module with the Azure Rights Management Administratio
 
 ## How to install the AIPService module
 
-The AIPService module is on the [PowerShell Gallery](/powershell/gallery/readme) and is not available from the Microsoft Download Center. 
+The AIPService module is on the [PowerShell Gallery](https://www.powershellgallery.com/) and is not available from the Microsoft Download Center. 
 
 ### To install the AIPService module from the PowerShell Gallery
 
-If you're new to the PowerShell Gallery, see [Get Started with the PowerShell Gallery](/powershell/gallery/psgallery/psgallery_gettingstarted). Follow the instructions for the gallery requirements, which include installing the PowerShellGet module and the NuGet provider.
+If you're new to the PowerShell Gallery, see [Get Started with the PowerShell Gallery](https://docs.microsoft.com/powershell/scripting/gallery/getting-started?view=powershell-6). Follow the instructions for the gallery requirements, which include installing the PowerShellGet module and the NuGet provider.
 
 To see details about the AIPService module on the PowerShell Gallery, visit the [AIPService page](https://www.powershellgallery.com/packages/AIPService).
 

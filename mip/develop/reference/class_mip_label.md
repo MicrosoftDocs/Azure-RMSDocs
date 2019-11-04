@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::Label 
@@ -20,6 +20,7 @@ public const std::string& GetDescription() const  |  Get the label description.
 public const std::string& GetColor() const  |  Get the color the label should be displayed.
 public int GetSensitivity() const  |  Get the Sensitivity of the label.
 public const std::string& GetTooltip() const  |  Get the tooltip description of the label.
+public const std::string& GetAutoTooltip() const  |  Get the tooltip description of the classification that cause this label to be applied.
 public bool IsActive() const  |  Gets a boolean signaling if the label is active.
 public std::weak_ptr\<Label\> GetParent() const  |  Get the parent label.
 public const std::vector\<std::shared_ptr\<Label\>\>& GetChildren() const  |  Get the children labels of the current label.
@@ -64,6 +65,12 @@ Get the tooltip description of the label.
   
 **Returns**: A tooltip string.
   
+### GetAutoTooltip function
+Get the tooltip description of the classification that cause this label to be applied.
+
+  
+**Returns**: A tooltip string.
+  
 ### IsActive function
 Gets a boolean signaling if the label is active.
 Only active labels can be applied. Inactive labels cannot be applied, and are used for display purposes only. 
@@ -93,4 +100,4 @@ Get the custom settings of a label.
 Gets the action source of the label.
 
   
-**Returns**: [Action](class_mip_action.md) source
+**Returns**: Action source

@@ -74,13 +74,13 @@ For documents, the visual markings are applied as follows:
 
 Use the following instructions to configure visual markings for a label.
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane. 
     
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
 
-2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label that contains the visual markings you want to add or change.
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** pane, select the label that contains the visual markings you want to add or change.
 
-3. On the **Label** blade, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markings that you want, and then click **Save**:
+3. On the **Label** pane, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markings that you want, and then click **Save**:
     
     - To configure a header: For **Documents with this label have a header**, select **On** if you want a header, and **Off** if you do not. If you select **On**, then specify the header text, size, [font](#setting-the-font-name), [color](#setting-the-font-color), and alignment for the header.
     

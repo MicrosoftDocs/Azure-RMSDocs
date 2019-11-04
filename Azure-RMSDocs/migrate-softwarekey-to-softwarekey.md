@@ -39,7 +39,7 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
 
 ## To import the configuration data to Azure Information Protection
 
-1. On an Internet-connected workstation, use the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet to connect to the Azure Rights Management service:
+1. On an internet-connected workstation, use the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet to connect to the Azure Rights Management service:
 
     ```
     Connect-AipService

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::TaskDispatcherDelegate 
@@ -15,7 +15,7 @@ A class that defines the interface to the MIP SDK task dispatcher.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public void DispatchTask(const std::string& taskId, std::function\<void()\> task)  |  Execute a task on a background thread.
-public void DispatchTask(const std::string& taskId, std::function\<void()\> task, int64_t delay)  |  Execute a task on a background thread with the given delay.
+public void DispatchTask(const std::string& taskId, std::function\<void()\> task, int64_t delaySeconds)  |  Execute a task on a background thread with the given delay.
 public void ExecuteTaskOnIndependentThread(const std::string& taskId, std::function\<void()\> task)  |  Immediately execute a task on an independent thread.
 public bool CancelTask(const std::string& taskId)  |  Cancel a background task.
 public void CancelAllTasks()  |  Cancel all background tasks.
@@ -43,7 +43,7 @@ Parameters:
 * **task**: Function to be executed 
 
 
-* **delay**: Delay (in seconds) before executing task
+* **delaySeconds**: Delay (in seconds) before executing task
 
 
   
