@@ -6,7 +6,7 @@ description: Install a reader on Mac computers for PDF documents that are labele
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

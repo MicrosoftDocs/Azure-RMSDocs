@@ -197,6 +197,8 @@ This version includes the MSIPC version 1.0.3592.627 of the RMS client.
 
 ## Next steps
 
+Not sure if this is the right client to install?  See [Choose which labeling client to use for Windows computers](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+
 For more information about installing and using the client: 
 
 - For users: [Download and install the client](install-client-app.md)
