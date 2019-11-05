@@ -6,14 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 
 ms.author: mbaldwin
-ms.date: 11/3/2019
+ms.date: 11/4/2019
 ---
 
 # Functions
 
 ## mip_cc_auth_callback
-
-From [auth_callback_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/auth_callback_cc.h)
 
 callback function definition for acquiring OAuth2 token
 
@@ -43,8 +41,6 @@ MIP_CC_CALLBACK(mip_cc_auth_callback,
 
 ## mip_cc_consent_callback
 
-From [consent_callback_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/consent_callback_cc.h)
-
 callback function definition for consent from user to access external service endpoint
 
 **Parameters**
@@ -62,8 +58,6 @@ MIP_CC_CALLBACK(mip_cc_consent_callback,
 ```
 
 ## MIP_CC_CreateDictionary
-
-From [dictionary_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/dictionary_cc.h)
 
 Create a dictionary of string keys/values
 
@@ -88,8 +82,6 @@ mip_cc_result MIP_CC_CreateDictionary(
 
 ## MIP_CC_Dictionary_GetEntries
 
-From [dictionary_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/dictionary_cc.h)
-
 Get key/value pairs that compose a dictionary
 
 **Parameters**
@@ -113,8 +105,6 @@ mip_cc_result MIP_CC_Dictionary_GetEntries(
 
 ## MIP_CC_ReleaseDictionary
 
-From [dictionary_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/dictionary_cc.h)
-
 Release resources associated with a dictionary
 
 **Parameters**
@@ -128,8 +118,6 @@ void MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
 ```
 
 ## mip_cc_http_send_callback_fn
-
-From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
 
 Callback function definition for issuing an HTTP request
 
@@ -149,8 +137,6 @@ MIP_CC_CALLBACK(mip_cc_http_send_callback_fn,
 
 ## mip_cc_http_cancel_callback_fn
 
-From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
-
 Callback function definition for cancelling an HTTP request
 
 **Parameters**
@@ -166,8 +152,6 @@ MIP_CC_CALLBACK(mip_cc_http_cancel_callback_fn,
 ```
 
 ## MIP_CC_CreateHttpDelegate
-
-From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
 
 Creates an HTTP delegate which can be used to override MIP's default HTTP stack
 
@@ -189,8 +173,6 @@ mip_cc_result MIP_CC_CreateHttpDelegate(
 ```
 
 ## MIP_CC_NotifyHttpDelegateResponse
-
-From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
 
 Notifies an HTTP delegate that an HTTP response is ready
 
@@ -215,8 +197,6 @@ void MIP_CC_NotifyHttpDelegateResponse(
 
 ## MIP_CC_ReleaseHttpDelegate
 
-From [http_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/http_delegate_cc.h)
-
 Release resources associated with an HTTP delegate handle
 
 **Parameters**
@@ -230,8 +210,6 @@ void MIP_CC_ReleaseHttpDelegate(mip_cc_http_delegate httpDelegate);
 ```
 
 ## mip_cc_logger_init_callback_fn
-
-From [logger_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/logger_delegate_cc.h)
 
 Callback function definition for initialization of logger
 
@@ -248,8 +226,6 @@ MIP_CC_CALLBACK(mip_cc_logger_init_callback_fn,
 ```
 
 ## mip_cc_logger_write_callback_fn
-
-From [logger_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/logger_delegate_cc.h)
 
 Callback function definition for writing a log statement
 
@@ -275,8 +251,6 @@ MIP_CC_CALLBACK(mip_cc_logger_write_callback_fn,
 
 ## MIP_CC_CreateLoggerDelegate
 
-From [logger_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/logger_delegate_cc.h)
-
 Creates a logger delegate which can be used to override MIP's default logger
 
 **Parameters**
@@ -300,8 +274,6 @@ mip_cc_result MIP_CC_CreateLoggerDelegate(
 
 ## MIP_CC_ReleaseLoggerDelegate
 
-From [logger_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/logger_delegate_cc.h)
-
 Release resources associated with an logger delegate handle
 
 **Parameters**
@@ -315,8 +287,6 @@ void MIP_CC_ReleaseLoggerDelegate(mip_cc_logger_delegate loggerDelegate);
 ```
 
 ## MIP_CC_CreateMipContext
-
-From [mip_context_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/mip_context_cc.h)
 
 Create a MIP context to manage state shared across all profile instances
 
@@ -346,8 +316,6 @@ mip_cc_result MIP_CC_CreateMipContext(
 ```
 
 ## MIP_CC_CreateMipContextWithCustomFeatureSettings
-
-From [mip_context_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/mip_context_cc.h)
 
 Create a MIP context to manage state shared across all profile instances
 
@@ -382,8 +350,6 @@ mip_cc_result MIP_CC_CreateMipContextWithCustomFeatureSettings(
 
 ## MIP_CC_ReleaseMipContext
 
-From [mip_context_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/mip_context_cc.h)
-
 Release resources associated with a MIP context
 
 **Parameters**
@@ -397,8 +363,6 @@ void MIP_CC_ReleaseMipContext(mip_cc_mip_context mipContext);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetProtectionType
-
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
 
 Gets type of protection, whether it is defined by an RMS template or not
 
@@ -419,8 +383,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetProtectionType(
 
 ## MIP_CC_ProtectionDescriptor_GetOwnerSize
 
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
-
 Gets size of buffer required to store owner
 
 **Parameters**
@@ -439,8 +401,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwnerSize(
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetOwner
-
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
 
 Gets protection owner
 
@@ -467,8 +427,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwner(
 
 ## MIP_CC_ProtectionDescriptor_GetNameSize
 
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
-
 Gets size of buffer required to store name
 
 **Parameters**
@@ -487,8 +445,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetNameSize(
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetName
-
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
 
 Gets protection name
 
@@ -515,8 +471,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetName(
 
 ## MIP_CC_ProtectionDescriptor_GetDescriptionSize
 
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
-
 Gets size of buffer required to store description
 
 **Parameters**
@@ -535,8 +489,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescriptionSize(
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetDescription
-
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
 
 Gets protection description
 
@@ -563,8 +515,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescription(
 
 ## MIP_CC_ProtectionDescriptor_GetTemplateId
 
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
-
 Gets template ID
 
 **Parameters**
@@ -583,8 +533,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetTemplateId(
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetLabelId
-
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
 
 Gets label ID
 
@@ -605,8 +553,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetLabelId(
 
 ## MIP_CC_ProtectionDescriptor_GetContentId
 
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
-
 Gets content ID
 
 **Parameters**
@@ -625,8 +571,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentId(
 ```
 
 ## MIP_CC_ProtectionDescriptor_DoesContentExpire
-
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
 
 Gets whether or not content has an expiration time or not
 
@@ -647,8 +591,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesContentExpire(
 
 ## MIP_CC_ProtectionDescriptor_GetContentValidUntil
 
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
-
 Gets protection expiration time (in seconds since epoch)
 
 **Parameters**
@@ -667,8 +609,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentValidUntil(
 ```
 
 ## MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess
-
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
 
 Gets whether or not offline access is allowed
 
@@ -689,8 +629,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
 
 ## MIP_CC_ProtectionDescriptor_GetReferrerSize
 
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
-
 Gets size of buffer required to store referrer
 
 **Parameters**
@@ -709,8 +647,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrerSize(
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetReferrer
-
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
 
 Gets protection referrer
 
@@ -737,8 +673,6 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrer(
 
 ## MIP_CC_ReleaseProtectionDescriptor
 
-From [protection_descriptor_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection_descriptor_cc.h)
-
 Release resources associated with a protection descriptor
 
 **Parameters**
@@ -752,8 +686,6 @@ void MIP_CC_ReleaseProtectionDescriptor(mip_cc_protection_descriptor protectionD
 ```
 
 ## MIP_CC_CreateStringList
-
-From [string_list_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/string_list_cc.h)
 
 Create a string list
 
@@ -778,8 +710,6 @@ mip_cc_result MIP_CC_CreateStringList(
 
 ## MIP_CC_StringList_GetStrings
 
-From [string_list_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/string_list_cc.h)
-
 Get strings that compose a string list
 
 **Parameters**
@@ -803,8 +733,6 @@ mip_cc_result MIP_CC_StringList_GetStrings(
 
 ## MIP_CC_ReleaseStringList
 
-From [string_list_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/string_list_cc.h)
-
 Release resources associated with a string list
 
 **Parameters**
@@ -818,8 +746,6 @@ void MIP_CC_ReleaseStringList(mip_cc_string_list stringList);
 ```
 
 ## mip_cc_dispatch_task_callback_fn
-
-From [task_dispatcher_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/task_dispatcher_delegate_cc.h)
 
 Callback function definition for dispatching an async task
 
@@ -836,8 +762,6 @@ MIP_CC_CALLBACK(mip_cc_dispatch_task_callback_fn,
 ```
 
 ## mip_cc_cancel_task_callback_fn
-
-From [task_dispatcher_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/task_dispatcher_delegate_cc.h)
 
 Callback function for canceling a background tasks
 
@@ -856,8 +780,6 @@ MIP_CC_CALLBACK(mip_cc_cancel_task_callback_fn,
 ```
 
 ## MIP_CC_CreateTaskDispatcherDelegate
-
-From [task_dispatcher_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/task_dispatcher_delegate_cc.h)
 
 Creates a task dispatcher delegate which can be used to override MIP's default async task handling
 
@@ -882,8 +804,6 @@ mip_cc_result MIP_CC_CreateTaskDispatcherDelegate(
 
 ## MIP_CC_ExecuteDispatchedTask
 
-From [task_dispatcher_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/task_dispatcher_delegate_cc.h)
-
 Notifies a TaskDispatcher delegate that a task is scheduled to execute now on the current thread
 
 **Parameters**
@@ -901,8 +821,6 @@ void MIP_CC_ExecuteDispatchedTask(const mip_cc_task_dispatcher_delegate taskDisp
 
 ## MIP_CC_ReleaseTaskDispatcherDelegate
 
-From [task_dispatcher_delegate_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/task_dispatcher_delegate_cc.h)
-
 Release resources associated with an task dispatcher delegate handle
 
 **Parameters**
@@ -916,8 +834,6 @@ void MIP_CC_ReleaseTaskDispatcherDelegate(mip_cc_task_dispatcher_delegate taskDi
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetHostName
-
-From [telemetry_configuration_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/telemetry_configuration_cc.h)
 
 Set a telemetry host name which will override internal telemetry settings
 
@@ -940,8 +856,6 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHostName(
 
 ## MIP_CC_TelemetryConfiguration_SetLibraryName
 
-From [telemetry_configuration_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/telemetry_configuration_cc.h)
-
 Set a telemetry shared library override
 
 **Parameters**
@@ -962,8 +876,6 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetHttpDelegate
-
-From [telemetry_configuration_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/telemetry_configuration_cc.h)
 
 Override default telemetry HTTP stack with client's own
 
@@ -986,8 +898,6 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHttpDelegate(
 
 ## MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled
 
-From [telemetry_configuration_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/telemetry_configuration_cc.h)
-
 Sets whether or not the telemetry component is allowed ping network status on a background thread
 
 **Parameters**
@@ -1008,8 +918,6 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled
-
-From [telemetry_configuration_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/telemetry_configuration_cc.h)
 
 Sets whether or not the telemetry component is allowed to write caches to disk
 
@@ -1032,8 +940,6 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
 
 ## MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled
 
-From [telemetry_configuration_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/telemetry_configuration_cc.h)
-
 Sets whether or not the telemetry component is allowed to write logs to disk
 
 **Parameters**
@@ -1054,8 +960,6 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut
-
-From [telemetry_configuration_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/telemetry_configuration_cc.h)
 
 Sets whether or not an application/user has opted out of optional telemetry
 
@@ -1078,8 +982,6 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
 
 ## MIP_CC_TelemetryConfiguration_SetCustomSettings
 
-From [telemetry_configuration_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/telemetry_configuration_cc.h)
-
 Sets custom telemetry settings
 
 **Parameters**
@@ -1099,8 +1001,6 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetCustomSettings(
 
 ## MIP_CC_ReleaseTelemetryConfiguration
 
-From [telemetry_configuration_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/telemetry_configuration_cc.h)
-
 Release resources associated with a protection profile settings
 
 **Parameters**
@@ -1115,8 +1015,6 @@ void MIP_CC_ReleaseTelemetryConfiguration(mip_cc_telemetry_configuration telemet
 
 ## MIP_CC_ReleaseProtectionEngine
 
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
-
 Release resources associated with a protection engine
 
 **Parameters**
@@ -1130,8 +1028,6 @@ void MIP_CC_ReleaseProtectionEngine(mip_cc_protection_engine engine);
 ```
 
 ## MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing
-
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
 
 Creates a protection handler for publishing new content
 
@@ -1156,8 +1052,6 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
 
 ## MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption
 
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
-
 Creates a protection handler for consuming existing content
 
 **Parameters**
@@ -1181,8 +1075,6 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
 
 ## MIP_CC_ProtectionEngine_GetEngineIdSize
 
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
-
 Gets size of buffer required to engine ID
 
 **Parameters**
@@ -1201,8 +1093,6 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineIdSize(
 ```
 
 ## MIP_CC_ProtectionEngine_GetEngineId
-
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
 
 Gets engine ID
 
@@ -1229,8 +1119,6 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineId(
 
 ## MIP_CC_ProtectionEngine_GetTemplatesSize
 
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
-
 Gets the number of RMS templates associated with a protection engine
 
 **Parameters**
@@ -1253,8 +1141,6 @@ mip_cc_result MIP_CC_ProtectionEngine_GetTemplatesSize(
 ```
 
 ## MIP_CC_ProtectionEngine_GetTemplates
-
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
 
 Get collection of templates available to a user
 
@@ -1282,8 +1168,6 @@ mip_cc_result MIP_CC_ProtectionEngine_GetTemplates(
 ```
 
 ## MIP_CC_ProtectionEngine_GetRightsForLabelId
-
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
 
 Get list of rights granted to a user for a label ID
 
@@ -1316,8 +1200,6 @@ mip_cc_result MIP_CC_ProtectionEngine_GetRightsForLabelId(
 
 ## MIP_CC_ProtectionEngine_GetClientDataSize
 
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
-
 Gets the size of client data associated with a protection engine
 
 **Parameters**
@@ -1336,8 +1218,6 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientDataSize(
 ```
 
 ## MIP_CC_ProtectionEngine_GetClientData
-
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
 
 Get client data associated with a protection engine
 
@@ -1364,8 +1244,6 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientData(
 
 ## MIP_CC_CreateProtectionEngineSettingsWithIdentity
 
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
-
 Create a settings object used to create a brand new protection engine
 
 **Parameters**
@@ -1389,8 +1267,6 @@ mip_cc_result MIP_CC_CreateProtectionEngineSettingsWithIdentity(
 
 ## MIP_CC_ProtectionEngineSettings_SetClientData
 
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
-
 Sets the client data that will be stored opaquely alongside this engine and persist across sessions
 
 **Parameters**
@@ -1409,8 +1285,6 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetClientData(
 ```
 
 ## MIP_CC_ProtectionEngineSettings_SetCustomSettings
-
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
 
 Configures custom settings, used for feature gating and testing.
 
@@ -1431,8 +1305,6 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCustomSettings(
 
 ## MIP_CC_ProtectionEngineSettings_SetSessionId
 
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
-
 Sets the session ID that can be used to correlate logs and telemetry
 
 **Parameters**
@@ -1451,8 +1323,6 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetSessionId(
 ```
 
 ## MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl
-
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
 
 Sets base URL for all service requests
 
@@ -1473,8 +1343,6 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
 
 ## MIP_CC_ReleaseProtectionEngineSettings
 
-From [protection/protection_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_engine_cc.h)
-
 Release resources associated with a protection engine settings
 
 **Parameters**
@@ -1488,8 +1356,6 @@ void MIP_CC_ReleaseProtectionEngineSettings(mip_cc_protection_engine_settings en
 ```
 
 ## MIP_CC_CreateProtectionHandlerPublishingSettings
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
 Create a settings object used to create a protection handler for publishing new content
 
@@ -1510,8 +1376,6 @@ mip_cc_result MIP_CC_CreateProtectionHandlerPublishingSettings(
 
 ## MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorithmPreferred
 
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
 Sets whether or not deprecated crypto algorithm (ECB) is preferred for backwards compatibility
 
 **Parameters**
@@ -1530,8 +1394,6 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorith
 ```
 
 ## MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
 Sets whether or not non-MIP-aware applications are allowed to open protected content
 
@@ -1552,8 +1414,6 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionA
 
 ## MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson
 
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
 Sets whether or not PL is in JSON format (default is XML)
 
 **Parameters**
@@ -1572,8 +1432,6 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJs
 ```
 
 ## MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
 Sets delegated user
 
@@ -1595,8 +1453,6 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
 ```
 
 ## MIP_CC_CreateProtectionHandlerConsumptionSettings
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
 Create a settings object used to create a protection handler for consuming existing content
 
@@ -1621,8 +1477,6 @@ mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettings(
 
 ## MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly
 
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
 Sets whether or not protection handler creation permits online HTTP operations
 
 **Parameters**
@@ -1643,8 +1497,6 @@ mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
 ```
 
 ## MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
 Sets delegated user
 
@@ -1667,8 +1519,6 @@ mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
 
 ## MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize
 
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
 Gets size of publishing license (in bytes)
 
 **Parameters**
@@ -1687,8 +1537,6 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
 ```
 
 ## MIP_CC_ProtectionHandler_GetSerializedPublishingLicense
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
 Gets publishing license
 
@@ -1715,8 +1563,6 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
 
 ## MIP_CC_ProtectionHandler_GetProtectionDescriptor
 
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
 Gets protection descriptor
 
 **Parameters**
@@ -1735,8 +1581,6 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectionDescriptor(
 ```
 
 ## MIP_CC_ProtectionHandler_GetRights
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
 Gets list of rights granted to a user
 
@@ -1758,8 +1602,6 @@ mip_cc_result MIP_CC_ProtectionHandler_GetRights(
 ```
 
 ## MIP_CC_ProtectionHandler_GetProtectedContentSize
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
 Calculates size of protected content, factoring in padding, etc.
 
@@ -1784,8 +1626,6 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectedContentSize(
 
 ## MIP_CC_ProtectionHandler_GetBlockSize
 
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
 Gets the block size (in bytes) for the cipher mode used by a protection handler
 
 **Parameters**
@@ -1805,8 +1645,6 @@ mip_cc_result MIP_CC_ProtectionHandler_GetBlockSize(
 
 ## MIP_CC_ProtectionHandler_GetIssuedUserSize
 
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
 Gets size of buffer required to store user that has been granted access to protected content
 
 **Parameters**
@@ -1825,8 +1663,6 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUserSize(
 ```
 
 ## MIP_CC_ProtectionHandler_GetIssuedUser
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
 Gets the user that has been granted access to protected content
 
@@ -1853,8 +1689,6 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUser(
 
 ## MIP_CC_ProtectionHandler_GetOwnerSize
 
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
 Gets size of buffer required to store the owner of protected content
 
 **Parameters**
@@ -1873,8 +1707,6 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwnerSize(
 ```
 
 ## MIP_CC_ProtectionHandler_GetOwner
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
 Gets the owner of protected content
 
@@ -1901,8 +1733,6 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwner(
 
 ## MIP_CC_ProtectionHandler_GetContentId
 
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
 Gets the content IE of protected content
 
 **Parameters**
@@ -1922,8 +1752,6 @@ mip_cc_result MIP_CC_ProtectionHandler_GetContentId(
 
 ## MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm
 
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
 Gets whether or not protection handler uses deprecated crypto algorithm (ECB) for backwards compatibility
 
 **Parameters**
@@ -1942,8 +1770,6 @@ mip_cc_result MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
 ```
 
 ## MIP_CC_ProtectionHandler_DecryptBuffer
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
 Decrypt a buffer
 
@@ -1975,8 +1801,6 @@ mip_cc_result MIP_CC_ProtectionHandler_DecryptBuffer(
 
 ## MIP_CC_ReleaseProtectionHandlerPublishingSettings
 
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
 Release resources associated with a protection handler settings
 
 **Parameters**
@@ -1990,8 +1814,6 @@ void MIP_CC_ReleaseProtectionHandlerPublishingSettings(mip_cc_protection_handler
 ```
 
 ## MIP_CC_ReleaseProtectionHandlerConsumptionSettings
-
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
 
 Release resources associated with a protection handler settings
 
@@ -2007,8 +1829,6 @@ void MIP_CC_ReleaseProtectionHandlerConsumptionSettings(mip_cc_protection_handle
 
 ## MIP_CC_ReleaseProtectionHandler
 
-From [protection/protection_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_handler_cc.h)
-
 Release resources associated with a protection handler
 
 **Parameters**
@@ -2022,8 +1842,6 @@ void MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
 ```
 
 ## MIP_CC_LoadProtectionProfile
-
-From [protection/protection_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_profile_cc.h)
 
 Load a profile
 
@@ -2044,8 +1862,6 @@ mip_cc_result MIP_CC_LoadProtectionProfile(
 
 ## MIP_CC_ReleaseProtectionProfile
 
-From [protection/protection_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_profile_cc.h)
-
 Release resources associated with a protection profile
 
 **Parameters**
@@ -2059,8 +1875,6 @@ void MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
 ```
 
 ## MIP_CC_ProtectionProfileSettings_SetSessionId
-
-From [protection/protection_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_profile_cc.h)
 
 Sets the session ID that can be used to correlate logs and telemetry
 
@@ -2081,8 +1895,6 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetSessionId(
 
 ## MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses
 
-From [protection/protection_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_profile_cc.h)
-
 Configures whether or not end user licenses (EULs) will be cached locally
 
 **Parameters**
@@ -2101,8 +1913,6 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
 ```
 
 ## MIP_CC_ProtectionProfileSettings_SetHttpDelegate
-
-From [protection/protection_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_profile_cc.h)
 
 Override default HTTP stack with client's own
 
@@ -2123,8 +1933,6 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
 
 ## MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate
 
-From [protection/protection_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_profile_cc.h)
-
 Override default async task dispatcher with client's own
 
 **Parameters**
@@ -2143,8 +1951,6 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
 ```
 
 ## MIP_CC_ProtectionProfileSettings_SetCustomSettings
-
-From [protection/protection_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_profile_cc.h)
 
 Configures custom settings, used for feature gating and testing.
 
@@ -2165,8 +1971,6 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetCustomSettings(
 
 ## MIP_CC_ReleaseProtectionProfileSettings
 
-From [protection/protection_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/protection/protection_profile_cc.h)
-
 Release resources associated with a protection profile settings
 
 **Parameters**
@@ -2180,8 +1984,6 @@ void MIP_CC_ReleaseProtectionProfileSettings(mip_cc_protection_profile_settings 
 ```
 
 ## MIP_CC_Action_GetType
-
-From [upe/action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/action_cc.h)
 
 Gets an action's type
 
@@ -2202,8 +2004,6 @@ mip_cc_result MIP_CC_Action_GetType(
 
 ## MIP_CC_Action_GetId
 
-From [upe/action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/action_cc.h)
-
 Gets an action's ID
 
 **Parameters**
@@ -2222,8 +2022,6 @@ mip_cc_result MIP_CC_Action_GetId(
 ```
 
 ## MIP_CC_ActionResult_GetActions
-
-From [upe/action_result_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/action_result_cc.h)
 
 Get actions that compose an action result
 
@@ -2248,8 +2046,6 @@ mip_cc_result MIP_CC_ActionResult_GetActions(
 
 ## MIP_CC_ReleaseActionResult
 
-From [upe/action_result_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/action_result_cc.h)
-
 Release resources associated with an action result
 
 **Parameters**
@@ -2263,8 +2059,6 @@ void MIP_CC_ReleaseActionResult(mip_cc_action_result actionResult);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetUIElementNameSize
-
-From [upe/add_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_footer_action_cc.h)
 
 Gets size of buffer required to store an "add content footer" action's UI element name
 
@@ -2284,8 +2078,6 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementNameSize(
 ```
 
 ## MIP_CC_AddContentFooterAction_GetUIElementName
-
-From [upe/add_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_footer_action_cc.h)
 
 Gets an "add content footer" action's UI element name
 
@@ -2312,8 +2104,6 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementName(
 
 ## MIP_CC_AddContentFooterAction_GetTextSize
 
-From [upe/add_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_footer_action_cc.h)
-
 Gets size of buffer required to store an "add content footer" action's text
 
 **Parameters**
@@ -2332,8 +2122,6 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetTextSize(
 ```
 
 ## MIP_CC_AddContentFooterAction_GetText
-
-From [upe/add_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_footer_action_cc.h)
 
 Gets an "add content footer" action's text
 
@@ -2360,8 +2148,6 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetText(
 
 ## MIP_CC_AddContentFooterAction_GetFontNameSize
 
-From [upe/add_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_footer_action_cc.h)
-
 Gets size of buffer required to store an "add content footer" action's font name
 
 **Parameters**
@@ -2380,8 +2166,6 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontNameSize(
 ```
 
 ## MIP_CC_AddContentFooterAction_GetFontName
-
-From [upe/add_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_footer_action_cc.h)
 
 Gets an "add content footer" action's font name
 
@@ -2408,8 +2192,6 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontName(
 
 ## MIP_CC_AddContentFooterAction_GetFontSize
 
-From [upe/add_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_footer_action_cc.h)
-
 Gets the integer font size
 
 **Parameters**
@@ -2429,8 +2211,6 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontSize(
 
 ## MIP_CC_AddContentFooterAction_GetFontColorSize
 
-From [upe/add_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_footer_action_cc.h)
-
 Gets size of buffer required to store an "add content footer" action's font color
 
 **Parameters**
@@ -2449,8 +2229,6 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColorSize(
 ```
 
 ## MIP_CC_AddContentFooterAction_GetFontColor
-
-From [upe/add_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_footer_action_cc.h)
 
 Gets an "add content footer" action's font color (for example, "#000000")
 
@@ -2477,8 +2255,6 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColor(
 
 ## MIP_CC_AddContentFooterAction_GetAlignment
 
-From [upe/add_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_footer_action_cc.h)
-
 Gets the alignment
 
 **Parameters**
@@ -2497,8 +2273,6 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetAlignment(
 ```
 
 ## MIP_CC_AddContentFooterAction_GetMargin
-
-From [upe/add_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_footer_action_cc.h)
 
 Gets the margin size
 
@@ -2519,8 +2293,6 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetMargin(
 
 ## MIP_CC_AddContentHeaderAction_GetUIElementNameSize
 
-From [upe/add_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_header_action_cc.h)
-
 Gets size of buffer required to store an "add content header" action's UI element name
 
 **Parameters**
@@ -2539,8 +2311,6 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetUIElementName
-
-From [upe/add_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_header_action_cc.h)
 
 Gets an "add content header" action's UI element name
 
@@ -2567,8 +2337,6 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementName(
 
 ## MIP_CC_AddContentHeaderAction_GetTextSize
 
-From [upe/add_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_header_action_cc.h)
-
 Gets size of buffer required to store an "add content header" action's text
 
 **Parameters**
@@ -2587,8 +2355,6 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetTextSize(
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetText
-
-From [upe/add_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_header_action_cc.h)
 
 Gets an "add content header" action's text
 
@@ -2615,8 +2381,6 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetText(
 
 ## MIP_CC_AddContentHeaderAction_GetFontNameSize
 
-From [upe/add_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_header_action_cc.h)
-
 Gets size of buffer required to store an "add content header" action's font name
 
 **Parameters**
@@ -2635,8 +2399,6 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontNameSize(
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetFontName
-
-From [upe/add_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_header_action_cc.h)
 
 Gets an "add content header" action's font name
 
@@ -2663,8 +2425,6 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontName(
 
 ## MIP_CC_AddContentHeaderAction_GetFontSize
 
-From [upe/add_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_header_action_cc.h)
-
 Gets the integer font size
 
 **Parameters**
@@ -2684,8 +2444,6 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontSize(
 
 ## MIP_CC_AddContentHeaderAction_GetFontColorSize
 
-From [upe/add_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_header_action_cc.h)
-
 Gets size of buffer required to store an "add content header" action's font color
 
 **Parameters**
@@ -2704,8 +2462,6 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColorSize(
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetFontColor
-
-From [upe/add_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_header_action_cc.h)
 
 Gets an "add content header" action's font color (for example, "#000000")
 
@@ -2732,8 +2488,6 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColor(
 
 ## MIP_CC_AddContentHeaderAction_GetAlignment
 
-From [upe/add_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_header_action_cc.h)
-
 Gets the alignment
 
 **Parameters**
@@ -2752,8 +2506,6 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetAlignment(
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetMargin
-
-From [upe/add_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_content_header_action_cc.h)
 
 Gets the margin size
 
@@ -2774,8 +2526,6 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetMargin(
 
 ## MIP_CC_AddWatermarkAction_GetUIElementNameSize
 
-From [upe/add_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_watermark_action_cc.h)
-
 Gets size of buffer required to store an "add watermark" action's UI element name
 
 **Parameters**
@@ -2794,8 +2544,6 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementNameSize(
 ```
 
 ## MIP_CC_AddWatermarkAction_GetUIElementName
-
-From [upe/add_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_watermark_action_cc.h)
 
 Gets an "add watermark" action's UI element name
 
@@ -2822,8 +2570,6 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementName(
 
 ## MIP_CC_AddWatermarkAction_GetLayout
 
-From [upe/add_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_watermark_action_cc.h)
-
 Gets the watermark layout
 
 **Parameters**
@@ -2843,8 +2589,6 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetLayout(
 
 ## MIP_CC_AddWatermarkAction_GetTextSize
 
-From [upe/add_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_watermark_action_cc.h)
-
 Gets size of buffer required to store an "add watermark" action's text
 
 **Parameters**
@@ -2863,8 +2607,6 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetTextSize(
 ```
 
 ## MIP_CC_AddWatermarkAction_GetText
-
-From [upe/add_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_watermark_action_cc.h)
 
 Gets an "add watermark" action's text
 
@@ -2891,8 +2633,6 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetText(
 
 ## MIP_CC_AddWatermarkAction_GetFontNameSize
 
-From [upe/add_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_watermark_action_cc.h)
-
 Gets size of buffer required to store an "add watermark" action's font name
 
 **Parameters**
@@ -2911,8 +2651,6 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontNameSize(
 ```
 
 ## MIP_CC_AddWatermarkAction_GetFontName
-
-From [upe/add_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_watermark_action_cc.h)
 
 Gets an "add watermark" action's font name
 
@@ -2939,8 +2677,6 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontName(
 
 ## MIP_CC_AddWatermarkAction_GetFontSize
 
-From [upe/add_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_watermark_action_cc.h)
-
 Gets the integer font size
 
 **Parameters**
@@ -2960,8 +2696,6 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontSize(
 
 ## MIP_CC_AddWatermarkAction_GetFontColorSize
 
-From [upe/add_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_watermark_action_cc.h)
-
 Gets size of buffer required to store an "add watermark" action's font color
 
 **Parameters**
@@ -2980,8 +2714,6 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColorSize(
 ```
 
 ## MIP_CC_AddWatermarkAction_GetFontColor
-
-From [upe/add_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/add_watermark_action_cc.h)
 
 Gets an "add watermark" action's font color (for example, "#000000")
 
@@ -3008,8 +2740,6 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColor(
 
 ## MIP_CC_ReleaseContentLabel
 
-From [upe/content_label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/content_label_cc.h)
-
 Release resources associated with a content label
 
 **Parameters**
@@ -3023,8 +2753,6 @@ void MIP_CC_ReleaseContentLabel(mip_cc_content_label contentLabel);
 ```
 
 ## MIP_CC_ContentLabel_GetCreationTime
-
-From [upe/content_label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/content_label_cc.h)
 
 Gets time when label was applied
 
@@ -3045,8 +2773,6 @@ mip_cc_result MIP_CC_ContentLabel_GetCreationTime(
 
 ## MIP_CC_ContentLabel_GetAssignmentMethod
 
-From [upe/content_label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/content_label_cc.h)
-
 Gets label assignment method
 
 **Parameters**
@@ -3065,8 +2791,6 @@ mip_cc_result MIP_CC_ContentLabel_GetAssignmentMethod(
 ```
 
 ## MIP_CC_ContentLabel_GetExtendedProperties
-
-From [upe/content_label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/content_label_cc.h)
 
 Gets extended properties
 
@@ -3089,8 +2813,6 @@ mip_cc_result MIP_CC_ContentLabel_GetExtendedProperties(
 
 ## MIP_CC_ContentLabel_IsProtectionAppliedFromLabel
 
-From [upe/content_label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/content_label_cc.h)
-
 Gets whether or not a protection was applied by a label.
 
 **Parameters**
@@ -3109,8 +2831,6 @@ mip_cc_result MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
 ```
 
 ## MIP_CC_ContentLabel_GetLabel
-
-From [upe/content_label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/content_label_cc.h)
 
 Gets generic label properties from a content label instance
 
@@ -3133,8 +2853,6 @@ mip_cc_result MIP_CC_ContentLabel_GetLabel(
 
 ## MIP_CC_CustomAction_GetNameSize
 
-From [upe/custom_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/custom_action_cc.h)
-
 Gets size of buffer required to store a "custom" action's name
 
 **Parameters**
@@ -3153,8 +2871,6 @@ mip_cc_result MIP_CC_CustomAction_GetNameSize(
 ```
 
 ## MIP_CC_CustomAction_GetName
-
-From [upe/custom_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/custom_action_cc.h)
 
 Gets a "custom" action's name
 
@@ -3181,8 +2897,6 @@ mip_cc_result MIP_CC_CustomAction_GetName(
 
 ## MIP_CC_CustomAction_GetProperties
 
-From [upe/custom_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/custom_action_cc.h)
-
 Gets a "custom" action's properties
 
 **Parameters**
@@ -3203,8 +2917,6 @@ mip_cc_result MIP_CC_CustomAction_GetProperties(
 ```
 
 ## mip_cc_metadata_callback
-
-From [upe/document_state_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/document_state_cc.h)
 
 Callback function definition for retrieving document metatdata, filtered by name/prefix
 
@@ -3232,8 +2944,6 @@ MIP_CC_CALLBACK(mip_cc_metadata_callback,
 
 ## MIP_CC_ReleaseLabel
 
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
-
 Release resources associated with a label
 
 **Parameters**
@@ -3247,8 +2957,6 @@ void MIP_CC_ReleaseLabel(mip_cc_label label);
 ```
 
 ## MIP_CC_Label_GetId
-
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
 
 Gets label ID
 
@@ -3269,8 +2977,6 @@ mip_cc_result MIP_CC_Label_GetId(
 
 ## MIP_CC_Label_GetNameSize
 
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
-
 Gets size of buffer required to store name
 
 **Parameters**
@@ -3289,8 +2995,6 @@ mip_cc_result MIP_CC_Label_GetNameSize(
 ```
 
 ## MIP_CC_Label_GetName
-
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
 
 Gets label name
 
@@ -3317,8 +3021,6 @@ mip_cc_result MIP_CC_Label_GetName(
 
 ## MIP_CC_Label_GetDescriptionSize
 
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
-
 Gets size of buffer required to store description
 
 **Parameters**
@@ -3337,8 +3039,6 @@ mip_cc_result MIP_CC_Label_GetDescriptionSize(
 ```
 
 ## MIP_CC_Label_GetDescription
-
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
 
 Gets label description
 
@@ -3365,8 +3065,6 @@ mip_cc_result MIP_CC_Label_GetDescription(
 
 ## MIP_CC_Label_GetColorSize
 
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
-
 Gets size of buffer required to store color
 
 **Parameters**
@@ -3385,8 +3083,6 @@ mip_cc_result MIP_CC_Label_GetColorSize(
 ```
 
 ## MIP_CC_Label_GetColor
-
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
 
 Gets label color
 
@@ -3413,8 +3109,6 @@ mip_cc_result MIP_CC_Label_GetColor(
 
 ## MIP_CC_Label_GetSensitivity
 
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
-
 Gets sensitivity level of label. Higher value means more sensitive.
 
 **Parameters**
@@ -3434,8 +3128,6 @@ mip_cc_result MIP_CC_Label_GetSensitivity(
 
 ## MIP_CC_Label_GetTooltipSize
 
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
-
 Gets size of buffer required to store tooltip
 
 **Parameters**
@@ -3454,8 +3146,6 @@ mip_cc_result MIP_CC_Label_GetTooltipSize(
 ```
 
 ## MIP_CC_Label_GetTooltip
-
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
 
 Gets label tooltip
 
@@ -3482,8 +3172,6 @@ mip_cc_result MIP_CC_Label_GetTooltip(
 
 ## MIP_CC_Label_GetAutoTooltipSize
 
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
-
 Gets size of buffer required to store auto-classification tooltip
 
 **Parameters**
@@ -3502,8 +3190,6 @@ mip_cc_result MIP_CC_Label_GetAutoTooltipSize(
 ```
 
 ## MIP_CC_Label_GetAutoTooltip
-
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
 
 Gets label auto-classification tooltip
 
@@ -3530,8 +3216,6 @@ mip_cc_result MIP_CC_Label_GetAutoTooltip(
 
 ## MIP_CC_Label_IsActive
 
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
-
 Gets whether or not a label is active
 
 **Parameters**
@@ -3553,8 +3237,6 @@ mip_cc_result MIP_CC_Label_IsActive(
 
 ## MIP_CC_Label_GetParent
 
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
-
 Gets the parent label, if any
 
 **Parameters**
@@ -3574,8 +3256,6 @@ mip_cc_result MIP_CC_Label_GetParent(
 
 ## MIP_CC_Label_GetChildrenSize
 
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
-
 Gets the number of children labels
 
 **Parameters**
@@ -3594,8 +3274,6 @@ mip_cc_result MIP_CC_Label_GetChildrenSize(
 ```
 
 ## MIP_CC_Label_GetChildren
-
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
 
 Gets the children labels
 
@@ -3622,8 +3300,6 @@ mip_cc_result MIP_CC_Label_GetChildren(
 
 ## MIP_CC_Label_GetCustomSettings
 
-From [upe/label_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/label_cc.h)
-
 Gets policy-defined custom settings of a label
 
 **Parameters**
@@ -3644,8 +3320,6 @@ mip_cc_result MIP_CC_Label_GetCustomSettings(
 ```
 
 ## MIP_CC_MetadataAction_GetMetadataToRemove
-
-From [upe/metadata_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/metadata_action_cc.h)
 
 Gets a "metadata" action's metadata to remove
 
@@ -3668,8 +3342,6 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
 
 ## MIP_CC_MetadataAction_GetMetadataToAdd
 
-From [upe/metadata_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/metadata_action_cc.h)
-
 Gets a "metadata" action's metadata to add
 
 **Parameters**
@@ -3691,8 +3363,6 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
 
 ## MIP_CC_ReleasePolicyEngine
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Release resources associated with a policy engine
 
 **Parameters**
@@ -3706,8 +3376,6 @@ void MIP_CC_ReleasePolicyEngine(mip_cc_policy_engine engine);
 ```
 
 ## MIP_CC_PolicyEngine_GetEngineIdSize
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Gets size of buffer required to engine ID
 
@@ -3727,8 +3395,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineIdSize(
 ```
 
 ## MIP_CC_PolicyEngine_GetEngineId
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Gets engine ID
 
@@ -3755,8 +3421,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineId(
 
 ## MIP_CC_PolicyEngine_GetMoreInfoUrlSize
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Gets the size of client data associated with a policy engine
 
 **Parameters**
@@ -3775,8 +3439,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
 ```
 
 ## MIP_CC_PolicyEngine_GetMoreInfoUrl
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Get client data associated with a policy engine
 
@@ -3803,8 +3465,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrl(
 
 ## MIP_CC_PolicyEngine_IsLabelingRequired
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Gets whether or not the policy dictates that a document must be labeled.
 
 **Parameters**
@@ -3824,8 +3484,6 @@ mip_cc_result MIP_CC_PolicyEngine_IsLabelingRequired(
 
 ## MIP_CC_PolicyEngine_GetPolicyFileIdSize
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Gets the size of client data associated with a policy engine
 
 **Parameters**
@@ -3844,8 +3502,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileIdSize(
 ```
 
 ## MIP_CC_PolicyEngine_GetPolicyFileId
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Get client data associated with a policy engine
 
@@ -3872,8 +3528,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileId(
 
 ## MIP_CC_PolicyEngine_GetSensitivityFileIdSize
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Gets the size of client data associated with a policy engine
 
 **Parameters**
@@ -3892,8 +3546,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
 ```
 
 ## MIP_CC_PolicyEngine_GetSensitivityFileId
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Get client data associated with a policy engine
 
@@ -3920,8 +3572,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileId(
 
 ## MIP_CC_PolicyEngine_HasClassificationRules
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Gets whether or not the policy has automatic or recommendation rules
 
 **Parameters**
@@ -3940,8 +3590,6 @@ mip_cc_result MIP_CC_PolicyEngine_HasClassificationRules(
 ```
 
 ## MIP_CC_PolicyEngine_GetLastPolicyFetchTime
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Gets the time when the policy was last fetched
 
@@ -3962,8 +3610,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
 
 ## MIP_CC_PolicyEngine_GetSensitivityLabelsSize
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Gets the number of sensitivity labels associated with the policy engine
 
 **Parameters**
@@ -3982,8 +3628,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
 ```
 
 ## MIP_CC_PolicyEngine_GetSensitivityLabels
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Gets the sensitivity labels associated with the policy engine
 
@@ -4010,8 +3654,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabels(
 
 ## MIP_CC_PolicyEngine_GetLabelById
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Gets sensitivity label by ID
 
 **Parameters**
@@ -4033,8 +3675,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetLabelById(
 
 ## MIP_CC_PolicyEngine_GetSensitivityTypesSize
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Gets the number of sensitivity types associated with the policy engine
 
 **Parameters**
@@ -4053,8 +3693,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesSize(
 ```
 
 ## MIP_CC_PolicyEngine_GetSensitivityTypes
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Gets the sensitivity types associated with the policy engine
 
@@ -4081,8 +3719,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypes(
 
 ## MIP_CC_PolicyEngine_CreatePolicyHandler
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Create a Policy Handler to execute policy-related functions
 
 **Parameters**
@@ -4103,8 +3739,6 @@ mip_cc_result MIP_CC_PolicyEngine_CreatePolicyHandler(
 ```
 
 ## MIP_CC_PolicyEngine_SendApplicationAuditEvent
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Logs an application specific event to the audit pipeline
 
@@ -4128,8 +3762,6 @@ mip_cc_result MIP_CC_PolicyEngine_SendApplicationAuditEvent(
 
 ## MIP_CC_PolicyEngine_GetPolicyDataXmlSize
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Gets size of policy data xml
 
 **Parameters**
@@ -4148,8 +3780,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
 ```
 
 ## MIP_CC_PolicyEngine_GetPolicyDataXml
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Gets policy data xml
 
@@ -4176,8 +3806,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXml(
 
 ## MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Gets size of sensitivity types data xml
 
 **Parameters**
@@ -4196,8 +3824,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
 ```
 
 ## MIP_CC_PolicyEngine_GetSensitivityTypesDataXml
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Gets sensitivity types data xml
 
@@ -4224,8 +3850,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
 
 ## MIP_CC_PolicyEngine_GetClientDataSize
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Gets the size of client data associated with a policy engine
 
 **Parameters**
@@ -4244,8 +3868,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientDataSize(
 ```
 
 ## MIP_CC_PolicyEngine_GetClientData
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Get client data associated with a policy engine
 
@@ -4271,8 +3893,6 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientData(
 ```
 
 ## MIP_CC_CreatePolicyEngineSettingsWithIdentity
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Create a settings object used to create a brand new policy engine
 
@@ -4301,8 +3921,6 @@ mip_cc_result MIP_CC_CreatePolicyEngineSettingsWithIdentity(
 
 ## MIP_CC_PolicyEngineSettings_SetClientData
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Sets the client data that will be stored opaquely alongside this engine and persist across sessions
 
 **Parameters**
@@ -4321,8 +3939,6 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetClientData(
 ```
 
 ## MIP_CC_PolicyEngineSettings_SetCustomSettings
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Configures custom settings, used for feature gating and testing.
 
@@ -4343,8 +3959,6 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCustomSettings(
 
 ## MIP_CC_PolicyEngineSettings_SetSessionId
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Sets the session ID that can be used to correlate logs and telemetry
 
 **Parameters**
@@ -4364,8 +3978,6 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetSessionId(
 
 ## MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Sets base URL for all service requests
 
 **Parameters**
@@ -4384,8 +3996,6 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
 ```
 
 ## MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail
-
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
 
 Sets delegated user
 
@@ -4408,8 +4018,6 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
 
 ## MIP_CC_ReleasePolicyEngineSettings
 
-From [upe/policy_engine_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_engine_cc.h)
-
 Release resources associated with a policy engine settings
 
 **Parameters**
@@ -4424,8 +4032,6 @@ void MIP_CC_ReleasePolicyEngineSettings(mip_cc_policy_engine_settings settings);
 
 ## MIP_CC_ReleasePolicyHandler
 
-From [upe/policy_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_handler_cc.h)
-
 Release resources associated with a policy handler
 
 **Parameters**
@@ -4439,8 +4045,6 @@ void MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
 ```
 
 ## MIP_CC_PolicyHandler_GetSensitivityLabel
-
-From [upe/policy_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_handler_cc.h)
 
 Gets a document's current label
 
@@ -4464,8 +4068,6 @@ mip_cc_result MIP_CC_PolicyHandler_GetSensitivityLabel(
 ```
 
 ## MIP_CC_PolicyHandler_ComputeActions
-
-From [upe/policy_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_handler_cc.h)
 
 Executes policy rules based on the provided state and determines corresponding actions
 
@@ -4494,8 +4096,6 @@ mip_cc_result MIP_CC_PolicyHandler_ComputeActions(
 
 ## MIP_CC_PolicyHandler_NotifyCommittedActions
 
-From [upe/policy_handler_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_handler_cc.h)
-
 Called by application after computed actions have been applied and data committed to disk
 
 **Parameters**
@@ -4521,8 +4121,6 @@ mip_cc_result MIP_CC_PolicyHandler_NotifyCommittedActions(
 
 ## MIP_CC_LoadPolicyProfile
 
-From [upe/policy_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_profile_cc.h)
-
 Load a profile
 
 **Parameters**
@@ -4542,8 +4140,6 @@ mip_cc_result MIP_CC_LoadPolicyProfile(
 
 ## MIP_CC_ReleasePolicyProfile
 
-From [upe/policy_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_profile_cc.h)
-
 Release resources associated with a policy profile
 
 **Parameters**
@@ -4557,8 +4153,6 @@ void MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
 ```
 
 ## MIP_CC_PolicyProfileSettings_SetSessionId
-
-From [upe/policy_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_profile_cc.h)
 
 Sets the session ID that can be used to correlate logs and telemetry
 
@@ -4579,8 +4173,6 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetSessionId(
 
 ## MIP_CC_PolicyProfileSettings_SetHttpDelegate
 
-From [upe/policy_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_profile_cc.h)
-
 Override default HTTP stack with client's own
 
 **Parameters**
@@ -4599,8 +4191,6 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetHttpDelegate(
 ```
 
 ## MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate
-
-From [upe/policy_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_profile_cc.h)
 
 Override default async task dispatcher with client's own
 
@@ -4621,8 +4211,6 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
 
 ## MIP_CC_PolicyProfileSettings_SetCustomSettings
 
-From [upe/policy_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_profile_cc.h)
-
 Configures custom settings, used for feature gating and testing.
 
 **Parameters**
@@ -4642,8 +4230,6 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetCustomSettings(
 
 ## MIP_CC_ReleasePolicyProfileSettings
 
-From [upe/policy_profile_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/policy_profile_cc.h)
-
 Release resources associated with a policy profile settings
 
 **Parameters**
@@ -4657,8 +4243,6 @@ void MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profilse
 ```
 
 ## MIP_CC_ProtectByTemplateAction_GetTemplateId
-
-From [upe/protect_by_template_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/protect_by_template_action_cc.h)
 
 Gets a "protect by template" action's template ID
 
@@ -4678,8 +4262,6 @@ mip_cc_result MIP_CC_ProtectByTemplateAction_GetTemplateId(
 ```
 
 ## MIP_CC_RemoveContentFooterAction_GetUIElementNames
-
-From [upe/remove_content_footer_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/remove_content_footer_action_cc.h)
 
 Gets a "remove content footer" action's UI element names to remove
 
@@ -4702,8 +4284,6 @@ mip_cc_result MIP_CC_RemoveContentFooterAction_GetUIElementNames(
 
 ## MIP_CC_RemoveContentHeaderAction_GetUIElementNames
 
-From [upe/remove_content_header_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/remove_content_header_action_cc.h)
-
 Gets a "remove content header" action's UI element names to remove
 
 **Parameters**
@@ -4724,8 +4304,6 @@ mip_cc_result MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
 ```
 
 ## MIP_CC_RemoveWatermarkAction_GetUIElementNames
-
-From [upe/remove_watermark_action_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/remove_watermark_action_cc.h)
 
 Gets a "remove watermark" action's UI element names to remove
 
@@ -4748,8 +4326,6 @@ mip_cc_result MIP_CC_RemoveWatermarkAction_GetUIElementNames(
 
 ## MIP_CC_ReleaseSensitivityType
 
-From [upe/sensitivity_type_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/sensitivity_type_cc.h)
-
 Release resources associated with a sensitivity type
 
 **Parameters**
@@ -4763,8 +4339,6 @@ void MIP_CC_ReleaseSensitivityType(mip_cc_sensitivity_type sensitivityType);
 ```
 
 ## MIP_CC_SensitivityType_GetRulePackageIdSize
-
-From [upe/sensitivity_type_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/sensitivity_type_cc.h)
 
 Gets size of buffer required to store a sensitivity type's rule package ID
 
@@ -4784,8 +4358,6 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageIdSize(
 ```
 
 ## MIP_CC_SensitivityType_GetRulePackageId
-
-From [upe/sensitivity_type_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/sensitivity_type_cc.h)
 
 Gets a sensitivity type's rule package ID
 
@@ -4812,8 +4384,6 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageId(
 
 ## MIP_CC_SensitivityType_GetRulePackageSize
 
-From [upe/sensitivity_type_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/sensitivity_type_cc.h)
-
 Gets size of buffer required to store a sensitivity type's rule package
 
 **Parameters**
@@ -4832,8 +4402,6 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageSize(
 ```
 
 ## MIP_CC_SensitivityType_GetRulePackage
-
-From [upe/sensitivity_type_cc.h](https://github.com/AzureAD/mip-sdk-for-cpp/blob/develop/src/api/mip_cc/upe/sensitivity_type_cc.h)
 
 Gets a sensitivity type's rule package
 
