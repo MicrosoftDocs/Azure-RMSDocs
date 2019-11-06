@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::ProtectionProfile::Observer 
-Interface that receives notifications related to [ProtectionProfile](class_mip_protectionprofile.md).
+Interface that receives notifications related to ProtectionProfile.
 This interface must be implemented by applications using the protection SDK
   
 ## Summary
@@ -30,25 +30,25 @@ public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const
 Called when profile was loaded successfully.
 
 Parameters:  
-* **profile**: A reference to the newly created [ProtectionProfile](class_mip_protectionprofile.md)
+* **profile**: A reference to the newly created ProtectionProfile
 
 
-* **context**: The same context that was passed to [ProtectionProfile::LoadAsync](class_mip_protectionprofile.md#addengineasync-function)
+* **context**: The same context that was passed to ProtectionProfile::LoadAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionProfile::LoadAsync](class_mip_protectionprofile.md#addengineasync-function) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess-function) or [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure-function)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to ProtectionProfile::Observer::OnLoadSuccess or ProtectionProfile::Observer::OnLoadFailure
   
 ### OnLoadFailure function
 Called when loading a profile caused an error.
 
 Parameters:  
-* **error**: [Error](class_mip_error.md) that occurred while loading 
+* **error**: Error that occurred while loading 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::LoadAsync](class_mip_protectionprofile.md#addengineasync-function)
+* **context**: The same context that was passed to ProtectionProfile::LoadAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionProfile::LoadAsync](class_mip_protectionprofile.md#addengineasync-function) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess-function) or [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure-function)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to ProtectionProfile::Observer::OnLoadSuccess or ProtectionProfile::Observer::OnLoadFailure
   
 ### OnListEnginesSuccess function
 Called when list of engines was generated successfully.
@@ -57,7 +57,7 @@ Parameters:
 * **engineIds**: a list of engine IDs the are available. 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::ListEnginesAsync](class_mip_protectionprofile.md#listenginesasync-function)
+* **context**: The same context that was passed to ProtectionProfile::ListEnginesAsync
 
 
   
@@ -68,7 +68,7 @@ Parameters:
 * **error**: the error that caused the list engines operation to fail. 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::ListEnginesAsync](class_mip_protectionprofile.md#listenginesasync-function)
+* **context**: The same context that was passed to ProtectionProfile::ListEnginesAsync
 
 
   
@@ -79,7 +79,7 @@ Parameters:
 * **engine**: Newly created engine 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](class_mip_protectionprofile.md#addengineasync-function)
+* **context**: The same context that was passed to ProtectionProfile::AddEngineAsync
 
 
   
@@ -90,7 +90,7 @@ Parameters:
 * **error**: the error that caused the add engine operation to fail. 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](class_mip_protectionprofile.md#addengineasync-function)
+* **context**: The same context that was passed to ProtectionProfile::AddEngineAsync
 
 
   
@@ -98,7 +98,7 @@ Parameters:
 Called when an engine was deleted successfully.
 
 Parameters:  
-* **context**: The same context that was passed to [ProtectionProfile::DeleteEngineAsync](class_mip_protectionprofile.md#deleteengineasync-function)
+* **context**: The same context that was passed to ProtectionProfile::DeleteEngineAsync
 
 
   
@@ -109,5 +109,5 @@ Parameters:
 * **error**: the error that caused the delete engine operation to fail. 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::DeleteEngineAsync](class_mip_protectionprofile.md#deleteengineasync-function)
+* **context**: The same context that was passed to ProtectionProfile::DeleteEngineAsync
 

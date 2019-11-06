@@ -5,11 +5,11 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::MetadataAction 
-An [Action](class_mip_action.md) that adds metadata information to the content.
+An Action that adds metadata information to the content.
   
 ## Summary
  Members                        | Descriptions                                

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
+ms.date: 10/29/2019
 ---
 
 # class mip::Identity 
@@ -14,26 +14,26 @@ Abstraction for identity.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Identity()  |  Default [Identity](class_mip_identity.md) constructor used when a user email address is not known.
-public Identity(const Identity& other)  |  [Identity](class_mip_identity.md) copy constructor.
-public explicit Identity(const std::string& email)  |  [Identity](class_mip_identity.md) constructor used when a user email address is known.
+public Identity()  |  Default Identity constructor used when a user email address is not known.
+public Identity(const Identity& other)  |  Identity copy constructor.
+public explicit Identity(const std::string& email)  |  Identity constructor used when a user email address is known.
 public const std::string& GetEmail() const  |  Get the email.
   
 ## Members
   
 ### Identity function
-Default [Identity](class_mip_identity.md) constructor used when a user email address is not known.
+Default Identity constructor used when a user email address is not known.
   
 ### Identity function
-[Identity](class_mip_identity.md) copy constructor.
+Identity copy constructor.
 
 Parameters:  
-* **[Identity](class_mip_identity.md)**: used to create the copy.
+* **Identity**: used to create the copy.
 
 
   
 ### Identity function
-[Identity](class_mip_identity.md) constructor used when a user email address is known.
+Identity constructor used when a user email address is known.
 
 Parameters:  
 * **email**: user email address.
