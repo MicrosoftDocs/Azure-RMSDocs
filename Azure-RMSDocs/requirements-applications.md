@@ -192,7 +192,7 @@ In addition, the Azure Information Protection client has the following restricti
 
 ## RMS-enlightened solutions
 
-For up-to-date nformation about solutions that support the Azure Rights Management service and Azure Information Protection, see the blog post, [title](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Ignite-2019-Microsoft-Information-Protection-solutions/ba-p/967024).
+For the latest information about solutions that support the Azure Rights Management service and Azure Information Protection, see the blog post, [Microsoft Ignite 2019 – Microsoft Information Protection solutions Partner ecosystem showcase](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Ignite-2019-Microsoft-Information-Protection-solutions/ba-p/967024).
 
 ## Next steps
 To check for other requirements, see [Requirements for Azure Information Protection](requirements.md).
