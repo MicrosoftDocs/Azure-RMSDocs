@@ -6,7 +6,7 @@ description: Instructions and examples to configure Exchange Online mail flow ru
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -82,7 +82,7 @@ In the Azure Information Protection policy, this label has been configured as th
      
     a. Select **Enter text**, and enter `msip_labels`.
      
-    b. Select **Enter words**, and enter `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;`
+    b. Select **Enter words**, and enter `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True`
     
     c. Select **+**, and then select **OK**.
 
