@@ -152,7 +152,7 @@ Additional resources: [Information and support for Azure Information Protection]
 
 ### Microsoft Ignite
 
-Microsoft Ignite 2019 in Orlando is here! There is lots of good information about Azure Information Protection with the latest updates and improvements. We hope to see you there, but if you can't join us, sessions are recorded for viewing later.
+Microsoft Ignite 2019 in Orlando was a great success! There was lots of good information about Azure Information Protection with the latest updates and improvements. If you couldn't join us, sessions are recorded for viewing later.
 
 See the following list for our top five sessions that we recommend. Links will be added when the recordings become available:
 
