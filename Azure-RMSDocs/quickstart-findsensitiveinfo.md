@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/01/2019
+ms.date: 11/12/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -48,7 +48,7 @@ To complete this quickstart, you need:
     
     - The classic client: To install this client, go to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
     
-    - The unified labeling client: To install this client, go the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection_UL_Preview.exe** from the Azure Information Protection page.
+    - The unified labeling client: To install this client, go the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection_UL.exe** from the Azure Information Protection page.
     
 3. SQL Server Express is also installed on your computer.
     
