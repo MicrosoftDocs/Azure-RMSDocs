@@ -154,11 +154,11 @@ Additional resources: [Information and support for Azure Information Protection]
 
 Microsoft Ignite 2019 in Orlando was a great success! There was lots of good information about Azure Information Protection with the latest updates and improvements. If you couldn't join us, sessions are recorded for viewing later.
 
-See the following list for our top five sessions that we recommend. Links will be added when the recordings become available:
+See the following list for our top five sessions that we recommend:
 
 - [BRK2119 - Secure your sensitive data! Understanding the latest Microsoft Information Protection capabilities](https://myignite.techcommunity.microsoft.com/sessions/81172?source=sessions)
  
-- BRK3100 - What does your sensitive data landscape look like? Best practices in data discovery, classification, analytics, and reports
+- [THR3067 - Know your data: Top five tips and tricks to better understand your sensitive data landscape](https://myignite.techcommunity.microsoft.com/sessions/81183)
 
 - [BRK3103 - Protecting sensitive files and data can be hard. Choose the right data protection options that balance security and worker productivity](https://myignite.techcommunity.microsoft.com/sessions/81177?source=sessions)
 
