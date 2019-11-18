@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 11/04/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -163,7 +163,7 @@ For the labels that successfully migrated, they can now be used by [clients and 
 ### Copy policies
 
 > [!NOTE]
-> This option is gradually rolling out to tenants. It is also in preview and subject to change.
+> This option is in preview and subject to change.
 
 After you have migrated your labels, you can select an option to copy policies. If you select this option, a one-time copy of your policies with their [policy settings](configure-policy-settings.md) and any [advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) is sent to the admin center where you manage your labels: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center.
 
