@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 11/01/2019
+ms.date: 11/19/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -241,12 +241,6 @@ Azure Monitor Logs has a **Usage and estimated costs** feature to help you estim
 4. If you have Azure Information Protection clients (classic), select the checkbox **Enable deeper analytics into your sensitive data** if you want to store the actual data that's identified as being a sensitive information type. For more information about this setting, see the [Content matches for deeper analysis](#content-matches-for-deeper-analysis) section on this page.
 
 5. Select **OK**.
-
-After the workspace is configured, do the following if you publish sensitivity labels in one of the following management centers: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center:
-
-- In the Azure portal go to **Azure Information Protection** > **Manage** > **Unified labeling**, and select **Publish**.
-    
-    Select this **Publish** option every time you make a labeling change (create, modify, delete) in your labeling center. 
 
 You're now ready to view the reports.
 
