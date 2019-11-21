@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -153,8 +153,9 @@ For these files, the file name extension remains the same after the file is prot
 
 To help prevent users from changing files that are critical for computer operations, some file types and folders are automatically excluded from classification and protection. If users try to classify or protect these files by using the Azure Information Protection unified labeling client, they see a message that they are excluded.
 
-- **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msg,.msp, .msi, .pdb, .jar
+- **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msp, .msi, .pdb, .jar
 
+Unlike the classic client, .msg files are not excluded. Currently, there is a known issue with .msg files that are classified and protected as ".msg.pfile" and you cannot open these files. For these files, remove the label to open the file.
 
 - **Excluded folders**: 
     - Windows
@@ -166,13 +167,15 @@ To help prevent users from changing files that are critical for computer operati
 
 By default, the scanner also excludes the same file types as the Azure Information Protection unified labeling client with the following exceptions:
 
-- .rtf, and .rar, are also excluded
+- .msg, .rtf, and .rar, are also excluded
 
 You can change the file types included or excluded for file inspection by the scanner:
 
 - Configure **File types to scan** in the scanner profile, by [using the Azure portal](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal).
 
 > [!NOTE]
+> Because of the known issue for .msg files detailed in the previous section, we recommend you keep .msg files as excluded.
+> 
 > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
 
 By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, use the PowerShell advanced setting, **PFileSupportedExtensions**. For more information, see [PowerShell configuration to change which file types are protected](../deploy-aip-scanner.md#scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected) from the scanner deployment instructions.
