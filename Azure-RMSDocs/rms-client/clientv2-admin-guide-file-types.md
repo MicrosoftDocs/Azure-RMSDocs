@@ -173,11 +173,11 @@ By default, the scanner also excludes the same file types as the Azure Informati
 You can change the file types included or excluded for file inspection by the scanner:
 
 - Configure **File types to scan** in the scanner profile, by [using the Azure portal](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal).
-
-> [!NOTE]
-> Because of the known issue for .msg files detailed in the previous section, we recommend you keep .msg files as excluded.
-> 
-> If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
+    
+    > [!NOTE]
+    > Because of the known issue for .msg files detailed in the previous section, we recommend you keep .msg files as excluded.
+    > 
+    > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
 
 By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, use the PowerShell advanced setting, **PFileSupportedExtensions**. For more information, see [PowerShell configuration to change which file types are protected](../deploy-aip-scanner.md#scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected) from the scanner deployment instructions.
 
