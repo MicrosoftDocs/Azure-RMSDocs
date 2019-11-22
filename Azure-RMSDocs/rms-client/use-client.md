@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/04/2019
+ms.date: 11/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -109,8 +109,8 @@ To compare the Office built-in sensitivity labeling features across different op
 |A viewer for protected files (text, images, PDF, .pfile):| **Yes** | **Yes** | No|
 |PPDF support for applying labels:| **Yes** | No | No |
 |PowerShell labeling cmdlets:| **Yes** | **Yes** <sup>4</sup> | No |
-|Manual policy file management for disconnected computers:| **Yes** |**Yes** <sup>6</sup>| No |
 |Offline support for protection actions:| **Yes** | **Yes** <sup>5</sup> | **Yes** |
+|Manual policy file management for disconnected computers:| **Yes** |**Yes** <sup>6</sup>| No |
 |HYOK support:| **Yes** | No | No |
 |Usage logging in Event Viewer:| **Yes** | No |No |
 |Display the Do Not Forward button in Outlook:| **Yes** | No | No |
