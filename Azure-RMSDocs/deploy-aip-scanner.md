@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/21/2019
+ms.date: 11/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -529,7 +529,7 @@ The scanner refreshes the policy according to the following triggers:
 
 - Scanner from the classic client: Every hour and when the service starts and the policy is older than one hour. 
 
-- Scanner from the unified labeling client: Every four hours and when the service starts. 
+- Scanner from the unified labeling client: Every four hours. 
 
 > [!TIP]
 > If you need to refresh the policy sooner than the default interval, for example, during a testing period: 
