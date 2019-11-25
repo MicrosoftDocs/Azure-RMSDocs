@@ -6,7 +6,7 @@ description: Instructions to migrate your Active Directory Rights Management Ser
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -45,7 +45,7 @@ Although not required, you might find it useful to read the following documentat
 
 - [Planning and implementing your Azure Information Protection tenant key](./plan-implement-tenant-key.md): Understand the key management options that you have for your Azure Information Protection tenant where your SLC key equivalent in the cloud is either managed by Microsoft (the default) or managed by you (the "bring your own key", or BYOK configuration). 
 
-- [RMS service discovery](./rms-client/client-deployment-notes.md#rms-service-discovery): This section of the RMS client deployment notes explains that the order for service discovery is **registry**, then **SCP**, then **cloud**. During the migration process when the SCP is still installed, you configure clients with registry settings for your Azure Information Protection tenant so that they do not use the AD RMS cluster returned from the SCP.
+- [RMS service discovery](./rms-client/client-deployment-notes.md#rms-service-discovery): This section of the RMS client deployment notes explains that the order for service discovery is **registry**, then **service connection point (SCP)**, then **cloud**. During the migration process when the SCP is still installed, you configure clients with registry settings for your Azure Information Protection tenant so that they do not use the AD RMS cluster returned from the SCP.
 
 - [Overview of the Microsoft Rights Management connector](./deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector): This section from the RMS connector documentation explains how your on-premises servers can connect to the Azure Rights Management service to protect documents and emails.
 

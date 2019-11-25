@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/01/2019
+ms.date: 11/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -147,6 +147,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
 |RunAuditInformationTypesDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|ScannerConcurrencyLevel|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
 
@@ -733,6 +734,25 @@ To send content matches when sensitive information types are sent, create the fo
 Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
+
+## Limit the number of threads used by the scanner
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+
+By default, the scanner uses all available processor resources on the computer running the scanner service. If you need to limit the CPU consumption while this service is scanning, create the following advanced setting in a label policy. 
+
+For the value, specify the number of concurrent threads that the scanner can run in parallel. The scanner uses a separate thread for each file that it scans, so this throttling configuration also defines the number of files that can be scanned in parallel. 
+
+When you first configure the value for testing, we recommend you specify 2 per core, and then monitor the results. For example, if you run the scanner on a computer that has 4 cores, first set the value to 8. If necessary, increase or decrease that number, according to the resulting performance you require for the scanner computer and your scanning rates. 
+
+- Key: **ScannerConcurrencyLevel**
+
+- Value: **\<number of concurrent threads>**
+
+Example PowerShell command, where your label policy is named "Scanner":
+
+	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8"}
+
 
 ## Migrate labels from Secure Islands and other labeling solutions
 
