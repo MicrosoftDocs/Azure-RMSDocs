@@ -1,14 +1,14 @@
-*-
+---
 title: Microsoft Information Protection (MIP) SDK version release history and support policy
-description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection (MIP) SDK client applications.
+description: Verison release history and change notes for the MIP SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 01/08/2019
+ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-*-
+---
 
 # Microsoft Information Protection (MIP) SDK version release history and support policy
 
@@ -29,7 +29,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 ## Version 1.4.0 
 
-**Release date**: October 6, 2019
+**Release date**: November 6, 2019
 
 This version introduces support for the protection API in the .NET package (Microsoft.InformationProtection.File).
 
