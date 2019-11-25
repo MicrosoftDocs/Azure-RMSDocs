@@ -5,8 +5,8 @@ title: Configure the Azure Information Protection policy - AIP
 description: To configure classification, labeling, and protection for the Azure Information Protection client (classic), you must configure the Azure Information Protection policy. 
 author: cabailey
 ms.author: cabailey
-ms.date: 11/20/2019
-manager: barbkess
+ms.date: 11/25/2019
+manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -87,7 +87,7 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
   - **Global administrator**
     
     > [!NOTE] 
-    > If your tenant is on the unified labeling platform, the Azure Information Protection administrator role (formerly "Information Protection administrator") and the Global reader role are not supported for the Azure portal. [More information](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > If your tenant is on the [unified labeling platform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform), the Azure Information Protection administrator role (formerly "Information Protection administrator"), the Security reader role, and the Global reader role are not supported for the Azure portal. [More information](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
     Microsoft accounts cannot manage Azure Information Protection.
 
