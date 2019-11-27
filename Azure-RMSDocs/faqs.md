@@ -140,9 +140,6 @@ Global administrators for an Office 365 tenant or Azure AD tenant can obviously 
     To assign a user to one of these administrative roles, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). To see what other permissions a user with these roles have, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
 
 - **Security reader** or **Global reader**: For [Azure Information Protection analytics](reports-aip.md) only. This Azure Active Directory administrator role lets an administrator view how your labels are being used, monitor user access to labeled documents and emails, and any changes to their classification, and can identify documents that contain sensitive information that must be protected. Because this feature uses Azure Monitor, you must also have a supporting [RBAC role](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
-    
-    > [!NOTE]
-    > The Global reader role is not supported if your tenant is on the [unified labeling platform](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
 
 - **Security administrator**: This Azure Active Directory administrator role lets an administrator configure Azure Information Protection in the Azure portal, in addition to configuring some aspects of other Azure services. An administrator with this role cannot run any of the [PowerShell cmdlets from the AIPService module](administer-powershell.md), or track and revoke documents for users.
     
