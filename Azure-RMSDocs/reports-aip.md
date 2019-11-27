@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: cabailey
 ms.author: cabailey
-ms.date: 11/25/2019
+ms.date: 11/27/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -182,9 +182,6 @@ Details:
     
         - **Security reader**
         - **Global reader**
-    
-    > [!NOTE] 
-    > You cannot use the Azure Information Protection administrator role, the Security reader role, or the Global reader role if your tenant is on the [unified labeling platform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
 
 2. In addition, you need one of the following [Azure Log Analytics roles](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) or standard [Azure roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) to access your Azure Log Analytics workspace:
     
