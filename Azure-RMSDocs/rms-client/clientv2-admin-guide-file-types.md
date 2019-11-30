@@ -156,7 +156,7 @@ To help prevent users from changing files that are critical for computer operati
 - **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msp, .msi, .pdb, .jar
     
     > [!NOTE]
-    > Unlike the classic client, .msg files are not excluded. Currently, there is a known issue with .msg files that are classified and protected as ".msg.pfile" and you cannot open these files. For these files, remove the label to open the file.
+    > Unlike the classic client, .msg files are not excluded. Currently, you cannot successfully open .msg files that are classified and protected. For these files, remove the label to open the file.
 
 - **Excluded folders**: 
     - Windows
