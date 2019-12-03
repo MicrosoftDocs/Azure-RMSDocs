@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/01/2019
+ms.date: 12/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -174,8 +174,6 @@ For a detailed comparison of behavior differences for specific protection settin
 ### Features not planned to be in the Azure Information Protection unified labeling client
 
 Although the Azure Information Protection unified labeling client is still under development, the following features and behavior differences from the classic client are not currently planned to be available in future releases for the unified labeling client: 
-
-- Support Office apps for disconnected computers with manual policy file management
 
 - Custom permissions as a separate option that users can select in Office apps: Word, Excel, and PowerPoint
 
