@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/02/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -33,7 +33,7 @@ Before you deploy Azure Information Protection for your organization, make sure 
 
 ## Subscription for Azure Information Protection
 
-**For classification, labeling, and protection**: You must have an [Azure Information Protection plan](https://azure.microsoft.com/pricing/details/information-protection/). 
+**For classification, labeling, and protection by using the Azure Information Protection client (classic or unified labeling) or scanner**: You must have an [Azure Information Protection plan](https://azure.microsoft.com/pricing/details/information-protection/). 
 
 **For protection-only**: You must have an [Office 365 plan that includes Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
