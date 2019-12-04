@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 12/03/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
