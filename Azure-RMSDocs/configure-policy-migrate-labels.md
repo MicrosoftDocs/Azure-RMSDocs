@@ -181,11 +181,11 @@ Before you select the **Copy policies (preview)** option on the **Azure Informat
 
 - Unlike label migration where subsequent changes to labels are synchronized, the copy policies action doesn't synchronize any subsequent changes to your policies or policy settings. You can repeat the copy policy action after making changes in the Azure portal, and any existing policies and their settings will be overwritten again. Or, use the Set-LabelPolicy or Set-Label cmdlets with the *AdvancedSettings* parameter from Office 365 Security & Compliance Center PowerShell.
 
-- The copy policy action verifies the following:
+- The **Copy policies** action verifies the following for each policy before it is copied:
     
-    - Users and groups assigned to the policies are currently in Azure AD. If one or more specified account is missing, the **Copy policies** action fails for all policies. Group membership is not checked.
+    - Users and groups assigned to the policy are currently in Azure AD. If one or more account is missing, the policy is not copied. Group membership is not checked.
     
-    - The Global policy contains at least one label. Because the admin labeling centers don't support label policies without labels, an empty policy will result in the **Copy policies** action failing for all policies.
+    - The Global policy contains at least one label. Because the admin labeling centers don't support label policies without labels, a Global policy without labels is not copied.
 
 - If you copy policies and then delete them from your admin labeling center, wait at least two hours before you use the **Copy policies** action again to ensure sufficient time for the deletion to replicate.
 
