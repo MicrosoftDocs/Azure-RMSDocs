@@ -183,11 +183,11 @@ Before you select the **Copy policies (preview)** option on the **Azure Informat
 
 - The copy policy action verifies the following:
     
-    - Users and groups assigned to the policies are currently in Azure AD. If one or more account is missing, the action doesn't complete.
+    - Users and groups assigned to the policies are currently in Azure AD. If one or more specified account is missing, the **Copy policies** action fails for all policies. Group membership is not checked.
     
-    - All policies contain at least one label. Because the admin labeling centers don't support label policies without labels, an empty policy will result in the action failing to complete.
+    - The Global policy contains at least one label. Because the admin labeling centers don't support label policies without labels, an empty policy will result in the **Copy policies** action failing for all policies.
 
-- If you copy policies and then delete them from your admin labeling center, wait at least two hours before you use the copy policies action again to ensure sufficient time for the deletion to replicate.
+- If you copy policies and then delete them from your admin labeling center, wait at least two hours before you use the **Copy policies** action again to ensure sufficient time for the deletion to replicate.
 
 For more information about configuring the policy settings, advanced client settings, and label settings for the Azure Information Protection unified labeling client, see [Custom configurations for the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-customizations.md) from the admin guide.
 
