@@ -185,6 +185,8 @@ The following SharePoint roles communicate with the RMS connector:
 
 To use the RMS connector, these servers running SharePoint must be running one of the following software versions:
 
+-   SharePoint Server 2019
+
 -   SharePoint Server 2016
 
 -   SharePoint Server 2013
