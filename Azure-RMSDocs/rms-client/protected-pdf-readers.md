@@ -29,7 +29,7 @@ search.appverid:
 
 If you need to open a PDF document that's been protected by Microsoft Information Protection, use the following links and information.
 
-A PDF document that has been protected is likely to contain sensitive information. For added security, the document is encrypted so that unauthorized people can't read it. To open this document, you need a reader that verifies you have been granted permissions to open the document, and then decrypt it for you.
+A PDF document that has been protected is likely to contain sensitive information. For added security, the document is encrypted so that unauthorized people can't read it. To open this document, you need a reader (sometimes called a viewer) that verifies you have been granted permissions to open the document, and then decrypt it for you.
 
 ## Install PDF readers for your device
 
