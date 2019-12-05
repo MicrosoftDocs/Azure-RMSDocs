@@ -40,7 +40,7 @@ Instructions:
 
 4. If prompted for admin approval, ask your admin to authorize the plug-in.
     
-    The admin instructions for this step are included in this announcement: [General Availability of Adobe Acrobat Reader Integration with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
+    The admin instructions for this step are included are included in the release announcement: [General Availability of Adobe Acrobat Reader Integration with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
 
 ## Next steps
 
