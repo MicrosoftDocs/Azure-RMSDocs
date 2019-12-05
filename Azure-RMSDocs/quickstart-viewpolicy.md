@@ -92,7 +92,7 @@ Your organization might already have labels because they were automatically crea
     
     ![Azure Information Protection default labels](./media/info-protect-defaultlabels.png)
     
-    If you don't see this option to generate default labels and you also don't have any labels, go to **Manage** > **Unified labeling**, and select **Activate** to move your tenant to the [unified labeling store](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform). When you see the status of **Unified labeling** display **Activated**, return to the **Classifications** > **Labels** pane.
+    If you don't see this option to generate default labels and you also don't see any labels, go to **Manage** > **Unified labeling**, and view the status of **Unified labeling**. If you see **Not activated**, select **Activate** and then return to the **Classifications** > **Labels** pane.
 
 2. If you don't yet have labels, select that option to **Generate default labels**.
 
