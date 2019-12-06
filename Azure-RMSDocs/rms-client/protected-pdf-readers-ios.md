@@ -6,7 +6,7 @@ description: Install a reader on iOS for PDF documents that are labeled for clas
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/22/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
