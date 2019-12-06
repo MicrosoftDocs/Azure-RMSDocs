@@ -5,8 +5,8 @@ title: Migrate AD RMS-Azure Information Protection - Phase 3
 description: Phase 3 of migrating from AD RMS to Azure Information Protection, covering step 7 from Migrating from AD RMS to Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 09/03/2019
+manager: rkarlin
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -78,17 +78,19 @@ This method is suitable only for Windows clients that run Office 365 apps and Of
 
     a. On one of your AD RMS servers in the cluster, start the Internet Information Services (IIS) Manager console.
 
-    b. Navigate to **Default Web Site** > **_wmcs** > **licensing** > **licensing.asmx**
+    b. Navigate to **Default Web Site** and expand **_wmcs**.
 
-    c. Right-click **licensing.asmx** > **Properties** > **Edit**
+    c. Right-click **licensing** and select **Switch to Content View**.
 
-    d. In the **Permissions for licensing.asmx** dialog box, either select **Users** if you want to set redirection for all users, or click **Add** and then specify a group that contains the users that you want to redirect.
+    d. In the details pane, right-click **license.asmx** > **Properties** > **Edit**
+
+    e. In the **Permissions for license.asmx** dialog box, either select **Users** if you want to set redirection for all users, or click **Add** and then specify a group that contains the users that you want to redirect.
     
     Even if all your users are using a version of Office that supports DNS redirection, you might prefer to initially specify a subset of users for a phased migration.
     
-    e. For your selected group, select **Deny** for the **Read & Execute** and the **Read** permission, and then click **OK** twice.
+    f. For your selected group, select **Deny** for the **Read & Execute** and the **Read** permission, and then click **OK** twice.
 
-    f. To confirm this configuration is working as expected, try to connect to the licensing.asmx file directly from a browser. You should see the following error message, which triggers the client running Office 365 apps or Office 2019 or Office 2016 to look for the SRV record:
+    g. To confirm this configuration is working as expected, try to connect to the licensing.asmx file directly from a browser. You should see the following error message, which triggers the client running Office 365 apps or Office 2019 or Office 2016 to look for the SRV record:
     
     **Error message 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists).**
 
