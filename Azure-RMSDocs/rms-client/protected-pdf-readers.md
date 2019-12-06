@@ -6,7 +6,7 @@ description: Install a reader for PDF documents that are labeled for classificat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/22/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,6 +29,8 @@ search.appverid:
 
 If you need to open a PDF document that's been protected by Microsoft Information Protection, use the following links and information.
 
+A PDF document that has been protected is likely to contain sensitive information. For added security, the document is encrypted so that unauthorized people can't read it. To open this document, you need a reader (sometimes called a viewer) that verifies you have been granted permissions to open the document, and then decrypt it for you.
+
 ## Install PDF readers for your device
 
 Select the device you're using to install a PDF reader that can open protected PDF documents. All these readers can open protected documents that adhere to the ISO standard for PDF encryption:
@@ -46,7 +48,7 @@ Currently, SharePoint Online and SharePoint on-premises use an older format for 
 
 |Operating system|Supported readers|
 |----------------|-----------------------------------|
-|Windows 10 and previous versions<br />through Windows 7 Service Pack 1|Azure Information Protection viewer<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF<br /><br />RMS sharing app|
+|Windows 10 and previous versions<br />through Windows 7 Service Pack 1|Azure Information Protection viewer<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF|
 |Android|Azure Information Protection app<br /><br />Foxit MobilePDF with RMS<br /><br />GigaTrust App for Android|
 |iOS|Azure Information Protection app<br /><br />Foxit MobilePDF with RMS<br /><br />TITUS Docs|
 
@@ -71,3 +73,9 @@ For more information, see the following blog posts:
 - [General Availability of Adobe Acrobat Reader Integration with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-Integration-with/ba-p/298396)
 
 - [Adobe reader and Microsoft Information Protection integration FAQs](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Adobe-reader-and-Microsoft-Information-Protection-integration/ba-p/482219)
+
+## Next steps
+
+Use the links from this page to install a PDF reader so that you can open protected PDF documents.
+
+If you need help using the reader after it's installed, use the instructions and documentation that accompanies that reader. For example, for the Azure Information Protection viewer for Windows, see [User Guide: View protected files with the Azure Information Protection unified labeling client](clientv2-view-use-files.md).
