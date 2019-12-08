@@ -5,7 +5,7 @@ author: cabailey
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -88,9 +88,11 @@ Your organization might already have labels because they were automatically crea
     
      ![Azure Information Protection no default labels](./media/info-protect-nodefaultlabels.png)
     
-    If you don't see this option to generate default labels, you already have labels, perhaps similar to those in the following picture, which are the default labels for Azure Information Protection:
+    If you don't see this option to generate default labels, you might already have labels, perhaps similar to those in the following picture, which are the default labels for Azure Information Protection:
     
     ![Azure Information Protection default labels](./media/info-protect-defaultlabels.png)
+    
+    If you don't see this option to generate default labels and you also don't see any labels, go to **Manage** > **Unified labeling**, and view the status of **Unified labeling**. If you see **Not activated**, select **Activate** and then return to the **Classifications** > **Labels** pane.
 
 2. If you don't yet have labels, select that option to **Generate default labels**.
 

@@ -6,7 +6,7 @@ description: Understand how the default policy for Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -44,7 +44,7 @@ You can reference the following values to return your Azure Information Protecti
 > [!IMPORTANT]
 > Starting April 2019, the default labels are not automatically created for new customers. These tenants are automatically provisioned for the unified labeling platform, so there is no need to migrate labels after you have configured them in the Azure portal.
 > 
-> For these tenants, if there aren't any sensitivity labels already created in the Office 365 Security & Compliance Center, the Microsoft 365 Security center, or the Microsoft 365 compliance center, you can create the default labels from the current default policy for Azure Information Protection. To do this, select **Generate default labels** from the **Labels** pane, and add the labels to the global policy. For detailed instructions, see the [Get started with Azure Information Protection in the Azure portal](quickstart-viewpolicy.md) quickstart.
+> For these tenants, if there aren't any sensitivity labels already created in the Office 365 Security & Compliance Center, the Microsoft 365 Security center, or the Microsoft 365 compliance center, you can create the default labels from the current default policy for Azure Information Protection. To do this, select **Generate default labels** from the **Labels** pane, and add the labels to the global policy. If you don't see the option to generate default labels, you might need to first activate unified labeling from the **Manage** > **Unified labeling** pane. For detailed instructions, see the [Get started with Azure Information Protection in the Azure portal](quickstart-viewpolicy.md) quickstart.
 
 
 ## Current default policy
