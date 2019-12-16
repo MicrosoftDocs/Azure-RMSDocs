@@ -6,7 +6,7 @@ description: Understand details and restrictions when you use customer-managed k
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 09/22/2019
+ms.date: 11/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
