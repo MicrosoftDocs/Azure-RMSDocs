@@ -58,7 +58,7 @@ These procedures are done by the administrator for Azure Key Vault.
         
         Encrypted key files for nCipher are named **key_<<em>keyAppName</em>>_<<em>keyIdentifier</em>>** locally on the server. For example, `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. You will need the **mscapi** value as the keyAppName, and your own value for the key identifier when you run the KeyTransferRemote command to create a copy of the key with reduced permissions.
         
-        When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includes the key ID. It will look similar to https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Make a note of this URL because the Azure Information Protection administrator needs it to tell the Azure Rights Management service to use this key for its tenant key.
+        When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includes the key ID. It will look similar to https\://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Make a note of this URL because the Azure Information Protection administrator needs it to tell the Azure Rights Management service to use this key for its tenant key.
 
 2. On the internet-connected workstation, in a PowerShell session, use the [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet to authorize the Azure Rights Management service principal to access the key vault that will store the Azure Information Protection tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
     
