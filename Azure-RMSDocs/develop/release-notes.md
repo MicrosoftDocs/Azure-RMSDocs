@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: What's new and release notes
+title: Rrelease notes for the Rights Management Services SDK v4.x
 description: Outlines important changes and features in this and previous versions.
 author: msmbaldwin
 ms.author: mbaldwin
@@ -20,7 +20,7 @@ ms.suite: ems
 
 ## What's new
 
-This topic outlines important changes and features in this new version of the RMS  SDK v4.x.
+This topic outlines important changes and features in this new version of the RMS SDK v4.x.
 
 -   [New for July 2017](#new-for-july-2017)
 -   [October 2016 update](#october-2016-update)
