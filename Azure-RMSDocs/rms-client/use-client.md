@@ -3,9 +3,9 @@
 
 title: The client for Azure Information Protection - AIP
 description: Microsoft Azure Information Protection provides a client-server solution that helps to protect an organization's data. The client (the Azure Information Protection client or the Rights Management client) is integrated with applications that you run on computers and mobile devices.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
