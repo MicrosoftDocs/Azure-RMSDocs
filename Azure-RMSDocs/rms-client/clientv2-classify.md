@@ -2,10 +2,10 @@
 # required metadata
 
 title: Classify using the Azure Information Protection unified labeling client
-description: Instructions how to classify your documents and emails when you use the Azure Information Protection unified labeling client for Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+description: Instructions about how to classify your documents and emails when you use the Azure Information Protection unified labeling client for Windows.
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
