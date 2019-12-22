@@ -3,8 +3,8 @@
 
 title: Azure Information Protection unified labeling client for Windows
 description: Information resources for the Azure Information Protection unified labeling client for Windows.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: barbkess
 ms.date: 10/23/2019
 ms.topic: conceptual

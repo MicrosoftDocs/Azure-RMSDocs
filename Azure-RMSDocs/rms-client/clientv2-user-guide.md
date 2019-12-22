@@ -2,10 +2,10 @@
 # required metadata
 
 title: Azure Information Protection user guide - unified labeling
-description: The Azure Information Protection unified labeling client for Windows helps you keep important documents and emails safe from people who shouldn't see them, even if your email is forwarded or your document is saved to another location. 
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+description: Azure Information Protection unified labeling client for Windows helps you keep important documents and emails safe from people who shouldn't see them, even if your email is forwarded or your document is saved to another location. 
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
