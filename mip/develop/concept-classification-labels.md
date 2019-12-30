@@ -4,7 +4,6 @@ description: This article will help you understand how labels are used for data 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ---

@@ -4,7 +4,6 @@ description: This article will help you understand how to use PowerShell to acqu
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 02/04/2019
 ms.author: mbaldwin
 ---

@@ -4,7 +4,6 @@ description: This article will help you understand the core SDK concept called M
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ---
