@@ -4,7 +4,6 @@ description: A quickstart showing you how to configure the MIP SDK to use Active
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 04/17/2019
 ms.author: tommos
 #Customer intent: As a an application developer, I want to learn how to use the MIP SDK to connect to AD RMS so I can consume and protect using my on-premises service.
