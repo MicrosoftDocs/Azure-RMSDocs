@@ -3,8 +3,8 @@
 
 title: Remove Azure Information Protection labels
 description: Instructions to remove classification labels and protection from files that have been labeled by Azure Information Protection or protected by Rights Management.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: barbkess
 ms.date: 11/30/2019
 ms.topic: conceptual

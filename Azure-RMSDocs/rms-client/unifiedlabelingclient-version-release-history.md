@@ -3,8 +3,8 @@
 
 title: Azure Information Protection unified labeling client - Version history & support policy
 description: See the release information for the Azure Information Protection unified labeling client for Windows. 
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
 ms.date: 11/02/2019
 ms.topic: conceptual
@@ -61,7 +61,7 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md##compare-the-labeling-clients-for-windows-computers).
+This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
 ## Version 2.5.33.0
 
@@ -128,7 +128,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 ## Version 2.2.21.0
 
-**Released**: 09/03/2020
+**Released**: 09/03/2019
 
 Supported through 04/23/2020
 

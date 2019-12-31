@@ -3,9 +3,9 @@
 
 title: Protected PDF readers for Microsoft Information Protection
 description: Install a reader for PDF documents that are labeled for classification and protection
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
