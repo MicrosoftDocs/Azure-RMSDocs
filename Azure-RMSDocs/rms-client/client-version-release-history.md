@@ -3,10 +3,10 @@
 
 title: Azure Information Protection client - Version history & support policy
 description: See what's new or changed in a release of the Azure Information Protection client for Windows, and understand the lifecycle policy for support. 
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 10/23/2019
+ms.date: 1/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,11 +26,15 @@ ms.custom: admin
 
 # Azure Information Protection client: Version release history and support policy
 
+> [!NOTE] 
+>Product deprecation notice for **Azure Information Protection client (classic)** and **Label Management** in Azure portal.<br>
+>To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. The move to Unified Labeling enables Azure Information Protection customers to enact a comprehensive information protection strategy seamlessly across Office applications on all platforms as well as non-Microsoft productivity applications. Learn more about all of the planned changes in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. 
+
 
 You can download the latest general availability release version and the current preview version (if available) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
@@ -39,7 +43,7 @@ After a short delay of typically a couple of weeks, the latest general availabil
 For more information, see [Upgrading and maintaining the Azure Information Protection client](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
 > [!TIP]
-> Interested in using the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center? When you download and then install the unified labeling client from the Microsoft Download Center, you can upgrade your Azure Information Protection client to this [unified labeling client](unifiedlabelingclient-version-release-history.md).
+> Interested in using the Azure Information Protection unified labeling client because your labels are published from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center? When you download and then install the unified labeling client from the Microsoft Download Center, you can upgrade your Azure Information Protection client to the [unified labeling client](unifiedlabelingclient-version-release-history.md).
 
 ### Servicing information and timelines
 
@@ -77,6 +81,7 @@ Use the following information to see what’s new or changed for a supported rel
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+
 
 ## Version 1.54.33.0
 

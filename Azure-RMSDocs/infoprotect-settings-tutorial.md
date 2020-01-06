@@ -3,10 +3,10 @@
 
 title: Tutorial - Use Azure Information Protection policy settings to classify data
 description: An introduction tutorial that steps you through configuring Azure Information Protection policy settings to help classify your organization's documents and emails.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -34,6 +34,9 @@ In this tutorial, you learn how to:
 > [!div class="checklist"]
 > * Configure policy settings that work together
 > * See your settings in action
+
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Rather than relying on users to manually label their documents and emails, you can use Azure Information Protection policy settings to:
 

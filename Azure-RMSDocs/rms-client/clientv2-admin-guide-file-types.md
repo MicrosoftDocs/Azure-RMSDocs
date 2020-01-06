@@ -3,9 +3,9 @@
 
 title: File types supported - Azure Information Protection unified labeling client
 description: Technical details about supported file types, file name extensions, and levels of protection for admins who are are responsible for the Azure Information Protection unified labeling client for Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

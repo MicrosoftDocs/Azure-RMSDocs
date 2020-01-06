@@ -3,9 +3,9 @@
 
 title: View protected files with the Azure Information Protection viewer
 description: Instructions to view and use a protected file that requires you to have the Azure Information Protection viewer installed.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
