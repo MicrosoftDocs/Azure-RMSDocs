@@ -3,10 +3,10 @@
 
 title: Tutorial - Use Azure Information Protection to control oversharing - AIP
 description: An introduction tutorial to configure and see in action advanced client settings for the Azure Information Protection client to warn, prompt for justification, or block messages from being sent from Outlook.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -34,6 +34,9 @@ In this tutorial, you learn how to:
 > * Configure settings that implement warn, justify, or block popup messages in Outlook
 > * See your settings in action
 > * Review the logged user messages and actions in the Event Log 
+
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Email is one of the most common methods by which users inappropriately share information—whether it's in the email message itself or in attachments. You might use data loss prevention (DLP) solutions that can identify known sensitive information and help prevent it from leaving your organization boundaries. However, you can also use the Azure Information Protection client with some advanced client settings to help prevent oversharing and also educate your users with interactive messages that provide feedback in real time.
 
