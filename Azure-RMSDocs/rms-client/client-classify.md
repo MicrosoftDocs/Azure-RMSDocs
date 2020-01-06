@@ -3,9 +3,9 @@
 
 title: Classify - Azure Information Protection client
 description: Instructions how to classify your documents and emails when you use the Azure Information Protection client for Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

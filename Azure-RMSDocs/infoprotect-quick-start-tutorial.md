@@ -3,10 +3,10 @@
 
 title: Tutorial - Edit the Azure Information Protection policy - AIP
 description: An introduction tutorial that edits the Azure Information Protection policy for your organization, which should take you about 15 minutes to complete.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -36,6 +36,9 @@ In this tutorial, you learn how to:
 > * Create a new label 
 > * Configure the label for visual markings, recommended classification, and protection
 > * See your settings and labels in action
+
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 As a result of this configuration, users see a default label applied when they create a new document or email. However, they are prompted to apply the new label when credit card information is detected. When the new label is applied, the content is reclassified and protected, with a corresponding footer and watermark. 
 
