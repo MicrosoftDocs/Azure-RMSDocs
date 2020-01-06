@@ -3,9 +3,9 @@
 
 title: Azure Information Protection unified labeling client files and usage logging
 description: Information about the client files and usage logging for the Azure Information Protection unified labeling client for Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

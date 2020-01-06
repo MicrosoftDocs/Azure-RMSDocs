@@ -3,9 +3,9 @@
 
 title: Install the Azure Information Protection unified labeling client for users
 description: Instructions and information for admins to deploy the Azure Information Protection unified labeling client for Windows on enterprise networks.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
