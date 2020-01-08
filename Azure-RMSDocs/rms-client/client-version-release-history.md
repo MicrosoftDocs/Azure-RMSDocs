@@ -26,9 +26,6 @@ ms.custom: admin
 
 # Azure Information Protection client: Version release history and support policy
 
-> [!NOTE] 
->Product deprecation notice for **Azure Information Protection client (classic)** and **Label Management** in Azure portal.<br>
->To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. The move to Unified Labeling enables Azure Information Protection customers to enact a comprehensive information protection strategy seamlessly across Office applications on all platforms as well as non-Microsoft productivity applications. Learn more about all of the planned changes in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
