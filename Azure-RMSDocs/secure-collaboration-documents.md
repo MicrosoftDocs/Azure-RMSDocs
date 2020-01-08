@@ -48,8 +48,6 @@ As an administrator, you can configure an Azure Information Protection label to 
 
 ## Example configuration for a label to apply protection to support internal and external collaboration
 
-> [!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset), and use the [instructions in Microsoft 365 Security and Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) to complete these steps. 
 
 This example walks through configuring an existing label to apply protection so that users from your organization can collaborate on documents with all users from another organization that has Office 365 or Azure AD, a group from a different organization that has Office 365 or Azure AD, and a user who doesn't have an account in Azure AD and instead will use their Gmail email address.
 
