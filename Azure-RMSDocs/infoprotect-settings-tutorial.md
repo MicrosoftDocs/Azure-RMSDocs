@@ -35,8 +35,6 @@ In this tutorial, you learn how to:
 > * Configure policy settings that work together
 > * See your settings in action
 
-> [!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Rather than relying on users to manually label their documents and emails, you can use Azure Information Protection policy settings to:
 
