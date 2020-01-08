@@ -35,8 +35,6 @@ In this tutorial, you learn how to:
 > * See your settings in action
 > * Review the logged user messages and actions in the Event Log 
 
-> [!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Email is one of the most common methods by which users inappropriately share information—whether it's in the email message itself or in attachments. You might use data loss prevention (DLP) solutions that can identify known sensitive information and help prevent it from leaving your organization boundaries. However, you can also use the Azure Information Protection client with some advanced client settings to help prevent oversharing and also educate your users with interactive messages that provide feedback in real time.
 
