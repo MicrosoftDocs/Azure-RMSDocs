@@ -29,14 +29,12 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-When you set Rights Management protection on files or emails by using Azure Information Protection and you do not use a template, you must configure the usage rights yourself. In addition, when you configure templates or labels for protection, you select the usage rights that will then be automatically applied when the template or label is selected by users, administrators, or configured services. For example, in the Azure portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights.
+When you configure sensitivity labels or protection templates for encryption, you select the usage rights that will then be automatically applied when the label or template is selected by users, administrators, or configured services. For example, in the Azure portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights. Alternatively users might select and apply the usage rights themselves.
 
 Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are designed to be interpreted by applications. However, applications might vary in how they implement the rights so always consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy in production.
 
 > [!NOTE] 
 > For completeness, this article includes values from the Azure classic portal, which was retired January 08, 2018.
->
-> To help you migrate to the new portal, see [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
 
 ## Usage rights and descriptions
 The following table lists and describes the usage rights that Rights Management supports, and how they are used and interpreted. They are listed by their **common name**, which is typically how you might see the usage right displayed or referenced, as a more friendly version of the single-word value that is used in the code (the **Encoding in policy** value). 
