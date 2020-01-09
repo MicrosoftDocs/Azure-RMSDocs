@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/07/2020
+ms.date: 1/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -121,6 +121,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |Revoke protected documents:| **Yes** | No | No |
 |Protection-only mode (no labels):| **Yes** | No | No |
 |Support for account switching:| No | No | **Yes** |
+|Support for Remote Desktop Services:| **Yes** | **Yes** | **Yes** |
 |Support for AD RMS:| **Yes** | No <sup>8</sup> | No |
 
 Footnotes:
