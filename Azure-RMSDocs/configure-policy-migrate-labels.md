@@ -200,7 +200,7 @@ To confirm whether the clients and services you use support unified labeling, re
 
 - The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md). For a comparison of this client with the Azure Information Protection client (classic), see [Compare the labeling clients for Windows computers](./rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-- Apps from Office that are in different stages of availability. For more information, see [What sensitivity label capabilities are supported in Office today?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) from the Office documentation.
+- Apps from Office that are in different stages of availability. For more information, see [Support for sensitivity label capabilities in apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) from the Office documentation.
     
 - Apps from software vendors and developers that use the [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview).
 
@@ -228,8 +228,12 @@ To confirm whether the clients and services you use support unified labeling, re
 
 ## Next steps
 
-For additional guidance and tips from our Customer Experience team, see the following blog post: [Understanding Unified Labeling Migration](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185).
+For additional guidance and tips from our Customer Experience team, see the following resources:
 
-For more information about your migrated labels that can now be configured and published in one of the admin centers, see [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+- Blog post: [Understanding Unified Labeling Migration](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)
+
+- Webinar: [AIP Unified Labeling webinar recording](https://aka.ms/AIP-UL-Webinar-Join1)
+
+For more information about your migrated labels that can now be configured and published in one of the labeling admin centers, see [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 If you haven't already done so, install the Azure Information Protection unified labeling client. For release information, an admin guide, and user guide, see [Azure Information Protection unified labeling client for Windows](./rms-client/aip-clientv2.md).
