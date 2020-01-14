@@ -43,7 +43,7 @@ When you use the Azure Rights Management service from Azure Information Protecti
 |Exchange on-premises with the Rights Management connector<br /><br />Applicable for transport rules and the Outlook web app|Automatically refreshed - no additional steps required. However, the Outlook web app caches the UI for a day.|
 |Office 2019 for Mac and Office 2016 for Mac|Automatically refreshed when you open protected content. To force a refresh, see the following section, [Office 2019 for Mac and Office 2016 for Mac: How to force a refresh for templates](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |RMS sharing app for Mac computers|Automatically refreshed - no additional steps required.|
-|Office apps that [support the Sensitivity feature](https://support.office.com/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US&ui=en-US&rs=en-US#bkmk_whereavailable)|These clients do not download templates but access them online - no additional steps required.|
+|Office 365 ProPlus apps with [built-in labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|This built-in labeling client doesn't download templates but accesses them online - no additional steps required.|
 
 When client applications need to download templates (initially or refreshed for changes), be prepared to wait up to 30 minutes before the download is complete and the new or updated templates are fully operational. The actual time will vary, according to factors such as the size and complexity of the template configuration, and the network connectivity. 
 
