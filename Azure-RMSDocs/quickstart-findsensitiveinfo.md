@@ -1,11 +1,10 @@
 ---
 title: Quickstart - Find sensitive info with the Azure Information Protection scanner
 description: Use the Azure Information Protection scanner to find what sensitive information you have in files stored on-premises.
-author: cabailey
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/12/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/13/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,14 +26,14 @@ ms.subservice: aiplabels
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-In this quickstart, you'll install and configure the Azure Information Protection scanner to find what sensitive information you have in files that are stored in an on-premises data store. For example, a local folder, network share, or SharePoint Server.
+In this quickstart, you'll permission SharePoint to allow scanning, and install and configure the Azure Information Protection scanner to find what sensitive information you have in files that are stored in an on-premises data store. For example, a local folder, network share, or SharePoint Server.
 
 > [!NOTE]
 > You can use this quickstart with the current general availability version of the Azure Information Protection client (classic), or the current general availability version of the Azure Information Protection unified labeling client that includes a preview version of the scanner.
 >  
 > Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 
-You can finish this configuration in less than 10 minutes.
+You can finish this configuration in less than 15 minutes.
 
 ## Prerequisites
 
@@ -58,6 +57,8 @@ To complete this quickstart, you need:
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 
+5. SharePoint policy permissions access if you choose to permissions a SharePoint scan.
+
 ## Prepare a test folder and file
 
 For an initial test to confirm that the scanner is working:
@@ -65,6 +66,29 @@ For an initial test to confirm that the scanner is working:
 1. Create a local folder on your computer. For example, **TestScanner** on your local C drive.
 
 2. Create and save a Word document in that folder, which has the text **Credit card: 4242-4242-4242-4242**.
+
+## Permission users to scan SharePoint repositories
+
+You can use the scanner across SharePoint repositories by specifying the site url and Azure Information Protection will discover all sites under that url and scan them.
+
+To enable scans across repositories, add the following SharePoint permissions for the user you intend to use to scan:
+
+1. Open SharePoint, and select **Permission Policy** and select **Add Permission Policy Level**. 
+
+    ![Create new permissions policy level for a specific user](./media/aip-quick-set-sp-permissions.png)
+
+
+2. Under **Site Collection Permissions** select the **Site Collector Auditor** option.   
+
+3. Under **Permissions**, select **Grant** for the **View Application Pages** option and **Save** your changes.  
+
+    ![Select Site Collector Auditor and permissions options for a specific user](./media/aip-quick-set-site-permissions.png)
+
+4. After confirming your changes, click **OK** in the **Policy for Web Application** notice that opens,   
+
+5. In the **Add Users** page, add the user you intend to use for scanning in the **Choose users** field. Under **Choose Permissions**, select the **site collection** option and then click **Finish** to apply the permissions you created to the user you added or selected. 
+
+    ![Add user to new permissions options](./media/aip-quick-set-user-permissions.png)
 
 ## Configure a profile for the scanner
 

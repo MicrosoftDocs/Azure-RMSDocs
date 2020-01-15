@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/05/2020
+ms.date: 1/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -52,6 +52,7 @@ Preview versions should not be deployed for end users on production networks. In
 
 |Client version|Date released|
 |--------------|-------------|
+|1.48.204.0|04/16/2019|
 |1.41.51.0|11/27/2018|
 |1.37.19.0|09/17/2018|
 |1.29.5.0|06/26/2018|
@@ -79,6 +80,23 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
+## Version 1.54.59.0
+
+**Released**: 1/29/2020
+
+**Fixes**:
+
+- Issue where files protected by IQP displayed **recover** and/or **save as** options after protection was removed are resolved. 
+
+- Numerous product feature tooltip texts were improved for clarity and ease of understanding. 
+
+- Issues surrounding client stability when working with protected PDF files is resolved. 
+
+- Decrypted temp files are no longer accessible to users from the temp folder. 
+
+- Protection labels are now removed as expected if the label is deleted on the email during the email creation process. 
+
+This release also includes general fixes for stability and performance.
 
 ## Version 1.54.33.0
 
@@ -111,91 +129,6 @@ This version includes the MSIPC version 1.0.3889.0419 of the RMS client.
 - In the following scenario a user no longer sees in the label tooltip that the label was automatically set by them: A user receives a protected email with a document attached that isn't labeled, but automatically protected. When the user from the same organization as the sender opens the document, the corresponding label for the protection settings is applied to the document.
 
 - The minimum [usage right](../configure-usage-rights.md#usage-rights-and-descriptions) to run the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet is now **Save As, Export** (EXPORT) rather than **Copy** (EXTRACT).
-
-## Version 1.48.204.0
-
-**Released**: 04/16/2019
-
-Supported through 01/15/2020
-
-This version includes the MSIPC version 1.0.3592.627 of the RMS client.
-
-**New features:**
-
-- The Azure Information Protection scanner is now configured from the Azure portal, rather than by using PowerShell.
-    
-    If you are upgrading from a general availability version of the scanner, the upgrade process is different from previous versions, so be sure to read [Upgrading the Azure Information Protection scanner](client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
-
-- The scanner now supports multiple configuration databases on the same SQL server instance when you specify a profile name.
-
-- Support for the following sensitive information types that help to identify credentials in documents and emails:
-    - Azure Service Bus Connection String
-    - Azure IoT Connection String
-    - Azure Storage Account
-    - Azure IAAS Database Connection String and Azure SQL Connection String
-    - Azure Redis Cache Connection String
-    - Azure SAS
-    - SQL Server Connection String
-    - Azure DocumentDB Auth Key
-    - Azure Publish Setting Password
-    - Azure Storage Account Key (Generic)
-
-- Endpoint discovery support for [Azure Information Protection analytics](../reports-aip.md), to report sensitive information found when users first save an Office document (using desktop apps for Word, Excel, and PowerPoint):
-    - To discover this information, the documents do not need to be labeled.
-    - Sensitive information is identified by predefined and custom information types.
-    - If you don't want the sensitive information types found to be sent to Azure Information Protection analytics, you can disable endpoint discovery with an [advanced client setting](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics).
-
-- New advanced client settings that implement pop-up messages in Outlook that can warn, justify, or block emails being sent. [More information](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    
-    Note that if you configured the advanced client property of OutlookCollaborationTrustedDomains for the preview version, this setting is now replaced by three new settings, so that domains can be exempt per action: OutlookWarnTrustedDomains, OutlookJustifyTrustedDomains, and OutlookBlockTrustedDomains.
-
-- If you label and protect files by using the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) cmdlet, you can use the *EnableTracking* parameter to register the file with the document tracking site. [More information](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
-
-- A new advanced client setting for [Azure Information Protection analytics](../reports-aip.md), to prevent sending information type matches for a subset of users when you have selected the checkbox in the Azure portal that enables deeper analytics into your sensitive data. This setting is applicable to the client and the scanner. [More information](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-
-- New advanced client setting that's applicable only when you configure the policy setting to not display custom permissions: When there's a file that's protected with custom permissions, display the custom permissions option in File Explorer so that users can see and change them (if they have permissions to change the protection settings). [More information](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
-
-
-**Fixes**:
-
-- Paths and file names do not display question marks (**?**) instead of non-ASCII characters in Azure Information Protection analytics when the sending operating system locale is English.
-
-- New visual markings are consistently applied when a user adds new sections to a Word document, and then relabels the document.
-
-- The Azure Information Protection client correctly removes protection from a PDF document that was protected by the Rights Management sharing application.
-
-- Sublabels are correctly applied by PowerShell and the scanner when the parent label is configured for user-defined permissions.
-
-- The Azure Information Protection client correctly displays labels that have been applied by [clients that support unified labeling](../configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
-
-- Documents open correctly in Office without a recovery message after protection has been removed by File Explorer and right-click, PowerShell, and the scanner.
-
-- When you use the advanced client setting to set a [default label for Outlook](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook), you can apply a parent label that has sublabels when all those sublabels are disabled for the user.
-
-- When you use the [policy setting](../configure-policy-settings.md) **For email messages with attachments, apply a label that matches the highest classification of those attachments** and the label with the highest classification is configured for user-defined permissions, the outcome previously was that the label was applied to the email, but the protection was not. Now:
-    - When the label's user-defined permissions include Outlook (Do Not Forward): Apply that label and its Do Not Forward protection to the email.
-    - When the label's user-defined permissions are just for Word, Excel, PowerPoint, and File Explorer: Do not apply the label and do not apply any protection to the email.
-
-**Additional changes:**
-
-- The following sensitive information types are [no longer supported](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) for labels that you configure for recommended or automatic classification:
-    - EU Phone Number
-    - EU GPS Coordinates
-
-- Because the Azure Information Protections scanner is configured from the Azure portal, the following cmdlets are now deprecated and can't be used to configure data repositories or the file types list:
-    - Add-AIPScannerRepository
-    - Add-AIPScannerScannedFileTypes
-    - Get-AIPScannerRepository
-    - Remove-AIPScannerRepository
-    - Remove-AIPScannerScannedFileTypes
-    - Set-AIPScannerRepository
-    - Set-AIPScannerScannedFileTypes
-
-- A new PowerShell cmdlet, [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration), for scenarios where the Azure Information Protection scanner cannot download its configuration from the Azure portal.
-
-- The Azure Information Protection scanner no longer excludes .zip files by default. To inspect and label .zip files, see the [To inspect .zip files](client-admin-guide-file-types.md#to-inspect-zip-files) section of the admin guide.
-
-- The [policy setting](../configure-policy-settings.md) **Users must provide justification to set a lower classification label, remove a label, or remove protection** no longer applies to the scanner. The scanner performs these actions when you configure the setting **Relabel files** to **On** in the scanner profile, and then select the **Allow label downgrade** checkbox.
 
 ## Next steps
 

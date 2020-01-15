@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/02/2019
+ms.date: 1/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Azure Information Protection unified labeling client - Version release history and support policy
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -47,6 +47,7 @@ Preview versions should not be deployed for end users on production networks. In
 
 |Client version|Date released|
 |--------------|-------------|
+|2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
 
 The date format used on this page is *month/day/year*.
@@ -62,6 +63,42 @@ Use the following information to see what’s new or changed for a supported rel
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
+
+## Version 2.6.101.0
+
+**Released** 1/15/2020
+
+**New features:**
+
+- Modification of [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) cmdlet **Set-AIPFileLabel** to enables removal of protection from PST, rar, 7zip and MSG files. 
+
+- Added ability for Azure Information Protection administrators to control when .pfile extensions are used for files. Learn more about [changing protected file types](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#change-which-file-types-to-protect). 
+
+- Dynamic visual marking support added for applications and variables. Learn more about how to [configure labels for visual markings](https://docs.microsoft.com/azure/information-protection/configure-policy-markings). 
+
+- Improvements made to [customizable policy tips for automatic and recommended labels](use-client.md).   
+
+- Support added for [offline labeling capability](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#support-for-disconnected-computers) with Office apps in the unified labeling client.
+
+- New **WordShapeNameToRemove** advanced property enables removal of content marking in Word documents made by third party applications. Learn more about how to [identify existing shape names and define them for removal using **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions). 
+
+- [Scanner](../deploy-aip-scanner.md) related features:
+    - [Easier SharePoint on-premises and subsite discovery](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories). Setting each specific site is no longer required. 
+    - Advanced property for [SQL chunk sizing](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server) added.
+    - Administrators now have the ability to [stop existing scans and perform a re-scan](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan) if a change was made to the default label.
+    - By default, scanner now sets minimal telemetry for faster scans and reduced log size and information types are now cached in the database. Learn more about [scanner optimization](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner). 
+
+**Fixes:**
+
+- Scanner now supports separate deployments for database and the service, while **Sysadmin** rights are needed only for database deployment. 
+- In instances where users attempted unsuccessfully to open protected TIFF files, and TIFF files created by RightFax, the TIFF files now open and remain stable as expected.  
+- Previous corruptions of protected txt and PDF files are resolved.
+- Inconsistent labeling between **Automatic** and **Manual** in Log Analytics was corrected. 
+- Unexpected inheritance issues identified between new emails and a user's last opened email is now resolved.  
+- Protection of .msg files as .msg.pfiles now works as expected. 
+- Co-owner permissions added from Office user defined settings is now applied as expected. 
+- When entering permissions downgrade justification, text can no longer be entered when other options are already selected. 
+
 
 ## Version 2.5.33.0
 
@@ -202,14 +239,6 @@ Supported through 02/06/2020
 - When automatic labeling is configured, the label applies the first time a document is saved.
 
 - Default labeling supports sublabels.
-
-## Version 2.0.779.0
-
-**Released**: 05/01/2019
-
-Supported through 02/15/2020
-
-This release has a single fix to resolve a race-condition issue where sometimes, no labels display in Office apps or File Explorer.
 
 ## Next steps
 
