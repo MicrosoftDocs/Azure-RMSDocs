@@ -25,7 +25,7 @@ search.appverid:
 
 # The client side of Azure Information Protection
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 
 Azure Information Protection provides a client-server solution that helps to protect an organization's documents and emails:
@@ -106,23 +106,23 @@ To compare the Office built-in sensitivity labeling features across different op
 |Custom permissions set independently from a label:| **Yes** | **Yes** <sup>3</sup>| No |
 |Information Protection bar in Office apps:| **Yes** | **Yes**| No |
 |Visual markings as a label action (header, footer, watermark):| **Yes** | **Yes** | **Yes**|
-|Per app visual markings:| **Yes** | No | No |
-|Dynamic visual markings with variables:| **Yes** | No | No |
+|Per app visual markings:| **Yes** | **Yes* | No |
+|Dynamic visual markings with variables:| **Yes** | **** | No |
 |Label with File Explorer:| **Yes** | **Yes** | No |
 |A viewer for protected files (text, images, PDF, .pfile):| **Yes** | **Yes** | No|
 |PPDF support for applying labels:| **Yes** | No | No |
 |PowerShell labeling cmdlets:| **Yes** | **Yes** <sup>4</sup> | No |
 |Offline support for protection actions:| **Yes** | **Yes** <sup>5</sup> | **Yes** |
-|Manual policy file management for disconnected computers:| **Yes** |**Yes** <sup>6</sup>| No |
+|Manual policy file management for disconnected computers:| **Yes** |**Yes**| No |
 |HYOK support:| **Yes** | No | No |
 |Usage logging in Event Viewer:| **Yes** | No |No |
 |Display the Do Not Forward button in Outlook:| **Yes** | No | No |
-|Track protected documented:| **Yes** | **Yes** <sup>7</sup> | No |
+|Track protected documented:| **Yes** | **Yes** <sup>6</sup> | No |
 |Revoke protected documents:| **Yes** | No | No |
 |Protection-only mode (no labels):| **Yes** | No | No |
 |Support for account switching:| No | No | **Yes** |
 |Support for Remote Desktop Services:| **Yes** | **Yes** | **Yes** |
-|Support for AD RMS:| **Yes** | No <sup>8</sup> | No |
+|Support for AD RMS:| **Yes** | No <sup>7</sup> | No |
 
 Footnotes:
 
@@ -136,18 +136,15 @@ These settings, and many more are supported as [advanced settings that you confi
 Supported by File Explorer and PowerShell. In Office apps, users can select **File Info** > **Protect Document** > **Restrict Access**.
 
 <sup>4</sup>
-No support to remove protection from container files (zip, .rar, .7z, .msg, and .pst).
+No support to remove protection from container files (zip).
 
 <sup>5</sup>
 For File Explorer and PowerShell commands, the user must be connected to the internet to protect files.
 
 <sup>6</sup>
-Supported for labeling with File Explorer, PowerShell, and the scanner. Not supported for labeling in Office apps.
-
-<sup>7</sup>
 The document tracking site that's supported by the classic client isn't supported by the unified labeling client. However, without the need to first register the document for tracking, administrators can use [central reporting](../reports-aip.md) to identify whether protected documented are accessed from Windows computers, and whether access was granted or denied. 
 
-<sup>8</sup>
+<sup>7</sup>
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 
