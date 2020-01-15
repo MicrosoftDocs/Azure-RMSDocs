@@ -6,7 +6,7 @@ description: View emails or files with the Azure Information Protection app for 
 author: rkarlin
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

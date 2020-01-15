@@ -43,7 +43,7 @@ When you configure these permissions, you can specify which users they are for:
 
 - **For any authenticated user**: This option is suitable for when you don't need to control who accesses the protected document, providing the user can be authenticated. The authentication can be by Azure AD, by using a Microsoft account, or even a federated social provider or one-time passcode when the content is protected by the new capabilities of Office 365 Message Encryption. 
 
-As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following sections provide an example walkthrough to protect a document that supports secure collaboration with internal and external users.
+As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following sections provide an example walk through to protect a document that supports secure collaboration with internal and external users.
 
 
 ## Example configuration for a label to apply protection to support internal and external collaboration

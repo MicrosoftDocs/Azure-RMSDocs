@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/24/2019
+ms.date: 1/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Admin Guide: Custom configurations for the Azure Information Protection unified labeling client
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -290,7 +290,43 @@ Example PowerShell command, where your label policy is named "Global":
 
 This configuration uses policy [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-The settings let you remove or replace text-based headers or footers from documents when those visual markings have been applied by another labeling solution. For example, the old footer contains the name of an old label that you have now migrated to sensitivity labels to use a new label name and its own footer.
+There are two methods that can used to remove classifications from other labeling solutions. The first method removes any shape from Word documents where the shape name matches the name as defined in the advanced property **WordShapeNameToRemove**, the second method lets you remove or replace text-based headers or footers from Word, Excel and PowerPoint documents as defined in the **RemoveExternalContentMarkingInApp** advanced property. 
+
+### Use the WordShapeNameToRemove advanced property (preview)
+
+*The **WordShapeNameToRemove** advanced property is supported from version 2.6.101.0 and above*
+
+This setting lets you remove or replace shape based labels from Word documents when those visual markings have been applied by another labeling solution. For example, the shape contains the name of an old label that you have now migrated to sensitivity labels to use a new label name and its own shape.
+
+To use this advanced property, you'll need to find the shape name in the Word document and then define them in the **WordShapeNameToRemove** advanced property list of shapes. The service will remove any shape in Word that starts with a name defined in list of shapes in this advanced property.
+
+Avoid removing shapes that contain the text that you wish to ignore, by defining the name of all shapes to remove and  avoid checking the text in all shapes, which is a resource-intensive process.
+
+If you do not specify Word shapes in this additional advanced property setting, and Word is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
+
+To find the name of the shape that you're using and wish to exclude:
+
+1. In Word, display the **Selection** pane: **Home** tab > **Editing** group > **Select** option > **Selection Pane**.
+
+2. Select the shape on the page that you wish to mark for removal. The name of the shape you mark is now highlighted in the **Selection** pane.
+
+Use the name of the shape to specify a string value for the ****WordShapeNameToRemove**** key. 
+
+Example: The shape name is **dc**. To remove the shape with this name, you specify the value: `dc`.
+
+- Key: **WordShapeNameToRemove**
+
+- Value: \<**Word shape name**> 
+
+Example PowerShell command, where your label policy is named "Global":
+
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+
+When you have more than one Word shape to remove, specify as many values as you have shapes to remove.
+
+
+### Use the RemoveExternalContentMarkingInApp advanced property
+This setting lets you remove or replace text-based headers or footers from documents when those visual markings have been applied by another labeling solution. For example, the old footer contains the name of an old label that you have now migrated to sensitivity labels to use a new label name and its own footer.
 
 When the unified labeling client gets this configuration in its policy, the old headers and footers are removed or replaced when the document is opened in the Office app and any sensitivity label is applied to the document.
 
@@ -1013,7 +1049,7 @@ Additionally:
 ## Support for disconnected computers
 
 > [!IMPORTANT]
-> Disconnected computers are supported for the following labeling scenarios only: File Explorer, PowerShell, and the scanner. To label documents in your Office apps, you must have connectivity to the internet.
+> Disconnected computers are supported for the following labeling scenarios: File Explorer, PowerShell, your Office apps and the scanner.
 
 By default, the Azure Information Protection unified labeling client automatically tries to connect to the internet to download the labels and label policy settings from your labeling management center: The Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center. If you have computers that cannot connect to the internet for a period of time, you can export and copy files that manually manages the policy for the unified labeling client.
 
