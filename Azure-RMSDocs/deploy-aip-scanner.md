@@ -161,9 +161,19 @@ If you cannot be granted the Sysadmin role even temporarily, you must ask a user
 
 Typically, you will use the same user account to install and configure the scanner. But if you use different accounts, they both require the db_owner role for the scanner configuration database:
 
-- If you do not specify your own profile name for the scanner (classic client only), the configuration database is named **AIPScanner_\<computer_name>**. 
+- For the classic client:
 
-- If you specify your own profile name, the configuration database is named **AIPScanner_\<profile_name>** (classic client) or **AIPScannerUL_\<profile_name>** (unified labeling client).
+    If you do not specify your own profile name for the scanner , the configuration database is named **AIPScanner_\<computer_name>**(classic client only). Continue to the following step of creating a user and granting db_owner rights on the database. 
+
+- For the unified labeling client:
+    
+    If you specify your own profile name, the configuration database is named **AIPScannerUL_<profile_name>** (unified labeling client).
+    
+    Populate the database using the following script: 
+
+
+
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END 
 
 To create a user and grant db_owner rights on this database, ask the Sysadmin to run the following SQL script twice. The first time, for the service account that runs the scanner, and the second time for you to install and manage the scanner. Before running the script:
 1. Replace *domain\user* with the domain name and user account name of the service account or user account.
@@ -409,6 +419,16 @@ If you are following these instructions, the scanner runs one time and in the re
     Then check the reports to see details of which files were labeled, what classification was applied to each file, and whether protection was applied to them. Or, use the Azure portal to more easily see this information.
 
 Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it automatically starts a new cycle so that any new and changed files are discovered.
+
+## Stop a scan 
+
+To stop a scan you previously started before it is complete, use the **Stop scan** option from the interface, or
+ 
+![Stop a scan for the Azure Information Protection scanner](./media/scanner-stop-scan.png)
+    
+Alternatively, you can run the following command in your PowerShell session:
+    
+        Stop-AIPScan 
 
 ## How files are scanned
 
