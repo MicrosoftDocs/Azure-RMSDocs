@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Installing and configuring the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 Use the following information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
@@ -230,7 +230,7 @@ If your connector servers are installed in a network that does not have direct i
 ## Installing the RMS connector administration tool on administrative computers
 You can run the RMS connector administration tool from a computer that does not have the RMS connector installed, if that computer meets the following requirements:
 
--   A physical or virtual computer running Windows Server 2012 or Windows Server 2012 R2 (all editions), Windows Server 2008 R2 or Windows Server 2008 R2 Service Pack 1 (all editions), Windows 8.1, Windows 8, or Windows 7.
+-   A physical or virtual computer running Windows Server 2012 or Windows Server 2012 R2 (all editions), Windows 8.1, Windows 8.
 
 -   At least 1 GB of RAM.
 
