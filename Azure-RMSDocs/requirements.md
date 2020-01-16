@@ -86,7 +86,6 @@ The following devices support the Azure Information Protection unified labeling 
 
 - Windows Server 2012 R2 and Windows Server 2012
 
-- Windows Server 2008 R2 
 
 For information about support options for earlier versions of Windows, contact your Microsoft account or support representative.   
 In addition to installing the client on physical computers, you can also install it on virtual machines. Check whether the software vendor for the virtual desktop solution has additional configuration that might be required to run the Azure Information Protection unified labeling client or the Azure Information Protection client. For example, for Citrix solutions, you might need to [disable Citrix Application Programming Interface (API) hooks](https://support.citrix.com/article/CTX107825) for Office (winword.exe, excel.exe, outlook.exe, powerpnt.exe) and the executable for the Azure Information Protection unified labeling client or Azure Information Protection client (msip.app.exe, msip.viewer.exe).

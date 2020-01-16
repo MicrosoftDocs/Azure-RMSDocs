@@ -3,10 +3,10 @@
 
 title: Migrate AD RMS-Azure Information Protection
 description: Instructions to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. After the migration, users still have access to documents and email messages that your organization protected by using AD RMS.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/25/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -58,9 +58,7 @@ Before you start the migration to Azure Information Protection, make sure that t
 - **A supported RMS deployment:**
     
   - The following releases of AD RMS support a migration to Azure Information Protection:
-    
-      - Windows Server 2008 R2 (x64)
-        
+           
       - Windows Server 2012 (x64)
         
       - Windows Server 2012 R2 (x64)
@@ -114,8 +112,6 @@ If your AD RMS cluster is currently in Cryptographic Mode 1, do not upgrade the 
 To confirm the AD RMS cryptographic mode:
  
 - For Windows Server 2012 R2 and Windows 2012: AD RMS cluster properties > **General** tab. 
-
-- For Windows Server 2008 R2: Check whether the [RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server ) hotfix is installed. If it is not, your AD RMS cluster is running in Cryptographic Mode 1.
 
 ### Migration limitations
 
