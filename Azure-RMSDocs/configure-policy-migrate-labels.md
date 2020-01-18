@@ -234,6 +234,6 @@ For additional guidance and tips from our Customer Experience team, see the foll
 
 - Webinar: [AIP Unified Labeling webinar recording](https://aka.ms/AIP-UL-Webinar-Join1)
 
-For more information about your migrated labels that can now be configured and published in one of the labeling admin centers, see [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and [Create and configure sensitivity labels and their policies](https://docs.microsoft.com/en-us/microsoft-365/compliance/create-sensitivity-labels).
+For more information about your migrated labels that can now be configured and published in one of the labeling admin centers, see [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and [Create and configure sensitivity labels and their policies](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels).
 
 If you haven't already done so, install the Azure Information Protection unified labeling client. For release information, an admin guide, and user guide, see [Azure Information Protection unified labeling client for Windows](./rms-client/aip-clientv2.md).
