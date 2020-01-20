@@ -64,7 +64,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## Version 2.6.101.0
+## Version 2.6.101.0 (preview)
 
 **Released** 1/15/2020
 
