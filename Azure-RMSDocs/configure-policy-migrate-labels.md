@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/18/2020
+ms.date: 1/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -232,7 +232,7 @@ For additional guidance and tips from our Customer Experience team, see the foll
 
 - Blog post: [Understanding Unified Labeling Migration](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)
 
-- Webinar: [AIP Unified Labeling webinar recording](https://aka.ms/AIP-UL-Webinar-Join1)
+- Webinar: [Unified labeling recording, deck, and FAQs](https://github.com/nihendle/MIP-Comp/tree/master/MIP/Webinars/Unified%20Labeling%20Migration)
 
 For more information about your migrated labels that can now be configured and published in one of the labeling admin centers, see [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and [Create and configure sensitivity labels and their policies](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels).
 
