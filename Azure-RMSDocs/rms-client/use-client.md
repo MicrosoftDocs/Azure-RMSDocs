@@ -97,8 +97,8 @@ To compare the Office built-in sensitivity labeling features across different op
 |Default label:| **Yes** | **Yes** | **Yes** |
 |Recommended or automatic labeling:| **Yes** | **Yes** | No |
 |Mandatory labeling:| **Yes** | **Yes** | No |
-|User-defined permissions for a label: Do Not Forward for emails| **Yes** | **Yes** | **Yes** |
-|User-defined permissions for a label: Custom permissions for Word, Excel, PowerPoint, File Explorer| **Yes** | **Yes** | No |
+|User-defined permissions for a label: <br />- Do Not Forward for emails| **Yes** | **Yes** | **Yes** |
+|User-defined permissions for a label: <br />- Custom permissions for Word, Excel, PowerPoint, File Explorer| **Yes** | **Yes** | No |
 |Multilanguage support for labels:| **Yes** | **Yes** |**Yes** |
 |Label inheritance from email attachments:| **Yes** | **Yes**  |No |
 |Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| **Yes** <sup>1</sup> | **Yes** <sup>2</sup> | No |
