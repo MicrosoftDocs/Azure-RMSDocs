@@ -63,11 +63,9 @@ If your tenant is not on the unified labeling platform, you see the following in
 
 You can also check by going to **Azure Information Protection** > **Manage** > **Unified labeling**, and view the status of **Unified labeling**:
 
-- If you see **Activated**, your tenant is on the unified labeling platform.
+- If you see **Activated**, your tenant is on the unified labeling platform and you can [create, configure, and publish labels](/microsoft-365/compliance/create-sensitivity-labels) from the Microsoft 365 compliance center.
 
-- If you see **Not activated**, your tenant is not on the unified labeling platform.
-
-For migration instructions and guidance, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).
+- If you see **Not activated**, your tenant is not on the unified labeling platform. For migration instructions and guidance, see [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md).
 
 ## What's the difference between the Azure Information Protection client and the Azure Information Protection unified labeling client?
 
