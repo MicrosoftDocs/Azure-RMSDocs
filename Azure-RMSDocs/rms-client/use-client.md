@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/09/2020
+ms.date: 1/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -89,15 +89,17 @@ When you have a Windows computer that runs Office 365 apps that are a minimum ve
 
 Use the following table to help compare which features are supported by the three labeling clients for Windows computers.
 
-To compare the Office built-in sensitivity labeling features across different operating system platforms (Windows, MacOS, iOS, and Android) and for the web, see the Office documentation, [Support for sensitivity label capabilities in apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps).
+To compare the Office built-in sensitivity labeling features across different operating system platforms (Windows, MacOS, iOS, and Android) and for the web, see the Microsoft 365 compliance documentation, [Support for sensitivity label capabilities in apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). This documentation also includes the Office build numbers or Office update channel information for the supported features.
 
 |Feature|Classic client|Unified labeling client|Office built-in labeling client|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manual labeling:| **Yes** | **Yes** |**Yes** |
 |Default label:| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling:| **Yes** | **Yes** | No |
+|Recommended or automatic labeling: <br />- For Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
+|Recommended or automatic labeling:<br />- For Outlook| **Yes** | **Yes** | No |
 |Mandatory labeling:| **Yes** | **Yes** | No |
-|User-defined permissions for a label:<br />- Do Not Forward for emails<br />- Custom permissions for Word, Excel, PowerPoint, File Explorer| **Yes** | **Yes** | No |
+|User-defined permissions for a label: <br />- Do Not Forward for emails| **Yes** | **Yes** | **Yes** |
+|User-defined permissions for a label: <br />- Custom permissions for Word, Excel, PowerPoint, File Explorer| **Yes** | **Yes** | No |
 |Multilanguage support for labels:| **Yes** | **Yes** |**Yes** |
 |Label inheritance from email attachments:| **Yes** | **Yes**  |No |
 |Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| **Yes** <sup>1</sup> | **Yes** <sup>2</sup> | No |
