@@ -1,11 +1,11 @@
 ---
 title: class mip::RulePackageData 
 description: Documents the mip::rulepackagedata class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 01/31/2020
 ---
 
 # class mip::RulePackageData 
@@ -13,10 +13,10 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const PolicyRuleData* GetRuleData() const  | Not yet documented.
-public const std::pair\<std::string, std::string\>& GetLabelToTemplateId() const  | Not yet documented.
-public const std::pair\<std::string, ProtectionActionType\>& GetLabelToProtectionType() const  | Not yet documented.
-public virtual ~RulePackageData()  | Not yet documented.
+public const PolicyRuleData* GetRuleData() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetLabelToTemplateId() const  | _Not yet documented._
+public const std::pair\<std::string, std::shared_ptr\<ProtectionActionData\>\>& GetLabelToProtectionType() const  | _Not yet documented._
+public virtual ~RulePackageData()  | _Not yet documented._
   
 ## Members
   

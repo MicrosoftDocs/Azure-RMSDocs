@@ -1,11 +1,11 @@
 ---
 title: class mip::HttpRequest 
 description: Documents the mip::httprequest class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 01/31/2020
 ---
 
 # class mip::HttpRequest 
@@ -27,7 +27,7 @@ Gets request ID.
 
   
 **Returns**: Request ID
-The corresponding HttpResponse will have the same ID
+The corresponding [HttpResponse](undefined) will have the same ID
   
 ### GetRequestType function
 Get request type.

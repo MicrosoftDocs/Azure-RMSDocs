@@ -1,11 +1,11 @@
 ---
 title: class mip::UserRights 
 description: Documents the mip::userrights class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 01/31/2020
 ---
 
 # class mip::UserRights 
@@ -14,14 +14,14 @@ A group of users and the rights associated with them.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public UserRights(const std::vector\<std::string\>& users, const std::vector\<std::string\>& rights)  |  UserRights constructor.
+public UserRights(const std::vector\<std::string\>& users, const std::vector\<std::string\>& rights)  |  [UserRights](undefined) constructor.
 public const std::vector\<std::string\>& Users() const  |  Gets users associated with a set of rights.
 public const std::vector\<std::string\>& Rights() const  |  Gets rights associated with a group of users.
   
 ## Members
   
 ### UserRights function
-UserRights constructor.
+[UserRights](undefined) constructor.
 
 Parameters:  
 * **users**: Group of users that share the same rights 

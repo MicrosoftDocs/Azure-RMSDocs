@@ -1,11 +1,11 @@
 ---
 title: class mip::PolicyPackageData 
 description: Documents the mip::policypackagedata class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 01/31/2020
 ---
 
 # class mip::PolicyPackageData 
@@ -13,8 +13,8 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\<std::unique_ptr\<RulePackageData\>\>& GetRules() const  | Not yet documented.
-public virtual ~PolicyPackageData()  | Not yet documented.
+public const std::vector\<std::unique_ptr\<RulePackageData\>\>& GetRules() const  | _Not yet documented._
+public virtual ~PolicyPackageData()  | _Not yet documented._
   
 ## Members
   

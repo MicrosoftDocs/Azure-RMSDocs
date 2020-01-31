@@ -1,11 +1,11 @@
 ---
 title: class mip::JustificationRequiredError 
 description: Documents the mip::justificationrequirederror class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 01/31/2020
 ---
 
 # class mip::JustificationRequiredError 

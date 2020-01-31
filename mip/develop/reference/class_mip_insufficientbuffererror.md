@@ -1,6 +1,6 @@
 ---
-title: class mip::NetworkError 
-description: Documents the mip::networkerror class of the Microsoft Information Protection (MIP) SDK.
+title: class mip::InsufficientBufferError 
+description: Documents the mip::insufficientbuffererror class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
@@ -8,8 +8,8 @@ ms.author: bryanla
 ms.date: 01/31/2020
 ---
 
-# class mip::NetworkError 
-Networking error. Caused by unexpected behavior when making network calls to service endpoints.
+# class mip::InsufficientBufferError 
+Insufficient buffer error.
   
 ## Summary
  Members                        | Descriptions                                

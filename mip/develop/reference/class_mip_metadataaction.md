@@ -1,15 +1,15 @@
 ---
 title: class mip::MetadataAction 
 description: Documents the mip::metadataaction class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 01/31/2020
 ---
 
 # class mip::MetadataAction 
-An Action that adds metadata information to the content.
+An [Action](undefined) that adds metadata information to the content.
   
 ## Summary
  Members                        | Descriptions                                

@@ -1,11 +1,11 @@
 ---
 title: class mip::PolicyEngine 
 description: Documents the mip::policyengine class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 01/31/2020
 ---
 
 # class mip::PolicyEngine 
@@ -14,7 +14,7 @@ This class provides an interface for all engine functions.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Get the policy engine Settings.
+public const Settings& GetSettings() const  |  Get the policy engine [Settings](undefined).
 public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  list the sensitivity labels associated with the policy engine.
 public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
@@ -34,12 +34,12 @@ public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTi
 ## Members
   
 ### GetSettings function
-Get the policy engine Settings.
+Get the policy engine [Settings](undefined).
 
   
 **Returns**: Policy engine settings. 
   
-**See also**: mip::PolicyEngine::Settings
+**See also**: [mip::PolicyEngine::Settings](undefined)
   
 ### ListSensitivityLabels function
 list the sensitivity labels associated with the policy engine.
@@ -53,7 +53,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: PolicyEngine::Settings).
+**See also**: [PolicyEngine::Settings](undefined)).
   
 ### GetMoreInfoUrl function
 Provide a url for looking up more information about the policy/labels.

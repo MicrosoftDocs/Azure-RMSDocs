@@ -1,11 +1,11 @@
 ---
 title: class mip::ApplicationActionState 
 description: Documents the mip::applicationactionstate class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 01/31/2020
 ---
 
 # class mip::ApplicationActionState 
@@ -29,7 +29,7 @@ Gets the new label state.
   
 **Returns**: The new label state. 
   
-**See also**: mip::LabelState
+**See also**: [mip::LabelState](undefined)
   
 ### GetNewLabel function
 Gets the sensitivity label ID that should be applied on the document.
@@ -43,7 +43,7 @@ Implementation should pass if justification to downgrade an existing label was g
   
 **Returns**: True if downgrade is justifiedalong with the justification messageelse false 
   
-**See also**: mip::JustifyAction
+**See also**: [mip::JustifyAction](undefined)
   
 ### GetNewLabelAssignmentMethod function
 Get the new label's assignment method.

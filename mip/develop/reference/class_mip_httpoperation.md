@@ -1,15 +1,15 @@
 ---
 title: class mip::HttpOperation 
 description: Documents the mip::httpoperation class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 01/31/2020
 ---
 
 # class mip::HttpOperation 
-Interface that describes a single HTTP operation, implemented by client app when overriding HttpDelegate.
+Interface that describes a single HTTP operation, implemented by client app when overriding [HttpDelegate](undefined).
   
 ## Summary
  Members                        | Descriptions                                
@@ -25,7 +25,7 @@ Gets operation ID.
 
   
 **Returns**: Operation ID
-The corresponding HttpRequest and HttpResponse will have the same ID
+The corresponding [HttpRequest](undefined) and [HttpResponse](undefined) will have the same ID
   
 ### GetResponse function
 Get response, if any.
