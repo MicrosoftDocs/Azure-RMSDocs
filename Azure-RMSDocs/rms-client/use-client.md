@@ -185,7 +185,7 @@ Although the Azure Information Protection unified labeling client is still under
 
 - [Protection-only mode](client-protection-only-mode.md) (no labels) using templates
 
-- Protect PDF document as .ppdf (older format)
+- Protect PDF document as [.ppdf (older format)](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)
 
 - Display the Do Not Forward button in Outlook
 
