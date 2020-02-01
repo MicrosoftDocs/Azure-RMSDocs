@@ -177,15 +177,15 @@ For a detailed comparison of behavior differences for specific protection settin
 
 Although the Azure Information Protection unified labeling client is still under development, the following features and behavior differences from the classic client are not currently planned to be available in future releases for the unified labeling client: 
 
-- Custom permissions as a separate option that users can select in Office apps: Word, Excel, and PowerPoint
+- Custom permissions as a [separate option that users can select in Office apps: Word, Excel, and PowerPoint](client-classify-protect#set-custom-permissions-for-a-document.md)
 
-- Track and revoke from Office apps and File Explorer
+- [Track and revoke](client-track-revoke.md) options from Office apps and File Explorer
 
 - Information Protection bar title and tooltip
 
-- Protection-only mode (no labels) using templates
+- [Protection-only mode](client-protection-only-mode.md) (no labels) using templates
 
-- Protect PDF document as .ppdf format
+- Protect PDF document as .ppdf (older format)
 
 - Display the Do Not Forward button in Outlook
 
