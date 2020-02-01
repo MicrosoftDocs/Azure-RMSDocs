@@ -177,7 +177,7 @@ For a detailed comparison of behavior differences for specific protection settin
 
 Although the Azure Information Protection unified labeling client is still under development, the following features and behavior differences from the classic client are not currently planned to be available in future releases for the unified labeling client: 
 
-- Custom permissions as a [separate option that users can select in Office apps: Word, Excel, and PowerPoint](client-classify-protect#set-custom-permissions-for-a-document.md)
+- Custom permissions as a [separate option that users can select in Office apps: Word, Excel, and PowerPoint](client-classify-protect.md#set-custom-permissions-for-a-document.md)
 
 - [Track and revoke](client-track-revoke.md) options from Office apps and File Explorer
 
