@@ -113,7 +113,7 @@
       href: reference/mip-functions.md
     - name: Classes
       items:
-      - name: AccessDeniedError
+       -name: AccessDeniedError
         href: reference/class_mip_accessdeniederror.md
       - name: Action
         href: reference/class_mip_action.md
@@ -135,6 +135,8 @@
         href: reference/class_mip_applylabelaction.md
       - name: ArgumentData
         href: reference/class_mip_argumentdata.md
+      - name: AsyncControl
+        href: reference/class_mip_asynccontrol.md
       - name: AuthDelegate
         href: reference/class_mip_authdelegate.md
       - name: AuthDelegate::OAuth2Challenge
@@ -205,6 +207,8 @@
         href: reference/class_mip_httpresponse.md
       - name: Identity
         href: reference/class_mip_identity.md
+      - name: InsufficientBufferError
+        href: reference/class_mip_insufficientbuffererror.md
       - name: InternalError
         href: reference/class_mip_internalerror.md
       - name: JustificationRequiredError
@@ -269,10 +273,16 @@
         href: reference/class_mip_propertydata.md
       - name: ProtectAdhocAction
         href: reference/class_mip_protectadhocaction.md
+      - name: ProtectAdhocDkAction
+        href: reference/class_mip_protectadhocdkaction.md
       - name: ProtectByTemplateAction
         href: reference/class_mip_protectbytemplateaction.md
+      - name: ProtectByTemplateDkAction
+        href: reference/class_mip_protectbytemplatedkaction.md
       - name: ProtectDoNotForwardAction
         href: reference/class_mip_protectdonotforwardaction.md
+      - name: ProtectDoNotForwardDkAction
+        href: reference/class_mip_protectdonotforwarddkaction.md
       - name: ProtectionActionData
         href: reference/class_mip_protectionactiondata.md
       - name: ProtectionDescriptor
@@ -333,6 +343,8 @@
         href: reference/class_mip_syncfilesensitivitydata.md
       - name: TaskDispatcherDelegate
         href: reference/class_mip_taskdispatcherdelegate.md
+      - name: TemplateDescriptor
+        href: reference/class_mip_templatedescriptor.md
       - name: TemplateNotFoundError
         href: reference/class_mip_templatenotfounderror.md
       - name: TransientNetworkError
