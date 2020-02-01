@@ -113,7 +113,7 @@
       href: reference/mip-functions.md
     - name: Classes
       items:
-       -name: AccessDeniedError
+      - name: AccessDeniedError
         href: reference/class_mip_accessdeniederror.md
       - name: Action
         href: reference/class_mip_action.md
