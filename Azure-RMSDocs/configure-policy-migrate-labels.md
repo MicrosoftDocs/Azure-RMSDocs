@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/21/2020
+ms.date: 1/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -220,9 +220,9 @@ To confirm whether the clients and services you use support unified labeling, re
     
     This service supports labels both before the migration to the unified labeling store, and after the migration, using the following logic:
     
-    - If the admin centers have the same labels as those in the Azure portal: Unified labels are retrieved from the admin centers. To select these labels in Cloud App Security, at least one label must be published to at least one user.
+    - If the admin centers have sensitivity labels, these labels are retrieved from the admin centers. To select these labels in Cloud App Security, at least one label must be published to at least one user.
     
-    - If the admin centers don't have the same labels as those in the Azure portal: Unified labels are not used from the admin centers, and instead, labels are retrieved from the Azure portal.
+    - If the admin centers don't have sensitivity labels, Azure Information Protection labels are retrieved from the Azure portal.
 
 - Services from software vendors and developers that use the [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview).
 

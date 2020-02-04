@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/08/2019
+ms.date: 02/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -80,7 +80,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 - Support added for [offline labeling capability](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#support-for-disconnected-computers) with Office apps in the unified labeling client.
 
-- New **WordShapeNameToRemove** advanced property enables removal of content marking in Word documents made by third party applications. Learn more about how to [identify existing shape names and define them for removal using **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions). 
+- New **WordShapeNameToRemove** advanced property enables removal of content marking in Word documents made by third party applications. Learn more about how to [identify existing shape names and define them for removal using **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions). 
 
 - [Scanner](../deploy-aip-scanner.md) related features:
     - [Easier SharePoint on-premises and subsite discovery](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories). Setting each specific site is no longer required. 
