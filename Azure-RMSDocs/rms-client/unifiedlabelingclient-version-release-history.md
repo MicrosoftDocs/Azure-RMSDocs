@@ -83,7 +83,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 - New **WordShapeNameToRemove** advanced property enables removal of content marking in Word documents made by third party applications. Learn more about how to [identify existing shape names and define them for removal using **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions). 
 
 - [Scanner](../deploy-aip-scanner.md) related features:
-    - [Easier SharePoint on-premises and subsite discovery](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories). Setting each specific site is no longer required. 
+    - [Easier SharePoint on-premises and subsite discovery](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories). Setting each specific site is no longer required. 
     - Advanced property for [SQL chunk sizing](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server) added.
     - Administrators now have the ability to [stop existing scans and perform a re-scan](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan) if a change was made to the default label.
     - By default, scanner now sets minimal telemetry for faster scans and reduced log size and information types are now cached in the database. Learn more about [scanner optimization](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner). 
