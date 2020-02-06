@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/04/2020
+ms.date: 02/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -47,6 +47,7 @@ Preview versions should not be deployed for end users on production networks. In
 
 |Client version|Date released|
 |--------------|-------------|
+|2.2.14.0|07/15/2019|
 |2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
 
@@ -186,59 +187,6 @@ Supported through 03/03/2020
 - The client can successfully download its policy and display the current sensitivity labels. This fix is required after upgrading from a previous version and you haven't configured any custom information types in your labeling center.
 
 - General performance and stability improvements.
-
-## Version 2.2.14.0
-
-**Released**: 07/15/2019
-
-Supported through 02/06/2020
-
-**New features:**
-
-- Support for [advanced settings](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you configure with PowerShell for the Security & Compliance Center.
-    
-    These advanced settings support the following customizations:
-     - [Display the Information Protection bar in Office apps](clientv2-admin-guide-customizations.md#display-the-information-protection-bar-in-office-apps)
-    - [Exempt Outlook messages from mandatory labeling](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
-    - [Enable recommended classification in Outlook](clientv2-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
-    - [Set a different default label for Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
-    - [Remove "Not now" for documents when you use mandatory labeling](clientv2-admin-guide-customizations.md#remove-not-now-for-documents-when-you-use-mandatory-labeling)
-    - [Remove headers and footers from other labeling solutions](clientv2-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
-    - [Disable custom permissions in File Explorer](clientv2-admin-guide-customizations.md#disable-custom-permissions-in-file-explorer)
-    - [For files protected with custom permissions, always display custom permissions to users in File Explorer](clientv2-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
-    - [For email messages with attachments, apply a label that matches the highest classification of those attachments](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
-    - [Add "Report an Issue" for users](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
-    - [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - [Disable sending discovered sensitive information in documents to Azure Information Protection analytics](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
-    - [Send information type matches to Azure Information Protection analytics](clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics)
-    - [Migrate labels from Secure Islands and other labeling solutions](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-    - [Apply a custom property when a label is applied](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
-    - [Configure a label to apply S/MIME protection in Outlook](clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
-    - [Specify a default sublabel for a parent label](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
-    - [Specify a color for the label](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
-
-- Support for labels that are configured for user-defined permissions for Word, Excel, PowerPoint, and File Explorer. For more information, see the [Let users assign permissions](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions) section in the Office documentation.
-
-- PowerShell changes in the AzureInformationProtection module:
-    - New cmdlet: [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) - replaces New-RMSProtectionLicense to create an ad-hoc policy for custom permissions
-    - New parameters:
-        -  *CustomPermissions* and *RemoveProtection* - added to [Set-AIPFileLabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)
-        -  *OnBeHalfOf* - added to [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), to be used instead of the *Token* parameter for non-interactive sessions
-        -  *WhatIf* and *DiscoveryInfoTypes* - added to [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), so that this cmdlet can run in discovery mode without applying labels
-    - Deprecated cmdlets that connect directly to a protection service: Clear-RMSAuthentication, Get-RMSFileStatus, Get-RMSServer, Get-RMSServerAuthentication, Get-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
-
-
-**Fixes:**
-
-- Support for [content matches](../reports-aip.md#content-matches-for-deeper-analysis) for analytics and [Set-AIPFileClassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) with the *DiscoveryInfoTypes* parameter.
-
-- After you change to an alternative locale in Windows, you can still apply a label with protection to a PDF document.
-
-- When a label is removed from content, protection is also removed only when it was applied as part of the label configuration. If the protection was applied independently from the label, that protection is preserved. For example, a user applied custom permissions to a file.
-
-- When automatic labeling is configured, the label applies the first time a document is saved.
-
-- Default labeling supports sublabels.
 
 ## Next steps
 
