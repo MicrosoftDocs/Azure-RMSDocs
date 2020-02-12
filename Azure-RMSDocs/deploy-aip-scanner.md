@@ -137,7 +137,7 @@ Follow the instructions from the admin guides to support a disconnected computer
 
 - For the unified labeling client: the unified labeling client cannot apply protection without an online connection. 
     
-    The scanner from the unified labeling client can apply labels based on policy policy imported using [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) cmdlet.
+    The scanner from the unified labeling client can apply labels based on policies imported using [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) cmdlet.
 
 Then, do the following:
 
