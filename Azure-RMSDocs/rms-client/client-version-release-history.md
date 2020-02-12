@@ -82,7 +82,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 ## Version 1.54.59.0
 
-**Released**: 1/29/2020
+**Released**: 12/02/2020
 
 **Fixes**:
 
@@ -92,15 +92,13 @@ Use the following information to see what’s new or changed for a supported rel
 
 - Issues surrounding client stability when working with protected PDF files is resolved. 
 
-- Decrypted temp files are no longer accessible to users from the temp folder. 
-
 - Protection labels are now removed as expected if the label is deleted on the email during the email creation process. 
-
-This release also includes general fixes for stability and performance.
 
 ## Version 1.54.33.0
 
 **Released**: 10/23/2019
+
+Supported through 08/12/2020
 
 This version includes the MSIPC version 1.0.4008.0813 of the RMS client.
 
