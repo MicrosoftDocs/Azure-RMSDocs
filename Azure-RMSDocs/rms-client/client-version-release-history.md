@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/08/2020
+ms.date: 02/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -80,6 +80,23 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
+## Version 1.54.59.0
+
+**Released**: 1/29/2020
+
+**Fixes**:
+
+- Issue where files protected by IQP displayed **recover** and/or **save as** options after protection was removed, are resolved. 
+
+- Numerous product feature tooltip texts were improved for clarity and ease of understanding. 
+
+- Issues surrounding client stability when working with protected PDF files is resolved. 
+
+- Decrypted temp files are no longer accessible to users from the temp folder. 
+
+- Protection labels are now removed as expected if the label is deleted on the email during the email creation process. 
+
+This release also includes general fixes for stability and performance.
 
 ## Version 1.54.33.0
 
