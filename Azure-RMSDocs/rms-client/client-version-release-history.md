@@ -84,6 +84,8 @@ Use the following information to see what’s new or changed for a supported rel
 
 **Released**: 12/02/2020
 
+This version includes fixes only. 
+
 **Fixes**:
 
 - Issue where files protected by IQP displayed **recover** and/or **save as** options after protection was removed, are resolved. 
