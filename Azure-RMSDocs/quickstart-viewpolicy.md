@@ -153,6 +153,6 @@ If you are using the classic client:
 
 If you are using the unified labeling client:
 
-- See [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Office documentation.
+- See [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Office documentation.
 
 Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
