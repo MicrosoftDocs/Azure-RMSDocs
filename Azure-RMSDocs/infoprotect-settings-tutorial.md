@@ -60,7 +60,7 @@ To complete this tutorial, you need:
     
     You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. 
     
-    If are using a different labeling client to the classic client, see the Office documentation for information about policy settings for sensitivity labels. For example, [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+    If are using a different labeling client to the classic client, see the Microsoft 365 Compliance documentation for information about policy settings for sensitivity labels. For example, [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 4. You are signed in to Office apps from one of the following categories:
     
