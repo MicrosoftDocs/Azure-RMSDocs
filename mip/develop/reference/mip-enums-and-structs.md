@@ -59,6 +59,7 @@ Values                         | Descriptions
 LEFT            | Content marking is aligned to the left
 RIGHT            | Content marking is aligned to the right
 CENTER            | Content marking is centered
+
 Alignment for content marks (content header or content footer).
   
 #### AssignmentMethod enum
@@ -67,6 +68,7 @@ Values                         | Descriptions
 STANDARD            | Label assignment method is standard
 PRIVILEGED            | Label assignment method is privileged
 AUTO            | Label assignment method is automatic
+
 The assignment method of the label on the document. Whether the Assignment of the label was done automatically, standard or as a privileged operation (The equivalent to an administrator operation).
   
 #### ActionSource enum
@@ -76,7 +78,8 @@ MANUAL            | Selected manually by user
 AUTOMATIC            | Set by policy conditions
 RECOMMENDED            | Set by user after label was recommended by policy conditions
 DEFAULT            | Set by default in policy
-defines what triggered the SetLabel event
+
+Defines what triggered the SetLabel event
   
 #### DataState enum
 Values                         | Descriptions                                
@@ -84,6 +87,7 @@ Values                         | Descriptions
 REST            | Inactive data stored physically in databases/file/warehouses
 MOTION            | Data traversing a network or temporarily residing in computer memory to be read or updated
 USE            | Active data under constant change stored physically in databases/file/warehouses etc
+
 Defines what state of the data is the application acting upon.
   
 #### ContentFormat enum
@@ -91,6 +95,7 @@ Values                         | Descriptions
 --------------------------------|---------------------------------------------
 DEFAULT            | Content format is standard file format
 EMAIL            | Content format is email format
+
 Content format.
   
 #### LabelFilterType enum
@@ -104,12 +109,14 @@ AdhocProtection            | Filter labels that may result in adhoc protection
 HyokProtection            | Filter labels that may result in hyok protection
 PredefinedTemplateProtection            | Filter labels that may result in predefined template protection
 DoubleKeyProtection            | Filter labels that may result in protection that requires double key, can be template, adhoc, dnf
+
 Label filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
   
 #### FeatureId enum
 Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 EncryptOnly            | Check if server supports EncryptOnly feature
+
 Defines new features by name.
   
 #### VariableTextMarkingType enum
@@ -118,7 +125,8 @@ Values                         | Descriptions
 Default            | Known markings are converted unknown marking are removed
 PassThrough            | Known markings are converted unknown marking are passed through
 None            | All markings are passed through
-various dynamic fields can be set into the text message of the application Some known: ${Item.Label} ${Item.Name} ${Item.Location} ${User.Name} ${User.PrincipalName} ${Event.DateTime} Others are still not defined: The sdk will replace them with correct values using these control flags.
+
+Various dynamic fields can be set into the text message of the application Some known: ${Item.Label} ${Item.Name} ${Item.Location} ${User.Name} ${User.PrincipalName} ${Event.DateTime} Others are still not defined: The sdk will replace them with correct values using these control flags.
   
 #### Consent enum
 Values                         | Descriptions                                
@@ -126,6 +134,7 @@ Values                         | Descriptions
 AcceptAlways            | Consent, and remember this decision
 Accept            | Consent, just one time
 Reject            | Do not consent
+
 A user's response when consent is requested to connect to a service endpoint.
   
 #### CacheStorageType enum
@@ -134,6 +143,7 @@ Values                         | Descriptions
 InMemory            | In Memory storage
 OnDisk            | On Disk storage
 OnDiskEncrypted            | On Disk storage with encryption (if supported by the platform)
+
 Storage type for the caches.
   
 #### PFileExtensionBehavior enum
@@ -142,6 +152,7 @@ Values                         | Descriptions
 Default            | Extensions will become as SDK default behavior
 PFileSuffix            | Extensions will become <EXT>.PFILE
 PPrefix            | Extensions will become P<EXT>
+
 Describes PFile extensions behavior.
   
 #### ErrorType enum
@@ -174,6 +185,7 @@ Values                         | Descriptions
 --------------------------------|---------------------------------------------
 Unknown            | Unkown file inspector.
 Msg            | Msg style file inspector, rpmsg / msg based.
+
 Inspector type correlating to supported file types.
   
 #### BodyType enum
@@ -183,6 +195,7 @@ UNKNOWN            | Unkown body type
 TXT            | Text style body type, encoding is returned as utf8
 HTML            | HTML style body type, encoding is returned as utf8
 RTF            | RTF style body type, a binary format
+
 Body type enumerator.
   
 #### FlightingFeature enum
@@ -198,6 +211,7 @@ PreLicensing            | Enable pre license api check
 DoubleKey            | Enable double key protection feature to use a customer key to encrypt with
 VariablePolicyTtl            | Enable variable policy time to live, disabling reverts to infinite policy
 VariableTextMarking            | Enable variable text marking
+
 Defines new features by name.
   
 #### HttpRequestType enum
@@ -205,6 +219,7 @@ Values                         | Descriptions
 --------------------------------|---------------------------------------------
 Get            | GET
 Post            | POST
+
 HTTP request type.
   
 #### LogLevel enum
@@ -214,6 +229,7 @@ Trace            |
 Info            | 
 Warning            | 
 Error            | 
+
 Different log levels used across the MIP SDK.
   
 #### ProtectionType enum
@@ -221,6 +237,7 @@ Values                         | Descriptions
 --------------------------------|---------------------------------------------
 TemplateBased            | Handle was created from a template
 Custom            | Handle was created ad hoc
+
 Describes whether protection is based off a template or ad-hoc (custom)
   
 #### ActionType enum
@@ -244,8 +261,8 @@ RECOMMEND_LABEL            | Recommend label action type.
 PROTECT_ADHOC_DK            | A protect by adhoc policy action type.
 PROTECT_BY_TEMPLATE_DK            | A protect by template action type.
 PROTECT_DO_NOT_FORWARD_DK            | A protect by do not forward action type.
-Different action types.
-CUSTOM is the generic action type. Every other action type is a specific action with a specific meaning.
+
+Different action types. CUSTOM is the generic action type. Every other action type is a specific action with a specific meaning.
   
 #### LabelState enum
 Values                         | Descriptions                                
