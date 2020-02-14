@@ -46,14 +46,14 @@ struct mip::TelemetryConfiguration  |  Custom telemetry settings (not commonly u
 ### Enumerations
 
 #### WatermarkLayout enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 HORIZONTAL            | Watermark layout is horizontal
 DIAGONAL            | Watermark layout is diagonal
 Layout for watermarks.
   
 #### ContentMarkAlignment enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 LEFT            | Content marking is aligned to the left
 RIGHT            | Content marking is aligned to the right
@@ -61,7 +61,7 @@ CENTER            | Content marking is centered
 Alignment for content marks (content header or content footer).
   
 #### AssignmentMethod enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 STANDARD            | Label assignment method is standard
 PRIVILEGED            | Label assignment method is privileged
@@ -69,7 +69,7 @@ AUTO            | Label assignment method is automatic
 The assignment method of the label on the document. Whether the Assignment of the label was done automatically, standard or as a privileged operation (The equivalent to an administrator operation).
   
 #### ActionSource enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 MANUAL            | Selected manually by user
 AUTOMATIC            | Set by policy conditions
@@ -78,7 +78,7 @@ DEFAULT            | Set by default in policy
 defines what triggered the SetLabel event
   
 #### DataState enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 REST            | Inactive data stored physically in databases/file/warehouses
 MOTION            | Data traversing a network or temporarily residing in computer memory to be read or updated
@@ -86,14 +86,14 @@ USE            | Active data under constant change stored physically in database
 Defines what state of the data is the application acting upon.
   
 #### ContentFormat enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 DEFAULT            | Content format is standard file format
 EMAIL            | Content format is email format
 Content format.
   
 #### LabelFilterType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 None            | Disable default labeling filtration
 CustomProtection            | Filter labels that may result in custom protection
@@ -106,13 +106,13 @@ DoubleKeyProtection            | Filter labels that may result in protection tha
 Label filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
   
 #### FeatureId enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 EncryptOnly            | Check if server supports EncryptOnly feature
 Defines new features by name.
   
 #### VariableTextMarkingType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Default            | Known markings are converted unknown marking are removed
 PassThrough            | Known markings are converted unknown marking are passed through
@@ -120,7 +120,7 @@ None            | All markings are passed through
 various dynamic fields can be set into the text message of the application Some known: ${Item.Label} ${Item.Name} ${Item.Location} ${User.Name} ${User.PrincipalName} ${Event.DateTime} Others are still not defined: The sdk will replace them with correct values using these control flags.
   
 #### Consent enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 AcceptAlways            | Consent, and remember this decision
 Accept            | Consent, just one time
@@ -128,7 +128,7 @@ Reject            | Do not consent
 A user's response when consent is requested to connect to a service endpoint.
   
 #### CacheStorageType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 InMemory            | In Memory storage
 OnDisk            | On Disk storage
@@ -136,7 +136,7 @@ OnDiskEncrypted            | On Disk storage with encryption (if supported by th
 Storage type for the caches.
   
 #### PFileExtensionBehavior enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Default            | Extensions will become as SDK default behavior
 PFileSuffix            | Extensions will become <EXT>.PFILE
@@ -144,7 +144,7 @@ PPrefix            | Extensions will become P<EXT>
 Describes PFile extensions behavior.
   
 #### ErrorType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 BAD_INPUT_ERROR            | Caller passed bad input.
 INSUFFICIENT_BUFFER_ERROR            | Caller passed a buffer that was too small.
@@ -169,14 +169,14 @@ LABEL_NOT_FOUND            | Label ID is not recognized
 LABEL_DISABLED            | Label is disabled or inactive
   
 #### InspectorType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Unknown            | Unkown file inspector.
 Msg            | Msg style file inspector, rpmsg / msg based.
 Inspector type correlating to supported file types.
   
 #### BodyType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 UNKNOWN            | Unkown body type
 TXT            | Text style body type, encoding is returned as utf8
@@ -185,7 +185,7 @@ RTF            | RTF style body type, a binary format
 Body type enumerator.
   
 #### FlightingFeature enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 ServiceDiscovery            | Rely on separate HTTP call to determine RMS service endpoints
 AuthInfoCache            | Cache OAuth2 challenges per domain/tenant to reduce unnecessary 401 responses. Disable for apps/services that manage their own HTTP auth (like SPO, Edge)
@@ -200,14 +200,14 @@ VariableTextMarking            | Enable variable text marking
 Defines new features by name.
   
 #### HttpRequestType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Get            | GET
 Post            | POST
 HTTP request type.
   
 #### LogLevel enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Trace            | 
 Info            | 
@@ -216,14 +216,14 @@ Error            |
 Different log levels used across the MIP SDK.
   
 #### ProtectionType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 TemplateBased            | Handle was created from a template
 Custom            | Handle was created ad hoc
 Describes whether protection is based off a template or ad-hoc (custom)
   
 #### ActionType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 ADD_CONTENT_FOOTER            | Add a content footer to the document action type.
 ADD_CONTENT_HEADER            | Add a content header to the document action type.
@@ -247,14 +247,14 @@ Different action types.
 CUSTOM is the generic action type. Every other action type is a specific action with a specific meaning.
   
 #### LabelState enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 NoChange            | 
 Remove            | 
 Update            | 
   
 #### ActionDataType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Custom            | 
 Protection            | 
@@ -263,25 +263,25 @@ AddWatermark            |
 Label            | 
   
 #### ConditionDataType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Default            | 
 Sensitivity            | 
   
 #### ContentMarkPlacement enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Header            | 
 Footer            | 
   
 #### LabelActionDataType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Recommend            | 
 Apply            | 
   
 #### ProtectionActionType enum
- Values                         | Descriptions                                
+Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Custom            | 
 Template            | 
