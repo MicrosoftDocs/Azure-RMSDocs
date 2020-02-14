@@ -111,5 +111,5 @@ More how-to instructions from the user guide for the Azure Information Protectio
 
 ## Additional information for administrators
 
-See [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+See [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 

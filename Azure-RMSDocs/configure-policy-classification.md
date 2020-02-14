@@ -35,7 +35,7 @@ ms.custom: admin
 > [!NOTE]
 > These instructions apply to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> If you are looking for information to configure automatic and recommended classification for the unified labeling client, see the Office documentation. For example, [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically).
+> If you are looking for information to configure automatic and recommended classification for the unified labeling client, see the Microsoft 365 Compliance documentation. For example, [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 
 When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend. 
 

@@ -47,7 +47,7 @@ For more information, including a feature and functionality comparison table, se
 
 See the following documentation resources:
 
-- [Overview of sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) 
+- [Learn about sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) 
 
 - [Sensitivity labels in Office apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
 
