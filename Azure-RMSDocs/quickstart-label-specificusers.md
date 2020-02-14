@@ -56,7 +56,7 @@ To complete this quickstart, you need:
     
     You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
      
-    If are using a different labeling client to the classic client, see the Office documentation for equivalent instructions to this tutorial. For example, [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+    If are using a different labeling client to the classic client, see the Microsoft 365 Compliance documentation for equivalent instructions to this tutorial. For example, [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
     
