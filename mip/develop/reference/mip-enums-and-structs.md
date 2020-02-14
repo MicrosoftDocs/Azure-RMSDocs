@@ -50,6 +50,7 @@ Values                         | Descriptions
 --------------------------------|---------------------------------------------
 HORIZONTAL            | Watermark layout is horizontal
 DIAGONAL            | Watermark layout is diagonal
+
 Layout for watermarks.
   
 #### ContentMarkAlignment enum
