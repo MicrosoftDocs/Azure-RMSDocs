@@ -66,7 +66,7 @@ Gets the protection template ID, if any.
 Gets the label ID, if any.
 
   
-**Returns**: [Label](undefined) ID
+**Returns**: Label ID
 This property will only be populated in ProtectionDescriptors for preexisting protected content. It is a field populated by the server at the moment protected content is consumed.
   
 ### GetContentId function
@@ -80,7 +80,7 @@ Gets collection of users-to-rights mappings.
 
   
 **Returns**: Collection of users-to-rights mappings
-The value of the [UserRights](undefined) property will be empty if the current user doesn't have access to this information (that is, if the user is not the owner and does not have the VIEWRIGHTSDATA right).
+The value of the UserRights property will be empty if the current user doesn't have access to this information (that is, if the user is not the owner and does not have the VIEWRIGHTSDATA right).
   
 ### GetUserRoles function
 Gets collection of users-to-roles mappings.
@@ -118,11 +118,11 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](undefined) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](undefined)
+A ProtectionHandler may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via ProtectionDescriptor::GetSignedAppData
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](undefined) may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](undefined)
+A ProtectionHandler may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via ProtectionDescriptor::GetEncryptedAppData

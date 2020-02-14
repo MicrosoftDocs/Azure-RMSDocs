@@ -9,7 +9,7 @@ ms.date: 02/14/2020
 ---
 
 # class mip::LabelDisabledError 
-[Label](undefined) is disabled or inactive.
+Label is disabled or inactive.
   
 ## Summary
  Members                        | Descriptions                                

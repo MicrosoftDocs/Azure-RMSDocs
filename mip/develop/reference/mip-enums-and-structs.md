@@ -20,7 +20,7 @@ enum AssignmentMethod       |  The assignment method of the label on the documen
 enum ActionSource       |  defines what triggered the SetLabel event
 enum DataState       |  Defines what state of the data is the application acting upon.
 enum ContentFormat       |  Content format.
-enum LabelFilterType       |  [Label](undefined) filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
+enum LabelFilterType       |  Label filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
 enum FeatureId       |  Defines new features by name.
 enum VariableTextMarkingType       |  various dynamic fields can be set into the text message of the application Some known: ${[Item.Label](#namespacemip_1afa5affe227b50ddee4ed685ddd9597c9ab021df6aac4654c454f46c77646e745f)} ${Item.Name} ${Item.Location} ${User.Name} ${User.PrincipalName} ${Event.DateTime} Others are still not defined: The sdk will replace them with correct values using these control flags.
 enum Consent       |  A user's response when consent is requested to connect to a service endpoint.
@@ -63,9 +63,9 @@ Alignment for content marks (content header or content footer).
 #### AssignmentMethod enum
  Values                         | Descriptions                                
 --------------------------------|---------------------------------------------
-STANDARD            | [Label](undefined) assignment method is standard
-PRIVILEGED            | [Label](undefined) assignment method is privileged
-AUTO            | [Label](undefined) assignment method is automatic
+STANDARD            | Label assignment method is standard
+PRIVILEGED            | Label assignment method is privileged
+AUTO            | Label assignment method is automatic
 The assignment method of the label on the document. Whether the Assignment of the label was done automatically, standard or as a privileged operation (The equivalent to an administrator operation).
   
 #### ActionSource enum
@@ -103,7 +103,7 @@ AdhocProtection            | Filter labels that may result in adhoc protection
 HyokProtection            | Filter labels that may result in hyok protection
 PredefinedTemplateProtection            | Filter labels that may result in predefined template protection
 DoubleKeyProtection            | Filter labels that may result in protection that requires double key, can be template, adhoc, dnf
-[Label](undefined) filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
+Label filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
   
 #### FeatureId enum
  Values                         | Descriptions                                
@@ -117,7 +117,7 @@ Defines new features by name.
 Default            | Known markings are converted unknown marking are removed
 PassThrough            | Known markings are converted unknown marking are passed through
 None            | All markings are passed through
-various dynamic fields can be set into the text message of the application Some known: ${[Item.Label](undefined)} ${Item.Name} ${Item.Location} ${User.Name} ${User.PrincipalName} ${Event.DateTime} Others are still not defined: The sdk will replace them with correct values using these control flags.
+various dynamic fields can be set into the text message of the application Some known: ${Item.Label} ${Item.Name} ${Item.Location} ${User.Name} ${User.PrincipalName} ${Event.DateTime} Others are still not defined: The sdk will replace them with correct values using these control flags.
   
 #### Consent enum
  Values                         | Descriptions                                
@@ -165,8 +165,8 @@ OPERATION_CANCELLED            | Operation cancelled
 ADHOC_PROTECTION_REQUIRED            | Adhoc protection should be set to complete the action on the file
 DEPRECATED_API            | Caller invoked a deprecated API
 TEMPLATE_NOT_FOUND            | Template ID is not recognized
-LABEL_NOT_FOUND            | [Label](undefined) ID is not recognized
-LABEL_DISABLED            | [Label](undefined) is disabled or inactive
+LABEL_NOT_FOUND            | Label ID is not recognized
+LABEL_DISABLED            | Label is disabled or inactive
   
 #### InspectorType enum
  Values                         | Descriptions                                

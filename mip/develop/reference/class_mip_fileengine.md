@@ -42,7 +42,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: [FileEngine::Settings](undefined)).
+**See also**: FileEngine::Settings).
   
 ### GetDefaultSensitivityLabel function
 Get the default sensitivity label.
@@ -105,7 +105,7 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](undefined) interface. 
+* **fileHandlerObserver**: A class implementing the FileHandler::Observer interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer. 
@@ -128,7 +128,7 @@ Parameters:
 * **isAuditDiscoveryEnabled**: representing whether audit discovery is enabled or not. 
 
 
-* **fileHandlerObserver**: A class implementing the [FileHandler::Observer](undefined) interface. 
+* **fileHandlerObserver**: A class implementing the FileHandler::Observer interface. 
 
 
 * **context**: Client context that will be opaquely passed back to the observer. 

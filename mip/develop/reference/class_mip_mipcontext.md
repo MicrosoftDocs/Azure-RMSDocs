@@ -9,7 +9,7 @@ ms.date: 02/14/2020
 ---
 
 # class mip::MipContext 
-[MipContext](undefined) represents state that is shared across all profiles, engines, handlers.
+MipContext represents state that is shared across all profiles, engines, handlers.
   
 ## Summary
  Members                        | Descriptions                                

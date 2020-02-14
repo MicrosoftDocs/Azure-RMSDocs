@@ -9,7 +9,7 @@ ms.date: 02/14/2020
 ---
 
 # class mip::ProtectionEngine::Observer 
-Interface that receives notifications related to [ProtectionEngine](undefined).
+Interface that receives notifications related to ProtectionEngine.
 This interface must be implemented by applications using the protection SDK
   
 ## Summary
@@ -31,22 +31,22 @@ Parameters:
 * **templateDescriptors**: A reference to the list of templates descriptors 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetTemplatesAsync](undefined)
+* **context**: The same context that was passed to ProtectionEngine::GetTemplatesAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::GetTemplatesAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetTemplatesSuccess](undefined) or [ProtectionEngine::Observer::OnGetTemplatesFailure](undefined)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTemplatesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetTemplatesSuccess or ProtectionEngine::Observer::OnGetTemplatesFailure
   
 ### OnGetTemplatesFailure function
 Called when retrieving templates generated an error.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred while retrieving templates 
+* **error**: Error that occurred while retrieving templates 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetTemplatesAsync](undefined)
+* **context**: The same context that was passed to ProtectionEngine::GetTemplatesAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::GetTemplatesAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetTemplatesSuccess](undefined) or [ProtectionEngine::Observer::OnGetTemplatesFailure](undefined)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTemplatesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetTemplatesSuccess or ProtectionEngine::Observer::OnGetTemplatesFailure
   
 ### OnGetRightsForLabelIdSuccess function
 Called when rights were retrieved successfully.
@@ -55,40 +55,40 @@ Parameters:
 * **rights**: A reference to the list of rights retrieved 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetRightsForLabelIdAsync](undefined)
+* **context**: The same context that was passed to ProtectionEngine::GetRightsForLabelIdAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::GetRightsForLabelIdAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](undefined) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](undefined)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
   
 ### OnGetRightsForLabelIdFailure function
 Called when retrieving rights for a label ID for the user.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred while retrieving rights 
+* **error**: Error that occurred while retrieving rights 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetRightsForLabelIdAsync](undefined)
+* **context**: The same context that was passed to ProtectionEngine::GetRightsForLabelIdAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::GetRightsForLabelIdAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](undefined) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](undefined)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
   
 ### OnLoadUserCertSuccess function
 Called when user cert loaded successfully.
 
 Parameters:  
-* **context**: The same context that was passed to [ProtectionEngine::LoadUserCert](undefined)
+* **context**: The same context that was passed to ProtectionEngine::LoadUserCert
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::LoadUserCertAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnLoadUserCertSuccess](undefined) or [ProtectionEngine::Observer::OnLoadUserCertFailure](undefined)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::LoadUserCertAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnLoadUserCertSuccess or ProtectionEngine::Observer::OnLoadUserCertFailure
   
 ### OnLoadUserCertFailure function
 Called when user cert loaded failed.
 
 Parameters:  
-* **error**: [Error](undefined) that occurred while retrieving rights 
+* **error**: Error that occurred while retrieving rights 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::LoadUserCert](undefined)
+* **context**: The same context that was passed to ProtectionEngine::LoadUserCert
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::LoadUserCertAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnLoadUserCertSuccess](undefined) or [ProtectionEngine::Observer::OnLoadUserCertFailure](undefined)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::LoadUserCertAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnLoadUserCertSuccess or ProtectionEngine::Observer::OnLoadUserCertFailure

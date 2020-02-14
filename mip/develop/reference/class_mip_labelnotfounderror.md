@@ -9,7 +9,7 @@ ms.date: 02/14/2020
 ---
 
 # class mip::LabelNotFoundError 
-[Label](undefined) ID is not recognized.
+Label ID is not recognized.
   
 ## Summary
  Members                        | Descriptions                                

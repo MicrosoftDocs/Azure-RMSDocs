@@ -55,7 +55,7 @@ Implementation should pass if justification to downgrade an existing label was g
   
 **Returns**: True if downgrade is justifiedalong with the justification messageelse false 
   
-**See also**: [mip::JustifyAction](undefined)
+**See also**: mip::JustifyAction
   
 ### GetNewLabelAssignmentMethod function
 Get the new label's assignment method.

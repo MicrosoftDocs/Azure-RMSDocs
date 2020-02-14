@@ -27,13 +27,13 @@ public const std::string& GetCustomSettingLabelCustomPropertiesSyncEnabled()    
 public const std::string& GetCustomSettingPolicyTtlDays()       |  Name of the setting that enables overriding policy ttl in days be default it will be 30 days. Values should be set as string integers i < 0 means infinite time to live.
 public const std::string& GetCustomSettingSensitivityPolicyTtlDays()       |  Name of the setting that enables overriding sensitivity policy ttl in days be default it will be 30 days. Values should be set as string integers i < 0 means infinite time to live.
 public const std::map\<FlightingFeature, bool\>& GetDefaultFeatureSettings()       |  Gets whether or not a feature is enabled by default.
-public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::istream\>& stdIStream)       |  Creates a [Stream](undefined) from a std::istream.
-public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::ostream\>& stdOStream)       |  Creates a [Stream](undefined) from a std::ostream.
-public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::iostream\>& stdIOStream)       |  Creates a [Stream](undefined) from a std::iostream.
-public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an [Stream](undefined) from a buffer.
+public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::istream\>& stdIStream)       |  Creates a Stream from a std::istream.
+public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::ostream\>& stdOStream)       |  Creates a Stream from a std::ostream.
+public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::iostream\>& stdIOStream)       |  Creates a Stream from a std::iostream.
+public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Creates an Stream from a buffer.
 public MIP_API std::vector\<uint8_t\> ReadFromStream(const std::shared_ptr\<mip::Stream\>& stream)       |  Read all the bytes of stream.
-public ActionType operator&(ActionType a, ActionType b)       |  And (&) operator for [Action](undefined) type enum.
-public ActionType operator^(ActionType a, ActionType b)       |  Xor (^) operator for [Action](undefined) type enum.
+public ActionType operator&(ActionType a, ActionType b)       |  And (&) operator for Action type enum.
+public ActionType operator^(ActionType a, ActionType b)       |  Xor (^) operator for Action type enum.
 
 ### GetAssignmentMethodString function
 Converts AssignmentMethod enum to a string description.
@@ -118,7 +118,7 @@ Gets whether or not a feature is enabled by default.
 **Returns**: Default state of flighting features
   
 ### CreateStreamFromStdStream function
-Creates a [Stream](undefined) from a std::istream.
+Creates a Stream from a std::istream.
 
 Parameters:  
 * **stdIStream**: Backing std::istream
@@ -126,10 +126,10 @@ Parameters:
 
 
   
-**Returns**: [Stream](undefined) wrapping a std::istream
+**Returns**: Stream wrapping a std::istream
   
 ### CreateStreamFromStdStream function
-Creates a [Stream](undefined) from a std::ostream.
+Creates a Stream from a std::ostream.
 
 Parameters:  
 * **stdOStream**: Backing std::ostream
@@ -137,10 +137,10 @@ Parameters:
 
 
   
-**Returns**: [Stream](undefined) wrapping a std::ostream
+**Returns**: Stream wrapping a std::ostream
   
 ### CreateStreamFromStdStream function
-Creates a [Stream](undefined) from a std::iostream.
+Creates a Stream from a std::iostream.
 
 Parameters:  
 * **stdIOStream**: Backing std::iostream
@@ -148,10 +148,10 @@ Parameters:
 
 
   
-**Returns**: [Stream](undefined) wrapping a std::iostream
+**Returns**: Stream wrapping a std::iostream
   
 ### CreateStreamFromBuffer function
-Creates an [Stream](undefined) from a buffer.
+Creates an Stream from a buffer.
 
 Parameters:  
 * **buffer**: Pointer to a buffer
@@ -173,13 +173,13 @@ Parameters:
 **Returns**: A vector of bytes.
   
 ### operator| function
-Or (|) operator for [Action](undefined) type enum.
+Or (|) operator for Action type enum.
   
 ### operator& function
-And (&) operator for [Action](undefined) type enum.
+And (&) operator for Action type enum.
   
 ### operator^ function
-Xor (^) operator for [Action](undefined) type enum.
+Xor (^) operator for Action type enum.
 
 ## namespace mip::auditmetadatakeys
 
