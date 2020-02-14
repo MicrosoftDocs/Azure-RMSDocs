@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/31/2020
+ms.date: 02/14/2020
 ---
 
 # class mip::ComputeEngine 
@@ -36,7 +36,7 @@ _Not documented yet._
   
 ### ComputeActionsWithRemoteState function
 Computes actions while choosing between remote and local state.
-State is selected using this priority. Unknown protection types, (template or ad-hoc not in the policy). Protection state is always preferable to unprotected state. Document state with label is preferred above one without. [Label](undefined) order, higher is preferred. [Label](undefined) timestamp, prefer newest labelled document. [DocumentState](#classmip_1_1DocumentState) LastModifiedTime optionally implemented, prefer newly modified file.
+State is selected using this priority. Unknown protection types, (template or ad-hoc not in the policy). Protection state is always preferable to unprotected state. Document state with label is preferred above one without. [Label](undefined) order, higher is preferred. [Label](undefined) timestamp, prefer newest labelled document. [DocumentState](undefined) LastModifiedTime optionally implemented, prefer newly modified file.
 
 Parameters:  
 * **context**: Comput engine context. 

@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/31/2020
+ms.date: 02/14/2020
 ---
 
 # class mip::ProtectionProfile::Observer 
@@ -33,7 +33,7 @@ Parameters:
 * **profile**: A reference to the newly created [ProtectionProfile](undefined)
 
 
-* **context**: The same context that was passed to [ProtectionProfile::LoadAsync](#classmip_1_1ProtectionProfile_1a509ec2d1f84c1758c1ddb6c34dd377aa)
+* **context**: The same context that was passed to [ProtectionProfile::LoadAsync](undefined)
 
 
 An application can pass any type of context (for example, std::promise, std::function) to [ProtectionProfile::LoadAsync](undefined) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](undefined) or [ProtectionProfile::Observer::OnLoadFailure](undefined)
@@ -57,7 +57,7 @@ Parameters:
 * **engineIds**: a list of engine IDs the are available. 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::ListEnginesAsync](#classmip_1_1ProtectionProfile_1ada99a40b1b2d64e5f5c731904643e027)
+* **context**: The same context that was passed to [ProtectionProfile::ListEnginesAsync](undefined)
 
 
   
@@ -79,7 +79,7 @@ Parameters:
 * **engine**: Newly created engine 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](#classmip_1_1ProtectionProfile_1a115257c033cbe118aa174e5b041ea09a)
+* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](undefined)
 
 
   
@@ -98,7 +98,7 @@ Parameters:
 Called when an engine was deleted successfully.
 
 Parameters:  
-* **context**: The same context that was passed to [ProtectionProfile::DeleteEngineAsync](#classmip_1_1ProtectionProfile_1aca7662e0960ad3d54e2368eda0fbe59a)
+* **context**: The same context that was passed to [ProtectionProfile::DeleteEngineAsync](undefined)
 
 
   

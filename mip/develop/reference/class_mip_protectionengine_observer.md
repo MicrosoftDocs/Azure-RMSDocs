@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/31/2020
+ms.date: 02/14/2020
 ---
 
 # class mip::ProtectionEngine::Observer 
@@ -31,10 +31,10 @@ Parameters:
 * **templateDescriptors**: A reference to the list of templates descriptors 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetTemplatesAsync](#classmip_1_1ProtectionEngine_1a16153e01451f45c62480eeaacf35713f)
+* **context**: The same context that was passed to [ProtectionEngine::GetTemplatesAsync](undefined)
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::GetTemplatesAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetTemplatesSuccess](#classmip_1_1ProtectionEngine_1_1Observer_1ad9534a7fba9adc9744277031aa720500) or [ProtectionEngine::Observer::OnGetTemplatesFailure](undefined)
+An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::GetTemplatesAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetTemplatesSuccess](undefined) or [ProtectionEngine::Observer::OnGetTemplatesFailure](undefined)
   
 ### OnGetTemplatesFailure function
 Called when retrieving templates generated an error.
@@ -55,7 +55,7 @@ Parameters:
 * **rights**: A reference to the list of rights retrieved 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetRightsForLabelIdAsync](#classmip_1_1ProtectionEngine_1a66859b295296ff4ba2d9109462d43db0)
+* **context**: The same context that was passed to [ProtectionEngine::GetRightsForLabelIdAsync](undefined)
 
 
 An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::GetRightsForLabelIdAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](undefined) or [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](undefined)
@@ -76,10 +76,10 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when user cert loaded successfully.
 
 Parameters:  
-* **context**: The same context that was passed to [ProtectionEngine::LoadUserCert](#classmip_1_1ProtectionEngine_1aaf9010fd5d974a575d4d0bab64b0bad6)
+* **context**: The same context that was passed to [ProtectionEngine::LoadUserCert](undefined)
 
 
-An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::LoadUserCertAsync](#classmip_1_1ProtectionEngine_1a648ce6fa24d09052c1debf5adee4b575) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnLoadUserCertSuccess](#classmip_1_1ProtectionEngine_1_1Observer_1a708bc0ee6517bcd61bf007ef47f6221c) or [ProtectionEngine::Observer::OnLoadUserCertFailure](#classmip_1_1ProtectionEngine_1_1Observer_1a80d039849b9ea8d55cb116c9d85f33ab)
+An application can pass any type of context (for example, std::promise, std::function) to [ProtectionEngine::LoadUserCertAsync](undefined) and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnLoadUserCertSuccess](undefined) or [ProtectionEngine::Observer::OnLoadUserCertFailure](undefined)
   
 ### OnLoadUserCertFailure function
 Called when user cert loaded failed.

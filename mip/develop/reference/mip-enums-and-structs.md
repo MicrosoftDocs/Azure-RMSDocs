@@ -298,7 +298,7 @@ RemoveProtection            |
 #### struct mip::ApplicationInfo 
 A struct that includes application specific information.
   
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string applicationId  |  Application identifier as set in the AAD portal, (Should be a GUID without brackets).
 public std::string applicationName  |  Application name, (Should only contain valid ASCII character excluding ';')
@@ -317,7 +317,7 @@ The version of the application being used, (Should only contain valid ASCII char
 #### struct mip::TelemetryConfiguration 
 Custom telemetry settings (not commonly used)
   
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string hostNameOverride  |  Host telemetry instance name. If not set, MIP will act as its own host.
 public std::string libraryNameOverride  |  Alternate telemetry library (DLL) filename.

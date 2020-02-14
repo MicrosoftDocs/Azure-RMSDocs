@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/31/2020
+ms.date: 02/14/2020
 ---
 
 # class mip::TaskDispatcherDelegate 

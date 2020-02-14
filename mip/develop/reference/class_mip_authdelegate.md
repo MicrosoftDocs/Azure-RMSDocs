@@ -5,7 +5,7 @@ author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 01/31/2020
+ms.date: 02/14/2020
 ---
 
 # class mip::AuthDelegate 
@@ -23,15 +23,19 @@ public virtual bool AcquireOAuth2Token(const mip::Identity& identity, const OAut
 This method is called when an auth token is required for the policy engine with the given identity and the given challenge. The client should return whether acquiring token was successful. If successful, it should initialize the given token object.
 
 Parameters:  
-* **identity**: 
+* **identity**: User for whom a token is requested 
 
 
-* **challenge**: 
+* **challenge**: OAuth2 challenge 
 
 
-* **token**: 
+* **token**: [Output] Base64-encoded OAuth2 token
 
 
+
+  
+**Returns**: True if token successfully acquired, else false
+On failure, if token output parameter contains an error message, it will be included in the [NoAuthTokenError](#classmip_1_1NoAuthTokenError) exception that will later be raised to the application.
 > Deprecated: This method will soon be deprecated in favor of the one accepting a context parameter. If the new version has been implemented, there is no need to implement this version.
   
 ### AcquireOAuth2Token function
@@ -49,3 +53,8 @@ Parameters:
 
 * **token**: [Output] Base64-encoded OAuth2 token
 
+
+
+  
+**Returns**: True if token successfully acquired, else false
+On failure, if token output parameter contains an error message, it will be included in the [NoAuthTokenError](undefined) exception that will later be raised to the application.
