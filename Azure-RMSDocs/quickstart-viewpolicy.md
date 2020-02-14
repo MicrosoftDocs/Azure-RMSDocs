@@ -1,10 +1,9 @@
 ---
 title: Quickstart - View Azure Information Protection in the Azure portal - AIP
 description: If your organization is brand new to Azure Information Protection, start here to add the service to the Azure portal, confirm the protection service is activated, and publish labels and policy settings.
-author: cabailey
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 12/04/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
@@ -153,6 +152,6 @@ If you are using the classic client:
 
 If you are using the unified labeling client:
 
-- See [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Office documentation.
+- See [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) from the Microsoft 365 Compliance documentation.
 
 Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
