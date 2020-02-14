@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 2/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -135,9 +135,9 @@ Follow the instructions from the admin guides to support a disconnected computer
     
     In this configuration, the scanner from the classic client cannot apply protection, remove protection, or inspect protected files by using your organization's cloud-based key. Instead, the scanner is limited to using labels that apply classification only, or apply protection that uses [HYOK](configure-adrms-restrictions.md)
 
-- For the unified labeling client: [Support for disconnected computers](./rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers)
+- For the unified labeling client: the unified labeling client cannot apply protection without an online connection. 
     
-    In this configuration, the scanner from the unified labeling client can apply protection, remove protection, and inspect protected files by using the *DelegatedUser* parameter with the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet.
+    The scanner from the unified labeling client can apply labels based on policies imported using [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) cmdlet.
 
 Then, do the following:
 
@@ -171,19 +171,28 @@ Typically, you will use the same user account to install and configure the scann
     
     Populate the database using the following script: 
 
-
-
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END 
 
-To create a user and grant db_owner rights on this database, ask the Sysadmin to run the following SQL script twice. The first time, for the service account that runs the scanner, and the second time for you to install and manage the scanner. Before running the script:
-1. Replace *domain\user* with the domain name and user account name of the service account or user account.
-2. Replace *DBName* with the name of the scanner configuration database.
+To create a user and grant db_owner rights on this database, ask the Sysadmin to do the following:
+
+1. Create a DB for scanner: <br>
+    **CREATE DATABASE AIPScannerUL_[ProfileName]**
+    **ALTER DATABASE AIPScannerUL_[ProfileName] SET TRUSTWORTHY ON**
+    - This step is optional but allows support to troubleshoot more easily if needed.
+
+2. Grant rights to the user that runs the install command and that is used to run scanner management commands:
 
 SQL script:
 
 	if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
 	USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 
+3. Grant rights to scanner service account:
+
+SQL script:
+
+	if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+	
 Additionally:
 
 - You must be a local administrator on the server that will run the scanner
