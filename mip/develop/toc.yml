@@ -275,8 +275,8 @@
         href: reference/class_mip_protectadhocaction.md
       - name: ProtectByTemplateAction
         href: reference/class_mip_protectbytemplateaction.md
-      - name: ProtectDoNotForwardDkAction
-        href: reference/class_mip_protectdonotforwarddkaction.md
+      - name: ProtectDoNotForwardAction
+        href: reference/class_mip_protectdonotforwardaction.md
       - name: ProtectionActionData
         href: reference/class_mip_protectionactiondata.md
       - name: ProtectionDescriptor
