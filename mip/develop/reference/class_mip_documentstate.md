@@ -1,11 +1,11 @@
 ---
 title: class mip::DocumentState 
 description: Documents the mip::documentstate class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 02/14/2020
 ---
 
 # class mip::DocumentState 
@@ -20,6 +20,7 @@ public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  
 public ContentFormat GetContentFormat() const  |  Gets the content format.
 public virtual std::shared_ptr\<ClassificationResults\> GetClassificationResults(const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Return a map of classification results.
 public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
+public virtual std::chrono::time_point\<std::chrono::system_clock\> GetLastModifiedTime() const  |  Return a time point to the last time the document was modified.
   
 ## Members
   
@@ -75,3 +76,9 @@ Return a map of application specific audit key-value pairs.
   
 **Returns**: A list of application specific audit metadata
 Registered Key:Value pairs Sender: Email Id for the sender Recipients: Represents a JSON array of recipients for an email LastModifiedBy: Email Id for the user who last modified the content LastModifiedDate: Date the content was last modified
+  
+### GetLastModifiedTime function
+Return a time point to the last time the document was modified.
+
+  
+**Returns**: The last modified time of the documents time point.

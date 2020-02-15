@@ -1,11 +1,11 @@
 ---
 title: class mip::LabelGroupData 
 description: Documents the mip::labelgroupdata class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 02/14/2020
 ---
 
 # class mip::LabelGroupData 
@@ -13,27 +13,29 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  | Not yet documented.
-public const std::vector\<std::unique_ptr\<LabelGroupData\>\>& GetLabelGroupData() const  | Not yet documented.
-public int GetOrder() const  | Not yet documented.
-public const std::pair\<std::string, std::string\>& GetColor() const  | Not yet documented.
-public const std::pair\<std::string, std::string\>& GetName() const  | Not yet documented.
-public const std::pair\<std::string, std::string\>& GetDescription() const  | Not yet documented.
-public const std::string& GetTemplateId() const  | Not yet documented.
-public const std::string& GetInvariantName() const  | Not yet documented.
-public const std::pair\<std::string, std::string\>& GetTooltip() const  | Not yet documented.
-public const std::pair\<std::string, std::string\>& GetAutoTooltip() const  | Not yet documented.
-public bool IsEnabled() const  | Not yet documented.
-public bool IsDowngradeJustificationRequired() const  | Not yet documented.
-public const std::string& GetDefaultLabelId() const  | Not yet documented.
-public const std::pair\<std::string, std::string\>& GetMoreInfoUrl() const  | Not yet documented.
-public bool IsMandatory() const  | Not yet documented.
-public const std::vector\<ProtectionActionType\>& GetProtectionActionTypes() const  | Not yet documented.
-public bool IsAuditEnabled() const  | Not yet documented.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  | Not yet documented.
-public const std::vector\<std::string\>& GetLabelByCustomProperties() const  | Not yet documented.
-public const std::vector\<std::string\>& GetCustomPropertiesByLabel() const  | Not yet documented.
-public virtual ~LabelGroupData()  | Not yet documented.
+public const std::string& GetLabelId() const  | _Not yet documented._
+public const std::vector\<std::unique_ptr\<LabelGroupData\>\>& GetLabelGroupData() const  | _Not yet documented._
+public int GetOrder() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetColor() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetName() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetDescription() const  | _Not yet documented._
+public const std::string& GetTemplateId() const  | _Not yet documented._
+public const std::string& GetInvariantName() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetTooltip() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetAutoTooltip() const  | _Not yet documented._
+public bool IsEnabled() const  | _Not yet documented._
+public bool IsDowngradeJustificationRequired() const  | _Not yet documented._
+public const std::string& GetDefaultLabelId() const  | _Not yet documented._
+public const std::pair\<std::string, std::string\>& GetMoreInfoUrl() const  | _Not yet documented._
+public bool IsMandatory() const  | _Not yet documented._
+public const std::vector\<std::shared_ptr\<ProtectionActionData\>\>& GetProtectionActionData() const  | _Not yet documented._
+public bool IsAuditEnabled() const  | _Not yet documented._
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  | _Not yet documented._
+public const std::vector\<std::string\>& GetLabelByCustomProperties() const  | _Not yet documented._
+public const std::vector\<std::string\>& GetCustomPropertiesByLabel() const  | _Not yet documented._
+public std::vector\<std::pair\<std::string, std::string\>\> GetParsedCustomPropertiesByLabel() const  | _Not yet documented._
+public std::vector\<std::tuple\<std::string, std::string, std::string\>\> GetLabelByCustomPropertiesSettings() const  | _Not yet documented._
+public virtual ~LabelGroupData()  | _Not yet documented._
   
 ## Members
   
@@ -97,7 +99,7 @@ _Not documented yet._
 _Not documented yet._
 
   
-### GetProtectionActionTypes function
+### GetProtectionActionData function
 _Not documented yet._
 
   
@@ -114,6 +116,14 @@ _Not documented yet._
 
   
 ### GetCustomPropertiesByLabel function
+_Not documented yet._
+
+  
+### GetParsedCustomPropertiesByLabel function
+_Not documented yet._
+
+  
+### GetLabelByCustomPropertiesSettings function
 _Not documented yet._
 
   
