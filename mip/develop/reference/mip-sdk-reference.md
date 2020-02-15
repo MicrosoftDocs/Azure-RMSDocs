@@ -90,11 +90,8 @@ The MIP SDK for C++ includes:
 [class mip::PrivilegedRequiredError](class_mip_privilegedrequirederror.md)  |  Current label was assigned as a privileged operation (The equivalent to an administrator operation), therefore it can't be overriden.
 [class mip::PropertyData](class_mip_propertydata.md)  | Not yet documented.
 [class mip::ProtectAdhocAction](class_mip_protectadhocaction.md)  |  An action class that specifies adding adhoc protection to the document.
-[class mip::ProtectAdhocDkAction](class_mip_protectadhocdkaction.md)  |  An action class that specifies adding adhoc double key protection to the document.
 [class mip::ProtectByTemplateAction](class_mip_protectbytemplateaction.md)  |  An action class that specifies adding protection by template to the document.
-[class mip::ProtectByTemplateDkAction](class_mip_protectbytemplatedkaction.md)  |  An action class that specifies adding protection by template double key to the document.
 [class mip::ProtectDoNotForwardAction](class_mip_protectdonotforwardaction.md)  |  An action class that specifies adding do not forward protection to the document.
-[class mip::ProtectDoNotForwardDkAction](class_mip_protectdonotforwarddkaction.md)  |  An action class that specifies adding do not forward double key protection to the document.
 [class mip::ProtectionActionData](class_mip_protectionactiondata.md)  | Not yet documented.
 [class mip::ProtectionDescriptor](class_mip_protectiondescriptor.md)  |  Description of protection associated with a piece of content.
 [class mip::ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md)  |  Constructs a ProtectionDescriptor that describes protection associated with a piece of content.

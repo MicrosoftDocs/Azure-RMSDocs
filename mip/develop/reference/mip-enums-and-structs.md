@@ -22,7 +22,7 @@ enum DataState       |  Defines what state of the data is the application acting
 enum ContentFormat       |  Content format.
 enum LabelFilterType       |  Label filter types, optional set of properties that can be used to filter labels when calling list sensitivity labels.
 enum FeatureId       |  Defines new features by name.
-enum VariableTextMarkingType       |  various dynamic fields can be set into the text message of the application Some known: ${[Item.Label](#namespacemip_1afa5affe227b50ddee4ed685ddd9597c9ab021df6aac4654c454f46c77646e745f)} ${Item.Name} ${Item.Location} ${User.Name} ${User.PrincipalName} ${Event.DateTime} Others are still not defined: The sdk will replace them with correct values using these control flags.
+enum VariableTextMarkingType       |  various dynamic fields can be set into the text message of the application Some known: ${Item.Label} ${Item.Name} ${Item.Location} ${User.Name} ${User.PrincipalName} ${Event.DateTime} Others are still not defined: The sdk will replace them with correct values using these control flags.
 enum Consent       |  A user's response when consent is requested to connect to a service endpoint.
 enum CacheStorageType       |  Storage type for the caches.
 enum PFileExtensionBehavior       |  Describes PFile extensions behavior.
