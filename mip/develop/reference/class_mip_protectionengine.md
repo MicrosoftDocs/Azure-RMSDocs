@@ -1,11 +1,11 @@
 ---
 title: class mip::ProtectionEngine 
 description: Documents the mip::protectionengine class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 02/14/2020
 ---
 
 # class mip::ProtectionEngine 
@@ -15,14 +15,17 @@ Manages protection-related actions related to a specific identity.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Gets the engine settings.
-public void GetTemplatesAsync(const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Get collection of templates available to a user.
-public std::vector\<std::string\> GetTemplates(const std::shared_ptr\<void\>& context)  |  Get collection of templates available to a user.
-public void GetRightsForLabelIdAsync(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::string& delegatedUserEmail, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Get collection of rights available to a user for a label ID.
+public std::shared_ptr\<AsyncControl\> GetTemplatesAsync(const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Get collection of templates available to a user.
+public std::vector\<std::shared_ptr\<TemplateDescriptor\>\> GetTemplates(const std::shared_ptr\<void\>& context)  |  Get collection of templates available to a user.
+public bool IsFeatureSupported(FeatureId featureId)  |  Check is feature supported.
+public std::shared_ptr\<AsyncControl\> GetRightsForLabelIdAsync(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::string& delegatedUserEmail, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Get collection of rights available to a user for a label ID.
 public std::vector\<std::string\> GetRightsForLabelId(const std::string& documentId, const std::string& labelId, const std::string& ownerEmail, const std::string& delegatedUserEmail, const std::shared_ptr\<void\>& context)  |  Get collection of rights available to a user for a labelId.
-public void CreateProtectionHandlerForPublishingAsync(const ProtectionHandler::PublishingSettings& settings, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
+public std::shared_ptr\<AsyncControl\> CreateProtectionHandlerForPublishingAsync(const ProtectionHandler::PublishingSettings& settings, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
 public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerForPublishing(const ProtectionHandler::PublishingSettings& settings, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
-public void CreateProtectionHandlerForConsumptionAsync(const ProtectionHandler::ConsumptionSettings& settings, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
+public std::shared_ptr\<AsyncControl\> CreateProtectionHandlerForConsumptionAsync(const ProtectionHandler::ConsumptionSettings& settings, const std::shared_ptr\<ProtectionHandler::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
 public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerForConsumption(const ProtectionHandler::ConsumptionSettings& settings, const std::shared_ptr\<void\>& context)  |  Creates a protection handler where rights/roles are assigned to specific users.
+public bool LoadUserCert(const std::shared_ptr\<void\>& context)  |  pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
+public std::shared_ptr\<AsyncControl\> LoadUserCertAsync(const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
   
 ## Members
   
@@ -42,6 +45,9 @@ Parameters:
 * **context**: Client context that will be opaquely passed back to observers and optional HttpDelegate
 
 
+
+  
+**Returns**: Async control object.
   
 ### GetTemplates function
 Get collection of templates available to a user.
@@ -53,6 +59,17 @@ Parameters:
 
   
 **Returns**: List of template IDs
+  
+### IsFeatureSupported function
+Check is feature supported.
+
+Parameters:  
+* **featureId**: id of feature to check
+
+
+
+  
+**Returns**: Boolean result
   
 ### GetRightsForLabelIdAsync function
 Get collection of rights available to a user for a label ID.
@@ -76,6 +93,9 @@ Parameters:
 * **context**: This same context will be forwarded to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
 
 
+
+  
+**Returns**: Async control object.
   
 ### GetRightsForLabelId function
 Get collection of rights available to a user for a labelId.
@@ -113,6 +133,9 @@ Parameters:
 * **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
+
+  
+**Returns**: Async control object.
   
 ### CreateProtectionHandlerForPublishing function
 Creates a protection handler where rights/roles are assigned to specific users.
@@ -141,6 +164,9 @@ Parameters:
 * **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
 
 
+
+  
+**Returns**: Async control object.
   
 ### CreateProtectionHandlerForConsumption function
 Creates a protection handler where rights/roles are assigned to specific users.
@@ -155,3 +181,28 @@ Parameters:
 
   
 **Returns**: ProtectionHandler
+  
+### LoadUserCert function
+pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
+
+Parameters:  
+* **context**: Client context that will be opaquely forwarded to optional HttpDelegate
+
+
+
+  
+**Returns**: True if loaded successfully else false.
+  
+### LoadUserCertAsync function
+pre-emptively load user licensor certificate, useful when background loading else using prelicense might incurr an additional network call.
+
+Parameters:  
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
+
+
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
+
+
+
+  
+**Returns**: Async control object.
