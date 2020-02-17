@@ -1,11 +1,11 @@
 ---
 title: class mip::MsgInspector 
 description: Documents the mip::msginspector class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 02/14/2020
 ---
 
 # class mip::MsgInspector 
@@ -16,6 +16,8 @@ ms.date: 10/29/2019
 public const std::vector\<uint8_t\>& GetBody()  |  Get the body of the msg. if TXT/HTML formatted as utf8.
 public BodyType GetBodyType() const  |  Get body type.
 public const std::vector\<std::unique_ptr\<MsgAttachmentData\>\>& GetAttachments() const  |  Get a list of attachment as msg attachment data objects.
+public InspectorType GetInspectorType() const  |  Get file types,.
+public std::shared_ptr\<Stream\> GetFileStream() const  |  Get the file stream.
   
 ## Members
   
@@ -36,3 +38,15 @@ Get a list of attachment as msg attachment data objects.
 
   
 **Returns**: A vector of std::unique_ptr<MsgAttachmentData>
+  
+### GetInspectorType function
+Get file types,.
+
+  
+**Returns**: InspectorType.
+  
+### GetFileStream function
+Get the file stream.
+
+  
+**Returns**: A shared ptr to the file stream.

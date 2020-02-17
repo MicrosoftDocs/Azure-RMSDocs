@@ -1,6 +1,6 @@
 ---
-title: class mip::AdhocProtectionRequiredError 
-description: Documents the mip::adhocprotectionrequirederror class of the Microsoft Information Protection (MIP) SDK.
+title: class mip::InsufficientBufferError 
+description: Documents the mip::insufficientbuffererror class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
@@ -8,8 +8,8 @@ ms.author: bryanla
 ms.date: 02/14/2020
 ---
 
-# class mip::AdhocProtectionRequiredError 
-Adhoc protection should be set to complete the action on the file.
+# class mip::InsufficientBufferError 
+Insufficient buffer error.
   
 ## Summary
  Members                        | Descriptions                                

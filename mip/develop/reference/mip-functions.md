@@ -24,6 +24,8 @@ public const std::string& GetCustomSettingSensitivityTypesDataName()       |  Na
 public const std::string& GetCustomSettingPolicyDataFile()       |  Name of the setting to explicitly specify policy data file path.
 public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  Name of the setting to explicitly specify sensitivity types data file path.
 public const std::string& GetCustomSettingLabelCustomPropertiesSyncEnabled()       |  Name of the setting that allows to enable label by custom properties and custom properties by label features.
+public const std::string& GetCustomSettingPolicyTtlDays()       |  Name of the setting that enables overriding policy ttl in days be default it will be 30 days. Values should be set as string integers i < 0 means infinite time to live.
+public const std::string& GetCustomSettingSensitivityPolicyTtlDays()       |  Name of the setting that enables overriding sensitivity policy ttl in days be default it will be 30 days. Values should be set as string integers i < 0 means infinite time to live.
 public const std::map\<FlightingFeature, bool\>& GetDefaultFeatureSettings()       |  Gets whether or not a feature is enabled by default.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::istream\>& stdIStream)       |  Creates a Stream from a std::istream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::ostream\>& stdOStream)       |  Creates a Stream from a std::ostream.
@@ -40,8 +42,6 @@ Parameters:
 * **method**: an assignment method. 
 
 
-
-  
 **Returns**: A string description of the assignment method.
   
 ### GetActionSourceString function
@@ -50,9 +50,6 @@ Get the action source name.
 Parameters:  
 * **actionSource**: The action source. 
 
-
-
-  
 **Returns**: A string representation of the action source.
   
 ### GetDataStateString function
@@ -98,6 +95,18 @@ Name of the setting to explicitly specify sensitivity types data file path.
   
 ### GetCustomSettingLabelCustomPropertiesSyncEnabled function
 Name of the setting that allows to enable label by custom properties and custom properties by label features.
+
+  
+**Returns**: The custom settings key.
+  
+### GetCustomSettingPolicyTtlDays function
+Name of the setting that enables overriding policy ttl in days be default it will be 30 days. Values should be set as string integers i < 0 means infinite time to live.
+
+  
+**Returns**: The custom settings key.
+  
+### GetCustomSettingSensitivityPolicyTtlDays function
+Name of the setting that enables overriding sensitivity policy ttl in days be default it will be 30 days. Values should be set as string integers i < 0 means infinite time to live.
 
   
 **Returns**: The custom settings key.
@@ -174,12 +183,12 @@ Xor (^) operator for Action type enum.
 
 ## namespace mip::auditmetadatakeys
 
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string Sender()       |  Audit metadata keys in string representation.
-public std::string Recipients()       | Not yet documented.
-public std::string LastModifiedBy()       | Not yet documented.
-public std::string LastModifiedDate()       | Not yet documented.
+public std::string Recipients()       | _Not yet documented._
+public std::string LastModifiedBy()       | _Not yet documented._
+public std::string LastModifiedDate()       | _Not yet documented._
   
 ### Sender function
 Audit metadata keys in string representation.
@@ -198,7 +207,7 @@ _Not documented yet._
 
 ## namespace `mip::rights` 
   
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string Owner()       |  Gets string identifier for 'owner' right.
 public std::string View()       |  Gets string identifier for 'view' right.
@@ -215,7 +224,6 @@ public std::vector\<std::string\> EmailRights()       |  Gets a list of rights t
 public std::vector\<std::string\> EditableDocumentRights()       |  Gets a list of rights that apply to documents.
 public std::vector\<std::string\> CommonRights()       |  Gets a list of rights that apply in all scenarios.
   
-
 ### Owner function
 Gets string identifier for 'owner' right.
 
@@ -300,9 +308,9 @@ Gets a list of rights that apply in all scenarios.
   
 **Returns**: A list of rights that apply in all scenarios
 
-## namespace mip::roles
+## namespace `mip::roles` 
   
- Members                        | Descriptions                                
+Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string Viewer()       |  Gets string identifier for 'viewer' role.
 public std::string Reviewer()       |  Gets string identifier for 'reviewer' role.
@@ -336,4 +344,3 @@ Gets string identifier for 'co-owner' role.
   
 **Returns**: String identifier for 'co-owner' role
 A co-owner has all permissions
-

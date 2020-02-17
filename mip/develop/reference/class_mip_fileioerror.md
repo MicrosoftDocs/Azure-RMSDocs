@@ -1,11 +1,11 @@
 ---
 title: class mip::FileIOError 
 description: Documents the mip::fileioerror class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 02/14/2020
 ---
 
 # class mip::FileIOError 
