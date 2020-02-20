@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -58,7 +58,7 @@ There are three scenarios for using users and groups with Azure Information Prot
 
 - Usage rights determine whether a user can open a document or email and how they can use it. For example, whether they can only read it, or read and print it, or read and edit it. 
 
-- Access controls include an expiry date and whether a connection to the Internet is required for access. 
+- Access controls include an expiry date and whether a connection to the internet is required for access. 
 
 **For configuring the Azure Rights Management service** to support specific scenarios, and therefore only administrators select these groups. Examples include configuring the following:
 

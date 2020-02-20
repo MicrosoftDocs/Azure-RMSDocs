@@ -3,10 +3,10 @@
 
 title: Use PowerShell with the Azure Information Protection unified labeling client
 description: Instructions and information for admins to manage the Azure Information Protection unified labeling client by using PowerShell.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/23/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Admin Guide: Using PowerShell with the Azure Information Protection unified client
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -107,7 +107,7 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
 
 2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **Manage** > **App registrations**. 
 
-3. Select **+ New registration**. On the **Register an application** blade, specify the following values, and then click **Register**:
+3. Select **+ New registration**. On the **Register an application** pane, specify the following values, and then click **Register**:
 
    - **Name**: `AIP-DelegatedUser`
         
@@ -117,26 +117,26 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
     
     - **Redirect URI (optional)**: **Web** and `https://localhost`
 
-4. On the **AIP-DelegatedUser** blade, copy the value for the **Application (client) ID**. The value looks similar to the following example: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *AppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
+4. On the **AIP-DelegatedUser** pane, copy the value for the **Application (client) ID**. The value looks similar to the following example: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *AppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
 5. From the sidebar, select **Manage** > **Certificates & secrets**.
 
-6. On the **AIP-DelegatedUser - Certificates & secrets** blade, in the **Client secrets** section, select **+ New client secret**.
+6. On the **AIP-DelegatedUser - Certificates & secrets** pane, in the **Client secrets** section, select **+ New client secret**.
 
 7. For **Add a client secret**, specify the following, and then select **Add**:
     
     - **Description**: `Azure Information Protection unified labeling client`
     - **Expires**: Specify your choice of duration (1 year, 2 years, or never expires)
 
-8. Back on the **AIP-DelegatedUser - Certificates & secrets** blade, in the **Client secrets** section, copy the string for the **VALUE**. This string looks similar to the following example: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. To make sure you copy all the characters, select the icon to **Copy to clipboard**. 
+8. Back on the **AIP-DelegatedUser - Certificates & secrets** pane, in the **Client secrets** section, copy the string for the **VALUE**. This string looks similar to the following example: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. To make sure you copy all the characters, select the icon to **Copy to clipboard**. 
     
     It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any sensitive information that you use, store the saved value securely and restrict access to it.
 
 9. From the sidebar, select **Manage** > **API permissions**.
 
-10. On the **AIP-DelegatedUser - API permissions** blade, select **+ Add a permission**.
+10. On the **AIP-DelegatedUser - API permissions** pane, select **+ Add a permission**.
 
-11. On the **Request API permissions** blade, make sure that you're on the **Microsoft APIs** tab, and select **Azure Rights Management Services**. When you're prompted for the type of permissions that your application requires, select **Application permissions**.
+11. On the **Request API permissions** pane, make sure that you're on the **Microsoft APIs** tab, and select **Azure Rights Management Services**. When you're prompted for the type of permissions that your application requires, select **Application permissions**.
 
 12. For **Select permissions**, expand **Content** and select the following:
     
@@ -145,11 +145,11 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
 
 13. Select **Add permissions**.
 
-14. Back on the **AIP-DelegatedUser - API permissions** blade, select **+ Add a permission** again.
+14. Back on the **AIP-DelegatedUser - API permissions** pane, select **+ Add a permission** again.
 
-15. On the **Request AIP permissions** blade, select **APIs my organization uses**, and search for **Microsoft Information Protection Sync Service**.
+15. On the **Request AIP permissions** pane, select **APIs my organization uses**, and search for **Microsoft Information Protection Sync Service**.
 
-16. On the **Request API permissions** blade, select **Application permissions**.
+16. On the **Request API permissions** pane, select **Application permissions**.
 
 17. For **Select permissions**, expand **UnifiedPolicy** and select the following:
     
@@ -157,7 +157,7 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
 
 18. Select **Add permissions**.
 
-19. Back on the **AIP-DelegatedUser - API permissions** blade, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
+19. Back on the **AIP-DelegatedUser - API permissions** pane, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
     
     Your API permissions should look like the following:
     
@@ -181,7 +181,7 @@ Now you've completed the registration of this app with a secret, you're ready to
     	Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
 
 > [!NOTE]
-> If the computer cannot have Internet access, there's no need to create the app in Azure AD and run Set-AIPAuthentication. Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
+> If the computer cannot have internet access, there's no need to create the app in Azure AD and run Set-AIPAuthentication. Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> -online`. For example: 

@@ -3,10 +3,10 @@
 
 title: Protected PDF readers for Android
 description: Install a reader on Android for PDF documents that are labeled for classification and protection
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 08/22/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

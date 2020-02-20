@@ -1,11 +1,11 @@
 ---
 title: class mip::PolicyProfile::Settings 
 description: Documents the mip::policyprofile class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 02/14/2020
 ---
 
 # class mip::PolicyProfile::Settings 
@@ -22,12 +22,12 @@ public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context w
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
 public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Override default HTTP stack with client's own.
 public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Get the TaskDispatcher delegate (if any) provided by the application.
-public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Override default asynchonous task dispatching handling with client's own.
-public void SetSessionId(const std::string& sessionId)  | Not yet documented.
-public const std::string& GetSessionId() const  | Not yet documented.
+public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Override default asynchronous task dispatching handling with client's own.
+public void SetSessionId(const std::string& sessionId)  | _Not yet documented._
+public const std::string& GetSessionId() const  | _Not yet documented._
 public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& customSettings)  |  Set the custom settings, used for feature gating and testing.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Get the custom settings, used for feature gating and testing.
-public ~Settings()  | Not yet documented.
+public ~Settings()  | _Not yet documented._
   
 ## Members
   
@@ -93,7 +93,7 @@ Get the TaskDispatcher delegate (if any) provided by the application.
 **Returns**: TaskDispatcher delegate to be used for executing asynchronous tasks
   
 ### SetTaskDispatcherDelegate function
-Override default asynchonous task dispatching handling with client's own.
+Override default asynchronous task dispatching handling with client's own.
 
 Parameters:  
 * **taskDispatcherDelegate**: Task dispatching callback interface implemented by client application

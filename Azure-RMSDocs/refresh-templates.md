@@ -3,10 +3,10 @@
 
 title: Refresh Azure RMS templates - AIP
 description: When you use the Azure Rights Management service, templates are automatically downloaded to client computers so that users can select them from their applications. However, you might need to take additional steps if you make changes to the templates.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/09/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,19 +30,20 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
+
 When you use the Azure Rights Management service from Azure Information Protection, protection templates are automatically downloaded to client computers so that users can select them from their applications. However, you might need to take additional steps if you make changes to the templates:
 
 |Application or service|How templates are refreshed after changes|
 |--------------------------|---------------------------------------------|
 |Exchange Online<br /><br />Applicable for transport rules and the Outlook web app |Automatically refreshed within an hour - no additional steps required.|
 |Azure Information Protection client|Automatically refreshed whenever the Azure Information Protection policy is refreshed on the client:<br /><br /> - When an Office application opens that supports the Azure Information Protection bar. <br /><br /> - When you right-click to classify and protect a file or folder. <br /><br /> - When you run the PowerShell cmdlets for labeling and protection (Get-AIPFileStatus and Set-AIPFileLabel).<br /><br /> - When the Azure Information Protection Scanner service starts and the local policy is older than one hour. In addition, the scanner service checks for changes every hour and uses these changes for the next scan cycle.<br /><br /> - Every 24 hours.<br /><br /> Additionally, because this client is tightly integrated with Office, any refreshed templates for Office 365 apps, Office 2019, Office 2016, or Office 2013 will also be refreshed for the Azure Information Protection client.|
-|Azure Information Protection unified labeling client|Automatically refreshed every 4 hours, per Office app.<br /><br /> Additionally, because this client is tightly integrated with Office, any refreshed templates for Office 365 apps, Office 2019, Office 2016, or Office 2013 will also be refreshed for the Azure Information Protection unified labeling client.|
+|Azure Information Protection unified labeling client|For Office apps, the templates automatically refresh every time the app is opened.<br /><br /> Additionally, because this client is tightly integrated with Office, any refreshed templates for Office 365 apps, Office 2019, Office 2016, or Office 2013 will also be refreshed for the Azure Information Protection unified labeling client.<br /><br /> For File Explorer, PowerShell, and the scanner, the client doesn't download templates but accesses them online - no additional steps required.|
 |Office 365 apps, Office 2019, Office 2016, and Office 2013|Automatically refreshed - on a schedule:<br /><br />- For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />To force a refresh sooner than the schedule, see the following section, [Office 365 apps, Office 2019, Office 2016, and Office 2013: How to force a refresh for templates](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
 |Office 2010|Automatically refreshed when users sign out from Windows, sign back in, and wait up to 1 hour.|
 |Exchange on-premises with the Rights Management connector<br /><br />Applicable for transport rules and the Outlook web app|Automatically refreshed - no additional steps required. However, the Outlook web app caches the UI for a day.|
 |Office 2019 for Mac and Office 2016 for Mac|Automatically refreshed when you open protected content. To force a refresh, see the following section, [Office 2019 for Mac and Office 2016 for Mac: How to force a refresh for templates](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |RMS sharing app for Mac computers|Automatically refreshed - no additional steps required.|
-|Office apps that [support the Sensitivity feature](https://support.office.com/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US&ui=en-US&rs=en-US#bkmk_whereavailable)|These clients do not download templates but access them online - no additional steps required.|
+|Office 365 ProPlus apps with [built-in labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|This built-in labeling client doesn't download templates but accesses them online - no additional steps required.|
 
 When client applications need to download templates (initially or refreshed for changes), be prepared to wait up to 30 minutes before the download is complete and the new or updated templates are fully operational. The actual time will vary, according to factors such as the size and complexity of the template configuration, and the network connectivity. 
 
@@ -105,7 +106,7 @@ By editing the registry on the computers running Office 365 apps, Office 2019, O
 
 ## Office 2019 for Mac and Office 2016 for Mac: How to force a refresh for templates
 
-In these versions of Office for Mac, templates refresh when you open protected content or you protect content by using a sensitivity label that's newly configured to apply encryption. If you need to force a refresh of the templates, you can use the following instructions. However, the command in the instructions deletes the templates, the RMS token cache in the key chain, and local use licenses for any previously opened protected content. As a result, you will need to authenticate again and you must have an Internet connection to open the previously opened protected content.
+In these versions of Office for Mac, templates refresh when you open protected content or you protect content by using a sensitivity label that's newly configured to apply encryption. If you need to force a refresh of the templates, you can use the following instructions. However, the command in the instructions deletes the templates, the RMS token cache in the key chain, and local use licenses for any previously opened protected content. As a result, you will need to authenticate again and you must have an internet connection to open the previously opened protected content.
 
 1. Open Terminal, and enter the following command:
     

@@ -1,11 +1,11 @@
 ---
 title: class mip::NoPermissionsError 
 description: Documents the mip::nopermissionserror class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 02/14/2020
 ---
 
 # class mip::NoPermissionsError 
@@ -15,7 +15,7 @@ The user could not get access to the content. For example, no permissions, conte
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string GetReferrer() const  |  Gets the contact in case of missing rights to the document.
-public std::string GetOwner() const  | Not yet documented.
+public std::string GetOwner() const  |  Gets the owner of the document.
   
 ## Members
   
@@ -26,4 +26,7 @@ Gets the contact in case of missing rights to the document.
 **Returns**: The contact in case of missing rights to the document.
   
 ### GetOwner function
-_Not documented yet._
+Gets the owner of the document.
+
+  
+**Returns**: Document owner

@@ -2,11 +2,11 @@
 # required metadata
 
 title: Application support for RMS data protection - AIP
-description: Identify the applications that use RMS APIs to natively support the Azure Rights Management service from Azure Information Protection.  
+description: Identify the applications that use RMS APIs to natively support the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/11/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,9 +31,9 @@ ms.custom: admin
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-Use the following tables to identify the applications and solutions that natively support the Azure Rights Management service (Azure RMS), which provides the data protection for Azure Information Protection.
+Use the following information to identify the applications and solutions that natively support the Azure Rights Management service (Azure RMS), which provides the data protection for Azure Information Protection.
 
-For these applications and solutions, Rights Management support is tightly integrated by using the Rights Management APIs to support usage restrictions. These applications and solutions are also known as "RMS-enlightened."
+For these applications and solutions, Rights Management support is tightly integrated by using the Rights Management APIs to support [usage restrictions](configure-usage-rights.md). These applications and solutions are also known as "RMS-enlightened."
 
 Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, macOS, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
@@ -54,7 +54,7 @@ Information about the table columns:
 
 |**Device operating system**|Word, Excel, PowerPoint|Email|Other file types|
 |---------------------------|-----------------------|-----------------|---------|
-|**Windows**|Office 365 apps [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office for the web (viewing protected documents) [[2]](#footnote-2)<br /><br />Web browser [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office 365 ProPlus<br /><br />Web browser [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Visio from Office 365 apps, Office 2019, and Office 2016: .vsdm, .vsdx, .vssm, .vstm, .vssx, .vstx <br /><br />Azure Information Protection client for Windows: Text, images, pfile<br /><br />SealPath RMS plugin for AutoCAD: .dwg|
+|**Windows**|Office 365 apps [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office for the web (viewing protected documents) [[2]](#footnote-2)<br /><br />Web browser [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Outlook 2016 <br /><br />Outlook 2019 <br /><br />Outlook from Office 365 ProPlus<br /><br />Web browser [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Visio from Office 365 apps, Office 2019, and Office 2016: .vsdm, .vsdx, .vssm, .vstm, .vssx, .vstx <br /><br />Azure Information Protection client for Windows: Text, images, pfile<br /><br />SealPath RMS plugin for AutoCAD: .dwg|
 |**iOS**|GigaTrust<br /><br /> Office Mobile <br /><br />Office for the web [[2]](#footnote-2)<br /><br />TITUS Docs<br /><br />Web browser [[3]](#footnote-3)|Azure Information Protection app (viewing protected email)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook for iPad and iPhone [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Web browser [[4]](#footnote-4)|Azure Information Protection app (viewing protecting text and images)<br /><br />TITUS Docs: Pfile|
 |**Android**|GigaTrust App for Android<br /><br />Office for the web [[2]](#footnote-2)<br /><br />Office Mobile (unless using sensitivity labels, limited to viewing and editing protected documents) <br /><br />Web browser [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />Azure Information Protection app (viewing protected emails)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[5]](#footnote-5)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook for Android [[5]](#footnote-5)<br /><br />Samsung Email (S3 and later) [[5]](#footnote-5)<br /><br />TITUS Classification for Mobile <br /><br />Web browser [[4]](#footnote-4)|Azure Information Protection app (viewing protected text and images)|
 |**macOS**|Office 365 apps<br /><br />Office 2019 for Mac<br /><br />Office 2016 for Mac<br /><br />Office for the web [[2]](#footnote-2)<br /><br />Web browser [[3]](#footnote-3)|Outlook 2019 for Mac<br /><br /> Outlook 2016 for Mac<br /><br />Web browser [[4]](#footnote-4)|RMS sharing app (viewing protected text, images, generically protected files)|
@@ -145,9 +145,13 @@ For more information about how to use app, see the [FAQ for Microsoft Azure Info
 
 For more information, see the following resources:
 
-- [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md)
+- Azure Information Protection client administrator guides:
+    - [Unified labeling client](./rms-client/clientv2-admin-guide.md)
+    - [Classic client](./rms-client/client-admin-guide.md)
 
-- [Azure Information Protection client user guide](./rms-client/client-user-guide.md)
+- Azure Information Protection client user guides:
+    - [Unified labeling client](./rms-client/clientv2-user-guide.md)
+    - [Classic client](./rms-client/client-user-guide.md)
 
 - [FAQs for Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md)
 
@@ -188,30 +192,12 @@ In addition, the Azure Information Protection client has the following restricti
 
 ## RMS-enlightened solutions
 
-The following table displays RMS-enlightened solutions from software vendors.
-
-If you are a software vendor and have a solution for this table that is not listed, register your application with Azure AD. For more information, see [How to register and RMS enable your app with Azure AD](./develop/authentication-integration.md).
-
-
-|Product|Vendor|Description|
-|-------------------------------|---------------------------|-----------------|
-|Absolute|Absolute|Data loss prevention (DLP) to protect content.|
-|Content Locker|VMware|Stores, consumes, and creates protected content.|
-|Controle|TakeControle|eDiscovery by using labeling and protection.|
-|Forcepoint|Forcepoint DLP|Endpoint data loss prevention (DLP) solution to enforce an organization’s data security policies.|
-|Halocore|Secude|Protects files that are exported from SAP environments.|
-|MaaS 360|IBM|Integration to consume and protect documents.|
-|Mobiliya|Mobiliya|Secures documents from EMC’s Documentum repositories.
-|Ramessys|Ramessys|Integration for Chemcart and Documentum.
-|Sealpath|Sealpath Technologies|Integration with CAD design tools, such as AutoCAD and Siemens Jt2GO.
-|SecRMM|Sqaudra Technologies |Document protection for removable media.
-|Security Sheriff|CryptZone |Access management on SharePoint and protects documents, based on their classification and access permissions.
-|Symantec DLP|Symantec |Detection and monitoring for protected files.
+For the latest information about solutions that support the Azure Rights Management service and Azure Information Protection, see the blog post, [Microsoft Ignite 2019 – Microsoft Information Protection solutions Partner ecosystem showcase](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Ignite-2019-Microsoft-Information-Protection-solutions/ba-p/967024).
 
 ## Next steps
 To check for other requirements, see [Requirements for Azure Information Protection](requirements.md).
 
-For more information about how the most commonly used applications support Azure RMS, see [How applications support the Azure Rights Management service](./applications-support.md).
+For more information about how the most commonly used applications support the Azure Rights Management service, see [How applications support the Azure Rights Management service](./applications-support.md).
 
-For information about how to configure the most commonly used  applications for Azure RMS, see [Configuring applications for Azure Rights Management](configure-applications.md).
+For information about how to configure the most commonly used  applications for the Azure Rights Management service, see [Configuring applications for Azure Rights Management](configure-applications.md).
 

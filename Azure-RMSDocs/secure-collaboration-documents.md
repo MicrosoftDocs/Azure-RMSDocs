@@ -3,10 +3,10 @@
 
 title: Configuring secure document collaboration with Azure Information Protection
 description: End-to-end workflow for collaborating on documents that are protected by Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -43,20 +43,21 @@ When you configure these permissions, you can specify which users they are for:
 
 - **For any authenticated user**: This option is suitable for when you don't need to control who accesses the protected document, providing the user can be authenticated. The authentication can be by Azure AD, by using a Microsoft account, or even a federated social provider or one-time passcode when the content is protected by the new capabilities of Office 365 Message Encryption. 
 
-As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following sections provide an example walkthrough to protect a document that supports secure collaboration with internal and external users.
+As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following sections provide an example walk through to protect a document that supports secure collaboration with internal and external users.
 
 
 ## Example configuration for a label to apply protection to support internal and external collaboration
+
 
 This example walks through configuring an existing label to apply protection so that users from your organization can collaborate on documents with all users from another organization that has Office 365 or Azure AD, a group from a different organization that has Office 365 or Azure AD, and a user who doesn't have an account in Azure AD and instead will use their Gmail email address.
 
 Because the scenario restricts access to specific people, it does not include the setting for any authenticated users. For an example of how you can configure a label with this setting, see [Example 5: Label that encrypts content but doesn't restrict who can access it](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
-1. Select your label that's already in the global policy or a scoped policy. On the **Protection** blade, make sure **Azure (cloud key)** is selected.
+1. Select your label that's already in the global policy or a scoped policy. On the **Protection** pane, make sure **Azure (cloud key)** is selected.
     
 2. Make sure **Set permissions** is selected, and select **Add permissions**.
 
-3. On the **Add permissions** blade: 
+3. On the **Add permissions** pane: 
     
    - For your internal group: Select **Browse directory** to select the group, which must be email-enabled.
     
@@ -72,11 +73,11 @@ Because the scenario restricts access to specific people, it does not include th
         
     ![Configuring permissions for secure collaboration](./media/collaboration-permissions.png)
 
-5. Click **OK** on the **Add permissions** blade.
+5. Click **OK** on the **Add permissions** pane.
 
-6. On the **Protection** blade, click **OK**.
+6. On the **Protection** pane, click **OK**.
 
-7. On the **Label** blade, select **Save**. 
+7. On the **Label** pane, select **Save**. 
 
 ## Applying the label that supports secure collaboration
 

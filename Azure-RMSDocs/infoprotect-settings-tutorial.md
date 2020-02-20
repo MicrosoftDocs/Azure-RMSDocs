@@ -3,10 +3,10 @@
 
 title: Tutorial - Use Azure Information Protection policy settings to classify data
 description: An introduction tutorial that steps you through configuring Azure Information Protection policy settings to help classify your organization's documents and emails.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -35,6 +35,7 @@ In this tutorial, you learn how to:
 > * Configure policy settings that work together
 > * See your settings in action
 
+
 Rather than relying on users to manually label their documents and emails, you can use Azure Information Protection policy settings to:
 
 - Ensure a base level of classification for new and edited content
@@ -51,7 +52,7 @@ To complete this tutorial, you need:
     
     If you don't have a subscription that includes this plan, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
-2. The Azure Information Protection blade is added to the Azure portal and you have one or more labels published in the Azure Information Protection global policy.
+2. The Azure Information Protection pane is added to the Azure portal and you have one or more labels published in the Azure Information Protection global policy.
     
     These steps are covered in the [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
 
@@ -59,7 +60,7 @@ To complete this tutorial, you need:
     
     You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. 
     
-    If are using a different labeling client to the classic client, see the Office documentation for information about policy settings for sensitivity labels. For example, [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+    If are using a different labeling client to the classic client, see the Microsoft 365 Compliance documentation for information about policy settings for sensitivity labels. For example, [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 4. You are signed in to Office apps from one of the following categories:
     
@@ -87,11 +88,11 @@ Using the Azure portal, we'll edit the global policy to change policy settings f
 
 1. Open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin. Then navigate to **Azure Information Protection**. 
     
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
     
     If you are not the global admin, use the following link for alternative roles: [Signing in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade. 
+2. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** pane. 
 
 3. Locate the policy settings after the labels, in the **Configure settings to display and apply on Information Protection end users** section. Your settings might have different values to ones shown:
     
@@ -110,7 +111,7 @@ Using the Azure portal, we'll edit the global policy to change policy settings f
     
     ![Azure Information Protection tutorial - default settings changed](./media/defaultsettings-aip-changed.png)
 
-5. Select **Save** on this **Policy: Global** blade, and if you're prompted to confirm your action, select **OK**. 
+5. Select **Save** on this **Policy: Global** pane, and if you're prompted to confirm your action, select **OK**. 
 
 ## See your policy settings in action 
 
@@ -177,7 +178,7 @@ However, you might want to try repeating this exercise but also attach another d
 
 Do the following if you don't want to keep the changes that you made in this tutorial:
 
-1. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade.
+1. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** pane.
 
 2. Return the policy settings to their original values that you took a note of, and then select **Save**.
 

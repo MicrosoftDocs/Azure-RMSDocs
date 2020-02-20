@@ -3,10 +3,10 @@
 
 title: Protected PDF readers for Windows
 description: Install a reader on Windows for PDF documents that are labeled for classification and protection
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 08/22/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.custom: user
 
 If you need to open a protected PDF document on your Windows computer, install the Adobe plug-in for the Adobe Acrobat Reader.
 
-**Supported versions**: Windows 10 and previous versions through Windows 7 Service Pack 1
+**Supported versions**: Windows 10 and previous versions through Windows 8
 
 Instructions: 
 
@@ -38,7 +38,9 @@ Instructions:
 
 3. Install the [Adobe plug-in](https://go.microsoft.com/fwlink/?linkid=2050049) for Windows.
 
-4. If prompted, ask your admin to [authorize the plug-in](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
+4. If prompted for admin approval, ask your admin to authorize the plug-in.
+    
+    The admin instructions for this step are included in the release announcement: [General Availability of Adobe Acrobat Reader Integration with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
 
 Alternative readers that open protected PDF documents that adhere to the ISO standard for PDF encryption:
 

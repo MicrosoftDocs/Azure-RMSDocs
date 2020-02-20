@@ -3,10 +3,10 @@
 
 title: Protected PDF readers for MacOS
 description: Install a reader on Mac computers for PDF documents that are labeled for classification and protection
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 08/22/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -38,7 +38,9 @@ Instructions:
 
 3. Install the [Adobe plug-in](https://go.microsoft.com/fwlink/?linkid=2050049) for Mac.
 
-4. If prompted, ask your admin to [authorize the plug-in](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
+4. If prompted for admin approval, ask your admin to authorize the plug-in.
+    
+    The admin instructions for this step are included are included in the release announcement: [General Availability of Adobe Acrobat Reader Integration with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
 
 ## Next steps
 

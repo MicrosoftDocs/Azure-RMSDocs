@@ -3,10 +3,10 @@
 
 title: Get started - AIP app for iOS & Android
 description: View emails or files with the Azure Information Protection app for iOS and Android
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/30/2019
+author: rkarlin
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

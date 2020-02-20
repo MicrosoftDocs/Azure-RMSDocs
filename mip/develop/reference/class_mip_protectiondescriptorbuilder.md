@@ -1,11 +1,11 @@
 ---
 title: class mip::ProtectionDescriptorBuilder 
 description: Documents the mip::protectiondescriptorbuilder class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 02/14/2020
 ---
 
 # class mip::ProtectionDescriptorBuilder 
@@ -22,11 +22,8 @@ public void SetAllowOfflineAccess(bool value)  |  Sets if protection policy allo
 public void SetReferrer(const std::string& uri)  |  Sets protection policy referrer address.
 public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be encrypted.
 public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be signed.
-public virtual ~ProtectionDescriptorBuilder()  | Not yet documented.
-public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromUserRights | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and rights.
-public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromUserRoles | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and roles.
-public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromTemplate | Creates a ProtectionDescriptorBuilder whose access permissions are defined by the protection template. 
-
+public virtual ~ProtectionDescriptorBuilder()  | _Not yet documented._
+  
 ## Members
   
 ### Build function
@@ -96,27 +93,3 @@ An application can specify a dictionary of app-specific data that will be signed
   
 ### ~ProtectionDescriptorBuilder function
 _Not documented yet._
-
-### CreateFromUserRights function
-Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and rights.
-
-Parameters:
-* **usersAndRights**: Collection of users-to-rights mappings.
-
-**Returns**: New [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance 
-
-### CreateFromUserRoles function
-Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and roles.
-
-Parameters:
-* **usersAndRoles**: Collection of users-to-roles mappings.
-
-**Returns**: Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by users and roles.
-
-### CreateFromTemplate function
-Creates a ProtectionDescriptorBuilder whose access permissions are defined by the protection template. 
-
-Parameters:
-* **templateId**: A protection template ID.
-
-**Returns**: A new [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance.

@@ -6,7 +6,7 @@ description: Information to help you install and configure the Azure Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/26/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Installing and configuring the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 Use the following information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
@@ -51,9 +51,9 @@ Before you begin, make sure that you have reviewed and checked the [prerequisite
 
     -   If you want to use the server configuration tool for the RMS connector, to automate the configuration of registry settings on your on-premises servers, also download GenConnectorConfig.ps1.
 
-3.  On the computer on which you want to install the RMS connector, run **RMSConnectorSetup.exe** with Administrator privileges.
+3.  On the computer on which you want to install the RMS connector, run **RMSConnectorSetup.exe** with administrator privileges.
 
-4.  On the Welcome page of the Microsoft Rights Management Connector Setup, select **Install Microsoft Rights Management connector on the computer**, and then click **Next**.
+4.  On the Welcome page of Microsoft Rights Management Connector Setup, select **Install Microsoft Rights Management connector on the computer**, and then click **Next**.
 
 5.  Read and agree to the RMS connector license terms, and then click **Next**.
 
@@ -62,9 +62,9 @@ To continue, enter an account and password to configure the RMS connector.
 ## Entering credentials
 Before you can configure the RMS connector, you must enter credentials for an account that has sufficient privileges to configure the RMS connector. For example, you might type <strong>admin@contoso.com</strong> and then specify the password for this account.
 
-This account must not require multi-factor authentication (MFA) because the Microsoft Rights Management administration tool does not support MFA for this account. In addition, if you use Azure AD Conditional Access, do not [block legacy authentication](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) for this account.
+This account must not require multi-factor authentication (MFA) because Microsoft Rights Management Connector Setup does not support MFA. In addition, if you use Azure AD Conditional Access, do not [block legacy authentication](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) for this account.
 
-The connector also has some character restrictions for this password. You cannot use a password that has any of the following characters: Ampersand ( **&** ); left angle bracket ( **[** ); right angle bracket ( **]** ); straight quotation ( **"** ); and apostrophe ( **'** ). If your password has any of these characters, authentication fails for the RMS connector and you see the error message **That user name and password combination is not correct**, even though you can successfully sign in using this account and password for other scenarios. If this scenario applies to your password, either use a different account with a password that does not have any of these special characters, or reset your password so it doesn't have any of these special characters.
+The connector setup also has some character restrictions for this password. You cannot use a password that has any of the following characters: Ampersand ( **&** ); left angle bracket ( **[** ); right angle bracket ( **]** ); straight quotation ( **"** ); and apostrophe ( **'** ). If your password has any of these characters, authentication fails for the RMS connector setup and you see the error message **That user name and password combination is not correct**, even though you can successfully sign in using this account and password for other scenarios. If this scenario applies to your password, either use a different account with a password that does not have any of these special characters, or reset your password so it doesn't have any of these special characters.
 
 In addition, if you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
 
@@ -81,7 +81,7 @@ You can use an account that has one of the following privileges:
     > 
     > To run the RMS connector with least privileges, create a dedicated account for this purpose that you then assign the Azure RMS connector administrator role by doing the following:
     >
-    > 1.  If you haven't already done so, download and install the AIPService PowerShell module. For more information, see [Installing the AIPService PowerShell module](install-powershell.md).
+    > 1. If you haven't already done so, download and install the AIPService PowerShell module. For more information, see [Installing the AIPService PowerShell module](install-powershell.md).
     >
     >     Start Windows PowerShell with the **Run as administrator** command, and connect to the protection service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) command:
     >
@@ -176,7 +176,7 @@ If you haven’t already done so, you must now configure load balancing for the 
 ## Configuring load balancing and high availability
 After you have installed the second or final instance of the RMS connector, define a connector URL server name and configure a load-balancing system.
 
-The connector URL server name can be any name under a namespace that you control. For example, you could create an entry in your DNS system for **rmsconnector.contoso.com** and configure this entry to use an IP address in your load-balancing system. There are no special requirements for this name and it doesn’t need to be configured on the connector servers themselves. Unless your Exchange and SharePoint servers are going to be communicating with the connector over the Internet, this name doesn’t have to resolve on the Internet.
+The connector URL server name can be any name under a namespace that you control. For example, you could create an entry in your DNS system for **rmsconnector.contoso.com** and configure this entry to use an IP address in your load-balancing system. There are no special requirements for this name and it doesn’t need to be configured on the connector servers themselves. Unless your Exchange and SharePoint servers are going to be communicating with the connector over the internet, this name doesn’t have to resolve on the internet.
 
 > [!IMPORTANT]
 > We recommend that you don’t change this name after you have configured Exchange or SharePoint servers to use the connector, because you have to then clear these servers of all IRM configurations and then reconfigure them.
@@ -213,7 +213,7 @@ If you use the HTTPS option, ensure that all servers that run the connector have
 > - To configure IIS to use the certificate, see [Add a Binding to a Site (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx) in the [Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
 
 ## Configuring the RMS connector for a web proxy server
-If your connector servers are installed in a network that does not have direct Internet connectivity and requires manual configuration of a web proxy server for outbound Internet access, you must configure the registry on these servers for the RMS connector.
+If your connector servers are installed in a network that does not have direct internet connectivity and requires manual configuration of a web proxy server for outbound internet access, you must configure the registry on these servers for the RMS connector.
 
 #### To configure the RMS connector to use a web proxy server
 
@@ -230,7 +230,7 @@ If your connector servers are installed in a network that does not have direct I
 ## Installing the RMS connector administration tool on administrative computers
 You can run the RMS connector administration tool from a computer that does not have the RMS connector installed, if that computer meets the following requirements:
 
--   A physical or virtual computer running Windows Server 2012 or Windows Server 2012 R2 (all editions), Windows Server 2008 R2 or Windows Server 2008 R2 Service Pack 1 (all editions), Windows 8.1, Windows 8, or Windows 7.
+-   A physical or virtual computer running Windows Server 2012 or Windows Server 2012 R2 (all editions), Windows 8.1, Windows 8.
 
 -   At least 1 GB of RAM.
 
@@ -238,7 +238,7 @@ You can run the RMS connector administration tool from a computer that does not 
 
 -   At least one network interface.
 
--   Access to the Internet via a firewall (or web proxy).
+-   Access to the internet via a firewall (or web proxy).
 
 To install the RMS connector administration tool, run the following files:
 

@@ -3,10 +3,10 @@
 
 title: Requirements for Azure Information Protection - AIP
 description: Identify the prerequisites to deploy Azure Information Protection for your organization.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/02/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -33,7 +33,7 @@ Before you deploy Azure Information Protection for your organization, make sure 
 
 ## Subscription for Azure Information Protection
 
-**For classification, labeling, and protection**: You must have an [Azure Information Protection plan](https://azure.microsoft.com/pricing/details/information-protection/). 
+**For classification, labeling, and protection by using the Azure Information Protection client (classic or unified labeling) or scanner**: You must have an [Azure Information Protection plan](https://azure.microsoft.com/pricing/details/information-protection/). 
 
 **For protection-only**: You must have an [Office 365 plan that includes Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
@@ -80,16 +80,14 @@ The following devices support the Azure Information Protection unified labeling 
 
 - Windows 8 (x86, x64)
 
-- Windows 7 Service Pack 1 (x86, x64)
-
 - Windows Server 2019
 
 - Windows Server 2016
 
 - Windows Server 2012 R2 and Windows Server 2012
 
-- Windows Server 2008 R2 
 
+For information about support options for earlier versions of Windows, contact your Microsoft account or support representative.   
 In addition to installing the client on physical computers, you can also install it on virtual machines. Check whether the software vendor for the virtual desktop solution has additional configuration that might be required to run the Azure Information Protection unified labeling client or the Azure Information Protection client. For example, for Citrix solutions, you might need to [disable Citrix Application Programming Interface (API) hooks](https://support.citrix.com/article/CTX107825) for Office (winword.exe, excel.exe, outlook.exe, powerpnt.exe) and the executable for the Azure Information Protection unified labeling client or Azure Information Protection client (msip.app.exe, msip.viewer.exe).
 
 For the listed server versions:
@@ -171,4 +169,18 @@ The following deployment scenario is not supported unless you are using AD RMS f
 - Running AD RMS and Azure RMS side by side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 There is a supported migration path [from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md), and from [Azure Information Protection to AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](decommission-deactivate.md).
+
+### Service Tags
+
+Make sure to allow access to all ports for the following Service Tags:
+
+- **AzureInformationProtection**
+- **AzureActiveDirectory**
+- **AzureFrontDoor.FrontEnd**
+
+The Azure Information Protection service also depends on two specific IP addresses:
+ - **13.107.6.181** 
+ - **13.107.9.181**
+
+Make sure to create rules to allow outbound access to these specific IP addresses. 
 

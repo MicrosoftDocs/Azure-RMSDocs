@@ -26,6 +26,7 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
 
+<<<<<<< HEAD
 ## Version 1.5.117
 
 **Release date**: February 14, 2020
@@ -132,17 +133,27 @@ Use the following information to see what’s new or changed for a supported rel
   - Removed unused PolicySyncError. Replaced by NetworkError
   - Removed unused TransientNetworkError. Replaced by NetworkError categories
 
+=======
+>>>>>>> af1b4d30f5b1e6a4e7a252f05bd49049e1f79737
 ## Version 1.4.0 
 
 **Release date**: November 6, 2019
 
+<<<<<<< HEAD
 This version introduces support for the Protection SDK in the .NET package (Microsoft.InformationProtection.File).
+=======
+This version introduces support for the protection API in the .NET package (Microsoft.InformationProtection.File).
+>>>>>>> af1b4d30f5b1e6a4e7a252f05bd49049e1f79737
 
 ### SDK changes
 - Performance improvements and bug fixes
 - Renamed StorageType enum to CacheStorageType
 - Android links to libc++ instead of gnustl
+<<<<<<< HEAD
 - Removed previouslydeprecated APIs
+=======
+- Removed previously-deprecated APIs
+>>>>>>> af1b4d30f5b1e6a4e7a252f05bd49049e1f79737
   - File/Policy/Profile::Settings must be initialized with a MipContext
   - File/Policy/Profile::Settings path, application info, logger delegate, telemetry, and log level getters/setters have been removed. These properties are managed by MipContext
 - Better static library support on Apple platforms
@@ -156,7 +167,11 @@ This version introduces support for the Protection SDK in the .NET package (Micr
     - libssl.a
 - Removed mip_telemetry.dll (merged into mip_core.dll)
 
+<<<<<<< HEAD
 ### File SDK
+=======
+### File API
+>>>>>>> af1b4d30f5b1e6a4e7a252f05bd49049e1f79737
 
 - RPMSG
   - Encryption
@@ -164,15 +179,25 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 - Configurable PFILE extension behavior (default, <EXT>.PFILE, or P<EXT>)
   - ProtectionSettings::SetPFileExtensionBehavior
 
+<<<<<<< HEAD
 ### Policy SDK
+=======
+### Policy API
+>>>>>>> af1b4d30f5b1e6a4e7a252f05bd49049e1f79737
 
 - Complete C API
 - Configure filtering of labels associated with protection
   - PolicyEngine::Settigns::SetLabelFilter()
 
+<<<<<<< HEAD
 ### Protection SDK
 
 - Removed previouslydeprecated APIs
+=======
+### Protection API
+
+- Removed previously-deprecated APIs
+>>>>>>> af1b4d30f5b1e6a4e7a252f05bd49049e1f79737
   - Removed ProtectionEngine::CreateProtectionHandlerFromDescriptor[Async] (use ProtectionEngine::CreateProtectionHandlerForPublishing[Async])
   - Removed ProtectionEngine::CreateProtectionHandlerFromPublishingLicense[Async] (use ProtectionEngine::CreateProtectionHandlerForConsumption[Async])
 - Complete C# API
@@ -214,10 +239,17 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 - Decryption of protected MSG files is now supported.
 - Inspection of message.rpmsg files is supported via `mip::FileInspector` and `mip::FileHandler::InspectAsync()`.
 - On-disk cache may now be optionally encrypted.
+<<<<<<< HEAD
 - Protection SDK now supports China sovereign cloud.
 - Arm64 support on Android.
 - Arm64e support on iOS.
 - End-user license (EUL) cache can now be disabled.
+=======
+- Protection API now supports China sovereign cloud.
+- Arm64 support on Android.
+- Arm64e support on iOS.
+- End user license (EUL) cache can now be disabled.
+>>>>>>> af1b4d30f5b1e6a4e7a252f05bd49049e1f79737
 - .pfile encryption may be disabled via `mip::FileEngine::EnablePFile`
 - Improved performance for protection operations by reducing number of HTTP calls
 - Removed the delegated identity details from `mip::Identity` and instead added `DelegatedUserEmail` to `mip::FileEngine::Settings`, `mip::ProtectionSettings`, `mip::PolicyEngine::Settings`, and `mip::ProtectionHandler`'s `PublishingSettings` and `ConsumptionSettings`.
@@ -247,7 +279,11 @@ This version introduces support for the Protection SDK in the .NET package (Micr
  - Align File/Policy SDK exception handling behavior with Protection SDK:
     - ProxyAuthError thrown by all SDKs if a proxy is configured to require authentication.
     - NoAuthTokenError thrown by all SDKs if empty auth token is provided by application's implementation of mip::AuthDelegate::AcquireOAuth2Token.
+<<<<<<< HEAD
  - Improved HTTP caching for Policy SDK reduces # of required HTTP calls by half.
+=======
+ - Improved HTTP caching for Policy SDK reduces # of required HTTP calls by half..
+>>>>>>> af1b4d30f5b1e6a4e7a252f05bd49049e1f79737
  - Richer logs/audit/telemetry for improved failure detection and debugging.
  - Support for external/foreign labels to facilitate migration to AIP labels.
  - Enabled support for 3rd-party applications to download sensitivity types from SCC.
@@ -257,8 +293,13 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 
  - mip_common.dll split into mip_core.dll and mip_telemetry.dll.
  - Renamed mip::ContentState to mip::DataState to describe how an application interacts with data at a high level.
+<<<<<<< HEAD
  - mip::AdhocProtectionRequiredError exception is thrown by FileHandler::SetLabel to notify an application that it must first apply ad hoc protection before applying a label.
  - mip::OperationCancelledError exception is thrown when an operation has been canceled (for example due to shutdown or HTTP cancellation).
+=======
+ - mip::AdhocProtectionRequiredError exception is thrown by FileHandler::SetLabel to notify an application that it must first apply ad-hoc protection before applying a label.
+ - mip::OperationCancelledError exception is thrown when an operation has been cancelled (e.g. due to shutdown or HTTP cancellation).
+>>>>>>> af1b4d30f5b1e6a4e7a252f05bd49049e1f79737
  - New APIs:
     - mip::ClassificationResult::GetSensitiveInformationDetections
     - mip::FileEngine::GetLastPolicyFetchTime
@@ -283,7 +324,11 @@ This version introduces support for the Protection SDK in the .NET package (Micr
 ### New Requirements
  - mip::ReleaseAllResources must be called prior to process termination (after clearing references to all Profiles, Engines, and Handlers)
  - (interface) mip::ExecutionState::GetClassificationResults return type and "classificationIds" parameter has changed
+<<<<<<< HEAD
  - (interface) mip::FileExecutionState::GetAuditMetadata can be implemented by applications to specify detailed information to surface to a tenant admin's audit dashboard (for example sender, recipients, last modified, etc.)
+=======
+ - (interface) mip::FileExecutionState::GetAuditMetadata can be implemented by applications to specify detailed information to surface to a tenant admin's audit dashboard (e.g. sender, recipients, last modified, etc.)
+>>>>>>> af1b4d30f5b1e6a4e7a252f05bd49049e1f79737
  - (interface) mip::FileExecutionState::GetClassificationResults return type has changed, and it now requires a FileHandler parameter
  - (interface) mip::FileExecutionState::GetDataState should be implemented by applications to specify how an application is interacting with contentIdentifier
  - (interface) mip::HttpDelegate interface requires 'CancelOperation' and 'CancelAllOperations' methods
@@ -295,7 +340,11 @@ This version introduces support for the Protection SDK in the .NET package (Micr
  - mip::PolicyHandler::NotifyCommitedActions renamed to mip::PolicyHandler::NotifyCommittedActions
 
 
+<<<<<<< HEAD
 ## Version 1.1.0 
+=======
+## Version 1.1.0
+>>>>>>> af1b4d30f5b1e6a4e7a252f05bd49049e1f79737
 
 **Release date**: January 15, 2019
 
@@ -308,7 +357,11 @@ This version introduces support for the following platforms:
 ### New Features
 
 - ADRMS support
+<<<<<<< HEAD
 - Protection SDK operations are truly asynchronous (on Win32), allowing for simultaneous non-blocking encrypt/decrypt operations
+=======
+- Protection API operations are truly asynchronous (on Win32), allowing for simultaneous non-blocking encrypt/decrypt operations
+>>>>>>> af1b4d30f5b1e6a4e7a252f05bd49049e1f79737
   - Application callbacks (AuthDelegate, HTTPDelegate, etc.) may now be invoked on -any- background thread
 - Custom label properties set by IT administrators can now be read via mip::Label::GetCustomSettings
 - Serialized publishing license can now be retrieved directly from a file without any HTTP operations via mip::FileHandler::GetSerializedPublishingLicense

@@ -3,10 +3,10 @@
 
 title: Tutorial - Edit the Azure Information Protection policy - AIP
 description: An introduction tutorial that edits the Azure Information Protection policy for your organization, which should take you about 15 minutes to complete.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -37,6 +37,7 @@ In this tutorial, you learn how to:
 > * Configure the label for visual markings, recommended classification, and protection
 > * See your settings and labels in action
 
+
 As a result of this configuration, users see a default label applied when they create a new document or email. However, they are prompted to apply the new label when credit card information is detected. When the new label is applied, the content is reclassified and protected, with a corresponding footer and watermark. 
 
 You can finish this tutorial in about 15 minutes.
@@ -49,13 +50,13 @@ To complete this tutorial, you need:
     
     If you don't have a subscription that includes Azure Information Protection Plan 2, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
-2. The Azure Information Protection blade is added to the Azure portal, the protection service is activated, and you have one or more labels published in the Azure Information Protection global policy.
+2. The Azure Information Protection pane is added to the Azure portal, the protection service is activated, and you have one or more labels published in the Azure Information Protection global policy.
     
     These steps are covered in the [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
 
 3. The Azure Information Protection client (classic) is installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
     
-    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. If are using a different labeling client to the classic client, see the [Office documentation](/microsoft-365/compliance/sensitivity-labels)  for equivalent instructions to this tutorial.
+    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. If are using a different labeling client to the classic client, see the [Microsoft 365 Compliance documentation](/microsoft-365/compliance/sensitivity-labels)  for equivalent instructions to this tutorial.
 
 4. You're signed in to Office apps from one of the following categories:
     
@@ -83,11 +84,11 @@ Using the Azure portal, we'll first change a couple of policy settings, and then
 
 1. Open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin. Then navigate to **Azure Information Protection**. 
     
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
     
     If you are not the global admin, use the following link for alternative roles: [Signing in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade. 
+2. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** pane. 
 
 3. Locate the policy settings after the labels, in the **Configure settings to display and apply on Information Protection end users** section. 
     
@@ -105,7 +106,7 @@ Using the Azure portal, we'll first change a couple of policy settings, and then
 
 6. In addition, make sure that **Display the Information Protection bar in Office apps** is set to **On**.
 
-7. Select **Save** on this **Policy: Global** blade, and if you're prompted to confirm your action, select **OK**. Close this blade.
+7. Select **Save** on this **Policy: Global** pane, and if you're prompted to confirm your action, select **OK**. Close this pane.
 
 ### Create a new label for protection, visual markers, and a condition to prompt for classification
 
@@ -115,17 +116,17 @@ We'll now create a new sublabel for **Confidential**.
     
     If you don't have a label named **Confidential**, you can select another label or you can create a new label instead and still follow the tutorial with minor differences.
 
-2. On the **Sub-label** blade, specify the label name of **Finance** and add the following description: **Confidential data that contains financial information that is restricted to employees only**.
+2. On the **Sub-label** pane, specify the label name of **Finance** and add the following description: **Confidential data that contains financial information that is restricted to employees only**.
     
     This text describes how the selected label is intended to be used and it's visible to users as a tooltip, to help them decide which label to select.
 
-3. For **Set permissions for documents and emails containing this label**, select **Protect**, which automatically opens the **Protection** blade by selecting the **Protection** option for you:
+3. For **Set permissions for documents and emails containing this label**, select **Protect**, which automatically opens the **Protection** pane by selecting the **Protection** option for you:
     
     ![Configuring an Azure Information Protection label for protection](./media/info-protect-protection-bar-configured.png) 
     
-4. On the **Protection** blade, make sure that **Azure (cloud key)** is selected. This option uses the Azure Rights Management service to protect documents and emails. Also make sure that the **Set Permissions** option is selected. Then select **Add permissions**.
+4. On the **Protection** pane, make sure that **Azure (cloud key)** is selected. This option uses the Azure Rights Management service to protect documents and emails. Also make sure that the **Set Permissions** option is selected. Then select **Add permissions**.
 
-5. On the **Add permissions** blade, select **Add \<organization name> - All members**. For example, if your organization name is VanArsdel Ltd, you see the following option to select:
+5. On the **Add permissions** pane, select **Add \<organization name> - All members**. For example, if your organization name is VanArsdel Ltd, you see the following option to select:
     
     ![Granting all members protection permissions for an Azure Information Protection label](./media/info-protect-protection-all-members.png) 
     
@@ -137,15 +138,15 @@ We'll now create a new sublabel for **Confidential**.
     
     You can select different permission levels or specify individual usage rights by using the **Custom** option. But for this tutorial, keep the **Reviewer** option. You can experiment with different permissions later and read how they restrict what the specified users can do with the protected document or email.
 
-7. Click **OK** to close this **Add permissions** blade, and you see how the **Protection** blade is updated to reflect your configuration. For example:
+7. Click **OK** to close this **Add permissions** pane, and you see how the **Protection** pane is updated to reflect your configuration. For example:
     
-     ![Protection blade showing the permissions configuration for an Azure Information Protection label](./media/info-protect-protection-configured.png)
+     ![Protection pane showing the permissions configuration for an Azure Information Protection label](./media/info-protect-protection-configured.png)
     
-    If you select **Add permissions**, this action opens the **Add permissions** blade again, so that you can add more users and grant them different permissions. For example, grant just view access for a specific group. But for this tutorial, we'll keep with one set of permissions for all users.
+    If you select **Add permissions**, this action opens the **Add permissions** pane again, so that you can add more users and grant them different permissions. For example, grant just view access for a specific group. But for this tutorial, we'll keep with one set of permissions for all users.
 
-8. Review and keep the defaults for content expiration and offline access, and then click **OK** to save and close this **Protection** blade.
+8. Review and keep the defaults for content expiration and offline access, and then click **OK** to save and close this **Protection** pane.
 
-8. Back on the **Sub-label** blade, locate the **Set visual marking** section:
+8. Back on the **Sub-label** pane, locate the **Set visual marking** section:
     
     For the **Documents with this label have a footer** setting, click **On**, and then for the **Text** box, type **Classified as Confidential**. 
     
@@ -155,7 +156,7 @@ We'll now create a new sublabel for **Confidential**.
     
 9. Locate the section **Configure conditions for automatically applying this label**:
     
-    Click **Add a new condition** and then, on the **Condition** blade, select the following:
+    Click **Add a new condition** and then, on the **Condition** pane, select the following:
     
     a. **Choose the type of condition**: Keep the default of **Information Types**.
     
@@ -169,9 +170,9 @@ We'll now create a new sublabel for **Confidential**.
     
     ![Azure Information Protection tutorial - configure credit card condition](./media/step2-configure-condition.png)
     
-    Click **Save** to return to the **Sub-label** blade.
+    Click **Save** to return to the **Sub-label** pane.
 
-10. On the **Sub-label** blade, you see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
+10. On the **Sub-label** pane, you see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
     
     ![Azure Information Protection tutorial - summary of credit card condition](./media/step2-see-condition.png)
 
@@ -179,13 +180,13 @@ We'll now create a new sublabel for **Confidential**.
 
 12. In the **Add notes for administrator use** box, type **For testing purposes only**.
 
-13. Click **Save** on this **Sub-label** blade. If you're prompted to confirm, click **OK**. The new label is created and saved, but not yet added to a policy.
+13. Click **Save** on this **Sub-label** pane. If you're prompted to confirm, click **OK**. The new label is created and saved, but not yet added to a policy.
 
 14. From the **Classifications** > **Policies** menu option: Select **Global** again, and then select the **Add or remove labels** link after the labels.
 
-15. From the **Policy: Add or remove labels** blade, select the label that you've just created, the sublabel named **Finance**, and click **OK**.
+15. From the **Policy: Add or remove labels** pane, select the label that you've just created, the sublabel named **Finance**, and click **OK**.
 
-16. On the **Policy: Global** blade, you now see your new sublabel in your global policy, which is configured for visual markings and protection. For example:
+16. On the **Policy: Global** pane, you now see your new sublabel in your global policy, which is configured for visual markings and protection. For example:
 
     ![Azure Information Protection tutorial - new sublabel](./media/info-protect-policy-configuredv2.png)
     
@@ -194,7 +195,7 @@ We'll now create a new sublabel for **Confidential**.
     ![Azure Information Protection tutorial - settings configured](./media/info-protect-settings-configuredv2.png)
     
 
-17. Click **Save** on this **Policy: Global** blade. If you're prompted to confirm this action, click **OK**.
+17. Click **Save** on this **Policy: Global** pane. If you're prompted to confirm this action, click **OK**.
 
 You can either close the Azure portal, or leave it open to try additional configuration options after you've finished this tutorial.
 
@@ -268,11 +269,11 @@ Open a new document in Word. Because the Azure Information Protection client is 
 
 Do the following if you don't want to keep the changes that you made in this tutorial:
 
-1. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** blade.
+1. Select **Classifications** > **Policies** > **Global** to open the **Policy: Global** pane.
 
 2. Return the policy settings to their original values that you took a note of, and then select **Save**. 
 
-3. From the **Classifications** > **Label** menu option: On the **Azure Information Protection - Label** blade, select the context menu (**...**) for the **Finance** label you created.
+3. From the **Classifications** > **Label** menu option: On the **Azure Information Protection - Label** pane, select the context menu (**...**) for the **Finance** label you created.
 
 4. Select **Delete this label** and if you're asked to confirm, select **OK**.
 

@@ -1,11 +1,11 @@
 ---
 title: class mip::MipContext 
 description: Documents the mip::mipcontext class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 02/14/2020
 ---
 
 # class mip::MipContext 
@@ -19,11 +19,10 @@ public bool IsFeatureEnabled(FlightingFeature feature) const  |  Gets whether or
 public const ApplicationInfo& GetApplicationInfo() const  |  Get application description.
 public const std::string& GetMipPath() const  |  Get file path for logs, caches, etc.
 public bool IsOfflineOnly()  |  Get offline-only setting.
+public LogLevel GetThresholdLogLevel() const  |  Get threshold log level.
 public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate()  |  Get logger implementation.
 public LoggerDelegate* GetRawLoggerDelegate()  |  Get logger implementation.
-public static MIP_API std::shared_ptr&lt;MipContext&gt; __CDECL mip::MipContext::Create | Create a new MipContext instance to be used when initializing profiles.
-public static MIP_API std::shared_ptr&lt;MipContext&gt; __CDECL mip::MipContext::CreateWithCustomFeatureSettings | Create a new MipContext instance with custom feature settings.
-
+  
 ## Members
   
 ### ShutDown function
@@ -60,6 +59,12 @@ Get offline-only setting.
   
 **Returns**: Whether or not application is running in offline-only mode
   
+### GetThresholdLogLevel function
+Get threshold log level.
+
+  
+**Returns**: Threshold log level
+  
 ### GetLoggerDelegate function
 Get logger implementation.
 
@@ -71,13 +76,3 @@ Get logger implementation.
 
   
 **Returns**: Logger
-
-### Create function
-Create a new MipContext instance to be used when initializing profiles.
-
-**Returns**: MipContext instance.
-
-### CreateWithCustomFeatureSettings function
-Create a new MipContext instance with custom feature settings.
-
-**Returns**: MipContext instance.

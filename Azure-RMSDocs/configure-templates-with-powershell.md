@@ -2,11 +2,11 @@
 # required metadata
 
 title: PowerShell for protection templates - Azure Information Protection
-description: Everything that you can do in the Azure portal to create and manage protection templates, you can do from the command line, by using PowerShell. In addition, you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
+description: Use PowerShell to create and manage protection templates for Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

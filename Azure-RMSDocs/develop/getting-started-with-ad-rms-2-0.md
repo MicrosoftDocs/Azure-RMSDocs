@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Getting started | Azure RMS
+title: Getting started with the Rights Management Services SDK 2.1
 description: The RMS SDK 2.1 platform enables developers to build applications that leverage RMS information protection.
 keywords:
 author: msmbaldwin

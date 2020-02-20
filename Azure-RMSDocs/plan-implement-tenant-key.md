@@ -6,7 +6,7 @@ description: Instead of Microsoft managing the root key for Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/11/2019
+ms.date: 11/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -172,7 +172,7 @@ Configuration by using the Azure portal:
 
 1. Navigate to **Key vaults** > **\<*your key vault name*>** > **Access policies** > **Add new**.
 
-2. From the **Add access policy** blade, select **Azure Information Protection BYOK** from the **Configure from template (optional)** list box, and click **OK**.
+2. From the **Add access policy** pane, select **Azure Information Protection BYOK** from the **Configure from template (optional)** list box, and click **OK**.
     
     The selected template has the following configuration:
     

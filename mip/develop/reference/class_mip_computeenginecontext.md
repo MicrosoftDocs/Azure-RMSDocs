@@ -1,11 +1,11 @@
 ---
 title: class mip::ComputeEngineContext 
 description: Documents the mip::computeenginecontext class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 02/14/2020
 ---
 
 # class mip::ComputeEngineContext 
@@ -13,8 +13,8 @@ ms.date: 10/29/2019
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual ~ComputeEngineContext()  | Not yet documented.
-protected ComputeEngineContext()  | Not yet documented.
+public virtual ~ComputeEngineContext()  | _Not yet documented._
+protected ComputeEngineContext()  | _Not yet documented._
   
 ## Members
   

@@ -3,10 +3,10 @@
 
 title: FAQs for classification & labeling - AIP
 description: Have a question that is specifically about classification and labeling using Azure Information Protection? See if it's answered here. 
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/25/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,26 +28,8 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
+
 Have a question about Azure Information Protection that is specifically about classification and labeling?  See if it's answered here. 
-
-## What can I do with the classification capabilities in Azure Information Protection?
-
-Try our [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md) tutorial to see this working in just a few minutes.
-
-Look out for announcements on the [Enterprise Mobility + Security blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional classification features and capabilities become available. There are a few limitations with the current releases, which include the following:
-
-- No labeling ability in the Office web apps (Office for the web).
-
-- No classification and labeling integration with Exchange Online or SharePoint Online.
-
-> [!NOTE]
-> **In preview**:
-> - Centralized reporting for classification and labeling. For more information, see [Central reporting for Azure Information Protection](reports-aip.md).
->
->**Sensitivity labels for Office**:
-> - For the latest information about which Office apps support sensitivity labels, see [What sensitivity label capabilities are supported in Office today?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) from the Office documentation.
-
-Request new features and vote on requests by visiting the [UserVoice site](https://msip.uservoice.com/) for Azure Information Protection.
 
 ## Which client do I install for testing new functionality?
 
@@ -61,14 +43,15 @@ We recommend you test with the unified labeling client if its current feature se
 
 For more information, including a feature and functionality comparison table, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
-## Where can I find information about using sensitivity labels in Office?
+## Where can I find information about using sensitivity labels for Office apps?
 
-See the following resources from the Office documentation:
+See the following documentation resources:
 
-- [How sensitivity labels work in Office apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Learn about sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) 
+
+- [Sensitivity labels in Office apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
 
 - [Apply sensitivity labels to your documents and email within Office](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
-
 
 ## Can a file have more than one classification?
 

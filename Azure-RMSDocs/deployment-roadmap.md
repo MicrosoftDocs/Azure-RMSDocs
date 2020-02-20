@@ -6,7 +6,7 @@ description: Use these steps to prepare for, implement, and manage Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 11/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -83,7 +83,7 @@ Reconfigure your labels to make any changes you need to support your classificat
 
 - Azure Information Protection labels for the classic client: [Configuring Azure Information Protection policy](./configure-policy.md)
 
-- Sensitivity labels for the unified labeling client: [Overview of sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
+- Sensitivity labels for the unified labeling client: [Learn about sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
 
 Then deploy the Azure Information Protection client (classic) or the Azure Information Protection unified labeling client for users. Provide user training and specific instructions when to select the labels. For more information about installing and supporting the clients, see the admin guides:
 
@@ -111,7 +111,7 @@ When users are comfortable labeling documents and emails, you're ready to start 
 
 1. Decide whether you want Microsoft to manage your tenant key (the default), or generate and manage your tenant key yourself (known as bring your own key, or BYOK). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
-2. Install the PowerShell module for AIPService on at least one computer that has Internet access. You can do this step now, or later. For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).
+2. Install the PowerShell module for AIPService on at least one computer that has internet access. You can do this step now, or later. For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).
 
 3. If you are currently using AD RMS: Perform a migration to move the keys, templates, and URLs to the cloud. For more information, see [Migrating from AD RMS to Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -186,7 +186,7 @@ Before you begin using the protection service from Azure Information Protection,
 
 2. Decide whether you want Microsoft to manage your tenant key (the default), or generate and manage your tenant key yourself (known as bring your own key, or BYOK). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
-3. Install the PowerShell module for AIPService on at least one computer that has Internet access. You can do this step now, or later. For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).
+3. Install the PowerShell module for AIPService on at least one computer that has internet access. You can do this step now, or later. For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).
 
 4. If you are currently using AD RMS: Perform a migration to move the keys, templates, and URLs to the cloud. For more information, see [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 

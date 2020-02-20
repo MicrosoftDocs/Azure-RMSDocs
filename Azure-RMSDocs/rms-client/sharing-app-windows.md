@@ -3,10 +3,10 @@
 
 title: Rights Management Sharing Application for Windows - AIP
 description: The Rights Management sharing application (RMS sharing app) for Windows is no longer supported.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/15/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 11/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

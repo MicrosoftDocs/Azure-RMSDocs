@@ -1,11 +1,11 @@
 ---
 title: class mip::PolicyEngine::Settings 
 description: Documents the mip::policyengine class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 02/14/2020
 ---
 
 # class mip::PolicyEngine::Settings 
@@ -34,6 +34,8 @@ public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Set
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
 public void SetLabelFilter(const std::vector\<LabelFilterType\>& labelFilter)  |  Sets the label filter.
 public const std::vector\<LabelFilterType\>& GetLabelFilter() const  |  Gets the label filter.
+public void SetVariableTextMarkingType(VariableTextMarkingType variableTextMarkingType)  |  Sets the variable text marking type.
+public VariableTextMarkingType GetVariableTextMarkingType() const  |  Gets the variable text marking type.
   
 ## Members
   
@@ -202,3 +204,17 @@ Gets the label filter.
   
 **Returns**: The label filter.
 Labels are by default filter to scope, this api is to allow filtering by possible actions.
+  
+### SetVariableTextMarkingType function
+Sets the variable text marking type.
+
+Parameters:  
+* **variableTextMarkingType**: the variable text marking type.
+
+
+  
+### GetVariableTextMarkingType function
+Gets the variable text marking type.
+
+  
+**Returns**: The variable text marking type.

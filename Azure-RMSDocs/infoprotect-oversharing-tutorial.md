@@ -3,10 +3,10 @@
 
 title: Tutorial - Use Azure Information Protection to control oversharing - AIP
 description: An introduction tutorial to configure and see in action advanced client settings for the Azure Information Protection client to warn, prompt for justification, or block messages from being sent from Outlook.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -35,6 +35,7 @@ In this tutorial, you learn how to:
 > * See your settings in action
 > * Review the logged user messages and actions in the Event Log 
 
+
 Email is one of the most common methods by which users inappropriately share information—whether it's in the email message itself or in attachments. You might use data loss prevention (DLP) solutions that can identify known sensitive information and help prevent it from leaving your organization boundaries. However, you can also use the Azure Information Protection client with some advanced client settings to help prevent oversharing and also educate your users with interactive messages that provide feedback in real time.
 
 This tutorial steps you through a basic configuration that uses just one label to illustrate the warn, justify, and block messages that users can see and respond to.
@@ -49,9 +50,9 @@ To complete this tutorial, you need:
     
     If you don't have a subscription that includes this plan, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
-2. The Azure Information Protection blade is added to the Azure portal and you have at least one label published in the Azure Information Protection global policy.
+2. The Azure Information Protection pane is added to the Azure portal and you have at least one label published in the Azure Information Protection global policy.
     
-    Although this tutorial uses the default label, **General**, you can substitute this label for another one if you prefer. If you need help adding the Azure Information Protection blade, or don't yet have any labels published to the global policy, see [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
+    Although this tutorial uses the default label, **General**, you can substitute this label for another one if you prefer. If you need help adding the Azure Information Protection pane, or don't yet have any labels published to the global policy, see [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
 
 3. A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you can sign in to Outlook. Be prepared to restart Outlook multiple times during this tutorial.
 
@@ -62,7 +63,7 @@ To complete this tutorial, you need:
     If are using the unified labeling client instead of the classic client, see the following instructions that explain how to use PowerShell advanced settings for the equivalent configurations in this tutorial:
     
     - Admin guide instructions: [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - Video: [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
+    - Video: [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 
@@ -76,33 +77,33 @@ To specify your chosen label, you must know its ID, which you identify from the 
 
 1. Open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin. Then navigate to **Azure Information Protection**. 
     
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
     
     If you are not the global admin, use the following link for alternative roles: [Signing in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Select **Classifications** > **Labels** and then select the **General** label to open the **Label: General** blade. 
+2. Select **Classifications** > **Labels** and then select the **General** label to open the **Label: General** pane. 
 
-3. Locate the label ID at the bottom of the blade:
+3. Locate the label ID at the bottom of the pane:
     
     ![Azure Information Protection tutorial - locate the label ID](./media/label-id.png)
 
 4. Copy and paste the label ID value into a temporary file so that this value can be easily copied for a later step. In our example, this label ID value is **0e421e6d-ea17-4fdb-8f01-93a3e71333b8**.
 
-5. Close the **Label: General** blade, but do not close the Azure portal.
+5. Close the **Label: General** pane, but do not close the Azure portal.
 
 ## Create a scoped policy to test the new advanced client settings
 
 We'll create a new scoped policy so that the new advanced client settings will apply to just you, for testing.
 
-1. On the **Azure Information Protection - Policies** blade, select **Add a new policy**. You then see the **Policy** blade that displays labels and settings from your existing global policy.
+1. On the **Azure Information Protection - Policies** pane, select **Add a new policy**. You then see the **Policy** pane that displays labels and settings from your existing global policy.
 
 2. Specify the policy name of **Oversharing tutorial** and optionally, a description of **Advanced client settings to control oversharing using Outlook**.
 
-3. Select **Specify which users/groups get this policy**, and using the subsequent blades, specify your own user account.
+3. Select **Specify which users/groups get this policy**, and using the subsequent panes, specify your own user account.
 
-4. With your account name now displayed on the **Policy** blade, select **Save** without making additional changes to the labels or settings on this blade. You might be prompted to confirm your choice. 
+4. With your account name now displayed on the **Policy** pane, select **Save** without making additional changes to the labels or settings on this pane. You might be prompted to confirm your choice. 
 
-This scoped policy is now ready to add advanced client settings. Close the **Policy: Oversharing tutorial** blade, but do not close the Azure portal.
+This scoped policy is now ready to add advanced client settings. Close the **Policy: Oversharing tutorial** pane, but do not close the Azure portal.
 
 ## Configure and test advanced client settings to warn, prompt for justification, or block emails that have the General label
 
@@ -116,16 +117,16 @@ For this step of the tutorial, we'll specify the following advanced client setti
 
 Using the newly created scoped policy, we'll add a new advanced client setting named **OutlookWarnUntrustedCollaborationLabel** with the ID of your **General** label: 
 
-1. Back on the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
+1. Back on the **Azure Information Protection - Policies** pane, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
 
-2. On the **Advanced settings** blade, type the advanced setting name, **OutlookWarnUntrustedCollaborationLabel**, and paste your own label ID for the value. Using our example label ID:
+2. On the **Advanced settings** pane, type the advanced setting name, **OutlookWarnUntrustedCollaborationLabel**, and paste your own label ID for the value. Using our example label ID:
     
     
     ![Azure Information Protection tutorial - create OutlookWarnUntrustedCollaborationLabel advanced client setting ](./media/configure-warnmessage.png)
 
 3. Select **Save and close**.
 
-Do not close the **Policies** blade, or the Azure portal.
+Do not close the **Policies** pane, or the Azure portal.
 
 ### Test the advanced client setting to warn users if an email or attachment has the General label
 
@@ -151,15 +152,15 @@ On your client computer, we'll now see the results of configuring this advanced 
 
 We'll edit the existing advanced client setting to keep your **General** label ID, but change the name to **OutlookJustifyUntrustedCollaborationLabel**: 
 
-1. On the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
+1. On the **Azure Information Protection - Policies** pane, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
 
-2. On the **Advanced settings** blade, replace the previous advanced setting name you created, **OutlookWarnUntrustedCollaborationLabel**, with the new name of **OutlookJustifyUntrustedCollaborationLabel**:
+2. On the **Advanced settings** pane, replace the previous advanced setting name you created, **OutlookWarnUntrustedCollaborationLabel**, with the new name of **OutlookJustifyUntrustedCollaborationLabel**:
     
     ![Azure Information Protection tutorial - create OutlookJustifyUntrustedCollaborationLabel advanced client setting ](./media/configure-justifymessage.png)
 
 3. Select **Save and close**.
 
-Do not close the **Policies** blade, or the Azure portal.
+Do not close the **Policies** pane, or the Azure portal.
 
 ### Test the advanced client setting to prompt users to justify if an email has the General label
 
@@ -183,15 +184,15 @@ On your client computer, we'll now see the results of this new advanced client s
 
 We'll edit the existing advanced client setting one more time, to keep your **General** label ID, but change the name to **OutlookBlockUntrustedCollaborationLabel**: 
 
-1. In the Azure portal, on the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
+1. In the Azure portal, on the **Azure Information Protection - Policies** pane, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
 
-2. On the **Advanced settings** blade, replace the previous advanced setting name you created, **OutlookJustifyUntrustedCollaborationLabel**, with the new name of **OutlookBlockUntrustedCollaborationLabel**:
+2. On the **Advanced settings** pane, replace the previous advanced setting name you created, **OutlookJustifyUntrustedCollaborationLabel**, with the new name of **OutlookBlockUntrustedCollaborationLabel**:
     
     ![Azure Information Protection tutorial - create OutlookBlockUntrustedCollaborationLabel advanced client setting ](./media/configure-blockmessage.png)
 
 3. Select **Save and close**.
 
-Do not close the **Policies** blade, or the Azure portal.
+Do not close the **Policies** pane, or the Azure portal.
 
 ### Test the advanced client setting to block users from sending an email that has the General label
 
@@ -288,13 +289,13 @@ You tested your warn, justify, and block messages by using your own email addres
 
 To illustrate how this works, we'll create an additional advanced client setting named **OutlookBlockTrustedDomains** and specify your own domain name from your email address. This will prevent the block message you saw previously from displaying for recipients that share your domain name in their email address, but will still be shown for other recipients. You can similarly create additional advanced client settings for **OutlookWarnTrustedDomains** and **OutlookJustifyTrustedDomains**.
 
-1. In the Azure portal, on the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
+1. In the Azure portal, on the **Azure Information Protection - Policies** pane, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
 
-2. On the **Advanced settings** blade, type the advanced setting name, **OutlookBlockTrustedDomains**, and paste your domain name from your email address for the value. For example:
+2. On the **Advanced settings** pane, type the advanced setting name, **OutlookBlockTrustedDomains**, and paste your domain name from your email address for the value. For example:
     
     ![Azure Information Protection tutorial - create OutlookBlockTrustedDomains advanced client setting](./media/configure-exemptblockdomain.png)
 
-4. Select **Save and close**. Do not close the **Policies** blade, or the Azure portal.
+4. Select **Save and close**. Do not close the **Policies** pane, or the Azure portal.
 
 5. Now repeat the [previous test to block users from sending an email that has the General label](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label), and you no longer see the block message when you use your own email address. The email is sent without interruption.
     
@@ -310,15 +311,15 @@ For this step of the tutorial, we'll specify a new advanced client setting with 
 
 This new advanced client setting named **OutlookUnlabeledCollaborationAction** doesn't need a label ID but specifies the action to take for unlabeled content: 
 
-1. In the Azure portal, back on the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
+1. In the Azure portal, back on the **Azure Information Protection - Policies** pane, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
 
-2. On the **Advanced settings** blade, type the advanced setting name, **OutlookUnlabeledCollaborationAction**, and for the value, specify **Warn**:
+2. On the **Advanced settings** pane, type the advanced setting name, **OutlookUnlabeledCollaborationAction**, and for the value, specify **Warn**:
     
     ![Azure Information Protection tutorial - create OutlookUnlabeledCollaborationAction advanced client setting with Warn value ](./media/configure-nolablewarn.png)
 
 3. Select **Save and close**.
 
-Do not close the **Policies** blade, or the Azure portal.
+Do not close the **Policies** pane, or the Azure portal.
 
 ### Test the advanced client setting to warn users if an email doesn't have a label
 
@@ -340,15 +341,15 @@ On your client computer, we'll now see the results of configuring this new advan
 
 We'll edit the existing advanced client setting to keep the name of **OutlookUnlabeledCollaborationAction**, but change the value to **Justify**: 
 
-1. On the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
+1. On the **Azure Information Protection - Policies** pane, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
 
-2. On the **Advanced settings** blade, locate the **OutlookUnlabeledCollaborationAction** setting and replace the previous value of **Warn** with new value **Justify**:
+2. On the **Advanced settings** pane, locate the **OutlookUnlabeledCollaborationAction** setting and replace the previous value of **Warn** with new value **Justify**:
     
     ![Azure Information Protection tutorial - change OutlookUnlabeledCollaborationAction advanced client setting to Justify value](./media/configure-justifymessage2.png)
 
 3. Select **Save and close**.
 
-Do not close the **Policies** blade, or the Azure portal.
+Do not close the **Policies** pane, or the Azure portal.
 
 ### Test the advanced client setting to prompt users to justify if an email isn't labeled
 
@@ -370,15 +371,15 @@ On your client computer, we'll now see the results of changing the value for thi
 
 As before, we'll edit the existing advanced client setting to keep the name of **OutlookUnlabeledCollaborationAction**, but change the value to **Block**: 
 
-1. On the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
+1. On the **Azure Information Protection - Policies** pane, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Advanced settings**.
 
-2. On the **Advanced settings** blade, locate the **OutlookUnlabeledCollaborationAction** setting and replace the previous value of **Justify** with the new value of **Block**:
+2. On the **Advanced settings** pane, locate the **OutlookUnlabeledCollaborationAction** setting and replace the previous value of **Justify** with the new value of **Block**:
     
     ![Azure Information Protection tutorial - change OutlookUnlabeledCollaborationAction advanced client setting to Block value](./media/configure-blockmessage2.png)
 
 3. Select **Save and close**.
 
-Do not close the **Policies** blade, or the Azure portal.
+Do not close the **Policies** pane, or the Azure portal.
 
 ### Test the advanced client setting to block users from sending an email that isn't labeled
 
@@ -426,7 +427,7 @@ User Response: Confirmed
 
 Do the following if you don't want to keep the changes that you made in this tutorial:
 
-1. In the Azure portal, on the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Delete policy**.
+1. In the Azure portal, on the **Azure Information Protection - Policies** pane, select the context menu (**...**) next to **Oversharing tutorial**. Then select **Delete policy**.
 
 2. If you are prompted to confirm, select **OK**.
 

@@ -13,7 +13,7 @@ metadata:
   author: cabailey
   ms.author: cabailey
   manager: rkarlin
-  ms.date: 09/17/2019 #Required; mm/dd/yyyy format.
+  ms.date: 11/01/2019 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | deploy | download | get-started | how-to-guide | learn | overview | quickstart | tutorial
 
@@ -51,26 +51,16 @@ landingContent:
             url: how-to-guides.md
 
   # Card
-  - title: Customize the client
+  - title: Stay current
     linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: "Classic client: Advanced settings"
-            url: ./rms-client/client-admin-guide-customizations.md
-          - text: "Unified labeling client: Advanced settings"
-            url: ./rms-client/clientv2-admin-guide-customizations.md
-
-  # Card
-  - title: Activate unified labels
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Compare the clients
-            url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
-      - linkListType: how-to-guide
-        links:
-          - text: Migrate Azure Information Protection labels
-            url: configure-policy-migrate-labels.md
+     - linkListType: whats-new
+       links:
+          - text: Doc updates for November
+            url: https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Documentation-Update-for-November/ba-p/1031924
+          - text: Top 5 recommended Ignite sessions
+            url: what-is-information-protection.md#microsoft-ignite
+          - text: Version 2.5.33.0 details - unified labeling client
+            url: ./rms-client/unifiedlabelingclient-version-release-history.md#version-25330
 
   # Card
   - title: Classify & protect data in on-premises data stores
@@ -81,12 +71,14 @@ landingContent:
             url: deploy-aip-scanner.md
 
   # Card
-  - title: Monitor label usage & discover sensitive information
+  - title: Customize the client
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Central reporting (preview)
-            url: reports-aip.md
+          - text: "Classic client: Advanced settings"
+            url: ./rms-client/client-admin-guide-customizations.md
+          - text: "Unified labeling client: Advanced settings"
+            url: ./rms-client/clientv2-admin-guide-customizations.md
 
 # Card
   - title: Microsoft Information Protection SDK
@@ -105,3 +97,23 @@ landingContent:
         links:
           - text: API reference for C++
             url: /information-protection/develop/mip-sdk-reference       
+
+  # Card
+  - title: Activate unified labels
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Choose your labeling client
+            url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
+      - linkListType: how-to-guide
+        links:
+          - text: Migrate Azure Information Protection labels
+            url: configure-policy-migrate-labels.md
+
+  # Card
+  - title: Monitor label usage & discover sensitive information
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Central reporting (preview)
+            url: reports-aip.md

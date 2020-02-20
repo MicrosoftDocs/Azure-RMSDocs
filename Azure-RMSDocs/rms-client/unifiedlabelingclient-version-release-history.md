@@ -3,10 +3,10 @@
 
 title: Azure Information Protection unified labeling client - Version history & support policy
 description: See the release information for the Azure Information Protection unified labeling client for Windows. 
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/27/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 02/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.custom: admin
 
 # Azure Information Protection unified labeling client - Version release history and support policy
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -43,6 +43,17 @@ Each general availability (GA) version of the Azure Information Protection unifi
 
 Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
 
+##### General availability versions that are no longer supported:
+
+|Client version|Date released|
+|--------------|-------------|
+|2.2.14.0|07/15/2019|
+|2.0.779.0|05/01/2019|
+|2.0.778.0|04/16/2019|
+
+The date format used on this page is *month/day/year*.
+
+
 ### Release information
 
 Use the following information to see what’s new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
@@ -52,7 +63,43 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md##compare-the-labeling-clients-for-windows-computers).
+This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
+
+## Version 2.6.101.0 (preview)
+
+**Released** 1/15/2020
+
+**New features:**
+
+- Modification of [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) cmdlet **Set-AIPFileLabel** to enable removal of protection from PST, rar, 7zip and MSG files. This feature is disabled by default and must be turned on using the [Set-LabelPolicy](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations) cmdlet, as described [here](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies).  
+
+- Added ability for Azure Information Protection administrators to control when .pfile extensions are used for files. Learn more about [changing protected file types](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#change-which-file-types-to-protect). 
+
+- Dynamic visual marking support added for applications and variables. Learn more about how to [configure labels for visual markings](https://docs.microsoft.com/azure/information-protection/configure-policy-markings). 
+
+- Improvements made to [customizable policy tips for automatic and recommended labels](use-client.md).   
+
+- Support added for [offline labeling capability](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#support-for-disconnected-computers) with Office apps in the unified labeling client.
+
+- New **WordShapeNameToRemove** advanced property enables removal of content marking in Word documents made by third party applications. Learn more about how to [identify existing shape names and define them for removal using **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions). 
+
+- [Scanner](../deploy-aip-scanner.md) related features:
+    - [Easier SharePoint on-premises and subsite discovery](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories). Setting each specific site is no longer required. 
+    - Advanced property for [SQL chunk sizing](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server) added.
+    - Administrators now have the ability to [stop existing scans and perform a re-scan](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan) if a change was made to the default label.
+    - By default, scanner now sets minimal telemetry for faster scans and reduced log size and information types are now cached in the database. Learn more about [scanner optimization](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner). 
+
+**Fixes:**
+
+- Scanner now supports separate deployments for database and the service, while **Sysadmin** rights are needed only for database deployment. 
+- In instances where users attempted unsuccessfully to open protected TIFF files, and TIFF files created by RightFax, the TIFF files now open and remain stable as expected.  
+- Previous corruptions of protected txt and PDF files are resolved.
+- Inconsistent labeling between **Automatic** and **Manual** in Log Analytics was corrected. 
+- Unexpected inheritance issues identified between new emails and a user's last opened email is now resolved.  
+- Protection of .msg files as .msg.pfiles now works as expected. 
+- Co-owner permissions added from Office user defined settings is now applied as expected. 
+- When entering permissions downgrade justification, text can no longer be entered when other options are already selected. 
+
 
 ## Version 2.5.33.0
 
@@ -74,6 +121,8 @@ This client is replacing the Azure Information Protection client (classic). To c
         - **Relabel files**: **On** with the **Enforce default label** checkbox selected
     
     - As with the scanner from the classic client, by default, the scanner protects Office files and PDF files. You can protect other files types when you use a [PowerShell advanced setting](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
+    
+    - Event IDs for the scanner cycles starting and finishing are not written to the Windows event log. Instead, use the Azure portal for this information.
     
     - Known issue: New and renamed labels aren't available to select as a default label for the scanner profile or repository settings. Workarounds:
         - For new labels: In the Azure portal, [add the label](../configure-policy-add-remove-label.md) you want to use to the global policy or a scoped policy.
@@ -117,7 +166,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 ## Version 2.2.21.0
 
-**Released**: 09/03/2020
+**Released**: 09/03/2019
 
 Supported through 04/23/2020
 
@@ -139,109 +188,9 @@ Supported through 03/03/2020
 
 - General performance and stability improvements.
 
-## Version 2.2.14.0
-
-**Released**: 07/15/2019
-
-Supported through 02/06/2020
-
-**New features:**
-
-- Support for [advanced settings](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you configure with PowerShell for the Security & Compliance Center.
-    
-    These advanced settings support the following customizations:
-     - [Display the Information Protection bar in Office apps](clientv2-admin-guide-customizations.md#display-the-information-protection-bar-in-office-apps)
-    - [Exempt Outlook messages from mandatory labeling](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
-    - [Enable recommended classification in Outlook](clientv2-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
-    - [Set a different default label for Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
-    - [Remove "Not now" for documents when you use mandatory labeling](clientv2-admin-guide-customizations.md#remove-not-now-for-documents-when-you-use-mandatory-labeling)
-    - [Remove headers and footers from other labeling solutions](clientv2-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
-    - [Disable custom permissions in File Explorer](clientv2-admin-guide-customizations.md#disable-custom-permissions-in-file-explorer)
-    - [For files protected with custom permissions, always display custom permissions to users in File Explorer](clientv2-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
-    - [For email messages with attachments, apply a label that matches the highest classification of those attachments](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
-    - [Add "Report an Issue" for users](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
-    - [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - [Disable sending discovered sensitive information in documents to Azure Information Protection analytics](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
-    - [Send information type matches to Azure Information Protection analytics](clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics)
-    - [Migrate labels from Secure Islands and other labeling solutions](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-    - [Apply a custom property when a label is applied](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
-    - [Configure a label to apply S/MIME protection in Outlook](clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
-    - [Specify a default sublabel for a parent label](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
-    - [Specify a color for the label](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
-
-- Support for labels that are configured for user-defined permissions for Word, Excel, PowerPoint, and File Explorer. For more information, see the [Let users assign permissions](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions) section in the Office documentation.
-
-- PowerShell changes in the AzureInformationProtection module:
-    - New cmdlet: [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) - replaces New-RMSProtectionLicense to create an ad-hoc policy for custom permissions
-    - New parameters:
-        -  *CustomPermissions* and *RemoveProtection* - added to [Set-AIPFileLabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)
-        -  *OnBeHalfOf* - added to [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), to be used instead of the *Token* parameter for non-interactive sessions
-        -  *WhatIf* and *DiscoveryInfoTypes* - added to [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), so that this cmdlet can run in discovery mode without applying labels
-    - Deprecated cmdlets that connect directly to a protection service: Clear-RMSAuthentication, Get-RMSFileStatus, Get-RMSServer, Get-RMSServerAuthentication, Get-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
-
-
-**Fixes:**
-
-- Support for [content matches](../reports-aip.md#content-matches-for-deeper-analysis) for analytics and [Set-AIPFileClassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) with the *DiscoveryInfoTypes* parameter.
-
-- After you change to an alternative locale in Windows, you can still apply a label with protection to a PDF document.
-
-- When a label is removed from content, protection is also removed only when it was applied as part of the label configuration. If the protection was applied independently from the label, that protection is preserved. For example, a user applied custom permissions to a file.
-
-- When automatic labeling is configured, the label applies the first time a document is saved.
-
-- Default labeling supports sublabels.
-
-## Version 2.0.779.0
-
-**Released**: 05/01/2019
-
-Supported through 02/15/2020
-
-This release has a single fix to resolve a race-condition issue where sometimes, no labels display in Office apps or File Explorer.
-
-## Version 2.0.778.0
-
-**Released**: 04/16/2019
-
-Supported through 11/01/2019
-
-This first general availability version of the Azure Information Protection unified labeling client for Windows supports the following features: 
-
-- Upgrade from the Azure Information Protection client.
-
-- Manual, automatic, and recommended labeling: For more information about configuring automatic and recommended labeling for this client, see [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically).
-
-- File Explorer, right-click actions to classify and protect files, remove protection, and apply custom permissions.
-
-- A viewer for protected text and image files, protected PDF files, and files that are generically protected.
-
-- PowerShell commands to do the following:
-    - [Set or remove a label on a document](/powershell/module/azureinformationprotection/set-aipfilelabel)
-    - [Label a document after inspecting its contents](/powershell/module/azureinformationprotection/set-aipfileclassification)
-    - [Read label information applied to a document](/powershell/module/azureinformationprotection/get-aipfilestatus)
-    - [Authenticate to support unattended PowerShell sessions](/powershell/module/azureinformationprotection/set-aipauthentication)
-
-- Auditing data and endpoint discovery support for central reporting by using [Azure Information Protection analytics](../reports-aip.md).
-
-- The following label and policy settings:
-    - Visual marking (headers, footers, watermarks)
-    - Default labeling - currently limited to labels without sublabels
-    - Labels that apply Do Not Forward and display in Outlook only
-    - Justification prompts if users lower the classification level or remove a label
-    - Colors for the labels
-
-- Policy refresh from the admin centers:
-    - Each time an Office app starts and every 4 hours
-    - When you right-click to classify and protect a file or folder
-    - When you run the PowerShell cmdlets for labeling and protection
-
-- A Help and feedback dialog box, which includes reset settings and export logs.
-
-
 ## Next steps
 
-For full details, see the [comparison tables](use-client.md#compare-the-labeling-clients-for-windows-computers).
+Not sure if this is the right client to install?  See [Choose which labeling client to use for Windows computers](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 For more information about installing and using this client: 
 

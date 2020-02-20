@@ -3,10 +3,10 @@
 
 title: HYOK protection for Azure Information Protection
 description: Overview of HYOK (AD RMS) protection with Azure Information Protection, its supported scenarios, limitations, prerequisites, and recommendations.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 08/09/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,6 +31,7 @@ ms.custom: admin
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
 
 Use the following information to understand what hold your own key (HYOK) protection is for Azure Information Protection, and how it is different from the default cloud-based protection. Before you use HYOK protection, make sure that you understand when it's appropriate, the supported scenarios, the limitations, and requirements. 
 

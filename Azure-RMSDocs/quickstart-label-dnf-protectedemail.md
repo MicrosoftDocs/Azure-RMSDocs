@@ -1,11 +1,10 @@
 ---
 title: Quickstart - Configure a label for users to easily protect emails - AIP
 description: Configure a label that protects an email for a user by automatically applying the Do Not Forward protection.
-author: cabailey
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,6 +28,7 @@ ms.custom: admin
 >
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+
 In this quickstart, you'll configure an existing Azure Information Protection label to automatically apply the Do Not Forward protection setting.
 
 The current Azure Information Protection policy already contains two labels that have this configuration:
@@ -49,7 +49,7 @@ To complete this quickstart, you need:
     
     If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
-2. You've added the Azure Information Protection blade to the Azure portal, and confirmed that the protection service is activated.
+2. You've added the Azure Information Protection pane to the Azure portal, and confirmed that the protection service is activated.
 
     If you need help with these actions, see [Quickstart: Get started in the Azure portal](quickstart-viewpolicy.md).
 
@@ -61,7 +61,7 @@ To complete this quickstart, you need:
     
     You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page.
     
-    If are using a different labeling client to the classic client, see the Office documentation for equivalent instructions to this tutorial. For example, [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+    If are using a different labeling client to the classic client, see the Microsoft 365 Compliance documentation for equivalent instructions to this tutorial. For example, [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 5. To test the new label: A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you're signed in to Office apps from one of the following categories:
     
@@ -83,19 +83,19 @@ For a full list of prerequisites to use Azure Information Protection, see [Requi
 
 1. Open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin. Then navigate to **Azure Information Protection**. 
     
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
     
     If you are not the global admin, use the following link for alternative roles: [Signing in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label you want to configure to apply the protection. 
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** pane, select the label you want to configure to apply the protection. 
 
-3. On the **Label** blade, locate **Set permissions for documents and emails containing this label**. Select **Protect**, and the **Protection** blade automatically opens if **Not configured** or **Remove Protection** was previously selected.
+3. On the **Label** pane, locate **Set permissions for documents and emails containing this label**. Select **Protect**, and the **Protection** pane automatically opens if **Not configured** or **Remove Protection** was previously selected.
     
-    If the **Protection** blade does not automatically open, select **Protection**:
+    If the **Protection** pane does not automatically open, select **Protection**:
     
     ![Configure protection for an Azure Information Protection label](./media/info-protect-protection-bar-configured.png).
 
-4. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
+4. On the **Protection** pane, make sure that **Azure (cloud key)** is selected.
     
 5. Select **Set user-defined permissions (Preview)**.
 
@@ -103,7 +103,7 @@ For a full list of prerequisites to use Azure Information Protection, see [Requi
 
 7. If selected, clear the following option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions**.
 
-8. Click **OK** on the **Protection** blade, and then click **Save** on the **Label** blade.
+8. Click **OK** on the **Protection** pane, and then click **Save** on the **Label** pane.
 
 Your label is now configured to display in Outlook only, and apply the Do Not Forward protection to emails.
 
@@ -125,9 +125,9 @@ The result is that recipients cannot forward the email, or print it, copy from i
 
 Do the following if you do not want to keep this configuration and return your label such that it doesn't apply protection:
 
-1. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label you configured. 
+1. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** pane, select the label you configured. 
 
-3. On the **Label** blade, locate **Set permissions for documents and emails containing this label**, select **Not configured**, and select **Save**.
+3. On the **Label** pane, locate **Set permissions for documents and emails containing this label**, select **Not configured**, and select **Save**.
 
 ## Next steps
 

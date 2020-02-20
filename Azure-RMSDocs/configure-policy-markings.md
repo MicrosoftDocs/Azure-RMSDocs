@@ -3,10 +3,10 @@
 
 title: Configure visual markings for an Azure Information Protection label - AIP
 description: When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/24/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,8 +29,6 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
-
 
 When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark. 
 
@@ -44,7 +42,7 @@ Additional information about these visual markings:
     
 	- PowerPoint: Watermarks are applied to the master slide, as a background image. On the **View** tab, **Slide Master**, make sure that the **Hide Background Graphics** check box is not selected.
 
-- Multiple lines are supported for watermarks, and for headers and footers in Word, Excel, and PowerPoint. If you specify multiple lines for a label's header or footer that is applied in Outlook, the lines are concatenated. In this scenario, consider using the configuration to [set different visual markings for Word, Excel, PowerPoint, and Outlook](##setting-different-visual-markings-for-word-excel-powerpoint-and-outlook).
+- Multiple lines are supported for watermarks, and for headers and footers in Word, Excel, and PowerPoint. If you specify multiple lines for a label's header or footer that is applied in Outlook, the lines are concatenated. In this scenario, consider using the configuration to [set different visual markings for Word, Excel, PowerPoint, and Outlook](#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook).
 
 - Maximum string lengths:
     
@@ -74,13 +72,13 @@ For documents, the visual markings are applied as follows:
 
 Use the following instructions to configure visual markings for a label.
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane. 
     
-    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
 
-2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label that contains the visual markings you want to add or change.
+2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** pane, select the label that contains the visual markings you want to add or change.
 
-3. On the **Label** blade, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markings that you want, and then click **Save**:
+3. On the **Label** pane, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markings that you want, and then click **Save**:
     
     - To configure a header: For **Documents with this label have a header**, select **On** if you want a header, and **Off** if you do not. If you select **On**, then specify the header text, size, [font](#setting-the-font-name), [color](#setting-the-font-color), and alignment for the header.
     
