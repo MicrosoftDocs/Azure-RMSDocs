@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/09/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -62,6 +62,8 @@ For label settings, multiple string values for the same key:
 
 To remove an advanced setting, use the same syntax but specify a null string value.
 
+> [!IMPORTANT]
+> Use of white spaces in the string will prevent application of the labels. 
 
 #### Examples for setting advanced settings
 
@@ -116,6 +118,7 @@ Label advanced settings follow the same logic for precedence: When a label is in
 
 Label policy advanced settings are applied in the reverse order: With one exception, the advanced settings from the first policy are applied, according to the order of the policies in the admin center. The exception is the advanced setting *OutlookDefaultLabel*, which sets a different default label for Outlook. For this label policy advanced setting only, the last setting is applied according to the order of the policies in the admin center.
 
+
 #### Available advanced settings for label policies
 
 Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) and [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
@@ -126,6 +129,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |AttachmentActionTip|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |DisableMandatoryInOutlook|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
 |EnableAudit|[Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
+|EnableContainerSupport|[Enable removal of protection from PST, rar, 7zip and MSG files](#enable-removal-of-protection-from-compressed-files)
 |EnableCustomPermissions|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -217,6 +221,20 @@ For the selected label policy, specify the following strings:
 Example PowerShell command, where your label policy is named "Global":
 
 	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
+
+## Enable removal of protection from compressed files
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+
+When you configure this setting, the  [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) cmdlet **Set-AIPFileLabel** is enabled to allow removal of protection from PST, rar, 7zip and MSG files.
+
+- Key: **Set-LabelPolicy**
+
+- Value: **True**
+
+Example PowerShell command where your policy is enabled:
+
+	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
 
 ## Set a different default label for Outlook
 
@@ -369,7 +387,7 @@ When you specify the string value for the **ExternalContentMarkingToRemove** key
     Example: Headers or footers have the string **TEXT TO REMOVE**. You want to remove headers or footers that have exactly this string. You specify the value: `^TEXT TO REMOVE$`.
     
 
-The pattern matching for the string that you specify is case-insensitive. The maximum string length is 255 characters.
+The pattern matching for the string that you specify is case-insensitive. The maximum string length is 255 characters, and cannot include white spaces. 
 
 Because some documents might include invisible characters or different kinds of spaces or tabs, the string that you specify for a phrase or sentence might not be detected. Whenever possible, specify a single distinguishing word for the value and be sure to test the results before you deploy in production.
 
@@ -933,6 +951,9 @@ As a result of this configuration option, any additional custom properties are a
 This configuration requires you to specify an advanced setting named **customPropertiesByLabel** for each sensitivity label that you want to apply the additional custom properties. Then for each entry, set the value by using the following syntax:
 
 `[custom property name],[custom property value]`
+
+> [!IMPORTANT]
+> Use of white spaces in the string will prevent application of the labels.
 
 #### Example 1: Add a single custom property for a label
 
