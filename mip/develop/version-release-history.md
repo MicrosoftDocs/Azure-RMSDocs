@@ -9,7 +9,7 @@ ms.author: mbaldwin
 manager: barbkess
 ---
 
-# Microsoft Information Protection (MIP) SDK version release history and support policy
+# Microsoft Information Protection (MIP) Software Development Kit (SDK) version release history and support policy
 
 ## Servicing 
 
@@ -26,17 +26,123 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
 
+## Version 1.5.117
+
+**Release date**: February 20, 2020
+
+### General SDK Changes
+
+- Java API (Windows-only)
+- Cancellation of async MIP tasks
+  - All async calls return mip::AsyncControl object with a Cancel() method
+- Delay-load dependent binaries
+- Optionally mask specific telemetry/audit properties
+   - Configurable via mip::TelemetryConfiguration::maskedProperties
+- Improved exceptions:
+  - All errors include actionable correlation IDs in description string
+  - Network error has 'Category', 'BaseUrl', 'RequestId', and 'StatusCode' fields
+- Improved C API result/error details
+
+### File SDK
+
+- Network-free check if file is labeled or protected
+  - mip::FileHandler::IsLabeledOrProtected()
+  - Minor risk of false positives (for example if file contains zombie label metadata)
+- Filter labels associated with specific types of protection
+  - Configurable via mip::FileEngine::Settings::SetLabelFilter()
+- Expose policy data to File API
+  - mip::FileEngine::GetPolicyDataXml()
+
+### Policy SDK
+
+- Dynamic content marking for watermark/header/footer actions:
+  - Fields like ${Item.Label}, ${Item.Name}, ${User.Name}, ${Event.DateTime} will be automatically
+    populated by MIP
+  - mip::Identity can be constructed with user-friendly "name" field used by dynamic content marking
+  - Configurable via mip::PolicyEngine::Settings::SetVariableTextMarkingType()
+- Network-free check if content is labeled
+  - mip::PolicyHandler::IsLabeled()
+  - Minor risk of false positives (for example if content contains zombie label metadata)
+- Label policy cache TTL
+  - Default: 30 days
+  - Configurable via mip::PolicyProfile::SetCustomSettings()
+- **Breaking Change**
+  - Updated PolicyEngine.Settings.LabelFilter from list of enums to nullable bitfield.
+
+### Protection SDK
+
+- Pre-license
+  - Existence of a pre-license alongside encrypted content, along with a previously retrieved user
+    cert, allows for offline decryption of content
+  - mip::ProtectionHandler::ConsumptionSettings can be constructed with a pre-license
+  - mip::ProtectionEngine::LoadUserCert|Async() fetches user cert which is stored according to
+    mip::ProtectionProfile's caching policy
+- Server-specific feature checking
+  - Checks if user's tenant supports "encrypt only" feature (only available in Azure RMS)
+  - mip::ProtectionEngine::IsFeatureSupported()
+- Richer details when fetching RMS templates
+- **Breaking Changes**
+  - mip::ProtectionEngine::GetTemplates() vector<shared_ptr<string>> return value replaced with
+    vector<shared_ptr<mip::TemplateDescriptor>> (C++)
+  - mip::ProtectionEngine::Observer::OnGetTemplatesSuccess() callback shared_ptr<vector<string>>
+    parameter replaced with vector<shared_ptr<mip::TemplateDescriptor>> (C++)
+  - IProtectionEngine.GetTemplates|Async() return value List<string> replaced with
+    List<TemplateDescriptor>. (C#)
+  - MIP_CC_ProtectionEngine_GetTemplates() mip_cc_guid* param replaced with mip_cc_template_descriptor* (C API)
+
+### C API
+
+- **Breaking Changes**: Updated most functions to include mip_cc_error* parameter, can be NULL
+  
+
+### Error/Exception Updates
+
+- Error handling summary:
+  - AccessDeniedError:        User has not been granted rights to access content
+      - NoAuthTokenError:          App did not provide auth token
+      - NoPermissionsError:        User has not been granted rights to specific content, but referrer/owner is available
+      - ServiceDisabledError:      Service is disabled for user/device/platform/tenant
+  - AdhocProtectionRequiredError: Ad hoc protection must be set before setting a label
+  - BadInputError:           Invalid input from user/app
+      - InsufficientBufferError:   Invalid buffer input from user/app
+      - LabelDisabledError:        Label ID is recognized but disabled for use
+      - LabelNotFoundError:        Unrecognized label ID
+      - TemplateNotFoundError:     Unrecognized template ID
+  - ConsentDeniedError:      An operation that required consent from user/app was not granted consent
+  - DeprecatedApiError:      This API has been deprecated
+  - FileIOError:             Failed to read/write file
+  - InternalError:           Unexpected internal failure
+  - NetworkError
+      - ProxyAuthenticationError:   Proxy authentication is required
+    - Category=BadResponse:         Server returned unreadable HTTP response (retry might succeed)
+    - Category=Cancelled:           Failed to establish HTTP connection because operation was canceled by user/app (retry will probably succeed)
+    - Category=FailureResponseCode: Server returned a generic failure response (retry might succeed)
+    - Category=NoConnection:        Failed to establish HTTP connection (retry might succeed)
+    - Category=Offline:             Failed to establish HTTP connection because application is in offline mode (retry won't succeed)
+    - Category=Proxy:               Failed to establish HTTP connection due to proxy issue (retry probably won't succeed)
+    - Category=SSL:                 Failed to establish HTTP connection due to SSL issue (retry probably won't succeed)
+    - Category=Throttled:           Server returned "throttled" response (backoff/retry will probably succeed)
+    - Category=Timeout:             Failed to establish HTTP connection after timeout (retry will probably succeed)
+    - Category=UnexpectedResponse:  Server returned unexpected data (retry might succeed)
+  - NoPolicyError:           Tenant or user is not configured for labels
+  - NotSupportedError:       Operation not supported in current state
+  - OperationCancelledError: Operation was canceled
+  - PrivilegedRequiredError: Cannot modify label unless assignment method = priviledged
+- Changes
+  - Removed unused PolicySyncError. Replaced by NetworkError
+  - Removed unused TransientNetworkError. Replaced by NetworkError categories
+
 ## Version 1.4.0 
 
 **Release date**: November 6, 2019
 
-This version introduces support for the protection API in the .NET package (Microsoft.InformationProtection.File).
+This version introduces support for the Protection SDK in the .NET package (Microsoft.InformationProtection.File).
 
 ### SDK changes
 - Performance improvements and bug fixes
 - Renamed StorageType enum to CacheStorageType
 - Android links to libc++ instead of gnustl
-- Removed previously-deprecated APIs
+- Removed previouslydeprecated APIs
   - File/Policy/Profile::Settings must be initialized with a MipContext
   - File/Policy/Profile::Settings path, application info, logger delegate, telemetry, and log level getters/setters have been removed. These properties are managed by MipContext
 - Better static library support on Apple platforms
@@ -50,7 +156,7 @@ This version introduces support for the protection API in the .NET package (Micr
     - libssl.a
 - Removed mip_telemetry.dll (merged into mip_core.dll)
 
-### File API
+### File SDK
 
 - RPMSG
   - Encryption
@@ -58,15 +164,15 @@ This version introduces support for the protection API in the .NET package (Micr
 - Configurable PFILE extension behavior (default, <EXT>.PFILE, or P<EXT>)
   - ProtectionSettings::SetPFileExtensionBehavior
 
-### Policy API
+### Policy SDK
 
 - Complete C API
 - Configure filtering of labels associated with protection
   - PolicyEngine::Settigns::SetLabelFilter()
 
-### Protection API
+### Protection SDK
 
-- Removed previously-deprecated APIs
+- Removed previouslydeprecated APIs
   - Removed ProtectionEngine::CreateProtectionHandlerFromDescriptor[Async] (use ProtectionEngine::CreateProtectionHandlerForPublishing[Async])
   - Removed ProtectionEngine::CreateProtectionHandlerFromPublishingLicense[Async] (use ProtectionEngine::CreateProtectionHandlerForConsumption[Async])
 - Complete C# API
@@ -108,10 +214,10 @@ This version introduces support for the protection API in the .NET package (Micr
 - Decryption of protected MSG files is now supported.
 - Inspection of message.rpmsg files is supported via `mip::FileInspector` and `mip::FileHandler::InspectAsync()`.
 - On-disk cache may now be optionally encrypted.
-- Protection API now supports China sovereign cloud.
+- Protection SDK now supports China sovereign cloud.
 - Arm64 support on Android.
 - Arm64e support on iOS.
-- End user license (EUL) cache can now be disabled.
+- End-user license (EUL) cache can now be disabled.
 - .pfile encryption may be disabled via `mip::FileEngine::EnablePFile`
 - Improved performance for protection operations by reducing number of HTTP calls
 - Removed the delegated identity details from `mip::Identity` and instead added `DelegatedUserEmail` to `mip::FileEngine::Settings`, `mip::ProtectionSettings`, `mip::PolicyEngine::Settings`, and `mip::ProtectionHandler`'s `PublishingSettings` and `ConsumptionSettings`.
@@ -141,7 +247,7 @@ This version introduces support for the protection API in the .NET package (Micr
  - Align File/Policy SDK exception handling behavior with Protection SDK:
     - ProxyAuthError thrown by all SDKs if a proxy is configured to require authentication.
     - NoAuthTokenError thrown by all SDKs if empty auth token is provided by application's implementation of mip::AuthDelegate::AcquireOAuth2Token.
- - Improved HTTP caching for Policy SDK reduces # of required HTTP calls by half..
+ - Improved HTTP caching for Policy SDK reduces # of required HTTP calls by half.
  - Richer logs/audit/telemetry for improved failure detection and debugging.
  - Support for external/foreign labels to facilitate migration to AIP labels.
  - Enabled support for 3rd-party applications to download sensitivity types from SCC.
@@ -151,8 +257,8 @@ This version introduces support for the protection API in the .NET package (Micr
 
  - mip_common.dll split into mip_core.dll and mip_telemetry.dll.
  - Renamed mip::ContentState to mip::DataState to describe how an application interacts with data at a high level.
- - mip::AdhocProtectionRequiredError exception is thrown by FileHandler::SetLabel to notify an application that it must first apply ad-hoc protection before applying a label.
- - mip::OperationCancelledError exception is thrown when an operation has been cancelled (e.g. due to shutdown or HTTP cancellation).
+ - mip::AdhocProtectionRequiredError exception is thrown by FileHandler::SetLabel to notify an application that it must first apply ad hoc protection before applying a label.
+ - mip::OperationCancelledError exception is thrown when an operation has been canceled (for example due to shutdown or HTTP cancellation).
  - New APIs:
     - mip::ClassificationResult::GetSensitiveInformationDetections
     - mip::FileEngine::GetLastPolicyFetchTime
@@ -177,7 +283,7 @@ This version introduces support for the protection API in the .NET package (Micr
 ### New Requirements
  - mip::ReleaseAllResources must be called prior to process termination (after clearing references to all Profiles, Engines, and Handlers)
  - (interface) mip::ExecutionState::GetClassificationResults return type and "classificationIds" parameter has changed
- - (interface) mip::FileExecutionState::GetAuditMetadata can be implemented by applications to specify detailed information to surface to a tenant admin's audit dashboard (e.g. sender, recipients, last modified, etc.)
+ - (interface) mip::FileExecutionState::GetAuditMetadata can be implemented by applications to specify detailed information to surface to a tenant admin's audit dashboard (for example sender, recipients, last modified, etc.)
  - (interface) mip::FileExecutionState::GetClassificationResults return type has changed, and it now requires a FileHandler parameter
  - (interface) mip::FileExecutionState::GetDataState should be implemented by applications to specify how an application is interacting with contentIdentifier
  - (interface) mip::HttpDelegate interface requires 'CancelOperation' and 'CancelAllOperations' methods
@@ -189,20 +295,20 @@ This version introduces support for the protection API in the .NET package (Micr
  - mip::PolicyHandler::NotifyCommitedActions renamed to mip::PolicyHandler::NotifyCommittedActions
 
 
-## Version 1.1.0
+## Version 1.1.0 
 
 **Release date**: January 15, 2019
 
 This version introduces support for the following platforms:
 
   - .NET
-  - iOS SDK (Policy API)
-  - Android SDK (Policy API and Protection API)
+  - iOS SDK (Policy SDK)
+  - Android SDK (Policy SDK and Protection SDK)
 
 ### New Features
 
 - ADRMS support
-- Protection API operations are truly asynchronous (on Win32), allowing for simultaneous non-blocking encrypt/decrypt operations
+- Protection SDK operations are truly asynchronous (on Win32), allowing for simultaneous non-blocking encrypt/decrypt operations
   - Application callbacks (AuthDelegate, HTTPDelegate, etc.) may now be invoked on -any- background thread
 - Custom label properties set by IT administrators can now be read via mip::Label::GetCustomSettings
 - Serialized publishing license can now be retrieved directly from a file without any HTTP operations via mip::FileHandler::GetSerializedPublishingLicense
