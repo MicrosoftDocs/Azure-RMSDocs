@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/23/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -109,7 +109,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |Information Protection bar in Office apps:| **Yes** | **Yes**| No |
 |Visual markings as a label action (header, footer, watermark):| **Yes** | **Yes** | **Yes**|
 |Per app visual markings:| **Yes** | **Yes* | No |
-|Dynamic visual markings with variables:| **Yes** | **** | No |
+|Dynamic visual markings with variables:| **Yes** | **Yes** (preview) | No |
 |Label with File Explorer:| **Yes** | **Yes** | No |
 |A viewer for protected files (text, images, PDF, .pfile):| **Yes** | **Yes** | No|
 |PPDF support for applying labels:| **Yes** | No | No |
