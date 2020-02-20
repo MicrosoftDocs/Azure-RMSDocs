@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 2/14/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -351,9 +351,18 @@ The Azure AD token lets the scanner authenticate to the Azure Information Protec
     ```
 
     When prompted, specify the password for your service account credentials for Azure AD, and then click **Accept**.
-    
+
+        
     If your scanner service account cannot be granted the **Log on locally** right for the installation see [Specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from that client's admin guide.
-    
+
+
+    **Classic client example:**
+
+    ```
+    Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
+    Acquired application access token on behalf of the user
+    ```
+       
     **For the unified labeling client:**
     
     ```
@@ -361,6 +370,14 @@ The Azure AD token lets the scanner authenticate to the Azure Information Protec
     ```
     
     If your scanner service account cannot be granted the **Log on locally** right for the installation, use the *OnBehalfOf* parameter with Set-AIPAuthentication, as described in [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from that client's admin guide.
+
+    **Unified labeling client example:**
+
+    ```
+    $pscreds = Get-Credential CONTOSO\scanner
+    Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+    Acquired application access token on behalf of CONTOSO\scanner.
+    ```
 
 The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** (classic client) or client secret (unified labeling client) in Azure AD. When the token expires, you must repeat steps 1 and 2.
 
