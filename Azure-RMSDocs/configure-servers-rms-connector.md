@@ -3,10 +3,10 @@
 
 title: Configure servers for the Rights Management connector - AIP
 description: Information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from Deploying the Azure Rights Management connector.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -179,6 +179,8 @@ The following SharePoint roles communicate with the RMS connector:
 -   Front-end SharePoint webservers, including those hosting the Central Administration server
 
 To use the RMS connector, these servers running SharePoint must be running one of the following software versions:
+
+-   SharePoint Server 2019
 
 -   SharePoint Server 2016
 
