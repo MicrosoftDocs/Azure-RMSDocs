@@ -135,6 +135,8 @@
         href: reference/class_mip_applylabelaction.md
       - name: ArgumentData
         href: reference/class_mip_argumentdata.md
+      - name: AsyncControl
+        href: reference/class_mip_asynccontrol.md
       - name: AuthDelegate
         href: reference/class_mip_authdelegate.md
       - name: AuthDelegate::OAuth2Challenge
@@ -205,6 +207,8 @@
         href: reference/class_mip_httpresponse.md
       - name: Identity
         href: reference/class_mip_identity.md
+      - name: InsufficientBufferError
+        href: reference/class_mip_insufficientbuffererror.md
       - name: InternalError
         href: reference/class_mip_internalerror.md
       - name: JustificationRequiredError
@@ -333,6 +337,8 @@
         href: reference/class_mip_syncfilesensitivitydata.md
       - name: TaskDispatcherDelegate
         href: reference/class_mip_taskdispatcherdelegate.md
+      - name: TemplateDescriptor
+        href: reference/class_mip_templatedescriptor.md
       - name: TemplateNotFoundError
         href: reference/class_mip_templatenotfounderror.md
       - name: TransientNetworkError
@@ -365,5 +371,5 @@
     href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
   - name: Security best practices
     href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
-  - name: What's new in version 1.1
-    href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/MIP-SDK-1-1-Now-GA/ba-p/328325
+  - name: Version release history
+    href: version-release-history.md

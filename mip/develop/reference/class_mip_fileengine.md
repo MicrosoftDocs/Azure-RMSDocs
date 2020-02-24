@@ -1,11 +1,11 @@
 ---
 title: class mip::FileEngine 
 description: Documents the mip::fileengine class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 02/14/2020
 ---
 
 # class mip::FileEngine 
@@ -24,8 +24,9 @@ public const std::string& GetPolicyFileId() const  |  Gets the policy file ID.
 public const std::string& GetSensitivityFileId() const  |  Gets the sensitivity file ID.
 public bool IsLabelingRequired() const  |  Checks if the policy dictates that a document must be labeled.
 public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
-public void CreateFileHandlerAsync(const std::string& inputFilePath, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\<FileHandler::Observer\>& fileHandlerObserver, const std::shared_ptr\<void\>& context, const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Starts creating a file handler for given file path.
-public void CreateFileHandlerAsync(const std::shared_ptr\<Stream\>& inputStream, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\<FileHandler::Observer\>& fileHandlerObserver, const std::shared_ptr\<void\>& context, const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Starts creating a file handler for given file stream.
+public const std::string& GetPolicyDataXml() const  |  Gets policy data XML which describes the settings, labels, and rules associated with this policy.
+public std::shared_ptr\<AsyncControl\> CreateFileHandlerAsync(const std::string& inputFilePath, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\<FileHandler::Observer\>& fileHandlerObserver, const std::shared_ptr\<void\>& context, const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Starts creating a file handler for given file path.
+public std::shared_ptr\<AsyncControl\> CreateFileHandlerAsync(const std::shared_ptr\<Stream\>& inputStream, const std::string& actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\<FileHandler::Observer\>& fileHandlerObserver, const std::shared_ptr\<void\>& context, const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Starts creating a file handler for given file stream.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Logs an application specific event to the audit pipeline.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Gets a list of custom settings.
 public bool HasClassificationRules() const  |  Gets if the policy has automatic or recommendation rules.
@@ -85,6 +86,12 @@ Gets the time when the policy was last fetched.
   
 **Returns**: The time when the policy was last fetched
   
+### GetPolicyDataXml function
+Gets policy data XML which describes the settings, labels, and rules associated with this policy.
+
+  
+**Returns**: Policy data XML.
+  
 ### CreateFileHandlerAsync function
 Starts creating a file handler for given file path.
 
@@ -101,9 +108,12 @@ Parameters:
 * **fileHandlerObserver**: A class implementing the FileHandler::Observer interface. 
 
 
-* **context**: Client context that will be opaquely passed back to the observer.
+* **context**: Client context that will be opaquely passed back to the observer. 
 
 
+
+  
+**Returns**: Async control object.
   
 ### CreateFileHandlerAsync function
 Starts creating a file handler for given file stream.
@@ -121,9 +131,12 @@ Parameters:
 * **fileHandlerObserver**: A class implementing the FileHandler::Observer interface. 
 
 
-* **context**: Client context that will be opaquely passed back to the observer.
+* **context**: Client context that will be opaquely passed back to the observer. 
 
 
+
+  
+**Returns**: Async control object.
   
 ### SendApplicationAuditEvent function
 Logs an application specific event to the audit pipeline.
