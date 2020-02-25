@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -91,6 +91,8 @@ When you click **Save**, your changes are automatically available to users and s
 
 ## Using variables in the text string
 
+The following variables are generally available when using Azure Information Protection classic client and are in public preview availability when using the Azure Information Protection unified labeling client.  
+
 You can use the following variables in the text string for your header, footer, or watermark:
 
 - `${Item.Label}` for the selected label. For example: General
@@ -99,13 +101,16 @@ You can use the following variables in the text string for your header, footer, 
 
 - `${Item.Location}` for the path and file name for documents, and the email subject for emails. For example: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` for the owner of the document or email, by the Windows signed in user name. For example: rsimone
+- `${User.Name}` for the owner of the document or email, by the Windows signed in user name. For example: rsimone 
 
 - `${User.PrincipalName}` for the owner of the document or email, by the Azure Information Protection client signed in email address (UPN). For example: rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}` for the date and time when the selected label was set. For example: 8/16/2016 1:30 PM
 
 Example: If you specify the string `Document: ${item.name}  Classification: ${item.label}` for the **General** label footer, the footer text applied to a documented named project.docx will be **Document: project.docx  Classification: General**.
+
+> [!NOTE]
+> Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 
 
 >[!TIP]
 > You also use a [field code to insert the label name](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) into a document or template.
@@ -139,6 +144,9 @@ Examples:
     `${If.App.WP}This content is ${If.End}Confidential`
     
     In Word and PowerPoint, the label applies the watermark text "This content is Confidential". In Excel, the label applies the watermark text "Confidential". In Outlook, the label doesn't apply any watermark text because watermarks as visual markings are not supported for Outlook.
+
+> [!NOTE]
+> When using the Azure Information Protection unified labeling client, setting values for **font name** and/or **font color** is only possible by using the Azure Information Protection portal. 
 
 ### Setting the font name
 
