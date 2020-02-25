@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/06/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -71,7 +71,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 **New features:**
 
-- Modification of [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) cmdlet **Set-AIPFileLabel** to enable removal of protection from PST, rar, 7zip and MSG files. This feature is disabled by default and must be turned on using the [Set-LabelPolicy](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations) cmdlet, as described [here](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies).  
+- Modification of [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) cmdlet **Set-AIPFileLabel** to enable removal of protection from PST, rar, 7zip and MSG files. This feature is disabled by default and must be turned on using the [Set-LabelPolicy](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations) cmdlet, as described [here](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-removal-of-protection-from-compressed-files).  
 
 - Added ability for Azure Information Protection administrators to control when .pfile extensions are used for files. Learn more about [changing protected file types](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#change-which-file-types-to-protect). 
 
