@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/25/2020
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -146,7 +146,7 @@ Examples:
     In Word and PowerPoint, the label applies the watermark text "This content is Confidential". In Excel, the label applies the watermark text "Confidential". In Outlook, the label doesn't apply any watermark text because watermarks as visual markings are not supported for Outlook.
 
 > [!NOTE]
-> When using the Azure Information Protection unified labeling client, setting values for **font name** and/or **font color** is only possible by using the Azure Information Protection portal. 
+> When using the Azure Information Protection unified labeling client, setting values for **font name** is only possible by using the Azure Information Protection portal. When setting values for **font color** beyond one of the five default values, is also only possible by using the Azure Information Protection portal.
 
 ### Setting the font name
 
