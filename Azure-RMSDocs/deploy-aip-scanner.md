@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -108,9 +108,9 @@ See the [Optimizing the performance of the scanner](#optimizing-the-performance-
     
     For example, to scan 1 million files that have an average file name length of 250 bytes, allocate 2 GB disk space.
 
-- **For multiple scanners, up to 12**: 4 core processors; 8 GB RAM recommended (4 GB minimum).
+- **For multiple scanners, up to 10**: 4 core processors; 8 GB RAM recommended.
 
-- **For multiple scanners more than 12 (maximum 40)**: 8 core processes; 16 GB RAM recommended (8 GB minimum).
+- **For multiple scanners more than 10 (maximum 40)**: 8 core processes; 16 GB RAM recommended.
 
 ### Deploying the scanner with alternative configurations
 
