@@ -97,7 +97,7 @@ This method is suitable only for Windows clients that run Office 365 apps and Of
 
 ## Client reconfiguration by using registry edits
 
-This method is suitable for all Windows clients and should be used if they do not run Office 365 apps, or Office 2019. or Office 2016, but instead, an earlier version of Office. This method uses two migration scripts to reconfigure AD RMS clients:
+This method is suitable for all Windows clients and should be used if they do not run Office 365 apps, or Office 2016 (or later) click-to-run. This method uses two migration scripts to reconfigure AD RMS clients:
 
 - Migrate-Client.cmd
 
