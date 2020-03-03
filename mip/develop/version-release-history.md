@@ -26,9 +26,9 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
 
-## Version 1.5.117
+## Version 1.5.124
 
-**Release date**: February 20, 2020
+**Release date**: March 2, 2020
 
 ### General SDK Changes
 
@@ -82,12 +82,12 @@ Use the following information to see what’s new or changed for a supported rel
   - mip::ProtectionEngine::IsFeatureSupported()
 - Richer details when fetching RMS templates
 - **Breaking Changes**
-  - mip::ProtectionEngine::GetTemplates() vector<shared_ptr<string>> return value replaced with
-    vector<shared_ptr<mip::TemplateDescriptor>> (C++)
-  - mip::ProtectionEngine::Observer::OnGetTemplatesSuccess() callback shared_ptr<vector<string>>
-    parameter replaced with vector<shared_ptr<mip::TemplateDescriptor>> (C++)
-  - IProtectionEngine.GetTemplates|Async() return value List<string> replaced with
-    List<TemplateDescriptor>. (C#)
+  - `mip::ProtectionEngine::GetTemplates()` `vector<shared_ptr<string>>` return value replaced with
+    `vector<shared_ptr<mip::TemplateDescriptor>>` (C++)
+  - `mip::ProtectionEngine::Observer::OnGetTemplatesSuccess()` callback `shared_ptr<vector<string>>`
+    parameter replaced with `vector<shared_ptr<mip::TemplateDescriptor>>` (C++)
+  - IProtectionEngine.GetTemplates|Async() return value `List<string>` replaced with
+    `List<TemplateDescriptor>`. (C#)
   - MIP_CC_ProtectionEngine_GetTemplates() mip_cc_guid* param replaced with mip_cc_template_descriptor* (C API)
 
 ### C API
