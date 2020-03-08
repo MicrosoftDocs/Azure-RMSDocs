@@ -324,7 +324,7 @@
       href: ./develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md
       items:
       - name: Deprecation notice
-        href: deprecation-notice,md
+        href: deprecation-notice.md
       - name: Overview
         href: ./develop/overview.md
       - name: Get started
