@@ -40,7 +40,7 @@ Additional information about these visual markings:
 
     - Excel: Watermarks are visible only in Page layout and Print preview modes, and when printed.
     
-	- PowerPoint: Watermarks are applied to the master slide, as a background image. On the **View** tab, **Slide Master**, make sure that the **Hide Background Graphics** check box is not selected.
+    - PowerPoint: Watermarks are applied to the master slide, as a background image. On the **View** tab, **Slide Master**, make sure that the **Hide Background Graphics** check box is not selected.
 
 - Multiple lines are supported for watermarks, and for headers and footers in Word, Excel, and PowerPoint. If you specify multiple lines for a label's header or footer that is applied in Outlook, the lines are concatenated. In this scenario, consider using the configuration to [set different visual markings for Word, Excel, PowerPoint, and Outlook](#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook).
 
@@ -107,13 +107,16 @@ You can use the following variables in the text string for your header, footer, 
 
 - `${Event.DateTime}` for the date and time when the selected label was set. For example: 8/16/2016 1:30 PM
 
+> [!NOTE]
+>This syntax is case-sensitive.
+
 Example: If you specify the string `Document: ${Item.Name}  Classification: ${Item.Label}` for the **General** label footer, the footer text applied to a documented named project.docx will be **Document: project.docx  Classification: General**.
 
 > [!NOTE]
 > Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 
 
 >[!TIP]
-> You also use a [field code to insert the label name](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) into a document or template.
+> You can also use a [field code to insert the label name](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) into a document or template.
 
 ## Setting different visual markings for Word, Excel, PowerPoint, and Outlook
 
@@ -121,9 +124,10 @@ By default, the visual markings that you specify are applied across Word, Excel,
 
 Use the following syntax:
 
-	${If.App.<application type>}<your visual markings text> ${If.End}
+    ${If.App.<application type>}<your visual markings text> ${If.End}
 
-This syntax in this statement is case-sensitive.
+> [!NOTE]
+>This syntax in this statement is case-sensitive.
 
 Examples:
 
