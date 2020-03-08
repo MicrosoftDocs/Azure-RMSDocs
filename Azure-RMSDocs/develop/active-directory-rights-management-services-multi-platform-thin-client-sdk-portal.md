@@ -26,6 +26,9 @@ ms.custom: dev
 
 # Rights Management SDK 4.2
 
+> [!IMPORTANT]
+> The Microsoft Rights Management SDK 4.2 is deprecated. See the [deprecation notice](deprecation-notice.md).
+
 ## Purpose
 
 The Rights Management SDK 4.2 is a simplified, next-generation API that enables a lightweight development experience in upgrading your device apps with information protection via Rights Management Services. Developers can build apps that leverage Active Directory Rights Management Services (AD RMS) or Azure Rights Management to provide information protection and can easily protect or consume information, while transparently handling complex security practices such as key management, encryption and decryption, policy and permissions creation, secure caching, and communication with AD RMS and Azure RMS services.
