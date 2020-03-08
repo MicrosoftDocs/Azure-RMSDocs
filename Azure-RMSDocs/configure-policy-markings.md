@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/26/2020
+ms.date: 03/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -107,7 +107,7 @@ You can use the following variables in the text string for your header, footer, 
 
 - `${Event.DateTime}` for the date and time when the selected label was set. For example: 8/16/2016 1:30 PM
 
-Example: If you specify the string `Document: ${item.name}  Classification: ${item.label}` for the **General** label footer, the footer text applied to a documented named project.docx will be **Document: project.docx  Classification: General**.
+Example: If you specify the string `Document: ${Item.Name}  Classification: ${Item.Label}` for the **General** label footer, the footer text applied to a documented named project.docx will be **Document: project.docx  Classification: General**.
 
 > [!NOTE]
 > Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 
