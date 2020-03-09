@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -99,7 +99,7 @@ For the delegated user account:
 ### To create and configure the Azure AD applications for Set-AIPAuthentication
 
 > [!IMPORTANT]
-> These instructions are for the current general availability version of the unified labeling client and also apply to the preview version of the scanner for this client.
+> These instructions are for the current general availability version of the unified labeling client and also apply to the general availability version of the scanner for this client.
 
 Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecret* parameters. If you upgraded from a previous version of the client and created an app registration for the previous *WebAppId* and *NativeAppId* parameters, they won't work with the unified labeling client. You must create a new app registration as follows:
 
@@ -172,13 +172,13 @@ Now you've completed the registration of this app with a secret, you're ready to
 
 2. In your PowerShell session, create a variable to store the credentials of the Windows user account that will run non-interactively. For example, if you created a service account for the scanner:
     
-    	$pscreds = Get-Credential "CONTOSO\srv-scanner"
+        $pscreds = Get-Credential "CONTOSO\srv-scanner"
     
     You're prompted for this account's password.
 
 2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. Also specify your app registration values, your tenant ID, and the name of the delegated user account in Azure AD. For example:
     
-    	Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
+        Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
 
 > [!NOTE]
 > If the computer cannot have internet access, there's no need to create the app in Azure AD and run Set-AIPAuthentication. Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  

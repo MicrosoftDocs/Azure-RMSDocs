@@ -26,6 +26,9 @@ ms.custom: dev
 
 # Overview
 
+> [!IMPORTANT]
+> The Microsoft Rights Management SDK 4.2 is deprecated. See the [deprecation notice](deprecation-notice.md).
+
 Microsoft Rights Management SDK 4.2 is an information protection technology and is available for several platforms.  It provides a software developer kit (SDK) or framework, which is designed for client computers and devices to help protect access to and usage of information flowing through applications that are “rights-enabled”. The SDKs for these platforms provide a simple API for an application developer to protect or consume digital content, retrieve templates and acquire policies from a server, and other related rights management tasks.
 
 For more information on the currently supported platforms, see our developer documentation portal for [Microsoft Rights Management SDK](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md).

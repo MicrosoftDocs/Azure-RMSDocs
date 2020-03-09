@@ -66,11 +66,21 @@ Use the following information to see what's new or changed for a supported relea
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## Version 2.6.101.0 (preview)
+## Version 2.6.111.0 
 
-**Released** 1/15/2020
+**Released** 03/09/2020
 
 **New features:**
+
+- General availability version of the [scanner](../deploy-aip-scanner.md), to inspect and label documents in on-premises data stores. 
+
+- [Scanner](../deploy-aip-scanner.md) related:
+    - [Easier SharePoint on-premises and subsite discovery](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories). Setting each specific site is no longer required. 
+    - Advanced property for [SQL chunk sizing](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server) added.
+    - Administrators now have the ability to [stop existing scans and perform a re-scan](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan) if a change was made to the default label.
+    - By default, scanner now sets minimal telemetry for faster scans and reduced log size and information types are now cached in the database. Learn more about [scanner optimization](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner). 
+    - Scanner now supports separate deployments for database and the service, while **Sysadmin** rights are needed only for database deployment.
+    - Improvements made to scanner performance. 
 
 - Modification of [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) cmdlet **Set-AIPFileLabel** to enable removal of protection from PST, rar, 7zip and MSG files. This feature is disabled by default and must be turned on using the [Set-LabelPolicy](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations) cmdlet, as described [here](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-removal-of-protection-from-compressed-files).  
 
@@ -84,15 +94,10 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 - New **WordShapeNameToRemove** advanced property enables removal of content marking in Word documents made by third party applications. Learn more about how to [identify existing shape names and define them for removal using **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions). 
 
-- [Scanner](../deploy-aip-scanner.md) related features:
-    - [Easier SharePoint on-premises and subsite discovery](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories). Setting each specific site is no longer required. 
-    - Advanced property for [SQL chunk sizing](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server) added.
-    - Administrators now have the ability to [stop existing scans and perform a re-scan](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan) if a change was made to the default label.
-    - By default, scanner now sets minimal telemetry for faster scans and reduced log size and information types are now cached in the database. Learn more about [scanner optimization](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner). 
+
 
 **Fixes:**
 
-- Scanner now supports separate deployments for database and the service, while **Sysadmin** rights are needed only for database deployment. 
 - In instances where users attempted unsuccessfully to open protected TIFF files, and TIFF files created by RightFax, the TIFF files now open and remain stable as expected.  
 - Previous corruptions of protected txt and PDF files are resolved.
 - Inconsistent labeling between **Automatic** and **Manual** in Log Analytics was corrected. 
@@ -105,6 +110,8 @@ This client is replacing the Azure Information Protection client (classic). To c
 ## Version 2.5.33.0
 
 **Released**: 10/23/2019
+
+Supported through  09/09/2020
 
 **New features:**
 
