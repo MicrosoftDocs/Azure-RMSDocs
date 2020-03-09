@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/02/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -61,7 +61,7 @@ Which client should you use?
     
     This client supports switching accounts, and because it doesn't use an Office add-in, it has better performance in Office apps than using either of the Azure Information Protection clients. Because labeling is built into Office, there's no separate install and maintenance for this labeling client. In addition, unlike an Office add-in, it can't be disabled.
 
-- Use the **Azure Information Protection unified labeling client** on Windows computers for labels and policy settings that can also be used by MacOS, iOS, and Android, you want to label files independently from Office 365 apps, and you don’t need features that are only supported by the classic client. These features currently include protecting content with an on-premises key (HYOK) and a general availability version of the scanner for on-premises data stores.
+- Use the **Azure Information Protection unified labeling client** on Windows computers for labels and policy settings that can also be used by MacOS, iOS, and Android, you want to label files independently from Office 365 apps, and you don't need features that are only supported by the classic client. These features currently include protecting content with an on-premises key (HYOK) and a general availability version of the scanner for on-premises data stores.
 
 - Install the **Azure Information Protection client (classic)** on Windows computers if you need a version of the client that has features that are not yet available with the unified labeling client. Although this client can use the same labels as those used by MacOS, iOS, and Android, it has different policy settings. So your tradeoff is administration using another management portal and a different user experience for users.
 
@@ -77,7 +77,7 @@ When you have a Windows computer that runs Office 365 apps that are a minimum ve
     
     For these users, their labeling experience is very similar across Windows, Mac, iOS, and Android because they have the same labels published to them and the same policy settings. As an admin, you manage these labels and policy settings in the same management center.
 
-- You also install the unified labeling client for yourself, to test the preview version of the Azure Information Protection scanner.
+- You also install the unified labeling client for yourself, to test the the Azure Information Protection scanner.
 
 - For a subset of users, you deploy the classic client because these users require labels that apply hold your own key (HYOK) protection.
     
@@ -103,13 +103,13 @@ To compare the Office built-in sensitivity labeling features across different op
 |Multilanguage support for labels:| **Yes** | **Yes** |**Yes** |
 |Label inheritance from email attachments:| **Yes** | **Yes**  |No |
 |Customizations that include:<br />- Default label for email<br />- Pop-up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| **Yes** <sup>1</sup> | **Yes** <sup>2</sup> | No |
-|Scanner for on-premises data stores:| **Yes** | **Yes <br />(preview)** | No |
+|Scanner for on-premises data stores:| **Yes** | **Yes <br />** | No |
 |Central reporting (analytics):| **Yes** | **Yes** | No |
 |Custom permissions set independently from a label:| **Yes** | **Yes** <sup>3</sup>| No |
 |Information Protection bar in Office apps:| **Yes** | **Yes**| No |
 |Visual markings as a label action (header, footer, watermark):| **Yes** | **Yes** | **Yes**|
-|Per app visual markings:| **Yes** | **Yes* | No |
-|Dynamic visual markings with variables:| **Yes** | **Yes** (preview) | No |
+|Per app visual markings:| **Yes** | **Yes** | No |
+|Dynamic visual markings with variables:| **Yes** | **Yes** | No |
 |Label with File Explorer:| **Yes** | **Yes** | No |
 |A viewer for protected files (text, images, PDF, .pfile):| **Yes** | **Yes** | No|
 |PPDF support for applying labels:| **Yes** | No | No |
@@ -190,8 +190,6 @@ Although the Azure Information Protection unified labeling client is still under
 - Display the Do Not Forward button in Outlook
 
 - Demo policy
-
-- Justification for removing protection
 
 - Confirmation prompt **Do you want to delete this label?** for users when you don't use the policy setting for justification
 
