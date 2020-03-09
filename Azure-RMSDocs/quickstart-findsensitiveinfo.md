@@ -4,7 +4,7 @@ description: Use the Azure Information Protection scanner to find what sensitive
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/09/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,7 +29,7 @@ ms.subservice: aiplabels
 In this quickstart, you'll permission SharePoint to allow scanning, and install and configure the Azure Information Protection scanner to find what sensitive information you have in files that are stored in an on-premises data store. For example, a local folder, network share, or SharePoint Server.
 
 > [!NOTE]
-> You can use this quickstart with the current general availability version of the Azure Information Protection client (classic), or the current general availability version of the Azure Information Protection unified labeling client that includes a preview version of the scanner.
+> You can use this quickstart with the current general availability version of the Azure Information Protection client (classic), or the current general availability version of the Azure Information Protection unified labeling client that includes the scanner.
 >  
 > Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 
@@ -140,7 +140,7 @@ You're now ready to install the scanner with the scanner profile that you've jus
 
 2. Use the following command to install the scanner, specifying your own computer name, and the profile name that you saved in the Azure portal:
     
-    	Install-AIPScanner -SqlServerInstance <your computer name>\SQLEXPRESS -Profile <profile name>
+        Install-AIPScanner -SqlServerInstance <your computer name>\SQLEXPRESS -Profile <profile name>
     
     When you're prompted, provide your own credentials for the scanner by using the \<domain\user name> format, and then your password. 
 
@@ -173,15 +173,15 @@ In Excel, the first two columns display your data store repository and file name
     
     - Example for a local folder:
         
-        	D:\Data\Finance
+            D:\Data\Finance
     
     - Example for a network share
         
-        	\\NAS\HR
+            \\NAS\HR
     
     - Example for a SharePoint folder:
         
-        	http://sp2016/Shared Documents
+            http://sp2016/Shared Documents
 
 2. Restart the scanner again: From the **Azure Information Protection - Profiles** pane, make sure your profile is selected, and then select the **Scan now** option:
     
@@ -197,7 +197,7 @@ In a production environment, you would run the scanner on a Windows Server, usin
 
 To clean up resources, ready for that production deployment, in your PowerShell session, run the following command to uninstall the scanner:
 
-	Uninstall-AIPScanner
+    Uninstall-AIPScanner
 
 Then restart your computer.
 
