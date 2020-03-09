@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -46,19 +46,19 @@ In both cases, after you [connect to Office 365 Security & Compliance Center Pow
 
 For a label policy setting, single string value:
 
-	Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
+    Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
 
 For label policy settings, multiple string values for the same key:
 
-	Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
+    Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 
 For a label setting, single string value:
 
-	Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
+    Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 
 For label settings, multiple string values for the same key:
 
-	Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
+    Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 
 To remove an advanced setting, use the same syntax but specify a null string value.
 
@@ -69,19 +69,19 @@ To remove an advanced setting, use the same syntax but specify a null string val
 
 Example 1: Set a label policy advanced setting for a single string value:
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 
 Example 2: Set a label advanced setting for a single string value:
 
-	Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
+    Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 
 Example 3: Set a label advanced setting for multiple string values:
 
-	Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
+    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 
 Example 4: Remove a label policy advanced setting by specifying a null string value:
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
 
 #### Specifying the identity for the label policy or label
 
@@ -97,7 +97,7 @@ For configuring your label advanced settings, use the **Name** value. For exampl
 
 If you prefer to specify the label GUID, this value is not displayed in the admin center where you manage your labels. However, you can use the following Office 365 Security & Compliance Center PowerShell command to find this value:
 
-	Get-Label | Format-Table -Property DisplayName, Name, Guid
+    Get-Label | Format-Table -Property DisplayName, Name, Guid
 
 
 #### Order of precedence - how conflicting settings are resolved
@@ -155,7 +155,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
 
-	(Get-LabelPolicy -Identity Global).settings
+    (Get-LabelPolicy -Identity Global).settings
 
 #### Available advanced settings for labels
 
@@ -172,7 +172,7 @@ Use the *AdvancedSettings* parameter with [New-Label](https://docs.microsoft.com
 
 Example PowerShell command to check your label settings in effect for a label named "Public":
 
-	(Get-Label -Identity Public).settings
+    (Get-Label -Identity Public).settings
 
 ## Display the Information Protection bar in Office apps
 
@@ -188,7 +188,7 @@ For the selected label policy, specify the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
 
 ## Exempt Outlook messages from mandatory labeling
 
@@ -204,7 +204,7 @@ For the selected label policy, specify the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
 
 ## Enable recommended classification in Outlook
 
@@ -220,7 +220,7 @@ For the selected label policy, specify the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
 
 ## Enable removal of protection from compressed files
 
@@ -234,7 +234,7 @@ When you configure this setting, the  [PowerShell](https://docs.microsoft.com/az
 
 Example PowerShell command where your policy is enabled:
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
 
 ## Set a different default label for Outlook
 
@@ -250,7 +250,7 @@ For the selected label policy, specify the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
 
 ## Change which file types to protect
 
@@ -274,15 +274,15 @@ Use the following table to identify the string value to specify:
 
 Example 1: PowerShell command for the unified client to protect only Office file types and PDF files, where your label policy is named "Client":
 
-	Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
+    Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
 
 Example 2:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
-	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 
 Example 3: PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
 
-	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
 
 With this setting, you can change which file types are protected but you cannot change the default protection level from native to generic. For example, for users running the unified labeling client, you can change the default setting so that only Office files and PDF files are protected instead of all file types. But you cannot change these file types to be generically protected with a .pfile file name extension.
 
@@ -302,7 +302,7 @@ For the selected label policy, specify the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
 
 ## Remove headers and footers from other labeling solutions
 
@@ -310,7 +310,7 @@ This configuration uses policy [advanced settings](#how-to-configure-advanced-se
 
 There are two methods that can used to remove classifications from other labeling solutions. The first method removes any shape from Word documents where the shape name matches the name as defined in the advanced property **WordShapeNameToRemove**, the second method lets you remove or replace text-based headers or footers from Word, Excel and PowerPoint documents as defined in the **RemoveExternalContentMarkingInApp** advanced property. 
 
-### Use the WordShapeNameToRemove advanced property (preview)
+### Use the WordShapeNameToRemove advanced property
 
 *The **WordShapeNameToRemove** advanced property is supported from version 2.6.101.0 and above*
 
@@ -338,7 +338,7 @@ Example: The shape name is **dc**. To remove the shape with this name, you speci
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
 
 When you have more than one Word shape to remove, specify as many values as you have shapes to remove.
 
@@ -366,7 +366,7 @@ Examples:
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
 
 You then need at least one more advanced client setting, **ExternalContentMarkingToRemove**, to specify the contents of the header or footer, and how to remove or replace them.
 
@@ -399,7 +399,7 @@ For the same label policy, specify the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
 
 #### Multiline headers or footers
 
@@ -419,7 +419,7 @@ To remove this multiline footer, you create the following two entries for the sa
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
 
 
 #### Optimization for PowerPoint
@@ -444,7 +444,7 @@ Example: The shape name is **fc**. To remove the shape with this name, you speci
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
 
 When you have more than one PowerPoint shape to remove, specify as many values as you have shapes to remove.
 
@@ -456,7 +456,7 @@ By default, only the Master slides are checked for headers and footers. To exten
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
 
 
 ## Disable custom permissions in File Explorer
@@ -473,7 +473,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 
 ## For files protected with custom permissions, always display custom permissions to users in File Explorer
 
@@ -491,7 +491,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 Example PowerShell command:
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissionsForCustomProtectedFiles="True"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissionsForCustomProtectedFiles="True"}
 
 
 ## For email messages with attachments, apply a label that matches the highest classification of those attachments
@@ -523,7 +523,7 @@ The customized tooltip supports a single language only.
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic"}
 
 ## Add "Report an Issue" for users
 
@@ -543,7 +543,7 @@ Example value for an email address: `mailto:helpdesk@contoso.com`
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:helpdesk@contoso.com"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:helpdesk@contoso.com"}
 
 ## Implement pop-up messages in Outlook that warn, justify, or block emails being sent
 
@@ -598,11 +598,11 @@ Example value for multiple label GUIDs as a comma-separated string: `dcf781ba-72
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e,b6d21387-5d34-4dc8-90ae-049453cec5cf,bb48a6cb-44a8-49c3-9102-2d2b017dcead,74591a94-1e0e-4b5d-b947-62b70fc0f53a,6c375a97-2b9b-4ccd-9c5b-e24e4fd67f73"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e,b6d21387-5d34-4dc8-90ae-049453cec5cf,bb48a6cb-44a8-49c3-9102-2d2b017dcead,74591a94-1e0e-4b5d-b947-62b70fc0f53a,6c375a97-2b9b-4ccd-9c5b-e24e4fd67f73"}
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedCollaborationLabel="dc284177-b2ac-4c96-8d78-e3e1e960318f,d8bb73c3-399d-41c2-a08a-6f0642766e31,750e87d4-0e91-4367-be44-c9c24c9103b4,32133e19-ccbd-4ff1-9254-3a6464bf89fd,74348570-5f32-4df9-8a6b-e6259b74085b,3e8d34df-e004-45b5-ae3d-efdc4731df24"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedCollaborationLabel="dc284177-b2ac-4c96-8d78-e3e1e960318f,d8bb73c3-399d-41c2-a08a-6f0642766e31,750e87d4-0e91-4367-be44-c9c24c9103b4,32133e19-ccbd-4ff1-9254-3a6464bf89fd,74348570-5f32-4df9-8a6b-e6259b74085b,3e8d34df-e004-45b5-ae3d-efdc4731df24"}
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
 
 #### To exempt domain names for pop-up messages configured for specific labels
 
@@ -636,9 +636,9 @@ For example, you have specified the **OutlookBlockUntrustedCollaborationLabel** 
 
 Example PowerShell commands, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
 ### To implement the warn, justify, or block pop-up messages for emails or attachments that don't have a label:
 
@@ -671,7 +671,7 @@ For the same label policy, create the following advanced client setting with one
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
 
 
 #### To define specific file name extensions for the warn, justify, or block pop-up messages for email attachments that don't have a label
@@ -692,7 +692,7 @@ For the same label policy, enter the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
 
 #### To specify a different action for email messages without attachments
 
@@ -728,7 +728,7 @@ If you don't specify this client setting, the value that you specify for Outlook
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 
 ## Disable sending audit data to Azure Information Protection analytics
 
@@ -744,7 +744,7 @@ To change this behavior so that this information is not sent by the unified labe
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
 
 
 ## Disable sending discovered sensitive information in documents to Azure Information Protection analytics
@@ -771,7 +771,7 @@ For example:
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 
 ## Send information type matches to Azure Information Protection analytics
  
@@ -787,7 +787,7 @@ To send content matches when sensitive information types are sent, create the fo
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
 ## Limit the number of threads used by the scanner
 
@@ -805,7 +805,7 @@ When you first configure the value for testing, we recommend you specify 2 per c
 
 Example PowerShell command, where your label policy is named "Scanner":
 
-	Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8"}
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8"}
 
 
 ## Migrate labels from Secure Islands and other labeling solutions
@@ -848,7 +848,7 @@ The advanced setting:
 
 Example PowerShell command, where your label is named "Confidential":
 
-	Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Confidential,Classification,Confidential"}
+    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Confidential,Classification,Confidential"}
 
 #### Example 2: One-to-one mapping for a different label name
 
@@ -866,7 +866,7 @@ The advanced setting:
 
 Example PowerShell command, where your label is named "Highly Confidential":
 
-	Set-Label -Identity "Highly Confidential" -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Sensitive,Classification,Sensitive"}
+    Set-Label -Identity "Highly Confidential" -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Sensitive,Classification,Sensitive"}
 
 #### Example 3: Many-to-one mapping of label names
 
@@ -884,7 +884,7 @@ The advanced client setting:
 
 Example PowerShell command, where your label is named "General":
 
-	Set-Label -Identity General -AdvancedSettings @{labelByCustomProperties="Secure Islands label contains Internal,Classification,.*Internal.*"}
+    Set-Label -Identity General -AdvancedSettings @{labelByCustomProperties="Secure Islands label contains Internal,Classification,.*Internal.*"}
 
 #### Example 4: Multiple rules for the same label
 
@@ -892,7 +892,7 @@ When you need multiple rules for the same label, define multiple string values f
 
 In this example, the Secure Islands labels named "Confidential" and "Secret" are stored in the custom property named **Classification**, and you want the Azure Information Protection unified labeling client to apply the sensitivity label named "Confidential":
 
-	Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
+    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 
 ### Extend your label migration rules to emails
 
@@ -906,7 +906,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
 
 ### Extend your label migration rules to SharePoint properties
 
@@ -922,7 +922,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 Example PowerShell command, where your label policy is named "Global":
 
-	Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
 
 ## Apply a custom property when a label is applied
 
@@ -971,7 +971,7 @@ The advanced setting:
 
 Example PowerShell command, where your label is named "Confidential":
 
-	Set-Label -Identity Confidential -AdvancedSettings @{customPropertiesByLabel="Classification,Secret"}
+    Set-Label -Identity Confidential -AdvancedSettings @{customPropertiesByLabel="Classification,Secret"}
 
 #### Example 2: Add multiple custom properties for a label
 
@@ -979,7 +979,7 @@ To add more than one custom property for the same label, you need to define mult
 
 Example PowerShell command, where your label is named "General" and you want to add one custom property named **Classification** with the value of **General** and a second custom property named **Sensitivity** with the value of **Internal**:
 
-	Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
+    Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
 
 ## Configure a label to apply S/MIME protection in Outlook
 
@@ -1005,9 +1005,9 @@ If you want the label to be visible in Outlook only, configure the label to appl
 
 Example PowerShell commands, where your label is named "Recipients Only":
 
-	Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeSign="True"}
+    Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeSign="True"}
 
-	Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeEncrypt="True"}
+    Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeEncrypt="True"}
 
 ## Specify a default sublabel for a parent label
 
@@ -1021,7 +1021,7 @@ When you add a sublabel to a label, users can no longer apply the parent label t
 
 Example PowerShell command, where your parent label is named "Confidential" and the "All Employees" sublabel has a GUID of 8faca7b8-8d20-48a3-8ea2-0f96310a848e:
 
-	Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
+    Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 
 
 ## Specify a color for the label
@@ -1040,7 +1040,7 @@ To configure the advanced setting for a label's color, enter the following strin
 
 Example PowerShell command, where your label is named "Public":
 
-	Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
+    Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
 ## Sign in as a different user
 

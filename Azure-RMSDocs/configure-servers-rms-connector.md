@@ -6,7 +6,7 @@ description: Information to help you configure your on-premises servers that wil
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -54,11 +54,11 @@ This configuration requires registry settings. To do this, you have two options:
 
 - Advantages:
 
-	- No direct editing of the registry. This is automated for you by using a script.
+    - No direct editing of the registry. This is automated for you by using a script.
 
-	- No need to run a Windows PowerShell cmdlet to obtain your Microsoft RMS URL.
+    - No need to run a Windows PowerShell cmdlet to obtain your Microsoft RMS URL.
 
-	- The prerequisites are automatically checked for you (but not automatically remediated) if you run it locally.
+    - The prerequisites are automatically checked for you (but not automatically remediated) if you run it locally.
 
 Disadvantages:
 
@@ -70,15 +70,15 @@ Disadvantages:
 
 - Advantages:
 
-	- No connectivity to a server running the RMS connector is required.
+    - No connectivity to a server running the RMS connector is required.
 
 - Disadvantages:
 
-	- More administrative overheads that are error-prone.
+    - More administrative overheads that are error-prone.
 
-	- You must obtain your Microsoft RMS URL, which requires you to run a Windows PowerShell command.
+    - You must obtain your Microsoft RMS URL, which requires you to run a Windows PowerShell command.
 
-	- You must always make all the prerequisites checks yourself.
+    - You must always make all the prerequisites checks yourself.
 
 
 ---
@@ -92,7 +92,7 @@ After making the configuration changes on these servers, you must restart them i
 
 ### How to use the server configuration tool for Microsoft RMS connector
 
-1.  If you haven’t already downloaded the script for the server configuration tool for Microsoft RMS connector (GenConnectorConfig.ps1), download it from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
+1.  If you haven't already downloaded the script for the server configuration tool for Microsoft RMS connector (GenConnectorConfig.ps1), download it from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
 
 2.  Save the GenConnectorConfig.ps1 file on the computer where you will run the tool. If you will run the tool locally, this must be the server that you want to configure to communicate with the RMS connector. Otherwise, you can save it on any computer.
 
@@ -129,7 +129,7 @@ Use the following sections for specific information for each service type:
 > [!NOTE]
 > After these servers are configured to use the connector, client applications that are installed locally on these servers might not work with RMS. When this happens, it is because the applications try to use the connector rather than use RMS directly, which is not supported.
 >
-> In addition, if Office 2010 is installed locally on an Exchange server, the client app’s IRM features might work from that computer after the server is configured to use the connector, but this is not supported.
+> In addition, if Office 2010 is installed locally on an Exchange server, the client app's IRM features might work from that computer after the server is configured to use the connector, but this is not supported.
 >
 > In both scenarios, you must install the client applications on separate computers that are not configured to use the connector. They will then correctly use RMS directly.
 
@@ -188,7 +188,7 @@ To use the RMS connector, these servers running SharePoint must be running one o
 
 -   SharePoint Server 2010
 
-A server running SharePoint 2016 or SharePoint 2013 must also be running a version of the MSIPC client 2.1 that is supported with the RMS connector. To make sure that you have a supported version, download the latest client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396).
+A server running SharePoint 2019, 2016 or SharePoint 2013 must also be running a version of the MSIPC client 2.1 that is supported with the RMS connector. To make sure that you have a supported version, download the latest client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396).
 
 > [!WARNING]
 > There are multiple versions of the MSIPC 2.1 client, so make sure that you have version 1.0.2004.0 or later.
@@ -205,13 +205,13 @@ Servers running SharePoint 2010 must have installed a version of the MSDRM clien
 
     -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
 
-        For example, to run the tool locally to configure a server running SharePoint 2016 or SharePoint 2013:
+        For example, to run the tool locally to configure a server running SharePoint 2019, 2016 or SharePoint 2013:
 
         ```
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetSharePoint2013
         ```
 
-    -   If you are using SharePoint 2016 or SharePoint 2013, make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
+    -   If you are using SharePoint 2019, 2016 or SharePoint 2013, make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
 3.  Enable IRM in SharePoint. For more information, see [Configure Information Rights Management (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) in the SharePoint library.
 
