@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/12/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,7 +31,8 @@ ms.custom: admin
 >
 > *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 You can download the latest general availability release version and the current preview version (if available) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
@@ -73,7 +74,7 @@ All client versions from 1.4.21.0 released 03/15/2017 support TLS 1.2. Client ve
 
 ### Release history
 
-Use the following information to see what’s new or changed for a supported release of the Azure Information Protection client for Windows. The most current release is listed first.
+Use the following information to see what's new or changed for a supported release of the Azure Information Protection client for Windows. The most current release is listed first.
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
