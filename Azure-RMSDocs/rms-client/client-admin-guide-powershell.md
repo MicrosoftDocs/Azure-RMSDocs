@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,7 +31,8 @@ ms.custom: admin
 >
 > *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 When you install the Azure Information Protection client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 
@@ -159,7 +160,7 @@ Windows PowerShell module:
 
 3. Use the `Connect-AipService` cmdlet to connect to the Azure Rights Management service:
     
-    	Connect-AipService
+        Connect-AipService
     
     When prompted, enter your Azure Information Protection tenant administrator credentials. Typically, you use an account that is a global administrator for Azure Active Directory or Office 365.
     
@@ -167,21 +168,21 @@ Windows PowerShell module:
     
     An example of output from Get-AipServiceConfiguration:
     
-		    BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
-		
-		    RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
-		
-		    LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-		
-		    LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-		
-		    CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
-		
-		    CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+            BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
+        
+            RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
+        
+            LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
+        
+            LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
+        
+            CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+        
+            CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
 
 5. Disconnect from the service:
     
-    	Disconnect-AipService
+        Disconnect-AipService
 
 ##### To get the AppPrincipalId and Symmetric Key
 
