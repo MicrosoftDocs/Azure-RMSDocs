@@ -30,9 +30,6 @@ ms.custom: admin
 >
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
-
 > [!NOTE]
 > This article is for versions of the Azure Information Protection scanner that are earlier than version **1.48.204.0** but still in support. To upgrade earlier versions to the current version, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
 > 
@@ -120,8 +117,8 @@ Typically, you will use the same user account to install and configure the scann
 
 To create a user and grant db_owner rights on this database, ask the Sysadmin to run the following SQL script twice. The first time, for the service account that runs the scanner, and the second time for you to install and manage the scanner. Before running the script, replace *domain\user* with the domain name and user account name of the service account or user account:
 
-    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
-    USE AzInfoProtectionScanner IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
+	if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+	USE AzInfoProtectionScanner IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 
 Additionally:
 
@@ -204,7 +201,7 @@ Supported versions for SharePoint: SharePoint Server 2019, SharePoint Server 201
 
 1. From the same Windows Server computer, in your PowerShell session, add your first data store by running the following command:
     
-        Add-AIPScannerRepository -Path <path>
+    	Add-AIPScannerRepository -Path <path>
     
     For example: `Add-AIPScannerRepository -Path \\NAS\Documents`
     
@@ -214,7 +211,7 @@ Supported versions for SharePoint: SharePoint Server 2019, SharePoint Server 201
 
 3. Confirm that you have specified all the data stores correctly, by running the **Get-AIPScannerRepository** cmdlet:
     
-        Get-AIPScannerRepository
+    	Get-AIPScannerRepository
 
 With the scanner's default configuration, you're now ready to run your first scan in discovery mode.
 
@@ -230,7 +227,7 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 2. Wait for the scanner to complete its cycle by running the following command:
     
-        Get-AIPScannerStatus
+    	Get-AIPScannerStatus
     
     Alternatively, you can view the status from the **Azure Information Protection - Nodes** pane in the Azure portal, by checking the **STATUS** column.
     
@@ -264,7 +261,7 @@ In its default setting, the scanner runs one time and in the reporting-only mode
 
 1. On the Windows Server computer, in the PowerShell session, run the following command:
     
-        Set-AIPScannerConfiguration -Enforce On -Schedule Always
+    	Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
     There are other configuration settings that you might want to change. For example, whether file attributes are changed and what is logged in the reports. In addition, if your Azure Information Protection policy includes the setting that requires a justification message to lower the classification level or remove protection, specify that message by using this cmdlet. Use the following PowerShell help command for more information about each configuration setting: `Get-Help Set-AIPScannerConfiguration -detailed`
 
@@ -523,6 +520,6 @@ If the scanner was configured to run manually rather than continuously, to run a
 
 Interested in how the Core Services Engineering and Operations team in Microsoft implemented this scanner?  Read the technical case study: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-You might be wondering: [What's the difference between Windows Server FCI and the Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+You might be wondering: [What’s the difference between Windows Server FCI and the Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 You can also use PowerShell to interactively classify and protect files from your desktop computer. For more information about this and other scenarios that use PowerShell, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md).
