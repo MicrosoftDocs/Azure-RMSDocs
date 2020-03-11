@@ -26,8 +26,7 @@ ms.custom: dev
 
 # Rights Management SDK 4.2
 
-> [!IMPORTANT]
-> The Microsoft Rights Management SDK 4.2 is deprecated. See the [deprecation notice](deprecation-notice.md).
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 ## Purpose
 
