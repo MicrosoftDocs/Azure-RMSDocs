@@ -26,10 +26,7 @@ ms.custom: dev
 
 # Overview
 
-> [!IMPORTANT]
-> Versions of the Microsoft Rights Management Service SDK released prior to March 2020 are deprecated. It's mandatory that applications using earlier versions update to the March 2020 release. For full details, see the [deprecation notice](deprecation-notice.md).
->
-> No further enhancements are planned for the Microsoft Rights Management Service SDK. We strongly recommend that you use the [Microsoft Information Protection SDK](/information-protection/develop/overview.md) for classification, labeling, and protection services.
+[!INCLUDE [deprecation notice](../../../includes/deprecation-notice.md)]
 
 Microsoft Rights Management SDK 4.2 is an information protection technology and is available for several platforms.  It provides a software developer kit (SDK) or framework, which is designed for client computers and devices to help protect access to and usage of information flowing through applications that are “rights-enabled”. The SDKs for these platforms provide a simple API for an application developer to protect or consume digital content, retrieve templates and acquire policies from a server, and other related rights management tasks.
 
