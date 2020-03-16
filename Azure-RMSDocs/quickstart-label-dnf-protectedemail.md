@@ -4,7 +4,7 @@ description: Configure a label that protects an email for a user by automaticall
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection

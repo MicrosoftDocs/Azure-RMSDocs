@@ -6,7 +6,7 @@ description: Instructions for protection activation in the Azure portal so that 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 003/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
