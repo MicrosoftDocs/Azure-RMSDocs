@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 1/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,8 +28,6 @@ search.appverid:
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Have a question about Azure Information Protection, or about the Azure Rights Management service (Azure RMS)? See if it's answered here.
 
@@ -45,7 +43,7 @@ Unlike Azure Information Protection, Microsoft Information Protection isn't a su
 
 For more information, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
-## What's the difference between labels in Azure Information Protection and labels in Office 365?
+## What’s the difference between labels in Azure Information Protection and labels in Office 365?
 
 Originally, Office 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that let you classify documents and emails for auditing and retention when that content is in Office 365 services. In comparison, Azure Information Protection labels let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud.
 
@@ -160,7 +158,7 @@ Some things to note:
 
 - Microsoft accounts are not supported for delegated administration of Azure Information Protection, even if these accounts are assigned to one of the administrative roles listed. 
 
-- If you have configured [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this configuration does not affect the ability to administer Azure Information Protection, except the RMS connector. For example, if you have configured onboarding controls such that the ability to protect content is restricted to the "IT department" group, the account that you use to install and configure the RMS connector must be a member of that group. 
+- If you have configured [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this configuration does not affect the ability to administer Azure Information Protection, except the RMS connector. For example, if you have configured onboarding controls such that the ability to protect content is restricted to the “IT department” group, the account that you use to install and configure the RMS connector must be a member of that group. 
 
 - Users who are assigned an administrative role cannot automatically remove protection from documents or emails that were protected by Azure Information Protection. Only users who are assigned super users can do this, and when the super user feature is enabled. However, any user that you assign administrative permissions to Azure Information Protection can assign users as super users, including their own account. They can also enable the super user feature. These actions are recorded in an administrator log. For more information, see the security best practices section in [Configuring super users for Azure Information Protection and discovery services or data recovery](configure-super-users.md). 
 
@@ -172,7 +170,7 @@ Yes. Although Azure Information Protection is a cloud-based solution, it can cla
 
 If you have Exchange Server, SharePoint Server, and Windows file servers, you can deploy the [Rights Management connector](deploy-rms-connector.md) so that these on-premises servers can use the Azure Rights Management service to protect your emails and documents. You can also synchronize and federate your Active Directory domain controllers with Azure AD for a more seamless authentication experience for users, for example, by using [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
 
-The Azure Rights Management service automatically generates and manages XrML certificates as required, so it doesn't use an on-premises PKI. For more information about how Azure Rights Management uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in the [How does Azure RMS work?](./how-does-it-work.md) article.
+The Azure Rights Management service automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure Rights Management uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in the [How does Azure RMS work?](./how-does-it-work.md) article.
 
 ## What types of data can Azure Information Protection classify and protect?
 
@@ -214,7 +212,7 @@ The Azure Information Protection alerts can be accessed by [using the Microsoft 
 
 For more information about the Microsoft Graph Security API, see [Microsoft Graph Security API overview](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview).
 
-## What's the difference between Windows Server FCI and the Azure Information Protection scanner?
+## What’s the difference between Windows Server FCI and the Azure Information Protection scanner?
 
 Windows Server File Classification Infrastructure has historically been an option to classify documents and then protect them by using the [Rights Management connector](deploy-rms-connector.md) (Office documents only) or a [PowerShell script](./rms-client/configure-fci.md) (all file types). 
 
@@ -236,7 +234,7 @@ There is a difference in setting the [Rights Management owner](configure-usage-r
 
 When the scanner protects files on SharePoint sites and libraries, the Rights Management owner is dynamically set for each file by using the SharePoint Editor value.
 
-## I've heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
+## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
 The technical documentation does not contain information about upcoming releases. For this type of information, use the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent), check the [Enterprise Mobility + Security Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services).
 
@@ -257,7 +255,7 @@ For technical support, use your standard support channels or [contact Microsoft 
 
 We also invite you to engage with our engineering team, on their [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/). 
 
-## What do I do if my question isn't here?
+## What do I do if my question isn’t here?
 
 First, review the following frequently asked questions that are specific to classification and labeling, or specific to data protection. The Azure Rights Management service (Azure RMS) provides the data protection technology for Azure Information Protection. Azure RMS can be used with classification and labeling, or by itself. 
 

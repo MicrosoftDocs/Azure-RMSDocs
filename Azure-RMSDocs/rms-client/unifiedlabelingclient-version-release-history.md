@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

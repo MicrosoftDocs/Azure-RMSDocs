@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -63,18 +63,6 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     For Windows 10 version 1809 only, operation system builds older than 17763.348, install [March 1, 2019—KB4482887 (OS Build 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) to ensure the Information Protection bar displays correctly in Office applications. This update is not needed if you have Office 365 1902 or later.
 
-- KB 2533623
-    
-    Computers running Windows 7 Service Pack 1 require KB 2533623. For more information about this update, see [Microsoft Security Advisory: Insecure library loading could allow remote code execution](https://support.microsoft.com/en-us/kb/2533623). You might be able to install this update directly, or it might be superseded by another update that installs it for you.
-    
-    If this update is required and not installed, the client installation warns you that it must be installed. This update can be installed after the client is installed but some actions will be blocked and the message is displayed again.  
-
-- Visual C++ Redistributable for Visual Studio 2015 (32-bit version)
-    
-    For computers running Windows 7 Service Pack 1, install **vc_redist.x86.exe** from the following download page: [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
-    
-    The client installation does not check for this prerequisite but it is needed for the Azure Information Protection unified labeling client to classify and protect PDF files.
-
 - Configure group policy to prevent the Azure Information Protection add-in from being disabled
     
     For Office 2013 and later versions, configure group policy to ensure that the **Microsoft Azure Information Protection** add-in for Office applications is always enabled. Without this configuration, the Microsoft Azure Information Protection add-in can get disabled and users will not be able to label their documents and emails in their Office application.
@@ -94,6 +82,26 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 > [!IMPORTANT]
 > Installation of the Azure Information Protection unified labeling client requires local administrative permissions.
 
+## Applications
+
+The Azure Information Protection unified labeling client can label and protect documents and emails by using the Office applications Word, Excel, PowerPoint, and Outlook from any of the following Office editions:
+
+Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
+Office 365 ProPlus
+Office Professional Plus 2019
+Office Professional Plus 2016
+Office Professional Plus 2013 with Service Pack 1
+Office Professional Plus 2010 with Service Pack 2
+
+Other editions (such as **standard**) of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for **labeling** only. Consequently, labels that apply protection do not display to users on the Azure Information Protection Sensitivity button or bar.
+
+For information about which Office editions support the protection service, see [Applications that support Azure Rights Management data protection](https://docs.microsoft.com/azure/information-protection/requirements-applications).
+
+### Office features and capabilities not supported
+
+The Azure Information Protection unified labeling client does not support multiple versions of Office on the same computer, or switching user accounts in Office.
+
+The Office mail merge feature is not supported with any Azure Information Protection feature.
 
 ## Options to install the Azure Information Protection unified labeling client for users
 
@@ -161,7 +169,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
 1. From a PowerShell session, first run [Connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration). 
  
-    If you haven’t already installed the PowerShell module for the Azure Rights Management service, see [Installing the AIPService PowerShell module](../install-powershell.md).
+    If you haven't already installed the PowerShell module for the Azure Rights Management service, see [Installing the AIPService PowerShell module](../install-powershell.md).
 
 2. From the output, identify the **LicensingIntranetDistributionPointUrl** value.
 
@@ -206,9 +214,8 @@ If you use Intune for your software deployment method, use these instructions to
     |Office 2010|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
     |Office 2010|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
     |Office 2010|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
-    |Office 2010|Windows 7 and Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Version number included in file name: v3|Install if KB3125574 is not installed|
-    |Not applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Install|
-    |Not applicable|Windows 7|KB2627273 <br /><br /> Version number included in file name: v4|Uninstall|
+    
+   
 
 3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection_UL.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer) with one exception:
     
