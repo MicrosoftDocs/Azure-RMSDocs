@@ -6,7 +6,7 @@ description: An introduction tutorial that steps you through configuring Azure I
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection

@@ -4,7 +4,7 @@ description: Create & configure a new label that classifies documents & emails f
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/16/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
