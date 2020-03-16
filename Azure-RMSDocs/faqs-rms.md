@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,6 +28,8 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Have a question about the data protection service, Azure Rights Management, from Azure Information Protection? See if it's answered here.
 
@@ -36,13 +38,13 @@ No, this is a common misconception. The Azure Rights Management service (and Mic
 
 For more information, see [How does Azure RMS work? Under the hood](./how-does-it-work.md) to understand how a secret cola formula that is created and stored on-premises is protected by the Azure Rights Management service but remains on-premises.
 
-## What’s the difference between Azure Rights Management encryption and encryption in other Microsoft cloud services?
+## What's the difference between Azure Rights Management encryption and encryption in other Microsoft cloud services?
 
 Microsoft provides multiple encryption technologies that enable you to protect your data for different, and often complementary scenarios. For example, while Office 365 offers encryption at-rest for data stored in Office 365, the Azure Rights Management service from Azure Information Protection independently encrypts your data so that it is protected regardless of where it is located or how it is transmitted.
 
 These encryption technologies are complementary and using them requires enabling and configuring them independently. When you do so, you might have the option to bring your own key for the encryption, a scenario also known as "BYOK." Enabling BYOK for one of these technologies does not affect the others. For example, you can use BYOK for Azure Information Protection and not use BYOK for other encryption technologies, and vice versa. The keys used by these different technologies might be the same or different, depending on how you configure the encryption options for each service.
 
-## What’s the difference between BYOK and HYOK and when should I use them?
+## What's the difference between BYOK and HYOK and when should I use them?
 
 **Bring your own key** (BYOK) in the context of Azure Information Protection, is when you create your own key on-premises for Azure Rights Management protection. You then transfer that key to a hardware security module (HSM) in Azure Key Vault where you continue to own and manage your key. If you didn't do this, Azure Rights Management protection would use a key that is automatically created and managed for you in Azure. This default configuration is referred to as "Microsoft-managed" rather than "customer-managed" (the BYOK option).
 
@@ -66,7 +68,7 @@ Many software vendors already have solutions or are implementing solutions that 
 
 ## Is there a management pack or similar monitoring mechanism for the RMS connector?
 
-Although the Rights Management connector logs information, warning, and error messages to the event log, there isn’t a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Azure Rights Management connector](monitor-rms-connector.md).
+Although the Rights Management connector logs information, warning, and error messages to the event log, there isn't a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Azure Rights Management connector](monitor-rms-connector.md).
 
 ## How do I create a new custom template in the Azure portal?
 
@@ -100,11 +102,11 @@ Yes, the Azure Rights Management service has user onboarding controls for this s
 ## Can I prevent users from sharing protected documents with specific organizations?
 One of the biggest benefits of using the Azure Rights Management service for data protection is that it supports business-to-business collaboration without you having to configure explicit trusts for each partner organization, because Azure AD takes care of the authentication for you.
 
-There is no administration option to prevent users from securely sharing documents with specific organizations. For example, you want to block an organization that you don’t trust or that has a competing business. Preventing the Azure Rights Management service from sending protected documents to users in these organizations wouldn’t make sense because your users would then share their documents unprotected, which is probably the last thing you want to happen in this scenario. For example, you wouldn’t be able to identify who is sharing company-confidential documents with which users in these organizations, which you can do when the document (or email) is protected by the Azure Rights Management service.
+There is no administration option to prevent users from securely sharing documents with specific organizations. For example, you want to block an organization that you don't trust or that has a competing business. Preventing the Azure Rights Management service from sending protected documents to users in these organizations wouldn't make sense because your users would then share their documents unprotected, which is probably the last thing you want to happen in this scenario. For example, you wouldn't be able to identify who is sharing company-confidential documents with which users in these organizations, which you can do when the document (or email) is protected by the Azure Rights Management service.
 
 ## When I share a protected document with somebody outside my company, how does that user get authenticated?
 
-By default, the Azure Rights Management service uses an Azure Active Directory account and an associated email address for user authentication, which makes business-to-business collaboration seamless for administrators. If the other organization uses Azure services, users already have accounts in Azure Active Directory, even if these accounts are created and managed on-premises and then synchronized to Azure. If the organization has Office 365, under the covers, this service also uses Azure Active Directory for the user accounts. If the user’s organization doesn’t have managed accounts in Azure, users can sign up for [RMS for individuals](./rms-for-individuals.md), which creates an unmanaged Azure tenant and directory for the organization with an account for the user, so that this user (and subsequent users) can then be authenticated for the Azure Rights Management service.
+By default, the Azure Rights Management service uses an Azure Active Directory account and an associated email address for user authentication, which makes business-to-business collaboration seamless for administrators. If the other organization uses Azure services, users already have accounts in Azure Active Directory, even if these accounts are created and managed on-premises and then synchronized to Azure. If the organization has Office 365, under the covers, this service also uses Azure Active Directory for the user accounts. If the user's organization doesn't have managed accounts in Azure, users can sign up for [RMS for individuals](./rms-for-individuals.md), which creates an unmanaged Azure tenant and directory for the organization with an account for the user, so that this user (and subsequent users) can then be authenticated for the Azure Rights Management service.
 
 The authentication method for these accounts can vary, depending on how the administrator in the other organization has configured the Azure Active Directory accounts. For example, they could use passwords that were created for these accounts, federation, or passwords that were created in Active Directory Domain Services and then synchronized to Azure Active Directory.
 
@@ -165,15 +167,15 @@ To protect an email message or a document: On the **Options** tab, click **Permi
 To track a document after you have protected it: From a Windows computer that has the Azure Information Protection client installed, register the document with the document tracking site by using either an Office application or File Explorer. For instructions, see [Track and revoke your documents](./rms-client/client-track-revoke.md). From your Mac computer, you can now use your web browser to go to the document tracking site (https://track.azurerms.com) to track and revoke this document.
 
 ## When I open an RMS-protected Office document, does the associated temporary file become RMS-protected as well?
-No. In this scenario, the associated temporary file doesn’t contain data from the original document but instead, only what the user enters while the file is open. Unlike the original file, the temporary file is obviously not designed for sharing and would remain on the device, protected by local security controls, such as BitLocker and EFS.
+No. In this scenario, the associated temporary file doesn't contain data from the original document but instead, only what the user enters while the file is open. Unlike the original file, the temporary file is obviously not designed for sharing and would remain on the device, protected by local security controls, such as BitLocker and EFS.
 
-## A feature I am looking for doesn’t seem to work with SharePoint protected libraries—is support for my feature planned?
+## A feature I am looking for doesn't seem to work with SharePoint protected libraries—is support for my feature planned?
 Currently, SharePoint supports RMS-protected documents by using IRM protected libraries, which do not support Rights Management templates, document tracking, and some other capabilities. For more information, see the [SharePoint Online and SharePoint Server](./office-apps-services-support.md#sharepoint-online-and-sharepoint-server) section in the [Office applications and services](./office-apps-services-support.md) article.
 
 If you are interested in a specific capability that isn't yet supported, be sure to keep an eye on announcements on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
 ## How do I configure One Drive for Business in SharePoint Online, so that users can safely share their files with people inside and outside the company?
-By default, as an Office 365 administrator, you don’t configure this; users do.
+By default, as an Office 365 administrator, you don't configure this; users do.
 
 Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive for Business is designed for users to enable and configure IRM for their own OneDrive for Business library. However, by using PowerShell, you can do this for them. For instructions, see the [SharePoint Online and OneDrive for Business: IRM Configuration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration) section in the [Office 365: Configuration for clients and online services](configure-office365.md) article.
 
@@ -181,7 +183,7 @@ Just as a SharePoint site administrator enables and configures IRM for a SharePo
 
 After overseeing many deployments and listening to our customers, partners, consultants, and support engineers – one of the biggest tips we can pass on from experience: **Design and deploy simple policies**.
 
-Because Azure Information Protection supports sharing securely with anyone, you can afford to be ambitious with your data protection reach. But be conservative when you configure rights usage restrictions. For many organizations, the biggest business impact comes from preventing data leakage by restricting access to people in your organization. Of course, you can get much more granular than that if you need to – prevent people from printing, editing etc. But keep the more granular restrictions as the exception for documents that really need high-level security, and don’t implement these more restrictive usage rights on day one, but plan for a more phased approach.
+Because Azure Information Protection supports sharing securely with anyone, you can afford to be ambitious with your data protection reach. But be conservative when you configure rights usage restrictions. For many organizations, the biggest business impact comes from preventing data leakage by restricting access to people in your organization. Of course, you can get much more granular than that if you need to – prevent people from printing, editing etc. But keep the more granular restrictions as the exception for documents that really need high-level security, and don't implement these more restrictive usage rights on day one, but plan for a more phased approach.
 
 ## How do we regain access to files that were protected by an employee who has now left the organization?
 Use the [super user feature](configure-super-users.md), which grants the Full Control usage rights to authorized users for all documents and emails that are protected by your tenant. Super users can always read this protected content, and if necessary, remove the protection or reprotect it for different users. This same feature lets authorized services index and inspect files, as needed.

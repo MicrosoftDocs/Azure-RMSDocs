@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -32,6 +32,8 @@ ms.custom: admin
 >
 > *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 The Azure Information Protection client can apply the following to documents and emails:
 
@@ -158,7 +160,7 @@ You can change how the Azure Information Protection client protects files by edi
 
 Reasons for why you might want to do this:
 
-- To ensure that all users can open the file if they don’t have an application that supports native protection.
+- To ensure that all users can open the file if they don't have an application that supports native protection.
 
 - To accommodate security systems that take action on files by their file name extension and can be reconfigured to accommodate the .pfile file name extension but cannot be reconfigured to accommodate multiple file name extensions for native protection.
 
