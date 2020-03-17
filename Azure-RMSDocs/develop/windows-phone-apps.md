@@ -26,6 +26,7 @@ ms.custom: dev
 
 # Windows Phone setup
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Windows Phone applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their application by using the Azure Active Directory Rights Management (AAD RM).
 
