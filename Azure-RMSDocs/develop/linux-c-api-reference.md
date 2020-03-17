@@ -26,4 +26,6 @@ ms.custom: dev
 
 # Linux API reference
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 API reference for our Linux flavored operating system support is hosted on Github - [RMS SDK for C++](https://azuread.github.io/rms-sdk-for-cpp/annotated.html). For more information, see [Get started](get-started.md).

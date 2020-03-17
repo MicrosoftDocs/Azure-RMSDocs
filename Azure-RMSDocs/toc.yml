@@ -369,13 +369,13 @@
         href: ./develop/api-reference-4-2.md
         items:
         - name: Android API Reference
-          href: https://msdn.microsoft.com/library/dn758245.aspx
+          href: /previous-versions/windows/desktop/msipcthin2/ios
         - name: Linux API reference
           href: ./develop/linux-c-api-reference.md
         - name: iOS / OS X API reference
-          href: https://msdn.microsoft.com/library/dn758306.aspx
+          href: /previous-versions/windows/desktop/msipcthin2/ios
         - name: Windows API Reference
-          href: https://msdn.microsoft.com/library/dn891914.aspx
+          href: /previous-versions/windows/desktop/msipcthin2/winrt
     - name: Rights Management SDK 2.1
       href: ./develop/microsoft-information-protection-and-control-client-portal.md
       items:
@@ -443,15 +443,15 @@
         href: ./develop/api-reference-2-1.md
         items:
         - name: Constants
-          href: https://msdn.microsoft.com/library/hh535291.aspx
+          href: /previous-versions/windows/desktop/msipc/msipc-constants
         - name: Data types
-          href: https://msdn.microsoft.com/library/hh535288.aspx
+          href: /previous-versions/windows/desktop/msipc/microsoft-information-protection-and-control-client-data-types
         - name: Functions
-          href: https://msdn.microsoft.com/library/hh535289.aspx
+          href: /previous-versions/windows/desktop/msipc/microsoft-information-protection-and-control-client-functions
         - name: Structures
-          href: https://msdn.microsoft.com/library/hh535294.aspx
+          href: /previous-versions/windows/desktop/msipc/msipc-structures
         - name: Error codes
-          href: https://msdn.microsoft.com/library/hh535248.aspx
+          href: /previous-versions/windows/desktop/msipc/error-codes
     - name: Terms
 - name: Resources
   items:

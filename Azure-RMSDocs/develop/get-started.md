@@ -26,6 +26,8 @@ ms.custom: dev
 
 # Get started
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 For this release of the Microsoft Rights Management SDK 4.2, your quick start approach to a first application is through the development environment setup guides for each of the operating systems / platforms. Begin creating your rights enabled application by:
 
 1. **Download the SDK package** for your target operating system using the following table of links.

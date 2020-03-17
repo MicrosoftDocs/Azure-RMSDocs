@@ -26,6 +26,8 @@ ms.custom: dev
 
 # iOS and OS X setup
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 iOS and OS X applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their application by using the Azure Rights Management (Azure RMS).
 
 This topic will guide you through setting up your environment for creating your own new apps.
