@@ -26,6 +26,8 @@ ms.custom: dev
 
 # Setup developer environment
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 The following topics show you how to setup you your development environment to work with the AD RMS SDK APIs for your particular operating system.
 
 |Platform | Description|
