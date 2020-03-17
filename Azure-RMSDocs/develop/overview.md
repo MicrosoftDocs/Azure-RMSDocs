@@ -6,21 +6,13 @@ description: AD RMS and Azure RMS is an information protection technology that h
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin
-manager: barbkess
-ms.date: 02/23/2017
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.assetid: 8A13494E-C1D7-407D-BCD1-A406915EA578
+
 # optional metadata
 
-#ROBOTS:
-audience: developer
-#ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: dev
 
 ---
 

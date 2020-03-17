@@ -26,6 +26,8 @@ ms.custom: dev
 
 # Android code examples
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 This article shows how to code elements for the Android version of the RMS SDK.
 
 **Note** In this article, The term _MSIPC_ (Microsoft Information Protection and Control) refers to the client process.
