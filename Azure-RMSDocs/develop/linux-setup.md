@@ -17,6 +17,8 @@ ms.suite: ems
 
 # Linux setup
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 Several flavors of Linux operating systems can now make use of the Microsoft Rights Management SDK 4.x to enable integrated information protection in their application by using the Azure Active Directory Rights Management (AAD RM).
 
 - [Supported operating systems](#supported-operating-systems)

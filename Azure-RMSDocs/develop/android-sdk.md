@@ -26,6 +26,8 @@ ms.custom: dev
 
 # Android setup
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 Android applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their applications by using Azure Active Directory Rights Management (AAD RM ).
 
 This topic will guide you through setting up your environment for creating your own new apps .

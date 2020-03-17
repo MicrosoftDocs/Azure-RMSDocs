@@ -26,6 +26,8 @@ ms.custom: dev
 
 # Linux code examples
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 This topic introduces you to important scenarios and code elements for the Linux version of the RMS SDK.
 
 The code snippets below are from the sample applications, *rms\_sample* and *rmsauth\_sample*. For more information, see [samples](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples) at the GitHub repository.

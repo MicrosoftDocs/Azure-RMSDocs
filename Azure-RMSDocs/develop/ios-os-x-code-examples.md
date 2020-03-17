@@ -26,6 +26,8 @@ ms.custom: dev
 
 # iOS/OS X code examples
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 This topic will introduce you to important code elements for the iOS/OS X version of the RMS SDK.
 
 **Note**  In the example code and descriptions that follow, we use the term MSIPC (Microsoft Information Protection and Control) to reference the client process.

@@ -26,6 +26,8 @@ ms.custom: dev
 
 # How-to: enable your service application to work with cloud based RMS
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 This topic outlines steps for setting up your service application to use Azure Rights Management. For more information, see [Getting started with Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
 
 **Important**  
