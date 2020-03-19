@@ -18,6 +18,8 @@ ms.suite: ems
 
 # What's new and Release notes
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 ## What's new
 
 This topic outlines important changes and features in this new version of the RMS SDK v4.x.

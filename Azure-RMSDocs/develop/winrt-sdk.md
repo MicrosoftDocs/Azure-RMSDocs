@@ -26,6 +26,8 @@ ms.custom: dev
 
 # Windows Store setup
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 Windows Store applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their application by using the Azure Active Directory Rights Management (AAD RM).
 
 This topic will guide you through setting up your environment for creating your own new apps.
