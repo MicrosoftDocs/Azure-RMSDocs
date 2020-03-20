@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -546,36 +546,47 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     - **User consent description**: `Allow the application to access the scanner for the signed-in user`
     - **State**: **Enabled** (the default)
 
+
 14. Back on the **AIPOnBehalfOf - Expose an API** pane, close this pane.
 
-15. On the **App registrations** pane, select **+ New application registration** to now create your native application.
+15. Select **API permissions**.
 
-16. On the **Register an application** pane, specify the following settings, and then select **Register**:
+16. On the **AIPOnBehalfOf** | **API permissions** pane, select **+ Add a permission**.
+
+17. Choose **Azure Right Management**, select **Delegated Permissions** and then select **Create and access protected content for users**.
+
+18. Click on **Add a permission**.
+
+19. Back on the **API permissions** pane, in the **Grant consent** section, select **Grant admin consent for <your tenant name>** and select **Yes** for the confirmation prompt.
+
+20. On the **App registrations** pane, select **+ New application registration** to create your native application now.
+
+21. On the **Register an application** pane, specify the following settings, and then select **Register**:
     - **Name**: `AIPClient`
     - **Supported account types**: **Accounts in this organizational directory only**
     - **Redirect URI (optional)**: **Public client (mobile & desktop)** and `http://localhost`
 
-17. On the **AIPClient** pane, copy the value of the **Application (client) ID**. The value looks similar to the following example: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+22. On the **AIPClient** pane, copy the value of the **Application (client) ID**. The value looks similar to the following example: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
     
     This value is used for the NativeAppId parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
-18. Still on the **AIPClient** pane, from the **Manage** menu, select **Authentication**.
+23. Still on the **AIPClient** pane, from the **Manage** menu, select **Authentication**.
 
-19. On the **AIPClient - Authentication** pane, specify the following, and then select **Save**:
+24. On the **AIPClient - Authentication** pane, specify the following, and then select **Save**:
     - In the **Advanced settings** section, select **ID tokens**.
     - In the **Default client type** section, select **Yes**.
 
-20. Still on the **AIPClient - Authentication** pane, from the **Manage** menu, select **API permissions**.
+25. Still on the **AIPClient - Authentication** pane, from the **Manage** menu, select **API permissions**.
 
-21. On the **AIPClient - permissions** pane, select **+ Add a permission**.
+26. On the **AIPClient - permissions** pane, select **+ Add a permission**.
 
-22. On the **Request API permissions** pane, select **My APIs**.
+27. On the **Request API permissions** pane, select **My APIs**.
 
-23. In the **Select an API** section, select **APIOnBehalfOf**, then select the checkbox for **user-impersonation**, as the permission. Select **Add permissions**. 
+28. In the **Select an API** section, select **APIOnBehalfOf**, then select the checkbox for **user-impersonation**, as the permission. Select **Add permissions**. 
 
-24. Back on the **API permissions** pane, in the **Grant consent** section, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
+29. Back on the **API permissions** pane, in the **Grant consent** section, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
 
-You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. From our examples:
+You've now completed configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. From our examples:
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 
