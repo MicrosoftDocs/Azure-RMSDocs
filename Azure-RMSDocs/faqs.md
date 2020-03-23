@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -87,9 +87,9 @@ Both clients, when they are installed, display **Azure Information Protection**.
 
 Use the **Version** number displayed to identify the client:
 
-- A version **1**, for example, **1.53.10.0**, identifies the Azure Information Protection client (classic).
+- A version **1**, for example, **1.54.59.0**, identifies the Azure Information Protection client (classic).
 
-- A version **2**, for example, **2.2.14.0**, identifies the Azure Information Protection unified labeling client.
+- A version **2**, for example, **2.6.111.0**, identifies the Azure Information Protection unified labeling client.
 
 ## When is the right time to migrate my labels?
 
