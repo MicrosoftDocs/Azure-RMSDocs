@@ -202,7 +202,7 @@ You can find the template GUID and licensing URL values from the Active Director
 
 - To locate a template GUID: Expand the cluster and click **Rights Policy Templates**. From the **Distributed Rights Policy Templates** information, you can then copy the GUID from the template you want to use. For example: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the **Licensing** value minus the **/_wmcs/licensing** string. For example: https://rmscluster.contoso.com 
+- To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the **Licensing** value minus the **/_wmcs/licensing** string. For example: `https://rmscluster.contoso.com` 
     
     If you have an extranet licensing value as well as an intranet licensing value, and they are different: Specify the extranet value only if you will share protected documents or emails with partners that you have defined with explicit point-to-point trusts. Otherwise, use the intranet value and make sure that all your client computers that use AD RMS protection with Azure Information Protection connect by using an intranet connection (for example, remote computers use a VPN connection).
 
