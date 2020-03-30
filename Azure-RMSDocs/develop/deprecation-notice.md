@@ -37,7 +37,7 @@ Previous versions of the RMS SDK use certificate pinning to ensure that the RMS-
 
 Modern browsers use certificate transparency logs to verify that certificates have been issued to legitimate domain owners and that those certificates are issued by trusted root certification authorities.  
 
-To better support modern browsers, on September 15th, 2020, the Microsoft will update the certificate for https://api.aadrm.com to a new certificate issued by a globally trusted root CA that reports issued certificates to certificate transparency logs trusted by modern browsers. Once this change is complete, legacy versions of RMS SDK attempting to perform certificate pinning to the expected root certificate will fail to find that certificate and will fail to connect.  
+To better support modern browsers, on September 15th, 2020, the Microsoft will update the certificate for `https://api.aadrm.com` to a new certificate issued by a globally trusted root CA that reports issued certificates to certificate transparency logs trusted by modern browsers. Once this change is complete, legacy versions of RMS SDK attempting to perform certificate pinning to the expected root certificate will fail to find that certificate and will fail to connect.  
 
 ## Client Impact 
 
