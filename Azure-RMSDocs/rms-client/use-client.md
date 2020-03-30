@@ -128,6 +128,8 @@ To compare the Office built-in sensitivity labeling features across different op
 |Support for account switching:| No | No | **Yes** |
 |Support for Remote Desktop Services:| **Yes** | **Yes** | **Yes** |
 |Support for AD RMS:| **Yes** | No <sup>7</sup> | No |
+|Remove external content marking in app| **Yes**| No| **Yes**|
+
 
 Footnotes:
 
