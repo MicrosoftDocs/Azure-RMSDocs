@@ -3,10 +3,10 @@
 
 title: Migrate AD RMS-Azure Information Protection - Phase 3
 description: Phase 3 of migrating from AD RMS to Azure Information Protection, covering step 7 from Migrating from AD RMS to Azure Information Protection.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 12/06/2019
+ms.date: 04/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -64,15 +64,15 @@ This method is suitable only for Windows clients that run Office 365 apps and Of
     
     If you use the DNS Server role on Windows Server, you can use the following table as an example how to specify the SRV record properties in the DNS Manager console.
     
-	|Field|Value|  
-	|-----------|-----------|  
-	|**Domain**|_tcp.rmscluster.contoso.com|  
-	|**Service**|_rmsredir|  
-	|**Protocol**|_http|  
-	|**Priority**|0|  
-	|**Weight**|0|  
-	|**Port number**|80|  
-	|**Host offering this service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
+    |Field|Value|  
+    |-----------|-----------|  
+    |**Domain**|_tcp.rmscluster.contoso.com|  
+    |**Service**|_rmsredir|  
+    |**Protocol**|_http|  
+    |**Priority**|0|  
+    |**Weight**|0|  
+    |**Port number**|80|  
+    |**Host offering this service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
 2. Set a deny permission on the AD RMS publishing endpoint for users running Office 365 apps or Office 2016 (or later):
 
@@ -97,7 +97,7 @@ This method is suitable only for Windows clients that run Office 365 apps and Of
 
 ## Client reconfiguration by using registry edits
 
-This method is suitable for all Windows clients and should be used if they do not run Office 365 apps, or Office 2016 (or later) click-to-run. This method uses two migration scripts to reconfigure AD RMS clients:
+This method is suitable for all Windows clients and should be used if they do not run Office 365 apps, or Office 2016 (or later). This method uses two migration scripts to reconfigure AD RMS clients:
 
 - Migrate-Client.cmd
 
@@ -125,7 +125,7 @@ The user configuration script (Migrate-User.cmd) configures user-level settings 
 
 The two scripts include a version number and do not rerun until this version number is changed. This means that you can leave the scripts in place until the migration is complete. However, if you do make changes to the scripts that you want computers and users to rerun on their Windows computers, update the following line in both scripts to a higher value:
 
-	SET Version=20170427
+    SET Version=20170427
 
 The user configuration script is designed to run after the client configuration script, and uses the version number in this check. It stops if the client configuration script with the same version has not run. This check ensures that the two scripts run in the right sequence. 
 
@@ -135,7 +135,7 @@ When you cannot migrate all your Windows clients at once, run the following proc
 
 1. Return to the migration scripts, **Migrate-Client.cmd** and **Migrate-User.cmd**, which you extracted previously when you downloaded these scripts in the [preparation phase](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
-2. Follow the instructions in **Migrate-Client.cmd** to modify the script so that it contains your tenant's Azure Rights Management service URL, and also your server names for your AD RMS cluster extranet licensing URL and intranet licensing URL. Then, increment the script version, which was previously explained. A good practice for tracking script versions is to use today’s date in the following format: YYYYMMDD
+2. Follow the instructions in **Migrate-Client.cmd** to modify the script so that it contains your tenant's Azure Rights Management service URL, and also your server names for your AD RMS cluster extranet licensing URL and intranet licensing URL. Then, increment the script version, which was previously explained. A good practice for tracking script versions is to use today's date in the following format: YYYYMMDD
     
    > [!IMPORTANT]
    > As before, be careful not to introduce additional spaces before or after your addresses.
