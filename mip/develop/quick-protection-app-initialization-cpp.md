@@ -1,11 +1,11 @@
 ---
 title: Quickstart - Initialization for Microsoft Information Protection (MIP) SDK C++ clients
 description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection (MIP) SDK client applications.
-author: Aniket Pathak
+author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: Pathak-Aniket
+ms.author: v-anikep
 #Customer intent: As a an application developer, I want to learn how to do SDK initialization, so that I can use the SDK Protection API.
 ---
 
@@ -216,8 +216,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
     // Construct/initialize profile object
     ProtectionProfile::Settings profileSettings(
       mipContext,
-      mip::CacheStorageType::OnDisk,
-      authDelegateImpl,
+      mip::CacheStorageType::OnDisk,      
       consentDelegateImpl,
       profileObserver);
 
@@ -240,6 +239,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
 
     // Construct/initialize engine object
     ProtectionEngine::Settings engineSettings(
+       authDelegateImpl,                          // Reference to mip::AuthDelegate implementation
        mip::Identity("<engine-account>"),         // Engine identity (account used for authentication)
        "<engine-state>",                          // User-defined engine state
        "en-US");                                  // Locale (default = en-US)

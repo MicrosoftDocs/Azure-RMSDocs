@@ -1,7 +1,7 @@
 ---
 title: Quickstart - Client application initialization - Protection API (C#)
 description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection (MIP) SDK - Protection API C# client applications.
-author: Aniket Pathak
+author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
@@ -129,15 +129,14 @@ namespace mip_sdk_dotnet_quickstart
                // Create the ProtectionProfileSettings object.
                // Initialize protection profile settings to create/use local state.
                var profileSettings = new ProtectionProfileSettings(mipContext,
-                                        CacheStorageType.OnDiskEncrypted,
-                                        authDelegate,
+                                        CacheStorageType.OnDiskEncrypted,                                        
                                         new ConsentDelegateImplementation());
 
                // Load the Profile async and wait for the result.
                var protectionProfile = Task.Run(async () => await MIP.LoadProtectionProfileAsync(profileSettings)).Result;
 
                // Create a ProtectionEngineSettings object, then use that to add an engine to the profile.
-               var engineSettings = new ProtectionEngineSettings("user1@tenant.com", "", "en-US");
+               var engineSettings = new ProtectionEngineSettings("user1@tenant.com", authDelegate, "", "en-US");
                engineSettings.Identity = new Identity("user1@tenant.com");
                var protectionEngine = Task.Run(async () => await protectionProfile.AddEngineAsync(engineSettings)).Result;
 
