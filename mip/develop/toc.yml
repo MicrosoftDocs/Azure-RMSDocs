@@ -13,24 +13,40 @@
     href: quick-app-adrms.md
   - name: C++
     items:
-    - name: Application initialization (C++)
-      href: quick-app-initialization-cpp.md
     - name: File API
       items:
+      - name: Application initialization (C++)
+        href: quick-app-initialization-cpp.md
       - name: List sensitivity labels (C++)
         href: quick-file-list-labels-cpp.md
       - name: Set/get sensitivity labels (C++)
         href: quick-file-set-get-label-cpp.md      
+    - name: Protection API
+      items:
+      - name: Application initialization (C++)
+        href: quick-protection-app-initialization-cpp.md
+      - name: List Templates
+        href: quick-protection-list-templates-cpp.md
+      - name: Encrypt/Decrypt Text
+        href: quick-protection-encrypt-decrypt-text-cpp.md
   - name: C#
-    items:
-    - name: Application initialization (C#)
-      href: quick-app-initialization-csharp.md
+    items:    
     - name: File API
       items:
+      - name: Application initialization (C#)
+        href: quick-app-initialization-csharp.md
       - name: List sensitivity labels (C#)
         href: quick-file-list-labels-csharp.md
       - name: Set/get sensitivity labels (C#)
         href: quick-file-set-get-label-csharp.md
+    - name: Protection API
+      items:
+      - name: Application initialization (C#)
+        href: quick-protection-app-initialization-csharp.md
+      - name: List Templates
+        href: quick-protection-list-templates-csharp.md
+      - name: Encrypt/Decrypt Text
+        href: quick-protection-encrypt-decrypt-text-csharp.md  
 - name: Concepts
   items:
   - name: The APIs
@@ -64,7 +80,9 @@
     - name: Acquiring an access token (PowerShell)
       href: concept-authentication-acquire-token-ps.md
     - name: Acquiring an access token (Python)
-      href: concept-authentication-acquire-token-py.md      
+      href: concept-authentication-acquire-token-py.md     
+  - name: Consent
+    href: concept-consent-cpp.md 
   - name: Handlers
     items:
     - name: File API handler (C++)
