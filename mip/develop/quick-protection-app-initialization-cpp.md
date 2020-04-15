@@ -5,7 +5,7 @@ author: Aniket Pathak
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: v-Anikep
+ms.author: Pathak-Aniket
 #Customer intent: As a an application developer, I want to learn how to do SDK initialization, so that I can use the SDK Protection API.
 ---
 
