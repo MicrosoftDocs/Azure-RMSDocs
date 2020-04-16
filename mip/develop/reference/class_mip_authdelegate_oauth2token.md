@@ -52,7 +52,7 @@ Parameters:
 Get the error message, if any.
 
   
-**Returns**: [Error](#classError) message.
+**Returns**: Error message.
   
 ### SetErrorMessage function
 Set the error message.
