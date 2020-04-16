@@ -1,20 +1,20 @@
 ---
-title: class mip::AuthDelegate::OAuth2Challenge 
-description: Documents the mip::authdelegate class of the Microsoft Information Protection (MIP) SDK.
+title: class AuthDelegate::OAuth2Challenge 
+description: Documents the authdelegate::oauth2challenge class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::AuthDelegate::OAuth2Challenge 
+# class AuthDelegate::OAuth2Challenge 
 a class that contains all the information required from the calling application in order to generate an oauth2 token.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public OAuth2Challenge(const std::string& authority, const std::string& resource, const std::string& scope, const std::string& claims)  |  Construct a new OAuth2Challenge object.
+public OAuth2Challenge(const std::string& authority, const std::string& resource, const std::string& scope, const std::string& claims)  |  Construct a new [OAuth2Challenge](#classAuthDelegate_1_1OAuth2Challenge) object.
 public const std::string& GetAuthority() const  |  Get the authority string.
 public const std::string& GetResource() const  |  Get the resource string.
 public const std::string& GetScope() const  |  Get the scope string.

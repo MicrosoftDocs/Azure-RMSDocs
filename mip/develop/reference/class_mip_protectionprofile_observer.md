@@ -1,14 +1,14 @@
 ---
-title: class mip::ProtectionProfile::Observer 
-description: Documents the mip::protectionprofile class of the Microsoft Information Protection (MIP) SDK.
+title: class ProtectionProfile::Observer 
+description: Documents the protectionprofile::observer class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::ProtectionProfile::Observer 
+# class ProtectionProfile::Observer 
 Interface that receives notifications related to ProtectionProfile.
 This interface must be implemented by applications using the protection SDK
   
@@ -33,10 +33,10 @@ Parameters:
 * **profile**: A reference to the newly created ProtectionProfile
 
 
-* **context**: The same context that was passed to ProtectionProfile::LoadAsync
+* **context**: The same context that was passed to [ProtectionProfile::LoadAsync](#classProtectionProfile_1a6dae6cea50e99c43e16ddf340afa45fc)
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to ProtectionProfile::Observer::OnLoadSuccess or ProtectionProfile::Observer::OnLoadFailure
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](#classProtectionProfile_1_1Observer_1a96572cb783e546f44ed2a7b46ae070a9) or [ProtectionProfile::Observer::OnLoadFailure](#classProtectionProfile_1_1Observer_1ae0a17f434b7e9cb2635e4b6b69581df6)
   
 ### OnLoadFailure function
 Called when loading a profile caused an error.
@@ -57,7 +57,7 @@ Parameters:
 * **engineIds**: a list of engine IDs the are available. 
 
 
-* **context**: The same context that was passed to ProtectionProfile::ListEnginesAsync
+* **context**: The same context that was passed to [ProtectionProfile::ListEnginesAsync](#classProtectionProfile_1a7e3ae818247abdeeaccbc4c740b4a39c)
 
 
   
@@ -79,7 +79,7 @@ Parameters:
 * **engine**: Newly created engine 
 
 
-* **context**: The same context that was passed to ProtectionProfile::AddEngineAsync
+* **context**: The same context that was passed to [ProtectionProfile::AddEngineAsync](#classProtectionProfile_1a0602bf501bced346bd4d9558cac3c391)
 
 
   
@@ -98,7 +98,7 @@ Parameters:
 Called when an engine was deleted successfully.
 
 Parameters:  
-* **context**: The same context that was passed to ProtectionProfile::DeleteEngineAsync
+* **context**: The same context that was passed to [ProtectionProfile::DeleteEngineAsync](#classProtectionProfile_1a4f3e1901a332b9c371605e2d8aebde7e)
 
 
   

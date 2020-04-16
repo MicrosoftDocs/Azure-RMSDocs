@@ -1,14 +1,14 @@
 ---
-title: class mip::AddContentHeaderAction 
-description: Documents the mip::addcontentheaderaction class of the Microsoft Information Protection (MIP) SDK.
+title: class AddContentHeaderAction 
+description: Documents the addcontentheaderaction::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::AddContentHeaderAction 
+# class AddContentHeaderAction 
 An action class that specifies adding content header.
   
 ## Summary
@@ -28,7 +28,7 @@ public int GetMargin() const  |  Get the margin of the header from the bottom.
 An API used to mark the content header element.
 
   
-**Returns**: The name that should be used for the UI element that holds the content header. The same name will be returned in RemoveContentHeaderAction in case the content header needs to be removed.
+**Returns**: The name that should be used for the UI element that holds the content header. The same name will be returned in [RemoveContentHeaderAction](#classRemoveContentHeaderAction) in case the content header needs to be removed.
   
 ### GetText function
 Get the text that is meant to go into the content header.
@@ -60,7 +60,7 @@ Get the alignment of the header.
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**See also**: ContentMarkAlignment
   
 ### GetMargin function
 Get the margin of the header from the bottom.

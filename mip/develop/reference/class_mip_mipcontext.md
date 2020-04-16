@@ -1,14 +1,14 @@
 ---
-title: class mip::MipContext 
-description: Documents the mip::mipcontext class of the Microsoft Information Protection (MIP) SDK.
+title: class MipContext 
+description: Documents the mipcontext::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::MipContext 
+# class MipContext 
 MipContext represents state that is shared across all profiles, engines, handlers.
   
 ## Summary
@@ -22,6 +22,7 @@ public bool IsOfflineOnly()  |  Get offline-only setting.
 public LogLevel GetThresholdLogLevel() const  |  Get threshold log level.
 public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate()  |  Get logger implementation.
 public LoggerDelegate* GetRawLoggerDelegate()  |  Get logger implementation.
+public const std::map\<FlightingFeature, bool\>& GetFlightingFeatures() const  |  Get flighting feature set.
   
 ## Members
   
@@ -76,3 +77,9 @@ Get logger implementation.
 
   
 **Returns**: Logger
+  
+### GetFlightingFeatures function
+Get flighting feature set.
+
+  
+**Returns**: Flighting feature map

@@ -1,20 +1,20 @@
 ---
-title: class mip::AuthDelegate::OAuth2Token 
-description: Documents the mip::authdelegate class of the Microsoft Information Protection (MIP) SDK.
+title: class AuthDelegate::OAuth2Token 
+description: Documents the authdelegate::oauth2token class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::AuthDelegate::OAuth2Token 
+# class AuthDelegate::OAuth2Token 
 A class containing access token info provided by an application.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public OAuth2Token()  |  Construct a new OAuth2Token object.
+public OAuth2Token()  |  Construct a new [OAuth2Token](#classAuthDelegate_1_1OAuth2Token) object.
 public OAuth2Token(const std::string& accessToken)  |  Construct a new OAuth2Token object from JWT access token.
 public const std::string& GetAccessToken() const  |  Get the access token string.
 public void SetAccessToken(const std::string& accessToken)  |  Set the access token string.
@@ -52,7 +52,7 @@ Parameters:
 Get the error message, if any.
 
   
-**Returns**: Error message.
+**Returns**: [Error](#classError) message.
   
 ### SetErrorMessage function
 Set the error message.

@@ -1,14 +1,14 @@
 ---
-title: class mip::LoggerDelegate 
-description: Documents the mip::loggerdelegate class of the Microsoft Information Protection (MIP) SDK.
+title: class LoggerDelegate 
+description: Documents the loggerdelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::LoggerDelegate 
+# class LoggerDelegate 
 A class that defines the interface to the MIP SDK logger.
   
 ## Summary

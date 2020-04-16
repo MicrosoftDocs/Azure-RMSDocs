@@ -1,14 +1,14 @@
 ---
-title: class mip::ComputeEngine::Settings 
-description: Documents the mip::computeengine class of the Microsoft Information Protection (MIP) SDK.
+title: class ComputeEngine::Settings 
+description: Documents the computeengine::settings class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::ComputeEngine::Settings 
+# class ComputeEngine::Settings 
   
 ## Summary
  Members                        | Descriptions                                

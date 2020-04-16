@@ -1,14 +1,14 @@
 ---
-title: class mip::ProtectionProfile 
-description: Documents the mip::protectionprofile class of the Microsoft Information Protection (MIP) SDK.
+title: class ProtectionProfile 
+description: Documents the protectionprofile::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::ProtectionProfile 
+# class ProtectionProfile 
 ProtectionProfile is the root class for performing protection operations.
 An application needs to create a ProtectionProfile before performing any protection operations
   
@@ -41,7 +41,7 @@ Parameters:
 
   
 **Returns**: Async control object.
-ProtectionProfile::Observer will be called upon success or failure.
+[ProtectionProfile::Observer](#classProtectionProfile_1_1Observer) will be called upon success or failure.
   
 ### ListEngines function
 List engines.

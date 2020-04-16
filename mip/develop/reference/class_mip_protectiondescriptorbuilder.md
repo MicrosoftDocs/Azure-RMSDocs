@@ -1,20 +1,20 @@
 ---
-title: class mip::ProtectionDescriptorBuilder 
-description: Documents the mip::protectiondescriptorbuilder class of the Microsoft Information Protection (MIP) SDK.
+title: class ProtectionDescriptorBuilder 
+description: Documents the protectiondescriptorbuilder::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::ProtectionDescriptorBuilder 
+# class ProtectionDescriptorBuilder 
 Constructs a ProtectionDescriptor that describes protection associated with a piece of content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Creates a ProtectionDescriptor whose access permissions are defined by this ProtectionDescriptorBuilder instance.
+public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Creates a ProtectionDescriptor whose access permissions are defined by this [ProtectionDescriptorBuilder](#classProtectionDescriptorBuilder) instance.
 public void SetName(const std::string& value)  |  Sets protection policy name.
 public void SetDescription(const std::string& value)  |  Sets protection policy description.
 public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  Sets protection policy expiration time.
@@ -22,7 +22,7 @@ public void SetAllowOfflineAccess(bool value)  |  Sets if protection policy allo
 public void SetReferrer(const std::string& uri)  |  Sets protection policy referrer address.
 public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be encrypted.
 public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be signed.
-public virtual ~ProtectionDescriptorBuilder()  | _Not yet documented._
+public void SetDoubleKeyUrl(const std::string& doubleKeyUrl)  |  Sets the double key url to be used for custom protection.
   
 ## Members
   
@@ -91,5 +91,9 @@ Parameters:
 
 An application can specify a dictionary of app-specific data that will be signed by the protection service. This signed data is independent of the encrypted data set by SetEncryptedAppData.
   
-### ~ProtectionDescriptorBuilder function
-_Not documented yet._
+### SetDoubleKeyUrl function
+Sets the double key url to be used for custom protection.
+
+Parameters:  
+* **value**: Double key url
+

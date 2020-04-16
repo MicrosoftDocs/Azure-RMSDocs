@@ -1,14 +1,14 @@
 ---
-title: class mip::ProtectionSettings 
-description: Documents the mip::protectionsettings class of the Microsoft Information Protection (MIP) SDK.
+title: class ProtectionSettings 
+description: Documents the protectionsettings::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::ProtectionSettings 
+# class ProtectionSettings 
 Interface for configuring protection options for the SetLabel method.
   
 ## Summary
