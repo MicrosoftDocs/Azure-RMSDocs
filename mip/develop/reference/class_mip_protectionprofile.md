@@ -41,7 +41,7 @@ Parameters:
 
   
 **Returns**: Async control object.
-[ProtectionProfile::Observer](#classProtectionProfile_1_1Observer) will be called upon success or failure.
+[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) will be called upon success or failure.
   
 ### ListEngines function
 List engines.

@@ -14,7 +14,7 @@ A class containing access token info provided by an application.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public OAuth2Token()  |  Construct a new [OAuth2Token](#classAuthDelegate_1_1OAuth2Token) object.
+public OAuth2Token()  |  Construct a new OAuth2Token object.
 public OAuth2Token(const std::string& accessToken)  |  Construct a new OAuth2Token object from JWT access token.
 public const std::string& GetAccessToken() const  |  Get the access token string.
 public void SetAccessToken(const std::string& accessToken)  |  Set the access token string.

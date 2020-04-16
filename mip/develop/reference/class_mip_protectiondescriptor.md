@@ -81,7 +81,7 @@ Gets collection of users-to-rights mappings.
 
   
 **Returns**: Collection of users-to-rights mappings
-The value of the [UserRights](#classUserRights) property will be empty if the current user doesn't have access to this information (that is, if the user is not the owner and does not have the VIEWRIGHTSDATA right).
+The value of the [UserRights](class_mip_userrights.md) property will be empty if the current user doesn't have access to this information (that is, if the user is not the owner and does not have the VIEWRIGHTSDATA right).
   
 ### GetUserRoles function
 Gets collection of users-to-roles mappings.
@@ -119,14 +119,14 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A ProtectionHandler may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](#classProtectionDescriptor_1a67c2a6cbd083c25d885cd051084cf4e9)
+A ProtectionHandler may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via ProtectionDescriptor::GetSignedAppData.
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.
 
   
 **Returns**: App-specific data
-A ProtectionHandler may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](#classProtectionDescriptor_1ac5b6c163d6757c4b66ebb716b76eef84)
+A ProtectionHandler may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via ProtectionDescriptor::GetEncryptedAppData.
   
 ### GetDoubleKeyUrl function
 Gets the double key url to be used for custom protection.

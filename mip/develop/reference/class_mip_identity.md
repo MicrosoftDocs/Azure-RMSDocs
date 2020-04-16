@@ -14,7 +14,7 @@ Abstraction for identity.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Identity()  |  Default [Identity](#classIdentity) constructor used when a user email address is not known.
+public Identity()  |  Default Identity constructor used when a user email address is not known.
 public Identity(const Identity& other)  |  Identity copy constructor.
 public explicit Identity(const std::string& email)  |  Identity constructor used when a user email address is known.
 public explicit Identity(const std::string& email, const std::string& name)  |  Identity constructor used when a user email address and user name is known.

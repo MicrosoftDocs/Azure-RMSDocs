@@ -14,7 +14,7 @@ Constructs a ProtectionDescriptor that describes protection associated with a pi
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Creates a ProtectionDescriptor whose access permissions are defined by this [ProtectionDescriptorBuilder](#classProtectionDescriptorBuilder) instance.
+public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Creates a ProtectionDescriptor whose access permissions are defined by this ProtectionDescriptorBuilder instance.
 public void SetName(const std::string& value)  |  Sets protection policy name.
 public void SetDescription(const std::string& value)  |  Sets protection policy description.
 public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  Sets protection policy expiration time.

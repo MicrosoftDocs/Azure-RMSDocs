@@ -14,7 +14,7 @@ a class that contains all the information required from the calling application 
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public OAuth2Challenge(const std::string& authority, const std::string& resource, const std::string& scope, const std::string& claims)  |  Construct a new [OAuth2Challenge](#classAuthDelegate_1_1OAuth2Challenge) object.
+public OAuth2Challenge(const std::string& authority, const std::string& resource, const std::string& scope, const std::string& claims)  |  Construct a new OAuth2Challenge object.
 public const std::string& GetAuthority() const  |  Get the authority string.
 public const std::string& GetResource() const  |  Get the resource string.
 public const std::string& GetScope() const  |  Get the scope string.

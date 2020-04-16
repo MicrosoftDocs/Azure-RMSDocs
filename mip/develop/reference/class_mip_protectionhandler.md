@@ -198,7 +198,7 @@ Parameters:
 
   
 **Returns**: Serialized pre-license
-A pre-license allows a user to immediately consume content without making an additional HTTP call. The ProtectionHandler must have been created with a [ProtectionHandler::PublishingSettings::SetPreLicenseUserEmail](#classProtectionHandler_1_1PublishingSettings_1afa3aed89ea38dbee80a52f4629b206c3) value or else this will return an empty vector.
+A pre-license allows a user to immediately consume content without making an additional HTTP call. The ProtectionHandler must have been created with a [ProtectionHandler::PublishingSettings::SetPreLicenseUserEmail](class_mip_protectionhandler_publishingsettings.md) value or else this will return an empty vector.
   
 ### PreLicenseFormat enum
  Values                         | Descriptions                                

@@ -43,7 +43,7 @@ Gets the engine settings.
 Get collection of templates available to a user.
 
 Parameters:  
-* **observer**: A class implementing the [ProtectionEngine::Observer](#classProtectionEngine_1_1Observer) interface 
+* **observer**: A class implementing the [ProtectionEngine::Observer](class_mip_protectionengine_observer.md) interface 
 
 
 * **context**: Client context that will be opaquely passed back to observers and optional HttpDelegate
@@ -131,7 +131,7 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](#classProtectionHandler_1_1Observer) interface 
+* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
 
 
 * **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate

@@ -14,7 +14,7 @@ Settings used to create a ProtectionHandler to consume existing content.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ConsumptionSettings(const std::vector\<uint8_t\>& serializedPublishingLicense)  |  [ProtectionHandler::ConsumptionSettings](#classProtectionHandler_1_1ConsumptionSettings) constructor for creating a new handler.
+public ConsumptionSettings(const std::vector\<uint8_t\>& serializedPublishingLicense)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
 public ConsumptionSettings(const std::vector\<uint8_t\>& serializedPreLicense, const std::vector\<uint8_t\>& serializedPublishingLicense)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
 public ConsumptionSettings(const std::shared_ptr\<PublishingLicenseInfo\>& licenseInfo)  |  ProtectionHandler::ConsumptionSettings constructor for creating a new handler.
 public std::shared_ptr\<PublishingLicenseInfo\> GetPublishingLicenseInfo() const  |  Get the publishing license associated with the protected content.
@@ -51,7 +51,7 @@ Parameters:
 * **licenseInfo**: Publishing license info from protected content
 
 
-Providing a [PublishingLicenseInfo](#classPublishingLicenseInfo) (as opposed to just a raw serialized publishing license) will remove the need for MIP SDK to parse the publishing license.
+Providing a [PublishingLicenseInfo](class_mip_publishinglicenseinfo.md) (as opposed to just a raw serialized publishing license) will remove the need for MIP SDK to parse the publishing license.
   
 ### GetPublishingLicenseInfo function
 Get the publishing license associated with the protected content.

@@ -35,7 +35,7 @@ Parameters:
 
   
 **Returns**: True if token successfully acquired, else false
-On failure, if token output parameter contains an error message, it will be included in the [NoAuthTokenError](#classNoAuthTokenError) exception that will later be raised to the application.
+On failure, if token output parameter contains an error message, it will be included in the NoAuthTokenError exception that will later be raised to the application.
 > Deprecated: This method will soon be deprecated in favor of the one accepting a context parameter. If the new version has been implemented, there is no need to implement this version.
   
 ### AcquireOAuth2Token function
