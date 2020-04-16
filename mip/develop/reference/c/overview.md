@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: reference
 
 ms.author: mbaldwin
-ms.date: 11/4/2019
+ms.date: 4/16/2020
 ---
 
 # MIP SDK for C Reference
@@ -53,6 +53,8 @@ Function | Brief description |
 | [MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess](functions.md#mip_cc_protectiondescriptor_doesallowofflineaccess) | Gets whether or not offline access is allowed |
 | [MIP_CC_ProtectionDescriptor_GetReferrerSize](functions.md#mip_cc_protectiondescriptor_getreferrersize) | Gets size of buffer required to store referrer |
 | [MIP_CC_ProtectionDescriptor_GetReferrer](functions.md#mip_cc_protectiondescriptor_getreferrer) | Gets protection referrer |
+| [MIP_CC_ProtectionDescriptor_GetDoubleKeyUrlSize](functions.md#mip_cc_protectiondescriptor_getdoublekeyurlsize) | Gets size of buffer required to store double key URL |
+| [MIP_CC_ProtectionDescriptor_GetDoubleKeyUrl](functions.md#mip_cc_protectiondescriptor_getdoublekeyurl) | Gets double key URL |
 | [MIP_CC_ReleaseProtectionDescriptor](functions.md#mip_cc_releaseprotectiondescriptor) | Release resources associated with a protection descriptor |
 | [MIP_CC_CreateStringList](functions.md#mip_cc_createstringlist) | Create a string list |
 | [MIP_CC_StringList_GetStrings](functions.md#mip_cc_stringlist_getstrings) | Get strings that compose a string list |
@@ -62,14 +64,17 @@ Function | Brief description |
 | [MIP_CC_CreateTaskDispatcherDelegate](functions.md#mip_cc_createtaskdispatcherdelegate) | Creates a task dispatcher delegate which can be used to override MIP's default async task handling |
 | [MIP_CC_ExecuteDispatchedTask](functions.md#mip_cc_executedispatchedtask) | Notifies a TaskDispatcher delegate that a task is scheduled to execute now on the current thread |
 | [MIP_CC_ReleaseTaskDispatcherDelegate](functions.md#mip_cc_releasetaskdispatcherdelegate) | Release resources associated with an task dispatcher delegate handle |
+| [MIP_CC_CreateTelemetryConfiguration](functions.md#mip_cc_createtelemetryconfiguration) | Create a settings object used to create a protection profile |
 | [MIP_CC_TelemetryConfiguration_SetHostName](functions.md#mip_cc_telemetryconfiguration_sethostname) | Set a telemetry host name which will override internal telemetry settings |
 | [MIP_CC_TelemetryConfiguration_SetLibraryName](functions.md#mip_cc_telemetryconfiguration_setlibraryname) | Set a telemetry shared library override |
 | [MIP_CC_TelemetryConfiguration_SetHttpDelegate](functions.md#mip_cc_telemetryconfiguration_sethttpdelegate) | Override default telemetry HTTP stack with client's own |
+| [MIP_CC_TelemetryConfiguration_SetTaskDispatcherDelegate](functions.md#mip_cc_telemetryconfiguration_settaskdispatcherdelegate) | Override default async task dispatcher with client's own |
 | [MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled](functions.md#mip_cc_telemetryconfiguration_setisnetworkdetectionenabled) | Sets whether or not the telemetry component is allowed ping network status on a background thread |
 | [MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled](functions.md#mip_cc_telemetryconfiguration_setislocalcachingenabled) | Sets whether or not the telemetry component is allowed to write caches to disk |
 | [MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled](functions.md#mip_cc_telemetryconfiguration_setistraceloggingenabled) | Sets whether or not the telemetry component is allowed to write logs to disk |
 | [MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut](functions.md#mip_cc_telemetryconfiguration_setistelemetryoptedout) | Sets whether or not an application/user has opted out of optional telemetry |
 | [MIP_CC_TelemetryConfiguration_SetCustomSettings](functions.md#mip_cc_telemetryconfiguration_setcustomsettings) | Sets custom telemetry settings |
+| [MIP_CC_TelemetryConfiguration_AddMaskedProperty](functions.md#mip_cc_telemetryconfiguration_addmaskedproperty) | Sets a telemetry property to mask |
 | [MIP_CC_ReleaseTelemetryConfiguration](functions.md#mip_cc_releasetelemetryconfiguration) | Release resources associated with a protection profile settings |
 | [MIP_CC_ReleaseProtectionEngine](functions.md#mip_cc_releaseprotectionengine) | Release resources associated with a protection engine |
 | [MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing](functions.md#mip_cc_protectionengine_createprotectionhandlerforpublishing) | Creates a protection handler for publishing new content |
@@ -85,6 +90,7 @@ Function | Brief description |
 | [MIP_CC_ProtectionEngineSettings_SetClientData](functions.md#mip_cc_protectionenginesettings_setclientdata) | Sets the client data that will be stored opaquely alongside this engine and persist across sessions |
 | [MIP_CC_ProtectionEngineSettings_SetCustomSettings](functions.md#mip_cc_protectionenginesettings_setcustomsettings) | Configures custom settings, used for feature gating and testing. |
 | [MIP_CC_ProtectionEngineSettings_SetSessionId](functions.md#mip_cc_protectionenginesettings_setsessionid) | Sets the session ID that can be used to correlate logs and telemetry |
+| [MIP_CC_ProtectionEngineSettings_SetCloud](functions.md#mip_cc_protectionenginesettings_setcloud) | Sets cloud which affects endpoint URLs for all service requests |
 | [MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl](functions.md#mip_cc_protectionenginesettings_setcloudendpointbaseurl) | Sets base URL for all service requests |
 | [MIP_CC_ReleaseProtectionEngineSettings](functions.md#mip_cc_releaseprotectionenginesettings) | Release resources associated with a protection engine settings |
 | [MIP_CC_CreateProtectionHandlerPublishingSettings](functions.md#mip_cc_createprotectionhandlerpublishingsettings) | Create a settings object used to create a protection handler for publishing new content |
@@ -92,11 +98,15 @@ Function | Brief description |
 | [MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed](functions.md#mip_cc_protectionhandlerpublishingsettings_setisauditedextractionallowed) | Sets whether or not non-MIP-aware applications are allowed to open protected content |
 | [MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson](functions.md#mip_cc_protectionhandlerpublishingsettings_setispublishingformatjson) | Sets whether or not PL is in JSON format (default is XML) |
 | [MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail](functions.md#mip_cc_protectionhandlerpublishingsettings_setdelegateduseremail) | Sets delegated user |
+| [MIP_CC_ProtectionHandlerPublishingSettings_SetPreLicenseUserEmail](functions.md#mip_cc_protectionhandlerpublishingsettings_setprelicenseuseremail) | Sets pre-license user |
 | [MIP_CC_CreateProtectionHandlerConsumptionSettings](functions.md#mip_cc_createprotectionhandlerconsumptionsettings) | Create a settings object used to create a protection handler for consuming existing content |
+| [MIP_CC_CreateProtectionHandlerConsumptionSettingsWithPreLicense](functions.md#mip_cc_createprotectionhandlerconsumptionsettingswithprelicense) | Create a settings object used to create a protection handler for consuming existing content |
 | [MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly](functions.md#mip_cc_protectionhandlerconsumptionsettings_setisofflineonly) | Sets whether or not protection handler creation permits online HTTP operations |
 | [MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail](functions.md#mip_cc_protectionhandlerconsumptionsettings_setdelegateduseremail) | Sets delegated user |
 | [MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize](functions.md#mip_cc_protectionhandler_getserializedpublishinglicensesize) | Gets size of publishing license (in bytes) |
 | [MIP_CC_ProtectionHandler_GetSerializedPublishingLicense](functions.md#mip_cc_protectionhandler_getserializedpublishinglicense) | Gets publishing license |
+| [MIP_CC_ProtectionHandler_GetSerializedPreLicenseSize](functions.md#mip_cc_protectionhandler_getserializedprelicensesize) | Gets size of pre-license (in bytes) |
+| [MIP_CC_ProtectionHandler_GetSerializedPreLicense](functions.md#mip_cc_protectionhandler_getserializedprelicense) | Gets pre-license |
 | [MIP_CC_ProtectionHandler_GetProtectionDescriptor](functions.md#mip_cc_protectionhandler_getprotectiondescriptor) | Gets protection descriptor |
 | [MIP_CC_ProtectionHandler_GetRights](functions.md#mip_cc_protectionhandler_getrights) | Gets list of rights granted to a user |
 | [MIP_CC_ProtectionHandler_GetProtectedContentSize](functions.md#mip_cc_protectionhandler_getprotectedcontentsize) | Calculates size of protected content, factoring in padding, etc. |
@@ -113,12 +123,19 @@ Function | Brief description |
 | [MIP_CC_ReleaseProtectionHandler](functions.md#mip_cc_releaseprotectionhandler) | Release resources associated with a protection handler |
 | [MIP_CC_LoadProtectionProfile](functions.md#mip_cc_loadprotectionprofile) | Load a profile |
 | [MIP_CC_ReleaseProtectionProfile](functions.md#mip_cc_releaseprotectionprofile) | Release resources associated with a protection profile |
+| [MIP_CC_CreateProtectionProfileSettings](functions.md#mip_cc_createprotectionprofilesettings) | Create a settings object used to create a protection profile |
 | [MIP_CC_ProtectionProfileSettings_SetSessionId](functions.md#mip_cc_protectionprofilesettings_setsessionid) | Sets the session ID that can be used to correlate logs and telemetry |
 | [MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses](functions.md#mip_cc_protectionprofilesettings_setcancachelicenses) | Configures whether or not end user licenses (EULs) will be cached locally |
 | [MIP_CC_ProtectionProfileSettings_SetHttpDelegate](functions.md#mip_cc_protectionprofilesettings_sethttpdelegate) | Override default HTTP stack with client's own |
 | [MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate](functions.md#mip_cc_protectionprofilesettings_settaskdispatcherdelegate) | Override default async task dispatcher with client's own |
 | [MIP_CC_ProtectionProfileSettings_SetCustomSettings](functions.md#mip_cc_protectionprofilesettings_setcustomsettings) | Configures custom settings, used for feature gating and testing. |
 | [MIP_CC_ReleaseProtectionProfileSettings](functions.md#mip_cc_releaseprotectionprofilesettings) | Release resources associated with a protection profile settings |
+| [MIP_CC_TemplateDescriptor_GetId](functions.md#mip_cc_templatedescriptor_getid) | Gets template ID |
+| [MIP_CC_TemplateDescriptor_GetNameSize](functions.md#mip_cc_templatedescriptor_getnamesize) | Gets size of buffer required to store name |
+| [MIP_CC_TemplateDescriptor_GetName](functions.md#mip_cc_templatedescriptor_getname) | Gets Template name |
+| [MIP_CC_TemplateDescriptor_GetDescriptionSize](functions.md#mip_cc_templatedescriptor_getdescriptionsize) | Gets size of buffer required to store description |
+| [MIP_CC_TemplateDescriptor_GetDescription](functions.md#mip_cc_templatedescriptor_getdescription) | Gets Template description |
+| [MIP_CC_ReleaseTemplateDescriptor](functions.md#mip_cc_releasetemplatedescriptor) | Release resources associated with a template descriptor |
 | [MIP_CC_Action_GetType](functions.md#mip_cc_action_gettype) | Gets an action's type |
 | [MIP_CC_Action_GetId](functions.md#mip_cc_action_getid) | Gets an action's ID |
 | [MIP_CC_ActionResult_GetActions](functions.md#mip_cc_actionresult_getactions) | Get actions that compose an action result |
@@ -185,6 +202,9 @@ Function | Brief description |
 | [MIP_CC_Label_GetCustomSettings](functions.md#mip_cc_label_getcustomsettings) | Gets policy-defined custom settings of a label |
 | [MIP_CC_MetadataAction_GetMetadataToRemove](functions.md#mip_cc_metadataaction_getmetadatatoremove) | Gets a "metadata" action's metadata to remove |
 | [MIP_CC_MetadataAction_GetMetadataToAdd](functions.md#mip_cc_metadataaction_getmetadatatoadd) | Gets a "metadata" action's metadata to add |
+| [MIP_CC_CreateMetadataDictionary](functions.md#mip_cc_createmetadatadictionary) | Create a dictionary of string keys/values |
+| [MIP_CC_MetadataDictionary_GetEntries](functions.md#mip_cc_metadatadictionary_getentries) | Get metadata entries that compose a dictionary |
+| [MIP_CC_ReleaseMetadataDictionary](functions.md#mip_cc_releasemetadatadictionary) | Release resources associated with a dictionary |
 | [MIP_CC_ReleasePolicyEngine](functions.md#mip_cc_releasepolicyengine) | Release resources associated with a policy engine |
 | [MIP_CC_PolicyEngine_GetEngineIdSize](functions.md#mip_cc_policyengine_getengineidsize) | Gets size of buffer required to engine ID |
 | [MIP_CC_PolicyEngine_GetEngineId](functions.md#mip_cc_policyengine_getengineid) | Gets engine ID |
@@ -204,6 +224,8 @@ Function | Brief description |
 | [MIP_CC_PolicyEngine_GetSensitivityTypes](functions.md#mip_cc_policyengine_getsensitivitytypes) | Gets the sensitivity types associated with the policy engine |
 | [MIP_CC_PolicyEngine_CreatePolicyHandler](functions.md#mip_cc_policyengine_createpolicyhandler) | Create a Policy Handler to execute policy-related functions |
 | [MIP_CC_PolicyEngine_SendApplicationAuditEvent](functions.md#mip_cc_policyengine_sendapplicationauditevent) | Logs an application specific event to the audit pipeline |
+| [MIP_CC_PolicyEngine_GetTenantIdSize](functions.md#mip_cc_policyengine_gettenantidsize) | Gets size of tenant ID |
+| [MIP_CC_PolicyEngine_GetTenantId](functions.md#mip_cc_policyengine_gettenantid) | Gets tenant ID |
 | [MIP_CC_PolicyEngine_GetPolicyDataXmlSize](functions.md#mip_cc_policyengine_getpolicydataxmlsize) | Gets size of policy data xml |
 | [MIP_CC_PolicyEngine_GetPolicyDataXml](functions.md#mip_cc_policyengine_getpolicydataxml) | Gets policy data xml |
 | [MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize](functions.md#mip_cc_policyengine_getsensitivitytypesdataxmlsize) | Gets size of sensitivity types data xml |
@@ -214,21 +236,32 @@ Function | Brief description |
 | [MIP_CC_PolicyEngineSettings_SetClientData](functions.md#mip_cc_policyenginesettings_setclientdata) | Sets the client data that will be stored opaquely alongside this engine and persist across sessions |
 | [MIP_CC_PolicyEngineSettings_SetCustomSettings](functions.md#mip_cc_policyenginesettings_setcustomsettings) | Configures custom settings, used for feature gating and testing. |
 | [MIP_CC_PolicyEngineSettings_SetSessionId](functions.md#mip_cc_policyenginesettings_setsessionid) | Sets the session ID that can be used to correlate logs and telemetry |
+| [MIP_CC_PolicyEngineSettings_SetCloud](functions.md#mip_cc_policyenginesettings_setcloud) | Sets cloud which affects endpoint URLs for all service requests |
 | [MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl](functions.md#mip_cc_policyenginesettings_setcloudendpointbaseurl) | Sets base URL for all service requests |
 | [MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail](functions.md#mip_cc_policyenginesettings_setdelegateduseremail) | Sets delegated user |
+| [MIP_CC_PolicyEngineSettings_SetLabelFilter](functions.md#mip_cc_policyenginesettings_setlabelfilter) | Sets label filter |
 | [MIP_CC_ReleasePolicyEngineSettings](functions.md#mip_cc_releasepolicyenginesettings) | Release resources associated with a policy engine settings |
 | [MIP_CC_ReleasePolicyHandler](functions.md#mip_cc_releasepolicyhandler) | Release resources associated with a policy handler |
 | [MIP_CC_PolicyHandler_GetSensitivityLabel](functions.md#mip_cc_policyhandler_getsensitivitylabel) | Gets a document's current label |
 | [MIP_CC_PolicyHandler_ComputeActions](functions.md#mip_cc_policyhandler_computeactions) | Executes policy rules based on the provided state and determines corresponding actions |
 | [MIP_CC_PolicyHandler_NotifyCommittedActions](functions.md#mip_cc_policyhandler_notifycommittedactions) | Called by application after computed actions have been applied and data committed to disk |
+| [MIP_CC_PolicyProfile_AcquireAuthToken](functions.md#mip_cc_policyprofile_acquireauthtoken) | Trigger an authentication callback |
 | [MIP_CC_LoadPolicyProfile](functions.md#mip_cc_loadpolicyprofile) | Load a profile |
 | [MIP_CC_ReleasePolicyProfile](functions.md#mip_cc_releasepolicyprofile) | Release resources associated with a policy profile |
+| [MIP_CC_CreatePolicyProfileSettings](functions.md#mip_cc_createpolicyprofilesettings) | Create a settings object used to create a policy profile |
 | [MIP_CC_PolicyProfileSettings_SetSessionId](functions.md#mip_cc_policyprofilesettings_setsessionid) | Sets the session ID that can be used to correlate logs and telemetry |
 | [MIP_CC_PolicyProfileSettings_SetHttpDelegate](functions.md#mip_cc_policyprofilesettings_sethttpdelegate) | Override default HTTP stack with client's own |
 | [MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate](functions.md#mip_cc_policyprofilesettings_settaskdispatcherdelegate) | Override default async task dispatcher with client's own |
 | [MIP_CC_PolicyProfileSettings_SetCustomSettings](functions.md#mip_cc_policyprofilesettings_setcustomsettings) | Configures custom settings, used for feature gating and testing. |
 | [MIP_CC_ReleasePolicyProfileSettings](functions.md#mip_cc_releasepolicyprofilesettings) | Release resources associated with a policy profile settings |
+| [MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrlSize](functions.md#mip_cc_protectadhocdkaction_getdoublekeyencryptionurlsize) | Gets size of buffer required to store the double key encryption url. |
+| [MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrl](functions.md#mip_cc_protectadhocdkaction_getdoublekeyencryptionurl) | Gets double key encryption url |
 | [MIP_CC_ProtectByTemplateAction_GetTemplateId](functions.md#mip_cc_protectbytemplateaction_gettemplateid) | Gets a "protect by template" action's template ID |
+| [MIP_CC_ProtectByTemplateDkAction_GetTemplateId](functions.md#mip_cc_protectbytemplatedkaction_gettemplateid) | Gets a "protect by template with double key" action's template ID |
+| [MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrlSize](functions.md#mip_cc_protectbytemplatedkaction_getdoublekeyencryptionurlsize) | Gets size of buffer required to store the double key encryption url. |
+| [MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrl](functions.md#mip_cc_protectbytemplatedkaction_getdoublekeyencryptionurl) | Gets double key encryption url |
+| [MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrlSize](functions.md#mip_cc_protectdonotforwarddkaction_getdoublekeyencryptionurlsize) | Gets size of buffer required to store the double key encryption url. |
+| [MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrl](functions.md#mip_cc_protectdonotforwarddkaction_getdoublekeyencryptionurl) | Gets double key encryption url |
 | [MIP_CC_RemoveContentFooterAction_GetUIElementNames](functions.md#mip_cc_removecontentfooteraction_getuielementnames) | Gets a "remove content footer" action's UI element names to remove |
 | [MIP_CC_RemoveContentHeaderAction_GetUIElementNames](functions.md#mip_cc_removecontentheaderaction_getuielementnames) | Gets a "remove content header" action's UI element names to remove |
 | [MIP_CC_RemoveWatermarkAction_GetUIElementNames](functions.md#mip_cc_removewatermarkaction_getuielementnames) | Gets a "remove watermark" action's UI element names to remove |
