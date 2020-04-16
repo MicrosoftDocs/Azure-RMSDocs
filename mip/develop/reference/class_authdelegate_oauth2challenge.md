@@ -23,7 +23,7 @@ public const std::string& GetClaims() const  |  Get the claims string.
 ## Members
   
 ### OAuth2Challenge function
-Construct a new [OAuth2Challenge](undefined) object.
+Construct a new OAuth2Challenge object.
 
 Parameters:  
 * **authority**: the authority the token needs to be generated against. 

@@ -36,7 +36,7 @@ public unsigned int GetWxpMetadataVersion() const  |  Gets the recommended WXP (
 ## Members
   
 ### GetSettings function
-Get the policy engine [Settings](undefined).
+Get the policy engine Settings.
 
   
 **Returns**: Policy engine settings. 
@@ -55,7 +55,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: [PolicyEngine::Settings](undefined)).
+**See also**: PolicyEngine::Settings).
   
 ### GetMoreInfoUrl function
 Provide a url for looking up more information about the policy/labels.

@@ -9,7 +9,7 @@ ms.date: 04/16/2020
 ---
 
 # class PolicyProfile 
-[PolicyProfile](undefined) class is the root class for using the Microsoft Information Protection operations. A typical application will only need one [PolicyProfile](undefined) but it can create multiple profiles if needed.
+PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
   
 ## Summary
  Members                        | Descriptions                                
@@ -40,7 +40,7 @@ Parameters:
 * **context**: a parameter that will be passed into the observer functions. 
 
 
-[PolicyProfile::Observer](undefined) will be called upon success or failure.
+PolicyProfile::Observer will be called upon success or failure.
   
 ### ListEngines function
 List of engines.
@@ -58,7 +58,7 @@ Parameters:
 * **context**: a parameter that will be forwarded opaquely to the observer functions. 
 
 
-[PolicyProfile::Observer](undefined) will be called upon success or failure.
+PolicyProfile::Observer will be called upon success or failure.
   
 ### UnloadEngine function
 Starts unloading the policy engine with the given ID.
@@ -75,10 +75,10 @@ Parameters:
 * **settings**: the mip::PolicyEngine::Settings object that specifies the engine's settings. 
 
 
-* **context**: a parameter that will be forwarded opaquely to the observer functions and optional [HttpDelegate](undefined). 
+* **context**: a parameter that will be forwarded opaquely to the observer functions and optional HttpDelegate. 
 
 
-[PolicyProfile::Observer](undefined) will be called upon success or failure.
+PolicyProfile::Observer will be called upon success or failure.
   
 ### AddEngine function
 Add a new policy engine to the profile.
@@ -87,12 +87,12 @@ Parameters:
 * **settings**: the mip::PolicyEngine::Settings object that specifies the engine's settings. 
 
 
-* **context**: a parameter that will be forwarded opaquely to the optional [HttpDelegate](undefined)
+* **context**: a parameter that will be forwarded opaquely to the optional HttpDelegate
 
 
 
   
-**Returns**: Newly created [PolicyEngine](undefined)
+**Returns**: Newly created PolicyEngine
   
 ### DeleteEngineAsync function
 Starts deleting the policy engine with the given ID. All data for the given profile will be deleted.
@@ -104,7 +104,7 @@ Parameters:
 * **context**: a parameter that will be passed into the observer functions. 
 
 
-[PolicyProfile::Observer](undefined) will be called upon success or failure.
+PolicyProfile::Observer will be called upon success or failure.
   
 ### DeleteEngine function
 Delete the policy engine with the given ID. All data for the given engine will be deleted.

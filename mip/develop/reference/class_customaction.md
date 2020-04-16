@@ -9,7 +9,7 @@ ms.date: 04/16/2020
 ---
 
 # class CustomAction 
-[CustomAction](undefined) is a generic action class that captures all the sub-properties of the action as a property bag. The caller is responsible to understand the meaning of the action.
+CustomAction is a generic action class that captures all the sub-properties of the action as a property bag. The caller is responsible to understand the meaning of the action.
   
 ## Summary
  Members                        | Descriptions                                

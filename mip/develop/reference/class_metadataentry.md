@@ -15,7 +15,7 @@ An abstraction class for metadata entry.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public MetadataEntry(const std::string& key, const std::string& value, unsigned int version)  |  C'tor for a [MetadataEntry](#classMetadataEntry) abstraction.
-public MetadataEntry(const std::string& key, const std::string& value)  |  C'tor for a [MetadataEntry](undefined) abstraction, version is set to a default of 0.
+public MetadataEntry(const std::string& key, const std::string& value)  |  C'tor for a MetadataEntry abstraction, version is set to a default of 0.
 public const std::string& GetKey() const  |  Get the metadata entry key.
 public const std::string& GetValue() const  |  Get the metadata entry value.
 public unsigned int GetVersion() const  |  Get the metadata entry version.
@@ -23,7 +23,7 @@ public unsigned int GetVersion() const  |  Get the metadata entry version.
 ## Members
   
 ### MetadataEntry function
-C'tor for a [MetadataEntry](undefined) abstraction.
+C'tor for a MetadataEntry abstraction.
 
 Parameters:  
 * **key**: metadata key entry. 
@@ -37,7 +37,7 @@ Parameters:
 
   
 ### MetadataEntry function
-C'tor for a [MetadataEntry](undefined) abstraction, version is set to a default of 0.
+C'tor for a MetadataEntry abstraction, version is set to a default of 0.
 
 Parameters:  
 * **key**: metadata key entry. 

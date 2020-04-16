@@ -67,7 +67,7 @@ Gets the protection template ID, if any.
 Gets the label ID, if any.
 
   
-**Returns**: [Label](undefined) ID
+**Returns**: Label ID
 This property will only be populated in ProtectionDescriptors for preexisting protected content. It is a field populated by the server at the moment protected content is consumed.
   
 ### GetContentId function
@@ -119,14 +119,14 @@ Gets app-specific data that was encrypted.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](undefined) may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](#classProtectionDescriptor_1a67c2a6cbd083c25d885cd051084cf4e9)
+A ProtectionHandler may hold a dictionary of app-specific data that was encrypted by the protection service. This encrypted data is independent of the signed data accessible via [ProtectionDescriptor::GetSignedAppData](#classProtectionDescriptor_1a67c2a6cbd083c25d885cd051084cf4e9)
   
 ### GetSignedAppData function
 Gets the app-specific data that was signed.
 
   
 **Returns**: App-specific data
-A [ProtectionHandler](undefined) may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](#classProtectionDescriptor_1ac5b6c163d6757c4b66ebb716b76eef84)
+A ProtectionHandler may hold a dictionary of app-specific data that was signed by the protection service. This signed data is independent of the encrypted data accessible via [ProtectionDescriptor::GetEncryptedAppData](#classProtectionDescriptor_1ac5b6c163d6757c4b66ebb716b76eef84)
   
 ### GetDoubleKeyUrl function
 Gets the double key url to be used for custom protection.

@@ -15,7 +15,7 @@ A class containing access token info provided by an application.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public OAuth2Token()  |  Construct a new [OAuth2Token](#classAuthDelegate_1_1OAuth2Token) object.
-public OAuth2Token(const std::string& accessToken)  |  Construct a new [OAuth2Token](undefined) object from JWT access token.
+public OAuth2Token(const std::string& accessToken)  |  Construct a new OAuth2Token object from JWT access token.
 public const std::string& GetAccessToken() const  |  Get the access token string.
 public void SetAccessToken(const std::string& accessToken)  |  Set the access token string.
 public const std::string& GetErrorMessage() const  |  Get the error message, if any.
@@ -24,10 +24,10 @@ public void SetErrorMessage(const std::string& errorMessage)  |  Set the error m
 ## Members
   
 ### OAuth2Token function
-Construct a new [OAuth2Token](undefined) object.
+Construct a new OAuth2Token object.
   
 ### OAuth2Token function
-Construct a new [OAuth2Token](undefined) object from JWT access token.
+Construct a new OAuth2Token object from JWT access token.
 
 Parameters:  
 * **accessToken**: JWT access token.
@@ -58,5 +58,5 @@ Get the error message, if any.
 Set the error message.
 
 Parameters:  
-* **errorMessage**: [Error](undefined) message.
+* **errorMessage**: Error message.
 

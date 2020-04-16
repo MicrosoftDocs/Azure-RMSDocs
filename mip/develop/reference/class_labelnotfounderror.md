@@ -9,7 +9,7 @@ ms.date: 04/16/2020
 ---
 
 # class LabelNotFoundError 
-[Label](undefined) ID is not recognized.
+Label ID is not recognized.
   
 ## Summary
  Members                        | Descriptions                                

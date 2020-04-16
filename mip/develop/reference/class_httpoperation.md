@@ -9,7 +9,7 @@ ms.date: 04/16/2020
 ---
 
 # class HttpOperation 
-Interface that describes a single HTTP operation, implemented by client app when overriding [HttpDelegate](undefined).
+Interface that describes a single HTTP operation, implemented by client app when overriding HttpDelegate.
   
 ## Summary
  Members                        | Descriptions                                
