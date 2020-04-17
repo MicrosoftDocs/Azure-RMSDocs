@@ -1,14 +1,14 @@
 ---
-title: class mip::HttpResponse 
-description: Documents the mip::httpresponse class of the Microsoft Information Protection (MIP) SDK.
+title: class HttpResponse 
+description: Documents the httpresponse::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::HttpResponse 
+# class HttpResponse 
 Interface that describes a single HTTP response, implemented by client app when overriding HttpDelegate.
   
 ## Summary

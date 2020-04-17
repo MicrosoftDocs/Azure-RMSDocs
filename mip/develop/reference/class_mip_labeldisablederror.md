@@ -1,14 +1,14 @@
 ---
-title: class mip::LabelDisabledError 
-description: Documents the mip::labeldisablederror class of the Microsoft Information Protection (MIP) SDK.
+title: class LabelDisabledError 
+description: Documents the labeldisablederror::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::LabelDisabledError 
+# class LabelDisabledError 
 Label is disabled or inactive.
   
 ## Summary

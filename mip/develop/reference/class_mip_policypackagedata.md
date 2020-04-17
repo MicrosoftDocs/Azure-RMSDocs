@@ -1,14 +1,14 @@
 ---
-title: class mip::PolicyPackageData 
-description: Documents the mip::policypackagedata class of the Microsoft Information Protection (MIP) SDK.
+title: class PolicyPackageData 
+description: Documents the policypackagedata::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::PolicyPackageData 
+# class PolicyPackageData 
   
 ## Summary
  Members                        | Descriptions                                

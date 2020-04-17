@@ -1,14 +1,14 @@
 ---
-title: class mip::FileProfile::Observer 
-description: Documents the mip::fileprofile class of the Microsoft Information Protection (MIP) SDK.
+title: class FileProfile::Observer 
+description: Documents the fileprofile::observer class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::FileProfile::Observer 
+# class FileProfile::Observer 
 Observer interface for clients to get notifications for profile related events.
 All errors inherit from mip::Error. 
 Client should not call the engine back on the thread that calls the observer.
