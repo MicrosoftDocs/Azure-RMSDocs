@@ -165,5 +165,4 @@ namespace mip_sdk_dotnet_quickstart
 Now that your initialization code is complete, you're ready for the next quickstart, where you'll start to experience the MIP Protection APIs.
 
 > [!div class="nextstepaction"]
-<!-------------------Update this section for links ----------------------------------------------------------------------------------------->
-> [List protection templates](quick-protection-list-templates-csharp)
+> [List protection templates](quick-protection-list-templates-csharp.md)
