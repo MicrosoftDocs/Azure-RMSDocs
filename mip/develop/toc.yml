@@ -275,16 +275,10 @@
         href: reference/class_mip_propertydata.md
       - name: ProtectAdhocAction
         href: reference/class_mip_protectadhocaction.md
-      - name: ProtectAdhocDkAction
-        href: reference/class_mip_protectadhocdkaction.md
       - name: ProtectByTemplateAction
         href: reference/class_mip_protectbytemplateaction.md
-      - name: ProtectByTemplateDkAction
-        href: reference/class_mip_protectbytemplatedkaction.md
       - name: ProtectDoNotForwardAction
         href: reference/class_mip_protectdonotforwardaction.md
-      - name: ProtectDoNotForwardDkAction
-        href: reference/class_mip_protectdonotforwarddkaction.md
       - name: ProtectionActionData
         href: reference/class_mip_protectionactiondata.md
       - name: ProtectionDescriptor
