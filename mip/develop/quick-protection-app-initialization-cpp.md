@@ -37,7 +37,6 @@ First we create and configure the initial Visual Studio solution and project, up
    - When finished, click the **OK** button in the lower right.
 
      [![Visual Studio solution creation](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
-    <!-------------Change this image. The layout has likely changed---------------->
 
 2. Add the Nuget package for the MIP SDK Protection API to your project:
    - In the **Solution Explorer**, right-click the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
@@ -48,7 +47,6 @@ First we create and configure the initial Visual Studio solution and project, up
      - Click "Install", then click "OK" when the **Preview changes** confirmation dialog displays.
 
      [![Visual Studio add NuGet package](media/quick-app-initialization-cpp/add-nuget-package.png)](media/quick-app-initialization-cpp/add-nuget-package.png#lightbox)
-     <!-------------Change this image to Protection Nuget download.---------------->
 
 ## Implement observer classes to monitor the Protection profile and engine objects
 
@@ -62,7 +60,6 @@ Now create a basic implementation for a Protection profile observer class, by ex
      - When finished, click the **OK** button.
 
      [![Visual Studio add class](media/quick-app-initialization-cpp/add-class.png)](media/quick-app-initialization-cpp/add-class.png#lightbox)
-     <!-------------No Need to change this image.---------------->
 
 2. After generating the .h and .cpp files for the class, both files are opened in Editor Group tabs. Now update each file to implement your new observer class:
 
@@ -284,7 +281,6 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
 
 4. Now do a final build of the application and resolve any errors. Your code should build successfully, but will not yet run correctly until you complete the next Quickstart. If you run the application, you see output similar to the following. The application would construct the Protection profile and Protection engine sucessfully but would not have fired authentication module and you won't have an access token yet, until you complete the next Quickstart.
 
-<!------------------------The application is building correctly, but is not providing below output on running --------------------------------------------------->
    ```console
     C:\MIP Sample Apps\ProtectionQS\Debug\ProtectionQS.exe (process 8252) exited with code 0.
     To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
@@ -296,4 +292,4 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
 Now that your initialization code is complete, you're ready for the next quickstart, where you'll start to experience the MIP Protection API.
 
 > [!div class="nextstepaction"]
-> [List protection templates](quick-protection-list-templates-cpp.md) <!---------Update this section------->
+> [List protection templates](quick-protection-list-templates-cpp.md)
