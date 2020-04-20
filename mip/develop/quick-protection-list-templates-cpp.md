@@ -143,4 +143,4 @@ Finally, build and test your client application.
 Now that you've learned how to list the protection templates available to an authenticated user, try the next quickstart:
 
 > [!div class="nextstepaction"]
-> [Set and get a sensitivity label](quick-protection-encrypt-decrypt text-cpp.md)
+> [Encrypt and Decrypt text using Protection API](quick-protection-encrypt-decrypt text-cpp.md)
