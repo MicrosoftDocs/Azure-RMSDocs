@@ -160,7 +160,7 @@ Now create a basic implementation for a Protection profile observer class, by ex
 
 The MIP SDK implements authentication using class extensibility, which provides a mechanism to share authentication work with the client application. The client must acquire a suitable OAuth2 access token, and provide to the MIP SDK at runtime.
 
-Create an implementation for an authentication delegate, by extending the SDK's `mip::AuthDelegate` class, and overriding/implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function. Follow the steps detailed under [File API Applcation Initialization Quickstart](quick-app-initialization-cpp.md). The authentication delegate is instantiated and used later, by the Protection profile and Protection engine objects.
+Create an implementation for an authentication delegate, by extending the SDK's `mip::AuthDelegate` class, and overriding/implementing the `mip::AuthDelegate::AcquireOAuth2Token()` pure virtual function. **Follow the steps detailed under [File API Applcation Initialization Quickstart](quick-app-initialization-cpp.md).** The authentication delegate is instantiated and used later, by the Protection profile and Protection engine objects.
 
 ## Implement a consent delegate
 
@@ -273,7 +273,7 @@ As mentioned, profile and engine objects are required for SDK clients using MIP 
 
    | Placeholder | Value | Example |
    |:----------- |:----- |:--------|
-   | \<application-id\> | The Azure AD Application ID (GUID) assigned to the application registered in [step #2 of the "MIP SDK setup and configuration"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) article. Replace 2 instances. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
+   | \<application-id\> | The Azure AD Application ID (GUID) assigned to the application registered in step #2 of the "MIP SDK setup and configuration"(setup-configure-mip.md) article. Replace 2 instances. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
    | \<application-name\> | A user-defined friendly name for your application. Must contain valid ASCII characters (excluding ';'), and ideally matches the application name you used in your Azure AD registration. | `"AppInitialization"` |
    | \<application-version\> | User-defined version info for your application. Must contain valid ASCII characters (excluding ';'). | `"1.1.0.0"` |
    | \<engine-account\> | The account used for the engine's identity. When you authenticate with a user account during token acquisition, it must match this value. | `"user1@tenant.onmicrosoft.com"` |
