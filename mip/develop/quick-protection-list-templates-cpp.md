@@ -18,7 +18,7 @@ This Quickstart shows you how to use the MIP Protection API, to protection templ
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
 - Complete [Quickstart - Client application initialization - Protection API (C++)](quick-protection-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This "List protection templates" Quickstart relies on the previous one, for proper creation of the starter solution.
-- Optionally: Review [RMS Templates] concepts. <!--Link for RMS templates overview. Aniket to confirm with Tom.--->
+- Optionally: Review [RMS Templates](https://docs.microsoft.com/en-us/azure/information-protection/configure-policy-templates) concepts.
 
 ## Add logic to list the protection templates
 
@@ -143,4 +143,4 @@ Finally, build and test your client application.
 Now that you've learned how to list the protection templates available to an authenticated user, try the next quickstart:
 
 > [!div class="nextstepaction"]
-> [Set and get a sensitivity label](quick-protection-encrypt-decrypt text-cpp.md)
+> [Encrypt and Decrypt text](quick-protection-encrypt-decrypt text-cpp.md)

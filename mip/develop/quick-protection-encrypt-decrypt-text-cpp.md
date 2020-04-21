@@ -43,9 +43,7 @@ Create a basic implementation for a Protection handler observer, by extending th
      ```cpp
      #include <memory>
      #include "mip/protection/protection_engine.h"
-
      using std::shared_ptr;
-
      using std::exception_ptr;
 
      class ProtectionHandlerObserver final : public mip::ProtectionHandler::Observer {
@@ -61,7 +59,6 @@ Create a basic implementation for a Protection handler observer, by extending th
 
      ```cpp
      #include "handler_observer.h"
-
      using std::shared_ptr;
      using std::promise;
      using std::exception_ptr;

@@ -35,7 +35,7 @@ First we create and configure the initial Visual Studio solution and project, up
    - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
    - When finished, click the **OK** button in the lower right.
 
-     [![Visual Studio solution creation](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)      <!--No Need to change the image.----->
+     [![Visual Studio solution creation](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
 2. Add the Nuget package for the MIP SDK File API to your project:
    - In the **Solution Explorer**, right click on the project node (directly under the top/solution node), and select **Manage NuGet packages...**:
@@ -49,9 +49,8 @@ First we create and configure the initial Visual Studio solution and project, up
 
 ## Implement an authentication delegate and a consent delegate
 
-If not already implemented, follow the steps listed in link <!---Inset link here---> for implementing authentication and consent delegate.
+If not already implemented, follow the steps listed in [File API application initialization](quick-app-initialization-csharp.md) for implementing authentication and consent delegate.
 
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------->
 ## Initialize the MIP SDK Managed Wrapper
 
 1. From **Solution Explorer**, open the .cs file in your project that contains the implementation of the `Main()` method. It defaults to the same name as the project containing it, which you specified during project creation.

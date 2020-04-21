@@ -18,8 +18,7 @@ This Quickstart shows you how to use the MIP SDK Protection API to list the prot
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
 - Complete [Quickstart: Client application initialization - Protection API (C#)](quick-protection-app-initialization-csharp.md) first, which builds a starter Visual Studio solution. This "List protection templates" Quickstart relies on the previous one, for proper creation of the starter solution.
-<!---Update the link to Quickstart for Protection API---->
-- Optionally: Review [RMS Templates] concepts. <!--Link for RMS templates overview. Aniket to confirm with Tom.--->
+- Optionally: Review [RMS Templates](https://docs.microsoft.com/en-us/azure/information-protection/configure-policy-templates) concepts. 
 
 ## Add logic to list the protection templates
 
@@ -52,11 +51,11 @@ Finally, build and test your client application.
 
 2. If your project builds and runs successfully, the application *may* prompt for authentication via ADAL each time the SDK calls your `AcquireToken()` method. If cached credentials already exist, you won't be prompted to sign in and see the list of labels.
 
-     [![Visual Studio acquire token sign-in](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox) <!--- No need to update the image--->
+     [![Visual Studio acquire token sign-in](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox) 
 
    - You may also need to give consent, to allow the application to access the MIP APIs, while running under the sign-in account. This happens when the Azure AD application registration isn't pre-consented (as outlined in "MIP SDK setup and configuration"), or you're signing in with an account from a different tenant (other than the one where your application is registered). Simply click **Accept** to record your consent.
 
-     [![Visual Studio consent](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png#lightbox) <!--- No need to update the image--->
+     [![Visual Studio consent](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png#lightbox)
 
 3. After authentication, your console output should show the protection templates for the authenticated user, similar to the following example:
 
@@ -71,7 +70,6 @@ Finally, build and test your client application.
    > [!NOTE]
    > Copy and save the ID of one or more of the protection templates (for example, `bb7ed207-046a-4caf-9826-647cff56b990`), as you will use it in the next Quickstart.
 
-<!------------------Review below by identifying further errors reported in stack overflow.-------------------------------------------------------------------------->
 ## Troubleshooting
 
 ### Problems during execution of C# application
@@ -85,4 +83,4 @@ Finally, build and test your client application.
 Now that you've learned how to list the protection templates available for authenticated user, try the next quickstart:
 
 > [!div class="nextstepaction"]
-> [Quickstart - Encrypt/Decrypt text using the C# MIP SDK Protection API](quick-protection-encrypt-decrypt-text-csharp.md)
+> [Quickstart - Encrypt and Decrypt text](quick-protection-encrypt-decrypt-text-csharp.md)
