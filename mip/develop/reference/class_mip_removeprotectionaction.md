@@ -1,14 +1,14 @@
 ---
-title: class mip::RemoveProtectionAction 
-description: Documents the mip::removeprotectionaction class of the Microsoft Information Protection (MIP) SDK.
+title: class RemoveProtectionAction 
+description: Documents the removeprotectionaction::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::RemoveProtectionAction 
+# class RemoveProtectionAction 
 An action class that specifies removing protection from the document.
   
 ## Summary

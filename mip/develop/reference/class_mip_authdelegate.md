@@ -1,21 +1,21 @@
 ---
-title: class mip::AuthDelegate 
-description: Documents the mip::authdelegate class of the Microsoft Information Protection (MIP) SDK.
+title: class AuthDelegate 
+description: Documents the authdelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::AuthDelegate 
+# class AuthDelegate 
 Delegate for auth related operations.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual bool AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token)  |  This method is called when an auth token is required for the policy engine with the given identity and the given challenge. The client should return whether acquiring token was successful. If successful, it should initialize the given token object.
-public virtual bool AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, const std::shared_ptr\<void\>& context, OAuth2Token& token)  |  This method is called when an auth token is required for the policy engine with the given identity and the given challenge. The client should return whether acquiring token was successful. If successful, it should initialize the given token object.
+public virtual bool AcquireOAuth2Token(const Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token)  |  This method is called when an auth token is required for the policy engine with the given identity and the given challenge. The client should return whether acquiring token was successful. If successful, it should initialize the given token object.
+public virtual bool AcquireOAuth2Token(const Identity& identity, const OAuth2Challenge& challenge, const std::shared_ptr\<void\>& context, OAuth2Token& token)  |  This method is called when an auth token is required for the policy engine with the given identity and the given challenge. The client should return whether acquiring token was successful. If successful, it should initialize the given token object.
   
 ## Members
   

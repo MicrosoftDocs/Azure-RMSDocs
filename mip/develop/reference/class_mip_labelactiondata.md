@@ -1,14 +1,14 @@
 ---
-title: class mip::LabelActionData 
-description: Documents the mip::labelactiondata class of the Microsoft Information Protection (MIP) SDK.
+title: class LabelActionData 
+description: Documents the labelactiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::LabelActionData 
+# class LabelActionData 
   
 ## Summary
  Members                        | Descriptions                                

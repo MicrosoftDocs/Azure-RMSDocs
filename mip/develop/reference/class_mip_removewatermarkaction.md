@@ -1,14 +1,14 @@
 ---
-title: class mip::RemoveWatermarkAction 
-description: Documents the mip::removewatermarkaction class of the Microsoft Information Protection (MIP) SDK.
+title: class RemoveWatermarkAction 
+description: Documents the removewatermarkaction::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::RemoveWatermarkAction 
+# class RemoveWatermarkAction 
 An action class that specifies removing the watermarking from the document.
   
 ## Summary

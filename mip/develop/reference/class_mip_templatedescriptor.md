@@ -1,14 +1,14 @@
 ---
-title: class mip::TemplateDescriptor 
-description: Documents the mip::templatedescriptor class of the Microsoft Information Protection (MIP) SDK.
+title: class TemplateDescriptor 
+description: Documents the templatedescriptor::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::TemplateDescriptor 
+# class TemplateDescriptor 
   
 ## Summary
  Members                        | Descriptions                                

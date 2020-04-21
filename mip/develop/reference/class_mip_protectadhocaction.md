@@ -1,14 +1,14 @@
 ---
-title: class mip::ProtectAdhocAction 
-description: Documents the mip::protectadhocaction class of the Microsoft Information Protection (MIP) SDK.
+title: class ProtectAdhocAction 
+description: Documents the protectadhocaction::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::ProtectAdhocAction 
+# class ProtectAdhocAction 
 An action class that specifies adding adhoc protection to the document.
   
 ## Summary
