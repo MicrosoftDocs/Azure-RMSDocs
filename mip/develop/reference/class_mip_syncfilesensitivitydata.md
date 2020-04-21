@@ -1,14 +1,14 @@
 ---
-title: class mip::SyncFileSensitivityData 
-description: Documents the mip::syncfilesensitivitydata class of the Microsoft Information Protection (MIP) SDK.
+title: class SyncFileSensitivityData 
+description: Documents the syncfilesensitivitydata::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::SyncFileSensitivityData 
+# class SyncFileSensitivityData 
   
 ## Summary
  Members                        | Descriptions                                

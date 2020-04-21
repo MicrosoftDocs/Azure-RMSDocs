@@ -1,14 +1,14 @@
 ---
-title: class mip::PropertyData 
-description: Documents the mip::propertydata class of the Microsoft Information Protection (MIP) SDK.
+title: class PropertyData 
+description: Documents the propertydata::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::PropertyData 
+# class PropertyData 
   
 ## Summary
  Members                        | Descriptions                                

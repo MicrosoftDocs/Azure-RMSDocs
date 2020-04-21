@@ -1,14 +1,14 @@
 ---
-title: class mip::LabelGroupData 
-description: Documents the mip::labelgroupdata class of the Microsoft Information Protection (MIP) SDK.
+title: class LabelGroupData 
+description: Documents the labelgroupdata::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::LabelGroupData 
+# class LabelGroupData 
   
 ## Summary
  Members                        | Descriptions                                
@@ -30,11 +30,13 @@ public const std::pair\<std::string, std::string\>& GetMoreInfoUrl() const  | _N
 public bool IsMandatory() const  | _Not yet documented._
 public const std::vector\<std::shared_ptr\<ProtectionActionData\>\>& GetProtectionActionData() const  | _Not yet documented._
 public bool IsAuditEnabled() const  | _Not yet documented._
+public bool IsCoauthEnabled() const  | _Not yet documented._
+public const std::string& GetAuditWorkspaceId() const  | _Not yet documented._
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  | _Not yet documented._
 public const std::vector\<std::string\>& GetLabelByCustomProperties() const  | _Not yet documented._
 public const std::vector\<std::string\>& GetCustomPropertiesByLabel() const  | _Not yet documented._
-public std::vector\<std::pair\<std::string, std::string\>\> GetParsedCustomPropertiesByLabel() const  | _Not yet documented._
-public std::vector\<std::tuple\<std::string, std::string, std::string\>\> GetLabelByCustomPropertiesSettings() const  | _Not yet documented._
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetParsedCustomPropertiesByLabel() const  | _Not yet documented._
+public const std::vector\<std::tuple\<std::string, std::string, std::string\>\>& GetLabelByCustomPropertiesSettings() const  | _Not yet documented._
 public virtual ~LabelGroupData()  | _Not yet documented._
   
 ## Members
@@ -104,6 +106,14 @@ _Not documented yet._
 
   
 ### IsAuditEnabled function
+_Not documented yet._
+
+  
+### IsCoauthEnabled function
+_Not documented yet._
+
+  
+### GetAuditWorkspaceId function
 _Not documented yet._
 
   

@@ -1,14 +1,14 @@
 ---
-title: class mip::PolicyProfile 
-description: Documents the mip::policyprofile class of the Microsoft Information Protection (MIP) SDK.
+title: class PolicyProfile 
+description: Documents the policyprofile::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::PolicyProfile 
+# class PolicyProfile 
 PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
   
 ## Summary
@@ -23,6 +23,7 @@ public std::shared_ptr\<AsyncControl\> AddEngineAsync(const PolicyEngine::Settin
 public std::shared_ptr\<PolicyEngine\> AddEngine(const PolicyEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  Add a new policy engine to the profile.
 public std::shared_ptr\<AsyncControl\> DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Starts deleting the policy engine with the given ID. All data for the given profile will be deleted.
 public void DeleteEngine(const std::string& engineId)  |  Delete the policy engine with the given ID. All data for the given engine will be deleted.
+public void AcquireAuthToken(Cloud cloud, const std::shared_ptr\<AuthDelegate\>& authDelegate) const  |  Trigger an authentication callback.
   
 ## Members
   
@@ -111,3 +112,16 @@ Delete the policy engine with the given ID. All data for the given engine will b
 Parameters:  
 * **id**: the unique engine ID.
 
+
+  
+### AcquireAuthToken function
+Trigger an authentication callback.
+
+Parameters:  
+* **cloud**: Azure cloud 
+
+
+* **authDelegate**: Authentication callback that will be invoked
+
+
+MIP will not cache or do anything else with the value returned by the auth delegate. This function is recommended for applications that aren't "logged in" until after MIP requests an auth token. It allows an application to fetch a token before MIP actually requires one.

@@ -1,20 +1,20 @@
 ---
-title: class mip::PolicyEngine 
-description: Documents the mip::policyengine class of the Microsoft Information Protection (MIP) SDK.
+title: class PolicyEngine 
+description: Documents the policyengine::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::PolicyEngine 
+# class PolicyEngine 
 This class provides an interface for all engine functions.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Get the policy engine Settings.
+public const Settings& GetSettings() const  |  Get the policy engine [Settings](class_mip_policyengine_settings.md).
 public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  list the sensitivity labels associated with the policy engine.
 public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
@@ -23,6 +23,7 @@ public std::shared_ptr\<Label\> GetDefaultSensitivityLabel()  |  Get the default
 public std::shared_ptr\<Label\> GetLabelById(const std::string& id) const  |  Gets the label according to the provided id.
 public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler(bool isAuditDiscoveryEnabled)  |  Create a Policy Handler to execute policy-related functions on a file's execution state.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Logs an application specific event to the audit pipeline.
+public const std::string& GetTenantId() const  |  Gets tenant ID associated with engine.
 public const std::string& GetPolicyDataXml() const  |  Gets policy data XML which describes the settings, labels, and rules associated with this policy.
 public const std::string& GetSensitivityTypesDataXml() const  |  Gets sensitivity types data XML which describes the sensitivity types associated with this policy.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Gets a list of custom settings.
@@ -30,6 +31,7 @@ public const std::string& GetPolicyFileId() const  |  Gets the policy file ID.
 public const std::string& GetSensitivityFileId() const  |  Gets the sensitivity file ID.
 public bool HasClassificationRules() const  |  Gets if the policy has automatic or recommendation rules.
 public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
+public unsigned int GetWxpMetadataVersion() const  |  Gets the recommended WXP (Windows, Excel, Powerpoint) metadata version, currently 0 for old verion 1 for co-authoring enabled version.
   
 ## Members
   
@@ -102,6 +104,12 @@ Parameters:
 
 
   
+### GetTenantId function
+Gets tenant ID associated with engine.
+
+  
+**Returns**: Tenant ID
+  
 ### GetPolicyDataXml function
 Gets policy data XML which describes the settings, labels, and rules associated with this policy.
 
@@ -143,3 +151,9 @@ Gets the time when the policy was last fetched.
 
   
 **Returns**: The time when the policy was last fetched
+  
+### GetWxpMetadataVersion function
+Gets the recommended WXP (Windows, Excel, Powerpoint) metadata version, currently 0 for old verion 1 for co-authoring enabled version.
+
+  
+**Returns**: Unsigned int indecating what version of metadata the tenant supports for WXP files.
