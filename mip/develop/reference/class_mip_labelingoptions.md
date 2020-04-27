@@ -1,14 +1,14 @@
 ---
-title: class mip::LabelingOptions 
-description: Documents the mip::labelingoptions class of the Microsoft Information Protection (MIP) SDK.
+title: class LabelingOptions 
+description: Documents the labelingoptions::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::LabelingOptions 
+# class LabelingOptions 
 Interface for configuring labeling options for the SetLabel/DeleteLabel methods.
   
 ## Summary

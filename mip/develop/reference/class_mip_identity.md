@@ -1,14 +1,14 @@
 ---
-title: class mip::Identity 
-description: Documents the mip::identity class of the Microsoft Information Protection (MIP) SDK.
+title: class Identity 
+description: Documents the identity::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::Identity 
+# class Identity 
 Abstraction for identity.
   
 ## Summary

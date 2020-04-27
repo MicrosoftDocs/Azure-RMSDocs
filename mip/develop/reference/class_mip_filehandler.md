@@ -1,14 +1,14 @@
 ---
-title: class mip::FileHandler 
-description: Documents the mip::filehandler class of the Microsoft Information Protection (MIP) SDK.
+title: class FileHandler 
+description: Documents the filehandler::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::FileHandler 
+# class FileHandler 
 Interface for all file handling functions.
   
 ## Summary
@@ -22,7 +22,7 @@ public void SetLabel(const std::shared_ptr\<Label\>& label, const LabelingOption
 public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Deletes the sensitivity label from the file.
 public void SetProtection(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor, const ProtectionSettings& protectionSettings)  |  Sets either custom or template-based permissions (according to protectionDescriptor->GetProtectionType) to the file.
 public void SetProtection(const std::shared_ptr\<ProtectionHandler\>& protectionHandler)  |  Sets protection on a document using an existing protection handler.
-public void RemoveProtection()  |  Removes protection from the file. If the file is labeled, the label will be lost.
+public void RemoveProtection()  |  Removes protection from the file. If the original file format does not support labeling, the label will be lost when protection is removed. When the native format supports labeling, the label metadata is maintained.
 public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  parameter.
 public void CommitAsync(const std::shared_ptr\<Stream\>& outputStream, const std::shared_ptr\<void\>& context) | Writes the changes to the stream specified by the \|outputStream\ |  parameter.
 public bool IsModified()  |  Checks if there are changes to commit to the file.
@@ -54,7 +54,7 @@ Create a file inspector object, used to retrieve file contents from compatible f
 ### SetLabel function
 Sets the sensitivity label to the file.
 Changes won't be written to the file until CommitAsync is called. Privileged and Auto method allows the API to override any existing label 
-Throws JustificationRequiredError when setting the label requires the operation to be justified (via the labelingOptions parameter).
+Throws [JustificationRequiredError](class_mip_justificationrequirederror.md) when setting the label requires the operation to be justified (via the labelingOptions parameter).
   
 ### DeleteLabel function
 Deletes the sensitivity label from the file.
@@ -70,7 +70,7 @@ Sets protection on a document using an existing protection handler.
 Changes won't be written to the file until CommitAsync is called.
   
 ### RemoveProtection function
-Removes protection from the file. If the file is labeled, the label will be lost.
+Removes protection from the file. If the original file format does not support labeling, the label will be lost when protection is removed. When the native format supports labeling, the label metadata is maintained.
 Changes won't be written to the file until CommitAsync is called.
   
 ### CommitAsync function

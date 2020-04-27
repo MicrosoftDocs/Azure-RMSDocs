@@ -1,14 +1,14 @@
 ---
-title: class mip::Error 
-description: Documents the mip::error class of the Microsoft Information Protection (MIP) SDK.
+title: class Error 
+description: Documents the error::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::Error 
+# class Error 
 Base class for all errors that will be reported (thrown or returned) from MIP SDK.
   
 ## Summary

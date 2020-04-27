@@ -26,6 +26,63 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
 
+## Version 1.6.103
+
+**Release date**: April 16, 2020
+
+### General SDK Changes
+
+- TLS 1.2 enforced for all non-ADRMS HTTP communication.
+- Migrated iOS/MacOS HTTP implementation from NSURLConnection to NSURLSession.
+- Migrated iOS telemetry component from Aria SDK to 1DS SDK.
+- Telemetry component now uses MIP's HttpDelegate on iOS, MacOs, and Linux. (Previously only win32).
+- Improved type safety for C API.
+- Moved AuthDelegate from Profile to Engine in C++, C#, and Java APIs.
+- AuthDelegate moved from constructor of `Profile::Settings` to `Engine::Settings`.
+- Added Category to NoPolicyError to provide more info about why policy sync failed.
+- Added `PolicyEngine::GetTenantId` method.
+- Added explicit sovereign cloud support.
+  - New `Engine::Settings::SetCloud` method to set target cloud (GCC High, 21-Vianet, etc.).
+  - Existing `Engine::Settings::SetCloudEndpointBaseUrl` method call is no longer necessary for recognized clouds.
+- Enabled bitcode for iOS binaries.
+
+### File SDK
+
+- Added `IFileHandler::InspectAsync` to C# and Java Wrappers
+- New support via `FileProfile::AcquirePolicyAuthToken` for triggering policy token acquisition to allow an application to warm up its token cache.    
+- `MsgInspector::GetAttachments` returns `vector<shared_ptr<MsgAttachmentData>>` instead of `vector<unique_ptr<MsgAttachmentData>>`
+- `TelemetryConfiguration::isOptedOut` setting now completely disables telemetry. Previously a set of minimum telemetry was sent.
+
+### Policy SDK
+
+- New support for triggering token acquisition to allow an application to warm up its token cache via `PolicyProfile::AcquireAuthToken`.
+- HYOK labels are filtered by default.
+- Metadata associated with deleted labels will now be removed.
+- If there is ever a mismatch between cached label policy and sensitivity policy, the policy cache will now be cleared.
+- New support for versioned metadata:
+  - A file format may rev the location/format of its label metadata. In that case, an application should provide MIP with all metadata, and MIP will determine which metadata is "true".
+  - `ContentLabel::GetExtendedProperties` now returns `vector<MetadataEntry>` instead of `vector<pair<string, string>>`.
+  - `MetadataAction::GetMetadataToAdd` now returns `vector<MetadataEntry>` instead of `vector<pair<string, string>>`.
+  - `ExecutionState::GetContentMetadata` should now return `vector<MetadataEntry>` instead of `vector<pair<string, string>>`.
+  - `ExecutionState::GetContentMetadataVersion` should return the highest version of metadata that the application recognizes for the current file format (usually 0).
+  - `PolicyEngine::GetWxpMetadataVersion` returns the metadata version for Office documents as configured by tenant admin (0 = default, 1 = coauth-enabled format).
+  - Equivalent changes in C API:
+    - `MIP_CC_ContentLabel_GetExtendedProperties`
+    - `MIP_CC_MetadataAction_GetMetadataToAdd`
+    - `mip_cc_metadata_callback`
+    - `mip_cc_document_state`
+    - `MIP_CC_PolicyEngine_GetWxpMetadataVersion`
+- `TelemetryConfiguration::isOptedOut` setting now completely disables telemetry. Previously a set of minimum telemetry was sent. 
+
+### Protection SDK
+
+- New support for registration and revocation for doc tracking.
+- New support for generating a pre-license when publishing.
+- Exposed public Microsoft SSL cert used by protection service.
+   - `GetMsftCert` and `GetMsftCertPEM`
+   - If an application overrides `HttpDelegate` interface, it must trust server certificates issued by this CA.
+   - This requirement is expected be removed late in 2020.    
+
 ## Version 1.5.124
 
 **Release date**: March 2, 2020

@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: reference
 
 ms.author: mbaldwin
-ms.date: 11/4/2019
+ms.date: 4/16/2020
 ---
 
 # Structures
@@ -51,6 +51,24 @@ typedef struct {
 
 ```
 
+## mip_cc_handle
+
+Opaque handle to MIP object
+
+| Field | Description |
+|---|---|
+| typeId | Magic number uniquely identifying s specific handle type  |
+| data | Raw handle data  |
+
+
+```c
+typedef struct {
+  uint32_t typeId; 
+  void* data;      
+} mip_cc_handle;
+
+```
+
 ## mip_cc_guid
 
 GUID
@@ -77,6 +95,29 @@ typedef struct {
   const char* key;   
   const char* value; 
 } mip_cc_kv_pair;
+
+```
+
+## mip_cc_error
+
+Error information
+
+```c
+typedef struct {
+  mip_cc_result result;
+  char description[ERROR_STRING_BUFFER_SIZE];
+
+  // MIP_RESULT_ERROR_NETWORK details
+  mip_cc_network_error_category networkError_Category;
+  int32_t networkError_ResponseCode;
+
+  // MIP_RESULT_ERROR_NO_PERMISSIONS details
+  char noPermissionsError_Owner[ERROR_STRING_BUFFER_SIZE];
+  char noPermissionsError_Referrer[ERROR_STRING_BUFFER_SIZE];
+
+  // MIP_RESULT_ERROR_SERVICE_DISABLED details
+  mip_cc_service_disabled_error_extent serviceDisabledError_Extent;
+} mip_cc_error;
 
 ```
 
@@ -154,16 +195,18 @@ typedef struct {
 
 ## mip_cc_identity
 
-A struct that includes application specific information 
+A struct that contains user identification info
 
 | Field | Description |
 |---|---|
 | email | User email address  |
+| name | User friendly name, used for content marking.  |
 
 
 ```c
 typedef struct {
   const char* email;          
+  const char* name;           
 } mip_cc_identity;
 
 ```
@@ -259,7 +302,7 @@ Represents the current state of the application as it performs a label-related o
 | actionState | Describes if/how an application is attempting to change label state.  |
 | newLabel | If 'actionType' is 'UPDATE': New label.  |
 | newLabelExtendedProperties | If 'actionType' is 'UPDATE': Additional properties to be written to metadata.  |
-| newLabelAssignementMethod | If 'actionType' is 'UPDATE': The method of assignment of the new label.  |
+| newLabelAssignmentMethod | If 'actionType' is 'UPDATE': The method of assignment of the new label.  |
 | isDowngradeJustified | If 'actionType' is 'UPDATE': Whether or not a label downgrade has been justified by user.  |
 | downgradeJustification | If 'actionType' is 'UPDATE': Label downgrade justification text provided by user.  |
 | supportedActions | Enum mask describing the label-related actions an application is able to perform.  |
@@ -270,7 +313,7 @@ typedef struct {
   mip_cc_label_action_state actionState;                    
   mip_cc_label newLabel;                                    
   mip_cc_dictionary newLabelExtendedProperties;             
-  mip_cc_label_assignment_method newLabelAssignementMethod; 
+  mip_cc_label_assignment_method newLabelAssignmentMethod;  
   bool isDowngradeJustified;                                
   const char* downgradeJustification;                       
   mip_cc_label_action_type supportedActions;                
@@ -280,23 +323,72 @@ typedef struct {
 
 ## mip_cc_document_state
 
-Represents the current state of a label-aware document.
-
-| Field | Description |
-|---|---|
-| contentId | Human-readable document description visible in tenant audit portal. Example for a file: [path\filename]; example for an email: [Subject:Sender]. |
-| dataState | State of document data as application interacts with it  |
-| contentMetadataCallback | Document metadata callback  |
-| protectionDescriptor | Protection descriptor if document is currently protected, else null  |
-| contentFormat | Format of document (file vs. email)  |
-| auditMetadata | Optional application-specific metadata that is used when sending audit reports. Recognized values: 'Sender': Sender email address; 'Recipients': JSON array of email recipients; 'LastModifiedBy': Email address of the user who last modified a document; 'LastModifiedDate': Date a document was last modified. |
+Callback function definition for retrieving document metatdata, filtered by name/prefix
 
 ```c
 typedef struct {
+  /**
+   * Human-readable document description visible in tenant audit portal
+   *     Example for a file: [path\filename]
+   *     Example for an email: [Subject:Sender]
+   */
   const char* contentId;
+
+  /**
+   * State of document data as application interacts with it
+   */
   mip_cc_data_state dataState;
+
+  /**
+   * Document metadata callback
+   */
   mip_cc_metadata_callback contentMetadataCallback;
+
+  /**
+   * Protection descriptor if document is currently protected, else null
+   */
   mip_cc_protection_descriptor protectionDescriptor;
+
+  /**
+   * Format of document (file vs. email)
+   */
   mip_cc_content_format contentFormat;
+
+  /**
+   * Optional application-specific metadata that is used when sending audit reports
+   *     Recognized values:
+   *       'Sender': Sender email address
+   *       'Recipients': JSON array of email recipients
+   *       'LastModifiedBy': Email address of the user who last modified a document
+   *       'LastModifiedDate': Date a document was last modified
+   */
   mip_cc_dictionary auditMetadata;
+  
+  /**
+   * Document metadata version, default should be 0.
+   */
+  unsigned int contentMetadataVersion;
 } mip_cc_document_state;
+
+```
+
+## mip_cc_metadata_entry
+
+Metadata entry
+
+| Field | Description |
+|---|---|
+| key | Key entry |
+| value | Value entry  |
+| version | Version entry, should be initialized to 0 unless otherwise known |
+
+
+```c
+typedef struct {
+  const char* key;        
+  const char* value;      
+  uint32_t version;       
+} mip_cc_metadata_entry;
+
+```
+

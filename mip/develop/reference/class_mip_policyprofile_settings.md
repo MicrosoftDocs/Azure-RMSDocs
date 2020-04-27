@@ -1,22 +1,21 @@
 ---
-title: class mip::PolicyProfile::Settings 
-description: Documents the mip::policyprofile class of the Microsoft Information Protection (MIP) SDK.
+title: class PolicyProfile::Settings 
+description: Documents the policyprofile::settings class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::PolicyProfile::Settings 
+# class PolicyProfile::Settings 
 Settings used by PolicyProfile during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<AuthDelegate\>& authDelegate, const std::shared_ptr\<PolicyProfile::Observer\>& observer)  |  Interface for configuring the profile.
+public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<PolicyProfile::Observer\>& observer)  |  Interface for configuring the profile.
 public CacheStorageType GetCacheStorageType() const  |  Get whether caches are stored in memory or on disk.
-public const std::shared_ptr\<AuthDelegate\>& GetAuthDelegate() const  |  Get the Auth Delegate.
 public const std::shared_ptr\<PolicyProfile::Observer\>& GetObserver() const  |  Get the event observer.
 public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Get the HTTP delegate (if any) provided by the application.
@@ -41,9 +40,6 @@ Parameters:
 * **cacheStorageType**: Store any cached state in memory or on disk 
 
 
-* **authDelegate**: The authentication delegate used by the SDK to acquire authentication tokens. 
-
-
 * **observer**: A class implementing the PolicyProfile::Observer interface. Can be nullptr.
 
 
@@ -53,12 +49,6 @@ Get whether caches are stored in memory or on disk.
 
   
 **Returns**: Storage type used
-  
-### GetAuthDelegate function
-Get the Auth Delegate.
-
-  
-**Returns**: The Auth Delegate.
   
 ### GetObserver function
 Get the event observer.
