@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: reference
 
 ms.author: mbaldwin
-ms.date: 11/4/2019
+ms.date: 4/16/2020
 ---
 
 # Functions
@@ -68,6 +68,7 @@ Parameter | Description
 | entries | Array of key/value pairs |
 | count | Number of key/value pairs |
 | dictionary | [Output] Newly-created dictionary |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -77,7 +78,8 @@ Parameter | Description
 mip_cc_result MIP_CC_CreateDictionary(
     const mip_cc_kv_pair* entries,
     const int64_t count,
-    mip_cc_dictionary* dictionary);
+    mip_cc_dictionary* dictionary,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Dictionary_GetEntries
@@ -91,6 +93,7 @@ Parameter | Description
 | dictionary | Source dictionary |
 | entries | [Output] Array of key/value pairs, memory owned by mip_cc_dictionary object |
 | count | [Output] Number of key/value pairs |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -100,7 +103,8 @@ Parameter | Description
 mip_cc_result MIP_CC_Dictionary_GetEntries(
     const mip_cc_dictionary dictionary,
     mip_cc_kv_pair** entries,
-    int64_t* count);
+    int64_t* count,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseDictionary
@@ -162,6 +166,7 @@ Parameter | Description
 | sendCallback | Function pointer for issuing HTTP requests |
 | cancelCallback | Function pointer for cancelling HTTP requests |
 | httpDelegate | [Output] Handle to HTTP delegate object |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -169,7 +174,8 @@ Parameter | Description
 mip_cc_result MIP_CC_CreateHttpDelegate(
     const mip_cc_http_send_callback_fn sendCallback,
     const mip_cc_http_cancel_callback_fn cancelCallback,
-    mip_cc_http_delegate* httpDelegate);
+    mip_cc_http_delegate* httpDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_NotifyHttpDelegateResponse
@@ -261,6 +267,7 @@ Parameter | Description
 | flushCallback | Function pointer for flushing logs |
 | writeCallback | Function pointer for writing a log statement |
 | loggerDelegate | [Output] Handle to logger delegate object |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -269,7 +276,8 @@ mip_cc_result MIP_CC_CreateLoggerDelegate(
     const mip_cc_logger_init_callback_fn initCallback,
     const mip_cc_logger_flush_callback_fn flushCallback,
     const mip_cc_logger_write_callback_fn writeCallback,
-    mip_cc_logger_delegate* loggerDelegate);
+    mip_cc_logger_delegate* loggerDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseLoggerDelegate
@@ -301,6 +309,7 @@ Parameter | Description
 | loggerDelegateOverride | (Optional) Logger override implementation |
 | telemetryOverride | (Optional) Overridden telemetry settings. If NULL, default settings will be used |
 | mipContext | [Output] Newly-created MIP context instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -312,7 +321,8 @@ mip_cc_result MIP_CC_CreateMipContext(
     const bool isOfflineOnly,
     const mip_cc_logger_delegate loggerDelegateOverride,
     const mip_cc_telemetry_configuration telemetryOverride,
-    mip_cc_mip_context* mipContext);
+    mip_cc_mip_context* mipContext,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_CreateMipContextWithCustomFeatureSettings
@@ -332,6 +342,7 @@ Parameter | Description
 | featureSettings | (Optional) Array of custom feature overrides |
 | featureSettingsSize | Size of custom feature overrides (in # of overrides) |
 | mipContext | [Output] Newly-created MIP context instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -345,7 +356,8 @@ mip_cc_result MIP_CC_CreateMipContextWithCustomFeatureSettings(
     const mip_cc_telemetry_configuration telemetryOverride,
     const mip_cc_feature_override* featureSettings,
     const int64_t featureSettingsSize,
-    mip_cc_mip_context* mipContext);
+    mip_cc_mip_context* mipContext,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseMipContext
@@ -372,13 +384,15 @@ Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | protectionType | [Output] Protection type |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetProtectionType(
     const mip_cc_protection_descriptor protectionDescriptor,
-    mip_cc_protection_type* protectionType);
+    mip_cc_protection_type* protectionType,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetOwnerSize
@@ -391,13 +405,15 @@ Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | ownerSize | [Output] Size of buffer to hold owner (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetOwnerSize(
     const mip_cc_protection_descriptor protectionDescriptor,
-    int64_t* ownerSize);
+    int64_t* ownerSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetOwner
@@ -412,6 +428,7 @@ Parameter | Description
 | ownerBuffer | [Output] Buffer the owner will be copied into. |
 | ownerBufferSize | Size (in number of chars) of the ownerBuffer. |
 | actualOwnerSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -422,7 +439,8 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwner(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* ownerBuffer,
     const int64_t ownerBufferSize,
-    int64_t* actualOwnerSize);
+    int64_t* actualOwnerSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetNameSize
@@ -435,13 +453,15 @@ Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | nameSize | [Output] Size of buffer to hold name (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetNameSize(
     const mip_cc_protection_descriptor protectionDescriptor,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetName
@@ -456,6 +476,7 @@ Parameter | Description
 | nameBuffer | [Output] Buffer the name will be copied into. |
 | nameBufferSize | Size (in number of chars) of the nameBuffer. |
 | actualNameSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -466,7 +487,8 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetName(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetDescriptionSize
@@ -479,13 +501,15 @@ Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | descriptionSize | [Output] Size of buffer to hold description (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetDescriptionSize(
     const mip_cc_protection_descriptor protectionDescriptor,
-    int64_t* descriptionSize);
+    int64_t* descriptionSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetDescription
@@ -500,6 +524,7 @@ Parameter | Description
 | descriptionBuffer | [Output] Buffer the description will be copied into. |
 | descriptionBufferSize | Size (in number of chars) of the descriptionBuffer. |
 | actualDescriptionSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -510,7 +535,8 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescription(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* descriptionBuffer,
     const int64_t descriptionBufferSize,
-    int64_t* actualDescriptionSize);
+    int64_t* actualDescriptionSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetTemplateId
@@ -523,13 +549,15 @@ Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | templateId | [Output] Template ID associated with protection |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetTemplateId(
     const mip_cc_protection_descriptor protectionDescriptor,
-    mip_cc_guid* templateId);
+    mip_cc_guid* templateId,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetLabelId
@@ -542,13 +570,15 @@ Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | labelId | [Output] Label ID associated with protection |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetLabelId(
     const mip_cc_protection_descriptor protectionDescriptor,
-    mip_cc_guid* labelId);
+    mip_cc_guid* labelId,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetContentId
@@ -561,13 +591,15 @@ Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | contentId | [Output] Content ID associated with protection |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetContentId(
     const mip_cc_protection_descriptor protectionDescriptor,
-    mip_cc_guid* contentId);
+    mip_cc_guid* contentId,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_DoesContentExpire
@@ -580,13 +612,15 @@ Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | doesContentExpire | [Output] Whether or not content expires |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_DoesContentExpire(
     const mip_cc_protection_descriptor protectionDescriptor,
-    bool* doesContentExpire);
+    bool* doesContentExpire,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetContentValidUntil
@@ -599,13 +633,15 @@ Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | contentValidUntil | [Output] Content expiration time (in seconds since epoch) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetContentValidUntil(
     const mip_cc_protection_descriptor protectionDescriptor,
-    int64_t* contentValidUntil);
+    int64_t* contentValidUntil,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess
@@ -618,13 +654,15 @@ Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | doesAllowOfflineAccess | [Output] Whether or not offline access is allowed |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
     const mip_cc_protection_descriptor protectionDescriptor,
-    bool* doesAllowOfflineAccess);
+    bool* doesAllowOfflineAccess,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetReferrerSize
@@ -637,13 +675,15 @@ Parameter | Description
 |---|---|
 | protectionDescriptor | Descriptor associated with protected content |
 | referrerSize | [Output] Size of buffer to hold referrer (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrerSize(
     const mip_cc_protection_descriptor protectionDescriptor,
-    int64_t* referrerSize);
+    int64_t* referrerSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionDescriptor_GetReferrer
@@ -658,6 +698,7 @@ Parameter | Description
 | referrerBuffer | [Output] Buffer the referrer will be copied into. |
 | referrerBufferSize | Size (in number of chars) of the referrerBuffer. |
 | actualReferrerSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -668,7 +709,56 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrer(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* referrerBuffer,
     const int64_t referrerBufferSize,
-    int64_t* actualReferrerSize);
+    int64_t* actualReferrerSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ProtectionDescriptor_GetDoubleKeyUrlSize
+
+Gets size of buffer required to store double key URL
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| protectionDescriptor | Descriptor associated with protected content |
+| url | [Output] Size of buffer to hold double key URL (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_ProtectionDescriptor_GetDoubleKeyUrlSize(
+    const mip_cc_protection_descriptor protectionDescriptor,
+    int64_t* urlSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ProtectionDescriptor_GetDoubleKeyUrl
+
+Gets double key URL
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| protectionDescriptor | Descriptor associated with protected content |
+| urlBuffer | [Output] Buffer the url will be copied into. |
+| urlBufferSize | Size (in number of chars) of the urlBuffer. |
+| actualUrlSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: If urlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualUrlSize will be set to the minimum required buffer size. 
+
+```c
+mip_cc_result MIP_CC_ProtectionDescriptor_GetDoubleKeyUrl(
+    const mip_cc_protection_descriptor protectionDescriptor,
+    char* urlBuffer,
+    const int64_t urlBufferSize,
+    int64_t* actualUrlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseProtectionDescriptor
@@ -696,6 +786,7 @@ Parameter | Description
 | strings | Array of strings |
 | count | Number of strings |
 | stringList | [Output] Newly-created string list |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -705,7 +796,8 @@ Parameter | Description
 mip_cc_result MIP_CC_CreateStringList(
     const char** strings,
     const int64_t count,
-    mip_cc_string_list* stringList);
+    mip_cc_string_list* stringList,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_StringList_GetStrings
@@ -719,6 +811,7 @@ Parameter | Description
 | stringList | Source string list |
 | strings | [Output] Array of strings, memory owned by mip_cc_string_list object |
 | count | [Output] Number of strings |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -728,7 +821,8 @@ Parameter | Description
 mip_cc_result MIP_CC_StringList_GetStrings(
     const mip_cc_string_list stringList,
     const char*** strings,
-    int64_t* count);
+    int64_t* count,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseStringList
@@ -791,6 +885,7 @@ Parameter | Description
 | cancelTaskCallback | Function pointer for cancelling background tasks |
 | cancelAllTasksCallback | Function pointer for cancelling all background tasks |
 | taskDispatcher | [Output] Handle to task dispatcher delegate object |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -799,7 +894,8 @@ mip_cc_result MIP_CC_CreateTaskDispatcherDelegate(
     const mip_cc_dispatch_task_callback_fn dispatchTaskCallback,
     const mip_cc_cancel_task_callback_fn cancelTaskCallback,
     const mip_cc_cancel_all_tasks_callback_fn cancelAllTasksCallback,
-    mip_cc_task_dispatcher_delegate* taskDispatcher);
+    mip_cc_task_dispatcher_delegate* taskDispatcher,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ExecuteDispatchedTask
@@ -833,6 +929,25 @@ Parameter | Description
 void MIP_CC_ReleaseTaskDispatcherDelegate(mip_cc_task_dispatcher_delegate taskDispatcher);
 ```
 
+## MIP_CC_CreateTelemetryConfiguration
+
+Create a settings object used to create a protection profile
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| telemetryConfig | [Output] Newly-created telemetry configuration instance containing default settings |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_CreateTelemetryConfiguration(
+    mip_cc_telemetry_configuration* telemetryConfig,
+    mip_cc_error* errorInfo);
+```
+
 ## MIP_CC_TelemetryConfiguration_SetHostName
 
 Set a telemetry host name which will override internal telemetry settings
@@ -843,6 +958,7 @@ Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | hostName | Host name |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -851,7 +967,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetHostName(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const char* hostName);
+    const char* hostName,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetLibraryName
@@ -864,6 +981,7 @@ Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | libraryName | Name of DLL that implements the Aria/1DS SDK's C API |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -872,7 +990,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const char* libraryName);
+    const char* libraryName,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetHttpDelegate
@@ -885,6 +1004,7 @@ Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | httpDelegate | HTTP callback instance implemented by client application |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -893,7 +1013,29 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetHttpDelegate(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const mip_cc_http_delegate httpDelegate);
+    const mip_cc_http_delegate httpDelegate,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_TelemetryConfiguration_SetTaskDispatcherDelegate
+
+Override default async task dispatcher with client's own
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| telemetryConfig | Telemetry configuration |
+| taskDispatcherDelegate | Task dispatcher callback instance implemented by client application |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_TelemetryConfiguration_SetTaskDispatcherDelegate(
+    const mip_cc_telemetry_configuration telemetryConfig,
+    const mip_cc_task_dispatcher_delegate taskDispatcherDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled
@@ -906,6 +1048,7 @@ Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | isCachingEnabled | Whether or not the telemetry component is allowed ping network status on a background thread |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -914,7 +1057,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const bool isNetworkDetectionEnabled);
+    const bool isNetworkDetectionEnabled,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled
@@ -927,6 +1071,7 @@ Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | isCachingEnabled | Whether or not the telemetry component is allowed to write caches to disk |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -935,7 +1080,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const bool isCachingEnabled);
+    const bool isCachingEnabled,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled
@@ -948,6 +1094,7 @@ Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | isTraceLoggingEnabled | Whether or not the telemetry component is allowed to write logs to disk |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -956,7 +1103,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const bool isTraceLoggingEnabled);
+    const bool isTraceLoggingEnabled,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut
@@ -969,6 +1117,7 @@ Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | isTelemetryOptedOut | Whether or not an application/user has opted out of optional telemetry |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -977,7 +1126,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const bool isTelemetryOptedOut);
+    const bool isTelemetryOptedOut,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_TelemetryConfiguration_SetCustomSettings
@@ -990,13 +1140,38 @@ Parameter | Description
 |---|---|
 | telemetryConfig | Telemetry configuration |
 | customSettings | Custom telemetry settings |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetCustomSettings(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const mip_cc_dictionary customSettings);
+    const mip_cc_dictionary customSettings,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_TelemetryConfiguration_AddMaskedProperty
+
+Sets a telemetry property to mask
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| telemetryConfig | Telemetry configuration |
+| eventName | Event name |
+| propertyName | Property name |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_TelemetryConfiguration_AddMaskedProperty(
+    const mip_cc_telemetry_configuration telemetryConfig,
+    const char* eventName,
+    const char* propertyName,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseTelemetryConfiguration
@@ -1039,6 +1214,7 @@ Parameter | Description
 | settings | Protection handler settings |
 | context | Client context that will be opaquely passed to HttpDelegate and AuthDelegate |
 | handler | [Output] Newly-created protection handler instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1047,7 +1223,8 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
     const mip_cc_protection_engine engine,
     const mip_cc_protection_handler_publishing_settings settings,
     const void* context,
-    mip_cc_protection_handler* handler);
+    mip_cc_protection_handler* handler,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption
@@ -1062,6 +1239,7 @@ Parameter | Description
 | settings | Protection handler settings |
 | context | Client context that will be opaquely passed to HttpDelegate and AuthDelegate |
 | handler | [Output] Newly-created protection handler instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1070,7 +1248,8 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
   const mip_cc_protection_engine engine,
   const mip_cc_protection_handler_consumption_settings settings,
   const void* context,
-  mip_cc_protection_handler* handler);
+  mip_cc_protection_handler* handler,
+  mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionEngine_GetEngineIdSize
@@ -1083,13 +1262,15 @@ Parameter | Description
 |---|---|
 | engine | Protection engine |
 | idSize | [Output] Size of buffer to hold engine ID (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngine_GetEngineIdSize(
     const mip_cc_protection_engine engine,
-    int64_t* idSize);
+    int64_t* idSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionEngine_GetEngineId
@@ -1104,6 +1285,7 @@ Parameter | Description
 | idBuffer | [Output] Buffer the id will be copied into. |
 | idBufferSize | Size (in number of chars) of the idBuffer. |
 | actualIdSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1114,7 +1296,8 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineId(
     const mip_cc_protection_engine engine,
     char* idBuffer,
     const int64_t idBufferSize,
-    int64_t* actualIdSize);
+    int64_t* actualIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionEngine_GetTemplatesSize
@@ -1128,6 +1311,7 @@ Parameter | Description
 | engine | Protection engine |
 | context | Client context that will be opaquely passed to HttpDelegate and AuthDelegate |
 | templatesSize | [Output] Number of templates |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1137,7 +1321,8 @@ Parameter | Description
 mip_cc_result MIP_CC_ProtectionEngine_GetTemplatesSize(
     const mip_cc_protection_engine engine,
     const void* context,
-    int64_t* templatesSize);
+    int64_t* templatesSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionEngine_GetTemplates
@@ -1150,21 +1335,23 @@ Parameter | Description
 |---|---|
 | engine | Protection engine |
 | context | Client context that will be opaquely passed to HttpDelegate and AuthDelegate |
-| templateBuffer | [Output] Buffer the templates will be copied into. |
+| mip_cc_template_descriptor | [Output] buffer to create template handlers. |
 | templateBufferSize | Size (in number of items) of the templateBuffer. |
 | actualTemplatesSize | [Output] Number of template IDs written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
-**Note**: If templateBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTemplateSize will be set to the minimum required buffer size. 
+**Note**: If templateBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTemplateSize will be set to the minimum required buffer size. Each mip_cc_template_descriptor must be released by the caller by calling MIP_CC_ReleaseTemplateDescriptor(). 
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngine_GetTemplates(
     const mip_cc_protection_engine engine,
     const void* context,
-    mip_cc_guid* templateBuffer,
+    mip_cc_template_descriptor* templateDescriptors,
     const int64_t templateBufferSize,
-    int64_t* actualTemplatesSize);
+    int64_t* actualTemplatesSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionEngine_GetRightsForLabelId
@@ -1182,6 +1369,7 @@ Parameter | Description
 | ownerEmail | Owner of the document |
 | delagedUserEmail | Email of user if the authenticating user/application is acting on behalf of another user, empty if none |
 | rights | [Output] List of rights granted to a user, memory owned by caller |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1195,7 +1383,8 @@ mip_cc_result MIP_CC_ProtectionEngine_GetRightsForLabelId(
     const char* labelId,
     const char* ownerEmail,
     const char* delegatedUserEmail,
-    mip_cc_string_list* rights);
+    mip_cc_string_list* rights,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionEngine_GetClientDataSize
@@ -1208,13 +1397,15 @@ Parameter | Description
 |---|---|
 | engine | Protection engine |
 | clientDataSize | [Output] Size of client data (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngine_GetClientDataSize(
     const mip_cc_protection_engine engine,
-    int64_t* clientDataSize);
+    int64_t* clientDataSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionEngine_GetClientData
@@ -1229,6 +1420,7 @@ Parameter | Description
 | clientDataBuffer | [Output] Buffer the client data will be copied into |
 | clientDataBufferSize | Size (in number of chars) of clientDataBuffer. |
 | actualClientDataSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1239,7 +1431,8 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientData(
     const mip_cc_protection_engine engine,
     char* clientDataBuffer,
     const int64_t clientDataBufferSize,
-    int64_t* actualClientDataSize);
+    int64_t* actualClientDataSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_CreateProtectionEngineSettingsWithIdentity
@@ -1254,6 +1447,7 @@ Parameter | Description
 | clientData | Customizable client data that is stored alongside the engine |
 | locale | Locale in which text results will output |
 | engineSettings | [Output] Newly-created settings instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1262,7 +1456,8 @@ mip_cc_result MIP_CC_CreateProtectionEngineSettingsWithIdentity(
     const mip_cc_identity* identity,
     const char* clientData,
     const char* locale,
-    mip_cc_protection_engine_settings* engineSettings);
+    mip_cc_protection_engine_settings* engineSettings,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionEngineSettings_SetClientData
@@ -1275,13 +1470,15 @@ Parameter | Description
 |---|---|
 | settings | Engine settings |
 | clientData | Client data |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngineSettings_SetClientData(
     const mip_cc_protection_engine_settings engineSettings,
-    const char* clientData);
+    const char* clientData,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionEngineSettings_SetCustomSettings
@@ -1294,13 +1491,15 @@ Parameter | Description
 |---|---|
 | engineSettings | Engine settings |
 | customSettings | Key/value pairs of custom settings |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngineSettings_SetCustomSettings(
     const mip_cc_protection_engine_settings engineSettings,
-    const mip_cc_dictionary customSettings);
+    const mip_cc_dictionary customSettings,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionEngineSettings_SetSessionId
@@ -1313,13 +1512,38 @@ Parameter | Description
 |---|---|
 | settings | Engine settings |
 | sessionId | Session ID that represents the lifetime of a protection engine |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngineSettings_SetSessionId(
     const mip_cc_protection_engine_settings engineSettings,
-    const char* sessionId);
+    const char* sessionId,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ProtectionEngineSettings_SetCloud
+
+Sets cloud which affects endpoint URLs for all service requests
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| settings | Engine settings |
+| cloud | Cloud identifier (default = Unknown) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: If cloud is not specified, then it will be determined by DNS lookup of the engine's identity domain if possible, else fall back to global cloud. 
+
+```c
+mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloud(
+    const mip_cc_protection_engine_settings engineSettings,
+    const mip_cc_cloud cloud,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl
@@ -1332,13 +1556,17 @@ Parameter | Description
 |---|---|
 | settings | Engine settings |
 | cloudEndpointBaseUrl | Base URL (e.g. 'https://api.aadrm.com') |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
+
+**Note**: This value will only be read and must be set for Cloud = MIP_CLOUD_CUSTOM 
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
     const mip_cc_protection_engine_settings engineSettings,
-    const char* cloudEndpointBaseUrl);
+    const char* cloudEndpointBaseUrl,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseProtectionEngineSettings
@@ -1365,13 +1593,15 @@ Parameter | Description
 |---|---|
 | descriptor | Protection details |
 | settings | [Output] Newly-created settings instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_CreateProtectionHandlerPublishingSettings(
     const mip_cc_protection_descriptor descriptor,
-    mip_cc_protection_handler_publishing_settings* settings);
+    mip_cc_protection_handler_publishing_settings* settings,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorithmPreferred
@@ -1384,13 +1614,15 @@ Parameter | Description
 |---|---|
 | settings | Protection handler settings |
 | isDeprecatedAlgorithmPreferred | Whether or not deprecated algorithm is preferred |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorithmPreferred(
     const mip_cc_protection_handler_publishing_settings settings,
-    const bool isDeprecatedAlgorithmPreferred);
+    const bool isDeprecatedAlgorithmPreferred,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed
@@ -1403,13 +1635,15 @@ Parameter | Description
 |---|---|
 | settings | Protection handler settings |
 | isAuditedExtractionAllowed | Whether or not non-MIP-aware applications are allowed to open protected content |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed(
     const mip_cc_protection_handler_publishing_settings settings,
-    const bool isAuditedExtractionAllowed);
+    const bool isAuditedExtractionAllowed,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson
@@ -1422,13 +1656,15 @@ Parameter | Description
 |---|---|
 | settings | Protection handler settings |
 | isPublishingFormatJson | Whether or not resulting PL should be in JSON format |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson(
     const mip_cc_protection_handler_publishing_settings settings,
-    const bool isPublishingFormatJson);
+    const bool isPublishingFormatJson,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail
@@ -1441,6 +1677,7 @@ Parameter | Description
 |---|---|
 | settings | Protection handler settings |
 | delegatedUserEmail | Email address of delegated user |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1449,7 +1686,31 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
     const mip_cc_protection_handler_publishing_settings settings,
-    const char* delegatedUserEmail);
+    const char* delegatedUserEmail,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ProtectionHandlerPublishingSettings_SetPreLicenseUserEmail
+
+Sets pre-license user
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| settings | Protection handler settings |
+| preLicenseUserEmail | Email address of pre-license user |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: A pre-license user is specified when a pre-license should be fetched when publishing 
+
+```c
+mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetPreLicenseUserEmail(
+    const mip_cc_protection_handler_publishing_settings settings,
+    const char* preLicenseUserEmail,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_CreateProtectionHandlerConsumptionSettings
@@ -1462,9 +1723,8 @@ Parameter | Description
 |---|---|
 | publishingLicenseBuffer | Buffer containing raw publishing license |
 | publishingLicenseBufferSize | Size of publishing license buffer |
-| isOfflineOnly | Whether or not fetching a new license from RMS server is allowed |
-| delegatedUserEmail | (Optional) User on behalf of whom protection operations will be performed |
 | settings | [Output] Newly-created settings instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1472,7 +1732,35 @@ Parameter | Description
 mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettings(
     const uint8_t* publishingLicenseBuffer,
     const int64_t publishingLicenseBufferSize,
-    mip_cc_protection_handler_consumption_settings* settings);
+    mip_cc_protection_handler_consumption_settings* settings,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_CreateProtectionHandlerConsumptionSettingsWithPreLicense
+
+Create a settings object used to create a protection handler for consuming existing content
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| preLicenseBuffer | Buffer containing raw pre license buffer |
+| preLicenseBufferSize | Size of pre license buffer |
+| publishingLicenseBuffer | Buffer containing raw publishing license |
+| publishingLicenseBufferSize | Size of publishing license buffer |
+| settings | [Output] Newly-created settings instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettingsWithPreLicense(
+    const uint8_t* preLicenseBuffer,
+    const int64_t preLicenseBufferSize,
+    const uint8_t* publishingLicenseBuffer,
+    const int64_t publishingLicenseBufferSize,
+    mip_cc_protection_handler_consumption_settings* settings,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly
@@ -1485,6 +1773,7 @@ Parameter | Description
 |---|---|
 | settings | Protection handler settings |
 | isOfflineOnly | True if HTTP operations are forbidden, else false |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1493,7 +1782,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
     const mip_cc_protection_handler_consumption_settings settings,
-    const bool isOfflineOnly);
+    const bool isOfflineOnly,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail
@@ -1506,6 +1796,7 @@ Parameter | Description
 |---|---|
 | settings | Protection handler settings |
 | delegatedUserEmail | Email address of delegated user |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1514,7 +1805,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
     const mip_cc_protection_handler_consumption_settings settings,
-    const char* delegatedUserEmail);
+    const char* delegatedUserEmail,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize
@@ -1527,13 +1819,15 @@ Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | publishingLicenseBufferSize | [Output] Size of publishing license (in bytes) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
     const mip_cc_protection_handler handler,
-    int64_t* publishingLicenseBufferSize);
+    int64_t* publishingLicenseBufferSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_GetSerializedPublishingLicense
@@ -1548,6 +1842,7 @@ Parameter | Description
 | publishingLicenseBuffer | [Output] Buffer to which publishing license will be written |
 | publishingLicenseBufferSize | Size of publishing license buffer |
 | actualPublishingLicenseSize | [Output] Actual size of publishing license (in bytes) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1558,7 +1853,60 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
     const mip_cc_protection_handler handler,
     uint8_t* publishingLicenseBuffer,
     const int64_t publishingLicenseBufferSize,
-    int64_t* actualPublishingLicenseSize);
+    int64_t* actualPublishingLicenseSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ProtectionHandler_GetSerializedPreLicenseSize
+
+Gets size of pre-license (in bytes)
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| handler | Handler representing protected content |
+| format | Pre-license format |
+| preLicenseBufferSize | [Output] Size of pre-license (in bytes) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPreLicenseSize(
+    const mip_cc_protection_handler handler,
+    mip_cc_pre_license_format format,
+    int64_t* preLicenseBufferSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ProtectionHandler_GetSerializedPreLicense
+
+Gets pre-license
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| handler | Handler representing protected content |
+| format | Pre-license format |
+| preLicenseBuffer | [Output] Buffer to which pre-license will be written |
+| preLicenseBufferSize | Size of pre-license buffer |
+| actualPreLicenseSize | [Output] Actual size of pre-license (in bytes) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: If preLicenseBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualPreLicenseSize will be set to the minimum required buffer size. 
+
+```c
+mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPreLicense(
+    const mip_cc_protection_handler handler,
+    mip_cc_pre_license_format format,
+    uint8_t* preLicenseBuffer,
+    const int64_t preLicenseBufferSize,
+    int64_t* actualPreLicenseSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_GetProtectionDescriptor
@@ -1571,13 +1919,15 @@ Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | descriptor | [Output] Protection descriptor |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetProtectionDescriptor(
     const mip_cc_protection_handler handler,
-    mip_cc_protection_descriptor* descriptor);
+    mip_cc_protection_descriptor* descriptor,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_GetRights
@@ -1590,6 +1940,7 @@ Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | rights | [Output] List of rights granted to a user, memory owned by caller |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1598,7 +1949,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetRights(
     const mip_cc_protection_handler handler,
-    mip_cc_string_list* rights);
+    mip_cc_string_list* rights,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_GetProtectedContentSize
@@ -1613,6 +1965,7 @@ Parameter | Description
 | unprotectedSize | Size of unprotected/cleartext content (in bytes) |
 | includesFinalBlock | Describes if the unprotected content in question includes the final block or not. |
 | protectedSize | [Output] Size of protected content |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1621,7 +1974,8 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectedContentSize(
     const mip_cc_protection_handler handler,
     const int64_t unprotectedSize,
     const bool includesFinalBlock,
-    int64_t* protectedSize);
+    int64_t* protectedSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_GetBlockSize
@@ -1634,13 +1988,15 @@ Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | blockSize | [Output] Block size (in bytes) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetBlockSize(
     const mip_cc_protection_handler handler,
-    int64_t* blockSize);
+    int64_t* blockSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_GetIssuedUserSize
@@ -1653,13 +2009,15 @@ Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | issuedUserSize | [Output] Size of buffer to hold issued user (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUserSize(
     const mip_cc_protection_handler handler,
-    int64_t* issuedUserSize);
+    int64_t* issuedUserSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_GetIssuedUser
@@ -1674,6 +2032,7 @@ Parameter | Description
 | issuedUserBuffer | [Output] Buffer the issued user will be copied into. |
 | issuedUserBufferSize | Size (in number of chars) of the issuedUserBuffer. |
 | actualIssuedUserSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1684,7 +2043,8 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUser(
     const mip_cc_protection_handler handler,
     char* issuedUserBuffer,
     const int64_t issuedUserBufferSize,
-    int64_t* actualIssuedUserSize);
+    int64_t* actualIssuedUserSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_GetOwnerSize
@@ -1697,13 +2057,15 @@ Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | ownerSize | [Output] Size of buffer to hold issued user (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetOwnerSize(
     const mip_cc_protection_handler handler,
-    int64_t* ownerSize);
+    int64_t* ownerSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_GetOwner
@@ -1718,6 +2080,7 @@ Parameter | Description
 | ownerBuffer | [Output] Buffer the issued user will be copied into. |
 | ownerBufferSize | Size (in number of chars) of the ownerBuffer. |
 | actualOwnerSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1728,7 +2091,8 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwner(
     const mip_cc_protection_handler handler,
     char* ownerBuffer,
     const int64_t ownerBufferSize,
-    int64_t* actualOwnerSize);
+    int64_t* actualOwnerSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_GetContentId
@@ -1741,13 +2105,15 @@ Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | contentId | [Output] Content ID |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetContentId(
     const mip_cc_protection_handler handler,
-    mip_cc_guid* contentId);
+    mip_cc_guid* contentId,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm
@@ -1760,13 +2126,15 @@ Parameter | Description
 |---|---|
 | handler | Handler representing protected content |
 | doesUseDeprecatedAlgorithm | [Output] Whether or not protection handler uses deprecated crypto algorithm |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
     const mip_cc_protection_handler handler,
-    bool* doesUseDeprecatedAlgorithm);
+    bool* doesUseDeprecatedAlgorithm,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionHandler_DecryptBuffer
@@ -1784,6 +2152,7 @@ Parameter | Description
 | outputBufferSize | Size (in bytes) of output buffer |
 | isFinal | If input buffer contains the final encrypted bytes or not |
 | actualDecryptedSize | [Output] Actual size of encrypted content (in bytes) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -1796,7 +2165,8 @@ mip_cc_result MIP_CC_ProtectionHandler_DecryptBuffer(
     uint8_t* outputBuffer,
     const int64_t outputBufferSize,
     const bool isFinal,
-    int64_t *actualDecryptedSize);
+    int64_t *actualDecryptedSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseProtectionHandlerPublishingSettings
@@ -1851,13 +2221,15 @@ Parameter | Description
 |---|---|
 | settings | Profile settings |
 | profile | [Output] Newly-created protection profile instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_LoadProtectionProfile(
     const mip_cc_protection_profile_settings settings,
-    mip_cc_protection_profile* profile);
+    mip_cc_protection_profile* profile,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseProtectionProfile
@@ -1874,6 +2246,33 @@ Parameter | Description
 void MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
 ```
 
+## MIP_CC_CreateProtectionProfileSettings
+
+Create a settings object used to create a protection profile
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| mipContext | Global context shared across all profiles |
+| cacheStorageType | Storage cache configuration |
+| authCallback | Callback object to be used for authentication, implemented by client application |
+| consentCallback | Callback object to be used for consent, implemented by client application |
+| settings | [Output] Newly-created settings instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_CreateProtectionProfileSettings(
+    const mip_cc_mip_context mipContext,
+    const mip_cc_cache_storage_type cacheStorageType,
+    const mip_cc_auth_callback authCallback,
+    const mip_cc_consent_callback consentCallback,
+    mip_cc_protection_profile_settings* settings,
+    mip_cc_error* errorInfo);
+```
+
 ## MIP_CC_ProtectionProfileSettings_SetSessionId
 
 Sets the session ID that can be used to correlate logs and telemetry
@@ -1884,13 +2283,15 @@ Parameter | Description
 |---|---|
 | settings | Profile settings |
 | sessionId | Session ID that represents the lifetime of a protection profile |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionProfileSettings_SetSessionId(
     const mip_cc_protection_profile_settings settings,
-    const char* sessionId);
+    const char* sessionId,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses
@@ -1903,13 +2304,15 @@ Parameter | Description
 |---|---|
 | settings | Profile settings |
 | canCacheLicenses | Whether or not engine should cache a license when opening protected content |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
     const mip_cc_protection_profile_settings settings,
-    const bool canCacheLicenses);
+    const bool canCacheLicenses,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionProfileSettings_SetHttpDelegate
@@ -1922,13 +2325,15 @@ Parameter | Description
 |---|---|
 | settings | Profile settings to which HTTP delegate will be assigned |
 | httpDelegate | HTTP callback instance implemented by client application |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
     const mip_cc_protection_profile_settings settings,
-    const mip_cc_http_delegate httpDelegate);
+    const mip_cc_http_delegate httpDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate
@@ -1941,13 +2346,15 @@ Parameter | Description
 |---|---|
 | settings | Profile settings to which task dispatcher delegate will be assigned |
 | taskDispatcherDelegate | Task dispatcher callback instance implemented by client application |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
     const mip_cc_protection_profile_settings settings,
-    const mip_cc_task_dispatcher_delegate taskDispatcherDelegate);
+    const mip_cc_task_dispatcher_delegate taskDispatcherDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectionProfileSettings_SetCustomSettings
@@ -1960,13 +2367,15 @@ Parameter | Description
 |---|---|
 | settings | Profile settings |
 | customSettings | Key/value pairs of custom settings |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectionProfileSettings_SetCustomSettings(
     const mip_cc_protection_profile_settings settings,
-    const mip_cc_dictionary customSettings);
+    const mip_cc_dictionary customSettings,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseProtectionProfileSettings
@@ -1983,6 +2392,137 @@ Parameter | Description
 void MIP_CC_ReleaseProtectionProfileSettings(mip_cc_protection_profile_settings profilsettingseSettings);
 ```
 
+## MIP_CC_TemplateDescriptor_GetId
+
+Gets template ID
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| protectionDescriptor | Descriptor associated with protected content |
+| templateId | [Output] Template ID associated with protection |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_TemplateDescriptor_GetId(
+    const mip_cc_template_descriptor protectionDescriptor,
+    mip_cc_guid* templateId,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_TemplateDescriptor_GetNameSize
+
+Gets size of buffer required to store name
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| templateDescriptor | Descriptor associated with template |
+| nameSize | [Output] Size of buffer to hold name (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_TemplateDescriptor_GetNameSize(
+    const mip_cc_template_descriptor templateDescriptor,
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_TemplateDescriptor_GetName
+
+Gets Template name
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| templateDescriptor | Descriptor associated with template |
+| nameBuffer | [Output] Buffer the name will be copied into. |
+| nameBufferSize | Size (in number of chars) of the nameBuffer. |
+| actualNameSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: If NameBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualNameSize will be set to the minimum required buffer size. 
+
+```c
+mip_cc_result MIP_CC_TemplateDescriptor_GetName(
+    const mip_cc_template_descriptor templateDescriptor,
+    char* nameBuffer,
+    const int64_t nameBufferSize,
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_TemplateDescriptor_GetDescriptionSize
+
+Gets size of buffer required to store description
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| templateDescriptor | Descriptor associated with template |
+| descriptionSize | [Output] Size of buffer to hold description (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_TemplateDescriptor_GetDescriptionSize(
+    const mip_cc_template_descriptor templateDescriptor,
+    int64_t* descriptionSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_TemplateDescriptor_GetDescription
+
+Gets Template description
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| templateDescriptor | Descriptor associated with template |
+| descriptionBuffer | [Output] Buffer the description will be copied into. |
+| descriptionBufferSize | Size (in number of chars) of the descriptionBuffer. |
+| actualNameSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: If descriptionBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualDescriptionSize will be set to the minimum required buffer size. 
+
+```c
+mip_cc_result MIP_CC_TemplateDescriptor_GetDescription(
+    const mip_cc_template_descriptor templateDescriptor,
+    char* nameBuffer,
+    const int64_t nameBufferSize,
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ReleaseTemplateDescriptor
+
+Release resources associated with a template descriptor
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| templateDescriptor | Template descriptor to be released |
+
+```c
+void MIP_CC_ReleaseTemplateDescriptor(mip_cc_template_descriptor templateDescriptor);
+```
+
 ## MIP_CC_Action_GetType
 
 Gets an action's type
@@ -1993,13 +2533,15 @@ Parameter | Description
 |---|---|
 | action | Action |
 | actionType | [Output] Type of action |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_Action_GetType(
     const mip_cc_action action,
-    mip_cc_action_type* actionType);
+    mip_cc_action_type* actionType,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Action_GetId
@@ -2012,13 +2554,15 @@ Parameter | Description
 |---|---|
 | action | Action |
 | id | [Output] Unique action ID |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_Action_GetId(
     const mip_cc_action action,
-    mip_cc_guid* id);
+    mip_cc_guid* id,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ActionResult_GetActions
@@ -2032,6 +2576,7 @@ Parameter | Description
 | actionResult | Source action result |
 | actions | [Output] Array of actions, memory owned by mip_cc_action_result object |
 | count | [Output] Number of key/value pairs |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2041,7 +2586,8 @@ Parameter | Description
 mip_cc_result MIP_CC_ActionResult_GetActions(
     const mip_cc_action_result actionResult,
     mip_cc_action** actions,
-    int64_t* count);
+    int64_t* count,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseActionResult
@@ -2068,13 +2614,15 @@ Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | nameSize | [Output] Size of buffer to hold UI element name (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetUIElementName
@@ -2089,6 +2637,7 @@ Parameter | Description
 | nameBuffer | [Output] Buffer the UI element name will be copied into. |
 | nameBufferSize | Size (in number of chars) of the nameBuffer. |
 | actualNameSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2099,7 +2648,8 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetTextSize
@@ -2112,13 +2662,15 @@ Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | nameSize | [Output] Size of buffer to hold text (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetTextSize(
     const mip_cc_action action,
-    int64_t* textSize);
+    int64_t* textSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetText
@@ -2133,6 +2685,7 @@ Parameter | Description
 | textBuffer | [Output] Buffer the text will be copied into. |
 | textBufferSize | Size (in number of chars) of the textBuffer. |
 | actualTextSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2143,7 +2696,8 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetText(
     const mip_cc_action action,
     char* textBuffer,
     const int64_t textBufferSize,
-    int64_t* actualTextSize);
+    int64_t* actualTextSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetFontNameSize
@@ -2156,13 +2710,15 @@ Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | nameSize | [Output] Size of buffer to hold font name (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetFontNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetFontName
@@ -2177,6 +2733,7 @@ Parameter | Description
 | nameBuffer | [Output] Buffer the font name will be copied into. |
 | nameBufferSize | Size (in number of chars) of the nameBuffer. |
 | actualNameSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2187,7 +2744,8 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetFontSize
@@ -2200,13 +2758,15 @@ Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | fontSize | [Output] Font size |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetFontSize(
     const mip_cc_action action,
-    int32_t* fontSize);
+    int32_t* fontSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetFontColorSize
@@ -2219,13 +2779,15 @@ Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | colorSize | [Output] Size of buffer to hold font color (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetFontColorSize(
     const mip_cc_action action,
-    int64_t* colorSize);
+    int64_t* colorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetFontColor
@@ -2240,6 +2802,7 @@ Parameter | Description
 | colorBuffer | [Output] Buffer the font color will be copied into. |
 | colorBufferSize | Size (in number of chars) of the colorBuffer. |
 | actualColorSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2250,7 +2813,8 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColor(
     const mip_cc_action action,
     char* colorBuffer,
     const int64_t colorBufferSize,
-    int64_t* actualColorSize);
+    int64_t* actualColorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetAlignment
@@ -2263,13 +2827,15 @@ Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | alignment | [Output] Alignment |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetAlignment(
     const mip_cc_action action,
-    mip_cc_content_mark_alignment* alignment);
+    mip_cc_content_mark_alignment* alignment,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentFooterAction_GetMargin
@@ -2282,13 +2848,15 @@ Parameter | Description
 |---|---|
 | action | "add content footer" action |
 | marginSize | [Output] Margin size (in mm) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetMargin(
     const mip_cc_action action,
-    int32_t* marginSize);
+    int32_t* marginSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetUIElementNameSize
@@ -2301,13 +2869,15 @@ Parameter | Description
 |---|---|
 | action | "add content header" action |
 | nameSize | [Output] Size of buffer to hold UI element name (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetUIElementName
@@ -2322,6 +2892,7 @@ Parameter | Description
 | nameBuffer | [Output] Buffer the UI element name will be copied into. |
 | nameBufferSize | Size (in number of chars) of the nameBuffer. |
 | actualNameSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2332,7 +2903,8 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetTextSize
@@ -2345,13 +2917,15 @@ Parameter | Description
 |---|---|
 | action | "add content header" action |
 | nameSize | [Output] Size of buffer to hold text (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetTextSize(
     const mip_cc_action action,
-    int64_t* textSize);
+    int64_t* textSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetText
@@ -2366,6 +2940,7 @@ Parameter | Description
 | textBuffer | [Output] Buffer the text will be copied into. |
 | textBufferSize | Size (in number of chars) of the textBuffer. |
 | actualTextSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2376,7 +2951,8 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetText(
     const mip_cc_action action,
     char* textBuffer,
     const int64_t textBufferSize,
-    int64_t* actualTextSize);
+    int64_t* actualTextSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetFontNameSize
@@ -2389,13 +2965,15 @@ Parameter | Description
 |---|---|
 | action | "add content header" action |
 | nameSize | [Output] Size of buffer to hold font name (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetFontNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetFontName
@@ -2410,6 +2988,7 @@ Parameter | Description
 | nameBuffer | [Output] Buffer the font name will be copied into. |
 | nameBufferSize | Size (in number of chars) of the nameBuffer. |
 | actualNameSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2420,7 +2999,8 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetFontSize
@@ -2433,13 +3013,15 @@ Parameter | Description
 |---|---|
 | action | "add content header" action |
 | fontSize | [Output] Font size |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetFontSize(
     const mip_cc_action action,
-    int32_t* fontSize);
+    int32_t* fontSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetFontColorSize
@@ -2452,13 +3034,15 @@ Parameter | Description
 |---|---|
 | action | "add content header" action |
 | colorSize | [Output] Size of buffer to hold font color (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColorSize(
     const mip_cc_action action,
-    int64_t* colorSize);
+    int64_t* colorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetFontColor
@@ -2473,6 +3057,7 @@ Parameter | Description
 | colorBuffer | [Output] Buffer the font color will be copied into. |
 | colorBufferSize | Size (in number of chars) of the colorBuffer. |
 | actualColorSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2483,7 +3068,8 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColor(
     const mip_cc_action action,
     char* colorBuffer,
     const int64_t colorBufferSize,
-    int64_t* actualColorSize);
+    int64_t* actualColorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetAlignment
@@ -2496,13 +3082,15 @@ Parameter | Description
 |---|---|
 | action | "add content header" action |
 | alignment | [Output] Alignment |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetAlignment(
     const mip_cc_action action,
-    mip_cc_content_mark_alignment* alignment);
+    mip_cc_content_mark_alignment* alignment,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddContentHeaderAction_GetMargin
@@ -2515,13 +3103,15 @@ Parameter | Description
 |---|---|
 | action | "add content header" action |
 | marginSize | [Output] Margin size (in mm) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetMargin(
     const mip_cc_action action,
-    int32_t* marginSize);
+    int32_t* marginSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddWatermarkAction_GetUIElementNameSize
@@ -2534,13 +3124,15 @@ Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | nameSize | [Output] Size of buffer to hold UI element name (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddWatermarkAction_GetUIElementName
@@ -2555,6 +3147,7 @@ Parameter | Description
 | nameBuffer | [Output] Buffer the UI element name will be copied into. |
 | nameBufferSize | Size (in number of chars) of the nameBuffer. |
 | actualNameSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2565,7 +3158,8 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddWatermarkAction_GetLayout
@@ -2578,13 +3172,15 @@ Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | layout | [Output] Watermark layout |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetLayout(
     const mip_cc_action action,
-    mip_cc_watermark_layout* layout);
+    mip_cc_watermark_layout* layout,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddWatermarkAction_GetTextSize
@@ -2596,14 +3192,16 @@ Gets size of buffer required to store an "add watermark" action's text
 Parameter | Description
 |---|---|
 | action | "add watermark" action |
-| nameSize | [Output] Size of buffer to hold text (in number of chars) |
+| textSize | [Output] Size of buffer to hold text (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetTextSize(
     const mip_cc_action action,
-    int64_t* textSize);
+    int64_t* textSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddWatermarkAction_GetText
@@ -2618,6 +3216,7 @@ Parameter | Description
 | textBuffer | [Output] Buffer the text will be copied into. |
 | textBufferSize | Size (in number of chars) of the textBuffer. |
 | actualTextSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2628,7 +3227,8 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetText(
     const mip_cc_action action,
     char* textBuffer,
     const int64_t textBufferSize,
-    int64_t* actualTextSize);
+    int64_t* actualTextSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddWatermarkAction_GetFontNameSize
@@ -2641,13 +3241,15 @@ Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | nameSize | [Output] Size of buffer to hold font name (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetFontNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddWatermarkAction_GetFontName
@@ -2662,6 +3264,7 @@ Parameter | Description
 | nameBuffer | [Output] Buffer the font name will be copied into. |
 | nameBufferSize | Size (in number of chars) of the nameBuffer. |
 | actualNameSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2672,7 +3275,8 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddWatermarkAction_GetFontSize
@@ -2685,13 +3289,15 @@ Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | fontSize | [Output] Font size |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetFontSize(
     const mip_cc_action action,
-    int32_t* fontSize);
+    int32_t* fontSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddWatermarkAction_GetFontColorSize
@@ -2704,13 +3310,15 @@ Parameter | Description
 |---|---|
 | action | "add watermark" action |
 | colorSize | [Output] Size of buffer to hold font color (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetFontColorSize(
     const mip_cc_action action,
-    int64_t* colorSize);
+    int64_t* colorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_AddWatermarkAction_GetFontColor
@@ -2725,6 +3333,7 @@ Parameter | Description
 | colorBuffer | [Output] Buffer the font color will be copied into. |
 | colorBufferSize | Size (in number of chars) of the colorBuffer. |
 | actualColorSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2735,7 +3344,8 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColor(
     const mip_cc_action action,
     char* colorBuffer,
     const int64_t colorBufferSize,
-    int64_t* actualColorSize);
+    int64_t* actualColorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseContentLabel
@@ -2762,13 +3372,15 @@ Parameter | Description
 |---|---|
 | contentLabel | Label |
 | creationTime | [Output] Time when label was applied to document (in seconds since epoch) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ContentLabel_GetCreationTime(
     const mip_cc_content_label contentLabel,
-    int64_t* creationTime);
+    int64_t* creationTime,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ContentLabel_GetAssignmentMethod
@@ -2781,13 +3393,15 @@ Parameter | Description
 |---|---|
 | contentLabel | Label |
 | assignmentMethod | [Output] Assignment method (e.g. 'standard' or 'privileged') |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ContentLabel_GetAssignmentMethod(
     const mip_cc_content_label contentLabel,
-    mip_cc_label_assignment_method* assignmentMethod);
+    mip_cc_label_assignment_method* assignmentMethod,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ContentLabel_GetExtendedProperties
@@ -2800,6 +3414,7 @@ Parameter | Description
 |---|---|
 | contentLabel | Label |
 | properties | [Output] Dictionary of extended properties, memory owned by caller |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2808,7 +3423,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_ContentLabel_GetExtendedProperties(
     const mip_cc_content_label contentLabel,
-    mip_cc_dictionary* properties);
+    mip_cc_metadata_dictionary* properties,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ContentLabel_IsProtectionAppliedFromLabel
@@ -2820,14 +3436,16 @@ Gets whether or not a protection was applied by a label.
 Parameter | Description
 |---|---|
 | contentLabel | Label |
-| isProtectionAppliedByLabel | [Output] If document is protected and the protection was explicity applied by this label. |
+| isProtectionAppliedByLabel | [Output] If document is protected and the protection was explicitly applied by this label. |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
     const mip_cc_content_label contentLabel,
-    bool* isProtectionAppliedByLabel);
+    bool* isProtectionAppliedByLabel,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ContentLabel_GetLabel
@@ -2840,6 +3458,7 @@ Parameter | Description
 |---|---|
 | contentLabel | Label |
 | label | [Output] Generic label, memory owned by caller |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2848,7 +3467,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_ContentLabel_GetLabel(
     const mip_cc_content_label contentLabel,
-    mip_cc_label* label);
+    mip_cc_label* label,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_CustomAction_GetNameSize
@@ -2861,13 +3481,15 @@ Parameter | Description
 |---|---|
 | action | "custom" action |
 | nameSize | [Output] Size of buffer to hold name (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_CustomAction_GetNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_CustomAction_GetName
@@ -2882,6 +3504,7 @@ Parameter | Description
 | nameBuffer | [Output] Buffer the name will be copied into. |
 | nameBufferSize | Size (in number of chars) of the nameBuffer. |
 | actualNameSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2892,7 +3515,8 @@ mip_cc_result MIP_CC_CustomAction_GetName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_CustomAction_GetProperties
@@ -2905,6 +3529,7 @@ Parameter | Description
 |---|---|
 | action | "custom" action |
 | properties | [Output] Dictionary of properties, memory owned by caller |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -2913,7 +3538,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_CustomAction_GetProperties(
     const mip_cc_action action,
-    mip_cc_dictionary* properties);
+    mip_cc_dictionary* properties,
+    mip_cc_error* errorInfo);
 ```
 
 ## mip_cc_metadata_callback
@@ -2939,7 +3565,7 @@ MIP_CC_CALLBACK(mip_cc_metadata_callback,
     const char**,
     const int64_t,
     const void*,
-    mip_cc_dictionary*);
+    mip_cc_metadata_dictionary*);
 ```
 
 ## MIP_CC_ReleaseLabel
@@ -2966,13 +3592,15 @@ Parameter | Description
 |---|---|
 | label | Label |
 | labelId | [Output] Label ID |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_Label_GetId(
     const mip_cc_label label,
-    mip_cc_guid* labelId);
+    mip_cc_guid* labelId,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetNameSize
@@ -2985,13 +3613,15 @@ Parameter | Description
 |---|---|
 | label | Label |
 | nameSize | [Output] Size of buffer to hold name (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_Label_GetNameSize(
     const mip_cc_label label,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetName
@@ -3006,6 +3636,7 @@ Parameter | Description
 | nameBuffer | [Output] Buffer the name will be copied into. |
 | nameBufferSize | Size (in number of chars) of the nameBuffer. |
 | actualNameSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3016,7 +3647,8 @@ mip_cc_result MIP_CC_Label_GetName(
     const mip_cc_label label,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetDescriptionSize
@@ -3029,13 +3661,15 @@ Parameter | Description
 |---|---|
 | label | Label |
 | descriptionSize | [Output] Size of buffer to hold description (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_Label_GetDescriptionSize(
     const mip_cc_label label,
-    int64_t* descriptionSize);
+    int64_t* descriptionSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetDescription
@@ -3050,6 +3684,7 @@ Parameter | Description
 | descriptionBuffer | [Output] Buffer the description will be copied into. |
 | descriptionBufferSize | Size (in number of chars) of the descriptionBuffer. |
 | actualDescriptionSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3060,7 +3695,8 @@ mip_cc_result MIP_CC_Label_GetDescription(
     const mip_cc_label label,
     char* descriptionBuffer,
     const int64_t descriptionBufferSize,
-    int64_t* actualDescriptionSize);
+    int64_t* actualDescriptionSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetColorSize
@@ -3073,13 +3709,15 @@ Parameter | Description
 |---|---|
 | label | Label |
 | colorSize | [Output] Size of buffer to hold color (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_Label_GetColorSize(
     const mip_cc_label label,
-    int64_t* colorSize);
+    int64_t* colorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetColor
@@ -3094,6 +3732,7 @@ Parameter | Description
 | colorBuffer | [Output] Buffer the color will be copied into (in #RRGGBB format). |
 | colorBufferSize | Size (in number of chars) of the colorBuffer. |
 | actualColorSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3104,7 +3743,8 @@ mip_cc_result MIP_CC_Label_GetColor(
     const mip_cc_label label,
     char* colorBuffer,
     const int64_t colorBufferSize,
-    int64_t* actualColorSize);
+    int64_t* actualColorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetSensitivity
@@ -3117,13 +3757,15 @@ Parameter | Description
 |---|---|
 | label | Label |
 | sensitivity | [Output] Sensitivity level |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_Label_GetSensitivity(
     const mip_cc_label label,
-    int32_t* sensitivity);
+    int32_t* sensitivity,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetTooltipSize
@@ -3136,13 +3778,15 @@ Parameter | Description
 |---|---|
 | label | Label |
 | tooltipSize | [Output] Size of buffer to hold tooltip (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_Label_GetTooltipSize(
     const mip_cc_label label,
-    int64_t* tooltipSize);
+    int64_t* tooltipSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetTooltip
@@ -3157,6 +3801,7 @@ Parameter | Description
 | tooltipBuffer | [Output] Buffer the tooltip will be copied into. |
 | tooltipBufferSize | Size (in number of chars) of the tooltipBuffer. |
 | actualTooltipSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3167,7 +3812,8 @@ mip_cc_result MIP_CC_Label_GetTooltip(
     const mip_cc_label label,
     char* tooltipBuffer,
     const int64_t tooltipBufferSize,
-    int64_t* actualTooltipSize);
+    int64_t* actualTooltipSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetAutoTooltipSize
@@ -3180,13 +3826,15 @@ Parameter | Description
 |---|---|
 | label | Label |
 | tooltipSize | [Output] Size of buffer to hold tooltip (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_Label_GetAutoTooltipSize(
     const mip_cc_label label,
-    int64_t* tooltipSize);
+    int64_t* tooltipSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetAutoTooltip
@@ -3201,6 +3849,7 @@ Parameter | Description
 | tooltipBuffer | [Output] Buffer the tooltip will be copied into. |
 | tooltipBufferSize | Size (in number of chars) of the tooltipBuffer. |
 | actualTooltipSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3211,7 +3860,8 @@ mip_cc_result MIP_CC_Label_GetAutoTooltip(
     const mip_cc_label label,
     char* tooltipBuffer,
     const int64_t tooltipBufferSize,
-    int64_t* actualTooltipSize);
+    int64_t* actualTooltipSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_IsActive
@@ -3224,6 +3874,7 @@ Parameter | Description
 |---|---|
 | label | Label |
 | isActive | [Output] Whether or not a label is considered active. |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3232,7 +3883,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_Label_IsActive(
     const mip_cc_label label,
-    bool* isActive);
+    bool* isActive,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetParent
@@ -3245,13 +3897,15 @@ Parameter | Description
 |---|---|
 | label | Label |
 | parent | [Output] Parent label, if any, else null |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_Label_GetParent(
     const mip_cc_label label,
-    mip_cc_label* parent);
+    mip_cc_label* parent,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetChildrenSize
@@ -3264,13 +3918,15 @@ Parameter | Description
 |---|---|
 | label | Label |
 | childrenSize | [Output] Number of children |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_Label_GetChildrenSize(
     const mip_cc_label label,
-    int64_t* childrenSize);
+    int64_t* childrenSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetChildren
@@ -3285,6 +3941,7 @@ Parameter | Description
 | childrenBuffer | [Output] Buffer the children labels will be copied into. Children labels |
 | childrenBufferSize | Size (in number of labels) of the childrenBuffer. |
 | actualChildrenSize | [Output] Number of children labels written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3295,7 +3952,8 @@ mip_cc_result MIP_CC_Label_GetChildren(
     const mip_cc_label label,
     mip_cc_label* childrenBuffer,
     const int64_t childrenBufferSize,
-    int64_t* actualChildrenSize);
+    int64_t* actualChildrenSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_Label_GetCustomSettings
@@ -3308,6 +3966,7 @@ Parameter | Description
 |---|---|
 | label | Label |
 | settings | [Output] Dictionary of settings, owned by the caller |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3316,7 +3975,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_Label_GetCustomSettings(
     const mip_cc_label label,
-    mip_cc_dictionary* settings);
+    mip_cc_dictionary* settings,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_MetadataAction_GetMetadataToRemove
@@ -3329,6 +3989,7 @@ Parameter | Description
 |---|---|
 | action | "metadata" action |
 | metadataNames | [Output] Key names of metadata to remove, memory owned by caller |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3337,7 +3998,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
     const mip_cc_action action,
-    mip_cc_string_list* metadataNames);
+    mip_cc_string_list* metadataNames,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_MetadataAction_GetMetadataToAdd
@@ -3349,7 +4011,8 @@ Gets a "metadata" action's metadata to add
 Parameter | Description
 |---|---|
 | action | "metadata" action |
-| metadata | [Output] Key/value pairs of metadata to add, memory owned by caller |
+| metadata | [Output] list of metadata entries to add, memory owned by caller |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3358,7 +4021,72 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
     const mip_cc_action action,
-    mip_cc_dictionary* metadata);
+    mip_cc_metadata_dictionary* metadata,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_CreateMetadataDictionary
+
+Create a dictionary of string keys/values
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| entries | Array of metadata entries |
+| count | Number of metadata entries |
+| dictionary | [Output] Newly-created dictionary |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: A mip_cc_dictionary must be freed by calling MIP_CC_ReleaseDictionary 
+
+```c
+mip_cc_result MIP_CC_CreateMetadataDictionary(
+    const mip_cc_metadata_entry* entries,
+    const int64_t count,
+    mip_cc_metadata_dictionary* dictionary,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_MetadataDictionary_GetEntries
+
+Get metadata entries that compose a dictionary
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| dictionary | Source dictionary |
+| entries | [Output] Array of metadata entries, memory owned by mip_cc_dictionary object |
+| count | [Output] Number of metadata entries |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: The memory for 'entries' is owned by the mip_cc_dictionary object, so it should not be freed independently 
+
+```c
+mip_cc_result MIP_CC_MetadataDictionary_GetEntries(
+    const mip_cc_metadata_dictionary dictionary,
+    mip_cc_metadata_entry** entries,
+    int64_t* count,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ReleaseMetadataDictionary
+
+Release resources associated with a dictionary
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| dictionary | Dictionary to be released |
+
+```c
+void MIP_CC_ReleaseMetadataDictionary(mip_cc_metadata_dictionary dictionary);
 ```
 
 ## MIP_CC_ReleasePolicyEngine
@@ -3385,13 +4113,15 @@ Parameter | Description
 |---|---|
 | engine | Policy engine |
 | idSize | [Output] Size of buffer to hold engine ID (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetEngineIdSize(
     const mip_cc_policy_engine engine,
-    int64_t* idSize);
+    int64_t* idSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetEngineId
@@ -3406,6 +4136,7 @@ Parameter | Description
 | idBuffer | [Output] Buffer the id will be copied into. |
 | idBufferSize | Size (in number of chars) of the idBuffer. |
 | actualIdSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3416,7 +4147,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineId(
     const mip_cc_policy_engine engine,
     char* idBuffer,
     const int64_t idBufferSize,
-    int64_t* actualIdSize);
+    int64_t* actualIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetMoreInfoUrlSize
@@ -3429,13 +4161,15 @@ Parameter | Description
 |---|---|
 | engine | Policy engine |
 | moreInfoUrlSize | [Output] Size of client data (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
     const mip_cc_policy_engine engine,
-    int64_t* moreInfoUrlSize);
+    int64_t* moreInfoUrlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetMoreInfoUrl
@@ -3450,6 +4184,7 @@ Parameter | Description
 | moreInfoUrlBuffer | [Output] Buffer the client data will be copied into |
 | moreInfoUrlBufferSize | Size (in number of chars) of moreInfoUrlBuffer. |
 | actualMoreInfoUrlSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3460,7 +4195,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrl(
     const mip_cc_policy_engine engine,
     char* moreInfoUrlBuffer,
     const int64_t moreInfoUrlBufferSize,
-    int64_t* actualMoreInfoUrlSize);
+    int64_t* actualMoreInfoUrlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_IsLabelingRequired
@@ -3473,13 +4209,15 @@ Parameter | Description
 |---|---|
 | engine | Policy engine |
 | isLabelingRequired | [Output] Whether or not policy dictates that a document must be labeled |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_IsLabelingRequired(
     const mip_cc_policy_engine engine,
-    bool* isLabelingRequired);
+    bool* isLabelingRequired,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetPolicyFileIdSize
@@ -3492,13 +4230,15 @@ Parameter | Description
 |---|---|
 | engine | Policy engine |
 | policyFileIdSize | [Output] Size of client data (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileIdSize(
     const mip_cc_policy_engine engine,
-    int64_t* policyFileIdSize);
+    int64_t* policyFileIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetPolicyFileId
@@ -3513,6 +4253,7 @@ Parameter | Description
 | policyFileIdBuffer | [Output] Buffer the client data will be copied into |
 | policyFileIdBufferSize | Size (in number of chars) of policyFileIdBuffer. |
 | actualPolicyFileIdSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3523,7 +4264,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileId(
     const mip_cc_policy_engine engine,
     char* policyFileIdBuffer,
     const int64_t policyFileIdBufferSize,
-    int64_t* actualPolicyFileIdSize);
+    int64_t* actualPolicyFileIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetSensitivityFileIdSize
@@ -3536,13 +4278,15 @@ Parameter | Description
 |---|---|
 | engine | Policy engine |
 | sensitivityFileIdSize | [Output] Size of client data (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
     const mip_cc_policy_engine engine,
-    int64_t* sensitivityFileIdSize);
+    int64_t* sensitivityFileIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetSensitivityFileId
@@ -3557,6 +4301,7 @@ Parameter | Description
 | sensitivityFileIdBuffer | [Output] Buffer the client data will be copied into |
 | sensitivityFileIdBufferSize | Size (in number of chars) of sensitivityFileIdBuffer. |
 | actualSensitivityFileIdSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3567,7 +4312,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileId(
     const mip_cc_policy_engine engine,
     char* sensitivityFileIdBuffer,
     const int64_t sensitivityFileIdBufferSize,
-    int64_t* actualSensitivityFileIdSize);
+    int64_t* actualSensitivityFileIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_HasClassificationRules
@@ -3580,13 +4326,15 @@ Parameter | Description
 |---|---|
 | engine | Policy engine |
 | hasClassificationRules | [Output] Whether or not policy has automatic or recommendation rules |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_HasClassificationRules(
     const mip_cc_policy_engine engine,
-    bool* hasClassificationRules);
+    bool* hasClassificationRules,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetLastPolicyFetchTime
@@ -3599,13 +4347,15 @@ Parameter | Description
 |---|---|
 | engine | Policy engine |
 | lastPolicyFetchTime | [Output] Time when the policy was last fetched (in seconds since epoch) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
     const mip_cc_policy_engine engine,
-    int64_t* lastPolicyFetchTime);
+    int64_t* lastPolicyFetchTime,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetSensitivityLabelsSize
@@ -3618,13 +4368,15 @@ Parameter | Description
 |---|---|
 | engine | Policy engine |
 | labelsSize | [Output] Number of labels |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
     const mip_cc_policy_engine engine,
-    int64_t* labelsSize);
+    int64_t* labelsSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetSensitivityLabels
@@ -3639,6 +4391,7 @@ Parameter | Description
 | labelBuffer | [Output] Buffer the labels will be copied into. Labels are owned by the client |
 | labelBufferSize | Size (in number of labels) of the labelBuffer. |
 | actualLabelsSize | [Output] Number of labels written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3649,7 +4402,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabels(
     const mip_cc_policy_engine engine,
     mip_cc_label* labelBuffer,
     const int64_t labelBufferSize,
-    int64_t* actualLabelsSize);
+    int64_t* actualLabelsSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetLabelById
@@ -3663,6 +4417,7 @@ Parameter | Description
 | engine | Policy engine |
 | labelId | Label ID |
 | label | [Output] Sensitivity label. This value is owned by the caller and must be released with MIP_CC_ReleaseLabel. |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3670,7 +4425,8 @@ Parameter | Description
 mip_cc_result MIP_CC_PolicyEngine_GetLabelById(
     const mip_cc_policy_engine engine,
     const char* labelId,
-    mip_cc_label* label);
+    mip_cc_label* label,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetSensitivityTypesSize
@@ -3683,13 +4439,15 @@ Parameter | Description
 |---|---|
 | engine | Policy engine |
 | sensitivityTypesSize | [Output] Number of sensitivity types |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesSize(
     const mip_cc_policy_engine engine,
-    int64_t* sensitivityTypesSize);
+    int64_t* sensitivityTypesSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetSensitivityTypes
@@ -3704,6 +4462,7 @@ Parameter | Description
 | sensitivityTypeBuffer | [Output] Buffer the sensitivity types will be copied into. Sensitivity |
 | sensitivityTypeBufferSize | Size (in number of sensitivity types) of the sensitivityTypeBuffer. |
 | actualSensitivityTypesSize | [Output] Number of sensitivity types written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3714,7 +4473,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypes(
     const mip_cc_policy_engine engine,
     mip_cc_sensitivity_type* sensitivityTypeBuffer,
     const int64_t sensitivityTypeBufferSize,
-    int64_t* actualSensitivityTypesSize);
+    int64_t* actualSensitivityTypesSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_CreatePolicyHandler
@@ -3728,6 +4488,7 @@ Parameter | Description
 | engine | Policy engine |
 | isAuditDiscoveryEnabled | Whether or not audit discovery is enabled |
 | handler | [Output] Newly-created Policy Handler instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3735,7 +4496,8 @@ Parameter | Description
 mip_cc_result MIP_CC_PolicyEngine_CreatePolicyHandler(
     const mip_cc_policy_engine engine,
     const bool isAuditDiscoveryEnabled,
-    mip_cc_policy_handler* handler);
+    mip_cc_policy_handler* handler,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_SendApplicationAuditEvent
@@ -3749,6 +4511,7 @@ Parameter | Description
 | level | Level of the event: Info/Error/Warning |
 | eventType | A description of the type of event |
 | eventData | The data associated with the event |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3757,7 +4520,56 @@ mip_cc_result MIP_CC_PolicyEngine_SendApplicationAuditEvent(
     const mip_cc_policy_engine engine,
     const char* level,
     const char* eventType,
-    const char* eventData);
+    const char* eventData,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_PolicyEngine_GetTenantIdSize
+
+Gets size of tenant ID
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| engine | Policy engine |
+| tenantIdSize | [Output] Size of tenant ID (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_PolicyEngine_GetTenantIdSize(
+    const mip_cc_policy_engine engine,
+    int64_t* tenantIdSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_PolicyEngine_GetTenantId
+
+Gets tenant ID
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| engine | Policy engine |
+| tenantIdBuffer | [Output] Buffer the tenant ID will be copied into. |
+| tenantIdBufferSize | Size (in number of chars) of the tenantIdBuffer. |
+| actualTenantIdSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: If tenantIdBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualTenantIdSize will be set to the minimum required buffer size. 
+
+```c
+mip_cc_result MIP_CC_PolicyEngine_GetTenantId(
+    const mip_cc_policy_engine engine,
+    char* tenantIdBuffer,
+    const int64_t tenantIdBufferSize,
+    int64_t* actualTenantIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetPolicyDataXmlSize
@@ -3770,13 +4582,15 @@ Parameter | Description
 |---|---|
 | engine | Policy engine |
 | xmlSize | [Output] Size of policy data xml (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
     const mip_cc_policy_engine engine,
-    int64_t* xmlSize);
+    int64_t* xmlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetPolicyDataXml
@@ -3791,6 +4605,7 @@ Parameter | Description
 | xmlBuffer | [Output] Buffer the xml will be copied into. |
 | xmlBufferSize | Size (in number of chars) of the xmlBuffer. |
 | actualXmlSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3801,7 +4616,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXml(
     const mip_cc_policy_engine engine,
     char* xmlBuffer,
     const int64_t xmlBufferSize,
-    int64_t* actualXmlSize);
+    int64_t* actualXmlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize
@@ -3814,13 +4630,15 @@ Parameter | Description
 |---|---|
 | engine | Policy engine |
 | xmlSize | [Output] Size of policy data xml (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
     const mip_cc_policy_engine engine,
-    int64_t* xmlSize);
+    int64_t* xmlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetSensitivityTypesDataXml
@@ -3835,6 +4653,7 @@ Parameter | Description
 | xmlBuffer | [Output] Buffer the xml will be copied into. |
 | xmlBufferSize | Size (in number of chars) of the xmlBuffer. |
 | actualXmlSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3845,7 +4664,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
     const mip_cc_policy_engine engine,
     char* xmlBuffer,
     const int64_t xmlBufferSize,
-    int64_t* actualXmlSize);
+    int64_t* actualXmlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetClientDataSize
@@ -3858,13 +4678,15 @@ Parameter | Description
 |---|---|
 | engine | Policy engine |
 | clientDataSize | [Output] Size of client data (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetClientDataSize(
     const mip_cc_policy_engine engine,
-    int64_t* clientDataSize);
+    int64_t* clientDataSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngine_GetClientData
@@ -3879,6 +4701,7 @@ Parameter | Description
 | clientDataBuffer | [Output] Buffer the client data will be copied into |
 | clientDataBufferSize | Size (in number of chars) of clientDataBuffer. |
 | actualClientDataSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3889,7 +4712,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientData(
     const mip_cc_policy_engine engine,
     char* clientDataBuffer,
     const int64_t clientDataBufferSize,
-    int64_t* actualClientDataSize);
+    int64_t* actualClientDataSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_CreatePolicyEngineSettingsWithIdentity
@@ -3905,6 +4729,7 @@ Parameter | Description
 | locale | Locale in which text results will output |
 | loadSensitivityTypes | Whether or not sensitivity types data (for classification) should also be loaded |
 | settings | [Output] Newly-created settings instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -3916,7 +4741,8 @@ mip_cc_result MIP_CC_CreatePolicyEngineSettingsWithIdentity(
     const char* clientData,
     const char* locale,
     bool loadSensitivityTypes,
-    mip_cc_policy_engine_settings* settings);
+    mip_cc_policy_engine_settings* settings,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngineSettings_SetClientData
@@ -3929,13 +4755,15 @@ Parameter | Description
 |---|---|
 | settings | Engine settings |
 | clientData | Client data |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngineSettings_SetClientData(
     const mip_cc_policy_engine_settings settings,
-    const char* clientData);
+    const char* clientData,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngineSettings_SetCustomSettings
@@ -3948,13 +4776,15 @@ Parameter | Description
 |---|---|
 | settings | Engine settings |
 | customSettings | Key/value pairs of custom settings |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngineSettings_SetCustomSettings(
     const mip_cc_policy_engine_settings settings,
-    const mip_cc_dictionary customSettings);
+    const mip_cc_dictionary customSettings,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngineSettings_SetSessionId
@@ -3967,13 +4797,38 @@ Parameter | Description
 |---|---|
 | settings | Engine settings |
 | sessionId | Session ID that represents the lifetime of a policy engine |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyEngineSettings_SetSessionId(
     const mip_cc_policy_engine_settings settings,
-    const char* sessionId);
+    const char* sessionId,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_PolicyEngineSettings_SetCloud
+
+Sets cloud which affects endpoint URLs for all service requests
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| settings | Engine settings |
+| cloud | Cloud identifier (default = Unknown) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: If cloud is not specified, then it will default to global cloud. 
+
+```c
+mip_cc_result MIP_CC_PolicyEngineSettings_SetCloud(
+    const mip_cc_policy_engine_settings settings,
+    const mip_cc_cloud cloud,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl
@@ -3985,14 +4840,18 @@ Sets base URL for all service requests
 Parameter | Description
 |---|---|
 | settings | Engine settings |
-| cloudEndpointBaseUrl | Base URL (e.g. 'https://api.aadrm.com') |
+| cloudEndpointBaseUrl | Base URL (e.g. 'https://dataservice.protection.outlook.com') |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
+
+**Note**: This value will only be read and must be set for Cloud = MIP_CLOUD_CUSTOM 
 
 ```c
 mip_cc_result MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
     const mip_cc_policy_engine_settings settings,
-    const char* cloudEndpointBaseUrl);
+    const char* cloudEndpointBaseUrl,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail
@@ -4005,6 +4864,7 @@ Parameter | Description
 |---|---|
 | settings | Engine settings |
 | delegatedUserEmail | Email address of delegated user |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -4013,7 +4873,29 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
     const mip_cc_policy_engine_settings settings,
-    const char* delegatedUserEmail);
+    const char* delegatedUserEmail,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_PolicyEngineSettings_SetLabelFilter
+
+Sets label filter
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| settings | Engine settings |
+| labelFilter | enum representing label filter, if not set default is hyok, doublekeyencryption |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_PolicyEngineSettings_SetLabelFilter(
+    const mip_cc_policy_engine_settings settings,
+    const mip_cc_label_filter labelFilter,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleasePolicyEngineSettings
@@ -4056,6 +4938,7 @@ Parameter | Description
 | documentState | Document state |
 | context | Application context opaquely forwarded to any callbacks |
 | contentLabel | Label currently applied to a document |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -4064,7 +4947,8 @@ mip_cc_result MIP_CC_PolicyHandler_GetSensitivityLabel(
     const mip_cc_policy_handler handler,
     const mip_cc_document_state* documentState,
     const void* context,
-    mip_cc_content_label* contentLabel);
+    mip_cc_content_label* contentLabel,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyHandler_ComputeActions
@@ -4080,6 +4964,7 @@ Parameter | Description
 | applicationState | Application action state |
 | context | Application context opaquely forwarded to any callbacks |
 | actionResult | [Output] Actions that should be taken by application, memory owned by caller |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -4091,7 +4976,8 @@ mip_cc_result MIP_CC_PolicyHandler_ComputeActions(
     const mip_cc_document_state* documentState,
     const mip_cc_application_action_state* applicationState,
     const void* context,
-    mip_cc_action_result* actionResult);
+    mip_cc_action_result* actionResult,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyHandler_NotifyCommittedActions
@@ -4106,6 +4992,7 @@ Parameter | Description
 | documentState | Document state |
 | applicationState | Application action state |
 | context | Application context opaquely forwarded to any callbacks |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -4116,7 +5003,33 @@ mip_cc_result MIP_CC_PolicyHandler_NotifyCommittedActions(
     const mip_cc_policy_handler handler,
     const mip_cc_document_state* documentState,
     const mip_cc_application_action_state* applicationState,
-    const void* context);
+    const void* context,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_PolicyProfile_AcquireAuthToken
+
+Trigger an authentication callback
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| profile | Profile |
+| cloud | Azure cloud |
+| authCallback | Authentication callback that will be invoked |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: MIP will not cache or do anything else with the value returned by the auth delegate. This function is recommended for applications that aren't "logged in" until after MIP requests an auth token. It allows an application to fetch a token before MIP actually requires one. 
+
+```c
+mip_cc_result MIP_CC_PolicyProfile_AcquireAuthToken(
+    const mip_cc_policy_profile profile,
+    const mip_cc_cloud cloud,
+    const mip_cc_auth_callback authCallback,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_LoadPolicyProfile
@@ -4129,13 +5042,15 @@ Parameter | Description
 |---|---|
 | settings | Profile settings |
 | profile | [Output] Newly-created policy profile instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_LoadPolicyProfile(
     const mip_cc_policy_profile_settings settings,
-    mip_cc_policy_profile* profile);
+    mip_cc_policy_profile* profile,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleasePolicyProfile
@@ -4152,6 +5067,31 @@ Parameter | Description
 void MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
 ```
 
+## MIP_CC_CreatePolicyProfileSettings
+
+Create a settings object used to create a policy profile
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| mipContext | Global context shared across all profiles |
+| cacheStorageType | Storage cache configuration |
+| authCallback | Callback object to be used for authentication, implemented by client application |
+| settings | [Output] Newly-created settings instance |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_CreatePolicyProfileSettings(
+    const mip_cc_mip_context mipContext,
+    const mip_cc_cache_storage_type cacheStorageType,
+    const mip_cc_auth_callback authCallback,
+    mip_cc_policy_profile_settings* settings,
+    mip_cc_error* errorInfo);
+```
+
 ## MIP_CC_PolicyProfileSettings_SetSessionId
 
 Sets the session ID that can be used to correlate logs and telemetry
@@ -4162,13 +5102,15 @@ Parameter | Description
 |---|---|
 | settings | Profile settings |
 | sessionId | Session ID that represents the lifetime of a policy profile |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyProfileSettings_SetSessionId(
     const mip_cc_policy_profile_settings settings,
-    const char* sessionId);
+    const char* sessionId,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyProfileSettings_SetHttpDelegate
@@ -4181,13 +5123,15 @@ Parameter | Description
 |---|---|
 | settings | Profile settings to which HTTP delegate will be assigned |
 | httpDelegate | HTTP callback instance implemented by client application |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyProfileSettings_SetHttpDelegate(
     const mip_cc_policy_profile_settings settings,
-    const mip_cc_http_delegate httpDelegate);
+    const mip_cc_http_delegate httpDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate
@@ -4200,13 +5144,15 @@ Parameter | Description
 |---|---|
 | settings | Profile settings to which task dispatcher delegate will be assigned |
 | taskDispatcherDelegate | Task dispatcher callback instance implemented by client application |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
     const mip_cc_policy_profile_settings settings,
-    const mip_cc_task_dispatcher_delegate taskDispatcherDelegate);
+    const mip_cc_task_dispatcher_delegate taskDispatcherDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_PolicyProfileSettings_SetCustomSettings
@@ -4219,13 +5165,15 @@ Parameter | Description
 |---|---|
 | settings | Profile settings |
 | customSettings | Key/value pairs of custom settings |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_PolicyProfileSettings_SetCustomSettings(
     const mip_cc_policy_profile_settings settings,
-    const mip_cc_dictionary customSettings);
+    const mip_cc_dictionary customSettings,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleasePolicyProfileSettings
@@ -4239,7 +5187,55 @@ Parameter | Description
 | settings | Policy profile settings to be released |
 
 ```c
-void MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profilsettingseSettings);
+void MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profileSettings);
+```
+
+## MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrlSize
+
+Gets size of buffer required to store the double key encryption url.
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| action | "protect by adhoc policy with double key" action |
+| urlSize | [Output] Size of buffer to hold the url (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrlSize(
+    const mip_cc_action action,
+    int64_t* urlSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrl
+
+Gets double key encryption url
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| action | "protect by adhoc policy with double key" action |
+| urlBuffer | [Output] Buffer the url will be copied into. |
+| urlBufferSize | Size (in number of chars) of the urlBuffer. |
+| actualUrlSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: If urlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualUrlSize will be set to the minimum required buffer size. 
+
+```c
+mip_cc_result MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrl(
+    const mip_cc_action action,
+    char* urlBuffer,
+    const int64_t urlBufferSize,
+    int64_t* actualUrlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ProtectByTemplateAction_GetTemplateId
@@ -4252,13 +5248,132 @@ Parameter | Description
 |---|---|
 | action | "protect by template" action |
 | templateId | [Output] ID of template that defines protections |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_ProtectByTemplateAction_GetTemplateId(
     const mip_cc_action action,
-    mip_cc_guid* templateId);
+    mip_cc_guid* templateId,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ProtectByTemplateDkAction_GetTemplateId
+
+Gets a "protect by template with double key" action's template ID
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| action | "protect by template" action |
+| templateId | [Output] ID of template that defines protections |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetTemplateId(
+    const mip_cc_action action,
+    mip_cc_guid* templateId,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrlSize
+
+Gets size of buffer required to store the double key encryption url.
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| action | "protect by template with double key" action |
+| urlSize | [Output] Size of buffer to hold the url (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrlSize(
+    const mip_cc_action action,
+    int64_t* urlSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrl
+
+Gets double key encryption url
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| action | "protect by template with double key" action |
+| urlBuffer | [Output] Buffer the url will be copied into. |
+| urlBufferSize | Size (in number of chars) of the urlBuffer. |
+| actualUrlSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: If urlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualUrlSize will be set to the minimum required buffer size. 
+
+```c
+mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrl(
+    const mip_cc_action action,
+    char* urlBuffer,
+    const int64_t urlBufferSize,
+    int64_t* actualUrlSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrlSize
+
+Gets size of buffer required to store the double key encryption url.
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| action | "protect by dp not forward policy with double key" action |
+| urlSize | [Output] Size of buffer to hold the url (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+```c
+mip_cc_result MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrlSize(
+    const mip_cc_action action,
+    int64_t* urlSize,
+    mip_cc_error* errorInfo);
+```
+
+## MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrl
+
+Gets double key encryption url
+
+**Parameters**
+
+Parameter | Description
+|---|---|
+| action | "protect by dp not forward policy with double key" action |
+| urlBuffer | [Output] Buffer the url will be copied into. |
+| urlBufferSize | Size (in number of chars) of the urlBuffer. |
+| actualUrlSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
+
+**Return**: Result code indicating success or failure
+
+**Note**: If urlBuffer is null or insufficient, MIP_RESULT_ERROR_INSUFFICIENT_BUFFER will be returned and actualUrlSize will be set to the minimum required buffer size. 
+
+```c
+mip_cc_result MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrl(
+    const mip_cc_action action,
+    char* urlBuffer,
+    const int64_t urlBufferSize,
+    int64_t* actualUrlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_RemoveContentFooterAction_GetUIElementNames
@@ -4271,6 +5386,7 @@ Parameter | Description
 |---|---|
 | action | "remove content footer" action |
 | names | [Output] Names of UI elements to remove, memory owned by caller |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -4279,7 +5395,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_RemoveContentFooterAction_GetUIElementNames(
     const mip_cc_action action,
-    mip_cc_string_list* names);
+    mip_cc_string_list* names,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_RemoveContentHeaderAction_GetUIElementNames
@@ -4292,6 +5409,7 @@ Parameter | Description
 |---|---|
 | action | "remove content header" action |
 | names | [Output] Names of UI elements to remove, memory owned by caller |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -4300,7 +5418,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
     const mip_cc_action action,
-    mip_cc_string_list* names);
+    mip_cc_string_list* names,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_RemoveWatermarkAction_GetUIElementNames
@@ -4313,6 +5432,7 @@ Parameter | Description
 |---|---|
 | action | "remove watermark footer" action |
 | names | [Output] Names of UI elements to remove, memory owned by caller |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -4321,7 +5441,8 @@ Parameter | Description
 ```c
 mip_cc_result MIP_CC_RemoveWatermarkAction_GetUIElementNames(
     const mip_cc_action action,
-    mip_cc_string_list* names);
+    mip_cc_string_list* names,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_ReleaseSensitivityType
@@ -4348,13 +5469,15 @@ Parameter | Description
 |---|---|
 | sensitivityType | Sensitivity type |
 | idSize | [Output] Size of buffer to hold rule package ID (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_SensitivityType_GetRulePackageIdSize(
     const mip_cc_sensitivity_type sensitivityType,
-    int64_t* idSize);
+    int64_t* idSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_SensitivityType_GetRulePackageId
@@ -4369,6 +5492,7 @@ Parameter | Description
 | idBuffer | [Output] Buffer the ID will be copied into. |
 | idBufferSize | Size (in number of chars) of the idBuffer. |
 | actualIdSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -4379,7 +5503,8 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageId(
     const mip_cc_sensitivity_type sensitivityType,
     char* idBuffer,
     const int64_t idBufferSize,
-    int64_t* actualIdSize);
+    int64_t* actualIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_SensitivityType_GetRulePackageSize
@@ -4392,13 +5517,15 @@ Parameter | Description
 |---|---|
 | sensitivityType | Sensitivity type |
 | rulePackageSize | [Output] Size of buffer to hold rule package (in number of chars) |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
 ```c
 mip_cc_result MIP_CC_SensitivityType_GetRulePackageSize(
     const mip_cc_sensitivity_type sensitivityType,
-    int64_t* rulePackageSize);
+    int64_t* rulePackageSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## MIP_CC_SensitivityType_GetRulePackage
@@ -4413,6 +5540,7 @@ Parameter | Description
 | rulePackageBuffer | [Output] Buffer the rule package will be copied into. |
 | rulePackageBufferSize | Size (in number of chars) of the rulePackageBuffer. |
 | actualRulePackageSize | [Output] Number of chars written to the buffer |
+| errorInfo | [Output] (Optional) Failure info if operation result is error |
 
 **Return**: Result code indicating success or failure
 
@@ -4423,6 +5551,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackage(
     const mip_cc_sensitivity_type sensitivityType,
     char* rulePackageBuffer,
     const int64_t rulePackageBufferSize,
-    int64_t* actualRulePackageSize);
+    int64_t* actualRulePackageSize,
+    mip_cc_error* errorInfo);
 ```
 

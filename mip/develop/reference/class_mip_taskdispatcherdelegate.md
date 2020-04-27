@@ -1,14 +1,14 @@
 ---
-title: class mip::TaskDispatcherDelegate 
-description: Documents the mip::taskdispatcherdelegate class of the Microsoft Information Protection (MIP) SDK.
+title: class TaskDispatcherDelegate 
+description: Documents the taskdispatcherdelegate::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::TaskDispatcherDelegate 
+# class TaskDispatcherDelegate 
 A class that defines the interface to the MIP SDK task dispatcher.
   
 ## Summary

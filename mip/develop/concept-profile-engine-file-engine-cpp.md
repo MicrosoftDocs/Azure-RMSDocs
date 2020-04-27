@@ -24,13 +24,14 @@ As covered in [Profile and Engine objects](concept-profile-engine-cpp.md), an en
 
 ### Create File Engine Settings
 
-Similar to a profile, the engine also requires a settings object, `mip::FileEngine::Settings`. This object stores the unique engine identifier, customizable client data that can be used for debugging or telemetry, and, optionally, the locale.
+Similar to a profile, the engine also requires a settings object, `mip::FileEngine::Settings`. This object stores the unique engine identifier, the `mip::AuthDelegate` implemenatation, customizable client data that can be used for debugging or telemetry, and, optionally, the locale.
 
 Here we create a `FileEngine::Settings` object called *engineSettings* using the identity of the application user.
 
 ```cpp
 FileEngine::Settings engineSettings(
   mip::Identity(mUsername), // mip::Identity.
+  authDelegateImpl,         // auth delegate object
   "",                       // Client data. Customizable by developer, stored with engine.
   "en-US",                  // Locale.
   false);                   // Load sensitive information types for driving classification.
@@ -40,10 +41,11 @@ Also valid is providing a custom engine ID:
 
 ```cpp
 FileEngine::Settings engineSettings(
-  "myEngineId", // string
-  "",           // Client data in string format. Customizable by developer, stored with engine.
-  "en-US",      // Locale. Default is en-US
-  false);       // Load sensitive information types for driving classification. Default is false.
+  "myEngineId",     // string
+  authDelegateImpl, // auth delegate object
+  "",               // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",          // Locale. Default is en-US
+  false);           // Load sensitive information types for driving classification. Default is false.
 ```
 
 As a best practice, the first parameter, `id`, should be something that allows the engine to be easily connected to the associated user. Something like email address, UPN, or AAD object GUID would ensure that the ID is both unique and can be loaded from local state without calling the service.
@@ -56,8 +58,11 @@ To add the engine, we'll go back to the promise/future pattern used to load the 
   //auto profile will be std::shared_ptr<mip::FileProfile>
   auto profile = profileFuture.get();
 
+  // Instantiate the AuthDelegate implementation.
+  auto authDelegateImpl = std::make_shared<sample::auth::AuthDelegateImpl>(appInfo, userName, password);
+
   //Create the FileEngine::Settings object
-  FileEngine::Settings engineSettings("UniqueID", "");
+  FileEngine::Settings engineSettings("UniqueID", authDelegateImpl, "");
 
   //Create a promise for std::shared_ptr<mip::FileEngine>
   auto enginePromise = std::make_shared<std::promise<std::shared_ptr<mip::FileEngine>>>();

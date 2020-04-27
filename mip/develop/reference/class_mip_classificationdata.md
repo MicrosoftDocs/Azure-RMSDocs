@@ -1,14 +1,14 @@
 ---
-title: class mip::ClassificationData 
-description: Documents the mip::classificationdata class of the Microsoft Information Protection (MIP) SDK.
+title: class ClassificationData 
+description: Documents the classificationdata::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::ClassificationData 
+# class ClassificationData 
   
 ## Summary
  Members                        | Descriptions                                

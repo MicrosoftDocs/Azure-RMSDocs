@@ -1,14 +1,14 @@
 ---
-title: class mip::FileEngine 
-description: Documents the mip::fileengine class of the Microsoft Information Protection (MIP) SDK.
+title: class FileEngine 
+description: Documents the fileengine::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::FileEngine 
+# class FileEngine 
 This class provides an interface for all engine functions.
   
 ## Summary
@@ -42,7 +42,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: FileEngine::Settings).
+**See also**: [FileEngine::Settings](class_mip_fileengine_settings.md).
   
 ### GetDefaultSensitivityLabel function
 Get the default sensitivity label.

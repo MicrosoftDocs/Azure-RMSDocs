@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: reference
 
 ms.author: mbaldwin
-ms.date: 11/4/2019
+ms.date: 4/16/2020
 ---
 
 # Enumerations
@@ -133,20 +133,36 @@ Defines new features by name
 
 | Field | Description |
 |---|---|
-|  MIP_FLIGHTING_FEATURE_SERVICE_DISCOVERY = 0      | Rely on separate HTTP call to determine RMS service endpoints (default false) |
-|  MIP_FLIGHTING_FEATURE_AUTH_INFO_CACHE = 1        | Cache OAuth2 challenges per domain/tenant to reduce unnecessary 401 responses. Disable for apps/services that manage their own HTTP auth (default true)  |
-|  MIP_FLIGHTING_FEATURE_LINUX_ENCRYPTED_CACHE = 2  | Enable encrypted caching for Linux platforms (default false)  |
-|  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3     | Enable single company name for dns lookup. e.g. https://corprights  |
-|  MIP_FLIGHTING_FEATURE_POLICY_AUTH = 4            | Enable automatic HTTP authentication for requests sent to Policy service. Disable for apps/services that manage their own HTTP auth (default true)  |
+|  MIP_FLIGHTING_FEATURE_SERVICE_DISCOVERY = 0          | Rely on separate HTTP call to determine RMS service endpoints (default false) |
+|  MIP_FLIGHTING_FEATURE_AUTH_INFO_CACHE = 1            | Cache OAuth2 challenges per domain/tenant to reduce unnecessary 401 responses. Disable for apps/services that manage their own HTTP auth (default true)  |
+|  MIP_FLIGHTING_FEATURE_LINUX_ENCRYPTED_CACHE = 2      | Enable encrypted caching for Linux platforms (default false)  |
+|  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3         | Enable single company name for dns lookup (e.g. https://corprights)  |
+|  MIP_FLIGHTING_FEATURE_POLICY_AUTH = 4                | Enable automatic HTTP authentication for requests sent to Policy service. Disable for apps/services that manage their own HTTP auth (default true)  |
+|  MIP_FLIGHTING_FEATURE_URL_REDIRECT_CACHE = 5         | Cache URL redirects to reduce number of HTTP operations  |
+|  MIP_FLIGHTING_FEATURE_PRE_LICENSE = 6                | Enable pre license api check  |
+|  MIP_FLIGHTING_FEATURE_DOUBLE_KEY_PROTECTION = 7      | Enable double key protection feature to use a customer key to encrypt with  |
+|  MIP_FLIGHTING_FEATURE_VARIABLE_POLICY_TTL = 8        | Enable variable policy ttl in storage  |
+|  MIP_FLIGHTING_FEATURE_VARIABLE_TEXT_MARKING = 9      | Enable variable text marking  |
+|  MIP_FLIGHTING_FEATURE_OPTIMIZE_PDF_MEMORY = 10       | Enable Optimize Pdf Memory Creator in protect and unprotect PDF files  |
+|  MIP_FLIGHTING_FEATURE_REMOVE_DELETED_LABEL_MD = 11   | Enable removing delete label's meta data  |
+|  MIP_FLIGHTING_FEATURE_ENFORCE_TLS12 = 12             | Enforce TLS 1.2 for non-ADRMS HTTPS connections  |
 
 
 ```c
 typedef enum {
-  MIP_FLIGHTING_FEATURE_SERVICE_DISCOVERY = 0,     
-  MIP_FLIGHTING_FEATURE_AUTH_INFO_CACHE = 1,       
-  MIP_FLIGHTING_FEATURE_LINUX_ENCRYPTED_CACHE = 2, 
-  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3,    
-  MIP_FLIGHTING_FEATURE_POLICY_AUTH = 4,           
+  MIP_FLIGHTING_FEATURE_SERVICE_DISCOVERY = 0,         
+  MIP_FLIGHTING_FEATURE_AUTH_INFO_CACHE = 1,           
+  MIP_FLIGHTING_FEATURE_LINUX_ENCRYPTED_CACHE = 2,     
+  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3,        
+  MIP_FLIGHTING_FEATURE_POLICY_AUTH = 4,               
+  MIP_FLIGHTING_FEATURE_URL_REDIRECT_CACHE = 5,        
+  MIP_FLIGHTING_FEATURE_PRE_LICENSE = 6,               
+  MIP_FLIGHTING_FEATURE_DOUBLE_KEY_PROTECTION = 7,     
+  MIP_FLIGHTING_FEATURE_VARIABLE_POLICY_TTL = 8,       
+  MIP_FLIGHTING_FEATURE_VARIABLE_TEXT_MARKING = 9,     
+  MIP_FLIGHTING_FEATURE_OPTIMIZE_PDF_MEMORY = 10,      
+  MIP_FLIGHTING_FEATURE_REMOVE_DELETED_LABEL_MD = 11,  
+  MIP_FLIGHTING_FEATURE_ENFORCE_TLS12 = 12,            
 } mip_cc_flighting_feature;
 
 ```
@@ -233,30 +249,28 @@ API success/failure result
 
 | Field | Description |
 |---|---|
-|  MIP_RESULT_ERROR_UNKNOWN                    | Unknown error  |
-|  MIP_RESULT_ERROR_INSUFFICIENT_BUFFER        | Buffer provided by application is too small  |
-|  MIP_RESULT_ERROR_BAD_INPUT                  | Application passed bad input  |
-|  MIP_RESULT_ERROR_FILE_IO_ERROR              | General file i/o error  |
-|  MIP_RESULT_ERROR_NETWORK                    | General network error (e.g. unreachable service)  |
-|  MIP_RESULT_ERROR_TRANSIENT_NETWORK          | Transient network error (e.g. bad gateway)  |
-|  MIP_RESULT_ERROR_INTERNAL                   | Unexpected internal error  |
-|  MIP_RESULT_ERROR_JUSTIFICATION_REQUIRED     | Justification should be provided to complete the action on the file.  |
-|  MIP_RESULT_ERROR_NOT_SUPPORTED_OPERATION    | Opeation is not supported  |
-|  MIP_RESULT_ERROR_PRIVILEGED_REQUIRED        | Cannot override privileged label when with standard method  |
-|  MIP_RESULT_ERROR_ACCESS_DENIED              | User does not have rights to access the service  |
-|  MIP_RESULT_ERROR_CONSENT_DENIED             | An operation that required consent from the user was not granted consent  |
-|  MIP_RESULT_ERROR_POLICY_SYNC                | An attempt to sync policy data failed  |
-|  MIP_RESULT_ERROR_NO_PERMISSIONS             | The user could not get access to the content (e.g. no permissions, content revoked)  |
-|  MIP_RESULT_ERROR_NO_AUTH_TOKEN              | The user could not get access to the content due to an empty auth token  |
-|  MIP_RESULT_ERROR_SERVICE_DISABLED           | The user could not get access to the content due to the service being disabled  |
-|  MIP_RESULT_ERROR_PROXY_AUTH                 | Proxy authentication failed  |
-|  MIP_RESULT_ERROR_NO_POLICY                  | No policy is configured for user/tenant  |
-|  MIP_RESULT_ERROR_OPERATION_CANCELLED        | Operation cancelled  |
-|  MIP_RESULT_ERROR_ADHOC_PROTECTION_REQUIRED  | Ad-hoc protection should be set to complete the action on the file  |
-|  MIP_RESULT_ERROR_DEPRECATED_API             | Caller invoked a deprecated API  |
-|  MIP_RESULT_ERROR_TEMPLATE_NOT_FOUND         | Template ID is not recognized  |
-|  MIP_RESULT_ERROR_LABEL_NOT_FOUND            | Label ID is not recognized  |
-|  MIP_RESULT_ERROR_LABEL_DISABLED             | Label is disabled or inactive  |
+|  MIP_RESULT_ERROR_UNKNOWN = 1                     | Unknown error  |
+|  MIP_RESULT_ERROR_INSUFFICIENT_BUFFER = 2         | Buffer provided by application is too small  |
+|  MIP_RESULT_ERROR_BAD_INPUT = 3                   | Application passed bad input  |
+|  MIP_RESULT_ERROR_FILE_IO_ERROR = 4               | General file i/o error  |
+|  MIP_RESULT_ERROR_NETWORK = 5                     | General network error (e.g. unreachable service)  |
+|  MIP_RESULT_ERROR_INTERNAL = 6                    | Unexpected internal error  |
+|  MIP_RESULT_ERROR_JUSTIFICATION_REQUIRED = 7      | Justification should be provided to complete the action on the file.  |
+|  MIP_RESULT_ERROR_NOT_SUPPORTED_OPERATION = 8     | Opeation is not supported  |
+|  MIP_RESULT_ERROR_PRIVILEGED_REQUIRED = 9         | Cannot override privileged label when with standard method  |
+|  MIP_RESULT_ERROR_ACCESS_DENIED = 10              | User does not have rights to access the service  |
+|  MIP_RESULT_ERROR_CONSENT_DENIED = 11             | An operation that required consent from the user was not granted consent  |
+|  MIP_RESULT_ERROR_NO_PERMISSIONS = 12             | The user could not get access to the content (e.g. no permissions, content revoked)  |
+|  MIP_RESULT_ERROR_NO_AUTH_TOKEN = 13              | The user could not get access to the content due to an empty auth token  |
+|  MIP_RESULT_ERROR_SERVICE_DISABLED = 14           | The user could not get access to the content due to the service being disabled  |
+|  MIP_RESULT_ERROR_PROXY_AUTH = 15                 | Proxy authentication failed  |
+|  MIP_RESULT_ERROR_NO_POLICY = 16                  | No policy is configured for user/tenant  |
+|  MIP_RESULT_ERROR_OPERATION_CANCELLED = 17        | Operation cancelled  |
+|  MIP_RESULT_ERROR_ADHOC_PROTECTION_REQUIRED = 18  | Ad-hoc protection should be set to complete the action on the file  |
+|  MIP_RESULT_ERROR_DEPRECATED_API = 19             | Caller invoked a deprecated API  |
+|  MIP_RESULT_ERROR_TEMPLATE_NOT_FOUND = 20         | Template ID is not recognized  |
+|  MIP_RESULT_ERROR_LABEL_NOT_FOUND = 21            | Label ID is not recognized  |
+|  MIP_RESULT_ERROR_LABEL_DISABLED = 22             | Label is disabled or inactive  |
 
 
 ```c
@@ -264,33 +278,49 @@ typedef enum {
   MIP_RESULT_SUCCESS = 0,
 
   // MIP C API errors
-  MIP_RESULT_ERROR_UNKNOWN,                   
-  MIP_RESULT_ERROR_INSUFFICIENT_BUFFER,       
+  MIP_RESULT_ERROR_UNKNOWN = 1,                    
+  MIP_RESULT_ERROR_INSUFFICIENT_BUFFER = 2,        
 
   // MIP C++ exceptions
-  MIP_RESULT_ERROR_BAD_INPUT,                 
-  MIP_RESULT_ERROR_FILE_IO_ERROR,             
-  MIP_RESULT_ERROR_NETWORK,                   
-  MIP_RESULT_ERROR_TRANSIENT_NETWORK,         
-  MIP_RESULT_ERROR_INTERNAL,                  
-  MIP_RESULT_ERROR_JUSTIFICATION_REQUIRED,    
-  MIP_RESULT_ERROR_NOT_SUPPORTED_OPERATION,   
-  MIP_RESULT_ERROR_PRIVILEGED_REQUIRED,       
-  MIP_RESULT_ERROR_ACCESS_DENIED,             
-  MIP_RESULT_ERROR_CONSENT_DENIED,            
-  MIP_RESULT_ERROR_POLICY_SYNC,               
-  MIP_RESULT_ERROR_NO_PERMISSIONS,            
-  MIP_RESULT_ERROR_NO_AUTH_TOKEN,             
-  MIP_RESULT_ERROR_SERVICE_DISABLED,          
-  MIP_RESULT_ERROR_PROXY_AUTH,                
-  MIP_RESULT_ERROR_NO_POLICY,                 
-  MIP_RESULT_ERROR_OPERATION_CANCELLED,       
-  MIP_RESULT_ERROR_ADHOC_PROTECTION_REQUIRED, 
-  MIP_RESULT_ERROR_DEPRECATED_API,            
-  MIP_RESULT_ERROR_TEMPLATE_NOT_FOUND,        
-  MIP_RESULT_ERROR_LABEL_NOT_FOUND,           
-  MIP_RESULT_ERROR_LABEL_DISABLED,            
+  MIP_RESULT_ERROR_BAD_INPUT = 3,                  
+  MIP_RESULT_ERROR_FILE_IO_ERROR = 4,              
+  MIP_RESULT_ERROR_NETWORK = 5,                    
+  MIP_RESULT_ERROR_INTERNAL = 6,                   
+  MIP_RESULT_ERROR_JUSTIFICATION_REQUIRED = 7,     
+  MIP_RESULT_ERROR_NOT_SUPPORTED_OPERATION = 8,    
+  MIP_RESULT_ERROR_PRIVILEGED_REQUIRED = 9,        
+  MIP_RESULT_ERROR_ACCESS_DENIED = 10,             
+  MIP_RESULT_ERROR_CONSENT_DENIED = 11,            
+  MIP_RESULT_ERROR_NO_PERMISSIONS = 12,            
+  MIP_RESULT_ERROR_NO_AUTH_TOKEN = 13,             
+  MIP_RESULT_ERROR_SERVICE_DISABLED = 14,          
+  MIP_RESULT_ERROR_PROXY_AUTH = 15,                
+  MIP_RESULT_ERROR_NO_POLICY = 16,                 
+  MIP_RESULT_ERROR_OPERATION_CANCELLED = 17,       
+  MIP_RESULT_ERROR_ADHOC_PROTECTION_REQUIRED = 18, 
+  MIP_RESULT_ERROR_DEPRECATED_API = 19,            
+  MIP_RESULT_ERROR_TEMPLATE_NOT_FOUND = 20,        
+  MIP_RESULT_ERROR_LABEL_NOT_FOUND = 21,           
+  MIP_RESULT_ERROR_LABEL_DISABLED = 22,            
 } mip_cc_result;
+
+```
+
+## mip_cc_pre_license_format
+
+Defines pre-license format
+
+| Field | Description |
+|---|---|
+|  MIP_PRE_LICENSE_FORMAT_XML = 0   | Legacy XML/SOAP format used by MSIPC  |
+|  MIP_PRE_LICENSE_FORMAT_JSON = 1  | JSON/REST format used by MIP SDK and RMS SDK  |
+
+
+```c
+typedef enum {
+  MIP_PRE_LICENSE_FORMAT_XML = 0,  
+  MIP_PRE_LICENSE_FORMAT_JSON = 1, 
+} mip_cc_pre_license_format;
 
 ```
 
