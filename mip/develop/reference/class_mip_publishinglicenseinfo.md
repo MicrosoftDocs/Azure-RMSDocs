@@ -1,14 +1,14 @@
 ---
-title: class mip::PublishingLicenseInfo 
-description: Documents the mip::publishinglicenseinfo class of the Microsoft Information Protection (MIP) SDK.
+title: class PublishingLicenseInfo 
+description: Documents the publishinglicenseinfo::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::PublishingLicenseInfo 
+# class PublishingLicenseInfo 
 Holds the details of a Publishing License used to create a protection handler.
   
 ## Summary

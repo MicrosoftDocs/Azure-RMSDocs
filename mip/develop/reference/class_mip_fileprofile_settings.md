@@ -1,22 +1,21 @@
 ---
-title: class mip::FileProfile::Settings 
-description: Documents the mip::fileprofile class of the Microsoft Information Protection (MIP) SDK.
+title: class FileProfile::Settings 
+description: Documents the fileprofile::settings class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::FileProfile::Settings 
+# class FileProfile::Settings 
 Settings used by FileProfile during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, std::shared_ptr\<AuthDelegate\> authDelegate, std::shared_ptr\<ConsentDelegate\> consentDelegate, std::shared_ptr\<Observer\> observer)  |  FileProfile::Settings constructor.
+public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, std::shared_ptr\<ConsentDelegate\> consentDelegate, std::shared_ptr\<Observer\> observer)  |  FileProfile::Settings constructor.
 public CacheStorageType GetCacheStorageType() const  |  Get whether caches are stored in memory or on disk.
-public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Gets the auth delegate used for acquiring authentication tokens.
 public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Gets the consent delegate used to request user consent connecting to services.
 public std::shared_ptr\<Observer\> GetObserver() const  |  Gets the observer that receives notifications of events related to FileProfile.
 public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
@@ -41,9 +40,6 @@ Parameters:
 * **cacheStorageType**: Store any cached state in memory or on disk 
 
 
-* **authDelegate**: Auth delegate used for acquiring authentication tokens 
-
-
 * **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
@@ -56,12 +52,6 @@ Get whether caches are stored in memory or on disk.
 
   
 **Returns**: Storage type used
-  
-### GetAuthDelegate function
-Gets the auth delegate used for acquiring authentication tokens.
-
-  
-**Returns**: Auth delegate used for acquiring authentication tokens
   
 ### GetConsentDelegate function
 Gets the consent delegate used to request user consent connecting to services.

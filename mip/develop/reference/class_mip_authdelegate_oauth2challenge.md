@@ -1,14 +1,14 @@
 ---
-title: class mip::AuthDelegate::OAuth2Challenge 
-description: Documents the mip::authdelegate class of the Microsoft Information Protection (MIP) SDK.
+title: class AuthDelegate::OAuth2Challenge 
+description: Documents the authdelegate::oauth2challenge class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::AuthDelegate::OAuth2Challenge 
+# class AuthDelegate::OAuth2Challenge 
 a class that contains all the information required from the calling application in order to generate an oauth2 token.
   
 ## Summary

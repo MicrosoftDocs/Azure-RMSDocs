@@ -3,10 +3,10 @@
 
 title: Migrate AD RMS-Azure Information Protection - Phase 2
 description: Phase 2 of migrating from AD RMS to Azure Information Protection, covering steps 4 though 6 from Migrating from AD RMS to Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -59,7 +59,7 @@ Do the following procedure on all AD RMS clusters, for all trusted publishing do
 
     - Do not select the checkbox to save the trusted domain file in RMS version 1.0.
 
-When you have exported all the trusted publishing domains, you’re ready to start the procedure to import this data to Azure Information Protection.
+When you have exported all the trusted publishing domains, you're ready to start the procedure to import this data to Azure Information Protection.
 
 Note that the trusted publishing domains include the Server Licensor Certificate (SLC) keys to decrypt previously protected files, so it's important that you export (and later import into Azure) all the trusted publishing domains and not just the currently active one.
 
@@ -82,7 +82,7 @@ Your current AD RMS deployment is using one of the following configurations for 
 > [!NOTE]
 > For more information about using hardware security modules with AD RMS, see [Using AD RMS with Hardware Security Modules](https://technet.microsoft.com/library/jj651024.aspx).
 
-The two Azure Information Protection tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**) in Azure Key Vault. When you manage your own Azure Information Protection tenant key, it’s sometimes referred to as “bring your own key” (BYOK). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) article.
+The two Azure Information Protection tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**) in Azure Key Vault. When you manage your own Azure Information Protection tenant key, it's sometimes referred to as "bring your own key" (BYOK). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) article.
 
 Use the following table to identify which procedure to use for your migration. 
 

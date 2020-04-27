@@ -25,7 +25,6 @@ The API used in the consuming application determines which profile class should 
 The profile itself provides the following functionality:
 
 - Defines whether state should be loaded in memory or persisted to disk and, if persisted to disk, should it be encrypted.
-- Handles authentication by accepting a `mip::AuthDelegate`.
 - Defines the `mip::ConsentDelegate` that should be used for consent operations.
 - Defines the `mip::FileProfile::Observer` implementation that will be used for asynchronous callbacks for profile operations.
 
@@ -33,7 +32,6 @@ The profile itself provides the following functionality:
 
 - `MipContext`: The `MipContext` object that was initialized to store application info, state path, etc.
 - `CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
-- `authDelegate`: A shared pointer of class `mip::AuthDelegate`.
 - `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
 - `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 - `applicationInfo`: A [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) object. Information about the application that is consuming the SDK, which matches your Azure Active Directory application registration ID and name.
@@ -52,6 +50,8 @@ There are three engine classes in the SDK, one for each API. The following list 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
   - `ListSensitivityLabels()`: Gets the list of labels for the loaded engine.
   - `CreateFileHandler()`: Creates a `mip::FileHandler` for a specific file or stream.
+
+Creating an engine requires passing in a specific engine settings object that contains the settings for the type of engine that is to be created. The settings object allows the developer to specify details on the engine identifier, the `mip::AuthDelegate` implementation, locale, and custom settings, as well as other API-specific details.
 
 ### Engine States
 

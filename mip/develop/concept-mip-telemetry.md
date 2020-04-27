@@ -16,7 +16,9 @@ By default, the Microsoft Information Protection SDK sends telemetry data to Mic
 
 ## Telemetry Configuration
 
-Telemetry options in the MIP SDK can be controlled via [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Create an instance of this class, then set **IsTelemetryOptedOut** to true. Provide the object of class **TelemetryConfiguration** to the function used to create **MipContext**. This doesn't completely eliminate telemetry data, but reduces to a minimum set with all end-user identifiable information scrubbed.
+Telemetry options in the MIP SDK can be controlled via [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Create an instance of this class, then set **IsTelemetryOptedOut** to true. Provide the object of class **TelemetryConfiguration** to the function used to create **MipContext**. 
+
+Starting in MIP SDK version 1.6, setting option **completely disables** telemetry. In verisons 1.5 and earlier, we send a set of minimum telemetry information.
 
 ### Minimum Telemetry Events
 

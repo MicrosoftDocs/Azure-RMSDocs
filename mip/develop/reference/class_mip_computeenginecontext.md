@@ -1,14 +1,14 @@
 ---
-title: class mip::ComputeEngineContext 
-description: Documents the mip::computeenginecontext class of the Microsoft Information Protection (MIP) SDK.
+title: class ComputeEngineContext 
+description: Documents the computeenginecontext::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::ComputeEngineContext 
+# class ComputeEngineContext 
   
 ## Summary
  Members                        | Descriptions                                
