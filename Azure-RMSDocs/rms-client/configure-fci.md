@@ -6,7 +6,7 @@ description: Instructions to use the Rights Management (RMS) client with the Azu
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
