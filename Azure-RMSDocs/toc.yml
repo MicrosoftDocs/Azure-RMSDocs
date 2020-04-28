@@ -4,8 +4,12 @@
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
-  - name: Comparing Azure Information Protection and AD RMS
-    href: compare-on-premise.md
+  - name: Azure Information Protection and AD RMS
+    items:
+    - name: Compare on premises and AD RMS
+      href: compare-on-premise.md
+    - name: Manage Active Directory Mobile Device Extensions
+      href: active-directory-rights-manage-mobile-device.md
   - name: Requirements
     items:
     - name: Overview
@@ -299,7 +303,7 @@
         href: ./rms-client/protected-pdf-readers.md
       - name: Windows
         href: ./rms-client/protected-pdf-readers-windows.md
-      - name: MacOS
+      - name: macOS
         href: ./rms-client/protected-pdf-readers-mac.md
       - name: iOS
         href: ./rms-client/protected-pdf-readers-ios.md
@@ -419,7 +423,7 @@
           href: ./develop/tracking-content.md
         - name: How to enable email notification
           href: ./develop/how-to-enable-email-notification.md
-        - name: How to enable your service application to work with cloud based RMS
+        - name: How to enable your service application to work with cloud-based RMS
           href: ./develop/how-to-use-file-api-with-aadrm-cloud.md
         - name: How to install and configure an RMS server
           href: ./develop/how-to-install-and-configure-an-rms-server.md
