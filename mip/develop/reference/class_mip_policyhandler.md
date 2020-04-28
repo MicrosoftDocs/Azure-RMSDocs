@@ -1,14 +1,14 @@
 ---
-title: class mip::PolicyHandler 
-description: Documents the mip::policyhandler class of the Microsoft Information Protection (MIP) SDK.
+title: class PolicyHandler 
+description: Documents the policyhandler::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::PolicyHandler 
+# class PolicyHandler 
 This class provides an interface for all policy handler functions on a file.
   
 ## Summary

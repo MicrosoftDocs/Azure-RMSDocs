@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/03/2020
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -47,6 +47,7 @@ Preview versions should not be deployed for end users on production networks. In
 
 |Client version|Date released|
 |--------------|-------------|
+|2.2.21.0|09/03/2019|
 |2.2.19.0|08/06/2019|
 |2.2.14.0|07/15/2019|
 |2.0.779.0|05/01/2019|
@@ -169,17 +170,6 @@ Supported through  09/09/2020
 
 - [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) now includes the content ID for a protected document.
 
-## Version 2.2.21.0
-
-**Released**: 09/03/2019
-
-Supported through 04/23/2020
-
-**Fixes:**
-
-- When you use the advanced setting [OutlookDefaultLabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook) to set a different default label for Outlook, and the label you specify doesn't have any sublabels for the label policy, the label is correctly applied.
-
-- When the Azure Information Protection client is used in an Office app, a user with an Active Directory account that isn't configured for single sign-on is prompted to authenticate for Azure Information Protection. After successfully authenticating, the client status correctly changes to online, which enables labeling functionality.
 
 ## Next steps
 

@@ -1,14 +1,14 @@
 ---
-title: class mip::AddWatermarkActionData 
-description: Documents the mip::addwatermarkactiondata class of the Microsoft Information Protection (MIP) SDK.
+title: class AddWatermarkActionData 
+description: Documents the addwatermarkactiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::AddWatermarkActionData 
+# class AddWatermarkActionData 
   
 ## Summary
  Members                        | Descriptions                                

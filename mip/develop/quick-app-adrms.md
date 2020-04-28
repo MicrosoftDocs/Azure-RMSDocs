@@ -45,7 +45,7 @@ If the DNS SRV record for MDE has been published and `Microsoft.InformationProte
 
 ```csharp
 // Configure FileEngineSettings as protection only engine.
-var engineSettings = new FileEngineSettings("", "", "en-US")
+var engineSettings = new FileEngineSettings("", authDelegate, "", "en-US")
 {
      // Provide the identity for service discovery.
      Identity = identity,
@@ -60,7 +60,7 @@ If the DNS SRV record for MDE isn't published, or `Microsoft.InformationProtecti
 
 ```csharp
 // Configure FileEngineSettings as protection only engine and generate a unique engine id.
-var engineSettings = new FileEngineSettings("", "", "en-US")
+var engineSettings = new FileEngineSettings("", authDelegate, "", "en-US")
 {
      // Set ProtectionOnlyEngine to true for AD RMS as labeling isn't supported
      ProtectionOnlyEngine = true,
@@ -97,7 +97,7 @@ engineSettings.SetProtectionOnlyEngine = true;
 If the DNS SRV record for MDE isn't published, or an identity isn't available for service discovery, then the engine must be set to protection only and the explicit cloud endpoint URL provided via `SetProtectionCloudEndpointBaseUrl()`.
 
 ```cpp
-FileEngine::Settings engineSettings("", "");
+FileEngine::Settings engineSettings("", authDelegate, "");
 engineSettings.SetProtectionOnlyEngine = true;
 engineSettings.SetProtectionCloudEndpointBaseUrl("https://rms.contoso.com");
 ```
@@ -113,7 +113,7 @@ If you don't have the mobile device extension DNS SRV record, or won't have an i
 If the DNS SRV record for mobile device extension has been published, and an identity provided in the `ProtectionEngine::Settings`, no extra code changes are required to use AD RMS. Service discovery will find the AD RMS endpoint and use it for protection operations.
 
 ```cpp
-ProtectionEngine::Settings engineSettings(mip::Identity(mUsername), "");
+ProtectionEngine::Settings engineSettings(mip::Identity(mUsername), authDelegate, "");
 ```
 
 ### Set the ProtectionEngine::Settings to use AD RMS with an explicit endpoint
@@ -121,7 +121,7 @@ ProtectionEngine::Settings engineSettings(mip::Identity(mUsername), "");
 If the DNS SRV record isn't published or an identity isn't provided in the `ProtectionEngine::Settings`, then the protection endpoint URL must be set explicitly via `SetProtectionCloudEndpointBaseUrl()`.
 
 ```cpp
-ProtectionEngine::Settings engineSettings("", "");
+ProtectionEngine::Settings engineSettings("", authDelegate, "");
 engineSettings.SetProtectionCloudEndpointBaseUrl("https://RMS.CONTOSO.COM");
 ```
 

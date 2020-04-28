@@ -1,14 +1,14 @@
 ---
-title: class mip::TemplateNotFoundError 
-description: Documents the mip::templatenotfounderror class of the Microsoft Information Protection (MIP) SDK.
+title: class TemplateNotFoundError 
+description: Documents the templatenotfounderror::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::TemplateNotFoundError 
+# class TemplateNotFoundError 
 Template ID is not recognized by RMS service.
   
 ## Summary

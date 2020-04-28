@@ -1,14 +1,14 @@
 ---
-title: class mip::ProxyAuthenticationError 
-description: Documents the mip::proxyauthenticationerror class of the Microsoft Information Protection (MIP) SDK.
+title: class ProxyAuthenticationError 
+description: Documents the proxyauthenticationerror::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::ProxyAuthenticationError 
+# class ProxyAuthenticationError 
 Proxy authentication failure.
   
 ## Summary

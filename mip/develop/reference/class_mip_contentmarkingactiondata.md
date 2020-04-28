@@ -1,14 +1,14 @@
 ---
-title: class mip::ContentMarkingActionData 
-description: Documents the mip::contentmarkingactiondata class of the Microsoft Information Protection (MIP) SDK.
+title: class ContentMarkingActionData 
+description: Documents the contentmarkingactiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
-# class mip::ContentMarkingActionData 
+# class ContentMarkingActionData 
   
 ## Summary
  Members                        | Descriptions                                
