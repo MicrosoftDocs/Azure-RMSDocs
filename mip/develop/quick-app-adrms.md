@@ -22,12 +22,12 @@ If you haven't already, be sure to:
 
 - Complete [Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution.
 - Complete [Quickstart: List sensitivity labels (C++)](quick-file-list-labels-cpp.md) or [Quickstart: List sensitivity labels (C#)](quick-file-list-labels-csharp.md)
-- Deploy AD RMS with [Mobile Device Extension](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)).
-- Optionally, ensure that the [DNS SRV record for AD RMS MDE](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn673574(v%3dws.11)#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) is published.
+- Deploy AD RMS with [Mobile Device Extension](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device).
+- Optionally, ensure that the [DNS SRV record for AD RMS MDE](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) is published.
 
 ## Service Discovery
 
-The SDK does service discovery based on the `mip::Identity` provided via `FileEngineSettings` or `ProtectionEngineSettings` by using the UPN or mail address suffix. It first searches the domain hierarchy for the *_rmsdisco* record for MDE. For more details on that process, review [Specifying the DNS SRV records for the AD RMS mobile device extension](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn673574(v%3dws.11)#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). If that DNS SRV record isn't found, it defaults to the Azure Information Protection service as the service location.
+The SDK does service discovery based on the `mip::Identity` provided via `FileEngineSettings` or `ProtectionEngineSettings` by using the UPN or mail address suffix. It first searches the domain hierarchy for the *_rmsdisco* record for MDE. For more details on that process, review [Specifying the DNS SRV records for the AD RMS mobile device extension](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). If that DNS SRV record isn't found, it defaults to the Azure Information Protection service as the service location.
 
 If an identity isn't available, or the DNS SRV record for MDE hasn't been published, the service discovery process can be overridden by explicitly settings the [cloud endpoint URL](https://docs.microsoft.com/information-protection/develop/reference/class_mip_fileengine_settings#setpolicycloudendpointbaseurl-function).
 
