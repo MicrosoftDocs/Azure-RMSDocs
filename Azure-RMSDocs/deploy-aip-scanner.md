@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/16/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -303,6 +303,9 @@ Before you install the scanner, or upgrade it from an older general availability
     For the remaining settings on this pane, do not change them for this initial configuration, but keep them as **Content scan job default**. This means that the data repository inherits the settings from the content scan job. 
     
     Select **Save**.
+
+> [!IMPORTANT]
+> While the local file system can be scanned, this configuration is not recommended for production deployments and can **only** be used in single node clusters. Scanning of local folders by multi-node clusters is not supported. If you need to scan a folder on the local file system, we recommend creating a share, and scanning it using a network URL.
 
 10. If you want to add another data repository, repeat steps 8 and 9. 
 
