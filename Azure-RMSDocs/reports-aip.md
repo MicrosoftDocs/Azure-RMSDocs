@@ -3,9 +3,9 @@
 
 title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
-author: cabailey
-ms.author: cabailey
-ms.date: 11/27/2019
+author: mlottner
+ms.author: mlottner
+ms.date: 05/05/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -61,7 +61,8 @@ For example, you'll be able to see the following:
     - Which applications are being used for labeling
 
 - From the **Activity logs**, where you can select a time period:
-    
+
+    - Which files previously discovered by scanner were deleted from the scanned repository    
     - What labeling actions were performed by a specific user
     
     - What labeling actions were performed from a specific device
@@ -285,7 +286,9 @@ Use the following table to identify the friendly name of event functions that yo
 |ItemPath|Full item path or email subject|
 |ItemName|File name or email subject |
 |Method|Label assigned method: Manual, Automatic, Recommended, Default, or Mandatory|
-|Activity|Audit activity: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection, or NewCustomProtection |
+|Activity|Audit activity: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection, NewCustomProtection, or FileRemoved |
+|ResultStatus|Result status of the action:<br /><br /> Succeeded or Failed (reported by AIP scanner only)|
+|ErrorMessage_s|Includes Error message details if ResultStatus=Failed. Reported by AIP scanner only|
 |LabelName|Label name (not localized)|
 |LabelNameBefore |Label name before change (not localized) |
 |ProtectionType|Protection type [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|

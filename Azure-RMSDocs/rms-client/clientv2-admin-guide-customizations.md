@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/23/2020
+ms.date: 04/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -125,6 +125,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
+|AdditionalPPrefixExtensions|[Support for changing \<EXT>.PFILE to P\<EXT> by using this advanced property](#additionalpprefixextensions)
 |AttachmentAction|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |DisableMandatoryInOutlook|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
@@ -255,15 +256,17 @@ Example PowerShell command, where your label policy is named "Global":
 
 ## Change which file types to protect
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+These configurations use a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, the Azure Information Protection unified labeling client protects all file types, and the scanner from the client protects only Office file types and PDF files.
 
-You can change this default behavior for a selected label policy, by specifying the following:
+You can change this default behavior for a selected label policy, by specifying one of the following:
+
+### PFileSupportedExtension
 
 - Key: **PFileSupportedExtensions**
 
-- Value: **<string value>** 
+- Value: **\<string value>** 
 
 Use the following table to identify the string value to specify:
 
@@ -286,6 +289,43 @@ Example 3: PowerShell command for the scanner to protect .txt files and .csv fil
     Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
 
 With this setting, you can change which file types are protected but you cannot change the default protection level from native to generic. For example, for users running the unified labeling client, you can change the default setting so that only Office files and PDF files are protected instead of all file types. But you cannot change these file types to be generically protected with a .pfile file name extension.
+
+### AdditionalPPrefixExtensions
+
+The unified labeling client supports changing \<EXT>.PFILE to P\<EXT> by using the advanced property, **AdditionalPPrefixExtensions**. This advanced property is supported in right-click, PowerShell, and scanner. All apps have similar behavior.   
+
+- Key: **AdditionalPPrefixExtensions**
+
+- Value: **\<string value>** 
+
+Use the following table to identify the string value to specify:
+
+| String value| Client and Scanner|
+|-------------|---------------|
+|\*|All PFile extensions become P\<EXT>|
+|\<null value>| Default value behaves like the default protection value.|
+|ConvertTo-Json(".dwg", ".zip")|In addition to the previous list, ".dwg" and ".zip" become P\<EXT>| 
+
+Example 1: PowerShell command to behave like the default behavior where Protect ".dwg" becomes ".dwg.pfile":
+
+    Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
+
+Example 2:  PowerShell command to change all PFile extensions from generic protection (dwg.pfile) to native protection (.pdwg) when the files is protected:
+
+    Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
+
+Example 3: PowerShell command to change ".dwg"  to ".pdwg" when using this service protect this file:
+
+    Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
+
+With this setting, the following extensions ( ".txt", ".xml", ".bmp", ".jt", ".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".tif", ".tiff", ".gif") always become P\<EXT>. Notable exclusion is that "ptxt" does not become "txt.pfile". 
+**AdditionalPPrefixExtensions** only works if protection of PFiles with the advanced property - [**PFileSupportedExtension**](#pfilesupportedextension) is enabled. 
+
+For example, in a case where the following command is used:
+
+    Set-LabelPolicy -AdvancedSettings @{PFileSupportedExtensions=""}
+
+PFile protection is not possible, and the value in **AdditionalPPrefixExtensions** is ignored. 
 
 ## Remove "Not now" for documents when you use mandatory labeling
 
@@ -640,7 +680,27 @@ Example PowerShell command, where your label policy is named "Global":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
+## Limit CPU consumption
+
+Starting from scanner version 2.7.x.x, we recommend limiting CPU consumption using the following **ScannerMaxCPU** and **ScannerMinCPU** advanced settings method. 
+
+> [!IMPORTANT]
+> The **ScannerMaxCPU** and **ScannerMinCPU** advanced settings method cannot be used with the thread limiting policy. To use method to limit CPU consumption, you'll need to discontinue use of the [thread limiting policy](#limit-the-number-of-threads-used-by-the-scanner) you may already have in place. 
+
+To limit CPU consumption on the scanner machine, it is manageable by creating two advanced settings: **ScannerMaxCPU** and **ScannerMinCPU**. 
+
+By default, **ScannerMaxCPU** is set to 100, which means there is no limit of maximum CPU consumption. In this case, the scanner process will try to use all available CPU time to maximize your scan rates.
+
+If you set **ScannerMaxCPU** to less than 100, scanner will monitor the CPU consumption over the past 30 minutes, and if the max CPU crossed the limit you set, it will start to reduce number of threads allocated for new files. The limit on the number of threads will continue as long as CPU consumption is higher than the limit set for **ScannerMaxCPU**.
+
+**ScannerMinCPU**, is only checked if **ScannerMaxCPU** is not equal to 100. **ScannerMinCPU** cannot be set to a number higher than the **ScannerMaxCPU** number. We recommend keeping **ScannerMinCPU** set at least 15 points lower than the value of  **ScannerMaxCPU**.   
+
+The default value of this setting is 50, which means that if CPU consumption in last 30 minutes went lower than this value,  scanner will start adding new threads to scan more files in parallel, until the CPU consumption reaches the level you have set for **ScannerMaxCPU**-15. 
+
 ## Limit the number of threads used by the scanner
+
+> [!IMPORTANT]
+> When the following thread limiting policy is in use, **ScannerMaxCPU** and **ScannerMinCPU** advanced settings are ignored. To limit CPU consumption using **ScannerMaxCPU** and **ScannerMinCPU** advanced settings, cancel use of policies that limit the number of threads. 
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
