@@ -680,7 +680,27 @@ Example PowerShell command, where your label policy is named "Global":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
+## Limit CPU consumption
+
+Starting from scanner version 2.7.x.x, we recommend limiting CPU consumption using the following **ScannerMaxCPU** and **ScannerMinCPU** advanced settings method. 
+
+> [!IMPORTANT]
+> The **ScannerMaxCPU** and **ScannerMinCPU** advanced settings method cannot be used with the thread limiting policy. To use method to limit CPU consumption, you'll need to discontinue use of the [thread limiting policy](#limit-the-number-of-threads-used-by-the-scanner) you may already have in place. 
+
+To limit CPU consumption on the scanner machine, it is manageable by creating two advanced settings: **ScannerMaxCPU** and **ScannerMinCPU**. 
+
+By default, **ScannerMaxCPU** is set to 100, which means there is no limit of maximum CPU consumption. In this case, the scanner process will try to use all available CPU time to maximize your scan rates.
+
+If you set **ScannerMaxCPU** to less than 100, scanner will monitor the CPU consumption over the past 30 minutes, and if the max CPU crossed the limit you set, it will start to reduce number of threads allocated for new files. The limit on the number of threads will continue as long as CPU consumption is higher than the limit set for **ScannerMaxCPU**.
+
+**ScannerMinCPU**, is only checked if **ScannerMaxCPU** is not equal to 100. **ScannerMinCPU** cannot be set to a number higher than the **ScannerMaxCPU** number. We recommend keeping **ScannerMinCPU** set at least 15 points lower than the value of  **ScannerMaxCPU**.   
+
+The default value of this setting is 50, which means that if CPU consumption in last 30 minutes went lower than this value,  scanner will start adding new threads to scan more files in parallel, until the CPU consumption reaches the level you have set for **ScannerMaxCPU**-15. 
+
 ## Limit the number of threads used by the scanner
+
+> [!IMPORTANT]
+> When the following thread limiting policy is in use, **ScannerMaxCPU** and **ScannerMinCPU** advanced settings are ignored. To limit CPU consumption using **ScannerMaxCPU** and **ScannerMinCPU** advanced settings, cancel use of policies that limit the number of threads. 
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
