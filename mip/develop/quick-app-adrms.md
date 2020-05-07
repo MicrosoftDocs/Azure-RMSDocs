@@ -6,6 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/17/2019
 ms.author: tommos
+ms.custom: has-adal-ref
 #Customer intent: As a an application developer, I want to learn how to use the MIP SDK to connect to AD RMS so I can consume and protect using my on-premises service.
 ---
 

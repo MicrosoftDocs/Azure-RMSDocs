@@ -21,7 +21,7 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: dev
+ms.custom: dev, has-adal-ref
 
 ---
 
@@ -107,4 +107,3 @@ After signing up for Microsoft Azure:
 - Save your application to persist the changes by choosing the **Save** icon located on the bottom, center of the portal.
 
 ![Select SAVE](../media/SaveApplication.png)
-
