@@ -20,7 +20,7 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: dev
+ms.custom: dev, has-adal-ref
 
 ---
 
@@ -46,7 +46,7 @@ We recommend the following software on your development system:
 -   Java starting with Java 1.6.
 -   [Android Developer Tools (ADT) Plugin](https://developer.android.com/studio/install). NOTE - You might be asked to restart Eclipse to complete the installation.
 
-     
+
 
 -   The MS RMS SDK 4.2 package for Android. For more information see, [Get started](get-started.md).
 
@@ -58,7 +58,7 @@ We recommend the following software on your development system:
 
     **Note**  If your application will not be using the ADAL Library as the OAuth 2.0 authentication library, you should review this Android guidance, [Some SecureRandom Thoughts](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
 
-     
+
 
 Read the [What's new](release-notes.md) topic for information about API updates, release notes, and frequently asked questions (FAQ).
 
@@ -70,7 +70,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 **Note**  MS RMS SDK 4.2 Preview Release: In this preview release, the screen shots have not been updated to show the change in name of the pathes from com/microsoft/protection to com/microsoft/rightsmanagment. The text though, has been updated.
 
- 
+
 -   Open the Eclipse development environment.
 -   To create a new Android Application project, on the **File** menu, click **New**, click **Project**, and then select **Android Application Project**.
 
@@ -154,5 +154,3 @@ Our UI library provides re-usable UI for consumption and protection operations f
 [Developer terms and concepts](core-concepts.md)
 
 [Android API Reference](https://msdn.microsoft.com/library/dn758245.aspx)
-
-

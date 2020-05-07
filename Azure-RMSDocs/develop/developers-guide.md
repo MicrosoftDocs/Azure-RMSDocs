@@ -11,6 +11,7 @@ ms.service: information-protection
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
+ms.custom: has-adal-ref
 ---
 # Azure Information Protection Developer's Guide
 
@@ -137,4 +138,3 @@ Each of the following topics presents specific guidance for an aspect of impleme
 
 - [Developer terminology](terms.md)
 - [Terminology for Azure Information Protection - ITPro](../terminology.md)
-

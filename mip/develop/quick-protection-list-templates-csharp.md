@@ -6,6 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
+ms.custom: has-adal-ref
 #Customer intent: As a an application developer, I want to learn how to list protection templates for a user in the MIP SDK, so that I can use the SDK APIs to apply templates later on.
 ---
 
@@ -18,7 +19,7 @@ This Quickstart shows you how to use the MIP SDK Protection API to list the prot
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
 - Complete [Quickstart: Client application initialization - Protection API (C#)](quick-protection-app-initialization-csharp.md) first, which builds a starter Visual Studio solution. This "List protection templates" Quickstart relies on the previous one, for proper creation of the starter solution.
-- Optionally: Review [RMS Templates](https://docs.microsoft.com/azure/information-protection/configure-policy-templates) concepts. 
+- Optionally: Review [RMS Templates](https://docs.microsoft.com/azure/information-protection/configure-policy-templates) concepts.
 
 ## Add logic to list the protection templates
 
@@ -31,15 +32,15 @@ Add logic to list protection templates available to a user, using the Protection
 3. Toward the end of the `Main()` body, above the application shutdown section of the `Main()` function (where you left off in the previous QuickStart), insert the following code:
 
   ```csharp
-  // List protection templates using protectionEngine and display the list  
-  
+  // List protection templates using protectionEngine and display the list
+
   var templates=protectionEngine.GetTemplates();
 
   for(int i = 0; i < templates.Count; i++)
   {
       Console.WriteLine("{0}: {1}", i.ToString(), templates[i].Name + " : " + templates[i].Id);
   }
-  
+
   Console.WriteLine("Press a key to continue...");
   ```
 
@@ -51,7 +52,7 @@ Finally, build and test your client application.
 
 2. If your project builds and runs successfully, the application *may* prompt for authentication via ADAL each time the SDK calls your `AcquireToken()` method. If cached credentials already exist, you won't be prompted to sign in and see the list of labels.
 
-     [![Visual Studio acquire token sign-in](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox) 
+     [![Visual Studio acquire token sign-in](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
    - You may also need to give consent, to allow the application to access the MIP APIs, while running under the sign-in account. This happens when the Azure AD application registration isn't pre-consented (as outlined in "MIP SDK setup and configuration"), or you're signing in with an account from a different tenant (other than the one where your application is registered). Simply click **Accept** to record your consent.
 
