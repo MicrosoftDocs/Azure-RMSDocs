@@ -6,6 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: tommos
+ms.custom: has-adal-ref
 #Customer intent: As a an application developer, I want to learn how to do SDK .NET wrapper initialization, so that I can use the SDK APIs.
 ---
 
@@ -22,7 +23,7 @@ If you haven't already, be sure to:
 
 - Complete the steps in [Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md). This "Client application initialization" Quickstart relies on proper SDK setup and configuration.
 - Optionally:
-  - Review [Profile and engine objects](concept-profile-engine-cpp.md). The profile and engine objects are universal concepts, required by clients that use the MIP File/Policy/Protection APIs. 
+  - Review [Profile and engine objects](concept-profile-engine-cpp.md). The profile and engine objects are universal concepts, required by clients that use the MIP File/Policy/Protection APIs.
   - Review [Authentication concepts](concept-authentication-cpp.md) to learn how authentication and consent are implemented by the SDK and client application.
 
 ## Create a Visual Studio solution and project
@@ -33,7 +34,7 @@ First we create and configure the initial Visual Studio solution and project, up
    - In the left pane, under **Installed**, **Visual C#**, select **Windows Desktop**.
    - In the center pane, select **Console App (.NET Framework)**
    - In the bottom pane, update the project **Name**, **Location**, and the containing **Solution name** accordingly.
-   - When finished, click the **OK** button in the lower right. 
+   - When finished, click the **OK** button in the lower right.
 
      [![Visual Studio solution creation](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
@@ -93,7 +94,7 @@ The `ApplicationInfo` object contains three properties. The `_appInfo.Applicatio
 
 Now create an implementation for a consent delegate, by extending the SDK's `Microsoft.InformationProtection.IConsentDelegate` interface, and overriding/implementing `GetUserConsent()`. The consent delegate is instantiated and used later, by the File profile and File engine objects. The consent delegate is provided with the address of the service the user must consent to using in the `url` parameter. The delegate should generally provide some flow that allows the user to accept or reject to consent to accessing the service. For this quickstart hard code `Consent.Accept`.
 
-1. Using the same Visual Studio "Add Class" feature we used previously, add another class to your project. This time, enter "ConsentDelegateImplementation" in the **Class Name** field. 
+1. Using the same Visual Studio "Add Class" feature we used previously, add another class to your project. This time, enter "ConsentDelegateImplementation" in the **Class Name** field.
 
 2. Now update **ConsentDelegateImpl.cs** to implement your new consent delegate class. Add the using statement for `Microsoft.InformationProtection` and set the class to inherit `IConsentDelegate`.
 
@@ -113,9 +114,9 @@ Now create an implementation for a consent delegate, by extending the SDK's `Mic
 
 1. From **Solution Explorer**, open the .cs file in your project that contains the implementation of the `Main()` method. It defaults to the same name as the project containing it, which you specified during project creation.
 
-2. Remove the generated implementation of `main()`. 
+2. Remove the generated implementation of `main()`.
 
-3. The managed wrapper includes a static class, `Microsoft.InformationProtection.MIP` used for initialization, creating a `MipContext`, loading profiles, and releasing resources. To initialize the wrapper for file API operations, call `MIP.Initialize()`, passing in `MipComponent.File` to load the libraries necessary for file operations. 
+3. The managed wrapper includes a static class, `Microsoft.InformationProtection.MIP` used for initialization, creating a `MipContext`, loading profiles, and releasing resources. To initialize the wrapper for file API operations, call `MIP.Initialize()`, passing in `MipComponent.File` to load the libraries necessary for file operations.
 
 4. In `Main()` in *Program.cs* add the following, replacing **\<application-id\>** with the ID of the Azure AD Application Registration created previously.
 
@@ -136,7 +137,7 @@ namespace mip_sdk_dotnet_quickstart
 
         static void Main(string[] args)
         {
-            //Initialize Wrapper for File API operations 
+            //Initialize Wrapper for File API operations
             MIP.Initialize(MipComponent.File);
         }
     }
@@ -188,7 +189,7 @@ namespace mip_sdk_dotnet_quickstart
                // Create the FileProfileSettings object.
                // Initialize file profile settings to create/use local state.
                var profileSettings = new FileProfileSettings(mipContext,
-                                        CacheStorageType.OnDiskEncrypted,                                        
+                                        CacheStorageType.OnDiskEncrypted,
                                         new ConsentDelegateImplementation());
 
                // Load the Profile async and wait for the result.

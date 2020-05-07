@@ -6,6 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: mbaldwin
+ms.custom: has-adal-ref
 #Customer intent: As a an application developer, I want to learn how to list sensitivity labels, so that I can implement this logic in my own application.
 ---
 
@@ -22,11 +23,11 @@ If you haven't already, be sure to complete the following prerequisites before c
 
 ## Add logic to list the sensitivity labels
 
-Add logic to list your organization's sensitivity labels, using the File engine object. 
+Add logic to list your organization's sensitivity labels, using the File engine object.
 
 1. Open the Visual Studio solution you created in the previous "Quickstart: Client application initialization (C++)" article.
 
-2. Using **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It defaults to the same name as the project containing it, which you specified during project creation. 
+2. Using **Solution Explorer**, open the .cpp file in your project that contains the implementation of the `main()` method. It defaults to the same name as the project containing it, which you specified during project creation.
 
 3. Add the following `using` directive after `using mip::FileEngine;`, near the top of the file:
 
@@ -50,23 +51,23 @@ Add logic to list your organization's sensitivity labels, using the File engine 
       }
    }
    system("pause");
-   ``` 
+   ```
 
 ## Create a PowerShell script to generate access tokens
 
-Use the following PowerShell script to generate access tokens, which are requested by the SDK in your `AuthDelegateImpl::AcquireOAuth2Token` implementation. The script uses the `Get-ADALToken` cmdlet from the ADAL.PS module you installed earlier, in "MIP SDK Setup and configuration". 
+Use the following PowerShell script to generate access tokens, which are requested by the SDK in your `AuthDelegateImpl::AcquireOAuth2Token` implementation. The script uses the `Get-ADALToken` cmdlet from the ADAL.PS module you installed earlier, in "MIP SDK Setup and configuration".
 
 1. Create a PowerShell Script file (.ps1 extension), and copy/paste the following script into the file:
 
    - `$authority` and `$resourceUrl` are updated later, in the following section.
-   - Update `$appId` and `$redirectUri`, to match the values you specified in your Azure AD app registration. 
+   - Update `$appId` and `$redirectUri`, to match the values you specified in your Azure AD app registration.
 
    ```powershell
-   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token() 
+   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token()
    $resourceUrl = '<resource-url>'                  # Specified when SDK calls AcquireOAuth2Token()
    $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'  # App ID of the Azure AD app registration
    $redirectUri = 'bltest://authorize'              # Redirect URI of the Azure AD app registration
-   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
+   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession
    $response.AccessToken | clip                     # Copy the access token text to the clipboard
    ```
 
@@ -74,7 +75,7 @@ Use the following PowerShell script to generate access tokens, which are request
 
 ## Build and test the application
 
-Finally, build and test your client application. 
+Finally, build and test your client application.
 
 1. Use F6 (**Build Solution**) to build your client application. If you have no build errors, use F5 (**Start debugging**) to run your application.
 
@@ -118,7 +119,7 @@ Finally, build and test your client application.
 
 ## Troubleshooting
 
-### Problems during execution of PowerShell script 
+### Problems during execution of PowerShell script
 
 | Summary | Error message | Solution |
 |---------|---------------|----------|

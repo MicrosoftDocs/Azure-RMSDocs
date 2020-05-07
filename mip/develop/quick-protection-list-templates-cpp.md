@@ -6,6 +6,7 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: v-anikep
+ms.custom: has-adal-ref
 #Customer intent: As a an application developer, I want to learn how to list protection templates for a user in the MIP SDK, so that I can use the SDK APIs to apply templates later on.
 ---
 
@@ -106,7 +107,7 @@ Finally, build and test your client application.
 
 4. After pasting the access token into the prompt from step #2, your console output should show the protection templates , similar to the following example:
 
-   ```console 
+   ```console
    *** Template List:
    Name: Confidential \ All Employees : a74f5027-f3e3-4c55-abcd-74c2ee41b607
    Name: Highly Confidential \ All Employees : bb7ed207-046a-4caf-9826-647cff56b990

@@ -20,7 +20,7 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: dev
+ms.custom: dev, has-adal-ref
 
 ---
 
