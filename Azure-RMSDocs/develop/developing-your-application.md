@@ -20,7 +20,7 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: dev
+ms.custom: dev, has-adal-ref
 
 ---
 
@@ -135,7 +135,7 @@ The protect with template option proceeds to get the template list from the serv
 
      public static void ProtectWithTemplate(SymmetricKeyCredential symmetricKeyCredential, string filePath)
      {
-       // Gets the available templates for this tenant             
+       // Gets the available templates for this tenant
        Collection<TemplateInfo> templates = SafeNativeMethods.IpcGetTemplateList(null, false, true,
            false, true, null, null, symmetricKeyCredential);
 
@@ -164,7 +164,7 @@ The protect with template option proceeds to get the template list from the serv
          {
            templateSelection -= templateSelection;
 
-           // Encrypts the file using the selected template             
+           // Encrypts the file using the selected template
            TemplateInfo selectedTemplateInfo = templates.ElementAt(templateSelection);
 
            string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(filePath,
@@ -179,7 +179,7 @@ If you select ad-hoc policy, the user of the application has to provide emails o
 
     if (issuerDisplayName.Trim() != "")
     {
-      // Gets the available issuers of rights policy templates.              
+      // Gets the available issuers of rights policy templates.
       // The available issuers is a list of RMS servers that this user has already contacted.
       try
       {
@@ -189,7 +189,7 @@ If you select ad-hoc policy, the user of the application has to provide emails o
                                                         false,
                                                         false, true, null, symmetricKeyCredential);
 
-        // Creates the policy and associates the chosen user rights with it             
+        // Creates the policy and associates the chosen user rights with it
         SafeInformationProtectionLicenseHandle handle = SafeNativeMethods.IpcCreateLicenseFromScratch(
                                                             templateIssuers.ElementAt(0));
         SafeNativeMethods.IpcSetLicenseOwner(handle, owner);
@@ -200,7 +200,7 @@ If you select ad-hoc policy, the user of the application has to provide emails o
                                                                 issuerDisplayName,
                                                                 false));
 
-        //Encrypts the file using the ad hoc policy             
+        //Encrypts the file using the ad hoc policy
         string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(
                                        filePath,
                                        handle,
@@ -234,4 +234,3 @@ Once you get everything built and executing, the outputs of the application shou
 
 6. Finally, you enter some policy metadata: policy name, description, and issuer (Azure AD Tenant) display name
    ![app output - step 6](../media/develop/app-output-6.png)
-

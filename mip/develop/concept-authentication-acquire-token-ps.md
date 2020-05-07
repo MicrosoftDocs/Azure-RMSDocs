@@ -6,6 +6,7 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 02/04/2019
 ms.author: mbaldwin
+ms.custom: has-adal-ref
 ---
 
 # Acquire an access token (PowerShell)
@@ -16,7 +17,7 @@ The example shown demonstrates how to call an external PowerShell script to obta
 
 - Complete [(MIP) SDK setup and configuration](setup-configure-mip.md). Among other tasks, you'll register your client application in your Azure Active Directory (Azure AD) tenant. Azure AD will provide an application ID, also known as client ID, which is used in your token acquisition logic.
 
-This code isn't intended for production use. It may only be used for development and understanding auth concepts. 
+This code isn't intended for production use. It may only be used for development and understanding auth concepts.
 
 ## sample::auth::AcquireToken()
 
@@ -56,7 +57,7 @@ namespace sample {
 
 ## Mint a token
 
-Finally, mint a token to put in the mToken variable. The example below demonstrates a PowerShell script that can be used to quickly obtain the OAuth2 token via ADAL and PowerShell on Windows. This token is granted for the Office 365 Security and Compliance Center endpoint only. Consequently, protection actions will fail unless the resource URL is updated. 
+Finally, mint a token to put in the mToken variable. The example below demonstrates a PowerShell script that can be used to quickly obtain the OAuth2 token via ADAL and PowerShell on Windows. This token is granted for the Office 365 Security and Compliance Center endpoint only. Consequently, protection actions will fail unless the resource URL is updated.
 
 ### Install [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) from PS Gallery
 
@@ -72,7 +73,7 @@ Install-Module -Name ADAL.PS
 #Install the ADAL.PS package if it's not installed.
 if(!(Get-Package adal.ps)) { Install-Package -Name adal.ps }
 
-$authority = "https://login.windows.net/common/oauth2/authorize" 
+$authority = "https://login.windows.net/common/oauth2/authorize"
 #this is the security and compliance center endpoint
 $resourceUrl = "https://syncservice.o365syncservice.com/"
 #replace <application-id> and <redirect-uri>, with the Redirect URI and Application ID from your Azure AD application registration.
@@ -84,5 +85,3 @@ $response.AccessToken | clip
 ```
 
 Copy the token from the clipboard in to auth.cpp as the value for `string mToken`, replacing "your token here" above. Running the script again may be required, depending on how long the following steps take.
-
-

@@ -20,7 +20,7 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: admin
+ms.custom: admin, has-adal-ref
 
 ---
 
@@ -30,15 +30,15 @@ ms.custom: admin
 
 You must have an Azure AD directory to use Azure Information Protection. You use an account from this directory to sign in to the Azure portal, where, for example, you can configure and manage Azure Information Protection labels and Azure Rights Management templates.
 
-If you have a subscription that includes Azure Information Protection or Azure Rights Management, your Azure AD directory is automatically created for you if needed.  
+If you have a subscription that includes Azure Information Protection or Azure Rights Management, your Azure AD directory is automatically created for you if needed.
 
 For more information about Azure AD, see [What is Azure AD Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 
 To integrate your Azure AD directory with your on-premises AD forests, see [Integrate on-premises Active Directory domains with Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
-### Scenarios that have specific requirements 
+### Scenarios that have specific requirements
 
-Computers running Office 2010: 
+Computers running Office 2010:
 
 - These computers require the [Azure Information Protection unified labeling client](./rms-client/aip-clientv2.md) or [Azure Information Protection client](./rms-client/aip-client.md) to authenticate to Azure Information Protection and its data protection service, Azure Rights Management.
 
@@ -51,7 +51,7 @@ Support for certificate-based authentication (CBA):
 Users' UPN value doesn't match their email address:
 
 - This is not a recommended configuration and doesn't support single sign-on for Azure Information Protection. If you cannot change the UPN value, configure alternate login ID for users, and instruct them how to sign in to Office by using this alternate login. For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) and [Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
-    
+
     When the domain name in the UPN value is a domain that is verified for your tenant, add the user's UPN value as another email address to the Azure AD proxyAddresses attribute. This lets the user be authorized for Azure Rights Management if their UPN value is specified at the time the usage rights are granted. For more information about this and how user accounts are authorized, see [Preparing users and groups for Azure Information Protection](prepare.md).
 
 Mobile devices or Mac computers that authenticate on-premises by using AD FS or an equivalent authentication provider:
@@ -67,7 +67,7 @@ To use multi-factor authentication (MFA) with Azure Information Protection requi
 
 - Azure Information Protection client:
 
-    - The Azure Information Protection clients for Windows and the viewer app for iOS and Android has always supported MFA; no minimum version is required. 
+    - The Azure Information Protection clients for Windows and the viewer app for iOS and Android has always supported MFA; no minimum version is required.
 
 -   Rights Management sharing app for Mac computers:
 
@@ -92,9 +92,8 @@ The Rights Management connector and the Azure Information Protection scanner do 
 - The account that installs and configures the connector.
 
 - The service principal account in Azure AD, **Aadrm_S-1-7-0**, that the connector creates.
- 
+
 - The service account that runs the scanner.
 
 ## Next steps
 To check for other requirements, see [Requirements for Azure Information Protection](requirements.md).
-

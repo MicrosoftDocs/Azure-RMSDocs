@@ -20,7 +20,7 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: dev
+ms.custom: dev, has-adal-ref
 
 ---
 # Deploy into production
@@ -130,4 +130,3 @@ For more on enabling your application to use RMS for Azure Rights Management ser
 * [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=28177)
 * [Configuring Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx)
 * [Enable your application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
-
