@@ -91,7 +91,7 @@ To add this field code in your document:
 
 1.	In the document, create a header, footer or watermark (e.g. using WordArt or a text box) and position the cursor where you want to add the label's classification inserted and then, from the **Insert** tab, select **Quick Parts** under the **Text** section > **Field**.
 2.	In the **Field** dialog box, from the **Categories** dropdown, select **Document Information**. Then, from the **Field names** dropdown, select **DocProperty**.
-3.	From the **Property** dropdown, select the property named **MSIP_Label_{*label GUID*}_Enabled** (the label GUID is the identifier of the label applied to the current document, you might need to select the option **Feld Codes** in order to show the full nake of the property you have selected to confirm it's the right one), and select **OK**.
+3.	From the **Property** dropdown, select the property named **MSIP_Label_{*label GUID*}_Enabled** (the label GUID is the identifier of the label applied to the current document, you might need to select the option **Feld Codes** in order to show the full name of the property you have selected to confirm it's the right one), and select **OK**.
 4.	Press **Shift-F9** to show field codes, and then edit the field code in the greyed area as follows:
 `{IF {DOCPROPERTY  MSIP_Label_{label GUID}_Enabled } = true “The sensitivity is Labelname” }`
 (replace the text at the end with what you want to display when the current label is applied to the document)
