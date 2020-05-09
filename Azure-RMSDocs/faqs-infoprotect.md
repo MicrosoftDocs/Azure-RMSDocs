@@ -94,8 +94,9 @@ To add this field code in your document:
 3.	From the **Property** dropdown, select the property named **MSIP_Label_{*label GUID*}_Enabled** (the label GUID is the identifier of the label applied to the current document, you might need to select the option **Feld Codes** in order to show the full name of the property you have selected to confirm it's the right one), and select **OK**.
 4.	Press **Shift-F9** to show field codes, and then edit the field code in the greyed area as follows:
 
+<pre>
 ```{IF {DOCPROPERTY  MSIP_Label_{label GUID}_Enabled } = true “The sensitivity is Labelname” }```
-
+</pre>
 (replace the text at the end with what you want to display when the current label is applied to the document)
 
 
