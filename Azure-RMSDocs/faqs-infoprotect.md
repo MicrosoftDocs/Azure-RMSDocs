@@ -95,9 +95,10 @@ To add this field code in your document:
 4.	Press **Shift-F9** to show field codes, and then edit the field code in the greyed area as follows:
 
 <pre>
-```{IF {DOCPROPERTY  MSIP_Label_{label GUID}_Enabled } = true “The sensitivity is Labelname” }```
+  {IF {DOCPROPERTY  MSIP_Label_{label GUID}_Enabled } = true “The sensitivity is Labelname” }
 </pre>
-(replace the text at the end with what you want to display when the current label is applied to the document)
+
+&nbsp;&nbsp;&nbsp;(replace the text at the end with what you want to display when the current label is applied to the document)
 
 
 5.	Format the text as desired and press **Shift-F9** again to display the resulting text as part of the custom content marking. If the label doesn’t match the GUID specified the text won’t be displayed. You can concatenate the string above using different GUIDs and text to accommodate multiple labels. 
