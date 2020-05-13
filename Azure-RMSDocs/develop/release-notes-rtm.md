@@ -20,7 +20,7 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: dev
+ms.custom: dev, has-adal-ref
 
 ---
 
@@ -34,7 +34,7 @@ This article contains important information about this and previous releases of 
 - The RMS client may crash when trying to check whether a some PDF documents that have been previously protected and unprotected are       currently protected.
 - Using DNS redirection for AD RMS servers that have been configured on special ports will not work correctly.
 
-## September 2019 - update 
+## September 2019 - update
 
 - Fixed a deadlock that may occur when trying to call the initialization methods at the same time as some other RMS client methods.
 - Fixed an issue with determining whether password protected Office files are RMS protected.
@@ -153,7 +153,7 @@ The File API component of SDK has been extended and offers the following feature
 
     **Note**  As of the April 2015 release, a check has been added to the installation process for this KB.
 
-     
+
 
 -   **File API integration**
 

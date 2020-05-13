@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/12/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -144,9 +144,9 @@ In addition to the information in the Office article, specific to Azure Informat
     
     You can use the following PowerShell commands to help you determine whether your client connection is terminated before it reaches the Azure Rights Management service:
    
-    	$request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
-    	$request.GetResponse()
-    	$request.ServicePoint.Certificate.Issuer
+        $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
+        $request.GetResponse()
+        $request.ServicePoint.Certificate.Issuer
     
     The result should show that the issuing CA is from a Microsoft CA, for example: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`. If you see an issuing CA name that is not from Microsoft, it is very likely your secure client-to-service connection is being terminated and needs reconfiguration on your firewall.
 
@@ -164,11 +164,13 @@ For information about the additional requirements for this scenario, see [On-pre
 
 ### Coexistence of AD RMS with Azure RMS
 
-The following deployment scenario is not supported unless you are using AD RMS for [HYOK protection](configure-adrms-restrictions.md) with Azure Information Protection (the "hold your own key" configuration):
+Use of AD RMS and Azure RMS in the following scenario to protect content by the same user in the same organization is **only** supported in AD RMS for [HYOK protection](configure-adrms-restrictions.md) with Azure Information Protection (the "hold your own key" configuration).
 
 - Running AD RMS and Azure RMS side by side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-There is a supported migration path [from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md), and from [Azure Information Protection to AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](decommission-deactivate.md).
+There is a supported migration path [from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md), and from [Azure Information Protection to AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](decommission-deactivate.md). 
+
+For other scenarios, where both services are active in the same organization, the services must be configured so that only one of them allows any given user to protect content. This can be configured using redirections in the case of an [AD RMS to Azure RMS migration](migrate-from-ad-rms-to-azure-rms.md) or, in the case where both services must be active for different users at the same time, by using service side configurations to enforce exclusivity: Azure RMS onboarding controls in the cloud service, and an ACL on the Publish URL to set Read-Only mode for AD RMS.   
 
 ### Service Tags
 
