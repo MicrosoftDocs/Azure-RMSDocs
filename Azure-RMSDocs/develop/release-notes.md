@@ -14,6 +14,7 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
+ms.custom: has-adal-ref
 ---
 
 # What's new and Release notes
@@ -41,7 +42,7 @@ This topic outlines important changes and features in this new version of the RM
 The update for our July release included incrementing the revision of the SDK, now 4.2.5.
 
 - Android SDK: Your app can now **set the logging level on-the-fly** with the Android SDK. For more information, see [How to: Enable error and performance logging](https://docs.microsoft.com/information-protection/develop/enabling-logging)
-- The iOS SDK does not support logging level. 
+- The iOS SDK does not support logging level.
 - The SDK now returns an error for a NULL access token.
 
 ### October 2016 update
