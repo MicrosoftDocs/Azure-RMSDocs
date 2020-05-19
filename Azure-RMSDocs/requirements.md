@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/04/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -185,4 +185,3 @@ The Azure Information Protection service also depends on two specific IP address
  - **13.107.9.181**
 
 Make sure to create rules to allow outbound access to these specific IP addresses. 
-
