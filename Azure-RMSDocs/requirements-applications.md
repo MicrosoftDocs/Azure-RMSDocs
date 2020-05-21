@@ -67,7 +67,7 @@ Includes:
 - Office 365 ProPlus apps
 
 ###### Footnote 2
-Supported only with SharePoint Online and OneDrive for Business, and the documents are unprotected before they are uploaded to a protected library.
+Supported only with Microsoft SharePoint and OneDrive, and the documents are unprotected before they are uploaded to a protected library.
 
 ###### Footnote 3
 For [Office attachments](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) that are protected by using [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
@@ -182,7 +182,7 @@ For more information, see the [Azure Information Protection Developer's Guide](.
 
 The following applications that are not currently supported by Azure RMS include the following:
 
-- Microsoft OneDrive for Business for SharePoint Server 2013
+- Microsoft OneDrive for SharePoint Server 2013
 
 - XPS Viewer
 

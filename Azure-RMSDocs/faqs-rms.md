@@ -170,14 +170,14 @@ To track a document after you have protected it: From a Windows computer that ha
 No. In this scenario, the associated temporary file doesn't contain data from the original document but instead, only what the user enters while the file is open. Unlike the original file, the temporary file is obviously not designed for sharing and would remain on the device, protected by local security controls, such as BitLocker and EFS.
 
 ## A feature I am looking for doesn't seem to work with SharePoint protected libraries—is support for my feature planned?
-Currently, SharePoint supports RMS-protected documents by using IRM protected libraries, which do not support Rights Management templates, document tracking, and some other capabilities. For more information, see the [SharePoint Online and SharePoint Server](./office-apps-services-support.md#sharepoint-online-and-sharepoint-server) section in the [Office applications and services](./office-apps-services-support.md) article.
+Currently, Microsoft SharePoint supports RMS-protected documents by using IRM protected libraries, which do not support Rights Management templates, document tracking, and some other capabilities. For more information, see the [SharePoint in Microsoft 365 and SharePoint Server](./office-apps-services-support.md#sharepoint-in-microsoft-365-and-sharepoint-server) section in the [Office applications and services](./office-apps-services-support.md) article.
 
 If you are interested in a specific capability that isn't yet supported, be sure to keep an eye on announcements on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
-## How do I configure One Drive for Business in SharePoint Online, so that users can safely share their files with people inside and outside the company?
+## How do I configure One Drive in SharePoint, so that users can safely share their files with people inside and outside the company?
 By default, as an Office 365 administrator, you don't configure this; users do.
 
-Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive for Business is designed for users to enable and configure IRM for their own OneDrive for Business library. However, by using PowerShell, you can do this for them. For instructions, see the [SharePoint Online and OneDrive for Business: IRM Configuration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration) section in the [Office 365: Configuration for clients and online services](configure-office365.md) article.
+Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive is designed for users to enable and configure IRM for their own OneDrive library. However, by using PowerShell, you can do this for them. For instructions, see the [SharePoint in Microsoft 365 and OneDrive: IRM Configuration](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration) section in the [Office 365: Configuration for clients and online services](configure-office365.md) article.
 
 ## Do you have any tips or tricks for a successful deployment?
 

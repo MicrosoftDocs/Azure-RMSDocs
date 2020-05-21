@@ -45,7 +45,7 @@ A super user always has the Rights Management Full Control [usage right](configu
 
 ## Configuration for the super user feature
 
-By default, the super user feature is not enabled, and no users are assigned this role. It is enabled for you automatically if you configure the Rights Management connector for Exchange, and it is not required for standard services that run Exchange Online, SharePoint Online, or SharePoint Server.
+By default, the super user feature is not enabled, and no users are assigned this role. It is enabled for you automatically if you configure the Rights Management connector for Exchange, and it is not required for standard services that run Exchange Online, Microsoft Sharepoint Server, or SharePoint in Microsoft 365.
 
 If you need to manually enable the super user feature, use the PowerShell cmdlet [Enable-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature), and then assign users (or service accounts) as needed by using the [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) cmdlet or the [Set-AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) cmdlet and add users (or other groups) as needed to this group. 
 
