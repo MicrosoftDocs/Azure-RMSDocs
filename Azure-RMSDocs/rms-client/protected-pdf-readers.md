@@ -43,7 +43,7 @@ Select the device you're using to install a PDF reader that can open protected P
 
 The PDF readers in the following table support protected PDF documents that have a .ppdf file name extension, and older formats that have a .pdf file name extension. 
 
-Currently, SharePoint Online and SharePoint on-premises use an older format for PDF documents in IRM-protected libraries.
+Currently, Microsoft SharePoint uses an older format for PDF documents in IRM-protected libraries.
 
 
 |Operating system|Supported readers|
