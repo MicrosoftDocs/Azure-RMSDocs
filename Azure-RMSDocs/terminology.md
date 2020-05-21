@@ -37,7 +37,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |Term|Definition|
 |--------|--------------|
 |AADRM|The name of the first PowerShell module for the protection service (Azure Rights Management), which was derived from the unofficial abbreviation for Azure Rights Management when it was previously named (Windows) Azure Active Directory Rights Management. This PowerShell module is now replaced with the AIPService module.|
-|activate|To enable the protection service (Azure Rights Management) so that an organization can protect their documents and email. This action also enables IRM features in Exchange Online and SharePoint Online.|
+|activate|To enable the protection service (Azure Rights Management) so that an organization can protect their documents and email. This action also enables IRM features in Exchange Online and Microsoft SharePoint.|
 |Active Directory Rights Management Services|Frequently abbreviated to *AD RMS*.<br /><br />A Windows Server role that provides rights management protection by using encryption and policy to help secure documents, files, and email.|
 |AD RMS|See *Active Directory Rights Management Services*.|
 |AIPService|The current name of the PowerShell module for the protection service, which replaces with the older, AADRM module.|
@@ -68,7 +68,7 @@ Azure Information Protection client (classic)|Sometimes abbreviated to *classic 
 |key object|In the context of the tenant key, an entity that contains metadata that is required by the Azure Rights Management service for cryptographic operations.|
 |label|See *Azure Information Protection label*.|
 |information protection|Sometimes abbreviated to *IP*.<br /><br />An industry-standard, generic term that refers to protecting data and files from unauthorized access, even after the data and files leave the organizational boundaries by using email or document sharing. Microsoft Azure Information Protection is an example of an information protection (IP) solution.|
-|Information Rights Management|Frequently abbreviated to *IRM*.<br /><br />A term used in conjunction with Office services, such as Exchange Server, Word, and SharePoint Online, to describe the ability to support the Microsoft Rights Management services.|
+|Information Rights Management|Frequently abbreviated to *IRM*.<br /><br />A term used in conjunction with Office services, such as Exchange Server, Word, and SharePoint, to describe the ability to support the Microsoft Rights Management services.|
 |IRM|See *Information Rights Management*.|
 |Office Message Encryption|Frequently abbreviated to *OME*.<br /><br />The new Office 365 Message Encryption capabilities have native integration with the Azure Rights Management service to provide the same email protection for internal and external users, automatic refresh of templates, and support for the bring your own key (BYOK) scenario. The previous OME implementation was designed for external recipients only, required a mail flow rule, and did not support BYOK.|
 |Microsoft Information Protection| Sometimes abbreviated to *MIP*.<br /><br /> A framework for products and integrated capabilities that use the same labeling store ("unified labels") and help you protect your organization's sensitive information.|

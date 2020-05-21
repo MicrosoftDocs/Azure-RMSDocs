@@ -64,7 +64,7 @@ For more information about Azure Key Vault, see [What is Azure Key Vault?](/azur
 
 ## BYOK support for services and clients
 
-BYOK and [usage logging](log-analyze-usage.md) work seamlessly with every application that integrates with the Azure Rights Management service that is used by Azure Information Protection to protect data. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that use the Azure Rights Management service by using the RMS connector, and client applications such as Office 2019, Office 2016, and Office 2013. 
+BYOK and [usage logging](log-analyze-usage.md) work seamlessly with every application that integrates with the Azure Rights Management service that is used by Azure Information Protection to protect data. This includes cloud services such as Microsoft SharePoint, on-premises servers that run Exchange and SharePoint that use the Azure Rights Management service by using the RMS connector, and client applications such as Office 2019, Office 2016, and Office 2013. 
 
 You get key usage logs whatever application makes requests to the Azure Rights Management service.
 

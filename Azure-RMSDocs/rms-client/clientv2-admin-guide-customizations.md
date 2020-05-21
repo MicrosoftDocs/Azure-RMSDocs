@@ -391,7 +391,7 @@ This configuration uses policy [advanced settings](#how-to-configure-advanced-se
 
 This setting is for when users attach labeled documents to an email, and do not label the email message itself. In this scenario, a label is automatically selected for them, based on the classification labels that are applied to the attachments. The highest classification label is selected.
 
-The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on SharePoint or OneDrive for Business).
+The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on Microsoft SharePoint or OneDrive).
 
 You can configure this setting to **Recommended**, so that users are prompted to apply the selected label to their email message, with a customizable tooltip. Users can accept the recommendation or dismiss it. Or, you can configure this setting to **Automatic**, where the selected label is automatically applied but users can remove the label or select a different label before sending the email.
 
@@ -943,7 +943,7 @@ When you configure this setting, it changes the default behavior of how the Azur
 For Word, Excel, and PowerPoint, automatic classification runs continuously in the background.
 
 The behavior does not change for Outlook.
-When the Azure Information Protection unified labeling client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint Online. Large files also save more quickly because the condition rules have already run.
+When the Azure Information Protection unified labeling client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint. Large files also save more quickly because the condition rules have already run.
 
 The condition rules do not run in real time as a user types. Instead, they run periodically as a background task if the document is modified.
 

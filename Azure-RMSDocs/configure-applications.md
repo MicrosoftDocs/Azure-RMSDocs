@@ -34,7 +34,7 @@ ms.custom: admin
 >
 > For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the Azure Information Protection client for Windows, see the [Azure Information Protection client user guide](./rms-client/client-user-guide.md).
 
-After you have deployed Azure Information Protection for your organization, use the following information to configure applications, the Azure Information Protection client, and services. For example, Office applications such as Word 2019, Word 2016, and Word 2013. Also services such as Exchange Online (transport rules, data loss prevention, do not forward, and message encryption) and SharePoint Online (protected libraries). For information about how these applications and services support the data protection service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
+After you have deployed Azure Information Protection for your organization, use the following information to configure applications, the Azure Information Protection client, and services. For example, Office applications such as Word 2019, Word 2016, and Word 2013. Also services such as Exchange Online (transport rules, data loss prevention, do not forward, and message encryption) and Microsoft SharePoint (protected libraries). For information about how these applications and services support the data protection service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
 
 > [!IMPORTANT]
 > For information about supported versions and other requirements, see [Requirements for Azure Information Protection](requirements.md).
@@ -43,7 +43,7 @@ After you have deployed Azure Information Protection for your organization, use 
 
     -   [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration)
 
-    -   [SharePoint Online and OneDrive for Business: IRM Configuration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)
+    -   [SharePoint in Microsoft 365 and OneDrive: IRM Configuration](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration)
 
 - [Office applications: Configuration for clients](configure-office-apps.md)
 

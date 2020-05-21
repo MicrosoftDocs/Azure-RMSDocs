@@ -35,11 +35,11 @@ This app lets you view rights-protected email messages (.rpmsg files) if your em
 
 Because this app is a viewer, you can't use it to create new protected email messages, reply to them, or create or edit protected files. In addition, the app can't open attachments for the files that you view. For example, attachments in protected PDF documents or in rights-protected email messages.
 
-## Can I open PDF files that are in SharePoint protected libraries and OneDrive for Business?
+## Can I open PDF files that are in SharePoint protected libraries and OneDrive?
 
-Yes, you can open protected PDF files that others have shared with you via SharePoint and OneDrive for Business. Tap the link, and choose this app to open the file for you. 
+Yes, you can open protected PDF files that others have shared with you via Microsoft SharePoint and OneDrive. Tap the link, and choose this app to open the file for you. 
 
-This app can also open PDF files that have been protected outside SharePoint and OneDrive for Business (protected PDF and .ppdf files).
+This app can also open PDF files that have been protected outside SharePoint and OneDrive (protected PDF and .ppdf files).
 
 ## Can my mobile device run the Azure Information Protection app?
 

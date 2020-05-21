@@ -69,7 +69,7 @@ If you configure automatic classification rather than recommended, the label is 
     
     You cannot use recommended classification for documents that were previously labeled with a higher classification. 
 
-You can change this behavior so that the Azure Information Protection client periodically checks documents for the condition rules that you specify. For example, this would be appropriate if you're using [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps that are automatically saved in SharePoint Online, OneDrive, or OneDrive for Business. To support this scenario, you can configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) that is currently in preview. The setting turns on classification to run continuously in the background.
+You can change this behavior so that the Azure Information Protection client periodically checks documents for the condition rules that you specify. For example, this would be appropriate if you're using [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps that are automatically saved in Microsoft SharePoint, OneDrive for work or school, or OneDrive for home. To support this scenario, you can configure an [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) that is currently in preview. The setting turns on classification to run continuously in the background.
 
 ### How multiple conditions are evaluated when they apply to more than one label
 
