@@ -133,7 +133,7 @@ Optionally, consider configuring the following:
 
 2. Configure Office applications and services
     
-    Configure Office applications and services for the information rights management (IRM) features in SharePoint Online or Exchange Online. For more information, see [Configuring applications for Azure Rights Management](configure-applications.md).
+    Configure Office applications and services for the information rights management (IRM) features in Microsoft SharePoint or Exchange Online. For more information, see [Configuring applications for Azure Rights Management](configure-applications.md).
 
 3. Configure the super user feature for data recovery
     
@@ -206,7 +206,7 @@ Optionally, consider configuring the following:
 
 2. Configure Office applications and services
     
-    Configure Office applications and services for the information rights management (IRM) features in SharePoint Online or Exchange Online. For more information, see [Configuring applications for Azure Rights Management](./configure-applications.md).
+    Configure Office applications and services for the information rights management (IRM) features in SharePoint or Exchange Online. For more information, see [Configuring applications for Azure Rights Management](./configure-applications.md).
 
 3. Configure the super user feature for data recovery
     
