@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/05/2020
+ms.date: 05/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -391,7 +391,7 @@ This configuration uses policy [advanced settings](#how-to-configure-advanced-se
 
 This setting is for when users attach labeled documents to an email, and do not label the email message itself. In this scenario, a label is automatically selected for them, based on the classification labels that are applied to the attachments. The highest classification label is selected.
 
-The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on SharePoint or OneDrive for Business).
+The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on Microsoft SharePoint or OneDrive).
 
 You can configure this setting to **Recommended**, so that users are prompted to apply the selected label to their email message, with a customizable tooltip. Users can accept the recommendation or dismiss it. Or, you can configure this setting to **Automatic**, where the selected label is automatically applied but users can remove the label or select a different label before sending the email.
 
@@ -685,7 +685,9 @@ Example PowerShell command, where your label policy is named "Global":
 Starting from scanner version 2.7.x.x, we recommend limiting CPU consumption using the following **ScannerMaxCPU** and **ScannerMinCPU** advanced settings method. 
 
 > [!IMPORTANT]
-> The **ScannerMaxCPU** and **ScannerMinCPU** advanced settings method cannot be used with the thread limiting policy. To use method to limit CPU consumption, you'll need to discontinue use of the [thread limiting policy](#limit-the-number-of-threads-used-by-the-scanner) you may already have in place. 
+> When the following thread limiting policy is in use, **ScannerMaxCPU** and **ScannerMinCPU** advanced settings are ignored. To limit CPU consumption using **ScannerMaxCPU** and **ScannerMinCPU** advanced settings, cancel use of policies that limit the number of threads. 
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 To limit CPU consumption on the scanner machine, it is manageable by creating two advanced settings: **ScannerMaxCPU** and **ScannerMinCPU**. 
 
@@ -943,7 +945,7 @@ When you configure this setting, it changes the default behavior of how the Azur
 For Word, Excel, and PowerPoint, automatic classification runs continuously in the background.
 
 The behavior does not change for Outlook.
-When the Azure Information Protection unified labeling client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint Online. Large files also save more quickly because the condition rules have already run.
+When the Azure Information Protection unified labeling client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint. Large files also save more quickly because the condition rules have already run.
 
 The condition rules do not run in real time as a user types. Instead, they run periodically as a background task if the document is modified.
 

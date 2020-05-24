@@ -314,8 +314,8 @@ Use the following table to identify the friendly name of event functions that yo
 |ProtectedBefore|Whether the content was protected before change: Yes/No |
 |ProtectionOwnerBefore|Rights Management owner before change |
 |UserJustification|Justification when downgrading or removing label|
-|LastModifiedBy|User in UPN format who last modified the file. Available for Office and SharePoint Online only|
-|LastModifiedDate|UTC in format YYYY-MM-DDTHH:MM:SS: Available for Office & SharePoint Online only |
+|LastModifiedBy|User in UPN format who last modified the file. Available for Office and SharePoint only|
+|LastModifiedDate|UTC in format YYYY-MM-DDTHH:MM:SS: Available for Office and SharePoint only |
 
 
 #### Examples using InformationProtectionEvents
