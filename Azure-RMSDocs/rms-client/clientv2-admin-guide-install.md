@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/15/2020
+ms.date: 05/24/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -40,9 +40,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     The full installation of the Azure Information Protection unified labeling client by default, requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the setup wizard from the executable installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted. Although not recommended, you can bypass this prerequisite when you use the setup wizard by using a [custom installation parameter](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
     
-    This prerequisite is not automatically installed when you install the client silently by using the executable installer, Windows Update, or Windows installer. For these scenarios, you must install this prerequisite separately if it is needed, or the install fails. You can download the Microsoft .NET Framework 4.6.2 (Offline Installer) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53344).
-
-- Microsoft .NET Framework 4.5.2
+    - Microsoft .NET Framework 4.5.2
     
     If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the executable installer does not download or install it.
 
