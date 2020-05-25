@@ -6,7 +6,7 @@ description: Configure and manage protection templates, also known as rights man
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 05/24/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -147,7 +147,16 @@ When you convert a template to a label:
 
 ## To create a new template
 
-When you create a new label with the protection setting of **Azure (cloud key)**, under the covers, this action creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
+Templates can be created using the portal or using PowerShell. 
+
+### Template creation using PowerShell
+
+To create a new protection template using PowerShell with the specified name, description, policy, and desired status setting use the [Add-AipServiceTemplate](https://docs.microsoft.com/powershell/module/aipservice/add-aipservicetemplate?view=azureipps) cmdlet. 
+
+
+### Template creation using the portal
+
+When you create a new label using the portal with the protection setting of **Azure (cloud key)**, this action creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
 
 1. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** pane, select **Add a new label**.
 

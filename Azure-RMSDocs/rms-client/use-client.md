@@ -200,6 +200,8 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Separate PowerShell cmdlets to connect to a Rights Management service
 
+- Display of the user identity that applied a label
+
 
 ### Parent labels and their sublabels 
 

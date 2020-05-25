@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/05/2020
+ms.date: 05/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -685,7 +685,9 @@ Example PowerShell command, where your label policy is named "Global":
 Starting from scanner version 2.7.x.x, we recommend limiting CPU consumption using the following **ScannerMaxCPU** and **ScannerMinCPU** advanced settings method. 
 
 > [!IMPORTANT]
-> The **ScannerMaxCPU** and **ScannerMinCPU** advanced settings method cannot be used with the thread limiting policy. To use method to limit CPU consumption, you'll need to discontinue use of the [thread limiting policy](#limit-the-number-of-threads-used-by-the-scanner) you may already have in place. 
+> When the following thread limiting policy is in use, **ScannerMaxCPU** and **ScannerMinCPU** advanced settings are ignored. To limit CPU consumption using **ScannerMaxCPU** and **ScannerMinCPU** advanced settings, cancel use of policies that limit the number of threads. 
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 To limit CPU consumption on the scanner machine, it is manageable by creating two advanced settings: **ScannerMaxCPU** and **ScannerMinCPU**. 
 
