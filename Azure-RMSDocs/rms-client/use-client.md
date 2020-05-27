@@ -115,7 +115,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |Dynamic visual markings with variables:| **Yes** | **Yes** | No |
 |Label with File Explorer:| **Yes** | **Yes** | No |
 |A viewer for protected files (text, images, PDF, .pfile):| **Yes** | **Yes** | No|
-|PPDF support for applying labels:| **Yes** | No | No |
+|PDF support for applying labels:| **Yes** | No | No |
 |PowerShell labeling cmdlets:| **Yes** | **Yes** <sup>4</sup> | No |
 |Offline support for protection actions:| **Yes** | **Yes** <sup>5</sup> | **Yes** |
 |Manual policy file management for disconnected computers:| **Yes** |**Yes**| No |
@@ -128,7 +128,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |Support for account switching:| No | No | **Yes** |
 |Support for Remote Desktop Services:| **Yes** | **Yes** | **Yes** |
 |Support for AD RMS:| **Yes** | No <sup>7</sup> | No |
-|Remove external content marking in app| **Yes**| No| **Yes**|
+|Remove external content marking in app| **Yes**| No| No|
 
 
 Footnotes:
