@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/19/2020
+ms.date: 05/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -572,19 +572,15 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 23. Still on the **AIPClient** pane, from the **Manage** menu, select **Authentication**.
 
-24. On the **AIPClient - Authentication** pane, specify the following, and then select **Save**:
-    - In the **Advanced settings** section, select **ID tokens**.
-    - In the **Default client type** section, select **Yes**.
+24. On the **AIPClient - Authentication** pane, from the **Manage** menu, select **API permissions**.
 
-25. Still on the **AIPClient - Authentication** pane, from the **Manage** menu, select **API permissions**.
+25. On the **AIPClient - permissions** pane, select **+ Add a permission**.
 
-26. On the **AIPClient - permissions** pane, select **+ Add a permission**.
+26. On the **Request API permissions** pane, select **My APIs**.
 
-27. On the **Request API permissions** pane, select **My APIs**.
+27. In the **Select an API** section, select **APIOnBehalfOf**, then select the checkbox for **user-impersonation**, as the permission. Select **Add permissions**. 
 
-28. In the **Select an API** section, select **APIOnBehalfOf**, then select the checkbox for **user-impersonation**, as the permission. Select **Add permissions**. 
-
-29. Back on the **API permissions** pane, in the **Grant consent** section, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
+28. Back on the **API permissions** pane, in the **Grant consent** section, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
 
 You've now completed configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. From our examples:
 
