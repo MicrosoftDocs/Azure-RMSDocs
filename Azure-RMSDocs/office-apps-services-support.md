@@ -90,7 +90,7 @@ If you use SharePoint Server, you can use this IRM protection by deploying the A
 
 For libraries that are not IRM-protected, if you apply protection-only to a file that you then upload to SharePoint or OneDrive, the following do not work with this file: Co-authoring, Office for the web, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP).
 
-> [!NOTE]
+> [!IMPORTANT]
 > SharePoint IRM can be used in combination with sensitivity labels that apply protection. When you use both features together, the behavior of protected files changes. For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 When you use SharePoint IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive and SharePoint](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
