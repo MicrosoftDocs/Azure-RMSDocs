@@ -230,7 +230,7 @@ This configuration uses a policy [advanced setting](#how-to-configure-advanced-s
 
 When you configure this setting, the  [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) cmdlet **Set-AIPFileLabel** is enabled to allow removal of protection from PST, rar, 7zip and MSG files.
 
-- Key: **Set-LabelPolicy**
+- Key: **EnableContainerSupport**
 
 - Value: **True**
 
