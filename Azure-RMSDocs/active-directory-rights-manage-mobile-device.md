@@ -34,7 +34,7 @@ You can download the Active Directory Rights Management Services (AD RMS) mobile
 - Use the Azure Information Protection app  to consume protected image files (including .jpg, .gif, and .tif).
 - Use the Azure Information Protection app to open any file that has been generically protected (.pfile format).
 - Use the Azure Information Protection app to open an Office file (Word, Excel, PowerPoint) that is a PDF copy (.pdf and .ppdf format).
-- Use the Azure Information Protection app to open protected email messages (.rpmsg) and protected PDF files on SharePoint Online.
+- Use the Azure Information Protection app to open protected email messages (.rpmsg) and protected PDF files on Microsoft SharePoint.
 - Use an AIP-enlightened PDF viewer for cross-platform viewing or to open PDF files that were protected with any AIP-enlightened application.
 - Use your internally developed AIP-enlightened apps that were written by using the [MIP SDK](https://aka.ms/mipsdkdocs).
 

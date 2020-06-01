@@ -560,7 +560,7 @@ When you configure this setting, it changes the [default behavior](../configure-
 
 The behavior does not change for Outlook.
 
-When the Azure Information Protection client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint Online. Large files also save more quickly because the condition rules have already run. 
+When the Azure Information Protection client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in Microsoft SharePoint. Large files also save more quickly because the condition rules have already run. 
 
 The condition rules do not run in real time as a user types. Instead, they run periodically as a background task if the document is modified.
 

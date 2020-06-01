@@ -3,10 +3,10 @@
 
 title: Protected PDF readers for Microsoft Information Protection
 description: Install a reader for PDF documents that are labeled for classification and protection
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 12/05/2019
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,7 +29,9 @@ search.appverid:
 
 If you need to open a PDF document that's been protected by Microsoft Information Protection, use the following links and information.
 
-A PDF document that has been protected is likely to contain sensitive information. For added security, the document is encrypted so that unauthorized people can't read it. To open this document, you need a reader (sometimes called a viewer) that verifies you have been granted permissions to open the document, and then decrypt it for you.
+A PDF document that has been protected is likely to contain sensitive information. For added security, the document is encrypted so that unauthorized people can't read it, and that authorized people cannot share screens or screenshots displaying the document. 
+
+To open this document, you need a reader (sometimes called a viewer) that verifies you have been granted permissions to open the document, and then decrypt it for you.
 
 ## Install PDF readers for your device
 
@@ -43,7 +45,7 @@ Select the device you're using to install a PDF reader that can open protected P
 
 The PDF readers in the following table support protected PDF documents that have a .ppdf file name extension, and older formats that have a .pdf file name extension. 
 
-Currently, SharePoint Online and SharePoint on-premises use an older format for PDF documents in IRM-protected libraries.
+Currently, Microsoft SharePoint uses an older format for PDF documents in IRM-protected libraries.
 
 
 |Operating system|Supported readers|

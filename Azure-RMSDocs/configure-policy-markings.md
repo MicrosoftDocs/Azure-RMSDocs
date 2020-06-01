@@ -3,10 +3,10 @@
 
 title: Configure visual markings for an Azure Information Protection label - AIP
 description: When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,11 +29,10 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-
->[!NOTE] 
+>[!NOTE]
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
-When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark. 
+When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark.
 
 Additional information about these visual markings:
 
@@ -42,15 +41,15 @@ Additional information about these visual markings:
 - Watermarks apply to Word, Excel, and PowerPoint:
 
     - Excel: Watermarks are visible only in Page layout and Print preview modes, and when printed.
-    
+
     - PowerPoint: Watermarks are applied to the master slide, as a background image. On the **View** tab, **Slide Master**, make sure that the **Hide Background Graphics** check box is not selected.
 
 - Multiple lines are supported for watermarks, and for headers and footers in Word, Excel, and PowerPoint. If you specify multiple lines for a label's header or footer that is applied in Outlook, the lines are concatenated. In this scenario, consider using the configuration to [set different visual markings for Word, Excel, PowerPoint, and Outlook](#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook).
 
 - Maximum string lengths:
-    
+
     - The maximum string length that you can enter for headers and footers is 1024 characters. However, Excel has a total limit of 255 characters for headers and footers. This limit includes characters that aren't visible in Excel, such as formatting codes. If that limit is reached, the string you enter is not displayed in Excel.
-    
+
     - The maximum string length for watermarks that you can enter is 255 characters.
 
 - You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied.
@@ -68,8 +67,8 @@ For documents, the visual markings are applied as follows:
 - In an Office app, the visual markings from a label are applied when the label is applied. Visual markings are also applied when a labeled document is opened and the document is first saved.  
 
 - When a document is labeled by using File Explorer, PowerShell, or the Azure Information Protection scanner: Visual markings are not immediately applied but are applied by the Azure Information Protection client when that document is opened in an Office app and the document is first saved.
-    
-    The exception is when you use [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps for files that are saved in SharePoint Online, OneDrive, or OneDrive for Business: When AutoSave is on, visual markings are not applied unless you configure the [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) to turn on classification to run continuously in the background. 
+
+    The exception is when you use [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps for files that are saved in Microsoft SharePoint, OneDrive for work or school, or OneDrive for home: When AutoSave is on, visual markings are not applied unless you configure the [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) to turn on classification to run continuously in the background. 
 
 ## To configure visual markings for a label
 
@@ -111,13 +110,11 @@ You can use the following variables in the text string for your header, footer, 
 - `${Event.DateTime}` for the date and time when the selected label was set. For example: 8/16/2016 1:30 PM
 
 > [!NOTE]
->This syntax is case-sensitive.
+>This syntax is case-sensitive. For example, if you specify the string `Document: ${Item.Name}  Classification: ${Item.Label}` for the **General** label footer, the footer text applied to a document named project.docx will be **Document: project.docx  Classification: General**.
 
-Example: If you specify the string `Document: ${Item.Name}  Classification: ${Item.Label}` for the **General** label footer, the footer text applied to a documented named project.docx will be **Document: project.docx  Classification: General**.
-
-> [!NOTE]
+<!-- REMOVED w JUNE 2020 RELEASE> [!NOTE]
 > Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 
-
+-->
 >[!TIP]
 > You can also use a [field code to insert the label name](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) into a document or template.
 

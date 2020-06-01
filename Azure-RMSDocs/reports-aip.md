@@ -25,12 +25,9 @@ ms.custom: admin
 
 ---
 
-# Central reporting for Azure Information Protection
+# Central reporting for Azure Information Protection (public preview)
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
-> [!NOTE]
-> This feature is currently in preview and subject to change.
 
 Use Azure Information Protection analytics for central reporting to help you track the adoption of your labels that classify and protect your organization's data. In addition:
 
@@ -126,7 +123,13 @@ To generate these reports, endpoints send the following types of information to 
 
 - The client operating system version.
 
-This information is stored in an Azure Log Analytics workspace that your organization owns and can be viewed independently from Azure Information Protection by users who have access rights to this workspace. For details, see the [Permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics) section. For information about managing access to your workspace, see the [Manage access to Log Analytics Workspace using Azure permissions](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) section from the Azure documentation.
+This information is stored in an Azure Log Analytics workspace that your organization owns and can be viewed independently from Azure Information Protection by users who have access rights to this workspace. 
+
+For more details, see:
+
+- [Permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics)
+- [Manage access to Log Analytics Workspace using Azure permissions](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)
+- [Azure Information Protection audit log reference](audit-logs.md)
 
 To prevent Azure Information Protection clients (classic) from sending this data, set the [policy setting](configure-policy-settings.md) of **Send audit data to Azure Information Protection analytics** to **Off**:
 
@@ -314,8 +317,8 @@ Use the following table to identify the friendly name of event functions that yo
 |ProtectedBefore|Whether the content was protected before change: Yes/No |
 |ProtectionOwnerBefore|Rights Management owner before change |
 |UserJustification|Justification when downgrading or removing label|
-|LastModifiedBy|User in UPN format who last modified the file. Available for Office and SharePoint Online only|
-|LastModifiedDate|UTC in format YYYY-MM-DDTHH:MM:SS: Available for Office & SharePoint Online only |
+|LastModifiedBy|User in UPN format who last modified the file. Available for Office and SharePoint only|
+|LastModifiedDate|UTC in format YYYY-MM-DDTHH:MM:SS: Available for Office and SharePoint only |
 
 
 #### Examples using InformationProtectionEvents
