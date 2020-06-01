@@ -3,10 +3,10 @@
 
 title: The client for Azure Information Protection - AIP
 description: Microsoft Azure Information Protection provides a client-server solution that helps to protect an organization's data. The client (the Azure Information Protection client or the Rights Management client) is integrated with applications that you run on computers and mobile devices.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -41,7 +41,7 @@ Azure Information Protection provides a client-server solution that helps to pro
 
 All these clients integrate with Office applications but the unified labeling client and the classic client must be installed separately and support additional features and components. For example, these clients include support for File Explorer, so you can classify and protect files outside Office. Additional components include a viewer for protected PDF documents and protected images, and a scanner for on-premises data stores.
 
-The RMS client provides protection only. This client is automatically installed with some applications, such as Office applications, the Azure Information Protection clients, and RMS-enlightened applications from software vendors. However, it can also be [installed by itself](https://www.microsoft.com/en-us/download/details.aspx?id=38396), to support [synchronizing files from IRM-protected libraries and OneDrive](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668), and for developers who want to integrate rights management protection into line-of-business applications.
+The RMS client provides protection only. This client is automatically installed with some applications, such as Office applications, the Azure Information Protection clients, and RMS-enlightened applications from software vendors. However, it can also be [installed by itself](https://www.microsoft.com/download/details.aspx?id=38396), to support [synchronizing files from IRM-protected libraries and OneDrive](https://docs.microsoft.com/onedrive/deploy-on-windows), and for developers who want to integrate rights management protection into line-of-business applications.
 
 ## Choose which labeling client to use for Windows computers
 
@@ -56,7 +56,7 @@ Your choice of labeling client for your Windows computers might be influenced by
 
 - The Azure Information Protection client (classic) downloads label and policy settings from the Azure portal.
 
-Because the unified labeling client and the classic client require a separate installation to Office, you must download and install these clients from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+Because the unified labeling client and the classic client require a separate installation to Office, you must download and install these clients from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). 
 
 Which client should you use?
 

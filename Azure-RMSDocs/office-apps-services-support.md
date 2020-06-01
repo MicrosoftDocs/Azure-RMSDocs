@@ -38,6 +38,9 @@ For example, users can configure a Word document so that it can be accessed only
 
 If you are ready to configure Office apps see [Office apps: Configuration for clients](configure-office-apps.md).
 
+> [!NOTE]
+> Due to a limitation in recent Windows updates, files that are attached to emails may be currently be locked after opening the file.
+
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can configure options for Azure Information Protection. This configuration lets Exchange provide the following protection solutions:
 
