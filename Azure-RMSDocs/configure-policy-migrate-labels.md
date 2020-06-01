@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/01/2020
+ms.date: 05/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -70,6 +70,7 @@ Label migration has many benefits but is irreversible, so make sure that you are
     - Your admin center for sensitivity labels.
     - [Office 365 Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), which you must use to configure [advanced client settings](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
     
+
 - Not all settings from a migrated label are supported by the admin centers. Use the table in the [Label settings that are not supported in the admin centers](#label-settings-that-are-not-supported-in-the-admin-centers) section to help you identify these settings and the recommended course of action.
 
 - Protection templates:
@@ -160,9 +161,6 @@ For the labels that successfully migrated, they can now be used by [clients and 
 
 > [!IMPORTANT]
 > If you edit the labels outside the Azure portal, for Azure Information Protection clients (classic), return to this **Azure Information Protection - Unified labeling** pane, and select **Publish**.
-
-> [!NOTE]
-> Items that were labeled will show their labels in both mobile and Outlook Web App views when unified labeling is activated.
 
 ### Copy policies
 
