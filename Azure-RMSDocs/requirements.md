@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/21/2020
+ms.date: 05/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -133,7 +133,7 @@ The Azure Information Protection clients can label and protect documents and ema
 
 - **Office apps minimum version 1805**, build 9330.2078 from Office 365 Business or Microsoft 365 Business. 
 
-This edition is supported only when the user is assigned a license for Azure Rights Management, also known as Azure Information Protection for Office 365.
+    This edition is supported only when the user is assigned a license for Azure Rights Management, also known as Azure Information Protection for Office 365.
 
 - **Office 365 ProPlus**
 
@@ -161,14 +161,15 @@ For more details, see [Applications that support Azure Rights Management data pr
 
 If you have a firewalls or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are listed in this Office article: [Office 365 URLs and IP address ranges > Microsoft 365 Common and Office Online](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#microsoft-365-common-and-office-online).
 
-Azure Information Protection has the following addition requirements:
+Azure Information Protection has the following additional requirements:
 
 - **Unified labeling client**. To download labels and label policies, allow the following URL over HTTPS: ***.protection.outlook.com**
 
 - **Web proxies**. If you use a web proxy that requires authentication, you must configure the proxy to use integrated Windows authentication with the user's Active Directory logon credentials.
 
+    
 - **TLS client-to-service connections**. Do not terminate any TLS client-to-service connections, for example to perform packet-level inspection, to the **aadrm.com** URL. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
-
+     
     To determine whether your client connection is terminated before it reaches the Azure Rights Management service, use the following PowerShell commands:
     
         $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
@@ -179,6 +180,8 @@ Azure Information Protection has the following addition requirements:
     
     If you see an issuing CA name that is not from Microsoft, it is very likely that your secure client-to-service connection is being terminated and needs reconfiguration on your firewall.
 
+- **TLS version 1.2 or higher** (unified labeling client only). The unified labeling client requires a TLS version of 1.2 or higher to ensure the  use of cryptographically secure protocols and align with Microsoft security guidelines.
+    
 ### On-premises servers
 
 The following on-premises servers are supported with the Azure Rights Management service from Azure Information Protection:
