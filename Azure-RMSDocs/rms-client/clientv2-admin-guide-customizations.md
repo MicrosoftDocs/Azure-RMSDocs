@@ -3,10 +3,10 @@
 
 title: Custom configurations - Azure Information Protection unified labeling client
 description: Information about customizing the Azure Information Protection unified labeling client for Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 05/25/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -154,6 +154,8 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |RunAuditInformationTypesDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
+|ScannerFSAttributesToSkip | [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview)
+|UseCopyAndPreserveNTFSOwner | [Preserve NTFS owners during labeling](#preserve-ntfs-owners-during-labeling-public-preview)
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
 
@@ -347,8 +349,155 @@ Example PowerShell command, where your label policy is named "Global":
 
 ## Remove headers and footers from other labeling solutions
 
-> [!NOTE]
-> This configuration currently has a known limitation and will be re-released in a future version. 
+This configuration uses policy [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+
+There are two methods that can used to remove classifications from other labeling solutions. The first method removes any shape from Word documents where the shape name matches the name as defined in the advanced property **WordShapeNameToRemove**, the second method lets you remove or replace text-based headers or footers from Word, Excel and PowerPoint documents as defined in the **RemoveExternalContentMarkingInApp** advanced property. 
+
+### Use the WordShapeNameToRemove advanced property
+
+*The **WordShapeNameToRemove** advanced property is supported from version 2.6.101.0 and above*
+
+This setting lets you remove or replace shape based labels from Word documents when those visual markings have been applied by another labeling solution. For example, the shape contains the name of an old label that you have now migrated to sensitivity labels to use a new label name and its own shape.
+
+To use this advanced property, you'll need to find the shape name in the Word document and then define them in the **WordShapeNameToRemove** advanced property list of shapes. The service will remove any shape in Word that starts with a name defined in list of shapes in this advanced property.
+
+Avoid removing shapes that contain the text that you wish to ignore, by defining the name of all shapes to remove and  avoid checking the text in all shapes, which is a resource-intensive process.
+
+If you do not specify Word shapes in this additional advanced property setting, and Word is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
+
+To find the name of the shape that you're using and wish to exclude:
+
+1. In Word, display the **Selection** pane: **Home** tab > **Editing** group > **Select** option > **Selection Pane**.
+
+2. Select the shape on the page that you wish to mark for removal. The name of the shape you mark is now highlighted in the **Selection** pane.
+
+Use the name of the shape to specify a string value for the ****WordShapeNameToRemove**** key. 
+
+Example: The shape name is **dc**. To remove the shape with this name, you specify the value: `dc`.
+
+- Key: **WordShapeNameToRemove**
+
+- Value: \<**Word shape name**> 
+
+Example PowerShell command, where your label policy is named "Global":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+
+When you have more than one Word shape to remove, specify as many values as you have shapes to remove.
+
+
+### Use the RemoveExternalContentMarkingInApp advanced property
+This setting lets you remove or replace text-based headers or footers from documents when those visual markings have been applied by another labeling solution. For example, the old footer contains the name of an old label that you have now migrated to sensitivity labels to use a new label name and its own footer.
+
+When the unified labeling client gets this configuration in its policy, the old headers and footers are removed or replaced when the document is opened in the Office app and any sensitivity label is applied to the document.
+
+This configuration is not supported for Outlook, and be aware that when you use it with Word, Excel, and PowerPoint, it can negatively affect the performance of these apps for users. The configuration lets you define settings per application, for example, search for text in the headers and footers of Word documents but not Excel spreadsheets or PowerPoint presentations.
+
+Because the pattern matching affects the performance for users, we recommend that you limit the Office application types (**W**ord, E**X**cel, **P**owerPoint) to just those that need to be searched.
+For the selected label policy, specify the following strings:
+- Key: **RemoveExternalContentMarkingInApp**
+
+- Value: \<**Office application types WXP**> 
+
+Examples:
+
+- To search Word documents only, specify **W**.
+
+- To search Word documents and PowerPoint presentations, specify **WP**.
+
+Example PowerShell command, where your label policy is named "Global":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
+
+You then need at least one more advanced client setting, **ExternalContentMarkingToRemove**, to specify the contents of the header or footer, and how to remove or replace them.
+
+### How to configure ExternalContentMarkingToRemove
+
+When you specify the string value for the **ExternalContentMarkingToRemove** key, you have three options that use regular expressions:
+
+- Partial match to remove everything in the header or footer.
+
+    Example: Headers or footers contain the string **TEXT TO REMOVE**. You want to completely remove these headers or footers. You specify the value: `*TEXT*`.
+
+- Complete match to remove just specific words in the header or footer.
+
+    Example: Headers or footers contain the string **TEXT TO REMOVE**. You want to remove the word **TEXT** only, which leaves the header or footer string as **TO REMOVE**. You specify the value: `TEXT `.
+
+- Complete match to remove everything in the header or footer.
+
+    Example: Headers or footers have the string **TEXT TO REMOVE**. You want to remove headers or footers that have exactly this string. You specify the value: `^TEXT TO REMOVE$`.
+
+
+The pattern matching for the string that you specify is case-insensitive. The maximum string length is 255 characters, and cannot include white spaces. 
+
+Because some documents might include invisible characters or different kinds of spaces or tabs, the string that you specify for a phrase or sentence might not be detected. Whenever possible, specify a single distinguishing word for the value and be sure to test the results before you deploy in production.
+
+For the same label policy, specify the following strings:
+
+- Key: **ExternalContentMarkingToRemove**
+
+- Value: \<**string to match, defined as regular expression**> 
+
+Example PowerShell command, where your label policy is named "Global":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
+
+#### Multiline headers or footers
+
+If a header or footer text is more than a single line, create a key and value for each line. For example, you have the following footer with two lines:
+
+**The file is classified as Confidential**
+
+**Label applied manually**
+
+To remove this multiline footer, you create the following two entries for the same label policy:
+
+- Key: **ExternalContentMarkingToRemove**
+
+- Key Value 1: **\*Confidential***
+
+- Key Value 2: **\*Label applied*** 
+
+Example PowerShell command, where your label policy is named "Global":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
+
+
+#### Optimization for PowerPoint
+
+Footers in PowerPoint are implemented as shapes. To avoid removing shapes that contain the text that you have specified but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process.
+
+If you do not specify this additional advanced client setting, and PowerPoint is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
+
+To find the name of the shape that you're using as a header or footer:
+
+1. In PowerPoint, display the **Selection** pane: **Format** tab > **Arrange** group > **Selection Pane**.
+
+2. Select the shape on the slide that contains your header or footer. The name of the selected shape is now highlighted in the **Selection** pane.
+
+Use the name of the shape to specify a string value for the **PowerPointShapeNameToRemove** key. 
+
+Example: The shape name is **fc**. To remove the shape with this name, you specify the value: `fc`.
+
+- Key: **PowerPointShapeNameToRemove**
+
+- Value: \<**PowerPoint shape name**> 
+
+Example PowerShell command, where your label policy is named "Global":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+
+When you have more than one PowerPoint shape to remove, specify as many values as you have shapes to remove.
+
+By default, only the Master slides are checked for headers and footers. To extend this search to all slides, which is a much more resource-intensive process, use an additional advanced client setting named **RemoveExternalContentMarkingInAllSlides**:
+
+- Key: **RemoveExternalContentMarkingInAllSlides**
+
+- Value: **True**
+
+Example PowerShell command, where your label policy is named "Global":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
 
 ## Disable custom permissions in File Explorer
 
@@ -1059,6 +1208,56 @@ Set the logging level to one of the following values:
 - **Trace**: Detailed logging (the default setting for clients).
 
 This registry setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md).
+
+## Skip or ignore files during scans depending on file attributes (public preview)
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+
+By default, the Azure Information Protection unified labeling scanner scans all relevant files. However, you may want to define specific files to be skipped, such as for archived files or files that have been moved. 
+
+Enable the scanner to skip specific files based on their file attributes by using the **ScannerFSAttributesToSkip** advanced setting. In the setting value, list the file attributes that will enable the file to be skipped when they are all set to **true**. This list of file attributes uses the AND logic.
+
+The following sample PowerShell commands illustrate how to use this advanced setting with a label named "Global".
+
+**Skip files that are both read-only and archived**
+
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY, FILE_ATTRIBUTE_ARCHIVE"}
+
+**Skip files that are either read-only or archived**
+
+To use an OR logic, run the same property multiple times. For example:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE”}
+
+> [!TIP]
+> We recommend that you consider enabling the scanner to skip files with the following attributes:
+> * FILE_ATTRIBUTE_SYSTEM
+> * FILE_ATTRIBUTE_HIDDEN
+> * FILE_ATTRIBUTE_DEVICE
+> * FILE_ATTRIBUTE_OFFLINE
+> * FILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS
+> * FILE_ATTRIBUTE_RECALL_ON_OPEN
+> * FILE_ATTRIBUTE_TEMPORARY
+
+For a list of all file attributes that can be defined in the **ScannerFSAttributesToSkip** advanced setting, see the [Win32 File Attribute Constants](https://docs.microsoft.com/windows/win32/fileio/file-attribute-constants)
+
+## Preserve NTFS owners during labeling (public preview)
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+
+By default, scanner, PowerShell, and File Explorer extension labeling do not preserve the NTFS owner that was defined before the labeling. 
+
+To ensure that the NTFS owner value is preserved, set the **UseCopyAndPreserveNTFSOwner** advanced setting to **true** for the selected label policy.
+
+> [!CAUTION]
+> Define this advanced setting only when you can ensure a low-latency, reliable network connection between the scanner and the scanned repository. A network failure during the automatic labeling process can cause the file to be lost.
+
+Sample PowerShell command, when your label policy is named "Global":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
+
 
 ## Next steps
 Now that you've customized the Azure Information Protection unified labeling client, see the following resources for additional information that you might need to support this client:
