@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/01/2020
+ms.date: 05/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -161,9 +161,6 @@ For the labels that successfully migrated, they can now be used by [clients and 
 
 > [!IMPORTANT]
 > If you edit the labels outside the Azure portal, for Azure Information Protection clients (classic), return to this **Azure Information Protection - Unified labeling** pane, and select **Publish**.
-
-> [!NOTE]
-> Items that were labeled will show their labels in both mobile and Outlook Web App views when unified labeling is activated.
 
 ### Copy policies
 
