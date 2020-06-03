@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/05/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -284,12 +284,8 @@ Before you install the scanner, or upgrade it from an older general availability
     Wildcards are not supported and WebDav locations are not supported.
     
     Examples:
-    
-    - For a local path: `C:\Folder`
-    
+      
     - For a network share: `C:\Folder\Filename`
-    
-    - For a UNC path:`\\Server\Folder`
     
     - For a SharePoint library: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
