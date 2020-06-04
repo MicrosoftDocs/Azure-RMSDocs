@@ -20,14 +20,20 @@
       - name: List sensitivity labels (C++)
         href: quick-file-list-labels-cpp.md
       - name: Set/get sensitivity labels (C++)
-        href: quick-file-set-get-label-cpp.md      
+        href: quick-file-set-get-label-cpp.md 
+      - name: Lowering a sensitivity label on a file (C++)
+        href: quick-file-justifyactions-cpp.md 
+      - name: File API Re-publishing (C++)
+        href: quick-file-republishing-cpp.md 
+      - name: Process email .msg files (C++)
+        href: quick-email-msg-cpp.md 
     - name: Protection API
       items:
       - name: Application initialization (C++)
         href: quick-protection-app-initialization-cpp.md
-      - name: List Templates
+      - name: List Templates (C++)
         href: quick-protection-list-templates-cpp.md
-      - name: Encrypt/Decrypt Text
+      - name: Encrypt/Decrypt Text (C++)
         href: quick-protection-encrypt-decrypt-text-cpp.md
   - name: C#
     items:    
@@ -39,13 +45,19 @@
         href: quick-file-list-labels-csharp.md
       - name: Set/get sensitivity labels (C#)
         href: quick-file-set-get-label-csharp.md
+      - name: Lowering a sensitivity label on a file (C#)
+        href: quick-file-justifyactions-csharp.md 
+      - name: File API Re-publishing (C#)
+        href: quick-file-republishing-csharp.md 
+      - name: Process email .msg files (C#)
+        href: quick-email-msg-csharp.md 
     - name: Protection API
       items:
       - name: Application initialization (C#)
         href: quick-protection-app-initialization-csharp.md
-      - name: List Templates
+      - name: List Templates (C#)
         href: quick-protection-list-templates-csharp.md
-      - name: Encrypt/Decrypt Text
+      - name: Encrypt/Decrypt Text (C#)
         href: quick-protection-encrypt-decrypt-text-csharp.md  
 - name: Concepts
   items:
@@ -119,6 +131,14 @@
       href: concept-async-observers-protection-cpp.md
   - name: SDK Telemetry
     href: concept-mip-telemetry.md
+  - name: Use Cases
+    items:
+    - name: File API - Action justification for lowering a sensitivity label on a file (C++)
+      href: concept-justification-cpp.md
+    - name: File API - Re-publishing (C++)
+      href: concept-republishing-cpp.md 
+    - name: File API - Process email .msg files (C++)
+      href: concept-email-cpp.md 
 - name: Reference
   items:
   - name: C++ library
