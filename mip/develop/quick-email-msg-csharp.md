@@ -3,7 +3,7 @@ title: How to - QuickStart - File API - Process email .msg files (C#)
 description: This article will help you understand the scenario of how to use MIP SDK file API to process .msg files.
 author: Pathak-Aniket
 ms.service: information-protection
-ms.topic: QuickStart
+ms.topic: quickstart
 ms.date: 04/08/2020
 ms.author: v-anikep
 ---
@@ -20,7 +20,7 @@ If you haven't already, be sure to complete the following prerequisites before c
 
 - Complete [Quickstart: File API application initialization (C#)](quick-app-initialization-csharp.md) first, which builds a starter Visual Studio solution. This "How to - process email message .msg files (C#)" QuickStart builds on the previous one.
 - Review [Email files MIP SDK](concept-email-cpp.md) concepts.
-- Optionally: Review [File engines in the MIP SDK](concept-engine-file-cpp.md) concepts.
+- Optionally: Review [File engines in the MIP SDK](concept-profile-engine-file-engine-cpp.md) concepts.
 - Optionally: Review [File handlers in the MIP SDK](concept-handler-file-cpp.md) concepts.
 
 ## Set enable_msg_file_type and use File API for protecting .msg file

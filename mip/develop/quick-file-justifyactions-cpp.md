@@ -3,7 +3,7 @@ title: How to - Downgrade/Remove a label that needs a justification (C++)
 description: This article will help you understand the scenario of how to downgrade or remove a label needing justification.
 author: Pathak-Aniket
 ms.service: information-protection
-ms.topic: Quick Start
+ms.topic: quickstart
 ms.date: 04/14/2020
 ms.author: v-anikep
 ---

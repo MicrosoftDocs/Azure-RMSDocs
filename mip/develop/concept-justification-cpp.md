@@ -18,7 +18,7 @@ As discussed previously, File API provides easy-to-use interfaces for reading la
 
 For some of the sensitivity labels, security administrators might want to apply stricter policies, when a user attempts to downgrade the sensitivity by deleting a label or by changing the label to a less restrictive one. Administrators can configure this using label policy configuration in [security and compliance center](https://sip.compliance.microsoft.com/) by selecting the checkbox.
 
-![Action Justification Required](JustifyAction.png)
+![Action Justification Required](./media/JustifyAction.png)
 
 If the file has an existing label and if the label policy requires justification in the event of a downgrade of sensitivity level, the `SetLabel()`/`DeleteLabel()` functions will throw `mip::JustificationRequiredError`. In such a scenario, the API provides an ability to record user justification. SDK consumers should provide an application interface to the user to provide input on the reason for downgrade. Once the justification is recorded, the application can set property `isDowngradeJustified` of `mip::LabelingOptions`, as well as setting the `Justification` property.
 
