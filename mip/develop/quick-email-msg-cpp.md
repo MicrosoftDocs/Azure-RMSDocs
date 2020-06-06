@@ -1,5 +1,5 @@
 ---
-title: How to - QuickStart - File API - Process email .msg files (C++)
+title: File API - Process email .msg files (C++)
 description: This article will help you understand the scenario of how to use MIP SDK file API to process .msg files.
 author: Pathak-Aniket
 ms.service: information-protection
@@ -25,11 +25,11 @@ If you haven't already, be sure to complete the following prerequisites before c
 - Optionally: Review [File engines in the MIP SDK](concept-profile-engine-file-engine-cpp.md) concepts.
 - Optionally: Review [File handlers in the MIP SDK](concept-handler-file-cpp.md) concepts.
 
-## Prerequisite implmentation steps
+## Prerequisite implementation steps
 
 1. Open the Visual Studio solution you created in the previous "Quickstart: Client application initialization (C++)" article.
 
-2. Create a powershell script to generate access tokens as explained in Quickstart "[List senstitivity labels (C++)](quick-file-list-labels-cpp.md#create-a-powershell-script-to-generate-access-tokens)".
+2. Create a PowerShell script to generate access tokens as explained in Quickstart "[List sensitivity labels (C++)](quick-file-list-labels-cpp.md#create-a-powershell-script-to-generate-access-tokens)".
 
 3. Implement observer class to monitor `mip::FileHandler` as explained in Quickstart "[Set/get sensitivity labels (C++)](quick-file-set-get-label-cpp.md#implement-an-observer-class-to-monitor-the-file-handler-object)".
 

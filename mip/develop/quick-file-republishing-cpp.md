@@ -35,7 +35,7 @@ To be able to use Decrypt a protected file by using `GetDecryptedTemporaryFileAs
         void OnGetDecryptedTemporaryFileFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
     ```
 
-3. Using Solution Explorere, open the `filehandler_observer.cpp` file in your project. Towards the end of the file, add below lines for method definitions.
+3. Using Solution Explorer, open the `filehandler_observer.cpp` file in your project. Towards the end of the file, add below lines for method definitions.
 
     ```cpp
 

@@ -8,7 +8,7 @@ ms.date: 05/01/2020
 ms.author: v-anikep
 ---
 
-# Microsoft Information Protection - Republishing (C++)
+# Republishing (C++)
 
 ## Overview
 
@@ -63,9 +63,10 @@ For further details on various user rights, consult [User rights for Azure Infor
 
 ## Save and publish the edited file by applying Protection
 
-After the file is decrypted the file can be edited. Once the edit operation is completed, the changes can be commited. Create a `IFileHandler` object using the temporary file above for handling the commited file. The temporary file can then be protected using the `IProtectionHandler` object retrieved from the original file.
+After the file is decrypted the file can be edited. Once the edit operation is completed, the changes can be committed. Create a `IFileHandler` object using the temporary file above for handling the committed file. The temporary file can then be protected using the `IProtectionHandler` object retrieved from the original file.
 
 ## Next Steps
 
-- [Review the Republishing Quickstart for C++](quick-file-republishing-cpp.md)
-- [Review the Republishing Quickstart for C#](quick-file-republishing-csharp.md)
+- [Review the Republishing quickstart for C++](quick-file-republishing-cpp.md)
+- [Review the Republishing - [Review the Republishing quickstart for C++](quick-file-republishing-cpp.md)
+ for C#](quick-file-republishing-csharp.md)
