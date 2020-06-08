@@ -24,5 +24,5 @@ If the file has an existing label and if the label policy requires justification
 
 ## Next Steps
 
-- Review [Action Justification Quickstart for (C++)](quick-file-justifyactions-cpp.md)
-- Review [Action Justification Quickstart for (C#)](quick-file-justifyactions-csharp.md)
+- Review [Action Justification Quickstart for (C++)](quick-file-justify-actions-cpp.md)
+- Review [Action Justification Quickstart for (C#)](quick-file-justify-actions-csharp.md)
