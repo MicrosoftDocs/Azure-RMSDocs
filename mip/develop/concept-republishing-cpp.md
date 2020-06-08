@@ -49,7 +49,7 @@ To successfully complete this reprotection scenario, review the Quick starts und
 
 ## Create a Protection Handler from the file and decrypt the file
 
-`mip::ProtectionHandler` exposes the functions for encrypting and decrypting protected streams and buffers, performing access checks, obtaining the publishing license, and getting attributes from the protected information. `mip::ProtectionHandler` objects are constructed by providing either a ProtectionDescriptor or a serialized publishing license. For this use case, we would be implicitly using the publishing licence as publishing license is used when decrypting already-protected content or when protecting content where the license has already been constructed.
+`mip::ProtectionHandler` exposes the functions for encrypting and decrypting protected streams and buffers, performing access checks, obtaining the publishing license, and getting attributes from the protected information. `mip::ProtectionHandler` objects are constructed by providing either a ProtectionDescriptor or a serialized publishing license. For this use case, we would be implicitly using the publishing license as publishing license is used when decrypting already-protected content or when protecting content where the license has already been constructed.
 
 `mip::FileHandler` exposes a method named `GetProtection()` which retrieves `mip::ProtectionHandler` from the file associated with the `mip::FileHandler`. Once the `mip::ProtectionHandler` object is retrieved the same can be used to validate user's access levels for the file, decrypt the file and later encrypt the file once it is edited.
 

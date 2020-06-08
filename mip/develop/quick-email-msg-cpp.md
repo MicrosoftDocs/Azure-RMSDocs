@@ -8,7 +8,7 @@ ms.date: 04/08/2020
 ms.author: v-anikep
 ---
 
-# QuickStart: File API - Process email .msg files (C++)
+# File API - Process email .msg files (C++)
 
 File API supports protection operations for .msg files in a manner identical to any other file type, except that the SDK needs the application to enable MSG feature flag. Here, we'll see how to set this flag.
 
@@ -18,7 +18,7 @@ As discussed previously, instantiation of `mip::FileEngine` requires a setting o
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete [Quickstart: File API application initialization (C++)](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This "How to - process email message .msg files (C++)" QuickStart builds on the previous one.
+- Complete [Quickstart: File API application initialization (C++)](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This "How to - process email message .msg files (C++)" quickstart builds on the previous one.
 - Review [Quickstart: List sensitivity labels (C++)](quick-file-list-labels-cpp.md).
 - Review [Quickstart: Set/get sensitivity labels (C++)](quick-file-set-get-label-cpp.md).
 - Review [Email files MIP SDK](concept-email-cpp.md) concepts.

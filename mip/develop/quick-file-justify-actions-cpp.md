@@ -10,7 +10,7 @@ ms.author: v-anikep
 
 # Microsoft Information Protection SDK File API - Action Justification for lowering a sensitivity label on a file (C++)
 
-This quick start addresses handling of a downgrade label operation when the label policy requires justification. Here, we will use `mip::FileHandler` class for changing the labels of a file. For further details consult [API reference](./reference/mip-sdk-reference.md).
+This quickstart addresses handling of a downgrade label operation when the label policy requires justification. Here, we will use `mip::FileHandler` class for changing the labels of a file. For further details consult [API reference](./reference/mip-sdk-reference.md).
 
 ## Prerequisites
 

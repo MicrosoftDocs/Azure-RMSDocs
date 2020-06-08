@@ -8,7 +8,7 @@ ms.date: 05/01/2020
 ms.author: v-anikep
 ---
 
-# Microsoft Information Protection SDK - File API Re-publishing Quickstart (C++)
+# File API Re-publishing Quickstart (C++)
 
 ## Overview
 

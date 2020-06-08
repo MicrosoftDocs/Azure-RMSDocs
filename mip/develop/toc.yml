@@ -22,7 +22,7 @@
       - name: Set/get sensitivity labels (C++)
         href: quick-file-set-get-label-cpp.md 
       - name: Lowering a sensitivity label on a file (C++)
-        href: quick-file-justifyactions-cpp.md 
+        href: quick-file-justify-actions-cpp.md 
       - name: File API Re-publishing (C++)
         href: quick-file-republishing-cpp.md 
       - name: Process email .msg files (C++)
@@ -46,7 +46,7 @@
       - name: Set/get sensitivity labels (C#)
         href: quick-file-set-get-label-csharp.md
       - name: Lowering a sensitivity label on a file (C#)
-        href: quick-file-justifyactions-csharp.md 
+        href: quick-file-justify-actions-csharp.md 
       - name: File API Re-publishing (C#)
         href: quick-file-republishing-csharp.md 
       - name: Process email .msg files (C#)
