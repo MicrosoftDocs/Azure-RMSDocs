@@ -351,7 +351,7 @@ Example PowerShell command, where your label policy is named "Global":
 
 This configuration uses policy [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-There are two methods that can used to remove classifications from other labeling solutions. The first method removes any shape from Word documents where the shape name matches the name as defined in the advanced property **WordShapeNameToRemove**, the second method lets you remove or replace text-based headers or footers from Word, Excel and PowerPoint documents as defined in the **RemoveExternalContentMarkingInApp** advanced property. 
+There are two methods to remove classifications from other labeling solutions. The first method removes any shape from Word documents where the shape name matches the name as defined in the advanced property **WordShapeNameToRemove**, the second method lets you remove or replace text-based headers or footers from Word, Excel and PowerPoint documents as defined in the **RemoveExternalContentMarkingInApp** advanced property. 
 
 ### Use the WordShapeNameToRemove advanced property
 
