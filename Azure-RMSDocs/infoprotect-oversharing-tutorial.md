@@ -61,7 +61,7 @@ To complete this tutorial, you need:
 
 4. The Azure Information Protection client (classic) is installed on your Windows computer.
     
-    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. 
+    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. 
     
     If are using the unified labeling client instead of the classic client, see the following instructions that explain how to use PowerShell advanced settings for the equivalent configurations in this tutorial:
     
