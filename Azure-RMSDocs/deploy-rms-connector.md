@@ -3,10 +3,10 @@
 
 title: Deploy the Rights Management connector - AIP
 description: Instructions to deploy the RMS connector, which provides the data protection service for existing on-premises deployments that use Exchange Server, SharePoint Server, or Windows Server and File Classification Infrastructure (FCI).
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/09/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Deploying the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, 2016, Windows Server 2012 R2, Windows Server 2012*
 
 Use this information to learn about the Azure Rights Management connector, and then how to successfully deploy it for your organization. This connector provides data protection for existing on-premises deployments that use Microsoft **Exchange Server**, **SharePoint Server**, or file servers that run Windows Server and **File Classification Infrastructure** (FCI).
 
