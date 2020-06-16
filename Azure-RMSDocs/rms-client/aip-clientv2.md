@@ -6,7 +6,7 @@ description: Information resources for the Azure Information Protection unified 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,9 +29,11 @@ search.appverid:
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
+> **Customers with extended Microsoft support for Windows 7 and Office 2010 can also get Azure Information Protection support for these versions. Check with your support contact for full details.*
+>
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-The Azure Information Protection unified labeling client for Windows is a downloadable client for organizations that use [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) to classify and protect documents and emails. This client also has a viewer for organizations that don’t have their own information protection infrastructure but want to consume content that has been protected by other organizations that use a Rights Management service from Microsoft.
+The Azure Information Protection unified labeling client for Windows is a downloadable client for organizations that use [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) to classify and protect documents and emails. This client also has a viewer for organizations that don't have their own information protection infrastructure but want to consume content that has been protected by other organizations that use a Rights Management service from Microsoft.
 
 > [!NOTE]
 > This client, also known as just the unified labeling client, is replacing the Azure Information Protection client (classic). If you're not sure which client to use, see [Choose which labeling client to use for Windows computers](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).

@@ -3,10 +3,10 @@
 
 title: Custom configurations - Azure Information Protection unified labeling client
 description: Information about customizing the Azure Information Protection unified labeling client for Windows.
-author: batamig
+author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,6 +28,8 @@ ms.custom: admin
 # Admin Guide: Custom configurations for the Azure Information Protection unified labeling client
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>
+> **Customers with extended Microsoft support for Windows 7 and Office 2010 can also get Azure Information Protection support for these versions. Check with your support contact for full details.*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -1229,7 +1231,7 @@ The following sample PowerShell commands illustrate how to use this advanced set
 To use an OR logic, run the same property multiple times. For example:
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE”}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE"}
 
 > [!TIP]
 > We recommend that you consider enabling the scanner to skip files with the following attributes:

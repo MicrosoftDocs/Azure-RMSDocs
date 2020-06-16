@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/03/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -285,7 +285,7 @@ Before you install the scanner, or upgrade it from an older general availability
     
     Examples:
       
-    - For a network share: `C:\Folder\Filename`
+    - For a network share: `\\Server\Folder`
     
     - For a SharePoint library: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
