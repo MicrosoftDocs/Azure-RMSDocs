@@ -50,7 +50,7 @@ The following Microsoft applications use the RMS SDKs today. Updates will be mad
 
 Resources 
 
-- Android: https://www.microsoft.com/en-us/download/details.aspx?id=43673
-- iOS: https://www.microsoft.com/en-us/download/details.aspx?id=43674 
-- MacOS: https://www.microsoft.com/en-us/download/details.aspx?id=43675 
+- Android: https://www.microsoft.com/download/details.aspx?id=43673
+- iOS: https://www.microsoft.com/download/details.aspx?id=43674 
+- MacOS: https://www.microsoft.com/download/details.aspx?id=43675 
 - Linux: https://azuread.github.io/rms-sdk-for-cpp/annotated.html

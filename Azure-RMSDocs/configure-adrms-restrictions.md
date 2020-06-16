@@ -166,7 +166,7 @@ An AD RMS deployment must meet the following requirements to provide HYOK protec
 
 - Users have a version of Office that supports Information Rights Management (IRM) and at least Office 2013 Professional Plus with Service Pack 1, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 are not supported for this scenario.
     
-    - For Office 2016, Microsoft Installer (.msi)-based edition: You have installed [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
+    - For Office 2016, Microsoft Installer (.msi)-based edition: You have installed [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
 
 > [!IMPORTANT]
 > To fulfill the high assurance that HYOK protection offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only managed devices. 
