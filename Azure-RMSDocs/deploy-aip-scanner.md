@@ -455,9 +455,11 @@ Because we configured the schedule to run continuously, when the scanner has wor
 
 ## Troubleshooting using scanner diagnostic tool
 
-To troubleshoot issues with scanner, run the following command in your PowerShell session:
+To troubleshoot issues with scanner, run the following commands in your PowerShell session:
 
-        Start-AIPScannerDiagnostics
+        $scanner_account_creds= Get-Credential 
+        Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
+
 
 1. Only execute the command -onbehalf %scanner_account% 
 2. Take note that this command is not a prerequisite checking tool. The tool checks if the current scanner deployment is healthy. Make sure to only execute this command after scanner deployment is complete and your profile configuration is complete. 
