@@ -1,23 +1,30 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Microsoft Information Protection
+### YamlMime:Landing
+
+title: Microsoft Information Protection documentation
+summary: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection — no matter where it's stored or who it's shared with.
+
 metadata:
-  title: Microsoft Information Protection Documentation
-  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection — no matter where it’s stored or who it’s shared with.
-  author: msmbaldwin
-  manager: barbkess
-  ms.service: information-protection
+  title: Microsoft Information Protection documentation
+  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection — no matter where it's stored or who it's shared with.
   services: information-protection
-  ms.topic: landing-page
-  ms.date: 09/26/2018
+  ms.service: information-protection
+  ms.topic: landing-page # Required
+  ms.collection: M365-security-compliance
+  author: msmbaldwin
   ms.author: mbaldwin
-  layout: LandingPage  
+  ms.date: 06/24/2020 #Required; mm/dd/yyyy format.
 
-abstract:
-  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection — no matter where it’s stored or who it’s shared with.
+# linkListType: architecture | deploy | download | get-started | how-to-guide | learn | overview | quickstart | tutorial
 
-sections:
-- title: Microsoft Information Protection SDK
-  items:
-  - type: paragraph
-    text: Get started with the <a href="develop/">Microsoft Information Protection SDK overview.</a>
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card
+  - title: Microsoft Information Protection SDK
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Learn more about with the MIP SDK
+            url: ./develop/overview.md
+          - text: Get started with the MIP SDK
+            url: ./develop/setup-configure-mip.md
