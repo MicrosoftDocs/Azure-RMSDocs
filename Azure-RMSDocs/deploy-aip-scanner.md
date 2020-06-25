@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/05/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -284,12 +284,8 @@ Before you install the scanner, or upgrade it from an older general availability
     Wildcards are not supported and WebDav locations are not supported.
     
     Examples:
-    
-    - For a local path: `C:\Folder`
-    
-    - For a network share: `C:\Folder\Filename`
-    
-    - For a UNC path:`\\Server\Folder`
+      
+    - For a network share: `\\Server\Folder`
     
     - For a SharePoint library: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
@@ -459,9 +455,11 @@ Because we configured the schedule to run continuously, when the scanner has wor
 
 ## Troubleshooting using scanner diagnostic tool
 
-To troubleshoot issues with scanner, run the following command in your PowerShell session:
+To troubleshoot issues with scanner, run the following commands in your PowerShell session:
 
-        Start-AIPScannerDiagnostics
+        $scanner_account_creds= Get-Credential 
+        Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
+
 
 1. Only execute the command -onbehalf %scanner_account% 
 2. Take note that this command is not a prerequisite checking tool. The tool checks if the current scanner deployment is healthy. Make sure to only execute this command after scanner deployment is complete and your profile configuration is complete. 

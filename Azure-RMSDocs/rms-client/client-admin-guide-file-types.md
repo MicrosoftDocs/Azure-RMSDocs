@@ -278,7 +278,7 @@ The following sections have configuration instructions to inspect .zip files, an
 
 The Azure Information Protection scanner and the [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can inspect .zip files when you follow these instructions:
 
-1. For the computer running the scanner or the PowerShell session, install the [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
+1. For the computer running the scanner or the PowerShell session, install the [Office 2010 Filter Pack SP2](https://support.microsoft.com/help/2687447/description-of-office-2010-filter-pack-sp2).
 
 2. For the scanner: After finding sensitive information, if the .zip file should be classified and protected with a label, add a registry entry for this file name extension to have generic protection (pfile), as described in [Registry edits to change which file types are protected](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) from the scanner deployment instructions.
 
