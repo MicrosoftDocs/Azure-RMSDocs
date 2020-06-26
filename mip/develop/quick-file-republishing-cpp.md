@@ -56,59 +56,65 @@ To be able to use Decrypt a protected file by using `GetDecryptedTemporaryFileAs
 
 2. Toward the end of the main() body, below system("pause"); and above return 0; (where you left off in the previous Quickstart), insert the following code:
 
-    ```cpp
+```cpp
+//Originally protected file's path.
+std::string protectedFilePath = "<protected-file-path>";
 
-        //Originally protected file's path.
-        std::string protectedFilePath = "<protected-file-path>";
+// Create file handler for the file
+auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
+auto handlerFuture = handlerPromise->get_future();
+engine->CreateFileHandlerAsync(protectedFilePath, 
+                                protectedFilePath, 
+                                true, 
+                                std::make_shared<FileHandlerObserver>(), 
+                                handlerPromise);
+auto protectedFileHandler = handlerFuture.get();
 
-        // Create file handler for the file
-        auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
-        auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(protectedFilePath, protectedFilePath, true, std::make_shared<FileHandlerObserver>(), handlerPromise);
-        auto protectedFileHandler = handlerFuture.get();
+// retieve and store protection handler from file
+auto protectionHandler = protectedFileHandler->GetProtection();
 
-        // retieve and store protection handler from file
-        auto protectionHandler = protectedFileHandler->GetProtection();
+//Check if the user has the 'Edit' right to the file and if so decrypt the file.
+if (protectionHandler->AccessCheck("Edit")) {
 
-        //Check if the user has the 'Edit' right to the file and if so decrypt the file.
-        if (protectionHandler->AccessCheck("Edit")) {
+    // Decrypt file to temp path using the same file handler
+    auto tempPromise = std::make_shared<std::promise<string>>();
+    auto tempFuture = tempPromise->get_future();
+    protectedFileHandler->GetDecryptedTemporaryFileAsync(tempPromise);
+    auto tempPath = tempFuture.get();
 
-            // Decrypt file to temp path using the same file handler
-            auto tempPromise = std::make_shared<std::promise<string>>();
-            auto tempFuture = tempPromise->get_future();
-            protectedFileHandler->GetDecryptedTemporaryFileAsync(tempPromise);
-            auto tempPath = tempFuture.get();
+    /// Write code here to perform further operations for edit ///
 
-            /// Write code here to perform further operations for edit ///
+    /// Follow steps below for re-protecting the edited file ///
 
-            /// Follow steps below for re-protecting the edited file ///
+    // Create a new file handler using the temporary file path.
+    auto reprotectPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
+    auto reprotectFuture = reprotectPromise->get_future();
+    engine->CreateFileHandlerAsync(tempPath, 
+                                    tempPath, 
+                                    true, 
+                                    std::make_shared<FileHandlerObserver>(), 
+                                    reprotectPromise);
+    auto republishHandler = reprotectFuture.get();
 
-            // Create a new file handler using the temporary file path.
-            auto reprotectPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
-            auto reprotectFuture = reprotectPromise->get_future();
-            engine->CreateFileHandlerAsync(tempPath, tempPath, true, std::make_shared<FileHandlerObserver>(), reprotectPromise);
-            auto republishHandler = reprotectFuture.get();
+    // Set protection using the ProtectionHandler from the original consumption operation.
+    republishHandler->SetProtection(protectionHandler);
+    std::string reprotectedFilePath = "<protected-file-path>";
 
-            // Set protection using the ProtectionHandler from the original consumption operation.
-            republishHandler->SetProtection(protectionHandler);
-            std::string reprotectedFilePath = "<protected-file-path>";
+    // Commit changes
+    auto republishPromise = std::make_shared<std::promise<bool>>();
+    auto republishFuture = republishPromise->get_future();
+    republishHandler->CommitAsync(reprotectedFilePath, republishPromise);
 
-            // Commit changes
-            auto republishPromise = std::make_shared<std::promise<bool>>();
-            auto republishFuture = republishPromise->get_future();
-            republishHandler->CommitAsync(reprotectedFilePath, republishPromise);
+    // Validate republishing
+    cout << "Protected File: " + protectedFilePath<<endl;
+    cout << "Protected Label ID: " + protectedFileHandler->GetLabel()->GetLabel()->GetId() << endl;
+    cout << "Protection Owner: " + protectedFileHandler->GetProtection()->GetOwner() << endl<<endl;
 
-            // Validate republishing
-            cout << "Protected File: " + protectedFilePath<<endl;
-            cout << "Protected Label ID: " + protectedFileHandler->GetLabel()->GetLabel()->GetId() << endl;
-            cout << "Protection Owner: " + protectedFileHandler->GetProtection()->GetOwner() << endl<<endl;
-
-            cout << "Republished File: " + reprotectedFilePath<<endl;
-            cout << "Republished Label ID: " + republishHandler->GetLabel()->GetLabel()->GetId() << endl;
-            cout << "Republished Owner: " + republishHandler->GetProtection()->GetOwner() << endl;
-
-        }
-    ```
+    cout << "Republished File: " + reprotectedFilePath<<endl;
+    cout << "Republished Label ID: " + republishHandler->GetLabel()->GetLabel()->GetId() << endl;
+    cout << "Republished Owner: " + republishHandler->GetProtection()->GetOwner() << endl;
+}
+```
 
 3. Towards the end of Main() find the application shutdown block created in previous quickstart and add below handler lines to release resources.
 

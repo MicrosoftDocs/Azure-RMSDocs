@@ -55,7 +55,9 @@ In continuation of File AI application initialization quickstart, modify the fil
         // Initialize and instantiate the File Profile.
         // Create the FileProfileSettings object.
         // Initialize file profile settings to create/use local state.
-        var profileSettings = new FileProfileSettings(mipContext, CacheStorageType.OnDiskEncrypted, new ConsentDelegateImplementation());
+        var profileSettings = new FileProfileSettings(mipContext, 
+                                    CacheStorageType.OnDiskEncrypted, 
+                                    new ConsentDelegateImplementation());
 
         // Load the Profile async and wait for the result.
         var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
@@ -80,7 +82,9 @@ In continuation of File AI application initialization quickstart, modify the fil
         string actualOutputFilePath = outputFilePath;
 
         //Create a file handler for original file
-        var fileHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, actualFilePath, true)).Result;
+        var fileHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, 
+                                                                    actualFilePath, 
+                                                                    true)).Result;
 
         // List templates available to the user and use one of them to protect the mail file.
 
@@ -96,7 +100,9 @@ In continuation of File AI application initialization quickstart, modify the fil
         var result = Task.Run(async () => await fileHandler.CommitAsync(outputFilePath)).Result;
 
         // Create a new handler to read the protected file metadata
-        var handlerModified = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(outputFilePath, actualOutputFilePath, true)).Result;
+        var handlerModified = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(outputFilePath, 
+                                                                        actualOutputFilePath, 
+                                                                        true)).Result;
 
         Console.WriteLine(string.Format("Original file: {0}", inputFilePath));
         Console.WriteLine(string.Format("Protected file: {0}", outputFilePath));

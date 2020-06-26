@@ -8,7 +8,7 @@ ms.date: 05/01/2020
 ms.author: v-anikep
 ---
 
-# Microsoft Information Protection SDK - File API Re-publishing Quickstart (C#)
+# Microsoft Information Protection SDK - File API Republishing Quickstart (C#)
 
 ## Overview
 
@@ -30,59 +30,64 @@ If you haven't already, be sure to complete the following prerequisites before c
 
 3. Toward the end of the `Main()` body, below `Console.ReadKey()` and above application shutdown block (where you left off in the previous Quickstart), insert the following code.
 
-    ```csharp
+```csharp
+string protectedFilePath = "<protected-file-path>" // Originally protected file's path from previous quickstart.
 
-        string protectedFilePath = "<protected-file-path>" // Originally protected file's path from previous quickstart.
+//Create a fileHandler for consumption for the Protected File.
+var protectedFileHandler = Task.Run(async () => 
+                            await fileEngine.CreateFileHandlerAsync(protectedFilePath,// inputFilePath
+                                                                    protectedFilePath,// actualFilePath
+                                                                    false, //isAuditDiscoveryEnabled
+                                                                    null)).Result; // fileExecutionState
 
-            //Create a fileHandler for consumption for the Protected File.
-            var protectedFileHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(protectedFilePath,// inputFilePath
-                                                                                          protectedFilePath,// actualFilePath
-                                                                                          false, //isAuditDiscoveryEnabled
-                                                                                          null)).Result; // fileExecutionState
+// Store protection handler from file
+var protectionHandler = protectedFileHandler.Protection;
 
-            // Store protection handler from file
-            var protectionHandler = protectedFileHandler.Protection;
+//Check if the user has the 'Edit' right to the file
+if (protectionHandler.AccessCheck("Edit"))
+{
+    // Decrypt file to temp path
+    var tempPath = Task.Run(async () => await protectedFileHandler.GetDecryptedTemporaryFileAsync()).Result;
 
-            //Check if the user has the 'Edit' right to the file
-            if (protectionHandler.AccessCheck("Edit"))
-            {
-                // Decrypt file to temp path
-                var tempPath = Task.Run(async () => await protectedFileHandler.GetDecryptedTemporaryFileAsync()).Result;
+    /*
+        Your own application code to edit the decrypted file belongs here. 
+    */
 
-                /// Write code here to perform further operations for edit ///
+    /// Follow steps below for re-protecting the edited file. ///
+    // Create a new file handler using the temporary file path.
+    var republishHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(tempPath, tempPath, false)).Result;
 
-                /// Follow steps below for re-protecting the edited file. ///
-                // Create a new file handler using the temporary file path.
-                var republishHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(tempPath, tempPath, false)).Result;
+    // Set protection using the ProtectionHandler from the original consumption operation.
+    republishHandler.SetProtection(protectionHandler);
 
-                // Set protection using the ProtectionHandler from the original consumption operation.
-                republishHandler.SetProtection(protectionHandler);
+    // New file path to save the edited file
+    string reprotectedFilePath = "<reprotected-file-path>" // New file path for saving reprotected file.
 
-                // New file path to save the edited file
-                string reprotectedFilePath = "<reprotected-file-path>" // New file path for saving reprotected file.
+    // Write changes
+    var reprotectedResult = Task.Run(async () => await republishHandler.CommitAsync(reprotectedFilePath)).Result;
 
-                // Write changes
-                var reprotectedResult = Task.Run(async () => await republishHandler.CommitAsync(reprotectedFilePath)).Result;
-
-                var protectedLabel = protectedFileHandler.Label;
-                Console.WriteLine(string.Format("Originally protected file: {0}", protectedFilePath));
-                Console.WriteLine(string.Format("File LabelID: {0} \r\nProtectionOwner: {1} \r\nIsProtected: {2}", protectedLabel.Label.Id, protectedFileHandler.Protection.Owner, protectedLabel.IsProtectionAppliedFromLabel.ToString()));
-                var reprotectedLabel = republishHandler.Label;
-                Console.WriteLine(string.Format("Reprotected file: {0}", reprotectedFilePath));
-                Console.WriteLine(string.Format("File LabelID: {0} \r\nProtectionOwner: {1} \r\nIsProtected: {2}", reprotectedLabel.Label.Id, republishHandler.Protection.Owner, reprotectedLabel.IsProtectionAppliedFromLabel.ToString()));
-                Console.WriteLine("Press a key to continue.");
-                Console.ReadKey();
-
-            }
-
-    ```
+    var protectedLabel = protectedFileHandler.Label;
+    Console.WriteLine(string.Format("Originally protected file: {0}", protectedFilePath));
+    Console.WriteLine(string.Format("File LabelID: {0} \r\nProtectionOwner: {1} \r\nIsProtected: {2}", 
+                        protectedLabel.Label.Id, 
+                        protectedFileHandler.Protection.Owner, 
+                        protectedLabel.IsProtectionAppliedFromLabel.ToString()));
+    var reprotectedLabel = republishHandler.Label;
+    Console.WriteLine(string.Format("Reprotected file: {0}", reprotectedFilePath));
+    Console.WriteLine(string.Format("File LabelID: {0} \r\nProtectionOwner: {1} \r\nIsProtected: {2}", 
+                        reprotectedLabel.Label.Id, 
+                        republishHandler.Protection.Owner, 
+                        reprotectedLabel.IsProtectionAppliedFromLabel.ToString()));
+    Console.WriteLine("Press a key to continue.");
+    Console.ReadKey();
+}
+```
 
 4. Towards the end of Main() find the application shutdown block created in previous quickstart and add below handler lines to release resources.
 
     ````csharp
         protectedFileHandler = null;
         protectionHandler = null;
-
     ````
 
 5. Replace the placeholder values in the source code using the following values:
