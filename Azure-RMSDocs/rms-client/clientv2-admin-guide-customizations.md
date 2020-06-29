@@ -4,9 +4,9 @@
 title: Custom configurations - Azure Information Protection unified labeling client
 description: Information about customizing the Azure Information Protection unified labeling client for Windows.
 author: mlottner
-ms.author: bagol
+ms.author: mlottner
 manager: rkarlin
-ms.date: 06/16/2020
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -156,7 +156,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |RunAuditInformationTypesDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
-|ScannerFSAttributesToSkip | [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview)
+|ScannerFSAttributesToSkip | [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes)
 |UseCopyAndPreserveNTFSOwner | [Preserve NTFS owners during labeling](#preserve-ntfs-owners-during-labeling-public-preview)
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
@@ -1211,7 +1211,7 @@ Set the logging level to one of the following values:
 
 This registry setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md).
 
-## Skip or ignore files during scans depending on file attributes (public preview)
+## Skip or ignore files during scans depending on file attributes
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
