@@ -19,7 +19,7 @@ As discussed previously, instantiation of `IFileEngine` requires a setting objec
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
 - Complete [Quickstart: File API application initialization (C#)](quick-app-initialization-csharp.md) first, which builds a starter Visual Studio solution. This "How to - process email message .msg files (C#)" quickstart builds on the previous one.
-- Review [Email files MIP SDK](concept-email-cpp.md) concepts.
+- Review [Email files MIP SDK](concept-email.md) concepts.
 - Optionally: Review [File engines in the MIP SDK](concept-profile-engine-file-engine-cpp.md) concepts.
 - Optionally: Review [File handlers in the MIP SDK](concept-handler-file-cpp.md) concepts.
 

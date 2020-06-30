@@ -12,7 +12,7 @@ ms.author: v-anikep
 
 ## Overview
 
-For an overview on this scenario and where it may be used, refer to [Republishing in MIP SDK](concept-republishing-cpp.md).
+For an overview on this scenario and where it may be used, refer to [Republishing in MIP SDK](concept-republishing.md).
 
 ## Prerequisites
 

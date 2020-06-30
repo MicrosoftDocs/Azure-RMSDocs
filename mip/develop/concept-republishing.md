@@ -68,4 +68,4 @@ After the file is decrypted the file can be edited. Once the edit operation is c
 ## Next Steps
 
 - [Review the Republishing quickstart for C++](quick-file-republishing-cpp.md)
-- [Review the Republishing quickstart for C#](quick-file-republishing-sharp.md)
+- [Review the Republishing quickstart for C#](quick-file-republishing-csharp.md)

@@ -21,7 +21,7 @@ If you haven't already, be sure to complete the following prerequisites before c
 - Complete [Quickstart: File API application initialization (C++)](quick-app-initialization-cpp.md) first, which builds a starter Visual Studio solution. This "How to - process email message .msg files (C++)" quickstart builds on the previous one.
 - Review [Quickstart: List sensitivity labels (C++)](quick-file-list-labels-cpp.md).
 - Review [Quickstart: Set/get sensitivity labels (C++)](quick-file-set-get-label-cpp.md).
-- Review [Email files MIP SDK](concept-email-cpp.md) concepts.
+- Review [Email files MIP SDK](concept-email.md) concepts.
 - Optionally: Review [File engines in the MIP SDK](concept-profile-engine-file-engine-cpp.md) concepts.
 - Optionally: Review [File handlers in the MIP SDK](concept-handler-file-cpp.md) concepts.
 
