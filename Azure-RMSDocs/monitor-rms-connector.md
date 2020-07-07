@@ -188,13 +188,15 @@ If you need more detailed logging for diagnosis purposes, you can use [Debugview
 
 2. Locate the following line:
 
-    	<trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```sh
+    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```
 
 3. Replace that line with the following text:
-
-    	<trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```sh
+    <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```
 
 4.  Stop and start IIS to activate tracing. 
 
 5.  When you have captured the traces that you need, revert the line in step 3, and stop and start IIS again.
-

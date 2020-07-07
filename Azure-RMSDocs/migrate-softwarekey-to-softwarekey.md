@@ -41,9 +41,10 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
 
 1. On an internet-connected workstation, use the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet to connect to the Azure Rights Management service:
 
-    ```
+    ```ps
     Connect-AipService
     ```
+    
     When prompted, enter your Azure Rights Management tenant administrator credentials (typically, you will use an account that is a global administrator for Azure Active Directory or Office 365).
 
 2. Use the [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) cmdlet to upload each exported trusted publishing domain (.xml) file. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. 
@@ -52,10 +53,13 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     
     For example, first run the following to store the password:
     
-		$TPD_Password = Read-Host -AsSecureString
-    
-    Enter the password that you specified to export the first configuration data file. Then, using E:\contosokey1.xml as an example for that configuration file, run the following command and confirm that you want to perform this action:
+    ```ps
+	$TPD_Password = Read-Host -AsSecureString
     ```
+
+    Enter the password that you specified to export the first configuration data file. Then, using E:\contosokey1.xml as an example for that configuration file, run the following command and confirm that you want to perform this action:
+
+    ```ps
     Import-AipServiceTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
     ```
     
@@ -63,7 +67,7 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
 
 4.  Use the [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
-    ```
+    ```ps
     Disconnect-AipServiceService
     ```
 
