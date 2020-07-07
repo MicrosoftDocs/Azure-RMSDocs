@@ -96,7 +96,7 @@ The following operating systems support both the Azure Information Protection un
 
 - **Windows Server 2012 R2** and **Windows Server 2012**
 
-[Both clients](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) let users classify and label their documents and emails.
+[Both clients](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) let users classify and label their documents and emails.
 
 For details about support in earlier versions of Windows, contact your Microsoft account or support representative.
 
@@ -171,10 +171,12 @@ Azure Information Protection has the following additional requirements:
 - **TLS client-to-service connections**. Do not terminate any TLS client-to-service connections, for example to perform packet-level inspection, to the **aadrm.com** URL. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
      
     To determine whether your client connection is terminated before it reaches the Azure Rights Management service, use the following PowerShell commands:
-    
-        $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
-        $request.GetResponse()
-        $request.ServicePoint.Certificate.Issuer
+
+    ```ps
+    $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
+    $request.GetResponse()
+    $request.ServicePoint.Certificate.Issuer
+    ```
 
     The result should show that the issuing CA is from a Microsoft CA, for example: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`. 
     
