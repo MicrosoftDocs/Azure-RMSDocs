@@ -28,7 +28,7 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
->[!NOTE] 
+>[!NOTE]
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Computers running Office 2010 require either the Azure Information Protection client (classic) or the Azure Information Protection unified labeling client to authenticate to the Azure Information Protection service.
@@ -64,12 +64,12 @@ To install the Azure Information Protection app viewer for iOS and Android, use 
 
 Because the Azure Information Protection viewer app uses the Microsoft Intune App Software Development Kit, when iOS and Android devices are enrolled by Intune, you can deploy and manage the Azure Information Protection viewer app for these devices:
 
-1. [Add the Azure Information Protection app to Intune](/intune/apps-add) 
+1. [Add the Azure Information Protection app to Intune](/intune/apps-add)
 
 2. Do one or both of the following actions:
-    
+
     - Deploy the app by [assigning it to users](/intune/apps-deploy)
-    
+
     - Manage the app by using [app protection policies](/intune/app-protection-policies)
 
 Additional information for when you add the Azure Information Protection app to Intune:
@@ -77,8 +77,10 @@ Additional information for when you add the Azure Information Protection app to 
 - For iOS: Search for and add the app from Intune.
 
 - For Android: When you add the app, use the following **Appstore URL**:
-        
-        https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
+
+    ```md
+    https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
+    ```
 
 When the Azure Information Protection app is configured for an app protection policy for Android devices, in addition to opening protected text, images, and PDF documents, this app can also open audio and video files. For more information, see [View media files with the Azure Information Protection app](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app).
 

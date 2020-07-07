@@ -112,7 +112,9 @@ In these versions of Office for Mac, templates refresh when you open protected c
 
 1. Open Terminal, and enter the following command:
     
-        defaults write ~/Library/Containers/com.microsoft.Outlook/Data/Library/Preferences/com.microsoft.Outlook ResetRMSCache 1
+    ```sh
+    defaults write ~/Library/Containers/com.microsoft.Outlook/Data/Library/Preferences/com.microsoft.Outlook ResetRMSCache 1
+    ```
 
 2. Restart Outlook for Mac.
 

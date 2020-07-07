@@ -64,7 +64,9 @@ Redirection via local hosts file:
 
 - Add the following line in the local hosts file, replacing `<AD RMS URL FQDN>` with the value for your AD RMS cluster, without prefixes or web pages:
 
-        127.0.0.1 <AD RMS URL FQDN>
+    ```sh
+    127.0.0.1 <AD RMS URL FQDN>
+    ```
 
 Redirection via DNS:
 
@@ -78,7 +80,7 @@ When these DNS changes have propagated, these clients will automatically discove
 
 To force Mac computers to run the discovery process immediately, in the keychain, search for "adal" and delete all ADAL entries. Then, run the following commands on these computers:
 
-````
+````sh
 
 rm -r ~/Library/Cache/MSRightsManagement
 
@@ -104,17 +106,22 @@ To remove the onboarding controls:
 
 1. In a PowerShell session, connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
 
-        Connect-AipService
+    ```ps
+    Connect-AipService
 
 2. Run the following command, and enter **Y** to confirm:
 
-        Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
+    ```ps
+    Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
+    ```
 
     Note that this command removes any license enforcement for the Azure Rights Management protection service, so that all computers can protect documents and emails.
 
 3. Confirm that onboarding controls are no longer set:
 
-        Get-AipServiceOnboardingControlPolicy
+    ```ps    
+    Get-AipServiceOnboardingControlPolicy
+    ```
 
     In the output, **License** should show **False**, and there is no GUID displayed for the **SecurityGroupOjbectId**
 
@@ -136,7 +143,10 @@ To rekey your Azure Information Protection tenant key:
 
 - **If your tenant key is managed by Microsoft**: Run the PowerShell cmdlet [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) and specify the key identifier for the key that was automatically created for your tenant. You can identify the value to specify by running the [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) cmdlet. The key that was automatically created for your tenant has the oldest creation date, so you can identify it by using the following command:
 
-        (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+        
+    ```ps
+    (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+    ```
 
 - **If your tenant key is managed by you (BYOK)**: In Azure Key Vault, repeat your key creation process for your Azure Information Protection tenant, and then run the [Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) cmdlet again to specify the URI for this new key.
 

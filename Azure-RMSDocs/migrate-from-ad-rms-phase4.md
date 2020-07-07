@@ -78,28 +78,30 @@ Use the instructions in the [Deploying the Azure Rights Management connector](./
 
     Before you run these commands, substitute your own Azure Rights Management service URL for *\<Your Tenant URL>*.
 
-        $irmConfig = Get-IRMConfiguration
-        $list = $irmConfig.LicensingLocation 
-        $list += "<Your Tenant URL>/_wmcs/licensing"
-        Set-IRMConfiguration -LicensingLocation $list
-    
+    ```ps
+    $irmConfig = Get-IRMConfiguration
+    $list = $irmConfig.LicensingLocation 
+    $list += "<Your Tenant URL>/_wmcs/licensing"
+    Set-IRMConfiguration -LicensingLocation $list
+    ```
+
     Now when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), you should see all your AD RMS cluster licensing URLs and your Azure Rights Management service URL displayed for the *LicensingLocation* parameter.
 
 3.  Now disable IRM features for messages that are sent to internal recipients:
 
-    ```
+    ```ps
     Set-IRMConfiguration -InternalLicensingEnabled $false
     ```
 
 4. Then use the same cmdlet to disable IRM in Microsoft Office Outlook Web App and in Microsoft Exchange ActiveSync:
 
-    ```
+    ```ps
     Set-IRMConfiguration -ClientAccessServerEnabled $false
     ```
 
 5.  Finally, use the same cmdlet to clear any cached certificates:
 
-    ```
+    ```ps
     Set-IRMConfiguration -RefreshServerCertificates
     ```
 
