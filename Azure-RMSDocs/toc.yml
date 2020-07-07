@@ -173,8 +173,26 @@
       href: secure-collaboration-documents.md
     - name: Configuring mail flow rules for Azure Information Protection labels
       href: configure-exo-rules.md
-    - name: Deploying the Azure Information Protection scanner
-      href: deploy-aip-scanner.md
+    - name: Azure Information Protection unified labeling scanner
+      items:
+        - name: Overview
+          href: deploy-aip-scanner.md
+        - name: Unified labeling scanner prerequisites
+          href: deploy-aip-scanner-prereqs.md
+        - name: Configure and install the unifed labeling scanner
+          href: deploy-aip-scanner-configure-install.md
+        - name: Run the unified labeling scanner
+          href: deploy-aip-scanner-manage.md
+    - name: Azure Information Protection classic scanner
+      items:
+        - name: Overview
+          href: deploy-aip-scanner-classic.md
+        - name: Classic scanner prerequisites
+          href: deploy-aip-scanner-prereqs-classic.md
+        - name: Configure and install the classic scanner
+          href: deploy-aip-scanner-configure-install-classic.md
+        - name: Run the classic scanner
+          href: deploy-aip-scanner-manage-classic.md
     - name: Reporting for Azure Information Protection
       href: reports-aip.md
     - name: Deploying the RMS connector
