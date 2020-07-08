@@ -3,9 +3,9 @@
 
 title: Overview of the Azure Information Protection policy
 description: Understand labels and settings in an Azure Information Protection policy that gets downloaded to the Azure Information Protection client. 
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
