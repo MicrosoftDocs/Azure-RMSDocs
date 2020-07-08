@@ -48,8 +48,10 @@ Instructions for when you use these settings:
         **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
         
         You can verify that you have correct value by running the following PowerShell command:
-        
-            (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+
+        ```ps
+        (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+        ```
 
 -   *\<ConnectorFQDN>* is the load-balancing name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
 

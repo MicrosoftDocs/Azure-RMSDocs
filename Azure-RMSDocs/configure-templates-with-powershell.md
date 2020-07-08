@@ -57,8 +57,6 @@ The cmdlets that support creating and managing protection templates:
 
 - [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)
 
-
-
 ## See Also
 [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md)
 

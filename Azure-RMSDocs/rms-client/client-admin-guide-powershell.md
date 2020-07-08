@@ -29,7 +29,7 @@ ms.custom: admin
 
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
@@ -129,7 +129,7 @@ You can use the following PowerShell commands and commented instructions to auto
 
 To automatically get the values and run Set-RMSServerAuthentication:
 
-````
+```ps
 # Make sure that you have the AIPService and MSOnline modules installed
 
 $ServicePrincipalName="<new service principal name>"
@@ -144,7 +144,7 @@ New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 $symmetricKey="<value from the display of the New-MsolServicePrincipal command>"
 $appPrincipalID=(Get-MsolServicePrincipal | Where { $_.DisplayName -eq $ServicePrincipalName }).AppPrincipalId
 Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -BposTenantId $bposTenantID
-````
+```
 
 The next sections explain how to manually get and specify these values, with more information about each one.
 
@@ -159,30 +159,35 @@ Windows PowerShell module:
 2. Start Windows PowerShell with the **Run as Administrator** option.
 
 3. Use the `Connect-AipService` cmdlet to connect to the Azure Rights Management service:
-    
-        Connect-AipService
-    
+   ```ps 
+    Connect-AipService
+    ```
+
     When prompted, enter your Azure Information Protection tenant administrator credentials. Typically, you use an account that is a global administrator for Azure Active Directory or Office 365.
     
 4. Run `Get-AipServiceConfiguration` and make a copy of the BPOSId value.
     
     An example of output from Get-AipServiceConfiguration:
-    
-            BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
+
+    ```ps    
+    BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
         
-            RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
+    RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
         
-            LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
+    LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
         
-            LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
+    LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
         
-            CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+    CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
         
-            CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+    CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+    ```
 
 5. Disconnect from the service:
-    
-        Disconnect-AipService
+
+    ```
+    Disconnect-AipService
+    ```
 
 ##### To get the AppPrincipalId and Symmetric Key
 
@@ -197,36 +202,42 @@ Create a new service principal by running the `New-MsolServicePrincipal` cmdlet 
 
 3. Use the **Connect-MsolService** cmdlet to connect to Azure AD:
 
-        Connect-MsolService
+    ```ps
+    Connect-MsolService
+    ```
 
     When prompted, enter your Azure AD tenant administrator credentials (typically, you use an account that is a global administrator for Azure Active Directory or Office 365).
 
 4. Run the New-MsolServicePrincipal cmdlet to create a new service principal:
 
-        New-MsolServicePrincipal
+    ```ps
+    New-MsolServicePrincipal
+    ```
 
     When prompted, enter your choice of a display name for this service principal that helps you to identify its purpose later as an account for you to connect to the Azure Rights Management service so that you can protect and unprotect files.
 
     An example of the output of New-MsolServicePrincipal:
 
-        Supply values for the following parameters:
+    ```ps
+    Supply values for the following parameters:
 
-        DisplayName: AzureRMSProtectionServicePrincipal
-        The following symmetric key was created as one was not supplied
-        zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=
+    DisplayName: AzureRMSProtectionServicePrincipal
+    The following symmetric key was created as one was not supplied
+    zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=
 
-        Display Name: AzureRMSProtectionServicePrincipal
-        ServicePrincipalNames: (b5e3f7g1-b5c2-4c96-a594-a0807f65bba4)
-        ObjectId: 23720996-593c-4122-bfc7-1abb5a0b5109
-        AppPrincialId: b5e3f76a-b5c2-4c96-a594-a0807f65bba4
-        TrustedForDelegation: False
-        AccountEnabled: True
-        Addresses: ()
-        KeyType: Symmetric
-        KeyId: 8ef61651-ca11-48ea-a350-25834a1ba17c
-        StartDate: 3/7/2014 4:43:59 AM
-        EndDate: 3/7/2014 4:43:59 AM
-        Usage: Verify
+    Display Name: AzureRMSProtectionServicePrincipal
+    ServicePrincipalNames: (b5e3f7g1-b5c2-4c96-a594-a0807f65bba4)
+    ObjectId: 23720996-593c-4122-bfc7-1abb5a0b5109
+    AppPrincialId: b5e3f76a-b5c2-4c96-a594-a0807f65bba4
+    TrustedForDelegation: False
+    AccountEnabled: True
+    Addresses: ()
+    KeyType: Symmetric
+    KeyId: 8ef61651-ca11-48ea-a350-25834a1ba17c
+    StartDate: 3/7/2014 4:43:59 AM
+    EndDate: 3/7/2014 4:43:59 AM
+    Usage: Verify
+    ```
 
 5. From this output, make a note of the symmetric key and the AppPrincialId.
 
@@ -242,7 +253,9 @@ From these instructions and our examples, we have the three identifiers required
 
 Our example command would then look like the following:
 
-    Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
+```ps
+Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
+```
 
 As shown in the previous command, you can supply the values with a single command, which you would do in a script to run non-interactively. But for testing purposes, you can just type Set-RMSServerAuthentication, and supply the values one-by-one when prompted. When the command completes, the client is now operating in "server mode", which is suitable for non-interactive use such as scripts and Windows Server File Classification Infrastructure.
 
@@ -287,75 +300,96 @@ However, to protect or unprotect files by directly connecting to the Azure Right
 
 First, if you need to authenticate to the Azure Rights Management service with a service principal account rather than use your own account, in a PowerShell session, type:
 
-    Set-RMSServerAuthentication
+```ps
+Set-RMSServerAuthentication
+```
 
 When prompted, enter the three identifiers as described in [Prerequisite 3: To protect or unprotect files without user interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction).
 
 Before you can protect files, you must download the Rights Management templates to your computer and identify which one to use and its corresponding ID number. From the output, you can then copy the template ID:
 
-    Get-RMSTemplate
-
+```ps
+Get-RMSTemplate
+```
 Your output might look similar to the following:
 
-    TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
-    CultureInfo       : en-US
-    Description       : This content is proprietary information intended for internal users only. This content cannot be modified.
-    Name              : Contoso, Ltd - Confidential View Only
-    IssuerDisplayName : Contoso, Ltd
-    FromTemplate      : True
+```ps
+TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
+CultureInfo       : en-US
+Description       : This content is proprietary information intended for internal users only. This content cannot be modified.
+Name              : Contoso, Ltd - Confidential View Only
+IssuerDisplayName : Contoso, Ltd
+FromTemplate      : True
 
-    TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
-    CultureInfo       : en-US
-    Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
-    Name              : Contoso, Ltd - Confidential
-    IssuerDisplayName : Contoso, Ltd
-    FromTemplate      : True
-    FromTemplate      : True
+TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
+CultureInfo       : en-US
+Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
+Name              : Contoso, Ltd - Confidential
+IssuerDisplayName : Contoso, Ltd
+FromTemplate      : True
+FromTemplate      : True
+```
 
 Note that if you didn't run the Set-RMSServerAuthentication command, you are authenticated to the Azure Rights Management service by using your own user account. If you are on a domain-joined computer, your current credentials are always used automatically. If you are on a workgroup computer, you are prompted to sign in to Azure, and these credentials are then cached for subsequent commands. In this scenario, if you later need to sign in as a different user, use the `Clear-RMSAuthentication` cmdlet.
 
 Now you know the template ID, you can use it with the `Protect-RMSFile` cmdlet to protect a single file or all files in a folder. For example, if you want to protect a single file only and overwrite the original, by using the "Contoso, Ltd - Confidential" template:
 
-    Protect-RMSFile -File C:\Test.docx -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```ps
+Protect-RMSFile -File C:\Test.docx -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```
 
 Your output might look similar to the following:
 
-    InputFile             EncryptedFile
-    ---------             -------------
-    C:\Test.docx          C:\Test.docx
+```ps
+InputFile             EncryptedFile
+---------             -------------
+C:\Test.docx          C:\Test.docx
+```
 
 To protect all files in a folder, use the **-Folder** parameter with a drive letter and path, or UNC path. For example:
 
-    Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```ps
+Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```
 
 Your output might look similar to the following:
 
-    InputFile                          EncryptedFile
-    ---------                          -------------
-    \Server1\Documents\Test1.docx     \Server1\Documents\Test1.docx
-    \Server1\Documents\Test2.docx     \Server1\Documents\Test2.docx
-    \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
-    \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
+```ps
+InputFile                          EncryptedFile
+---------                          -------------
+\Server1\Documents\Test1.docx     \Server1\Documents\Test1.docx
+\Server1\Documents\Test2.docx     \Server1\Documents\Test2.docx
+\Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
+\Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
+```
 
 When the file name extension does not change after the protection is applied, you can always use the `Get-RMSFileStatus` cmdlet later to check whether the file is protected. For example:
 
-    Get-RMSFileStatus -File \Server1\Documents\Test1.docx
+```ps
+Get-RMSFileStatus -File \Server1\Documents\Test1.docx
+```
 
 Your output might look similar to the following:
 
-    FileName                              Status
-    --------                              ------
-    \Server1\Documents\Test1.docx         Protected
+```ps
+FileName                              Status
+--------                              ------
+\Server1\Documents\Test1.docx         Protected
+```
 
 To unprotect a file, you must have Owner or Extract rights from when the file was protected. Or, you must run the cmdlets as a super user. Then, use the Unprotect cmdlet. For example:
 
-    Unprotect-RMSFile C:\test.docx -InPlace
+```ps
+Unprotect-RMSFile C:\test.docx -InPlace
+```
 
 Your output might look similar to the following:
 
-    InputFile                             DecryptedFile
-    ---------                             -------------
-    C:\Test.docx                          C:\Test.docx
+```ps
+InputFile                             DecryptedFile
+---------                             -------------
+C:\Test.docx                          C:\Test.docx
+```
 
 Note that if the Rights Management templates are changed, you must download them again with `Get-RMSTemplate -force`. 
 
@@ -396,82 +430,104 @@ A typical scenario for these cmdlets is to protect all files in a folder by usin
 
 First, if you have more than one deployment of AD RMS, you need the names of your AD RMS servers, which you do by using the Get-RMSServer cmdlet to display a list of available servers:
 
-    Get-RMSServer
-
+```ps
+Get-RMSServer
+```
 Your output might look similar to the following:
 
-    Number of RMS Servers that can provide templates: 2 
-    ConnectionInfo             DisplayName          AllowFromScratch
-    --------------             -------------        ----------------
-    Microsoft.InformationAnd…  RmsContoso                       True
-    Microsoft.InformationAnd…  RmsFabrikam                      True
+```ps
+Number of RMS Servers that can provide templates: 2 
+ConnectionInfo             DisplayName          AllowFromScratch
+--------------             -------------        ----------------
+Microsoft.InformationAnd…  RmsContoso                       True
+Microsoft.InformationAnd…  RmsFabrikam                      True
+```
 
 Before you can protect files, you need to get a list of RMS templates to identify which one to use and its corresponding ID number. Only when you have more than one AD RMS deployment do you need to specify the  RMS server as well. 
 
 From the output, you can then copy the template ID:
 
-    Get-RMSTemplate -RMSServer RmsContoso
+```ps
+Get-RMSTemplate -RMSServer RmsContoso
+```
 
 Your output might look similar to the following:
 
-    TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
-    CultureInfo       : en-US
-    Description       : This content is proprietary information intended for internal users only. This content cannot be modified.
-    Name              : Contoso, Ltd - Confidential View Only
-    IssuerDisplayName : Contoso, Ltd
-    FromTemplate      : True
+```ps
+TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
+CultureInfo       : en-US
+Description       : This content is proprietary information intended for internal users only. This content cannot be modified.
+Name              : Contoso, Ltd - Confidential View Only
+IssuerDisplayName : Contoso, Ltd
+FromTemplate      : True
 
-
-    TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
-    CultureInfo       : en-US
-    Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
-    Name              : Contoso, Ltd - Confidential
-    IssuerDisplayName : Contoso, Ltd
-    FromTemplate      : True
-    FromTemplate      : True
+TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
+CultureInfo       : en-US
+Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
+Name              : Contoso, Ltd - Confidential
+IssuerDisplayName : Contoso, Ltd
+FromTemplate      : True
+FromTemplate      : True
+```
 
 Now you know the template ID, you can use it with the Protect-RMSFile cmdlet to protect a single file or all files in a folder. For example, if you want to protect a single file only and replace the original, by using the "Contoso, Ltd - Confidential" template:
 
-    Protect-RMSFile -File C:\Test.docx -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```ps
+Protect-RMSFile -File C:\Test.docx -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```
 
 Your output might look similar to the following:
 
-    InputFile             EncryptedFile
-    ---------             -------------
-    C:\Test.docx          C:\Test.docx   
+```ps
+InputFile             EncryptedFile
+---------             -------------
+C:\Test.docx          C:\Test.docx   
+```
 
 To protect all files in a folder, use the -Folder parameter with a drive letter and path, or UNC path. For example:
 
-    Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```ps
+Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```
 
 Your output might look similar to the following:
 
-    InputFile                          EncryptedFile
-    ---------                          -------------
-    \\Server1\Documents\Test1.docx     \\Server1\Documents\Test1.docx   
-    \\Server1\Documents\Test2.docx     \\Server1\Documents\Test2.docx   
-    \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
-    \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
+```ps
+InputFile                          EncryptedFile
+---------                          -------------
+\\Server1\Documents\Test1.docx     \\Server1\Documents\Test1.docx   
+\\Server1\Documents\Test2.docx     \\Server1\Documents\Test2.docx   
+\\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
+\\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
+```
 
 When the file name extension does not change after protection is applied, you can always use the Get-RMSFileStatus cmdlet later to check whether the file is protected. For example: 
 
-    Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
+```ps
+Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
+```
 
 Your output might look similar to the following:
 
-    FileName                              Status
-    --------                              ------
-    \\Server1\Documents\Test1.docx        Protected
+```ps
+FileName                              Status
+--------                              ------
+\\Server1\Documents\Test1.docx        Protected
+```
 
 To unprotect a file, you must have Owner or Extract usage rights from when the  file was protected, or be super user for AD RMS. Then, use the Unprotect cmdlet. For example:
 
-    Unprotect-RMSFile C:\test.docx -InPlace
+```ps
+Unprotect-RMSFile C:\test.docx -InPlace
+```
 
 Your output might look similar to the following:
 
-    InputFile                             DecryptedFile
-    ---------                             -------------
-    C:\Test.docx                          C:\Test.docx
+```ps
+InputFile                             DecryptedFile
+---------                             -------------
+C:\Test.docx                          C:\Test.docx
+```
 
 ## How to label files non-interactively for Azure Information Protection
 
@@ -584,7 +640,9 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 You've now completed configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. From our examples:
 
-`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+```ps
+Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"
+```
 
 Run this command in the context of the account that will label and protect the documents non-interactively. For example, a user account for your PowerShell scripts or the service account to run the Azure Information Protection scanner.  
 
@@ -612,11 +670,17 @@ High-level steps:
 
 2. Copy and paste the following command into this script:
 
-         Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application> -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
+    ```ps
+    Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application> -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
+    ```
 
 3. Using the instructions in the preceding section, modify this command by specifying your own values for the **WebAppId**, **WebAppkey**, and **NativeAppId** parameters. At this time, you do not have the value for the **Token** parameter, which you specify later. 
 
-    For example: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
+    For example: 
+
+    ```ps
+    Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>
+    ```
 
 #### Step 2: Run Set-AIPAuthentication to get an access token and copy it to the clipboard
 
@@ -624,9 +688,15 @@ High-level steps:
 
 2. Using the same values as you specified in the script, run the following command:
 
-        (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
+    ```ps
+    (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
+    ```
 
-    For example: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+    For example: 
+
+    ```ps
+    (Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+    ```
 
 #### Step 3: Modify the PowerShell script to supply the token
 
@@ -636,7 +706,7 @@ High-level steps:
 
     For more information about signing Windows PowerShell scripts, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in the PowerShell documentation library.
 
-3. Copy this PowerShell script to the computer that will label and protect files, and delete the original on your computer. For example, you copy the PowerShell script to C:\Scripts\Aipauthentication.ps1 on a Windows Server computer.
+3. Copy this PowerShell script to the computer that will label and protect files, and delete the original on your computer. For example, you copy the PowerShell script to **C:\Scripts\Aipauthentication.ps1** on a Windows Server computer.
 
 #### Step 4: Create a task that runs the PowerShell script
 
@@ -654,16 +724,18 @@ High-level steps:
 
 #### Step 5: Confirm that the token is saved and delete the PowerShell script
 
-1. Confirm that the token is now stored in the %localappdata%\Microsoft\MSIP folder for the service account profile. This value is protected by the service account.
+1. Confirm that the token is now stored in the **%localappdata%\Microsoft\MSIP** folder for the service account profile. This value is protected by the service account.
 
-2. Delete the PowerShell script that contains the token value (for example, Aipauthentication.ps1).
+2. Delete the PowerShell script that contains the token value (for example, **Aipauthentication.ps1).**
 
     Optionally, delete the task. If your token expires, you must repeat this process, in which case it might be more convenient to leave the configured task so that it's ready to rerun when you copy over the new PowerShell script with the new token value.
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> cmdlet`, and use the -online parameter to read the most up-to-date information. For example: 
 
-    Get-Help Get-RMSTemplate -online
+```ps
+Get-Help Get-RMSTemplate -online
+```
 
 See the following for additional information that you might need to support the Azure Information Protection client:
 
@@ -674,5 +746,3 @@ See the following for additional information that you might need to support the 
 - [Document tracking](client-admin-guide-document-tracking.md)
 
 - [File types supported](client-admin-guide-file-types.md)
-
-

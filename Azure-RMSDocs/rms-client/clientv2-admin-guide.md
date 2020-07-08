@@ -30,7 +30,7 @@ ms.custom: admin
 >
 > **Customers with extended Microsoft support for Windows 7 and Office 2010 can also get Azure Information Protection support for these versions. Check with your support contact for full details.*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Use the information in this guide if you are responsible for the Azure Information Protection unified labeling client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection unified labeling client user guide](clientv2-user-guide.md). 
 
@@ -246,7 +246,7 @@ You can now use the rest of the instructions in [Deploying the Azure Information
 
 Beginning with version 1.48.204.0, the scanner gets its configuration settings from the Azure portal, by using a configuration profile. Upgrading the scanner includes instructing the scanner to use this online configuration and for the unified labeling client, offline configuration for the scanner is not supported.
 
-1. Use the Azure portal to create a new scanner profile that includes settings for the scanner and your data repositories with any settings that they need. For help with this step, see the [Configure the scanner in the Azure portal](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) section from the scanner deployment instructions.
+1. Use the Azure portal to create a new scanner profile that includes settings for the scanner and your data repositories with any settings that they need. For help with this step, see [Configure the scanner in the Azure portal](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) from the scanner deployment instructions.
 
 2. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
 
