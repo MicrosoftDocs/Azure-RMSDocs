@@ -6,7 +6,7 @@ description: Azure Information Protection unified labeling client for Windows he
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/06/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,9 @@ ms.custom: user
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> **Customers with extended Microsoft support for Windows 7 and Office 2010 can also get Azure Information Protection support for these versions. Check with your support contact for full details.*
+>
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 The Azure Information Protection unified labeling client for Windows helps you keep important documents and emails safe from people who shouldn't see them, even if your email is forwarded or your document is saved to another location. You can also use this client to open documents that other people have protected by using the Rights Management protection technology from Azure Information Protection.
 

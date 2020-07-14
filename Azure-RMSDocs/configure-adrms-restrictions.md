@@ -30,7 +30,7 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
@@ -166,7 +166,7 @@ An AD RMS deployment must meet the following requirements to provide HYOK protec
 
 - Users have a version of Office that supports Information Rights Management (IRM) and at least Office 2013 Professional Plus with Service Pack 1, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 are not supported for this scenario.
     
-    - For Office 2016, Microsoft Installer (.msi)-based edition: You have installed [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
+    - For Office 2016, Microsoft Installer (.msi)-based edition: You have installed [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
 
 > [!IMPORTANT]
 > To fulfill the high assurance that HYOK protection offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only managed devices. 
@@ -180,17 +180,23 @@ For deployment information and instructions for AD RMS, see [Active Directory Ri
 
 1. On each AD RMS server in the cluster, create the following registry entry:
 
-    `Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
-    
+    ``` md
+    Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"
+    ```
+
     For the \<string value>, specify one of the following:
     
     - For AD RMS clusters using SSL/TLS:
-
-            https://<cluster_name>/_wmcs/certification/certification.asmx
     
+        ``` md
+        https://<cluster_name>/_wmcs/certification/certification.asmx
+        ```
+
     - For AD RMS clusters not using SSL/TLS (testing networks only):
         
-            http://<cluster_name>/_wmcs/certification/certification.asmx
+        ``` md
+        http://<cluster_name>/_wmcs/certification/certification.asmx
+        ```
 
 2. Restart IIS.
 

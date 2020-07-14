@@ -3,9 +3,9 @@
 
 title: Microsoft-managed - AIP tenant key life cycle operations
 description: Information about the life cycle operations that are relevant if Microsoft manages your tenant key for Azure Information Protection (the default).
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -56,7 +56,9 @@ You have more than one Microsoft-managed key if you migrated from Active Directo
 
 To select a different key to be your active tenant key for Azure Information Protection, use the [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) cmdlet from the AIPService module. To help you identify which key to use, use the [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) cmdlet. You can identify the default key that was automatically created for your Azure Information Protection tenant by running the following command:
 
-	(Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+```ps
+(Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+```
 
 To change your key topology to be customer-managed (BYOK), see [Implementing BYOK for your Azure Information Protection tenant key](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 
@@ -78,16 +80,18 @@ You can export your Azure Information Protection configuration and tenant key by
 
 - Microsoft Customer Support Services (CSS) sends you your Azure Information Protection configuration and tenant key encrypted in a password-protected file. This file has a **.tpd** file name extension. To do this, CSS first sends you (as the person who initiated the export) a tool by email. You must run the tool from a command prompt as follows:
 
-    ```
+    ```ps
     AadrmTpd.exe -createkey
     ```
+
     This generates an RSA key pair and saves the public and private halves as files in the current folder. For example: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** and **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
     Respond to the email from CSS, attaching the file that has a name that starts with **PublicKey**. CSS next sends you a TPD file as an .xml file that is encrypted with your RSA key. Copy this file to the same folder as you ran the AadrmTpd tool originally, and run the tool again, using your file that starts with **PrivateKey** and the file from CSS. For example:
 
-    ```
+    ```ps
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
+
     The output of this command should be two files: One contains the plain text password for the password-protected TPD, and the other is the password-protected TPD itself. The files have a new GUID, for example:
      
   - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
@@ -114,5 +118,4 @@ If you have a breach, the best action that you or Microsoft can take depends on 
 |Your tenant key is leaked.|Rekey your tenant key. See the [Rekey your tenant key](#rekey-your-tenant-key) section in this article.|
 |An unauthorized individual or malware got rights to use your tenant key but the key itself did not leak.|Rekeying your tenant key does not help here and requires root-cause analysis. If a process or software bug was responsible for the unauthorized individual to get access, that situation must be resolved.|
 |Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Information Protection to support new algorithms and longer key lengths that are resilient, and instruct all customers to rekey their tenant key.|
-
-
+| | |

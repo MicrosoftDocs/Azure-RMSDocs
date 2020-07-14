@@ -3,9 +3,9 @@
 
 title: Registry settings for the Rights Management connector - AIP
 description: Information about the registry settings on servers using the RMS connector. The recommended method to configure these settings is to use the server configuration tool for Microsoft RMS connector.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -48,8 +48,10 @@ Instructions for when you use these settings:
         **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
         
         You can verify that you have correct value by running the following PowerShell command:
-        
-            (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+
+        ```ps
+        (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+        ```
 
 -   *\<ConnectorFQDN>* is the load-balancing name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
 

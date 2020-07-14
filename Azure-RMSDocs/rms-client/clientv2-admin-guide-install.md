@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/24/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,9 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> **Customers with extended Microsoft support for Windows 7 and Office 2010 can also get Azure Information Protection support for these versions. Check with your support contact for full details.*
+>
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Before you install the Azure Information Protection unified labeling client on your enterprise network, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../requirements.md). 
 
@@ -115,7 +117,7 @@ After the Azure Information Protection unified labeling client is installed, you
 
 Use the following instructions to install the client when you're not using the Microsoft Update catalog, or deploying the .msi by using a central deployment method such as Intune.
 
-1. Download the executable version of the Azure Information Protection unified labeling client (file name of AzInfoProtection_UL) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+1. Download the executable version of the Azure Information Protection unified labeling client (file name of AzInfoProtection_UL) from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). 
     
     If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment. 
 
@@ -198,7 +200,7 @@ For central deployment, use the following information that is specific to the .m
 
 If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/deploy-use/add-apps).
 
-1. Download the .msi version of the Azure Information Protection unified labeling client (AzInfoProtection_UL) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+1. Download the .msi version of the Azure Information Protection unified labeling client (AzInfoProtection_UL) from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). 
     
     If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment.
 
@@ -207,11 +209,11 @@ If you use Intune for your software deployment method, use these instructions to
     |Office version|Operating system|Software|Action|
     |--------------------|--------------|----------------|---------------------|
     |All versions except Office 365 1902 or later|Windows 10 version 1809 only, operation system builds older than 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Install|
-    |Office 2016|All supported versions|64-bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32-bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Install|
-    |Office 2013|All supported versions|64-bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32-bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Version: 1.0|Install|
-    |Office 2010|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
-    |Office 2010|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
-    |Office 2010|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
+    |Office 2016|All supported versions|64-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Install|
+    |Office 2013|All supported versions|64-bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32-bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version: 1.0|Install|
+    |Office 2010|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
+    |Office 2010|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
+    |Office 2010|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
     
    
 

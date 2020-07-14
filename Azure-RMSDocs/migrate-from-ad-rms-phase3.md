@@ -35,11 +35,11 @@ Use the following information for Phase 3 of migrating from AD RMS to Azure Info
 For Windows computers that use Office 365 apps, Office 2019, or Office 2016 click-to-run desktop apps:
 
 - You can reconfigure these clients to use Azure Information Protection by using DNS redirection. This is the preferred method for client migration because it is the simplest. However, this method is restricted to Office 2016 (or later) click-to-run desktop apps for Windows computers.
-    
+
     This method requires you to create a new SRV record, and set an NTFS deny permission for users on the AD RMS publishing endpoint.
 
 - For Windows computers that don't use Office 2019 or Office 2016 click-to-run:
-    
+
     You cannot use DNS redirection and instead, must use registry edits. If you have a mix of Office versions that can and cannot use DNS redirection, you can use this single method for all Windows computers, or a combination of DNS redirection and editing the registry. 
     
     The registry changes are made easier for you by editing and deploying scripts that you can download. 
@@ -52,7 +52,9 @@ This method is suitable only for Windows clients that run Office 365 apps and Of
 
 1. Create a DNS SRV record using the following format:
     
-    `_rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.`
+    ```sh
+    _rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.
+    ```
     
     For *\<AD RMS cluster>*, specify the FQDN of your AD RMS cluster. For example, **rmscluster.contoso.com**.
     
@@ -125,7 +127,9 @@ The user configuration script (Migrate-User.cmd) configures user-level settings 
 
 The two scripts include a version number and do not rerun until this version number is changed. This means that you can leave the scripts in place until the migration is complete. However, if you do make changes to the scripts that you want computers and users to rerun on their Windows computers, update the following line in both scripts to a higher value:
 
-    SET Version=20170427
+```sh
+SET Version=20170427
+```
 
 The user configuration script is designed to run after the client configuration script, and uses the version number in this check. It stops if the client configuration script with the same version has not run. This check ensures that the two scripts run in the right sequence. 
 
@@ -147,4 +151,5 @@ When you cannot migrate all your Windows clients at once, run the following proc
 3. Using the instructions at the beginning of this step, configure your script deployment methods to run **Migrate-Client.cmd** and **Migrate-User.cmd** on the Windows client computers that are used by the members of the AIPMigrated group. 
 
 ## Next steps
+
 To continue the migration, go to [phase 4 -supporting services configuration](migrate-from-ad-rms-phase4.md).

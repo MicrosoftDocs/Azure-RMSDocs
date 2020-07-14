@@ -3,9 +3,9 @@
 
 title: Your Azure Information Protection tenant key
 description: Instead of Microsoft managing the root key for Azure Information Protection, you might want to create and manage this key (known as "bring your own key" or BYOK) for your tenant, to comply with specific regulations.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -135,7 +135,9 @@ Make your choice first for compliance, and then to minimize network latency:
 
 To identify the location of your Azure Information Protection tenant, use the [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)​ PowerShell cmdlet and identify the region from the URLs. For example:
 
-	LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
+```ps
+LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
+```
 
 The region is identifiable from **rms.na.aadrm.com**, and for this example, it is in North America.
 
@@ -182,16 +184,22 @@ Configuration by using the Azure portal:
 Configuration by using PowerShell:
 
 - Run the Key Vault PowerShell cmdlet, [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy), and grant permissions to the Azure Rights Management service principal, by using the GUID **00000012-0000-0000-c000-000000000000**. For example:
-    
-    	Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
+
+    ```ps
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
+    ```
 
 You're now ready to configure Azure Information Protection to use this key as your organization's Azure Information Protection tenant key. Using Azure RMS cmdlets, first connect to the Azure Rights Management service and sign in:
 
+```ps
 	Connect-AipService
+```
 
 Then run the [Use-AipServiceKeyVaultKey cmdlet](/powershell/module/aipservice/use-aipservicekeyvaultkey), specifying the key URL. For example:
 
+```ps
 	Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
+```
 
 > [!IMPORTANT]
 > In this example, "aaaabbbbcccc111122223333" is the version of the key to use. If you do not specify the version, the current version of the key is used without warning and the command appears to work. However, if your key in Key Vault is later updated (renewed), the Azure Rights Management service will stop working for your tenant, even if you run the Use-AipServiceKeyVaultKey command again.

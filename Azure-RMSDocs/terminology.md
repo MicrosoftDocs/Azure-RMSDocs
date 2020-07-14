@@ -3,9 +3,9 @@
 
 title: Terminology for Azure Information Protection
 description: Confused by a word, phrase, or acronym that's related to Microsoft Azure Information Protection? Find the definition here for terms and abbreviations that are either specific to Azure Information Protection or have a specific meaning when used in the context of this service.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -46,7 +46,7 @@ AzureInformationProtection|The name of the PowerShell module for the Azure Infor
 Azure Information Protection client (classic)|Sometimes abbreviated to *classic client*.<br /><br />The original client side of Azure Information Protection that lets users, administrators, and services use the labels and settings from your Azure Information Protection policy. Now being replaced with the Azure Information Protection unified labeling client.|
 |Azure Information Protection label|An item that always applies a classification value to documents and emails, and can also protect them. When a label is applied, the label information is stored in the metadata for applications and services to read and optionally, act on it.|
 |Azure Information Protection policy|Administrator-defined configuration for clients and services that use Azure Information Protection labels and policy settings.|
-|Azure Information Protection scanner|A service that runs on Windows Server and lets you discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries.|
+|Azure Information Protection scanner|A service that runs on Windows Server and lets you discover, classify, and protect documents on network shares, and SharePoint Server sites and libraries.|
 |Azure Information Protection unified labeling client|Sometimes abbreviated to *unified labeling client*.<br /><br />The client for Windows computers that lets users, administrators, and services use the sensitivity labels and label policy settings from the Office 365 Security & Compliance Center, the Microsoft 365 security center, and the Microsoft 365 compliance center. Replaces the Azure Information Protection client (classic).|
 |Azure RMS|See *Azure Rights Management*.|
 |Azure Information Protection viewer|An app that runs on Windows computers and mobile devices, to display protected files.|

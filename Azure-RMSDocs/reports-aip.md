@@ -25,12 +25,9 @@ ms.custom: admin
 
 ---
 
-# Central reporting for Azure Information Protection
+# Central reporting for Azure Information Protection (public preview)
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
-> [!NOTE]
-> This feature is currently in preview and subject to change.
 
 Use Azure Information Protection analytics for central reporting to help you track the adoption of your labels that classify and protect your organization's data. In addition:
 
@@ -126,7 +123,13 @@ To generate these reports, endpoints send the following types of information to 
 
 - The client operating system version.
 
-This information is stored in an Azure Log Analytics workspace that your organization owns and can be viewed independently from Azure Information Protection by users who have access rights to this workspace. For details, see the [Permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics) section. For information about managing access to your workspace, see the [Manage access to Log Analytics Workspace using Azure permissions](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) section from the Azure documentation.
+This information is stored in an Azure Log Analytics workspace that your organization owns and can be viewed independently from Azure Information Protection by users who have access rights to this workspace. 
+
+For more details, see:
+
+- [Permissions required for Azure Information Protection analytics](#permissions-required-for-azure-information-protection-analytics)
+- [Manage access to Log Analytics Workspace using Azure permissions](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)
+- [Azure Information Protection audit log reference](audit-logs.md)
 
 To prevent Azure Information Protection clients (classic) from sending this data, set the [policy setting](configure-policy-settings.md) of **Send audit data to Azure Information Protection analytics** to **Off**:
 
@@ -156,7 +159,7 @@ To view the Azure Information Protection reports and create your own, make sure 
 |Requirement|More information|
 |---------------|--------------------|
 |An Azure subscription that includes Log Analytics and that is for the same tenant as Azure Information Protection|See the [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/log-analytics) page.<br /><br />If you don't have an Azure subscription or you don't currently use Azure Log Analytics, the pricing page includes a link for a free trial.|
-|For reporting information from labeling clients: <br /><br />- Azure Information Protection clients|Both the unified labeling client and the classic client are supported. <br /><br />If not already installed, you can download and install these clients from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
+|For reporting information from labeling clients: <br /><br />- Azure Information Protection clients|Both the unified labeling client and the classic client are supported. <br /><br />If not already installed, you can download and install these clients from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).|
 |For reporting information from cloud-based data stores: <br /><br />- Microsoft Cloud App Security |To display information from Microsoft Cloud App Security, configure [Azure Information Protection integration](https://docs.microsoft.com/cloud-app-security/azip-integration).|
 |For reporting information from on-premises data stores: <br /><br />- Azure Information Protection scanner |For installation instructions for the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md). |
 |For reporting information from Windows 10 computers:  <br /><br />- Minimum build of 1809 with Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)|You must enable the Azure Information Protection integration feature from Microsoft Defender Security Center. For more information, see [Information protection in Windows overview](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|

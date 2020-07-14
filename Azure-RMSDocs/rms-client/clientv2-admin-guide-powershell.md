@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/08/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,9 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> **Customers with extended Microsoft support for Windows 7 and Office 2010 can also get Azure Information Protection support for these versions. Check with your support contact for full details.*
+>
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 When you install the Azure Information Protection unified labeling client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 
@@ -171,14 +173,18 @@ Now you've completed the registration of this app with a secret, you're ready to
 1. Open Windows PowerShell with the **Run as administrator option**. 
 
 2. In your PowerShell session, create a variable to store the credentials of the Windows user account that will run non-interactively. For example, if you created a service account for the scanner:
-    
-        $pscreds = Get-Credential "CONTOSO\srv-scanner"
-    
+
+    ```ps
+    $pscreds = Get-Credential "CONTOSO\srv-scanner"
+    ```
+
     You're prompted for this account's password.
 
 2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. Also specify your app registration values, your tenant ID, and the name of the delegated user account in Azure AD. For example:
     
-        Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
+    ```ps
+    Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
+    ```
 
 > [!NOTE]
 > If the computer cannot have internet access, there's no need to create the app in Azure AD and run Set-AIPAuthentication. Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
@@ -186,7 +192,9 @@ Now you've completed the registration of this app with a secret, you're ready to
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> -online`. For example: 
 
-    Get-Help Set-AIPFileLabel -online
+```ps
+Get-Help Set-AIPFileLabel -online
+```
 
 See the following for additional information that you might need to support the Azure Information Protection client:
 

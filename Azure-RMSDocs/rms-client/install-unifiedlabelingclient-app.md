@@ -27,7 +27,7 @@ ms.custom: user
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 If your administrator does not install the Azure Information Protection unified labeling client for you, you can do this yourself. You must be a local administrator for your PC to install this client so that it can label and protect your documents and emails.
 
@@ -40,7 +40,7 @@ In addition:
 
 Before you install the Azure Information Protection unified labeling client, confirm with your administrator or help desk that you are using [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) to classify and protect documents and emails.
 
-1. Download **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+1. Download **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
 2. Run the executable file that was downloaded, and if you are prompted to continue, click **Yes**.
 

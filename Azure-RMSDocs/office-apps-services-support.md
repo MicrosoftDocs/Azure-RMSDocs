@@ -3,8 +3,8 @@
 
 title: How Office apps & services support Azure RMS from AIP
 description: How end-user Office applications such as Word and Outlook, and Office services such as Exchange and SharePoint, can use the Azure Rights Management service from AIP to help protect your organization's data.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
 ms.date: 05/31/2020
 ms.topic: conceptual
@@ -37,6 +37,9 @@ These applications natively support Azure Rights Management and let users apply 
 For example, users can configure a Word document so that it can be accessed only by people in your organization. Or, control whether an Excel spreadsheet can be edited, or restricted to read-only, or prevent it from being printed. For time-sensitive files, an expiration time can be configured for when the file can no longer be accessed. This configuration can be made directly by users or by applying a protection template. For Outlook, users can also choose the **Do Not Forward** option to help prevent data leakage.
 
 If you are ready to configure Office apps see [Office apps: Configuration for clients](configure-office-apps.md).
+
+> [!NOTE]
+> Due to a limitation in recent Windows updates, files that are attached to emails may be currently be locked after opening the file.
 
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can configure options for Azure Information Protection. This configuration lets Exchange provide the following protection solutions:
@@ -95,7 +98,7 @@ For libraries that are not IRM-protected, if you apply protection-only to a file
 
 When you use SharePoint IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive and SharePoint](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
 
-Although no longer new, the following post from the Office 365 blog has some additional information that you might find useful: [What’s New with Information Rights Management in SharePoint](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
+Although no longer new, the following post from the Office 365 blog has some additional information that you might find useful: [What’s New with Information Rights Management in SharePoint](https://www.microsoft.com/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
 
 For changes that are coming, see [Updates to SharePoint security, administration, and migration](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
 
