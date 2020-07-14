@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -139,7 +139,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |Recommended or automatic labeling:<br />- For Outlook| **Yes** | **Yes** | No |
 |Mandatory labeling:| **Yes** | **Yes** | No |
 |User-defined permissions for a label: <br />- Do Not Forward for emails| **Yes** | **Yes** | **Yes** |
-|User-defined permissions for a label: <br />- Custom permissions for Word, Excel, PowerPoint, File Explorer| **Yes** | **Yes** | **Yes** |
+|User-defined permissions for a label: <br />- Custom permissions for Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
 |Multilanguage support for labels:| **Yes** | **Yes** |**Yes** |
 |Label inheritance from email attachments:| **Yes** | **Yes**  |No |
 |Customizations that include:<br />- Default label for email<br />- Pop up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| **Yes** <sup>1</sup> | **Yes** <sup>2</sup> | No |
@@ -152,7 +152,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |Dynamic visual markings with variables:| **Yes** | **Yes** | No |
 |Label with File Explorer:| **Yes** | **Yes** | No |
 |A viewer for protected files (text, images, PDF, .pfile):| **Yes** | **Yes** | No|
-|PDF support for applying labels:| **Yes** | No | No |
+|PPDF support for applying labels:| **Yes** | No | No |
 |PowerShell labeling cmdlets:| **Yes** | **Yes** <sup>4</sup> | No |
 |Offline support for protection actions:| **Yes** | **Yes** <sup>5</sup> | **Yes** |
 |Manual policy file management for disconnected computers:| **Yes** |**Yes**| No |
