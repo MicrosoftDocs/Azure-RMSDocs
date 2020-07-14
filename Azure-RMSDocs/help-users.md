@@ -3,9 +3,9 @@
 
 title: Help users protect files by using Azure RMS - AIP
 description: Information to help you provide guidance for users, administrators, and your help desk after you have deployed and configured the Azure Rights Management service from Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

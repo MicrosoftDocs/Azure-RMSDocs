@@ -3,9 +3,9 @@
 
 title: Decommission & deactivate Azure RMS
 description: Information and instructions if you decide you no longer want to use the cloud-based protection service from Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

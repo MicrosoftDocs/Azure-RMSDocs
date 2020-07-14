@@ -3,8 +3,8 @@
 
 title: Install the AIPService PowerShell module for Azure Information Protection
 description: Instructions to install PowerShell for the protection service from Azure Information Protection. The name of this module is AIPService.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
 ms.date: 11/01/2019
 ms.topic: conceptual

@@ -3,9 +3,9 @@
 
 title: Customer-managed - AIP tenant key life cycle operations
 description: Information about the life cycle operations that are relevant if you manage your tenant key for Azure Information Protection (the bring your own key, or BYOK, scenario).
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
