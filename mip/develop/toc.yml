@@ -23,7 +23,7 @@
         href: quick-file-set-get-label-cpp.md 
       - name: Lowering a sensitivity label on a file (C++)
         href: quick-file-justify-actions-cpp.md 
-      - name: File API Re-publishing (C++)
+      - name: File API Republishing (C++)
         href: quick-file-republishing-cpp.md 
       - name: Process email .msg files (C++)
         href: quick-email-msg-cpp.md 
@@ -47,7 +47,7 @@
         href: quick-file-set-get-label-csharp.md
       - name: Lowering a sensitivity label on a file (C#)
         href: quick-file-justify-actions-csharp.md 
-      - name: File API Re-publishing (C#)
+      - name: File API Republishing (C#)
         href: quick-file-republishing-csharp.md 
       - name: Process email .msg files (C#)
         href: quick-email-msg-csharp.md 
@@ -133,12 +133,12 @@
     href: concept-mip-telemetry.md
   - name: Use Cases
     items:
-    - name: File API - Action justification for lowering a sensitivity label on a file (C++)
-      href: concept-justification-cpp.md
-    - name: File API - Re-publishing (C++)
-      href: concept-republishing-cpp.md 
-    - name: File API - Process email .msg files (C++)
-      href: concept-email-cpp.md 
+    - name: File API - Action justification for lowering a sensitivity label on a file
+      href: concept-justification.md
+    - name: File API - Republishing
+      href: concept-republishing.md 
+    - name: File API - Process email .msg files
+      href: concept-email.md 
 - name: Reference
   items:
   - name: C++ library
