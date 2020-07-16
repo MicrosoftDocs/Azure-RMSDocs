@@ -3,10 +3,10 @@
 
 title: The client for Azure Information Protection - AIP
 description: Microsoft Azure Information Protection provides a client-server solution that helps to protect an organization's data. The client (the Azure Information Protection client or the Rights Management client) is integrated with applications that you run on computers and mobile devices.
-author: batamig
+author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
+ms.date: 07/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -165,7 +165,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |Support for account switching:| No | No | **Yes** |
 |Support for Remote Desktop Services:| **Yes** | **Yes** | **Yes** |
 |Support for AD RMS:| **Yes** | No <sup>7</sup> | No |
-|Remove external content marking in app| **Yes**| No| No|
+|Remove external content marking in app:| **Yes**| **Yes**| No|
 
 
 Footnotes:
