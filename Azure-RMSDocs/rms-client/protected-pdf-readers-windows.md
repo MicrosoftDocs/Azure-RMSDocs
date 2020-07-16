@@ -6,7 +6,7 @@ description: Install a reader on Windows for PDF documents that are labeled for 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,21 @@ ms.custom: user
 
 [![Windows icon](../media/develop/windows-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
 
-If you need to open a protected PDF document on your Windows computer, install the Adobe plug-in for the Adobe Acrobat Reader.
+If you need to open a protected PDF document on your Windows computer, use the new [Microsoft Edge](https://www.microsoft.com/edge?form=MY01BL&OCID=MY01BL) browser, or install the Adobe plug-in for the Adobe Acrobat Reader.
+
+## Use Microsoft Edge to view protected files
+
+**Supported versions**: Windows 10 and previous versions through Windows 7
+
+Instructions:
+
+1. Check which [Microsoft Edge version](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) is installed on your system. 
+1. If the Microsoft Edge version is 83.0.478.37 or above, you can open protected files directly in the Edge browser. 
+1. To open PDF files in SharePoint, click **Open** > **Open in browser**. 
+:::image type="content" source="../media/edge_open_browser.png" alt-text="Open a protected PDF in SharePoint by selecting the Open in browser option":::
+
+
+## Use Adobe Acrobat Reader to view protected files
 
 **Supported versions**: Windows 10 and previous versions through Windows 8
 
