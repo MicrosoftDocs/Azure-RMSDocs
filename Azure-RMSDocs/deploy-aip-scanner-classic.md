@@ -121,15 +121,6 @@ The AIP scanner cannot label files under the following circumstances:
 
 However, if the label is configured for both classification and protection, and the .txt file type is included for the scanner to protect, the scanner can label the file.
 
-## Upgrading your scanner
-
-If you have previously installed the scanner and want to upgrade, see [Upgrading the Azure Information Protection scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
-
-Then, [configure](deploy-aip-scanner-configure-install.md) and [use your scanner](deploy-aip-scanner-manage.md) as usual, skipping the steps to install your scanner.
-
->[!NOTE]
-> If you have a version of the scanner that is older than 1.48.204.0 and you're not ready to upgrade it, see [Deploying previous versions of the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner-previousversions.md).
-
 ## Next steps
 
 For more information about deploying the scanner, see the following articles:

@@ -1,5 +1,5 @@
 ---
-title: Re-Publishing in MIP SDK
+title: Republishing in MIP SDK
 description: This article will help you understand the scenario of how to re-use protection handler for republishing scenarios.
 author: Pathak-Aniket
 ms.service: information-protection
@@ -68,5 +68,4 @@ After the file is decrypted the file can be edited. Once the edit operation is c
 ## Next Steps
 
 - [Review the Republishing quickstart for C++](quick-file-republishing-cpp.md)
-- [Review the Republishing - [Review the Republishing quickstart for C++](quick-file-republishing-cpp.md)
- for C#](quick-file-republishing-csharp.md)
+- [Review the Republishing quickstart for C#](quick-file-republishing-csharp.md)

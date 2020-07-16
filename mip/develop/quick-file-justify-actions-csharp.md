@@ -16,7 +16,7 @@ This quickstart addresses handling of a downgrade label operation when the label
 
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
-- Complete [Quickstart: Set/get sensitivity labels(C#)](quick-file-set-get-label-csharp.md) first, which builds a starter Visual Studio solution, to list an organization's sensitivity labels, to set and read sensitivity labels to/from a file. This "How to - Downgrade/Remove a label that needs a justification C#" Quickstart builds on the previous one.
+- Complete [Quickstart: Set/get sensitivity labels(C#)](quick-file-set-get-label-csharp.md) which builds a starter Visual Studio solution to list an organization's sensitivity labels and to set and read sensitivity labels to/from a file. This "How to - Downgrade/Remove a label that needs a justification C#" Quickstart builds on the previous one.
 - Optionally: Review [File handlers concepts](concept-handler-file-cpp.md) in the MIP SDK concepts.
 
 ## Add logic to set a lower label to a protected file
@@ -87,7 +87,6 @@ Add logic to set a sensitivity label on a file, using the File handler object.
     ````csharp
     downgradeHandler = null;
     commitHandler = null;
-
     ````
 
 6. Replace the placeholder values in the source code using the following values:

@@ -3,9 +3,9 @@
 
 title: Your Azure Information Protection tenant key
 description: Instead of Microsoft managing the root key for Azure Information Protection, you might want to create and manage this key (known as "bring your own key" or BYOK) for your tenant, to comply with specific regulations.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

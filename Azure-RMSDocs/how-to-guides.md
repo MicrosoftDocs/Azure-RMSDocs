@@ -3,9 +3,9 @@
 
 title: How-to instructions for Azure Information Protection common scenarios 
 description: Identify use cases that classify and protect your organization's data by using Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
