@@ -3,10 +3,10 @@
 
 title: Protected PDF readers for Microsoft Information Protection
 description: Install a reader for PDF documents that are labeled for classification and protection
-author: batamig
-ms.author: bagol
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 05/26/2020
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -50,11 +50,21 @@ Currently, Microsoft SharePoint uses an older format for PDF documents in IRM-pr
 
 |Operating system|Supported readers|
 |----------------|-----------------------------------|
-|Windows 10 and previous versions<br />through Windows 7 Service Pack 1|Azure Information Protection viewer<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF|
+|Windows 10 and previous versions<br />through Windows 7 Service Pack 1|Microsoft Edge<br /><br />Azure Information Protection viewer<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF|
 |Android|Azure Information Protection app<br /><br />Foxit MobilePDF with RMS<br /><br />GigaTrust App for Android|
 |iOS|Azure Information Protection app<br /><br />Foxit MobilePDF with RMS<br /><br />TITUS Docs|
 
-## Using Adobe Acrobat Reader with the Adobe plug-in
+## Using Microsoft Edge to view protected PDF files
+
+Microsoft Edge offers native support for viewing PDF files that are classified and protected. Use of Microsoft Edge ensures that users can open protected PDF files seamlessly without the need to install or configure any additional settings or software.  settings.
+
+With Microsoft Edge, when a user encounters a locally saved protected PDF file, they can view the file directly in the browser. If the file is available on SharePoint, the user only needs to click **Open** > **Open in browser** from Microsoft Edge, to view the file. 
+
+:::image type="content" source="../media/edge_open_browser.png" alt-text="Open a protected PDF using Microsoft Edge from the browser using the Open in browser option":::
+
+Protected files can be opened on both [Windows](./protected-pdf-readers-windows.md) and [MacOS](./protected-pdf-readers-mac.md).
+
+## Using Adobe Acrobat Reader with Adobe plug-in
 
 A collaboration between Microsoft and Adobe gives you a more simplified and consistent experience for PDF documents that have been classified and optionally, protected. This collaboration provides support for Adobe Acrobat native integration with Microsoft Information Protection solutions, such as [Azure Information Protection](../what-is-information-protection.md). 
 
