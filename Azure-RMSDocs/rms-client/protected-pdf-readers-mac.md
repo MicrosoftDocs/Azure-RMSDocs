@@ -6,7 +6,7 @@ description: Install a reader on Mac computers for PDF documents that are labele
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/04/2019
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,19 @@ ms.custom: user
 
 [![iOS icon](../media/develop/ios-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
 
-If you need to open a protected PDF document on your Mac computer, install the Adobe plug-in for the Adobe Acrobat Reader.
+If you need to open a protected PDF document on your Mac computer, use the new [Microsoft Edge](https://www.microsoft.com/edge?form=MY01BL&OCID=MY01BL), or install the Adobe plug-in for the Adobe Acrobat Reader.
+
+## Use Microsoft Edge to view protected files
+
+**Supported versions**: 10.12 and above
+
+Instructions: 
+
+1. Check which [Microsoft Edge version](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) is installed on your system. 
+1. If the Microsoft Edge version is 83.0.478.37 or above, you can open protected files directly in the Edge browser. 
+1. To open PDF files in SharePoint, click **Open** > **Open in browser**. 
+
+## Use Adobe Acrobat Reader to view protected files
 
 **Supported versions**: 10.12 - 10.14
 
