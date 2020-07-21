@@ -78,7 +78,7 @@ Additional file types support classification when they are also protected. For t
 
 Examples:
 
-- If the **General** sensitivity label applies classification and does not apply protection: You could apply the **General** label to a file named sales.pdf but you could not apply this label to a file named sales.txt. 
+- If the **General** sensitivity label applies classification and does not apply protection: You could apply the **General** label to a file named sales.pdf but you could not apply this label to a file named sales.txt.
 
 - If the **Confidential \ All Employees** sensitivity label applies classification and protection: You could apply this label to a file named sales.pdf and a file named sales.txt. You could also apply just protection to these files, without classification.
 
@@ -94,7 +94,7 @@ The Azure Information Protection unified labeling client supports protection at 
 
 You cannot change the default protection level that the Azure Information Protection unified labeling client or the scanner applies. However, you can change which file types are protected. For more information, see [Change which file types to protect](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
 
-The protection can be applied automatically when a user selects a sensitivity label that an administrator has configured, or users can specify their own custom protection settings by using [permission levels](../configure-usage-rights.md#rights-included-in-permissions-levels). 
+The protection can be applied automatically when a user selects a sensitivity label that an administrator has configured, or users can specify their own custom protection settings by using [permission levels](../configure-usage-rights.md#rights-included-in-permissions-levels).
 
 ### File sizes supported for protection
 
@@ -102,15 +102,13 @@ There are maximum file sizes that the Azure Information Protection unified label
 
 - **For Office files:**
 
-
   |                                                     Office application                                                      |                                                Maximum file size supported                                                 |
   |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
   |             Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32-bit: 512 MB<br /><br />64-bit: 512 MB                                          |
   |           Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory                       |
   | PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory |
 
-
-- **For all other files**: 
+- **For all other files**:
 
   - To protect other file types, and to open these file types in the Azure Information Protection viewer: The maximum file size is limited only by available disk space and memory.
 
@@ -120,7 +118,7 @@ There are maximum file sizes that the Azure Information Protection unified label
 
 ### Supported file types for classification and protection
 
-The following table lists a subset of file types that support native protection by the Azure Information Protection unified labeling client, and that can also be classified. 
+The following table lists a subset of file types that support native protection by the Azure Information Protection unified labeling client, and that can also be classified.
 
 These file types are identified separately because when they are natively protected, the original file name extension is changed, and these files become read-only. Note that when files are generically protected, the original file name extension is always changed to .pfile.
 
@@ -150,18 +148,16 @@ For these files, the file name extension remains the same after the file is prot
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
-
 ## File types that are excluded from classification and protection
 
 To help prevent users from changing files that are critical for computer operations, some file types and folders are automatically excluded from classification and protection. If users try to classify or protect these files by using the Azure Information Protection unified labeling client, they see a message that they are excluded.
 
 - **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msp, .msi, .pdb, .jar
-    
 
-- **Excluded folders**: 
+- **Excluded folders**:
     - Windows
     - Program Files (\Program Files and \Program Files (x86))
-    - \ProgramData 
+    - \ProgramData
     - \AppData (for all users)
 
 ### File types that are excluded from classification and protection by the Azure Information Protection scanner
@@ -175,7 +171,7 @@ You can change the file types included or excluded for file inspection by the sc
 - Configure **File types to scan** in the scanner profile, by [using the Azure portal](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
     
     > [!NOTE]
-    > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
+    > If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted.
 
 By default, the scanner protects only Office file types, and PDF files when they are protected by using the ISO standard for PDF encryption. To change this behavior for the scanner, use the PowerShell advanced setting, **PFileSupportedExtensions**. For more information, see [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
 
@@ -185,13 +181,7 @@ Any file that is password-protected cannot be natively protected by the Azure In
 
 ### Limitations for container files, such as .zip files
 
-Container files are files that include other files, with a typical example being .zip files that contain compressed files. Other examples include .rar, .7z, .msg files, and PDF documents that include attachments.
-
-You can classify and protect these container files, but the classification and protection is not applied to each file inside the container.
-
-If you have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings.
-
-The Azure Information Protection viewer cannot open attachments in a protected PDF document. In this scenario, when the document is opened in the viewer, the attachments are not visible.
+For more information, see the [Azure Information Protection known issues](../known-issues.md#client-support-for-container-files-such-as-zip-files).
 
 ## File types supported for inspection
 
@@ -219,10 +209,9 @@ The Azure Information Protection scanner and the [Set-AIPFileClassification](/po
 
 2. For the scanner: After finding sensitive information, if the .zip file should be classified and protected with a label, specify the .zip file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
 
+Example scenario after doing these steps:
 
-Example scenario after doing these steps: 
-
-A file named **accounts.zip** contains Excel spreadsheets with credit card numbers. You have a sensitivity label named **Confidential \ Finance**, which is configured to discover credit card numbers and automatically apply the label with protection that restricts access to the Finance group. 
+A file named **accounts.zip** contains Excel spreadsheets with credit card numbers. You have a sensitivity label named **Confidential \ Finance**, which is configured to discover credit card numbers and automatically apply the label with protection that restricts access to the Finance group.
 
 After inspecting the file, the unified labeling client from your PowerShell session classifies this file as **Confidential \ Finance**, applies generic protection to the file so that only members of the Finance groups can unzip it, and renames the file **accounts.zip.pfile**.
 
@@ -233,6 +222,7 @@ The [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set
 For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, specify this file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
 
 ## Next steps
+
 Now that you've identified the file types supported by the Azure Information Protection unified labeling client, see the following resources for additional information that you might need to support this client:
 
 - [Customizations](clientv2-admin-guide-customizations.md)
@@ -240,4 +230,3 @@ Now that you've identified the file types supported by the Azure Information Pro
 - [Client files and usage logging](clientv2-admin-guide-files-and-logging.md)
 
 - [PowerShell commands](clientv2-admin-guide-powershell.md)
-

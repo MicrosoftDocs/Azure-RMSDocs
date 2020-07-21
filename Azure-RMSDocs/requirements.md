@@ -182,7 +182,7 @@ Azure Information Protection has the following additional requirements:
     
     If you see an issuing CA name that is not from Microsoft, it is very likely that your secure client-to-service connection is being terminated and needs reconfiguration on your firewall.
 
-- **TLS version 1.2 or higher** (unified labeling client only). The unified labeling client requires a TLS version of 1.2 or higher to ensure the  use of cryptographically secure protocols and align with Microsoft security guidelines.
+- **TLS version 1.2 or higher** (unified labeling client only). The unified labeling client requires a TLS version of 1.2 or higher to ensure the use of cryptographically secure protocols and align with Microsoft security guidelines.
     
 ### On-premises servers
 
