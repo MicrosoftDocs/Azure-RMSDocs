@@ -97,10 +97,14 @@
         href: migrate-from-ad-rms-phase5.md
     - name: Planning and implementing your tenant key
       items:
-      - name: Overview
+      - name: Supported key types
         href: plan-implement-tenant-key.md
-      - name: BYOK details
+      - name: Configure Bring Your Own Key (BYOK) protection
         href: byok-price-restrictions.md
+      - name: Configure Hold Your Own Key (HYOK) protection 
+        href: configure-adrms-restrictions.md
+      - name: Get started with tenant root keys
+        href: get-started-tenant-root-keys.md
     - name: Preparing users and groups
       href: prepare.md
   - name: Configure & use the service
@@ -144,11 +148,7 @@
       - name: Change a label
         href: configure-policy-change-label.md
       - name: Configure protection
-        items:
-        - name: Overview
-          href: configure-policy-protection.md
-        - name: HYOK
-          href: configure-adrms-restrictions.md
+        href: configure-policy-protection.md
       - name: Configure visual markings
         href: configure-policy-markings.md
       - name: Configure conditions

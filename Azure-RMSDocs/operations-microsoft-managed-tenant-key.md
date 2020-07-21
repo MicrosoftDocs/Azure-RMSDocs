@@ -60,7 +60,7 @@ To select a different key to be your active tenant key for Azure Information Pro
 (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 ```
 
-To change your key topology to be customer-managed (BYOK), see [Implementing BYOK for your Azure Information Protection tenant key](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+To change your key topology to be customer-managed (BYOK), see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
 ## Backup and recover your tenant key
 Microsoft is responsible for backing up your tenant key and no action is required from you.
