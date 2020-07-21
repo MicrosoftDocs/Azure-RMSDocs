@@ -60,12 +60,6 @@ This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protec
 
 Currently, if you install the module as one user and run the cmdlets on the same computer as another user, you must first run the `Import-Module AzureInformationProtection` command. In this scenario, the module doesn't autoload when you first run a cmdlet.
 
-The current release of the AzureInformationProtection module has the following limitations:
-
-- You can unprotect Outlook personal folders (.pst files), but you cannot currently natively protect these files or other container files by using this PowerShell module.
-
-- You can unprotect Outlook protected email messages (.rpmsg files) when they are in an Outlook personal folder (.pst), but you cannot unprotect .rpmsg files outside a personal folder.
-
 Before you start to use these cmdlets, see the additional prerequisites and instructions that corresponds to your deployment:
 
 - [Azure Information Protection and Azure Rights Management service](#azure-information-protection-and-azure-rights-management-service)
@@ -77,6 +71,7 @@ Before you start to use these cmdlets, see the additional prerequisites and inst
 
     - Applicable if you use protection-only with the on-premises version of Azure Rights Management; Active Directory Rights Management Services (AD RMS).
 
+For more information, see the relevant collection of [Azure Information Protection known issues](../known-issues.md#powershell-support-for-the-azure-information-protection-client).
 
 ## Azure Information Protection and Azure Rights Management service
 
