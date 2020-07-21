@@ -42,6 +42,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |Get help with the product|See the [Support options and community resources](#support-options-and-community-resources) section on this page.|
 |Check subscription information and what features are supported|Use the subscription information and feature list from the [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection) page.|
 |See commonly asked questions about licensing answered|Read through the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing.|
+|Search or browse through a list of current known issues | See the [Known issues - Azure Information Protection](known-issues.md) page.
 |Request a new feature or change of functionality|Visit the [UserVoice](https://msip.uservoice.com) site for Azure Information Protection, and use your company email address to sign in.|
 |Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
 |Understand a specific Azure Information Protection term|Search for the term or abbreviation on the [terminology](terminology.md) page.|
