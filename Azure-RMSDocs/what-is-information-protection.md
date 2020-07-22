@@ -2,7 +2,7 @@
 # required metadata
 
 title: What is Azure Information Protection (AIP)?
-description: Azure Information Protection (AIP) is a service that helps organizations to label documents and emails, classifying and protecting data wherever it resides.
+description: Azure Information Protection (AIP) is a service that helps organizations to label documents and emails. AIP classifies and protects data, wherever that data is saved.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -30,17 +30,25 @@ search.appverid:
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Azure Information Protection (AIP) is a cloud-based solution that enables organizations to classify and protect documents and emails by applying labels. Labels can be applied automatically by administrators using rules and conditions, manually by users, or by a combination where administrators define the recommendations shown to users.
+Azure Information Protection (AIP) is a cloud-based solution that enables organizations to classify and protect documents and emails by applying labels. Labels can be applied:
 
-For example, your administrator might configure a label with rules that detect sensitive data, such as credit card information. In this case, any user who saves credit card information in a Word file might see a tooltop at the top of the document, recommending that they apply the label configured for this scenario.
+- **Automatically** by administrators using rules and conditions
+- **Manually** by users
+- **By a combination** where administrators define the recommendations shown to users
 
-Labels can both classify, and optionally protect, the document.
+For example, your administrator might configure a label with rules that detect sensitive data, such as credit card information. In this case, any user who saves credit card information in a Word file might see a tooltip at the top of the document with a recommendation to apply the relevant label for this scenario.
 
-[Classifying](#how-labels-apply-classification) and [protecting](#how-data-is-protected) content enables you to track and control how it is used, analyze data flows to gain insight into your business, detect risky behaviors and take corrective measures, track document access, prevent data leakage or misuse, and more.
+Labels can both [classify](#how-labels-apply-classification-with-aip), and optionally [protect](#how-aip-protects-your-data) your documents, enabling you to:
 
-## How labels apply classification
+- **Track and control** how your content is used
+- **Analyze data flows** to gain insight into your business
+**- Detect risky behaviors** and take corrective measures
+- **Track document access** and prevent data leakage or misuse
+- And more ...
 
-Use Azure Information Protection labels to apply classification to both documents and emails. 
+## How labels apply classification with AIP
+
+Use Azure Information Protection to apply classification labels to both documents and emails.
 
 Labeling content includes:
 
@@ -54,16 +62,23 @@ For example, in the image below, labeling has classified an email message as *Ge
 
 In this example, the label also:
 
-- **Added a footer of *Sensitivity: General* to the email message.** This footer is a visual indicator for all recipients that it's intended for general business data that should not be sent outside of the organization. 
+- **Added a footer of *Sensitivity: General* to the email message.** This footer is a visual indicator for all recipients that it's intended for general business data that should not be sent outside of the organization.
 - **Embedded metadata in the email headers.** Header data enables email services can inspect the label and theoretically create an audit entry or prevent it from being sent outside of the organization.
 
-## How data is protected
+## How AIP protects your data
 
-Azure Information Protection uses the *Azure Rights Management service* (Azure RMS) to protect your data. Azure RMS is integrated with other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory, and can also be used with your own or third-party applications and information protection solutions. Azure RMS works with both on-premises and cloud solutions.
+Azure Information Protection uses the [*Azure Rights Management service* (Azure RMS)](what-is-azure-rms.md) to protect your data. 
+
+Azure RMS is integrated with other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory, and can also be used with your own or third-party applications and information protection solutions. Azure RMS works with both on-premises and cloud solutions.
 
 Azure RMS uses encryption, identity, and authorization policies. Similar to AIP labels, protection applied using Azure RMS stays with the documents and emails, regardless of the document or email's location, ensuring that you stay in control of your content even when it's shared with other people.
 
-Protection settings can be part of your label configuration, so that users both classify and protect documents and emails simply by applying a label. Protection settings can also be used on their own, by applications and services that support protection but not labeling. For applications and services that support protection only, protection settings are used as [Rights Management templates](#rights-management-templates).
+Protection settings can be:
+
+- **Part of your label configuration,** so that users both classify and protect documents and emails simply by applying a label. 
+- **Used on their own,** by applications and services that support protection but not labeling. 
+
+    For applications and services that support protection only, protection settings are used as [Rights Management templates](#rights-management-templates).
 
 For example, you may want to configure a report or sales forecast spreadsheet so that it can be accessed only by people in your organization. In this case, you'd apply protection settings to control whether that document can be edited, restrict it to read-only, or prevent it from being printed.
 
@@ -71,13 +86,13 @@ Emails can have similar protection settings to prevent them from being forwarded
 
 ### Rights Management templates
 
-As soon as the Azure Rights Management service is activated, two default templates are available for you that restrict data access to users within your organization. Use these templates immediately, or configure your own protection settings to apply more restrictive controls in new templates. 
+As soon as the Azure Rights Management service is activated, two default rights management templates are available for you to restrict data access to users within your organization. Use these templates immediately, or configure your own protection settings to apply more restrictive controls in new templates.
 
 Rights Management templates can be used with any applications or services that support Azure Rights Management.
 
 The following image shows an example from the Exchange admin center, where you can configure Exchange Online mail flow rules to use RMS templates:
 
-![Example of selecting templates for Exchange Online](./media/templates-exchangeonline-callouts.png)
+:::image type="content" source="media/templates-exchangeonline-callouts.png" alt-text="Example of selecting templates for Exchange Online":::
 
 > [!NOTE]
 > Creating an AIP label that includes protection settings also creates a corresponding Rights Management template that can be used separately from the label. 
@@ -97,7 +112,7 @@ While labels can be applied automatically to documents and emails, removing gues
 
 Additionally, the AIP client enables users to classify and protect additional file types, or multiple files at once, using the right-click menu from Windows File Explorer. For example:
 
-![File Explorer right-click Classify and protect using Azure Information Protection](./media/right-click-classify-protect-folder.png)
+:::image type="content" source="media/right-click-classify-protect-folder.png" alt-text="File Explorer right-click Classify and protect using Azure Information Protection":::
 
 The **Classify and protect** menu option works similarly to the Information Protection bar in Office applications, enabling users to select a label or set custom permissions.
 
@@ -118,7 +133,7 @@ This scenario requires [Office 365 Message Encryption capabilities](https://tech
 
 For example, a Gmail user might see the following prompt in an email message they receive:
 
-![Gmail recipient experience for OME and AIP](./media/ome-message.png)
+:::image type="content" source="media/ome-message.png" alt-text="Gmail recipient experience for OME and AIP":::
 
 For the user sending the email, the actions required are the same as for sending a protected email to a user in their own organization. For example, select the **Do Not Forward** button that the AIP client can add to the Outlook ribbon. 
 
@@ -150,23 +165,28 @@ See the latest information about how Azure Information Protection helps you to d
 
 > [!VIDEO https://www.youtube.com/embed/UI0p9xqMNfI]
 
+For more information, see:
+
+- [What's new in the Microsoft 365 admin center](https://docs.microsoft.com/microsoft-365/admin/whats-new-in-preview)
+- [What's new in the SharePoint admin center](https://docs.microsoft.com/sharepoint/what-s-new-in-admin-center)
+
 ## Additional Azure Information Protection resources
 
-- Free trial: [Enterprise Mobility + Security E5](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
+- **Free trial:** [Enterprise Mobility + Security E5](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
-- Subscription options and pricing: [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection)
+- **Subscription options and pricing:** [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection)
 
-- Download the client: [Azure Information Protection client](https://www.microsoft.com/download/details.aspx?id=53018)
+- **Download the client:** [Azure Information Protection client](https://www.microsoft.com/download/details.aspx?id=53018)
 
-- Download a customizable user guide: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- **Download a customizable end-user guide:** [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
-- FAQs: [Frequently asked questions for Azure Information Protection](faqs.md)
+- **FAQs:** [Frequently asked questions for Azure Information Protection](faqs.md)
 
-- Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
+- **Yammer:** [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
-- What's new in the documentation: [Azure Information Protection technical blog](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs)
+- **Docs twitter feed:** [https://twitter.com/docsmsft](https://twitter.com/docsmsft)
 
-Additional resources: [Information and support for Azure Information Protection](information-support.md)
+**Additional resources:** [Information and support for Azure Information Protection](information-support.md)
 
 ### Microsoft Ignite
 
@@ -189,4 +209,6 @@ Latest blog post: [Understand where your sensitive data is located and intellige
 
 ## Next steps
 
-Configure and see Azure Information Protection for yourself with our [quickstarts](quickstart-viewpolicy.md) and [tutorials](infoprotect-quick-start-tutorial.md). If you're ready to deploy this service for your organization, head over to the [how-to guides](how-to-guides.md).
+Configure and see Azure Information Protection for yourself with our [quickstarts](quickstart-viewpolicy.md) and [tutorials](infoprotect-quick-start-tutorial.md). 
+
+If you're ready to deploy this service for your organization, head over to the [how-to guides](how-to-guides.md).
