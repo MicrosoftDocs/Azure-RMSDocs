@@ -4,13 +4,9 @@
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
-  - name: Azure Information Protection and AD RMS
-    items:
-    - name: Compare on premises and AD RMS
-      href: compare-on-premise.md
-    - name: Manage Active Directory Mobile Device Extensions
-      href: active-directory-rights-manage-mobile-device.md
-  - name: Requirements
+  - name: Azure Information Protection rights management
+    href: what-is-azure-rms.md
+  - name: AIP requirements
     items:
     - name: Overview
       href: requirements.md
@@ -22,6 +18,8 @@
       href: requirements-applications.md
     - name: On-premises server support for protection
       href: requirements-servers.md
+  - name: AIP is also known as ...
+    href: aka.md
 - name: Quickstarts
   expanded: true
   items:
@@ -43,13 +41,9 @@
     href: infoprotect-oversharing-tutorial.md
 - name: Concepts
   items:
-  - name: Overview of the Azure Information Protection policy
-    href: overview-policy.md
   - name: Rights Management protection
     items:
-    - name: Overview
-      href: what-is-azure-rms.md
-    - name: How does it work?
+    - name: How Rights Management protection works
       href: how-does-it-work.md
     - name: How applications support Azure Rights Management protection
       items:
@@ -63,16 +57,12 @@
         href: api-support.md
   - name: RMS for individuals and Azure Information Protection
     href: rms-for-individuals.md
-  - name: Also known as ...
-    href: aka.md
-- name: How-to guides
-  items:
-  - name: How-tos for common scenarios
-    href: how-to-guides.md
-  - name: Plan & prepare for the service
+  - name: Azure Information Protection and AD RMS
     items:
-    - name: Deployment roadmap
-      href: deployment-roadmap.md
+    - name: Compare on premises and AD RMS
+      href: compare-on-premise.md
+    - name: Manage Active Directory Mobile Device Extensions
+      href: active-directory-rights-manage-mobile-device.md
     - name: Migrating from AD RMS
       items:
       - name: Overview
@@ -95,6 +85,16 @@
         href: migrate-from-ad-rms-phase4.md
       - name: Post migration tasks
         href: migrate-from-ad-rms-phase5.md
+  - name: Azure Information Protection policies
+    href: overview-policy.md
+- name: How-to guides
+  items:
+  - name: How-tos for common scenarios
+    href: how-to-guides.md
+  - name: Plan & prepare for the service
+    items:
+    - name: Deployment roadmap
+      href: deployment-roadmap.md
     - name: Planning and implementing your tenant key
       items:
       - name: Supported key types
@@ -322,17 +322,7 @@
         - name: Start using the AIP mobile apps
           href: ./rms-client/mobile-app-get-started.md
     - name: Protected PDF readers
-      items:
-      - name: Overview
-        href: ./rms-client/protected-pdf-readers.md
-      - name: Windows
-        href: ./rms-client/protected-pdf-readers-windows.md
-      - name: macOS
-        href: ./rms-client/protected-pdf-readers-mac.md
-      - name: iOS
-        href: ./rms-client/protected-pdf-readers-ios.md
-      - name: Android
-        href: ./rms-client/protected-pdf-readers-android.md
+      href: ./rms-client/protected-pdf-readers.md
     - name: RMS client deployment notes
       href: ./rms-client/client-deployment-notes.md
     - name: RMS protection with Windows Server FCI
