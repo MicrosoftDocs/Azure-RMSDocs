@@ -92,8 +92,6 @@ When you click **Save**, your changes are automatically available to users and s
 
 ## Using variables in the text string
 
-The following variables are generally available when using Azure Information Protection classic client and are in public preview availability when using the Azure Information Protection unified labeling client.  
-
 You can use the following variables in the text string for your header, footer, or watermark:
 
 - `${Item.Label}` for the selected label. For example: General
