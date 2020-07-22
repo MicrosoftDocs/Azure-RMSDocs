@@ -126,7 +126,7 @@ Optionally, consider configuring the following:
 
 ### Step 5: Configure labels and settings, applications, and services for data protection
 
-1. Update your labels to apply protection
+1. **Update your labels to apply protection**
     
     For the Azure Information Protection client (classic), see [How to configure a label for Rights Management protection](./configure-policy-protection.md).
     
@@ -134,25 +134,30 @@ Optionally, consider configuring the following:
     
     Note that users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). However, until Exchange is configured for IRM or [Office 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in the following list (2 for Exchange Online, and 5 for Exchange on-premises). 
 
-2. Configure Office applications and services
+2. **Configure Office applications and services**
     
     Configure Office applications and services for the information rights management (IRM) features in Microsoft SharePoint or Exchange Online. For more information, see [Configuring applications for Azure Rights Management](configure-applications.md).
 
-3. Configure the super user feature for data recovery
+3. **Configure the super user feature for data recovery**
     
     If you have existing IT services that need to inspect files that Azure Information Protection will protect—such as data leak prevention (DLP) solutions, content encryption gateways (CEG), and anti-malware products—configure the service accounts to be super users for Azure Rights Management. For more information, see [Configuring super users for Azure Information Protection and discovery services or data recovery](./configure-super-users.md).
 
-4. Classify and protect existing files in bulk
+4. **Classify and protect existing files in bulk**
     
-    For your on-premises data stores, now run the [Azure Information Protection scanner](deploy-aip-scanner.md) in enforcement mode so that files are automatically labeled. For cloud-based data stores, use [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security).
+    For your on-premises data stores, now run the [Azure Information Protection scanner](deploy-aip-scanner.md) in enforcement mode so that files are automatically labeled.
     
-    For files on PCs, you can use PowerShell cmdlets to classify and protect files. For more information, see the following admin guides:
+    For files on PCs, use PowerShell cmdlets to classify and protect files. For more information, see the following admin guides:
     
     - Azure Information Protection client (classic): [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)
     
     - Azure Information Protection unified labeling client: [Using PowerShell with the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-powershell.md)
 
-6. Deploy the connector for IRM-protected libraries on SharePoint Server, and IRM-protected emails for Exchange on-premises
+    For cloud-based data stores, use [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security). 
+
+    > [!TIP]
+    > While classifying and protecting existing files in bulk is not one of the main use cases for cloud app security, [documented workarounds](https://docs.microsoft.com/cloud-app-security/azip-integration#enable-azure-information-protection) can help you get your files classified and protected.
+
+6. **Deploy the connector for IRM-protected libraries on SharePoint Server, and IRM-protected emails for Exchange on-premises**
     
     If you have SharePoint and Exchange on-premises and want to use their information rights management (IRM) features, install and configure the Rights Management connector. For more information, see [Deploying the Azure Rights Management connector](./deploy-rms-connector.md).
 
