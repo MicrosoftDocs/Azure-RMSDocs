@@ -98,7 +98,9 @@ Lastly, use this API to register your tracked document with the tracking system.
 
 Here's a code snippet showing an example of setting document tracking metadata and the call to register with the tracking system.
 
-      C++
+**C++**:
+
+  ```cpp
       HRESULT hr = S_OK;
       LPCWSTR wszOutputFile = NULL;
       wstring wszWorkingFile;
@@ -128,7 +130,7 @@ Here's a code snippet showing an example of setting document tracking metadata a
      /* the context to use for the call */
      PCIPC_PROMPT_CTX pContext;
 
-     wstring wstrContentName(“MyDocument.txt”);
+     wstring wstrContentName("MyDocument.txt");
      bool sendLicenseRegistrationNotificationEmail = FALSE;
 
      hr = IpcRegisterLicense( pSerializedLicense,
@@ -136,6 +138,7 @@ Here's a code snippet showing an example of setting document tracking metadata a
                         pContext,
                         wstrContentName.c_str(),
                         sendLicenseRegistrationNotificationEmail);
+  ```
 
 ## Add a **Track Usage** button to your app
 
