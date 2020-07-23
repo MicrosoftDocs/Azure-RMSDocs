@@ -74,7 +74,7 @@ To specify the protection behavior, set the **Encryption** value in the key. If 
 
 
 > [!Note]
-> This setting has no bearing on Office file formats. For example, if the `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` value is set to &quot;Pfile”, .docx files will still be encrypted using native protection, and the encrypted file will still have a file extension of .docx.
+> This setting has no bearing on Office file formats. For example, if the `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` value is set to “Pfile”, .docx files will still be encrypted using native protection, and the encrypted file will still have a file extension of .docx.
 
 Setting any other value or setting no value results in default behavior.
 

@@ -41,6 +41,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 
 **C++**:
 
+  ```cpp
     void MainWindow::ConvertFromPFILE(const string& fileIn,
         const string& clientId,
         const string& redirectUrl,
@@ -101,6 +102,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
     inFile->close();
     outFile->close();
     }
+  ```
 
 **Create a protected file stream**
 **Source**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
@@ -109,6 +111,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 
 **C++**:
 
+  ```cpp
     shared_ptr<GetProtectedFileStreamResult>PFileConverter::ConvertFromPFile(
     const string           & userId,
     shared_ptr<istream>      inStream,
@@ -151,6 +154,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
     }
       return fsResult;
     }
+  ```
 
 ## Scenario: Create a new protected file using a template
 
@@ -161,6 +165,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 
 **C++**:
 
+  ```cpp
     void MainWindow::ConvertToPFILEUsingTemplates(const string& fileIn,
                                               const string& clientId,
                                               const string& redirectUrl,
@@ -221,6 +226,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
     inFile->close();
     outFile->close();
     }
+  ```
 
 
 **Protects a file using a policy created from a template**
@@ -230,6 +236,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 
 **C++**:
 
+  ```cpp
     void PFileConverter::ConvertToPFileTemplates(const string           & userId,
                                              shared_ptr<istream>      inStream,
                                              const string           & fileExt,
@@ -255,6 +262,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
     ConvertToPFileUsingPolicy(policy, inStream, fileExt, outStream);
     }
     }
+  ```
 
 **Protects a file given a policy**
 **Source**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
@@ -263,6 +271,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 
 **C++**:
 
+  ```cpp
     void PFileConverter::ConvertToPFileUsingPolicy(shared_ptr<UserPolicy>   policy,
                                                shared_ptr<istream>      inStream,
                                                const string           & fileExt,
@@ -295,7 +304,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
     
     pStream->Flush();
     }
-    
+  ```
 
 
 ## Scenario: Protect a file using custom protection
@@ -307,6 +316,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 
 **C++**:
 
+  ```cpp
     void MainWindow::ConvertToPFILEUsingRights(const string            & fileIn,
                                            const vector<UserRights>& userRights,
                                            const string            & clientId,
@@ -381,6 +391,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
     inFile->close();
     outFile->close();
     }
+  ```
 
 
 **Creates a protection policy give user selected rights**
@@ -390,6 +401,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 
 **C++**:
 
+  ```cpp
     void PFileConverter::ConvertToPFilePredefinedRights(
     const string            & userId,
     shared_ptr<istream>       inStream,
@@ -413,6 +425,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
     auto policy = UserPolicy::Create(desc, userId, auth,
                                    USER_AllowAuditedExtraction);
     ConvertToPFileUsingPolicy(policy, inStream, fileExt, outStream);
+  ```
     
 
 ## WorkerThread - a supporting method
@@ -422,15 +435,18 @@ The *WorkerThread()* method is called by two of the previous example scenarios; 
 
 **C++**:
 
+  ```cpp
     threadPool.push_back(thread(WorkerThread,
                                   static_pointer_cast<iostream>(outStream), pfs,
                                   false));
+  ```
 
 
 **Supporting method, WorkerThread()**
 
 **C++**:
 
+  ```cpp
     static mutex   threadLocker;
     static int64_t totalSize     = 0;
     static int64_t readPosition  = 0;
@@ -508,6 +524,7 @@ The *WorkerThread()* method is called by two of the previous example scenarios; 
     }
     }
     }
+  ```
 
 
 ## Scenario: RMS authentication
@@ -521,7 +538,9 @@ Description: You can set cache path or use default.
 
 **C++**:
 
+  ```cpp
     auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
+  ```
 
 
 **Step 2**: Create **rmsauth::AuthenticationContext** object
@@ -529,10 +548,12 @@ Description: Specify Azure *authority URI* and *FileCache* object.
 
 **C++**:
 
+  ```cpp
     AuthenticationContext authContext(
-                              std::string(“https://sts.aadrm.com/_sts/oauth/authorize”),
+                              std::string("https://sts.aadrm.com/_sts/oauth/authorize"),
                               AuthorityValidationType::False,
                               FileCachePtr);
+  ```
 
 
 **Step 3**: Call **acquireToken** method of **authContext** object and specify next parameters:
@@ -546,13 +567,14 @@ Description:
 
 **C++**:
 
+  ```cpp
     auto result = authContext.acquireToken(
-                std::string(“api.aadrm.com”),
-                std::string(“4a63455a-cfa1-4ac6-bd2e-0d046cf1c3f7”),
-                std::string(“https://client.test.app”),
+                std::string("api.aadrm.com"),
+                std::string("4a63455a-cfa1-4ac6-bd2e-0d046cf1c3f7"),
+                std::string("https://client.test.app"),
                 PromptBehavior::Auto,
-                std::string(“john.smith@msopentechtest01.onmicrosoft.com”));
-
+                std::string("john.smith@msopentechtest01.onmicrosoft.com"));
+  ```
 
 **Step 4**: Get access token from result
 Description: Call **result-> accessToken()** method
@@ -568,7 +590,9 @@ Description: You can set cache path or use default
 
 **C++**:
 
+  ```cpp
     auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
+  ```
 
 
 **Step 2**:Create **UserCredential** object
@@ -576,19 +600,22 @@ Description: Specify *user login* and *password*
 
 **C++**:
 
+  ```cpp
     auto userCred = std::make_shared<UserCredential>("john.smith@msopentechtest01.onmicrosoft.com",
                                                  "SomePass");
-
+  ```
 
 **Step 3**:Create **rmsauth::AuthenticationContext** object
 Description: Specify Azure authority *URI* and *FileCache* object
 
 **C++**:
 
+  ```cpp
     AuthenticationContext authContext(
-                        std::string(“https://sts.aadrm.com/_sts/oauth/authorize”),
+                        std::string("https://sts.aadrm.com/_sts/oauth/authorize"),
                         AuthorityValidationType::False,
                         FileCachePtr);
+  ```
 
 
 **Step 4**: Call the **acquireToken** method of **authContext** and specify parameters:
@@ -598,10 +625,12 @@ Description: Specify Azure authority *URI* and *FileCache* object
 
 **C++**:
 
+  ```cpp
     auto result = authContext.acquireToken(
-                std::string(“api.aadrm.com”),
-                std::string(“4a63455a-cfa1-4ac6-bd2e-0d046cf1c3f7”),
+                std::string("api.aadrm.com"),
+                std::string("4a63455a-cfa1-4ac6-bd2e-0d046cf1c3f7"),
                 userCred);
+  ```
 
 
 **Step 5**: Get access token from result
