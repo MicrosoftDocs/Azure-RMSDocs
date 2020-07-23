@@ -54,49 +54,63 @@ In each of the example code snippets following, the calling application can set 
 ### Android ###
 Enable automatic logging
 
-    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-    SharedPreferences.Editor editor = preferences.edit();
-    editor.putBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, true);
-    editor.commit();
+```java
+SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+SharedPreferences.Editor editor = preferences.edit();
+editor.putBoolean("IpcCustomerExperienceDataCollectionEnabled", true);
+editor.commit();
+```
 
 Get current logging control flag setting
 
-    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-    Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
+```java
+SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
+```
 
 ## iOS ##
 Enable automatic logging
 
-    NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
-        [prefs setBool:FALSE forKey:@&quot;IpcCustomerExperienceDataCollectionEnabled”];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+```objectivec
+NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setBool:FALSE forKey:@"IpcCustomerExperienceDataCollectionEnabled"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+```
 
 Get current logging control flag setting
 
-    [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcCustomerExperienceDataCollectionEnabled&quot;];
+```java
+[[NSUserDefaults standardUserDefaults] boolForKey:@"IpcCustomerExperienceDataCollectionEnabled"];
+```
 
 Set log level control
 
-    NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
-      [prefs setInteger:1 forKey:@&quot;IpcLogLevel”];
-      [[NSUserDefaults standardUserDefaults] synchronize];
+```java
+NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setInteger:1 forKey:@"IpcLogLevel"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+```
 
 Get log level control setting
 
-    [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcLogLevel&quot;];
- 
+```java
+[[NSUserDefaults standardUserDefaults] boolForKey:@"IpcLogLevel"];
+```
 
 ## Windows ##
 Enable automatic logging
 
-    CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
+```cpp
+CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
+```
 
 For more information on optional settings, see [CustomerExperienceOptions](https://msdn.microsoft.com/library/microsoft.rightsmanagement.customerexperienceoptions.aspx).
 
 Get current logging control flag setting
 
-    CustomerExperienceOptions loggingOption = CustomerExperienceConfiguration::Option;
-
+```cpp
+CustomerExperienceOptions loggingOption = CustomerExperienceConfiguration::Option;
+```
 
 **Note** - The Windows code snips above are in C++. For C\#, update the syntax with ‘.’ in place of ‘::’.
 
