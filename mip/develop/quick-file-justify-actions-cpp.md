@@ -215,4 +215,4 @@ Build and test your client application.
     Press any key to continue . . .
    ```
 
-Please note, in case the label being deleted from a file requires a justification as per label policy, similar approach should be followed for `DeleteLabel()` operation.`DeleteLabel()` function throws a `mip::JustificationRequiredError` exception. `isDowngradeJustified` flag should be set to true in exception handling before deleting the label successfully.
+Please note, in case the label being deleted from a file requires a justification as per label policy, similar approach should be followed for `DeleteLabel()` operation. `DeleteLabel()` function throws a `mip::JustificationRequiredError` exception. `isDowngradeJustified` flag should be set to true in exception handling before deleting the label successfully.
