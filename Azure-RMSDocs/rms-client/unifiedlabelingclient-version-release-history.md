@@ -100,11 +100,17 @@ Unified labeling scanner and client version 2.7.96.0
 
 **New features for the unified labeling client:**
 
-- [Justification popups ](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) now appear for changes made to default labels in the unified labeling client.
+- [**Justification popups**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) now appear for changes made to default labels in the unified labeling client.
     
 - Smoother integration with visual content markings applied by Office. For more information about configuring content markings in Office document, see [How to configure a label for visual markings for Azure Information Protections](../configure-policy-markings.md).
 
 - New **WordShapeNameToRemove** advanced property enables removal of content marking in Word documents made by third-party applications. Learn more about how to [identify existing shape names and define them for removal using **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions).
+
+- Support for **Double Key Encryption (DKE)** (public preview). 
+
+    Now you can use the unified labeling client to protect highly sensitive content while maintaining full control of your key. DKE requires two keys to access protected content: one key is stored in Azure, and the other key is held by the customer. 
+
+    For more information about the default, cloud-based tenant root keys, see [Planning and implementing your Azure Information Protection tenant key](../plan-implement-tenant-key.md). For information about implementing Double Key Encryption, see [Double key encryption](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 documentation.
 
 **New audit logs generated for removed files**
 

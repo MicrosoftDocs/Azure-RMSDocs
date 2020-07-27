@@ -63,7 +63,8 @@ To rekey to another key that you manage, you can either create a new key in Azur
 
 For more information about each of these steps:
 
-- To rekey to another key that you manage, see [Implementing BYOK for your Azure Information Protection tenant key](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+- To rekey to another key that you manage, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
+
     
     If you are rekeying an HSM-protected key that you create on-premises and transfer to Key Vault, you can use the same security world and access cards as you used for your current key.
 
