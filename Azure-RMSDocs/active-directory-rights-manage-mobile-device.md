@@ -6,7 +6,7 @@ description: Learn about Active Directory mobile device extensions for AIP
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/17/2020
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -88,7 +88,7 @@ $TransformRules = @"
 @RuleTemplate = "LdapClaims"
 @RuleName = "Jwt Token"
 c:[Type ==
-"https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
+"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
 Issuer == "AD AUTHORITY"]
  => issue(store = "Active Directory", types =
 ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
