@@ -10,14 +10,10 @@
     items:
     - name: Overview
       href: requirements.md
-    - name: Azure Active Directory requirements
+    - name: Additional Azure Active Directory requirements
       href: requirements-azure-ad.md
-    - name: Client device support for protection
-      href: requirements-client-devices.md
     - name: Application support for protection
       href: requirements-applications.md
-    - name: On-premises server support for protection
-      href: requirements-servers.md
   - name: AIP is also known as ...
     href: aka.md
 - name: Quickstarts
@@ -94,7 +90,13 @@
   - name: Plan & prepare for the service
     items:
     - name: Deployment roadmap
-      href: deployment-roadmap.md
+      items:
+      - name: Overview
+        href: deployment-roadmap.md
+      - name: Roadmap for classification, labeling, and protection
+        href: deployment-roadmap-classify-label-protect.md
+      - name: Roadmap for protection only (classic client)
+        href: deployment-roadmap-protect-only.md
     - name: Planning and implementing your tenant key
       items:
       - name: Supported key types
