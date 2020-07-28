@@ -1,6 +1,16 @@
 {
     "redirections": [
         {
+            "source_path": "Azure-RMSDocs/rms-client/requirements-client-devices.md",
+            "redirect_url": "/azure/information-protection/requirements.md#client-devices",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/requirements-servers.md",
+            "redirect_url": "/azure/information-protection/requirements.md#supported-on-premises-servers-for-azure-rights-management-data-protection",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "Azure-RMSDocs/rms-client/protected-pdf-readers-mac.md",
             "redirect_url": "/azure/information-protection/rms-client/protected-pdf-readers#installing-a-protected-pdf-reader-for-windows-or-mac",
             "redirect_document_id": false
