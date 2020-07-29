@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,9 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> **Customers with extended Microsoft support for Windows 7 and Office 2010 can also get Azure Information Protection support for these versions. Check with your support contact for full details.*
+>
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 You can download the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
@@ -66,11 +68,21 @@ Use the following information to see what's new or changed for a supported relea
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## Version 2.7.95.0 public preview
+## Version 2.7.99.0
 
-Unified labeling scanner and client (public preview) version 2.7.95.0
+Unified labeling scanner and client version 2.7.99.0
 
-**Released** 06/01/2020
+**Fixes and improvements:**
+
+Fixed issues in file labeling actions for **New Label** audit logs.
+
+For more information, see [Version 2.7.96.0](#version-27960) and [Azure Information Protection audit log reference (public preview)](../audit-logs.md).
+
+## Version 2.7.96.0
+
+Unified labeling scanner and client version 2.7.96.0
+
+**Released** 06/29/2020
 
 **New features for the unified labeling scanner:**
 
@@ -84,15 +96,21 @@ Unified labeling scanner and client (public preview) version 2.7.95.0
 
 - You can now manage and limit max CPU consumption on the scanner machine. Learn how to prevent 100% CPU usage and manage your CPU usage using [two new advanced settings **ScannerMaxCPU**, and **ScannerMinCPU**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#limit-cpu-consumption). 
 
-- Now you can configure the unified labeling scanner to skip specific files depending on their file attributes. Define the list of file attributes that triggers a file to be skipped using the new **[ScannerFSAttributesToSkip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview)** advanced setting.
+- Now you can configure the unified labeling scanner to skip specific files depending on their file attributes. Define the list of file attributes that triggers a file to be skipped using the new **[ScannerFSAttributesToSkip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes)** advanced setting.
 
 **New features for the unified labeling client:**
 
-- [Justification popups ](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) now appear for changes made to default labels in the unified labeling client.
+- [**Justification popups**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) now appear for changes made to default labels in the unified labeling client.
     
 - Smoother integration with visual content markings applied by Office. For more information about configuring content markings in Office document, see [How to configure a label for visual markings for Azure Information Protections](../configure-policy-markings.md).
 
 - New **WordShapeNameToRemove** advanced property enables removal of content marking in Word documents made by third-party applications. Learn more about how to [identify existing shape names and define them for removal using **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions).
+
+- Support for **Double Key Encryption (DKE)** (public preview). 
+
+    Now you can use the unified labeling client to protect highly sensitive content while maintaining full control of your key. DKE requires two keys to access protected content: one key is stored in Azure, and the other key is held by the customer. 
+
+    For more information about the default, cloud-based tenant root keys, see [Planning and implementing your Azure Information Protection tenant key](../plan-implement-tenant-key.md). For information about implementing Double Key Encryption, see [Double key encryption](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 documentation.
 
 **New audit logs generated for removed files**
 
@@ -101,6 +119,11 @@ Audit logs are now generated each time the scanner detects that a file that had 
 For more information, see:
 - [File removed audit logs](../audit-logs.md#file-removed-audit-logs)
 - [Central reporting for Azure Information Protection](../reports-aip.md)
+
+> [!IMPORTANT]
+> In this version, file labeling actions do not generate **New Label** audit logs.
+> If you run the scanner in **Enforce=On** mode, we recommend that upgrade to [Version 2.7.99.0](#version-27990).
+> 
 
 **TLS 1.2 enforcement**
 
@@ -130,6 +153,8 @@ For more requirement details, see [Firewalls and network infrastructure requirem
 
 - [Dynamic user variables](../configure-policy-markings.md#using-variables-in-the-text-string) are now displayed in a document's visual markings as expected.
 
+- Issue where only the first page of content of a PDF was being used for applying auto-classification rules is now resolved, and auto-classification based on all content in the PDF now proceeds as expected. For more information about classification and labeling, see the [classification and labeling FAQ](https://docs.microsoft.com/azure/information-protection/faqs-infoprotect). 
+
 - When multiple Exchange accounts are configured and the Azure Information Protection Outlook client is enabled, mails are sent from the secondary account as expected. For more information about configuring the unified labeling client with Outlook, see [Additional prerequisites for the Azure Information Protection unified labeling client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
 - When a document with a higher confidentiality label is dragged and dropped into an email, the email now automatically receives the higher confidentiality label as expected. For more information about labeling client features, see the [labeling client comparison table](use-client.md#compare-the-labeling-clients-for-windows-computers).
@@ -140,10 +165,11 @@ For more requirement details, see [Firewalls and network infrastructure requirem
 
     The **UseCopyAndPreserveNTFSOwner** advanced setting requires a low latency, reliable network connection between the scanner and the scanned repository.
 
-
 ## Version 2.6.111.0 
 
 **Released** 03/09/2020
+
+Supported through  12/29/2020
 
 **New features:**
 

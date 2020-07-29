@@ -29,13 +29,13 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 > [!NOTE]
-> These instructions apply to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
+> These instructions apply to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 > 
 > If you are looking for information to configure a sensitivity label to apply Rights Management protection, see the Microsoft 365 Compliance documentation. For example, [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels).
 
@@ -63,7 +63,7 @@ For more information about the Azure Rights Management protection and how it wor
 When the label applies protection, a protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following features for protected files: Co-authoring, Office for the web, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP).
 
 > [!TIP]
-> When you [migrate your labels](configure-policy-migrate-labels.md) to unified sensitivity labels and publish them from one of the labeling admin centers such as the Microsoft 365 compliance center, labels that apply protection are then supported for these locations. For more information, see  [Enable sensitivity labels for Office files in SharePoint and OneDrive (public preview)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> When you [migrate your labels](configure-policy-migrate-labels.md) to unified sensitivity labels and publish them from one of the labeling admin centers such as the Microsoft 365 compliance center, labels that apply protection are then supported for these locations. For more information, see  [Enable sensitivity labels for Office files in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 Exchange does not have to be configured for Azure Information Protection before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for Azure Information Protection, you do not get the full functionality of using Azure Rights Management protection with Exchange. For example, users cannot view protected emails on mobile phones or with Outlook on the web, protected emails cannot be indexed for search, and you cannot configure Exchange Online DLP for Rights Management protection. To ensure that Exchange can support these additional scenarios, see the following resources:
 

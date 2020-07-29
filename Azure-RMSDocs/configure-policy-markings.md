@@ -68,32 +68,29 @@ For documents, the visual markings are applied as follows:
 
 - When a document is labeled by using File Explorer, PowerShell, or the Azure Information Protection scanner: Visual markings are not immediately applied but are applied by the Azure Information Protection client when that document is opened in an Office app and the document is first saved.
 
-    The exception is when you use [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps for files that are saved in Microsoft SharePoint, OneDrive for work or school, or OneDrive for home: When AutoSave is on, visual markings are not applied unless you configure the [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) to turn on classification to run continuously in the background. 
+    The exception is when you use [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office apps for files that are saved in Microsoft SharePoint, OneDrive for work or school, or OneDrive for home: When AutoSave is on, visual markings are not applied unless you configure the [advanced client setting](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) to turn on classification to run continuously in the background.
 
 ## To configure visual markings for a label
 
 Use the following instructions to configure visual markings for a label.
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane. 
-    
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** pane.
+
     For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
 
 2. From the **Classifications** > **Labels** menu option: On the **Azure Information Protection - Labels** pane, select the label that contains the visual markings you want to add or change.
 
 3. On the **Label** pane, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markings that you want, and then click **Save**:
-    
+
     - To configure a header: For **Documents with this label have a header**, select **On** if you want a header, and **Off** if you do not. If you select **On**, then specify the header text, size, [font](#setting-the-font-name), [color](#setting-the-font-color), and alignment for the header.
-    
+
     - To configure a footer: For **Documents with this label have a footer**, select **On** if you want a footer, and **Off** if you do not. If you select **On**, then specify the footer text, size, [font](#setting-the-font-name), [color](#setting-the-font-color), and alignment for the footer.
-    
+
     - To configure a watermark: For **Documents with this label have a watermark**, select **On** if you want a watermark, and **Off** if you do not. If you select **On**, then specify the watermark text, size, [font](#setting-the-font-name), [color](#setting-the-font-color), and alignment for the watermark.
-    
+
 When you click **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
 
-
 ## Using variables in the text string
-
-The following variables are generally available when using Azure Information Protection classic client and are in public preview availability when using the Azure Information Protection unified labeling client.  
 
 You can use the following variables in the text string for your header, footer, or watermark:
 
@@ -103,7 +100,7 @@ You can use the following variables in the text string for your header, footer, 
 
 - `${Item.Location}` for the path and file name for documents, and the email subject for emails. For example: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` for the owner of the document or email, by the Windows signed in user name. For example: rsimone 
+- `${User.Name}` for the owner of the document or email, by the Windows signed in user name. For example: rsimone
 
 - `${User.PrincipalName}` for the owner of the document or email, by the Azure Information Protection client signed in email address (UPN). For example: rsimone@vanarsdelltd.com
 
@@ -124,7 +121,9 @@ By default, the visual markings that you specify are applied across Word, Excel,
 
 Use the following syntax:
 
-    ${If.App.<application type>}<your visual markings text> ${If.End}
+```ps
+${If.App.<application type>}<your visual markings text> ${If.End}
+```
 
 > [!NOTE]
 >This syntax in this statement is case-sensitive.
@@ -132,21 +131,21 @@ Use the following syntax:
 Examples:
 
 - **Set header text for Word documents only:**
-    
+
     `${If.App.Word}This Word document is sensitive ${If.End}`
-    
+
     In Word document headers only, the label applies the header text "This Word document is sensitive". No header text is applied to other Office applications.
 
 - **Set footer text for Word, Excel, and Outlook, and different footer text for PowerPoint:**
-    
+
     `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
-    
+
     In Word, Excel, and Outlook, the label applies the footer text "This content is confidential." In PowerPoint, the label applies the footer text "This presentation is confidential."
 
 - **Set specific watermark text for Word and PowerPoint, and then watermark text for Word, Excel, and PowerPoint:**
-    
+
     `${If.App.WP}This content is ${If.End}Confidential`
-    
+
     In Word and PowerPoint, the label applies the watermark text "This content is Confidential". In Excel, the label applies the watermark text "Confidential". In Outlook, the label doesn't apply any watermark text because watermarks as visual markings are not supported for Outlook.
 
 > [!NOTE]
@@ -154,17 +153,15 @@ Examples:
 
 ### Setting the font name
 
-Calibri is the default font for headers, footers, and watermark text. If you specify an alternative font name, make sure that it is available on the client devices that will apply the visual markings. 
-
+Calibri is the default font for headers, footers, and watermark text. If you specify an alternative font name, make sure that it is available on the client devices that will apply the visual markings.
 If the font specified is not available, the client falls back to using the Calibri font.
 
 ### Setting the font color
 
-You can choose from the list of available colors or specify a custom color by entering a hex triplet code for the red, green, and blue (RGB) components of the color. For example, **#40e0d0** is the RGB hex value for turquoise. 
+You can choose from the list of available colors or specify a custom color by entering a hex triplet code for the red, green, and blue (RGB) components of the color. For example, **#40e0d0** is the RGB hex value for turquoise.
 
 If you need a reference for these codes, you'll find a helpful table from the [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) page from the MSDN web docs. You also find these codes in many applications that let you edit pictures. For example, Microsoft Paint lets you choose a custom color from a palette and the RGB values are automatically displayed, which you can then copy.
 
 ## Next steps
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  
-

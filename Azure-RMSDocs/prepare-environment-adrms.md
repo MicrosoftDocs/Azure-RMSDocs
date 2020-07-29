@@ -3,9 +3,9 @@
 
 title: Prepare the environment for Azure RMS and AD RMS
 description: Guidance for administrators if you have Azure Rights Management with AD RMS deployed.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -46,7 +46,7 @@ If the Azure Rights Management service is activated and you are also using AD RM
 
 If AD RMS is deployed for your organization, consider whether you can migrate to Azure Information Protection. Azure Information Protection has many advantages over AD RMS. For example, better support for mobile devices and integration with Office 365 services as well as with Exchange Server and SharePoint Server. For more information, see [Comparing Azure Information Protection and AD RMS](compare-on-premise.md).
 
-When you migrate to Azure Information Protection, you won't lose access to previously protected content and you don't have to unprotect or reprotect your content. Documents and emails that were protected by AD RMS can still be opened even after you have deprovisioned AD RMS.
+When you migrate to Azure Information Protection, you won't lose access to previously protected content and you don't have to un-protect or re-protect your content. Documents and emails that were protected by AD RMS can still be opened even after you have de-provisioned AD RMS.
 
 Whether you decide to migrate to Azure Information Protection or you decide to accept the limitations in using your current AD RMS deployment, you must first ensure that the Azure Rights Management service is deactivated. For instructions, follow the steps for the scenario that applies to you:
 

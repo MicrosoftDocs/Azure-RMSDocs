@@ -3,9 +3,9 @@
 
 title: PowerShell for protection templates - Azure Information Protection
 description: Use PowerShell to create and manage protection templates for Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -56,8 +56,6 @@ The cmdlets that support creating and managing protection templates:
 - [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate)
 
 - [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)
-
-
 
 ## See Also
 [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md)

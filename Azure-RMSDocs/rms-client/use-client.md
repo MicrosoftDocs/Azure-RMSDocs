@@ -3,10 +3,10 @@
 
 title: The client for Azure Information Protection - AIP
 description: Microsoft Azure Information Protection provides a client-server solution that helps to protect an organization's data. The client (the Azure Information Protection client or the Rights Management client) is integrated with applications that you run on computers and mobile devices.
-author: batamig
+author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 07/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -139,7 +139,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |Recommended or automatic labeling:<br />- For Outlook| **Yes** | **Yes** | No |
 |Mandatory labeling:| **Yes** | **Yes** | No |
 |User-defined permissions for a label: <br />- Do Not Forward for emails| **Yes** | **Yes** | **Yes** |
-|User-defined permissions for a label: <br />- Custom permissions for Word, Excel, PowerPoint, File Explorer| **Yes** | **Yes** | **Yes** |
+|User-defined permissions for a label: <br />- Custom permissions for Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
 |Multilanguage support for labels:| **Yes** | **Yes** |**Yes** |
 |Label inheritance from email attachments:| **Yes** | **Yes**  |No |
 |Customizations that include:<br />- Default label for email<br />- Pop up messages in Outlook <br />- S/MIME support<br />- Report an Issue option| **Yes** <sup>1</sup> | **Yes** <sup>2</sup> | No |
@@ -152,7 +152,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |Dynamic visual markings with variables:| **Yes** | **Yes** | No |
 |Label with File Explorer:| **Yes** | **Yes** | No |
 |A viewer for protected files (text, images, PDF, .pfile):| **Yes** | **Yes** | No|
-|PDF support for applying labels:| **Yes** | No | No |
+|PPDF support for applying labels:| **Yes** | No | No |
 |PowerShell labeling cmdlets:| **Yes** | **Yes** <sup>4</sup> | No |
 |Offline support for protection actions:| **Yes** | **Yes** <sup>5</sup> | **Yes** |
 |Manual policy file management for disconnected computers:| **Yes** |**Yes**| No |
@@ -165,7 +165,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |Support for account switching:| No | No | **Yes** |
 |Support for Remote Desktop Services:| **Yes** | **Yes** | **Yes** |
 |Support for AD RMS:| **Yes** | No <sup>7</sup> | No |
-|Remove external content marking in app| **Yes**| No| No|
+|Remove external content marking in app:| **Yes**| **Yes**| No|
 
 
 Footnotes:

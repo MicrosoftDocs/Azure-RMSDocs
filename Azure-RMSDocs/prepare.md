@@ -134,20 +134,25 @@ You can use Azure AD PowerShell to confirm that users and groups can be used wit
 
 For example, using the V1 PowerShell module for Azure Active Directory, [MSOnline](/powershell/module/msonline/?view=azureadps-1.0), in a PowerShell session, first connect to the service and supply your global admin credentials:
 
-    Connect-MsolService
-
+```ps
+Connect-MsolService
+```
 
 Note: If this command doesn't work, you can run `Install-Module MSOnline` to install the MSOnline module.
 
 Next, configure your PowerShell session so that it doesn't truncate the values:
 
-    $Formatenumerationlimit =-1
+```ps
+$Formatenumerationlimit =-1
+```
 
 ### Confirm user accounts are ready for Azure Information Protection
 
 To confirm the user accounts, run the following command:
 
-    Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
+```ps
+Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
+```
 
 Your first check is to make sure that the users you want to use with Azure Information Protection are displayed.
 
@@ -188,7 +193,9 @@ In most cases, the value for UserPrincipalName matches one of the values in the 
 
 To confirm group accounts, use the following command:
 
-    Get-MsolGroup | select DisplayName, ProxyAddresses
+```ps
+Get-MsolGroup | select DisplayName, ProxyAddresses
+```
 
 Make sure that the groups you want to use with Azure Information Protection are displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for the Azure Rights Management service.
 
@@ -196,7 +203,9 @@ Then check that the groups contain the users (or other groups) that you want to 
 
 For the two Azure Rights Management service configuration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that can be used to identify these groups. You can also use the Azure portal to find these groups and copy the values for the object ID and the display name:
 
-    Get-MsolGroup | where {$_.GroupType -eq "Security"}
+```ps
+Get-MsolGroup | where {$_.GroupType -eq "Security"}
+```
 
 ## Considerations for Azure Information Protection if email addresses change
 

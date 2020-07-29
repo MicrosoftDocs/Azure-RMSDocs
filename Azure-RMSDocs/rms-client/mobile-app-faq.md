@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: FAQs for Azure Information Protection app for iOS & Android
-description: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
-author: mlottner
-ms.author: mlottner
+title: Azure Information Protection apps for iOS & Android
+description: Learn the basics about the Azure Information Protection (AIP) apps for iOS and Android devices
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/12/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -23,63 +23,79 @@ ms.custom: user
 
 ---
 
-# FAQs for Microsoft Azure Information Protection app for iOS and Android
+# What is the Azure Information Protection app for iOS or Android?
 
 *Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-This page provides answers to frequently asked questions about the Azure Information Protection app for iOS and Android.
+The Azure Information Protection (AIP) apps for iOS and Android enable you to view rights-protected email messages (**.rpmsg** files) when your email app doesn't natively support rights management data protection.  
 
-## What can I do with the Azure Information Protection app?
+The AIP apps also enable you to view rights-protected PDF documents (protected PDF and**.ppdf** files), images, and text files.
 
-This app lets you view rights-protected email messages (.rpmsg files) if your email app doesn't natively support rights management data protection. This app also lets you view rights-protected PDF documents, and pictures and text files that are rights-protected. 
+> [!NOTE]
+> The AIP apps are viewers only, and do not enable you to create new or reply to protected email messages, or create or edit protected files. The apps also cannot open attachments for files that you view, such as attachments to protected PDF documents or email messages.
+>
 
-Because this app is a viewer, you can't use it to create new protected email messages, reply to them, or create or edit protected files. In addition, the app can't open attachments for the files that you view. For example, attachments in protected PDF documents or in rights-protected email messages.
+## AIP mobile app requirements
 
-## Can I open PDF files that are in SharePoint protected libraries and OneDrive?
+The AIP mobile apps for iOS and Android can be used with the following systems:
 
-Yes, you can open protected PDF files that others have shared with you via Microsoft SharePoint and OneDrive. Tap the link, and choose this app to open the file for you. 
+- [Supported mobile OS versions](#supported-mobile-os-versions)
+- [Supported sign in credentials](#supported-sign-in-credentials)
+- [Supported file extensions](#supported-file-extensions)
 
-This app can also open PDF files that have been protected outside SharePoint and OneDrive (protected PDF and .ppdf files).
+### Supported mobile OS versions
 
-## Can my mobile device run the Azure Information Protection app?
+The AIP mobile apps require one of the following minimum mobile operating systems: 
 
-The Azure Information Protection app requires a minimum version of **iOS 11** or **Android 6.0**. Take note that the Azure Information Protection app **cannot** run on Intel CPUs. 
+- iOS 11 
+- Android 6.0 
 
-If you have these versions or higher, you can install the app to run on your mobile device:
+> [!NOTE]
+> The AIP mobile apps are not supported on Intel CPUs.
+> 
 
-- If your mobile device is managed by Microsoft Intune, you might be able to install the Azure Information Protection app from your company portal.
+### Supported sign in credentials
 
-- If your mobile device is not managed by Microsoft Intune or the Azure Information Protection app isn't available from your company portal, you can install the app either directly from the iTunes store and the Google Play store, or by clicking the iOS or Android icon from the **Mobile Devices** section on the [Azure Information Protection download page](https://portal.azurerms.com/#/download). 
+Use one of the following to sign in to AIP: 
 
-## How do I get started with the viewer app?
+- **Work or school credentials.** Use if your organization already has AD RMS on-premises with the mobile device extension, or uses Azure Information Protection.
+ 
+- **A Microsoft account**. If your personal email address was used to protect the file, sign in with a [Microsoft account](https://signup.live.com). 
 
-After you've installed the app, you don't need to do anything more at that point. Wait until you get a protected email or file that you want to view, and then choose the **AIP Viewer** to open it. You will then be asked to sign in with your work or school account, or prompted to select a certificate. After these credentials are authenticated, you can then read the contents.
+    - You can use your own Hotmail, Gmail, or any other email address you own when you apply for a Microsoft account.
+    
+> [!NOTE]
+> Not all applications can open protected content when a Microsoft account is used. For more information, see [Supported scenarios for opening protected documents](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
+> 
 
-However, if you don't want to wait, you can use the following instructions to send yourself a protected email or file to view: [Get started with the Microsoft Azure Information Protection app for iOS and Android](mobile-app-get-started.md) 
-
-## What credentials should I use to sign in to this app?
-
-If your organization already has AD RMS on-premises (with the mobile device extension) or uses Azure Information Protection, use your work credentials to sign in. 
-
-If your personal email address was used to protect the file, use credentials from a free [Microsoft account](https://signup.live.com) to sign in.
-
-## Can I sign up for the free account with my personal email address, such as a Hotmail or Gmail account?
-
-Yes, when you apply for a Microsoft account, you can specify your Hotmail or Gmail email address, or any other email address that you own. 
-
-However, although this viewer can open protected files with this account, not all applications can open protected content when a Microsoft account is used for authentication. [More information](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
-
-## Which file extensions can I open with this app?
+### Supported file extensions
 
 You can open .rpmsg, .pdf, .ppdf, .pjpg, .pjpeg, .ptiff, .ppng, .ptxt, .pxml, and several other text and image file formats.
 
 For the full list of text and image file name extensions, see the first table in the [Supported file types for classification and protection](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) section from the admin guide.
 
-##  How do I provide feedback about this app?
+## Installing your AIP mobile apps and viewing files
 
-In the app, go to **Settings** > **Send feedback**.
+If your mobile device is managed by Microsoft Intune, you may be able to download the apps from your company portal.
 
+Otherwise, access the apps from:
 
-## My question has not been answered—what should I do?
+- The [iTunes](https://apps.apple.com/app/microsoft-rights-management/id689516635) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer) store
+- The [Azure Information Protection download page](https://portal.azurerms.com/#/download). Select the [iOS](https://apps.apple.com/app/microsoft-rights-management/id689516635) or [Android](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer) icons in the **Mobile Devices** section.
 
-Post your question on our [Yammer site](https://www.yammer.com/AskIPTeam).
+Once installed, wait until you've received a protected email or file, and select the **AIP Viewer** when opening it.
+
+You'll be prompted to sign in with your work or school account, or prompted to select a certificate. Once you've been authenticated, your email or file will open and you'll be able to read its contents.
+
+> [!TIP]
+> To try this out right away, send yourself a protected email or file to view. 
+>
+> For more information, see [Get started with the Microsoft Azure Information Protection app for iOS and Android](mobile-app-get-started.md).
+> 
+
+## Next steps
+
+Use one of the following methods to provide feedback about the AIP mobile apps:
+
+- Go to **Settings** > **Send feedback**
+- Post your question on our [Yammer site](https://www.yammer.com/AskIPTeam)

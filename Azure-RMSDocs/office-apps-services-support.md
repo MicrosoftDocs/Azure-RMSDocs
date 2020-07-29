@@ -3,8 +3,8 @@
 
 title: How Office apps & services support Azure RMS from AIP
 description: How end-user Office applications such as Word and Outlook, and Office services such as Exchange and SharePoint, can use the Azure Rights Management service from AIP to help protect your organization's data.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
 ms.date: 05/31/2020
 ms.topic: conceptual
@@ -38,9 +38,12 @@ For example, users can configure a Word document so that it can be accessed only
 
 If you are ready to configure Office apps see [Office apps: Configuration for clients](configure-office-apps.md).
 
+For relevant known issues, see [AIP known issues in Office applications](known-issues.md#aip-known-issues-in-office-applications).
+
+<!-->
 > [!NOTE]
 > Due to a limitation in recent Windows updates, files that are attached to emails may be currently be locked after opening the file.
-
+-->
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can configure options for Azure Information Protection. This configuration lets Exchange provide the following protection solutions:
 
