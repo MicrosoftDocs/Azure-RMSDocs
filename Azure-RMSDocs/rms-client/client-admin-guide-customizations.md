@@ -983,7 +983,7 @@ This advanced client setting does not change the information that's sent to Azur
 
 Outlook on the web now supports built-in labeling for Exchange Online, which is the recommended method to label emails in Outlook on the web. However, if you need to label emails in OWA and are using Exchange Server, which doesn't yet support sensitivity labels, you can use Exchange message classification to extend Azure Information Protection labels to Outlook on the web.
 
-Please note that Outlook Mobile does not support Exchange message classification.
+Outlook Mobile does not support Exchange message classification.
 
 To achieve this solution: 
 
