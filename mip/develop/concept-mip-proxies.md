@@ -45,7 +45,7 @@ MIP SDK doesn't support anything but fully transparent proxies of any type on no
 
 ## Custom HTTP Delegate
 
-The Microsoft Information Protection SDK supports implementation of a custom HTTP delegate that can override the SDK's default HTTP stack. If there are features not present, or a specific HTTP implementation is required, this delegate can be implemented by adding a new class that inherits [`mip::HttpDelegate`](./reference/class_mip_httpdelegate,md).
+The Microsoft Information Protection SDK supports implementation of a custom HTTP delegate that can override the SDK's default HTTP stack. If there are features not present, or a specific HTTP implementation is required, this delegate can be implemented by adding a new class that inherits [`mip::HttpDelegate`](./reference/class_mip_httpdelegate.md).
 
 This `mip::HttpDelegate`-derived class is set via `mip::FileProfile::Settings`:
 
