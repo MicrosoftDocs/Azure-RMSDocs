@@ -67,6 +67,6 @@ If a custom HTTP delegate isn't an option, it will be required that you bypass y
 | Endpoint           | Hostname                                                                                                                                                                |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Protection Service | https://api.aadrm.com                                                                                                                                                   |
-| Policy             | https://*.protection.outlook.com                                                                                                                                        |
-| Audit Logging      | https://*.events.data.microsoft.com, https://\*.aria.microsoft.com (iOS only)                                                                                           |
+| Policy             | https://\*.protection.outlook.com                                                                                                                                       |
+| Audit Logging      | https://\*.events.data.microsoft.com, https://\*.aria.microsoft.com (iOS only)                                                                                          |
 | Authentication     | [Please review Azure AD documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
