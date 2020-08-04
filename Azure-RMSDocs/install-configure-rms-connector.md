@@ -6,7 +6,7 @@ description: Information to help you install and configure the Azure Rights Mana
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/05/2019
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,27 +27,31 @@ ms.custom: admin
 
 # Installing and configuring the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, 2016, 2012 R2, and Windows Server 2012*
 
 Use the following information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
 Before you begin, make sure that you have reviewed and checked the [prerequisites](deploy-rms-connector.md#prerequisites-for-the-rms-connector) for this deployment.
 
+Make sure you are aware of the correct Azure sovereign cloud instance for your connector to be able to complete setup and configuration: 
+- **AzureCloud**: Commercial offering of Azure
+- **AzureChinaCloud**: Azure Operated by 21Vianet
+- **AzureUSGovernment**: Azure Government (GCC High/DoD)
+- **AzureUSGovernment2**: Azure Government 2
+- **AzureUSGovernment3**: Azure Government 3
 
 ## Installing the RMS connector
 
 1.  Identify the computers (minimum of two) to run the RMS connector. These computers must meet the minimum specification listed in the prerequisites.
 
     > [!NOTE]
-    > You install a single RMS connector (consisting of multiple servers for high availability) per tenant (Office 365 tenant or Azure AD tenant). Unlike Active Directory RMS, you do not have to install an RMS connector in each forest.
+    > Install a single RMS connector (consisting of multiple servers for high availability) per tenant (Microsoft 365 tenant or Azure AD tenant). Unlike Active Directory RMS, you do not have to install an RMS connector in each forest.
 
 2.  Download the source files for the RMS connector from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
 
     To install the RMS connector, download RMSConnectorSetup.exe.
 
     In addition:
-
-    -   If you later want to configure the connector from a 32-bit computer, also download RMSConnectorAdminToolSetup_x86.exe.
 
     -   If you want to use the server configuration tool for the RMS connector, to automate the configuration of registry settings on your on-premises servers, also download GenConnectorConfig.ps1.
 
@@ -57,20 +61,25 @@ Before you begin, make sure that you have reviewed and checked the [prerequisite
 
 5.  Read and agree to the RMS connector license terms, and then click **Next**.
 
-To continue, enter an account and password to configure the RMS connector.
 
 ## Entering credentials
-Before you can configure the RMS connector, you must enter credentials for an account that has sufficient privileges to configure the RMS connector. For example, you might type <strong>admin@contoso.com</strong> and then specify the password for this account.
 
-This account must not require multi-factor authentication (MFA) because Microsoft Rights Management Connector Setup does not support MFA. In addition, if you use Azure AD Conditional Access, do not [block legacy authentication](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) for this account.
+Before you can configure the RMS connector, you must first select the Cloud environment that matches your solution.   
+- **AzureCloud**: Commercial offering of Azure
+- **AzureChinaCloud**: Azure Operated by 21Vianet
+- **AzureUSGovernment**: Azure Government (GCC High/DoD)
+- **AzureUSGovernment2**: Azure Government 2
+- **AzureUSGovernment3**: Azure Government 3
 
-The connector setup also has some character restrictions for this password. You cannot use a password that has any of the following characters: Ampersand ( **&** ); left angle bracket ( **[** ); right angle bracket ( **]** ); straight quotation ( **"** ); and apostrophe ( **'** ). If your password has any of these characters, authentication fails for the RMS connector setup and you see the error message **That user name and password combination is not correct**, even though you can successfully sign in using this account and password for other scenarios. If this scenario applies to your password, either use a different account with a password that does not have any of these special characters, or reset your password so it doesn't have any of these special characters.
+:::image type="content" source="media/authenticate_tenant_rms_connector.png" alt-text="Select the correct Azure environment to authenticate your new AAD RM connector":::
 
-In addition, if you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
+After making your Cloud environment selection, enter your **Username** and **password**. Make sure you enter credentials for an account that has sufficient privileges to configure the RMS connector. For example, you might type <strong>admin@contoso.com</strong> and then specify the password for this account.
+
+In addition, if you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you'll see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
 
 You can use an account that has one of the following privileges:
 
--   **Global administrator for your tenant**: An account that is a global administrator for your Office 365 tenant or Azure AD tenant.
+-   **Global administrator for your tenant**: An account that is a global administrator for your Microsoft 365 tenant or Azure AD tenant.
 
 -   **Azure Rights Management global administrator**: An account in Azure Active Directory that has been assigned the Azure RMS global administrator role.
 
@@ -86,7 +95,7 @@ You can use an account that has one of the following privileges:
     >     Start Windows PowerShell with the **Run as administrator** command, and connect to the protection service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) command:
     >
     >     ```
-    >     Connect-AipService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
+    >     Connect-AipService                   //provide Microsoft 365 tenant administrator or Azure RMS global administrator credentials
     >     ```
     > 2.  Then run the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) command, using just one of the following parameters:
     >
@@ -107,7 +116,7 @@ You can use an account that has one of the following privileges:
 
 During the RMS connector installation process, all prerequisite software is validated and installed, Internet Information Services (IIS) is installed if not already present, and the connector software is installed and configured. In addition, Azure RMS is prepared for configuration by creating the following:
 
--   An empty table of servers that are authorized to use the connector to communicate with Azure RMS. You add servers to this table later.
+-   An empty table of servers that are authorized to use the connector to communicate with Azure RMS. Add servers to this table later.
 
 -   A set of security tokens for the connector, which authorize operations with Azure RMS. These tokens are downloaded from Azure RMS and installed on the local computer in the registry. They are protected by using the data protection application programming interface (DPAPI) and the Local System account credentials.
 
@@ -230,7 +239,7 @@ If your connector servers are installed in a network that does not have direct i
 ## Installing the RMS connector administration tool on administrative computers
 You can run the RMS connector administration tool from a computer that does not have the RMS connector installed, if that computer meets the following requirements:
 
--   A physical or virtual computer running Windows Server 2012 or Windows Server 2012 R2 (all editions), Windows 8.1, Windows 8.
+-   A physical or virtual computer running Windows Server 2019, 2016, 2012 or Windows Server 2012 R2 (all editions), Windows 10, Windows 8.1, Windows 8.
 
 -   At least 1 GB of RAM.
 
@@ -241,8 +250,6 @@ You can run the RMS connector administration tool from a computer that does not 
 -   Access to the internet via a firewall (or web proxy).
 
 To install the RMS connector administration tool, run the following files:
-
--   For a 32-bit computer: RMSConnectorAdminToolSetup_x86.exe
 
 -   For a 64-bit computer: RMSConnectorSetup.exe
 
