@@ -137,19 +137,19 @@ Each Azure Information Protection client has additional prerequisites. For detai
 
 The Azure Information Protection clients can label and protect documents and emails by using Microsoft **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
 
-- **Office apps minimum version 1805**, build 9330.2078 from [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). 
+- **Office apps minimum version 1805**, build 9330.2078 from Office 365 Business or Microsoft 365 Business. 
 
     This edition is supported only when the user is assigned a license for Azure Rights Management, also known as Azure Information Protection for Office 365.
 
-- **[Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
+- **Office 365 ProPlus**
 
-- **[Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019**
+- **Office Professional Plus 2019**
 
-- **[Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016**
+- **Office Professional Plus 2016**
 
-- **[Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 with Service Pack 1**
+- **Office Professional Plus 2013 with Service Pack 1**
 
-- **[Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 with Service Pack 2**
+- **Office Professional Plus 2010 with Service Pack 2**
 
 Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only, and labels that apply protection are not displayed for users. 
 
