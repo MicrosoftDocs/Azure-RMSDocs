@@ -3,10 +3,10 @@
 
 title: Deploy the Rights Management connector - AIP
 description: Instructions to deploy the RMS connector, which provides the data protection service for existing on-premises deployments that use Exchange Server, SharePoint Server, or Windows Server and File Classification Infrastructure (FCI).
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/09/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Deploying the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, 2016, Windows Server 2012 R2, Windows Server 2012*
 
 Use this information to learn about the Azure Rights Management connector, and then how to successfully deploy it for your organization. This connector provides data protection for existing on-premises deployments that use Microsoft **Exchange Server**, **SharePoint Server**, or file servers that run Windows Server and **File Classification Infrastructure** (FCI).
 
@@ -47,7 +47,7 @@ The RMS connector supports the following on-premises servers: Exchange Server, S
 > [!NOTE]
 > If you want to protect multiple file types (not just Office documents) by using File Classification Infrastructure, do not use the RMS connector, but instead, use the [AzureInformationProtection cmdlets](/powershell/azureinformationprotection/vlatest/aip).
 
-For the versions of these on-premises servers that are supported by the RMS connector, see [On-premises servers that support Azure RMS](requirements-servers.md).
+For the versions of these on-premises servers that are supported by the RMS connector, see [On-premises servers that support Azure RMS](requirements.md#supported-on-premises-servers-for-azure-rights-management-data-protection).
 
 
 ### Support for hybrid scenarios

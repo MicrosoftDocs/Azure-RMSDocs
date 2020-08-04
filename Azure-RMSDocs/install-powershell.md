@@ -3,8 +3,8 @@
 
 title: Install the AIPService PowerShell module for Azure Information Protection
 description: Instructions to install PowerShell for the protection service from Azure Information Protection. The name of this module is AIPService.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
 ms.date: 11/01/2019
 ms.topic: conceptual
@@ -33,6 +33,7 @@ Use the following information to help you install the Windows PowerShell module
 You can use this PowerShell module to administer the protection service (Azure Rights Management) from the command line by using any Windows computer that has an internet connection and that meets the prerequisites listed in the next section. Windows PowerShell for Azure Information Protection supports scripting for automation or might be necessary for advanced configuration scenarios. For more information about the administration tasks and configurations that the module supports, see [Administering protection from Azure Information Protection by using PowerShell](administer-powershell.md).
 
 ## Prerequisites
+
 This table lists the prerequisites to install and use the AIPService PowerShell module for the protection service from Azure Information Protection.
 
 |Requirement|More information|
@@ -48,13 +49,15 @@ The newer module has aliases to the cmdlet names in the older module so that any
 
 If you installed the AADRM module from the PowerShell Gallery, to uninstall it, start a PowerShell session with the **Run as Administrator** option, and type:
 
-	Uninstall-Module -Name AADRM
+```ps
+Uninstall-Module -Name AADRM
+```
 
 If you installed the AADRM module with the Azure Rights Management Administration Tool, use **Programs and Features** to uninstall **Windows Azure AD Rights Management Administration**.
 
 ## How to install the AIPService module
 
-The AIPService module is on the [PowerShell Gallery](https://www.powershellgallery.com/) and is not available from the Microsoft Download Center. 
+The AIPService module is on the [PowerShell Gallery](https://www.powershellgallery.com/) and is not available from the Microsoft Download Center.
 
 ### To install the AIPService module from the PowerShell Gallery
 
@@ -64,46 +67,51 @@ To see details about the AIPService module on the PowerShell Gallery, visit the 
 
 To install the AIPService module, start a PowerShell session with the **Run as Administrator** option, and type:
 
-	Install-Module -Name AIPService
+```ps
+Install-Module -Name AIPService
+```
 
 If you are warned about installing from an untrusted repository, you can press Y to confirm. Or, press N and configure the PowerShell Gallery as a trusted repository by using the command `Set-PSRepository -Name PSGallery -InstallationPolicy Trusted` and then rerun the command to install the AIPService module.  
 
 If you have a previous version of the AIPService module installed from the Gallery, update it to the latest by typing:
 
-	Update-Module -Name AIPService
-
+```ps
+Update-Module -Name AIPService
+```
 
 ## Next steps
+
 In a Windows PowerShell session, confirm the version of the installed module. This check is particularly important if you upgraded from an older version:
 
-```
+```ps
 (Get-Module AIPService –ListAvailable).Version
 ```
 
-Note: If this command fails, first run **Import-Module AIPService**.
+> [!NOTE]
+> If this command fails, first run **Import-Module AIPService**.
+> 
 
 To see which cmdlets are available, type the following:
 
-```
+```ps
 Get-Command -Module AIPService
 ```
 
 Use the `Get-Help <cmdlet_name>` command to see the Help for a specific cmdlet, and use the **-online** parameter to see the latest help on the Microsoft documentation site. For example:
 
-```
+```powershell
 Get-Help Connect-AipService -online
 ```
 
 For more information:
 
--   Full list of cmdlets available: [AIPService Module](/powershell/module/aipservice/?view=azureipps#aipservice)
+- Full list of cmdlets available: [AIPService Module](/powershell/module/aipservice/?view=azureipps#aipservice)
 
--   List of main configuration scenarios that support PowerShell: [Administering protection from Azure Information Protection by using PowerShell](administer-powershell.md)
+- List of main configuration scenarios that support PowerShell: [Administering protection from Azure Information Protection by using PowerShell](administer-powershell.md)
 
 Before you can run any commands that configure the protection service, you must connect to the service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet.
 
-When you have finished running your configuration commands, as a best practice, disconnect from the service by using the [Disconnect-AipService](/powershell/module/aipservice/disconnect-aipservice) cmdlet. If you do not disconnect, the connection is automatically disconnected after a period of inactivity. Because of the automatic disconnection behavior, you might find that you need to occasionally reconnect in a PowerShell session. 
+When you have finished running your configuration commands, as a best practice, disconnect from the service by using the [Disconnect-AipService](/powershell/module/aipservice/disconnect-aipservice) cmdlet. If you do not disconnect, the connection is automatically disconnected after a period of inactivity. Because of the automatic disconnection behavior, you might find that you need to occasionally reconnect in a PowerShell session.
 
 > [!NOTE]
 > If the protection service is not yet activated, you can do this after you have connected to the service, by using the [Enable-AipService](/powershell/module/aipservice/enable-aipservice) cmdlet.
-

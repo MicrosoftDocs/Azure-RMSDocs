@@ -31,8 +31,8 @@ ms.custom: admin
 
 Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 4 though 6 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-
 ## Step 4. Export configuration data from AD RMS and import it to Azure Information Protection
+
 This step is a two-part process:
 
 1. Export the configuration data from AD RMS by exporting the trusted publishing domains (TPDs) to an .xml file. This process is the same for all migrations.
@@ -65,8 +65,8 @@ Note that the trusted publishing domains include the Server Licensor Certificate
 
 For example, you will have multiple trusted publishing domains if you upgraded your AD RMS servers from Cryptographic Mode 1 to Cryptographic Mode 2. If you do not export and import the trusted publishing domain that contains your archived key that used Cryptographic Mode 1, at the end of the migration, users will not be able to open content that was protected with the Cryptographic Mode 1 key.
 
-
 ### Import the configuration data to Azure Information Protection
+
 The exact procedures for this step depend on your current AD RMS deployment configuration, and your preferred topology for your Azure Information Protection tenant key.
 
 Your current AD RMS deployment is using one of the following configurations for your server licensor certificate (SLC) key:
@@ -84,7 +84,7 @@ Your current AD RMS deployment is using one of the following configurations for 
 
 The two Azure Information Protection tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**) in Azure Key Vault. When you manage your own Azure Information Protection tenant key, it's sometimes referred to as "bring your own key" (BYOK). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) article.
 
-Use the following table to identify which procedure to use for your migration. 
+Use the following table to identify which procedure to use for your migration.
 
 |Current AD RMS deployment|Chosen Azure Information Protection tenant key topology|Migration instructions|
 |-----------------------------|----------------------------------------|--------------------------|
@@ -101,7 +101,7 @@ Before you start these key migration procedures, make sure that you can access t
 > [!NOTE]
 > However you store these files, use security best practices to protect them because this data includes your private key.
 
-To complete Step 4, choose and select the instructions for your migration path: 
+To complete Step 4, choose and select the instructions for your migration path:
 
 - [Software-protected key to software-protected key](migrate-softwarekey-to-softwarekey.md)
 - [HSM-protected key to HSM-protected key](migrate-hsmkey-to-hsmkey.md)
@@ -112,14 +112,18 @@ To complete Step 4, choose and select the instructions for your migration path:
 Open a PowerShell session and run the following commands:
 
 1. Connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
-    
-        Connect-AipService
+
+    ```ps
+    Connect-AipService
+    ```
 
 2. Activate the Azure Rights Management service:
-    
-        Enable-AipService
 
-**What if your Azure Information Protection tenant is already activated?** If the Azure Rights Management service is already activated for your organization, and you have created custom templates that you want to use after the migration, you must export and import these templates. This procedure is covered in the next step. 
+    ```ps
+    Enable-AipService
+    ```
+
+**What if your Azure Information Protection tenant is already activated?** If the Azure Rights Management service is already activated for your organization, and you have created custom templates that you want to use after the migration, you must export and import these templates. This procedure is covered in the next step.
 
 ## Step 6. Configure imported templates
 
@@ -133,15 +137,15 @@ The template changes that you might need to make for this step:
 
 - If you created Azure Information Protection custom templates before the migration, you must manually export and import them.
 
-- If your templates in AD RMS used the **ANYONE** group, you might need to manually add users or groups. 
-    
+- If your templates in AD RMS used the **ANYONE** group, you might need to manually add users or groups.
+
     In AD RMS, the ANYONE group granted rights to all users authenticated by your on-premises Active Directory, and this group is not supported by Azure Information Protection. The closet equivalent is a group that's automatically created for all users in your Azure AD tenant. If you were using the ANYONE group for your AD RMS templates, you might need to add users and the rights that you want to grant them.
 
 ### Procedure if you created custom templates before the migration
 
-If you created custom templates before the migration, either before or after activating the Azure Rights Management service, templates will not be available to users after the migration, even if they were set to **Published**. To make them available to users, you must first do the following: 
+If you created custom templates before the migration, either before or after activating the Azure Rights Management service, templates will not be available to users after the migration, even if they were set to **Published**. To make them available to users, you must first do the following:
 
-1. Identify these templates and make a note of their template ID, by running the [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate). 
+1. Identify these templates and make a note of their template ID, by running the [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate).
 
 2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate).
 
@@ -157,29 +161,30 @@ When you manage templates and labels in the Azure portal, this group displays as
 
 If you're not sure whether your AD RMS templates include the ANYONE group, you can use the following sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
-You can easily add external users to templates when you convert these templates to labels in the Azure portal. Then, on the **Add permissions** pane, choose **Enter details** to manually specify the email addresses for these users. 
+You can easily add external users to templates when you convert these templates to labels in the Azure portal. Then, on the **Add permissions** pane, choose **Enter details** to manually specify the email addresses for these users.
 
 For more information about this configuration, see [How to configure a label for Rights Management protection](./configure-policy-protection.md).
 
 #### Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group
+
 This section contains the sample script to help you identify any AD RMS templates that have the ANYONE group defined, as described in the preceding section.
 
 **Disclaimer:** This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
 
-```
-import-module adrmsadmin 
+```ps
+import-module adrmsadmin
 
-New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost -Force 
+New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost -Force
 
 $ListofTemplates=dir MyRmsAdmin:\RightsPolicyTemplate
 
-foreach($Template in $ListofTemplates) 
-{ 
+foreach($Template in $ListofTemplates)
+{
                 $templateID=$Template.id
 
                 $rights = dir MyRmsAdmin:\RightsPolicyTemplate\$Templateid\userright
 
-     $templateName=$Template.DefaultDisplayName 
+     $templateName=$Template.DefaultDisplayName
 
         if ($rights.usergroupname -eq "anyone")
 
@@ -194,10 +199,10 @@ foreach($Template in $ListofTemplates)
 
                            write-host ANYONE  -ForegroundColor Red
                          }
- } 
+ }
 Remove-PSDrive MyRmsAdmin -force
 ```
 
-
 ## Next steps
+
 Go to [phase 3 - client-side configuration](migrate-from-ad-rms-phase3.md).

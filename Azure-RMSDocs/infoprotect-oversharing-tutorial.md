@@ -27,7 +27,7 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
@@ -61,7 +61,7 @@ To complete this tutorial, you need:
 
 4. The Azure Information Protection client (classic) is installed on your Windows computer.
     
-    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. 
+    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. 
     
     If are using the unified labeling client instead of the classic client, see the following instructions that explain how to use PowerShell advanced settings for the equivalent configurations in this tutorial:
     

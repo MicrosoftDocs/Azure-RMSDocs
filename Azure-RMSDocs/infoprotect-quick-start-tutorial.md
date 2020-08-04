@@ -3,10 +3,10 @@
 
 title: Tutorial - Edit the Azure Information Protection policy - AIP
 description: An introduction tutorial that edits the Azure Information Protection policy for your organization, which should take you about 15 minutes to complete.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/13/2020
+ms.date: 07/20/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
@@ -59,21 +59,21 @@ To complete this tutorial, you need:
 
 3. The Azure Information Protection client (classic) is installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
     
-    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. If are using a different labeling client to the classic client, see the [Microsoft 365 Compliance documentation](/microsoft-365/compliance/sensitivity-labels)  for equivalent instructions to this tutorial.
+    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. If are using a different labeling client to the classic client, see the [Microsoft 365 Compliance documentation](/microsoft-365/compliance/sensitivity-labels)  for equivalent instructions to this tutorial.
 
 4. You're signed in to Office apps from one of the following categories:
     
-    - Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when you are assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365).
+    - Office apps minimum version 1805, build 9330.2078 from [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) when you are assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365).
     
-    - Office 365 ProPlus.
+    - [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename).
     
-    - Office Professional Plus 2019.
+    - [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019.
     
-    - Office Professional Plus 2016.
+    - [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016.
     
-    - Office Professional Plus 2013 with Service Pack 1.
+    - [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 with Service Pack 1.
     
-    - Office Professional Plus 2010 with Service Pack 2.
+    - [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 with Service Pack 2.
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 

@@ -64,7 +64,7 @@ For more information about this change, see the blog announcement: [Office 365 M
 
 ## Where can I find information about third-party solutions that integrate with Azure RMS?
 
-Many software vendors already have solutions or are implementing solutions that integrate with Azure Rights Management—and the list is growing rapidly. You might find it useful to check the [RMS-englightened solutions](requirements-applications.md#rms-enlightened-solutions) list and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. Also check the [developer's guide](./develop/developers-guide.md) and post any specific integration questions on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam).
+Many software vendors already have solutions or are implementing solutions that integrate with Azure Rights Management—and the list is growing rapidly. You might find it useful to check the [RMS-enlightened applications](requirements-applications.md#) lists and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. Also check the [developer's guide](./develop/developers-guide.md) and post any specific integration questions on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam).
 
 ## Is there a management pack or similar monitoring mechanism for the RMS connector?
 
@@ -144,7 +144,8 @@ To support this scenario, Exchange Online must be enabled for the Azure Rights M
 For more information about the new capabilities that include supporting all email accounts on all devices, see the following blog post: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 ## What devices and which file types are supported by Azure RMS?
-For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](./requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table for [RMS-enlighted applications](./requirements-applications.md#rms-enlightened-applications).
+
+For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](./requirements.md#client-devices). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the tables for [RMS-enlighted applications](./requirements-applications.md).
 
 The Azure Rights Management service can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure Rights Management provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 
@@ -152,7 +153,7 @@ For a list of file name extensions that are natively supported by Azure Rights M
 
 ## How do I configure a Mac computer to protect and track documents?
 
-First, make sure that you have installed Office for Mac by using the software installation link from https://admin.microsoft.com. For full instructions, see [Download and install or reinstall Office 365 or Office 2019 on a PC or Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+First, make sure that you have installed Office for Mac by using the software installation link from https://admin.microsoft.com. For full instructions, see [Download and install or reinstall Office 365 or Office 2019 on a PC or Mac](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
 Open Outlook and create a profile by using your Office 365 work or school account. Then, create a new message and do the following to configure Office so that it can protect documents and emails by using the Azure Rights Management service:
 

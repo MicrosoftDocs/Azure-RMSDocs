@@ -59,7 +59,7 @@ If you have used the Information Rights Management (IRM) functionality of Exchan
 This step covers installing and configuring the connector, disabling IRM for Exchange and SharePoint, and configuring these servers to use the connector. Finally, if you have imported AD RMS data configuration files (.xml) into Azure Information Protection that were used to protect email messages, you must manually edit the registry on the Exchange Server computers to redirect all trusted publishing domain URLs to the RMS connector.
 
 > [!NOTE]
-> Before you start, check the versions of the on-premises servers that the Azure Rights Management service supports, from [On-premises servers that support Azure RMS](./requirements-servers.md).
+> Before you start, check the versions of the on-premises servers that the Azure Rights Management service supports, from [On-premises servers that support Azure RMS](requirements.md#supported-on-premises-servers-for-azure-rights-management-data-protection).
 
 ### Install and configure the RMS connector
 
@@ -78,28 +78,30 @@ Use the instructions in the [Deploying the Azure Rights Management connector](./
 
     Before you run these commands, substitute your own Azure Rights Management service URL for *\<Your Tenant URL>*.
 
-        $irmConfig = Get-IRMConfiguration
-        $list = $irmConfig.LicensingLocation 
-        $list += "<Your Tenant URL>/_wmcs/licensing"
-        Set-IRMConfiguration -LicensingLocation $list
-    
+    ```ps
+    $irmConfig = Get-IRMConfiguration
+    $list = $irmConfig.LicensingLocation 
+    $list += "<Your Tenant URL>/_wmcs/licensing"
+    Set-IRMConfiguration -LicensingLocation $list
+    ```
+
     Now when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), you should see all your AD RMS cluster licensing URLs and your Azure Rights Management service URL displayed for the *LicensingLocation* parameter.
 
 3.  Now disable IRM features for messages that are sent to internal recipients:
 
-    ```
+    ```ps
     Set-IRMConfiguration -InternalLicensingEnabled $false
     ```
 
 4. Then use the same cmdlet to disable IRM in Microsoft Office Outlook Web App and in Microsoft Exchange ActiveSync:
 
-    ```
+    ```ps
     Set-IRMConfiguration -ClientAccessServerEnabled $false
     ```
 
 5.  Finally, use the same cmdlet to clear any cached certificates:
 
-    ```
+    ```ps
     Set-IRMConfiguration -RefreshServerCertificates
     ```
 

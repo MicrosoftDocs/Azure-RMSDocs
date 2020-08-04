@@ -6,7 +6,7 @@ description: Learn about Active Directory mobile device extensions for AIP
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/28/2020
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.custom: admin
 # Active Directory Rights Management Services Mobile Device Extension
 
  
-Applies To: Windows Server 2019, 2016, 2012 R2, and  2012
+Applies To: Windows Server 2019, 2016, 2012 R2, and 2012
 
 You can download the Active Directory Rights Management Services (AD RMS) mobile device extension from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=43738) and install this extension on top of an existing AD RMS deployment. This lets users  protect and consume sensitive data when their device supports the latest API-enlightened apps. For example, users can do the following:
 - Use the Azure Information Protection app to consume protected text files in different formats (including .txt, .csv, and .xml).
@@ -88,7 +88,7 @@ $TransformRules = @"
 @RuleTemplate = "LdapClaims"
 @RuleName = "Jwt Token"
 c:[Type ==
-"https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
+"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
 Issuer == "AD AUTHORITY"]
  => issue(store = "Active Directory", types =
 ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
@@ -139,16 +139,74 @@ Write-Host "Microsoft Rights Management Mobile Device Extension Configured"
 
 #### Step 2: Authorize apps for your devices
 
-1. Run the following Windows PowerShell command after replacing the variables to add support for the Azure Information Protection app:
+- Run the following Windows PowerShell command after replacing the variables to add support for the **Azure Information Protection** app. Make sure to run both commands in the order shown:
 
 
 ```powershell
 Add-AdfsClient -Name "R<your application name> " -ClientId "<YOUR CLIENT ID >" -RedirectUri @("<YOUR REDIRECT URI >")
 ```
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier '<YOUR CLIENT ID>' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
 
 **Powershell Example**
 ```powershell
 Add-AdfsClient -Name "Fabrikam application for MIP" -ClientId "96731E97-2204-4D74-BEA5-75DCA53566C3" -RedirectUri @("com.fabrikam.MIPAPP://authorize")
+```
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier '96731E97-2204-4D74-BEA5-75DCA53566C3' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+- For the **Azure Information Protection unified labeling client**, run the following Windows PowerShell command to add support for the Azure Information Protection client on your devices:
+
+```powershell
+Add-AdfsClient -Name "Azure Information Protection Client" -ClientId "c00e9d32-3c8d-4a7d-832b-029040e7db99" -RedirectUri @("com.microsoft.azip://authorize")
+Grant-AdfsApplicationPermission -ClientRoleIdentifier "c00e9d32-3c8d-4a7d-832b-029040e7db99" -ServerRoleIdentifier api.rms.rest.com -ScopeName "openid"
+```
+- To support **ADFS on Windows 2016 and 2019** and **ADRMS MDE** for third party products, run the following Windows PowerShell command:
+
+```powershell
+Add-AdfsClient -Name "YOUR APP" -ClientId 'YOUR CLIENT ID' -RedirectUri @("YOUR REDIRECT") 
+Grant-AdfsApplicationPermission -ClientRoleIdentifier 'YOUR CLIENT ID' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+To configure the AIP client on **Windows**, **Mac**, mobile and **Office Mobile** for **consuming HYOK or AD RMS protected content** with **AD FS on Windows Server 2012 R2 and newer**, use the following: 
+
+- For Mac devices (using the RMS sharing app), make sure to run both commands in the order shown:
+
+```powershell
+Add-AdfsClient -Name "RMS Sharing App for macOS" -ClientId "96731E97-2204-4D74-BEA5-75DCA53566C3" -RedirectUri @("com.microsoft.rms-sharing-for-osx://authorize")
+```
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier '96731E97-2204-4D74-BEA5-75DCA53566C3' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+- For iOS devices (using the Azure Information Protection app), make sure to run both commands in the order shown:
+```powershell
+Add-AdfsClient -Name "Azure Information Protection app for iOS" -ClientId "9D7590FB-9536-4D87-B5AA-FAA863DCC3AB" -RedirectUri @("com.microsoft.rms-sharing-for-ios://authorize")
+```
+
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier '9D7590FB-9536-4D87-B5AA-FAA863DCC3AB' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+- For Android devices (using the Azure Information Protection app), make sure to run both commands in the order shown:
+```powershell
+Add-AdfsClient -Name "Azure Information Protection app for Android" -ClientId "ECAD3080-3AE9-4782-B763-2DF1B1373B3A" -RedirectUri @("com.microsoft.rms-sharing-for-android://authorize")
+```
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier 'ECAD3080-3AE9-4782-B763-2DF1B1373B3A' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+Run the following PowerShell commands to add support for Microsoft Office apps on your devices:
+- For Mac, iOS, Android devices (make sure to run both commands in the order shown):
+
+```powershell
+Add-AdfsClient –Name "Office for Mac and Office Mobile" –ClientId "d3590ed6-52b3-4102-aeff-aad2292ab01c" –RedirectUri @("urn:ietf:wg:oauth:2.0:oob")
+```
+
+```powershell
+Set-AdfsClient -TargetClientId d3590ed6-52b3-4102-aeff-aad2292ab01c -RedirectUri "urn:ietf:wg:oauth:2.0:oob","launch-word://com.microsoft.Office.Word","launch-excel://com.microsoft.Office.Excel","launch-ppt://com.microsoft.Office.Powerpoint"
 ```
 
 ### Specifying the DNS SRV records for the AD RMS mobile device extension
@@ -253,3 +311,4 @@ Repeat this procedure on all the nodes in your RMS cluster.
 
 Find out more about Azure Information Protection, make contact with other AIP customers, and with AIP product managers using the [API yammer group](https://www.yammer.com/askipteam/). 
 
+"
