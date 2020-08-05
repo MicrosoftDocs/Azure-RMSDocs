@@ -176,16 +176,25 @@ See also: [Office Applications Service Description](https://technet.microsoft.co
 
 The following Office client suites support protecting files and emails on Windows computers by using the Azure Rights Management service:
 
-|Office version  |Support details  |
-|---------|---------|
-|[**Office 365 Business or Microsoft 365 Business**     |  Office apps minimum version 1805, build 9330.2078, when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)       |
-|**Office 365 ProPlus**   | The following editions of Office are included with most, but not all, Office 365 subscriptions that include data protection from Azure Information Protection. </br>Check your subscription information to see if Office 365 ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). </br></br>- Office 365 ProPlus 2019 </br>- Office 365 ProPlus 2016 </br>- Office 365 ProPlus 2013 </br>- Office 365 ProPlus 2010 with Service Pack 2       |
+- **Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business** when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
+
+- **Office 365 ProPlus**
+
+    These editions of Office are included with most but not all Office 365 subscriptions that include data protection from Azure Information Protection. Check your subscription information to see if Office 365 ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+
+- **Office Professional Plus 2019**
+
+- **Office Professional Plus 2016**
+
+- **Office Professional Plus 2013**
+
+- **Office Professional Plus 2010 with Service Pack 2**
 
 All editions of Office (with the exception of Office 2007) support consuming protected content.
 
-#### Azure Rights Management service with Office 365 ProPlus 2010
+#### Azure Rights Management service with Office Professional Plus 2010 and Service Pack 2 or Office Professional 2010 with Service Pack 2
 
-When you use the Azure Rights Management service with Office 365 ProPlus 2010 and Service Pack 2 or Office Professional 2010 with Service Pack 2, you must also have the AIP client for Windows.
+When you use the Azure Rights Management service with Office Professional Plus 2010 and Service Pack 2 or Office Professional 2010 with Service Pack 2, you must also have the AIP client for Windows.
 
 Additionally, this configuration:
 

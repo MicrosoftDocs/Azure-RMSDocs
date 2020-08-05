@@ -71,13 +71,13 @@ To complete this tutorial, you need:
     
     - Office 365 ProPlus.
     
-    - Office 365 ProPlus 2019.
+    - Office Professional Plus 2019.
     
-    - Office 365 ProPlus 2016.
+    - Office Professional Plus2016.
     
-    - Office 365 ProPlus 2013 with Service Pack 1.
+    - Office Professional Plus 2013 with Service Pack 1.
     
-    - Office 365 ProPlus 2010 with Service Pack 2.
+    - Office Professional Plus 2010 with Service Pack 2.
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 
