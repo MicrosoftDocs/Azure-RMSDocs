@@ -73,7 +73,7 @@ To complete this tutorial, you need:
     
     - Office Professional Plus 2019.
     
-    - Office Professional Plus2016.
+    - Office Professional Plus 2016.
     
     - Office Professional Plus 2013 with Service Pack 1.
     
