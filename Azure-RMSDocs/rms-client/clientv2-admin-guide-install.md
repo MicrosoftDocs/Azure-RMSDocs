@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -42,7 +42,7 @@ The following prerequisites for the AIP unified labeling client are in addition 
 
 |Requirement  |Description  |
 |---------|---------|
-|**Microsoft .NET Framework 4.6.2**     | The full installation of the Azure Information Protection unified labeling client by default, requires a minimum version of Microsoft .NET Framework 4.6.2. </br></br>If this framework is missing, the setup wizard from the executable installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted. </br></br>**Note:** Although not recommended, you can bypass this prerequisite when you use the setup wizard by using a [custom installation parameter](#more-information-about-the-downgradedotnetrequirement-installation-parameter).        |
+|**Microsoft .NET Framework 4.6.2**     | The full installation of the Azure Information Protection unified labeling client by default, requires a minimum version of Microsoft .NET Framework 4.6.2. </br></br>If this framework is missing, the setup wizard from the executable installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted.       |
 |**Microsoft .NET Framework 4.5.2**     | If the Azure Information Protection Viewer is installed separately, the Viewer application requires a minimum version of Microsoft .NET Framework 4.5.2. </br></br>**Important:** If this framework is missing for the Viewer, the executable installer does *not* download or install it.        |
 |**Windows PowerShell minimum version 4.0**     |   The PowerShell module for the client requires a minimum version of Windows PowerShell 4.0, which might need to be installed on older operating systems. </br></br>For more information, see [How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). </br></br>**Important:** The installer does *not* check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type `$PSVersionTable` in a PowerShell session.      |
 |**Screen resolution greater than 800x600**    |     Resolutions 800x600 and lower can't fully display the **Classify and protect - Azure Information Protection** dialog box when you right-click a file or folder in File Explorer.    |
@@ -207,7 +207,10 @@ If you use Intune for your software deployment method, use these instructions to
     You may need to specify additional installation parameters. For more information, see the [executable installer instructions](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).
 
     > [!NOTE]
-    > By default, the **Help improve Azure Information Protection by sending usage statistics to Microsoft** installation option is enabled. To disable this option, make sure to specify **ENABLETELEMETRY=0** instead of **AllowTelemetry=0**.
+    > By default, the **Help improve Azure Information Protection by sending usage statistics to Microsoft** installation option is enabled. To disable this option, make sure to do one of the following:
+    >
+    >- During installation, specify **AllowTelemetry=0**
+    >- After installation, update the registry key as follows: **EnableTelemetry=0**.
     >
 
 ## Next steps
