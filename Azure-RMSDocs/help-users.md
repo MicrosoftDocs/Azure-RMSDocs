@@ -6,7 +6,7 @@ description: Information to help you provide guidance for users, administrators,
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -87,7 +87,7 @@ If you are using the Azure Rights Management service and have not installed the 
 > [!TIP]
 > To find application-specific help and instructions for using information protection with these applications, search for **IRM** and the application name and version.
 
-#### To protect a document in Word from Microsoft 365 Apps for Enterprise
+#### To protect a document in Word from Office 365 ProPlus
 
 1.  Within Microsoft Word, create a document.
 
@@ -106,7 +106,7 @@ For example, a usage right of View-only does not allow the user to edit or save 
 
 The usage rights are displayed at the top of the document by using a restriction banner. The banner might display the permissions that are applied to the document, or it might provide a link to display them.
 
-#### To protect an email message using Outlook from Microsoft 365 Apps for Enterprise, connecting to Exchange Online
+#### To protect an email message using Outlook from Office 365 ProPlus, connecting to Exchange Online
 
 1.  Within Outlook, create a mail message that is addressed to a recipient within your organization.
 

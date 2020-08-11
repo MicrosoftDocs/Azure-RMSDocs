@@ -57,7 +57,7 @@ You must have a Windows Server computer to run the scanner, which has the follow
 |---------|---------|
 |**Processor**     |4 core processors         |
 |**RAM**     |8 GB         |
-|**Disk space**     |10 GB free space (average) for temporary files. </br></br>The scanner requires sufficient disk space to create temporary files for each file that it scans, four files per core. </br></br>The recommended disk space of 10 GB allows for 4 core processors scanning 16 files that each have a file size of 625 MB.
+|**Disk space**     |10-GB free space (average) for temporary files. </br></br>The scanner requires sufficient disk space to create temporary files for each file that it scans, four files per core. </br></br>The recommended disk space of 10 GB allows for 4 core processors scanning 16 files that each have a file size of 625 MB.
 |**Operating system**     |- Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Note:** For testing or evaluation purposes in a non-production environment, you can also use any Windows operating system that is [supported by the Azure Information Protection client](requirements.md#client-devices).
 |**Network connectivity**     | Your scanner computer can be a physical or virtual computer with a fast and reliable network connection to the data stores to be scanned. </br></br> If internet connectivity is not possible because of your organization policies, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations). </br></br>Otherwise, make sure that this computer has internet connectivity that allows the following URLs over HTTPS (port 443):</br><br />-  \*.aadrm.com <br />-  \*.azurerms.com<br />-  \*.informationprotection.azure.com <br /> - informationprotection.hosting.portal.azure.net <br /> - \*.aria.microsoft.com <br />-  \*.protection.outlook.com |
 | ||
@@ -96,7 +96,7 @@ To store the scanner configuration data, use an SQL server with the following re
 
 - **An account with Sysadmin role to install the scanner.**
 
-    This enables the installation process to automatically create the scanner configuration database and grant the required **db_owner** role to the service account that runs the scanner.
+    The Sysadmin role enables the installation process to automatically create the scanner configuration database and grant the required **db_owner** role to the service account that runs the scanner.
 
     If you cannot be granted the Sysadmin role or your organization policies require databases to be created and configured manually, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations).
 
@@ -119,18 +119,18 @@ The disk size for the scanner configuration database will vary for each deployme
 100 KB + <file count> *(1000 + 4* <average file name length>)
 ```
 
-For example, to scan 1 million files that have an average file name length of 250 bytes, allocate 2 GB disk space.
+For example, to scan 1 million files that have an average file name length of 250 bytes, allocate 2-GB disk space.
 
 For multiple scanners:
 
 - **Up to 10 scanners,** use:
 
     - 4 core processors
-    - 8 GB RAM recommended
+    - 8-GB RAM recommended
 
 - **More than 10 scanners** (maximum 40), use:
     - 8 core processes
-    - 16 GB RAM recommended
+    - 16-GB RAM recommended
 
 ## Azure Information Protection client requirements
 
@@ -174,12 +174,16 @@ For more information, see [File types supported by the Azure Information Protect
 
 ## File path requirements
 
-To scan files, your file paths must have a maximum of 260 characters, unless the scanner is installed on Windows 2016 and the computer is configured to support long paths
+By default, to scan files, your file paths must have a maximum of 260 characters.
 
-Windows 10 and Windows Server 2016 support path lengths greater than 260 characters with the following [group policy setting](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths**
+To scan files with file paths of more than 260 characters, install the scanner on a computer with one of the following Windows versions, and configure the computer as needed:
 
-For more information about supporting long file paths, see the [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.
-
+|Windows version  |Description  |
+|---------|---------|
+|**Windows 2016 or later**     |   Configure the computer to support long paths      |
+|**Windows 10 or Windows Server 2016**     | Define the following [group policy setting](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths**.    </br></br>For more information long file path support in these versions, see the [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.    |
+|**Windows 10, version 1607 or later**     |  Opt in for the updated **MAX_PATH** functionality. For more information, see [Enable Long Paths in Windows 10 versions 1607 and later](https://docs.microsoft.com/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
+| | |
 ## Usage statistics requirements
 
 Disable usage statistics using one of the following methods:
@@ -256,7 +260,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 
 #### Create a user and grant db_owner rights manually
 
-To create a user and grant db_owner rights on this database, ask the Sysadmin to do the following:
+To create a user and grant db_owner rights on this database, ask the Sysadmin to perform the following steps:
 
 1. Create a DB for scanner:
 
