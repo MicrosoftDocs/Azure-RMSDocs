@@ -2,7 +2,7 @@
 # required metadata
 
 title: How to register your app with Azure AD - AIP
-description: Describes the basics of user authentication for your RMS-enabled app.
+description: Learn about app registration and RMS enablement in the Azure portal and user authentication with the Azure Active Directory Authentication Library (ADAL).
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin

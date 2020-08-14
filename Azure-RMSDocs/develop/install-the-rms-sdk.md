@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install the SDK | Azure RMS
-description: This topic guides you through installing the developer tools.
+description: See how to download and install the Rights Management Services SDK 2.1 developer tools and Active Directory Rights Management Services Client 2.1.
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin

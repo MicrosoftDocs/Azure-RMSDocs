@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Information Protection SDK 4.2 developer guidance | Microsoft Docs
-description: A collection of how-to topics for developing the AIP SDK 4.2
+description: See how Microsoft Rights Management SDK 4.2 helps you build AD RMS-enabled applications that leverage Active Directory Right Management Services (AD RMS).
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin
