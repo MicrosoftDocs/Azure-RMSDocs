@@ -3,10 +3,10 @@
 
 title: Download & install the Azure Information Protection client
 description: Instructions for users to install the Azure Information Protection client for Windows, so that you can classify and protect your documents and emails. 
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 05/03/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -39,24 +39,29 @@ In addition:
 - The Azure Information Protection client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, your computer must be restarted.
 
 
-## To download and install the Azure Information Protection client    
+## To download and install the Azure Information Protection client
 
+The Azure Information Protection classic client is being deprecated in March, 2021. 
+
+To deploy the AIP classic client, open a support ticket to get download access.
+
+<!--
 1. Go to the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
 
     This page has links for all the popular devices you might use, so that you can easily download a viewer app if it's needed to open protected files. If you're not a local administrator for your PC, you can still install the viewer app for Windows. But these instructions are to install the full client, which lets you label and protect files. 
 
 2. Locate the **Azure Information Protection client** section and click the Windows icon. Click **Download** and save the **AzInfoProtection.exe** file.     
+-->
+1. Run the **AzInfoProtection.exe** file to start the installation. If you are prompted to continue, click **Yes**.    
 
-3. Run the executable file that was downloaded. If you are prompted to continue, click **Yes**.    
-
-4. On the **Install the Azure Information Protection client** page:     
+1. On the **Install the Azure Information Protection client** page:     
     - Select the option to install a demo policy if you cannot connect to the cloud but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy.    
 
     - Click **I agree** when you have read the license terms and conditions.    
 
-5. If you are prompted to continue, click **Yes**, and wait for the installation to finish.    
+1. If you are prompted to continue, click **Yes**, and wait for the installation to finish.    
 
-6. Click **Close**. Before you start to use the Azure Information Protection client:    
+1. Click **Close**. Before you start to use the Azure Information Protection client:    
 
     - If your computer runs Office 2010, restart your computer and then go to the next section for your final step.    
         
