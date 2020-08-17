@@ -2,7 +2,7 @@
 # required metadata
 
 title: Release notes
-description: SDK updates by revision and other developer information.
+description: See release notes for the Microsoft Rights Management Service SDK v2.1 October 2019 and previous updates.
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin

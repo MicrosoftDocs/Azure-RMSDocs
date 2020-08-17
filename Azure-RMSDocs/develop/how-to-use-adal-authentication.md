@@ -2,7 +2,7 @@
 # required metadata
 
 title: ADAL authentication for your RMS enabled application | Azure RMS
-description: Outlines the process for authentication with ADAL
+description: See how to authenticate your app with Azure RMS by using Azure Active Directory Authentication Library (ADAL).
 keywords: authentication, RMS, ADAL
 author: msmbaldwin
 ms.author: mbaldwin
