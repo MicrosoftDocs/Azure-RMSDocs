@@ -75,35 +75,42 @@ The following steps guide you in setting up your RMS server and include:
 
 4. **EnterpriseCertification**
 
-        HKEY_LOCAL_MACHINE
-          SOFTWARE
-            Microsoft
-              MSIPC
-                ServiceLocation
-                  EnterpriseCertification
+  ```console
+  HKEY_LOCAL_MACHINE
+    SOFTWARE
+      Microsoft
+        MSIPC
+          ServiceLocation
+            EnterpriseCertification
+  ```
 
    **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
 5. **EnterprisePublishing**
 
-        HKEY_LOCAL_MACHINE
-          SOFTWARE
-            Microsoft
-              MSIPC
-                ServiceLocation
-                  EnterprisePublishing
-                  
+  ```console
+  HKEY_LOCAL_MACHINE
+    SOFTWARE
+      Microsoft
+        MSIPC
+          ServiceLocation
+            EnterprisePublishing
+  ```
+
    **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 > [!NOTE]
 > By default, these keys do not exist in the registry and must be created.
-> 
+>
+ 
 > [!IMPORTANT]
-> If you are running a 32-bit application on a 64-bit version of Windows, you must set these keys in the following key location:<p>
->   ```    
->   HKEY_LOCAL_MACHINE
->     SOFTWARE
->       Wow6432Node
->         Microsoft
->           MSIPC
->             ```
+> If you are running a 32-bit application on a 64-bit version of Windows, you must set these keys in the following key location:  
+>
+
+```console
+HKEY_LOCAL_MACHINE  
+  SOFTWARE  
+    Wow6432Node  
+      Microsoft  
+        MSIPC  
+```

@@ -24,7 +24,7 @@ ms.custom: dev, has-adal-ref
 
 ---
 
-# Developer guidance
+# Rights Management Services SDK 2.1 developer guidance
 
 This section covers specific guidance for several important development scenarios as well as general information about developing with this SDK. The scenarios in this section are specific to this release of the Rights Management Services SDK 2.1 and may be altered in subsequent releases.
 - [How-to: use ADAL authentication](how-to-use-adal-authentication.md) - Authentication with Azure RMS for your app using Azure Active Directory Authentication Library (ADAL).
