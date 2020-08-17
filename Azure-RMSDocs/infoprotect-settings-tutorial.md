@@ -6,7 +6,7 @@ description: An introduction tutorial that steps you through configuring Azure I
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 08/17/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -32,6 +32,11 @@ ms.custom: admin
 
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
+> **To deploy the AIP classic client,** open a support ticket to get download access.
+
+> [!TIP]
+> If are using a different labeling client to the classic client, see the Microsoft 365 Compliance documentation for information about policy settings for sensitivity labels. For example, [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
@@ -59,11 +64,7 @@ To complete this tutorial, you need:
     
     These steps are covered in the [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
 
-3. The Azure Information Protection client (classic) is installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
-    
-    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. 
-    
-    If are using a different labeling client to the classic client, see the Microsoft 365 Compliance documentation for information about policy settings for sensitivity labels. For example, [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+3. The Azure Information Protection client (classic) installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
 
 4. You are signed in to Office apps from one of the following categories:
     
@@ -81,7 +82,7 @@ To complete this tutorial, you need:
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
 
-Let's get started.
+Let's get started. Continue with [Edit the Azure Information Protection policy](#edit-the-azure-information-protection-policy).
 
 ## Edit the Azure Information Protection policy
 
