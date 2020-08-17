@@ -3,10 +3,10 @@
 
 title: Tutorial - Use Azure Information Protection to control oversharing - AIP
 description: An introduction tutorial to configure and see in action advanced client settings for the Azure Information Protection client to warn, prompt for justification, or block messages from being sent from Outlook.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 08/17/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,6 +31,8 @@ ms.custom: admin
 
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
+> **To deploy the AIP classic client,** open a support ticket to get download access.
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
@@ -53,24 +55,28 @@ To complete this tutorial, you need:
     
     If you don't have a subscription that includes this plan, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.
 
-2. The Azure Information Protection pane is added to the Azure portal and you have at least one label published in the Azure Information Protection global policy.
+1. The Azure Information Protection pane is added to the Azure portal and you have at least one label published in the Azure Information Protection global policy.
     
     Although this tutorial uses the default label, **General**, you can substitute this label for another one if you prefer. If you need help adding the Azure Information Protection pane, or don't yet have any labels published to the global policy, see [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
 
-3. A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you can sign in to Outlook. Be prepared to restart Outlook multiple times during this tutorial.
+1. A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you can sign in to Outlook. Be prepared to restart Outlook multiple times during this tutorial.
 
-4. The Azure Information Protection client (classic) is installed on your Windows computer.
-    
-    You can install the classic client by going to the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=53018) and download **AzInfoProtection.exe** from the Azure Information Protection page. 
-    
-    If are using the unified labeling client instead of the classic client, see the following instructions that explain how to use PowerShell advanced settings for the equivalent configurations in this tutorial:
-    
-    - Admin guide instructions: [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - Video: [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
+1. The Azure Information Protection client (classic) installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
 
-For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
+> [!TIP]
+> For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
+> 
+Let's get started. Continue with [Identify a label ID for testing](#identify-a-label-id-for-testing).
 
-Let's get started.
+**Unified labeling client**
+
+If are using the unified labeling client instead of the classic client, see the following instructions that explain how to use PowerShell advanced settings for the equivalent configurations in this tutorial:
+    
+- Admin guide instructions: [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+
+- Video: [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
+
+
 
 ## Identify a label ID for testing
 

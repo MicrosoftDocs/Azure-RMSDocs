@@ -3,10 +3,10 @@
 
 title: Azure Information Protection unified labeling client admin guide
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Azure Information Protection unified labeling client for Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/16/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -277,7 +277,7 @@ You can use any of the following options to uninstall the client:
 
 - Rerun the executable (for example, **AzInfoProtection_UL.exe**), and from the **Modify Setup** page, click **Uninstall**. 
 
-- Run the executable with **/uninstall**. For example: `AzInfoProtection.exe /uninstall`
+- Run the executable with **/uninstall**. For example: `AzInfoProtection_UL.exe /uninstall`
 
 ## Next steps
 To install the client, see [Install the Azure Information Protection unified labeling client for users](clientv2-admin-guide-install.md).
