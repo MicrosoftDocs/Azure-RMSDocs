@@ -16,7 +16,7 @@ ms.service: information-protection
 
 ---
 
-# Overview
+# Overview of Rights Management SDK 4.2
 
 [!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 

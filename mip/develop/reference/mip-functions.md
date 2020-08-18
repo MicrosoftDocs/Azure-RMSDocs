@@ -7,9 +7,7 @@ ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
 ---
-# Functions
-
-
+# Functions (C++) 
 
 ## Namespace mip
 

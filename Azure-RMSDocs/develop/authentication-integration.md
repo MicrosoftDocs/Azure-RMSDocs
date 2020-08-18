@@ -73,9 +73,9 @@ and comes from the previous registration step via the Azure portal.
 > [!NOTE]
 > **Scope** is not currently used but may be and is therefore reserved for future use.
 
-    Android: `msauth://packagename/Base64UrlencodedSignature`
+Android: `msauth://packagename/Base64UrlencodedSignature`
 
-    iOS: `<app-scheme>://<bundle-id>`
+iOS: `<app-scheme>://<bundle-id>`
 
 > [!NOTE]
 > If your app does not follow these guidelines, Azure RMS and Azure AD workflows are likely to fail and will not be supported by Microsoft.com. Further, the Rights Management License Agreement (RMLA) may be violated if an invalid Client Id is used in a production app.

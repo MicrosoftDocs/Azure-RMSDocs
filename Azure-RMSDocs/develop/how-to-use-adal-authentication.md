@@ -60,60 +60,63 @@ This topic contains two approaches to authentication with corresponding code exa
 
 To configure you RMS client, add a call to [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx) right after calling [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) to configure the RMS client. Use the following code snippet as an example.
 
-      C++
-      IpcInitialize();
+```cpp
+IpcInitialize();
 
-      IPC_AAD_APPLICATION_ID applicationId = { 0 };
-      applicationId.cbSize = sizeof(IPC_AAD_APPLICATION_ID);
-      applicationId.wszClientId = L"GUID-provided-by-AAD-for-your-app-(no-brackets)";
-      applicationId.wszRedirectUri = L"RedirectionUriWeProvidedAADForOurApp://authorize";
-      HRESULT hr = IpcSetGlobalProperty(IPC_EI_APPLICATION_ID, &applicationId);
-      if (FAILED(hr)) {
-        //Handle the error
-      }
+IPC_AAD_APPLICATION_ID applicationId = { 0 };
+applicationId.cbSize = sizeof(IPC_AAD_APPLICATION_ID);
+applicationId.wszClientId = L"GUID-provided-by-AAD-for-your-app-(no-brackets)";
+applicationId.wszRedirectUri = L"RedirectionUriWeProvidedAADForOurApp://authorize";
+HRESULT hr = IpcSetGlobalProperty(IPC_EI_APPLICATION_ID, &applicationId);
+if (FAILED(hr)) {
+  //Handle the error
+}
+```
 
 ## External Authentication
 
 Use this code as an example of how to manage your own authentication tokens.
-      C++
-      extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Parameters, __out wstring wstrToken) throw();
 
-      HRESULT GetLicenseKey(PCIPC_BUFFER pvLicense, __in LPVOID pContextForAdal, __out IPC_KEY_HANDLE &hKey)
-      {
-          IPC_OAUTH2_CALLBACK pfGetADALToken =
-          [](LPVOID pvContext, PIPC_NAME_VALUE_LIST pParameters, IPC_AUTH_TOKEN_HANDLE* phAuthToken) -> HRESULT
-          {
-              wstring wstrToken;
-              HRESULT hr = GetADALToken(pvContext, *pParameters, wstrToken);
-              return SUCCEEDED(hr) ? IpcCreateOAuth2Token(wstrToken.c_str(), OUT phAuthToken) : hr;
-          };
+```cpp
+extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Parameters, __out wstring wstrToken) throw();
 
-          IPC_OAUTH2_CALLBACK_INFO callbackCredentialContext =
-          {
-              sizeof(IPC_OAUTH2_CALLBACK_INFO),
-              pfGetADALToken,
-              pContextForAdal
-          };
+HRESULT GetLicenseKey(PCIPC_BUFFER pvLicense, __in LPVOID pContextForAdal, __out IPC_KEY_HANDLE &hKey)
+{
+    IPC_OAUTH2_CALLBACK pfGetADALToken =
+    [](LPVOID pvContext, PIPC_NAME_VALUE_LIST pParameters, IPC_AUTH_TOKEN_HANDLE* phAuthToken) -> HRESULT
+    {
+        wstring wstrToken;
+        HRESULT hr = GetADALToken(pvContext, *pParameters, wstrToken);
+        return SUCCEEDED(hr) ? IpcCreateOAuth2Token(wstrToken.c_str(), OUT phAuthToken) : hr;
+    };
 
-          IPC_CREDENTIAL credentialContext =
-          {
-              IPC_CREDENTIAL_TYPE_OAUTH2,
-              NULL
-          };
-          credentialContext.pcOAuth2 = &callbackCredentialContext;
+    IPC_OAUTH2_CALLBACK_INFO callbackCredentialContext =
+    {
+        sizeof(IPC_OAUTH2_CALLBACK_INFO),
+        pfGetADALToken,
+        pContextForAdal
+    };
 
-          IPC_PROMPT_CTX promptContext =
-          {
-              sizeof(IPC_PROMPT_CTX),
-              NULL,
-              IPC_PROMPT_FLAG_SILENT | IPC_PROMPT_FLAG_HAS_USER_CONSENT,
-              NULL,
-              &credentialContext
-          };
+    IPC_CREDENTIAL credentialContext =
+    {
+        IPC_CREDENTIAL_TYPE_OAUTH2,
+        NULL
+    };
+    credentialContext.pcOAuth2 = &callbackCredentialContext;
 
-          hKey = 0L;
-          return IpcGetKey(pvLicense, 0, &promptContext, NULL, &hKey);
-      }
+    IPC_PROMPT_CTX promptContext =
+    {
+        sizeof(IPC_PROMPT_CTX),
+        NULL,
+        IPC_PROMPT_FLAG_SILENT | IPC_PROMPT_FLAG_HAS_USER_CONSENT,
+        NULL,
+        &credentialContext
+    };
+
+    hKey = 0L;
+    return IpcGetKey(pvLicense, 0, &promptContext, NULL, &hKey);
+}
+```
 
 ## Related topics
 
