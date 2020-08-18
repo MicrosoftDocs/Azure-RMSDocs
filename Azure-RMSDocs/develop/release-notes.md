@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Rrelease notes for the Rights Management Services SDK v4.x
-description: Outlines important changes and features in this and previous versions.
+title: Release notes for the Rights Management Services SDK v4.x
+description: See what's new and release notes for the Microsoft Rights Management Service SDK v4.x July 2017 and previous releases.
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess

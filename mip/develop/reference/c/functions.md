@@ -9,7 +9,7 @@ ms.author: mbaldwin
 ms.date: 4/16/2020
 ---
 
-# Functions
+# Functions (C)
 
 ## mip_cc_auth_callback
 
