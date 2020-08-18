@@ -2,7 +2,7 @@
 # required metadata
 
 title: How-to set the API security mode | Azure RMS
-description: Choose which security mode your File API application runs.
+description: Learn how to set the API security mode by using the IpcSetGlobalProperty function to choose which security mode your File API application runs in.
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin

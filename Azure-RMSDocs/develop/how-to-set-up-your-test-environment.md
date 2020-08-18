@@ -2,7 +2,7 @@
 # required metadata
 
 title: Testing your application | Azure RMS
-description: Instructions on how to setup your application for testing.
+description: Learn how to prepare for application testing with either Azure RMS or an RMS server running on Windows Server.
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin
