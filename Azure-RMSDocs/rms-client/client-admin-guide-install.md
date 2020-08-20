@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/08/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -34,6 +34,8 @@ ms.custom: admin
 
 >[!NOTE]
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
+> **To deploy the AIP classic client,** open a support ticket to get download access.
 
 Before you install the Azure Information Protection client on your enterprise network, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../requirements.md).
 
@@ -106,11 +108,15 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 Use the following instructions to install the client when you're not using the Microsoft Update catalog, or deploying the .msi by using a central deployment method such as Intune.
 
+<!--
 1. Download the executable version Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
     If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment.
+-->
 
-2. For a default installation, simply run the executable, for example, **AzInfoProtection.exe**. However, to see the installation options, first run the executable with **/help**: `AzInfoProtection.exe /help`
+1. For a default installation, simply run the executable, for example, **AzInfoProtection.exe**. 
+
+    To view other installation options, first run the executable with **/help**: `AzInfoProtection.exe /help`
 
     Example to silently install the client: `AzInfoProtection.exe /quiet`
 
@@ -124,9 +130,9 @@ Use the following instructions to install the client when you're not using the M
 
     - **AllowTelemetry=0**: Use this parameter to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**.
 
-3. If you are installing interactively, select the option to install a **demo policy** if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy.
+1. If you are installing interactively, select the option to install a **demo policy** if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy.
 
-4. To complete the installation:
+1. To complete the installation:
 
     - If your computer runs Office 2010, restart your computer.
 
@@ -134,7 +140,7 @@ Use the following instructions to install the client when you're not using the M
 
     - For other versions of Office, restart any Office applications and all instances of File Explorer.
 
-5. You can confirm that the installation was successful by checking the install log file, which by default is created in the %temp% folder. You can change this location with the **/log** installation parameter.
+1. You can confirm that the installation was successful by checking the install log file, which by default is created in the %temp% folder. You can change this location with the **/log** installation parameter.
 
     This file has the following naming format: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
 
@@ -170,7 +176,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
     The remainin' string is the value to specify for your ServiceLocation parameter.
 
-Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
+Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 #### More information about the DowngradeDotNetRequirement installation parameter
 
@@ -190,11 +196,13 @@ For central deployment, use the following information that is specific to the .m
 
 If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/deploy-use/add-apps).
 
+<!--
+
 1. Download the .msi version of the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). 
     
     If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment. 
-
-2. For each computer that runs the .msi file, you must make sure that the following software dependencies are in place. For example, package these with the .msi version of the client or only deploy to computers that meet these dependencies:
+-->
+1. For each computer that runs the .msi file, you must make sure that the following software dependencies are in place. For example, package these with the .msi version of the client or only deploy to computers that meet these dependencies:
     
     |Office version|Operating system|Software|Action|
     |--------------------|--------------|----------------|---------------------|
@@ -206,15 +214,20 @@ If you use Intune for your software deployment method, use these instructions to
     |Office 2010|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
     |Office 2010|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
 
-3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer) with one exception:
+1. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).
 
-    - Instead of **AllowTelemetry=0** to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**, specify **ENABLETELEMETRY=0**.
+    > [!NOTE]
+    > By default, the **Help improve Azure Information Protection by sending usage statistics to Microsoft** installation option is enabled. To disable this option, make sure to do one of the following:
+    >
+    >- During installation, specify **AllowTelemetry=0**
+    >- After installation, update the registry key as follows: **EnableTelemetry=0**.
+    >
 
 ## How to install the Azure Information Protection scanner
 
 The PowerShell module that is included with the Azure Information Protection client has cmdlets to install and configure the scanner. However, to use the scanner, you must install the full version of the client and cannot install just the PowerShell module.
 
-To install the client for the scanner, follow the same instructions in the preceding sections. You're then ready to configure and then install the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-aip-scanner.md).
+To install the client for the scanner, follow the same instructions in the preceding sections. You're then ready to configure and then install the scanner. For more information, see [What is the Azure Information Protection classic scanner?](../deploy-aip-scanner-classic.md).
 
 ## Next steps
 

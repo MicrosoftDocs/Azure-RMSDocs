@@ -2,7 +2,7 @@
 # required metadata
 
 title: How to register your app with Azure AD - AIP
-description: Describes the basics of user authentication for your RMS-enabled app.
+description: Learn about app registration and RMS enablement in the Azure portal and user authentication with the Azure Active Directory Authentication Library (ADAL).
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin
@@ -73,9 +73,9 @@ and comes from the previous registration step via the Azure portal.
 > [!NOTE]
 > **Scope** is not currently used but may be and is therefore reserved for future use.
 
-    Android: `msauth://packagename/Base64UrlencodedSignature`
+Android: `msauth://packagename/Base64UrlencodedSignature`
 
-    iOS: `<app-scheme>://<bundle-id>`
+iOS: `<app-scheme>://<bundle-id>`
 
 > [!NOTE]
 > If your app does not follow these guidelines, Azure RMS and Azure AD workflows are likely to fail and will not be supported by Microsoft.com. Further, the Rights Management License Agreement (RMLA) may be violated if an invalid Client Id is used in a production app.
@@ -85,7 +85,7 @@ and comes from the previous registration step via the Azure portal.
 
 **Android user authentication** - for more information, see [Android code examples](android-code.md), **Step 2** of the first scenario, "Consuming an RMS protected file".
 
-
+```java
     class MsipcAuthenticationCallback implements AuthenticationRequestCallback
     {
     ...
@@ -97,8 +97,8 @@ and comes from the previous registration step via the Azure portal.
         String authority = authenticationParametersMap.get("oauth2.authority");
         String resource = authenticationParametersMap.get("oauth2.resource");
         String userId = authenticationParametersMap.get("userId");
-        mClientId = “12345678-ABCD-ABCD-ABCD-ABCDEFGHIJ”; // get your registered Azure AD application ID here
-        mRedirectUri = “urn:ietf:wg:oauth:2.0:oob”;
+        mClientId = "12345678-ABCD-ABCD-ABCD-ABCDEFGH12"; // get your registered Azure AD application ID here
+        mRedirectUri = "urn:ietf:wg:oauth:2.0:oob";
         final String userHint = (userId == null)? "" : userId;
         AuthenticationContext authenticationContext = App.getInstance().getAuthenticationContext();
         if (authenticationContext == null || !authenticationContext.getAuthority().equalsIgnoreCase(authority))
@@ -156,12 +156,12 @@ and comes from the previous registration step via the Azure portal.
                             }
                         });
                          }
-
+```
 
 **iOS/OS X user authentication** - for more information, see [iOS/OS X code examples](ios-os-x-code-examples.md),
 *Step 2 of the first scenario, "Consuming an RMS protected file".*
 
-
+```objectivec
     // AuthenticationCallback holds the necessary information to retrieve an access token.
     @interface MsipcAuthenticationCallback : NSObject<MSAuthenticationCallback>
 
@@ -177,11 +177,11 @@ and comes from the previous registration step via the Azure portal.
     ADAuthenticationError *error;
     ADAuthenticationContext* context = [ADAuthenticationContext authenticationContextWithAuthority:authenticationParameters.authority error:&error];
 
-    NSString *appClientId = @”12345678-ABCD-ABCD-ABCD-ABCDEFGHIJ”;
+    NSString *appClientId = @"12345678-ABCD-ABCD-ABCD-ABCDEFGH12";
 
     // get your registered Azure AD application ID here
 
-    NSURL *redirectURI = [NSURL URLWithString:@”ms-sample://com.microsoft.sampleapp”];
+    NSURL *redirectURI = [NSURL URLWithString:@"ms-sample://com.microsoft.sampleapp"];
 
     // get your <app-scheme>://<bundle-id> here
     // Retrieve token using ADAL
@@ -204,13 +204,12 @@ and comes from the previous registration step via the Azure portal.
 
         ];
     }
-
-
+```
 
 **Linux user authentication** - for more information, see [Linux code examples](linux-c-code-examples.md).
 
 
-
+```cpp
     // Class Header
     class AuthCallback : public IAuthenticationCallback {
     private:
@@ -270,3 +269,4 @@ and comes from the previous registration step via the Azure portal.
         throw;
       }
     }
+```

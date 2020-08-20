@@ -2,7 +2,7 @@
 # required metadata
 
 title: PowerShell for protection templates - Azure Information Protection
-description: Use PowerShell to create and manage protection templates for Azure Information Protection.
+description: Use PowerShell cmdlets to add, get, export, import, remove, and configure protection templates for Azure Information Protection.
 author: mlottner
 ms.author: mlottner
 manager: rkarlin

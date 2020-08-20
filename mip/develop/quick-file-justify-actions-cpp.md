@@ -23,7 +23,7 @@ If you haven't already, be sure to complete the following prerequisites before c
 
 Add logic to set a sensitivity label on a file, using the `mip::FileHandler` object.
 
-1. Open the Visual Studio solution you created in the previous "Quickstart: Set/get sensitivity labels(C++).
+1. Open the Visual Studio solution you created in the previous [Quickstart: Set/get sensitivity labels(C++)](quick-file-set-get-label-cpp.md).
 
 2. Using Solution Explorer, open the .cpp file in your project that contains the implementation of the `main()` method. It defaults to the same name as the project containing it, which you specified during project creation.
 
@@ -42,108 +42,108 @@ Add logic to set a sensitivity label on a file, using the `mip::FileHandler` obj
 
 5. Toward the end of the `main()` body, below `system("pause");` and above shutdown block (where you left off in the previous Quickstart), insert the following code:
 
-    ```cpp
+```cpp
 
-    // Downgrade label
-    // Set paths and lower label ID
-    // Set a new label on input file.
+// Downgrade label
+// Set paths and lower label ID
+// Set a new label on input file.
 
-    string lowerlabelId = "<lower-label-id>";
-    cout << "\nApplying new Label ID " << lowerlabelId << " to " << filePathOut << endl;
+string lowerlabelId = "<lower-label-id>";
+cout << "\nApplying new Label ID " << lowerlabelId << " to " << filePathOut << endl;
+mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+
+// Try to apply a label with lower sensitivity.
+try
+{
+    handler->SetLabel(engine->GetLabelById(lowerlabelId), labelingOptions, mip::ProtectionSettings());
+}
+
+catch (const mip::JustificationRequiredError& e)
+{
+    // Request justification from user.
+    cout<<"Please provide justification for downgrading a label: "<<endl;
+    string justification;
+    cin >> justification;
+
+    // Set Justification provided flag
+    bool isDowngradeJustified = true;
     mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+    labelingOptions.SetDowngradeJustification(isDowngradeJustified,justification);
 
-    // Try to apply a label with lower sensitivity.
-    try
-    {
-        handler->SetLabel(engine->GetLabelById(lowerlabelId), labelingOptions, mip::ProtectionSettings());
-    }
+    //Set new label.
+    handler->SetLabel(engine->GetLabelById(lowerlabelId), labelingOptions, mip::ProtectionSettings());
+}
 
-    catch (const mip::JustificationRequiredError& e)
-    {
-        // Request justification from user.
-        cout<<"Please provide justification for downgrading a label: "<<endl;
-        string justification;
-        cin >> justification;
-
-        // Set Justification provided flag
-        bool isDowngradeJustified = true;
-        mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
-        labelingOptions.SetDowngradeJustification(isDowngradeJustified,justification);
-
-        //Set new label.
-        handler->SetLabel(engine->GetLabelById(lowerlabelId), labelingOptions, mip::ProtectionSettings());
-    }
-
-    catch (const std::exception& e)
-    {
-        cout << "An exception occurred... did you specify a valid label ID?\n\n" << e.what() << "'\n";
-        system("pause");
-        return 1;
-    }
-
-    // Commit changes, save as a different output file
-    string lowerFilePathOut = "<lower-output-file-path>";
-    try
-    {
-        cout << "Committing changes" << endl;
-        auto commitPromise = std::make_shared<std::promise<bool>>();
-        auto commitFuture = commitPromise->get_future();
-        handler->CommitAsync(lowerFilePathOut, commitPromise);
-        if (commitFuture.get()) {
-            cout << "\nLabel committed to file: " << lowerFilePathOut << endl;
-        }
-        else {
-            cout << "Failed to label: " + lowerFilePathOut << endl;
-            return 1;
-        }
-    }
-    catch (const std::exception& e)
-    {
-        cout << "An exception occurred... did you specify a valid commit file path?\n\n" << e.what() << "'\n";
-        system("pause");
-        return 1;
-    }
+catch (const std::exception& e)
+{
+    cout << "An exception occurred... did you specify a valid label ID?\n\n" << e.what() << "'\n";
     system("pause");
+    return 1;
+}
 
-    // Set up async FileHandler for output file operations
-    string lowerActualFilePath = "<lower-content-identifier>";
-    try
-    {
-        auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
-        auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(
-            lowerFilePathOut,
-            lowerActualFilePath,
-            true,
-            std::make_shared<FileHandlerObserver>(),
-            handlerPromise);
-
-        handler = handlerFuture.get();
+// Commit changes, save as a different output file
+string lowerFilePathOut = "<lower-output-file-path>";
+try
+{
+    cout << "Committing changes" << endl;
+    auto commitPromise = std::make_shared<std::promise<bool>>();
+    auto commitFuture = commitPromise->get_future();
+    handler->CommitAsync(lowerFilePathOut, commitPromise);
+    if (commitFuture.get()) {
+        cout << "\nLabel committed to file: " << lowerFilePathOut << endl;
     }
-    catch (const std::exception& e)
-    {
-        cout << "An exception occurred... did you specify a valid output file path?\n\n" << e.what() << "'\n";
-        system("pause");
+    else {
+        cout << "Failed to label: " + lowerFilePathOut << endl;
         return 1;
     }
-
-    // Get the lowered label from output file
-    try
-    {
-        cout << "\nGetting the label committed to file: " << lowerFilePathOut << endl;
-        auto lowerLabel = handler->GetLabel();
-        cout << "Name: " + lowerLabel->GetLabel()->GetName() << endl;
-        cout << "Id: " + lowerLabel->GetLabel()->GetId() << endl;
-    }
-    catch (const std::exception& e)
-    {
-        cout << "An exception occurred... did you specify a valid label ID?\n\n" << e.what() << "'\n";
-        system("pause");
-        return 1;
-    }
+}
+catch (const std::exception& e)
+{
+    cout << "An exception occurred... did you specify a valid commit file path?\n\n" << e.what() << "'\n";
     system("pause");
+    return 1;
+}
+system("pause");
 
-    ```
+// Set up async FileHandler for output file operations
+string lowerActualFilePath = "<lower-content-identifier>";
+try
+{
+    auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
+    auto handlerFuture = handlerPromise->get_future();
+    engine->CreateFileHandlerAsync(
+        lowerFilePathOut,
+        lowerActualFilePath,
+        true,
+        std::make_shared<FileHandlerObserver>(),
+        handlerPromise);
+
+    handler = handlerFuture.get();
+}
+catch (const std::exception& e)
+{
+    cout << "An exception occurred... did you specify a valid output file path?\n\n" << e.what() << "'\n";
+    system("pause");
+    return 1;
+}
+
+// Get the lowered label from output file
+try
+{
+    cout << "\nGetting the label committed to file: " << lowerFilePathOut << endl;
+    auto lowerLabel = handler->GetLabel();
+    cout << "Name: " + lowerLabel->GetLabel()->GetName() << endl;
+    cout << "Id: " + lowerLabel->GetLabel()->GetId() << endl;
+}
+catch (const std::exception& e)
+{
+    cout << "An exception occurred... did you specify a valid label ID?\n\n" << e.what() << "'\n";
+    system("pause");
+    return 1;
+}
+system("pause");
+
+```
 
 6. Replace the placeholder values in the source code using the following values:
 
@@ -215,4 +215,4 @@ Build and test your client application.
     Press any key to continue . . .
    ```
 
-Please note, in case the label being deleted from a file requires a justification as per label policy, similar approach should be followed for `DeleteLabel()` operation.`DeleteLabel()` function throws a `mip::JustificationRequiredError` exception. `isDowngradeJustified` flag should be set to true in exception handling before deleting the label successfully.
+Please note, in case the label being deleted from a file requires a justification as per label policy, similar approach should be followed for `DeleteLabel()` operation. `DeleteLabel()` function throws a `mip::JustificationRequiredError` exception. `isDowngradeJustified` flag should be set to true in exception handling before deleting the label successfully.

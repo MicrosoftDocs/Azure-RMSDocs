@@ -58,46 +58,44 @@ Getting the benefit of the old deprecated encryption algorithms flag can still b
 
 No change in code needed, *AES 256* CBC4K is the default.
 
-    C++
-
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
-                                    0,
-                                    NULL,
-                                    &amp;pLicenseHandle);
-
+```cpp
+hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                0,
+                                NULL,
+                                &amp;pLicenseHandle);
+```
 
 ## Protect Files with AES-128 CBC4K
 
-    C++
+```cpp
+hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                0,
+                                NULL,
+                                &amp;pLicenseHandle);
 
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
-                                    0,
-                                    NULL,
-                                    &amp;pLicenseHandle);
+DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K;
 
-    DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K;
-
-    hr = IpcSetLicenseProperty(pLicenseHandle,
-                           false,
-                           IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
-                           &amp;dwEncryptionMode);
+hr = IpcSetLicenseProperty(pLicenseHandle,
+                        false,
+                        IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
+                        &amp;dwEncryptionMode);
+```
 
 
 ## Protect Files with AES-128 ECB (Deprecated Algorithms)
 
 This sample also shows the new way of supporting *deprecated algorithms*.
 
-    C++
+```cpp
+hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                0,
+                                NULL,
+                                &amp;pLicenseHandle);
 
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
-                                    0,
-                                    NULL,
-                                    &amp;pLicenseHandle);
+DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_ECB;
 
-    DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_ECB;
-
-    hr = IpcSetLicenseProperty(pLicenseHandle,
-                           false,
-                           IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
-                           &amp;dwEncryptionMode);
-
+hr = IpcSetLicenseProperty(pLicenseHandle,
+                        false,
+                        IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
+                        &amp;dwEncryptionMode);
+```

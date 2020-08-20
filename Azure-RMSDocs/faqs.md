@@ -137,7 +137,7 @@ Azure Information Protection (AIP) provides classification, labeling, and protec
 
 Content is protected using the Azure Rights Management service, which is now a component of AIP. 
 
-For more information, see [How data is protected](what-is-information-protection.md#how-data-is-protected) and [What is Azure Rights Management?](what-is-azure-rms.md).
+For more information, see [How data is protected](what-is-information-protection.md#how-aip-protects-your-data) and [What is Azure Rights Management?](what-is-azure-rms.md).
 
 ## What's the role of identity management for Azure Information Protection?
 
@@ -272,7 +272,7 @@ For more information, see the full list [file types supported](./rms-client/clie
 > 
 
 > [!TIP]
-> Power BI now supports classification by using sensitivity labels and can apply protection from those labels to data that is exported to the following file formats: .pdf, .xls, and .ppt. For more information, see [Data protection in Power BI (preview)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview).
+> Power BI now supports classification by using sensitivity labels and can apply protection from those labels to data that is exported to the following file formats: .pdf, .xls, and .ppt. For more information, see [Data protection in Power BI](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview).
 > 
 ## I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?
 

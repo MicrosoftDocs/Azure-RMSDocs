@@ -2,7 +2,7 @@
 # required metadata
 
 title: Understanding usage restrictions | Azure RMS
-description: All RMS enabled applications must enforce usage restrictions.
+description: Understand RMS rights, usage restrictions, and common enforcement points. Learn how to update your code to perform access checks and enforce specific rights.
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin

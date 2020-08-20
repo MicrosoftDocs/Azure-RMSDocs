@@ -19,7 +19,7 @@ As discussed previously, instantiation of `IFileEngine` requires a setting objec
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
 - Complete [Quickstart: File API application initialization (C#)](quick-app-initialization-csharp.md) first, which builds a starter Visual Studio solution. This "How to - process email message .msg files (C#)" quickstart builds on the previous one.
-- Review [Email files MIP SDK](concept-email-cpp.md) concepts.
+- Review [Email files MIP SDK](concept-email.md) concepts.
 - Optionally: Review [File engines in the MIP SDK](concept-profile-engine-file-engine-cpp.md) concepts.
 - Optionally: Review [File handlers in the MIP SDK](concept-handler-file-cpp.md) concepts.
 
@@ -55,7 +55,9 @@ In continuation of File AI application initialization quickstart, modify the fil
         // Initialize and instantiate the File Profile.
         // Create the FileProfileSettings object.
         // Initialize file profile settings to create/use local state.
-        var profileSettings = new FileProfileSettings(mipContext, CacheStorageType.OnDiskEncrypted, new ConsentDelegateImplementation());
+        var profileSettings = new FileProfileSettings(mipContext, 
+                                    CacheStorageType.OnDiskEncrypted, 
+                                    new ConsentDelegateImplementation());
 
         // Load the Profile async and wait for the result.
         var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
@@ -80,7 +82,9 @@ In continuation of File AI application initialization quickstart, modify the fil
         string actualOutputFilePath = outputFilePath;
 
         //Create a file handler for original file
-        var fileHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, actualFilePath, true)).Result;
+        var fileHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, 
+                                                                    actualFilePath, 
+                                                                    true)).Result;
 
         // List templates available to the user and use one of them to protect the mail file.
 
@@ -96,7 +100,9 @@ In continuation of File AI application initialization quickstart, modify the fil
         var result = Task.Run(async () => await fileHandler.CommitAsync(outputFilePath)).Result;
 
         // Create a new handler to read the protected file metadata
-        var handlerModified = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(outputFilePath, actualOutputFilePath, true)).Result;
+        var handlerModified = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(outputFilePath, 
+                                                                        actualOutputFilePath, 
+                                                                        true)).Result;
 
         Console.WriteLine(string.Format("Original file: {0}", inputFilePath));
         Console.WriteLine(string.Format("Protected file: {0}", outputFilePath));
@@ -143,5 +149,5 @@ Use **F6** (Build Solution) to build your client application. If you have no bui
 
 | Summary | Error message | Solution |
 |---------|---------------|----------|
-| NetworkException: RMS service detected bad input in request. RMS error code: Microsoft.RightsManagement.Exceptions.BadInputException | * Parameter Both TemplateId and Policy cannot be null is invalid., CorrelationId=f265b189-ebf6-4b30-a191-41539cdff215, CorrelationId.Description=FileHandler, HttpRequest.Id=04990d53-cf12-4969-9c80-06e365b312f2;d5fb4794-ac84-4445-abc6-647e41df62b2, HttpRequest.SanitizedUrl=https://api.aadrm.com/my/v2/publishinglicenses, HttpResponse.StatusCode=400, NetworkError.Category=FailureResponseCode* | If your project builds successfully, but you see output similar to the left, you likely have an invalid templateID. Go back to code block and correct protection template ID, and rebuild/retest. |
+| NetworkException: RMS service detected bad input in request. RMS error code: Microsoft.RightsManagement.Exceptions.BadInputException | * Parameters are invalid if both TemplateID and Policy are null., CorrelationId=f265b189-ebf6-4b30-a191-41539cdff215, CorrelationId.Description=FileHandler, HttpRequest.Id=04990d53-cf12-4969-9c80-06e365b312f2;d5fb4794-ac84-4445-abc6-647e41df62b2, HttpRequest.SanitizedUrl=https://api.aadrm.com/my/v2/publishinglicenses, HttpResponse.StatusCode=400, NetworkError.Category=FailureResponseCode* | If your project builds successfully, but you see output similar to the left, you likely have an invalid templateID. Go back to code block and correct protection template ID, and rebuild/retest. |
 | TemplateNotFoundException | *Unrecognized template ID., CorrelationId=abb2ef59-ad09-4aa0-b731-f59a92711dad, CorrelationId.Description=FileHandler, HttpRequest.Id=8c688752-ccd2-4dca-ace3-b67b44176689;78538a57-a9fd-4717-8924-33581a04598b* | If your project builds successfully, but you see output similar to the left, you likely have an invalid templateID. Go back to code block and correct protection template ID, and rebuild/retest. |

@@ -92,8 +92,6 @@ When you click **Save**, your changes are automatically available to users and s
 
 ## Using variables in the text string
 
-The following variables are generally available when using Azure Information Protection classic client and are in public preview availability when using the Azure Information Protection unified labeling client.  
-
 You can use the following variables in the text string for your header, footer, or watermark:
 
 - `${Item.Label}` for the selected label. For example: General
@@ -109,7 +107,7 @@ You can use the following variables in the text string for your header, footer, 
 - `${Event.DateTime}` for the date and time when the selected label was set. For example: 8/16/2016 1:30 PM
 
 > [!NOTE]
->This syntax is case-sensitive. For example, if you specify the string `Document: ${Item.Name}  Classification: ${Item.Label}` for the **General** label footer, the footer text applied to a document named project.docx will be **Document: project.docx  Classification: General**.
+>This syntax is case-sensitive.
 
 <!-- REMOVED w JUNE 2020 RELEASE> [!NOTE]
 > Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 

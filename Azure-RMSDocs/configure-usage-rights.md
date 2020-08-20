@@ -3,10 +3,10 @@
 
 title: Configure usage rights for Azure Information Protection
 description: Understand and identify the specific rights that are used when you protect files or emails by using Rights Management protection from Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 01/08/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
