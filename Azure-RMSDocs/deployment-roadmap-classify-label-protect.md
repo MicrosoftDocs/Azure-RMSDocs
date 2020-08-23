@@ -1,0 +1,253 @@
+---
+# required metadata
+
+title: Deploy Azure Information Protection (AIP) for classification, labeling, and protection
+description: Use these steps to prepare for, implement, and manage Azure Information Protection (AIP) for your organization, when you want to classify, label, and protect your data.
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 07/23/2020
+ms.topic: conceptual
+ms.collection: M365-security-compliance
+ms.service: information-protection
+ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+ms.custom: admin
+
+---
+
+# AIP deployment roadmap for classification, labeling, and protection
+
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
+Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization, when you want to classify, label, and protect your data.
+
+This roadmap is recommended for any customers with a supporting subscription. Additional capabilities include both discovering sensitive information and labeling documents and emails for classification. 
+
+Labels can also apply protection, simplifying this step for your users. 
+
+This roadmap is supported for both AIP labels created with the classic client, and sensitivity labels that use the [unified labeling platform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
+
+> [!TIP]
+> Alternatively, you may be looking for one of the following articles:
+> - [AIP roadmap for data protection only](deployment-roadmap-protect-only.md)
+> - [How-to guides for common scenarios that use Azure Information Protection](how-to-guides.md)
+>- [Azure Information Protection release roadmap](information-support.md#information-about-new-releases-and-updates)
+
+## Deployment process
+
+Perform the following steps:
+
+1. [Confirm your subscription and assign user licenses](#confirm-your-subscription-and-assign-user-licenses)
+1. [Prepare your tenant to use Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
+1. [Configure and deploy classification and labeling](#configure-and-deploy-classification-and-labeling)
+1. [Prepare for data protection](#prepare-for-data-protection)
+1. [Configure labels and settings, applications, and services for data protection](#configure-labels-and-settings-applications-and-services-for-data-protection)
+1. [Use and monitor your data protection solutions](#use-and-monitor-your-data-protection-solutions)
+1. [Administer the protection service for your tenant account as needed](#administer-the-protection-service-for-your-tenant-account-as-needed)
+
+> [!TIP]
+> Already using the protection functionality from Azure Information Protection? You can skip many of these steps and focus on steps [3](#configure-and-deploy-classification-and-labeling) and [5.1](#configure-labels-and-settings-applications-and-services-for-data-protection).
+
+## Confirm your subscription and assign user licenses
+
+Confirm that your organization has a subscription that includes the functionality and features you expect. You can find these details on the [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection) page.
+
+Then, assign licenses from this subscription to each user in your organization who will classify, label, and protect documents and emails.
+
+> [!IMPORTANT]
+> Do not manually assign user licenses from the free RMS for individuals subscription, and do not use this license to administer the Azure Rights Management service for your organization. 
+>
+> These licenses display as **Rights Management Adhoc** in the Microsoft 365 admin center, and **RIGHTSMANAGEMENT_ADHOC** when you run the Azure AD PowerShell cmdlet, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). 
+>
+> For more information, see [RMS for individuals and Azure Information Protection](./rms-for-individuals.md).
+> 
+## Prepare your tenant to use Azure Information Protection
+
+Before you begin using Azure Information Protection, make sure that you have user accounts and groups in Office 365 or Azure Active Directory that AIP can use to authenticate and authorize your users.
+
+If necessary, create these accounts and groups, or synchronize them from your on-premises directory. 
+
+For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
+
+## Configure and deploy classification and labeling
+
+Determine whether you're going to use the AIP classic or the AIP unified labeling client, or if you'll need both clients.
+
+1. **Determine which client you want to use.**
+
+    Decide which client you'll need at this point so that you know which management portal to use when configuring labels and policy settings.
+
+    For more information, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+
+1. **Scan your files (optional but recommended).**
+
+    [Deploy and run the AIP scanner](deploy-aip-scanner.md) to discover the sensitive information you have on your local data stores. The information that the scanner finds can help you with your classification taxonomy, provide valuable information about what labels you need, and which files need protecting.
+
+    The scanner discovery mode doesn't require any label configuration or taxonomy, and is therefore suitable at this early stage of your deployment. You can also use this scanner configuration in parallel with the following deployment steps, until you configure recommended or automatic labeling.
+
+1. **Customize the default AIP policy**.
+
+    If you don't have a classification strategy yet, use the [default Azure Information Protection policy](./configure-policy-default.md) as a basis for determining which labels you'll need for your data. Customize these labels as needed to meet your needs.
+
+    For example, you may want to reconfigure your labels with the following details:
+
+    - Make sure that your labels support your classification decisions.
+    - Configure policies for manual labeling by users
+    - Write user guidance to help explain which label should be applied in each scenario.
+    - If your default policy was created with labels that automatically apply protection, you may want to temporarily remove the protection settings or disable the label while you test your settings. 
+
+    For more information about how to configure the labels and policy settings, see:
+
+    - **Classic client:** [Configuring Azure Information Protection policy](./configure-policy.md)
+    - **Unified labeling client:** [Learn about sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
+    
+1. **Deploy your client**
+
+    Once you have a policy configured, deploy the Azure Information Protection classic and/or unified labeling client for your users. Provide user training and specific instructions when to select the labels. 
+
+    For more information, see:
+
+    - **Classic client**: [Administrator guide](./rms-client/client-admin-guide.md)
+    - **Unified labeling client**: [Administrator guide](./rms-client/clientv2-admin-guide.md)
+
+1. **Introduce more advanced configurations**
+
+    Wait for your users to become more comfortable with labels on their documents and emails. When you're ready, introduce advanced configurations, such as:
+
+    - Applying default labels
+    - Prompting users for justification if they chose a label with a lower classification level or remove a label
+    - Mandating that all documents and emails have a label
+    - Customizing headers, footers, or watermarks
+    - Recommended and automatic labeling
+
+    For more information, see:
+
+    - **Classic client**: [Admin Guide: Custom configurations](rms-client/client-admin-guide-customizations.md)
+    - **Unified labeling client**: [Admin Guide: Custom configurations](rms-client/clientv2-admin-guide-customizations.md)
+     
+    > [!TIP]
+    > If you've configured labels for automatic labeling, run the [Azure Information Protection scanner](deploy-aip-scanner-manage.md) again on your local data stores in discovery mode and to match your policy. 
+    > 
+    > Running the scanner in discovery mode tells you which labels would be applied to files, which helps you fine-tune your label configuration and prepares you for classifying and protecting files in bulk. 
+    > 
+
+## Prepare for data protection
+
+Introduce data protection for your most sensitive data once users become comfortable labeling documents and emails.
+
+Perform the following steps to prepare for data protection:
+
+1. **Determine how you want to manage your tenant key**.
+
+    Decide whether you want Microsoft to manage your tenant key (the default), or generate and manage your tenant key yourself (known as bring your own key, or BYOK). 
+
+    > [!NOTE]
+    > Depending on your client, additional options to "hold your own key (HYOK)", or double-key encryption are available for additional security. .
+    >
+ 
+    For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md)
+
+1. **Install PowerShell for AIP**.
+
+    Install the PowerShell module for AIPService on at least one computer that has internet access. You can do this step now, or later. 
+
+    For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).
+
+1. **AD RMS only**: Migrate your keys, templates, and URLs to the cloud.
+
+    If you are currently using AD RMS, perform a migration to move the keys, templates, and URLs to the cloud. 
+    
+    For more information, see [Migrating from AD RMS to Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+
+1. **Activate protection**.
+
+    Make sure that the protection service is activated so that you can begin to protect documents and emails. If you're deploying in multiple phases, configure user onboarding controls to restrict users' ability to apply protection. 
+
+    For more information, see [Activating the protection service from Azure Information Protection](./activate-service.md).
+
+1. **Consider usage logging (optional)**.
+
+    Consider logging usage to monitor how your organization is using the protection service. You can do this step now, or later. 
+
+    For more information, see [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md).
+
+## Configure labels and settings, applications, and services for data protection
+
+Perform the following steps:
+
+1. **Update your labels to apply protection**
+    
+    Use one of the following guides, depending on your client:
+
+    - Classic: [How to configure a label for Rights Management protection](./configure-policy-protection.md)
+    - Unified labeling: [Restrict access to content by using encryption in sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
+    
+    > [!IMPORTANT]
+    > Users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). 
+    > 
+    > However, until Exchange is configured for IRM or [Office 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in the following list (2 for Exchange Online, and 5 for Exchange on-premises). 
+    > 
+
+1. **Configure Office applications and services**
+    
+    Configure Office applications and services for the information rights management (IRM) features in Microsoft SharePoint or Exchange Online. 
+
+    For more information, see [Configuring applications for Azure Rights Management](configure-applications.md).
+
+1. **Configure the super user feature for data recovery**
+    
+    If you have existing IT services that need to inspect files that Azure Information Protection will protect—such as data leak prevention (DLP) solutions, content encryption gateways (CEG), and anti-malware products—configure the service accounts to be super users for Azure Rights Management. 
+
+    For more information, see [Configuring super users for Azure Information Protection and discovery services or data recovery](./configure-super-users.md).
+
+1. **Classify and protect existing files in bulk**
+    
+    For your on-premises data stores, now run the [Azure Information Protection scanner](deploy-aip-scanner.md) in enforcement mode so that files are automatically labeled.
+    
+    For files on PCs, use PowerShell cmdlets to classify and protect files. For more information, see the following guides, depending on your client:
+    
+    - **Classic client:** [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)
+    - **Unified labeling client:** [Using PowerShell with the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-powershell.md)
+
+    For cloud-based data stores, use [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security). 
+
+    > [!TIP]
+    > While classifying and protecting existing files in bulk is not one of the main use cases for cloud app security, [documented workarounds](https://docs.microsoft.com/cloud-app-security/azip-integration#enable-azure-information-protection) can help you get your files classified and protected.
+
+6. **Deploy the connector for IRM-protected libraries on SharePoint Server, and IRM-protected emails for Exchange on-premises**
+    
+    If you have SharePoint and Exchange on-premises and want to use their information rights management (IRM) features, install and configure the Rights Management connector. 
+
+    For more information, see [Deploying the Azure Rights Management connector](./deploy-rms-connector.md).
+
+## Use and monitor your data protection solutions
+
+You're now ready to monitor how your organization is using the labels that you've configured and confirm that you're protecting sensitive information. 
+
+For more information, see the following pages:
+
+- [Central reporting for Azure Information Protection](reports-aip.md) - currently in preview
+- [Local usage logging with Windows event monitor](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) for the Azure Information Protection classic client
+- [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md)
+
+## Administer the protection service for your tenant account as needed
+
+As you begin to use the protection service, you might find PowerShell useful to help script or automate administrative changes. PowerShell might also be needed for some of the advanced configurations. 
+
+For more information, see [Administering protection from Azure Information Protection by using PowerShell](./administer-powershell.md).
+
+## Next steps
+
+As you deploy Azure Information Protection, you might find it helpful to check the [frequently asked questions](faqs.md), and the [information and support](information-support.md) page for additional resources.

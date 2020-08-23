@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -38,61 +38,45 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
 ## Additional prerequisites for the Azure Information Protection unified labeling client
 
-- Microsoft .NET Framework 4.6.2
-    
-    The full installation of the Azure Information Protection unified labeling client by default, requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the setup wizard from the executable installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted. Although not recommended, you can bypass this prerequisite when you use the setup wizard by using a [custom installation parameter](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
-    
-    - Microsoft .NET Framework 4.5.2
-    
-    If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the executable installer does not download or install it.
+The following prerequisites for the AIP unified labeling client are in addition to items listed in [Azure Information Protection requirements](../requirements.md).
 
-- Windows PowerShell minimum version 4.0
-    
-    The PowerShell module for the client requires a minimum version of 4.0 for Windows PowerShell, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type `$PSVersionTable` in a PowerShell session.
-
-- Screen resolution greater than 800x600
-    
-    Resolutions 800x600 and lower can't fully display the **Classify and protect - Azure Information Protection** dialog box when you right-click a file or folder in File Explorer.
-
-
-- Microsoft Online Services Sign-in Assistant 7.250.4303.0
-    
-    Computers running Office 2010 require Microsoft Online Services Sign-in Assistant version 7.250.4303.0. This version is included with the client installation. If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection unified labeling client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
-
-- KB 4482887
-    
-    For Windows 10 version 1809 only, operation system builds older than 17763.348, install [March 1, 2019—KB4482887 (OS Build 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) to ensure the Information Protection bar displays correctly in Office applications. This update is not needed if you have Office 365 1902 or later.
-
-- Configure group policy to prevent the Azure Information Protection add-in from being disabled
-    
-    For Office 2013 and later versions, configure group policy to ensure that the **Microsoft Azure Information Protection** add-in for Office applications is always enabled. Without this configuration, the Microsoft Azure Information Protection add-in can get disabled and users will not be able to label their documents and emails in their Office application.
-    
-    - For Outlook: Use the group policy setting documented in [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) from the Office documentation.
-    
-    - For Word, Excel, and PowerPoint: Use the group policy setting **list of managed add-ins** documented in the Support article [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). 
+|Requirement  |Description  |
+|---------|---------|
+|**Microsoft .NET Framework 4.6.2**     | The full installation of the Azure Information Protection unified labeling client by default, requires a minimum version of Microsoft .NET Framework 4.6.2. </br></br>If this framework is missing, the setup wizard from the executable installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted.       |
+|**Microsoft .NET Framework 4.5.2**     | If the Azure Information Protection Viewer is installed separately, the Viewer application requires a minimum version of Microsoft .NET Framework 4.5.2. </br></br>**Important:** If this framework is missing for the Viewer, the executable installer does *not* download or install it.        |
+|**Windows PowerShell minimum version 4.0**     |   The PowerShell module for the client requires a minimum version of Windows PowerShell 4.0, which might need to be installed on older operating systems. </br></br>For more information, see [How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). </br></br>**Important:** The installer does *not* check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type `$PSVersionTable` in a PowerShell session.      |
+|**Screen resolution greater than 800x600**    |     Resolutions 800x600 and lower can't fully display the **Classify and protect - Azure Information Protection** dialog box when you right-click a file or folder in File Explorer.    |
+|**Microsoft Online Services Sign-in Assistant 7.250.4303.0**     |   Computers running Office 2010 require Microsoft Online Services Sign-in Assistant version 7.250.4303.0, which is included with the client installation. </br></br>If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection unified labeling client. </br></br>For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.      |
+|**KB 4482887**     | For Windows 10 version 1809 only, operation system builds older than 17763.348, install [March 1, 2019—KB4482887 (OS Build 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) to ensure the Information Protection bar displays correctly in Office applications. </br></br>This update is not needed if you have Office 365 1902 or later.        |
+|**Admin permissions**| Installing the Azure Information Protection unified labeling client requires local administrative permissions.| 
+|   |  |
         
-        Specify the following programmatic identifiers (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
-        
-        For Word: `MSIP.WordAddin`
-        
-        For Excel: `MSIP.ExcelAddin`
-        
-        For PowerPoint: `MSIP.PowerPointAddin`
+### Configure your group policy to prevent disabling AIP
 
-> [!IMPORTANT]
-> Installation of the Azure Information Protection unified labeling client requires local administrative permissions.
+For Office versions 2013 and later, we recommend that you configure your group policy to ensure that the **Microsoft Azure Information Protection** add-in for Office applications is always enabled.  Without this add-in, users won't be able to label their documents or emails in Office applications.   
+
+- **For Outlook:** Use the group policy setting documented in [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins).
+- **For Word, Excel, and PowerPoint:** Use the group policy setting **list of managed add-ins** documented in [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). . 
+
+    Specify the following programmatic identifiers (ProgID) for AIP, and set the option to **1: The add-in is always enabled**.
+
+    |Application  |ProgID  |
+    |---------|---------|
+    |Word     |     `MSIP.WordAddin`    |
+    |Excel     |  `MSIP.ExcelAddin`       |
+    |PowerPoint     |   `MSIP.PowerPointAddin`      |
+    | | | 
 
 ## Applications
 
 The Azure Information Protection unified labeling client can label and protect documents and emails by using the Office applications Word, Excel, PowerPoint, and Outlook from any of the following Office editions:
 
-Office apps minimum version 1805, build 9330.2078 from [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
-
-- [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
-- [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019
-- [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016
-- [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 with Service Pack 1
-- [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 with Service Pack 2
+- Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
+- Office 365 ProPlus
+- Office Professional Plus 2019
+- Office Professional Plus 2016
+- Office Professional Plus 2013 with Service Pack 1
+- Office Professional Plus 2010 with Service Pack 2
 
 Other editions (such as **standard**) of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for **labeling** only. Consequently, labels that apply protection do not display to users on the Azure Information Protection Sensitivity button or bar.
 
@@ -205,7 +189,7 @@ If you use Intune for your software deployment method, use these instructions to
     
     If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment.
 
-2. For each computer that runs the .msi file, you must make sure that the following software dependencies are in place. For example, package these with the .msi version of the client or only deploy to computers that meet these dependencies:
+1. For each computer that runs the .msi file, you must make sure that the following software dependencies are in place. For example, package these with the .msi version of the client or only deploy to computers that meet these dependencies:
     
     |Office version|Operating system|Software|Action|
     |--------------------|--------------|----------------|---------------------|
@@ -218,9 +202,16 @@ If you use Intune for your software deployment method, use these instructions to
     
    
 
-3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection_UL.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer) with one exception:
-    
-    - Instead of **AllowTelemetry=0** to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**, specify **ENABLETELEMETRY=0**. 
+1. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection_UL.msi /quiet`.
+
+    You may need to specify additional installation parameters. For more information, see the [executable installer instructions](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).
+
+    > [!NOTE]
+    > By default, the **Help improve Azure Information Protection by sending usage statistics to Microsoft** installation option is enabled. To disable this option, make sure to do one of the following:
+    >
+    >- During installation, specify **AllowTelemetry=0**
+    >- After installation, update the registry key as follows: **EnableTelemetry=0**.
+    >
 
 ## Next steps
 Now that you've installed the Azure Information Protection unified labeling client, see the following for additional information that you might need to support this client:

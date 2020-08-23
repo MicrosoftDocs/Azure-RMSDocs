@@ -72,6 +72,8 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 Unified labeling scanner and client version 2.7.99.0
 
+**Released** 07/20/2020
+
 **Fixes and improvements:**
 
 Fixed issues in file labeling actions for **New Label** audit logs.

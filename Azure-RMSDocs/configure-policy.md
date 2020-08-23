@@ -3,9 +3,9 @@
 
 title: Configure the Azure Information Protection policy - AIP
 description: To configure classification, labeling, and protection for the Azure Information Protection client (classic), you must configure the Azure Information Protection policy. 
-author: mlottner
-ms.author: mlottner
-ms.date: 1/06/2020
+author: batamig
+ms.author: bagol
+ms.date: 08/17/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -37,7 +37,7 @@ ms.custom: admin
 > 
 > If you are looking for information to configure sensitivity labels and policy settings for the unified labeling client, see [Learn about sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) from the Microsoft 365 Compliance documentation.
 
-To configure classification, labeling, and protection for the classic client, you must configure the Azure Information Protection policy. This policy is then downloaded to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/download/details.aspx?id=53018).
+To configure classification, labeling, and protection for the classic client, you must configure the Azure Information Protection policy. This policy is then downloaded to computers that have installed the Azure Information Protection client.
 
 The policy contains labels and settings:
 

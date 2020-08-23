@@ -2,7 +2,7 @@
 # required metadata
 
 title: Release notes
-description: SDK updates by revision and other developer information.
+description: See release notes for the Microsoft Rights Management Service SDK v2.1 October 2019 and previous updates.
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin
@@ -187,8 +187,8 @@ The File API component of SDK has been extended and offers the following feature
 
 **A**: Use 0 for the default locale. In this case, AD RMS Client 2.1 looks up names and descriptions in the following sequence and retrieves the first available one:
 
-    1 - User preferred LCID.
-    2 - System locale LCID.
-    3 - The first available language specified in the Rights Management Server (RMS) template.
+1. User preferred LCID.
+2. System locale LCID.
+3. The first available language specified in the Rights Management Server (RMS) template.
 
 If no name and description can be retrieved, an error is returned. There can be only one name and description for a specific LCID.

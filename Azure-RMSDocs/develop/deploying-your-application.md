@@ -2,7 +2,7 @@
 # required metadata
 
 title: Deploying your application - AIP
-description: This topic outlines and guides you through deployment of your application
+description: Learn about the deployment process for your Azure Information Protection (AIP) / Rights Management Services (RMS) enabled application.
 keywords: deploy, RMS, AIP
 author: msmbaldwin
 ms.author: mbaldwin
