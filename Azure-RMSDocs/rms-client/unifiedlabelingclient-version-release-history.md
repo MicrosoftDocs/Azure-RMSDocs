@@ -3,10 +3,10 @@
 
 title: Azure Information Protection unified labeling client - Version history & support policy
 description: See the release information for the Azure Information Protection unified labeling client for Windows. 
-author: batamig
-ms.author: bagol
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 07/15/2020
+ms.date: 08/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -67,6 +67,16 @@ Use the following information to see what's new or changed for a supported relea
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
+
+## Version 2.7.101.0
+
+Unified labeling scanner and client version 2.7.101.0
+
+**Released** 08/23/2020
+
+**Fix:**
+
+Fixed issue for PPT, Excel and Word users which resulted in files freezing, crashing, or being  forced to repeat save that was related to mandatory labels configured with protection,  watermarking, and/or content marking.
 
 ## Version 2.7.99.0
 
