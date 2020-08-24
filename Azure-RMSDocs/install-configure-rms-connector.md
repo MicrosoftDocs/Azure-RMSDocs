@@ -40,6 +40,7 @@ Make sure you are aware of the correct Azure sovereign cloud instance for your c
 - **AzureUSGovernment2**: Azure Government 2
 - **AzureUSGovernment3**: Azure Government 3
 
+
 ## Installing the RMS connector
 
 1.  Identify the computers (minimum of two) to run the RMS connector. These computers must meet the minimum specification listed in the prerequisites.
@@ -75,7 +76,8 @@ Before you can configure the RMS connector, you must first select the Cloud envi
 
 After making your Cloud environment selection, enter your **Username** and **password**. Make sure you enter credentials for an account that has sufficient privileges to configure the RMS connector. For example, you might type <strong>admin@contoso.com</strong> and then specify the password for this account.
 
-In addition, if you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you'll see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
+
+In addition, if you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
 
 You can use an account that has one of the following privileges:
 
@@ -112,7 +114,7 @@ You can use an account that has one of the following privileges:
     >     ```
     >     For example, type: **Add-AipServiceRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
     >
-    >     Although these commands assign the connector administrator role, you could also use the GlobalAdministrator role here, as well.
+    >     Although these commands assign the connector administrator role, you can also use the GlobalAdministrator role here.
 
 During the RMS connector installation process, all prerequisite software is validated and installed, Internet Information Services (IIS) is installed if not already present, and the connector software is installed and configured. In addition, Azure RMS is prepared for configuration by creating the following:
 

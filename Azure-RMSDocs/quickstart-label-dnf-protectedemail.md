@@ -4,7 +4,7 @@ description: Configure a label that protects an email for a user by automaticall
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 07/20/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -53,7 +53,7 @@ To complete this quickstart, you need:
 |**AIP added to the Azure portal**    |  You've added the Azure Information Protection pane to the Azure portal, and confirmed that the protection service is activated. </br></br>For more information, see [Quickstart: Get started in the Azure portal](quickstart-viewpolicy.md).       |
 |**An existing Azure Information Protection label to configure**     | Use one of the default labels, or a label that you've created. For more information, see  [Quickstart: Create a new Azure Information Protection label for specific users](quickstart-label-specificusers.md). |
 |**Classic client installed**    |   To test the new label, you'll need the classic client installed on your computer. </br></br>The Azure Information Protection classic client is being deprecated in March  2021. To deploy the AIP classic client, open a support ticket to get download access.  |
-|**A Windows computer, signed into Office apps** |To test the new label, you'll need a  computer running Windows (minimum of Windows 7 with Service Pack 1). </br></br>On this computer, sign into one of the following Office app versions: </br>- Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when you are assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365). </br>- Office 365 ProPlus. </br>- Office Professional Plus 2019. </br>- Office Professional Plus 2016.</br>- Office Professional Plus 2013 with Service Pack 1. </br>- Office Professional Plus 2010 with Service Pack 2.|
+|**A Windows computer, signed into Office apps** |To test the new label, you'll need a  computer running Windows (minimum of Windows 7 with Service Pack 1). </br></br>On this computer, sign into one of the following Office app versions: </br>- Office apps minimum version 1805, build 9330.2078 from [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) when you are assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365). </br>- [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). </br>- Office Professional Plus 2019. </br>- Office Professional Plus 2016.</br>- Office Professional Plus 2013 with Service Pack 1. </br>- Office Professional Plus 2010 with Service Pack 2.|
 | | |
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
