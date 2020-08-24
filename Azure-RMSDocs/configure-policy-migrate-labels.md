@@ -259,15 +259,13 @@ To confirm whether the clients and services you use support unified labeling, re
 
 ##### Services that currently support unified labeling include:
 
-- [Power BI](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
+- [Power BI (in preview)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
 
-- Office Online and Outlook on the web
+- Office Online (in preview) and Outlook on the web
 
-    For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
-
-- Microsoft SharePoint, OneDrive for work or school, OneDrive for home, Teams, and Office 365 groups
+- Microsoft SharePoint, OneDrive for work or school, OneDrive for home, Teams, and Office 365 groups (in preview)
     
-    For more information, see [Use sensitivity labels with Microsoft Teams, Office 365 groups, and SharePoint sites](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites).
+    For more information, see [Use sensitivity labels with Microsoft Teams, Office 365 groups, and SharePoint sites (public preview)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites) and [Enable sensitivity labels for Office files in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 - Microsoft Defender Advanced Threat Protection
 
