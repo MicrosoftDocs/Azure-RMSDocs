@@ -160,7 +160,6 @@ Unified labeling scanner and client version 2.7.101.0
 
 Fixed issue for PPT, Excel and Word users which resulted in files freezing, crashing, or being  forced to repeat save that was related to mandatory labels configured with protection,  watermarking, and/or content marking.
 
-
 ## Version 2.7.99.0
 
 Unified labeling scanner and client version 2.7.99.0
