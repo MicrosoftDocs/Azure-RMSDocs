@@ -35,7 +35,7 @@ BYOK and [usage logging](log-analyze-usage.md) work seamlessly with applications
 
 Supported applications include:
 
-- **Cloud services,** such as Microsoft SharePoint or Office 365
+- **Cloud services,** such as Microsoft SharePoint or Microsoft 365
 
 - **On-premises services** running Exchange and SharePoint applications that use the Azure Rights Management service via the RMS connector
 

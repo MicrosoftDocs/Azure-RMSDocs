@@ -40,7 +40,7 @@ Protection templates, also known as Rights Management templates, are a grouping 
 
 - Templates that are not integrated with your labels for your tenant are displayed in the **Protection templates** section after your labels on the **Azure Information Protection - Labels** pane. To navigate to this pane, select the **Classifications** > **Labels** menu option. You can convert these templates to labels, or you can link to them when you configure protection for your labels. 
 
-**When you have a subscription that includes protection only (an Office 365 subscription that includes the Azure Rights Management service):**
+**When you have a subscription that includes protection only (a Microsoft 365 subscription that includes the Azure Rights Management service):**
 
 - Templates for your tenant are displayed in the **Protection templates** section on the **Azure Information Protection - Labels** pane. To navigate to this pane, select the **Classifications** > **Labels** menu option. No labels are displayed. You also see configuration settings that are specific to classification and labeling, but these settings either have no effect on your templates or cannot be configured. 
 
@@ -49,7 +49,7 @@ Protection templates, also known as Rights Management templates, are a grouping 
 
 ## Default templates
 
-When you obtain your subscription for Azure Information Protection or for an Office 365 subscription that includes the Azure Rights Management service, two default templates are automatically created for your tenant. These templates restrict access to authorized users in your organization. When these templates are created, they have the permissions that are listed in the [Configuring usage rights for Azure Information Protection](configure-usage-rights.md#rights-included-in-the-default-templates) documentation.
+When you obtain your subscription for Azure Information Protection or for an Microsoft 365 subscription that includes the Azure Rights Management service, two default templates are automatically created for your tenant. These templates restrict access to authorized users in your organization. When these templates are created, they have the permissions that are listed in the [Configuring usage rights for Azure Information Protection](configure-usage-rights.md#rights-included-in-the-default-templates) documentation.
 
 In addition, the templates are configured to allow offline access for seven days and do not have an expiration date.
 

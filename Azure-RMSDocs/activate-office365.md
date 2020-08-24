@@ -37,7 +37,7 @@ If you have questions about the subscription requirements, or you need help acti
 
 1. When you have confirmed that your organization has a plan that includes Azure Rights Management, go to the [Rights Management page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) in the Microsoft 365 admin center.
     
-    If you are prompted to sign in, use an account that is a global administrator for Office 365.
+    If you are prompted to sign in, use an account that is a global administrator.
     
     > [!TIP]
     > For admin center help, see [About the Microsoft 365 admin center](/office365/admin/admin-overview/about-the-admin-center).

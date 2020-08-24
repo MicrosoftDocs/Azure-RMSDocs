@@ -58,7 +58,7 @@ It doesn't matter when you enable the super user feature or when you add users a
 
 ## Security best practices for the super user feature
 
-- Restrict and monitor the administrators who are assigned a global administrator for your Office 365 or Azure Information Protection tenant, or who are assigned the GlobalAdministrator role by using the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) cmdlet. These users can enable the super user feature and assign users (and themselves) as super users, and potentially decrypt all files that your organization protects.
+- Restrict and monitor the administrators who are assigned a global administrator for your Microsoft 365 or Azure Information Protection tenant, or who are assigned the GlobalAdministrator role by using the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) cmdlet. These users can enable the super user feature and assign users (and themselves) as super users, and potentially decrypt all files that your organization protects.
 
 - To see which users and service accounts are individually assigned as super users, use the [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) cmdlet. To see whether a super user group is configured, use the [Get-AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup) cmdlet and your standard user management tools to check which users are a member of this group. Like all administration actions, enabling or disabling the super feature, and adding or removing super users are logged and can be audited by using the [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) command. See the next section for an example. When super users decrypt files, this action is logged and can be audited with [usage logging](log-analyze-usage.md).
 
@@ -92,9 +92,9 @@ For more information about these cmdlets, see [Using PowerShell with the Azure I
 
 Although you can use the Unprotect-RMSFile cmdlet to decrypt protected content in PST files, use this cmdlet strategically as part of your eDiscovery process. Running Unprotect-RMSFile on large files on a computer is a resource-intensive (memory and disk space) and the maximum file size supported for this cmdlet is 5 GB.
 
-Ideally, use [Office 365 eDiscovery](https://docs.microsoft.com/microsoft-365/compliance/ediscovery) to search and extract protected emails and protected attachment in emails. The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Office 365 Security & Compliance Center or Microsoft 365 compliance center can search for encrypted items prior to export, or decrypt encrypted email on export.
+Ideally, use [eDiscovery in Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/ediscovery) to search and extract protected emails and protected attachment in emails. The super user ability is automatically integrated with Exchange Online so that eDiscovery in the Office 365 Security & Compliance Center or Microsoft 365 compliance center can search for encrypted items prior to export, or decrypt encrypted email on export.
 
-If you cannot use Office 365 eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. Or, if your eDiscovery solution cannot automatically read and decrypt protected content, you can still use this solution in a multi-step process that lets you run Unprotect-RMSFile more efficiently:
+If you cannot use Microsoft 365 eDiscovery, you might have another eDiscovery solution that integrates with the Azure Rights Management service to similarly reason over data. Or, if your eDiscovery solution cannot automatically read and decrypt protected content, you can still use this solution in a multi-step process that lets you run Unprotect-RMSFile more efficiently:
 
 1. Export the email in question to a PST file from Exchange Online or Exchange Server, or from the workstation where the user stored their email.
 
