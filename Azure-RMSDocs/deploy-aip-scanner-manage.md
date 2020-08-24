@@ -114,32 +114,34 @@ To stop a currently running scan before it's complete, use one of the following 
 
 For the [first scan cycle](#run-a-discovery-cycle-and-view-reports-for-the-scanner), the scanner inspects all files in the configured data stores. For subsequent scans, only new or modified files are inspected.
 
-Inspecting all files again is typically useful when you want the reports to include all files, and when the scanner runs in discovery mode.
+Inspecting all files again is typically useful when you want the reports to include all files, when you have changes that you want to apply across all files, and when the scanner runs in discovery mode.
 
-Run a new scan of all your files using one the following methods:
+**To manually run a full rescan:**
 
-- [Manually run a full rescan](#manually-run-a-full-rescan)
-- [Trigger a full rescan by refreshing the policy](#trigger-a-full-rescan-by-refreshing-the-policy)
+1. Navigate to the **Azure Information Protection - Content scan jobs** pane in the Azure portal.
 
-### Manually run a full rescan
+1. Select your content scan job from the list, and then select the **Rescan all files** option:
 
-Force the scanner to inspect all files again, as needed, from the **Azure Information Protection - Content scan jobs** pane in the Azure portal.
-
-Select your content scan job from the list, and then select the **Rescan all files** option:
-
-![Initiate rescan for the Azure Information Protection scanner](./media/scanner-rescan-files.png)
+    ![Initiate rescan for the Azure Information Protection scanner](./media/scanner-rescan-files.png)
 
 When a full scan is complete, the scan type automatically changes to incremental so that for subsequent scans, only new or modified files are scanned again.
 
-### Trigger a full rescan by refreshing the policy
+> [!TIP]
+> If you've made changes to your AIP [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), the Azure portal will prompt you to skip a full rescan. To ensure that your rescan occurs, make sure to select **No** in the prompt that appears.
+> 
+### Trigger a full rescan by modifying your settings (versions 2.7.99.0 and earlier)
 
-All files are also inspected whenever the scanner has new or changed settings for automatic and recommended labeling. The scanner automatically refreshes the policy every four hours.
+In scanner versions 2.7.99.0 and earlier, all files are scanned whenever the scanner detects new or changed settings for automatic and recommended labeling. The scanner automatically refreshes the policy every four hours.
 
-To refresh the policy sooner, such as while testing, manually delete the contents of the **%LocalAppData%\Microsoft\MSIP\mip\\<*processname*>\mip** directory and restart the Azure Information Protection service.
+To refresh the policy sooner, such as while testing, manually delete the contents of the **%LocalAppData%\Microsoft\MSIP\mip\<processname>\mip** directory and restart the Azure Information Protection service.
 
-> [!NOTE]
-> If you've also changed protection settings for your labels, wait an extra 15 minutes from when you saved the updated protection settings before restarting the Azure Information Protection service.
+If you've also changed protection settings for your labels, wait an extra 15 minutes from when you saved the updated protection settings before restarting the Azure Information Protection service.
+
+> [!IMPORTANT]
+> If you've upgraded to version [2.8.83](rms-client/unifiedlabelingclient-version-release-history.md#version-2883-public-preview) or later, AIP skips the full rescan for updated settings to ensure consistent performance. If you've upgraded, make sure to [run a full rescan manually](#rescanning-files) as needed. 
 >
+> For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On,** make sure to run a full rescan to apply your labels across your content.
+> 
 
 ## Troubleshooting a stopped scan
 
