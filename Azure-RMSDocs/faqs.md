@@ -54,7 +54,7 @@ Unlike Azure Information Protection, [Microsoft Information Protection](https://
 
 For more information, see [Information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
-## What's the difference between labels in Azure Information Protection and labels?
+## What's the difference between labels in Azure Information Protection and labels in Office 365?
 
 Originally, Microsoft 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that enabled you to classify documents and emails for auditing and retention when that content was stored in Microsoft 365 services. 
 
