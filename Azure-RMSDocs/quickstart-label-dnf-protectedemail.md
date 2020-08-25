@@ -53,7 +53,7 @@ To complete this quickstart, you need:
 |**AIP added to the Azure portal**    |  You've added the Azure Information Protection pane to the Azure portal, and confirmed that the protection service is activated. </br></br>For more information, see [Quickstart: Get started in the Azure portal](quickstart-viewpolicy.md).       |
 |**An existing Azure Information Protection label to configure**     | Use one of the default labels, or a label that you've created. For more information, see  [Quickstart: Create a new Azure Information Protection label for specific users](quickstart-label-specificusers.md). |
 |**Classic client installed**    |   To test the new label, you'll need the classic client installed on your computer. </br></br>The Azure Information Protection classic client is being deprecated in March  2021. To deploy the AIP classic client, open a support ticket to get download access.  |
-|**A Windows computer, signed into Office apps** |To test the new label, you'll need a  computer running Windows (minimum of Windows 7 with Service Pack 1). </br></br>On this computer, sign into one of the following Office app versions: </br>- Office apps minimum version 1805, build 9330.2078 from [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) when you are assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365). </br>- [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). </br>- Office Professional Plus 2019. </br>- Office Professional Plus 2016.</br>- Office Professional Plus 2013 with Service Pack 1. </br>- Office Professional Plus 2010 with Service Pack 2.|
+|**A Windows computer, signed into Office apps** |To test the new label, you'll need a  computer running Windows (minimum of Windows 7 with Service Pack 1). </br></br>On this computer, sign into one of the following Office app versions: </br>- Office apps minimum version 1805, build 9330.2078 from [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) when you are assigned a license for Azure Rights Management. </br>- [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). </br>- Office Professional Plus 2019. </br>- Office Professional Plus 2016.</br>- Office Professional Plus 2013 with Service Pack 1. </br>- Office Professional Plus 2010 with Service Pack 2.|
 | | |
 
 For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
@@ -88,7 +88,7 @@ Your label is now configured to display in Outlook only, and apply the **Do Not 
 
 ## Test your new label
 
-Your configured label displays only in Outlook and is suitable for emails sent to any recipient outside your organization when Exchange Online is configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
+Your configured label displays only in Outlook and is suitable for emails sent to any recipient outside your organization when Exchange Online is configured for the new capabilities in message encryption. For more information, see [Set up new Message Encryption capabilities](/microsoft-365/compliance/set-up-new-message-encryption-capabilities).
 
 1. On your computer, open Outlook and create a new email message. If Outlook is already open, restart it to force a policy refresh.
 

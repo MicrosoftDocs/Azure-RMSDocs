@@ -57,7 +57,7 @@ When you use Exchange Online or Exchange Server, you can configure options for A
 
 -   **Data loss prevention (DLP) policies** that contain sets of conditions to filter email messages and take actions, to help prevent data loss for confidential or sensitive content. One of the actions that you can specify is to apply encryption as protection, by specifying one of the protection templates or options. Policy Tips can be used when sensitive data is detected, to alert users that they might need to apply protection. For more information, see [Data loss prevention](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) in the Exchange Online documentation.
 
--   **Office 365 Message Encryption** that supports sending a protected email message and protected Office documents as attachments to any email address on any device. For user accounts that don't use Azure AD, a web experience supports social identity providers or a one-time passcode. For more information, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](/microsoft-365/compliance/set-up-new-message-encryption-capabilities) from the Office 365 documentation. To help you find additional information that is related to this configuration, see [Office 365 Message Encryption](https://docs.microsoft.com/microsoft-365/compliance/ome).
+-   **Message Encryption** that supports sending a protected email message and protected Office documents as attachments to any email address on any device. For user accounts that don't use Azure AD, a web experience supports social identity providers or a one-time passcode. For more information, see [Set up new Message Encryption capabilities](/microsoft-365/compliance/set-up-new-message-encryption-capabilities). To help you find additional information that is related to this configuration, see [Message Encryption](https://docs.microsoft.com/microsoft-365/compliance/ome).
 
 If you use Exchange on-premises, you can use the IRM features with the Azure Rights Management service by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Azure Rights Management service.
 
@@ -101,7 +101,7 @@ For libraries that are not IRM-protected, if you apply protection-only to a file
 
 When you use SharePoint IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive and SharePoint](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
 
-Although no longer new, the following post from the Office 365 blog has some additional information that you might find useful: [What’s New with Information Rights Management in SharePoint](https://www.microsoft.com/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
+Although no longer new, the following blog post has some additional information that you might find useful: [What’s New with Information Rights Management in SharePoint](https://www.microsoft.com/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
 
 For changes that are coming, see [Updates to SharePoint security, administration, and migration](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
 
@@ -113,8 +113,6 @@ If you are ready to configure SharePoint for IRM:
 
 
 ## Next steps
-
-If you have Office 365, you might be interested in reviewing [File Protection Solutions in Office 365](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect), which provides recommended capabilities for protecting files in Office 365.
 
 To see how other applications and services support the Azure Rights Management service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
 

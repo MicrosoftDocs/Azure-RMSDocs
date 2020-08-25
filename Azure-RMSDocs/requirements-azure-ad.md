@@ -61,16 +61,16 @@ To use multi-factor authentication (MFA) with Azure Information Protection, you 
 
 Once you've confirmed these prerequisites, do one of the following, depending on your tenant configuration:
 
-- **Microsoft-managed tenants, with Azure AD or Office 365**. Configure Azure MFA to enforce MFA for users. 
+- **Microsoft-managed tenants, with Azure AD or Microsoft 365**. Configure Azure MFA to enforce MFA for users. 
 
     For more information, see: 
     - [Getting started with Azure Multi-Factor Authentication in the cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud)
     - [What is Azure Multi-Factor Authentication?](/multi-factor-authentication/multi-factor-authentication)
 
-- **Federated tenants, where federation servers operate on-premises**. Configure your federation servers for Azure Active Directory or Office 365. 
+- **Federated tenants, where federation servers operate on-premises**. Configure your federation servers for Azure Active Directory or Microsoft 365. 
 For example, if you are using AD FS, see [Configure Additional Authentication Methods for AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs). 
 
-    For more information about this scenario, see  [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) on the Office blog. 
+    For more information about this scenario, see [Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) on the Office blog. 
 
 ## Rights Management connector / AIP scanner requirements
 

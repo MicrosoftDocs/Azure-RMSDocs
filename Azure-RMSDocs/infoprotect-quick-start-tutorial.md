@@ -67,7 +67,7 @@ To complete this tutorial, you need:
 
 4. You're signed in to Office apps from one of the following categories:
     
-    - Office apps minimum version 1805, build 9330.2078 from [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) when you are assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365).
+    - Office apps minimum version 1805, build 9330.2078 from [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) when you are assigned a license for Azure Rights Management.
     
     - [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename).
     
