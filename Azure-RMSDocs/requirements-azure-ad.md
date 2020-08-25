@@ -50,7 +50,7 @@ For more information, see [Get started with certificate-based authentication in 
 
 To use multi-factor authentication (MFA) with Azure Information Protection, you must have at least one of the following installed:
 
-- **Microsoft Office,** version 2013 or later
+- **Microsoft Office,** version 2013 or higher
 - **An AIP client**. No minimum version required. The AIP clients for Windows, as well as the viewer apps for iOS and Android all support MFA.
 - **The Rights Management sharing app for Mac computers**. The RMS sharing apps have supported MFA since the September 2015 release.
 

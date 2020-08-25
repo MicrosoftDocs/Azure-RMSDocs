@@ -129,9 +129,9 @@ When a full scan is complete, the scan type automatically changes to incremental
 > [!TIP]
 > If you've made changes to your AIP [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), the Azure portal will prompt you to skip a full rescan. To ensure that your rescan occurs, make sure to select **No** in the prompt that appears.
 > 
-### Trigger a full rescan by modifying your settings (versions 2.7.99.0 and earlier)
+### Trigger a full rescan by modifying your settings (versions 2.7.101.0 and lower)
 
-In scanner versions 2.7.99.0 and earlier, all files are scanned whenever the scanner detects new or changed settings for automatic and recommended labeling. The scanner automatically refreshes the policy every four hours.
+In scanner versions [2.7.101.0](rms-client/unifiedlabelingclient-version-release-history.md#version-271010) and lower, all files are scanned whenever the scanner detects new or changed settings for automatic and recommended labeling. The scanner automatically refreshes the policy every four hours.
 
 To refresh the policy sooner, such as while testing, manually delete the contents of the **%LocalAppData%\Microsoft\MSIP\mip\<processname>\mip** directory and restart the Azure Information Protection service.
 

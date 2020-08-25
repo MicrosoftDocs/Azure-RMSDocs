@@ -67,17 +67,17 @@ To complete this tutorial, you need:
 
 4. You're signed in to Office apps from one of the following categories:
     
-    - Office apps minimum version 1805, build 9330.2078 from [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) when you are assigned a license for Azure Rights Management.
+    - Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when you are assigned a license for Azure Rights Management.
     
-    - [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename).
+    - Office 365 ProPlus
     
-    - [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019.
+    - Office Professional Plus 2019.
     
-    - [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016.
+    - Office Professional Plus 2016.
     
-    - [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 with Service Pack 1.
+    - Office Professional Plus 2013 with Service Pack 1.
     
-    - [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 with Service Pack 2.
+    - Office Professional Plus 2010 with Service Pack 2.
 
 > [!TIP]
 > For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).
