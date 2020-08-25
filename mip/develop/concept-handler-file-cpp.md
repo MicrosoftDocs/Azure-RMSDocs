@@ -63,7 +63,7 @@ After successfully creating the `FileHandler` object, file operations (get/set/d
 
 There are a few requirements to successfully reading metadata from a file and translating in to something that can be used in applications.
 
-- The label being read must still exist in the O365 service. If it's been deleted entirely, the SDK will fail to obtain information about that label and will return an error.
+- The label being read must still exist in the service. If it's been deleted entirely, the SDK will fail to obtain information about that label and will return an error.
 - The file metadata must be intact. This metadata includes:
   - Attribute1
   - Attribute2
