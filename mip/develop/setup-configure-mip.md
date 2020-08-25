@@ -12,7 +12,7 @@ ms.custom: has-adal-ref
 
 # Microsoft Information Protection (MIP) SDK setup and configuration
 
-The Quickstart and Tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Office 365 subscription and client workstation, in preparation for using the SDK.
+The Quickstart and Tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Microsoft 365 subscription and client workstation, in preparation for using the SDK.
 
 ## Prerequisites
 
@@ -27,9 +27,9 @@ Be sure to review the following topics before getting started:
 >
 > *By turning on Error and Performance Logging, you are agreeing to send Error and Performance Data to Microsoft. Microsoft will collect error and performance data over the internet (“Data”). Microsoft uses this Data to provide and improve the quality, security and integrity of Microsoft products and services. For example, we analyze performance and reliability, such as what features you use, how quickly the features respond, device performance, user interface interactions, and any problems you experience with the product. Data will also include information about the configuration of your software like the software you are currently running, and the IP address.*
 
-## Sign up for an Office 365 subscription
+## Sign up for a subscription
 
-Many of the SDK samples require access to an Office 365 subscription. If you haven't already, be sure to sign up for one of the following subscription types:
+Many of the SDK samples require access to a subscription. If you haven't already, be sure to sign up for one of the following subscription types:
 
 | Name                                               | Sign-up                                                                         |
 | -------------------------------------------------- | ------------------------------------------------------------------------------- |
@@ -41,7 +41,7 @@ Many of the SDK samples require access to an Office 365 subscription. If you hav
 
 ## Configure sensitivity labels
 
-If you're currently using Azure Information Protection, you must migrate your labels to Office 365 Security and Compliance Center. For more information on the process, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels).
+If you're currently using Azure Information Protection, you must migrate your labels to Office 365 Security and Compliance Center. For more information on the process, see [How to migrate Azure Information Protection labels to unified sensitivity labels](/azure/information-protection/configure-policy-migrate-labels).
 
 ## Configure your client workstation
 
@@ -139,7 +139,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 ## Register a client application with Azure Active Directory
 
-As part of the Office 365 subscription provisioning process, an associated Azure Active Directory (Azure AD) tenant is created. The Azure AD tenant provides identity and access management for Office 365 *user accounts* and *application accounts*. Applications that require access to secured APIs (such as MIP APIs), require an application account.
+As part of the Microsoft 365 subscription provisioning process, an associated Azure Active Directory (Azure AD) tenant is created. The Azure AD tenant provides identity and access management for *user accounts* and *application accounts*. Applications that require access to secured APIs (such as MIP APIs), require an application account.
 
 For authentication and authorization at runtime, accounts are represented by a *security principal*, which is derived from the account's identity information. Security principals that represent an application account are referred to as a [*service principal*](/azure/active-directory/develop/developer-glossary#service-principal-object).
 
