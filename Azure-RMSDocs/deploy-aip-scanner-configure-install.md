@@ -281,7 +281,7 @@ For more information, see [How to label files non-interactively for Azure Inform
 To get an Azure AD token:
 
 1. Return to the Azure portal to create an Azure AD application to specify an access token for authentication.
-1. 
+
 1. From the Windows Server computer, if your scanner service account has been granted the **Log on locally** right for the installation, sign in with this account and start a PowerShell session. 
 
     Run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
