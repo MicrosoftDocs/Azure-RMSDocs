@@ -168,7 +168,7 @@ Use the following information to help you configure the Azure Information Protec
 
 - [How to configure labels for different languages](configure-policy-languages.md)
 
-- [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md)
+- [How to migrate Azure Information Protection labels to Microsoft 365](configure-policy-migrate-labels.md)
 
 ## Label information stored in emails and documents
 
