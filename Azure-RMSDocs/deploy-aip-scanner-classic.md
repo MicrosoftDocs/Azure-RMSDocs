@@ -52,7 +52,7 @@ The following image shows the AIP scanner architecture, where the scanner discov
 
 :::image type="content" source="media/classic-scanner-arch.png" alt-text="Azure Information Protection classic scanner architecture":::
 
-To inspect your files, the scanner uses IFilters installed on the computer. To determine whether the files need labeling, the scanner uses built-in data loss prevention (DLP) sensitivity information types and pattern detection, or regex patterns.
+To inspect your files, the scanner uses IFilters installed on the computer. To determine whether the files need labeling, the scanner uses the Microsoft 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Microsoft 365 regex patterns.
 
 The scanner uses the Azure Information Protection client, and can classify and protect the same types of files as the client. For more information, see [File types supported by the Azure Information Protection client](./rms-client/client-admin-guide-file-types.md).
 

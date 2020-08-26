@@ -38,9 +38,9 @@ Because these later versions of Office natively support the Azure Rights Managem
 
 Users who have Office for Mac must first verify their credentials before they can protect content. For example:
 
-1. Open Outlook and create a profile by using your work or school account. 
+1. Open Outlook and create a profile by using your Microsoft 365 work or school account. 
 
-2. Create a new message and on the **Options** tab, select **Permissions**, and then select **Verify Credentials**. When prompted, specify your work or school account details again, and select **Sign in**.
+2. Create a new message and on the **Options** tab, select **Permissions**, and then select **Verify Credentials**. When prompted, specify your Microsoft 365 work or school account details again, and select **Sign in**.
     
     This action downloads the Azure Rights Management templates and **Verify Credentials** is now replaced with options that include **No Restrictions**, **Do Not Forward**, and any Azure Rights Management templates that are published for your tenant. 
 

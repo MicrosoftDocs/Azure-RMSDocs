@@ -53,7 +53,7 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
     $Cred = Get-Credential
     ```
 
-    Then, in the **Windows PowerShell credential request** dialog box, supply your user name and password.
+    Then, in the **Windows PowerShell credential request** dialog box, supply your Microsoft 365 user name and password.
 
 3. Connect to the Exchange Online service by first setting a variable:
 
@@ -526,7 +526,7 @@ Although you cannot configure IRM for users' OneDrive by using the SharePoint ad
 
       This value is the same as the one you use to sign in to the Microsoft 365 admin center as the global administrator and has the following format: user_name@*&lt;tenant domain name&gt;*.com
 
-      For example, if the global administrator user name is "admin" for the "contoso.com" tenant domain, you would specify: **admin@contoso.com**
+      For example, if the Microsoft 365 global administrator user name is "admin" for the "contoso.com" tenant domain, you would specify: **admin@contoso.com**
 
    3. Search for `$webUrls` and replace the example values with your users' OneDrive web URLs, adding or deleting as many entries as you need.
 
@@ -544,7 +544,7 @@ Although you cannot configure IRM for users' OneDrive by using the SharePoint ad
 
    For more information about signing Windows PowerShell scripts, see [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) in the PowerShell documentation library.
 
-6. Run the script and if prompted, supply the password for the admin account. If you modify the script and run it in the same Windows PowerShell session, you won't be prompted for credentials.
+6. Run the script and if prompted, supply the password for the Microsoft 365 admin account. If you modify the script and run it in the same Windows PowerShell session, you won't be prompted for credentials.
 
 > [!TIP]
 > You can also use this script to configure IRM for a SharePoint library. For this configuration, you will likely want to enable the additional option **Do not allow users to upload documents that do not support IRM**, to ensure that the library contains only protected documents.    To do that, add the `-IrmReject` parameter to the Set-IrmConfiguration command in the script.
