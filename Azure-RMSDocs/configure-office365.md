@@ -567,7 +567,7 @@ This script also requires the [SharePoint Client Components SDK](https://www.mic
 <#
   Description:
 
-    Queries the search service of a Microsoft 365 organization to retrieve all OneDrive sites.  
+    Queries the search service of a Microsoft 365 tenant to retrieve all OneDrive sites.  
     Details of the discovered sites are written to a .CSV file (by default,"OneDriveForBusinessSiteInfo_<date>.csv").
 
  Script Installation Requirements:
