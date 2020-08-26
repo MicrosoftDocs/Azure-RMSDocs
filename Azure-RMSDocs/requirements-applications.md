@@ -129,7 +129,7 @@ For more information, see the [File types supported](./rms-client/client-admin-g
 ### Microsoft 365 app support
 
 Includes: 
-- Office apps minimum version 1805, build 9330.2078 from Microsoft 365 Apps for Business or Microsoft 365 Business. Supported only when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Microsoft 365 Business Premium).
+- Office apps minimum version 1805, build 9330.2078 from Microsoft 365 Apps for Business or Microsoft 365 Business Premium. Supported only when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Microsoft 365 Business Premium).
 - Microsoft 365 Apps for Enterprise.
 
 ### Viewing protected documents in Office for the web
@@ -138,7 +138,7 @@ Supported only with Microsoft SharePoint and OneDrive, and the documents are unp
 
 ### Web browser support
 
-- Web browsers are supported for **Word, Excel, and PowerPoint** files, when the [Office attachments](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) are protected by using [Email Encryption and Rights Protection](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
+- Web browsers are supported for **Word, Excel, and PowerPoint** files, when the [Office attachments](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) are protected by using [Microsoft 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 - For **emails,** web browsers are supported only in the following scenarios:
 
@@ -176,7 +176,7 @@ See also: [Office Applications Service Description](https://technet.microsoft.co
 
 The following Office client suites support protecting files and emails on Windows computers by using the Azure Rights Management service:
 
-- **Office apps minimum version 1805, build 9330.2078 from Microsoft 365 Apps for Business or Microsoft 365 Business Premium** when the user is assigned a license for Azure Rights Management
+- **Office apps minimum version 1805, build 9330.2078 from Microsoft 365 Apps for Business or Microsoft 365 Business Premium** when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Microsoft 365)
 
 - **Microsoft 365 Apps for Enterprise**
 

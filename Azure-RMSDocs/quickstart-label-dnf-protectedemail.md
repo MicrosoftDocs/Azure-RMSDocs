@@ -88,7 +88,7 @@ Your label is now configured to display in Outlook only, and apply the **Do Not 
 
 ## Test your new label
 
-Your configured label displays only in Outlook and is suitable for emails sent to any recipient outside your organization when Exchange Online is configured for the new capabilities in message encryption. For more information, see [Set up new Message Encryption capabilities](/microsoft-365/compliance/set-up-new-message-encryption-capabilities).
+Your configured label displays only in Outlook and is suitable for emails sent to any recipient outside your organization when Exchange Online is configured for the new capabilities in message encryption. For more information, see [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
 1. On your computer, open Outlook and create a new email message. If Outlook is already open, restart it to force a policy refresh.
 

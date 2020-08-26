@@ -180,7 +180,7 @@ In most cases, the value for UserPrincipalName matches one of the values in the 
 
     If the domain name in the UPN value is not a verified domain for your tenant, it cannot be used with Azure Information Protection. However, the user can still be authorized as a member of a group when the group email address uses a verified domain name.
 
-2. If the UPN is not routable (for example, <strong>ankurroy@contoso.local</strong>), configure alternate login ID for users and instruct them how to sign in by using this alternate login. You must also set a registry key for Office.
+2. If the UPN is not routable (for example, <strong>ankurroy@contoso.local</strong>), configure alternate login ID for users and instruct them how to sign in to Office by using this alternate login. You must also set a registry key for Office.
 
     For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) and [Office applications periodically prompt for credentials to SharePoint, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
 

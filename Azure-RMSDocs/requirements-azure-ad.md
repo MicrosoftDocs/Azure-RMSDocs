@@ -70,7 +70,7 @@ Once you've confirmed these prerequisites, do one of the following, depending on
 - **Federated tenants, where federation servers operate on-premises**. Configure your federation servers for Azure Active Directory or Microsoft 365. 
 For example, if you are using AD FS, see [Configure Additional Authentication Methods for AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs). 
 
-    For more information about this scenario, see [Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) on the Office blog. 
+    For more information about this scenario, see [The Works with Microsoft 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) on the Office blog. 
 
 ## Rights Management connector / AIP scanner requirements
 

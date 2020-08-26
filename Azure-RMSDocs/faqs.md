@@ -163,7 +163,7 @@ If you later purchase a subscription that does include classification and labeli
 
 ## Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?
 
-Global administrators for a Microsoft 365 organization or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection. 
+Global administrators for a Microsoft 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection. 
 
 However, if you want to assign administrative permissions to other users, do so using the following roles:
 

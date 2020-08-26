@@ -197,7 +197,7 @@ Perform the following steps:
     > [!IMPORTANT]
     > Users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). 
     > 
-    > However, until Exchange is configured for IRM or [Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in the following list (2 for Exchange Online, and 5 for Exchange on-premises). 
+    > However, until Exchange is configured for IRM or [Microsoft 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in the following list (2 for Exchange Online, and 5 for Exchange on-premises). 
     > 
 
 1. **Configure Office applications and services**

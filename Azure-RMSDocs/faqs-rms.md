@@ -58,9 +58,9 @@ For more information about HYOK and to make sure that you understand its limitat
 
 ## Can I now use BYOK with Exchange Online?
 
-Yes, you can now use BYOK with Exchange Online when you follow the instructions in [Set up new Message Encryption capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). These instructions enable the new capabilities in Exchange Online that support using BYOK for Azure Information Protection, as well as the new Office 365 Message Encryption.
+Yes, you can now use BYOK with Exchange Online when you follow the instructions in [Set up new Microsoft 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). These instructions enable the new capabilities in Exchange Online that support using BYOK for Azure Information Protection, as well as the new Office 365 Message Encryption.
 
-For more information about this change, see the blog announcement: [Email Encryption and Rights Protection](https://techcommunity.microsoft.com/t5/microsoft-security-and/email-encryption-and-rights-protection/ba-p/110801).
+For more information about this change, see the blog announcement: [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)
 
 ## Where can I find information about third-party solutions that integrate with Azure RMS?
 
@@ -141,7 +141,7 @@ The recipient sees an option to sign in to their Gmail, Yahoo, or Microsoft acco
 
 To support this scenario, Exchange Online must be enabled for the Azure Rights Management service and the new capabilities in Office 365 Message Encryption. For more information about this configuration, see [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration).
 
-For more information about the new capabilities that include supporting all email accounts on all devices, see the following blog post: [Email Encryption and Rights Protection](https://techcommunity.microsoft.com/t5/microsoft-security-and/email-encryption-and-rights-protection/ba-p/110801).
+For more information about the new capabilities that include supporting all email accounts on all devices, see the following blog post: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 ## What devices and which file types are supported by Azure RMS?
 
@@ -159,7 +159,7 @@ Open Outlook and create a profile by using your work or school account. Then, cr
 
 1. In the new message, on the **Options** tab, click **Permissions**, and then click **Verify Credentials**.
 
-2. When prompted, specify your work or school account details again, and select **Sign in**.
+2. When prompted, specify your Microsoft 365 work or school account details again, and select **Sign in**.
 
     This downloads the Azure Rights Management templates and **Verify Credentials** is now replaced with options that include **No Restrictions**, **Do Not Forward**, and any Azure Rights Management templates that are published for your tenant. You can now cancel this new message.
 
@@ -176,7 +176,7 @@ Currently, Microsoft SharePoint supports RMS-protected documents by using IRM pr
 If you are interested in a specific capability that isn't yet supported, be sure to keep an eye on announcements on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
 ## How do I configure One Drive in SharePoint, so that users can safely share their files with people inside and outside the company?
-By default, as an administrator, you don't configure this; users do.
+By default, as a Microsoft 365 administrator, you don't configure this; users do.
 
 Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive is designed for users to enable and configure IRM for their own OneDrive library. However, by using PowerShell, you can do this for them. For instructions, see [SharePoint in Microsoft 365 and OneDrive: IRM Configuration](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration).
 

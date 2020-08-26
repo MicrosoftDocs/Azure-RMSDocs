@@ -50,7 +50,7 @@ To verify that your subscription includes the Azure Information Protection featu
 If you have questions about licensing, read through the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing.
 
 > [!TIP]
-> Looking to see if your plan or Exchange Online standalone plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
+> Looking to see if your Microsoft 365 plan or Exchange Online standalone plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
 >
 > - [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
 >
@@ -137,11 +137,11 @@ Each Azure Information Protection client has additional prerequisites. For detai
 
 The Azure Information Protection clients can label and protect documents and emails by using Microsoft **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
 
-- **Office apps minimum version 1805**, build 9330.2078 from Office 365 Business or Microsoft 365 Business. 
+- **Office apps minimum version 1805**, build 9330.2078 from Microsoft 365 Apps for Business or Microsoft 365 Business Premium. 
 
-    This edition is supported only when the user is assigned a license for Azure Rights Management.
+    This edition is supported only when the user is assigned a license for Azure Rights Management, also known as Azure Information Protection for Microsoft 365.
 
-- **Office 365 ProPlus**
+- **Microsoft 365 Apps for Enterprise**
 
 - **Office Professional Plus 2019**
 
