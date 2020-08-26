@@ -40,7 +40,7 @@ Mail flow rules that apply protection as an action are ignored if the email is a
 
 You can extend these examples as well as modify them. For example, add more conditions. For more information about configuring mail flow rules, see [Mail flow rules (transport rules) in Exchange Online](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx) from the Exchange Online documentation.
 
-For more information about configuring mail flow rules to encrypt email messages, see [Define mail flow rules to encrypt email messages](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) from the Office documentation. 
+For more information about configuring mail flow rules to encrypt email messages, see [Define mail flow rules to encrypt email messages in Microsoft 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) from the Office documentation. 
 
 ## Prerequisite: Know your label GUID
 
