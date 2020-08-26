@@ -71,7 +71,7 @@ If you have AD RMS and want to migrate to Azure Information Protection, see [Mig
 
 ## Should you deploy the Azure Information Protection unified labeling client?
 
-Deploy the Azure Information Protection unified labeling client if you are using [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels), and any of the following applies:
+Deploy the Azure Information Protection unified labeling client if you are using [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) in Microsoft 365, and any of the following applies:
 
 - You want to classify (and optionally, protect) documents and email messages by selecting labels from within your Office apps (Word, Excel, PowerPoint, Outlook) on Windows computers.
 
@@ -148,7 +148,7 @@ The **Reset Settings** signs out the user, deletes the currently downloaded sens
 
 #### **Client status** section
 
-Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Microsoft 365 or Azure Active Directory. The account must also belong to an organization that is configured for sensitivity labels in your labeling management portal.
+Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Microsoft 365 or Azure Active Directory. The account must also belong to a Microsoft 365 tenant that is configured for sensitivity labels in your labeling management portal.
 
 If you need to sign in as a different user to the one displayed, see the [Sign in as a different user](clientv2-admin-guide-customizations.md#sign-in-as-a-different-user) instructions.
 
