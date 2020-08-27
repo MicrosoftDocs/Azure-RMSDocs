@@ -108,12 +108,6 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 Use the following instructions to install the client when you're not using the Microsoft Update catalog, or deploying the .msi by using a central deployment method such as Intune.
 
-<!--
-1. Download the executable version Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
-
-    If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment.
--->
-
 1. For a default installation, simply run the executable, for example, **AzInfoProtection.exe**. 
 
     To view other installation options, first run the executable with **/help**: `AzInfoProtection.exe /help`
@@ -196,12 +190,6 @@ For central deployment, use the following information that is specific to the .m
 
 If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/deploy-use/add-apps).
 
-<!--
-
-1. Download the .msi version of the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). 
-    
-    If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment. 
--->
 1. For each computer that runs the .msi file, you must make sure that the following software dependencies are in place. For example, package these with the .msi version of the client or only deploy to computers that meet these dependencies:
     
     |Office version|Operating system|Software|Action|
