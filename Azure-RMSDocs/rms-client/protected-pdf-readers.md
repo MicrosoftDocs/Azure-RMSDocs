@@ -81,11 +81,6 @@ Supported versions include:
 - **Mac:** macOS versions 10.12 and above 
 
 
-
-<!--
-With Microsoft Edge, when a user encounters a locally saved protected PDF file, they can view the file directly in the browser. If the file is available on SharePoint, the user only needs to click **Open** > **Open in browser** from Microsoft Edge, to view the file. 
--->
-
 **Instructions:** 
 
 1. Check which [Microsoft Edge version](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) is installed on your system. 

@@ -419,13 +419,6 @@ To maximize the scanner performance:
 
     Inspecting the file contents for a match against your configured conditions, and encrypting and decrypting files are processor-intensive actions. Monitor typical scanning cycles for your specified data stores to identify whether a lack of processor resources is negatively affecting the scanner performance.
 
-<!--   removed w local folders 
-- **Do not scan local folders on the computer running the scanner service**
-    
-    If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.
-
-If necessary, install multiple instances of the scanner. Each scanner instance requires its own configuration database in a different SQL Server instance.
--->
 
 Other factors that affect the scanner performance:
 

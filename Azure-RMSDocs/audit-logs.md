@@ -49,11 +49,11 @@ Microsoft Azure Information Protection generates audit logs at the following act
 
 |Reported by  |Platform  |Application  |Action / Description  |
 |---------|---------|---------|---------|
-|Azure Information Protection:</br>- Classic client</br>- Unified labeling client     | Windows        | Office        |Generated for the first time in each session that a labeled or protected file is saved.<br>The log includes any information type matches.  <!-- plan to be removed -->    |
-|Azure Information Protection:</br>- Classic client</br>- Unified labeling client     |Windows         |Office         |Generated each time a labeled or protected file is created.<!-- plan to be removed -->       |
-|Azure Information Protection:</br>- Classic client</br>- Unified labeling client     | Windows, SharePoint, OneDrive        | Office        | Generated each time a labeled or protected file is opened. </br></br>**Note:** For protected files, Access audit logs are generated only when the file is opened and the content is successfully decrypted and exposed to the user. </br>For protected emails in Outlook, Access audit logs are also generated each time the user attempts to open an encrypted email, even if the decryption is blocked due to a lack of permissions. <!--limitations-->         |
+|Azure Information Protection:</br>- Classic client</br>- Unified labeling client     | Windows        | Office        |Generated for the first time in each session that a labeled or protected file is saved.<br>The log includes any information type matches.     |
+|Azure Information Protection:</br>- Classic client</br>- Unified labeling client     |Windows         |Office         |Generated each time a labeled or protected file is created.       |
+|Azure Information Protection:</br>- Classic client</br>- Unified labeling client     | Windows, SharePoint, OneDrive        | Office        | Generated each time a labeled or protected file is opened. </br></br>**Note:** For protected files, Access audit logs are generated only when the file is opened and the content is successfully decrypted and exposed to the user. </br>For protected emails in Outlook, Access audit logs are also generated each time the user attempts to open an encrypted email, even if the decryption is blocked due to a lack of permissions.          |
 |Microsoft Information Protection (MIP) SDK     | Any        | Third-party applications        | Generated each time a labeled or protected file is accessed by a third-party application that supports it.       |
-|RMS service     | Windows        | Office         |Generated each time a labeled or protected document is accessed.<!-- plan to be removed -->       |
+|RMS service     | Windows        | Office         |Generated each time a labeled or protected document is accessed.       |
 
 
 ## Access denied audit logs
