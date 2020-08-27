@@ -223,12 +223,6 @@ You may want to do this only after running a network scan job to analyze the rep
         |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
         | | |
 
-        <!--
-        > [!IMPORTANT]
-        > While the local file system can be scanned, this configuration is not recommended for production deployments and can **only** be used in single node clusters.
-        >
-        > Scanning of local folders by multi-node clusters is not supported. If you need to scan a folder on the local file system, we recommend creating a share, and scanning it using a network URL.
-        -->
 
 1. Repeat the previous steps to add as many repositories as needed.
 
@@ -444,9 +438,6 @@ Use the following options and guidance to help you optimize scanner performance:
 |**Check your alternative configuration usage** |The scanner runs more quickly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents. <br/></br>The scanner runs more slowly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.|
 | | |
 
-<!-- removed when removing local folders
-|**Do not scan local folders on the computer running the scanner service**     | If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. </br></br>Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.        |
--->
 
 ### Additional factors that affect performance
 

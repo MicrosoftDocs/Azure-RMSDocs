@@ -33,8 +33,6 @@ search.appverid:
 
 Have a question about Azure Information Protection, or about the Azure Rights Management service (Azure RMS)? See if it's answered here.
 
-<!-- These FAQ pages are updated regularly, with new additions listed in the monthly documentation update announcements on the [Azure Information Protection technical blog](https://aka.ms/AIPblog).-->
-
 ## What's the difference between Azure Information Protection and Microsoft Information Protection?
 
 Unlike Azure Information Protection, [Microsoft Information Protection](https://www.microsoft.com/security/business/information-protection) isn't a subscription or product that you can buy. Instead, it's a framework for products and integrated capabilities that help you protect your organization's sensitive information.

@@ -30,29 +30,6 @@ Use the lists and tables below to find details about known issues and limitation
 > [!NOTE]
 > This article refers to known issues in both the classic and unified labeling clients. Not sure of the difference between these clients? See [FAQs](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 
-<!--removed from this page
-## HYOK known issues
-
-HYOK has the following known issues:
-
-- [Supported Microsoft Office versions](#supported-microsoft-office-versions)
-- [Email recommendations for Office 365 and other online services](#email-recommendations-for-office-365-and-other-online-services)
-
-### Supported Microsoft Office versions
-
-HYOK for the Azure Information Protection classic client does not support versions of Office earlier than Office 2013.
-
-### Email recommendations for Office 365 and other online services
-
-We recommend that you do not use HYOK protection for emails in Office 365 and other online services.
-
-Office 365 and other online services are not be able to decrypt HYOK-protected documents and emails. This limitation includes HYOK-protected documents and emails that have been protected with the Rights Management connector, and prevents these services from inspecting the content and taking action on them.
-
-This loss of functionality for HYOK-protected email includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
-
-Additionally, users may not understand why some devices cannot open their HYOK-protected emails, resulting in more calls to your help desk.
--->
-
 ## Client support for container files, such as .zip files
 
 Container files are files that include other files, with a typical example being .zip files that contain compressed files. Other examples include .rar, .7z, .msg files, and PDF documents that include attachments.
@@ -77,16 +54,6 @@ The current release of the **AzureInformationProtection** PowerShell module that
 
 For more information, see [Admin Guide: Using PowerShell with the Azure Information Protection client](rms-client/client-admin-guide-powershell.md).
 
-<!-- removed from this page
-## Protection-only mode known issues
-
-The following known issues apply for [Protection-only mode for the Azure Information Protection client](rms-client/client-protection-only-mode.md):
-
-- In Office apps, the Azure Information Protection bar is not shown. When you click **Protect** > **Show Bar**, this menu option is unavailable.
-
-- When you use the **Classify and protect - Azure Information Protection** dialog box with the File Explorer, labels for classification are not shown. Instead, you have an option select a Rights Management (RMS) template.
--->
-
 ## AIP known issues in Office applications
 
 |Feature  |Known issues  |
@@ -98,12 +65,6 @@ The following known issues apply for [Protection-only mode for the Azure Informa
 |**Files attached to emails** |Due to a limitation in recent Windows updates, when [Microsoft Outlook is protected by Azure Rights Management](office-apps-services-support.md), files attached to emails may be locked after opening the file. |
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
 | | |
-
-<!-- removing b/c this is relevant for classic only. for UL, labels are configured in m365. so this is basically irrelevant for us.
-## Known issues in labeling
-
-Depending on your policy rule size limit, configuring more than 200 users or user groups for each label may cause unexpected errors. 
--->
 
 ## Known issues in policies
 
