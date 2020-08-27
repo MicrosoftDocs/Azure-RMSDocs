@@ -153,10 +153,6 @@ BYOK prerequisites vary, depending on your system configuration. Verify that you
 |**Thales firmware version 11.62**    |You must have a Thales firmware version of 11.62 if you are migrating from AD RMS to Azure Information Protection by using software key to hardware key and are using Thales firmware for your HSM.
 |**Firewall bypass for trusted Microsoft services** |If the key vault that contains your tenant key uses Virtual Network Service Endpoints for Azure Key Vault, you must allow trusted Microsoft services to bypass this firewall. </br>For more information, see [Virtual Network Service Endpoints for Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/overview-vnet-service-endpoints).       |
 
-<!--
->[!NOTE]
-> For more information about nCipher nShield hardware security module (HSM) and how they are used with Azure Key Vault, see the [nCipher website](https://www.ncipher.com/products/key-management/cloud-microsoft-azure/how-to-buy).-->
-
 #### Verifying that you have a BYOK-compatible Azure subscription
 
 Your Azure Information Protection tenant must have an Azure subscription. If you don't have one yet, you can sign up for a [free account](https://azure.microsoft.com/pricing/free-trial/). However, to use an HSM-protected key, you must have the Azure Key Vault Premium service tier.

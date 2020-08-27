@@ -187,7 +187,7 @@ The diagnostics tool checks the following details and then exports a log file wi
 - Whether the rules configured are valid
 
 > [!TIP]
-> If you are running the command under a user that is not the scanner user, be sure to add the **-OnBehalf** parameter. <!--For more information, see <x>.-->
+> If you are running the command under a user that is not the scanner user, be sure to add the **-OnBehalf** parameter. 
 >
 
 > [!NOTE]
