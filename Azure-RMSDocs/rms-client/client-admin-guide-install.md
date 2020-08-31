@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/17/2020
+ms.date: 08/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -84,6 +84,8 @@ Then check the additional prerequisites that might be needed for the Azure Infor
         For Excel: `MSIP.ExcelAddin`
 
         For PowerPoint: `MSIP.PowerPointAddin`
+
+- The AIP client is not supported on machines that have [Exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. Make sure to [disable Exploit protection](../known-issues.md#known-issues-for-installing-the-aip-client) before installing the AIP client.  
 
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.

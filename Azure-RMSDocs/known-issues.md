@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/10/2020
+ms.date: 08/30/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -41,6 +41,20 @@ If you have a container file that includes classified and protected files, you m
 The Azure Information Protection viewer cannot open attachments in a protected PDF document. In this scenario, when the document is opened in the viewer, the attachments are not visible.
 
 For more information, see [Admin Guide: File types supported by the Azure Information Protection client](rms-client/client-admin-guide-file-types.md).
+
+## Known issues for installing the AIP client
+
+The Azure Information Protection client is not supported on machines where [Exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled.
+
+Make sure to disable Exploit protection before installing AIP. 
+
+To disable Exploit protection via PowerShell, run the following:
+
+```PowerShell
+Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
+```
+
+For more information, see [Azure Information Protection requirements](requirements.md).
 
 ## PowerShell support for the Azure Information Protection client
 
@@ -84,7 +98,6 @@ Publishing policies may take up to 24 hours.
 
     - [**Classic client**: View protected files with the Azure Information Protection viewer](rms-client/client-view-use-files.md)
     - [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md)
-
 
 ## More information
 
