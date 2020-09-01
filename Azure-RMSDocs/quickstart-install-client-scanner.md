@@ -41,7 +41,7 @@ To install the unified labeling scanner and complete this quickstart, you'll nee
 |Requirement  |Description  |
 |---------|---------|
 |**A supporting subscription**     |  You'll need an Azure subscription that includes [Azure Information Protection Plan 1 or Plan 2](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
-|**The Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with a [supported administrator account](configure-policy.md#signing-in-to-the-azure-portal). |
+|**The Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with one of the following administrator accounts: </br>- **Compliance administrator**</br>- **Compliance data administrator**</br>- **Security administrator**</br>- **Global administrator** |
 |**Client installed**    |   Install the AIP unified labeling client on your computer to access the scanner installation. </br></br>Download and run the **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). </br></br>When the installation is complete, you may be prompted to restart your computer or Office software. Restart as needed to continue. |
 |**SQL Server Express**     | To run the scanner, you'll need SQL Server Express installed on the machine where you want to install the scanner. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the **Express** option. In the installer, select the **Basic** installation type.        |
 |**Azure Active Directory account**     |  Your domain account must be synchronized to [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). </br></br>If you're not sure about your account, contact one of your system administrators.      |
@@ -128,7 +128,7 @@ Now you're ready to [Install the AIP unified labeling scanner](#install-the-aip-
     Install-AIPScanner -SqlServerInstance localhost\SQLEXPRESS -Cluster Quickstart
     ```
 
-    When PowerSHell prompts you for credentials, enter your username and password. 
+    When PowerShell prompts you for credentials, enter your username and password. 
 
     For the **User name** field, use the following syntax: `<domain\user name>`. For example: `emea\msanchez`.
 
