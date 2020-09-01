@@ -4,7 +4,7 @@ description: Use the Azure Information Protection (AIP) scanner to find what sen
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/19/2020
+ms.date: 09/01/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection

@@ -4,7 +4,7 @@ description: Use the Azure Information Protection (AIP) unified labeling scanner
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/19/2020
+ms.date: 09/01/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -40,9 +40,9 @@ Use the information in the reports generated to understand which repositories to
 |Requirement  |Description  |
 |---------|---------|
 |**A supporting subscription**     |  You'll need an Azure subscription that includes [Azure Information Protection Plan 1 or Plan 2](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
-|**Access to Azure Information Protection in the Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with a [supported administrator account](configure-policy.md#signing-in-to-the-azure-portal), and have protection enabled. For more information, see [Quickstart: Installing the Azure Information Protection (AIP) unified labeling client and scanner](quickstart-install-client-scanner.md).  |
+|**Access to Azure Information Protection in the Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with a supported administrator account, and have protection enabled. Supported administrator accounts include: </br>- **Compliance administrator**</br>- **Compliance data administrator**</br>- **Security administrator**</br>- **Global administrator** </br></br>For more information, see [Quickstart: Installing the Azure Information Protection (AIP) unified labeling client and scanner](quickstart-install-client-scanner.md).  |
 | **Azure Information Protection analytics**|Make sure that you have [Azure Information Protection analytics](reports-aip.md) enabled.  In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview)**.   |
-|**AIP client and scanner**   |   To complete this quickstart, you'll need to have installed the Azure Information Protection unified labeling scanner. </br></br>For more information, see [Quickstart: Installing the Azure Information Protection (AIP) unified labeling client and scanner](quickstart-install-client-scanner.md). |
+|**AIP client and scanner**   |   To complete this quickstart, you'll need to have installed the Azure Information Protection unified labeling client and scanner. </br></br>For more information, see [Quickstart: Installing the Azure Information Protection (AIP) unified labeling client and scanner](quickstart-install-client-scanner.md). |
 |**SQL Server Express**     | To run the scanner, you'll need SQL Server Express installed on the machine where you want to install the scanner. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the **Express** option. In the installer, select the **Basic** installation type.        |
 |**Azure Active Directory account**     |  Your domain account must be synchronized to [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). </br></br>If you're not sure about your account, contact one of your system administrators.      |
 | | | 
@@ -61,16 +61,37 @@ On the scanner computer, open a PowerShell session as an administrator.
 
 Then run the following commands, to first get the credentials you want the Network Discovery service to use when scanning the network, and the install the service:
 
-```powershell
-Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance] <String> [- Cluster <String>] [<CommonParameters>]
-```
+1. Define the credentials you want to use for Network Discovery. 
 
-For example:
+    For example, run the following commands:
 
-```powershell
-PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\SQLEXPRESS - Cluster Quickstart -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount
+    ``` PowerShell 
+    $serviceacct= Get-Credential 
+    ``` 
+    When prompted, enter the credentials for the account you want to use to run the Network Discovery service.
+
+    ``` PowerShell 
+    $shareadminacct= Get-Credential 
+    ``` 
+    When prompted, enter the credentials for the admin account you want to use to simulate administrator access during your network scan job.
+
+    ``` PowerShell  
+    $publicaccount= Get-Credential 
+    ``` 
+    When prompted, enter the credentials for the account you want to use to simulate public access during your network scan job.
+
+1. Run the following to install the Network Discovery service:
+
+    ```PowerShell
+    Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance] <String> [- Cluster <String>] [<CommonParameters>]
+    ```
+
+    For example:
+
+    ```PowerShell
+    Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Quickstart -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount
  
-```
+    ```
 
 When the system confirms that the installation has completed successfully, continue with  [Create a network scan job](#create-a-network-scan-job) in the Azure portal.
 

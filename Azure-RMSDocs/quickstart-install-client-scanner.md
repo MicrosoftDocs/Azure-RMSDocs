@@ -4,7 +4,7 @@ description: Install the Azure Information Protection (AIP) unified labeling sca
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
