@@ -33,7 +33,7 @@ In this quickstart, you'll run a network scan job to scan a specific IP address 
 
 Use the information in the reports generated to understand which repositories to add to your content scan jobs for deeper scanning.
 
-**Time required:** You can finish this configuration in less than 15 minutes.
+**Time required:** You can finish this quickstart in less than 15 minutes.
 
 ## Quickstart prerequisites
 
@@ -48,12 +48,12 @@ Use the information in the reports generated to understand which repositories to
 | | | 
 
 > [!NOTE]
-> The examples in this quickstart build on the elements built in the previous quickstart: [Installing the Azure Information Protection (AIP) unified labeling client and scanner](quickstart-install-client-scanner.md).      
+> The examples in this quickstart are based on the elements built in the previous quickstart: [Installing the Azure Information Protection (AIP) unified labeling client and scanner](quickstart-install-client-scanner.md).      
 >
 
 ## Install the Network Discovery service
 
-AIP network scan jobs require you to install the additional Network Discovery service on the scanner computer. This service is supported only in versions [2.8.83.0](rms-client/unifiedlabelingclient-version-release-history.md) of the unified labeling client.
+AIP network scan jobs require you to install the additional Network Discovery service on the scanner computer. This service is supported only in versions [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#2885-public-preview) of the unified labeling client.
 
 **To install the Network Discovery service:**
 
@@ -143,10 +143,13 @@ Once your network scan job is complete, you can check for any risky repositories
 
 1. In the **Scanner** menu on the left, select :::image type="icon" source="media/qs-tutor/i-repos.png" border="false"::: **Repositories (Preview)**.
 
-    :::image type="content" source="media/qs-tutor/risky-repos.png" alt-text="Azure Information Protection Repositories page":::
+    :::image type="content" source="media/qs-tutor/risky-repos-small.png" alt-text="Azure Information Protection Repositories page" lightbox="media/small/risky-repos.png":::
 
-1. In the grid below the graphs, locate a repository that is not yet managed by the scanner. Repositories not managed by the scanner are not being scanned by a content scan job, and may have sensitive content at risk.
+1. In the grid below the graphs, locate a repository that is not yet managed by the scanner. Not being managed by the scanner means that they are not included in a content scan job, and are not being scanned for sensitive content.
 
+    > [!TIP]
+    > For example, repositories that have **Effective Public Access** found to be **R** (read) or **RW** (read/write) are available to the public and may have sensitive content at risk.
+    > 
 1. Select the row, and then above the grid, select :::image type="icon" source="media/i-add.PNG" border="false"::: **Assign Selected Items**. 
 
 1. In the **Assign to Content Scan Job** pane that appears on the right, select your content scan job from the dropdown list:

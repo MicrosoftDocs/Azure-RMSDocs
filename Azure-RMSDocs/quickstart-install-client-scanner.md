@@ -23,7 +23,7 @@ ms.subservice: aiplabels
 
 ---
 
-# Quickstart: Installing the Azure Information Protection (AIP) unified labeling client and scanner
+# Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
@@ -142,9 +142,12 @@ Now you're ready to [Install the AIP unified labeling scanner](#install-the-aip-
 
 Once you have the scanner installed, you're ready to start scanning.
 
-We recommend that you first scan your network shares to find risky repositories that have public access. It's specifically on these repositories that you may want to scan for sensitive data, and then classify and protect that data from outside users.
+> [!TIP]
+> We recommend that you first scan your network shares to find risky repositories that have public access. It's specifically on these repositories that you may want to scan for sensitive data, and then classify and protect that data from outside users.
+> 
+> You can then update the content scan job you created above with the details of those repositories, and scan further to find your sensitive data.
 
-You can then update the content scan job you created above with the details of those repositories, and scan further to find your sensitive data: 
+For more information, see:
 
 - [Quickstart: Scanning your network for risky repositories](quickstart-scan-network.md)
 - [Quickstart: Finding your sensitive content with the Azure Information Protection (AIP) scanner](quickstart-scan-content.md)
