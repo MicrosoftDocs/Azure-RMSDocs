@@ -213,15 +213,35 @@ However, in a production environment, your organization's policies may prohibit 
 
 ### Restriction: The scanner server cannot have internet connectivity
 
+While the unified labeling client cannot apply protection without an internet connection, the scanner can still apply labels based on imported policies.
+
 To support a disconnected computer, perform the following steps:
 
-1. Configure labels in your policy, and then import the policy using the [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) cmdlet. While the unified labeling client cannot apply protection without an internet connection, the scanner can still apply labels based on imported policies.
+1.	Configure labels in your policy, and then use the [procedure to support disconnected computers](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) to enable offline classification and labeling.
 
-1. Configure the scanner in the Azure portal, by creating a scanner cluster. If you need help with this step, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+1. Enable offline management for content scan jobs:
 
-1. Export your content job from the **Azure Information Protection - Content scan jobs** pane using the **Export** option.
+    1. Set the scanner to function in **offline** mode, using the [Set-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet.
 
-1. In a PowerShell session, run [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) and specify the file that contains the exported settings.
+    1. Configure the scanner in the Azure portal by creating a scanner cluster. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+
+    1. Export your content job from the **Azure Information Protection - Content scan jobs** pane using the **Export** option.
+    
+    1. Import the policy using the [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-aipscannerconfiguration) cmdlet. 
+    
+    Results for offline content scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
+    
+1. Enable offline management of network scan jobs:
+
+    1. Set the Network Discovery service to function in offline mode using the [Set-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) cmdlet.
+
+    1. Configure the network scan job in the Azure portal. For more information, see [Creating a network scan job](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
+    
+    1. Export your network scan job from the **Azure Information Protection - Network scan jobs (Preview)** pane using the **Export** option. 
+    
+    1.  Import the network scan job using the file that matches our cluster name using the [Import-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) cmdlet.  
+    
+    Results for offline network scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
 
 ### Restriction: You cannot be granted Sysadmin or databases must be created and configured manually
 

@@ -117,8 +117,6 @@ Use the following instructions to install the client when you're not using the M
     
     - **ServiceLocation**: Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. [More information](#more-information-about-the-servicelocation-installation-parameter) 
     
-    - **DowngradeDotNetRequirement**: Use this parameter to bypass the requirement for Microsoft Framework .NET version 4.6.2. [More information](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
-    
     - **AllowTelemetry=0**: Use this parameter to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**. 
 
 3. To complete the installation: 
@@ -167,18 +165,6 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
 Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
-
-#### More information about the DowngradeDotNetRequirement installation parameter
-
-To support automatic upgrades by using Windows Update, and for reliable integration with Office applications, the Azure Information Protection unified labeling client uses Microsoft .NET Framework version 4.6.2. By default, an interactive installation by using the executable checks for this version and tries to install it if it is missing. The installation then requires the computer to restart.
-
-If installing this later version of the Microsoft .NET Framework is not practical, you can install the client with the **DowngradeDotNetRequirement=True** parameter and value, which bypasses this requirement if Microsoft .NET Framework version 4.5.1 is installed.
-
-For example: `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
-
-We recommend that you use this parameter with caution, and with the knowledge that there are reported issues with Office applications hanging when the Azure Information Protection unified labeling client is used with this older version of the Microsoft .NET Framework. If you do experience hanging problems, upgrade to the recommended version before you try other troubleshooting solutions. 
-
-Also remember that if you use Windows Update to keep the Azure Information Protection unified labeling client updated, you must have another software deployment mechanism to upgrade the client to later versions.
 
 ### To install the Azure Information Protection unified labeling client by using the .msi installer
 

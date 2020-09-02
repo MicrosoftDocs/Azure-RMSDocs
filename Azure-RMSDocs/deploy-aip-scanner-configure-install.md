@@ -6,7 +6,7 @@ description: Instructions for installing and configuring the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/24/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.custom: admin
 >[!NOTE] 
 > If you're working with the AIP classic scanner, see [Installing and configuring the Azure Information Protection classic scanner](deploy-aip-scanner-configure-install-classic.md).
 
-Before you start configuring and installing the Azure Information Protection scanner, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md).
+Before you start configuring and installing the Azure Information Protection scanner, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md). 
 
 When you're ready, continue with the following steps:
 
@@ -62,7 +62,14 @@ Before you install the scanner, or upgrade it from an older general availability
 
 To configure your scanner: 
 
-1. [Sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal), and navigate to the **Azure Information Protection** pane. 
+1. Sign in to the [Azure portal](https://portal.azure.com) with one of the following roles:
+
+    - **Compliance administrator**
+    - **Compliance data administrator**
+    - **Security administrator**
+    - **Global administrator**
+
+    Then, navigate to the **Azure Information Protection** pane.
     
     For example, in the search box for resources, services, and docs, start typing **Information** and select **Azure Information Protection**.
 
@@ -90,7 +97,7 @@ To configure your scanner:
 
 ### Create a network scan job (public preview)
 
-Starting in version 2.8.83, you can scan your network for risky repositories. Add one or more of the repositories found to a content scan job to scan them for sensitive content.
+Starting in version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview), you can scan your network for risky repositories. Add one or more of the repositories found to a content scan job to scan them for sensitive content.
 
 > [!NOTE]
 > The **network discovery** interface is currently in gradual deployment and will be available in all regions by September 15, 2020. 
