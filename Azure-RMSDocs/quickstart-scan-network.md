@@ -37,6 +37,9 @@ Use the information in the reports generated to understand which repositories to
 
 ## Quickstart prerequisites
 
+> [!NOTE]
+> The examples in this quickstart are based on the elements built in the previous quickstart: [Installing the Azure Information Protection (AIP) unified labeling client and scanner](quickstart-install-client-scanner.md).      
+>
 |Requirement  |Description  |
 |---------|---------|
 |**A supporting subscription**     |  You'll need an Azure subscription that includes [Azure Information Protection Plan 1 or Plan 2](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
@@ -46,10 +49,6 @@ Use the information in the reports generated to understand which repositories to
 |**SQL Server Express**     | To run the scanner, you'll need SQL Server Express installed on the machine where you want to install the scanner. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the **Express** option. In the installer, select the **Basic** installation type.        |
 |**Azure Active Directory account**     |  Your domain account must be synchronized to [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). </br></br>If you're not sure about your account, contact one of your system administrators.      |
 | | | 
-
-> [!NOTE]
-> The examples in this quickstart are based on the elements built in the previous quickstart: [Installing the Azure Information Protection (AIP) unified labeling client and scanner](quickstart-install-client-scanner.md).      
->
 
 ## Install the Network Discovery service
 
@@ -122,6 +121,7 @@ Create a network scan job to scan a specified IP address or IP range for risky r
     For example: 
 
     :::image type="content" source="media/qs-tutor/network-scan-job.png" alt-text="Enter details for your network scan job":::
+
 1. Select :::image type="icon" source="media/qs-tutor/save-icon.png" border="false"::: **Save** at the top of the page.
 
 1. Return to the :::image type="icon" source="media/qs-tutor/i-network-scan-jobs.png" border="false"::: **Network scan jobs (Preview)** grid, and wait for your scan to start running.
@@ -143,13 +143,14 @@ Once your network scan job is complete, you can check for any risky repositories
 
 1. In the **Scanner** menu on the left, select :::image type="icon" source="media/qs-tutor/i-repos.png" border="false"::: **Repositories (Preview)**.
 
-    :::image type="content" source="media/qs-tutor/risky-repos-small.png" alt-text="Azure Information Protection Repositories page" lightbox="media/small/risky-repos.png":::
+    :::image type="content" source="media/qs-tutor/small/risky-repos-small.png" alt-text="Azure Information Protection Repositories page" lightbox="media/risky-repos.png":::
 
 1. In the grid below the graphs, locate a repository that is not yet managed by the scanner. Not being managed by the scanner means that they are not included in a content scan job, and are not being scanned for sensitive content.
 
     > [!TIP]
     > For example, repositories that have **Effective Public Access** found to be **R** (read) or **RW** (read/write) are available to the public and may have sensitive content at risk.
     > 
+
 1. Select the row, and then above the grid, select :::image type="icon" source="media/i-add.PNG" border="false"::: **Assign Selected Items**. 
 
 1. In the **Assign to Content Scan Job** pane that appears on the right, select your content scan job from the dropdown list:
