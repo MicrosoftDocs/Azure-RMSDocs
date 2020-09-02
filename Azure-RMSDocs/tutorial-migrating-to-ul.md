@@ -30,6 +30,8 @@ ms.custom: admin
 >
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-
+- had classic and needs to move to ul
+https://techcommunity.microsoft.com/t5/azure-information-protection/announcing-timelines-for-sunsetting-label-management-in-the/ba-p/1226179
+https://techcommunity.microsoft.com/t5/azure-information-protection/understanding-unified-labeling-migration/ba-p/783185
 
 ## Next steps
