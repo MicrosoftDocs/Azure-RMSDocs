@@ -137,49 +137,19 @@ Prevent your popups from being displayed when an email is sent to users in trust
     Where:
 
     - <Key> is one of the following:
-        - **OutlookWarnTrustedDomains** to define trusted domains for warning messages
-        - **OutlookJustifyTrustedDomains** to define trusted domains for justification messages
-        - **OutlookBlockTrustedDomains** to define trusted domains for blocked emails
+        - **OutlookWarnTrustedDomains** to define trusted domains for warning messages. Warning messages will not be displayed when emails are sent to these domains.
+        - **OutlookJustifyTrustedDomains** to define trusted domains for justification messages. Justification messages will not be displayed when emails are sent to these domains.
+        - **OutlookBlockTrustedDomains** to define trusted domains for blocked emails. Emails will not be blocked, and blocking messages will not be displayed, when emails are sent to these domains.
             
-    - <Value> is at least one label GUID. Separate multiple GUIDs by commas to apply the same popup to multiple labels
+    - <Value> is at least one label domain name. Separate multiple domain names by commas to apply the same settings to multiple domains.
 
-    For example:
+    For example, say you've configured any emails with the **Confidential \ All Employees** label to be blocked. However, you *do* want to be able to send these emails inside your own organization's domain, **contoso.com**, as well your partners' domains.  Therefore, you'd define contoso.com
 
     ```PowerShell
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e,b6d21387-5d34-4dc8-90ae-049453cec5cf,bb48a6cb-44a8-49c3-9102-2d2b017dcead,74591a94-1e0e-4b5d-b947-62b70fc0f53a,6c375a97-2b9b-4ccd-9c5b-e24e4fd67f73"}
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedCollaborationLabel="dc284177-b2ac-4c96-8d78-e3e1e960318f,d8bb73c3-399d-41c2-a08a-6f0642766e31,750e87d4-0e91-4367-be44-c9c24c9103b4,32133e19-ccbd-4ff1-9254-3a6464bf89fd,74348570-5f32-4df9-8a6b-e6259b74085b,3e8d34df-e004-45b5-ae3d-efdc4731df24"}
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
     ```
     
-#### To exempt domain names for pop-up messages configured for specific labels
-
-For the labels that you've specified with these pop-up messages, you can exempt specific domain names so that users do not see the messages for recipients who have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
-
-A typical configuration is to display the pop-up messages only for recipients who are external to your organization or who aren't authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
-
-For the same label policy, create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
-
-Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
-
-- Warn messages:
-    
-    - Key: **OutlookWarnTrustedDomains**
-    
-    - Value: **\<**domain names, comma separated**>**
-
-- Justification messages:
-    
-    - Key: **OutlookJustifyTrustedDomains**
-    
-    - Value: **\<**domain names, comma separated**>**
-
-- Block messages:
-    
-    - Key: **OutlookBlockTrustedDomains**
-    
-    - Value: **\<**domain names, comma separated**>**
 
 For example, you have specified the **OutlookBlockUntrustedCollaborationLabel** advanced client setting for the **Confidential \ All Employees** label. You now specify the additional advanced client setting of **OutlookJustifyTrustedDomains** and **contoso.com**. As a result, a user can send an email to john@sales.contoso.com when it is labeled **Confidential \ All Employees** but will be blocked from sending an email with the same label to a Gmail account.
 
