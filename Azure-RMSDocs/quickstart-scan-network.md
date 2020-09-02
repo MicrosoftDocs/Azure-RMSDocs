@@ -153,7 +153,7 @@ Once your network scan job is complete, you can check for any risky repositories
 
 1. Select the row, and then above the grid, select :::image type="icon" source="media/i-add.PNG" border="false"::: **Assign Selected Items**. 
 
-1. In the **Assign to Content Scan Job** pane that appears on the right, select your content scan job from the dropdown list:
+1. In the **Assign to Content Scan Job** pane that appears on the right, select your content scan job from the dropdown list, and then click :::image type="icon" source="media/qs-tutor/save-icon.png" border="false"::: **Save**.
 
     :::image type="content" source="media/qs-tutor/assign-content-scan-job.png" alt-text="Assign a risky repository to a content scan job":::
 
