@@ -3,10 +3,10 @@
 
 title: Custom configurations - Azure Information Protection unified labeling client
 description: Information about customizing the Azure Information Protection unified labeling client for Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 08/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -48,25 +48,25 @@ In both cases, after you [connect to Office 365 Security & Compliance Center Pow
 
 For a label policy setting, single string value:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
 ```
 
 For label policy settings, multiple string values for the same key:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
 For a label setting, single string value:
 
-```ps
+```PowerShell
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 ```
 
 For label settings, multiple string values for the same key:
 
-```ps
+```PowerShell
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
@@ -79,25 +79,25 @@ To remove an advanced setting, use the same syntax but specify a null string val
 
 Example 1: Set a label policy advanced setting for a single string value:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 ```
 
 Example 2: Set a label advanced setting for a single string value:
 
-```ps
+```PowerShell
 Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 ```
 
 Example 3: Set a label advanced setting for multiple string values:
 
-```ps
+```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 ```
 
 Example 4: Remove a label policy advanced setting by specifying a null string value:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
 ```
 
@@ -115,7 +115,7 @@ For configuring your label advanced settings, use the **Name** value. For exampl
 
 If you prefer to specify the label GUID, this value is not displayed in the admin center where you manage your labels. However, you can use the following Office 365 Security & Compliance Center PowerShell command to find this value:
 
-```ps
+```PowerShell
 Get-Label | Format-Table -Property DisplayName, Name, Guid
 ```
 
@@ -170,7 +170,6 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
-|RunAuditInformationTypesDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
 |ScannerFSAttributesToSkip | [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes)
@@ -178,7 +177,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
 
-```ps
+```PowerShell
 (Get-LabelPolicy -Identity Global).settings
 ```
 
@@ -197,7 +196,7 @@ Use the *AdvancedSettings* parameter with [New-Label](https://docs.microsoft.com
 
 Example PowerShell command to check your label settings in effect for a label named "Public":
 
-```ps
+```PowerShell
 (Get-Label -Identity Public).settings
 ```
 
@@ -215,7 +214,7 @@ For the selected label policy, specify the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
 ```
 
@@ -233,7 +232,7 @@ For the selected label policy, specify the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
 ```
 
@@ -251,7 +250,7 @@ For the selected label policy, specify the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
 ```
 
@@ -267,7 +266,7 @@ When you configure this setting, the  [PowerShell](https://docs.microsoft.com/az
 
 Example PowerShell command where your policy is enabled:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
 ```
 
@@ -285,7 +284,7 @@ For the selected label policy, specify the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
 ```
 
@@ -313,19 +312,19 @@ Use the following table to identify the string value to specify:
 
 Example 1: PowerShell command for the unified client to protect only Office file types and PDF files, where your label policy is named "Client":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
 ```
 
 Example 2:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
 Example 3: PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
 ```
 
@@ -349,19 +348,19 @@ Use the following table to identify the string value to specify:
 
 Example 1: PowerShell command to behave like the default behavior where Protect ".dwg" becomes ".dwg.pfile":
 
-```ps
+```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
 ```
 
 Example 2:  PowerShell command to change all PFile extensions from generic protection (dwg.pfile) to native protection (.pdwg) when the files is protected:
 
-```ps
+```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
 ```
 
 Example 3: PowerShell command to change ".dwg"  to ".pdwg" when using this service protect this file:
 
-```ps
+```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
 ```
 
@@ -370,7 +369,7 @@ With this setting, the following extensions ( ".txt", ".xml", ".bmp", ".jt", ".j
 
 For example, in a case where the following command is used:
 
-```ps
+```PowerShell
 Set-LabelPolicy -AdvancedSettings @{PFileSupportedExtensions=""}
 ```
 
@@ -392,7 +391,7 @@ For the selected label policy, specify the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
 ```
 
@@ -430,7 +429,7 @@ Example: The shape name is **dc**. To remove the shape with this name, you speci
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
 ```
 
@@ -458,7 +457,7 @@ Examples:
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
 ```
 
@@ -493,7 +492,7 @@ For the same label policy, specify the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
 ```
 
@@ -515,7 +514,7 @@ To remove this multiline footer, you create the following two entries for the sa
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
 ```
 
@@ -541,7 +540,7 @@ Example: The shape name is **fc**. To remove the shape with this name, you speci
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
 ```
 
@@ -555,7 +554,7 @@ By default, only the Master slides are checked for headers and footers. To exten
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
 ```
 
@@ -573,7 +572,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 ```
 
@@ -593,7 +592,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 Example PowerShell command:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissionsForCustomProtectedFiles="True"}
 ```
 
@@ -628,7 +627,7 @@ The customized tooltip supports a single language only.
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic"}
 ```
 
@@ -650,7 +649,7 @@ Example value for an email address: `mailto:helpdesk@contoso.com`
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:helpdesk@contoso.com"}
 ```
 
@@ -710,7 +709,7 @@ dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df7
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e,b6d21387-5d34-4dc8-90ae-049453cec5cf,bb48a6cb-44a8-49c3-9102-2d2b017dcead,74591a94-1e0e-4b5d-b947-62b70fc0f53a,6c375a97-2b9b-4ccd-9c5b-e24e4fd67f73"}
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedCollaborationLabel="dc284177-b2ac-4c96-8d78-e3e1e960318f,d8bb73c3-399d-41c2-a08a-6f0642766e31,750e87d4-0e91-4367-be44-c9c24c9103b4,32133e19-ccbd-4ff1-9254-3a6464bf89fd,74348570-5f32-4df9-8a6b-e6259b74085b,3e8d34df-e004-45b5-ae3d-efdc4731df24"}
@@ -750,7 +749,7 @@ For example, you have specified the **OutlookBlockUntrustedCollaborationLabel** 
 
 Example PowerShell commands, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
@@ -787,7 +786,7 @@ For the same label policy, create the following advanced client setting with one
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
 ```
 
@@ -809,7 +808,7 @@ For the same label policy, enter the following strings:
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
 ```
 
@@ -847,7 +846,7 @@ If you don't specify this client setting, the value that you specify for Outlook
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 ```
 
@@ -865,36 +864,8 @@ To change this behavior so that this information is not sent by the unified labe
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
-```
-
-## Disable sending discovered sensitive information in documents to Azure Information Protection analytics
-
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
-
-When the Azure Information Protection unified labeling client is used in Office apps, it looks for sensitive information in documents when they are first saved. Providing the [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) advanced setting is not set to **False**, any predefined and custom sensitive information types found are then sent to [Azure Information Protection analytics](../reports-aip.md).
-
-To change this behavior so that sensitive information types found by the unified labeling client are not sent, enter the following strings for the selected label policy:
-
-- Key: **RunAuditInformationTypesDiscovery**
-
-- Value: **False**
-
-If you set this advanced client setting, auditing information can still be sent from the client, but the information is limited to reporting when a user has accessed labeled content.
-
-For example:
-
-- With this setting, you can see that a user accessed Financial.docx that is labeled **Confidential \ Sales**.
-
-- Without this setting, you can see that Financial.docx contains 6 credit card numbers.
-    
-    - If you also enable [content matches for deeper analysis](../reports-aip.md#content-matches-for-deeper-analysis), you will additionally be able to see what those credit card numbers are.
-
-Example PowerShell command, where your label policy is named "Global":
-
-```ps
-Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 ```
 
 ## Send information type matches to Azure Information Protection analytics
@@ -911,7 +882,7 @@ To send content matches when sensitive information types are sent, create the fo
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 ```
 
@@ -953,7 +924,7 @@ When you first configure the value for testing, we recommend you specify 2 per c
 
 Example PowerShell command, where your label policy is named "Scanner":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8"}
 ```
 
@@ -997,7 +968,7 @@ The advanced setting:
 
 Example PowerShell command, where your label is named "Confidential":
 
-```ps
+```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Confidential,Classification,Confidential"}
 ```
 
@@ -1017,7 +988,7 @@ The advanced setting:
 
 Example PowerShell command, where your label is named "Highly Confidential":
 
-```ps
+```PowerShell
 Set-Label -Identity "Highly Confidential" -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Sensitive,Classification,Sensitive"}
 ```
 
@@ -1037,7 +1008,7 @@ The advanced client setting:
 
 Example PowerShell command, where your label is named "General":
 
-```ps
+```PowerShell
 Set-Label -Identity General -AdvancedSettings @{labelByCustomProperties="Secure Islands label contains Internal,Classification,.*Internal.*"}
 ```
 
@@ -1047,7 +1018,7 @@ When you need multiple rules for the same label, define multiple string values f
 
 In this example, the Secure Islands labels named "Confidential" and "Secret" are stored in the custom property named **Classification**, and you want the Azure Information Protection unified labeling client to apply the sensitivity label named "Confidential":
 
-```ps
+```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 ```
 
@@ -1063,7 +1034,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
 ```
 
@@ -1081,7 +1052,7 @@ To configure this advanced setting, enter the following strings for the selected
 
 Example PowerShell command, where your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
 ```
 
@@ -1134,7 +1105,7 @@ The advanced setting:
 
 Example PowerShell command, where your label is named "Confidential":
 
-```ps
+```PowerShell
     Set-Label -Identity Confidential -AdvancedSettings @{customPropertiesByLabel="Classification,Secret"}
 ```
 
@@ -1144,7 +1115,7 @@ To add more than one custom property for the same label, you need to define mult
 
 Example PowerShell command, where your label is named "General" and you want to add one custom property named **Classification** with the value of **General** and a second custom property named **Sensitivity** with the value of **Internal**:
 
-```ps
+```PowerShell
 Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
 ```
 
@@ -1172,7 +1143,7 @@ If you want the label to be visible in Outlook only, configure the label to appl
 
 Example PowerShell commands, where your label is named "Recipients Only":
 
-```ps
+```PowerShell
 Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeSign="True"}
 
 Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeEncrypt="True"}
@@ -1190,7 +1161,7 @@ When you add a sublabel to a label, users can no longer apply the parent label t
 
 Example PowerShell command, where your parent label is named "Confidential" and the "All Employees" sublabel has a GUID of 8faca7b8-8d20-48a3-8ea2-0f96310a848e:
 
-```ps
+```PowerShell
 Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 ```
 
@@ -1216,7 +1187,7 @@ To configure this advanced setting, enter the following strings:
 
 Example PowerShell command: 
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity PolicyName -AdvancedSettings @{RunPolicyInBackground = "true"}
 ```
 
@@ -1236,7 +1207,7 @@ To configure the advanced setting for a label's color, enter the following strin
 
 Example PowerShell command, where your label is named "Public":
 
-```ps
+```PowerShell
 Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 ```
 
@@ -1334,7 +1305,7 @@ The following sample PowerShell commands illustrate how to use this advanced set
 
 **Skip files that are both read-only and archived**
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY, FILE_ATTRIBUTE_ARCHIVE"}
 ```
 
@@ -1342,7 +1313,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 To use an OR logic, run the same property multiple times. For example:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE"}
 ```
@@ -1372,9 +1343,452 @@ To ensure that the NTFS owner value is preserved, set the **UseCopyAndPreserveNT
 
 Sample PowerShell command, when your label policy is named "Global":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
 ```
+
+## Customize justification prompt texts for modified labels
+
+Customize the justification prompts that are displayed in both Office and the AIP client, when end-users change classification labels on documents and emails.
+
+For example, as an administrator, you may want to remind your users not to add any customer identifying information into this field:
+
+:::image type="content" source="../media/justification-office.png" alt-text="Customized justification prompt text":::
+
+To modify the default **Other** text that's displayed, use the **JustificationTextForUserText** advanced property with the [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) cmdlet. Set the value to the text you want to use instead.
+
+For example:
+
+``` PowerShell
+
+[Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
+```
+
+## Customize Outlook popup messages
+
+AIP administrators can customize the popup messages that appear to end-users in Outlook, such as:
+
+- Messages for blocked emails
+- Warning messages that prompt users to verify the content that they're sending
+- Justification messages that request users to justify the content that they're sending
+
+**To customize your Outlook popup messages:**
+
+1. Create **.json** files, each with a rule that configures how Outlook displays popup messages to your users. For more information, see [Rule value .json syntax](#rule-value-json-syntax) and [Sample popup customziation .json code](#sample-popup-customziation-json-code).
+
+1. Use PowerShell to define advanced settings that control the popup messages you're configuring. Run a separate set of commands for each rule you want to configure.
+
+    Each set of PowerShell commands must include the name of the policy you're configuring, as well as the key and value that defines your rule.
+
+    Use the following syntax:
+
+    ```PowerShell
+    $filedata = Get-Content "<Path to json file>”
+    Set-LabelPolicy -Identity <Policy name> -AdvancedSettings @{<Key> ="$filedata"}
+    ```
+    Where: 
+
+    - `<Path to json file>` is the the path to the json file you created. For example: **C:\Users\msanchez\Desktop\ \dlp\OutlookCollaborationRule_1.json**.
+    - `<Policy name>` is the name of the policy you want to configure. 
+    - `<Key>` is a name for your rule. Use the following syntax, where **<#>** is the serial number for your rule: 
+    
+        `OutlookCollaborationRule_<x>` 
+
+    For more information, see [Ordering your Outlook customziation rules](#ordering-your-outlook-customziation-rules) and [Rule value json syntax](#rule-value-json-syntax).
+
+   
+> [!TIP]
+> For additional organization, name your file with the same string as the key used in your PowerShell command. For example, name your file **OutlookCollaborationRule_1.json,** and then also use **OutlookCollaborationRule_1** as your key.
+> 
+
+### Ordering your Outlook customziation rules
+
+AIP uses the serial number in the key you enter to determine the order in which the rules are processed. When defining the keys used for each rule, define your more restrictive rules with lower numbers, followed by less restrictive rules with higher numbers.
+
+Once a specific rule match is found, AIP stops processing the rules, and performs the action associated with the matching rule. (**First match - > Exit** logic)
+    
+**Example:**
+
+Say you want to configure all **Internal** emails with a specific **Warning** message, but you don't generally want to block them. However, you do want to block users from sending attachments classified as **Secret**, even as **Internal** emails. 
+
+In this scenario, order your **Block Secret** rule key, which is the more specific rule, before your more generic **Warn on Internal** rule key:
+- For the **Block** message: **OutlookCollaborationRule_1**
+- For the **Warn** message: **OutlookCollaborationRule_2**
+
+### Rule value .json syntax
+
+Define your rule's json snytax as follows:
+
+``` JSON
+"type" : "And",
+"nodes" : []
+```
+
+You must have at least two nodes, the first representing your rule's condition, and the last represending the rule's action. For more information, see:
+
+- [Rule condition syntax](#rule-condition-syntax)
+- [Rule action syntax](#rule-action-syntax)
+
+##### Rule condition syntax
+
+Rule condition nodes must include the node type, and then the conditions themselves. 
+
+Supported node types include:
+
+|Node type  |Description  |
+|---------|---------|
+| **And**	| Performs *and* on all child nodes     |
+| **Or**	|Performs *or* on all child nodes       |
+| **Not**	| Performs *not* for its own child      |
+| **Except**	| Returns *not* for its own child, causing it to behave as **All**        |
+| **SentTo,** followed by **Domains: listOfDomains**	|Checks one of the following: </br>- If the Parent is **Except,** checks whether **All** of the recipients are in one of the domains</br>- If the Parent is anything else but **Except,** checks whether **Any** of the recipients are in one of the domains.   |
+| **EMailLabel,** followed by label	| One of the following:  </br>- The label ID </br>- null, if not labeled             |
+| **AttachmentLabel,** followed by **Label** and **supportedExtensions**	| One of the following:  </br></br>**true:** </br>- If the Parent is **Except,** checks whether **All** of the attachments with one supported extension exists within the label</br>- 	If the Parent is anything else but **Except,** checks whether **Any** of the attachments with one supported extension exists within the label </br>- If not labeled, and **label = null** </br></br> **false:** For all other cases 
+| | |
+
+#### Rule action syntax
+
+Rule actions can be one of the following:
+
+|Action  |Syntax  |Sample message  |
+|---------|---------|---------|
+|**Block**     |    `Block (List<language, [title, body]>)`     |    ***Email Blocked***</br></br>  *You are about to send content classified as **Secret** to one or more untrusted recipients:*</br>*`rsinclair@contoso.com`*</br></br>*Your organization policy does not allow this action. Consider removing these recipients or replace the content.*|
+|**Warn**     | `Warn (List<language,[title,body]>)`        |  ***Confirmation Required***</br></br>*You are about to send content classified as **General** to one or more untrusted recipients:*</br>*`rsinclair@contoso.com`*</br></br>*Your organization policy requires confirmation for you to send this content.*       |
+|**Justify**     | `Justify (numOfOptions, hasFreeTextOption, List<language, [Title, body, options1,options2….]> )` </br></br>Including up to three options.        |  ***Justification Required*** </br></br>*Your organization policy requires justification for you to send content classified as **General** to untrusted recipients.*</br></br>*- I confirm the recipients are approved for sharing this content*</br>*- My manager approved sharing of this content*</br>*- Other, as explained* |
+| | | |
+
+##### Action parameters
+
+If no parameters are provided for an action, the pop-ups will have the default text. 
+
+All texts support the following dynamic parameters: 
+
+|Parameter  |Description  |
+|---------|---------|
+| `${MatchedRecipientsList}`  | The last match for the **SentTo** conditions       |
+| `${MatchedLabelName}`      | The mail/attachment **Label,** with the localized name from the policy               |
+| `${MatchedAttachmentName}` | The name of the attachment from the last match for the **AttachmentLabel** condition |
+| | |
+
+> [!NOTE]
+> All messages include the **Tell Me More** option, as well as the **Help** and **Feedback** dialogs.
+>
+> The **Language** is the **CultureName** for the locale name, such as: **English** = `en-us`; **Spanish** = `es-es`
+>
+> Parent-only language names are also supported, such as `en` only.
+> 
+
+### Sample popup customziation .json code
+
+The following sets of **.json** code show how you can define a variety of rules that control how Outlook displays popup messages for your users.
+
+- [**Example 1**: Block Internal emails or attachments](#example-1-block-internal-emails-or-attachments)
+- [**Example 2**: Block unclassified Office attachments](#example-2-block-unclassified-office-attachments)
+- [**Example 3**: Require the user to accept sending a Confidential email or attachment](#example-3-require-the-user-to-accept-sending-a-confidential-email-or-attachment)
+- [**Example 4**: Warn on mail with no label, and an attachment with a specific label](#example-4-warn-on-mail-with-no-label-and-an-attachment-with-a-specific-label)
+- [**Example 5**: Prompt for a justificaiton, with two predefined options, and an extra free-text option](#example-5-prompt-for-a-justificaiton-with-two-predefined-options-and-an-extra-free-text-option)
+
+#### Example 1: Block Internal emails or attachments
+
+The following **.json** code will block emails or attachments that are classified as **Internal** from being set to external recipients.
+
+In this example, **89a453df-5df4-4976-8191-259d0cf9560a** is the ID of the **Internal** label, and internal domains include **contoso.com** and **microsoft.com**.
+
+```powershell
+{ 	
+    "type" : "And", 	
+    "nodes" : [ 		
+        { 			
+            "type" : "Except" , 			
+            "node" :{ 				
+                "type" : "SentTo",  				
+                "Domains" : [  					
+                    "contoso.com", 					
+			  "microsoft.com"
+                ]   			
+            } 		
+        },
+		{ 			
+            "type" : "Or", 			
+            "nodes" : [ 				
+                { 			
+					"type" : "AttachmentLabel", 			
+					"LabelId" : "89a453df-5df4-4976-8191-259d0cf9560a" 		
+				},{ 					
+                    "type" : "EmailLabel", 					
+                    "LabelId" : "89a453df-5df4-4976-8191-259d0cf9560a" 				
+                }
+			]
+		},		
+        { 			
+            "type" : "Block", 			
+            "LocalizationData": { 				
+                "en-us": { 				  
+                    "Title": "Email Blocked", 				  
+                    "Body": "The email or at least one of the attachments is classified as <Bold>${MatchedLabelName}</Bold>. Documents classified as <Bold> ${MatchedLabelName}</Bold> cannot be sent to external recipients (${MatchedRecipientsList}).<br><br>List of attachments classified as <Bold>${MatchedLabelName}</Bold>:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance with classification requirements as per Contoso’s policies." 				
+                }, 				
+                "es-es": { 				  
+                    "Title": "Correo electrónico bloqueado", 				  
+                    "Body": "El correo electrónico o al menos uno de los archivos adjuntos se clasifica como <Bold> ${MatchedLabelName}</Bold>." 				
+                } 			
+            }, 			
+            "DefaultLanguage": "en-us" 		
+        } 	
+    ] 
+}
+```
+
+#### Example 2: Block unclassified Office attachments
+
+The following **.json** code blocks unclassified Office attachments or emails from being sent to external recipeints.
+
+In the following example, the attachment list that requires labeling is:
+**.doc,.docm,.docx,.dot,.dotm,.dotx,.potm,.potx,.pps,.ppsm,.ppsx,.ppt,.pptm,.pptx,.vdw,.vsd,.vsdm,.vsdx,.vss,.vssm,.vst,.vstm,.vssx,.vstx,.xls,.xlsb,.xlt,.xlsm,.xlsx,.xltm,.xltx**
+
+```powershell
+{ 	
+    "type" : "And", 	
+    "nodes" : [ 		
+        { 			
+            "type" : "Except" , 			
+            "node" :{ 				
+                "type" : "SentTo",  				
+                "Domains" : [  					
+                    "contoso.com", 					
+			        "microsoft.com"
+                ]   			
+            } 		
+        },
+		{ 			
+            "type" : "Or", 			
+            "nodes" : [ 				
+                { 			
+					"type" : "AttachmentLabel",
+					 "LabelId" : null,
+					"Extensions": [
+									".doc",
+									".docm",
+									".docx",
+									".dot",
+									".dotm",
+									".dotx",
+									".potm",
+									".potx",
+									".pps",
+									".ppsm",
+									".ppsx",
+									".ppt",
+									".pptm",
+									".pptx",
+									".vdw",
+									".vsd",
+									".vsdm",
+									".vsdx",
+									".vss",
+									".vssm",
+									".vst",
+									".vstm",
+									".vssx",
+									".vstx",
+									".xls",
+									".xlsb",
+									".xlt",
+									".xlsm",
+									".xlsx",
+									".xltm",
+									".xltx"
+								 ]
+					
+				},{ 					
+                    "type" : "EmailLabel",
+					 "LabelId" : null
+                }
+			]
+		},		
+        { 			
+            "type" : "Email Block", 			
+            "LocalizationData": { 				
+                "en-us": { 				  
+                    "Title": "Emailed Blocked", 				  
+                    "Body": "Classification is necessary for attachments to be sent to external recipients.<br><br>List of attachments that are not classified:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance to classification requirement as per Contoso’s policies.<br><br>For MS Office documents, classify and send again.<br><br>For PDF files, classify the document or classify the email (using the most restrictive classification level of any single attachment or the email content) and send again." 				
+                }, 				
+                "es-es": { 				  
+                    "Title": "Correo electrónico bloqueado", 				  
+                    "Body": "La clasificación es necesaria para que los archivos adjuntos se envíen a destinatarios externos." 				
+                } 			
+            }, 			
+            "DefaultLanguage": "en-us" 		
+        } 	
+    ] 
+}
+```
+
+#### Example 3: Require the user to accept sending a Confidential email or attachment
+
+The following example causes Outlook to display a message that warns the user that they are sending a **Confidential** email or attachment to external recipients, and also requires that the user selects **I accept**. 
+
+This sort of warning message is technically considered to be a justification, as the user must select **I accept**.
+
+``` powershell
+{ 	
+    "type" : "And", 	
+    "nodes" : [ 		
+        { 			
+            "type" : "Except" , 			
+            "node" :{ 				
+                "type" : "SentTo",  				
+                "Domains" : [  					
+                    "contoso.com", 					
+			        "microsoft.com"
+                ]   			
+            } 		
+        },
+		{ 			
+            "type" : "Or", 			
+            "nodes" : [ 				
+                { 			
+					"type" : "AttachmentLabel", 			
+					"LabelId" : "3acd2acc-2072-48b1-80c8-4da23e245613" 		
+				},{ 					
+                    "type" : "EmailLabel", 					
+                    "LabelId" : "3acd2acc-2072-48b1-80c8-4da23e245613" 				
+                }
+			]
+		},		
+        { 			
+            "type" : "Justify", 			
+            "LocalizationData": { 				
+                "en-us": { 				  
+                    "Title": "Warning", 				  
+                    "Body": "You are sending a document that is classified as <Bold>${MatchedLabelName}</Bold> to at least one external recipient. Please make sure that the content is correctly classified and that the recipients are entitled to receive this document.<br><br>List of attachments classified as <Bold>${MatchedLabelName}</Bold>:<br><br>${MatchedAttachmentName}<br><br><Bold>List of external email addresses:</Bold><br>${MatchedRecipientsList})<br><br>You are responsible for ensuring compliance to classification requirement as per Contoso’s policies.<br><br><Bold>Acknowledgement</Bold><br>By clicking <Bold>I accept<\Bold> below, you confirm that the recipient is entitled to receive the content and the communication complies with CS Policies and Standards",
+					"Options": [ 						
+                        "I accept"			    
+                    ] 
+                }, 				
+                "es-es": { 				  
+                    "Title": "Advertencia", 				  
+                    "Body": "Está enviando un documento clasificado como <Bold>${MatchedLabelName}</Bold> a al menos un destinatario externo. Asegúrese de que el contenido esté correctamente clasificado y que los destinatarios tengan derecho a recibir este documento.",
+                    "Options": [ 						
+                        "Acepto"				    
+                    ] 					
+                } 			
+            }, 			
+            "HasFreeTextOption":"false", 			
+            "DefaultLanguage": "en-us" 		
+        } 	
+    ] 
+}
+```
+
+#### Example 4: Warn on mail with no label, and an attachment with a specific label
+
+The following **.json code** causes Outlook to warn the user when they are sending an internal email has no label, with an attachment that has a specific label. 
+
+In this example, **bcbef25a-c4db-446b-9496-1b558d9edd0e** is the ID of the attachment's label.
+
+By default, emails that have labeled attachments do not automatically receive the same label.
+
+```powershell
+{ 	
+    "type" : "And", 	
+    "nodes" : [ 		
+        { 			
+            "type" : "EmailLabel",
+					 "LabelId" : null			
+        },
+        {
+          "type": "AttachmentLabel",
+          "LabelId": "bcbef25a-c4db-446b-9496-1b558d9edd0e",
+          "Extensions": [
+                ".docx",
+                ".xlsx",
+                ".pptx"
+             ]
+        },
+	{  			
+            "type" : "SentTo",  			
+            "Domains" : [  				
+                "contoso.com", 				
+            ]   		
+        }, 		
+        { 			
+            "type" : "Warn"	
+        } 	
+    ] 
+}
+```
+
+#### Example 5: Prompt for a justificaiton, with two predefined options, and an extra free-text option
+
+The following **.json** code causes Outlook to prompt the user for a justification for their action. The justification text includes two predefined options, as well as a third, free-text option.
+
+```PowerShell
+{ 	
+    "type" : "And", 	
+    "nodes" : [ 		
+        { 			
+            "type" : "Except" , 			
+            "node" :{ 				
+                "type" : "SentTo",  				
+                "Domains" : [  					
+                    "contoso.com", 									
+                ]   			
+            } 		
+        }, 		
+        { 			
+            "type" : "EmailLabel", 			
+            "LabelId" : "34b8beec-40df-4219-9dd4-553e1c8904c1" 		
+        }, 		
+        { 			
+            "type" : "Justify", 			
+            "LocalizationData": { 				
+                "en-us": { 					
+                    "Title": "Justification Required", 					
+                    "Body": "Your organization policy requires justification for you to send content classified as <Bold> ${MatchedLabelName}</Bold>,to untrusted recipients:<br>Recipients are: ${MatchedRecipientsList}", 					
+                    "Options": [ 						
+                        "I confirm the recipients are approved for sharing this content", 					
+                        "My manager approved sharing of this content", 						
+                        "Other, as explained" 				    
+                    ] 				
+                }, 				
+                "es-es": { 				    
+                    "Title": "Justificación necesaria", 				    
+                    "Body": "La política de su organización requiere una justificación para que envíe contenido clasificado como <Bold> ${MatchedLabelName}</Bold> a destinatarios que no sean de confianza.", 				    
+                    "Options": [ 						
+                        "Confirmo que los destinatarios están aprobados para compartir este contenido.",
+                        "Mi gerente aprobó compartir este contenido",
+                        "Otro, como se explicó" 					
+                    ] 				
+                } 			
+            }, 			
+            "HasFreeTextOption":"true", 			
+            "DefaultLanguage": "en-us" 		
+        } 	
+    ] 
+}
+```
+
+## Configure SharePoint timeouts
+
+By default, the timeout for SharePoint interactions is two minutes, after which the attempted AIP operation fails.
+
+Starting in [version 2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview), AIP administrators can control this timeout using the following advanced properties, using an **hh:mm:ss** syntax to define the timeouts:
+
+- **SharepointWebRequestTimeout**. Determines the timeout for all AIP web requests to SharePoint. Default = 2 minutes.
+
+    For example, if your policy is named **Global**, the following sample PowerShell command updates the web request timeout to 5 minutes.
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointWebRequestTimeout="00:05:00"}
+    ```
+
+- **SharepointFileWebRequestTimeout**. Determines the timeout specifically for SharePoint files via AIP web requests. Default = 15 minutes
+
+    For example, if your policy is named **Global**, the following sample PowerShell command updates the file web request timeout to 10 minutes.
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointFileWebRequestTimeout="00:10:00"}
+    ```
 
 ## Next steps
 
