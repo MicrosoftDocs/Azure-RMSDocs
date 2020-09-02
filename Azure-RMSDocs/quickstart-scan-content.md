@@ -37,7 +37,7 @@ In this quickstart, you'll return to the content scan job you created [earlier](
 > [!NOTE]
 > The examples in this quickstart build on the elements built in the previous quickstarts:    
 >
-> - [Installing the Azure Information Protection (AIP) unified labeling client and scanner](quickstart-install-client-scanner.md)
+> - [Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-client-scanner.md)
 > - [Scanning your network for risky repositories (Public preview)](quickstart-scan-network.md)
 
 |Requirement  |Description  |
@@ -60,27 +60,39 @@ In this quickstart, you'll return to the content scan job you created [earlier](
     > If you haven't yet completed the previous quickstarts and you don't have a content scan job yet, select :::image type="icon" source="media/i-add.PNG" border="false"::: **Add** to create a new one.
     >
  
-1. Edit your content scan job settings. Make sure that you have a meaningful name and optional description, and keep the default values except for the following:
-    
-    |Setting  |Description  |
-    |---------|---------|
-    |**Treat recommended labeling as automatic**     | Set to **On**    |
-    |**Configure repositories**     |Ensure that there is at least one repository defined. </br></br>**Tip**: If you've added additional repositories to your content scan job after having scanned your network in [Quickstart: Scanning your network for risky repositories (Public preview)](quickstart-scan-network.md),  you can click to see them listed here now.        |
-    |**Enforce**     |         |Set to **On** **|
-    | | |
+1. Edit your content scan job settings. 
 
+    Make sure that you have a meaningful name and optional description. Keep the default values for most of the settings, except for the following changes:
+
+    -  **Treat recommended labeling as automatic**. Set to **On**.
+    
+    - **Configure repositories**. Ensure that there is at least one repository defined. 
+    
+        > [!TIP]
+        > If you've added additional repositories to your content scan job after having scanned your network in [Quickstart: Scanning your network for risky repositories (Public preview)](quickstart-scan-network.md),  you can click to see them listed here now. 
+
+    - **Enforce**. Set to **On**
+    
  1. Click :::image type="icon" source="media/qs-tutor/save-icon.png" border="false":::, and then return to the :::image type="icon" source="media/i-content-scan-jobs.PNG" border="false"::: **Content scan jobs** grid.
 
 ## Scan your content
 
 On the :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Content scan jobs** grid, select your content scan job, and then click :::image type="icon" source="media/i-scan-now.PNG" border="false"::: **Scan now**.
 
-When the scan is complete, results are stored in the **%localappdata%\Microsoft\MSIP\Scanner\Reports directory** on the scanner machine, including the following types of files:
+When the scan is complete, results are stored in the **%localappdata%\Microsoft\MSIP\Scanner\Reports directory** on the scanner machine.
 
-|File type  |Description  |
-|---------|---------|
-|**.txt**    |Summary files, including the time taken to scan, the number of scanned files, and how many files had a match for the information types.         |
-|**.csv**     |Contain detailed descriptions for each file scanned. The directory can hold up to 60 reports for each scanning cycle.         |
+Content scan job results include the following types of files:
+
+- **.txt**. Summary files, including the time taken to scan, the number of scanned files, and how many files had a match for the information types.
+- **.csv**. Contain detailed descriptions for each file scanned. The directory can hold up to 60 reports for each scanning cycle. 
+
+> [!TIP]
+> If your results are empty and you would like to run a meaningful scan, create a file named **Payment info** in one of the repositories included in your content scan job. Save the file with the following content:
+> 
+> **Credit card:** 2384 2328 5436 3489
+>
+> Run your scan again to see the difference in the results.
+> 
 
 ## Next steps
 
