@@ -143,7 +143,7 @@ Once your network scan job is complete, you can check for any risky repositories
 
 1. In the **Scanner** menu on the left, select :::image type="icon" source="media/qs-tutor/i-repos.png" border="false"::: **Repositories (Preview)**.
 
-    :::image type="content" source="media/qs-tutor/small/risky-repos-small.png" alt-text="Azure Information Protection Repositories page" lightbox="media/risky-repos.png":::
+    :::image type="content" source="media/small/risky-repos-small.png" alt-text="View repositories from your network scan job" lightbox="media/qs-tutor/risky-repos.png":::
 
 1. In the grid below the graphs, locate a repository that is not yet managed by the scanner. Not being managed by the scanner means that they are not included in a content scan job, and are not being scanned for sensitive content.
 
