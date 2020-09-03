@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/30/2020
+ms.date: 09/03/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
