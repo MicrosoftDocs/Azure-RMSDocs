@@ -33,11 +33,22 @@ PDF for creditsuisse adding for Q3
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>*Instructions for: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 System administrators must ensure that their organization's content remains secure, and is shared only with trusted users. Preventing oversharing can include limiting internal access to specific users only, or sharing content only with trusted external users.
 
-One of the most comment methods that users share content inappropriately is email, either in the email itself or as an attachment. Use this tutorial to learn how to use implement popup messages in Outlook that:
+One of the most comment methods that users share content inappropriately is email, either in the email itself or as an attachment. 
+
+In this tutorial, you learn how to:
+> [!div class="checklist"]
+> * Configure a warning message to display for emails that are labeled **General**
+> * Create an exception for your warning messages for internal emails that are labeled **General**
+> * Require users to justify sending emails with no label
+> * Configure the justification prompt that's displayed for unlabeled emails
+> * Block users from sending PowerPoint files with no lablesSee your settings in action
+> * Review the logged user messages and actions in the Event Log 
+
+Use this tutorial to learn how to use implement popup messages in Outlook that:
 
 - Block sensitive content from being emailed to untrusted users
 - Warn users about sensitive content they may be sending
