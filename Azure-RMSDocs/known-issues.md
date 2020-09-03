@@ -100,6 +100,23 @@ Publishing policies may take up to 24 hours.
     - [**Classic client**: View protected files with the Azure Information Protection viewer](rms-client/client-view-use-files.md)
     - [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md)
 
+## AIP for Windows and Office versions in extended support
+
+- [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
+
+    We strongly encourage you to upgrade to a newer version of Windows 10. However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
+
+    For more information, check with your support contact.
+
+- [**Office 2010 is currently in extended support**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+
+    This support will end on Oct. 13, 2020, and will not be extended. Additionally, ESU will not be offered for Office 2010, and we strongly encourage you to upgrade to a newer version of Office 365. 
+    
+    For customers who are currently running Office 2010 in extended support, AIP support is available until October 13, 2020. 
+
+    For more information, check with your support contact.
+
+
 ## More information
 
 The following additional articles may be helpful in answering questions about known issues in Azure Information Protection:
