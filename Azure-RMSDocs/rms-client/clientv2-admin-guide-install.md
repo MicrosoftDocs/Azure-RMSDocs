@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/10/2020
+ms.date: 08/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> **Customers with extended Microsoft support for Windows 7 and Office 2010 can also get Azure Information Protection support for these versions. Check with your support contact for full details.*
+>*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -49,7 +49,8 @@ The following prerequisites for the AIP unified labeling client are in addition 
 |**Microsoft Online Services Sign-in Assistant 7.250.4303.0**     |   Computers running Office 2010 require Microsoft Online Services Sign-in Assistant version 7.250.4303.0, which is included with the client installation. </br></br>If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection unified labeling client. </br></br>For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.      |
 |**KB 4482887**     | For Windows 10 version 1809 only, operation system builds older than 17763.348, install [March 1, 2019—KB4482887 (OS Build 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) to ensure the Information Protection bar displays correctly in Office applications. </br></br>This update is not needed if you have Office 365 1902 or later.        |
 |**Admin permissions**| Installing the Azure Information Protection unified labeling client requires local administrative permissions.| 
-|   |  |
+|**Disable Exploit protection**   |The AIP client is not supported on machines that have [Exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. Make sure to [disable Exploit protection](../known-issues.md#known-issues-for-installing-the-aip-client) before installing the AIP client.  |
+|||
         
 ### Configure your group policy to prevent disabling AIP
 
@@ -116,8 +117,6 @@ Use the following instructions to install the client when you're not using the M
     
     - **ServiceLocation**: Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. [More information](#more-information-about-the-servicelocation-installation-parameter) 
     
-    - **DowngradeDotNetRequirement**: Use this parameter to bypass the requirement for Microsoft Framework .NET version 4.6.2. [More information](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
-    
     - **AllowTelemetry=0**: Use this parameter to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**. 
 
 3. To complete the installation: 
@@ -166,18 +165,6 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
 Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
-
-#### More information about the DowngradeDotNetRequirement installation parameter
-
-To support automatic upgrades by using Windows Update, and for reliable integration with Office applications, the Azure Information Protection unified labeling client uses Microsoft .NET Framework version 4.6.2. By default, an interactive installation by using the executable checks for this version and tries to install it if it is missing. The installation then requires the computer to restart.
-
-If installing this later version of the Microsoft .NET Framework is not practical, you can install the client with the **DowngradeDotNetRequirement=True** parameter and value, which bypasses this requirement if Microsoft .NET Framework version 4.5.1 is installed.
-
-For example: `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
-
-We recommend that you use this parameter with caution, and with the knowledge that there are reported issues with Office applications hanging when the Azure Information Protection unified labeling client is used with this older version of the Microsoft .NET Framework. If you do experience hanging problems, upgrade to the recommended version before you try other troubleshooting solutions. 
-
-Also remember that if you use Windows Update to keep the Azure Information Protection unified labeling client updated, you must have another software deployment mechanism to upgrade the client to later versions.
 
 ### To install the Azure Information Protection unified labeling client by using the .msi installer
 
