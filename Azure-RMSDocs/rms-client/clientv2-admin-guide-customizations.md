@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/30/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

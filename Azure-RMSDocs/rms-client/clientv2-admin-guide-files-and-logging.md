@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
