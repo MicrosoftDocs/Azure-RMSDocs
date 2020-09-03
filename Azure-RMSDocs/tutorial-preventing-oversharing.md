@@ -39,70 +39,165 @@ System administrators must ensure that their organization's content remains secu
 
 One of the most comment methods that users share content inappropriately is email, either in the email itself or as an attachment. 
 
+**Time required:** You can complete this tutorial in less than 20 minutes.
+
 In this tutorial, you learn how to:
 > [!div class="checklist"]
 > * Configure a warning message to display for emails that are labeled **General**
 > * Create an exception for your warning messages for internal emails that are labeled **General**
 > * Require users to justify sending emails with no label
 > * Configure the justification prompt that's displayed for unlabeled emails
-> * Block users from sending PowerPoint files with no lablesSee your settings in action
+> * Block users from sending PowerPoint files with no labels
+> * Configure the block message displayed unlabeled PowerPoint files
+> * See your settings in action
 > * Review the logged user messages and actions in the Event Log 
-
-Use this tutorial to learn how to use implement popup messages in Outlook that:
-
-- Block sensitive content from being emailed to untrusted users
-- Warn users about sensitive content they may be sending
-- Request that users justify the content they are sending to untrusted users
-
-**Time required:** You can complete this tutorial in less than 15 minutes.
 
 ## Tutorial prerequisites
 
-To complete this tutorial, you'll need:
- 
-
-Additionally, you'll need:
+Make sure you have the following system requirements before starting this tutorial.
 
 |Prerequisites  |Description  |
 |---------|---------|
 |**Azure Information Protection unified labeling client** | Make sure that the Azure Information Protection unified labeling client is installed on your machine. </br></br>For more information see, [Tutorial: Deploying the Azure Information Protection (AIP) unified labeling client](tutorial-deploy-client.md). |
 |**Azure Information Protection subscription**     |   You must have an Azure [subscription](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) that includes **Azure Information Protection Plan 2.**      |
 |**Access to the Azure portal**     |    Make sure that you can access [Azure portal](https://portal.azure.com), using one of the following administrator accounts: ???     |
-|**Sensitivity labels**     |  You must have at least one label configured in your policy. This tutorial uses the **General** label in the examples. </br></br>Sensitivity labels are configured in your labeling management center, including the Office 365 Security & Compliance Center, Microsoft 365 Security center, or Microsoft 365 Compliance Center.  </br></br>**Note**: We recommend using a testing policy for this tutorial so that you don't affect your live policy. </br>Make sure that you have the name of your policy handy, as well as the GUIDs for any specific labels you want to use for your popup messages.   |
+|**Sensitivity labels**     |  A **General** sensitivity label configured in your policy. </br></br>Sensitivity labels are configured in your labeling management center, including the Office 365 Security & Compliance Center, Microsoft 365 Security center, or Microsoft 365 Compliance Center.  </br></br>**Note**: We recommend using a testing policy for this tutorial so that you don't affect your live policy. </br>Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
 |**Machine requirements**     |  A computer running Windows, minimum version Windows ???. </br>Make sure that PowerShell is installed, and that you have the ability to run PowerShell as an administrator. </br></br>Additionally, make sure you can sign into Outlook. Be prepared to restarted Outlook multiple times during this tutorial.     |
 | | |
 
 Let's get started. 
 
-<!--
-- Admin guide instructions: [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+## Implement a warning message for emails labeled as General
 
-## Implement pop-up messages in Outlook that warn, request justification, or block sensitive content
+This procedure describes how to cause Outlook to warn users before they send an email labeled **General**. 
 
-This configuration uses policy [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+The users can choose to heed the warning, and either change the label or the content, or they can choose to send the email anyway.
 
-When you create and configure the following advanced client settings, users see pop-up messages in Outlook that can warn them before sending an email, or ask them to provide justification why they are sending an email, or prevent them from sending an email for either of the following scenarios:
+1. Run PowerShell as an administrator.
 
-- **Their email or attachment for the email has a specific label**:
-    - The attachment can be any file type
+1. Run the following command, to define a warning message for the **General** label. 
 
-- **Their email or attachment for the email doesn't have a label**:
-    - The attachment can be an Office document or PDF document
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
+    ```
 
-When these conditions are met, the user sees a pop-up message with one of the following actions:
+    In this example, the GUID for the **General** label is **8faca7b8-8d20-48a3-8ea2-0f96310a848e**.
 
-- **Warn**: The user can confirm and send, or cancel.
+    > [!TIP]
+    > If you wanted to apply this setting to multiple labels, list their GUIDs in the value, separated by commas.
 
-- **Justify**: The user is prompted for justification (predefined options or free-form).  The user can then send or cancel the email. The justification text is written to the email x-header, so that it can be read by other systems. For example, data loss prevention (DLP) services.
+1. Test your setting in Outlook:
 
-- **Block**: The user is prevented from sending the email while the condition remains. The message includes the reason for blocking the email, so the user can address the problem. For example, remove specific recipients, or label the email. 
+    1. On your client computer, open Outlook, or restart Outlook to pull the updated settings.
 
-When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
+    1. Create a new email message, and apply the **General** label. In the message toolbar, click the :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: **Sensitivity** button and then select **General**.
 
-> [!TIP]
-> See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
--->
+    1. Define the **To** field with your own email address, the **Subject field** as: `Testing the General label for the Warn message`, and then send the email.
 
+        You should see the following warning, asking you to confirm before sending the email. For example:
+
+        ![Azure Information Protection tutorial - see OutlookWarnUntrustedCollaborationLabel advanced client setting ](./media/see-warnmessage.png)
+
+    1. Pretend that you're a user who has mistakenly tried to email something that was labeled **General**. In this case, you want to heed the warning, so click **Cancel**.
+
+        Your email is not sent, but remains open so that you can either change the content or the label.
+
+    1. There's no need to make any changes, and you can decide that the content is appropriate to send. This time, when the warning appears, click **Confirm and Send**.
+
+        The email is sent.
+
+## Show a warning message for General emails only when they're sent externally
+
+This procedure describes how to add an exception to the warning message you configured earlier, so that the warning message is only displayed for external recipients.
+
+When sending a **General** email internally, the warning message is not displayed.
+
+1. Run PowerShell as an administrator.
+
+1. Run the following command to define your domain as a trusted domain for warning messages. When you copy this command, replace **contoso.com** with your own domain.
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="contoso.com"}    
+    ```
+
+    > [!TIP]
+    > If you wanted to apply this setting to multiple domains, such as if you wanted to add trusted partners, list their domains in the value, separated by commas.
+
+1. Test your setting in Outlook:
+
+    1. On your client computer, open Outlook, or restart Outlook to pull the updated settings.
+
+    1. Create a new email message, and apply the **General** label. In the message toolbar, click the :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: **Sensitivity** button and then select **General**.
+
+    1. Define the **To** field with your own email address, the **Subject field** as: `Testing the General label for the Warn message`, and then send the email.
+
+        The email is sent, and no warning is displayed.
+
+## Request users to justify sending unlabeled content
+
+This procedure describes how to configure advanced settings so that users must justify their reasoning for sending unlabeled content. 
+
+You won't prevent them from sending it, but you'd like to encourage labeling in your organization. 
+
+1. Run PowerShell as an administrator.
+
+1. Run the following command to have Outlook display a justification message for your users if they try to send an email without a label:
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Justify"}
+    ```
+
+1. Test your setting in Outlook:
+
+    1. On your client computer, open Outlook, or restart Outlook to pull the updated settings.
+
+    1. Create a new email message, and make sure there is no label applied. 
+    
+        For example, if your policy applies a default label, use the :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: button to remove it. 
+
+    1. Define the **To** field with your own email address, the **Subject field** as: `Testing the General label for the Justification message`, and then send the email.
+    
+        A popup is displayed similar to the following: 
+
+        :::image type="content" source="media/see-nolabljustify.png" alt-text="Sample justification required for unlabled messages":::
+
+    1. Select one of the options. If you select the third option **Other, as explained**, enter some sample text in the text box. 
+    
+    1. Click **Confirm and Send**.
+    
+        The email is sent.
+
+## Customize the free text justification prompt
+
+This procedure describes how to customize the third option in the default justification message. 
+
+For example, you may want to add text there to prompt the user to add specific details, or remind users not to enter any sensitive data.
+
+1. Run PowerShell as an administrator.
+
+1. Run the following command to have Outlook display a justification message for your users if they try to send an email without a label:
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
+    ```
+
+    > [!TIP]
+    > Feel free to replace the value in quotes with any other text you want to add there instead. 
+
+1. Test your setting in Outlook:
+
+    1. On your client computer, open Outlook, or restart Outlook to pull the updated settings.
+
+    1. Create a new email message, and make sure there is no label applied. 
+
+        For example, if your policy applies a default label, use the :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: button to remove it. 
+
+    1. Define the **To** field with your own email address, the **Subject field** as: `Testing the General label for the customized Justification message`, and then send the email.
+    
+        The justification popup is displayed, this time with your customized text. For example: 
+
+        TBD
+        
 ## Show a warning, justification, or warning popup message for specific labels
 
 This procedure supports a use case scenario where users send emails, or emails with attachments, that have a specific label.
