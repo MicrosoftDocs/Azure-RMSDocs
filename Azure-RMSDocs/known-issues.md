@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/10/2020
+ms.date: 08/30/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -42,6 +42,20 @@ The Azure Information Protection viewer cannot open attachments in a protected P
 
 For more information, see [Admin Guide: File types supported by the Azure Information Protection client](rms-client/client-admin-guide-file-types.md).
 
+## Known issues for installing the AIP client
+
+The Azure Information Protection client is not supported on machines where [Exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled.
+
+Make sure to disable Exploit protection before installing AIP. 
+
+To disable Exploit protection via PowerShell, run the following:
+
+```PowerShell
+Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
+```
+
+For more information, see [Azure Information Protection requirements](requirements.md).
+
 ## PowerShell support for the Azure Information Protection client
 
 The current release of the **AzureInformationProtection** PowerShell module that's installed with the Azure Information Protection client has the following known issues:
@@ -64,6 +78,7 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 |**Content markings in Word**    | Azure Information Protection content [markings](configure-policy-markings.md) may be hidden in Microsoft Word footers, when the footer also contains a table. For more information, see [When visual markings are applied](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**Files attached to emails** |Due to a limitation in recent Windows updates, when [Microsoft Outlook is protected by Azure Rights Management](office-apps-services-support.md), files attached to emails may be locked after opening the file. |
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
+| **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane may cause performance issues. </br></br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneProperty**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. </br></br>**Note:** Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
 | | |
 
 ## Known issues in policies
@@ -84,6 +99,22 @@ Publishing policies may take up to 24 hours.
 
     - [**Classic client**: View protected files with the Azure Information Protection viewer](rms-client/client-view-use-files.md)
     - [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md)
+
+## AIP for Windows and Office versions in extended support
+
+- [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
+
+    We strongly encourage you to upgrade to a newer version of Windows 10. However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
+
+    For more information, check with your support contact.
+
+- [**Office 2010 is currently in extended support**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+
+    This support will end on Oct. 13, 2020, and will not be extended. Additionally, ESU will not be offered for Office 2010, and we strongly encourage you to upgrade to a newer version of Office 365. 
+    
+    For customers who are currently running Office 2010 in extended support, AIP support is available until October 13, 2020. 
+
+    For more information, check with your support contact.
 
 
 ## More information

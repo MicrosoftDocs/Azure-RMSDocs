@@ -102,7 +102,7 @@ To open a protected PDF document on your desktop computer, we recommend that you
 
 1. Install the [MIP plug-in for Acrobat and Acrobat Reader](https://go.microsoft.com/fwlink/?linkid=2050049) for your operating system.  
 
-    Download: [![Download](../media/download.png "Download the MIP plug-in for Acrobat and Acrobat Reader")](https://go.microsoft.com/fwlink/?linkid=2050049)
+    Download: [![Download MIP plug-in for Acrobat and Acrobat Reader](../media/download.png "Download the MIP plug-in for Acrobat and Acrobat Reader")](https://go.microsoft.com/fwlink/?linkid=2050049)
 
     Supported versions include:
 
@@ -126,17 +126,17 @@ To open a protected PDF document on your desktop computer, we recommend that you
 
 Alternatively, use one of the following PDF readers for Windows that adhere to the ISO standard for PDF encryption:
 
-- Azure Information Protection viewer [![Download](../media/download.png "Download the AIP viewer")](https://go.microsoft.com/fwlink/?linkid=838993) 
+- Azure Information Protection viewer [![Download the AIP viewer](../media/download.png "Download the AIP viewer")](https://go.microsoft.com/fwlink/?linkid=838993) 
 
-- Foxit Reader [![Download](../media/download.png "Download Foxit Reader viewer")](https://www.foxitsoftware.com/pdf-reader/)
+- Foxit Reader [![Download the Foxit Reader viewer](../media/download.png "Download Foxit Reader viewer")](https://www.foxitsoftware.com/pdf-reader/)
 
 ## Installing a protected PDF reader for mobile (iOS/Android)
 
 To open a protected PDF on your iOS or Android device, download and install the app for your operating system:
 
-- Azure Information Protection app for iOS [![Download](../media/download.png "Azure Information Protection app for iOS")  ](https://go.microsoft.com/fwlink/?LinkId=325338)
+- Azure Information Protection app for iOS [![Download the Azure Information Protection app for iOS](../media/download.png "Azure Information Protection app for iOS")  ](https://go.microsoft.com/fwlink/?LinkId=325338)
 
-- Azure Information Protection app for Android [![Download](../media/download.png "Azure Information Protection app for Android")](https://go.microsoft.com/fwlink/?LinkId=325340)
+- Azure Information Protection app for Android [![Download the Azure Information Protection app for Android](../media/download.png "Azure Information Protection app for Android")](https://go.microsoft.com/fwlink/?LinkId=325340)
 
 For more information, see [What is the Azure Information Protection app for iOS or Android?](mobile-app-faq.md).
 
