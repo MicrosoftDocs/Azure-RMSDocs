@@ -61,12 +61,10 @@ Additionally, you'll need:
 
 Let's get started. 
 
-
-## Add default warning, justification, and blocking popup messages to Outlook for emails being sent with sensitive content
-
+<!--
 - Admin guide instructions: [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
-## Implement pop-up messages in Outlook that warn, justify, or block emails being sent
+## Implement pop-up messages in Outlook that warn, request justification, or block sensitive content
 
 This configuration uses policy [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
@@ -90,10 +88,12 @@ When the popup-messages are for a specific label, you can configure exceptions f
 
 > [!TIP]
 > See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
+-->
 
 ## Show a warning, justification, or warning popup message for specific labels
 
-This procedure supports a use case scenario where users send emails, or emails with attachments, that have a specific label. Configure a warning, justification, or blocking message to appear in Outlook, depending on the label detected.
+This procedure supports a use case scenario where users send emails, or emails with attachments, that have a specific label.
+Configure a warning, justification, or blocking message to appear in Outlook, depending on the label detected.
 
 1. Run PowerShell as an administrator. 
 
@@ -124,7 +124,8 @@ This procedure supports a use case scenario where users send emails, or emails w
 
 ## Prevent popups from being displayed for trusted domains
 
-Prevent your popups from being displayed when an email is sent to users in trusted domains, such as your own organization's domain, or your partners. 
+Once you've configured popup messages for specific labels, you can define un-trusted domains for each message type. 
+This ensures that the specified message type is not displayed for any domains that you trust, such as your own domain, or those of trusted partners.
 
 1. Run PowerShell as an administrator.
 
@@ -143,114 +144,77 @@ Prevent your popups from being displayed when an email is sent to users in trust
             
     - <Value> is at least one label domain name. Separate multiple domain names by commas to apply the same settings to multiple domains.
 
-    For example, say you've configured any emails with the **Confidential \ All Employees** label to be blocked. However, you *do* want to be able to send these emails inside your own organization's domain, **contoso.com**, as well your partners' domains.  Therefore, you'd define contoso.com
+For example, say that you've specified that the emails and email attachments with the **Confidential \ All Employees** label should be blocked from sending, using the **[OutlookBlockUntrustedCollaborationLabel](#show-a-warning-justification-or-warning-popup-message-for-specific-labels)** advanced setting. 
 
-    ```PowerShell
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
-    ```
-    
+- You *do* want users to be able to send this content within your own domain, **contoso.com,** as well as the domains of your trusted partners, **fabrikam.com** and **litware.com.**
+- You *do not* want users to be able to send this content to emails with a **gmail.com** domain.
 
-For example, you have specified the **OutlookBlockUntrustedCollaborationLabel** advanced client setting for the **Confidential \ All Employees** label. You now specify the additional advanced client setting of **OutlookJustifyTrustedDomains** and **contoso.com**. As a result, a user can send an email to john@sales.contoso.com when it is labeled **Confidential \ All Employees** but will be blocked from sending an email with the same label to a Gmail account.
-
-Example PowerShell commands, where your label policy is named "Global":
+If your policy is named **Global**, you'd use the following command to add trusted domains for your **Confidential \ All Employees** label, while keeping **gmail.com** blocked.
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
-
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
 
-### To implement the warn, justify, or block pop-up messages for emails or attachments that don't have a label:
+As an additional example, say that you've specified that the emails and email attachments with the **Employees \ Extended** label should require justification, using the **[OutlookBlockUntrustedCollaborationLabel](#show-a-warning-justification-or-warning-popup-message-for-specific-labels)** advanced setting. You want to remove this justification requirement for your own domain, **contoso.com,** as well as the domains of your trusted partners, **fabrikam.com** and **litware.com.**
 
-For the same label policy, create the following advanced client setting with one of the following values:
+In this case, if your policy is named **Global**, you'd use the following command to add trusted domains for your **Employees \ Extended** label, while keeping **gmail.com** blocked.
 
-- Warn messages:
-    
-    - Key: **OutlookUnlabeledCollaborationAction**
-    
-    - Value: **Warn**
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
+```    
 
-- Justification messages:
-    
-    - Key: **OutlookUnlabeledCollaborationAction**
-    
-    - Value: **Justify**
+## Implement warn, justify, or blocking popup messages for unlabeled content
 
-- Block messages:
-    
-    - Key: **OutlookUnlabeledCollaborationAction**
-    
-    - Value: **Block**
+Make sure to address emails or email attachments that don't have any labels. Handle unlabeled content in Outlook using any of the following methods:
 
-- Turn off these messages:
-    
-    - Key: **OutlookUnlabeledCollaborationAction**
-    
-    - Value: **Off**
+- Show a warning message, prompting users to add a label
+- Show a justification message, prompting users to justify sending unlabeled content
+- Show a block message and block the message entirely, requiring users to add a label
+- Allow the email to be sent smoothly, without showing any message at all
 
+Use the **OutlookUnlabeledCollaborationAction** advanced client setting, with one of the following values:
 
-Example PowerShell command, where your label policy is named "Global":
+- **Warn**
+- **Justify**
+- **Block**
+- **Off**
+
+For example, if your policy is named **Global**, use the following command to warn users about unlabeled content being send in Outlook:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
 ```
+## Specify file extensions for unlabeled content
 
-#### To define specific file name extensions for the warn, justify, or block pop-up messages for email attachments that don't have a label
+By default, the warn, justify, and blocking pop-up messages in Outlook apply to all Office documents and PDFs attached to your emails, as well as the emails themselves.
 
-By default, the warn, justify, or block pop-up messages apply to all Office documents and PDF documents. You can refine this list by specifying which file name extensions should display the warn, justify, or block messages with an additional advanced setting and a comma-separated list of file name extensions.
+You can further define your message popups by defining specific file extenstions where they are used. 
 
-Example value for multiple file name extensions to define as a comma-separated string: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
-
-In this example, an unlabeled PDF document will not result in warn, justify, or block pop-up messages.
-
-For the same label policy, enter the following strings: 
+For example, if you list only Office file types, unlabeled PDF files attached to your emails will not show a warn, justify, or blocking message.
 
 
-- Key: **OutlookOverrideUnlabeledCollaborationExtensions**
+Further define your message popups for unlabeled content by defining specific file extensions where they are used. 
 
-- Value: **\<**file name extensions to display messages, comma separated**>**
+Use the **OutlookOverrideUnlabeledCollaborationExtensions** advanced property to define the file extensions where you want popup messages to be displayed, with a comma-separated list of all your file types.
 
-
-Example PowerShell command, where your label policy is named "Global":
+For example, if your policy is named **Global**, use the following command to show popup messages on PowerPoint files or templates only:
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.POTX,.POTM,.POT,.PPTX"}
 ```
 
-#### To specify a different action for email messages without attachments
+## Specify a separate action for email messages without attachments
 
-By default, the value that you specify for OutlookUnlabeledCollaborationAction to warn, justify, or block pop-up messages applies to emails or attachments that don't have a label. You can refine this configuration by specifying another advanced setting for email messages that don't have attachments.
+By default, the same action is applied both to the emails with attachments and emails without attachments.
 
-Create the following advanced client setting with one of the following values:
+Use the **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior** advanced setting to define a different action for email messages without attachments, with one of the following values:
 
-- Warn messages:
-    
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
-    
-    - Value: **Warn**
+- **Warn**: Show a warning message, instead of the action defined by other settings
+- **Justify**: Request justification, instead of the action defined by other settings
+- **Block**: Block the email and show a blocking message, instead the action defined by other settings
+- **Off**: Take no action, and show no message, instead of the action defined by other settings
 
-- Justification messages:
-    
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
-    
-    - Value: **Justify**
-
-- Block messages:
-    
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
-    
-    - Value: **Block**
-
-- Turn off these messages:
-    
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
-    
-    - Value: **Off**
-
-If you don't specify this client setting, the value that you specify for OutlookUnlabeledCollaborationAction is used for unlabeled email messages without attachments as well as unlabeled email messages with attachments.
-
-Example PowerShell command, where your label policy is named "Global":
+For example, if your Example PowerShell command, where your label policy is named "Global":
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
