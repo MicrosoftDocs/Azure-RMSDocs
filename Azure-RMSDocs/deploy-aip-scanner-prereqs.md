@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/24/2020
+ms.date: 08/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -57,7 +57,7 @@ You must have a Windows Server computer to run the scanner, which has the follow
 |---------|---------|
 |**Processor**     |4 core processors         |
 |**RAM**     |8 GB         |
-|**Disk space**     |10 GB free space (average) for temporary files. </br></br>The scanner requires sufficient disk space to create temporary files for each file that it scans, four files per core. </br></br>The recommended disk space of 10 GB allows for 4 core processors scanning 16 files that each have a file size of 625 MB.
+|**Disk space**     |10-GB free space (average) for temporary files. </br></br>The scanner requires sufficient disk space to create temporary files for each file that it scans, four files per core. </br></br>The recommended disk space of 10 GB allows for 4 core processors scanning 16 files that each have a file size of 625 MB.
 |**Operating system**     |- Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Note:** For testing or evaluation purposes in a non-production environment, you can also use any Windows operating system that is [supported by the Azure Information Protection client](requirements.md#client-devices).
 |**Network connectivity**     | Your scanner computer can be a physical or virtual computer with a fast and reliable network connection to the data stores to be scanned. </br></br> If internet connectivity is not possible because of your organization policies, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations). </br></br>Otherwise, make sure that this computer has internet connectivity that allows the following URLs over HTTPS (port 443):</br><br />-  \*.aadrm.com <br />-  \*.azurerms.com<br />-  \*.informationprotection.azure.com <br /> - informationprotection.hosting.portal.azure.net <br /> - \*.aria.microsoft.com <br />-  \*.protection.outlook.com |
 | ||
@@ -96,7 +96,7 @@ To store the scanner configuration data, use an SQL server with the following re
 
 - **An account with Sysadmin role to install the scanner.**
 
-    This enables the installation process to automatically create the scanner configuration database and grant the required **db_owner** role to the service account that runs the scanner.
+    The Sysadmin role enables the installation process to automatically create the scanner configuration database and grant the required **db_owner** role to the service account that runs the scanner.
 
     If you cannot be granted the Sysadmin role or your organization policies require databases to be created and configured manually, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations).
 
@@ -119,18 +119,18 @@ The disk size for the scanner configuration database will vary for each deployme
 100 KB + <file count> *(1000 + 4* <average file name length>)
 ```
 
-For example, to scan 1 million files that have an average file name length of 250 bytes, allocate 2 GB disk space.
+For example, to scan 1 million files that have an average file name length of 250 bytes, allocate 2-GB disk space.
 
 For multiple scanners:
 
 - **Up to 10 scanners,** use:
 
     - 4 core processors
-    - 8 GB RAM recommended
+    - 8-GB RAM recommended
 
 - **More than 10 scanners** (maximum 40), use:
     - 8 core processes
-    - 16 GB RAM recommended
+    - 16-GB RAM recommended
 
 ## Azure Information Protection client requirements
 
@@ -174,11 +174,16 @@ For more information, see [File types supported by the Azure Information Protect
 
 ## File path requirements
 
-To scan files, your file paths must have a maximum of 260 characters, unless the scanner is installed on Windows 2016 and the computer is configured to support long paths
+By default, to scan files, your file paths must have a maximum of 260 characters.
 
-Windows 10 and Windows Server 2016 support path lengths greater than 260 characters with the following [group policy setting](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths**
+To scan files with file paths of more than 260 characters, install the scanner on a computer with one of the following Windows versions, and configure the computer as needed:
 
-For more information about supporting long file paths, see the [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.
+|Windows version  |Description  |
+|---------|---------|
+|**Windows 2016 or later**     |   Configure the computer to support long paths      |
+|**Windows 10 or Windows Server 2016**     | Define the following [group policy setting](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths**.    </br></br>For more information long file path support in these versions, see the [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.    |
+|**Windows 10, version 1607 or later**     |  Opt in for the updated **MAX_PATH** functionality. For more information, see [Enable Long Paths in Windows 10 versions 1607 and later](https://docs.microsoft.com/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
+| | |
 
 ## Usage statistics requirements
 
@@ -204,17 +209,39 @@ However, in a production environment, your organization's policies may prohibit 
 
 - [Restriction: You cannot be granted Sysadmin or databases must be created and configured manually](#restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually)
 
+- [Restriction: Your labels do not have auto-labeling conditions](#restriction-your-labels-do-not-have-auto-labeling-conditions)
+
 ### Restriction: The scanner server cannot have internet connectivity
+
+While the unified labeling client cannot apply protection without an internet connection, the scanner can still apply labels based on imported policies.
 
 To support a disconnected computer, perform the following steps:
 
-1. Configure labels in your policy, and then import the policy using the [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) cmdlet. While the unified labeling client cannot apply protection without an internet connection, the scanner can still apply labels based on imported policies.
+1.	Configure labels in your policy, and then use the [procedure to support disconnected computers](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) to enable offline classification and labeling.
 
-1. Configure the scanner in the Azure portal, by creating a scanner cluster. If you need help with this step, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+1. Enable offline management for content scan jobs:
 
-1. Export your content job from the **Azure Information Protection - Content scan jobs** pane using the **Export** option.
+    1. Set the scanner to function in **offline** mode, using the [Set-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet.
 
-1. In a PowerShell session, run [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) and specify the file that contains the exported settings.
+    1. Configure the scanner in the Azure portal by creating a scanner cluster. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+
+    1. Export your content job from the **Azure Information Protection - Content scan jobs** pane using the **Export** option.
+    
+    1. Import the policy using the [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-aipscannerconfiguration) cmdlet. 
+    
+    Results for offline content scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
+    
+1. Enable offline management of network scan jobs:
+
+    1. Set the Network Discovery service to function in offline mode using the [Set-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) cmdlet.
+
+    1. Configure the network scan job in the Azure portal. For more information, see [Creating a network scan job](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
+    
+    1. Export your network scan job from the **Azure Information Protection - Network scan jobs (Preview)** pane using the **Export** option. 
+    
+    1.  Import the network scan job using the file that matches our cluster name using the [Import-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) cmdlet.  
+    
+    Results for offline network scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
 
 ### Restriction: You cannot be granted Sysadmin or databases must be created and configured manually
 
@@ -256,7 +283,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 
 #### Create a user and grant db_owner rights manually
 
-To create a user and grant db_owner rights on this database, ask the Sysadmin to do the following:
+To create a user and grant db_owner rights on this database, ask the Sysadmin to perform the following steps:
 
 1. Create a DB for scanner:
 
@@ -295,6 +322,17 @@ You can have one account to run the scanner service and use another account to a
 - **For the scanner service account,** use a local Windows account or an Active Directory account.
 
 - **For the Azure Active Directory account,** specify your local account for the *OnBehalfOf* parameter with Set-AIPAuthentication. For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+
+#### Restriction: Your labels do not have auto-labeling conditions
+
+If your labels do not have any auto-labeling conditions, plan to use one of the following options when configuring your scanner:
+
+|Option  |Description  |
+|---------|---------|
+|**Discover all info types**     |  In your [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), set the **Info types to be discovered** option to **All**. </br></br>This option sets the content scan job to scan your content for all sensitive information types.      |
+|**Use recommended labeling**     |  In your [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), set the **Treat recommended labeling as automatic** option to **On**.</br></br> This setting configures the scanner to automatically apply all recommended labels on your content.      |
+|**Define a default label**     |   Define a default label in your [policy](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), or [repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In this case the scanner applies the default label on all files found.       |
+| | |
 
 ## Next steps
 

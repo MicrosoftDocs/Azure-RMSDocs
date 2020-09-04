@@ -6,7 +6,7 @@ description: Instructions for installing and configuring the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.custom: admin
 >[!NOTE] 
 > If you're working with the AIP classic scanner, see [Installing and configuring the Azure Information Protection classic scanner](deploy-aip-scanner-configure-install-classic.md).
 
-Before you start configuring and installing the Azure Information Protection scanner, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md).
+Before you start configuring and installing the Azure Information Protection scanner, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md). 
 
 When you're ready, continue with the following steps:
 
@@ -58,43 +58,139 @@ For more information, see also [List of cmdlets for the scanner](#list-of-cmdlet
 
 ## Configure the scanner in the Azure portal
 
-Before you install the scanner, or upgrade it from an older general availability version of the scanner, create a cluster and content scan job for the scanner in the Azure portal. 
-
-Then, configure the cluster and content scan job with scanner settings and the data repositories to scan.
+Before you install the scanner, or upgrade it from an older general availability version, configure or verify your scanner settings in the Azure Information Protection area of the Azure portal.
 
 To configure your scanner: 
 
-1. [Sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal), and navigate to the **Azure Information Protection** pane. 
+1. Sign in to the [Azure portal](https://portal.azure.com) with one of the following roles:
+
+    - **Compliance administrator**
+    - **Compliance data administrator**
+    - **Security administrator**
+    - **Global administrator**
+
+    Then, navigate to the **Azure Information Protection** pane.
     
-    For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
+    For example, in the search box for resources, services, and docs, start typing **Information** and select **Azure Information Protection**.
+
+1. [Create a scanner cluster](#create-a-scanner-cluster). This cluster defines your scanner and is used to identify the scanner instance, such as during installation, upgrades, and other processes.
+
+1. (Optional) [Scan your network for risky repositories](#create-a-network-scan-job-public-preview). Create a network scan job to scan a specified IP address or range, and provide a list of risky repositories that may contain sensitive content you'll want to secure.  
+
+    Run your network scan job and then [analyze any risky repositories found](#analyze-risky-repositories-found-public-preview).
+
+1. [Create a content scan job](#create-a-content-scan-job) to define the repositories you want to scan.
+
+### Create a scanner cluster  
+
+1. From the **Scanner** menu on the left, select **Clusters** ![clusters icon](media/i-clusters.png "clusters icon").
+
+1. On the **Azure Information Protection - Clusters** pane, select **Add** ![add icon](media/i-add.png "add icon").
     
-1. Locate the **Scanner** menu options, and select **Clusters**.
-
-1. On the **Azure Information Protection - Clusters** pane, select **Add**:
+1. On the **Add a new cluster** pane, enter a meaningful name for the scanner, and an optional description. 
     
-    :::image type="content" source="media/scanner-add-profile.png" alt-text="Add content scan job for the Azure Information Protection scanner":::
+    The cluster name is used to identify the scanner's configurations and repositories. For example, you might enter **Europe** to identify the geographical locations of the data repositories you want to scan. 
 
-1. On the **Add a new cluster** pane:
+    You'll use this name later on to identify where you want to install or upgrade your scanner.
 
-    1. Specify a meaningful name for the scanner. This name is used to identify the scanner's configuration settings and the data repositories to scan. 
+1. Select **Save** ![save icon](media/qs-tutor/save-icon.png "save icon") to save your changes.
 
-        For example, you might specify **Europe** to identify the geographical location of the data repositories that your scanner will cover. When you later install or upgrade the scanner, you will need to specify the same cluster name.
-   
-    2. Optionally, specify a description for administrative purposes, to help you identify the scanner's cluster name.
+### Create a network scan job (public preview)
 
-    3. Select **Save**.
-1. Locate the **Scanner** menu options, and select **Content scan jobs**.
-1. On the **Azure Information Protection - Content scan jobs** pane, select **Add**.
+Starting in version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview), you can scan your network for risky repositories. Add one or more of the repositories found to a content scan job to scan them for sensitive content.
+
+> [!NOTE]
+> The **network discovery** interface is currently in gradual deployment and will be available in all regions by September 15, 2020. 
+
+- [Network discovery prerequisites](#network-discovery-prerequisites)
+- [Creating a network scan job](#creating-a-network-scan-job)
+
+#### Network discovery prerequisites
+
+|Prerequisite  |Description  |
+|---------|---------|
+|**Install the Network Discovery service**     |   If you've recently upgraded your scanner, you may need to still install the Network Discovery service. </br></br>Run the [**Install-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet to enable network scan jobs.      |
+|**Azure Information Protection analytics**     | Make sure that you have Azure Information Protection analytics enabled. </br></br>In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview).** </br></br>For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).|
+| | |
+
+#### Creating a network scan job
+
+1. Log in to the Azure portal, and go to **Azure Information Protection.** Under the **Scanner** menu on the left, select **Network scan jobs (Preview)** ![network scan jobs icon](media/i-network-scan-jobs.png "network scan jobs icon").
+    
+1. On the **Azure Information Protection - Network scan jobs** pane, select **Add** ![add icon](media/i-add.png "add icon").
+    
+1. On the **Add a new network scan job** page, define the following settings:
+        
+    |Setting  |Description  |
+    |---------|---------|
+    |**Network scan job name**     |Enter a meaningful name for this job.  This field is required.       |
+    |**Description**     |   Enter a meaningful description.      |
+    |**Select the cluster**     |From the dropdown, select the cluster you want to use to scan the configured network locations.  </br></br>**Tip:** When selecting a cluster, make sure that the nodes in the cluster you assign can access the configured IP ranges via SMB.      |
+    |**Configure IP ranges to discover**     |   Click to define an IP address or range. </br></br>In the **Choose IP ranges** pane, enter an optional name, and then a start IP address and end IP address for your range. </br></br>**Tip:** To scan a specific IP address only, enter the identical IP address in both the **Start IP** and **End IP** fields.      |
+    |**Set schedule**     | Define how often you want this network scan job to run.  </br></br>If you select **Weekly**, the **Run network scan job on** setting appears. Select the days of the week where you want the network scan job to run.       |
+    |**Set start time (UTC)**     |Define the date and time that you want this network scan job to start running. If you've selected to run the job daily, weekly, or monthly, the job will run at the defined time, at the recurrence you've selected. </br></br>**Note**: Be careful when setting the date to any days at the end of the month. If you select **31,** the network scan job will not run in any month that has 30 days or fewer.    |
+    | | |
+
+1. Select **Save** ![save icon](media/qs-tutor/save-icon.png "save icon") to save your changes.
+
+> [!TIP]
+> If you want to run the same network scan using a different scanner, change the cluster defined in the network scan job.
+> 
+> Return to the **Network scan jobs** pane, and select **Assign to cluster** to select a different cluster now, or **Unassign cluster** to make additional changes later. 
+>     
+
+### Analyze risky repositories found (public preview)
+
+Repositories found, either by a network scan job, a content scan job, or by user access detected in log files, are aggregated and listed on the **Scanner > Repositories** [repositories icon](media/i-repositories.png "repositories icon") pane.
+
+If you've [defined a network scan job](#create-a-network-scan-job-public-preview) and have set it to run at a specific date and time, wait until it's finished running to check for results. You can also return here after running a [content scan job](#create-a-content-scan-job) to view updated data.
+
+1. Under the **Scanner** menu on the left, select **Repositories** ![repositories icon](media/i-repositories.png "repositories icon").
+    
+    The repositories found are shown as follows:
+    - The **Repositories by status** graph shows how many repositories are already configured for a content scan job, and how many are not.
+    - The **Top 10 unmanaged repositories by access** graph lists the top 10 repositories that are not currently assigned to a content scan job, as well as details about their access levels. Access levels can indicate how risky your repositories are.
+    - The table below the graphs list each repository found and their details.
+
+1. Do any of the following:
+    
+    |Option  |Description  |
+    |---------|---------|
+    |![columns icon](media/i-columns.png "columns icon")    | Select **Columns** to change the table columns displayed.        |
+    |![refresh icon](media/i-refresh.png "refresh icon")   | If your scanner has recently run network scan results, select **Refresh** to refresh the page.      |
+    |![add icon](media/i-add.png "add icon")   | Select one or more repositories listed in the table, and then select **Assign Selected Items** to assign them to a content scan job.          |
+    |**Filter**     |   The filter row shows any filtering criteria currently applied. Select any of the criteria shown to modify its settings, or select **Add Filter** to add new filtering criteria. </br></br>Select **Filter** to apply your changes and refresh the table with the updated filter.       |
+    |![Log Analytics icon](media/i-log-analytics.png "Log Analytics icon") |In the top-right corner of the unmanaged repositories graph, click the **Log Analytics** icon to jump to Log Analytics data for these repositories. |
+    | | |
+
+#### Repositories with public access
+
+Repositories where **Public access** is found to have **read** or **read/write** capabilities may have sensitive content that must be secured. If **Public access** is false, the repository not accessible by the public at all.
+
+Public access to a repository is only reported if you've set a weak account in the **StandardDomainsUserAccount** parameter of the [**Install-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) or [**Set-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscovery) cmdlets.
+
+- The accounts defined in these parameters are used to simulate the access of a weak user to the repository. If the weak user defined there can access the repository, this means that the repository can be accessed publicly. 
+
+- To ensure that public access is reported correctly, make sure that the user specified in these parameters is a member of the **Domain Users** group only.
+       
+### Create a content scan job
+
+Deep dive into your content to scan specific repositories for sensitive content. 
+
+You may want to do this only after running a network scan job to analyze the repositories in your network, but can also define your repositories yourself.
  
-1. For this initial configuration, configure the following settings, and then select **Save** but do not close the pane:
+1. Under the **Scanner** menu on the left, select **Content scan jobs**. 
+   
+1. On the **Azure Information Protection - Content scan jobs** pane, select **Add** ![add icon](media/i-add.png "save icon").
+ 
+1. For this initial configuration, configure the following settings, and then select **Save** but do not close the pane.
     
-    |Section  |Settings  |
+    |Setting  |Description  |
     |---------|---------|
     |**Content scan job settings**     |    - **Schedule**: Keep the default of **Manual** </br>- **Info types to be discovered**: Change to **Policy only** </br>- **Configure repositories**: Do not configure at this time because the content scan job must first be saved.         |
     |**Policy enforcement**     | - **Enforce**: Select **Off** </br>- **Label files based on content**: Keep the default of **On** </br>- **Default label**: Keep the default of **Policy default** </br>- **Relabel files**: Keep the default of **Off**        |
     |**Configure file settings**     | - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On** </br>- **File types to scan**: Keep the default file types for **Exclude** </br>- **Default owner**: Keep the default of **Scanner Account**        |
     | | |
-
 
 1. Now that the content scan job is created and saved, you're ready to return to the **Configure repositories** option to specify the data stores to be scanned. 
 
@@ -107,43 +203,37 @@ To configure your scanner:
     
     :::image type="content" source="media/scanner-repositories-bar.png" alt-text="Configure data repositories for the Azure Information Protection scanner":::
 
-1. On the **Repositories** pane, select **Add**:
+    1. On the **Repositories** pane, select **Add**:
     
-    :::image type="content" source="media/scanner-repository-add.png" alt-text="Add data repository for the Azure Information Protection scanner":::
+        :::image type="content" source="media/scanner-repository-add.png" alt-text="Add data repository for the Azure Information Protection scanner":::
 
-1. On the **Repository** pane, specify the path for the data repository, and then select **Save**.
+    1. On the **Repository** pane, specify the path for the data repository, and then select **Save**.
 
-    For example: 
+        For example: 
 
-    - For a network share, use `\\Server\Folder`. 
-    - For a SharePoint library, use `http://sharepoint.contoso.com/Shared%20Documents/Folder`.
+        - For a network share, use `\\Server\Folder`. 
+        - For a SharePoint library, use `http://sharepoint.contoso.com/Shared%20Documents/Folder`.
 
-    > [!NOTE]
-    > Wildcards are not supported and WebDav locations are not supported.
-    >     
+        > [!NOTE]
+        > Wildcards are not supported and WebDav locations are not supported.
+        >     
 
-    Use the following syntax when adding SharePoint paths:
+        For the remaining settings on this pane, do not change them for this initial configuration, but keep them as **Content scan job default**. The default setting means that the data repository inherits the settings from the content scan job.
+
+        Use the following syntax when adding SharePoint paths:
     
-    |Path  |Syntax  |
-    |---------|---------|
-    |**Root path**     | `http://<SharePoint server name>` </br></br>Scans all sites, including any site collections allowed for the scanner user. </br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
-    |**Specific SharePoint subsite or collection**     | One of the following: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
-    |**Specific SharePoint library**     | One of the following: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
-    |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
-    | | |
+        |Path  |Syntax  |
+        |---------|---------|
+        |**Root path**     | `http://<SharePoint server name>` </br></br>Scans all sites, including any site collections allowed for the scanner user. </br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
+        |**Specific SharePoint subsite or collection**     | One of the following: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
+        |**Specific SharePoint library**     | One of the following: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
+        |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
+        | | |
 
-    For the remaining settings on this pane, do not change them for this initial configuration, but keep them as **Content scan job default**. The default setting means that the data repository inherits the settings from the content scan job.
 
-    <!--
-        > [!IMPORTANT]
-        > While the local file system can be scanned, this configuration is not recommended for production deployments and can **only** be used in single node clusters.
-        >
-        > Scanning of local folders by multi-node clusters is not supported. If you need to scan a folder on the local file system, we recommend creating a share, and scanning it using a network URL.
-    -->
+1. Repeat the previous steps to add as many repositories as needed.
 
-1. If you want to add another data repository, repeat steps 8 and 9. 
-
-1. Close the **Repositories** pane and the **content scan job** pane. 
+    When you're done, close both the **Repositories** and **Content scan job** panes. 
 
 Back on the **Azure Information Protection - Content scan job** pane, your content scan name is displayed, together with the **SCHEDULE** column showing **Manual** and the **ENFORCE** column is blank.
 
@@ -185,13 +275,15 @@ Now that you have installed the scanner, you need to [get an Azure AD token for 
 
 ## Get an Azure AD token for the scanner
 
-An Azure AD token allows the scanner to authenticate to the Azure Information Protection service.
+An Azure AD token allows the scanner to authenticate to the Azure Information Protection service, enabling the scanner to run non-interactively.
+
+For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
 To get an Azure AD token:
 
-1. Return to the Azure portal to create an Azure AD application to specify an access token for authentication. This token lets the scanner run non-interactively. For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+1. Return to the Azure portal to create an Azure AD application to specify an access token for authentication.
 
-2. From the Windows Server computer, if your scanner service account has been granted the **Log on locally** right for the installation, sign in with this account and start a PowerShell session. 
+1. From the Windows Server computer, if your scanner service account has been granted the **Log on locally** right for the installation, sign in with this account and start a PowerShell session. 
 
     Run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
     
@@ -210,13 +302,13 @@ To get an Azure AD token:
 > [!TIP]
 > If your scanner service account cannot be granted the **Log on locally** right for the installation, use the *OnBehalfOf* parameter with [Set-AIPAuthentication](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipauthentication), as described in [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
-The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never, according to your configuration of the **Web app /API** client secret in Azure AD. 
+The scanner now has a token to authenticate to Azure AD. This token is valid for one year, two years, or never, according to your configuration of the **Web app /API** client secret in Azure AD. 
 
 When the token expires, you must repeat this procedure.
 
 You're now ready to run your first scan in discovery mode. For more information, see [Run a discovery cycle and view reports for the scanner](deploy-aip-scanner-manage.md#run-a-discovery-cycle-and-view-reports-for-the-scanner).
 
-If you've already run a discovery scan, continue with [Configure the scanner to apply classification and protection](#configure-the-scanner-to-apply-classification-and-protection).
+Once you've run your initial discovery scan, continue with [Configure the scanner to apply classification and protection](#configure-the-scanner-to-apply-classification-and-protection).
 
 ## Configure the scanner to apply classification and protection
 
@@ -353,9 +445,6 @@ Use the following options and guidance to help you optimize scanner performance:
 |**Check your alternative configuration usage** |The scanner runs more quickly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents. <br/></br>The scanner runs more slowly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.|
 | | |
 
-<!-- removed when removing local folders
-|**Do not scan local folders on the computer running the scanner service**     | If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. </br></br>Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.        |
--->
 
 ### Additional factors that affect performance
 
@@ -381,27 +470,43 @@ This section lists PowerShell cmdlets supported for the Azure Information Protec
 
 Supported cmdlets for the scanner include:
 
+- [Export-AIPLogs](/powershell/module/azureinformationprotection/Export-AIPLogs)
+
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
 
 - [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
 
-- [Export-AIPLogs](/powershell/module/azureinformationprotection/Export-AIPLogs)
+- [Get-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)
+
+- [Get-MIPNetworkDiscoveryJobs](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)
+
+- [Get-MIPNetworkDiscoveryStatus](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
 
 - [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
+- [Import-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)
+
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
+
+- [Install-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)
 
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
-- [Start-AIPScanDiagnostics](/powershell/module/azureinformationprotection/Start-AIPScanDiagnostics)
+- [Set-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
+
+- [Start-AIPScanDiagnostics](/powershell/module/azureinformationprotection/Start-AIPScannerDiagnostics)
+
+- [Start-MIPNetworkDiscovery](https://docs.microsoft.com/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)
 
 - [Stop-AIPScan](/powershell/module/azureinformationprotection/Stop-AIPScan)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
+
+- [Uninstall-MIPNetworkDiscovery](https://docs.microsoft.com/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
 

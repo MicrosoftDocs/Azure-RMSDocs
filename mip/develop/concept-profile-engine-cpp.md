@@ -60,15 +60,15 @@ An engine may have one of two states:
 - `CREATED`: Created indicates that the SDK has enough local state information after calling the required backend services.
 - `LOADED`: The SDK has built the required data structures for the engine to be operational.
 
-An engine must be both created and loaded to perform any operations. The `Profile` class exposes a few engine management methods: `AddEngineAsync`, `RemoveEngineAsync`, and `UnloadEngineAsync`.
+An engine must be both created and loaded to perform any operations. The `Profile` class exposes a few engine management methods: `AddEngineAsync`, `DeleteEngineAsync`, and `UnloadEngineAsync`.
 
 The following table describes the possible engine states, and which methods can change that state:
 
-|         | NONE              | CREATED           | LOADED         |
-|---------|-------------------|-------------------|----------------|
-| NONE    |                   |                   | AddEngineAsync |
-| CREATED | DeleteEngineAsync |                   | AddEngineAsync |
-| LOADED  | DeleteEngineAsync | UnloadEngineAsync |                |
+| Engine state | NONE              | CREATED           | LOADED         |
+|--------------|-------------------|-------------------|----------------|
+| NONE         |                   |                   | AddEngineAsync |
+| CREATED      | DeleteEngineAsync |                   | AddEngineAsync |
+| LOADED       | DeleteEngineAsync | UnloadEngineAsync |                |
 
 ### Engine ID
 

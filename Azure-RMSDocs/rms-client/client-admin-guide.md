@@ -3,10 +3,10 @@
 
 title: Azure Information Protection client admin guide
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Azure Information Protection client for Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -34,6 +34,8 @@ ms.custom: admin
 
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
+> **To deploy the AIP classic client,** open a support ticket to get download access.
 
 Use the information in this guide if you are responsible for the Azure Information Protection client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection client user guide](client-user-guide.md). 
 
@@ -193,7 +195,7 @@ The Azure Information Protection team regularly updates the Azure Information Pr
 
 If you are using Windows Update, the Azure Information Protection client automatically upgrades the general availability version of the client, irrespective of how the client was installed. New client releases are published to the catalog a few weeks after the release.
 
-Alternatively, you can manually upgrade the client by downloading the new release from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). Then install the new version to upgrade the client. You must use this method to upgrade preview versions.
+Alternatively, you can manually upgrade the client with a newer release installation. You must use this method to upgrade preview versions.
 
 When you manually upgrade, uninstall the previous version first only if you're changing the installation method. For example, you change from the executable (.exe) version of the client to the Windows installer (.msi) version of the client. Or, if you need to install a previous version of the client. For example, you have the current preview version installed for testing and now need to revert to the current general availability version.
 
@@ -222,9 +224,9 @@ Although it's possible to upgrade the scanner in a different order, we recommend
 
 2. On the scanner computer, stop the scanner service, **Azure Information Protection Scanner**.
 
-3. Upgrade the Azure Information Protection client by installing the current general availability (GA) version from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
+3. Upgrade the Azure Information Protection client by installing the current general availability (GA) version. 
 
-4. In a PowerShell session, run the Update-AIPScanner command with the same profile name that you specified in step 1. For example: `Update-AIPScanner –Profile Europe`
+4. In a PowerShell session, run the **Update-AIPScanner** command with the same profile name that you specified in step 1. For example: `Update-AIPScanner –Profile Europe`
 
 5. Only if the scanner is running on a disconnected computer: Now run [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) and specify the file that contains the exported settings.
 
@@ -257,7 +259,7 @@ If you know that you want move the scanner configuration database for the  GA ve
 
 3. Install the scanner by using [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), specifying the new SQL Server instance and profile name.
 
-4. Optional: If you do not want the scanner to rescan all files, export the ScannerFiles table and import it to the new database.
+4. **Optional:** If you do not want the scanner to rescan all files, export the ScannerFiles table and import it to the new database.
 
 ## Uninstalling the Azure Information Protection client
 
