@@ -6,7 +6,7 @@ description: A detailed tutorial for using the Azure Information Protection (AIP
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 09/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -23,11 +23,6 @@ ms.subservice: aiplabels
 ms.custom: admin
 
 ---
-
-- Implement pop-up messages in Outlook that warn, justify, or block emails being sent
-https://docs.microsoft.com/en-us/azure/information-protection/infoprotect-oversharing-tutorial
-https://docs.microsoft.com/en-us/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent
-PDF for creditsuisse adding for Q3
 
 # Tutorial: Preventing oversharing using Azure Information Protection (AIP)
 
@@ -196,178 +191,145 @@ For example, you may want to add text there to prompt the user to add specific d
     
         The justification popup is displayed, this time with your customized text. For example: 
 
-        TBD
+        **TBD**
         
-## Show a warning, justification, or warning popup message for specific labels
+## Block users from sending unlabeled PowerPoint messages
 
-This procedure supports a use case scenario where users send emails, or emails with attachments, that have a specific label.
-Configure a warning, justification, or blocking message to appear in Outlook, depending on the label detected.
-
-1. Run PowerShell as an administrator. 
-
-1. Run the **Set-LabelPolicy** cmdlet to define AIP advanced settings, using the following syntax:
-    
-    ```PowerShell
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{<Key>="<Value>"}
-    ```
-
-    Where:
-
-    - <Key> is one of the following:
-        - **OutlookWarnUntrustedCollaborationLabel** to set a warning popup
-        - **OutlookJustifyUntrustedCollaborationLabel** to set a justification popup
-        - **OutlookBlockUntrustedCollaborationLabel** to block the email and set a blocking popup
-        
-    - <Value> is at least one label GUID. Separate multiple GUIDs by commas to apply the same popup to multiple labels
-
-> [!TIP]
-> For the sake of this tutorial and following the instructions to [test your settings](#test-your-settings), make sure to set the **General** label to show a warning message.
-> 
-
-For example:
-
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e,b6d21387-5d34-4dc8-90ae-049453cec5cf,bb48a6cb-44a8-49c3-9102-2d2b017dcead,74591a94-1e0e-4b5d-b947-62b70fc0f53a,6c375a97-2b9b-4ccd-9c5b-e24e4fd67f73"}
-
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedCollaborationLabel="dc284177-b2ac-4c96-8d78-e3e1e960318f,d8bb73c3-399d-41c2-a08a-6f0642766e31,750e87d4-0e91-4367-be44-c9c24c9103b4,32133e19-ccbd-4ff1-9254-3a6464bf89fd,74348570-5f32-4df9-8a6b-e6259b74085b,3e8d34df-e004-45b5-ae3d-efdc4731df24"}
-
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
-```
-
-## Prevent popups from being displayed for trusted domains
-
-Once you've configured popup messages for specific labels, you can define un-trusted domains for each message type. 
-This ensures that the specified message type is not displayed for any domains that you trust, such as your own domain, or those of trusted partners.
+This procedure describes how to block your users from sending unlabeled PowerPoint files from Outlook.
 
 1. Run PowerShell as an administrator.
 
-1. Run the **Set-LabelPolicy** cmdlet to define AIP advanced settings, using the following syntax:
-    
+1. Run the following command to block unlabeled content from being sent from Outlook:
+
     ```PowerShell
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{<Key>="<Value>"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Block"}
     ```
 
-    Where:
+1. Run the following command to limit the blocking behavior for unlabeled content only to specific PowerPoint file types:
 
-    - <Key> is one of the following:
-        - **OutlookWarnTrustedDomains** to define trusted domains for warning messages. Warning messages will not be displayed when emails are sent to these domains.
-        - **OutlookJustifyTrustedDomains** to define trusted domains for justification messages. Justification messages will not be displayed when emails are sent to these domains.
-        - **OutlookBlockTrustedDomains** to define trusted domains for blocked emails. Emails will not be blocked, and blocking messages will not be displayed, when emails are sent to these domains.
-            
-    - <Value> is at least one label domain name. Separate multiple domain names by commas to apply the same settings to multiple domains.
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.POTX,.POTM,.POT,.PPTX"}
+    ```
 
-For example, say that you've specified that the emails and email attachments with the **Confidential \ All Employees** label should be blocked from sending, using the **[OutlookBlockUntrustedCollaborationLabel](#show-a-warning-justification-or-warning-popup-message-for-specific-labels)** advanced setting. 
+1. Test your setting in Outlook:
 
-- You *do* want users to be able to send this content within your own domain, **contoso.com,** as well as the domains of your trusted partners, **fabrikam.com** and **litware.com.**
-- You *do not* want users to be able to send this content to emails with a **gmail.com** domain.
+    1. On your client computer, open PowerPoint and create a new **.pptx** file, making sure to leave the file unlabeled.
 
-If your policy is named **Global**, you'd use the following command to add trusted domains for your **Confidential \ All Employees** label, while keeping **gmail.com** blocked.
+    1. Open Outlook, or restart Outlook to pull the updated settings.
+    
+    1. Attach your unlabeled PowerPoint file to a new Outlook message.
 
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+    1. Define the **To** field with your own email address, the **Subject field** as: `Testing unlabeled PowerPoint files`, and then send the email.
+    
+        Outlook blocks the email from being sent, and display the following message:
+
+        **TBD**
+
+## Customize the block message for unlabeled PowerPoint messages
+
+This procedure describes how to customize the message that appears when a user tries to send an unlabeled PowerPoint file to external users.
+
+1. Create a **.json** file, named **OutlookCollaborationRule_1.json**, with the following code:
+
+    ```JSON
+    { 	
+    "type" : "And", 	
+    "nodes" : [ 		
+        { 			
+            "type" : "Except" , 			
+            "node" :{ 				
+                "type" : "SentTo",  				
+                "Domains" : [  					
+                    "contoso.com", 					
+                ]   			
+            } 		
+        },
+		{ 			
+            "type" : "Or", 			
+            "nodes" : [ 				
+                { 			
+					"type" : "AttachmentLabel",
+					 "LabelId" : null,
+					"Extensions": [
+									".PPTX",
+                                    ".PPTM",
+                                    ".POTX",
+                                    ".POTM",
+                                    ".POT",
+                                    ".PPTX"
+								 ]
+					
+				},
+                { 					
+                    "type" : "EmailLabel",
+					 "LabelId" : null
+                }
+			]
+		},		
+        { 			
+            "type" : "Email Block", 			
+            "LocalizationData": { 				
+                "en-us": { 				  
+                    "Title": "Emailed Blocked", 				  
+                    "Body": "Sending PowerPoint files to external recipients requires that you label your files so that we can classify and protect Contoso content.<br><br>List of attachments that are not labeled:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance to classification requirement as per Contoso’s policies.<br><br>Label your document and send it again." 				
+                },			
+            }, 			
+            "DefaultLanguage": "en-us" 		
+        } 	
+      ] 
+    }
+    ```
+1. Save your **OutlookCollaborationRule_1.json** file in a location that's accessible by your client machine.
+
+1. Run PowerShell as an administrator.
+
+1. Run the following command to block unlabeled content from being sent from Outlook:
+
+    ```PowerShell
+    $filedata = Get-Content "<Path to **OutlookCollaborationRule_1.json** file>”
+    Set-LabelPolicy -Identity <Policy name> -AdvancedSettings @{OutlookCollaborationRule_1 ="$filedata"}    
+    ```
+
+    Where `<Path to **OutlookCollaborationRule_1.json** file>` is the path where you've saved your .json file. 
+
+
+1. Test your setting in Outlook:
+
+    1. On your client computer, open PowerPoint and create a new .pptx file, making sure to leave the file unlabeled.
+
+    1. Open Outlook, or restart Outlook to pull the updated settings.
+    
+    1. Attach your unlabeled PowerPoint file to a new Outlook message.
+
+    1. Define the **To** field with your own email address, the **Subject field** as: `Testing customized blocking message for unlabeled PowerPoint files`, and then send the email.
+    
+        Outlook blocks the email from being sent, and display the following message:
+
+        **TBD**
+
+## Use Event Log to identify the messages and user actions for the General label
+
+In this tutorial, you learned how to customize AIP's behavior in Outlook to prevent a few types of oversharing, including warning, justification, and block messages.
+
+You've also checked the behavior from Outlook on your local client computer.
+
+Now you can start the Event Viewer to check the logs for the actions that occurred.
+
+**Check the Event Viewer for AIP logging events**
+
+On your client machine, open the Event Viewer application, and navigate to **Applications and Services Logs** > **Azure Information Protection**.
+
+You'll see an information event logged for each test you performed, including details about both the message and user response:
+
+- **Warn messages:** Information ID 301
+- **Justify messages:** Information ID 302
+- **Block messages:** Information ID 303
+
+For example, the first test was to warn the user, and you selected **Cancel**. In this case, the **User Response** displays **Dismissed** in the first Event 301:
+
+
 ```
-
-As an additional example, say that you've specified that the emails and email attachments with the **Employees \ Extended** label should require justification, using the **[OutlookBlockUntrustedCollaborationLabel](#show-a-warning-justification-or-warning-popup-message-for-specific-labels)** advanced setting. You want to remove this justification requirement for your own domain, **contoso.com,** as well as the domains of your trusted partners, **fabrikam.com** and **litware.com.**
-
-In this case, if your policy is named **Global**, you'd use the following command to add trusted domains for your **Employees \ Extended** label, while keeping **gmail.com** blocked.
-
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
-```    
-
-## Implement warn, justify, or blocking popup messages for unlabeled content
-
-Make sure to address emails or email attachments that don't have any labels. Handle unlabeled content in Outlook using any of the following methods:
-
-- Show a warning message, prompting users to add a label
-- Show a justification message, prompting users to justify sending unlabeled content
-- Show a block message and block the message entirely, requiring users to add a label
-- Allow the email to be sent smoothly, without showing any message at all
-
-Use the **OutlookUnlabeledCollaborationAction** advanced client setting, with one of the following values:
-
-- **Warn**
-- **Justify**
-- **Block**
-- **Off**
-
-For example, if your policy is named **Global**, use the following command to warn users about unlabeled content being send in Outlook:
-
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
-```
-
-## Specify file extensions for unlabeled content
-
-By default, the warn, justify, and blocking pop-up messages in Outlook apply to all Office documents and PDFs attached to your emails, as well as the emails themselves.
-
-You can further define your message popups by defining specific file extenstions where they are used. 
-
-For example, if you list only Office file types, unlabeled PDF files attached to your emails will not show a warn, justify, or blocking message.
-
-Use the **OutlookOverrideUnlabeledCollaborationExtensions** advanced property to define the file extensions where you want popup messages to be displayed, with a comma-separated list of all your file types.
-
-For example, if your policy is named **Global**, use the following command to show popup messages on PowerPoint files or templates only:
-
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.POTX,.POTM,.POT,.PPTX"}
-```
-
-## Specify a separate action for email messages without attachments
-
-By default, the same action is applied both to the emails with attachments and emails without attachments.
-
-Use the **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior** advanced setting to define a different action for email messages without attachments, with one of the following values:
-
-- **Warn**: Show a warning message, instead of the action defined by other settings
-- **Justify**: Request justification, instead of the action defined by other settings
-- **Block**: Block the email and show a blocking message, instead the action defined by other settings
-- **Off**: Take no action, and show no message, instead of the action defined by other settings
-
-For example, if your policy is named **Global**, use the following command to have a warning message appear for unlabeled content, regardless of other settings:
-
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
-```
-
-## Test your settings
-
-Test the advanced settings that you've defined in the sections above to verify that popup messages display as expected. 
-
-1. On your AIP client computer open Outlook. If Outlook is already open, restart it to download the changes you've made.
-
-1. Create a new email message, and apply the **General** label. In the message toolbar, click the :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: **Sensitivity** button and then select **General**.
-
-1. Define the **To** field with your own email address, the **Subject field** as: `Testing the General label for the Warn message`, and then send the email.
-
-    You should see the following warning, asking you to confirm before sending the email. For example:
-
-    ![Azure Information Protection tutorial - see OutlookWarnUntrustedCollaborationLabel advanced client setting ](./media/see-warnmessage.png)
-
-1. Pretend that you're a user who has mistakenly tried to email something that was labeled **General**. In this case, you want to heed the warning, so click **Cancel**.
-
-    Your email is not sent, but remains open so that you can either change the content or the label.
-
-1. There's no need to make any changes, and you can decide that the content is appropriate to send. This time, when the warning appears, click **Confirm and Send**.
-
-    The email is sent.
-
-### Use Event Log to identify the messages and user actions for the General label
-
-Before we move on to the next scenario for when an email or attachment doesn't have a label, start Event Viewer and navigate to **Applications and Services Logs** > **Azure Information Protection**.
-
-For each of the tests that you did, information events are created to record both the message and the user response:
-
-- Warn messages: Information ID 301
-
-- Justify messages: Information ID 302
-
-- Block messages: Information ID 303
-
-For example, the first test was to warn the user, and you selected **Cancel**, so the **User Response** displays **Dismissed** in the first Event 301. For example:
-
-```
-Client Version: 1.53.10.0
+Client Version: 2.8.85
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Warn message.msg
 Item Name: Testing the General label for the Warn message
@@ -382,7 +344,7 @@ User Response: Dismissed
 However, you then selected **Confirm and Send**, which is reflected in the next Event 301, where the **User Response** displays **Confirmed**:
 
 ```
-Client Version: 1.53.10.0
+Client Version: 2.8.85
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Warn message.msg
 Item Name: Testing the General label for the Warn message
@@ -397,7 +359,7 @@ User Response: Confirmed
 The same pattern is repeated for the justify message, which has an Event 302. The first event has a **User Response** of **Dismissed**, and the second shows the justification that was selected. For example:
 
 ```
-Client Version: 1.53.10.0
+Client Version: 2.8.85
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Justify message.msg
 Item Name: Testing the General label for the Justify message
@@ -414,7 +376,7 @@ User Response: Confirmed
 At the top of the event log, you see the block message logged, which has an Event 303. For example:
 
 ```
-Client Version: 1.53.10.0
+Client Version: 2.8.85
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Block message.msg
 Item Name: Testing the General label for the Block message
@@ -425,20 +387,10 @@ Label ID After Action: 0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 Action Source: 
 ```
 
-### Use Event Log to identify the messages and user actions for the unlabeled email
-
-As before, the messages and user responses are logged in Event Viewer, **Applications and Services Logs** > **Azure Information Protection**, with the same event IDs.
-
-- Warn messages: Information ID 301
-
-- Justify messages: Information ID 302
-
-- Block messages: Information ID 303
-
 For example, the results of our justification prompt when the email didn't have a label:
 
 ```
-Client Version: 1.53.10.0
+Client Version: 2.8.85
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing send an email without a label for the Justify message.msg
 Item Name: Testing send an email without a label for the Justify message
@@ -453,7 +405,7 @@ User Response: Confirmed
 
 Once you're finished with this tutorial, you can keep the policy for further reference, or delete it to clean up your resources.
 
-Delete your policy wherever it was created, either in the ???.
+Delete your policy in the labeling management center where it was created, including as the Office 365 Security & Compliance Center, Microsoft 365 Security center, or Microsoft 365 Compliance Center. 
 
 Once deleted, restart Outlook so that it's no longer configured with the settings defined in this tutorial.
 
@@ -465,7 +417,4 @@ Apply the same methods with multiple recipients and labels, or to attachments, w
 
 For example, you may want to have a popup message appear on email messages labeled **Public,** but have a PowerPoint presentation attached that's labeled **General.**
 
-For more information about advanced properties, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).
-
-## Next steps
-
+For more information about advanced properties and Outlook customizations, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).
