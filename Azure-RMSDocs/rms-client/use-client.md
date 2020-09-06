@@ -166,9 +166,10 @@ To compare the Office built-in sensitivity labeling features across different op
 |Support for Remote Desktop Services:| **Yes** | **Yes** | **Yes** |
 |Support for AD RMS:| **Yes** | No <sup>7</sup> | No |
 |Remove external content marking in app:| **Yes**| **Yes**| No|
+|Support for Microsoft Office 97-2003 formats| **Yes** | **Yes** | No <sup>8</sup>|
+| | | | |
 
-
-Footnotes:
+**Footnotes:**
 
 <sup>1</sup>
 These settings, and many more are supported as [advanced client settings that you configure in the Azure portal](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal).
@@ -191,6 +192,8 @@ The document tracking site that's supported by the classic client isn't supporte
 <sup>7</sup>
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
+<sup>8</sup>
+While the AIP clients support both Microsoft Office 97-2003 file formats, such as **.doc,** as well as Office Open XML formats, such as **.docx,** built-in labeling supports Open XML formats only.
 
 ### Detailed comparisons for the Azure Information Protection clients
 
