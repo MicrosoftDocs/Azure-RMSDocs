@@ -190,7 +190,7 @@ Also remember that if you use Windows Update to keep the Azure Information Prote
 
 For central deployment, use the following information that is specific to the .msi installation version of the Azure Information Protection client. 
 
-If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/deploy-use/add-apps).
+If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/apps/apps-add).
 
 1. For each computer that runs the .msi file, you must make sure that the following software dependencies are in place. For example, package these with the .msi version of the client or only deploy to computers that meet these dependencies:
     

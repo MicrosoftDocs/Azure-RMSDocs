@@ -64,13 +64,13 @@ To install the Azure Information Protection app viewer for iOS and Android, use 
 
 Because the Azure Information Protection viewer app uses the Microsoft Intune App Software Development Kit, when iOS and Android devices are enrolled by Intune, you can deploy and manage the Azure Information Protection viewer app for these devices:
 
-1. [Add the Azure Information Protection app to Intune](/intune/apps-add)
+1. [Add the Azure Information Protection app to Intune](/intune/apps/apps-add)
 
 2. Do one or both of the following actions:
 
-    - Deploy the app by [assigning it to users](/intune/apps-deploy)
+    - Deploy the app by [assigning it to users](/intune/apps/apps-deploy)
 
-    - Manage the app by using [app protection policies](/intune/app-protection-policies)
+    - Manage the app by using [app protection policies](/intune/apps/app-protection-policies)
 
 Additional information for when you add the Azure Information Protection app to Intune:
 
@@ -82,7 +82,7 @@ Additional information for when you add the Azure Information Protection app to 
     https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
     ```
 
-When the Azure Information Protection app is configured for an app protection policy for Android devices, in addition to opening protected text, images, and PDF documents, this app can also open audio and video files. For more information, see [View media files with the Azure Information Protection app](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app).
+When the Azure Information Protection app is configured for an app protection policy for Android devices, in addition to opening protected text, images, and PDF documents, this app can also open audio and video files. For more information, see [View media files with the Azure Information Protection app](/intune/fundamentals/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app).
 
 ## Next steps
 
