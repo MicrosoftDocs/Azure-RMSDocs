@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/30/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -170,7 +170,7 @@ Example to install the client silently for Office 2010 and Azure RMS: `AzInfoPro
 
 For central deployment, use the following information that is specific to the .msi installation version of the Azure Information Protection unified labeling client. 
 
-If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/deploy-use/add-apps).
+If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/mem/intune/apps/apps-add).
 
 1. Download the .msi version of the Azure Information Protection unified labeling client (AzInfoProtection_UL) from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). 
     

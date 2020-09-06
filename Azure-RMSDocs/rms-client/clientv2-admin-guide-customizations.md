@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/30/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -165,7 +165,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |OutlookJustifyUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
 |OutlookOverrideUnlabeledCollaborationExtensions|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookSkipSmimeOnReadingPaneProperty | [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)|
+|OutlookSkipSmimeOnReadingPaneEnabled | [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)|
 |OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -1797,14 +1797,14 @@ Starting in [version 2.8.85](unifiedlabelingclient-version-release-history.md#ve
 
 ## Prevent Outlook performance issues with S/MIME emails
 
-Performance issues may occur in Outlook when the S/MIME emails are opened in Reading Pane. To prevent these issues, enable the **OutlookSkipSmimeOnReadingPaneProperty** advanced property. 
+Performance issues may occur in Outlook when the S/MIME emails are opened in Reading Pane. To prevent these issues, enable the **OutlookSkipSmimeOnReadingPaneEnabled** advanced property. 
 
 Enabling this property prevents the AIP bar and the email classifications from being shown in the Reading Pane.
 
-For example, if your policy is named **Global**, the following sample PowerShell command enables the **OutlookSkipSmimeOnReadingPaneProperty** property:
+For example, if your policy is named **Global**, the following sample PowerShell command enables the **OutlookSkipSmimeOnReadingPaneEnabled** property:
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPaneProperty="true"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPaneEnabled="true"}
 ```
 
 ## Next steps
