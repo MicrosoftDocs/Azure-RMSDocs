@@ -241,7 +241,7 @@ For more information, see:
 - [Compare the labeling clients for Windows computers](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)
 - [Tutorial: Deploying the Azure Information Protection (AIP) unified labeling client](tutorial-deploy-client.md)
 
-The Azure Information Protection unified labeling client can be downloaded from the [Microsoft Download Center](http://aka.ms/aipclient). 
+The Azure Information Protection unified labeling client can be downloaded from the [Microsoft Download Center](https://aka.ms/aipclient). 
 
 Make sure that you use the **AzInfoProtection_UL** file to deploy the client. If you currently have the classic client deployed, installing the unified labeling client performs an in-place upgrade.
 

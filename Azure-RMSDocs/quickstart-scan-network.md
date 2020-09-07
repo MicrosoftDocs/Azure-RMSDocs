@@ -52,7 +52,7 @@ Use the information in the reports generated to understand which repositories to
 
 ## Install the Network Discovery service
 
-AIP network scan jobs require you to install the additional Network Discovery service on the scanner computer. This service is supported only in versions [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#2885-public-preview) of the unified labeling client.
+AIP network scan jobs require you to install the additional Network Discovery service on the scanner computer. This service is supported only in [versions 2.8.85 (Public preview)](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) and higher of the unified labeling client.
 
 **To install the Network Discovery service:**
 
