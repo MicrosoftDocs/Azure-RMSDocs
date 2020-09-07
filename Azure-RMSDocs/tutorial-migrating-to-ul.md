@@ -36,12 +36,14 @@ This time frame enables all current Azure Information Protection classic client 
 
 This tutorial provides an end-to-end description of how to migrate your organization's Azure Information Protection deployment from the classic client to the unified labeling client.
 
-**Time required:** You can complete this tutorial in less than 1 hour.
+**Time required:** The time required to complete an end-to-end migration depends on how complex your policies are and the AIP features you use. You can continue to work with the classic client while you migrate in the background.
 
-In this tutorial, you learn how to:
+In this tutorial, you'll:
 > [!div class="checklist"]
-> * Configure a warning message to display for emails that are labeled **General**
-> * Create an exception for your warning messages for internal emails that are labeled - had classic and needs to move to ul
+> * Plan your migration
+> * Migrate the service
+> * Copy your policies to your labeling management system
+> * Deploy the unified labeling client
 https://techcommunity.microsoft.com/t5/azure-information-protection/announcing-timelines-for-sunsetting-label-management-in-the/ba-p/1226179
 https://techcommunity.microsoft.com/t5/azure-information-protection/understanding-unified-labeling-migration/ba-p/783185
 
@@ -56,71 +58,96 @@ Download the latest unified labeling client for Windows if you are not yet fully
 Train end users to apply labels and protection in Office applications across web, Mac, iOS, Android and Windows. Read this article to know which labeling capabilities are available across platforms
 Learn more about transitioning from Azure Information Protection to the unified labeling platform in this blog post, and get detailed instructions on how to migrate here.
 
-Once you transition from the Azure portal to the Microsoft 365 compliance center, we recommend that you take advantage of the built-in labeling in the latest Office apps in web, Mac, iOS and Android. On the Windows platform, we suggest you use our built-in labeling capabilities in Office ProPlus apps as well. However, if you are not on Office 365 ProPlus fully yet, or need certain advanced capabilities listed here, we recommend using the latest unified labeling client for Windows.
+## More reasons to migrate
 
-Phase 1 – Planning
+In addition to the planned classic client deprecation, migrating to the unified labeling client enables you to effectively protect sensitive data across your digital estate. Once you've migrated, you can use Microsoft Information Protection (MIP) in Microsoft 365 cloud services, on-premises, in third-party SaaS applications, and more.
 
-Unified labels support most functionalities that are available in Azure Information Protection labels, some functionalists are not available, and some are configured differently when managed from the Security & Compliance Center. There are also difference between which capabilities are available in each platform. Please review the following:
+MIP supports built-in labeling services for many basic information protection features, so you can reserve client usage only for extra features not supported by built-in labeling.
 
-Client differences between the classic client for Azure Information Protection, and the unified labeling client.
-How sensitivity labels work in Office apps, to learn about the built-in labeling capabilities, the supported environments and when they are available.
-Label settings that are not supported in the admin centers and learn how they are manageable.
-Features not planned to be in the Azure Information Protection unified labeling client. As a clarification please note that although custom permissions are not supported in the unified labeling client as a standalone action with the Office add-in, it is supported as a label that is configured with User Defined Permissions action.
-How you can use the AIP Unified Labeling client TODAY blog.
-If one of the documented differences impact your end users’ behavior, please reflect this accordingly in your end user communication before deploying the latest client and publishing the unified labeling policy.
+Using built-in labeling enables you to protect documents and emails in the latest Office apps, on all platforms, as well as:
 
+- Lower maintenance costs, as you only need to deploy and maintain additional software when you really need to
+- Increase performance by using Office apps without additional add-ins
+- Use the Microsoft 365 Security & Compliance Center as a single portal that unifies labeling and protection policy management across AIP, Office 365, and Windows.
+
+Additionally, AIP's classic client requires you to manage your labeling policies in the Azure Information Protection blade in the Azure portal. This blade supports only the AIP classic client, scanner, and Microsoft Cloud App Security.
+
+The unified labeling console in the Microsoft 365 Security & Compliance Center is supported by the following services:
+
+- The Azure Information Protection unified labeling client and scanner
+- Microsoft Cloud App Security
+- SharePoint Online
+- Office 365 apps for Windows, MacOS, iOS and Android (built-in, without an add-in requirement)
+- Office and Outlook for the web
+- Outlook for mobile devices (iOS & Android)
+- PowerBI Data protection
+- The Microsoft Information Protection SDK and applications based on it, such as Adobe Acrobat
+
+## Planning your migration
+
+While most functionality available for the AIP classic client is also available for the unified labeling client, some features not yet fully available, and some are configured differently when managed by the Microsoft Security & Compliance Center.
+
+Review the following articles to understand how the Information Protection features you use may differ when using the unified labeling client:
+
+- [Learn about built-in labeling capabilities in Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Compare support between the classic and unified labeling clients](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)
+- [Learn how to manage label settings that are not supported in the admin centers](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-admin-centers). This section describes how you can manage the migration for each relevant setting.
+
+> [!NOTE]
+> ALthough some custom permissions ae not supported in the unified labeling client as a standalone action inside Microsoft Office, they are supported as a label configured with a User-Defined Permissions action.
+
+> [!TIP]
+> If there are documented differences between the clients that impact your end users' behavior, we recommend communicating these changes effectively to your users before deploying the unified labeling client and publishing your new policy.
+
+## Migrating labels to the Security & Compliance Center
+
+Once you've planned you migration and considered how you will manage the differences in the clients, you're ready to activate unified labeling and migrate your labels.
+
+You can continue to use the policies un the Azure Information Protection blade in the Azure portal and the AIP classic client while you migrate. The two clients can work side-by-side without any additional configuration.
+
+1. Log in to the Azure portal as a user with one of the following roles:
+    - sdfs
+
+1. In the :::image type="icon" source="media/aip-icon.png" border="false"::: **Azure Information Protection** area, navigate to **Manage > Unified labeling**. 
+
+    At the top of the page, click :::image type="icon" source="media/qs-tutor/activate.PNG" border="false"::: to activate unified labeling.
+
+    Once activated, labels are copied in the background from Azure Information Protection to the unified labeling platform, and your labels are now stored in both systems.
+
+    > [!TIP]
+    > Open the unified labeling console in the Microsoft 365 Security & Compliance Center to compare the labels displayed there and in the Azure Portal's Azure Information Protection blade. The two lists of labels should be identical.
+
+### Synchronizing any labeling edits
+
+From here on in, if you edit a migrated label in the Azure Information Protection blade in the Azure portal, the change is automatically reflected in the Security & Compliance Center. 
+
+However, if you edit a migrated label in the Security & Compliance Center, and then also want the update to be shown in the Azure portal, you must publish the update in the Azure portal:
+
+1. In the Azure portal, navigate to the **Azure Information Protection** blade > **Manage** > **Unified labeling** page.
+
+1. Click **Publish**. 
+
+> [!NOTE]
+> This step is not required after you've fully migrated to the unified labeling platform, and no longer need to the classic client, or need to manage your labels from the Azure portal.
+
+## Configuring advanced labeling settings
+
+As explained during the planning phase, some advanced labeling settings are not migrated automatically, and must be re-configured for the unified labeling platform.
+
+These configurations are performed using the Security & Compliance PowerShell module. To get started, configure the following settings:
+
+- Specify a color for the label
+- Specify a default sub-label for a parent label
+- Configure a label to apply S/MIME protection in Outlook
+
+For more information about advanced configurations available, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).
+
+> [!NOTE]
+> Advanced labeling configurations defined for the unified labeling platform are supported only on machines where you have the unified labeling client deployed. These advanced settings will not be available for users who have only built-in labeling provided by Office 365.
+> 
  
+## Copy your labeling policies to the Security & Compliance center
 
-As of today (Updated on November 2019), the Azure Information Protection scanner and Analytics supports Unified Labels, are in preview and managed from the Azure Information Protection blade in the Azure Portal. Please note that Azure Information Protection Analytics - audit activities that are generated only form the Azure Information Protection client (Classic and Unified Labeling).
-
- 
-
-Phase 2 – Service migration
-
-After you have reviewed the 1st phase, it’s time to migrate your labels and policies to the Security & Compliance Center. It is important to mention that “Migrate” doesn’t mean you need to move away from managing labels and policies in the Azure Information Protection blade and the Azure Information Protection client (classic). This migration can happen in the background and works side by side with no additional configuration.
-
- 
-
-Migration is a 2-step action:
-
-Enable label migration (Mandatory step).
-One-time policy copy from Azure Information Protection blade to Security & Compliance (Optional step).
-Step 1: Label migration
-
-We will start with describing what happens when you migrate your Azure Information Protection labels to unified labels. This happens once you click the “Activate” (Fig 3) button under “Unified Labeling” blade.  
-
-Fig 3. Unified Labeling activation button for label migration
-clipboard_image_2.png
-
-Before you activate the migration, both Azure Information Protection backend and unified labeling backend are 2 separate services which work independently (Fig. 4). Once you activate the unified labeling migration, the labels are copied from the Azure Information Protection backend to the unified labeling backend and both services are using the same backend to store labels (Fig. 5). This means that every change you perform to any label at any portal will be changed also in the other portal.
-
- 
-
-Fig 4. Service architecture pre-unified labeling migration
-clipboard_image_3.png
-
-Fig 5. Service architecture post unified labeling migration
-clipboard_image_4.png
-
-After you activate the unified labeling migration, your labels are expected to be visible in both the Azure Information Protection blade and unified labeling page in the Security & Compliance Center (Fig 6).
-
-Fig 6. Azure Information Protection and unified labeling in the Microsoft 365 compliance center post migration UI.
-clipboard_image_3.png
-
-Moving forward you can manage your labels at one place. After the migration, when you edit a migrated label in the Azure Information Protection blade, the same change is automatically reflected in the admin centers. However, when you edit a migrated label in the Security & Compliance Center, you must return to the Azure Information Protection blade, go to Azure Information Protection - Unified labeling blade, and select Publish. This additional action is needed for the Azure Information Protection clients (classic) to pick up the label changes. Once you are fully migrated to the unified labeling client, you no longer need to do this step, so migrating quickly helps to reduce this administrative overhead.
-
- 
-
-As you may notice, label configuration in the Security & Compliance Center doesn’t include some of the advanced settings that were able to be configured using Azure Information Protection labels. These configurations are now applied to the label after its initial creation / migration using the Security and Compliance PowerShell module. Here are few examples of these configurations:
-
-Specify a color for the label
-Specify a default sublabel for a parent label
-Configure a label to apply S/MIME protection in Outlook
-A full list of all the advanced label settings is published here with instructions how to apply them. Please note that these label advanced settings are supported only by the Azure Information Protection unified labeling client on Windows and not by the Office 365 apps built-in integration with unified labeling.
-
- 
-
-Step 2: Copy policies
 
 Once your labels have been migrated to Security & Compliance center we can discuss and check the possibility to migrate your policies as well with a one-time copy action (Fig 7.) Policies can be migrated or otherwise, you can create them manually and start this part from scratch.
 
@@ -212,3 +239,4 @@ You can manage labels in one place which is the unified labeling console in Offi
  
 
 ## Next steps
+Once you transition from the Azure portal to the Microsoft 365 compliance center, we recommend that you take advantage of the built-in labeling in the latest Office apps in web, Mac, iOS and Android. On the Windows platform, we suggest you use our built-in labeling capabilities in Office ProPlus apps as well. However, if you are not on Office 365 ProPlus fully yet, or need certain advanced capabilities listed here, we recommend using the latest unified labeling client for Windows.
