@@ -221,9 +221,9 @@ The following fixes were delivered in version 2.8.85 of the Azure Information Pr
 - Tooltip updates to show the highest [classification for email attachments](../faqs-infoprotect.md#when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling), considering both the classification of the email and the attachment. 
 - Fixes to the **Report an Issue** text when modifying sensitivity labeling policies using the [**Set-LabelPolicy**](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) cmdlet
 - Fixes in errors shown when the [**Set-AipFileLabel**](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfilelabel?view=azureipps) cmdlet is used with an invalid label ID.
-- Performance fixes for decrypting SMIME emails in Outlook's reading pane. To implement this fix, enable the [**OutlookSkipSmimeOnReadingPaneProperty**](clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property.
+- Performance fixes for decrypting SMIME emails in Outlook's reading pane. To implement this fix, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property.
 - Fixes for [decrypting PST files](clientv2-admin-guide-file-types.md) that contain password-encrypted files. Decrypting PST files no longer fails if the PST file contains a password-protected file.
-- Removing a protection label that is not included in your [scoped policy](../configure-policy-scope.md) no longer removes any protection from the content.
+- Removing a protection label that is not included in your scoped policy now removes both the label and protection from the content.
 
 ## Version 2.7.101.0
 Unified labeling scanner and client version 2.7.101.0
