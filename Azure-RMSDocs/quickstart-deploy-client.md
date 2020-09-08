@@ -65,8 +65,7 @@ For more information, see: [Options for installing the AIP client](rms-client/cl
 Perform any of the following quickstarts and tutorials to get started with the Azure Information client:
 
 - [Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-client-scanner.md)
-- [Quickstart: Scanning your network for risky repositories (Public preview)](quickstart-scan-network.md)
-- [Quickstart: Finding your sensitive content with the Azure Information Protection (AIP) scanner](quickstart-scan-content.md)     
+- [Quickstart: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
 - [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md) 
 - [Tutorial: Preventing oversharing using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 

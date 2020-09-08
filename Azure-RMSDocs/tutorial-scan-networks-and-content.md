@@ -37,7 +37,7 @@ In this tutorial, you'll learn how to:
 > * Scan your content shares for sensitive content and understand results found
 
 > [!NOTE]
-> Network Dicovery is available only starting in version [2.8.85.0 ](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview), and is in public preview. If you do not have this version of the client and scanner installed, skip straight to [Define your content scan job settings](#define-your-content-scan-job-settings).
+> Network Dicovery is available only starting in version [2.8.85.0 ](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview), and is in public preview. If you do not have this version of the client and scanner installed, skip straight to [Define and run your content scan job](#define-and-run-your-content-scan-job).
 > 
 
 **Time required:** You can finish this configuration in less than 15 minutes.
@@ -47,7 +47,7 @@ In this tutorial, you'll learn how to:
 |Requirement  |Description  |
 |---------|---------|
 |**A supporting subscription**     |  You'll need an Azure subscription that includes [Azure Information Protection Plan 1 or Plan 2](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
-|**Access to Azure Information Protection in the Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with a supported administrator account, and have protection enabled. Supported administrator accounts include: </br>- **Compliance administrator**</br>- **Compliance data administrator**</br>- **Security administrator**</br>- **Global administrator** </br></br>For more information, see [Quickstart: Installing the Azure Information Protection (AIP) unified labeling client and scanner](quickstart-install-client-scanner.md).  |
+|**Access to Azure Information Protection in the Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with a supported administrator account, and have protection enabled. Supported administrator accounts include: </br>- **Compliance administrator**</br>- **Compliance data administrator**</br>- **Security administrator**</br>- **Global administrator**   |
 |**AIP client and scanner**   |   To complete this quickstart, you'll need to have installed the Azure Information Protection unified labeling client and scanner. </br></br>For more information, see [Tutorial: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md) and [Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-scanner.md). |
 |**A content scan job** | Make sure you have a basic content scan job that you can use for testing. </br></br>If you need to create one now, you can use the instructions in [Configure Azure Information Protection in the Azure portal](quickstart-install-scanner.md#configure-azure-information-protection-in-the-azure-portal). When you have a basic content scan job, return here to complete this tutorial. |
 |**SQL Server Express**     | To run the scanner, you'll need SQL Server Express installed on the machine where you want to install the scanner. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the **Express** option. In the installer, select the **Basic** installation type.        |
@@ -183,19 +183,22 @@ For example, you may want to add any repositories found with public read or read
 
 The next time your content scan job runs, it will now include this newly discovered repository, and identify, label, classify and protect any sensitive content found, as configured in your policy.
 
-For more information, continue with [Define your content scan job settings](#define-your-content-scan-job-settings).
+For more information, continue with [Define and run your content scan job](#define-and-run-your-content-scan-job).
 
 ## Define and run your content scan job
 
-The examples in this procedure use the content scanner created in [Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-scanner.md). If you don't have a content scan job yet, perform [Configure initial settings in the Azure portal](quickstart-install-client-scanner.md#configure-initial-settings-in-the-azure-portal), and then return here to continue.
+The examples in this procedure use the content scanner created in [Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-scanner.md). If you don't have a content scan job yet, perform [Configure initial settings in the Azure portal](quickstart-install-scanner.md#configure-initial-settings-in-the-azure-portal), and then return here to continue.
 
-**To define your content job settings**:
+1. [Define your content job settings:](#define-your-content-job-settings)
+
+1. [Scan your content](#scan-your-content)
+
+### Define your content job settings
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) as a [supported administrator](#quickstart-prerequisites), and navigate to the **Azure Information Protection** pane.
     
     For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
     
-
 1. In the **Scanner** menu on the left, and select :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Content scan jobs**, and then select your content scan job.
  
 1. Edit your content scan job settings, making sure that you have a meaningful name and optional description. 
@@ -213,11 +216,9 @@ The examples in this procedure use the content scanner created in [Quickstart: I
     
  1. Click :::image type="icon" source="media/qs-tutor/save-icon.png" border="false":::, and then return to the :::image type="icon" source="media/i-content-scan-jobs.PNG" border="false"::: **Content scan jobs** grid.
 
-To scan your file shares for sensitive content, continue with [Scan your content](#scan-your-content).
+### Scan your content
 
-**To scan your content:**
-
-Go back to the :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Content scan jobs** blad, and select your content scan job.
+Go back to the :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Content scan jobs** blade, and select your content scan job.
 
 In the toolbar above the grid, click :::image type="icon" source="media/i-scan-now.PNG" border="false"::: **Scan now** to start the scan.
 

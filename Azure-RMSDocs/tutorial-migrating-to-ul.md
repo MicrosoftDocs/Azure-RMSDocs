@@ -148,7 +148,7 @@ If you have policies in the Azure portal that you want to copy over to the unifi
     |**Copying policies copies *all* your policies**     |     Copying policies does not support copying specific policies only - it's all of your policies, or none of them.    |
     |**Copying automatically publishes your policies**     |  Copying your policies to the unified labeling client automatically publishes them to all unified labeling-supported clients. </br>   **Important:** Do not copy your policies if you don't want to publish them.     |
     |**Copying overwrites existing policies of the same name**     |   If you have a policy with the same name already existing in your admin center, copying your policies will overwrite any settings defined in that policy.   </br>All policies copied from the Azure portal are named with the following syntax: `AIP_<policy name>`.    |
-    |**Some client settings are not copied**     | Some client settings are not copied to the unified labeling platform, and must be configured manually after migrating. </br>For more information, see [Update client settings manually](#update-client-settings-manually).        |
+    |**Some client settings are not copied**     | Some client settings are not copied to the unified labeling platform, and must be configured manually after migrating. </br>For more information, see [Configuring advanced labeling settings](#configuring-advanced-labeling-settings)|
     | | |
 
     > [!NOTE]
@@ -173,7 +173,7 @@ If you have policies in the Azure portal that you want to copy over to the unifi
     >
     > This policy is required for Microsoft Cloud App Security to identify all the labels in the labeling admin center, and show them in the Microsoft Cloud App Security portal.
 
-Now that you've migrated both your labels and policies, continue with [Update client settings manually](#update-client-settings-manually) to cover any advanced configurations that were not migrated.
+Now that you've migrated both your labels and policies, continue with [Configuring advanced labeling settings](#configuring-advanced-labeling-settings) to cover any advanced configurations that were not migrated.
 
 ## Configuring advanced labeling settings
 
@@ -237,7 +237,7 @@ For more information, see:
 - [Non-Windows platforms](#non-windows-platforms)
 - [Windows platforms](#windows-platforms)
 - [Sample screenshots across various platforms and clients](#sample-screenshots-across-various-platforms-and-clients)
-- [What changes for classic client users?](#what-changes-for-classic-client-users)
+- [What changes for classic client end-users?](#what-changes-for-classic-client-end-users)
 
 ### Non-Windows platforms
 
