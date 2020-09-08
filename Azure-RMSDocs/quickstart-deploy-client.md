@@ -24,7 +24,7 @@ ms.custom: admin
 
 ---
 
-# Tutorial: Deploying the Azure Information Protection (AIP) unified labeling client
+# Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >

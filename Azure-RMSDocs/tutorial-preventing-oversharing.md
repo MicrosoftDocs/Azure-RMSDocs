@@ -6,7 +6,7 @@ description: A detailed tutorial for using the Azure Information Protection (AIP
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/06/2020
+ms.date: 09/08/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,9 +30,7 @@ ms.custom: admin
 >
 >*Instructions for: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-System administrators must ensure that their organization's content remains secure, and is shared only with trusted users. Preventing oversharing can include limiting internal access to specific users only, or sharing content only with trusted external users.
-
-One of the most comment methods that users share content inappropriately is email, either in the email itself or as an attachment. 
+System administrators must ensure that their organization's content remains secure, and is shared only with trusted users. Preventing oversharing can include limiting internal access to specific users only, or sharing content only with trusted external users. One of the most comment methods that users share content inappropriately is email, either in the email itself or as an attachment. 
 
 **Time required:** You can complete this tutorial in less than 20 minutes.
 
@@ -55,20 +53,19 @@ Make sure you have the following system requirements before starting this tutori
 |---------|---------|
 |**Azure Information Protection unified labeling client** | Make sure that the Azure Information Protection unified labeling client is installed on your machine. </br></br>For more information see, [Tutorial: Deploying the Azure Information Protection (AIP) unified labeling client](tutorial-deploy-client.md). |
 |**Azure Information Protection subscription**     |   You must have an Azure [subscription](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) that includes **Azure Information Protection Plan 2.**      |
-|**Access to the Azure portal**     |    Make sure that you can access [Azure portal](https://portal.azure.com), using one of the following administrator accounts: ???     |
-|**Sensitivity labels**     |  A **General** sensitivity label configured in your policy. </br></br>Sensitivity labels are configured in your labeling management center, including the Office 365 Security & Compliance Center, Microsoft 365 Security center, or Microsoft 365 Compliance Center.  </br></br>**Note**: We recommend using a testing policy for this tutorial so that you don't affect your live policy. </br>Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
-|**Machine requirements**     |  A computer running Windows, minimum version Windows ???. </br>Make sure that PowerShell is installed, and that you have the ability to run PowerShell as an administrator. </br></br>Additionally, make sure you can sign into Outlook. Be prepared to restarted Outlook multiple times during this tutorial.     |
+|**Sensitivity labels**     |  A **General** sensitivity label configured in your policy. </br></br>Configure sensitivity labels your labeling admin center, including the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels).</br></br>**Note**: We recommend using a testing policy for this tutorial so that you don't affect your live policy. </br>Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
+|**Machine requirements**     |  - Make sure that you have a Windows computer, with the Azure Information Protection unified labeling client installed. For more information, see [Tutorial: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md).</br>Make sure that PowerShell is installed, and that you have the ability to run PowerShell as an administrator. </br></br>Make sure you can sign into Outlook. Be prepared to restarted Outlook multiple times during this tutorial.     |
 | | |
 
 Let's get started. 
 
 ## Implement a warning message for emails labeled as General
 
-This procedure describes how to cause Outlook to warn users before they send an email labeled **General**. 
+This procedure describes how to configure your policy to warn Outlook users before they send an email labeled **General**. 
 
 The users can choose to heed the warning, and either change the label or the content, or they can choose to send the email anyway.
 
-1. Run PowerShell as an administrator.
+1. On your AIP client machine, run PowerShell as an administrator.
 
 1. Run the following command, to define a warning message for the **General** label. 
 
@@ -286,12 +283,11 @@ This procedure describes how to customize the message that appears when a user t
 1. Run the following command to block unlabeled content from being sent from Outlook:
 
     ```PowerShell
-    $filedata = Get-Content "<Path to **OutlookCollaborationRule_1.json** file>”
+    $filedata = Get-Content "<Path to the OutlookCollaborationRule_1.json file>”
     Set-LabelPolicy -Identity <Policy name> -AdvancedSettings @{OutlookCollaborationRule_1 ="$filedata"}    
     ```
 
-    Where `<Path to **OutlookCollaborationRule_1.json** file>` is the path where you've saved your .json file. 
-
+    Where `<Path to OutlookCollaborationRule_1.json file>` is the path where you've saved your .json file. 
 
 1. Test your setting in Outlook:
 
@@ -326,7 +322,6 @@ You'll see an information event logged for each test you performed, including de
 - **Block messages:** Information ID 303
 
 For example, the first test was to warn the user, and you selected **Cancel**. In this case, the **User Response** displays **Dismissed** in the first Event 301:
-
 
 ```
 Client Version: 2.8.85
@@ -405,7 +400,9 @@ User Response: Confirmed
 
 Once you're finished with this tutorial, you can keep the policy for further reference, or delete it to clean up your resources.
 
-Delete your policy in the labeling management center where it was created, including as the Office 365 Security & Compliance Center, Microsoft 365 Security center, or Microsoft 365 Compliance Center. 
+Delete your policy in the admin center where it was created, either the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center.
+
+For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)
 
 Once deleted, restart Outlook so that it's no longer configured with the settings defined in this tutorial.
 
