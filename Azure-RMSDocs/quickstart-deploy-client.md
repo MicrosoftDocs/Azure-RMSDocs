@@ -48,6 +48,8 @@ AIP provides the following installation options:
 
 - **[Download and run the .exe file.](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)** This is the recommended option for most use cases. The installation can be run interactively or silently.
 
+    When the installation is complete, you may be prompted to restart your computer or Office software. Restart as needed to continue.
+
 - **[Download and run the .msi file.](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer)** Supported for silent installations that use a central deployment mechanism, such as group policies, Configuration Manger, or Microsoft Intune.
 
 The AIP client installation files are available from the [Microsoft Download site](https://www.microsoft.com/download/details.aspx?id=53018). 

@@ -22,7 +22,7 @@
   - name: Deploying the client
     href: quickstart-deploy-client.md
   - name: Installing the scanner
-    href: quickstart-install-client-scanner.md
+    href: quickstart-install-scanner.md
   - name: Scanning your network for risky repositories
     href: quickstart-scan-network.md
   - name: Finding your sensitive content
