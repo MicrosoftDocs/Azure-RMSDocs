@@ -19,6 +19,8 @@
 - name: Quickstarts
   expanded: true
   items:
+  - name: Deploying the client
+    href: quickstart-deploy-client.md
   - name: Installing the scanner
     href: quickstart-install-client-scanner.md
   - name: Scanning your network for risky repositories
@@ -27,8 +29,6 @@
     href: quickstart-scan-content.md
 - name: Tutorials
   items:
-  - name: Deploying the client
-    href: tutorial-deploy-client.md
   - name: Migrating from the classic client to the unified labeling client
     href: tutorial-migrating-to-ul.md
   - name: Preventing oversharing
