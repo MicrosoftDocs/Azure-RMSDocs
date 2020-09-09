@@ -24,7 +24,7 @@ ms.custom: admin
 
 ---
 
-# Tutorial: Preventing oversharing using Azure Information Protection (AIP)
+# Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
@@ -36,12 +36,7 @@ System administrators must ensure that their organization's content remains secu
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
-> * Configure a warning message to display for emails that are labeled **General**
-> * Create an exception for your warning messages for internal emails that are labeled **General**
-> * Require users to justify sending emails with no label
-> * Configure the justification prompt that's displayed for unlabeled emails
-> * Block users from sending PowerPoint files with no labels
-> * Configure the block message displayed unlabeled PowerPoint files
+> * Configure warning, justification, and blocking behaviors for specific labeling conditions
 > * See your settings in action
 > * Review the logged user messages and actions in the Event Log 
 
@@ -51,10 +46,10 @@ Make sure you have the following system requirements before starting this tutori
 
 |Prerequisites  |Description  |
 |---------|---------|
-|**Azure Information Protection unified labeling client** | Make sure that the Azure Information Protection unified labeling client is installed on your machine. </br></br>For more information see, [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md). |
+|**Machine requirements**     | Make sure that you have a Windows computer, with the Azure Information Protection unified labeling client installed. For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md).</br></br>Make sure that PowerShell is installed, and that you have the ability to run PowerShell as an administrator. </br></br>Make sure you can sign into Outlook. Be prepared to restarted Outlook multiple times during this tutorial.     |
 |**Azure Information Protection subscription**     |   You must have an Azure [subscription](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) that includes **Azure Information Protection Plan 2.**      |
-|**Sensitivity labels**     |  A **General** sensitivity label configured in your policy. </br></br>Configure sensitivity labels your labeling admin center, including the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels).</br></br>**Note**: We recommend using a testing policy for this tutorial so that you don't affect your live policy. </br>Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
-|**Machine requirements**     |  - Make sure that you have a Windows computer, with the Azure Information Protection unified labeling client installed. For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md).</br>Make sure that PowerShell is installed, and that you have the ability to run PowerShell as an administrator. </br></br>Make sure you can sign into Outlook. Be prepared to restarted Outlook multiple times during this tutorial.     |
+|**Sensitivity labels and a testing policy**     |  A **General** sensitivity label configured in your policy. </br></br>Configure sensitivity labels your labeling admin center, including the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels).</br></br>We recommend using a testing policy for this tutorial so that you don't affect your live policy. </br>Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
+
 | | |
 
 Let's get started. 
@@ -65,7 +60,7 @@ This procedure describes how to configure your policy to warn Outlook users befo
 
 The users can choose to heed the warning, and either change the label or the content, or they can choose to send the email anyway.
 
-1. On your AIP client machine, run PowerShell as an administrator.
+1. On the client machine, run PowerShell as an administrator.
 
 1. Run the following command, to define a warning message for the **General** label. 
 
@@ -73,7 +68,7 @@ The users can choose to heed the warning, and either change the label or the con
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
     ```
 
-    In this example, the GUID for the **General** label is **8faca7b8-8d20-48a3-8ea2-0f96310a848e**.
+    In this example, the policy is named **Global**, and the GUID for the **General** label is **8faca7b8-8d20-48a3-8ea2-0f96310a848e**.
 
     > [!TIP]
     > If you wanted to apply this setting to multiple labels, list their GUIDs in the value, separated by commas.
@@ -84,19 +79,21 @@ The users can choose to heed the warning, and either change the label or the con
 
     1. Create a new email message, and apply the **General** label. In the message toolbar, click the :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: **Sensitivity** button and then select **General**.
 
-    1. Define the **To** field with your own email address, the **Subject field** as: `Testing the General label for the Warn message`, and then send the email.
+    1. Define the **To** field with your own email address, the **Subject field** as: `Testing a warning message for the General label`, and then send the email.
 
         You should see the following warning, asking you to confirm before sending the email. For example:
 
-        ![Azure Information Protection tutorial - see OutlookWarnUntrustedCollaborationLabel advanced client setting ](./media/see-warnmessage.png)
+        :::image type="content" source="media/qs-tutor/ul-see-warnmessage.png" alt-text="Testing a warning message for the General label":::
 
     1. Pretend that you're a user who has mistakenly tried to email something that was labeled **General**. In this case, you want to heed the warning, so click **Cancel**.
 
         Your email is not sent, but remains open so that you can either change the content or the label.
 
-    1. There's no need to make any changes, and you can decide that the content is appropriate to send. This time, when the warning appears, click **Confirm and Send**.
+    1. There's no need to make any changes, and you can decide that the content is appropriate to send. Click **Send** again. This time, when the warning appears, click **Confirm and Send**.
 
         The email is sent.
+
+Continue with [Show a warning message for General emails only when they're sent externally](#show-a-warning-message-for-general-emails-only-when-theyre-sent-externally).
 
 ## Show a warning message for General emails only when they're sent externally
 
@@ -104,12 +101,12 @@ This procedure describes how to add an exception to the warning message you conf
 
 When sending a **General** email internally, the warning message is not displayed.
 
-1. Run PowerShell as an administrator.
+1. On the client machine, run PowerShell as an administrator.
 
-1. Run the following command to define your domain as a trusted domain for warning messages. When you copy this command, replace **contoso.com** with your own domain.
+1. Run the following command to define your domain as a trusted domain for warning messages. When you copy this command, replace **Global** with the name of your policy, and **contoso.com** with your own domain.
 
     ```PowerShell
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="contoso.com"}    
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnTrustedDomains="contoso.com"}    
     ```
 
     > [!TIP]
@@ -121,7 +118,7 @@ When sending a **General** email internally, the warning message is not displaye
 
     1. Create a new email message, and apply the **General** label. In the message toolbar, click the :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: **Sensitivity** button and then select **General**.
 
-    1. Define the **To** field with your own email address, the **Subject field** as: `Testing the General label for the Warn message`, and then send the email.
+    1. Define the **To** field with your own email address, the **Subject field** as: `Testing a warning message for the General label`, and then send the email.
 
         The email is sent, and no warning is displayed.
 
@@ -129,12 +126,10 @@ When sending a **General** email internally, the warning message is not displaye
 
 This procedure describes how to configure advanced settings so that users must justify their reasoning for sending unlabeled content. 
 
-You won't prevent them from sending it, but you'd like to encourage labeling in your organization. 
+1. On the client machine, run PowerShell as an administrator.
 
-1. Run PowerShell as an administrator.
-
-1. Run the following command to have Outlook display a justification message for your users if they try to send an email without a label:
-
+1. To have Outlook display a justification message for your users if they try and send an unlabeled email, replace **Global** with the name of your policy, and run:
+ 
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Justify"}
     ```
@@ -147,11 +142,11 @@ You won't prevent them from sending it, but you'd like to encourage labeling in 
     
         For example, if your policy applies a default label, use the :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: button to remove it. 
 
-    1. Define the **To** field with your own email address, the **Subject field** as: `Testing the General label for the Justification message`, and then send the email.
+    1. Define the **To** field with your own email address, the **Subject field** as: `Testing the justification message for unlabeled content`, and then send the email.
     
         A popup is displayed similar to the following: 
 
-        :::image type="content" source="media/see-nolabljustify.png" alt-text="Sample justification required for unlabled messages":::
+        :::image type="content" source="media/qs-tutor/ul-see-nolabljustify.png" alt-text="Sample justification message for unlabeled content":::
 
     1. Select one of the options. If you select the third option **Other, as explained**, enter some sample text in the text box. 
     
@@ -159,15 +154,17 @@ You won't prevent them from sending it, but you'd like to encourage labeling in 
     
         The email is sent.
 
+Continue with [Customize the free text justification prompt](#customize-the-free-text-justification-prompt).
+
 ## Customize the free text justification prompt
 
 This procedure describes how to customize the third option in the default justification message. 
 
 For example, you may want to add text there to prompt the user to add specific details, or remind users not to enter any sensitive data.
 
-1. Run PowerShell as an administrator.
+1. On the client machine, run PowerShell as an administrator.
 
-1. Run the following command to have Outlook display a justification message for your users if they try to send an email without a label:
+1. To have customize the free text prompt in the justification message displayed, replace **Global** with your policy name, and run:
 
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
@@ -184,25 +181,25 @@ For example, you may want to add text there to prompt the user to add specific d
 
         For example, if your policy applies a default label, use the :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: button to remove it. 
 
-    1. Define the **To** field with your own email address, the **Subject field** as: `Testing the General label for the customized Justification message`, and then send the email.
+    1. Define the **To** field with your own email address, the **Subject field** as: `Testing a customized free text justification prompt`, and then send the email.
     
         The justification popup is displayed, this time with your customized text. For example: 
 
-        **TBD**
+        :::image type="content" source="media/qs-tutor/ul-see-nolabljustify-custom.png" alt-text="Sample justification prompt with customized free text prompt":::
         
 ## Block users from sending unlabeled PowerPoint messages
 
 This procedure describes how to block your users from sending unlabeled PowerPoint files from Outlook.
 
-1. Run PowerShell as an administrator.
+1. On the client machine, run PowerShell as an administrator.
 
-1. Run the following command to block unlabeled content from being sent from Outlook:
+1. To block unlabeled content from being sent from Outlook, replace **Global** with your policy name, and run:
 
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Block"}
     ```
 
-1. Run the following command to limit the blocking behavior for unlabeled content only to specific PowerPoint file types:
+1. To limit the blocking behavior to specific PowerPoint file types only, replace **Global** with your policy name, and run:
 
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.POTX,.POTM,.POT,.PPTX"}
@@ -216,11 +213,13 @@ This procedure describes how to block your users from sending unlabeled PowerPoi
     
     1. Attach your unlabeled PowerPoint file to a new Outlook message.
 
-    1. Define the **To** field with your own email address, the **Subject field** as: `Testing unlabeled PowerPoint files`, and then send the email.
+    1. Define the **To** field with your own email address, the **Subject field** as: `Testing sending unlabeled PowerPoint files`, and then send the email.
     
         Outlook blocks the email from being sent, and display the following message:
 
-        **TBD**
+        :::image type="content" source="media/qs-tutor/ul-see-blockmessage.png" alt-text="Sample blocking message for an unlableled PowerPoint attachment":::
+
+Continue with [Customize the block message for unlabeled PowerPoint messages](#customize-the-block-message-for-unlabeled-powerpoint-messages).
 
 ## Customize the block message for unlabeled PowerPoint messages
 
@@ -267,7 +266,7 @@ This procedure describes how to customize the message that appears when a user t
             "type" : "Email Block", 			
             "LocalizationData": { 				
                 "en-us": { 				  
-                    "Title": "Emailed Blocked", 				  
+                    "Title": "Email Blocked", 				  
                     "Body": "Sending PowerPoint files to external recipients requires that you label your files so that we can classify and protect Contoso content.<br><br>List of attachments that are not labeled:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance to classification requirement as per Contoso’s policies.<br><br>Label your document and send it again." 				
                 },			
             }, 			
@@ -278,16 +277,16 @@ This procedure describes how to customize the message that appears when a user t
     ```
 1. Save your **OutlookCollaborationRule_1.json** file in a location that's accessible by your client machine.
 
-1. Run PowerShell as an administrator.
+1. On the client machine, run PowerShell as an administrator.
 
-1. Run the following command to block unlabeled content from being sent from Outlook:
+1. To customize your blocking message, copy the following code, replacing **C:\OutlookCollaborationRule_1.json** with the path to your .json file, and **General** with the name of your policy. 
 
     ```PowerShell
-    $filedata = Get-Content "<Path to the OutlookCollaborationRule_1.json file>”
-    Set-LabelPolicy -Identity <Policy name> -AdvancedSettings @{OutlookCollaborationRule_1 ="$filedata"}    
+    $filedata = Get-Content "C:\OutlookCollaborationRule_1.json”
+    Set-LabelPolicy -Identity General -AdvancedSettings @{OutlookCollaborationRule_1 ="$filedata"}    
     ```
 
-    Where `<Path to OutlookCollaborationRule_1.json file>` is the path where you've saved your .json file. 
+    Run the code to implement the settings defined in your .json file.
 
 1. Test your setting in Outlook:
 
