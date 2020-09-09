@@ -1,6 +1,6 @@
 ---
 title: Quickstart - Install the Azure Information Protection (AIP) unified labeling scanner
-description: Install the Azure Information Protection (AIP) unified labeling scanner to start understanding the sensitive data you have stored in your on-premises network shares.
+description: Install the Azure Information Protection (AIP) unified labeling scanner to find sensitive data stored in your on-premises network shares.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -51,7 +51,7 @@ Once you've confirmed your prerequisites, [Configure Azure Information Protectio
 
 ## Configure Azure Information Protection in the Azure portal
 
-Even if you have a supporting Azure subscription, Azure Information Protection may not automatically be available for you in the Azure portal, or protection may not be currently activated. Do one or both of the following steps, as needed:
+Azure Information Protection may not be available for you in the Azure portal, or protection may not be currently activated. Do one or both of the following steps, as needed:
 
 - [Add Azure Information Protection to the Azure portal](#add-azure-information-protection-to-the-azure-portal)
 - [Confirm that protection is activated](#confirm-that-protection-is-activated)
@@ -62,7 +62,7 @@ Then, continue with [Configure initial scanner settings in the Azure portal](#co
 
 1. Sign in to the [Azure portal](https://portal.azure.com) using a [supporting admin account](#quickstart-prerequisites).
 
-1. Select **+ Create a resource**. In the Azure Marketplace searchbox, enter and then select **Azure Information Protection**. On the Azure Information Protection page, select **Create**, and then **Create** again.
+1. Select **+ Create a resource**. In the search box, search for and then select **Azure Information Protection**. On the Azure Information Protection page, select **Create**, and then **Create** again.
 
     :::image type="content" source="media/gifs/quickstart-add-aip-to-portal.gif" alt-text="Add Azure Information Protection to your Azure portal":::
 
@@ -75,13 +75,13 @@ Continue with [Confirm that protection is activated](#confirm-that-protection-is
 
 If you already have Azure Information Protection available for you, make sure that protection is activated:
 
-1. On the Azure Information Protection blade, under **Manage** on the left, select **Protection Activation**.
+1. In the Azure Information Protection area, under **Manage** on the left, select **Protection Activation**.
 
 1. Confirm whether protection is activated for your tenant. For example:
 
     :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="Confirm AIP activation":::
 
-If protection is not activated, select ![Activate AIP](media/qs-tutor/activate.png "Activate AIP") **Activate**. When activation is complete, the information bar displays **Activation finished successfully**.
+If protection isn't activated, select ![Activate AIP](media/qs-tutor/activate.png "Activate AIP") **Activate**. When activation is complete, the information bar displays **Activation finished successfully**.
 
 Continue with [Configure initial scanner settings in the Azure portal](#configure-initial-scanner-settings-in-the-azure-portal).
 
@@ -89,7 +89,7 @@ Continue with [Configure initial scanner settings in the Azure portal](#configur
 
 Prepare your initial scanner settings in the Azure portal before you install the scanner on your machine.
 
-1. On the Azure Information Protection blade, under **Scanner** on the left, select :::image type="icon" source="media/i-clusters.png" border="false":::  **Clusters**.
+1. In the Azure Information Protection area, under **Scanner** on the left, select :::image type="icon" source="media/i-clusters.png" border="false":::  **Clusters**.
 
 1. On the clusters page, select :::image type="icon" source="media/i-add.PNG" border="false"::: **Add** to create a new cluster to manage your scanner.
 
@@ -113,9 +113,9 @@ Prepare your initial scanner settings in the Azure portal before you install the
 
     This default scan job will scan for all known sensitive information types, and doesn't require you to configure any labels or policy settings.
 
-1. Close your content scan job details pane, and return to the :::image type="icon" source="media/i-content-scan-jobs.png" border="false":::  **Content scan jobs** grid. 
+1. Close the details pane for your content scan job, and return to the :::image type="icon" source="media/i-content-scan-jobs.png" border="false":::  **Content scan jobs** grid. 
 
-    In the new row that appears for your content scan job, in the **Cluster Name** column, click **+Assign to cluster.** Then, in the **Assign to cluster** pane that appears on the right, select your cluster. 
+    In the new row that appears for your content scan job, in the **Cluster Name** column, select **+Assign to cluster.** Then, in the **Assign to cluster** pane that appears on the right, select your cluster. 
 
     :::image type="content" source="media/qs-tutor/assign-cluster-all.png" alt-text="Assign to cluster":::
 
@@ -123,11 +123,11 @@ Now you're ready to [Install the AIP unified labeling scanner](#install-the-aip-
 
 ## Install the AIP unified labeling scanner
 
-Install the AIP unified labeling scanner on your client machine after having [configured basic scanner settings in the Azure portal](#configure-azure-information-protection-in-the-azure-portal).
+Once you've [configured basic scanner settings in the Azure portal](#configure-azure-information-protection-in-the-azure-portal), install the unified labeling scanner on your AIP client machine.
 
 1. On your client machine, open a PowerShell session with the **Run as an administrator** option.
 
-1. Use the following command to install the scanner, specifying the location where you want to install the scanner, as well as the name of the [cluster you created in the Azure portal](#configure-initial-scanner-settings-in-the-azure-portal).
+1. Use the following command to install the scanner. In your command, specify where you want to install the scanner, as well as the name of the [cluster you created in the Azure portal](#configure-initial-scanner-settings-in-the-azure-portal).
 
     ```PowerShell
     Install-AIPScanner -SqlServerInstance <your SQL installation location>\SQLEXPRESS -Cluster <cluster name>

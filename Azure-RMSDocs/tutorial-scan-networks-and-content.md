@@ -119,17 +119,17 @@ Create a network scan job to scan a specified IP address or IP range for risky r
 
 **To create a network scan job:**
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) as a [supported administrator](#tutorial-prerequisites), and navigate to the **Azure Information Protection** blade.
+1. Sign in to the [Azure portal](https://portal.azure.com/) as a [supported administrator](#tutorial-prerequisites), and navigate to the **Azure Information Protection** area.
         
 1. In the **Scanner** menu on the left, select :::image type="icon" source="media/qs-tutor/i-network-scan-jobs.png" border="false"::: **Network scan jobs (Preview)**.
 
-1. Click :::image type="icon" source="media/i-add.PNG" border="false"::: **Add** to add a new job. In the **Add a new network scan job** pane, enter the following details:
+1. Select :::image type="icon" source="media/i-add.PNG" border="false"::: **Add** to add a new job. In the **Add a new network scan job** pane, enter the following details:
     
     |Option  |Description  |
     |---------|---------|
     |**Network scan job name** and **Description**     |Enter a meaningful name, such as `Quickstart`, and an optional description.         |
     |**Select the cluster**     | Select your cluster name from the dropdown list.</br></br> For example, if you've completed [Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-scanner.md), and still have that cluster available, select **Quickstart**.       |
-    |**Configure IP ranges to discover**     | Click the row to open the **Choose IP ranges** pane. There, enter an IP address or IP range to scan. </br></br>**Note**: Make sure to enter IP addresses that are accessible from the scanner's machine.      |
+    |**Configure IP ranges to discover**     | Select the row to open the **Choose IP ranges** pane. There, enter an IP address or IP range to scan. </br></br>**Note**: Make sure to enter IP addresses that are accessible from the scanner's machine.      |
     |**Set schedule**     | Keep the default value of **One Time**.        |
     |**Set start time (UTC)**     |  Calculate the current UTC time, considering your current time zone, and set the start time to run within 5 minutes from now.     |
     |     |         |
@@ -177,13 +177,13 @@ For example, if a repository is found to have both read and write public access,
 
 1. Select the row, and then above the grid, select :::image type="icon" source="media/i-add.PNG" border="false"::: **Assign Selected Items**. 
 
-1. In the **Assign to Content Scan Job** pane that appears on the right, select your content scan job from the dropdown list, and then click :::image type="icon" source="media/qs-tutor/save-icon.png" border="false"::: **Save**.
+1. In the **Assign to Content Scan Job** pane that appears on the right, select your content scan job from the dropdown list, and then select :::image type="icon" source="media/qs-tutor/save-icon.png" border="false"::: **Save**.
 
     For example:
 
     :::image type="content" source="media/qs-tutor/assign-content-scan-job.png" alt-text="Assign a risky repository to a content scan job":::
 
-The next time your content scan job runs, it will now include this newly discovered repository, and identify, label, classify and protect any sensitive content found, as configured in your policy.
+The next time your content scan job runs, it will now include this newly discovered repository, and identify, label, classify, and protect any sensitive content found, as configured in your policy.
 
 Continue with [Define and run your content scan job](#define-and-run-your-content-scan-job).
 
@@ -207,15 +207,15 @@ If you don't have a content scan job yet, perform [Configure initial settings in
     - **Configure repositories**. Ensure that there is at least one repository defined. 
     
         > [!TIP]
-        > If you've added additional repositories to your content scan job after having scanned your network in [Add risky repositories to a content scan job](#add-risky-repositories-to-a-content-scan-job),  you can click to see them listed here now. 
+        > If you've added additional repositories to your content scan job after having scanned your network in [Add risky repositories to a content scan job](#add-risky-repositories-to-a-content-scan-job),  you can select to see them listed here now. 
 
     - **Enforce**. Set to **On**
     
-1. Click :::image type="icon" source="media/qs-tutor/save-icon.png" border="false":::, and then return to the :::image type="icon" source="media/i-content-scan-jobs.PNG" border="false"::: **Content scan jobs** grid.
+1. Select :::image type="icon" source="media/qs-tutor/save-icon.png" border="false":::, and then return to the :::image type="icon" source="media/i-content-scan-jobs.PNG" border="false"::: **Content scan jobs** grid.
 
-1. To scan your content, go back to the :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Content scan jobs** blade, and select your content scan job.
+1. To scan your content, go back to the :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Content scan jobs** area, and select your content scan job.
 
-    In the toolbar above the grid, click :::image type="icon" source="media/i-scan-now.PNG" border="false"::: **Scan now** to start the scan.
+    In the toolbar above the grid, select :::image type="icon" source="media/i-scan-now.PNG" border="false"::: **Scan now** to start the scan.
 
     When the scan is complete, results are stored in the **%localappdata%\Microsoft\MSIP\Scanner\Reports directory** on the scanner machine.
 

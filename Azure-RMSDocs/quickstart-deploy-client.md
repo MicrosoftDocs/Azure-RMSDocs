@@ -32,9 +32,9 @@ ms.custom: admin
 
 The Azure Information Protection (AIP) unified labeling client is part of the [Microsoft Information Protection](https://aka.ms/MIPdocs) solution, and  extends the built-in capabilities for sensitivity labeling provided by Microsoft 365. 
 
-The client provides additional support for labeling and protection of all file types from the File Explorer and PowerShell, and enables admins to scan network and content shares for sensitive content.
+The client provides end-user support for labeling and protection in the File Explorer and PowerShell. It also enables admins to scan networks and content shares for sensitive content. 
 
-For companies that don't have their own information protection platform, the AIP client also provides a viewer that enables users to open and view content protected by other organizations using Microsoft Information Protection.
+For organizations without an information protection platform, the client provides a viewer for content protected by other organizations using Microsoft Information Protection.
 
 ## Review AIP client prerequisites
 
@@ -48,11 +48,11 @@ Use the articles linked below to help you understand the prerequisites for deplo
 
 AIP provides the following client installation options:
 
-- **[Download and run the .exe file.](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)** This is the recommended option for most use cases. The installation can be run interactively or silently.
+- **[Download and run the .exe file.](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)** This installation is the recommended option for most use cases. The installation can be run interactively or silently.
 
     When the installation is complete, you may be prompted to restart your computer or Office software. Restart as needed to continue.
 
-- **[Download and run the .msi file.](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer)** Supported for silent installations that use a central deployment mechanism, such as group policies, Configuration Manger, or Microsoft Intune.
+- **[Download and run the .msi file.](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer)** Supported for silent installations that use a central deployment mechanism, such as group policies, Configuration Manger, or Microsoft Intune.E
 
 The AIP client installation files are available from the [Microsoft Download site](https://www.microsoft.com/download/details.aspx?id=53018). 
 
@@ -64,7 +64,7 @@ For more information, see: [Options for installing the AIP client](rms-client/cl
 
 ## Next steps
 
-Perform any of the following quickstarts and tutorials to get started with the Azure Information client:
+See any of the following quickstarts and tutorials to get started with the Azure Information client:
 
 - [Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-scanner.md)
 - [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
