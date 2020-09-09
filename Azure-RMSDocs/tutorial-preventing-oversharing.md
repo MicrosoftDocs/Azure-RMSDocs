@@ -300,7 +300,9 @@ This procedure describes how to customize the message that appears when a user t
     
         Outlook blocks the email from being sent, and display the following message:
 
-        **TBD**
+        :::image type="content" source="media/qs-tutor/ul-see-custom-blockmessage.png" alt-text="Custom block message for PowerPoint files with no label":::
+
+Continue with [Use Event Log to identify the messages and user actions for the General label](#use-event-log-to-identify-the-messages-and-user-actions-for-the-general-label).
 
 ## Use Event Log to identify the messages and user actions for the General label
 
@@ -310,7 +312,7 @@ You've also checked the behavior from Outlook on your local client computer.
 
 Now you can start the Event Viewer to check the logs for the actions that occurred.
 
-**Check the Event Viewer for AIP logging events**
+**To check the Event Viewer for AIP logging events:**
 
 On your client machine, open the Event Viewer application, and navigate to **Applications and Services Logs** > **Azure Information Protection**.
 
@@ -320,13 +322,21 @@ You'll see an information event logged for each test you performed, including de
 - **Justify messages:** Information ID 302
 - **Block messages:** Information ID 303
 
-For example, the first test was to warn the user, and you selected **Cancel**. In this case, the **User Response** displays **Dismissed** in the first Event 301:
+For example:
+
+- [Check the Event log for your warning message tests](#check-the-event-log-for-your-warning-message-tests)
+- [Check the Event log for your justify message tests](#check-the-event-log-for-your-justify-message-tests)
+- - [Check the Event log for your block message tests](#check-the-event-log-for-your-block-message-tests)
+
+### Check the Event log for your warning message tests
+
+The first test was to warn the user, and you selected **Cancel**. In this case, the **User Response** displays **Dismissed** in the first Event 301:
 
 ```
-Client Version: 2.8.85
+Client Version: 2.8.85.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
-Item Full Path: Testing the General label for the Warn message.msg
-Item Name: Testing the General label for the Warn message
+Item Full Path: Testing a warning message for the General label.msg
+Item Name: Testing a warning message for the General label
 Process Name: OUTLOOK
 Action: Warn
 Label After Action: General
@@ -338,10 +348,10 @@ User Response: Dismissed
 However, you then selected **Confirm and Send**, which is reflected in the next Event 301, where the **User Response** displays **Confirmed**:
 
 ```
-Client Version: 2.8.85
+Client Version: 2.8.85.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
-Item Full Path: Testing the General label for the Warn message.msg
-Item Name: Testing the General label for the Warn message
+Item Full Path: Testing a warning message for the General label.msg
+Item Name: Testing a warning message for the General label
 Process Name: OUTLOOK
 Action: Warn
 Label After Action: General
@@ -350,13 +360,15 @@ Action Source:
 User Response: Confirmed
 ```
 
+### Check the Event log for your justify message tests
+
 The same pattern is repeated for the justify message, which has an Event 302. The first event has a **User Response** of **Dismissed**, and the second shows the justification that was selected. For example:
 
 ```
-Client Version: 2.8.85
+Client Version: 2.8.85.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
-Item Full Path: Testing the General label for the Justify message.msg
-Item Name: Testing the General label for the Justify message
+Item Full Path: Testing the justification message for unlabeled content.msg
+Item Name: Testing the justification message for unlabeled content
 Process Name: OUTLOOK
 Action: Justify
 Label After Action: General
@@ -367,13 +379,15 @@ User Response: Confirmed
 
 ```
 
+### Check the Event log for your block message tests
+
 At the top of the event log, you see the block message logged, which has an Event 303. For example:
 
 ```
-Client Version: 2.8.85
+Client Version: 2.8.85.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
-Item Full Path: Testing the General label for the Block message.msg
-Item Name: Testing the General label for the Block message
+Item Full Path: Testing sending unlabeled PowerPoint files.msg
+Item Name: Testing sending unlabeled PowerPoint files
 Process Name: OUTLOOK
 Action: Block
 Label After Action: General
@@ -381,29 +395,15 @@ Label ID After Action: 0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 Action Source: 
 ```
 
-For example, the results of our justification prompt when the email didn't have a label:
-
-```
-Client Version: 2.8.85
-Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
-Item Full Path: Testing send an email without a label for the Justify message.msg
-Item Name: Testing send an email without a label for the Justify message
-Process Name: OUTLOOK
-Action: Justify
-User Justification: My manager approved sharing of this content
-Action Source: 
-User Response: Confirmed
-```
-
 ## Clean up resources
 
-Once you're finished with this tutorial, you can keep the policy for further reference, or delete it to clean up your resources.
+Once you're finished with this tutorial, you can keep the testing policy for further reference, or delete it to clean up your resources.
 
 Delete your policy in the admin center where it was created, either the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center.
 
 For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)
 
-Once deleted, restart Outlook so that it's no longer configured with the settings defined in this tutorial.
+Once deleted, restart Outlook on the client machine so that it's no longer configured with the settings defined in this tutorial.
 
 ## Next steps
 
