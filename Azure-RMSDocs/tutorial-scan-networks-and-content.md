@@ -119,7 +119,7 @@ Create a network scan job to scan a specified IP address or IP range for risky r
 
 **To create a network scan job:**
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) as a [supported administrator](#quickstart-prerequisites), and navigate to the **Azure Information Protection** blade.
+1. Sign in to the [Azure portal](https://portal.azure.com/) as a [supported administrator](#tutorial-prerequisites), and navigate to the **Azure Information Protection** blade.
         
 1. In the **Scanner** menu on the left, select :::image type="icon" source="media/qs-tutor/i-network-scan-jobs.png" border="false"::: **Network scan jobs (Preview)**.
 
@@ -163,7 +163,7 @@ For example, if a repository is found to have both read and write public access,
 
 **To add risky repositories to your content scan job**:
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) as a [supported administrator](#quickstart-prerequisites), and navigate to the **Azure Information Protection** pane.
+1. Sign in to the [Azure portal](https://portal.azure.com/) as a [supported administrator](#tutorial-prerequisites), and navigate to the **Azure Information Protection** pane.
         
 1. In the **Scanner** menu on the left, select :::image type="icon" source="media/qs-tutor/i-repos.png" border="false"::: **Repositories (Preview)**.
 
@@ -191,10 +191,10 @@ Continue with [Define and run your content scan job](#define-and-run-your-conten
 
 Use the content scan job you prepared with the [tutorial prerequisites](#tutorial-prerequisites) to scan your content. 
 
-If you don't have a content scan job yet, perform [Configure initial settings in the Azure portal](quickstart-install-scanner.md#configure-initial-settings-in-the-azure-portal), and then return here to continue.
+If you don't have a content scan job yet, perform [Configure initial settings in the Azure portal](quickstart-install-scanner.md#configure-initial-scanner-settings-in-the-azure-portal), and then return here to continue.
 
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) as a [supported administrator](#quickstart-prerequisites), and navigate to the **Azure Information Protection** pane.
+1. Sign in to the [Azure portal](https://portal.azure.com/) as a [supported administrator](#tutorial-prerequisites), and navigate to the **Azure Information Protection** pane.
         
 1. In the **Scanner** menu on the left, and select :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Content scan jobs**, and then select your content scan job.
  

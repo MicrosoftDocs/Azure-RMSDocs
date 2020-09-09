@@ -127,7 +127,7 @@ Install the AIP unified labeling scanner on your client machine after having [co
 
 1. On your client machine, open a PowerShell session with the **Run as an administrator** option.
 
-1. Use the following command to install the scanner, specifying the location where you want to install the scanner, as well as the name of the [cluster you created in the Azure portal](#configure-initial-settings-in-the-azure-portal).
+1. Use the following command to install the scanner, specifying the location where you want to install the scanner, as well as the name of the [cluster you created in the Azure portal](#configure-initial-scanner-settings-in-the-azure-portal).
 
     ```PowerShell
     Install-AIPScanner -SqlServerInstance <your SQL installation location>\SQLEXPRESS -Cluster <cluster name>
