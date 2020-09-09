@@ -6,7 +6,7 @@ description: A step-by-step tutorial for migrating from the Azure Information Pr
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/08/2020
+ms.date: 09/09/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -44,7 +44,7 @@ In this tutorial, you'll:
 > [!div class="checklist"]
 > * Learn about planning your migration
 > * Migrate your labels to the unified labeling platform
-> * Learn how to configure advanced settings using the Security & Compliance Center PowerShell module
+> * Learn how to configure advanced settings in your new labeling admin center
 > * Copy your policies to the unified labeling platform
 > * Deploy the unified labeling client
 
