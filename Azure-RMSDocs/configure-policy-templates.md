@@ -151,7 +151,7 @@ Templates can be created using the portal or using PowerShell.
 
 ### Template creation using PowerShell
 
-To create a new protection template using PowerShell with the specified name, description, policy, and desired status setting use the [Add-AipServiceTemplate](https://docs.microsoft.com/powershell/module/aipservice/add-aipservicetemplate?view=azureipps) cmdlet. 
+To create a new protection template using PowerShell with the specified name, description, policy, and desired status setting use the [Add-AipServiceTemplate](https://docs.microsoft.com/powershell/module/aipservice/add-aipservicetemplate) cmdlet. 
 
 
 ### Template creation using the portal

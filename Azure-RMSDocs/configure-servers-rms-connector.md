@@ -170,7 +170,7 @@ You will also need on these servers, a version 1 of the RMS client (also known a
 
    -   Make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
-3. Enable IRM functionality for Exchange by using the Exchange PowerShell cmdlet [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) and set `InternalLicensingEnabled $true` and `ClientAccessServerEnabled $true`.
+3. Enable IRM functionality for Exchange by using the Exchange PowerShell cmdlet [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) and set `InternalLicensingEnabled $true` and `ClientAccessServerEnabled $true`.
 
 
 ## Configuring a SharePoint server to use the connector
