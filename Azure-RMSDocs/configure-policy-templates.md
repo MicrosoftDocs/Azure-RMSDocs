@@ -3,8 +3,8 @@
 
 title: Configure and manage templates for Azure Information Protection - AIP
 description: Configure and manage protection templates, also known as rights management templates, from the Azure portal.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/24/2020
 ms.topic: conceptual
@@ -151,7 +151,7 @@ Templates can be created using the portal or using PowerShell.
 
 ### Template creation using PowerShell
 
-To create a new protection template using PowerShell with the specified name, description, policy, and desired status setting use the [Add-AipServiceTemplate](https://docs.microsoft.com/powershell/module/aipservice/add-aipservicetemplate?view=azureipps) cmdlet. 
+To create a new protection template using PowerShell with the specified name, description, policy, and desired status setting use the [Add-AipServiceTemplate](https://docs.microsoft.com/powershell/module/aipservice/add-aipservicetemplate) cmdlet. 
 
 
 ### Template creation using the portal

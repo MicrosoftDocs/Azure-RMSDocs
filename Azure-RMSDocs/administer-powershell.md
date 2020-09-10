@@ -3,8 +3,8 @@
 
 title: Administering protection from Azure Information Protection by using PowerShell
 description: Learn how you can use the PowerShell module for the protection service from Azure Information Protection, to administer this service for your tenant.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 04/28/2020
 ms.topic: conceptual
@@ -32,7 +32,7 @@ Do you need to use PowerShell to administer the protection service from Azure In
 
 The table in the next section includes some of the advanced configuration scenarios that use PowerShell. When the configuration can also be completed without using PowerShell, this information is also included in the table.
 
-For a complete list of the available cmdlets for this module, with more information about each one, see [AIPService](/powershell/module/aipservice/?view=azureipps#aipservice).
+For a complete list of the available cmdlets for this module, with more information about each one, see [AIPService](/powershell/module/aipservice/#aipservice).
 
 > [!NOTE]
 > To install this PowerShell module, see [Installing the AIPService PowerShell module](install-powershell.md).
