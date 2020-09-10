@@ -40,7 +40,7 @@ After you have installed and configured the RMS connector, you are ready to conf
 
 -   **For Exchange 2016 and Exchange 2013**: Client access servers and mailbox servers
 
--   **For Exchange 2010**: Client access servers and hub transport servers
+-   **For Exchange 2010 and Exchange 2019**: Client access servers and hub transport servers
 
 -   **For SharePoint**: Front-end SharePoint webservers, including those hosting the Central Administration server
 
@@ -138,7 +138,7 @@ The following Exchange roles communicate with the RMS connector:
 
 -   For Exchange 2016 and Exchange 2013: Client access server and mailbox server
 
--   For Exchange 2010: Client access server and hub transport server
+-   For Exchange 2010 and Exchange 2019: Client access server and hub transport server
 
 To use the RMS connector, these servers running Exchange must be running one of the following software versions:
 
@@ -147,6 +147,8 @@ To use the RMS connector, these servers running Exchange must be running one of 
 -   Exchange Server 2013 with Exchange 2013 Cumulative Update 3
 
 -   Exchange Server 2010 with Exchange 2010 Service Pack 3 Rollup Update 6
+
+-   Exchange Server 2019
 
 You will also need on these servers, a version 1 of the RMS client (also known as MSDRM) that includes support for RMS Cryptographic Mode 2. All Windows operating systems include the MSDRM client but early versions of the client did not support Cryptographic Mode 2. If your Exchange servers are running at least Windows Server 2012, no further action is required because the RMS client installed with these operating systems natively supports Cryptographic Mode 2. 
 
