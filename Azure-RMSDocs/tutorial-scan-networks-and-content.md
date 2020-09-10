@@ -22,7 +22,7 @@ ms.subservice: aiplabels
 #Customer intent: As an administrator, I want to find what sensitive information my organization stores on-premises
 ---
 
-# Quickstart: Finding your sensitive content with the Azure Information Protection (AIP) scanner
+# Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
@@ -167,7 +167,7 @@ For example, if a repository is found to have both read and write public access,
         
 1. In the **Scanner** menu on the left, select :::image type="icon" source="media/qs-tutor/i-repos.png" border="false"::: **Repositories (Preview)**.
 
-    :::image type="content" source="media/small/risky-repos-small.png" alt-text="View repositories from your network scan job" lightbox="media/qs-tutor/risky-repos.png":::
+    :::image type="content" source="media/small/risky-repos-small.png" alt-text="View repositories found by your network scan job" lightbox="media/qs-tutor/risky-repos.png":::
 
 1. In the grid below the graphs, locate a repository that is not yet managed by the scanner. Not being managed by the scanner means that they are not included in a content scan job, and are not being scanned for sensitive content.
 

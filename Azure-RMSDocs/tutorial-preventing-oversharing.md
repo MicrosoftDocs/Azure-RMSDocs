@@ -46,10 +46,9 @@ Make sure you have the following system requirements before starting this tutori
 
 |Prerequisites  |Description  |
 |---------|---------|
-|**Machine requirements**     | Make sure that you have a Windows computer, with the Azure Information Protection unified labeling client installed. For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md). </br></br>Make sure that PowerShell is installed, and that you have the ability to run PowerShell as an administrator. </br></br>Make sure you can sign into Outlook. Be prepared to restart Outlook multiple times during this tutorial.     |
+|**Machine requirements**     | Make sure that you: </br></br>-Have a Windows computer, with the Azure Information Protection unified labeling client installed. For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md). </br></br>- Have PowerShell installed, and that you can run PowerShell as an administrator. </br></br>- Can sign into Outlook. Be prepared to restart Outlook multiple times during this tutorial.     |
 |**Azure Information Protection subscription**     |   You must have an Azure [subscription](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) that includes **Azure Information Protection Plan 2.**      |
 |**Sensitivity labels and a testing policy**     |  A **General** sensitivity label configured in your policy. </br></br>Configure sensitivity labels your labeling admin center, including the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). </br></br>We recommend using a testing policy for this tutorial so that you don't affect your live policy. </br>Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
-
 | | |
 
 Let's get started. 
