@@ -3,8 +3,8 @@
 
 title: Deploy the Azure Information Protection scanner - previous versions
 description: Deployment instructions for versions of the Azure Information Protection scanner older than the current general availability version.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
 ms.topic: conceptual

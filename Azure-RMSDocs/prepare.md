@@ -3,9 +3,9 @@
 
 title: Prepare users and groups for Azure Information Protection
 description: Check that you have the user and group accounts that you need to start classifying, labeling, and protecting your organization's documents and emails.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: batamig
+ms.author: bagol
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

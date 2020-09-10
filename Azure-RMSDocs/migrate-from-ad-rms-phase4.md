@@ -3,8 +3,8 @@
 
 title: Migrate AD RMS-Azure Information Protection - phase 4
 description: Phase 4 of migrating from AD RMS to Azure Information Protection, covering steps 8 through 9 from Migrating from AD RMS to Azure Information Protection
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 04/02/2020
 ms.topic: conceptual
