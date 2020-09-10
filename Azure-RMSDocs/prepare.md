@@ -84,7 +84,7 @@ For assigning usage rights and access controls, and configuring the Azure Rights
 
     - For Azure AD: [Add a custom domain name to Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - For Office 365: [Add a domain to Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - For Office 365: [Add a domain to Office 365](/office365/admin/setup/add-domain)
 
 - The **Azure AD userPrincipalName** attribute is used only when an account in your tenant doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
 
@@ -132,7 +132,7 @@ From the attributes list for Azure Rights Management, you see that for users, th
 
 You can use Azure AD PowerShell to confirm that users and groups can be used with Azure Information Protection. You can also use PowerShell to confirm the values that can be used to authorize them. 
 
-For example, using the V1 PowerShell module for Azure Active Directory, [MSOnline](/powershell/module/msonline/?view=azureadps-1.0), in a PowerShell session, first connect to the service and supply your global admin credentials:
+For example, using the V1 PowerShell module for Azure Active Directory, [MSOnline](/powershell/module/msonline/), in a PowerShell session, first connect to the service and supply your global admin credentials:
 
 ```ps
 Connect-MsolService
@@ -199,7 +199,7 @@ Get-MsolGroup | select DisplayName, ProxyAddresses
 
 Make sure that the groups you want to use with Azure Information Protection are displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for the Azure Rights Management service.
 
-Then check that the groups contain the users (or other groups) that you want to use for Azure Information Protection. You can use PowerShell to do this (for example, [Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember?view=azureadps-1.0)), or use your management portal.
+Then check that the groups contain the users (or other groups) that you want to use for Azure Information Protection. You can use PowerShell to do this (for example, [Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember)), or use your management portal.
 
 For the two Azure Rights Management service configuration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that can be used to identify these groups. You can also use the Azure portal to find these groups and copy the values for the object ID and the display name:
 
