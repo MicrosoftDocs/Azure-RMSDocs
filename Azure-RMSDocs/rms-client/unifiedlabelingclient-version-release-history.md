@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/03/2020
+ms.date: 09/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -50,11 +50,13 @@ Preview versions should not be deployed for end users on production networks. In
 
 |Client version|Date released|
 |--------------|-------------|
+|2.5.33.0 |10/23/2019|
 |2.2.21.0|09/03/2019|
 |2.2.19.0|08/06/2019|
 |2.2.14.0|07/15/2019|
 |2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
+| | |
 
 The date format used on this page is *month/day/year*.
 
@@ -370,73 +372,6 @@ Supported through  12/29/2020
 - Protection of **.msg** files as **.msg.pfiles** now works as expected. 
 - Co-owner permissions added from Office user-defined settings is now applied as expected. 
 - When entering permissions downgrade justification, text can no longer be entered when other options are already selected. 
-
-
-## Version 2.5.33.0
-
-**Released**: 10/23/2019
-
-Supported through  09/09/2020
-
-**New features:**
-
-- Preview version of the [scanner](../deploy-aip-scanner.md), to inspect and label documents on-premises data stores. With this version of the scanner:
-    
-    - Multiple scanners can share the same SQL Server database when you configure the scanners to use the same scanner profile. This configuration makes it easier to manage multiple scanners, and results in faster scanning times. When you use this configuration, always wait for a scanner to finish installing before installing another scanner with the same profile.
-    
-    - You must specify a profile when you install the scanner and the scanner database is named **AIPScannerUL_\<profile_name>**. The *Profile* parameter is also mandatory for Set-AIPScanner.
-    
-    - You can set a default label on all documents, even if documents are already labeled. In the scanner profile or repository settings, set the **Relabel files** option to **On** with the new **Enforce default label** checkbox selected.
-    
-    - You can remove existing labels from all documents and this act includes removing protection if it was previously applied by a label. Protection applied independently from a label is preserved. This scanner configuration is achieved in the scanner profile or repository settings with the following settings:
-        - **Label files based on content**: **Off**
-        - **Default label**: **None**
-        - **Relabel files**: **On** with the **Enforce default label** checkbox selected
-    
-    - As with the scanner from the classic client, by default, the scanner protects Office files and PDF files. You can protect other files types when you use a [PowerShell advanced setting](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
-    
-    - Event IDs for the scanner cycles starting and finishing are not written to the Windows event log. Instead, use the Azure portal for this information.
-    
-    - Known issue: New and renamed labels aren't available to select as a default label for the scanner profile or repository settings. Workarounds:
-        - For new labels: In the Azure portal, [add the label](../configure-policy-add-remove-label.md) you want to use to the global policy or a scoped policy.
-        - For renamed labels: Close and reopen the Azure portal.
-    
-    You can upgrade scanners from the Azure Information Protection client (classic). After the upgrade, which creates a new database, the scanner rescans all files the first time it runs. For instructions, see [Upgrading the Azure Information Protection scanner](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) from the admin guide.
-    
-    For more information, see the blog post announcement: [Unified labeling AIP scanner preview brings scaling out and more!](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
-
-- The PowerShell cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) has new parameters (*AppId*, *AppSecret*, *TenantId*, *DelegatedUser*, and *OnBehalfOf*) for when you want to label files non-interactively, and also a new procedure to register an app in Azure AD. Example scenarios include the scanner and automated PowerShell scripts to label documents. For instructions, see [How to label files non-interactively](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
-    
-    Note that *DelegatedUser* is a new parameter since the last preview version of the unified labeling client, and that the API permissions for the registered app have consequently changed.
-
-- New PowerShell label policy advanced setting to [change which file types to protect](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
-
-- New PowerShell label policy advanced setting to [extend your label migration rules to SharePoint properties](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-sharepoint-properties).
-
-- Matched custom sensitive information types are sent to [Azure Information Protection analytics](../reports-aip.md).
-
-- The applied label displays the configured color for the label, if a [color has been configured](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).
-
-- When you add or change protection settings to a label, the client reapplies the label with these latest protection settings when the document is next saved. Similarly, the scanner reapplies the label with these latest protection settings when the document is next scanned in enforce mode.
-
-- [Support for disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers) by exporting files from one client and manually copying them to the disconnected computer. Note that this configuration is supported for labeling with File Explorer, PowerShell, and the scanner. This configuration is not supported for labeling with Office apps.
-
-- New cmdlet, [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs), to gather all log files from %localappdata%\Microsoft\MSIP\Logs and saves them to a single, compressed file that has a .zip format. You can send this .zip file to Microsoft Support if you're requested to send log files to help investigate a reported issue.
-
-**Fixes:**
-
-- You can successfully make changes to a protected file using File Explorer and right-click after a password for the file has been removed.
-
-- You can successfully open natively protected files in the viewer without requiring the Save As, Export (EXPORT) [usage right](../configure-usage-rights.md#usage-rights-and-descriptions).
-
-- Labels and policy settings refresh as expected without having to run [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication?), or manually delete the %LocalAppData%\Microsoft\MSIP\mip folder.
-
-**Additional changes**
-
-- [Reset Settings](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) now deletes the %LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName.exe\>* folders instead of the %LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName\>*\mip folder.
-
-- [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) now includes the content ID for a protected document.
-
 
 ## Next steps
 
