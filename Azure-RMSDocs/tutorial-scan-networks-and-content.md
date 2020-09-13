@@ -97,8 +97,7 @@ For example, if a repository is found to have both read and write public access,
 1. To install the Network Discovery service, run:
 
     ```PowerShell
-    Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance] <String> [- Cluster <String>] [<CommonParameters>]
-    ```
+    Install-MIPNetworkDiscovery [-ServiceUserCredentials] <PSCredential> [[-StandardDomainsUserAccount] <PSCredential>] [[-ShareAdminUserAccount] <PSCredential>] [-SqlServerInstance] <String> -Cluster <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 
     For example:
 
