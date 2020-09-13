@@ -30,7 +30,7 @@ search.appverid:
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Azure Information Protection (AIP) is a cloud-based solution that enables organizations to find, classify, and protect documents and emails by applying labels. 
+Azure Information Protection (AIP) is a cloud-based solution that enables organizations to find, classify, and protect documents and emails by applying labels to content.
 
 AIP is part of the Microsoft Information Protection (MIP) framework, and extends the labeling and classification functionality provided by Microsoft 365.
 
@@ -38,11 +38,17 @@ AIP is part of the Microsoft Information Protection (MIP) framework, and extends
 
 Azure Information Protection adds the following elements to the MIP framework:
 
-- **Microsoft Information Protection client:** Extends labeling, classification, and protection capabilities to additional file types, as well as the File Explorer and PowerShell
+- **Microsoft Information Protection client:** Extends labeling, classification, and protection capabilities to additional file types, as well as the File Explorer and PowerShell. For example:
 
-- **Microsoft Information Protection scanner:** Enables admins to scan their networks and file shares for sensitive content that must be labeled, classified, and/or protected
+    :::image type="content" source="media/protect-from-file-explorer.png" alt-text="Classify and protect from the File Explorer":::
 
-- **Microsoft Information Protection SDK:** Extends sensitivity labels to third-party apps and services
+- **Microsoft Information Protection scanner:** Enables admins to scan their networks and file shares for sensitive content that must be labeled, classified, and/or protected.
+
+    For example, find repositories that might have sensitive content at risk:
+
+    :::image type="content" source="media/import-scanner-repositories.png" alt-text="Scanned repositories for content at risk"::: 
+
+- **Microsoft Information Protection SDK:** Extends sensitivity labels to third-party apps and services. For example, see [Quickstart: Set and get a sensitivity label (C#)](../mip/develop/quick-file-set-get-label-csharp.md).
 
 For more information about the MIP framework and its other elements, see [Microsoft Information Protection in Microsoft 365](https://aka.ms/MIPdocs).
 
@@ -98,11 +104,11 @@ See the following list for our top five sessions that we recommend:
 
 - [BRK2121 - Extend the power of sensitivity labeling and protection to your own apps and ISV solutions with the Microsoft Information Protection SDK](https://myignite.techcommunity.microsoft.com/sessions/81179?source=sessions)
 
-## The Azure Information Protection classic client
+## Azure Information Protection's classic client
 
 The Azure Information Protection classic client is the earlier version of AIP, and enables administrators to manage classification labels directly in the Azure portal.
 
-AIP labels managed in the Azure portal are not supported by the unified labeling platform, are limited to working with the Azure Information Protection client and scanner, and Microsoft Cloud App Security. 
+AIP labels managed in the Azure portal are *not* supported by the unified labeling platform, are limited to working with the Azure Information Protection client and scanner, and Microsoft Cloud App Security. 
 
 We recommend migrating to unified labeling to support these features, as well as SharePoint, Microsoft 365 apps, Outlook for the web and mobile devices, PowerBI data protection, and more. For more infomration, see Tutorial: Migrating to the unified labeling platform.
 
