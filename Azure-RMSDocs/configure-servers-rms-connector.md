@@ -3,8 +3,8 @@
 
 title: Configure servers for the Rights Management connector - AIP
 description: Information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from Deploying the Azure Rights Management connector.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/09/2020
 ms.topic: conceptual
@@ -170,7 +170,7 @@ You will also need on these servers, a version 1 of the RMS client (also known a
 
    -   Make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
-3. Enable IRM functionality for Exchange by using the Exchange PowerShell cmdlet [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) and set `InternalLicensingEnabled $true` and `ClientAccessServerEnabled $true`.
+3. Enable IRM functionality for Exchange by using the Exchange PowerShell cmdlet [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) and set `InternalLicensingEnabled $true` and `ClientAccessServerEnabled $true`.
 
 
 ## Configuring a SharePoint server to use the connector
