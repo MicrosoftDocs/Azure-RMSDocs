@@ -36,6 +36,8 @@ AIP is part of the Microsoft Information Protection (MIP) framework, and extends
 
 :::image type="content" source="media/what-is-mip.png" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
 
+For more information about the MIP framework and its other elements, see [Microsoft Information Protection in Microsoft 365](https://aka.ms/MIPdocs).
+
 ## Azure Information Protection elements in MIP
 
 Azure Information Protection adds the following elements to the MIP framework:
@@ -54,9 +56,21 @@ Azure Information Protection adds the following elements to the MIP framework:
 
     For example, see [Quickstart: Set and get a sensitivity label (C#)](https://docs.microsoft.com/information-protection/develop/quick-file-set-get-label-csharp).
 
-For more information about the MIP framework and its other elements, see [Microsoft Information Protection in Microsoft 365](https://aka.ms/MIPdocs).
 
 For the latest details and public preview version of Azure Information Protection, see [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md).
+
+## Azure Information Protection's classic client
+
+The Azure Information Protection classic client is the earlier version of AIP, and enables administrators to manage classification labels directly in the Azure portal.
+
+AIP labels managed in the Azure portal are *not* supported by the unified labeling platform, are limited to working with the Azure Information Protection client and scanner, and Microsoft Cloud App Security. 
+
+We recommend migrating to unified labeling to support these features, as well as SharePoint, Microsoft 365 apps, Outlook for the web and mobile devices, PowerBI data protection, and more. For more information, see Tutorial: Migrating to the unified labeling platform.
+
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+>
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 ## Next steps
 
@@ -94,7 +108,16 @@ If you're looking to extend your own apps and services with sensitivity labels, 
 
 ### Microsoft Ignite
 
-Microsoft Ignite 2020 in Orlando was a great success! There was lots of good information about Azure Information Protection with the latest updates and improvements. If you couldn't join us, sessions are recorded for viewing later.
+**[Microsoft Ignite 2020](https://myignite.microsoft.com/home):** Join us for our digital event experience on September 22-24, 2020. Check out the following sessions recommended for you:
+
+- Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments
+
+- Know your data, protect your data and prevent data loss with Microsoft Information Protection
+
+- Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more!
+- How do Security professionals sleep at night?
+
+**Microsoft Ignite 2019** in Orlando was a great success! There was lots of good information about Azure Information Protection with the latest updates and improvements. If you couldn't join us, sessions are recorded for viewing later.
 
 See the following list for our top five sessions that we recommend:
 
@@ -107,14 +130,3 @@ See the following list for our top five sessions that we recommend:
 - [BRK2120 - Got Azure Information Protection? Navigating unified labeling, policy configuration, clients, and analytics](https://myignite.techcommunity.microsoft.com/sessions/81178?source=sessions)
 
 - [BRK2121 - Extend the power of sensitivity labeling and protection to your own apps and ISV solutions with the Microsoft Information Protection SDK](https://myignite.techcommunity.microsoft.com/sessions/81179?source=sessions)
-
-## Azure Information Protection's classic client
-
-The Azure Information Protection classic client is the earlier version of AIP, and enables administrators to manage classification labels directly in the Azure portal.
-
-AIP labels managed in the Azure portal are *not* supported by the unified labeling platform, are limited to working with the Azure Information Protection client and scanner, and Microsoft Cloud App Security. 
-
-We recommend migrating to unified labeling to support these features, as well as SharePoint, Microsoft 365 apps, Outlook for the web and mobile devices, PowerBI data protection, and more. For more infomration, see Tutorial: Migrating to the unified labeling platform.
-
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
