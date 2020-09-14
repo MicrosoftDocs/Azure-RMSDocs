@@ -51,7 +51,7 @@ Azure Information Protection adds the following elements to the MIP framework:
 
     For example, find repositories that might have sensitive content at risk:
 
-    :::image type="content" source="media/small/risky-repos-small.png" alt-text="Check scanned networks for risky repositories" lightbox="media/qs-tutor/risky-repos.png":::
+    :::image type="content" source="media/risky-repos.png" alt-text="Check scanned networks for risky repositories":::
 
 - **Microsoft Information Protection SDK:** Extends sensitivity labels to third-party apps and services. 
 
@@ -117,18 +117,5 @@ If you're looking to extend your own apps and services with sensitivity labels, 
 - Know your data, protect your data and prevent data loss with Microsoft Information Protection
 
 - Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more!
+
 - How do Security professionals sleep at night?
-
-**Microsoft Ignite 2019** in Orlando was a great success! There was lots of good information about Azure Information Protection with the latest updates and improvements. If you couldn't join us, sessions are recorded for viewing later.
-
-See the following list for our top five sessions that we recommend:
-
-- [BRK2119 - Secure your sensitive data! Understanding the latest Microsoft Information Protection capabilities](https://myignite.techcommunity.microsoft.com/sessions/81172?source=sessions)
- 
-- [THR3067 - Know your data: Top five tips and tricks to better understand your sensitive data landscape](https://myignite.techcommunity.microsoft.com/sessions/81183)
-
-- [BRK3103 - Protecting sensitive files and data can be hard. Choose the right data protection options that balance security and worker productivity](https://myignite.techcommunity.microsoft.com/sessions/81177?source=sessions)
-
-- [BRK2120 - Got Azure Information Protection? Navigating unified labeling, policy configuration, clients, and analytics](https://myignite.techcommunity.microsoft.com/sessions/81178?source=sessions)
-
-- [BRK2121 - Extend the power of sensitivity labeling and protection to your own apps and ISV solutions with the Microsoft Information Protection SDK](https://myignite.techcommunity.microsoft.com/sessions/81179?source=sessions)
