@@ -36,7 +36,7 @@
 - name: Concepts
   items:
   - name: AIP classification and protection
-    href: aip-classification-and-protection
+    href: aip-classification-and-protection.md
   - name: Azure Information Protection rights management
     href: what-is-azure-rms.md
   - name: Rights Management protection
