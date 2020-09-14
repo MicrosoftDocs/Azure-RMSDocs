@@ -33,7 +33,7 @@
   items:
   - name: Azure Information Protection rights management
     href: what-is-azure-rms.md
-  - name: AIP labeing, classification, and protection
+  - name: AIP labeling, classification, and protection
     href: aip-classification-and-protection.md
   - name: Rights Management protection
     items:
