@@ -36,6 +36,8 @@ AIP is part of the Microsoft Information Protection (MIP) framework, and extends
 
 :::image type="content" source="media/what-is-mip.png" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
 
+## Azure Information Protection elements in MIP
+
 Azure Information Protection adds the following elements to the MIP framework:
 
 - **Microsoft Information Protection client:** Extends labeling, classification, and protection capabilities to additional file types, as well as the File Explorer and PowerShell. For example:
@@ -48,7 +50,9 @@ Azure Information Protection adds the following elements to the MIP framework:
 
     :::image type="content" source="media/import-scanner-repositories.png" alt-text="Scanned repositories for content at risk"::: 
 
-- **Microsoft Information Protection SDK:** Extends sensitivity labels to third-party apps and services. For example, see [Quickstart: Set and get a sensitivity label (C#)](../mip/develop/quick-file-set-get-label-csharp.md).
+- **Microsoft Information Protection SDK:** Extends sensitivity labels to third-party apps and services. 
+
+    For example, see [Quickstart: Set and get a sensitivity label (C#)](../develop/quick-file-set-get-label-csharp.md).
 
 For more information about the MIP framework and its other elements, see [Microsoft Information Protection in Microsoft 365](https://aka.ms/MIPdocs).
 
