@@ -20,6 +20,7 @@ Customer intent: As an administrator, I want to extend Microsoft 365's labeling 
 #ms.reviewer: eymanor
 #ms.suite: ems
 #ms.tgt_pltfrm:
+ms.custom: contperfq1
 ms.custom: admin
 search.appverid:
 - MET150
