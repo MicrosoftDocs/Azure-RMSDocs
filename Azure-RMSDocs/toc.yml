@@ -4,6 +4,8 @@
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
+  - name: Azure Information Protection rights management
+    href: what-is-azure-rms.md
   - name: AIP requirements
     items:
     - name: Overview
@@ -31,10 +33,6 @@
     href: tutorial-preventing-oversharing.md
 - name: Concepts
   items:
-  - name: Azure Information Protection rights management
-    href: what-is-azure-rms.md
-  - name: AIP labeling, classification, and protection
-    href: aip-classification-and-protection.md
   - name: Rights Management protection
     items:
     - name: How Rights Management protection works
