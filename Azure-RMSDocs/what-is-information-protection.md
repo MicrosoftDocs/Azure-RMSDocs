@@ -2,15 +2,15 @@
 # required metadata
 
 title: What is Azure Information Protection (AIP)?
-description: Azure Information Protection (AIP) is a service that helps organizations to label documents and emails. AIP classifies and protects data, wherever that data is saved.
+description: Azure Information Protection (AIP) extends the Microsoft Information Protection (MIP) framework to extend the labeling and classification functionality provided by Microsoft 365.
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/23/2020
+ms.date: 09/14/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
-Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
+Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
 
 # optional metadata
 
@@ -50,12 +50,11 @@ Azure Information Protection adds the following elements to the MIP framework:
 
     For example, find repositories that might have sensitive content at risk:
 
-    :::image type="content" source="media/import-scanner-repositories.png" alt-text="Scanned repositories for content at risk"::: 
+    :::image type="content" source="media/qs-tutor/risky-repos.png" alt-text="Check scanned networks for risky repositories" lightbox="media/small/risky-repos-small.png":::
 
 - **Microsoft Information Protection SDK:** Extends sensitivity labels to third-party apps and services. 
 
     For example, see [Quickstart: Set and get a sensitivity label (C#)](https://docs.microsoft.com/information-protection/develop/quick-file-set-get-label-csharp).
-
 
 For the latest details and public preview version of Azure Information Protection, see [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md).
 
@@ -65,7 +64,7 @@ The Azure Information Protection classic client is the earlier version of AIP, a
 
 AIP labels managed in the Azure portal are *not* supported by the unified labeling platform, are limited to working with the Azure Information Protection client and scanner, and Microsoft Cloud App Security. 
 
-We recommend migrating to unified labeling to support these features, as well as SharePoint, Microsoft 365 apps, Outlook for the web and mobile devices, PowerBI data protection, and more. For more information, see Tutorial: Migrating to the unified labeling platform.
+We recommend migrating to unified labeling to support these features, as well as SharePoint, Microsoft 365 apps, Outlook for the web and mobile devices, PowerBI data protection, and more. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md).
 
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
@@ -76,15 +75,14 @@ We recommend migrating to unified labeling to support these features, as well as
 
 To get started with AIP, install the unified labeling client and scanner. For more information, see:
 
-- Quickstart: Deploy the unified labeling client
-- Quickstart: Install the unified labeling scanner
-- Tutorial: Finding your sensitive data
-- Tutorial: Preventing oversharing in Outlook
+- [Quickstart: Deploy the unified labeling client](quickstart-install-scanner.md)
+- [Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-scanner.md)
+- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
+- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 
-Once you're ready to fully deploy AIP for your organization, see the full list of [how-to guides](how-to-guides.md). 
+Once you're ready to customize your AIP deployment further, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).
 
 If you're looking to extend your own apps and services with sensitivity labels, see the [Microsoft Information Protection SDK overview](develop/overview.md).
-
 
 ## Additional resources
 
