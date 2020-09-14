@@ -34,7 +34,7 @@ Azure Information Protection (AIP) is a cloud-based solution that enables organi
 
 AIP is part of the Microsoft Information Protection (MIP) framework, and extends the labeling and classification functionality provided by Microsoft 365.
 
-:::image type="content" source="media/what-is-mip.png" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
+:::image type="content" source="media/what-is-mip.png" border="false" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
 
 For more information about the MIP framework and its other elements, see [Microsoft Information Protection in Microsoft 365](https://aka.ms/MIPdocs).
 
@@ -50,7 +50,7 @@ Azure Information Protection adds the following elements to the MIP framework:
 
     For example, find repositories that might have sensitive content at risk:
 
-    :::image type="content" source="media/qs-tutor/risky-repos.png" alt-text="Check scanned networks for risky repositories" lightbox="media/small/risky-repos-small.png":::
+    :::image type="content" source="media/small/risky-repos-small.png" alt-text="Check scanned networks for risky repositories" lightbox="media/qs-tutor/risky-repos.png":::
 
 - **Microsoft Information Protection SDK:** Extends sensitivity labels to third-party apps and services. 
 
