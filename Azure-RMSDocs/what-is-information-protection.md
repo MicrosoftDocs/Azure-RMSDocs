@@ -76,8 +76,11 @@ We recommend migrating to unified labeling to support these features, as well as
 To get started with AIP, install the unified labeling client and scanner. For more information, see:
 
 - [Quickstart: Deploy the unified labeling client](quickstart-install-scanner.md)
+
 - [Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-scanner.md)
+
 - [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
+
 - [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 
 Once you're ready to customize your AIP deployment further, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).
