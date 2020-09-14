@@ -52,7 +52,7 @@ Azure Information Protection adds the following elements to the MIP framework:
 
 - **Microsoft Information Protection SDK:** Extends sensitivity labels to third-party apps and services. 
 
-    For example, see [Quickstart: Set and get a sensitivity label (C#)](../develop/quick-file-set-get-label-csharp.md).
+    For example, see [Quickstart: Set and get a sensitivity label (C#)](https://docs.microsoft.com/information-protection/develop/quick-file-set-get-label-csharp).
 
 For more information about the MIP framework and its other elements, see [Microsoft Information Protection in Microsoft 365](https://aka.ms/MIPdocs).
 
@@ -80,7 +80,7 @@ If you're looking to extend your own apps and services with sensitivity labels, 
 
 - **Download the client:** [Azure Information Protection client](https://www.microsoft.com/download/details.aspx?id=53018)
 
-- **Download a customizable PDF guide:** [Azure Information Protection PDF documentation](https://docs.microsoft.com/en-us/azure/information-protection/opbuildpdf/toc.pdf?branch=live)
+- **Download a customizable PDF guide:** [Azure Information Protection PDF documentation](https://docs.microsoft.com/azure/information-protection/opbuildpdf/toc.pdf?branch=live)
 
 - **FAQs:** [Frequently asked questions for Azure Information Protection](faqs.md)
 
