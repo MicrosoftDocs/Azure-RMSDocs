@@ -29,7 +29,7 @@ ms.custom: dev
 
 On March 3, 2020, an update to the RMS SDK 4.2 for Android, iOS, and OSX was released via Microsoft Download Center. This update is mandatory for all applications that use these RMS SDK platforms today.  
 
-On Tuesday, September 15, 2020 versions of the RMS SDK released prior to March of 2020 will fail to connect to the Azure Rights Management Service endpoint. Applications consuming RMS SDK 4.2 must update prior to this date. 
+After September 15, 2020, on a date yet to be determined, versions of the RMS SDK released prior to March of 2020 will fail to connect to the Azure Rights Management Service endpoint. Applications consuming RMS SDK 4.2 must update prior to this date. 
 
 ## Reason for Change 
 
