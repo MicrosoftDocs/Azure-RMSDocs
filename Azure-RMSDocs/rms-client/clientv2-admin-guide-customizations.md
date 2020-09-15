@@ -527,7 +527,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 Footers in PowerPoint are implemented as shapes. To avoid removing shapes that contain the text that you have specified but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process.
 
-If you do not specify this additional advanced client setting, and PowerPoint is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
+If you do not specify this additional advanced client setting, and PowerPoint is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. If this value is specified, only shapes that meet the shape name criteria and also have text that matches the string provided with **ExternalContentMarkingToRemove** will be removed. 
 
 To find the name of the shape that you're using as a header or footer:
 
