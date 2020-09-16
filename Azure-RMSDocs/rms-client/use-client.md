@@ -221,8 +221,6 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Custom permissions as a [separate option that users can select in Office apps: Word, Excel, and PowerPoint](client-classify-protect.md#set-custom-permissions-for-a-document)
 
-- [Track and revoke](client-track-revoke.md) options from Office apps and File Explorer
-
 - Information Protection bar title and tooltip
 
 - [Protection-only mode](client-protection-only-mode.md) (no labels) using templates
@@ -232,8 +230,6 @@ Although the Azure Information Protection unified labeling client is still under
 - Display the **Do Not Forward** button in Outlook
 
 - Demo policy
-
-- Confirmation prompt **Do you want to delete this label?** for users when you don't use the policy setting for justification
 
 - Separate PowerShell cmdlets to connect to a Rights Management service
 
