@@ -201,7 +201,7 @@ The default requirements should be suitable for initial testing, so that you can
 
 However, in a production environment, your organization's policies may be different than the default requirements. The scanner can accommodate the following changes with additional configuration:
 
-- [Discover and scan all sites and subsites under a specific URL](#enable-discovery-and-scanning-under-a-specific-url)
+- [Discover and scan all sites and subsites under a specific URL]([Discover and scan all Sharepoint sites and subsites under a specific URL](#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url)
 
 - [The scanner server cannot have internet connectivity](#restriction-the-scanner-server-cannot-have-internet-connectivity)
 
@@ -225,7 +225,7 @@ The scanner can discover and scan all Sharepoint sites and subsites under a spec
 1. Add your scanner user to the new policy and grant **Site collection** in the Permissions list.   
 1. Add a URL of the SharePoint that hosts sites or subsites that need to be scanned using the scanner repository management procedure at https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner-configure-install#configure-the-scanner-in-the-azure-portal
 
-To learn more about how to manage your SharePoint policy levels see, [manage permission policies for a web application](https://docs.microsoft.com/en-us/sharepoint/administration/manage-permission-policies-for-a-web-application).
+To learn more about how to manage your SharePoint policy levels see, [manage permission policies for a web application](https://docs.microsoft.com/sharepoint/administration/manage-permission-policies-for-a-web-application).
 
 ### Restriction: The scanner server cannot have internet connectivity
 

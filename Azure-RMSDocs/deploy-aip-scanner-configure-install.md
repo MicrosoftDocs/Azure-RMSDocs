@@ -224,22 +224,21 @@ You may want to do this only after running a network scan job to analyze the rep
     For example: `http://sp2013/SharedDocuments`
     - Specify **Documents** in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. 
     For example: `http://sp2013/Documents/SalesReports`
-    - Or, specify only the **FQDN** of your Sharepoint, for example `http://sp2013` to [discover and scan sites]([Discover and scan all Sharepoint sites and subsites under a specific URL](deploy-aip-scanner-prereqs.md#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url) and subtitles under this URL. Grant scanner **Site Collector Auditor** rights to enable this. 
+    - Or, specify only the **FQDN** of your Sharepoint, for example `http://sp2013` to [discover and scan all SharePoint sites and subsites under a specific URL](deploy-aip-scanner-prereqs.md#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url) and subtitles under this URL. Grant scanner **Site Collector Auditor** rights to enable this. 
     >
 
 
-        For the remaining settings on this pane, do not change them for this initial configuration, but keep them as **Content scan job default**. The default setting means that the data repository inherits the settings from the content scan job.
+    For the remaining settings on this pane, do not change them for this initial configuration, but keep them as **Content scan job default**. The default setting means that the data repository inherits the settings from the content scan job.
 
-        Use the following syntax when adding SharePoint paths:
+    Use the following syntax when adding SharePoint paths:
     
-        |Path  |Syntax  |
-        |---------|---------|
-        |**Root path**     | `http://<SharePoint server name>` </br></br>Scans all sites, including any site collections allowed for the scanner user. </br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
-        |**Specific SharePoint subsite or collection**     | One of the following: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
-        |**Specific SharePoint library**     | One of the following: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
-        |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
-        | | |
-
+    |Path  |Syntax  |
+    |---------|---------|
+    |**Root path**     | `http://<SharePoint server name>` </br></br>Scans all sites, including any site collections allowed for the scanner user. </br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
+    |**Specific SharePoint subsite or collection**     | One of the following: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
+    |**Specific SharePoint library**     | One of the following: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
+    |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
+    
 
 1. Repeat the previous steps to add as many repositories as needed.
 
