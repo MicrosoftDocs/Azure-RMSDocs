@@ -3,10 +3,10 @@
 
 title: Configure and manage templates for Azure Information Protection - AIP
 description: Configure and manage protection templates, also known as rights management templates, from the Azure portal.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 05/24/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -96,7 +96,7 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 - You cannot copy or delete a template in the Azure portal. When the template is converted to a label, you can configure the label to stop using the template by selecting  **Not configured** for the **Set permissions for documents and emails containing this label** option. Or, you can delete the label. In both scenarios however, the template is not deleted and remains in an archived state.
     
-    You could now delete the template by using the PowerShell [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate) cmdlet. You can also use this PowerShell cmdlet for templates that are not converted to labels. However, to ensure that previously protected content can be opened and used as intended, we usually advise against deleting templates. As a best practice, delete templates only if you are sure they were not used to protect documents or emails in production. As a precaution, you might want to consider first exporting the template as a backup, by using the [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate) cmdlet. 
+    Deleting templates using the PowerShell [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate) cmdlet is **permanent**. You can also use this PowerShell cmdlet for templates that are not converted to labels. However, to ensure that previously protected content can be opened and used as intended, we usually advise against deleting templates. As a best practice, delete templates only if you are sure they were not used to protect documents or emails in production. As a precaution before permanently deleting a template using PowerShell, consider exporting the template as a backup, using the [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate) cmdlet. 
 
 - Currently, if you edit and save a departmental template, it removes the scope configuration. The equivalent of a scoped template in the Azure Information Protection policy is a [scoped policy](configure-policy-scope.md). If you convert the template to a label, you can select an existing scope.
     
@@ -151,7 +151,7 @@ Templates can be created using the portal or using PowerShell.
 
 ### Template creation using PowerShell
 
-To create a new protection template using PowerShell with the specified name, description, policy, and desired status setting use the [Add-AipServiceTemplate](https://docs.microsoft.com/powershell/module/aipservice/add-aipservicetemplate?view=azureipps) cmdlet. 
+To create a new protection template using PowerShell with the specified name, description, policy, and desired status setting use the [Add-AipServiceTemplate](https://docs.microsoft.com/powershell/module/aipservice/add-aipservicetemplate) cmdlet. 
 
 
 ### Template creation using the portal

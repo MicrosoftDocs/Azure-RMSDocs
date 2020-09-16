@@ -3,10 +3,10 @@
 
 title: FAQs for Azure Information Protection
 description: Some frequently asked questions about Azure Information Protection and its protection service, Azure Rights Management (Azure RMS).
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/23/2020
+ms.date: 09/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -123,11 +123,21 @@ For more information and instructions, see [How to migrate Azure Information Pro
 
 After you've migrated your labels in the Azure portal, continue managing them in one of the following locations, depending on the clients you have installed:
 
-|Client  |Column2  |
+|Client  |Description  |
 |---------|---------|
 |[Unified labeling clients and services](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) only    |  If you only have unified labeling clients installed, manage your labels in one of the admin centers: Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft 365 compliance center. Unified labeling clients download the labels and policy settings from these admin centers. </br></br>For instructions, see [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).     |
 |[Classic client](./rms-client/aip-client.md) only  | If you've migrated your labels, but still have the classic client installed, continue to use the Azure portal to edit labels and policy settings. The classic client continues to download labels and policy settings from Azure.
 |Both the AIP [classic client](./rms-client/aip-client.md) and [unified labeling](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) clients     | If you have both of the clients installed, use the admin centers or the Azure portal to make label changes. </br></br>For the classic clients to pick up label changes made in the admin centers, return to the Azure portal to publish them. In the Azure portal > **Azure Information Protection - Unified labeling** pane, select **Publish**.  </br></br> Continue to use the Azure portal for [central reporting](reports-aip.md) and the [scanner](deploy-aip-scanner.md).     |
+| | |
+
+## Do I need to re-encrypt my files after moving to sensitivity labels and the unified labeling platform?
+
+No, you don’t need to re-encrypt your files after moving to sensitivity labels and the unified labeling platform after migrating from the AIP classic client and the labels managed in the Azure portal.
+
+After migrating, manage your labels and labeling policies from your labeling admin center, including the Microsoft security center, Microsoft compliance center, or the Microsoft Security & Compliance Center. 
+
+For more information, see [Learn about sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) in the Microsoft 365 documentation and the [Understanding unified labeling migration](https://techcommunity.microsoft.com/t5/microsoft-security-and/understanding-unified-labeling-migration/ba-p/783185) blog.
+
 
 ## What's the difference between Azure Information Protection and Azure Rights Management?
 
@@ -342,9 +352,7 @@ Different countries have different requirements and regulations. To help you ans
 
 ## How can Azure Information Protection help with GDPR?
 
-To see how Azure Information Protection can help you meet the General Data Protection Regulation (GDPR), see the following blog post announcement, with video: 
-
-[Microsoft 365 provides an information protection strategy to help with the GDPR](https://blogs.office.com/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr)
+[!INCLUDE [gdpr-hybrid-note](includes/gdpr-hybrid-note.md)]
 
 ## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
 See [Compliance and supporting information for Azure Information Protection](./compliance.md).
