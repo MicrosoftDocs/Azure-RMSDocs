@@ -102,7 +102,7 @@ For more information about key usage logging for BYOK, see [Logging and analyzin
 > [!NOTE]
 > Azure Information Protection now supports using the Azure Key Vault Managed HSM in public preview, for use with non-production tenants only.
 >
-> For more information about the Managed HSM offering, and how to set up a vault and a key, see the [Azure Key Vault documentation](https://docs.microsoft.com/en-us/azure/key-vault/). 
+> For more information about the Managed HSM offering, and how to set up a vault and a key, see the [Azure Key Vault documentation](https://docs.microsoft.com/azure/key-vault/). 
 >
 >Additional instructions on granting key authorization are described below.
 >
