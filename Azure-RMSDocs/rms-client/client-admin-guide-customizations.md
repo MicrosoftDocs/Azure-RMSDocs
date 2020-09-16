@@ -986,15 +986,15 @@ Set the logging level to one of the following values:
 
 This advanced client setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md), or change the information that's written to the local [event log](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
 
-## Integration with Exchange message classification for a mobile device labeling solution
+## Integration with the legacy Exchange message classification
 
-Outlook on the web now supports built-in labeling for Exchange Online, which is the recommended method to label emails in Outlook on the web. However, if you're not yet using sensitivity labels that are published from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft compliance center, you can use Exchange message classification to extend Azure Information Protection labels to your mobile users when they use Outlook on the web. You can also use this method for Exchange Server. 
+Outlook on the web now supports built-in labeling for Exchange Online, which is the recommended method to label emails in Outlook on the web. However, if you need to label emails in OWA and are using Exchange Server, which doesn't yet support sensitivity labels, you can use Exchange message classification to extend Azure Information Protection labels to Outlook on the web.
 
 Outlook Mobile does not support Exchange message classification.
 
 To achieve this solution: 
 
-1. Use the [New-MessageClassification](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/New-MessageClassification?view=exchange-ps) Exchange PowerShell cmdlet to create message classifications with the Name property that maps to your label names in your Azure Information Protection policy. 
+1. Use the [New-MessageClassification](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/New-MessageClassification) Exchange PowerShell cmdlet to create message classifications with the Name property that maps to your label names in your Azure Information Protection policy. 
 
 2. Create an Exchange mail flow rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message properties to set a message header. 
 

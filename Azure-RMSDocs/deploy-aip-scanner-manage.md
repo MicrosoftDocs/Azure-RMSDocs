@@ -129,16 +129,16 @@ When a full scan is complete, the scan type automatically changes to incremental
 > [!TIP]
 > If you've made changes to your AIP [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), the Azure portal will prompt you to skip a full rescan. To ensure that your rescan occurs, make sure to select **No** in the prompt that appears.
 > 
-### Trigger a full rescan by modifying your settings (versions 2.7.99.0 and earlier)
+### Trigger a full rescan by modifying your settings (versions 2.7.101.0 and lower)
 
-In scanner versions 2.7.99.0 and earlier, all files are scanned whenever the scanner detects new or changed settings for automatic and recommended labeling. The scanner automatically refreshes the policy every four hours.
+In scanner versions [2.7.101.0](rms-client/unifiedlabelingclient-version-release-history.md#version-271010) and lower, all files are scanned whenever the scanner detects new or changed settings for automatic and recommended labeling. The scanner automatically refreshes the policy every four hours.
 
 To refresh the policy sooner, such as while testing, manually delete the contents of the **%LocalAppData%\Microsoft\MSIP\mip\<processname>\mip** directory and restart the Azure Information Protection service.
 
 If you've also changed protection settings for your labels, wait an extra 15 minutes from when you saved the updated protection settings before restarting the Azure Information Protection service.
 
 > [!IMPORTANT]
-> If you've upgraded to version [2.8.83](rms-client/unifiedlabelingclient-version-release-history.md#version-2883-public-preview) or later, AIP skips the full rescan for updated settings to ensure consistent performance. If you've upgraded, make sure to [run a full rescan manually](#rescanning-files) as needed. 
+> If you've upgraded to version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) or later, AIP skips the full rescan for updated settings to ensure consistent performance. If you've upgraded, make sure to [run a full rescan manually](#rescanning-files) as needed. 
 >
 > For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On,** make sure to run a full rescan to apply your labels across your content.
 > 
@@ -180,7 +180,7 @@ The diagnostics tool checks the following details and then exports a log file wi
 - Whether the rules configured are valid
 
 > [!TIP]
-> If you are running the command under a user that is not the scanner user, be sure to add the **-OnBehalf** parameter. <!--For more information, see <x>.-->
+> If you are running the command under a user that is not the scanner user, be sure to add the **-OnBehalf** parameter. 
 >
 
 > [!NOTE]

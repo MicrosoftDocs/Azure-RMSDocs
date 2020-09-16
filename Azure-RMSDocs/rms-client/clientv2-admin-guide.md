@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/17/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> **Customers with extended Microsoft support for Windows 7 and Office 2010 can also get Azure Information Protection support for these versions. Check with your support contact for full details.*
+>*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -160,7 +160,7 @@ The Azure Information Protection unified labeling client supports the same langu
 
 For these languages, menu options, dialog boxes, and messages from the Azure Information Protection unified labeling client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection unified labeling client for different languages. 
 
-However, label names and descriptions that you specify are not automatically translated when you configure labels in your labeling center. For users to see labels in their preferred language, provide your own translations and configure them for the labels by using by using Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps). Visual markings are not translated and do not support more than one language.
+However, label names and descriptions that you specify are not automatically translated when you configure labels in your labeling center. For users to see labels in their preferred language, provide your own translations and configure them for the labels by using by using Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label). Visual markings are not translated and do not support more than one language.
 
 ## Post installation tasks
 

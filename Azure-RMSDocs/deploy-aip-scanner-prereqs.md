@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/24/2020
+ms.date: 08/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -102,7 +102,7 @@ To store the scanner configuration data, use an SQL server with the following re
 
 - **Capacity.** For capacity guidance, see [Storage requirements and capacity planning for SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).
 
-- **[Case insensitive collation](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-ver15)**
+- **[Case insensitive collation](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support)**
 
 > [!NOTE]
 > Multiple configuration databases on the same SQL server are supported when you specify a custom cluster (profile) name for the scanner, or when you use the preview version of the scanner.
@@ -209,17 +209,39 @@ However, in a production environment, your organization's policies may prohibit 
 
 - [Restriction: You cannot be granted Sysadmin or databases must be created and configured manually](#restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually)
 
+- [Restriction: Your labels do not have auto-labeling conditions](#restriction-your-labels-do-not-have-auto-labeling-conditions)
+
 ### Restriction: The scanner server cannot have internet connectivity
+
+While the unified labeling client cannot apply protection without an internet connection, the scanner can still apply labels based on imported policies.
 
 To support a disconnected computer, perform the following steps:
 
-1. Configure labels in your policy, and then import the policy using the [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) cmdlet. While the unified labeling client cannot apply protection without an internet connection, the scanner can still apply labels based on imported policies.
+1.	Configure labels in your policy, and then use the [procedure to support disconnected computers](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) to enable offline classification and labeling.
 
-1. Configure the scanner in the Azure portal, by creating a scanner cluster. If you need help with this step, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+1. Enable offline management for content scan jobs:
 
-1. Export your content job from the **Azure Information Protection - Content scan jobs** pane using the **Export** option.
+    1. Set the scanner to function in **offline** mode, using the [Set-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet.
 
-1. In a PowerShell session, run [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) and specify the file that contains the exported settings.
+    1. Configure the scanner in the Azure portal by creating a scanner cluster. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+
+    1. Export your content job from the **Azure Information Protection - Content scan jobs** pane using the **Export** option.
+    
+    1. Import the policy using the [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-aipscannerconfiguration) cmdlet. 
+    
+    Results for offline content scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
+    
+1. Enable offline management of network scan jobs:
+
+    1. Set the Network Discovery service to function in offline mode using the [Set-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) cmdlet.
+
+    1. Configure the network scan job in the Azure portal. For more information, see [Creating a network scan job](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
+    
+    1. Export your network scan job from the **Azure Information Protection - Network scan jobs (Preview)** pane using the **Export** option. 
+    
+    1.  Import the network scan job using the file that matches our cluster name using the [Import-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) cmdlet.  
+    
+    Results for offline network scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
 
 ### Restriction: You cannot be granted Sysadmin or databases must be created and configured manually
 
@@ -300,6 +322,17 @@ You can have one account to run the scanner service and use another account to a
 - **For the scanner service account,** use a local Windows account or an Active Directory account.
 
 - **For the Azure Active Directory account,** specify your local account for the *OnBehalfOf* parameter with Set-AIPAuthentication. For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+
+#### Restriction: Your labels do not have auto-labeling conditions
+
+If your labels do not have any auto-labeling conditions, plan to use one of the following options when configuring your scanner:
+
+|Option  |Description  |
+|---------|---------|
+|**Discover all info types**     |  In your [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), set the **Info types to be discovered** option to **All**. </br></br>This option sets the content scan job to scan your content for all sensitive information types.      |
+|**Use recommended labeling**     |  In your [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), set the **Treat recommended labeling as automatic** option to **On**.</br></br> This setting configures the scanner to automatically apply all recommended labels on your content.      |
+|**Define a default label**     |   Define a default label in your [policy](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), or [repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In this case the scanner applies the default label on all files found.       |
+| | |
 
 ## Next steps
 

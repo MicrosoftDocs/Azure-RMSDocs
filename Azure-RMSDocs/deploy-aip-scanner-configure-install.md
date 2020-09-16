@@ -6,7 +6,7 @@ description: Instructions for installing and configuring the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/24/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.custom: admin
 >[!NOTE] 
 > If you're working with the AIP classic scanner, see [Installing and configuring the Azure Information Protection classic scanner](deploy-aip-scanner-configure-install-classic.md).
 
-Before you start configuring and installing the Azure Information Protection scanner, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md).
+Before you start configuring and installing the Azure Information Protection scanner, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md). 
 
 When you're ready, continue with the following steps:
 
@@ -62,7 +62,14 @@ Before you install the scanner, or upgrade it from an older general availability
 
 To configure your scanner: 
 
-1. [Sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal), and navigate to the **Azure Information Protection** pane. 
+1. Sign in to the [Azure portal](https://portal.azure.com) with one of the following roles:
+
+    - **Compliance administrator**
+    - **Compliance data administrator**
+    - **Security administrator**
+    - **Global administrator**
+
+    Then, navigate to the **Azure Information Protection** pane.
     
     For example, in the search box for resources, services, and docs, start typing **Information** and select **Azure Information Protection**.
 
@@ -90,7 +97,7 @@ To configure your scanner:
 
 ### Create a network scan job (public preview)
 
-Starting in version 2.8.83, you can scan your network for risky repositories. Add one or more of the repositories found to a content scan job to scan them for sensitive content.
+Starting in version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview), you can scan your network for risky repositories. Add one or more of the repositories found to a content scan job to scan them for sensitive content.
 
 > [!NOTE]
 > The **network discovery** interface is currently in gradual deployment and will be available in all regions by September 15, 2020. 
@@ -223,12 +230,6 @@ You may want to do this only after running a network scan job to analyze the rep
         |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
         | | |
 
-        <!--
-        > [!IMPORTANT]
-        > While the local file system can be scanned, this configuration is not recommended for production deployments and can **only** be used in single node clusters.
-        >
-        > Scanning of local folders by multi-node clusters is not supported. If you need to scan a folder on the local file system, we recommend creating a share, and scanning it using a network URL.
-        -->
 
 1. Repeat the previous steps to add as many repositories as needed.
 
@@ -281,7 +282,7 @@ For more information, see [How to label files non-interactively for Azure Inform
 To get an Azure AD token:
 
 1. Return to the Azure portal to create an Azure AD application to specify an access token for authentication.
-1. 
+
 1. From the Windows Server computer, if your scanner service account has been granted the **Log on locally** right for the installation, sign in with this account and start a PowerShell session. 
 
     Run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
@@ -444,9 +445,6 @@ Use the following options and guidance to help you optimize scanner performance:
 |**Check your alternative configuration usage** |The scanner runs more quickly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents. <br/></br>The scanner runs more slowly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.|
 | | |
 
-<!-- removed when removing local folders
-|**Do not scan local folders on the computer running the scanner service**     | If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. </br></br>Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.        |
--->
 
 ### Additional factors that affect performance
 
