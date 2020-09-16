@@ -131,6 +131,8 @@
       href: concept-async-observers-protection-cpp.md
   - name: Proxy Support 
     href: concept-mip-proxies.md
+  - name: Service Discovery Overview
+    href: concept-service-discovery.md
   - name: SDK Telemetry
     href: concept-mip-telemetry.md
   - name: Use Cases
@@ -401,6 +403,8 @@
       href: reference/c/functions.md
   - name: .NET API Browser
     href: /dotnet/api/?term=microsoft.informationprotection
+  - name: API Permissions
+    href: concept-api-permissions.md
 - name: Resources
   items:
   - name: Developer blog

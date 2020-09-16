@@ -4,7 +4,7 @@ description: A quickstart showing you how to write the initialization logic for 
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 07/30/2019
+ms.date: 09/15/2020
 ms.author: tommos
 ms.custom: has-adal-ref
 #Customer intent: As a an application developer, I want to learn how to do SDK .NET wrapper initialization, so that I can use the SDK APIs.
@@ -46,7 +46,7 @@ First we create and configure the initial Visual Studio solution and project, up
      - Select the "Microsoft.InformationProtection.File" package.
      - Click "Install", then click "OK" when the **Preview changes** confirmation dialog displays.
 
-3. Repeat the steps above for adding the MIP SDK File API package, but instead add "Microsoft.IdentityModel.Clients.ActiveDirectory" to the application.
+3. Repeat the steps above for adding the MIP SDK File API package, but instead add "Microsoft.Identity.Client" to the application.
 
 ## Implement an authentication delegate
 
@@ -56,38 +56,50 @@ Now create an implementation for an authentication delegate, by extending the SD
 
 1. Right-click the project name in Visual Studio, select **Add** then **Class**.
 2. Enter "AuthDelegateImplementation" in the **Name** field. Click **Add**.
-3. Add using statements for the Active Directory Authentication Library (ADAL) and the MIP library:
+3. Add using statements for the Microsoft Authentication Library (ADAL) and the MIP library:
 
      ```csharp
      using Microsoft.InformationProtection;
-     using Microsoft.IdentityModel.Clients.ActiveDirectory;
+     using Microsoft.Identity.Client;
      ```
 
 4. Set `AuthDelegateImplementation` to inherit `Microsoft.InformationProtection.IAuthDelegate` and implement a private variable of `Microsoft.InformationProtection.ApplicationInfo` and a constructor that accepts the same type.
 
      ```csharp
      public class AuthDelegateImplementation : IAuthDelegate
-     {
+    {
         private ApplicationInfo _appInfo;
-        private string redirectUri = "mip-sdk-app://authorize";
+        // Microsoft Authentication Library IPublicClientApplication
+        private IPublicClientApplication _app;
         public AuthDelegateImplementation(ApplicationInfo appInfo)
         {
             _appInfo = appInfo;
         }
-     }
+
+    }
      ```
 
-The `ApplicationInfo` object contains three properties. The `_appInfo.ApplicationId` will be used in the `AuthDelegateImplementation` class to provide the client ID to the auth library. `ApplicationName` and `ApplicationVersion` will be surfaced in Azure Information Protection Analytics reports.
+    The `ApplicationInfo` object contains three properties. The `_appInfo.ApplicationId` will be used in the `AuthDelegateImplementation` class to provide the client ID to the auth library. `ApplicationName` and `ApplicationVersion` will be surfaced in Azure Information Protection Analytics reports.
 
-5. Add the `public string AcquireToken()` method. This method should accept `Microsoft.InformationProtection.Identity` and three strings: authority URL, resource URI, and claims, if required. These string variables will be passed in to the authentication library by the API and shouldn't be manipulated. Editing may result in a failure to authenticate.
+5. Add the `public string AcquireToken()` method. This method should accept `Microsoft.InformationProtection.Identity` and three strings: authority URL, resource URI, and claims, if required. These string variables will be passed in to the authentication library by the API and shouldn't be manipulated. Please input Tenant GUID from Azure portal for your tenant. Editing strings other than the Tenant GUID may result in a failure to authenticate.
 
      ```csharp
-     public string AcquireToken(Identity identity, string authority, string resource, string claims)
-     {
-          AuthenticationContext authContext = new AuthenticationContext(authority);
-          var result = Task.Run(async() => await authContext.AcquireTokenAsync(resource, AppInfo.ApplicationId, new Uri(redirectUri), new PlatformParameters(PromptBehavior.Always))).Result;
-          return result.AccessToken;
-     }
+    public string AcquireToken(Identity identity, string authority, string resource, string claims)
+    {
+        var authorityUri = new Uri(authority);
+        authority = String.Format("https://{0}/{1}", authorityUri.Host, "<Tenant-GUID>");
+
+        _app = PublicClientApplicationBuilder.Create(_appInfo.ApplicationId).WithAuthority(authority).WithDefaultRedirectUri().Build();
+        var accounts = (_app.GetAccountsAsync()).GetAwaiter().GetResult();
+
+        // Append .default to the resource passed in to AcquireToken().
+        string[] scopes = new string[] { resource[resource.Length - 1].Equals('/') ? $"{resource}.default" : $"{resource}/.default" };
+        var result = _app.AcquireTokenInteractive(scopes).WithAccount(accounts.FirstOrDefault()).WithPrompt(Prompt.SelectAccount)
+                   .ExecuteAsync().ConfigureAwait(false).GetAwaiter().GetResult();
+
+        return result.AccessToken;
+    }
+
      ```
 
 ## Implement a consent delegate
@@ -147,7 +159,6 @@ namespace mip_sdk_dotnet_quickstart
 ## Construct a File Profile and Engine
 
 As mentioned, profile and engine objects are required for SDK clients using MIP APIs. Complete the coding portion of this Quickstart, by adding code to load the native DLLs then instantiate the profile and engine objects.
-
 
 
    ```csharp
@@ -216,6 +227,7 @@ namespace mip_sdk_dotnet_quickstart
    |:----------- |:----- |:--------|
    | \<application-id\> | The Azure AD Application ID assigned to the application registered in "MIP SDK setup and configuration" (2 instances).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
    | \<friendly-name\> | A user-defined friendly name for your application. | AppInitialization |
+   | \<Tenant-GUID\> | Tenant-ID for your Azure AD tenant | TenantID |
 
 
 4. Now do a final build of the application and resolve any errors. Your code should build successfully.
