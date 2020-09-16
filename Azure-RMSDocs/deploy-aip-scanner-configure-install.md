@@ -6,7 +6,7 @@ description: Instructions for installing and configuring the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/31/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -208,15 +208,25 @@ You may want to do this only after running a network scan job to analyze the rep
         :::image type="content" source="media/scanner-repository-add.png" alt-text="Add data repository for the Azure Information Protection scanner":::
 
     1. On the **Repository** pane, specify the path for the data repository, and then select **Save**.
-
-        For example: 
-
+    
+        
         - For a network share, use `\\Server\Folder`. 
         - For a SharePoint library, use `http://sharepoint.contoso.com/Shared%20Documents/Folder`.
+        - For a local path: `C:\Folder`
+        - For a UNC path: `\\Server\Folder`
 
-        > [!NOTE]
-        > Wildcards are not supported and WebDav locations are not supported.
-        >     
+    > [!NOTE]
+    > Wildcards are not supported and WebDav locations are not supported.
+    >  
+  
+    If you add a SharePoint path for **Shared Documents**:
+    - Specify **Shared Documents** in the path when you want to scan all documents and all folders from Shared Documents. 
+    For example: `http://sp2013/SharedDocuments`
+    - Specify **Documents** in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. 
+    For example: `http://sp2013/Documents/SalesReports`
+    - Or, specify only the **FQDN** of your Sharepoint, for example `http://sp2013` to [discover and scan sites]([Discover and scan all Sharepoint sites and subsites under a specific URL](deploy-aip-scanner-prereqs.md#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url) and subtitles under this URL. Grant scanner **Site Collector Auditor** rights to enable this. 
+    >
+
 
         For the remaining settings on this pane, do not change them for this initial configuration, but keep them as **Content scan job default**. The default setting means that the data repository inherits the settings from the content scan job.
 

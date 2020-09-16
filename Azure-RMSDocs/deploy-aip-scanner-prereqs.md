@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/27/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -76,9 +76,9 @@ This service account has the following requirements:
 |---------|---------|
 |**Log on locally** user right assignment     |Required to install and configure the scanner, but not required to run scans.  </br></br>Once you've confirmed that the scanner can discover, classify, and protect files, you can remove this right from the service account.  </br></br>If granting this right even for a short period of time is not possible because of your organization policies, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations).         |
 |**Log on as a service** user right assignment.     |  This right is automatically granted to the service account during the scanner installation and this right is required for the installation, configuration, and operation of the scanner.        |
-|**Permissions to the data repositories**     |- **File shares or local files:** Grant **Read**, **Write**, and **Modify** permissions for scanning the files and then applying classification and protection as configured.  <br /><br />- **SharePoint:** Grant **Full Control** permissions for scanning the files and then applying classification and protection as configured.  <br /><br />- **Discovery mode:** To run the scanner in discovery mode only, **Read** permission is sufficient.         |
+|**Permissions to the data repositories**     |- **File shares or local files:** Grant **Read**, **Write**, and **Modify** permissions for scanning the files and then applying classification and protection as configured.  <br /><br />- **SharePoint:** You must grant **Full Control** permissions for scanning the files and then applying classification and protection to the files that meet the conditions in the Azure Information Protection policy.  <br /><br />- **Discovery mode:** To run the scanner in discovery mode only, **Read** permission is sufficient.         |
 |**For labels that reprotect or remove protection**     | To ensure that the scanner always has access to protected files, make this account a [super user](configure-super-users.md) for Azure Information Protection, and ensure that the super user feature is enabled. </br></br>Additionally, if you've implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) for a phased deployment, make sure that the service account is included in the onboarding controls you've configured.|
-| ||
+|**Specific URL level scanning:** To scan and discover sites and subsites [under a specific URL](#deploying -the-scanner-with-alternative-configurations), grant **Site Collector Auditor** rights to the scanner account on the farm level.|
 
 ## SQL server requirements
 
@@ -199,7 +199,9 @@ The prerequisites listed above are the default requirements for the scanner depl
 
 The default requirements should be suitable for initial testing, so that you can check the capabilities of the scanner.
 
-However, in a production environment, your organization's policies may prohibit these default requirements. The scanner can accommodate the following restrictions with additional configuration:
+However, in a production environment, your organization's policies may be different than the default requirements. The scanner can accommodate the following changes with additional configuration:
+
+- [Discover and scan all sites and subsites under a specific URL](#enable-discovery-and-scanning-under-a-specific-url)
 
 - [The scanner server cannot have internet connectivity](#restriction-the-scanner-server-cannot-have-internet-connectivity)
 
@@ -210,6 +212,20 @@ However, in a production environment, your organization's policies may prohibit 
 - [Restriction: You cannot be granted Sysadmin or databases must be created and configured manually](#restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually)
 
 - [Restriction: Your labels do not have auto-labeling conditions](#restriction-your-labels-do-not-have-auto-labeling-conditions)
+
+### Discover and scan all Sharepoint sites and subsites under a specific URL
+
+The scanner can discover and scan all Sharepoint sites and subsites under a specific URL with the following configuration:
+
+1. Start **SharePoint Central Administration**.
+1. On the **SharePoint Central Administration** website, in the **Application Management** section, click **Manage web applications**.
+1. Click to highlight the web application whose permission policy level you want to manage.
+1. Choose the relevant farm and then select **Manage Permissions Policy Levels**.
+1. Select **Site Collection Auditor** in the **Site Collection Permissions** options, then grant **View Application Pages** in the Permissions list, and finally, name the new policy level **AIP scanner site collection auditor and viewer**.
+1. Add your scanner user to the new policy and grant **Site collection** in the Permissions list.   
+1. Add a URL of the SharePoint that hosts sites or subsites that need to be scanned using the scanner repository management procedure at https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner-configure-install#configure-the-scanner-in-the-azure-portal
+
+To learn more about how to manage your SharePoint policy levels see, [manage permission policies for a web application](https://docs.microsoft.com/en-us/sharepoint/administration/manage-permission-policies-for-a-web-application).
 
 ### Restriction: The scanner server cannot have internet connectivity
 
