@@ -35,7 +35,7 @@ ms.custom: admin
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection unified labeling client.
 
-These settings require editing the registry or specifying advanced settings. The advanced settings use [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps).
+These settings require editing the registry or specifying advanced settings. The advanced settings use [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 ### How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell
 
@@ -44,7 +44,7 @@ When you use Office 365 Security & Compliance Center PowerShell, you can configu
 - The setting to display the Information Protection bar in Office apps is a ***label policy advanced setting***.
 - The setting to specify a label color is a ***label advanced setting***.
 
-In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Use the following syntax:
+In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell), specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Use the following syntax:
 
 For a label policy setting, single string value:
 
@@ -140,7 +140,7 @@ Label policy advanced settings are applied in the reverse order: With one except
 
 #### Available advanced settings for label policies
 
-Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) and [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
+Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy) and [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy).
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
@@ -165,7 +165,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |OutlookJustifyUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
 |OutlookOverrideUnlabeledCollaborationExtensions|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookSkipSmimeOnReadingPaneProperty | [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)|
+|OutlookSkipSmimeOnReadingPaneEnabled | [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)|
 |OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -188,7 +188,7 @@ Example PowerShell command to check your label policy settings in effect for a l
 
 #### Available advanced settings for labels
 
-Use the *AdvancedSettings* parameter with [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) and [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
+Use the *AdvancedSettings* parameter with [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label) and [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label).
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
@@ -1797,14 +1797,14 @@ Starting in [version 2.8.85](unifiedlabelingclient-version-release-history.md#ve
 
 ## Prevent Outlook performance issues with S/MIME emails
 
-Performance issues may occur in Outlook when the S/MIME emails are opened in Reading Pane. To prevent these issues, enable the **OutlookSkipSmimeOnReadingPaneProperty** advanced property. 
+Performance issues may occur in Outlook when the S/MIME emails are opened in Reading Pane. To prevent these issues, enable the **OutlookSkipSmimeOnReadingPaneEnabled** advanced property. 
 
 Enabling this property prevents the AIP bar and the email classifications from being shown in the Reading Pane.
 
-For example, if your policy is named **Global**, the following sample PowerShell command enables the **OutlookSkipSmimeOnReadingPaneProperty** property:
+For example, if your policy is named **Global**, the following sample PowerShell command enables the **OutlookSkipSmimeOnReadingPaneEnabled** property:
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPaneProperty="true"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPaneEnabled="true"}
 ```
 
 ## Next steps
