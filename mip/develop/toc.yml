@@ -13,24 +13,52 @@
     href: quick-app-adrms.md
   - name: C++
     items:
-    - name: Application initialization (C++)
-      href: quick-app-initialization-cpp.md
     - name: File API
       items:
+      - name: Application initialization (C++)
+        href: quick-app-initialization-cpp.md
       - name: List sensitivity labels (C++)
         href: quick-file-list-labels-cpp.md
       - name: Set/get sensitivity labels (C++)
-        href: quick-file-set-get-label-cpp.md      
+        href: quick-file-set-get-label-cpp.md 
+      - name: Lowering a sensitivity label on a file (C++)
+        href: quick-file-justify-actions-cpp.md 
+      - name: File API Republishing (C++)
+        href: quick-file-republishing-cpp.md 
+      - name: Process email .msg files (C++)
+        href: quick-email-msg-cpp.md 
+    - name: Protection API
+      items:
+      - name: Application initialization (C++)
+        href: quick-protection-app-initialization-cpp.md
+      - name: List Templates (C++)
+        href: quick-protection-list-templates-cpp.md
+      - name: Encrypt/Decrypt Text (C++)
+        href: quick-protection-encrypt-decrypt-text-cpp.md
   - name: C#
-    items:
-    - name: Application initialization (C#)
-      href: quick-app-initialization-csharp.md
+    items:    
     - name: File API
       items:
+      - name: Application initialization (C#)
+        href: quick-app-initialization-csharp.md
       - name: List sensitivity labels (C#)
         href: quick-file-list-labels-csharp.md
       - name: Set/get sensitivity labels (C#)
         href: quick-file-set-get-label-csharp.md
+      - name: Lowering a sensitivity label on a file (C#)
+        href: quick-file-justify-actions-csharp.md 
+      - name: File API Republishing (C#)
+        href: quick-file-republishing-csharp.md 
+      - name: Process email .msg files (C#)
+        href: quick-email-msg-csharp.md 
+    - name: Protection API
+      items:
+      - name: Application initialization (C#)
+        href: quick-protection-app-initialization-csharp.md
+      - name: List Templates (C#)
+        href: quick-protection-list-templates-csharp.md
+      - name: Encrypt/Decrypt Text (C#)
+        href: quick-protection-encrypt-decrypt-text-csharp.md  
 - name: Concepts
   items:
   - name: The APIs
@@ -64,7 +92,9 @@
     - name: Acquiring an access token (PowerShell)
       href: concept-authentication-acquire-token-ps.md
     - name: Acquiring an access token (Python)
-      href: concept-authentication-acquire-token-py.md      
+      href: concept-authentication-acquire-token-py.md     
+  - name: Consent
+    href: concept-consent-cpp.md 
   - name: Handlers
     items:
     - name: File API handler (C++)
@@ -99,6 +129,18 @@
       href: concept-async-observers-policy-cpp.md
     - name: Protection API observers (C++)
       href: concept-async-observers-protection-cpp.md
+  - name: Proxy Support 
+    href: concept-mip-proxies.md
+  - name: SDK Telemetry
+    href: concept-mip-telemetry.md
+  - name: Use Cases
+    items:
+    - name: File API - Action justification for lowering a sensitivity label on a file
+      href: concept-justification.md
+    - name: File API - Republishing
+      href: concept-republishing.md 
+    - name: File API - Process email .msg files
+      href: concept-email.md 
 - name: Reference
   items:
   - name: C++ library
@@ -133,6 +175,8 @@
         href: reference/class_mip_applylabelaction.md
       - name: ArgumentData
         href: reference/class_mip_argumentdata.md
+      - name: AsyncControl
+        href: reference/class_mip_asynccontrol.md
       - name: AuthDelegate
         href: reference/class_mip_authdelegate.md
       - name: AuthDelegate::OAuth2Challenge
@@ -203,6 +247,8 @@
         href: reference/class_mip_httpresponse.md
       - name: Identity
         href: reference/class_mip_identity.md
+      - name: InsufficientBufferError
+        href: reference/class_mip_insufficientbuffererror.md
       - name: InternalError
         href: reference/class_mip_internalerror.md
       - name: JustificationRequiredError
@@ -225,6 +271,8 @@
         href: reference/class_mip_loggerdelegate.md
       - name: MetadataAction
         href: reference/class_mip_metadataaction.md
+      - name: MetadataEntry
+        href: reference/class_mip_metadataentry.md
       - name: MipContext
         href: reference/class_mip_mipcontext.md
       - name: MsgAttachmentData
@@ -259,7 +307,7 @@
         href: reference/class_mip_policyprofile_settings.md
       - name: PolicyRuleData
         href: reference/class_mip_policyruledata.md
-      - name: PolicySyncError
+      - name: mip::PolicySyncError
         href: reference/class_mip_policysyncerror.md
       - name: PrivilegedRequiredError
         href: reference/class_mip_privilegedrequirederror.md
@@ -315,7 +363,7 @@
         href: reference/class_mip_removewatermarkaction.md
       - name: RulePackageData
         href: reference/class_mip_rulepackagedata.md
-      - name: SensitivityConditionData
+      - name: mip::SensitivityConditionData
         href: reference/class_mip_sensitivityconditiondata.md
       - name: SensitivityTypesRulePackage
         href: reference/class_mip_sensitivitytypesrulepackage.md
@@ -331,9 +379,11 @@
         href: reference/class_mip_syncfilesensitivitydata.md
       - name: TaskDispatcherDelegate
         href: reference/class_mip_taskdispatcherdelegate.md
+      - name: TemplateDescriptor
+        href: reference/class_mip_templatedescriptor.md
       - name: TemplateNotFoundError
         href: reference/class_mip_templatenotfounderror.md
-      - name: TransientNetworkError
+      - name: mip::TransientNetworkError
         href: reference/class_mip_transientnetworkerror.md
       - name: UserRights
         href: reference/class_mip_userrights.md
@@ -341,12 +391,14 @@
         href: reference/class_mip_userroles.md
   - name: C library
     items:
+    - name: Overview
+      href: reference/c/overview.md
     - name: Enumerations
-      href: reference/enumerations.md
+      href: reference/c/enumerations.md
     - name: Structures
-      href: reference/structures.md
+      href: reference/c/structures.md
     - name: Functions
-      href: reference/functions.md
+      href: reference/c/functions.md
   - name: .NET API Browser
     href: /dotnet/api/?term=microsoft.informationprotection
 - name: Resources
@@ -361,5 +413,5 @@
     href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
   - name: Security best practices
     href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
-  - name: What's new in version 1.1
-    href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/MIP-SDK-1-1-Now-GA/ba-p/328325
+  - name: Version release history
+    href: version-release-history.md

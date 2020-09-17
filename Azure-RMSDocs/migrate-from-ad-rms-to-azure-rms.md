@@ -3,10 +3,10 @@
 
 title: Migrate AD RMS-Azure Information Protection
 description: Instructions to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. After the migration, users still have access to documents and email messages that your organization protected by using AD RMS.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -45,11 +45,11 @@ Although not required, you might find it useful to read the following documentat
 
 - [Planning and implementing your Azure Information Protection tenant key](./plan-implement-tenant-key.md): Understand the key management options that you have for your Azure Information Protection tenant where your SLC key equivalent in the cloud is either managed by Microsoft (the default) or managed by you (the "bring your own key", or BYOK configuration). 
 
-- [RMS service discovery](./rms-client/client-deployment-notes.md#rms-service-discovery): This section of the RMS client deployment notes explains that the order for service discovery is **registry**, then **SCP**, then **cloud**. During the migration process when the SCP is still installed, you configure clients with registry settings for your Azure Information Protection tenant so that they do not use the AD RMS cluster returned from the SCP.
+- [RMS service discovery](./rms-client/client-deployment-notes.md#rms-service-discovery): This section of the RMS client deployment notes explains that the order for service discovery is **registry**, then **service connection point (SCP)**, then **cloud**. During the migration process when the SCP is still installed, you configure clients with registry settings for your Azure Information Protection tenant so that they do not use the AD RMS cluster returned from the SCP.
 
 - [Overview of the Microsoft Rights Management connector](./deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector): This section from the RMS connector documentation explains how your on-premises servers can connect to the Azure Rights Management service to protect documents and emails.
 
-In addition, if you are familiar with how AD RMS works, you might find it useful to read [How does Azure RMS work? Under the hood](./how-does-it-work.md) to help you identify which technology processes are the same or different for the cloud version.
+In addition, if you are not familiar with how AD RMS works, you might find it useful to read [How does Azure RMS work? Under the hood](./how-does-it-work.md) to help you identify which technology processes are the same or different for the cloud version.
 
 ## Prerequisites for migrating AD RMS to Azure Information Protection
 
@@ -58,9 +58,7 @@ Before you start the migration to Azure Information Protection, make sure that t
 - **A supported RMS deployment:**
     
   - The following releases of AD RMS support a migration to Azure Information Protection:
-    
-      - Windows Server 2008 R2 (x64)
-        
+           
       - Windows Server 2012 (x64)
         
       - Windows Server 2012 R2 (x64)
@@ -81,7 +79,7 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 	See [Requirements for Azure Information Protection](./requirements.md).
 
-    Note that if you have computers that run Office 2010, you must install the [Azure Information Protection client or the Azure Information Protection unified labeling client for users](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client), because these clients provide the ability to authenticate users to cloud services. For later versions of Office, these clients are required for classification and labeling, and the Azure Information Protection client is optional but recommended if you want to only protect data. For more information, see the admin guides for the [Azure Information Protection client](./rms-client/client-admin-guide.md) and the [Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide.md).
+    Note that if you have computers that run Office 2010, you must install the [Azure Information Protection client or the Azure Information Protection unified labeling client for users](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients), because these clients provide the ability to authenticate users to cloud services. For later versions of Office, these clients are required for classification and labeling, and the Azure Information Protection client is optional but recommended if you want to only protect data. For more information, see the admin guides for the [Azure Information Protection client](./rms-client/client-admin-guide.md) and the [Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide.md).
 
 	Although you must have a subscription for Azure Information Protection before you can migrate from AD RMS, we recommend that the Rights Management service for your tenant is not activated before you start the migration. The migration process includes this activation step after you have exported keys and templates from AD RMS and imported them to your tenant for Azure Information Protection. However, if the Rights Management service is already activated, you can still migrate from AD RMS with some additional steps.
 
@@ -114,8 +112,6 @@ If your AD RMS cluster is currently in Cryptographic Mode 1, do not upgrade the 
 To confirm the AD RMS cryptographic mode:
  
 - For Windows Server 2012 R2 and Windows 2012: AD RMS cluster properties > **General** tab. 
-
-- For Windows Server 2008 R2: Check whether the [RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server ) hotfix is installed. If it is not, your AD RMS cluster is running in Cryptographic Mode 1.
 
 ### Migration limitations
 

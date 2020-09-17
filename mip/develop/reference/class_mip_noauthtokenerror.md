@@ -1,14 +1,14 @@
 ---
-title: class mip::NoAuthTokenError 
-description: Documents the mip::noauthtokenerror class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class NoAuthTokenError 
+description: Documents the noauthtokenerror::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::NoAuthTokenError 
+# class NoAuthTokenError 
 The user could not get access to the content due to missing authentication token.
   
 ## Summary

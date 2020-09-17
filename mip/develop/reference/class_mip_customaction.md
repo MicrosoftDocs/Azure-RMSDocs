@@ -1,14 +1,14 @@
 ---
-title: class mip::CustomAction 
-description: Documents the mip::customaction class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class CustomAction 
+description: Documents the customaction::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::CustomAction 
+# class CustomAction 
 CustomAction is a generic action class that captures all the sub-properties of the action as a property bag. The caller is responsible to understand the meaning of the action.
   
 ## Summary

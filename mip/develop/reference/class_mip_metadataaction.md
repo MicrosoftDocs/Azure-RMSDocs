@@ -1,21 +1,21 @@
 ---
-title: class mip::MetadataAction 
-description: Documents the mip::metadataaction class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class MetadataAction 
+description: Documents the metadataaction::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::MetadataAction 
+# class MetadataAction 
 An Action that adds metadata information to the content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::vector\<std::string\>& GetMetadataToRemove() const  |  Get the list of names of metadata that should be removed from content.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetMetadataToAdd() const  |  Get the metadata name/value pairs that should be added to the content.
+public const std::vector\<MetadataEntry\>& GetMetadataToAdd() const  |  Get the metadata name/value pairs that should be added to the content.
   
 ## Members
   
@@ -30,5 +30,5 @@ Removing metadata should be done before adding metadata.
 Get the metadata name/value pairs that should be added to the content.
 
   
-**Returns**: Const std::vector<std::pair<std::string, std::string>>& 
+**Returns**: Const std::vector<MetadataEntry>& 
 Removing metadata should be done before adding metadata.

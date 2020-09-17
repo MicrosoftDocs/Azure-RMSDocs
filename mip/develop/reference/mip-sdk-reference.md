@@ -4,7 +4,6 @@ description: MIP SDK for C++ Reference
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ---
@@ -17,6 +16,8 @@ The MIP SDK for C++ includes:
 - [Enumerations and structures](mip-enums-and-structs.md)
 - [Functions](mip-functions.md)
 - The following classes:
+
+## namespace mip classes
 
  Class                         | Description                                
 --------------------------------|---------------------------------------------
@@ -31,15 +32,13 @@ The MIP SDK for C++ includes:
 [class mip::ApplicationActionState](class_mip_applicationactionstate.md)  | Not yet documented.
 [class mip::ApplyLabelAction](class_mip_applylabelaction.md)  |  Apply label actions requires the calling application to apply a specific label.
 [class mip::ArgumentData](class_mip_argumentdata.md)  | Not yet documented.
+[class mip::AsyncControl](class_mip_asynccontrol.md)  |  Class used to cancel async operation.
 [class mip::AuthDelegate](class_mip_authdelegate.md)  |  Delegate for auth related operations.
-[class mip::AuthDelegate::OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md)  |  a class that contains all the information required from the calling application in order to generate an oauth2 token.
-[class mip::AuthDelegate::OAuth2Token](class_mip_authdelegate_oauth2token.md)  |  A class defining how the MIP SDK expects the oauth2 token to be passed back into the SDK.
 [class mip::BadInputError](class_mip_badinputerror.md)  |  Bad input error, thrown when the input to an SDK API is invalid.
 [class mip::ClassificationData](class_mip_classificationdata.md)  | Not yet documented.
 [class mip::ClassificationRequest](class_mip_classificationrequest.md)  |  Class that contains the request of a classification call on the Execution State.
 [class mip::ClassificationResult](class_mip_classificationresult.md)  |  Class that contains the result of a classification call on the Execution State.
 [class mip::ComputeEngine](class_mip_computeengine.md)  | Not yet documented.
-[class mip::ComputeEngine::Settings](class_mip_computeengine_settings.md)  | Not yet documented.
 [class mip::ComputeEngineContext](class_mip_computeenginecontext.md)  | Not yet documented.
 [class mip::ConditionData](class_mip_conditiondata.md)  | Not yet documented.
 [class mip::ConsentDelegate](class_mip_consentdelegate.md)  |  Delegate for consent related operations.
@@ -52,20 +51,17 @@ The MIP SDK for C++ includes:
 [class mip::Error](class_mip_error.md)  |  Base class for all errors that will be reported (thrown or returned) from MIP SDK.
 [class mip::ExecutionState](class_mip_executionstate.md)  |  Interface for all the state needed to execute the engine.
 [class mip::FileEngine](class_mip_fileengine.md)  |  This class provides an interface for all engine functions.
-[class mip::FileEngine::Settings](class_mip_fileengine_settings.md)  | Not yet documented.
 [class mip::FileExecutionState](class_mip_fileexecutionstate.md)  | Not yet documented.
 [class mip::FileHandler](class_mip_filehandler.md)  |  Interface for all file handling functions.
-[class mip::FileHandler::Observer](class_mip_filehandler_observer.md)  |  Observer interface for clients to get notifications events related to file handler.
 [class mip::FileInspector](class_mip_fileinspector.md)  | Not yet documented.
 [class mip::FileIOError](class_mip_fileioerror.md)  |  File IO error.
 [class mip::FileProfile](class_mip_fileprofile.md)  |  FileProfile class is the root class for using the Microsoft Information Protection operations.
-[class mip::FileProfile::Observer](class_mip_fileprofile_observer.md)  |  Observer interface for clients to get notifications for profile related events.
-[class mip::FileProfile::Settings](class_mip_fileprofile_settings.md)  |  Settings used by FileProfile during its creation and throughout its lifetime.
 [class mip::HttpDelegate](class_mip_httpdelegate.md)  |  Interface for overriding HTTP handling.
 [class mip::HttpOperation](class_mip_httpoperation.md)  |  Interface that describes a single HTTP operation, implemented by client app when overriding HttpDelegate.
 [class mip::HttpRequest](class_mip_httprequest.md)  |  Interface that describes a single HTTP request.
 [class mip::HttpResponse](class_mip_httpresponse.md)  |  Interface that describes a single HTTP response, implemented by client app when overriding HttpDelegate.
 [class mip::Identity](class_mip_identity.md)  |  Abstraction for identity.
+[class mip::InsufficientBufferError](class_mip_insufficientbuffererror.md)  |  Insufficient buffer error.
 [class mip::InternalError](class_mip_internalerror.md)  |  Internal error. This error is thrown when something unexpected happens during execution.
 [class mip::JustificationRequiredError](class_mip_justificationrequirederror.md)  | Not yet documented.
 [class mip::JustifyAction](class_mip_justifyaction.md)  |  Justify Action requires providing a justification to a label downgrade and setting the response in the execution state.
@@ -87,14 +83,10 @@ The MIP SDK for C++ includes:
 [class mip::NotSupportedError](class_mip_notsupportederror.md)  |  The operation requested by the application is not supported by the SDK.
 [class mip::OperationCancelledError](class_mip_operationcancellederror.md)  |  Operation was cancelled.
 [class mip::PolicyEngine](class_mip_policyengine.md)  |  This class provides an interface for all engine functions.
-[class mip::PolicyEngine::Settings](class_mip_policyengine_settings.md)  |  Defines the settings associated with a PolicyEngine.
 [class mip::PolicyHandler](class_mip_policyhandler.md)  |  This class provides an interface for all policy handler functions on a file.
 [class mip::PolicyPackageData](class_mip_policypackagedata.md)  | Not yet documented.
 [class mip::PolicyProfile](class_mip_policyprofile.md)  |  PolicyProfile class is the root class for using the Microsoft Information Protection operations. A typical application will only need one PolicyProfile but it can create multiple profiles if needed.
-[class mip::PolicyProfile::Observer](class_mip_policyprofile_observer.md)  |  Observer interface for clients to get notifications for profile related events.
-[class mip::PolicyProfile::Settings](class_mip_policyprofile_settings.md)  |  Settings used by PolicyProfile during its creation and throughout its lifetime.
 [class mip::PolicyRuleData](class_mip_policyruledata.md)  | Not yet documented.
-[class mip::PolicySyncError](class_mip_policysyncerror.md)  |  An attempt to sync policy data failed.
 [class mip::PrivilegedRequiredError](class_mip_privilegedrequirederror.md)  |  Current label was assigned as a privileged operation (The equivalent to an administrator operation), therefore it can't be overriden.
 [class mip::PropertyData](class_mip_propertydata.md)  | Not yet documented.
 [class mip::ProtectAdhocAction](class_mip_protectadhocaction.md)  |  An action class that specifies adding adhoc protection to the document.
@@ -104,15 +96,8 @@ The MIP SDK for C++ includes:
 [class mip::ProtectionDescriptor](class_mip_protectiondescriptor.md)  |  Description of protection associated with a piece of content.
 [class mip::ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md)  |  Constructs a ProtectionDescriptor that describes protection associated with a piece of content.
 [class mip::ProtectionEngine](class_mip_protectionengine.md)  |  Manages protection-related actions related to a specific identity.
-[class mip::ProtectionEngine::Observer](class_mip_protectionengine_observer.md)  |  Interface that receives notifications related to ProtectionEngine.
-[class mip::ProtectionEngine::Settings](class_mip_protectionengine_settings.md)  |  Settings used by ProtectionEngine during its creation and throughout its lifetime.
 [class mip::ProtectionHandler](class_mip_protectionhandler.md)  |  Manages protection-related actions for a specific protection configuration.
-[class mip::ProtectionHandler::ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md)  |  Settings used to create a ProtectionHandler to consume existing content.
-[class mip::ProtectionHandler::Observer](class_mip_protectionhandler_observer.md)  |  Interface that receives notifications related to ProtectionHandler.
-[class mip::ProtectionHandler::PublishingSettings](class_mip_protectionhandler_publishingsettings.md)  |  Settings used to create a ProtectionHandler to protect new content.
 [class mip::ProtectionProfile](class_mip_protectionprofile.md)  |  ProtectionProfile is the root class for performing protection operations.
-[class mip::ProtectionProfile::Observer](class_mip_protectionprofile_observer.md)  |  Interface that receives notifications related to ProtectionProfile.
-[class mip::ProtectionProfile::Settings](class_mip_protectionprofile_settings.md)  |  Settings used by ProtectionProfile during its creation and throughout its lifetime.
 [class mip::ProtectionSettings](class_mip_protectionsettings.md)  |  Interface for configuring protection options for the SetLabel method.
 [class mip::ProxyAuthenticationError](class_mip_proxyauthenticationerror.md)  |  Proxy authentication failure.
 [class mip::PublishingLicenseInfo](class_mip_publishinglicenseinfo.md)  |  Holds the details of a Publishing License used to create a protection handler.
@@ -130,7 +115,11 @@ The MIP SDK for C++ includes:
 [class mip::SyncFilePolicyData](class_mip_syncfilepolicydata.md)  | Not yet documented.
 [class mip::SyncFileSensitivityData](class_mip_syncfilesensitivitydata.md)  | Not yet documented.
 [class mip::TaskDispatcherDelegate](class_mip_taskdispatcherdelegate.md)  |  A class that defines the interface to the MIP SDK task dispatcher.
+[class mip::TemplateDescriptor](class_mip_templatedescriptor.md)  | Not yet documented.
 [class mip::TemplateNotFoundError](class_mip_templatenotfounderror.md)  |  Template ID is not recognized by RMS service.
-[class mip::TransientNetworkError](class_mip_transientnetworkerror.md)  |  Transient networking error. Caused by unexpected behavior when making network calls to service endpoints. The operation can be retried as this error is a transient error.
 [class mip::UserRights](class_mip_userrights.md)  |  A group of users and the rights associated with them.
 [class mip::UserRoles](class_mip_userroles.md)  |  A group of users and the roles associated with them.
+struct mip::ApplicationInfo  |  A struct that includes application specific information.
+struct mip::TelemetryConfiguration  |  Custom telemetry settings (not commonly used)
+
+

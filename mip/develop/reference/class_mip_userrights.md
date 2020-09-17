@@ -1,14 +1,14 @@
 ---
-title: class mip::UserRights 
-description: Documents the mip::userrights class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class UserRights 
+description: Documents the userrights::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::UserRights 
+# class UserRights 
 A group of users and the rights associated with them.
   
 ## Summary

@@ -3,10 +3,10 @@
 
 title: Migrate HSM-protected key to HSM-protected key - AIP
 description: Instructions that are part of the migration path from AD RMS to Azure Information Protection, and applicable only if your AD RMS key is HSM-protected and you want to migrate to Azure Information Protection with a HSM-protected tenant key in Azure Key Vault. 
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/11/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 11/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -58,14 +58,15 @@ These procedures are done by the administrator for Azure Key Vault.
         
         Encrypted key files for nCipher are named **key_<<em>keyAppName</em>>_<<em>keyIdentifier</em>>** locally on the server. For example, `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. You will need the **mscapi** value as the keyAppName, and your own value for the key identifier when you run the KeyTransferRemote command to create a copy of the key with reduced permissions.
         
-        When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includes the key ID. It will look similar to https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Make a note of this URL because the Azure Information Protection administrator needs it to tell the Azure Rights Management service to use this key for its tenant key.
+        When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includes the key ID. It will look similar to https\://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Make a note of this URL because the Azure Information Protection administrator needs it to tell the Azure Rights Management service to use this key for its tenant key.
 
-2. On the Internet-connected workstation, in a PowerShell session, use the [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet to authorize the Azure Rights Management service principal to access the key vault that will store the Azure Information Protection tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
+2. On the internet-connected workstation, in a PowerShell session, use the [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet to authorize the Azure Rights Management service principal to access the key vault that will store the Azure Information Protection tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
     
     For example, if the key vault that you have created for Azure Information Protection is named contoso-byok-ky, and your resource group is named contoso-byok-rg, run the following command:
-    
-        Set-AzKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 
+    ```sh
+    Set-AzKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
+    ```
 
 Now that you’ve prepared your HSM key in Azure Key Vault for the Azure Rights Management service from Azure Information Protection, you’re ready to import your AD RMS configuration data.
 
@@ -73,7 +74,7 @@ Now that you’ve prepared your HSM key in Azure Key Vault for the Azure Rights 
 
 These procedures are done by the administrator for Azure Information Protection.
 
-1. On the Internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet.
+1. On the internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connect-AipService](/powershell/module/aipservice/connect-aipservice) cmdlet.
     
     Then upload each trusted publishing domain (.xml) file, by using the [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
     
@@ -81,13 +82,13 @@ These procedures are done by the administrator for Azure Information Protection.
     
     For example, using a configuration data file of C:\contoso-tpd1.xml and our key URL value from the previous step, first run the following to store the password:
     
-    ```
+    ```ps
 	$TPD_Password = Read-Host -AsSecureString
     ```
     
     Enter the password that you specified to export the configuration data file. Then, run the following command and confirm that you want to perform this action:
     
-    ```
+    ```ps
     Import-AipServiceTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
     
@@ -97,7 +98,7 @@ These procedures are done by the administrator for Azure Information Protection.
 
 3.  Use the [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) cmdlet to disconnect from the Azure Rights Management service:
 
-    ```
+    ```ps
     Disconnect-AipServiceService
     ```
 

@@ -20,11 +20,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: dev
+ms.custom: dev, has-adal-ref
 
 ---
 
 # iOS/OS X code examples
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 This topic will introduce you to important code elements for the iOS/OS X version of the RMS SDK.
 
@@ -44,6 +46,7 @@ Following are **Objective C** code examples from a larger sample application rep
 
   **Description**: Instantiate an [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) object, through its create method which implements service authentication using the [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) in the following example code section.
 
+    ```objectivec
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
             // userId can be provided as a hint for authentication
@@ -57,11 +60,13 @@ Following are **Objective C** code examples from a larger sample application rep
                 NSData *content = [data retrieveData];
             }];
         }
+    ```
 
 - **Step 2**: Setup authentication using the Active Directory Authentication Library (ADAL).
 
   **Description**: In this step you will see ADAL used to implement an [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) with example authentication parameters. For more information on using ADAL, see the Azure AD Authentication Library (ADAL).
 
+    ```objectivec
       // AuthenticationCallback holds the necessary information to retrieve an access token.
       @interface MsipcAuthenticationCallback : NSObject<MSAuthenticationCallback>
 
@@ -79,7 +84,7 @@ Following are **Objective C** code examples from a larger sample application rep
               ADAuthenticationContext authenticationContextWithAuthority:authenticationParameters.authority
                                                                 error:&error
           ];
-          NSString *appClientId = @”com.microsoft.sampleapp”;
+          NSString *appClientId = @"com.microsoft.sampleapp";
           NSURL *redirectURI = [NSURL URLWithString:@"local://authorize"];
           // Retrieve token using ADAL
           [context acquireTokenWithResource:authenticationParameters.resource
@@ -98,9 +103,11 @@ Following are **Objective C** code examples from a larger sample application rep
                               }
                           }];
        }
+    ```
 
 - **Step 3**: Check if the Edit right exists for this user with this content via the [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) method of a [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) object.
 
+    ```objectivec
       - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
       {
           //check if user has edit rights and apply enforcements
@@ -112,6 +119,7 @@ Following are **Objective C** code examples from a larger sample application rep
               textEditor.enabled = NO;
           }
       }
+    ```
 
 ### Scenario: Create a new protected file using a template
 
@@ -119,6 +127,7 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
 
 -   **Step 1**: Get list of templates
 
+    ```objectivec
         + (void)templateListUsageWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
             [MSTemplateDescriptor templateListWithUserId:@"user@domain.com"
@@ -128,9 +137,11 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
                                      // use templates array of MSTemplateDescriptor (Note: will be nil on error)
                                    }];
         }
+    ```
 
 -   **Step 2**: Create a [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) using the first template in the list.
 
+    ```objectivec
         + (void)userPolicyCreationFromTemplateWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
             [MSUserPolicy userPolicyWithTemplateDescriptor:[templates objectAtIndex:0]
@@ -143,9 +154,11 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
             // use userPolicy (Note: will be nil on error)
             }];
         }
+    ```
 
 -   **Step 3**: Create a [MSMutableProtectedData](https://msdn.microsoft.com/library/dn758325.aspx) and write content to it.
 
+    ```objectivec
         + (void)createPtxtWithUserPolicy:(MSUserPolicy *)userPolicy contentToProtect:(NSData *)contentToProtect
         {
             // create an MSMutableProtectedData to write content
@@ -157,12 +170,14 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
              // use data (Note: will be nil on error)
             }];
         }
+    ```
 
 ### Scenario: Open a custom protected file
 
 
 -   **Step 1**: Create a [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) from a *serializedContentPolicy*.
 
+    ```objectivec
         + (void)userPolicyWith:(NSData *)protectedData
         authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -188,9 +203,11 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
 
             }];
          }
+    ```
 
 -   **Step 2**: Create a [MSCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) using the [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) from **Step 1** and read from it.
 
+    ```objectivec
         + (void)customProtectedDataWith:(NSData *)protectedData
         {
             // Read header information from protectedData and extract the  protectedContentSize
@@ -215,6 +232,7 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
              NSLog(@"%@", content);
             }];
          }
+    ```
 
 ### Scenario: Create a custom protected file using a custom (ad-hoc) policy
 
@@ -223,6 +241,7 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
 
     **Description**: In practice the following objects would be created by using user inputs from the device interface; [MSUserRights](https://msdn.microsoft.com/library/dn790811.aspx) and [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx).
 
+    ```objectivec
         + (void)policyDescriptor
         {
             MSUserRights *userRights = [[MSUserRights alloc] initWithUsers:[NSArray arrayWithObjects: @"user1@domain.com", @"user2@domain.com", nil] rights:[MSEmailRights all]];
@@ -231,9 +250,11 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
             policyDescriptor.contentValidUntil = [[NSDate alloc] initWithTimeIntervalSinceNow:NSTimeIntervalSince1970 + 3600.0];
             policyDescriptor.offlineCacheLifetimeInDays = 10;
         }
+    ```
 
 -   **Step 2**: Create a custom [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) from the policy descriptor, *selectedDescriptor*.
 
+    ```objectivec
         + (void)userPolicyWithPolicyDescriptor:(MSPolicyDescriptor *)policyDescriptor
         {
             [MSUserPolicy userPolicyWithPolicyDescriptor:policyDescriptor
@@ -245,9 +266,11 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
               // use userPolicy (Note: will be nil on error)
             }];
         }
+    ```
 
 -   **Step 3**: Create and write content to the [MSMutableCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) and then close.
 
+    ```objectivec
         + (void)mutableCustomProtectedData:(NSMutableData *)backingData policy:(MSUserPolicy *)policy contentToProtect:(NSString *)contentToProtect
         {
             //Get the serializedPolicy from a given policy
@@ -282,3 +305,4 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
 
             }];
           }
+    ```

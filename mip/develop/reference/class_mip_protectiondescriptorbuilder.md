@@ -1,14 +1,14 @@
 ---
-title: class mip::ProtectionDescriptorBuilder 
-description: Documents the mip::protectiondescriptorbuilder class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ProtectionDescriptorBuilder 
+description: Documents the protectiondescriptorbuilder::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::ProtectionDescriptorBuilder 
+# class ProtectionDescriptorBuilder 
 Constructs a ProtectionDescriptor that describes protection associated with a piece of content.
   
 ## Summary
@@ -22,11 +22,8 @@ public void SetAllowOfflineAccess(bool value)  |  Sets if protection policy allo
 public void SetReferrer(const std::string& uri)  |  Sets protection policy referrer address.
 public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be encrypted.
 public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  Sets app-specific data that should be signed.
-public virtual ~ProtectionDescriptorBuilder()  | Not yet documented.
-public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromUserRights | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and rights.
-public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromUserRoles | Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and roles.
-public static MIP_API std::shared_ptr&lt;ProtectionDescriptorBuilder&gt; mip::ProtectionDescriptorBuilder::CreateFromTemplate | Creates a ProtectionDescriptorBuilder whose access permissions are defined by the protection template. 
-
+public void SetDoubleKeyUrl(const std::string& doubleKeyUrl)  |  Sets the double key url to be used for custom protection.
+  
 ## Members
   
 ### Build function
@@ -94,29 +91,9 @@ Parameters:
 
 An application can specify a dictionary of app-specific data that will be signed by the protection service. This signed data is independent of the encrypted data set by SetEncryptedAppData.
   
-### ~ProtectionDescriptorBuilder function
-_Not documented yet._
+### SetDoubleKeyUrl function
+Sets the double key url to be used for custom protection.
 
-### CreateFromUserRights function
-Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and rights.
+Parameters:  
+* **value**: Double key url
 
-Parameters:
-* **usersAndRights**: Collection of users-to-rights mappings.
-
-**Returns**: New [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance 
-
-### CreateFromUserRoles function
-Creates a ProtectionDescriptorBuilder whose access permissions are defined by users and roles.
-
-Parameters:
-* **usersAndRoles**: Collection of users-to-roles mappings.
-
-**Returns**: Creates a [ProtectionDescriptor](class_mip_protectiondescriptor.md) whose access permissions are defined by users and roles.
-
-### CreateFromTemplate function
-Creates a ProtectionDescriptorBuilder whose access permissions are defined by the protection template. 
-
-Parameters:
-* **templateId**: A protection template ID.
-
-**Returns**: A new [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance.

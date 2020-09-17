@@ -1,14 +1,14 @@
 ---
-title: class mip::ProtectByTemplateAction 
-description: Documents the mip::protectbytemplateaction class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ProtectByTemplateAction 
+description: Documents the protectbytemplateaction::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::ProtectByTemplateAction 
+# class ProtectByTemplateAction 
 An action class that specifies adding protection by template to the document.
   
 ## Summary

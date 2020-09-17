@@ -3,10 +3,10 @@
 
 title: Customer-managed - AIP tenant key life cycle operations
 description: Information about the life cycle operations that are relevant if you manage your tenant key for Azure Information Protection (the bring your own key, or BYOK, scenario).
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 08/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -33,7 +33,10 @@ ms.custom: admin
 If you manage your tenant key for Azure Information Protection (the bring your own key, or BYOK, scenario), use the following sections for more information about the life cycle operations that are relevant to this topology.
 
 ## Revoke your tenant key
-In Azure Key Vault, you can change the permissions on the key vault that contains your Azure Information Protection tenant key so that the Azure Rights Management service can no longer access the key. However, when you do this, nobody will be able to open documents and emails that you previously protected with the Azure Rights Management service.
+
+There are very few scenarios when you might need to revoke your key instead of rekeying. When you revoke your key, all content that has been protected by your tenant using that key will become inaccessible to everybody (including Microsoft, your global admins, and super users) unless you have a backup of the key that you can restore. After revoking your key, you won't be able to protect new content until you create and configure a new tenant key for Azure Information Protection. 
+
+To revoke your customer-managed tenant key, in Azure Key Vault, change the permissions on the key vault that contains your Azure Information Protection tenant key so that the Azure Rights Management service can no longer access the key. This action effectively revokes the tenant key for Azure Information Protection.
 
 When you cancel your subscription for Azure Information Protection, Azure Information Protection stops using your tenant key and no action is needed from you.
 
@@ -60,7 +63,8 @@ To rekey to another key that you manage, you can either create a new key in Azur
 
 For more information about each of these steps:
 
-- To rekey to another key that you manage, see [Implementing BYOK for your Azure Information Protection tenant key](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+- To rekey to another key that you manage, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
+
     
     If you are rekeying an HSM-protected key that you create on-premises and transfer to Key Vault, you can use the same security world and access cards as you used for your current key.
 

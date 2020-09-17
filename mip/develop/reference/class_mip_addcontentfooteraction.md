@@ -1,14 +1,14 @@
 ---
-title: class mip::AddContentFooterAction 
-description: Documents the mip::addcontentfooteraction class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class AddContentFooterAction 
+description: Documents the addcontentfooteraction::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::AddContentFooterAction 
+# class AddContentFooterAction 
 An action class that specifies adding a content footer to the document.
   
 ## Summary
@@ -28,7 +28,7 @@ public int GetMargin() const  |  Get the margin of the footer from the bottom.
 An API used to mark the content footer element.
 
   
-**Returns**: The name that should be used for the UI element that holds the content footer. The same name will be returned in RemoveContentFooterAction in case the content footer needs to be removed.
+**Returns**: The name that should be used for the UI element that holds the content footer. The same name will be returned in [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) in case the content footer needs to be removed.
   
 ### GetText function
 Get the text that is meant to go into the content footer.
@@ -60,7 +60,7 @@ Get the alignment of the footer.
   
 **Returns**: The ContentMarkAlignment enumerator: LEFT|RIGHT|CENTER. 
   
-**See also**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**See also**: ContentMarkAlignment
   
 ### GetMargin function
 Get the margin of the footer from the bottom.

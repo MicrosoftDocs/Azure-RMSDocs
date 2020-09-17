@@ -1,23 +1,22 @@
 ---
-title: class mip::ProtectionProfile::Settings 
-description: Documents the mip::protectionprofile class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ProtectionProfile::Settings 
+description: Documents the protectionprofile::settings class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::ProtectionProfile::Settings 
+# class ProtectionProfile::Settings 
 Settings used by ProtectionProfile during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<AuthDelegate\>& authDelegate, const std::shared_ptr\<ConsentDelegate\>& consentDelegate, const std::shared_ptr\<ProtectionProfile::Observer\>& observer)  |  ProtectionProfile::Settings constructor that specifies an observer to be used for async operations.
-public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<AuthDelegate\>& authDelegate, const std::shared_ptr\<ConsentDelegate\>& consentDelegate)  |  ProtectionProfile::Settings constructor, used for synchronous operations.
+public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<ConsentDelegate\>& consentDelegate, const std::shared_ptr\<ProtectionProfile::Observer\>& observer)  |  ProtectionProfile::Settings constructor that specifies an observer to be used for async operations.
+public Settings(const std::shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std::shared_ptr\<ConsentDelegate\>& consentDelegate)  |  ProtectionProfile::Settings constructor, used for synchronous operations.
 public CacheStorageType GetCacheStorageType() const  |  Get whether caches are stored in memory or on disk.
-public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Gets the auth delegate used for acquiring authentication tokens.
 public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Gets the consent delegate used for connecting to services.
 public std::shared_ptr\<ProtectionProfile::Observer\> GetObserver() const  |  Gets the observer that receives notifications of events related to ProtectionProfile.
 public std::shared_ptr\<MipContext\> GetMipContext() const  |  Get MIP context which represents shared state across all profiles.
@@ -44,9 +43,6 @@ Parameters:
 * **cacheStorageType**: Store any cached state in memory or on disk 
 
 
-* **authDelegate**: Callback object to be used for authentication, implemented by client application 
-
-
 * **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
@@ -67,9 +63,6 @@ Parameters:
 * **cacheStorageType**: Store any cached state in memory or on disk 
 
 
-* **authDelegate**: Callback object to be used for authentication, implemented by client application 
-
-
 * **consentDelegate**: Delegate used to obtain user permission to access external resources 
 
 
@@ -82,12 +75,6 @@ Get whether caches are stored in memory or on disk.
 
   
 **Returns**: Storage type used
-  
-### GetAuthDelegate function
-Gets the auth delegate used for acquiring authentication tokens.
-
-  
-**Returns**: Auth delegate used for acquiring authentication tokens
   
 ### GetConsentDelegate function
 Gets the consent delegate used for connecting to services.

@@ -3,10 +3,10 @@
 
 title: Download & install the Azure Information Protection unified labeling client
 description: Instructions for users to install the Azure Information Protection unified labeling client for Windows, so that you can classify and protect your documents and emails. 
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 08/13/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -25,9 +25,9 @@ ms.custom: user
 
 # User Guide: Download and install the Azure Information Protection unified labeling client
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 If your administrator does not install the Azure Information Protection unified labeling client for you, you can do this yourself. You must be a local administrator for your PC to install this client so that it can label and protect your documents and emails.
 
@@ -35,13 +35,12 @@ In addition:
 
 - The Azure Information Protection unified labeling client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, your computer must be restarted.
 
-- If you have Windows 7 SP1, the Azure Information Protection unified labeling client requires a specific update, KB 2533623. If your PC needs this update but it is not installed, installation completes but with a message that the Azure Information Protection unified labeling client requires this update. Until this update is installed, you won't be able to use all features of the Azure Information Protection unified labeling client. 
 
 ## To download and install the Azure Information Protection unified labeling client
 
 Before you install the Azure Information Protection unified labeling client, confirm with your administrator or help desk that you are using [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) to classify and protect documents and emails.
 
-1. Download **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+1. Download **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
 2. Run the executable file that was downloaded, and if you are prompted to continue, click **Yes**.
 

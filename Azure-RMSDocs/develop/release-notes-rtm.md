@@ -2,7 +2,7 @@
 # required metadata
 
 title: Release notes
-description: SDK updates by revision and other developer information.
+description: See release notes for the Microsoft Rights Management Service SDK v2.1 October 2019 and previous updates.
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin
@@ -20,7 +20,7 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: dev
+ms.custom: dev, has-adal-ref
 
 ---
 
@@ -34,7 +34,7 @@ This article contains important information about this and previous releases of 
 - The RMS client may crash when trying to check whether a some PDF documents that have been previously protected and unprotected are       currently protected.
 - Using DNS redirection for AD RMS servers that have been configured on special ports will not work correctly.
 
-## September 2019 - update 
+## September 2019 - update
 
 - Fixed a deadlock that may occur when trying to call the initialization methods at the same time as some other RMS client methods.
 - Fixed an issue with determining whether password protected Office files are RMS protected.
@@ -153,7 +153,7 @@ The File API component of SDK has been extended and offers the following feature
 
     **Note**  As of the April 2015 release, a check has been added to the installation process for this KB.
 
-     
+
 
 -   **File API integration**
 
@@ -187,8 +187,8 @@ The File API component of SDK has been extended and offers the following feature
 
 **A**: Use 0 for the default locale. In this case, AD RMS Client 2.1 looks up names and descriptions in the following sequence and retrieves the first available one:
 
-    1 - User preferred LCID.
-    2 - System locale LCID.
-    3 - The first available language specified in the Rights Management Server (RMS) template.
+1. User preferred LCID.
+2. System locale LCID.
+3. The first available language specified in the Rights Management Server (RMS) template.
 
 If no name and description can be retrieved, an error is returned. There can be only one name and description for a specific LCID.

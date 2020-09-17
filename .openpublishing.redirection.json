@@ -1,5 +1,40 @@
 {
     "redirections": [
+		{
+            "source_path": "Azure-RMSDocs/rms-client/mobile-app-get-started.md",
+            "redirect_url": "/azure/information-protection/rms-client/mobile-app-faq#admins-testing-the-aip-mobile-apps",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/requirements-client-devices.md",
+            "redirect_url": "/azure/information-protection/requirements#client-devices",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/requirements-servers.md",
+            "redirect_url": "/azure/information-protection/requirements#supported-on-premises-servers-for-azure-rights-management-data-protection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/protected-pdf-readers-mac.md",
+            "redirect_url": "/azure/information-protection/rms-client/protected-pdf-readers#installing-a-protected-pdf-reader-for-windows-or-mac",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/protected-pdf-readers-windows.md",
+            "redirect_url": "/azure/information-protection/rms-client/protected-pdf-readers#installing-a-protected-pdf-reader-for-windows-or-mac",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/protected-pdf-readers-android.md",
+            "redirect_url": "/azure/information-protection/rms-client/protected-pdf-readers#installing-a-protected-pdf-reader-for-mobile-iosandroidc",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/protected-pdf-readers-ios.md",
+            "redirect_url": "/azure/information-protection/rms-client/protected-pdf-readers#installing-a-protected-pdf-reader-for-mobile-iosandroid",
+            "redirect_document_id": false
+        },
         {
             "source_path": "Azure-RMSDocs/generate-tenant-key-internet.md",
             "redirect_url": "/azure/information-protection/plan-implement-tenant-key#implementing-byok-for-your-azure-information-protection-tenant-key",
@@ -1282,6 +1317,11 @@
         {
             "source_path": "mip/develop/concept-auditing-policy-executionstate-cpp.md",
             "redirect_url": "/information-protection/develop/concept-handler-policy-executionstate-cpp",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "Azure-RMSDocs/faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client",
+            "redirect_url": "Azure-RMSDocs/faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients",
             "redirect_document_id": false
         }
     ]

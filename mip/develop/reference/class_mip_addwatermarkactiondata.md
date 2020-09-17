@@ -1,24 +1,24 @@
 ---
-title: class mip::AddWatermarkActionData 
-description: Documents the mip::addwatermarkactiondata class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class AddWatermarkActionData 
+description: Documents the addwatermarkactiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::AddWatermarkActionData 
+# class AddWatermarkActionData 
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | Not yet documented.
-public const std::string& GetFontName() const  | Not yet documented.
-public const std::string& GetFontColor() const  | Not yet documented.
-public int GetFontSize() const  | Not yet documented.
-public WatermarkLayout GetWatermarkLayout() const  | Not yet documented.
-public virtual ~AddWatermarkActionData()  | Not yet documented.
+public const std::string& GetText() const  | _Not yet documented._
+public const std::string& GetFontName() const  | _Not yet documented._
+public const std::string& GetFontColor() const  | _Not yet documented._
+public int GetFontSize() const  | _Not yet documented._
+public WatermarkLayout GetWatermarkLayout() const  | _Not yet documented._
+public virtual ~AddWatermarkActionData()  | _Not yet documented._
   
 ## Members
   

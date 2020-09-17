@@ -1,14 +1,14 @@
 ---
-title: class mip::NoPolicyError 
-description: Documents the mip::nopolicyerror class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class NoPolicyError 
+description: Documents the nopolicyerror::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::NoPolicyError 
+# class NoPolicyError 
 Tenant policy is not configured for classification/labels.
   
 ## Summary

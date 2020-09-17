@@ -6,7 +6,7 @@ description: Supporting information for Azure Information Protection that inclu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -74,5 +74,5 @@ For in-depth technical information about how the protection technology works, se
 
 - Azure Active Directory documentation: [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- Office 365 Enterprise documentation: [Office 365](https://docs.microsoft.com/en-us/Office365/Enterprise/)
+- Office 365 Enterprise documentation: [Office 365](https://docs.microsoft.com/Office365/Enterprise/)
 

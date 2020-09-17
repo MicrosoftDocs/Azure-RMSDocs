@@ -1,14 +1,14 @@
 ---
-title: class mip::RecommendLabelAction 
-description: Documents the mip::recommendlabelaction class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class RecommendLabelAction 
+description: Documents the recommendlabelaction::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::RecommendLabelAction 
+# class RecommendLabelAction 
 Recommend label actions is meant to suggest a label to the users. Suppressing this call after a user ignores the recommended label should be done through the supported actions on the execution state.
   
 ## Summary

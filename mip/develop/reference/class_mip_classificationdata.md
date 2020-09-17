@@ -1,25 +1,25 @@
 ---
-title: class mip::ClassificationData 
-description: Documents the mip::classificationdata class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ClassificationData 
+description: Documents the classificationdata::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::ClassificationData 
+# class ClassificationData 
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetClassificationId() const  | Not yet documented.
-public const std::string& GetRulePackageId() const  | Not yet documented.
-public int GetMaxCount() const  | Not yet documented.
-public int GetMinCount() const  | Not yet documented.
-public int GetMinConfidence() const  | Not yet documented.
-public int GetMaxConfidence() const  | Not yet documented.
-public virtual ~ClassificationData()  | Not yet documented.
+public const std::string& GetClassificationId() const  | _Not yet documented._
+public const std::string& GetRulePackageId() const  | _Not yet documented._
+public int GetMaxCount() const  | _Not yet documented._
+public int GetMinCount() const  | _Not yet documented._
+public int GetMinConfidence() const  | _Not yet documented._
+public int GetMaxConfidence() const  | _Not yet documented._
+public virtual ~ClassificationData()  | _Not yet documented._
   
 ## Members
   

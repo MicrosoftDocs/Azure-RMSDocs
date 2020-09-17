@@ -4,7 +4,6 @@ description: This article will help you understand the core SDK concepts called 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/29/2019
 ms.author: mbaldwin
 ---
@@ -26,7 +25,6 @@ The API used in the consuming application determines which profile class should 
 The profile itself provides the following functionality:
 
 - Defines whether state should be loaded in memory or persisted to disk and, if persisted to disk, should it be encrypted.
-- Handles authentication by accepting a `mip::AuthDelegate`.
 - Defines the `mip::ConsentDelegate` that should be used for consent operations.
 - Defines the `mip::FileProfile::Observer` implementation that will be used for asynchronous callbacks for profile operations.
 
@@ -34,7 +32,6 @@ The profile itself provides the following functionality:
 
 - `MipContext`: The `MipContext` object that was initialized to store application info, state path, etc.
 - `CacheStorageType`: Defines how to store state: In memory, on disk, or on disk and encrypted.
-- `authDelegate`: A shared pointer of class `mip::AuthDelegate`.
 - `consentDelegate`: A shared pointer of class [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
 - `observer`: A shared pointer to the profile `Observer` implementation (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), and [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 - `applicationInfo`: A [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) object. Information about the application that is consuming the SDK, which matches your Azure Active Directory application registration ID and name.
@@ -54,6 +51,8 @@ There are three engine classes in the SDK, one for each API. The following list 
   - `ListSensitivityLabels()`: Gets the list of labels for the loaded engine.
   - `CreateFileHandler()`: Creates a `mip::FileHandler` for a specific file or stream.
 
+Creating an engine requires passing in a specific engine settings object that contains the settings for the type of engine that is to be created. The settings object allows the developer to specify details on the engine identifier, the `mip::AuthDelegate` implementation, locale, and custom settings, as well as other API-specific details.
+
 ### Engine States
 
 An engine may have one of two states:
@@ -61,15 +60,15 @@ An engine may have one of two states:
 - `CREATED`: Created indicates that the SDK has enough local state information after calling the required backend services.
 - `LOADED`: The SDK has built the required data structures for the engine to be operational.
 
-An engine must be both created and loaded to perform any operations. The `Profile` class exposes a few engine management methods: `AddEngineAsync`, `RemoveEngineAsync`, and `UnloadEngineAsync`.
+An engine must be both created and loaded to perform any operations. The `Profile` class exposes a few engine management methods: `AddEngineAsync`, `DeleteEngineAsync`, and `UnloadEngineAsync`.
 
 The following table describes the possible engine states, and which methods can change that state:
 
-|         | NONE              | CREATED           | LOADED         |
-|---------|-------------------|-------------------|----------------|
-| NONE    |                   |                   | AddEngineAsync |
-| CREATED | DeleteEngineAsync |                   | AddEngineAsync |
-| LOADED  | DeleteEngineAsync | UnloadEngineAsync |                |
+| Engine state | NONE              | CREATED           | LOADED         |
+|--------------|-------------------|-------------------|----------------|
+| NONE         |                   |                   | AddEngineAsync |
+| CREATED      | DeleteEngineAsync |                   | AddEngineAsync |
+| LOADED       | DeleteEngineAsync | UnloadEngineAsync |                |
 
 ### Engine ID
 

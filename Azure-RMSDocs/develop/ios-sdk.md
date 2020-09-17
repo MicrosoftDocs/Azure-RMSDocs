@@ -20,11 +20,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: dev
+ms.custom: dev, has-adal-ref
 
 ---
 
 # iOS and OS X setup
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 iOS and OS X applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their application by using the Azure Rights Management (Azure RMS).
 

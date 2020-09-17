@@ -1,24 +1,24 @@
 ---
-title: class mip::SyncFilePolicyData 
-description: Documents the mip::syncfilepolicydata class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class SyncFilePolicyData 
+description: Documents the syncfilepolicydata::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::SyncFilePolicyData 
+# class SyncFilePolicyData 
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const LabelGroupData* GetLabelGroupData() const  | Not yet documented.
-public const std::vector\<std::unique_ptr\<PolicyPackageData\>\>& GetPoliciesPackageData() const  | Not yet documented.
-public const std::string& GetUpn() const  | Not yet documented.
-public const std::unordered_map\<std::string, std::string\>& GetClassificationList() const  | Not yet documented.
-public const std::string& GetUserObjectId() const  | Not yet documented.
-public virtual ~SyncFilePolicyData()  | Not yet documented.
+public const LabelGroupData* GetLabelGroupData() const  | _Not yet documented._
+public const std::vector\<std::unique_ptr\<PolicyPackageData\>\>& GetPoliciesPackageData() const  | _Not yet documented._
+public const std::string& GetUpn() const  | _Not yet documented._
+public const std::unordered_map\<std::string, std::string\>& GetClassificationList() const  | _Not yet documented._
+public const std::string& GetUserObjectId() const  | _Not yet documented._
+public virtual ~SyncFilePolicyData()  | _Not yet documented._
   
 ## Members
   

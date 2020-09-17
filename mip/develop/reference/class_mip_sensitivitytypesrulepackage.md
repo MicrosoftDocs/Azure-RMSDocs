@@ -1,14 +1,14 @@
 ---
-title: class mip::SensitivityTypesRulePackage 
-description: Documents the mip::sensitivitytypesrulepackage class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class SensitivityTypesRulePackage 
+description: Documents the sensitivitytypesrulepackage::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::SensitivityTypesRulePackage 
+# class SensitivityTypesRulePackage 
   
 ## Summary
  Members                        | Descriptions                                

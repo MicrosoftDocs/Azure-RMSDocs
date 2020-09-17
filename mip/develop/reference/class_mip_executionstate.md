@@ -1,14 +1,14 @@
 ---
-title: class mip::ExecutionState 
-description: Documents the mip::executionstate class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ExecutionState 
+description: Documents the executionstate::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::ExecutionState 
+# class ExecutionState 
 Interface for all the state needed to execute the engine.
 Clients should only call the methods to obtain the state that is needed. Hence, for efficiency, clients may want to implement this interface such that the corresponding state is computed dynamically instead of computing in advance.
   
@@ -21,9 +21,10 @@ public virtual DataState GetDataState() const  |  Gets the state of the content 
 public std::pair\<bool, std::string\> IsDowngradeJustified() const  |  Implementation should pass if justification to downgrade an existing label was given.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Get the new label's assignment method.
 public virtual std::vector\<std::pair\<std::string, std::string\>\> GetNewLabelExtendedProperties() const  |  Return new label's extended properties.
-public std::vector\<std::pair\<std::string, std::string\>\> GetContentMetadata(const std::vector\<std::string\>& names, const std::vector\<std::string\>& namePrefixes) const  |  Get the meta-data items from the content.
+public std::vector\<MetadataEntry\> GetContentMetadata(const std::vector\<std::string\>& names, const std::vector\<std::string\>& namePrefixes) const  |  Get the meta-data items from the content.
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Get the Protection Descriptor.
 public ContentFormat GetContentFormat() const  |  Gets the content format.
+public virtual unsigned int GetContentMetadataVersion() const  |  Gets the highest metadata version supported by the application for the tenant.
 public ActionType GetSupportedActions() const  |  Gets a masked enum describing all the supported action types.
 public virtual std::shared_ptr\<ClassificationResults\> GetClassificationResults(const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Return a map of classification results.
 public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
@@ -63,7 +64,7 @@ Get the new label's assignment method.
   
 **Returns**: The assignment method STANDARD, PRIVILEGED, AUTO. 
   
-**See also**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**See also**: mip::AssignmentMethod
   
 ### GetNewLabelExtendedProperties function
 Return new label's extended properties.
@@ -90,7 +91,14 @@ Gets the content format.
   
 **Returns**: DEFAULT, EMAIL 
   
-**See also**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat-enum)
+**See also**: mip::ContentFormat
+  
+### GetContentMetadataVersion function
+Gets the highest metadata version supported by the application for the tenant.
+
+  
+**Returns**: Content metadata version. If 0, metadata is un-versioned. 
+If a file format supports multiple versions of metadata, this allows MIP to understand all metadata and report granular metadata changes on a per-version basis.
   
 ### GetSupportedActions function
 Gets a masked enum describing all the supported action types.

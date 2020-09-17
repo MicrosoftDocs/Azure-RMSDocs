@@ -3,10 +3,10 @@
 
 title: Migrate AD RMS-Azure Information Protection - Phase 3
 description: Phase 3 of migrating from AD RMS to Azure Information Protection, covering step 7 from Migrating from AD RMS to Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -35,11 +35,11 @@ Use the following information for Phase 3 of migrating from AD RMS to Azure Info
 For Windows computers that use Office 365 apps, Office 2019, or Office 2016 click-to-run desktop apps:
 
 - You can reconfigure these clients to use Azure Information Protection by using DNS redirection. This is the preferred method for client migration because it is the simplest. However, this method is restricted to Office 2016 (or later) click-to-run desktop apps for Windows computers.
-    
+
     This method requires you to create a new SRV record, and set an NTFS deny permission for users on the AD RMS publishing endpoint.
 
 - For Windows computers that don't use Office 2019 or Office 2016 click-to-run:
-    
+
     You cannot use DNS redirection and instead, must use registry edits. If you have a mix of Office versions that can and cannot use DNS redirection, you can use this single method for all Windows computers, or a combination of DNS redirection and editing the registry. 
     
     The registry changes are made easier for you by editing and deploying scripts that you can download. 
@@ -52,7 +52,9 @@ This method is suitable only for Windows clients that run Office 365 apps and Of
 
 1. Create a DNS SRV record using the following format:
     
-    `_rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.`
+    ```sh
+    _rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.
+    ```
     
     For *\<AD RMS cluster>*, specify the FQDN of your AD RMS cluster. For example, **rmscluster.contoso.com**.
     
@@ -64,38 +66,40 @@ This method is suitable only for Windows clients that run Office 365 apps and Of
     
     If you use the DNS Server role on Windows Server, you can use the following table as an example how to specify the SRV record properties in the DNS Manager console.
     
-	|Field|Value|  
-	|-----------|-----------|  
-	|**Domain**|_tcp.rmscluster.contoso.com|  
-	|**Service**|_rmsredir|  
-	|**Protocol**|_http|  
-	|**Priority**|0|  
-	|**Weight**|0|  
-	|**Port number**|80|  
-	|**Host offering this service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
+    |Field|Value|  
+    |-----------|-----------|  
+    |**Domain**|_tcp.rmscluster.contoso.com|  
+    |**Service**|_rmsredir|  
+    |**Protocol**|_http|  
+    |**Priority**|0|  
+    |**Weight**|0|  
+    |**Port number**|80|  
+    |**Host offering this service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
 2. Set a deny permission on the AD RMS publishing endpoint for users running Office 365 apps or Office 2016 (or later):
 
     a. On one of your AD RMS servers in the cluster, start the Internet Information Services (IIS) Manager console.
 
-    b. Navigate to **Default Web Site** > **_wmcs** > **licensing** > **licensing.asmx**
+    b. Navigate to **Default Web Site** and expand **_wmcs**.
 
-    c. Right-click **licensing.asmx** > **Properties** > **Edit**
+    c. Right-click **licensing** and select **Switch to Content View**.
 
-    d. In the **Permissions for licensing.asmx** dialog box, either select **Users** if you want to set redirection for all users, or click **Add** and then specify a group that contains the users that you want to redirect.
+    d. In the details pane, right-click **license.asmx** > **Properties** > **Edit**
+
+    e. In the **Permissions for license.asmx** dialog box, either select **Users** if you want to set redirection for all users, or click **Add** and then specify a group that contains the users that you want to redirect.
     
     Even if all your users are using a version of Office that supports DNS redirection, you might prefer to initially specify a subset of users for a phased migration.
     
-    e. For your selected group, select **Deny** for the **Read & Execute** and the **Read** permission, and then click **OK** twice.
+    f. For your selected group, select **Deny** for the **Read & Execute** and the **Read** permission, and then click **OK** twice.
 
-    f. To confirm this configuration is working as expected, try to connect to the licensing.asmx file directly from a browser. You should see the following error message, which triggers the client running Office 365 apps or Office 2019 or Office 2016 to look for the SRV record:
+    g. To confirm this configuration is working as expected, try to connect to the licensing.asmx file directly from a browser. You should see the following error message, which triggers the client running Office 365 apps or Office 2019 or Office 2016 to look for the SRV record:
     
     **Error message 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists).**
 
 
 ## Client reconfiguration by using registry edits
 
-This method is suitable for all Windows clients and should be used if they do not run Office 365 apps, or Office 2019. or Office 2016, but instead, an earlier version of Office. This method uses two migration scripts to reconfigure AD RMS clients:
+This method is suitable for all Windows clients and should be used if they do not run Office 365 apps, or Office 2016 (or later). This method uses two migration scripts to reconfigure AD RMS clients:
 
 - Migrate-Client.cmd
 
@@ -123,7 +127,9 @@ The user configuration script (Migrate-User.cmd) configures user-level settings 
 
 The two scripts include a version number and do not rerun until this version number is changed. This means that you can leave the scripts in place until the migration is complete. However, if you do make changes to the scripts that you want computers and users to rerun on their Windows computers, update the following line in both scripts to a higher value:
 
-	SET Version=20170427
+```sh
+SET Version=20170427
+```
 
 The user configuration script is designed to run after the client configuration script, and uses the version number in this check. It stops if the client configuration script with the same version has not run. This check ensures that the two scripts run in the right sequence. 
 
@@ -133,7 +139,7 @@ When you cannot migrate all your Windows clients at once, run the following proc
 
 1. Return to the migration scripts, **Migrate-Client.cmd** and **Migrate-User.cmd**, which you extracted previously when you downloaded these scripts in the [preparation phase](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
-2. Follow the instructions in **Migrate-Client.cmd** to modify the script so that it contains your tenant's Azure Rights Management service URL, and also your server names for your AD RMS cluster extranet licensing URL and intranet licensing URL. Then, increment the script version, which was previously explained. A good practice for tracking script versions is to use today’s date in the following format: YYYYMMDD
+2. Follow the instructions in **Migrate-Client.cmd** to modify the script so that it contains your tenant's Azure Rights Management service URL, and also your server names for your AD RMS cluster extranet licensing URL and intranet licensing URL. Then, increment the script version, which was previously explained. A good practice for tracking script versions is to use today's date in the following format: YYYYMMDD
     
    > [!IMPORTANT]
    > As before, be careful not to introduce additional spaces before or after your addresses.
@@ -145,4 +151,5 @@ When you cannot migrate all your Windows clients at once, run the following proc
 3. Using the instructions at the beginning of this step, configure your script deployment methods to run **Migrate-Client.cmd** and **Migrate-User.cmd** on the Windows client computers that are used by the members of the AIPMigrated group. 
 
 ## Next steps
+
 To continue the migration, go to [phase 4 -supporting services configuration](migrate-from-ad-rms-phase4.md).

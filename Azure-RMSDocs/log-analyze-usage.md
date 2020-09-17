@@ -3,10 +3,10 @@
 
 title: Log & analyze the protection usage from Azure Information Protection
 description: Information and instructions how to use usage logging for the protection service from Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -153,7 +153,7 @@ Although the user-id field usually indicates the user who made the request, ther
 
 -   The value **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**.
 
-    This indicates an Office 365 service, such as Exchange Online or SharePoint Online, is making the request. In the string, *&lt;YourTenantID&gt;* is the GUID for your tenant and *&lt;region&gt;* is the region where your tenant is registered. For example, **na** represents North America, **eu** represents Europe, and **ap** represents Asia.
+    This indicates an Office 365 service, such as Exchange Online or Microsoft SharePoint, is making the request. In the string, *&lt;YourTenantID&gt;* is the GUID for your tenant and *&lt;region&gt;* is the region where your tenant is registered. For example, **na** represents North America, **eu** represents Europe, and **ap** represents Asia.
 
 -   If you are using the RMS connector.
 

@@ -1,14 +1,14 @@
 ---
-title: class mip::RemoveContentFooterAction 
-description: Documents the mip::removecontentfooteraction class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class RemoveContentFooterAction 
+description: Documents the removecontentfooteraction::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::RemoveContentFooterAction 
+# class RemoveContentFooterAction 
 An action class that specifies removing the content footer from the document.
   
 ## Summary

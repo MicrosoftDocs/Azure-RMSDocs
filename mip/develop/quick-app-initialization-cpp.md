@@ -1,16 +1,15 @@
 ---
-title: Quickstart - Initialization for Microsoft Information Protection (MIP) SDK C++ clients
-description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection (MIP) SDK client applications.
+title: Quickstart - Initialization for MIP SDK C++ clients using the File API
+description: A quickstart showing you how to write the initialization logic for a Microsoft Information Protection (MIP) SDK client application using the File API.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 #Customer intent: As a an application developer, I want to learn how to do SDK initialization, so that I can use the SDK APIs.
 ---
 
-# Quickstart: Client application initialization (C++)
+# Quickstart: Client application initialization (C++) 
 
 This quickstart shows you how to implement the client initialization pattern, used by the MIP C++ SDK at runtime. 
 

@@ -26,6 +26,8 @@ ms.custom: dev
 
 # Code examples
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 Microsoft Rights Management SDK 4.2 includes example code and working projects for some supported operating systems.
 
 ## Available via GitHub ##

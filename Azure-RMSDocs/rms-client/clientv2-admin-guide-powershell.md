@@ -3,10 +3,10 @@
 
 title: Use PowerShell with the Azure Information Protection unified labeling client
 description: Instructions and information for admins to manage the Azure Information Protection unified labeling client by using PowerShell.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/23/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,9 +26,11 @@ ms.custom: admin
 
 # Admin Guide: Using PowerShell with the Azure Information Protection unified client
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 When you install the Azure Information Protection unified labeling client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 
@@ -41,17 +43,20 @@ The cmdlets are installed with the PowerShell module **AzureInformationProtectio
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|For a shared folder, apply a specified label to all files that do not have a label.|
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
 
+This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
+
+> [!IMPORTANT]
+> The AzureInformationProtection module doesn't support configuring advanced settings for labels or label policies. For these settings, you need the Office 365 Security & Compliance Center PowerShell. For more information, see [Custom configurations for the Azure Information Protection unified labeling client](clientv2-admin-guide-customizations.md).
+> [!NOTE]
+> If you've migrated from Azure RMS, note that RMS-related cmdlets have been deprecated for use in unified labeling. Some of these have been replaced with new cmdlets for unified labeling. For more information, see [RMS to unified labeling cmdlet mapping](#rms-to-unified-labeling-cmdlet-mapping).
+>
+
 > [!TIP]
 > To use cmdlets with path lengths greater than 260 characters, use the following [group policy setting](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) that is available starting Windows 10, version 1607:<br /> **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths** 
 > 
 > For Windows Server 2016, you can use the same group policy setting when you install the latest Administrative Templates (.admx) for Windows 10.
 >
 > For more information, see the [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.
-
-This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
-
-> [!IMPORTANT]
-> The AzureInformationProtection module doesn't support configuring advanced settings for labels or label policies. For these settings, you need the Office 365 Security & Compliance Center PowerShell. For more information, see [Custom configurations for the Azure Information Protection unified labeling client](clientv2-admin-guide-customizations.md).
 
 ### Prerequisites for using the AzureInformationProtection module
 
@@ -72,6 +77,25 @@ If your Azure Information Protection tenant is not activated, see the instructio
 Typical scenarios for removing protection from files for others include data discovery or data recovery. If you are using labels to apply the protection, you could remove the protection by setting a new label that doesn't apply protection or by removing the label.
 
 You must have a Rights Management usage right to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Information Protection and discovery services or data recovery](../configure-super-users.md).
+
+## RMS to unified labeling cmdlet mapping
+
+The following table maps RMS-related cmdlets with the updated cmdlets used for unified labeling.
+
+For example, if you used **New-RMSProtectionLicense** with RMS protection and have migrated to unified labeling, use **New-AIPCustomPermissions** instead.
+
+|RMS cmdlet  |Unified labeling cmdlet  |
+|---------|---------|
+|[Get-RMSFileStatus](/powershell/module/azureinformationprotection/get-rmsfilestatus)     |  [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)        |
+|[Get-RMSServer](/powershell/module/azureinformationprotection/get-rmsserver)     |  Not relevant for unified labeling.      |
+|[Get-RMSServerAuthentication](/powershell/module/azureinformationprotection/get-rmsserverauthentication)      |   [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)       |
+|[Clear-RMSAuthentication](/powershell/module/azureinformationprotection/clear-rmsauthentication)     | [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)       |
+|[Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication)     |  [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)      |
+|[Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate)     |       Not relevant for unified labeling  |
+|[New-RMSProtectionLicense](/powershell/module/azureinformationprotection/new-rmsprotectionlicense)     |  [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/new-aipcustompermissions), and [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **CustomPermissions** parameter      |
+|[Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), with the **RemoveProtection** parameter |
+| | |
+
 
 ## How to label files non-interactively for Azure Information Protection
 
@@ -99,7 +123,7 @@ For the delegated user account:
 ### To create and configure the Azure AD applications for Set-AIPAuthentication
 
 > [!IMPORTANT]
-> These instructions are for the current general availability version of the unified labeling client and also apply to the preview version of the scanner for this client.
+> These instructions are for the current general availability version of the unified labeling client and also apply to the general availability version of the scanner for this client.
 
 Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecret* parameters. If you upgraded from a previous version of the client and created an app registration for the previous *WebAppId* and *NativeAppId* parameters, they won't work with the unified labeling client. You must create a new app registration as follows:
 
@@ -107,7 +131,7 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
 
 2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **Manage** > **App registrations**. 
 
-3. Select **+ New registration**. On the **Register an application** blade, specify the following values, and then click **Register**:
+3. Select **+ New registration**. On the **Register an application** pane, specify the following values, and then click **Register**:
 
    - **Name**: `AIP-DelegatedUser`
         
@@ -117,26 +141,26 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
     
     - **Redirect URI (optional)**: **Web** and `https://localhost`
 
-4. On the **AIP-DelegatedUser** blade, copy the value for the **Application (client) ID**. The value looks similar to the following example: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *AppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
+4. On the **AIP-DelegatedUser** pane, copy the value for the **Application (client) ID**. The value looks similar to the following example: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. This value is used for the *AppId* parameter when you run the Set-AIPAuthentication cmdlet. Paste and save the value for later reference.
 
 5. From the sidebar, select **Manage** > **Certificates & secrets**.
 
-6. On the **AIP-DelegatedUser - Certificates & secrets** blade, in the **Client secrets** section, select **+ New client secret**.
+6. On the **AIP-DelegatedUser - Certificates & secrets** pane, in the **Client secrets** section, select **+ New client secret**.
 
 7. For **Add a client secret**, specify the following, and then select **Add**:
     
     - **Description**: `Azure Information Protection unified labeling client`
     - **Expires**: Specify your choice of duration (1 year, 2 years, or never expires)
 
-8. Back on the **AIP-DelegatedUser - Certificates & secrets** blade, in the **Client secrets** section, copy the string for the **VALUE**. This string looks similar to the following example: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. To make sure you copy all the characters, select the icon to **Copy to clipboard**. 
+8. Back on the **AIP-DelegatedUser - Certificates & secrets** pane, in the **Client secrets** section, copy the string for the **VALUE**. This string looks similar to the following example: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. To make sure you copy all the characters, select the icon to **Copy to clipboard**. 
     
     It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any sensitive information that you use, store the saved value securely and restrict access to it.
 
 9. From the sidebar, select **Manage** > **API permissions**.
 
-10. On the **AIP-DelegatedUser - API permissions** blade, select **+ Add a permission**.
+10. On the **AIP-DelegatedUser - API permissions** pane, select **+ Add a permission**.
 
-11. On the **Request API permissions** blade, make sure that you're on the **Microsoft APIs** tab, and select **Azure Rights Management Services**. When you're prompted for the type of permissions that your application requires, select **Application permissions**.
+11. On the **Request API permissions** pane, make sure that you're on the **Microsoft APIs** tab, and select **Azure Rights Management Services**. When you're prompted for the type of permissions that your application requires, select **Application permissions**.
 
 12. For **Select permissions**, expand **Content** and select the following:
     
@@ -145,11 +169,11 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
 
 13. Select **Add permissions**.
 
-14. Back on the **AIP-DelegatedUser - API permissions** blade, select **+ Add a permission** again.
+14. Back on the **AIP-DelegatedUser - API permissions** pane, select **+ Add a permission** again.
 
-15. On the **Request AIP permissions** blade, select **APIs my organization uses**, and search for **Microsoft Information Protection Sync Service**.
+15. On the **Request AIP permissions** pane, select **APIs my organization uses**, and search for **Microsoft Information Protection Sync Service**.
 
-16. On the **Request API permissions** blade, select **Application permissions**.
+16. On the **Request API permissions** pane, select **Application permissions**.
 
 17. For **Select permissions**, expand **UnifiedPolicy** and select the following:
     
@@ -157,7 +181,7 @@ Set-AIPAuthentication requires an app registration for the *AppId* and *AppSecre
 
 18. Select **Add permissions**.
 
-19. Back on the **AIP-DelegatedUser - API permissions** blade, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
+19. Back on the **AIP-DelegatedUser - API permissions** pane, select **Grant admin consent for \<*your tenant name*>** and select **Yes** for the confirmation prompt.
     
     Your API permissions should look like the following:
     
@@ -171,22 +195,28 @@ Now you've completed the registration of this app with a secret, you're ready to
 1. Open Windows PowerShell with the **Run as administrator option**. 
 
 2. In your PowerShell session, create a variable to store the credentials of the Windows user account that will run non-interactively. For example, if you created a service account for the scanner:
-    
-    	$pscreds = Get-Credential "CONTOSO\srv-scanner"
-    
+
+    ```ps
+    $pscreds = Get-Credential "CONTOSO\srv-scanner"
+    ```
+
     You're prompted for this account's password.
 
 2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. Also specify your app registration values, your tenant ID, and the name of the delegated user account in Azure AD. For example:
     
-    	Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
+    ```ps
+    Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
+    ```
 
 > [!NOTE]
-> If the computer cannot have Internet access, there's no need to create the app in Azure AD and run Set-AIPAuthentication. Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
+> If the computer cannot have internet access, there's no need to create the app in Azure AD and run Set-AIPAuthentication. Instead, follow the instructions for [disconnected computers](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> -online`. For example: 
 
-    Get-Help Set-AIPFileLabel -online
+```ps
+Get-Help Set-AIPFileLabel -online
+```
 
 See the following for additional information that you might need to support the Azure Information Protection client:
 

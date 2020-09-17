@@ -3,10 +3,10 @@
 
 title: Configure servers for the Rights Management connector - AIP
 description: Information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from Deploying the Azure Rights Management connector.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/30/2019
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Configuring servers for the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 
 Use the following information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
@@ -40,7 +40,7 @@ After you have installed and configured the RMS connector, you are ready to conf
 
 -   **For Exchange 2016 and Exchange 2013**: Client access servers and mailbox servers
 
--   **For Exchange 2010**: Client access servers and hub transport servers
+-   **For Exchange 2010 and Exchange 2019**: Client access servers and hub transport servers
 
 -   **For SharePoint**: Front-end SharePoint webservers, including those hosting the Central Administration server
 
@@ -54,11 +54,11 @@ This configuration requires registry settings. To do this, you have two options:
 
 - Advantages:
 
-	- No direct editing of the registry. This is automated for you by using a script.
+    - No direct editing of the registry. This is automated for you by using a script.
 
-	- No need to run a Windows PowerShell cmdlet to obtain your Microsoft RMS URL.
+    - No need to run a Windows PowerShell cmdlet to obtain your Microsoft RMS URL.
 
-	- The prerequisites are automatically checked for you (but not automatically remediated) if you run it locally.
+    - The prerequisites are automatically checked for you (but not automatically remediated) if you run it locally.
 
 Disadvantages:
 
@@ -70,15 +70,15 @@ Disadvantages:
 
 - Advantages:
 
-	- No connectivity to a server running the RMS connector is required.
+    - No connectivity to a server running the RMS connector is required.
 
 - Disadvantages:
 
-	- More administrative overheads that are error-prone.
+    - More administrative overheads that are error-prone.
 
-	- You must obtain your Microsoft RMS URL, which requires you to run a Windows PowerShell command.
+    - You must obtain your Microsoft RMS URL, which requires you to run a Windows PowerShell command.
 
-	- You must always make all the prerequisites checks yourself.
+    - You must always make all the prerequisites checks yourself.
 
 
 ---
@@ -92,7 +92,7 @@ After making the configuration changes on these servers, you must restart them i
 
 ### How to use the server configuration tool for Microsoft RMS connector
 
-1.  If you haven’t already downloaded the script for the server configuration tool for Microsoft RMS connector (GenConnectorConfig.ps1), download it from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
+1.  If you haven't already downloaded the script for the server configuration tool for Microsoft RMS connector (GenConnectorConfig.ps1), download it from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
 
 2.  Save the GenConnectorConfig.ps1 file on the computer where you will run the tool. If you will run the tool locally, this must be the server that you want to configure to communicate with the RMS connector. Otherwise, you can save it on any computer.
 
@@ -129,7 +129,7 @@ Use the following sections for specific information for each service type:
 > [!NOTE]
 > After these servers are configured to use the connector, client applications that are installed locally on these servers might not work with RMS. When this happens, it is because the applications try to use the connector rather than use RMS directly, which is not supported.
 >
-> In addition, if Office 2010 is installed locally on an Exchange server, the client app’s IRM features might work from that computer after the server is configured to use the connector, but this is not supported.
+> In addition, if Office 2010 is installed locally on an Exchange server, the client app's IRM features might work from that computer after the server is configured to use the connector, but this is not supported.
 >
 > In both scenarios, you must install the client applications on separate computers that are not configured to use the connector. They will then correctly use RMS directly.
 
@@ -138,7 +138,7 @@ The following Exchange roles communicate with the RMS connector:
 
 -   For Exchange 2016 and Exchange 2013: Client access server and mailbox server
 
--   For Exchange 2010: Client access server and hub transport server
+-   For Exchange 2010 and Exchange 2019: Client access server and hub transport server
 
 To use the RMS connector, these servers running Exchange must be running one of the following software versions:
 
@@ -148,13 +148,10 @@ To use the RMS connector, these servers running Exchange must be running one of 
 
 -   Exchange Server 2010 with Exchange 2010 Service Pack 3 Rollup Update 6
 
+-   Exchange Server 2019
+
 You will also need on these servers, a version 1 of the RMS client (also known as MSDRM) that includes support for RMS Cryptographic Mode 2. All Windows operating systems include the MSDRM client but early versions of the client did not support Cryptographic Mode 2. If your Exchange servers are running at least Windows Server 2012, no further action is required because the RMS client installed with these operating systems natively supports Cryptographic Mode 2. 
 
-If your Exchange servers are running an earlier version of the operating system, verify that the installed version of the RMS client supports Cryptographic Mode 2. To do this, check your installed file version of Windows\System32\Msdrm.dll against the version numbers listed in the following knowledge-based articles. If the version number installed is the same or higher than the version numbers listed, no further action is required. If the version number installed is lower, download and install the hotfix from the article.
-
-- Windows Server 2008: [https://support.microsoft.com/kb/2627272](https://support.microsoft.com/kb/2627272) 
-
-- Windows Server 2008 R2: [https://support.microsoft.com/kb/2627273](https://support.microsoft.com/kb/2627273)
 
 > [!IMPORTANT]
 > If these versions or later versions of Exchange and the MSDRM client are not installed, you will not be able to configure Exchange to use the connector. Check that these versions are installed before you continue.
@@ -175,7 +172,7 @@ If your Exchange servers are running an earlier version of the operating system,
 
    -   Make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
-3. Enable IRM functionality for Exchange by using the Exchange PowerShell cmdlet [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) and set `InternalLicensingEnabled $true` and `ClientAccessServerEnabled $true`.
+3. Enable IRM functionality for Exchange by using the Exchange PowerShell cmdlet [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) and set `InternalLicensingEnabled $true` and `ClientAccessServerEnabled $true`.
 
 
 ## Configuring a SharePoint server to use the connector
@@ -185,20 +182,22 @@ The following SharePoint roles communicate with the RMS connector:
 
 To use the RMS connector, these servers running SharePoint must be running one of the following software versions:
 
+-   SharePoint Server 2019
+
 -   SharePoint Server 2016
 
 -   SharePoint Server 2013
 
 -   SharePoint Server 2010
 
-A server running SharePoint 2016 or SharePoint 2013 must also be running a version of the MSIPC client 2.1 that is supported with the RMS connector. To make sure that you have a supported version, download the latest client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396).
+A server running SharePoint 2019, 2016 or SharePoint 2013 must also be running a version of the MSIPC client 2.1 that is supported with the RMS connector. To make sure that you have a supported version, download the latest client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396).
 
 > [!WARNING]
 > There are multiple versions of the MSIPC 2.1 client, so make sure that you have version 1.0.2004.0 or later.
 >
 > You can verify the client version by checking the version number of MSIPC.dll, which is located in **\Program Files\Active Directory Rights Management Services Client 2.1**. The properties dialog box  shows the version number of the MSIPC 2.1 client.
 
-Servers running SharePoint 2010 must have installed a version of the MSDRM client that includes support for RMS Cryptographic Mode 2. The minimum version that is supported in Windows Server 2008 is included in the hotfix that you can download from [RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008](https://support.microsoft.com/kb/2627272), and the minimum version for Windows Server 2008 R2 can be downloaded from [RSA key length is increased to 2048 bits for AD RMS in Windows 7 or in Windows Server 2008 R2](https://support.microsoft.com/kb/2627273). Windows Server 2012 and Windows Server 2012 R2 natively support Cryptographic Mode 2.
+Servers running SharePoint 2010 must have installed a version of the MSDRM client that includes support for RMS Cryptographic Mode 2. Windows Server 2012 and Windows Server 2012 R2 natively support Cryptographic Mode 2.
 
 ### To configure SharePoint servers to use the connector
 
@@ -208,13 +207,13 @@ Servers running SharePoint 2010 must have installed a version of the MSDRM clien
 
     -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
 
-        For example, to run the tool locally to configure a server running SharePoint 2016 or SharePoint 2013:
+        For example, to run the tool locally to configure a server running SharePoint 2019, 2016 or SharePoint 2013:
 
         ```
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetSharePoint2013
         ```
 
-    -   If you are using SharePoint 2016 or SharePoint 2013, make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
+    -   If you are using SharePoint 2019, 2016 or SharePoint 2013, make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
 3.  Enable IRM in SharePoint. For more information, see [Configure Information Rights Management (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) in the SharePoint library.
 

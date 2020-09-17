@@ -1,21 +1,21 @@
 ---
-title: class mip::ProtectionHandler::PublishingSettings 
-description: Documents the mip::protectionhandler class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ProtectionHandler::PublishingSettings 
+description: Documents the protectionhandler::publishingsettings class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::ProtectionHandler::PublishingSettings 
+# class ProtectionHandler::PublishingSettings 
 Settings used to create a ProtectionHandler to protect new content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public PublishingSettings(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor)  |  ProtectionHandler::Settings constructor for creating a new engine.
-public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | Not yet documented.
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | _Not yet documented._
 public bool GetIsAuditedExtractionAllowed() const  |  Gets whether or not non-MIP-aware applications are allowed to open protected content.
 public void SetIsAuditedExtractionAllowed(bool isAuditedExtractionAllowed)  |  Sets whether or not non-MIP-aware applications are allowed to open protected content.
 public bool GetIsDeprecatedAlgorithmPreferred() const  |  Gets whether or not deprecated crypto algorithm (ECB) is preferred for backwards compatibility.
@@ -24,6 +24,8 @@ public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Set
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
 public bool IsPublishingFormatJson() const  |  Gets whether or not the returned pl is in json format (xml format is more widely accepted and is the default).
 public void SetPublishingFormatJson(bool isPublishingFormatJson)  |  whether or not the returned pl is in json format (xml format is more widely accepted and is the default).
+public void SetPreLicenseUserEmail(const std::string& preLicenseUserEmail)  |  Sets pre-license user.
+public const std::string& GetPreLicenseUserEmail() const  |  Gets the pre-license user.
   
 ## Members
   
@@ -95,3 +97,19 @@ whether or not the returned pl is in json format (xml format is more widely acce
 Parameters:  
 * **isPublishingFormatJson**: if json format is enabled.
 
+
+  
+### SetPreLicenseUserEmail function
+Sets pre-license user.
+
+Parameters:  
+* **preLicenseUserEmail**: Pre-license user
+
+
+If no pre-license user is specified, a pre-license will not be obtained
+  
+### GetPreLicenseUserEmail function
+Gets the pre-license user.
+
+  
+**Returns**: Pre-license user

@@ -2,11 +2,11 @@
 # required metadata
 
 title: Remove labels using the Azure Information Protection unified labeling client
-description: Instructions to remove sensitivity labels and protection from files and emails by using the Azure Information Protection unified labeling client.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/24/2019
+description: Instructions about how to remove sensitivity labels and protection from files and emails using the Azure Information Protection unified labeling client.
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,9 +26,11 @@ ms.custom: user
 
 # User Guide: Remove labels and protection from files and emails that have been labeled by Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+>*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 When the Azure Information Protection unified client is [installed on your computer](install-client-app.md), you can remove sensitivity labels and protection from files and emails.
 
@@ -79,5 +81,5 @@ More how-to instructions from the Azure Information Protection user guide:
 
 ## Additional information for administrators    
 
-See [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+See [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 

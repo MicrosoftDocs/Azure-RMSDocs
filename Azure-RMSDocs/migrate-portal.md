@@ -3,10 +3,10 @@
 
 title: Migrating from the Azure classic portal - AIP
 description: At-a-glance admin tasks in the Azure portal that you used to do in the Azure classic portal
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,6 +29,11 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
+
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
+
 Used to the Azure classic portal for managing the Azure Rights Management service, and need some help transitioning to the Azure portal?
 
 The Azure classic portal retired **January 08, 2018**. After this date, you will not be able to manage the Azure Rights Management service and custom templates from the classic portal. If you try to access the classic portal, you see a link that takes you to the new Azure portal.
@@ -41,7 +46,7 @@ Use the following information to help you quickly transition to the current port
 
 |Azure classic portal|How to do this task in the Azure portal
 |-----------|--------------------|
-|Access the configuration settings for the first time|1. [Sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Follow the instructions for [To access the Azure Information Protection blade for the first time](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time).
+|Access the configuration settings for the first time|1. [Sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Follow the instructions for [To access the Azure Information Protection pane for the first time](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time).
 |Create a new template|Create a label that applies protection, and use **Set permissions** to define the permissions, expiration, and offline access. <br /><br />Under the covers, this configuration creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.<br /><br />For more information, see [To create a new template](configure-policy-templates.md#to-create-a-new-template).
 |Edit the template properties: <br /><br />- Template name and description<br /><br />- Usage rights, content expiration, and offline access settings|If you haven't already done so, [convert the template to a label](configure-policy-templates.md#to-convert-templates-to-labels), and then do the following<br /><br />1. Change the label name and description<br /><br />2. Change the protection settings on the label to update the permissions, expiration, and offline access settings.<br /><br />For more information, see [To configure a label for protection settings](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 |Archive a template|Set the label status to **Disabled**.

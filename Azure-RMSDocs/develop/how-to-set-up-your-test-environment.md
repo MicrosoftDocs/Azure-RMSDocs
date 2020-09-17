@@ -2,7 +2,7 @@
 # required metadata
 
 title: Testing your application | Azure RMS
-description: Instructions on how to setup your application for testing.
+description: Learn how to prepare for application testing with either Azure RMS or an RMS server running on Windows Server.
 keywords:
 author: msmbaldwin
 ms.author: mbaldwin
@@ -20,7 +20,7 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: dev
+ms.custom: dev, has-adal-ref
 
 ---
 
@@ -52,4 +52,3 @@ This guidance is not comprehensive. To learn how to configure the RMS Client 2.1
 * [How-to: use ADAL authentication](how-to-use-adal-authentication.md)
 * [Install the SDK](install-the-rms-sdk.md)
 * [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
-

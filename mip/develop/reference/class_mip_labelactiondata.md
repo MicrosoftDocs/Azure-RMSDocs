@@ -1,21 +1,21 @@
 ---
-title: class mip::LabelActionData 
-description: Documents the mip::labelactiondata class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class LabelActionData 
+description: Documents the labelactiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::LabelActionData 
+# class LabelActionData 
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  | Not yet documented.
-public LabelActionDataType GetLabelActionDataType() const  | Not yet documented.
-public virtual ~LabelActionData()  | Not yet documented.
+public const std::string& GetLabelId() const  | _Not yet documented._
+public LabelActionDataType GetLabelActionDataType() const  | _Not yet documented._
+public virtual ~LabelActionData()  | _Not yet documented._
   
 ## Members
   

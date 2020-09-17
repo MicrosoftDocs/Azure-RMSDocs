@@ -3,10 +3,10 @@
 
 title: Configuration for clients to use Office apps with Azure RMS from AIP
 description: Information and instructions for admins to configure Office apps to work with the Azure Rights Management service from Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

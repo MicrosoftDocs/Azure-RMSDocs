@@ -20,11 +20,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: dev
+ms.custom: dev, has-adal-ref
 
 ---
 
 # Android code examples
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 This article shows how to code elements for the Android version of the RMS SDK.
 
@@ -92,7 +94,7 @@ The *MSIPCSampleApp* sample application is available for use with this SDK for t
                     catch (IOException e)
                     {
                       …
-                    }  
+                    }
               }
             };
             try
@@ -251,7 +253,7 @@ This scenario begins with getting a list of templates, selecting the first one t
               …
       }
     ```
-    
+
 
 - **Step 2**: Create a [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) using the first template in the list.
 
@@ -296,7 +298,7 @@ This scenario begins with getting a list of templates, selecting the first one t
               …
       }
     ```
-    
+
 
 -  **Step 3**: Create a [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) and write content to it.
 
@@ -492,7 +494,7 @@ This scenario begins with getting a list of templates, selecting the first one t
       ...
     }
     ```
-    
+
 
 - **Step 3**: Read content from the [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) into *mDecryptedContent* then close.
 
@@ -505,7 +507,7 @@ This scenario begins with getting a list of templates, selecting the first one t
       mUserPolicy = customProtectedInputStream.getUserPolicy();
       ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 
-      int nRead;                      
+      int nRead;
       byte[] dataChunk = new byte[16384];
 
       try
@@ -528,7 +530,7 @@ This scenario begins with getting a list of templates, selecting the first one t
       }
     }
     ```
-    
+
 
 ### Scenario: Create a custom protected file using a custom policy
 

@@ -1,14 +1,14 @@
 ---
-title: class mip::ClassificationResult 
-description: Documents the mip::classificationresult class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class ClassificationResult 
+description: Documents the classificationresult::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::ClassificationResult 
+# class ClassificationResult 
 Class that contains the result of a classification call on the Execution State.
   
 ## Summary
@@ -47,4 +47,4 @@ Get the confidence in the result.
 Get the sensitive information detections.
 
   
-**Returns**: Json string of all the sensitive information detections.
+**Returns**: Json string of all the sensitive information detections. if not empty must be a valid json format.

@@ -3,10 +3,10 @@
 
 title: Verifying Azure Rights Management - AIP
 description: Instructions to verify that the protection service from Azure Information Protection is working as expected.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 05/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection

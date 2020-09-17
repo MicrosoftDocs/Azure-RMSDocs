@@ -3,10 +3,10 @@
 
 title: Monitor the Rights Management connector - AIP
 description: Information to help you monitor the connector and your organization's use of the Azure Rights Management service from Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 09/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.custom: admin
 
 # Monitor the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 After you install and configure the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of the Azure Rights Management service from Azure Information Protection.
 
@@ -45,14 +45,14 @@ For example, Information events such as:
 
 If you have not configured the connector to use HTTPS, expect to see a Warning ID 2002 that a client is using a non-secure (HTTP) connection.
 
-If the connector fails to connect to the Azure Rights Management service, you will most likely see Error 3001. For example, this connection failure might be as a result of a DNS problem or lack of Internet access for one or more servers running the RMS connector. 
+If the connector fails to connect to the Azure Rights Management service, you will most likely see Error 3001. For example, this connection failure might be as a result of a DNS problem or lack of internet access for one or more servers running the RMS connector. 
 
 > [!TIP]
 > When RMS connector servers can't connect to Azure Rights Management service, web proxy configurations are often the reason.
 
 As with all event log entries, drill in to the message for more details.
 
-In addition to checking the event log when you first deploy the connector, check for warnings and errors on an ongoing basis. The connector might be working as expected initially, but other administrators might change dependent configurations. For example, another administrator changes the web proxy server configuration so that RMS connector servers can no longer access the Internet (Error 3001) or removes a computer account from a group that you specified as authorized to use the connector (Warning 2001).
+In addition to checking the event log when you first deploy the connector, check for warnings and errors on an ongoing basis. The connector might be working as expected initially, but other administrators might change dependent configurations. For example, another administrator changes the web proxy server configuration so that RMS connector servers can no longer access the internet (Error 3001) or removes a computer account from a group that you specified as authorized to use the connector (Warning 2001).
 
 ### Event log IDs and descriptions
 
@@ -188,13 +188,15 @@ If you need more detailed logging for diagnosis purposes, you can use [Debugview
 
 2. Locate the following line:
 
-    	<trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```sh
+    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```
 
 3. Replace that line with the following text:
-
-    	<trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```sh
+    <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```
 
 4.  Stop and start IIS to activate tracing. 
 
 5.  When you have captured the traces that you need, revert the line in step 3, and stop and start IIS again.
-

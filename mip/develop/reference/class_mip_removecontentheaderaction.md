@@ -1,14 +1,14 @@
 ---
-title: class mip::RemoveContentHeaderAction 
-description: Documents the mip::removecontentheaderaction class of the Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: class RemoveContentHeaderAction 
+description: Documents the removecontentheaderaction::undefined class of the Microsoft Information Protection (MIP) SDK.
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.author: bryanla
+ms.date: 04/16/2020
 ---
 
-# class mip::RemoveContentHeaderAction 
+# class RemoveContentHeaderAction 
 An action class that specifies removing the content header from the document.
   
 ## Summary

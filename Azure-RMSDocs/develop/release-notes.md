@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: What's new and release notes
-description: Outlines important changes and features in this and previous versions.
+title: Release notes for the Rights Management Services SDK v4.x
+description: See what's new and release notes for the Microsoft Rights Management Service SDK v4.x July 2017 and previous releases.
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
@@ -14,13 +14,16 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
+ms.custom: has-adal-ref
 ---
 
 # What's new and Release notes
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
 ## What's new
 
-This topic outlines important changes and features in this new version of the RMS  SDK v4.x.
+This topic outlines important changes and features in this new version of the RMS SDK v4.x.
 
 -   [New for July 2017](#new-for-july-2017)
 -   [October 2016 update](#october-2016-update)
@@ -39,7 +42,7 @@ This topic outlines important changes and features in this new version of the RM
 The update for our July release included incrementing the revision of the SDK, now 4.2.5.
 
 - Android SDK: Your app can now **set the logging level on-the-fly** with the Android SDK. For more information, see [How to: Enable error and performance logging](https://docs.microsoft.com/information-protection/develop/enabling-logging)
-- The iOS SDK does not support logging level. 
+- The iOS SDK does not support logging level.
 - The SDK now returns an error for a NULL access token.
 
 ### October 2016 update
