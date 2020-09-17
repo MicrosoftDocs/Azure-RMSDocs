@@ -135,8 +135,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manual labeling:| **Yes** | **Yes** |**Yes** |
 |Default label:| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling: <br />- For Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling:| **Yes** | **Yes** | **Yes** |
+|Recommended or automatic labeling: <br />- For Word, Excel, PowerPoint, Outlook| **Yes** | **Yes** | **Yes** |
 |Mandatory labeling:| **Yes** | **Yes** | No |
 |User-defined permissions for a label: <br />- Do Not Forward for emails| **Yes** | **Yes** | **Yes** |
 |User-defined permissions for a label: <br />- Custom permissions for Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
