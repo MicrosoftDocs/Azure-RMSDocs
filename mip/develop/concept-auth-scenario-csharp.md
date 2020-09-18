@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.service: information-protection
 ---
 
-# Quickstart: Client application initialization (C#)
+# Quickstart: Public and Confidential Clients (C#)
 
 There are two common scenarios used when building applications with the MIP SDK. One scenario sees the user directly authenticating against Azure AD, where as in the other the application authenticates uses a secret service principal key or certificate.
 
@@ -16,7 +16,7 @@ There are two common scenarios used when building applications with the MIP SDK.
 
 These are generally desktop or mobile applications where the application running on the device will prompt the user to authenticate and the user connects directly to the backend MIP services. In this scenario, auth libraries should be used to ensure that the user is able to sign in to Azure AD, meets any multi-factor or conditional access requirements, and obtains an OAuth2 token for the appropriate resource.
 
-For further information refer to Azure AD [public client auth flow documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-public-client-application-from-configuration-options)
+For further information refer to Azure AD [public client auth flow documentation](https://docs.microsoft.com/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-public-client-application-from-configuration-options)
 
 Below is a quick code snip demonstrating public client authentication flow for Microsoft Information Protection SDK client application using Microsoft Authentication Library(MSAL).
 
@@ -46,7 +46,7 @@ Tenant-GUID represents Tenant GUID for the Azure AD tenant whereas Application-I
 
 These are generally cloud or service-based applications where the user is not directly connecting to the backend MIP services, but the service has a need to label, protect, or unprotect MIP-enabled content. In this scenario, the application must store some certificate or application secret to use for authentication to Azure AD and use that secret to fetch tokens for the backend MIP services. It may then use the MIP SDK’s delegation features to protect or consume content on behalf of the authenticated user.
 
-For further information refer to Azure AD [confidential client auth flow documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-confidential-client-application-from-code)
+For further information refer to Azure AD [confidential client auth flow documentation](https://docs.microsoft.com/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-confidential-client-application-from-code)
 
 Below is a quick code snip demonstrating confidential client authentication flow for Microsoft Information Protection SDK client application using Microsoft Authentication Library(MSAL). An application can authenticate using either the AD certificate or client secret.
 

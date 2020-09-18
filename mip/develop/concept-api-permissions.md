@@ -16,9 +16,9 @@ The MIP SDK uses two backend Azure services for labeling and protection. In the 
 - Azure Rights Management Service
 - Microsoft Information Protection Sync Service
 
-Application permissions must be granted to all APIs when using the MIP SDK for labeling and protection. Various application authentication scenarios necessitate different application permissions. For application authentication scenarios please refer to [Authentication scenarios](https://docs.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios).
+Application permissions must be granted to all APIs when using the MIP SDK for labeling and protection. Various application authentication scenarios necessitate different application permissions. For application authentication scenarios please refer to [Authentication scenarios](https://docs.microsoft.com/azure/active-directory/develop/authentication-flows-app-scenarios).
 
-Tenant wide admin consent should be granted for application permissions where Admin consent is required as described in [AAD documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
+Tenant wide admin consent should be granted for application permissions where Admin consent is required as described in [AAD documentation](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
 
 ## Application Permissions
 
