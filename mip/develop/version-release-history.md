@@ -40,9 +40,6 @@ Use the following information to see what’s new or changed for a supported rel
 
 ### File SDK
 
-- Added support for co-authoring
-- - Removed SetDate and parent label details from labelinfo.xml.
-- `FileHandler.GetLabel()` will fetch label info from file, even if label is missing from policy.
 -  Fixed UTF-16/UTF-8 body conversion in `MSGInspector`.
 -  Set a default max file size limit for files protected by the File SDK to 6GB.
    -  Change made due to decryption of large files requiring *at least* the file size in available memory.
@@ -50,6 +47,7 @@ Use the following information to see what’s new or changed for a supported rel
 - Added support for linearized PDFs.
 - Fixed a bug where LastModifiedDate wasn't updated on Change event.
 - Fixed a memory leak in protected PDF creation.
+- File SDK supports revocation of tracked files.
 
 ### Policy SDK
 
