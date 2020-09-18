@@ -26,6 +26,55 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
 
+## Version 1.7.000
+
+**Release date**: September 14th, 2020
+
+### General SDK Changes
+
+- Public Preview available for Java on Windows and Ubuntu 18.04.
+- .NET Core now supported on Windows.
+- Public preview support for .NET Core on Ubuntu 18.04.
+- Improved local logging for Keystore when storage cache type is set to `OnDiskEncrypted.`
+- Enabled feature flighting on .NET Wrapper
+
+### File SDK
+
+- Added support for co-authoring
+- - Removed SetDate and parent label details from labelinfo.xml.
+- `FileHandler.GetLabel()` will fetch label info from file, even if label is missing from policy.
+-  Fixed UTF-16/UTF-8 body conversion in `MSGInspector`.
+-  Set a default max file size limit for files protected by the File SDK to 6GB.
+   -  Change made due to decryption of large files requiring *at least* the file size in available memory.
+   -  Can be overridden by custom setting `max_file_size_for_protection`.
+- Added support for linearized PDFs.
+- Fixed a bug where LastModifiedDate wasn't updated on Change event.
+- Fixed a memory leak in protected PDF creation.
+
+### Policy SDK
+
+- Policy SDK now supports Encrypt Only labeling actions.
+- Fixed a bug where `mip::Identity` wasn't properly loaded from cached engines.
+- Fixed a bug where classification GUID comparisons were case sensitive in classification API.
+- Added support for co-authoring enabled labels.
+- Added support for filtering labels that use double key encryption with user-defined permissions from user labels.
+- Enriched audit events by adding new fields.
+
+### Protection SDK
+
+- Fixed a bug where `mip::Identity` wasn't properly loaded from cached engines.
+- Added implicit registration for newly created publishing licenses. 
+- Added support for PKCS #7 and no padding.
+- Added support for 4k cipher mode.
+- Added support for CBC 4k with no padding.
+- Made `documentId` and `owner` parameters optional.
+
+### C APIs
+
+- Added missing identity and DKE APIs.
+- Moved `AuthDelegate` from profile to engine across all SDKs.
+- Publish Policy SDK Sample for C
+
 ## Version 1.6.103
 
 **Release date**: April 16, 2020
