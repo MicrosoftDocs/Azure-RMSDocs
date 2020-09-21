@@ -50,7 +50,7 @@ This permission is required when an application must be permitted to encrypt con
 
 ### UnifiedPolicy.Tenant.Read
 
-This permission is required when an application must be permitted to download unified labeling policies for the tenant. Examples of services that require `UnifiedPolicy.Tenant .Read` are applications which need work with labels as a service principal identity.
+This permission is required when an application must be permitted to download unified labeling policies for the tenant. Examples of services that require `UnifiedPolicy.Tenant.Read` are applications which need work with labels as a service principal identity.
 
 ## Delegated Permissions
 
