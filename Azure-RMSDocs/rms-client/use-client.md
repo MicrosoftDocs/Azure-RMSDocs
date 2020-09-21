@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
+ms.date: 09/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -135,8 +135,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manual labeling:| **Yes** | **Yes** |**Yes** |
 |Default label:| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling: <br />- For Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling:<br />- For Outlook| **Yes** | **Yes** | No |
+|Recommended or automatic labeling: <br />- For Word, Excel, PowerPoint, Outlook| **Yes** | **Yes** | **Yes** |
 |Mandatory labeling:| **Yes** | **Yes** | No |
 |User-defined permissions for a label: <br />- Do Not Forward for emails| **Yes** | **Yes** | **Yes** |
 |User-defined permissions for a label: <br />- Custom permissions for Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
@@ -221,8 +220,6 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Custom permissions as a [separate option that users can select in Office apps: Word, Excel, and PowerPoint](client-classify-protect.md#set-custom-permissions-for-a-document)
 
-- [Track and revoke](client-track-revoke.md) options from Office apps and File Explorer
-
 - Information Protection bar title and tooltip
 
 - [Protection-only mode](client-protection-only-mode.md) (no labels) using templates
@@ -232,8 +229,6 @@ Although the Azure Information Protection unified labeling client is still under
 - Display the **Do Not Forward** button in Outlook
 
 - Demo policy
-
-- Confirmation prompt **Do you want to delete this label?** for users when you don't use the policy setting for justification
 
 - Separate PowerShell cmdlets to connect to a Rights Management service
 
