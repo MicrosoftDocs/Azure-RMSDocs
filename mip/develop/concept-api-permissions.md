@@ -50,7 +50,7 @@ This permission is required when an application must be permitted to encrypt con
 
 ### UnifiedPolicy.Tenant.Read
 
-This permission is required when an application must be permitted to download unified labeling policies for the tenant. Examples of services that require `Unified.Policy.Tenant .Read` are applications which need work with labels as a service principal identity.
+This permission is required when an application must be permitted to download unified labeling policies for the tenant. Examples of services that require `UnifiedPolicy.Tenant .Read` are applications which need work with labels as a service principal identity.
 
 ## Delegated Permissions
 
@@ -67,4 +67,4 @@ This permission is required when an application must be permitted to user Azure 
   
 ### UnifiedPolicy.User.Read
 
-This permission is required when an application must be permitted to read unified labeling policies related to a user. Examples of services that require `UnifiedPolicy.User. Read` permissions are applications that need to encrypt and decrypt content, based on user’s label policies.
+This permission is required when an application must be permitted to read unified labeling policies related to a user. Examples of services that require `UnifiedPolicy.User.Read` permissions are applications that need to encrypt and decrypt content, based on user’s label policies.
