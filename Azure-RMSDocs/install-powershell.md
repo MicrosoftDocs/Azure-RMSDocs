@@ -61,7 +61,7 @@ The AIPService module is on the [PowerShell Gallery](https://www.powershellgalle
 
 ### To install the AIPService module from the PowerShell Gallery
 
-If you're new to the PowerShell Gallery, see [Get Started with the PowerShell Gallery](https://docs.microsoft.com/powershell/scripting/gallery/getting-started). Follow the instructions for the gallery requirements, which include installing the PowerShellGet module and the NuGet provider.
+If you're new to the PowerShell Gallery, see [Get Started with the PowerShell Gallery](/powershell/scripting/gallery/getting-started). Follow the instructions for the gallery requirements, which include installing the PowerShellGet module and the NuGet provider.
 
 To see details about the AIPService module on the PowerShell Gallery, visit the [AIPService page](https://www.powershellgallery.com/packages/AIPService).
 

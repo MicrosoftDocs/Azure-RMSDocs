@@ -53,7 +53,7 @@ We recommend the following software on your development system:
 
     This SDK can be used to develop for iOS 7.0 and OS X 10.8 and later.
 
--   Authentication library: We recommend that you use the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). However, other authentication libraries that support OAuth 2.0 can be used as well.
+-   Authentication library: We recommend that you use the [Azure AD Authentication Library (ADAL)](/previous-versions/azure/jj573266(v=azure.100)). However, other authentication libraries that support OAuth 2.0 can be used as well.
 
     For more information see, [ADAL for iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios) or [ADAL for OS X](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)
 
@@ -114,4 +114,4 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 * [Developer terms and concepts](core-concepts.md)
 
-* [iOS / OS X API Reference](https://msdn.microsoft.com/library/dn758306.aspx)
+* [iOS / OS X API Reference](/previous-versions/windows/desktop/msipcthin2/ios)

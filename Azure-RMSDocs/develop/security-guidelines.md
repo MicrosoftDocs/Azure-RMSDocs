@@ -101,5 +101,5 @@ None at this time.
 
 Best practices for implementing applications by using the AIP SDK include the following articles:
 
-- [Threat Models and Mitigations](https://msdn.microsoft.com/library/aa362751.aspx)
-- [Security Attacks](https://msdn.microsoft.com/library/aa362736.aspx)
+- [Threat Models and Mitigations](/previous-versions//aa362751(v=vs.85))
+- [Security Attacks](/previous-versions//aa362736(v=vs.85))

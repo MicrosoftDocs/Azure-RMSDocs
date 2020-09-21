@@ -54,11 +54,11 @@ However, some relevant information that can help your legal adviser make a deter
 
 ## Security, compliance, and auditing
 
-See the [Security, compliance, and regulatory requirements](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](./azure-rms-problems-it-solves.md) article, for information about specific certifications for the Azure Rights Management service. In addition:
+See the [Security, compliance, and regulatory requirements](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](./what-is-azure-rms.md#business-problems-solved-by-azure-rights-management) article, for information about specific certifications for the Azure Rights Management service. In addition:
 
 - For external certifications for Azure Information Protection: [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/)
 
-- For FIPS 140 information: [FIPS 140 Validation](https://technet.microsoft.com/library/security/cc750357.aspx)
+- For FIPS 140 information: [FIPS 140 Validation](/windows/security/threat-protection/fips-140-validation)
 
 For in-depth technical information about how the protection technology works, see [How does Azure RMS work?](./how-does-it-work.md) 
 
@@ -74,5 +74,5 @@ For in-depth technical information about how the protection technology works, se
 
 - Azure Active Directory documentation: [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- Microsoft 365 documentation: [Microsoft 365 for enterprise documentation and resources](https://docs.microsoft.com/Office365/Enterprise/)
+- Microsoft 365 documentation: [Microsoft 365 for enterprise documentation and resources](/Office365/Enterprise/)
 

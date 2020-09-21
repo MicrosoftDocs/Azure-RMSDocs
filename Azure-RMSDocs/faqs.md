@@ -58,7 +58,7 @@ Originally, Microsoft 365 had just [retention labels](https://support.office.com
 
 In contrast, Azure Information Protection labels enabled you apply a consistent classification and protection policy for documents and emails whether they were stored on-premises or in the cloud.
 
-Announced at Microsoft Ignite 2018 in Orlando, Microsoft 365 now has the option to create and configure [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels), in addition to retention labels. Sensitivity labels can be created and configured in the following admin centers:
+Announced at Microsoft Ignite 2018 in Orlando, Microsoft 365 now has the option to create and configure [sensitivity labels](/microsoft-365/compliance/sensitivity-labels), in addition to retention labels. Sensitivity labels can be created and configured in the following admin centers:
 
 - Office 365 Security & Compliance Center
 - Microsoft 365 security center
@@ -87,7 +87,7 @@ You can also check by going to **Azure Information Protection** > **Manage** > *
 
 The original client, referred to as the *Azure Information client* or the *classic* client, downloads labels and policy settings from Azure and enables you to configure the [AIP policy](overview-policy.md) from the Azure portal.
 
-The *unified labeling client* is a more recent addition and supports the unified labeling store used by multiple applications and services. The unified labeling client downloads [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) and policy settings from the following admin centers:
+The *unified labeling client* is a more recent addition and supports the unified labeling store used by multiple applications and services. The unified labeling client downloads [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and policy settings from the following admin centers:
 
 - Office 365 Security & Compliance Center
 - Microsoft 365 security center
@@ -136,7 +136,7 @@ No, you don’t need to re-encrypt your files after moving to sensitivity labels
 
 After migrating, manage your labels and labeling policies from your labeling admin center, including the Microsoft security center, Microsoft compliance center, or the Microsoft Security & Compliance Center. 
 
-For more information, see [Learn about sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) in the Microsoft 365 documentation and the [Understanding unified labeling migration](https://techcommunity.microsoft.com/t5/microsoft-security-and/understanding-unified-labeling-migration/ba-p/783185) blog.
+For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in the Microsoft 365 documentation and the [Understanding unified labeling migration](https://techcommunity.microsoft.com/t5/microsoft-security-and/understanding-unified-labeling-migration/ba-p/783185) blog.
 
 
 ## What's the difference between Azure Information Protection and Azure Rights Management?
@@ -280,7 +280,7 @@ For more information, see the full list [file types supported](./rms-client/clie
 > 
 
 > [!TIP]
-> Power BI now supports classification by using sensitivity labels and can apply protection from those labels to data that is exported to the following file formats: .pdf, .xls, and .ppt. For more information, see [Data protection in Power BI](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview).
+> Power BI now supports classification by using sensitivity labels and can apply protection from those labels to data that is exported to the following file formats: .pdf, .xls, and .ppt. For more information, see [Data protection in Power BI](/power-bi/admin/service-security-data-protection-overview).
 > 
 ## I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?
 
@@ -307,9 +307,9 @@ Yes, as a public preview offering, you can now receive an alert for **Azure Info
 
 Such alerts can help you to detect advanced data-related attacks and insider threats in your environment. These alerts use machine learning to profile the behavior of users who access your protected data. 
 
-The Azure Information Protection alerts can be accessed by [using the Microsoft Graph Security API](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview), or you can [stream alerts](https://developer.microsoft.com/graph/docs/concepts/security_siemintegration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
+The Azure Information Protection alerts can be accessed by [using the Microsoft Graph Security API](/graph/api/resources/security-api-overview), or you can [stream alerts](/graph/security-integration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
 
-For more information about the Microsoft Graph Security API, see [Microsoft Graph Security API overview](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview).
+For more information about the Microsoft Graph Security API, see [Microsoft Graph Security API overview](/graph/security-concept-overview).
 
 ## What's the difference between Windows Server FCI and the Azure Information Protection scanner?
 
@@ -377,5 +377,4 @@ In addition, there are FAQs designed for end users:
 
 - [FAQ for Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md)
 
-- [FAQ for RMS sharing app for Mac computers](https://technet.microsoft.com/dn451248)
-
+- [FAQ for RMS sharing app for Mac computers](/previous-versions/msdn10/dn451248(v=msdn.10))

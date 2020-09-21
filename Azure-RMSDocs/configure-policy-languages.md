@@ -37,7 +37,7 @@ ms.custom: admin
 > [!NOTE]
 > These instructions apply to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 > 
-> If you are looking for information to configure different languages for sensitivity labels, use Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label).
+> If you are looking for information to configure different languages for sensitivity labels, use Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label).
 
 Although the default labels for Azure Information Protection support multiple languages, you must configure support for label names and descriptions that you specify. This configuration requires you to do the following:
 
@@ -122,6 +122,3 @@ In the following scenarios, localized label (and sublabel) names are not used. F
 ## Next steps
 
 For more information about configuring the options that you can make for a label, and other settings for your Azure Information Protection policies, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.
-
-
-
