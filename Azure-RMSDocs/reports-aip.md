@@ -5,7 +5,7 @@ title: Central reporting for Azure Information Protection
 description: How to use central reporting to track adoption of your Azure Information Protection labels and identify files that contain sensitive information
 author: batamig
 ms.author: bagol
-ms.date: 08/17/2020
+ms.date: 09/21/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -43,54 +43,16 @@ Use Azure Information Protection analytics for central reporting to help you tra
 
 The data that you see is aggregated from your Azure Information Protection clients and scanners, from Microsoft Cloud App Security, from Windows 10 computers using Microsoft Defender Advanced Threat Protection, and from [protection usage logs](log-analyze-usage.md).
 
-For example, you'll be able to see the following:
+## AIP reporting data
 
-- From the **Usage report**, where you can select a time period:
-    
-    - Which labels are being applied
-    
-    - How many documents and emails are being labeled
-    
-    - How many documents and emails are being protected
-    
-    - How many users and how many devices are labeling documents and emails
-    
-    - Which applications are being used for labeling
+For example, the Azure Information Protection analytics for central reporting displays the following data:
 
-- From the **Activity logs**, where you can select a time period:
-
-    - Which files previously discovered by scanner were deleted from the scanned repository    
-    - What labeling actions were performed by a specific user
-    
-    - What labeling actions were performed from a specific device
-    
-    - Which users have accessed a specific labeled document
-    
-    - What labeling actions were performed for a specific file path
-    
-    - What labeling actions were performed by a specific application, such File Explorer and right-click, PowerShell, the scanner, or Microsoft Cloud App Security
-    
-    - Which protected documents were accessed successfully by users or denied access to users, even if those users don't have the Azure Information Protection client installed or are outside your organization
-
-    - Drill down into reported files to view **Activity Details** for additional information
-
-- From the **Data discovery** report:
-
-    - What files are on your scanned data repositories, Windows 10 computers, or computers running the Azure Information Protection clients
-    
-    - Which files are labeled and protected, and the location of files by labels
-    
-    - Which files contain sensitive information for known categories, such as financial data and personal information, and the location of files by these categories
-
-- From the **Recommendations** report:
-    
-    - Identify unprotected files that contain a known sensitive information type. A recommendation lets you immediately configure the corresponding condition for one of your labels to apply automatic or recommended labeling.
-        
-        If you follow the recommendation: The next time the files are opened by a user or scanned by the Azure Information Protection scanner, the files can be automatically classified and protected.
-    
-    - Which data repositories have files with identified sensitive information but are not being scanned by the Azure Information Protection. A recommendation lets you immediately add the identified data store to one of your scanner's profiles.
-        
-        If you follow the recommendation: On the next scanner cycle, the files can be automatically classified and protected.
+|Report  |Sample data shown |
+|---------|---------|
+|**Usage report**     |  Select a time period to show any of the following: </br></br>     - Which labels are being applied </br></br>- How many documents and emails are being labeled </br></br>- How many documents and emails are being protected </br></br>- How many users and how many devices are labeling documents and emails </br></br>- Which applications are being used for labeling     |
+|**Activity logs**     | Select a time period to show any of the following: </br></br>      - Which files previously discovered by scanner were deleted from the scanned repository </br> </br> - What labeling actions were performed by a specific user </br></br> - What labeling actions were performed from a specific device</br> </br>    - Which users have accessed a specific labeled document</br> </br>- What labeling actions were performed for a specific file path</br> </br>- What labeling actions were performed by a specific application, such File Explorer and right-click, PowerShell, the scanner, or Microsoft Cloud App Security </br> </br>- Which protected documents were accessed successfully by users or denied access to users, even if those users don't have the Azure Information Protection client installed or are outside your organization </br> </br>- Drill down into reported files to view **Activity Details** for additional information      |
+|**Data discovery report**     |      - What files are on your scanned data repositories, Windows 10 computers, or computers running the Azure Information Protection clients </br></br>- Which files are labeled and protected, and the location of files by labels </br></br>- Which files contain sensitive information for known categories, such as financial data and personal information, and the location of files by these categories       |
+|**Recommendations report**     | - Identify unprotected files that contain a known sensitive information type. A recommendation lets you immediately configure the corresponding condition for one of your labels to apply automatic or recommended labeling. **</br>If you follow the recommendation:** The next time the files are opened by a user or scanned by the Azure Information Protection scanner, the files can be automatically classified and protected. </br></br> - Which data repositories have files with identified sensitive information but are not being scanned by the Azure Information Protection. A recommendation lets you immediately add the identified data store to one of your scanner's profiles. </br>   **If you follow the recommendation:** On the next scanner cycle, the files can be automatically classified and protected.        |
 
 > [!NOTE]
 > The [AIP Viewer](rms-client/clientv2-view-use-files.md) does not send audit logs.
