@@ -6,7 +6,7 @@ description: Understand details and restrictions when you use customer-managed k
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -102,7 +102,7 @@ For more information about key usage logging for BYOK, see [Logging and analyzin
 > [!NOTE]
 > Azure Information Protection now supports using the Azure Key Vault Managed HSM in public preview, for use with non-production tenants only.
 >
-> For more information about the Managed HSM offering, and how to set up a vault and a key, see the [Azure Key Vault documentation](https://docs.microsoft.com/azure/key-vault/). 
+> For more information about the Managed HSM offering, and how to set up a vault and a key, see the [Azure Key Vault documentation](https://aka.ms/mhsm). 
 >
 >Additional instructions on granting key authorization are described below.
 >
