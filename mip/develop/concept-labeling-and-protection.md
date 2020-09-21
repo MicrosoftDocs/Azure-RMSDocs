@@ -31,4 +31,4 @@ If the file has some form of protection applied through an RMS template and a us
 
 ## User-defined permissions
 
-If a file has a label applied and that label applied user-defined protection, the protection is applied to the file. In this case, the SDK can not resolve the protection to an RMS template. If a user tries to apply a new label to the file now, SDK treats the action similar to above and won't apply the new label to the file.
+If a file has a label applied and that label applied user-defined protection, the protection is applied to the file. In this case, the SDK can not resolve the protection to an RMS template. If a user tries to apply a new label to the file now, the SDK treats the action similar to above and won't apply the new label to the file.
