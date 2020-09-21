@@ -27,7 +27,7 @@ If a file has a label applied and that label applied protection, then the SDK ca
 
 ## Custom-protection and label applications
 
-If the file has some form of protection applied through an RMS template and, user tries to apply a label to the file, SDK first should resolve the original protection to a label. Not being able to do so, SDK can not evaluate if the new protection sensitivity level is more restrictive or permissive than the original protection sensitivity and hence SDK won't apply the new label to the file.
+If the file has some form of protection applied through an RMS template and a user tries to apply a label to the file, the SDK first should resolve the original protection to a label. Not being able to do so, SDK can not evaluate if the new protection sensitivity level is more restrictive or permissive than the original protection sensitivity and hence SDK won't apply the new label to the file.
 
 ## User-defined permissions
 
