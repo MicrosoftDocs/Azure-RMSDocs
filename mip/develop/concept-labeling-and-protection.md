@@ -23,7 +23,7 @@ This article discusses how the SDK handles attempt for applying a label to a fil
 
 ## Label-based protection when label metadata has been stripped
 
-If a file has a label applied and that label applied protection, then the SDK can resolve file's protection to the particular label. If a user who has "Edit" permissions on the file, removes the label metadata either accidentally or maliciously, the protection still remains. When the next time SDK interacts with the file, it looks at the protection data, resolves that protection template to the original label, and reapplies the label. This SDK behavior is a safety mechanism built into the SDK for information protection in case the label metadata is tampered with.
+If a file has a label applied and that label applied protection, then the SDK can resolve file's protection to the particular label. If a user who has "Edit" permissions on the file removes the label metadata either accidentally or maliciously, the protection still remains. When next time SDK interacts with the file, it looks at the protection data, resolves that protection template to the original label, and reapplies the label. This SDK behavior is a safety mechanism built into the SDK for information protection in case the label metadata is tampered with.
 
 ## Custom-protection and label applications
 
