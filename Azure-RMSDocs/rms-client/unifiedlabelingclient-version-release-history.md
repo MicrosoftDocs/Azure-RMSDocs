@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/08/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -76,7 +76,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 Unified labeling scanner and client version 2.8.85.0
 
-**Released** 09/02/2020
+**Released** 09/22/2020
 
 This version includes the following new features, fixes, and enhancements, for the unified labeling scanner and client:
 
@@ -201,7 +201,7 @@ For more information, see:
 
 #### Azure Information Protection scanner fixed issues
 
-The following fixes were delivered in version 2.8.85 of the Azure Information Protection unified labeling scanner:
+The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling scanner:
 
 - Improvements for [scanning files with long paths](../deploy-aip-scanner-prereqs.md#file-path-requirements)
 - The AIP scanner now scans full [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) environments when there are multiple ContentDatabases.
@@ -210,7 +210,7 @@ The following fixes were delivered in version 2.8.85 of the Azure Information Pr
 
 #### Azure Information Protection client fixed issues
 
-The following fixes were delivered in version 2.8.85 of the Azure Information Protection unified labeling client:
+The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling client:
 
 - A new, narrated indication for any items currently selected from the **Sensitivity** ![columns icon](../media/selected-sensitivity-options.png "columns icon") menu in Office apps. For more information, see the page on [Sensitivity labels in the Microsoft 365 docs](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do).
 - Fixes for viewing JPEG files in the [AIP Viewer](clientv2-view-use-files.md)
