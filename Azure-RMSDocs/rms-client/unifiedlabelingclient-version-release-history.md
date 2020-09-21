@@ -72,9 +72,9 @@ Use the following information to see what's new or changed for a supported relea
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## Version 2.8.85 (Public preview)
+## Version 2.8.85.0
 
-Unified labeling scanner and client version 2.8.85
+Unified labeling scanner and client version 2.8.85.0
 
 **Released** 09/02/2020
 
