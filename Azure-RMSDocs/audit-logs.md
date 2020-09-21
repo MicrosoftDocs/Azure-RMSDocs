@@ -43,7 +43,6 @@ Microsoft Azure Information Protection generates audit logs at the following act
 * [Remove protection](#remove-protection-audit-logs)
 * [Upgrade label](#upgrade-label-audit-logs)
 
-
 ## Access audit logs
 
 **Access** audit logs are generated for the following activities:
