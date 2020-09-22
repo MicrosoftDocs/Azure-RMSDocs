@@ -63,6 +63,8 @@
   items:
   - name: The APIs
     href: concept-apis-use-cases.md
+  - name: MIP SDK API Permissions
+    href: concept-api-permissions.md
   - name: MipContext object concepts
     href: concept-mipcontext.md
   - name: Cache storage
@@ -115,8 +117,12 @@
         href: concept-handler-policy-auditing-cpp.md
     - name: Protection API handler (C++)
       href: concept-handler-protection-cpp.md
-  - name: Labels 
-    href: concept-classification-labels.md
+  - name: Labels and Protection
+    items:
+    - name: Labels   
+      href: concept-classification-labels.md
+    - name: Labels and Protection Behavior
+      href: concept-labeling-and-protection.md  
   - name: Metadata
     href: concept-mip-metadata.md
   - name: Observers for async (C++)
@@ -131,8 +137,12 @@
       href: concept-async-observers-protection-cpp.md
   - name: Proxy Support 
     href: concept-mip-proxies.md
+  - name: Service Discovery Overview
+    href: concept-service-discovery.md
   - name: SDK Telemetry
     href: concept-mip-telemetry.md
+  - name: Supported File Types
+    href: concept-supported-file-types.md  
   - name: Use Cases
     items:
     - name: File API - Action justification for lowering a sensitivity label on a file
@@ -415,6 +425,8 @@
       href: reference/c/functions.md
   - name: .NET API Browser
     href: /dotnet/api/?term=microsoft.informationprotection
+  - name: API Permissions
+    href: concept-api-permissions.md
 - name: Resources
   items:
   - name: Developer blog
