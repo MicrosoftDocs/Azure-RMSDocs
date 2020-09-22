@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/21/2020
+ms.date: 09/22/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -72,6 +72,36 @@ Use the following information to see what's new or changed for a supported relea
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
+## Version TBD (Public preview)
+
+Unified labeling scanner and client version TBD
+
+**Release** 11/02/2020
+
+This version includes the following new features, fixes, and enhancements for the unifed labeling scanner and client:
+
+- [New features for the unified labeling scanner](#new-features-for-the-unified-labeling-scanner)
+- [New features for the unified labeling client](#new-features-for-the-unified-labeling-client)
+
+### New features for the unified labeling scanner
+
+### New features for the unified labeling client
+
+- [Migrate files protected by Secure Island to unified labeling](#migrate-files-protected-by-secure-island-to-unified-labeling)
+
+### Migrate files protected by Secure Island to unified labeling
+
+Customers who have documents protected by Secure Island can now migrate their protection, in order to open and view those files with the Azure Information Protection unified labeling client.
+
+Until now, support for documents with IQP protection provided by Secure Island included only label migration and the ability to decrypt and open files with the AIP classic client. Now, customers can migrate IQP-protected files into the AIP unified labeling client as well.
+
+For more information, see [Migrate documents with legacy protection](clientv2-admin-guide-customizations.md#migrate-documents-with-legacy-protection).
+
+### Fixes and improvements
+
+- [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues)
+- [Client fixes and improvements](#azure-information-protection-client-fixed-issues)
+
 ## Version 2.8.85.0
 
 Unified labeling scanner and client version 2.8.85.0
@@ -80,11 +110,11 @@ Unified labeling scanner and client version 2.8.85.0
 
 This version includes the following new features, fixes, and enhancements, for the unified labeling scanner and client:
 
-- [New features for the unified labeling scanner](#new-features-for-the-unified-labeling-scanner)
-- [New features for the unified labeling client](#new-features-for-the-unified-labeling-client)
-- [Fixes and improvements](#fixes-and-improvements)
+- [New features for the unified labeling scanner](#new-features-for-the-unified-labeling-scanner-28850)
+- [New features for the unified labeling client](#new-features-for-the-unified-labeling-client-28850)
+- [Fixes and improvements](#fixes-and-improvements-28850)
 
-### New features for the unified labeling scanner
+### New features for the unified labeling scanner (2.8.85.0)
 
 - [Optional full rescans for changes detected](#optional-full-rescans-for-changes-detected)
 - [Configure SharePoint timeouts](#configure-sharepoint-timeouts)
@@ -160,7 +190,7 @@ PowerShell cmdlets added for Network Discovery include:
 |[**Uninstall-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  Uninstalls the Network Discovery service.       |
 | | |
 
-### New features for the unified labeling client
+### New features for the unified labeling client (2.8.85.0)
 
 - [Administrator customizations for AIP popups in Outlook](#administrator-customizations-for-aip-popups-in-outlook) 
 - [Administrator customizations for justification prompts](#administrator-customizations-for-justification-prompts) 
@@ -194,12 +224,12 @@ For more information, see:
 - [Planning and implementing your Azure Information Protection tenant key](../plan-implement-tenant-key.md)
 - [Double Key Encryption](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 docs
 
-### Fixes and improvements
+### Fixes and improvements (2.8.85.0)
 
-- [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues)
-- [Client fixes and improvements](#azure-information-protection-client-fixed-issues)
+- [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues-28850)
+- [Client fixes and improvements](#azure-information-protection-client-fixed-issues-28850)
 
-#### Azure Information Protection scanner fixed issues
+#### Azure Information Protection scanner fixed issues (2.8.85.0)
 
 The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling scanner:
 
@@ -208,7 +238,7 @@ The following fixes were delivered in version 2.8.85.0 of the Azure Information 
 - The AIP scanner now supports [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) files with a period in the path, but no extension. For example, a file with a path of `https://sharepoint.contoso.com/shared documents/meeting-notes`, with no extension, is now scanned successfully.
 - The AIP scanner now supports [custom sensitive information types](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) that are created in the Microsoft Security and Compliance center, and do not belong to any policy.
 
-#### Azure Information Protection client fixed issues
+#### Azure Information Protection client fixed issues (2.8.85.0)
 
 The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling client:
 

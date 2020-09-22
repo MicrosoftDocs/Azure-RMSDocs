@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
+ms.date: 09/22/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -1062,7 +1062,28 @@ Example PowerShell command, where your label policy is named "Global":
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
 ```
+## Migrate documents with legacy protection
 
+If you have documents with IQP protection provided by Secure Island, migrate the protection on your files to sensitivity labels in order to decrypt and open your files using the AIP unified labeling client.
+
+To migrate your IQP file protection, first enable support in the unified labeling client. Remove the legacy protection from your documents, and then apply your sensitivity labels. 
+
+**To migrate IQP-protected documents:**
+
+1.  Enable support for IQP-protection using the unified lableling client's advanced properties. Run:
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableIQPFormat="True"}
+    ```
+
+1. Use one of the following methods to check the labeling status, remove the legacy label, and apply your sensitivity label:
+    
+    |Method  |Description  |
+    |---------|---------|
+    |**PowerShell**     | 1. Use the [GetAIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet to get labeling status of the files you want to migrate. This cmdlet supports Secure Island IQP labels, and returns details about their labels. </br></br>  2. Use the [SetAIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet with the **RemoveProtection** parameter to remove the IQP protection from your files.  </br></br>3. Use the [SetAIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet again to apply your sensitivity label and protection.    |
+    |**File Explorer**     | 1. Right-click the files you want to migrate, and select **Classify & Protect**. </br>The Azure Information Protection client opens, showing the file's current label. </br></br>2. Click **Delete label** to remove the legacy label. </br></br>3. Click the new senstivity label you want to apply to the document.      |
+    | | |
+ 
 ## Apply a custom property when a label is applied
 
 This configuration uses a label [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
