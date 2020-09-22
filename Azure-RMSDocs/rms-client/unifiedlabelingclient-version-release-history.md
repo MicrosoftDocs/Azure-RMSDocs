@@ -256,13 +256,13 @@ Unified labeling scanner and client version 2.7.96.0
 
 **New features for the unified labeling scanner:**
 
-- [Use scanner to apply labels based on recommended conditions](../deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner). AIP customers can now choose to implement service side only autolabeling. This feature allows AIP end users to always follow recommendations instead of the previous scenario, which only enabled automatic labeling on the user side.
+- [Use scanner to apply labels based on recommended conditions](../deploy-aip-scanner-prereqs.md). AIP customers can now choose to implement service side only autolabeling. This feature allows AIP end users to always follow recommendations instead of the previous scenario, which only enabled automatic labeling on the user side.
 
 - [Learn which files previously discovered by scanner were deleted from the scanned repository](../reports-aip.md) These deleted files were not previously reported in AIP analytics and are now available in the scanner discovery report.
 
 - [Get reports from scanner on failures to apply action events](../reports-aip.md#friendly-schema-reference-for-event-functions). Use reports to learn about failed action events and discover ways to prevent future occurrences. 
 
-- Introduction of AIP scanner diagnostic analyzer tool for detection and analysis of common scanner errors. To begin using AIP scanner diagnostics, [run the new **Start-AIPScannerDiagnostics** cmdlet](../deploy-aip-scanner.md#troubleshooting-using-scanner-diagnostic-tool). 
+- Introduction of AIP scanner diagnostic analyzer tool for detection and analysis of common scanner errors. To begin using AIP scanner diagnostics, [run the new **Start-AIPScannerDiagnostics** cmdlet](../deploy-aip-scanner-manage.md#troubleshooting-using-the-scanner-diagnostic-tool). 
 
 - You can now manage and limit max CPU consumption on the scanner machine. Learn how to prevent 100% CPU usage and manage your CPU usage using [two new advanced settings **ScannerMaxCPU**, and **ScannerMinCPU**](./clientv2-admin-guide-customizations.md#limit-cpu-consumption). 
 
@@ -347,9 +347,9 @@ Supported through  12/29/2020
 
 - [Scanner](../deploy-aip-scanner.md) related:
     - [Easier SharePoint on-premises and subsite discovery](../quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories). Setting each specific site is no longer required. 
-    - Advanced property for [SQL chunk sizing](../deploy-aip-scanner.md#storage-requirements-and-capacity-planning-for-sql-server) added.
-    - Administrators now have the ability to [stop existing scans and perform a rescan](../deploy-aip-scanner.md#stop-a-scan) if a change was made to the default label.
-    - By default, scanner now sets minimal telemetry for faster scans and reduced log size and information types are now cached in the database. Learn more about [scanner optimization](../deploy-aip-scanner.md#optimizing-the-performance-of-the-scanner). 
+    - Advanced property for [SQL chunk sizing](../deploy-aip-scanner-prereqs.md#storage-requirements-and-capacity-planning-for-sql-server) added.
+    - Administrators now have the ability to [stop existing scans and perform a rescan](../deploy-aip-scanner-manage.md#stopping-a-scan) if a change was made to the default label.
+    - By default, scanner now sets minimal telemetry for faster scans and reduced log size and information types are now cached in the database. Learn more about [scanner optimization](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance). 
     - Scanner now supports separate deployments for database and the service, while **Sysadmin** rights are needed only for database deployment.
     - Improvements made to scanner performance. 
 
