@@ -97,7 +97,7 @@ To configure your scanner:
 
 ### Create a network scan job (public preview)
 
-Starting in version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview), you can scan your network for risky repositories. Add one or more of the repositories found to a content scan job to scan them for sensitive content.
+Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), you can scan your network for risky repositories. Add one or more of the repositories found to a content scan job to scan them for sensitive content.
 
 > [!NOTE]
 > The **network discovery** interface is currently in gradual deployment and will be available in all regions by September 15, 2020. 
