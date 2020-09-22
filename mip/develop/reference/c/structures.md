@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: reference
 
 ms.author: mbaldwin
-ms.date: 4/16/2020
+ms.date: 9/22/2020
 ---
 
 # Structures
@@ -367,7 +367,13 @@ typedef struct {
   /**
    * Document metadata version, default should be 0.
    */
-  unsigned int contentMetadataVersion;
+  uint32_t contentMetadataVersion;
+
+  /**
+   * Describes how metadata versioning is processed.
+   */
+  mip_cc_metadata_version_format contentMetadataVersionFormat;
+
 } mip_cc_document_state;
 
 ```
