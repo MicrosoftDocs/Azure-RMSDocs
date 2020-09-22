@@ -55,9 +55,6 @@ Get the content state name.
 
 Parameters:  
 * **actionSource**: The state of the content being worked upon. 
-
-
-
   
 **Returns**: A string representation of the content state.
   
