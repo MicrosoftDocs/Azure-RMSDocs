@@ -142,7 +142,7 @@
   - name: SDK Telemetry
     href: concept-mip-telemetry.md
   - name: Supported File Types
-    href: concept-supported-file-types.md  
+    href: concept-supported-filetypes.md  
   - name: Use Cases
     items:
     - name: File API - Action justification for lowering a sensitivity label on a file
