@@ -1779,7 +1779,7 @@ The following **.json** code causes Outlook to prompt the user for a justificati
 
 By default, the timeout for SharePoint interactions is two minutes, after which the attempted AIP operation fails.
 
-Starting in [version 2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview), AIP administrators can control this timeout using the following advanced properties, using an **hh:mm:ss** syntax to define the timeouts:
+Starting in [version 2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), AIP administrators can control this timeout using the following advanced properties, using an **hh:mm:ss** syntax to define the timeouts:
 
 - **SharepointWebRequestTimeout**. Determines the timeout for all AIP web requests to SharePoint. Default = 2 minutes.
 
