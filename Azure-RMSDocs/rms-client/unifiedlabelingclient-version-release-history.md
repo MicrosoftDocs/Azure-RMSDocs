@@ -87,7 +87,22 @@ This version includes the following new features, fixes, and enhancements for th
 
 ### New features for the unified labeling client
 
+- [Track document access and revoke access](#track-document-access-and-revoke-access)
 - [Migrate files protected by Secure Island to unified labeling](#migrate-files-protected-by-secure-island-to-unified-labeling)
+
+### Track document access and revoke access
+
+Once you've upgraded to version TBD, all documents are automatically registered for tracking when they are next opened.
+
+This means that administrators can start tracking document access, and revoking document access, using PowerShell cmdlets and the unified labeling client.
+
+End-user can also revoke access for documents they've protected from the **Sensitivity** button in Microsoft Office Word, Excel, and PowerPoint. 
+
+For more information, see:
+
+- [Administrator Guide: Track and revoke document access with Azure Information Protection](track-and-revoke-admin.md)
+- [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
+- [Known issues for tracking and revoking document access](../known-issues.md#tracking-and-revoking-document-access)
 
 ### Migrate files protected by Secure Island to unified labeling
 
@@ -101,6 +116,10 @@ For more information, see [Migrate documents with legacy protection](clientv2-ad
 
 - [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues)
 - [Client fixes and improvements](#azure-information-protection-client-fixed-issues)
+
+#### Scanner fixes and improvements
+
+#### Client fixes and improvements
 
 ## Version 2.8.85.0
 
