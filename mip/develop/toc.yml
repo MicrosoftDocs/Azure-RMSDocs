@@ -193,10 +193,10 @@
         href: reference/class_mip_classificationresult.md
       - name: ComputeEngine
         href: reference/class_mip_computeengine.md
-      - name: ComputeEngineContext
-        href: reference/class_mip_computeenginecontext.md
       - name: ComputeEngine::Settings
         href: reference/class_mip_computeengine_settings.md
+      - name: ComputeEngineContext
+        href: reference/class_mip_computeenginecontext.md
       - name: ConditionData
         href: reference/class_mip_conditiondata.md
       - name: ConsentDelegate
@@ -389,6 +389,8 @@
         href: reference/class_mip_userrights.md
       - name: UserRoles
         href: reference/class_mip_userroles.md
+      - name: MipContext
+        href: reference/class_mipcontext.md
   - name: C library
     items:
     - name: Overview
