@@ -312,7 +312,7 @@
           - name: Classify and protect a file or email
             href: ./rms-client/client-classify-protect.md
           - name: Track and revoke your documents
-            href: ./rms-client/client-track-revoke-classic.md
+            href: ./rms-client/client-track-revoke.md
           - name: Open files that have been protected
             href: ./rms-client/client-view-use-files.md
           - name: Remove labels and protection

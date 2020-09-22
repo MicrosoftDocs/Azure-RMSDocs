@@ -117,9 +117,9 @@ For more information, see [Migrate documents with legacy protection](clientv2-ad
 - [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues)
 - [Client fixes and improvements](#azure-information-protection-client-fixed-issues)
 
-#### Scanner fixes and improvements
+#### Azure Information Protection scanner fixed issues
 
-#### Client fixes and improvements
+#### Azure Information Protection client fixed issues
 
 ## Version 2.8.85.0
 
