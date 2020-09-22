@@ -254,7 +254,7 @@
           - name: Install the client for users
             href: ./rms-client/clientv2-admin-guide-install.md
           - name: Track and revoke access
-            href: ./rms-client/track-revoke-admin.md
+            href: ./rms-client/track-and-revoke-admin.md
           - name: Customizations
             href: ./rms-client/clientv2-admin-guide-customizations.md
           - name: Client files and usage logging
