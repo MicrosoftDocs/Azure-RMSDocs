@@ -1,10 +1,10 @@
 ---
 title: class TemplateNotFoundError 
 description: Documents the templatenotfounderror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/16/2020
 ---
 
@@ -28,11 +28,11 @@ public const std::map\<std::string, std::string\>& GetDebugInfo() const  |  Get 
 ## Members
   
 ### mMessage
-_Not documented yet._
+Not yet documented.
 
   
 ### mDebugInfo
-_Not documented yet._
+Not yet documented.
 
   
 ### what function

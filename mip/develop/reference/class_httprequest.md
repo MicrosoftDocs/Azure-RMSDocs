@@ -1,10 +1,10 @@
 ---
 title: class HttpRequest 
 description: Documents the httprequest::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
@@ -27,7 +27,7 @@ Gets request ID.
 
   
 **Returns**: Request ID
-The corresponding [HttpResponse](undefined) will have the same ID
+The corresponding HttpResponse will have the same ID
   
 ### GetRequestType function
 Get request type.

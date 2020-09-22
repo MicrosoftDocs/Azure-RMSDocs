@@ -1,10 +1,10 @@
 ---
 title: class FileIOError 
 description: Documents the fileioerror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
@@ -16,4 +16,4 @@ File IO error.
 --------------------------------|---------------------------------------------
   
 ## Members
-_Not documented yet._
+Not yet documented.

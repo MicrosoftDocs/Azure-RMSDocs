@@ -1,10 +1,10 @@
 ---
 title: class ComputeEngine::Settings 
 description: Documents the computeengine::settings class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
@@ -35,72 +35,72 @@ public const std::map\<Classifier, bool\>& GetSupportedClassifiers() const  | _N
 ## Members
   
 ### Settings function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetIdentity function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetIdentity function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetApplicationInfo function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetTelemetryDelegate function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetLoggerDelegate function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetHostName function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetCustomProperties function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetParentCorrelationId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetParentCorrelationId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetParentCorrelationIdDescription function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetDeprecatedLabelFilter function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetConfiguredFunctionality function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetVariableTextMarkingType function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetVariableTextMarkingType function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetThresholdLogLevel function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetClassifierEnabled function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetSupportedClassifiers function
-_Not documented yet._
+Not yet documented.

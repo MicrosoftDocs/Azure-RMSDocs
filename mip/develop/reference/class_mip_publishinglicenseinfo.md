@@ -1,10 +1,10 @@
 ---
 title: class PublishingLicenseInfo 
 description: Documents the publishinglicenseinfo::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/16/2020
 ---
 
@@ -33,60 +33,60 @@ public const std::map\<std::string, std::string\>& GetDoubleKeyApplicationData()
 ## Members
   
 ### PublishingLicenseInfo function
-_Not documented yet._
+Not yet documented.
 
   
 ### PublishingLicenseInfo function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetParsedData function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetDoubleKeyData function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetSerializedPublishingLicense function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetPreLicense function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetDomains function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetServerPublicCertificate function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetIssuerId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetContentId function
-_Not documented yet._
+Not yet documented.
 
   
 ### IsLicenseParsed function
-_Not documented yet._
+Not yet documented.
 
   
 ### HasPreLicense function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetIsDoubleKeyLicense function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetDoubleKeyAlgorithm function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetDoubleKeyApplicationData function
-_Not documented yet._
+Not yet documented.

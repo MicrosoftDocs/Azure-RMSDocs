@@ -1,10 +1,10 @@
 ---
 title: class TemplateNotFoundError 
 description: Documents the templatenotfounderror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
@@ -31,15 +31,15 @@ enum ErrorCode  |  ErrorCode of bad input error.
 ## Members
   
 ### mMessage
-_Not documented yet._
+Not yet documented.
 
   
 ### mDebugInfo
-_Not documented yet._
+Not yet documented.
 
   
 ### mName
-_Not documented yet._
+Not yet documented.
 
   
 ### GetErrorCode function

@@ -1,10 +1,10 @@
 ---
 title: class JustifyAction 
 description: Documents the justifyaction::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/16/2020
 ---
 
@@ -18,4 +18,4 @@ Justify Action requires providing a justification to a label downgrade and setti
 --------------------------------|---------------------------------------------
   
 ## Members
-_Not documented yet._
+Not yet documented.

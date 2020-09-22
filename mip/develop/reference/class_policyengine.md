@@ -1,10 +1,10 @@
 ---
 title: class PolicyEngine 
 description: Documents the policyengine::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
@@ -14,7 +14,7 @@ This class provides an interface for all engine functions.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Get the policy engine [Settings](undefined).
+public const Settings& GetSettings() const  |  Get the policy engine Settings.
 public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  list the sensitivity labels associated with the policy engine.
 public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
@@ -37,7 +37,7 @@ public uint32_t GetWxpMetadataVersion() const  |  Gets the recommended WXP (Wind
 ## Members
   
 ### GetSettings function
-Get the policy engine [Settings](undefined).
+Get the policy engine Settings.
 
   
 **Returns**: Policy engine settings. 
@@ -56,7 +56,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: [PolicyEngine::Settings](undefined)).
+**See also**: PolicyEngine::Settings).
   
 ### GetMoreInfoUrl function
 Provide a url for looking up more information about the policy/labels.

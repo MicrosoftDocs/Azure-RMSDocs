@@ -1,10 +1,10 @@
 ---
 title: class AddWatermarkActionData 
 description: Documents the addwatermarkactiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/16/2020
 ---
 
@@ -23,24 +23,24 @@ public virtual ~AddWatermarkActionData()  | _Not yet documented._
 ## Members
   
 ### GetText function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetFontName function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetFontColor function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetFontSize function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetWatermarkLayout function
-_Not documented yet._
+Not yet documented.
 
   
 ### ~AddWatermarkActionData function
-_Not documented yet._
+Not yet documented.

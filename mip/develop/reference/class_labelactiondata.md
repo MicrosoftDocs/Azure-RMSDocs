@@ -1,10 +1,10 @@
 ---
 title: class LabelActionData 
 description: Documents the labelactiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
@@ -20,12 +20,12 @@ public virtual ~LabelActionData()  | _Not yet documented._
 ## Members
   
 ### GetLabelId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetLabelActionDataType function
-_Not documented yet._
+Not yet documented.
 
   
 ### ~LabelActionData function
-_Not documented yet._
+Not yet documented.

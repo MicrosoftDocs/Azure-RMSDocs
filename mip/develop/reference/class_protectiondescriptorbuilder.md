@@ -1,20 +1,20 @@
 ---
 title: class ProtectionDescriptorBuilder 
 description: Documents the protectiondescriptorbuilder::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
 # class ProtectionDescriptorBuilder 
-Constructs a [ProtectionDescriptor](undefined) that describes protection associated with a piece of content.
+Constructs a ProtectionDescriptor that describes protection associated with a piece of content.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Creates a [ProtectionDescriptor](undefined) whose access permissions are defined by this [ProtectionDescriptorBuilder](undefined) instance.
+public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Creates a ProtectionDescriptor whose access permissions are defined by this ProtectionDescriptorBuilder instance.
 public void SetName(const std::string& value)  |  Sets protection policy name.
 public void SetDescription(const std::string& value)  |  Sets protection policy description.
 public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  Sets protection policy expiration time.
@@ -27,10 +27,10 @@ public void SetDoubleKeyUrl(const std::string& doubleKeyUrl)  |  Sets the double
 ## Members
   
 ### Build function
-Creates a [ProtectionDescriptor](undefined) whose access permissions are defined by this [ProtectionDescriptorBuilder](undefined) instance.
+Creates a ProtectionDescriptor whose access permissions are defined by this ProtectionDescriptorBuilder instance.
 
   
-**Returns**: New [ProtectionDescriptor](undefined) instance
+**Returns**: New ProtectionDescriptor instance
   
 ### SetName function
 Sets protection policy name.

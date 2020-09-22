@@ -1,10 +1,10 @@
 ---
 title: class Identity 
 description: Documents the identity::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
@@ -14,28 +14,28 @@ Abstraction for identity.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Identity()  |  Default [Identity](undefined) constructor used when a user email address is not known.
-public Identity(const Identity& other)  |  [Identity](undefined) copy constructor.
-public explicit Identity(const std::string& email)  |  [Identity](undefined) constructor used when a user email address is known.
-public explicit Identity(const std::string& email, const std::string& name)  |  [Identity](undefined) constructor used when a user email address and user name is known.
+public Identity()  |  Default Identity constructor used when a user email address is not known.
+public Identity(const Identity& other)  |  Identity copy constructor.
+public explicit Identity(const std::string& email)  |  Identity constructor used when a user email address is known.
+public explicit Identity(const std::string& email, const std::string& name)  |  Identity constructor used when a user email address and user name is known.
 public const std::string& GetEmail() const  |  Get the email.
 public const std::string& GetName() const  |  Get the user's friendly name. used for text marking.
   
 ## Members
   
 ### Identity function
-Default [Identity](undefined) constructor used when a user email address is not known.
+Default Identity constructor used when a user email address is not known.
   
 ### Identity function
-[Identity](undefined) copy constructor.
+Identity copy constructor.
 
 Parameters:  
-* **[Identity](undefined)**: used to create the copy.
+* **Identity**: used to create the copy.
 
 
   
 ### Identity function
-[Identity](undefined) constructor used when a user email address is known.
+Identity constructor used when a user email address is known.
 
 Parameters:  
 * **email**: must be valid email address.
@@ -43,7 +43,7 @@ Parameters:
 
   
 ### Identity function
-[Identity](undefined) constructor used when a user email address and user name is known.
+Identity constructor used when a user email address and user name is known.
 
 Parameters:  
 * **email**: must be valid email address. 

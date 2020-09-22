@@ -1,10 +1,10 @@
 ---
 title: class ProtectionSettings 
 description: Documents the protectionsettings::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
@@ -24,24 +24,24 @@ public PFileExtensionBehavior GetPFileExtensionBehavior() const  | _Not yet docu
 ## Members
   
 ### ProtectionSettings function
-_Not documented yet._
+Not yet documented.
 
   
 ### ProtectionSettings function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetDelegatedUserEmail function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetDelegatedUserEmail function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetPFileExtensionBehavior function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetPFileExtensionBehavior function
-_Not documented yet._
+Not yet documented.

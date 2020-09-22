@@ -1,15 +1,15 @@
 ---
 title: class FileProfile 
 description: Documents the fileprofile::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
 # class FileProfile 
-[FileProfile](undefined) class is the root class for using the Microsoft Information Protection operations.
+FileProfile class is the root class for using the Microsoft Information Protection operations.
 A typical application will only need one Profile.
   
 ## Summary
@@ -32,28 +32,28 @@ Starts list engines operation.
 
   
 **Returns**: Async control object.
-[FileProfile::Observer](undefined) will be called upon success or failure.
+FileProfile::Observer will be called upon success or failure.
   
 ### UnloadEngineAsync function
 Starts unloading the file engine with the given ID.
 
   
 **Returns**: Async control object.
-[FileProfile::Observer](undefined) will be called upon success or failure.
+FileProfile::Observer will be called upon success or failure.
   
 ### AddEngineAsync function
 Starts adding a new file engine to the profile.
 
   
 **Returns**: Async control object.
-[FileProfile::Observer](undefined) will be called upon success or failure.
+FileProfile::Observer will be called upon success or failure.
   
 ### DeleteEngineAsync function
 Starts deleting the file engine with the given ID. All data for the given profile will be deleted.
 
   
 **Returns**: Async control object.
-[FileProfile::Observer](undefined) will be called upon success or failure.
+FileProfile::Observer will be called upon success or failure.
   
 ### AcquirePolicyAuthToken function
 Trigger an authentication callback for policy.

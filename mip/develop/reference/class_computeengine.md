@@ -1,10 +1,10 @@
 ---
 title: class ComputeEngine 
 description: Documents the computeengine::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
@@ -37,20 +37,20 @@ public virtual ~ComputeEngine()  | _Not yet documented._
 ## Members
   
 ### ListSensitivityLabels function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetSensitivityLabel function
-_Not documented yet._
+Not yet documented.
 
   
 ### ComputeActions function
-_Not documented yet._
+Not yet documented.
 
   
 ### ComputeActionsWithRemoteState function
 Computes actions while choosing between remote and local state.
-State is selected using this priority. Unknown protection types, (template or ad-hoc not in the policy). Protection state is always preferable to unprotected state. Document state with label is preferred above one without. [Label](undefined) order, higher is preferred. [Label](undefined) timestamp, prefer newest labelled document. [DocumentState](undefined) LastModifiedTime optionally implemented, prefer newly modified file.
+State is selected using this priority. Unknown protection types, (template or ad-hoc not in the policy). Protection state is always preferable to unprotected state. Document state with label is preferred above one without. Label order, higher is preferred. Label timestamp, prefer newest labelled document. DocumentState LastModifiedTime optionally implemented, prefer newly modified file.
 
 Parameters:  
 * **context**: Comput engine context. 
@@ -70,64 +70,64 @@ Parameters:
 **Returns**: Methods return a pair. first contains a list of the action the second is whether it should be applied on the local, if false actions should be applied on the remote document and that document state should be used.
   
 ### NotifyCommittedActions function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetDefaultLabel function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetMoreInfoUrl function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetUpn function
-_Not documented yet._
+Not yet documented.
 
   
 ### IsLabelingRequired function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetFileId function
-_Not documented yet._
+Not yet documented.
 
   
 ### HasClassificationRules function
-_Not documented yet._
+Not yet documented.
 
   
 ### IsEnhancedClassificationEnabled function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetLabelById function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetTenantId function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetSensitivityTypesRulePackages function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetSensitivityTypesRulePackages function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetCustomSettings function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetOpcMetadataVersion function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetUserObjectId function
-_Not documented yet._
+Not yet documented.
 
   
 ### ~ComputeEngine function
-_Not documented yet._
+Not yet documented.

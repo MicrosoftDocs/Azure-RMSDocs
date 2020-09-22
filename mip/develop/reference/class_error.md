@@ -1,10 +1,10 @@
 ---
 title: class Error 
 description: Documents the error::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
@@ -16,4 +16,4 @@ Base class for all errors that will be reported (thrown or returned) from MIP SD
 --------------------------------|---------------------------------------------
   
 ## Members
-_Not documented yet._
+Not yet documented.

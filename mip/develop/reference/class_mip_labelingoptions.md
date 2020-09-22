@@ -1,10 +1,10 @@
 ---
 title: class LabelingOptions 
 description: Documents the labelingoptions::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/16/2020
 ---
 
@@ -25,28 +25,28 @@ public void SetExtendedProperties(const std::vector\<std::pair\<std::string, std
 ## Members
   
 ### LabelingOptions function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetAssignmentMethod function
-_Not documented yet._
+Not yet documented.
 
   
 ### IsDowngradeJustified function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetJustificationMessage function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetExtendedProperties function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetDowngradeJustification function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetExtendedProperties function
-_Not documented yet._
+Not yet documented.

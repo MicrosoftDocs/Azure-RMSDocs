@@ -1,10 +1,10 @@
 ---
 title: class mip::SensitivityConditionData 
 description: Documents the mip::sensitivityconditiondata class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 02/14/2020
 ---
 
@@ -36,76 +36,76 @@ public void AddClassificationData(std::unique_ptr\<ClassificationData\> classifi
 ## Members
   
 ### GetLabelId function
-_Not documented yet._
+Not yet documented.
 
   
 ### IsClassificationDiscovered function
-_Not documented yet._
+Not yet documented.
 
   
 ### ~SensitivityConditionData function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetType function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetName function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetProperties function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetSubConditionsData function
-_Not documented yet._
+Not yet documented.
 
   
 ### HasKeyValueEntries function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetKeyValueEntries function
-_Not documented yet._
+Not yet documented.
 
   
 ### HasClassificationData function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetClassificationData function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetName function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetProperties function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetSubConditionsData function
-_Not documented yet._
+Not yet documented.
 
   
 ### AddKeyValueEntry function
-_Not documented yet._
+Not yet documented.
 
   
 ### AddSubCondition function
-_Not documented yet._
+Not yet documented.
 
   
 ### AddTextEntry function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetKeyValueEntries function
-_Not documented yet._
+Not yet documented.
 
   
 ### AddClassificationData function
-_Not documented yet._
+Not yet documented.

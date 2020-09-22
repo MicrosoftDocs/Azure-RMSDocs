@@ -1,10 +1,10 @@
 ---
 title: class RulePackageData 
 description: Documents the rulepackagedata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
@@ -21,16 +21,16 @@ public virtual ~RulePackageData()  | _Not yet documented._
 ## Members
   
 ### GetRuleData function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetLabelToTemplateId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetLabelToProtectionType function
-_Not documented yet._
+Not yet documented.
 
   
 ### ~RulePackageData function
-_Not documented yet._
+Not yet documented.

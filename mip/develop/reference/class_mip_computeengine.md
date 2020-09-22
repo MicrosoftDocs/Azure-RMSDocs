@@ -1,10 +1,10 @@
 ---
 title: class ComputeEngine 
 description: Documents the computeengine::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/16/2020
 ---
 
@@ -25,15 +25,15 @@ public virtual ~ComputeEngine()  | _Not yet documented._
 ## Members
   
 ### ListSensitivityLabels function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetSensitivityLabel function
-_Not documented yet._
+Not yet documented.
 
   
 ### ComputeActions function
-_Not documented yet._
+Not yet documented.
 
   
 ### ComputeActionsWithRemoteState function
@@ -58,16 +58,16 @@ Parameters:
 **Returns**: Methods return a pair. first contains a list of the action the second is whether it should be applied on the local, if false actions should be applied on the remote document and that document state should be used.
   
 ### NotifyCommittedActions function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetDefaultLabel function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetMoreInfoUrl function
-_Not documented yet._
+Not yet documented.
 
   
 ### ~ComputeEngine function
-_Not documented yet._
+Not yet documented.

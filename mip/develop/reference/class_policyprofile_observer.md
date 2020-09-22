@@ -1,15 +1,15 @@
 ---
 title: class PolicyProfile::Observer 
 description: Documents the policyprofile::observer class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
 # class PolicyProfile::Observer 
-[Observer](undefined) interface for clients to get notifications for profile related events.
+Observer interface for clients to get notifications for profile related events.
 All errors inherit from mip::Error. 
 Client should not call the engine back on the thread that calls the observer.
   

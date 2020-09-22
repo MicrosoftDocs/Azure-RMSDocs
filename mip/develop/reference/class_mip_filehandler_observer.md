@@ -1,10 +1,10 @@
 ---
 title: class FileHandler::Observer 
 description: Documents the filehandler::observer class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 04/16/2020
 ---
 

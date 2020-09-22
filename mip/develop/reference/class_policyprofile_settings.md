@@ -1,15 +1,15 @@
 ---
 title: class PolicyProfile::Settings 
 description: Documents the policyprofile::settings class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
 # class PolicyProfile::Settings 
-[Settings](undefined) used by [PolicyProfile](undefined) during its creation and throughout its lifetime.
+Settings used by PolicyProfile during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -40,7 +40,7 @@ Parameters:
 * **cacheStorageType**: Store any cached state in memory or on disk 
 
 
-* **observer**: A class implementing the [PolicyProfile::Observer](undefined) interface. Can be nullptr.
+* **observer**: A class implementing the PolicyProfile::Observer interface. Can be nullptr.
 
 
   
@@ -92,11 +92,11 @@ Parameters:
 tasks can reference profile objects preventing its destruction as a result taskdispatcher queues should not be shared.
   
 ### SetSessionId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetSessionId function
-_Not documented yet._
+Not yet documented.
 
   
 ### SetCustomSettings function
@@ -114,4 +114,4 @@ Get the custom settings, used for feature gating and testing.
 **Returns**: List of name/value pairs.
   
 ### ~Settings function
-_Not documented yet._
+Not yet documented.

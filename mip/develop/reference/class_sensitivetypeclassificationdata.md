@@ -1,10 +1,10 @@
 ---
 title: class SensitiveTypeClassificationData 
 description: Documents the sensitivetypeclassificationdata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
@@ -25,32 +25,32 @@ public bool Evaluate(const ClassificationResult& result, const PredicateInput& p
 ## Members
   
 ### GetRulePackageId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetMaxCount function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetMinCount function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetMinConfidence function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetMaxConfidence function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetClassificationId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetClassifierType function
-_Not documented yet._
+Not yet documented.
 
   
 ### Evaluate function
-_Not documented yet._
+Not yet documented.
