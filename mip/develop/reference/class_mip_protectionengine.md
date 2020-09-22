@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/16/2020
+ms.date: 09/21/2020
 ---
 
 # class ProtectionEngine 
@@ -43,7 +43,7 @@ Gets the engine settings.
 Get collection of templates available to a user.
 
 Parameters:  
-* **observer**: A class implementing the [ProtectionEngine::Observer](class_mip_protectionengine_observer.md) interface 
+* **observer**: A class implementing the ProtectionEngine::Observer interface 
 
 
 * **context**: Client context that will be opaquely passed back to observers and optional HttpDelegate
@@ -131,7 +131,7 @@ Parameters:
 * **settings**: Protection settings 
 
 
-* **observer**: A class implementing the [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interface 
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
 
 
 * **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
@@ -218,7 +218,7 @@ Parameters:
 * **contentName**: The name to associated with the content specified by the serializedPublishingLicense. If the serializedPublishingLicense specifies a content name, that value will take precedence. 
 
 
-* **isOwnerNotificationEnabled**: Set to true to notify the owner via email whenever the document is decrypted , or false to not send the notification. 
+* **isOwnerNotificationEnabled**: Set to true to notify the owner via email whenever the document is decrypted, or false to not send the notification. 
 
 
 * **context**: Client context that will be opaquely forwarded to optional HttpDelegate

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/16/2020
+ms.date: 09/21/2020
 ---
 
 # class ProtectionHandler::ConsumptionSettings 
@@ -21,7 +21,9 @@ public std::shared_ptr\<PublishingLicenseInfo\> GetPublishingLicenseInfo() const
 public bool GetIsOfflineOnly() const  |  Gets whether or not ProtectionHandler creation allows for online HTTP operations.
 public void SetIsOfflineOnly(bool isOfflineOnly)  |  Sets whether or not ProtectionHandler creation allows for online HTTP operations.
 public void SetDelegatedUserEmail(const std::string& delegatedUserEmail)  |  Sets the delegated user.
+public void SetContentName(const std::string& contentName)  | _Not yet documented._
 public const std::string& GetDelegatedUserEmail() const  |  Gets the delegated user.
+public const std::string& GetContentName() const  | _Not yet documented._
   
 ## Members
   
@@ -51,7 +53,7 @@ Parameters:
 * **licenseInfo**: Publishing license info from protected content
 
 
-Providing a [PublishingLicenseInfo](class_mip_publishinglicenseinfo.md) (as opposed to just a raw serialized publishing license) will remove the need for MIP SDK to parse the publishing license.
+Providing a PublishingLicenseInfo (as opposed to just a raw serialized publishing license) will remove the need for MIP SDK to parse the publishing license.
   
 ### GetPublishingLicenseInfo function
 Get the publishing license associated with the protected content.
@@ -84,9 +86,16 @@ Parameters:
 
 A delegated user is specified when the authenticating user/application is acting on behalf of another user
   
+### SetContentName function
+Not yet documented.
+
+  
 ### GetDelegatedUserEmail function
 Gets the delegated user.
 
   
 **Returns**: Delegated user
 A delegated user is specified when the authenticating user/application is acting on behalf of another user
+  
+### GetContentName function
+Not yet documented.

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/16/2020
+ms.date: 09/21/2020
 ---
 
 # class TemplateNotFoundError 
@@ -16,6 +16,8 @@ Template ID is not recognized by RMS service.
 --------------------------------|---------------------------------------------
 public std::string mMessage  | _Not yet documented._
 public std::map\<std::string, std::string\> mDebugInfo  | _Not yet documented._
+public std::string mName  | _Not yet documented._
+public ErrorCode GetErrorCode() const  |  Gets the errorCode of bad input.
 public char const* what() const  |  Get the error message.
 public std::shared_ptr\<Error\> Clone() const  |  Clone the error.
 public virtual ErrorType GetErrorType() const  |  Get the error type.
@@ -24,6 +26,7 @@ public const std::string& GetMessage() const  |  Get the error message.
 public void SetMessage(const std::string& msg)  |  Set the error message.
 public void AddDebugInfo(const std::string& key, const std::string& value)  |  Add debug info entry.
 public const std::map\<std::string, std::string\>& GetDebugInfo() const  |  Get debug info.
+enum ErrorCode  |  ErrorCode of bad input error.
   
 ## Members
   
@@ -34,6 +37,16 @@ Not yet documented.
 ### mDebugInfo
 Not yet documented.
 
+  
+### mName
+Not yet documented.
+
+  
+### GetErrorCode function
+Gets the errorCode of bad input.
+
+  
+**Returns**: ErrorCode of bad input error
   
 ### what function
 Get the error message.
@@ -89,3 +102,10 @@ Get debug info.
 
   
 **Returns**: Debug info (keys/values)
+  
+### ErrorCode enum
+ Values                         | Descriptions                                
+--------------------------------|---------------------------------------------
+General            | General bad input error
+FileIsTooLargeForProtection            | File is too large for protection
+ErrorCode of bad input error.

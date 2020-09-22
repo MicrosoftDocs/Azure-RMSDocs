@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/16/2020
+ms.date: 09/21/2020
 ---
 
 # class DocumentState 
@@ -18,7 +18,7 @@ public virtual DataState GetDataState() const  |  Gets the state of the content 
 public std::vector\<MetadataEntry\> GetContentMetadata(const std::vector\<std::string\>& names, const std::vector\<std::string\>& namePrefixes) const  |  Get the meta-data items from the content.
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Get the Protection Descriptor.
 public ContentFormat GetContentFormat() const  |  Gets the content format.
-public virtual unsigned int GetContentMetadataVersion() const  |  Gets the highest metadata version supported by the application for the tenant.
+public virtual MetadataVersion GetContentMetadataVersion() const  |  Gets the highest metadata version supported by the application for the tenant.
 public virtual std::shared_ptr\<ClassificationResults\> GetClassificationResults(const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Return a map of classification results.
 public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Return a map of application specific audit key-value pairs.
 public virtual std::chrono::time_point\<std::chrono::system_clock\> GetLastModifiedTime() const  |  Return a time point to the last time the document was modified.

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/16/2020
+ms.date: 09/21/2020
 ---
 
 # class LabelGroupData 
@@ -31,6 +31,7 @@ public bool IsMandatory() const  | _Not yet documented._
 public const std::vector\<std::shared_ptr\<ProtectionActionData\>\>& GetProtectionActionData() const  | _Not yet documented._
 public bool IsAuditEnabled() const  | _Not yet documented._
 public bool IsCoauthEnabled() const  | _Not yet documented._
+public bool IsEnhancedClassificationEnabled() const  | _Not yet documented._
 public const std::string& GetAuditWorkspaceId() const  | _Not yet documented._
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  | _Not yet documented._
 public const std::vector\<std::string\>& GetLabelByCustomProperties() const  | _Not yet documented._
@@ -110,6 +111,10 @@ Not yet documented.
 
   
 ### IsCoauthEnabled function
+Not yet documented.
+
+  
+### IsEnhancedClassificationEnabled function
 Not yet documented.
 
   

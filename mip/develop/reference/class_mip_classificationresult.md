@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/16/2020
+ms.date: 09/21/2020
 ---
 
 # class ClassificationResult 
@@ -19,6 +19,7 @@ public std::string GetName() const  |  Get the name of the classification policy
 public int GetCount() const  |  Get the instance count.
 public int GetConfidenceLevel() const  |  Get the confidence in the result.
 public std::string GetSensitiveInformationDetections() const  |  Get the sensitive information detections.
+public virtual std::vector\<std::shared_ptr\<mip::DetailedClassificationResult\>\> GetDetailedClassificationAttributes() const  |  Get the specific detection bands if the enchanced classification is enabled.
   
 ## Members
   
@@ -48,3 +49,9 @@ Get the sensitive information detections.
 
   
 **Returns**: Json string of all the sensitive information detections. if not empty must be a valid json format.
+  
+### GetDetailedClassificationAttributes function
+Get the specific detection bands if the enchanced classification is enabled.
+
+  
+**Returns**: A vector of instance counts at different confidence thresholds

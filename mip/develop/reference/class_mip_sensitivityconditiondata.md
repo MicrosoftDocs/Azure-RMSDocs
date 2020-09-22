@@ -1,14 +1,14 @@
 ---
-title: class mip::SensitivityConditionData 
-description: Documents the mip::sensitivityconditiondata class of the Microsoft Information Protection (MIP) SDK.
+title: class SensitivityConditionData 
+description: Documents the sensitivityconditiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 02/14/2020
+ms.date: 09/21/2020
 ---
 
-# class mip::SensitivityConditionData 
+# class SensitivityConditionData 
   
 ## Summary
  Members                        | Descriptions                                
@@ -23,7 +23,7 @@ public const std::vector\<std::unique_ptr\<ConditionData\>\>& GetSubConditionsDa
 public bool HasKeyValueEntries() const  | _Not yet documented._
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetKeyValueEntries() const  | _Not yet documented._
 public bool HasClassificationData() const  | _Not yet documented._
-public const ClassificationData& GetClassificationData() const  | _Not yet documented._
+public const std::shared_ptr\<ClassificationData\>& GetClassificationData() const  | _Not yet documented._
 public void SetName(const std::string& name)  | _Not yet documented._
 public void SetProperties(std::map\<std::string, std::string\>& properties)  | _Not yet documented._
 public void SetSubConditionsData(std::vector\<std::unique_ptr\<ConditionData\>\>& subConditionData)  | _Not yet documented._

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/16/2020
+ms.date: 09/21/2020
 ---
 
 # class FileHandler 
@@ -15,7 +15,10 @@ Interface for all file handling functions.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<ContentLabel\> GetLabel()  |  Starts retrieving the sensitivity label from the file.
+public std::vector\<std::pair\<std::string, std::string\>\> GetProperties(uint32_t version)  |  Retrievs the file propertries according to version.
 public std::shared_ptr\<ProtectionHandler\> GetProtection()  |  Starts retrieving the protection policy from the file.
+public std::shared_ptr\<AsyncControl\> RegisterContentForTrackingAndRevocationAsync(bool isOwnerNotificationEnabled, const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  #### Parameters
+public std::shared_ptr\<AsyncControl\> RevokeContentAsync(const std::shared_ptr\<ProtectionEngine::Observer\>& observer, const std::shared_ptr\<void\>& context)  |  Perform revocation for the content.
 public void ClassifyAsync(const std::shared_ptr\<void\>& context)  |  Executes the rules in the handler and returns the list of actions to be executed.
 public void InspectAsync(const std::shared_ptr\<void\>& context)  |  Create a file inspector object, used to retrieve file contents from compatible file formats.
 public void SetLabel(const std::shared_ptr\<Label\>& label, const LabelingOptions& labelingOptions, const ProtectionSettings& protectionSettings)  |  Sets the sensitivity label to the file.
@@ -36,8 +39,41 @@ public std::string GetOutputFileName()  |  Calculates the output file name and e
 ### GetLabel function
 Starts retrieving the sensitivity label from the file.
   
+### GetProperties function
+Retrievs the file propertries according to version.
+  
 ### GetProtection function
 Starts retrieving the protection policy from the file.
+  
+### RegisterContentForTrackingAndRevocationAsync function
+
+Parameters:  
+* **isOwnerNotificationEnabled**: Set to true to notify the owner via email whenever the document is decrypted, or false to not send the notification. 
+
+
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
+
+
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
+
+
+
+  
+**Returns**: Async control object.
+  
+### RevokeContentAsync function
+Perform revocation for the content.
+
+Parameters:  
+* **observer**: A class implementing the ProtectionHandler::Observer interface 
+
+
+* **context**: Client context that will be opaquely forwarded to observers and optional HttpDelegate
+
+
+
+  
+**Returns**: Async control object.
   
 ### ClassifyAsync function
 Executes the rules in the handler and returns the list of actions to be executed.
@@ -54,7 +90,7 @@ Create a file inspector object, used to retrieve file contents from compatible f
 ### SetLabel function
 Sets the sensitivity label to the file.
 Changes won't be written to the file until CommitAsync is called. Privileged and Auto method allows the API to override any existing label 
-Throws [JustificationRequiredError](class_mip_justificationrequirederror.md) when setting the label requires the operation to be justified (via the labelingOptions parameter).
+Throws JustificationRequiredError when setting the label requires the operation to be justified (via the labelingOptions parameter).
   
 ### DeleteLabel function
 Deletes the sensitivity label from the file.

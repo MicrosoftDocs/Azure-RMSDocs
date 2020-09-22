@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/16/2020
+ms.date: 09/21/2020
 ---
 
 # class PolicyEngine 
@@ -14,7 +14,7 @@ This class provides an interface for all engine functions.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Get the policy engine [Settings](class_mip_policyengine_settings.md).
+public const Settings& GetSettings() const  |  Get the policy engine Settings.
 public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  list the sensitivity labels associated with the policy engine.
 public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  list the sensitivity types associated with the policy engine.
 public const std::string& GetMoreInfoUrl() const  |  Provide a url for looking up more information about the policy/labels.
@@ -30,8 +30,9 @@ public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSett
 public const std::string& GetPolicyFileId() const  |  Gets the policy file ID.
 public const std::string& GetSensitivityFileId() const  |  Gets the sensitivity file ID.
 public bool HasClassificationRules() const  |  Gets if the policy has automatic or recommendation rules.
+public ClassificationScheme GetClassificationScheme() const  |  Gets if the policy should classify based on the latest.
 public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Gets the time when the policy was last fetched.
-public unsigned int GetWxpMetadataVersion() const  |  Gets the recommended WXP (Windows, Excel, Powerpoint) metadata version, currently 0 for old verion 1 for co-authoring enabled version.
+public uint32_t GetWxpMetadataVersion() const  |  Gets the recommended WXP (Windows, Excel, Powerpoint) metadata version, currently 0 for old verion 1 for co-authoring enabled version.
   
 ## Members
   
@@ -146,6 +147,12 @@ Gets if the policy has automatic or recommendation rules.
   
 **Returns**: A bool that will tell if there any automatic or recommendation rules in the policy
   
+### GetClassificationScheme function
+Gets if the policy should classify based on the latest.
+
+  
+**Returns**: An Engine Type that will tell the customer which engine to use
+  
 ### GetLastPolicyFetchTime function
 Gets the time when the policy was last fetched.
 
@@ -156,4 +163,4 @@ Gets the time when the policy was last fetched.
 Gets the recommended WXP (Windows, Excel, Powerpoint) metadata version, currently 0 for old verion 1 for co-authoring enabled version.
 
   
-**Returns**: Unsigned int indecating what version of metadata the tenant supports for WXP files.
+**Returns**: Uint32_t int indecating what version of metadata the tenant supports for WXP files.

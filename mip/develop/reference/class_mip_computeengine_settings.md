@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/16/2020
+ms.date: 09/21/2020
 ---
 
 # class ComputeEngine::Settings 
@@ -13,7 +13,7 @@ ms.date: 04/16/2020
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const Identity& identity, const ApplicationInfo& applicationInfo, const std::shared_ptr\<TelemetryDelegate\>& telemetryDelegate, LogLevel thresholdLogLevel, const std::shared_ptr\<LoggerDelegate\>& loggerDelegate, const std::string& hostName, const std::vector\<std::pair\<std::string, std::string\>\>& customProperties, const std::vector\<LabelFilterType\>& labelFilter)  | _Not yet documented._
+public Settings(const Identity& identity, const ApplicationInfo& applicationInfo, const std::shared_ptr\<TelemetryDelegate\>& telemetryDelegate, LogLevel thresholdLogLevel, const std::shared_ptr\<LoggerDelegate\>& loggerDelegate, const std::string& hostName, const std::vector\<std::pair\<std::string, std::string\>\>& customProperties, const std::vector\<LabelFilterType\>& deprecatedFilters, const std::map\<LabelFilterType, bool\>& configuredFunctionality)  | _Not yet documented._
 public const Identity& GetIdentity() const  | _Not yet documented._
 public void SetIdentity(const Identity& identity)  | _Not yet documented._
 public const ApplicationInfo& GetApplicationInfo() const  | _Not yet documented._
@@ -24,10 +24,13 @@ public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomProp
 public void SetParentCorrelationId(const std::string correlationId, const std::string description)  | _Not yet documented._
 public const std::string& GetParentCorrelationId() const  | _Not yet documented._
 public const std::string& GetParentCorrelationIdDescription() const  | _Not yet documented._
-public const std::vector\<LabelFilterType\>& GetLabelFilter() const  | _Not yet documented._
+public const std::vector\<LabelFilterType\>& GetDeprecatedLabelFilter() const  | _Not yet documented._
+public const std::map\<LabelFilterType, bool\>& GetConfiguredFunctionality() const  | _Not yet documented._
 public void SetVariableTextMarkingType(VariableTextMarkingType variableTextMarkingType)  | _Not yet documented._
 public VariableTextMarkingType GetVariableTextMarkingType() const  | _Not yet documented._
 public LogLevel GetThresholdLogLevel() const  | _Not yet documented._
+public void SetClassifierEnabled(Classifier classifierType, bool enabled)  | _Not yet documented._
+public const std::map\<Classifier, bool\>& GetSupportedClassifiers() const  | _Not yet documented._
   
 ## Members
   
@@ -75,7 +78,11 @@ Not yet documented.
 Not yet documented.
 
   
-### GetLabelFilter function
+### GetDeprecatedLabelFilter function
+Not yet documented.
+
+  
+### GetConfiguredFunctionality function
 Not yet documented.
 
   
@@ -88,4 +95,12 @@ Not yet documented.
 
   
 ### GetThresholdLogLevel function
+Not yet documented.
+
+  
+### SetClassifierEnabled function
+Not yet documented.
+
+  
+### GetSupportedClassifiers function
 Not yet documented.

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/16/2020
+ms.date: 09/21/2020
 ---
 
 # class FileEngine 
@@ -42,7 +42,7 @@ list the sensitivity types associated with the policy engine.
   
 **Returns**: A list of sensitivity labels. empty if LoadSensitivityTypesEnabled was false (
   
-**See also**: [FileEngine::Settings](class_mip_fileengine_settings.md).
+**See also**: FileEngine::Settings).
   
 ### GetDefaultSensitivityLabel function
 Get the default sensitivity label.

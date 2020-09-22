@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 04/16/2020
+ms.date: 09/21/2020
 ---
 
 # class SyncFilePolicyData 
@@ -16,7 +16,7 @@ ms.date: 04/16/2020
 public const LabelGroupData* GetLabelGroupData() const  | _Not yet documented._
 public const std::vector\<std::unique_ptr\<PolicyPackageData\>\>& GetPoliciesPackageData() const  | _Not yet documented._
 public const std::string& GetUpn() const  | _Not yet documented._
-public const std::unordered_map\<std::string, std::string\>& GetClassificationList() const  | _Not yet documented._
+public const std::shared_ptr\<ClassifierUniqueIds\>& GetClassificationList() const  | _Not yet documented._
 public const std::string& GetUserObjectId() const  | _Not yet documented._
 public virtual ~SyncFilePolicyData()  | _Not yet documented._
   
