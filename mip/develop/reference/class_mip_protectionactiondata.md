@@ -1,11 +1,11 @@
 ---
 title: class ProtectionActionData 
 description: Documents the protectionactiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class ProtectionActionData 
@@ -26,36 +26,36 @@ public std::vector\<std::pair\<std::string, std::string\>\> GetArguments() const
 ## Members
   
 ### GetProtectionType function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetTemplateId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetDoubleKeyEncryptionUrl function
-_Not documented yet._
+Not yet documented.
 
   
 ### ~ProtectionActionData function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetType function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetProperties function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetArgumentValue function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetName function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetArguments function
-_Not documented yet._
+Not yet documented.

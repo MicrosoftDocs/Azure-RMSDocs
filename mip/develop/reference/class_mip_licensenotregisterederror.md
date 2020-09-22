@@ -1,6 +1,6 @@
 ---
-title: class ActionData 
-description: Documents the actiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
+title: class LicenseNotRegisteredError 
+description: Documents the licensenotregisterederror::undefined class of the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
@@ -8,14 +8,12 @@ ms.author: mbaldwin
 ms.date: 09/21/2020
 ---
 
-# class ActionData 
+# class LicenseNotRegisteredError 
+License is not registered.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual ~ActionData()  | _Not yet documented._
   
 ## Members
-  
-### ~ActionData function
 Not yet documented.
