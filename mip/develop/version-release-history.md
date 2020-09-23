@@ -11,20 +11,82 @@ manager: barbkess
 
 # Microsoft Information Protection (MIP) Software Development Kit (SDK) version release history and support policy
 
-## Servicing 
+## Servicing
 
-Each general availability (GA) version is supported for six months once the next GA version is release. The documentation may not include information about unsupported versions. Fixes and new functionality are only applied to the latest GA version.
+Each general availability (GA) version is supported for six months once the next GA version is released. The documentation may not include information about unsupported versions. Fixes and new functionality are only applied to the latest GA version.
 
 Preview versions shouldn't be deployed in production. Instead, use the latest preview version to test new functionality or fixes that are coming in the next GA version. Only the most current preview version is supported.
 
 ## Release history
 
-Use the following information to see what’s new or changed for a supported release. The most current release is listed first. 
+Use the following information to see what’s new or changed for a supported release. The most current release is listed first.
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the SDK, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version.
 >  
-> For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
+> For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
+
+## Version 1.7.133
+
+**Release date**: September 23, 2020
+
+### General SDK Changes
+
+- Public Preview available for Java on Windows and Ubuntu 18.04.
+- .NET Core now supported on Windows.
+- Public preview support for .NET Core on Ubuntu 18.04.
+- Improved local logging for Keystore when storage cache type is set to `OnDiskEncrypted.`
+- Enabled feature flighting on .NET Wrapper
+- Reverted SDK telemetry behavior to pre-1.6. A minimum set of usage events are now sent when opted in for minimum telemetry only.
+
+### File SDK
+
+- Fixed UTF-16/UTF-8 body conversion in `MSGInspector`.
+- Set a default max file size limit for files protected by the File SDK to 6GB.
+  - Change made due to decryption of large files requiring *at least* the file size in available memory.
+  - Can be overridden by custom setting `max_file_size_for_protection`.
+- Added support for linearized PDFs.
+- Fixed a bug where LastModifiedDate wasn't updated on Change event.
+- Fixed a memory leak in protected PDF creation.
+- File SDK supports revocation of tracked files.
+- `FileEngine::Settings::SetLabelFilter` is deprecated, use `ConfigureFunctionality` instead.
+
+### Policy SDK
+
+- Policy SDK now supports Encrypt Only labeling actions.
+- Fixed a bug where `mip::Identity` wasn't properly loaded from cached engines.
+- Fixed a bug where classification GUID comparisons were case sensitive in classification API.
+- Enriched audit events by adding new fields.
+
+### Protection SDK
+
+- Fixed a bug where `mip::Identity` wasn't properly loaded from cached engines.
+- Added implicit registration for newly created publishing licenses.
+- Added support for cyptographic algorithms used to support DKE in Office files.
+- Made `documentId` and `owner` parameters optional.
+
+### C APIs
+
+- Added missing identity and DKE APIs.
+- Moved `AuthDelegate` from profile to engine across all SDKs.
+- Publish Policy SDK Sample for C
+- `MIP_CC_CreateProtectionEngineSettingsWithIdentity` has been deprecated, use `MIP_CC_CreateProtectionEngineSettingsWithIdentityAndAuthCallback` instead.
+- `MIP_CC_CreateProtectionEngineSettingsWithEngineId` has been deprecated, use `MIP_CC_CreateProtectionEngineSettingsWithEngineIdAndAuthCallback` instead.
+- `MIP_CC_CreateProtectionProfileSettings` signature has changed.
+- `MIP_CC_CreatePolicyEngineSettingsWithIdentity` has been deprecated, use `MIP_CC_CreatePolicyEngineSettingsWithIdentityAndAuthCallback`.
+- `MIP_CC_CreatePolicyEngineSettingsWithEngineId` has been deprecated, use `MIP_CC_CreatePolicyEngineSettingsWithEngineIdAndAuthCallback`.
+- `MIP_CC_PolicyEngineSettings_SetLabelFilter` has been deprecated, use `MIP_CC_PolicyEngineSettings_ConfigureFunctionality`.
+- `MIP_CC_CreatePolicyProfileSettings` signature has changed.
+
+### Breaking Changes
+
+#### Common
+
+- `TelemetryConfiguration::isTelemetryOptedOut` renamed to `isMinimalTelemetryEnabled`. 
+
+#### C API
+
+- `mip_cc_document_state` has been updated with a new value `mip_cc_metadata_version_format` contentMetadataVersionFormat
 
 ## Version 1.6.103
 
