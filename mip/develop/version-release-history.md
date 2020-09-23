@@ -54,8 +54,6 @@ Use the following information to see what’s new or changed for a supported rel
 ### Policy SDK
 
 - Policy SDK now supports Encrypt Only labeling actions.
-- Policy SDK now supports user-defined permissions (UDP) for Dual Key Encryption-enabled (DKE) labels.
-- Added support for filtering labels that use double key encryption with user-defined permissions from user labels.
 - Fixed a bug where `mip::Identity` wasn't properly loaded from cached engines.
 - Fixed a bug where classification GUID comparisons were case sensitive in classification API.
 - Enriched audit events by adding new fields.
@@ -87,6 +85,7 @@ Use the following information to see what’s new or changed for a supported rel
 - `TelemetryConfiguration::isTelemetryOptedOut` renamed to `isMinimalTelemetryEnabled`. 
 
 #### C API
+
 - `mip_cc_document_state` has been updated with a new value `mip_cc_metadata_version_format` contentMetadataVersionFormat
 
 ## Version 1.6.103
