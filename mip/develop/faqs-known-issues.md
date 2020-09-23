@@ -50,7 +50,7 @@ This indicates that you haven't migrated your labels from Azure Information Prot
 
 > NoPolicyException: Label policy did not contain data, CorrelationId=GUID, CorrelationId.Description=PolicyProfile, NoPolicyError.Category=SyncFile, NoPolicyError.Category=SyncFile
 
-This indicates that no labeling policy has been published in Microsoft Security and Compliance Center. Follow [Create and configure sensitivity labels and their policies](https://docs.microsoft.com/en-us/microsoft-365/compliance/create-sensitivity-labels?view=o365-worldwide) to configure the labeling policy.
+This indicates that no labeling policy has been published in Microsoft Security and Compliance Center. Follow [Create and configure sensitivity labels and their policies](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
 
 ### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
 
