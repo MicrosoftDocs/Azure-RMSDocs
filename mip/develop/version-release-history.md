@@ -26,7 +26,7 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, please visit the [Stack Overflow Microsoft Information Protection forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
 
-## Version 1.7
+## Version 1.7.133
 
 **Release date**: September 23, 2020
 
