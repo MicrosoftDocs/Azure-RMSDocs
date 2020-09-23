@@ -1,11 +1,11 @@
 ---
 title: class DeprecatedApiError 
 description: Documents the deprecatedapierror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class DeprecatedApiError 
@@ -16,4 +16,4 @@ Caller invoked a deprecated API.
 --------------------------------|---------------------------------------------
   
 ## Members
-_Not documented yet._
+Not yet documented.

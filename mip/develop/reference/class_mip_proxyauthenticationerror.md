@@ -1,52 +1,51 @@
 ---
 title: class ProxyAuthenticationError 
 description: Documents the proxyauthenticationerror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class ProxyAuthenticationError 
 Proxy authentication failure.
   
 ## Summary
-
-| Members                                       | Descriptions
-|-----------------------------------------------|---------------------------------------------
-| public Category GetCategory() const           |  Gets the category of network failure.
-| public int32_t GetResponseStatusCode() const  |  Gets the HTTP response status code.
-| enum Category                                 |  Category of network error.
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+public Category GetCategory() const  |  Gets the category of network failure.
+public int32_t GetResponseStatusCode() const  |  Gets the HTTP response status code.
+enum Category  |  Category of network error.
   
 ## Members
   
 ### GetCategory function
-
 Gets the category of network failure.
 
+  
 **Returns**: Category of network failure
   
 ### GetResponseStatusCode function
-
 Gets the HTTP response status code.
 
+  
 **Returns**: HTTP response status code, 0 if none
   
 ### Category enum
 
-Category of network error.
+ Values                         | Descriptions                                
+--------------------------------|---------------------------------------------
+Unknown            | Unknown network failure
+FailureResponseCode            | HTTP response code indicates failure
+BadResponse            | HTTP response could not be read
+UnexpectedResponse            | HTTP response completed but contained unexpected data
+NoConnection            | Failed to establish a connection
+Proxy            | Proxy failure
+SSL            | SSL failure
+Timeout            | Connection timed out
+Offline            | Operation requires network connectivity
+Throttled            | HTTP operation failed due to server traffic throttling
+Cancelled            | HTTP operation has been cancelled by the application
 
-| Values                   | Descriptions
-|--------------------------|---------------------------------------------
-| Unknown                  | Unknown network failure
-| FailureResponseCode      | HTTP response code indicates failure
-| BadResponse              | HTTP response could not be read
-| UnexpectedResponse       | HTTP response completed but contained unexpected data
-| NoConnection             | Failed to establish a connection
-| Proxy                    | Proxy failure
-| SSL                      | SSL failure
-| Timeout                  | Connection timed out
-| Offline                  | Operation requires network connectivity
-| Throttled                | HTTP operation failed due to server traffic throttling
-| Cancelled                | HTTP operation has been cancelled by the application
+Category of network error.
