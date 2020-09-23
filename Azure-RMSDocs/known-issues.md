@@ -115,7 +115,7 @@ Tracking and revoking document access using the unified labeling client has the 
 - [Multiple attachments in a protected email](#multiple-attachments-in-a-protected-email)
 - [Documents accessed via SharePoint](#documents-accessed-via-sharepoint)
 
-For more information, see [Administrator Guide: Track and revoke document access with Azure Information Protection](rms-client/track-and-revoke-admin.md).
+For more information, see [Administrator Guide: Track and revoke document access with Azure Information Protection](rms-client/track-and-revoke-admin.md) and [User Guide: Revoke document access with Azure Information Protection](rms-client/revoke-access-user.md).
 
 #### Multiple attachments in a protected email
 
@@ -133,23 +133,9 @@ Additionally, revoking access for one of the attachments also revokes access for
 
 - If a user downloads the file from SharePoint and accesses it from their local machine, a new ContentID is applied to the document when they open it locally. 
     
-    Using the original ContentID value to track data will not include any access performed for the user's downloaded file.
-
-    Additionally, revoking access based on the original ContentID value will not revoke access for any of the downloaded files.
+    Using the original ContentID value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original ContentID value will not revoke access for any of the downloaded files.
 
     In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new ContentID values to track or revoke access.
-
-#### Known issues for revoking document access
-
-- **Protection with labels that allow offline access.**
-
-    If a user opens the document offline before access is revoked, that user will continue to have access to the document until permissions are next checked for the document, such as when offline access expires.
-
-- **Revoking access for multiple email attachments in a protected email.** 
-
-    If you attach multiple documents to an email, and then protect the email and send it, each of the attachments get the same ContentID value. 
-
-    This means that revoking access for one of the attachments will revoke access for the other attachments as well.
 
 ## AIP for Windows and Office versions in extended support
 

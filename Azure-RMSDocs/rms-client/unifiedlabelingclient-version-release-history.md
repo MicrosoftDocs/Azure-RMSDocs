@@ -92,11 +92,11 @@ This version includes the following new features, fixes, and enhancements for th
 
 ### Track document access and revoke access
 
-Once you've upgraded to version TBD, all documents are automatically registered for tracking when they are next opened.
+Once you've upgraded to version TBD, any documents not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed.
 
-This means that administrators can start tracking document access, and revoking document access, using PowerShell cmdlets and the unified labeling client.
+Having your documents registered for tracking enables administrators to use PowerShell to track document access, and revoke access if needed.
 
-End-user can also revoke access for documents they've protected from the **Sensitivity** button in Microsoft Office Word, Excel, and PowerPoint. 
+Once you've upgraded, end-users can also revoke access for documents that they've protected. To revoke access from Microsoft Office apps, use the new **Revoke access** option on the **Sensitivity** menu.
 
 For more information, see:
 
@@ -106,9 +106,11 @@ For more information, see:
 
 ### Migrate files protected by Secure Island to unified labeling
 
-Customers who have documents protected by Secure Island can now migrate their protection, in order to open and view those files with the Azure Information Protection unified labeling client.
+Customers who have documents protected by Secure Island can now migrate their protection to sensitivity labels, enabling them to decrypt and open those files with the AIP unified labeling client.
 
-Until now, support for documents with IQP protection provided by Secure Island included only label migration and the ability to decrypt and open files with the AIP classic client. Now, customers can migrate IQP-protected files into the AIP unified labeling client as well.
+Until now, AIP support for documents with IQP protection provided by Secure Island included only the ability to migrate labels, and decrypt and open files with the AIP classic client. 
+
+Now, customers can migrate IQP-protected files into the AIP unified labeling client as well.
 
 For more information, see [Migrate documents with legacy protection](clientv2-admin-guide-customizations.md#migrate-documents-with-legacy-protection).
 

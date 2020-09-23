@@ -31,7 +31,7 @@ ms.custom: user
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-If you've upgraded to [version TBD](unifiedlabelingclient-version-release-history.md#version-tbd-public-preview) of the AIP unified labeling client, all protected documents are automatically registered for tracking the next time they're opened. 
+If you've upgraded to [version TBD](unifiedlabelingclient-version-release-history.md#version-tbd-public-preview) of the AIP unified labeling client, any protected documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client.
 
 Registering a document for tracking enables administrators to track access details, including successful access events and denied attempts, as well as revoke access if needed.
 
@@ -46,7 +46,7 @@ Administrators can track access for protected documents via PowerShell using the
     In the cmdlet response, note the **ContentID** returned. You'll use this ContentID to return tracking information.
 
     > [!TIP]
-    > Only documents that have been protected and registered for tracking have a ContentID value. If your document has no ContentID, open it for the AIP unified labeling client to register the file.
+    > Only documents that have been protected and registered for tracking have a ContentID value. If your document has no ContentID, open it to register the file.
 
 1. Run the following command to view tracking data for the selected file:
 
@@ -74,7 +74,7 @@ For example, if an administrator changes the tracking data retention period from
 Administrators can revoke access for any protected document stored in their local content shares.
 
 > [!TIP]
-> Users can also revoke access for any documents where they applied protection directly from the **Sensitivity** menu in their Office apps. For more information, see <x.>.
+> Users can also revoke access for any documents where they applied protection directly from the **Sensitivity** menu in their Office apps. For more information, see [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
 
 ### Un-revoke access
 

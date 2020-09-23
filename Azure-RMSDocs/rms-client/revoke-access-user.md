@@ -33,13 +33,13 @@ ms.custom: user
 
 This article describes how to revoke access for documents that you've protected from Microsoft Office.
 
-Revoking access for a protected document prevents other users from accessing the document, even if you've given them access before.
+Revoking access for a protected document prevents other users from accessing the document, even if you've given them access before. For more information, see [User Guide: Classify and protect with the Azure Information Protection unified labeling client](clientv2-classify-protect.md).
 
 ## Revoke access from Microsoft Office apps
 
 To revoke access from Word, Excel, or PowerPoint:
 
-1. Open the protected file where you want to revoke access. This must be a file where you have applied the protection, using your current user account.
+1. Open the protected file whose access you want to revoke. This must be a file where *you* have applied the protection, using your *current* user account.
 
 1. On the **Home** tab, click the **Sensitivity** button and select **Revoke Access**:
 
@@ -54,12 +54,16 @@ To revoke access from Word, Excel, or PowerPoint:
 
 Access is revoked, and other users can no longer access the document.
 
+
 ### Revoking access where the document protection has been changed
 
-If another user had changed the label or protection on the document, access is not revoked on that copy of the document. Each protection level on the document has its own ContentID value, which is used to track and revoke access.
+If another user had changed the label or the protection on a copy of the document, access is *not revoked* on that copy of the document. 
 
-If you think that a user may have changed the label or protection level on a document and you need to revoke access, contact a system administrator to help you revoke access on that copy of the document.
+This is because tracking and revoking access is done using a unique ContentID value, which changes each time protection is changed.
 
+> [!IMPORTANT]
+> If you think that a user may have changed the label or protection level on a document and you need to revoke access, contact a system administrator to help you revoke access on that copy of the document.
+> 
 ## Next steps
 
 For more information, see:
