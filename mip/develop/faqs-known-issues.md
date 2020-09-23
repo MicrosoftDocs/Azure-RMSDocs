@@ -44,6 +44,14 @@ This exception results from attempting to protect or label a PDF file that has b
 
 This indicates that you haven't migrated your labels from Azure Information Protection to the unified labeling experience. Follow [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels) to migrate the labels, then create a Label Policy in Office 365 Security and Compliance Center. 
 
+### Error: "NoPolicyException: Label policy did not contain data"
+
+**Question**: Why do I get the following error when trying to read a label or list labels via MIP SDK?
+
+> NoPolicyException: Label policy did not contain data, CorrelationId=GUID, CorrelationId.Description=PolicyProfile, NoPolicyError.Category=SyncFile, NoPolicyError.Category=SyncFile
+
+This indicates that no labeling policy has been published in Microsoft Security and Compliance Center. Follow [Create and configure sensitivity labels and their policies](https://docs.microsoft.com/en-us/microsoft-365/compliance/create-sensitivity-labels?view=o365-worldwide) to configure the labeling policy.
+
 ### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
 
 **Question**: Why do I get the following error when using the MIP SDK .NET Wrapper?
