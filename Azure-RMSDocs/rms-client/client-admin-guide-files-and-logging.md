@@ -4,9 +4,9 @@
 title: Azure Information Protection client files and usage logging
 description: Information about the client files and usage logging for the Azure Information Protection client for Windows.
 author: mlottner
-ms.author: mlottner
-manager: rkarlin
-ms.date: 03/16/2020
+ms.author: batamig
+manager: bagol
+ms.date: 09/24/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -63,9 +63,9 @@ The client logs user activity to the local Windows event log **Applications and 
 
     - Set label: Information ID 101​
     
-    - Set label (lower): Information ID 101​
+    - Set label (lower): Information ID 102
     
-    - Set label (higher): Information ID 101​
+    - Set label (higher): Information ID 103​
     
     - Remove label: Information ID 104​
     
