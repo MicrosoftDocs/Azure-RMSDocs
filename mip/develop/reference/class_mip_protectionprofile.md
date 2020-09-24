@@ -1,11 +1,11 @@
 ---
 title: class ProtectionProfile 
 description: Documents the protectionprofile::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class ProtectionProfile 
@@ -41,7 +41,7 @@ Parameters:
 
   
 **Returns**: Async control object.
-[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) will be called upon success or failure.
+ProtectionProfile::Observer will be called upon success or failure.
   
 ### ListEngines function
 List engines.

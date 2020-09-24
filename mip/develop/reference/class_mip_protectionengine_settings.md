@@ -1,11 +1,11 @@
 ---
 title: class ProtectionEngine::Settings 
 description: Documents the protectionengine::settings class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class ProtectionEngine::Settings 
@@ -33,6 +33,8 @@ public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  | 
 public const std::string& GetCloudEndpointBaseUrl() const  |  Gets the cloud base URL used by all service requests, if specified.
 public void SetAuthDelegate(const std::shared_ptr\<AuthDelegate\>& authDelegate)  |  Set the Engine Auth Delegate.
 public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Get the Engine Auth Delegate.
+public const std::string& GetUnderlyingApplicationId() const  |  Gets the Underlying Application ID.
+public void SetUnderlyingApplicationId(const std::string& underlyingApplicationId)  |  Sets the Underlying Application ID.
   
 ## Members
   
@@ -189,3 +191,16 @@ Get the Engine Auth Delegate.
 
   
 **Returns**: The Engine Auth Delegate.
+  
+### GetUnderlyingApplicationId function
+Gets the Underlying Application ID.
+
+  
+**Returns**: Underlying Application ID
+  
+### SetUnderlyingApplicationId function
+Sets the Underlying Application ID.
+
+Parameters:  
+* **UnderlyingApplicationId**: Underlying Application ID.
+

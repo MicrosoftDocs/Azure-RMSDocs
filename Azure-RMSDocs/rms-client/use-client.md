@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/16/2020
+ms.date: 09/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -135,8 +135,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manual labeling:| **Yes** | **Yes** |**Yes** |
 |Default label:| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling: <br />- For Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling:<br />- For Outlook| **Yes** | **Yes** | No |
+|Recommended or automatic labeling: <br />- For Word, Excel, PowerPoint, Outlook| **Yes** | **Yes** | **Yes** |
 |Mandatory labeling:| **Yes** | **Yes** | No |
 |User-defined permissions for a label: <br />- Do Not Forward for emails| **Yes** | **Yes** | **Yes** |
 |User-defined permissions for a label: <br />- Custom permissions for Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
@@ -153,18 +152,18 @@ To compare the Office built-in sensitivity labeling features across different op
 |Label with File Explorer:| **Yes** | **Yes** | No |
 |A viewer for protected files (text, images, PDF, .pfile):| **Yes** | **Yes** | No|
 |PPDF support for applying labels:| **Yes** | No | No |
-|PowerShell labeling cmdlets:| **Yes** | **Yes** <sup>4</sup> | No |
-|Offline support for protection actions:| **Yes** | **Yes** <sup>5</sup> | **Yes** |
+|PowerShell labeling cmdlets:| **Yes** | **Yes**  | No |
+|Offline support for protection actions:| **Yes** | **Yes** <sup>4</sup> | **Yes** |
 |Manual policy file management for disconnected computers:| **Yes** |**Yes**| No |
 |HYOK support:| **Yes** | No | No |
 |Usage logging in Event Viewer:| **Yes** | No |No |
 |Display the Do Not Forward button in Outlook:| **Yes** | No | No |
-|Track protected documented:| **Yes** | **Yes** <sup>6</sup> | No |
+|Track protected documented:| **Yes** | **Yes** <sup>5</sup> | No |
 |Revoke protected documents:| **Yes** | No | No |
 |Protection-only mode (no labels):| **Yes** | No | No |
 |Support for account switching:| No | No | **Yes** |
 |Support for Remote Desktop Services:| **Yes** | **Yes** | **Yes** |
-|Support for AD RMS:| **Yes** | No <sup>7</sup> | No |
+|Support for AD RMS:| **Yes** | No <sup>6</sup> | No |
 |Remove external content marking in app:| **Yes**| **Yes**| No|
 
 
@@ -180,15 +179,12 @@ These settings, and many more are supported as [advanced settings that you confi
 Supported by File Explorer and PowerShell. In Office apps, users can select **File Info** > **Protect Document** > **Restrict Access**.
 
 <sup>4</sup>
-No support to remove protection from container files (zip).
-
-<sup>5</sup>
 For File Explorer and PowerShell commands, the user must be connected to the internet to protect files.
 
-<sup>6</sup>
+<sup>5</sup>
 The document tracking site that's supported by the classic client isn't supported by the unified labeling client. However, without the need to first register the document for tracking, administrators can use [central reporting](../reports-aip.md) to identify whether protected documented are accessed from Windows computers, and whether access was granted or denied. 
 
-<sup>7</sup>
+<sup>6</sup>
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 
@@ -212,7 +208,7 @@ When the Azure Information Protection client (classic) and the Azure Information
 |Automatic and recommended labels: | Configured as [label conditions](../configure-policy-classification.md) in the Azure portal with built-in information types and custom conditions that use phrases or regular expressions <br /><br />Configuration options include: <br /><br />- Unique / Not unique count <br /><br /> - Minimum count| Configured in the admin centers with built-in sensitive information types and [custom information types](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Configuration options include:  <br /><br />- Unique count only <br /><br />- Minimum and maximum count <br /><br />- AND and OR support with information types <br /><br />- Keyword dictionary<br /><br />- Customizable confidence level and character proximity|
 |Order support for sublabels on attachments: | Enabled with an [advanced client setting](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Enabled by default, no configuration required|
 |Change the default protection behavior for file types: | You can use [registry edits](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) to override the defaults of native and generic protection | You can use [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) to change which file types get protected|
-|Automatic rescans | Full rescans are automatically run every time the scanner detects a change in policy or labeling settings | Starting in version [2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview), administrators can choose to skip a full rescan after making changes to policy or content scan job settings. |
+|Automatic rescans | Full rescans are automatically run every time the scanner detects a change in policy or labeling settings | Starting in version [2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), administrators can choose to skip a full rescan after making changes to policy or content scan job settings. |
 |Network discovery |Network discovery features are unavailable for the classic scanner | Administrators can discover additional risky repositories by scanning a specified IP address or range.|
 | | | |
 
@@ -224,8 +220,6 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Custom permissions as a [separate option that users can select in Office apps: Word, Excel, and PowerPoint](client-classify-protect.md#set-custom-permissions-for-a-document)
 
-- [Track and revoke](client-track-revoke.md) options from Office apps and File Explorer
-
 - Information Protection bar title and tooltip
 
 - [Protection-only mode](client-protection-only-mode.md) (no labels) using templates
@@ -235,8 +229,6 @@ Although the Azure Information Protection unified labeling client is still under
 - Display the **Do Not Forward** button in Outlook
 
 - Demo policy
-
-- Confirmation prompt **Do you want to delete this label?** for users when you don't use the policy setting for justification
 
 - Separate PowerShell cmdlets to connect to a Rights Management service
 
