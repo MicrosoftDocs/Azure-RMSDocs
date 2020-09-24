@@ -1220,7 +1220,7 @@ Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
 ## Sign in as a different user
 
-In a production environment, users wouldn't usually need to sign in as a different user when they are using the Azure Information Protection unified labeling client. However, as an administrator, you might need to sign in as a different user during a testing phase. 
+Signing in with multiple users is not supported by AIP in production. This procedure describes how to sign in as a different user for testing purposes only.
 
 You can verify which account you're currently signed in as by using the **Microsoft Azure Information Protection** dialog box: Open an Office application and on the **Home** tab, select the **Sensitivity** button, and then select **Help and feedback**. Your account name is displayed in the **Client status** section.
 
