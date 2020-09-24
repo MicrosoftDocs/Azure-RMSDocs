@@ -3,9 +3,9 @@
 
 title: Azure Information Protection client files and usage logging
 description: Information about the client files and usage logging for the Azure Information Protection client for Windows.
-author: mlottner
-ms.author: batamig
-manager: bagol
+author: batamig
+ms.author: bagol
+manager: rkarlin
 ms.date: 09/24/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
