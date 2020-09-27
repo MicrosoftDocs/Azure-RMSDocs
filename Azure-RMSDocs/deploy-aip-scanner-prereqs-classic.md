@@ -104,7 +104,7 @@ To store the scanner configuration data, use an SQL server with the following re
 
 - **Capacity.** For capacity guidance, see [Storage requirements and capacity planning for SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).
 
-- **[Case insensitive collation](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-ver15)**
+- **[Case insensitive collation](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support)**
 
 > [!NOTE]
 > Multiple configuration databases on the same SQL server are supported when you specify a custom cluster (profile) name for the scanner.

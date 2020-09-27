@@ -55,9 +55,6 @@ Get the content state name.
 
 Parameters:  
 * **actionSource**: The state of the content being worked upon. 
-
-
-
   
 **Returns**: A string representation of the content state.
   
@@ -192,15 +189,15 @@ public std::string LastModifiedDate()       | _Not yet documented._
 Audit metadata keys in string representation.
   
 ### Recipients function
-_Not documented yet._
+Not yet documented.
 
   
 ### LastModifiedBy function
-_Not documented yet._
+Not yet documented.
 
   
 ### LastModifiedDate function
-_Not documented yet._
+Not yet documented.
 
 
 ## namespace `mip::rights` 
