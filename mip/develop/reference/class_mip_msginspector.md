@@ -1,11 +1,11 @@
 ---
 title: class MsgInspector 
 description: Documents the msginspector::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class MsgInspector 
@@ -13,7 +13,8 @@ ms.date: 04/16/2020
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector\<uint8_t\>& GetBody()  |  Get the body of the msg. if TXT/HTML formatted as utf8.
+public const std::vector\<uint8_t\>& GetBody() const  |  Get the body of the msg. if TXT/HTML formatted as utf8.
+public unsigned int GetCodePage() const  |  Get body encoding code page, relevant for txt, html body formats.
 public BodyType GetBodyType() const  |  Get body type.
 public const std::vector\<std::shared_ptr\<MsgAttachmentData\>\>& GetAttachments() const  |  Get a list of attachment as msg attachment data objects.
 public InspectorType GetInspectorType() const  |  Get file types,.
@@ -26,6 +27,14 @@ Get the body of the msg. if TXT/HTML formatted as utf8.
 
   
 **Returns**: A vector of bytes.
+  
+### GetCodePage function
+Get body encoding code page, relevant for txt, html body formats.
+
+  
+**Returns**: An unsigned code page. 
+  
+**See also**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers)
   
 ### GetBodyType function
 Get body type.

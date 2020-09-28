@@ -1,11 +1,11 @@
 ---
 title: class ConditionData 
 description: Documents the conditiondata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class ConditionData 
@@ -18,4 +18,4 @@ public virtual ~ConditionData()  | _Not yet documented._
 ## Members
   
 ### ~ConditionData function
-_Not documented yet._
+Not yet documented.
