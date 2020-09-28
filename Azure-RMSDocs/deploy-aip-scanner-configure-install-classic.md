@@ -135,12 +135,6 @@ To configure your scanner:
 
     For the remaining settings on this pane, do not change them for this initial configuration, but keep them as **Content scan job default**. The default setting means that the data repository inherits the settings from the content scan job.
 
-    <!--
-    > [!IMPORTANT]
-    > While the local file system can be scanned, this configuration is not recommended for production deployments and can **only** be used in single node clusters.
-    >
-    > Scanning of local folders by multi-node clusters is not supported. If you need to scan a folder on the local file system, we recommend creating a share, and scanning it using a network URL.
-    -->
 
 1. If you want to add another data repository, repeat steps 8 and 9.
 
@@ -359,9 +353,6 @@ Use the following options and guidance to help you optimize scanner performance:
 |**Decrease scanner timeouts** | Decrease the scanner timeouts with [advanced client settings](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner).Decreased scanner timeouts provide better scanning rates and lower memory consumption. </br></br>**Note:** Decreasing scanner timeouts means that some files may be skipped.
 | | |
 
-<!-- removed with local folders
-|**Do not scan local folders on the computer running the scanner service**     | If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. </br></br>Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.        |
--->
 
 ### Additional factors that affect performance
 

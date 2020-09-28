@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -221,8 +221,9 @@ Make sure to allow access to all ports for the following Service Tags:
 The Azure Information Protection service also depends on two specific IP addresses:
  - **13.107.6.181** 
  - **13.107.9.181**
+ - **Port 443**, for HTTPS traffic
 
-Make sure to create rules to allow outbound access to these specific IP addresses.
+Make sure to create rules to allow outbound access to these specific IP addresses, and via this port.
 
 ## Supported on-premises servers for Azure Rights Management data protection
 
@@ -240,10 +241,6 @@ Supported servers include:
 |**Office SharePoint Server**     |- Office SharePoint Server 2016 </br>- Office SharePoint Server 2013 </br>- Office SharePoint Server 2010         |
 |**File servers that run Windows Server and use File Classification Infrastructure (FCI)**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
 | | |
-
-<!-- i think that half of this note was removed at some point, without this other half. keeping it here in case we ever need it..>
-    > You can also use these cmdlets with servers running later versions of Windows Server, with the benefit that these cmdlets can protect all file types. The RMS connector protects Office files only. For how-to instructions, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](./rms-client/configure-fci.md).
--->
 
 For more information, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 

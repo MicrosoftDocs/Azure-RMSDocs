@@ -1,11 +1,11 @@
 ---
 title: class HttpOperation 
 description: Documents the httpoperation::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class HttpOperation 
@@ -25,7 +25,7 @@ Gets operation ID.
 
   
 **Returns**: Operation ID
-The corresponding [HttpRequest](class_mip_httprequest.md) and [HttpResponse](class_mip_httpresponse.md) will have the same ID
+The corresponding HttpRequest and HttpResponse will have the same ID
   
 ### GetResponse function
 Get response, if any.

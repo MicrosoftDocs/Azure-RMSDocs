@@ -1,11 +1,11 @@
 ---
 title: class AdhocProtectionRequiredError 
 description: Documents the adhocprotectionrequirederror::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class AdhocProtectionRequiredError 
@@ -16,4 +16,4 @@ Adhoc protection should be set to complete the action on the file.
 --------------------------------|---------------------------------------------
   
 ## Members
-_Not documented yet._
+Not yet documented.

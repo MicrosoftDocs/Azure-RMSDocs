@@ -113,6 +113,12 @@ To generate these reports, endpoints send the following types of information to 
 
 - The name of the user's device.
 
+- The IP address of the user's device. 
+
+- The relevant process name, such as **outlook** or **msip.app**.
+
+- The name of the application that performed the labeling, such as **Outlook** or **File Explorer**
+
 - For documents: The file path and file name of documents that are labeled.
 
 - For emails: The email subject and email sender  for emails that are labeled. 

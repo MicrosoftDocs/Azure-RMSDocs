@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/10/2020
+ms.date: 09/03/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -30,29 +30,6 @@ Use the lists and tables below to find details about known issues and limitation
 > [!NOTE]
 > This article refers to known issues in both the classic and unified labeling clients. Not sure of the difference between these clients? See [FAQs](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 
-<!--removed from this page
-## HYOK known issues
-
-HYOK has the following known issues:
-
-- [Supported Microsoft Office versions](#supported-microsoft-office-versions)
-- [Email recommendations for Office 365 and other online services](#email-recommendations-for-office-365-and-other-online-services)
-
-### Supported Microsoft Office versions
-
-HYOK for the Azure Information Protection classic client does not support versions of Office earlier than Office 2013.
-
-### Email recommendations for Office 365 and other online services
-
-We recommend that you do not use HYOK protection for emails in Office 365 and other online services.
-
-Office 365 and other online services are not be able to decrypt HYOK-protected documents and emails. This limitation includes HYOK-protected documents and emails that have been protected with the Rights Management connector, and prevents these services from inspecting the content and taking action on them.
-
-This loss of functionality for HYOK-protected email includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
-
-Additionally, users may not understand why some devices cannot open their HYOK-protected emails, resulting in more calls to your help desk.
--->
-
 ## Client support for container files, such as .zip files
 
 Container files are files that include other files, with a typical example being .zip files that contain compressed files. Other examples include .rar, .7z, .msg files, and PDF documents that include attachments.
@@ -64,6 +41,20 @@ If you have a container file that includes classified and protected files, you m
 The Azure Information Protection viewer cannot open attachments in a protected PDF document. In this scenario, when the document is opened in the viewer, the attachments are not visible.
 
 For more information, see [Admin Guide: File types supported by the Azure Information Protection client](rms-client/client-admin-guide-file-types.md).
+
+## Known issues for installing the AIP client
+
+The Azure Information Protection client is not supported on machines where [Exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled.
+
+Make sure to disable Exploit protection before installing AIP. 
+
+To disable Exploit protection via PowerShell, run the following:
+
+```PowerShell
+Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
+```
+
+For more information, see [Azure Information Protection requirements](requirements.md).
 
 ## PowerShell support for the Azure Information Protection client
 
@@ -77,16 +68,6 @@ The current release of the **AzureInformationProtection** PowerShell module that
 
 For more information, see [Admin Guide: Using PowerShell with the Azure Information Protection client](rms-client/client-admin-guide-powershell.md).
 
-<!-- removed from this page
-## Protection-only mode known issues
-
-The following known issues apply for [Protection-only mode for the Azure Information Protection client](rms-client/client-protection-only-mode.md):
-
-- In Office apps, the Azure Information Protection bar is not shown. When you click **Protect** > **Show Bar**, this menu option is unavailable.
-
-- When you use the **Classify and protect - Azure Information Protection** dialog box with the File Explorer, labels for classification are not shown. Instead, you have an option select a Rights Management (RMS) template.
--->
-
 ## AIP known issues in Office applications
 
 |Feature  |Known issues  |
@@ -97,13 +78,8 @@ The following known issues apply for [Protection-only mode for the Azure Informa
 |**Content markings in Word**    | Azure Information Protection content [markings](configure-policy-markings.md) may be hidden in Microsoft Word footers, when the footer also contains a table. For more information, see [When visual markings are applied](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**Files attached to emails** |Due to a limitation in recent Windows updates, when [Microsoft Outlook is protected by Azure Rights Management](office-apps-services-support.md), files attached to emails may be locked after opening the file. |
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
+| **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane may cause performance issues. </br></br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. </br></br>**Note:** Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
 | | |
-
-<!-- removing b/c this is relevant for classic only. for UL, labels are configured in m365. so this is basically irrelevant for us.
-## Known issues in labeling
-
-Depending on your policy rule size limit, configuring more than 200 users or user groups for each label may cause unexpected errors. 
--->
 
 ## Known issues in policies
 
@@ -123,6 +99,22 @@ Publishing policies may take up to 24 hours.
 
     - [**Classic client**: View protected files with the Azure Information Protection viewer](rms-client/client-view-use-files.md)
     - [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md)
+
+## AIP for Windows and Office versions in extended support
+
+- [**Windows 7 extended supported ended on January 14, 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
+
+    We strongly encourage you to upgrade to a newer version of Windows 10. However, if you have Extended Security Updates (ESU) and a support contract, AIP support is available to continue keeping your Windows 7 systems secure.
+
+    For more information, check with your support contact.
+
+- [**Office 2010 is currently in extended support**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+
+    This support will end on Oct. 13, 2020, and will not be extended. Additionally, ESU will not be offered for Office 2010, and we strongly encourage you to upgrade to a newer version of Office 365. 
+    
+    For customers who are currently running Office 2010 in extended support, AIP support is available until October 13, 2020. 
+
+    For more information, check with your support contact.
 
 
 ## More information

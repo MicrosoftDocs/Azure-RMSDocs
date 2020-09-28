@@ -6,7 +6,7 @@ description: Understand details and restrictions when you use customer-managed k
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -99,6 +99,14 @@ For more information about key usage logging for BYOK, see [Logging and analyzin
 
 ## Options for creating and storing your key
 
+> [!NOTE]
+> Azure Information Protection now supports using the Azure Key Vault Managed HSM in public preview, for use with non-production tenants only.
+>
+> For more information about the Managed HSM offering, and how to set up a vault and a key, see the [Azure Key Vault documentation](https://aka.ms/mhsm). 
+>
+>Additional instructions on granting key authorization are described below.
+>
+
 BYOK supports keys that are created either in Azure Key Vault or on-premises.
 
 If you create your key on-premises, you must then transfer or import it into your Key Vault and configure Azure Information Protection to use the key. Perform any additional key management from within Azure Key Vault.
@@ -152,10 +160,6 @@ BYOK prerequisites vary, depending on your system configuration. Verify that you
 |**Azure Key Vault prerequisites for BYOK** | If you are using an HSM-protected key that was created on-premises, ensure that you also comply with the [prerequisites for BYOK](https://docs.microsoft.com/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) listed in the Azure Key Vault documentation.         |
 |**Thales firmware version 11.62**    |You must have a Thales firmware version of 11.62 if you are migrating from AD RMS to Azure Information Protection by using software key to hardware key and are using Thales firmware for your HSM.
 |**Firewall bypass for trusted Microsoft services** |If the key vault that contains your tenant key uses Virtual Network Service Endpoints for Azure Key Vault, you must allow trusted Microsoft services to bypass this firewall. </br>For more information, see [Virtual Network Service Endpoints for Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/overview-vnet-service-endpoints).       |
-
-<!--
->[!NOTE]
-> For more information about nCipher nShield hardware security module (HSM) and how they are used with Azure Key Vault, see the [nCipher website](https://www.ncipher.com/products/key-management/cloud-microsoft-azure/how-to-buy).-->
 
 #### Verifying that you have a BYOK-compatible Azure subscription
 
@@ -212,6 +216,9 @@ The following table lists recommended Azure regions and instances for minimizing
 |rms.**aadrm.cn**|**China East 2** or **China North 2**|
 
 ### Create and configure your key
+
+>[!IMPORTANT]
+> For information specific for Managed HSMs, see [Enabling key authorization for Managed HSM keys via Azure CLI](#enabling-key-authorization-for-managed-hsm-keys-via-azure-cli).
 
 Create an Azure Key Vault and the key you want to use for Azure Information Protection. For more information, see the [Azure Key Vault documentation](https://docs.microsoft.com/azure/key-vault/).
 
@@ -289,6 +296,24 @@ For example:
 ```ps
 Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 ```
+
+##### Enabling key authorization for Managed HSM keys via Azure CLI
+
+To grant the Azure Rights Management service principal user permissions as a **Managed HSM Crypto** user, run the following command:
+
+```PowerShell
+az keyvault role assignment create --hsm-name "ContosoMHSM" --role "Managed HSM Crypto User" --assignee 00000012-0000-0000-c000-000000000000 --scope /keys/contosomhsmkey
+```
+
+Where:
+- **00000012-0000-0000-c000-000000000000** is the GUID to use in this command
+- **ContosoMHSM** is a sample HSM name. When running this command, replace this value with your own HSM name.
+
+The **Managed HSM Crypto User** user role allows the user to decrypt, sign, and get permissions to the key, which are all required for the Managed HSM functionality. 
+
+> [!NOTE]
+> While Managed HSM is in public preview, granting the **Managed HSM Crypto User** role is supported only via Azure CLI.
+> 
 
 ### Configure Azure Information Protection to use your key
 
