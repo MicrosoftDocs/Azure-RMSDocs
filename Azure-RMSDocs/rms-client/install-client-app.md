@@ -45,13 +45,6 @@ The Azure Information Protection classic client is being deprecated in March, 20
 
 To deploy the AIP classic client, open a support ticket to get download access.
 
-<!--
-1. Go to the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
-
-    This page has links for all the popular devices you might use, so that you can easily download a viewer app if it's needed to open protected files. If you're not a local administrator for your PC, you can still install the viewer app for Windows. But these instructions are to install the full client, which lets you label and protect files. 
-
-2. Locate the **Azure Information Protection client** section and click the Windows icon. Click **Download** and save the **AzInfoProtection.exe** file.     
--->
 1. Run the **AzInfoProtection.exe** file to start the installation. If you are prompted to continue, click **Yes**.    
 
 1. On the **Install the Azure Information Protection client** page:     

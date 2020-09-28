@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/23/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -68,7 +68,6 @@ Do any of the following to configure your scans as needed:
 > 
 > Deploy multiple nodes right from the start, or start with a single-node cluster and add additional nodes later on as you grow. Deploy multiple nodes by using the same cluster name and database for the **Install-AIPScanner** cmdlet.
 > 
- 
 
 ## AIP scanning process
 

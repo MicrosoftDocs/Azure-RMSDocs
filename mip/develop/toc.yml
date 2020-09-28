@@ -63,6 +63,8 @@
   items:
   - name: The APIs
     href: concept-apis-use-cases.md
+  - name: MIP SDK API Permissions
+    href: concept-api-permissions.md
   - name: MipContext object concepts
     href: concept-mipcontext.md
   - name: Cache storage
@@ -115,8 +117,12 @@
         href: concept-handler-policy-auditing-cpp.md
     - name: Protection API handler (C++)
       href: concept-handler-protection-cpp.md
-  - name: Labels 
-    href: concept-classification-labels.md
+  - name: Labels and Protection
+    items:
+    - name: Labels   
+      href: concept-classification-labels.md
+    - name: Labels and Protection Behavior
+      href: concept-labeling-and-protection.md  
   - name: Metadata
     href: concept-mip-metadata.md
   - name: Observers for async (C++)
@@ -131,8 +137,12 @@
       href: concept-async-observers-protection-cpp.md
   - name: Proxy Support 
     href: concept-mip-proxies.md
+  - name: Service Discovery Overview
+    href: concept-service-discovery.md
   - name: SDK Telemetry
     href: concept-mip-telemetry.md
+  - name: Supported File Types
+    href: concept-supported-filetypes.md  
   - name: Use Cases
     items:
     - name: File API - Action justification for lowering a sensitivity label on a file
@@ -193,10 +203,10 @@
         href: reference/class_mip_classificationresult.md
       - name: ComputeEngine
         href: reference/class_mip_computeengine.md
-      - name: ComputeEngineContext
-        href: reference/class_mip_computeenginecontext.md
       - name: ComputeEngine::Settings
         href: reference/class_mip_computeengine_settings.md
+      - name: ComputeEngineContext
+        href: reference/class_mip_computeenginecontext.md
       - name: ConditionData
         href: reference/class_mip_conditiondata.md
       - name: ConsentDelegate
@@ -211,6 +221,8 @@
         href: reference/class_mip_customaction.md
       - name: DeprecatedApiError
         href: reference/class_mip_deprecatedapierror.md
+      - name: DetailedClassificationResult
+        href: reference/class_mip_detailedclassificationresult.md
       - name: DocumentState
         href: reference/class_mip_documentstate.md
       - name: Error
@@ -267,12 +279,16 @@
         href: reference/class_mip_labelingoptions.md
       - name: LabelNotFoundError
         href: reference/class_mip_labelnotfounderror.md
+      - name: LicenseNotRegisteredError
+        href: reference/class_mip_licensenotregisterederror.md
       - name: LoggerDelegate
         href: reference/class_mip_loggerdelegate.md
       - name: MetadataAction
         href: reference/class_mip_metadataaction.md
       - name: MetadataEntry
         href: reference/class_mip_metadataentry.md
+      - name: MetadataVersion
+        href: reference/class_mip_metadataversion.md
       - name: MipContext
         href: reference/class_mip_mipcontext.md
       - name: MsgAttachmentData
@@ -315,10 +331,16 @@
         href: reference/class_mip_propertydata.md
       - name: ProtectAdhocAction
         href: reference/class_mip_protectadhocaction.md
+      - name: ProtectAdhocDkAction
+        href: reference/class_mip_protectadhocdkaction.md
+      - name: ProtectByEncryptOnlyAction
+        href: reference/class_mip_protectbyencryptonlyaction.md
       - name: ProtectByTemplateAction
         href: reference/class_mip_protectbytemplateaction.md
       - name: ProtectDoNotForwardAction
         href: reference/class_mip_protectdonotforwardaction.md
+      - name: ProtectDoNotForwardDkAction
+        href: reference/class_mip_protectdonotforwarddkaction.md
       - name: ProtectionActionData
         href: reference/class_mip_protectionactiondata.md
       - name: ProtectionDescriptor
@@ -363,7 +385,9 @@
         href: reference/class_mip_removewatermarkaction.md
       - name: RulePackageData
         href: reference/class_mip_rulepackagedata.md
-      - name: mip::SensitivityConditionData
+      - name: SensitiveTypeClassificationData
+        href: reference/class_mip_sensitivetypeclassificationdata.md
+      - name: SensitivityConditionData
         href: reference/class_mip_sensitivityconditiondata.md
       - name: SensitivityTypesRulePackage
         href: reference/class_mip_sensitivitytypesrulepackage.md
@@ -401,6 +425,8 @@
       href: reference/c/functions.md
   - name: .NET API Browser
     href: /dotnet/api/?term=microsoft.informationprotection
+  - name: API Permissions
+    href: concept-api-permissions.md
 - name: Resources
   items:
   - name: Developer blog

@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/17/2020
+ms.date: 08/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -85,6 +85,8 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
         For PowerPoint: `MSIP.PowerPointAddin`
 
+- The AIP client is not supported on machines that have [Exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. Make sure to [disable Exploit protection](../known-issues.md#known-issues-for-installing-the-aip-client) before installing the AIP client.  
+
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.
 
@@ -107,12 +109,6 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 ### To install the Azure Information Protection client by using the executable installer
 
 Use the following instructions to install the client when you're not using the Microsoft Update catalog, or deploying the .msi by using a central deployment method such as Intune.
-
-<!--
-1. Download the executable version Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
-
-    If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment.
--->
 
 1. For a default installation, simply run the executable, for example, **AzInfoProtection.exe**. 
 
@@ -194,14 +190,8 @@ Also remember that if you use Windows Update to keep the Azure Information Prote
 
 For central deployment, use the following information that is specific to the .msi installation version of the Azure Information Protection client. 
 
-If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/deploy-use/add-apps).
+If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/apps/apps-add).
 
-<!--
-
-1. Download the .msi version of the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). 
-    
-    If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment. 
--->
 1. For each computer that runs the .msi file, you must make sure that the following software dependencies are in place. For example, package these with the .msi version of the client or only deploy to computers that meet these dependencies:
     
     |Office version|Operating system|Software|Action|

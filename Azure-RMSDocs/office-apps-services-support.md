@@ -40,10 +40,6 @@ If you are ready to configure Office apps see [Office apps: Configuration for cl
 
 For relevant known issues, see [AIP known issues in Office applications](known-issues.md#aip-known-issues-in-office-applications).
 
-<!-->
-> [!NOTE]
-> Due to a limitation in recent Windows updates, files that are attached to emails may be currently be locked after opening the file.
--->
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can configure options for Azure Information Protection. This configuration lets Exchange provide the following protection solutions:
 

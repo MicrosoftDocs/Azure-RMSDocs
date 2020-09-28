@@ -6,7 +6,7 @@ description: Overview of HYOK (AD RMS) protection with Azure Information Protect
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -90,7 +90,7 @@ Microsoft 365 services and other online services can't decrypt HYOK-protected co
 
 For emails, this loss of functionality includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
 
-Users may not understand why some devices aren't able to open HYOK-protected emails, leading to additional calls to your help desk. To avoid these extra help calls, do not configure HYOK protection for emails.
+Users may not understand why some devices aren't able to open HYOK-protected emails, leading to additional calls to your help desk. Be aware of these severe limitations when configuring HYOK protection with emails.
 
 ## Supported applications for HYOK
 

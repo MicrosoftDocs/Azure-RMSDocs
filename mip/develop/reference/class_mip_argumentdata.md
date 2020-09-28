@@ -1,11 +1,11 @@
 ---
 title: class ArgumentData 
 description: Documents the argumentdata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class ArgumentData 
@@ -21,16 +21,16 @@ public virtual ~ArgumentData()  | _Not yet documented._
 ## Members
   
 ### GetValue function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetKey function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetValues function
-_Not documented yet._
+Not yet documented.
 
   
 ### ~ArgumentData function
-_Not documented yet._
+Not yet documented.
