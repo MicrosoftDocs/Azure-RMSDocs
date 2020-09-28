@@ -7,7 +7,7 @@ author: mlottner
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
