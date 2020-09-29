@@ -6,8 +6,8 @@ description: Understand and implement the super user feature of the Azure Rights
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/27/2020
-ms.topic: conceptual
+ms.date: 09/29/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3

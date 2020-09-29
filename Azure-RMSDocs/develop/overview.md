@@ -7,7 +7,7 @@ keywords:
 author: msmbaldwin
 ms.author: mbaldwin
 ms.date: 03/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
