@@ -19,7 +19,7 @@ This Quickstart shows you how to use the MIP SDK Protection API to list the prot
 If you haven't already, be sure to complete the following prerequisites before continuing:
 
 - Complete [Quickstart: Client application initialization - Protection API (C#)](quick-protection-app-initialization-csharp.md) first, which builds a starter Visual Studio solution. This "List protection templates" Quickstart relies on the previous one, for proper creation of the starter solution.
-- Optionally: Review [RMS Templates](https://docs.microsoft.com/azure/information-protection/configure-policy-templates) concepts.
+- Optionally: Review [RMS Templates](/azure/information-protection/configure-policy-templates) concepts.
 
 ## Add logic to list the protection templates
 
