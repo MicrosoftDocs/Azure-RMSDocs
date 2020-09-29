@@ -44,16 +44,16 @@ These applications and solutions are known as "RMS-enlighted", and have Rights M
 
 |Type  |Supported applications   |
 |---------|---------|
-|**Word, Excel, PowerPoint**    | - [Office 365 apps](#office-365-app-support) <br />- Office 2010 <br />- Office 2013<br />- Office 2016 <br />- Office 2019 <br />- [Office for the web (viewing protected documents)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
-|[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook 2010<br />- Outlook 2013<br />- Outlook 2016 <br />- Outlook 2019 <br />- Outlook from Office 365 ProPlus<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
-|[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Office 365 apps, Office 2019, and Office 2016: **.vsdm,** **.vsdx,** **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile** <br />- SealPath RMS plugin for AutoCAD: **.dwg**       |
+|**Word, Excel, PowerPoint**    | - [Microsoft 365 apps](#microsoft-365-app-support) <br />- Office 2010 <br />- Office 2013<br />- Office 2016 <br />- Office 2019 <br />- [Office for the web (viewing protected documents)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
+|[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook 2010<br />- Outlook 2013<br />- Outlook 2016 <br />- Outlook 2019 <br />- Outlook from Microsoft 365 Apps for Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
+|[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Microsoft 365 apps, Office 2019, and Office 2016: **.vsdm,** **.vsdx,** **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile** <br />- SealPath RMS plugin for AutoCAD: **.dwg**       |
 | | |
 
 ## macOS RMS-enlightened applications
 
 |Type  |Supported applications   |
 |---------|---------|
-|**Word, Excel, PowerPoint**    |  - Office 365 apps<br />- Office 2019 for Mac<br />- Office 2016 for Mac<br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)    |
+|**Word, Excel, PowerPoint**    |  - Microsoft 365 apps<br />- Office 2019 for Mac<br />- Office 2016 for Mac<br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)    |
 |[**Email**](#viewing-protected-content-in-email-clients)   |   - Outlook 2019 for Mac<br />- Outlook 2016 for Mac<br />- [Web browser](#web-browser-support)     |
 |[**Other file types**](#supported-text-and-image-file-types)    | RMS sharing app (viewing protected text, images, generically protected files)   |
 | | |
@@ -102,7 +102,7 @@ For more information about the tables RMS-enlightened applications listed above,
 
 - [Viewing protected content in email clients](#viewing-protected-content-in-email-clients)
 - [Supported text and image file types](#supported-text-and-image-file-types)
-- [Office 365 app support](#office-365-app-support)
+- [Microsoft 365 app support](#microsoft-365-app-support)
 - [Viewing protected documents in Office for the web](#viewing-protected-documents-in-office-for-the-web)
 - [Web browser support](#web-browser-support)
 - [Email clients using Exchange ActiveSync Information Rights Management (IRM)](#email-clients-using-exchange-activesync-irm)
@@ -126,11 +126,11 @@ Files that cannot be natively protected have a **.pfile** file name extension af
 
 For more information, see the [File types supported](./rms-client/client-admin-guide-file-types.md).
 
-### Office 365 app support
+### Microsoft 365 app support
 
 Includes: 
-- Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business. Supported only when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365).
-- Office 365 ProPlus apps.
+- Office apps minimum version 1805, build 9330.2078 from Microsoft 365 Apps for Business or Microsoft 365 Business Premium. Supported only when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Microsoft 365 Business Premium).
+- Microsoft 365 Apps for Enterprise.
 
 ### Viewing protected documents in Office for the web
 
@@ -138,7 +138,7 @@ Supported only with Microsoft SharePoint and OneDrive, and the documents are unp
 
 ### Web browser support
 
-- Web browsers are supported for **Word, Excel, and PowerPoint** files, when the [Office attachments](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) are protected by using [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
+- Web browsers are supported for **Word, Excel, and PowerPoint** files, when the [Office attachments](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) are protected by using [Microsoft 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 - For **emails,** web browsers are supported only in the following scenarios:
 
@@ -176,11 +176,11 @@ See also: [Office Applications Service Description](https://technet.microsoft.co
 
 The following Office client suites support protecting files and emails on Windows computers by using the Azure Rights Management service:
 
-- **Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business** when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
+- **Office apps minimum version 1805, build 9330.2078 from Microsoft 365 Apps for Business or Microsoft 365 Business Premium** when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Microsoft 365)
 
-- **Office 365 ProPlus**
+- **Microsoft 365 Apps for Enterprise**
 
-    These editions of Office are included with most but not all Office 365 subscriptions that include data protection from Azure Information Protection. Check your subscription information to see if Office 365 ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+    These editions of Office are included with most but not all subscriptions that include data protection from Azure Information Protection. Check your subscription information to see if Microsoft 365 Apps for Enterprise ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - **Office Professional Plus 2019**
 
@@ -206,7 +206,7 @@ Additionally, this configuration:
 
 The following Office client suites support protecting files and emails on macOS by using Azure RMS:
 
-- Office 365 ProPlus
+- Microsoft 365 Apps for Enterprise
 - Office Standard 2019 for Mac
 - Office Standard 2016 for Mac
 
@@ -242,7 +242,7 @@ Download the relevant app from the [Microsoft Azure Information Protection page]
 > 
 ## Rights Management sharing app
 
-For Mac computers, the Rights Management sharing app offers a viewer for protected PDF files **(.ppdf),** protected text images, and generically protected files. It can also protect image files, but not other files. To protect Office files on these computers, use Office for Mac or Office 365 ProPlus. 
+For Mac computers, the Rights Management sharing app offers a viewer for protected PDF files **(.ppdf),** protected text images, and generically protected files. It can also protect image files, but not other files. To protect Office files on these computers, use Office for Mac or Microsoft 365 Apps for Enterprise. 
 
 For more information, see the [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](https://technet.microsoft.com/dn451248)
 
