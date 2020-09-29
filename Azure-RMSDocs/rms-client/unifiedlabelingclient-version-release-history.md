@@ -76,7 +76,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 Unified labeling scanner and client version TBD
 
-**Release** 11/02/2020
+**Release** 11/19/2020
 
 This version includes the following new features, fixes, and enhancements for the unifed labeling scanner and client:
 
@@ -121,7 +121,12 @@ For more information, see [Migrate documents with legacy protection](clientv2-ad
 
 #### Azure Information Protection scanner fixed issues
 
+
 #### Azure Information Protection client fixed issues
+
+- Updates to the [order of precedence](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) used when more than one label policy is configured for a user, each with conflicting advanced settings. 
+
+    In such cases, the advanced settings from the first policy are always applied, according to the order of the policies in the admin center. The exception for the *OutlookDefaultLabel* is now removed.
 
 ## Version 2.8.85.0
 
