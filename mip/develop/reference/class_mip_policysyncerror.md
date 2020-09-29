@@ -16,4 +16,4 @@ An attempt to sync policy data failed.
 --------------------------------|---------------------------------------------
   
 ## Members
-_Not documented yet._
+Not yet documented.

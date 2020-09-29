@@ -1,11 +1,11 @@
 ---
 title: class AddContentHeaderAction 
 description: Documents the addcontentheaderaction::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class AddContentHeaderAction 
@@ -28,7 +28,7 @@ public int GetMargin() const  |  Get the margin of the header from the bottom.
 An API used to mark the content header element.
 
   
-**Returns**: The name that should be used for the UI element that holds the content header. The same name will be returned in [RemoveContentHeaderAction](class_mip_removecontentfooteraction.md) in case the content header needs to be removed.
+**Returns**: The name that should be used for the UI element that holds the content header. The same name will be returned in RemoveContentHeaderAction in case the content header needs to be removed.
   
 ### GetText function
 Get the text that is meant to go into the content header.
