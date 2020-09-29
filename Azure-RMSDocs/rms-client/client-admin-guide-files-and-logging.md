@@ -7,7 +7,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
