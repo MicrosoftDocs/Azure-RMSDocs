@@ -6,8 +6,8 @@ description: Information about the client files and usage logging for the Azure 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/24/2020
-ms.topic: conceptual
+ms.date: 09/29/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
