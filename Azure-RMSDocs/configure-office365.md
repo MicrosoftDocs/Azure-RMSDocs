@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configuration for Office 365 services to use Azure RMS - AIP
-description: Information and instructions for admins to configure Office 365 services to work with the Azure Rights Management service from Azure Information Protection.
+title: Configuration for Microsoft 365 services to use Azure RMS - AIP
+description: Information and instructions for admins to configure Microsoft 365 services to work with the Azure Rights Management service from Azure Information Protection.
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
@@ -25,7 +25,7 @@ ms.custom: admin
 
 ---
 
-# Office 365: Configuration for online services to use the Azure Rights Management service
+# Microsoft 365: Configuration for online services to use the Azure Rights Management service
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -53,7 +53,7 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
     $Cred = Get-Credential
     ```
 
-    Then, in the **Windows PowerShell credential request** dialog box, supply your Office 365 user name and password.
+    Then, in the **Windows PowerShell credential request** dialog box, supply your Microsoft 365 user name and password.
 
 3. Connect to the Exchange Online service by first setting a variable:
 
@@ -104,7 +104,7 @@ To enable the information rights management (IRM) service for SharePoint, see th
 
 - [Set up Information Rights Management (IRM) in the SharePoint admin center](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center)
 
-This configuration is done by the Office 365 administrator.
+This configuration is done by the Microsoft 365 administrator.
 
 ### Configuring IRM for libraries and lists
 
@@ -119,13 +119,13 @@ This configuration is done by the SharePoint site administrator.
 After you have enabled the IRM service for SharePoint, users' OneDrive document library or individual folders can then be configured for Rights Management protection. Users can configure this for themselves by using their OneDrive website. Although administrators cannot configure this protection for them by using the SharePoint admin center, you can do this by using Windows PowerShell.
 
 > [!NOTE]
-> For more information about configuring OneDrive, see the Office documentation, [Set up OneDrive in Office 365](https://support.office.com/article/Set-up-OneDrive-for-Business-in-Office-365-3e21f8f0-e0a1-43be-aa3e-8c0236bf11bb).
+> For more information about configuring OneDrive, see the [OneDrive](https://support.office.com/article/Set-up-OneDrive-for-Business-in-Office-365-3e21f8f0-e0a1-43be-aa3e-8c0236bf11bb) documentation.
 
 #### Configuration for users
 
 Give users the following instructions so that they can configure their OneDrive to protect their business files.
 
-1. Sign in to Office 365 with your work or school account and go to the [OneDrive website](https://admin.microsoft.com/onedrive).
+1. Sign in to Microsoft 365 with your work or school account and go to the [OneDrive website](https://admin.microsoft.com/onedrive).
 
 2. In the navigation pane, at the bottom, select **Return to classic OneDrive**.
 
@@ -426,7 +426,7 @@ Although you cannot configure IRM for users' OneDrive by using the SharePoint ad
        if(-not $o365TenantAdminCredential)
        {
            # when credentials are not cached, prompt for the tenant admin credentials
-           $o365TenantAdminCredential = Get-Credential -UserName $tenantAdmin -Message "Enter the password for the Office 365 admin"
+           $o365TenantAdminCredential = Get-Credential -UserName $tenantAdmin -Message "Enter the password for the Microsoft 365 admin"
 
            if(-not $o365TenantAdminCredential -or -not $o365TenantAdminCredential.UserName -or $o365TenantAdminCredential.Password.Length -eq 0 )
            {
@@ -522,11 +522,11 @@ Although you cannot configure IRM for users' OneDrive by using the SharePoint ad
 
       For example, if the tenant name is "contoso", then you would specify: **https://contoso-admin.sharepoint.com**
 
-   2. Search for `$tenantAdmin` and replace the example value with your own fully qualified global administrator account for Office 365.
+   2. Search for `$tenantAdmin` and replace the example value with your own fully qualified global administrator account for Microsoft 365.
 
       This value is the same as the one you use to sign in to the Microsoft 365 admin center as the global administrator and has the following format: user_name@*&lt;tenant domain name&gt;*.com
 
-      For example, if the Office 365 global administrator user name is "admin" for the "contoso.com" tenant domain, you would specify: **admin@contoso.com**
+      For example, if the Microsoft 365 global administrator user name is "admin" for the "contoso.com" tenant domain, you would specify: **admin@contoso.com**
 
    3. Search for `$webUrls` and replace the example values with your users' OneDrive web URLs, adding or deleting as many entries as you need.
 
@@ -544,7 +544,7 @@ Although you cannot configure IRM for users' OneDrive by using the SharePoint ad
 
    For more information about signing Windows PowerShell scripts, see [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) in the PowerShell documentation library.
 
-6. Run the script and if prompted, supply the password for the Office 365 admin account. If you modify the script and run it in the same Windows PowerShell session, you won't be prompted for credentials.
+6. Run the script and if prompted, supply the password for the Microsoft 365 admin account. If you modify the script and run it in the same Windows PowerShell session, you won't be prompted for credentials.
 
 > [!TIP]
 > You can also use this script to configure IRM for a SharePoint library. For this configuration, you will likely want to enable the additional option **Do not allow users to upload documents that do not support IRM**, to ensure that the library contains only protected documents.    To do that, add the `-IrmReject` parameter to the Set-IrmConfiguration command in the script.
@@ -567,7 +567,7 @@ This script also requires the [SharePoint Client Components SDK](https://www.mic
 <#
   Description:
 
-    Queries the search service of an Office 365 tenant to retrieve all OneDrive sites.  
+    Queries the search service of a Microsoft 365 tenant to retrieve all OneDrive sites.  
     Details of the discovered sites are written to a .CSV file (by default,"OneDriveForBusinessSiteInfo_<date>.csv").
 
  Script Installation Requirements:
@@ -751,7 +751,7 @@ function Add-CredentialToCredentialCache
     $clientContext = New-Object Microsoft.SharePoint.Client.ClientContext($sharepointAdminCenterUrl)
     $clientContext.Credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($o365TenantAdminCredential.UserName, $o365TenantAdminCredential.Password)
 
-# run a query against the Office 365 tenant search service to retrieve all OneDrive URLs
+# run a query against the Microsoft 365 tenant search service to retrieve all OneDrive URLs
 
     do
     {
