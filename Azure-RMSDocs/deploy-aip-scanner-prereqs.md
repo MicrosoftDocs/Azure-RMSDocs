@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -203,7 +203,7 @@ However, in a production environment, your organization's policies may be differ
 
 - [Discover and scan all sites and subsites under a specific URL]([Discover and scan all Sharepoint sites and subsites under a specific URL](#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url)
 
-- [The scanner server cannot have internet connectivity](#restriction-the-scanner-server-cannot-have-internet-connectivity)
+- [Restriction: The scanner server cannot have internet connectivity](#restriction-the-scanner-server-cannot-have-internet-connectivity)
 
 - [Restriction: The scanner service account cannot be synchronized to Azure Active Directory but the server has internet connectivity](#restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity)
 
@@ -289,14 +289,6 @@ Additionally:
 
 If, after configuring these permissions, you see an error when you install the scanner, the error can be ignored and you can manually start the scanner service.
 
-#### Populate the database manually
-
-Populate the database using the following script:
-
-```cli
-if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END 
-```
-
 #### Create a user and grant db_owner rights manually
 
 To create a user and grant db_owner rights on this database, ask the Sysadmin to perform the following steps:
@@ -325,13 +317,13 @@ To create a user and grant db_owner rights on this database, ask the Sysadmin to
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     ```
 
-#### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
+### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
 
-If your organization policies prohibit the **Log on locally** right for service accounts, but allows the **Log on as a batch job** right, use the *OnBehalfOf* parameter with Set-AIPAuthentication.
+If your organization policies prohibit the **Log on locally** right for service accounts, use the *OnBehalfOf* parameter with Set-AIPAuthentication.
 
 For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
-#### Restriction: The scanner service account cannot be synchronized to Azure Active Directory but the server has internet connectivity
+### Restriction: The scanner service account cannot be synchronized to Azure Active Directory but the server has internet connectivity
 
 You can have one account to run the scanner service and use another account to authenticate to Azure Active Directory:
 
@@ -339,7 +331,7 @@ You can have one account to run the scanner service and use another account to a
 
 - **For the Azure Active Directory account,** specify your local account for the *OnBehalfOf* parameter with Set-AIPAuthentication. For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
-#### Restriction: Your labels do not have auto-labeling conditions
+### Restriction: Your labels do not have auto-labeling conditions
 
 If your labels do not have any auto-labeling conditions, plan to use one of the following options when configuring your scanner:
 

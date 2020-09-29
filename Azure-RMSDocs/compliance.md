@@ -74,5 +74,5 @@ For in-depth technical information about how the protection technology works, se
 
 - Azure Active Directory documentation: [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- Office 365 Enterprise documentation: [Office 365](https://docs.microsoft.com/Office365/Enterprise/)
+- Microsoft 365 documentation: [Microsoft 365 for enterprise documentation and resources](https://docs.microsoft.com/Office365/Enterprise/)
 

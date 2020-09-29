@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
@@ -70,7 +70,7 @@ Before you begin using the protection service from Azure Information Protection,
 
 1. **Set up your user accounts and groups for AIP.**
 
-    Make sure that your Office 365 tenant contains the user accounts and groups that will be used by Azure Information Protection to authenticate and authorize users from your organization. If necessary, create these accounts and groups, or synchronize them from your on-premises directory. 
+    Make sure that your Microsoft 365 tenant contains the user accounts and groups that will be used by Azure Information Protection to authenticate and authorize users from your organization. If necessary, create these accounts and groups, or synchronize them from your on-premises directory. 
 
     For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
 

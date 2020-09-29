@@ -39,7 +39,7 @@ Unlike Azure Information Protection, [Microsoft Information Protection](https://
 
 **Microsoft Information Protection products include:**
 - Azure Information Protection
-- Office 365 Information Protection, such as Office 365 DLP
+- Microsoft 365 Information Protection, such as Microsoft 365 DLP
 - Windows Information Protection
 - Microsoft Cloud App Security
 
@@ -54,17 +54,17 @@ For more information, see [Information protection capabilities to help protect y
 
 ## What's the difference between labels in Azure Information Protection and labels in Office 365?
 
-Originally, Office 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that enabled you to classify documents and emails for auditing and retention when that content was stored in Office 365 services. 
+Originally, Microsoft 365 had just [retention labels](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) that enabled you to classify documents and emails for auditing and retention when that content was stored in Microsoft 365 services. 
 
 In contrast, Azure Information Protection labels enabled you apply a consistent classification and protection policy for documents and emails whether they were stored on-premises or in the cloud.
 
-Announced at Microsoft Ignite 2018 in Orlando, Office 365 now has the option to create and configure [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels), in addition to retention labels. Sensitivity labels can be created and configured in the following admin centers:
+Announced at Microsoft Ignite 2018 in Orlando, Microsoft 365 now has the option to create and configure [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels), in addition to retention labels. Sensitivity labels can be created and configured in the following admin centers:
 
 - Office 365 Security & Compliance Center
 - Microsoft 365 security center
 - Microsoft 365 compliance center
 
-Use Azure Information Protection labels as sensitivity labels with Office 365 apps by [migrating your AIP labels to the unified labeling store](configure-policy-migrate-labels.md).
+Use Azure Information Protection labels as sensitivity labels with Microsoft 365 apps by [migrating your AIP labels to the unified labeling store](configure-policy-migrate-labels.md).
 
 For more information about unified labeling management and support, see [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
@@ -157,7 +157,7 @@ To read more about how Azure Information Protection helps to secure your data, s
 
 To understand more about AIP subscriptions, see the subscription information and feature list on the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection) page.
 
-If you have an Office 365 subscription that includes Azure Rights Management data protection, download the [Azure Information Protection licensing datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) for more details about integrating with AIP.
+If you have a Microsoft 365 subscription that includes Azure Rights Management data protection, download the [Azure Information Protection licensing datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) for more details about integrating with AIP.
 
 Still have questions about licensing? See if they are answered in the [frequently asked questions for licensing](https://azure.microsoft.com/pricing/details/information-protection#faq) section.
 
@@ -171,7 +171,7 @@ If you later purchase a subscription that does include classification and labeli
 
 ## Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?
 
-Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection. 
+Global administrators for a Microsoft 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection. 
 
 However, if you want to assign administrative permissions to other users, do so using the following roles:
 

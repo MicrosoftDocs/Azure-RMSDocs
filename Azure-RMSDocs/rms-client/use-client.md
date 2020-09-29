@@ -6,8 +6,8 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
-ms.topic: conceptual
+ms.date: 09/17/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -78,7 +78,7 @@ For more information, see:
 
 The labeling client that's built in to Microsoft Office:
 
-- Requires a Windows computer with Office 365 applications, minimum version 1910
+- Requires a Windows computer with Microsoft 365 applications, minimum version 1910
 - Enables you to share labels and policy settings that can also be used by macOS, iOS, and Android
 - Supports switching accounts
 - Provides better performance in Office applications
@@ -109,7 +109,7 @@ However, the classic client has different policy settings for macOS, iOS, and An
 
 You can use different clients in the same environment to support different business requirements, as demonstrated in the following deployment example. In a mixed client environment, we recommend you use unified labels so that clients share the same set of labels for ease of administration. New customers have unified labels by default because their tenants are on the unified labeling platform. For more information, see [How can I determine if my tenant is on the unified labeling platform?](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
 
-When you have a Windows computer that runs Office 365 apps that are a minimum version 1910 and one of the Azure Information Protection clients is installed, by default the built-in labeling client is disabled in Office apps. However, you can change this behavior to use the built-in labeling client for just your Office apps. With this configuration, the Azure Information Protection client (classic or unified labeling) remains available for labeling in File Explorer, PowerShell, and the scanner. For instructions to disable the Azure Information Protection client in Office 365 apps, see the section [Office built-in labeling client and the Azure Information Protection client](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#office-built-in-labeling-client-and-the-azure-information-protection-client) from the Microsoft 365 Compliance documentation.
+When you have a Windows computer that runs Microsoft 365 apps that are a minimum version 1910 and one of the Azure Information Protection clients is installed, by default the built-in labeling client is disabled in Office apps. However, you can change this behavior to use the built-in labeling client for just your Office apps. With this configuration, the Azure Information Protection client (classic or unified labeling) remains available for labeling in File Explorer, PowerShell, and the scanner. For instructions to disable the Azure Information Protection client in Microsoft 365 apps, see the section [Office built-in labeling client and the Azure Information Protection client](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#office-built-in-labeling-client-and-the-azure-information-protection-client) from the Microsoft 365 Compliance documentation.
 
 ##### Example deployment strategy:
 
@@ -135,8 +135,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manual labeling:| **Yes** | **Yes** |**Yes** |
 |Default label:| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling: <br />- For Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling:<br />- For Outlook| **Yes** | **Yes** | No |
+|Recommended or automatic labeling: <br />- For Word, Excel, PowerPoint, Outlook| **Yes** | **Yes** | **Yes** |
 |Mandatory labeling:| **Yes** | **Yes** | No |
 |User-defined permissions for a label: <br />- Do Not Forward for emails| **Yes** | **Yes** | **Yes** |
 |User-defined permissions for a label: <br />- Custom permissions for Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
@@ -209,7 +208,7 @@ When the Azure Information Protection client (classic) and the Azure Information
 |Automatic and recommended labels: | Configured as [label conditions](../configure-policy-classification.md) in the Azure portal with built-in information types and custom conditions that use phrases or regular expressions <br /><br />Configuration options include: <br /><br />- Unique / Not unique count <br /><br /> - Minimum count| Configured in the admin centers with built-in sensitive information types and [custom information types](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Configuration options include:  <br /><br />- Unique count only <br /><br />- Minimum and maximum count <br /><br />- AND and OR support with information types <br /><br />- Keyword dictionary<br /><br />- Customizable confidence level and character proximity|
 |Order support for sublabels on attachments: | Enabled with an [advanced client setting](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Enabled by default, no configuration required|
 |Change the default protection behavior for file types: | You can use [registry edits](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) to override the defaults of native and generic protection | You can use [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) to change which file types get protected|
-|Automatic rescans | Full rescans are automatically run every time the scanner detects a change in policy or labeling settings | Starting in version [2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview), administrators can choose to skip a full rescan after making changes to policy or content scan job settings. |
+|Automatic rescans | Full rescans are automatically run every time the scanner detects a change in policy or labeling settings | Starting in version [2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), administrators can choose to skip a full rescan after making changes to policy or content scan job settings. |
 |Network discovery |Network discovery features are unavailable for the classic scanner | Administrators can discover additional risky repositories by scanning a specified IP address or range.|
 | | | |
 
@@ -250,4 +249,4 @@ To install and configure the Azure Information Protection clients, use the follo
 
 - [Azure Information Protection unified labeling client](unifiedlabelingclient-version-release-history.md)
 
-For more information about using the built-in labeling client for Office 365 apps, see [Sensitivity labels in Office apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps).
+For more information about using the built-in labeling client for Microsoft 365 apps, see [Sensitivity labels in Office apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps).

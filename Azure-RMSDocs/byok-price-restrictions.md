@@ -6,8 +6,8 @@ description: Understand details and restrictions when you use customer-managed k
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
-ms.topic: conceptual
+ms.date: 09/21/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
@@ -35,7 +35,7 @@ BYOK and [usage logging](log-analyze-usage.md) work seamlessly with applications
 
 Supported applications include:
 
-- **Cloud services,** such as Microsoft SharePoint or Office 365
+- **Cloud services,** such as Microsoft SharePoint or Microsoft 365
 
 - **On-premises services** running Exchange and SharePoint applications that use the Azure Rights Management service via the RMS connector
 
@@ -98,6 +98,14 @@ For more information about key usage logging for BYOK, see [Logging and analyzin
 > If necessary, immediately revoke access to your key by removing permissions on the key vault.
 
 ## Options for creating and storing your key
+
+> [!NOTE]
+> Azure Information Protection now supports using the Azure Key Vault Managed HSM in public preview, for use with non-production tenants only.
+>
+> For more information about the Managed HSM offering, and how to set up a vault and a key, see the [Azure Key Vault documentation](https://aka.ms/mhsm). 
+>
+>Additional instructions on granting key authorization are described below.
+>
 
 BYOK supports keys that are created either in Azure Key Vault or on-premises.
 
@@ -209,6 +217,9 @@ The following table lists recommended Azure regions and instances for minimizing
 
 ### Create and configure your key
 
+>[!IMPORTANT]
+> For information specific for Managed HSMs, see [Enabling key authorization for Managed HSM keys via Azure CLI](#enabling-key-authorization-for-managed-hsm-keys-via-azure-cli).
+
 Create an Azure Key Vault and the key you want to use for Azure Information Protection. For more information, see the [Azure Key Vault documentation](https://docs.microsoft.com/azure/key-vault/).
 
 Note the following for configuring your Azure Key Vault and key for BYOK:
@@ -285,6 +296,24 @@ For example:
 ```ps
 Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 ```
+
+##### Enabling key authorization for Managed HSM keys via Azure CLI
+
+To grant the Azure Rights Management service principal user permissions as a **Managed HSM Crypto** user, run the following command:
+
+```PowerShell
+az keyvault role assignment create --hsm-name "ContosoMHSM" --role "Managed HSM Crypto User" --assignee 00000012-0000-0000-c000-000000000000 --scope /keys/contosomhsmkey
+```
+
+Where:
+- **00000012-0000-0000-c000-000000000000** is the GUID to use in this command
+- **ContosoMHSM** is a sample HSM name. When running this command, replace this value with your own HSM name.
+
+The **Managed HSM Crypto User** user role allows the user to decrypt, sign, and get permissions to the key, which are all required for the Managed HSM functionality. 
+
+> [!NOTE]
+> While Managed HSM is in public preview, granting the **Managed HSM Crypto User** role is supported only via Azure CLI.
+> 
 
 ### Configure Azure Information Protection to use your key
 

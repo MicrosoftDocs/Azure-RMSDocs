@@ -7,7 +7,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 05/31/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
@@ -158,7 +158,7 @@ Windows PowerShell module:
     Connect-AipService
     ```
 
-    When prompted, enter your Azure Information Protection tenant administrator credentials. Typically, you use an account that is a global administrator for Azure Active Directory or Office 365.
+    When prompted, enter your Azure Information Protection tenant administrator credentials. Typically, you use an account that is a global administrator for Azure Active Directory or Microsoft 365.
     
 4. Run `Get-AipServiceConfiguration` and make a copy of the BPOSId value.
     
@@ -201,7 +201,7 @@ Create a new service principal by running the `New-MsolServicePrincipal` cmdlet 
     Connect-MsolService
     ```
 
-    When prompted, enter your Azure AD tenant administrator credentials (typically, you use an account that is a global administrator for Azure Active Directory or Office 365).
+    When prompted, enter your Azure AD tenant administrator credentials (typically, you use an account that is a global administrator for Azure Active Directory or Microsoft 365).
 
 4. Run the New-MsolServicePrincipal cmdlet to create a new service principal:
 
