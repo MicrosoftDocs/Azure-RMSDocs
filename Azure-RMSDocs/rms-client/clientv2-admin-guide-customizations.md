@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
+ms.date: 09/29/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -135,7 +135,7 @@ When more than one label policy is configured for a user, each with potentially 
 
 Label advanced settings follow the same logic for precedence: When a label is in multiple label policies and that label has advanced settings, the last advanced setting is applied according to the order of the policies in the admin center.
 
-Label policy advanced settings are applied in the reverse order: With one exception, the advanced settings from the first policy are applied, according to the order of the policies in the admin center. 
+Label policy advanced settings are applied in the reverse order: The advanced settings from the first policy are applied, according to the order of the policies in the admin center. 
 
 #### Available advanced settings for label policies
 
