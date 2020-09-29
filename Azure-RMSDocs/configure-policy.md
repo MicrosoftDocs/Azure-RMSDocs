@@ -53,7 +53,7 @@ Azure Information Protection supports different levels of subscriptions:
 
 - Azure Information Protection P1: Support for most classification, labeling, and protection features, but not automatic classification or HYOK.
 
-- Office 365 that includes the Azure Rights Management service: Support for protection but not classification and labeling.
+- Microsoft 365 that includes the Azure Rights Management service: Support for protection but not classification and labeling.
 
 Options that require an Azure Information Protection P2 subscription are identified in the portal.
 
@@ -61,7 +61,7 @@ If your organization has a mix of subscriptions, it is your responsibility to ma
 
 - **When your organization has a mix of Azure Information Protection P1 and Azure Information Protection P2 licenses**: For users who have a P2 license, create and use one or more [scoped policies](configure-policy-scope.md) when you configure options that require an Azure Information Protection P2 license. Make sure that your global policy does not contain options that require an Azure Information Protection P2 license.
 
-- **When your organization has a subscription for Azure Information Protection but some users have only a license for Office 365 that includes the Azure Rights Management service**: For the users who do not have a license for Azure Information Protection, edit the registry on their computers so they do not download the Azure Information Protection policy. For instructions, see the admin guide for the following customization: [Enforce protection-only mode when your organization has a mix of licenses](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
+- **When your organization has a subscription for Azure Information Protection but some users have only a license for Microsoft 365 that includes the Azure Rights Management service**: For the users who do not have a license for Azure Information Protection, edit the registry on their computers so they do not download the Azure Information Protection policy. For instructions, see the admin guide for the following customization: [Enforce protection-only mode when your organization has a mix of licenses](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
 
 For more information about the subscriptions, see [What subscription do I need for Azure Information Protection and what features are included?](faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
@@ -168,7 +168,7 @@ Use the following information to help you configure the Azure Information Protec
 
 - [How to configure labels for different languages](configure-policy-languages.md)
 
-- [How to migrate Azure Information Protection labels to Office 365](configure-policy-migrate-labels.md)
+- [How to migrate Azure Information Protection labels to Microsoft 365](configure-policy-migrate-labels.md)
 
 ## Label information stored in emails and documents
 

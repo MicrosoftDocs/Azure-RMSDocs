@@ -64,7 +64,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |Term|Definition|
 |--------|--------------|
 |**bring your own key**|Frequently abbreviated to *BYOK*.<br /><br />A configuration and topology option chosen by an organization that wants to generate and manage their own tenant key for Azure Information Protection.|
-|**built-in labeling**|An Office 365 app or service capability to support sensitivity labels without the requirement to install an additional labeling client. Also known as *native labeling*.|
+|**built-in labeling**|A Microsoft 365 app or service capability to support sensitivity labels without the requirement to install an additional labeling client. Also known as *native labeling*.|
 |**BYOK**|See *bring your own key*.|
 | | |
 

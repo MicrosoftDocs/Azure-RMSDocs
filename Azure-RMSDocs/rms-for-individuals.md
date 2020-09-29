@@ -52,7 +52,7 @@ When the account is created, the final page displays links to download the Azure
 
     Microsoft uses your email address to check whether your organization already has a [subscription for Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) or an [Office 365 subscription that includes data protection by using Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). If either of these subscriptions are found, you don’t need RMS for individuals. You are signed in immediately and the self-service sign up for RMS for individuals is canceled. If one of these subscriptions isn't found, you continue to the next step.
 
-4. Wait for a confirmation email message to be sent to the address that you supplied. It will be from the Office 365 Team (support@email.microsoftonline.com) and has the subject **Finish signing up for Microsoft Azure Information Protection**.
+4. Wait for a confirmation email message to be sent to the address that you supplied. It will be from the Microsoft 365 Team (support@email.microsoftonline.com) and has the subject **Finish signing up for Microsoft Azure Information Protection**.
 
 5. When you receive the email, click **Yes, that's me** to verify your email address and complete the sign-up process.
 

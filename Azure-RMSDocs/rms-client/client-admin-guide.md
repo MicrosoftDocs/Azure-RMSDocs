@@ -80,7 +80,7 @@ If you have AD RMS and want to migrate to Azure Information Protection, see [Mig
 
 ## Should you deploy the Azure Information Protection client?
 
-Deploy the Azure Information Protection client if you are not using [sensitivity labels in the Office 365 Security & Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) but instead, using Azure Information Protection labels that you download from Azure, and any of the following applies:
+Deploy the Azure Information Protection client if you are not using [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) in Microsoft 365 but instead, using Azure Information Protection labels that you download from Azure, and any of the following applies:
 
 - You want to classify (and optionally, protect) documents and email messages by selecting labels from within your Office applications (Word, Excel, PowerPoint, Outlook).
 
@@ -163,7 +163,7 @@ The **Reset Settings** signs out the user, deletes the currently downloaded Azur
 
 #### **Client status** section
 
-Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Office 365 or Azure Active Directory. The account must also belong to a tenant that is configured for Azure Information Protection.
+Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Microsoft 365 or Azure Active Directory. The account must also belong to a tenant that is configured for Azure Information Protection.
 
 If you need to sign in as a different user to the one displayed, see the [Sign in as a different user](client-admin-guide-customizations.md#sign-in-as-a-different-user) customization.
 
@@ -175,7 +175,7 @@ Use the **Version** information to confirm which version of the client is instal
 
 ## Support for multiple languages
 
-The Azure Information Protection client supports the same languages that Office 365 supports. For a list of these languages, see the **Office 365, Exchange Online Protection, and Power BI** section from the [International availability](https://products.office.com/business/international-availability) page from Office.
+The Azure Information Protection client supports the same languages that Microsoft 365 supports. For a list of these languages, see the [International availability](https://products.office.com/business/international-availability) page from Office.
 
 For these languages, menu options, dialog boxes, and messages from the Azure Information Protection client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection client for different languages. 
 

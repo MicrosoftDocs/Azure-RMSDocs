@@ -36,11 +36,11 @@ Azure Rights Management (often abbreviated to Azure RMS) is the protection techn
 
 Azure RMS is a cloud-based protection service that uses encryption, identity, and authorization policies to help secure files and emails across multiple devices, including phones, tablets, and PCs. Protection settings remain with your data, even when it leaves your organization's boundaries, keeping your content protected both within and outside your organization.
 
-The following image shows how Azure RMS provides protection for Office 365, as well as on-premises servers and services. Protection is also supported by popular end-user devices running Windows, macOS, iOS, and Android.
+The following image shows how Azure RMS provides protection for Microsoft 365, as well as on-premises servers and services. Protection is also supported by popular end-user devices running Windows, macOS, iOS, and Android.
 
 ![How Azure RMS works](./media/AzRMS_elements.png)
 
-Use Azure RMS with Office 365 subscriptions or subscriptions for Azure Information Protection. For more information about individual subscription types and supported features, see the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection/) site.
+Use Azure RMS with Microsoft 365 subscriptions or subscriptions for Azure Information Protection. For more information about individual subscription types and supported features, see the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection/) site.
 
 ### Sample Azure RMS use case
 
@@ -78,7 +78,7 @@ Use the following lists and tables to identify business requirements or problems
 |Feature  |Description  |
 |---------|---------|
 |**Safely share information**     |  [Protected files](./rms-client/client-classify-protect.md) are safe to share with others, such as an attachment to an email or a link to a SharePoint site. </br></br> If the sensitive information is within an email message, protect the email, or use the **Do Not Forward** option from Outlook.       |
-|**Support for business-to-business collaboration**     |  Because Azure Rights Management is a cloud service, there’s no need to explicitly configure trusts with other organizations before you can share protected content with them. </br></br>Collaboration with other organizations that already have an Office 365 or an Azure AD directory is automatically supported. </br></br>For organizations without Office 365 or an Azure AD directory, users can sign up for the free [RMS for individuals](rms-for-individuals.md) subscription, or use a Microsoft account for [supported applications](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).       |
+|**Support for business-to-business collaboration**     |  Because Azure Rights Management is a cloud service, there’s no need to explicitly configure trusts with other organizations before you can share protected content with them. </br></br>Collaboration with other organizations that already have a Microsoft 365 or an Azure AD directory is automatically supported. </br></br>For organizations without Microsoft 365 or an Azure AD directory, users can sign up for the free [RMS for individuals](rms-for-individuals.md) subscription, or use a Microsoft account for [supported applications](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).       |
 | | |
 
 > [!TIP]
