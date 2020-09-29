@@ -8,7 +8,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 03/13/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935

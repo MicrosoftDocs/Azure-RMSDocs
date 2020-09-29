@@ -7,7 +7,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -129,11 +129,11 @@ Additionally:
 
 ## Enforce protection-only mode when your organization has a mix of licenses
 
-If your organization does not have any licenses for Azure Information Protection, but does have licenses for Office 365 that include the Azure Rights Management service for protecting data, the Azure Information Protection client for Windows automatically runs in [protection-only mode](client-protection-only-mode.md).
+If your organization does not have any licenses for Azure Information Protection, but does have licenses for Microsoft 365 that include the Azure Rights Management service for protecting data, the Azure Information Protection client for Windows automatically runs in [protection-only mode](client-protection-only-mode.md).
 
 However, if your organization has a subscription for Azure Information Protection, by default all Windows computers can download the Azure Information Protection policy. The Azure Information Protection client does not do license checking and enforcement. 
 
-If you have some users who do not have a license for Azure Information Protection but do have a license for Office 365 that includes the Azure Rights Management service, edit the registry on these users' computers to prevent users from running the unlicensed classification and labeling features from Azure Information Protection.
+If you have some users who do not have a license for Azure Information Protection but do have a license for Microsoft 365 that includes the Azure Rights Management service, edit the registry on these users' computers to prevent users from running the unlicensed classification and labeling features from Azure Information Protection.
 
 Locate the following value name and set the value data to **0**:
 

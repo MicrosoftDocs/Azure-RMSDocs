@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
@@ -35,7 +35,7 @@ BYOK and [usage logging](log-analyze-usage.md) work seamlessly with applications
 
 Supported applications include:
 
-- **Cloud services,** such as Microsoft SharePoint or Office 365
+- **Cloud services,** such as Microsoft SharePoint or Microsoft 365
 
 - **On-premises services** running Exchange and SharePoint applications that use the Azure Rights Management service via the RMS connector
 

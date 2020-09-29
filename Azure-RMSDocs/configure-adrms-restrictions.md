@@ -6,8 +6,8 @@ description: Overview of HYOK (AD RMS) protection with Azure Information Protect
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/27/2020
-ms.topic: conceptual
+ms.date: 09/29/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
@@ -49,7 +49,7 @@ Cloud-based keys are managed in Azure Key Vault, which provides customers with t
 
 - **Cloud-based authentication** enables easier sharing with partners and users from other organizations. 
 
-- **Tight integration with other Azure and Office 365 services**, such as search, web viewers, pivoted views, anti-malware, eDiscovery, and Delve.
+- **Tight integration with other Azure and Microsoft 365 services**, such as search, web viewers, pivoted views, anti-malware, eDiscovery, and Delve.
 
 - **Document tracking**, **revocation**, and **email notifications** for sensitive documents that you have shared.
 

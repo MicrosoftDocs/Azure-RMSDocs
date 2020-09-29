@@ -7,7 +7,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 11/03/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
@@ -67,9 +67,9 @@ Use one of the following procedures to deactivate the protection service, Azure 
 
 #### To deactivate Rights Management from the Microsoft 365 admin center
 
-1. Go to the [Rights Management page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) for Office 365 administrators.
+1. Go to the [Rights Management page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) for Microsoft 365 administrators.
     
-    If you are prompted to sign in, use an account that is a global administrator for Office 365.
+    If you are prompted to sign in, use an account that is a global administrator for Microsoft 365.
 
 2. On the **rights management** page, click **deactivate**.
 

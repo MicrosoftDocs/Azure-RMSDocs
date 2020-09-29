@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -72,8 +72,8 @@ For Office versions 2013 and later, we recommend that you configure your group p
 
 The Azure Information Protection unified labeling client can label and protect documents and emails by using the Office applications Word, Excel, PowerPoint, and Outlook from any of the following Office editions:
 
-- Office apps minimum version 1805, build 9330.2078 from Office 365 Business or Microsoft 365 Business when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
-- Office 365 ProPlus
+- Office apps minimum version 1805, build 9330.2078 from Microsoft 365 Apps for Business or Microsoft 365 Business Premium when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
+- Microsoft 365 Apps for Enterprise
 - Office Professional Plus 2019
 - Office Professional Plus 2016
 - Office Professional Plus 2013 with Service Pack 1
