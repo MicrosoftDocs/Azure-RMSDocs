@@ -3,10 +3,10 @@
 
 title: Configure super users for Azure Rights Management - AIP
 description: Understand and implement the super user feature of the Azure Rights Management service from Azure Information Protection, so that authorized people and services can always read and inspect ("reason over") your organization's protected data.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2019
+ms.date: 09/29/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -60,7 +60,18 @@ It doesn't matter when you enable the super user feature or when you add users a
 
 - Restrict and monitor the administrators who are assigned a global administrator for your Microsoft 365 or Azure Information Protection tenant, or who are assigned the GlobalAdministrator role by using the [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) cmdlet. These users can enable the super user feature and assign users (and themselves) as super users, and potentially decrypt all files that your organization protects.
 
-- To see which users and service accounts are individually assigned as super users, use the [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) cmdlet. To see whether a super user group is configured, use the [Get-AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup) cmdlet and your standard user management tools to check which users are a member of this group. Like all administration actions, enabling or disabling the super feature, and adding or removing super users are logged and can be audited by using the [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) command. See the next section for an example. When super users decrypt files, this action is logged and can be audited with [usage logging](log-analyze-usage.md).
+- To see which users and service accounts are individually assigned as super users, use the [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) cmdlet. 
+
+- To see whether a super user group is configured, use the [Get-AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup) cmdlet and your standard user management tools to check which users are a member of this group. 
+
+- Like all administration actions, enabling or disabling the super feature, and adding or removing super users are logged and can be audited by using the [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) command. For example, see [Example auditing for the super user feature](#example-auditing-for-the-super-user-feature).
+
+- When super users decrypt files, this action is logged and can be audited with [usage logging](log-analyze-usage.md).
+
+    > [!NOTE]
+    > While the logs include details about the decryption, including the user who decrypted the file, they do not note when the user is a super user. 
+    > Use the logs together with the cmdlets listed above to first collect a list of super users that you can identify in the logs.
+    >
 
 - If you do not need the super user feature for everyday services, enable the feature only when you need it, and disable it again by using the [Disable-AipServiceSuperUserFeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature) cmdlet.
 
