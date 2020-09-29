@@ -38,7 +38,7 @@ When the Azure Information Protection client doesn't have labels to classify you
 
 Protection-only mode runs in the following scenarios:
 
-- Your organization does not have a subscription for Azure Information Protection that includes classification and labeling features, but has a subscription for Office 365 that includes data protection by using the Azure Rights Management service. 
+- Your organization does not have a subscription for Azure Information Protection that includes classification and labeling features, but has a subscription for Microsoft 365 that includes data protection by using the Azure Rights Management service. 
     
     - You can use the Azure Information Protection client to protect files and view protected files. You can't classify or label documents and emails.
 
@@ -65,7 +65,7 @@ Protection-only mode runs in the following scenarios:
 
 ## Supported tasks for protection-only mode
 
-- Protect (and unprotect) documents and emails from within your Office apps, by using the Office Information Rights Management (IRM) feature: For example: Click **File** > **Info** > **Protect Document** > **Restrict Access**. For more information, see [Using information protection with Office 365, Office 2019, Office 2016, or Office 2013](../help-users.md#using-information-protection-with-Office-365-Office 2019-Office-2016-or-Office-2013).
+- Protect (and unprotect) documents and emails from within your Office apps, by using the Office Information Rights Management (IRM) feature: For example: Click **File** > **Info** > **Protect Document** > **Restrict Access**. For more information, see [Using information protection with Office 365, Office 2019, Office 2016, or Office 2013](../help-users.md#using-information-protection-with-office365-office-2019-office-2016-or-office2013).
 
 - Protect (and unprotect) files by using Windows File Explorer: Right-click the file, files, or folder > **Classify and protect**. To apply protection that has been configured by your administrator, in the **Classify and protect - Azure Information Protection** dialog box, click **Select template** and choose one of the available templates.
 
