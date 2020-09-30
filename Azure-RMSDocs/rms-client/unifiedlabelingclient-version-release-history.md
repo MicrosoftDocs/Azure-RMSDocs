@@ -103,7 +103,7 @@ For more information about content scan jobs, see [Create a content scan job](..
 
 > [!IMPORTANT]
 > If you are working in an Azure China environment, you *must* use these cmdlets to manage your content scan jobs instead of the Azure portal.
-> For more information about Azure China, see the [Azure China documentation](azure/china/).
+> For more information about Azure China, see the [Azure China documentation](/azure/china/).
 > 
 
 ### New features for the unified labeling client
