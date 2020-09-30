@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2020
+ms.date: 09/30/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -84,6 +84,27 @@ This version includes the following new features, fixes, and enhancements for th
 - [New features for the unified labeling client](#new-features-for-the-unified-labeling-client)
 
 ### New features for the unified labeling scanner
+
+- [Azure China support with content scan job PowerShell cmdlets](#azure-china-support-with-content-scan-job-powershell-cmdlets)
+
+#### Azure China support with content scan job PowerShell cmdlets
+
+The Azure Information Protection on-premises scanner now supports Azure China environments with new cmdlets that enable you to manage your content scan job via PowerShell.
+
+- **[Add-MIPScannerRepository](/powershell/module/azureinformationprotection/add-mipscannerrepository).** Adds a new repository to your content scan job.
+- **[Get-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-mipscannercontentscanjob).** Gets details about your content scan job.
+- **[Get-MIPScannerRepository](/powershell/module/azureinformationprotection/get-mipscannerrepository).** Gets details about repositories defined for your content scan job.
+- **[Remove-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-mipscannercontentscanjob).** Deletes your content scan job.
+- **[Remove-MIPScannerRepository](/powershell/module/azureinformationprotection/remove-mipscannerrepository).** Removes a repository from your content scan job.
+- **[Set-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-mipscannercontentscanjob).** Defines settings for your content scan job.
+- **[Set-MIPScannerRepository](/powershell/module/azureinformationprotection/set-mipscannerrepository).** Defines settings for an existing repository in your content scan job.
+
+For more information about content scan jobs, see [Create a content scan job](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
+
+> [!IMPORTANT]
+> If you are working in an Azure China environment, you *must* use these cmdlets to manage your content scan jobs instead of the Azure portal.
+> For more information about Azure China, see the [Azure China documentation](azure/china/).
+> 
 
 ### New features for the unified labeling client
 

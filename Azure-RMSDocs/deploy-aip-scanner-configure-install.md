@@ -178,7 +178,14 @@ Public access to a repository is only reported if you've set a weak account in t
 Deep dive into your content to scan specific repositories for sensitive content. 
 
 You may want to do this only after running a network scan job to analyze the repositories in your network, but can also define your repositories yourself.
- 
+
+> [!IMPORTANT]
+> You can also use PowerShell cmdlets to manage your content scan jobs, such as if you're working in an Azure China environment. 
+>
+> For more information, see [Azure China support with content scan job PowerShell cmdlets](rms-client/unifiedlabelingclient-version-release-history.md#azure-china-support-with-content-scan-job-powershell-cmdlets). 
+
+**To create your content scan job on the Azure portal:**
+
 1. Under the **Scanner** menu on the left, select **Content scan jobs**. 
    
 1. On the **Azure Information Protection - Content scan jobs** pane, select **Add** ![add icon](media/i-add.png "save icon").
@@ -404,6 +411,7 @@ In the following scenarios, the Azure Information Protection scanner is also abl
 - [Apply a default label to all files in a data repository](#apply-a-default-label-to-all-files-in-a-data-repository)
 - [Remove existing labels from all files in a data repository](#remove-existing-labels-from-all-files-in-a-data-repository)
 - [Identify all custom conditions and known sensitive information types](#identify-all-custom-conditions-and-known-sensitive-information-types)
+
 ### Apply a default label to all files in a data repository
 
 In this configuration, all unlabeled files in the repository are labeled with the default label specified for the repository or the content scan job. Files are labeled without inspection. 
@@ -479,6 +487,8 @@ This section lists PowerShell cmdlets supported for the Azure Information Protec
 
 Supported cmdlets for the scanner include:
 
+- [Add-MIPScannerRepository](/powershell/module/azureinformationprotection/add-mipscannerrepository)
+
 - [Export-AIPLogs](/powershell/module/azureinformationprotection/Export-AIPLogs)
 
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
@@ -491,6 +501,10 @@ Supported cmdlets for the scanner include:
 
 - [Get-MIPNetworkDiscoveryStatus](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
 
+- [Get-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-mipscannercontentscanjob)
+
+- [Get-MIPScannerRepository](/powershell/module/azureinformationprotection/get-mipscannerrepository)
+
 - [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
 - [Import-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)
@@ -499,11 +513,19 @@ Supported cmdlets for the scanner include:
 
 - [Install-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)
 
+- [Remove-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-mipscannercontentscanjob)
+
+- [Remove-MIPScannerRepository](/powershell/module/azureinformationprotection/remove-mipscannerrepository)
+
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
 - [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
+
+- [Set-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-mipscannercontentscanjob)
+
+- [Set-MIPScannerRepository](/powershell/module/azureinformationprotection/set-mipscannerrepository)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
 
@@ -518,6 +540,7 @@ Supported cmdlets for the scanner include:
 - [Uninstall-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
+
 
 ## Next steps
 
