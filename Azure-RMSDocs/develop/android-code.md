@@ -45,11 +45,11 @@ The *MSIPCSampleApp* sample application is available for use with this SDK for t
 
 ### Scenario: Consume an RMS protected file
 
-- **Step 1**: Create a [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx).
+- **Step 1**: Create a [ProtectedFileInputStream](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-class-java).
 
     **Source**: *MsipcAuthenticationCallback.java*
 
-    **Description**: Instantiate a [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) object and implement service authentication.  Use the [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) to get a token by passing an instance of **AuthenticationRequestCallback**, as the parameter *mRmsAuthCallback*, to the MSIPC API. See the call to [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) near the end of the following example code section.
+    **Description**: Instantiate a [ProtectedFileInputStream](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-class-java) object and implement service authentication.  Use the [AuthenticationRequestCallback](/previous-versions/windows/desktop/msipcthin2/authenticationcompletioncallback-interface-java) to get a token by passing an instance of **AuthenticationRequestCallback**, as the parameter *mRmsAuthCallback*, to the MSIPC API. See the call to [ProtectedFileInputStream.create](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-class-java) near the end of the following example code section.
 
     ``` java
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
@@ -115,7 +115,7 @@ The *MSIPCSampleApp* sample application is available for use with this SDK for t
 
     **Source**: *MsipcAuthenticationCallback.java*.
 
-    **Description**: This step uses ADAL to implement an [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) with example authentication parameters. To learn more, see the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
+    **Description**: This step uses ADAL to implement an [AuthenticationRequestCallback](/previous-versions/windows/desktop/msipcthin2/authenticationrequestcallback-interface-java) with example authentication parameters. To learn more, see the [Azure AD Authentication Library (ADAL)](/previous-versions/azure/jj573266(v=azure.100)).
 
 
    ``` java
@@ -192,7 +192,7 @@ The *MSIPCSampleApp* sample application is available for use with this SDK for t
                      }
    ```
 
-- **Step 3**: Check if the **Edit** right exists for this user with this content via the [UserPolicy.accessCheck](https://msdn.microsoft.com/library/dn790885.aspx) method.
+- **Step 3**: Check if the **Edit** right exists for this user with this content via the [UserPolicy.accessCheck](/previous-versions/windows/desktop/msipcthin2/userpolicy-accesscheck-method-java) method.
 
     **Source**: *TextEditorFragment.java*
 
@@ -212,7 +212,7 @@ The *MSIPCSampleApp* sample application is available for use with this SDK for t
 
 This scenario begins with getting a list of templates, selecting the first one to create a policy, then creates and writes to the new protected file.
 
-- **Step 1**: Get list of templates via a [TemplateDescriptor](https://msdn.microsoft.com/library/dn790871.aspx) object.
+- **Step 1**: Get list of templates via a [TemplateDescriptor](/previous-versions/windows/desktop/msipcthin2/templatedescriptor-class-java) object.
 
     **Source**: *MsipcTaskFragment.java*
 
@@ -255,7 +255,7 @@ This scenario begins with getting a list of templates, selecting the first one t
     ```
 
 
-- **Step 2**: Create a [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) using the first template in the list.
+- **Step 2**: Create a [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) using the first template in the list.
 
     **Source**: *MsipcTaskFragment.java*
 
@@ -300,7 +300,7 @@ This scenario begins with getting a list of templates, selecting the first one t
     ```
 
 
--  **Step 3**: Create a [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) and write content to it.
+-  **Step 3**: Create a [ProtectedFileOutputStream](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-class-java) and write content to it.
 
     **Source**: *MsipcTaskFragment.java*
 
@@ -366,7 +366,7 @@ This scenario begins with getting a list of templates, selecting the first one t
 
 ### Scenario: Open a custom protected file
 
-- **Step 1**: Create a [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) from a *serializedContentPolicy*.
+- **Step 1**: Create a [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) from a *serializedContentPolicy*.
 
     **Source**: *MsipcTaskFragment.java*
 
@@ -424,7 +424,7 @@ This scenario begins with getting a list of templates, selecting the first one t
    ```
 
 
-- **Step 2**: Create a [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) using the [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) from **Step 1**.
+- **Step 2**: Create a [CustomProtectedInputStream](/previous-versions/windows/desktop/msipcthin2/customprotectedinputstream-class-java) using the [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) from **Step 1**.
 
     **Source**: *MsipcTaskFragment.java*
 
@@ -496,7 +496,7 @@ This scenario begins with getting a list of templates, selecting the first one t
     ```
 
 
-- **Step 3**: Read content from the [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) into *mDecryptedContent* then close.
+- **Step 3**: Read content from the [CustomProtectedInputStream](/previous-versions/windows/desktop/msipcthin2/customprotectedinputstream-class-java) into *mDecryptedContent* then close.
 
     **Source**: *MsipcTaskFragment.java*
 
@@ -538,7 +538,7 @@ This scenario begins with getting a list of templates, selecting the first one t
 
     **Source**: *MsipcTaskFragment.java*
 
-    **Description**: In practice, the following objects would be created by using user inputs from the device interface; [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) and [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx).
+    **Description**: In practice, the following objects would be created by using user inputs from the device interface; [UserRights](/previous-versions/windows/desktop/msipcthin2/userrights-class-java) and [PolicyDescriptor](/previous-versions/windows/desktop/msipcthin2/policydescriptor-interface-java).
 
     ``` java
       // create userRights list
@@ -555,7 +555,7 @@ This scenario begins with getting a list of templates, selecting the first one t
     ```
 
 
-- **Step 2**: Create a custom [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) from the policy descriptor, *selectedDescriptor*.
+- **Step 2**: Create a custom [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) from the policy descriptor, *selectedDescriptor*.
 
     **Source**: *MsipcTaskFragment.java*
 
@@ -565,7 +565,7 @@ This scenario begins with getting a list of templates, selecting the first one t
     ```
 
 
-- **Step 3**: Create and write content to the [CustomProtectedOutputStream](https://msdn.microsoft.com/library/dn758274.aspx) and then close.
+- **Step 3**: Create and write content to the [CustomProtectedOutputStream](/previous-versions/windows/desktop/msipcthin2/customprotectedoutputstream-class-java) and then close.
 
     **Source**: *MsipcTaskFragment.java*
 

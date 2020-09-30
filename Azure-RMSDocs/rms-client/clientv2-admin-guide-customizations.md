@@ -35,7 +35,7 @@ ms.custom: admin
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection unified labeling client.
 
-These settings require editing the registry or specifying advanced settings. The advanced settings use [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
+These settings require editing the registry or specifying advanced settings. The advanced settings use [Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
 ### How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell
 
@@ -44,7 +44,7 @@ When you use Office 365 Security & Compliance Center PowerShell, you can configu
 - The setting to display the Information Protection bar in Office apps is a ***label policy advanced setting***.
 - The setting to specify a label color is a ***label advanced setting***.
 
-In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell), specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Use the following syntax:
+In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell), specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](/powershell/module/microsoft.powershell.core/about/about_hash_tables). Use the following syntax:
 
 For a label policy setting, single string value:
 
@@ -131,7 +131,7 @@ Using one of the admin centers where you manage your sensitivity labels, you can
 
 - **Provide users with a link to a custom help page**
 
-When more than one label policy is configured for a user, each with potentially different policy settings, the last policy setting is applied according to the order of the policies in the admin center. For more information, see [Label policy priority (order matters)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
+When more than one label policy is configured for a user, each with potentially different policy settings, the last policy setting is applied according to the order of the policies in the admin center. For more information, see [Label policy priority (order matters)](/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
 
 Label advanced settings follow the same logic for precedence: When a label is in multiple label policies and that label has advanced settings, the last advanced setting is applied according to the order of the policies in the admin center.
 
@@ -139,7 +139,7 @@ Label policy advanced settings are applied in the reverse order: The advanced se
 
 #### Available advanced settings for label policies
 
-Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy) and [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy).
+Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/exchange/policy-and-compliance/new-labelpolicy) and [Set-LabelPolicy](/powershell/module/exchange/policy-and-compliance/set-labelpolicy).
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
@@ -187,7 +187,7 @@ Example PowerShell command to check your label policy settings in effect for a l
 
 #### Available advanced settings for labels
 
-Use the *AdvancedSettings* parameter with [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label) and [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label).
+Use the *AdvancedSettings* parameter with [New-Label](/powershell/module/exchange/policy-and-compliance/new-label) and [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label).
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
@@ -262,7 +262,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnable
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When you configure this setting, the  [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) cmdlet **Set-AIPFileLabel** is enabled to allow removal of protection from PST, rar, 7zip and MSG files.
+When you configure this setting, the  [PowerShell](./clientv2-admin-guide-powershell.md) cmdlet **Set-AIPFileLabel** is enabled to allow removal of protection from PST, rar, 7zip and MSG files.
 
 - Key: **EnableContainerSupport**
 
@@ -1150,7 +1150,7 @@ Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertT
 
 This configuration uses label [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-Use these settings only when you have a working [S/MIME deployment](https://docs.microsoft.com/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
+Use these settings only when you have a working [S/MIME deployment](/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
 
 To configure an advanced setting for an S/MIME digital signature, enter the following strings for the selected label:
 
@@ -1240,7 +1240,7 @@ Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
 ## Sign in as a different user
 
-In a production environment, users wouldn't usually need to sign in as a different user when they are using the Azure Information Protection unified labeling client. However, as an administrator, you might need to sign in as a different user during a testing phase. 
+Signing in with multiple users is not supported by AIP in production. This procedure describes how to sign in as a different user for testing purposes only.
 
 You can verify which account you're currently signed in as by using the **Microsoft Azure Information Protection** dialog box: Open an Office application and on the **Home** tab, select the **Sensitivity** button, and then select **Help and feedback**. Your account name is displayed in the **Client status** section.
 
@@ -1282,7 +1282,7 @@ Instructions:
 
 4. From this computer, export the log files.
     
-    For example, run the [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs) cmdlet, or use the **Export Logs** option from the client's [Help and Feedback](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) dialog box. 
+    For example, run the [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) cmdlet, or use the **Export Logs** option from the client's [Help and Feedback](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) dialog box. 
     
     The log files are exported as a single compressed file.
 
@@ -1355,7 +1355,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 > * FILE_ATTRIBUTE_RECALL_ON_OPEN
 > * FILE_ATTRIBUTE_TEMPORARY
 
-For a list of all file attributes that can be defined in the **ScannerFSAttributesToSkip** advanced setting, see the [Win32 File Attribute Constants](https://docs.microsoft.com/windows/win32/fileio/file-attribute-constants)
+For a list of all file attributes that can be defined in the **ScannerFSAttributesToSkip** advanced setting, see the [Win32 File Attribute Constants](/windows/win32/fileio/file-attribute-constants)
 
 ## Preserve NTFS owners during labeling (public preview)
 
@@ -1382,13 +1382,13 @@ For example, as an administrator, you may want to remind your users not to add a
 
 :::image type="content" source="../media/justification-office.png" alt-text="Customized justification prompt text":::
 
-To modify the default **Other** text that's displayed, use the **JustificationTextForUserText** advanced property with the [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) cmdlet. Set the value to the text you want to use instead.
+To modify the default **Other** text that's displayed, use the **JustificationTextForUserText** advanced property with the [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) cmdlet. Set the value to the text you want to use instead.
 
 For example:
 
 ``` PowerShell
 
-[Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
+[Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
 ```
 
 ## Customize Outlook popup messages

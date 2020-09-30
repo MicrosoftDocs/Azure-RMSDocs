@@ -47,7 +47,7 @@ To remove the SCP, make sure that you are logged in as a domain enterprise admin
 
 4. Select **Remove Current SCP**, and then click **OK**.
 
-Now monitor your AD RMS servers for activity. For example, check the [requests in the System Health report](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), the [ServiceRequest table](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) or [audit user access to protected content](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx).
+Now monitor your AD RMS servers for activity. For example, check the [requests in the System Health report](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee221012(v=ws.10)), the [ServiceRequest table](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772686(v=ws.10)) or [audit user access to protected content](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx).
 
 When you have confirmed that RMS clients are no longer communicating with these servers and that clients are successfully using Azure Information Protection, you can remove the AD RMS server role from these servers. If you're using dedicated servers, you might prefer the cautionary step of first shutting down the servers for a period of time. This gives you time to make sure that there are no reported problems that might require you to restart these servers for service continuity while you investigate why clients are not using Azure Information Protection.
 
@@ -74,7 +74,7 @@ Redirection via DNS:
 
 ## Step 11. Complete client migration tasks
 
-For mobile device clients and Mac computers: Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](https://technet.microsoft.com/library/dn673574.aspx).
+For mobile device clients and Mac computers: Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)).
 
 When these DNS changes have propagated, these clients will automatically discover and start to use the Azure Rights Management service. However, Mac computers that run Office Mac cache the information from AD RMS. For these computers, this process can take up to 30 days.
 

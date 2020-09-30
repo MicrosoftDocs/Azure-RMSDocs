@@ -207,7 +207,7 @@ The migration steps can be divided into five phases that can be done at differen
 
 - **Step 11: Complete client migration tasks**
 
-    If you have deployed the [mobile device extension](https://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phones and tablets, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS. 
+    If you have deployed the [mobile device extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phones and tablets, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS. 
     
     The onboarding controls that you configured during the preparation phase are no longer needed. However, if you did not use onboarding controls because you chose to migrate everything at the same time rather than do a phased migration, you can skip the instructions to remove the onboarding controls.
     
@@ -220,4 +220,3 @@ The migration steps can be divided into five phases that can be done at differen
 
 ## Next steps
 To start the migration, go to [Phase 1 - preparation](migrate-from-ad-rms-phase1.md).
-
