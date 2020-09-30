@@ -12,13 +12,13 @@ ms.custom: has-adal-ref
 
 # Microsoft Information Protection (MIP) SDK setup and configuration
 
-The Quickstart and Tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Office 365 subscription and client workstation, in preparation for using the SDK.
+The Quickstart and Tutorial articles are centered around building applications that use the MIP SDK libraries and APIs. This article shows you how to set up and configure your Microsoft 365 subscription and client workstation, in preparation for using the SDK.
 
 ## Prerequisites
 
 Be sure to review the following topics before getting started:
 
-- [What is Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
+- [What is Office 365 Security and Compliance Center?](/office365/securitycompliance/security-and-compliance)
 - [What is Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
@@ -139,7 +139,7 @@ Next, complete the following steps to ensure your client computer is set up and 
 
 ## Register a client application with Azure Active Directory
 
-As part of the Office 365 subscription provisioning process, an associated Azure Active Directory (Azure AD) tenant is created. The Azure AD tenant provides identity and access management for Office 365 *user accounts* and *application accounts*. Applications that require access to secured APIs (such as MIP APIs), require an application account.
+As part of the Microsoft 365 subscription provisioning process, an associated Azure Active Directory (Azure AD) tenant is created. The Azure AD tenant provides identity and access management for Microsoft 365 *user accounts* and *application accounts*. Applications that require access to secured APIs (such as MIP APIs), require an application account.
 
 For authentication and authorization at runtime, accounts are represented by a *security principal*, which is derived from the account's identity information. Security principals that represent an application account are referred to as a [*service principal*](/azure/active-directory/develop/developer-glossary#service-principal-object).
 

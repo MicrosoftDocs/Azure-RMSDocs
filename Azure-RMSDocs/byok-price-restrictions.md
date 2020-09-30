@@ -35,7 +35,7 @@ BYOK and [usage logging](log-analyze-usage.md) work seamlessly with applications
 
 Supported applications include:
 
-- **Cloud services,** such as Microsoft SharePoint or Office 365
+- **Cloud services,** such as Microsoft SharePoint or Microsoft 365
 
 - **On-premises services** running Exchange and SharePoint applications that use the Azure Rights Management service via the RMS connector
 
@@ -54,7 +54,7 @@ Customer-generated keys must be stored in the Azure Key Vault for BYOK protectio
 
 ### Sharing key vaults and subscriptions
 
-We recommend using a **dedicated key vault** for your tenant key. Dedicated key vaults help to ensure that calls by other services do not cause [service limits](https://docs.microsoft.com/azure/key-vault/general/service-limits) to be exceeded. Exceeding service limits on the key vault where your tenant key is stored may cause response time throttling for Azure Rights Management service.
+We recommend using a **dedicated key vault** for your tenant key. Dedicated key vaults help to ensure that calls by other services do not cause [service limits](/azure/key-vault/general/service-limits) to be exceeded. Exceeding service limits on the key vault where your tenant key is stored may cause response time throttling for Azure Rights Management service.
 
 As different services have varying key management requirements, Microsoft also recommends using **a dedicated Azure subscription** for your key vault. Dedicated Azure subscriptions:
 
@@ -82,7 +82,7 @@ Storing your tenant key in the Azure Key Vault provides the following advantages
 |**Separated security domains**|Azure Key Vault uses separate security domains for its data centers in regions such as North America, EMEA (Europe, Middle East and Africa), and Asia. </br></br>Azure Key Vault also uses different instances of Azure, such as Microsoft Azure Germany, and Azure Government. |
 |**Unified experience**| Azure Key Vault also enables security administrators to store, access, and manage certificates and secrets, such as passwords, for other services that use encryption. <br></br>Using Azure Key Vault for your tenant keys provides a seamless user experience for administrators who manage all of these elements.|
 
-For the latest updates and to learn how other services use  [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/basic-concepts), visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/).
+For the latest updates and to learn how other services use  [Azure Key Vault](/azure/key-vault/general/basic-concepts), visit the [Azure Key Vault team blog](/archive/blogs/kv/).
 
 ## Usage logging for BYOK
 
@@ -93,7 +93,7 @@ Although usage logging is optional, we recommend using the near real-time usage 
 For more information about key usage logging for BYOK, see [Logging and analyzing the protection usage from Azure Information Protection](log-analyze-usage.md).
 
 > [!TIP]
-> For additional assurance, Azure Information Protection usage logging can be cross referenced with [Azure Key Vault logging](https://docs.microsoft.com/azure/key-vault/general/logging). Key Vault logs provide a reliable method to independently monitor that your key is only used by Azure Rights Management service.
+> For additional assurance, Azure Information Protection usage logging can be cross referenced with [Azure Key Vault logging](/azure/key-vault/general/logging). Key Vault logs provide a reliable method to independently monitor that your key is only used by Azure Rights Management service.
 >
 > If necessary, immediately revoke access to your key by removing permissions on the key vault.
 
@@ -102,7 +102,7 @@ For more information about key usage logging for BYOK, see [Logging and analyzin
 > [!NOTE]
 > Azure Information Protection now supports using the Azure Key Vault Managed HSM in public preview, for use with non-production tenants only.
 >
-> For more information about the Managed HSM offering, and how to set up a vault and a key, see the [Azure Key Vault documentation](https://aka.ms/mhsm). 
+> For more information about the Managed HSM offering, and how to set up a vault and a key, see the [Azure Key Vault documentation](/azure/key-vault/). 
 >
 >Additional instructions on granting key authorization are described below.
 >
@@ -157,9 +157,9 @@ BYOK prerequisites vary, depending on your system configuration. Verify that you
 |---------|---------|
 |**Azure subscription**     |Required for all configurations. </br>For more information, see [Verifying that you have a BYOK-compatible Azure subscription](#verifying-that-you-have-a-byok-compatible-azure-subscription).         |
 |**AIPService PowerShell module for Azure Information Protection**|Required for all configurations. </br>For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).|
-|**Azure Key Vault prerequisites for BYOK** | If you are using an HSM-protected key that was created on-premises, ensure that you also comply with the [prerequisites for BYOK](https://docs.microsoft.com/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) listed in the Azure Key Vault documentation.         |
+|**Azure Key Vault prerequisites for BYOK** | If you are using an HSM-protected key that was created on-premises, ensure that you also comply with the [prerequisites for BYOK](/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) listed in the Azure Key Vault documentation.         |
 |**Thales firmware version 11.62**    |You must have a Thales firmware version of 11.62 if you are migrating from AD RMS to Azure Information Protection by using software key to hardware key and are using Thales firmware for your HSM.
-|**Firewall bypass for trusted Microsoft services** |If the key vault that contains your tenant key uses Virtual Network Service Endpoints for Azure Key Vault, you must allow trusted Microsoft services to bypass this firewall. </br>For more information, see [Virtual Network Service Endpoints for Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/overview-vnet-service-endpoints).       |
+|**Firewall bypass for trusted Microsoft services** |If the key vault that contains your tenant key uses Virtual Network Service Endpoints for Azure Key Vault, you must allow trusted Microsoft services to bypass this firewall. </br>For more information, see [Virtual Network Service Endpoints for Azure Key Vault](/azure/key-vault/general/overview-vnet-service-endpoints).       |
 
 #### Verifying that you have a BYOK-compatible Azure subscription
 
@@ -167,7 +167,7 @@ Your Azure Information Protection tenant must have an Azure subscription. If you
 
 The free Azure subscription that provides access to Azure Active Directory configuration and Azure Rights Management custom template configuration is *not* sufficient for using Azure Key Vault.
 
-To confirm whether you have an Azure subscription that is compatible with BYOK, do the following to verify, using [Azure PowerShell](https://docs.microsoft.com/powershell/azure/) cmdlets:
+To confirm whether you have an Azure subscription that is compatible with BYOK, do the following to verify, using [Azure PowerShell](/powershell/azure/) cmdlets:
 
 1. Start an Azure PowerShell session as an administrator.
 
@@ -175,7 +175,7 @@ To confirm whether you have an Azure subscription that is compatible with BYOK, 
 
 1. Copy the token displayed to your clipboard. Then, in a browser, go to https://microsoft.com/devicelogin and enter the copied token.
 
-    For more information, see [Sign in with Azure PowerShell](https://docs.microsoft.com/powershell/azure/authenticate-azureps).
+    For more information, see [Sign in with Azure PowerShell](/powershell/azure/authenticate-azureps).
 
 1. In your PowerShell session, enter `Get-AzSubscription`, and confirm that the following values are displayed:
 
@@ -195,7 +195,7 @@ Make your choice first for compliance, and then to minimize network latency:
 
 - All cryptographic calls for protection chain to your Azure Information Protection key. Therefore, you may want to minimize the network latency these calls require by creating your key vault in the same Azure region or instance as your Azure Information Protection tenant.
 
-To identify the location of your Azure Information Protection tenant, use the [Get-AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration)​ PowerShell cmdlet and identify the region from the URLs. For example:
+To identify the location of your Azure Information Protection tenant, use the [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)​ PowerShell cmdlet and identify the region from the URLs. For example:
 
 ```ps
 LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
@@ -220,7 +220,7 @@ The following table lists recommended Azure regions and instances for minimizing
 >[!IMPORTANT]
 > For information specific for Managed HSMs, see [Enabling key authorization for Managed HSM keys via Azure CLI](#enabling-key-authorization-for-managed-hsm-keys-via-azure-cli).
 
-Create an Azure Key Vault and the key you want to use for Azure Information Protection. For more information, see the [Azure Key Vault documentation](https://docs.microsoft.com/azure/key-vault/).
+Create an Azure Key Vault and the key you want to use for Azure Information Protection. For more information, see the [Azure Key Vault documentation](/azure/key-vault/).
 
 Note the following for configuring your Azure Key Vault and key for BYOK:
 
@@ -241,7 +241,7 @@ When creating your key, make sure that the key length is either 2048 bits (recom
 
 #### Creating an HSM-protected key on-premises and transferring it to your key vault
 
-To create an HSM-protected key on-premises and transfer it to your key vault as an HSM-protected key, follow the procedures in the Azure Key Vault documentation: [How to generate and transfer HSM-protected keys for Azure Key Vault](https://docs.microsoft.com/azure/key-vault/keys/hsm-protected-keys-byok).
+To create an HSM-protected key on-premises and transfer it to your key vault as an HSM-protected key, follow the procedures in the Azure Key Vault documentation: [How to generate and transfer HSM-protected keys for Azure Key Vault](/azure/key-vault/keys/hsm-protected-keys-byok).
 
 For Azure Information Protection to use the transferred key, all Key Vault operations must be permitted for the key, including:
 
@@ -260,7 +260,7 @@ To check the permitted operations for a specific key, run the following PowerShe
 (Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps
 ```
 
-If necessary, add permitted operations by using [Update-AzKeyVaultKey](https://docs.microsoft.com/powershell/module/az.keyvault/update-azkeyvaultkey) and the *KeyOps* parameter.
+If necessary, add permitted operations by using [Update-AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey) and the *KeyOps* parameter.
 
 #### Configuring Azure Information Protection with your key ID
 
@@ -289,7 +289,7 @@ The Azure Rights Management service must be authorized to use your key. Azure Ke
 
 ##### Enabling key authorization using PowerShell
 
-Run the Key Vault PowerShell cmdlet, [Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy), and grant permissions to the Azure Rights Management service principal using the GUID **00000012-0000-0000-c000-000000000000**.
+Run the Key Vault PowerShell cmdlet, [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy), and grant permissions to the Azure Rights Management service principal using the GUID **00000012-0000-0000-c000-000000000000**.
 
 For example:
 
@@ -326,7 +326,7 @@ Using Azure RMS cmdlets, run the following commands:
     Connect-AipService
     ```
 
-1. Run the [Use-AipServiceKeyVaultKey cmdlet](https://docs.microsoft.com/powershell/module/aipservice/use-aipservicekeyvaultkey), specifying the key URL. For example:
+1. Run the [Use-AipServiceKeyVaultKey cmdlet](/powershell/module/aipservice/use-aipservicekeyvaultkey), specifying the key URL. For example:
 
     ```ps
     Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/<key-version>"
@@ -335,13 +335,13 @@ Using Azure RMS cmdlets, run the following commands:
     > [!IMPORTANT]
     > In this example, `<key-version>` is the version of the key you want to use. If you do not specify the version, the current version of the key is used by default, and the command may appear to work. However, if your key is later updated or renewed, the Azure Rights Management service will stop working for your tenant, even if you run the **Use-AipServiceKeyVaultKey** command again.
     >
-    > Use the [Get-AzKeyVaultKey](https://docs.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultkey) command as needed to get the version number of the current key.
+    > Use the [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey) command as needed to get the version number of the current key.
     >
     > For example: `Get-AzKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
-    To confirm that the key URL is set correctly for Azure Information Protection, run the [Get-AzKeyVaultKey](https://docs.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultkey) command in the Azure Key Vault to display the key URL.
+    To confirm that the key URL is set correctly for Azure Information Protection, run the [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey) command in the Azure Key Vault to display the key URL.
 
-1. If the Azure Rights Management service is already activated, run [Set-AipServiceKeyProperties](https://docs.microsoft.com/powershell/module/aipservice/set-aipservicekeyproperties) to tell Azure Information Protection to use this key as the active tenant key for the Azure Rights Management service.
+1. If the Azure Rights Management service is already activated, run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) to tell Azure Information Protection to use this key as the active tenant key for the Azure Rights Management service.
 
 Azure Information Protection is now configured to use your key instead of the default Microsoft-created key that was automatically created for your tenant.
 

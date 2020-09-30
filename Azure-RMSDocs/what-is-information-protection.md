@@ -69,7 +69,7 @@ In this example, the label also:
 
 Azure Information Protection uses the [*Azure Rights Management service* (Azure RMS)](what-is-azure-rms.md) to protect your data. 
 
-Azure RMS is integrated with other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory, and can also be used with your own or third-party applications and information protection solutions. Azure RMS works with both on-premises and cloud solutions.
+Azure RMS is integrated with other Microsoft cloud services and applications, such as Microsoft 365 and Azure Active Directory, and can also be used with your own or third-party applications and information protection solutions. Azure RMS works with both on-premises and cloud solutions.
 
 Azure RMS uses encryption, identity, and authorization policies. Similar to AIP labels, protection applied using Azure RMS stays with the documents and emails, regardless of the document or email's location, ensuring that you stay in control of your content even when it's shared with other people.
 
@@ -117,7 +117,7 @@ Additionally, the AIP client enables users to classify and protect additional fi
 The **Classify and protect** menu option works similarly to the Information Protection bar in Office applications, enabling users to select a label or set custom permissions.
 
 > [!TIP]
-> Power users or administrators might find that PowerShell commands are more efficient for managing and setting classification and protection for multiple files. [Relevant PowerShell commands](https://docs.microsoft.com/powershell/module/azureinformationprotection) are included with the client, and can also be installed separately.
+> Power users or administrators might find that PowerShell commands are more efficient for managing and setting classification and protection for multiple files. [Relevant PowerShell commands](/powershell/module/azureinformationprotection) are included with the client, and can also be installed separately.
 
 Users and administrators can use document tracking sites to monitor protected documents, watch who accesses them, and when. If they suspect misuse, they can also revoke access to these documents. For example:
 
@@ -127,7 +127,7 @@ Users and administrators can use document tracking sites to monitor protected do
 
 Using AIP with Exchange Online provides the additional benefit of sending protected emails to any user, with the assurance that they can read it on any device.
 
-For example, you may need to send sensitive information to personal email addresses that use a **Gmail**, **Hotmail**, or **Microsoft** account, or to users who don't have an account in Office 365 or Azure AD. These emails should be encrypted at rest and in transit, and be read only by the original recipients.
+For example, you may need to send sensitive information to personal email addresses that use a **Gmail**, **Hotmail**, or **Microsoft** account, or to users who don't have an account in Microsoft 365 or Azure AD. These emails should be encrypted at rest and in transit, and be read only by the original recipients.
 
 This scenario requires [Office 365 Message Encryption capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipients cannot open the protected email in their native email client, they can use a one-time passcode to read the sensitive information in a browser.
 
@@ -157,7 +157,7 @@ Use one of the following methods to classify and protect existing content:
 
     Alternately, use the scanner to apply a default label to all documents in a data repository without inspecting the file contents. Use the scanner in reporting mode only to discover sensitive information that you might not know you had.
 
-- **Cloud data storage**: Use [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/azip-integration) to apply your labels to documents in Box, SharePoint, and OneDrive. For a tutorial, see [Automatically apply Azure Information Protection classification labels](https://docs.microsoft.com/cloud-app-security/use-case-information-protection) 
+- **Cloud data storage**: Use [Microsoft Cloud App Security](/cloud-app-security/azip-integration) to apply your labels to documents in Box, SharePoint, and OneDrive. For a tutorial, see [Automatically apply Azure Information Protection classification labels](/cloud-app-security/use-case-information-protection) 
 
 ## Latest labeling updates for Microsoft 365
 
@@ -167,8 +167,8 @@ See the latest information about how Azure Information Protection helps you to d
 
 For more information, see:
 
-- [What's new in the Microsoft 365 admin center](https://docs.microsoft.com/microsoft-365/admin/whats-new-in-preview)
-- [What's new in the SharePoint admin center](https://docs.microsoft.com/sharepoint/what-s-new-in-admin-center)
+- [What's new in the Microsoft 365 admin center](/microsoft-365/admin/whats-new-in-preview)
+- [What's new in the SharePoint admin center](/sharepoint/what-s-new-in-admin-center)
 
 ## Additional Azure Information Protection resources
 
