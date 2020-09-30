@@ -135,6 +135,8 @@ Now, customers can migrate IQP-protected files into the AIP unified labeling cli
 
 For more information, see [Migrate documents with legacy protection](clientv2-admin-guide-customizations.md#migrate-documents-with-legacy-protection).
 
+
+
 ### Fixes and improvements
 
 - [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues)
@@ -145,9 +147,13 @@ For more information, see [Migrate documents with legacy protection](clientv2-ad
 
 #### Azure Information Protection client fixed issues
 
-- Updates to the [order of precedence](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) used when more than one label policy is configured for a user, each with conflicting advanced settings. 
+- **Updates to the [order of precedence](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved)** used when more than one label policy is configured for a user, each with conflicting advanced settings. 
 
     In such cases, the advanced settings from the first policy are always applied, according to the order of the policies in the admin center. The exception for the *OutlookDefaultLabel* is now removed.
+
+- **Support for MCE version 15.20.3326.** The Azure Information Protection unified labeling client now supports the latest version of the Microsoft Classification Engine, providing improvements for sensitive information types and accuracy.
+
+    For more information about classification in the Microsoft 365 Security and Compliance Center, see the [Microsoft 365 documentation](/microsoft-365/compliance/data-classification-overview).
 
 ## Version 2.8.85.0
 
