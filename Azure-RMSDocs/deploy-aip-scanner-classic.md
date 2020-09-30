@@ -42,7 +42,7 @@ The AIP scanner runs as a service on Windows Server and lets you discover, class
 - **SharePoint document libraries and folder** for SharePoint Server 2019 through SharePoint Server 2013. SharePoint 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 > [!NOTE]
-> To scan and label files on cloud repositories, use [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) instead of the scanner.
+> To scan and label files on cloud repositories, use [Cloud App Security](/cloud-app-security/) instead of the scanner.
 >
 ## Azure Information Protection classic scanner overview
 

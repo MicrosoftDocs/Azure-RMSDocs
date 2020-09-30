@@ -49,14 +49,14 @@ The following prerequisites for the AIP unified labeling client are in addition 
 |**Microsoft Online Services Sign-in Assistant 7.250.4303.0**     |   Computers running Office 2010 require Microsoft Online Services Sign-in Assistant version 7.250.4303.0, which is included with the client installation. </br></br>If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection unified labeling client. </br></br>For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.      |
 |**KB 4482887**     | For Windows 10 version 1809 only, operation system builds older than 17763.348, install [March 1, 2019—KB4482887 (OS Build 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) to ensure the Information Protection bar displays correctly in Office applications. </br></br>This update is not needed if you have Office 365 1902 or later.        |
 |**Admin permissions**| Installing the Azure Information Protection unified labeling client requires local administrative permissions.| 
-|**Disable Exploit protection**   |The AIP client is not supported on machines that have [Exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. Make sure to [disable Exploit protection](../known-issues.md#known-issues-for-installing-the-aip-client) before installing the AIP client.  |
+|**Disable Exploit protection**   |The AIP client is not supported on machines that have [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. Make sure to [disable Exploit protection](../known-issues.md#known-issues-for-installing-the-aip-client) before installing the AIP client.  |
 |||
         
 ### Configure your group policy to prevent disabling AIP
 
 For Office versions 2013 and later, we recommend that you configure your group policy to ensure that the **Microsoft Azure Information Protection** add-in for Office applications is always enabled.  Without this add-in, users won't be able to label their documents or emails in Office applications.   
 
-- **For Outlook:** Use the group policy setting documented in [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins).
+- **For Outlook:** Use the group policy setting documented in [System Administrator control over add-ins](/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins).
 - **For Word, Excel, and PowerPoint:** Use the group policy setting **list of managed add-ins** documented in [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). . 
 
     Specify the following programmatic identifiers (ProgID) for AIP, and set the option to **1: The add-in is always enabled**.
@@ -81,7 +81,7 @@ The Azure Information Protection unified labeling client can label and protect d
 
 Other editions (such as **standard**) of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for **labeling** only. Consequently, labels that apply protection do not display to users on the Azure Information Protection Sensitivity button or bar.
 
-For information about which Office editions support the protection service, see [Applications that support Azure Rights Management data protection](https://docs.microsoft.com/azure/information-protection/requirements-applications).
+For information about which Office editions support the protection service, see [Applications that support Azure Rights Management data protection](../requirements-applications.md).
 
 ### Office features and capabilities not supported
 
@@ -151,7 +151,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
 ##### To identify the value to specify for the ServiceLocation parameter
 
-1. From a PowerShell session, first run [Connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration). 
+1. From a PowerShell session, first run [Connect-AipService](/powershell/module/aipservice/connect-aipservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration). 
  
     If you haven't already installed the PowerShell module for the Azure Rights Management service, see [Installing the AIPService PowerShell module](../install-powershell.md).
 
@@ -208,4 +208,3 @@ Now that you've installed the Azure Information Protection unified labeling clie
 - [File types supported](clientv2-admin-guide-file-types.md)
 
 - [PowerShell commands](clientv2-admin-guide-powershell.md)
-

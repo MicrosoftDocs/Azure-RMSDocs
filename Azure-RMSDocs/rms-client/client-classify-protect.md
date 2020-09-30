@@ -44,7 +44,7 @@ However, you can also classify and protect files by using **File Explorer**. Thi
 If your label applies protection to a document, the protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following for protected files: Co-authoring, Office for the web, search, document preview, thumbnail, and eDiscovery.
 
 > [!TIP]
-> Ask your administrator about migrating your labels to unified sensitivity labels that are supported for these locations when [SharePoint is enabled for sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> Ask your administrator about migrating your labels to unified sensitivity labels that are supported for these locations when [SharePoint is enabled for sensitivity labels](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 ### Safely share a file with people outside your organization
 
@@ -200,4 +200,3 @@ More how-to instructions from the Azure Information Protection user guide:
 For configuration instructions to enable the policy setting **Make the custom permissions option available to users**, see [Configuring the Azure Information Protection policy settings](../configure-policy-settings.md).
 
 Other configuration instructions: [Configuring the Azure Information Protection policy](../configure-policy.md).
-

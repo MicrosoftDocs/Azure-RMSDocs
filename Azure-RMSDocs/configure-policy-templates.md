@@ -151,7 +151,7 @@ Templates can be created using the portal or using PowerShell.
 
 ### Template creation using PowerShell
 
-To create a new protection template using PowerShell with the specified name, description, policy, and desired status setting use the [Add-AipServiceTemplate](https://docs.microsoft.com/powershell/module/aipservice/add-aipservicetemplate) cmdlet. 
+To create a new protection template using PowerShell with the specified name, description, policy, and desired status setting use the [Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate) cmdlet. 
 
 
 ### Template creation using the portal
@@ -182,5 +182,4 @@ It can take up to 15 minutes for a computer running the Azure Information Protec
 
 Everything that you can configure in the Azure portal to create and manage your templates, you can do by using PowerShell. In addition, PowerShell provides more options that are not available in the portal. For more information, see [PowerShell reference for protection templates](configure-templates-with-powershell.md). 
 
-For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  
-
+For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.

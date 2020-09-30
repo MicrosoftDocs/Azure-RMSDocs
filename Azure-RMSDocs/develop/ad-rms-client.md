@@ -34,10 +34,10 @@ The RMS Client 2.1, exposes functionality that enables users to create, publish,
 
 The Rights Management Services SDK 2.1 works with RMS Client 2.1. Rights enabled applications built on the RMS SDK 2.1 must use the RMS Client 2.1.
 
-For more information, see the [TechNet documentation on the RMS Client 2.1](https://TechNet.Microsoft.Com/library/jj159267(WS.10).aspx).
+For more information, see the [TechNet documentation on the RMS Client 2.1](../rms-client/client-deployment-notes.md).
 
 ## Related topics
 
 * [Overview](ad-rms-overview.md)
 * [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
-* [TechNet documentation on the RMS Client 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
+* [TechNet documentation on the RMS Client 2.1](../rms-client/client-deployment-notes.md)

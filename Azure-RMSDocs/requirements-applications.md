@@ -170,7 +170,7 @@ Azure RMS is tightly integrated into the Word, Excel, PowerPoint, and Outlook ap
 - [Windows computers for Information Rights Management (IRM)](#windows-computers-for-information-rights-management-irm)
 - [Mac computers for Information Rights Management (IRM)](#mac-computers-for-information-rights-management-irm)
 
-See also: [Office Applications Service Description](https://technet.microsoft.com/library/office-applications-service-description.aspx)
+See also: [Office Applications Service Description](/office365/servicedescriptions/office-applications-service-description/office-applications-service-description)
 
 ### Windows computers for Information Rights Management (IRM)
 
@@ -244,7 +244,7 @@ Download the relevant app from the [Microsoft Azure Information Protection page]
 
 For Mac computers, the Rights Management sharing app offers a viewer for protected PDF files **(.ppdf),** protected text images, and generically protected files. It can also protect image files, but not other files. To protect Office files on these computers, use Office for Mac or Microsoft 365 Apps for Enterprise. 
 
-For more information, see the [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](https://technet.microsoft.com/dn451248)
+For more information, see the [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](/previous-versions/msdn10/dn451248(v=msdn.10))
 
 Download the Rights Management sharing app for Mac computers from the [Microsoft Azure Information Protection page](https://go.microsoft.com/fwlink/?LinkId=303970).
 

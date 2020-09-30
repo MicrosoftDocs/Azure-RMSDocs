@@ -52,11 +52,11 @@ If you have questions about licensing, read through the [frequently asked questi
 > [!TIP]
 > Looking to see if your Microsoft 365 plan or Exchange Online standalone plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
 >
-> - [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
+> - [Exchange Online Service Description](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description)
 >
-> - [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
+> - [Office 365 Education](/office365/servicedescriptions/office-365-platform-service-description/office-365-education)
 >
-> - [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
+> - [Office 365 US Government](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/office-365-us-government)
 
 If you have questions about subscriptions or licensing, do not post them on this page. Instead, see if they are answered in the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing. If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
@@ -169,7 +169,7 @@ For more information, see [Applications that support Azure Rights Management dat
 
 ## Firewalls and network infrastructure
 
-If you have a firewalls or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are listed in this Office article: [Microsoft 365 Common and Office Online](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#microsoft-365-common-and-office-online).
+If you have a firewalls or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are listed in this Office article: [Microsoft 365 Common and Office Online](/office365/enterprise/urls-and-ip-address-ranges#microsoft-365-common-and-office-online).
 
 Azure Information Protection has the following additional requirements:
 
@@ -266,4 +266,3 @@ The following operating systems support the Azure Rights Management service, whi
 ## Next steps
 
 Once you've reviewed all AIP requirements and confirmed that your system complies, continue with [Preparing users and groups for Azure Information Protection](prepare.md).
-

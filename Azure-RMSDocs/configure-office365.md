@@ -45,7 +45,7 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
 
     Press **Y** to confirm.
 
-2. In your Windows PowerShell session, sign in to Exchange Online by using an account that is enabled for remote Shell access. By default, all accounts that are created in Exchange Online are enabled for remote Shell access but this can be disabled  (and enabled) by using the [Set-User &lt;UserIdentity&gt; -RemotePowerShellEnabled](https://technet.microsoft.com/library/jj984292%28v=exchg.160%29.aspx) command.
+2. In your Windows PowerShell session, sign in to Exchange Online by using an account that is enabled for remote Shell access. By default, all accounts that are created in Exchange Online are enabled for remote Shell access but this can be disabled  (and enabled) by using the [Set-User &lt;UserIdentity&gt; -RemotePowerShellEnabled](/powershell/exchange/disable-access-to-exchange-online-powershell) command.
 
     To sign in, first type:
 
@@ -67,7 +67,7 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
     Import-PSSession $Session
     ```
 
-4. Run the [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) command to view your Exchange Online configuration for the protection service:
+4. Run the [Get-IRMConfiguration](/powershell/module/exchange/get-irmconfiguration) command to view your Exchange Online configuration for the protection service:
 
     ```md
     Get-IRMConfiguration
@@ -89,7 +89,7 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
 
     This command runs a series of checks that includes verifying connectivity to the service, retrieving the configuration, retrieving URIs, licenses, and any templates. In the Windows PowerShell session, you will see the results of each and at the end, if everything passes these checks: **OVERALL RESULT: PASS**
 
-When Exchange Online is enabled to use the Azure Rights Management service, you can configure features that apply information protection automatically, such as [mail flow rules](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8), [data loss prevention (DLP) policies](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), and [protected voice mail](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
+When Exchange Online is enabled to use the Azure Rights Management service, you can configure features that apply information protection automatically, such as [mail flow rules](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8), [data loss prevention (DLP) policies](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention), and [protected voice mail](/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/protect-voice-mail) (Unified Messaging).
 
 ## SharePoint in Microsoft 365 and OneDrive: IRM Configuration
 
@@ -102,7 +102,7 @@ To configure SharePoint in Microsoft 365 and OneDrive to support the Azure Right
 
 To enable the information rights management (IRM) service for SharePoint, see the following instructions from the Office documentation:
 
-- [Set up Information Rights Management (IRM) in the SharePoint admin center](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center)
+- [Set up Information Rights Management (IRM) in the SharePoint admin center](/microsoft-365/compliance/set-up-irm-in-sp-admin-center)
 
 This configuration is done by the Microsoft 365 administrator.
 
@@ -542,7 +542,7 @@ Although you cannot configure IRM for users' OneDrive by using the SharePoint ad
 
 5. Save the script and sign it. If you do not sign the script (more secure), Windows PowerShell must be configured on your computer to run unsigned scripts. To do this, run a Windows PowerShell session with the **Run as Administrator** option, and type: **Set-ExecutionPolicy Unrestricted**. However, this configuration lets all unsigned scripts run (less secure).
 
-   For more information about signing Windows PowerShell scripts, see [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) in the PowerShell documentation library.
+   For more information about signing Windows PowerShell scripts, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in the PowerShell documentation library.
 
 6. Run the script and if prompted, supply the password for the Microsoft 365 admin account. If you modify the script and run it in the same Windows PowerShell session, you won't be prompted for credentials.
 
