@@ -49,7 +49,7 @@ Use the following resources for the classic client:
 > [!TIP]
 > There's also an Azure Information Protection app for iOS and Android. For more information, see [FAQs for Azure Information Protection app for iOS and Android](mobile-app-faq.md )
 > 
-> For Mac computers: Use the RMS sharing app and read the [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](https://technet.microsoft.com/dn451248).
+> For Mac computers: Use the RMS sharing app and read the [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](/previous-versions/msdn10/dn451248(v=msdn.10)).
 
 ## Install instructions
 

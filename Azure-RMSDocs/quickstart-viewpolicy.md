@@ -90,7 +90,7 @@ Your organization might already have labels because they were automatically crea
     If you don't see the **Generate default labels** button above the grid, under **Manage**, select **Unified labeling.** If the Unified labeling status is **Not activated**, select **Activate**, and then return to the **Classification** > **Labels** pane.
 
     > [!NOTE]
-    > For the unified labeling client, labels are managed in Microsoft M365. For more information, see [Restrict access to content by using encryption in sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels).
+    > For the unified labeling client, labels are managed in Microsoft M365. For more information, see [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels).
     >
 
 1. Publish your labels in the Azure portal to make them available for the Azure Information Protection classic client:
@@ -134,7 +134,7 @@ The first time you connect to the Azure Information Protection service from the 
 
 - **Unified labeling client.** For the unified labeling client, only labels are downloaded to the client. Policy settings are downloaded from the Office 365 Compliance & Security Center, the Microsoft 365 Compliance center, or the Microsoft 365 Security center. Use those admin centers to edit your labels and label policies instead of the Azure portal.
 
-    For more information, see [Learn about sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) in the Microsoft 365 documentation for more information.
+    For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in the Microsoft 365 documentation for more information.
 
 **Classic client instructions:**
 

@@ -40,7 +40,7 @@ For more information, see [How does Azure RMS work? Under the hood](./how-does-i
 
 ## What's the difference between Azure Rights Management encryption and encryption in other Microsoft cloud services?
 
-Microsoft provides multiple encryption technologies that enable you to protect your data for different, and often complementary scenarios. For example, while Office 365 offers encryption at-rest for data stored in Office 365, the Azure Rights Management service from Azure Information Protection independently encrypts your data so that it is protected regardless of where it is located or how it is transmitted.
+Microsoft provides multiple encryption technologies that enable you to protect your data for different, and often complementary scenarios. For example, while Microsoft 365 offers encryption at-rest for data stored in Microsoft 365, the Azure Rights Management service from Azure Information Protection independently encrypts your data so that it is protected regardless of where it is located or how it is transmitted.
 
 These encryption technologies are complementary and using them requires enabling and configuring them independently. When you do so, you might have the option to bring your own key for the encryption, a scenario also known as "BYOK." Enabling BYOK for one of these technologies does not affect the others. For example, you can use BYOK for Azure Information Protection and not use BYOK for other encryption technologies, and vice versa. The keys used by these different technologies might be the same or different, depending on how you configure the encryption options for each service.
 
@@ -58,7 +58,7 @@ For more information about HYOK and to make sure that you understand its limitat
 
 ## Can I now use BYOK with Exchange Online?
 
-Yes, you can now use BYOK with Exchange Online when you follow the instructions in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). These instructions enable the new capabilities in Exchange Online that support using BYOK for Azure Information Protection, as well as the new Office 365 Message Encryption.
+Yes, you can now use BYOK with Exchange Online when you follow the instructions in [Set up new Microsoft 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). These instructions enable the new capabilities in Exchange Online that support using BYOK for Azure Information Protection, as well as the new Office 365 Message Encryption.
 
 For more information about this change, see the blog announcement: [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)
 
@@ -91,7 +91,7 @@ If the document was protected by using custom permissions, you cannot change the
 Tip: To check whether a document was protected by a template or by using custom permission, use the [Get-AIPFile​Status](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet. You always see a template description of **Restricted Access** for custom permissions, with a unique template ID that is not displayed when you run [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate).
 
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
-Absolutely, and the nice thing is, users are able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](activate-service.md) and [enable IRM for Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), then [deploy and configure the RMS connector](deploy-rms-connector.md) for Exchange Server.
+Absolutely, and the nice thing is, users are able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](activate-service.md) and [enable IRM for Exchange Online](/microsoft-365/enterprise/activate-rms-in-microsoft-365), then [deploy and configure the RMS connector](deploy-rms-connector.md) for Exchange Server.
 
 ## If I use this protection for my production environment, is my company then locked into the solution or risk losing access to content that we protected with Azure RMS?
 No, you always remain in control of your data and can continue to access it, even if you decide to no longer use the Azure Rights Management service. For more information, see [Decommissioning and deactivating Azure Rights Management](decommission-deactivate.md).
@@ -106,7 +106,7 @@ There is no administration option to prevent users from securely sharing documen
 
 ## When I share a protected document with somebody outside my company, how does that user get authenticated?
 
-By default, the Azure Rights Management service uses an Azure Active Directory account and an associated email address for user authentication, which makes business-to-business collaboration seamless for administrators. If the other organization uses Azure services, users already have accounts in Azure Active Directory, even if these accounts are created and managed on-premises and then synchronized to Azure. If the organization has Office 365, under the covers, this service also uses Azure Active Directory for the user accounts. If the user's organization doesn't have managed accounts in Azure, users can sign up for [RMS for individuals](./rms-for-individuals.md), which creates an unmanaged Azure tenant and directory for the organization with an account for the user, so that this user (and subsequent users) can then be authenticated for the Azure Rights Management service.
+By default, the Azure Rights Management service uses an Azure Active Directory account and an associated email address for user authentication, which makes business-to-business collaboration seamless for administrators. If the other organization uses Azure services, users already have accounts in Azure Active Directory, even if these accounts are created and managed on-premises and then synchronized to Azure. If the organization has Microsoft 365, under the covers, this service also uses Azure Active Directory for the user accounts. If the user's organization doesn't have managed accounts in Azure, users can sign up for [RMS for individuals](./rms-for-individuals.md), which creates an unmanaged Azure tenant and directory for the organization with an account for the user, so that this user (and subsequent users) can then be authenticated for the Azure Rights Management service.
 
 The authentication method for these accounts can vary, depending on how the administrator in the other organization has configured the Azure Active Directory accounts. For example, they could use passwords that were created for these accounts, federation, or passwords that were created in Active Directory Domain Services and then synchronized to Azure Active Directory.
 
@@ -153,13 +153,13 @@ For a list of file name extensions that are natively supported by Azure Rights M
 
 ## How do I configure a Mac computer to protect and track documents?
 
-First, make sure that you have installed Office for Mac by using the software installation link from https://admin.microsoft.com. For full instructions, see [Download and install or reinstall Office 365 or Office 2019 on a PC or Mac](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+First, make sure that you have installed Office for Mac by using the software installation link from https://admin.microsoft.com. For full instructions, see [Download and install or reinstall Microsoft 365 or Office 2019 on a PC or Mac](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
-Open Outlook and create a profile by using your Office 365 work or school account. Then, create a new message and do the following to configure Office so that it can protect documents and emails by using the Azure Rights Management service:
+Open Outlook and create a profile by using your Microsoft 365 work or school account. Then, create a new message and do the following to configure Office so that it can protect documents and emails by using the Azure Rights Management service:
 
 1. In the new message, on the **Options** tab, click **Permissions**, and then click **Verify Credentials**.
 
-2. When prompted, specify your Office 365 work or school account details again, and select **Sign in**.
+2. When prompted, specify your Microsoft 365 work or school account details again, and select **Sign in**.
 
     This downloads the Azure Rights Management templates and **Verify Credentials** is now replaced with options that include **No Restrictions**, **Do Not Forward**, and any Azure Rights Management templates that are published for your tenant. You can now cancel this new message.
 
@@ -176,9 +176,9 @@ Currently, Microsoft SharePoint supports RMS-protected documents by using IRM pr
 If you are interested in a specific capability that isn't yet supported, be sure to keep an eye on announcements on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
 ## How do I configure One Drive in SharePoint, so that users can safely share their files with people inside and outside the company?
-By default, as an Office 365 administrator, you don't configure this; users do.
+By default, as a Microsoft 365 administrator, you don't configure this; users do.
 
-Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive is designed for users to enable and configure IRM for their own OneDrive library. However, by using PowerShell, you can do this for them. For instructions, see the [SharePoint in Microsoft 365 and OneDrive: IRM Configuration](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration) section in the [Office 365: Configuration for clients and online services](configure-office365.md) article.
+Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive is designed for users to enable and configure IRM for their own OneDrive library. However, by using PowerShell, you can do this for them. For instructions, see [SharePoint in Microsoft 365 and OneDrive: IRM Configuration](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration).
 
 ## Do you have any tips or tricks for a successful deployment?
 
@@ -209,4 +209,3 @@ As these examples demonstrate, even if all platforms and all software supported 
 ## What's the difference between a user protecting an email with Do Not Forward and a template that doesn't include the Forward right?
 
 Despite its name and appearance, **Do Not Forward** is not the opposite of the Forward right, or a template. It is actually a set of rights that include restricting copying, printing, and saving the email outside the mailbox, in addition to restricting the forwarding of emails. The rights are dynamically applied to users via the chosen recipients, and not statically assigned by the administrator. For more information, see the [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) section in [Configuring usage rights for Azure Information Protection](configure-usage-rights.md).
-

@@ -102,7 +102,7 @@ To store the scanner configuration data, use an SQL server with the following re
 
 - **Capacity.** For capacity guidance, see [Storage requirements and capacity planning for SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).
 
-- **[Case insensitive collation](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support)**
+- **[Case insensitive collation](/sql/relational-databases/collations/collation-and-unicode-support)**
 
 > [!NOTE]
 > Multiple configuration databases on the same SQL server are supported when you specify a custom cluster (profile) name for the scanner, or when you use the preview version of the scanner.
@@ -150,8 +150,8 @@ If you don't have these labels configured, see [Deploying the scanner with alter
 
 For more information, see:
 
-- [Apply a sensitivity label to content automatically](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
-- [Restrict access to content by using encryption in sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
+- [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically)
+- [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels)
 
 ## SharePoint requirements
 
@@ -159,7 +159,7 @@ To scan SharePoint document libraries and folders, ensure that your SharePoint s
 
 - **Supported versions.** Supported versions include: SharePoint 2019, SharePoint 2016, SharePoint 2013, and SharePoint 2010. Other versions of SharePoint are not supported for the scanner.
 
-- **Versioning.** When you use [versioning](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning), the scanner inspects and labels the last published version. If the scanner labels a file and [content approval](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) is required, that labeled file must be approved to be available for users.  
+- **Versioning.** When you use [versioning](/sharepoint/governance/versioning-content-approval-and-check-out-planning), the scanner inspects and labels the last published version. If the scanner labels a file and [content approval](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) is required, that labeled file must be approved to be available for users.  
 
 - **Large SharePoint farms.** For large SharePoint farms, check whether you need to increase the list view threshold (by default, 5,000) for the scanner to access all files. For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 
@@ -181,15 +181,15 @@ To scan files with file paths of more than 260 characters, install the scanner o
 |Windows version  |Description  |
 |---------|---------|
 |**Windows 2016 or later**     |   Configure the computer to support long paths      |
-|**Windows 10 or Windows Server 2016**     | Define the following [group policy setting](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths**.    </br></br>For more information long file path support in these versions, see the [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.    |
-|**Windows 10, version 1607 or later**     |  Opt in for the updated **MAX_PATH** functionality. For more information, see [Enable Long Paths in Windows 10 versions 1607 and later](https://docs.microsoft.com/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
+|**Windows 10 or Windows Server 2016**     | Define the following [group policy setting](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10): **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths**.    </br></br>For more information long file path support in these versions, see the [Maximum Path Length Limitation](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.    |
+|**Windows 10, version 1607 or later**     |  Opt in for the updated **MAX_PATH** functionality. For more information, see [Enable Long Paths in Windows 10 versions 1607 and later](/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
 | | |
 
 ## Usage statistics requirements
 
 Disable usage statistics using one of the following methods:
 
-- Setting the [AllowTelemetry](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-install#to-install-the-azure-information-protection-client-by-using-the-executable-installer) parameter to 0
+- Setting the [AllowTelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer) parameter to 0
 
 - Ensure that the **Help improve Azure Information Protection by sending usage statistics to Microsoft** option remains unselected during the scanner installation process.
 
@@ -203,7 +203,7 @@ However, in a production environment, your organization's policies may be differ
 
 - [Discover and scan all sites and subsites under a specific URL]([Discover and scan all Sharepoint sites and subsites under a specific URL](#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url)
 
-- [The scanner server cannot have internet connectivity](#restriction-the-scanner-server-cannot-have-internet-connectivity)
+- [Restriction: The scanner server cannot have internet connectivity](#restriction-the-scanner-server-cannot-have-internet-connectivity)
 
 - [Restriction: The scanner service account cannot be synchronized to Azure Active Directory but the server has internet connectivity](#restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity)
 
@@ -225,7 +225,7 @@ The scanner can discover and scan all Sharepoint sites and subsites under a spec
 1. Add your scanner user to the new policy and grant **Site collection** in the Permissions list.   
 1. Add a URL of the SharePoint that hosts sites or subsites that need to be scanned using the scanner repository management procedure at https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner-configure-install#configure-the-scanner-in-the-azure-portal
 
-To learn more about how to manage your SharePoint policy levels see, [manage permission policies for a web application](https://docs.microsoft.com/sharepoint/administration/manage-permission-policies-for-a-web-application).
+To learn more about how to manage your SharePoint policy levels see, [manage permission policies for a web application](/sharepoint/administration/manage-permission-policies-for-a-web-application).
 
 ### Restriction: The scanner server cannot have internet connectivity
 
@@ -237,25 +237,25 @@ To support a disconnected computer, perform the following steps:
 
 1. Enable offline management for content scan jobs:
 
-    1. Set the scanner to function in **offline** mode, using the [Set-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet.
+    1. Set the scanner to function in **offline** mode, using the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet.
 
     1. Configure the scanner in the Azure portal by creating a scanner cluster. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
 
     1. Export your content job from the **Azure Information Protection - Content scan jobs** pane using the **Export** option.
     
-    1. Import the policy using the [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-aipscannerconfiguration) cmdlet. 
+    1. Import the policy using the [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/import-aipscannerconfiguration) cmdlet. 
     
     Results for offline content scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
     
 1. Enable offline management of network scan jobs:
 
-    1. Set the Network Discovery service to function in offline mode using the [Set-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) cmdlet.
+    1. Set the Network Discovery service to function in offline mode using the [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) cmdlet.
 
     1. Configure the network scan job in the Azure portal. For more information, see [Creating a network scan job](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
     
     1. Export your network scan job from the **Azure Information Protection - Network scan jobs (Preview)** pane using the **Export** option. 
     
-    1.  Import the network scan job using the file that matches our cluster name using the [Import-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) cmdlet.  
+    1.  Import the network scan job using the file that matches our cluster name using the [Import-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) cmdlet.  
     
     Results for offline network scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
 
@@ -289,14 +289,6 @@ Additionally:
 
 If, after configuring these permissions, you see an error when you install the scanner, the error can be ignored and you can manually start the scanner service.
 
-#### Populate the database manually
-
-Populate the database using the following script:
-
-```cli
-if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END 
-```
-
 #### Create a user and grant db_owner rights manually
 
 To create a user and grant db_owner rights on this database, ask the Sysadmin to perform the following steps:
@@ -325,13 +317,13 @@ To create a user and grant db_owner rights on this database, ask the Sysadmin to
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     ```
 
-#### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
+### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
 
-If your organization policies prohibit the **Log on locally** right for service accounts, but allows the **Log on as a batch job** right, use the *OnBehalfOf* parameter with Set-AIPAuthentication.
+If your organization policies prohibit the **Log on locally** right for service accounts, use the *OnBehalfOf* parameter with Set-AIPAuthentication.
 
 For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
-#### Restriction: The scanner service account cannot be synchronized to Azure Active Directory but the server has internet connectivity
+### Restriction: The scanner service account cannot be synchronized to Azure Active Directory but the server has internet connectivity
 
 You can have one account to run the scanner service and use another account to authenticate to Azure Active Directory:
 
@@ -339,7 +331,7 @@ You can have one account to run the scanner service and use another account to a
 
 - **For the Azure Active Directory account,** specify your local account for the *OnBehalfOf* parameter with Set-AIPAuthentication. For more information, see [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
-#### Restriction: Your labels do not have auto-labeling conditions
+### Restriction: Your labels do not have auto-labeling conditions
 
 If your labels do not have any auto-labeling conditions, plan to use one of the following options when configuring your scanner:
 
@@ -347,7 +339,7 @@ If your labels do not have any auto-labeling conditions, plan to use one of the 
 |---------|---------|
 |**Discover all info types**     |  In your [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), set the **Info types to be discovered** option to **All**. </br></br>This option sets the content scan job to scan your content for all sensitive information types.      |
 |**Use recommended labeling**     |  In your [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), set the **Treat recommended labeling as automatic** option to **On**.</br></br> This setting configures the scanner to automatically apply all recommended labels on your content.      |
-|**Define a default label**     |   Define a default label in your [policy](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), or [repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In this case the scanner applies the default label on all files found.       |
+|**Define a default label**     |   Define a default label in your [policy](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), or [repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In this case the scanner applies the default label on all files found.       |
 | | |
 
 ## Next steps

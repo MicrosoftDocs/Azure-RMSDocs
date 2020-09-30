@@ -60,7 +60,7 @@ This standard is used by default by both the AIP classic and unified labeling cl
 
 Adobe Acrobat Reader integrates with Microsoft Information Protection solutions, such as [Azure Information Protection](../what-is-information-protection.md) to provide users with a simplified and consistent experience for classified and/or protected PDFs.
 
-The Adobe Acrobat Reader with Microsoft Information Protection integration is supported for [Windows](protected-pdf-readers-windows.md) and [macOS](protected-pdf-readers-mac.md).
+The Adobe Acrobat Reader with Microsoft Information Protection integration is supported for [Windows](#installing-a-protected-pdf-reader-for-windows-or-mac) and [macOS](#installing-a-protected-pdf-reader-for-windows-or-mac).
 
 For more information, see the following blog posts: 
 
