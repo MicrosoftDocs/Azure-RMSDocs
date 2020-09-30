@@ -125,7 +125,7 @@ Note that if you make changes to the Rights Management template that you use for
 
 3.  Sign the script. If you do not sign the script (more secure), you must configure Windows PowerShell on the servers that run it. For example, run a Windows PowerShell session with the **Run as Administrator** option, and type: **Set-ExecutionPolicy RemoteSigned**. However, this configuration lets all unsigned scripts run when they are stored on this server (less secure).
 
-    For more information about signing Windows PowerShell scripts, see [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) in the PowerShell documentation library.
+    For more information about signing Windows PowerShell scripts, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in the PowerShell documentation library.
 
 4.  Save the file locally on each file server that runs File Resource Manager with file classification infrastructure. For example, save the file in **C:\RMS-Protection**. If you use a different path or folder name, choose a path and folder that does not include spaces. Secure this file by using NTFS permissions so that unauthorized users cannot modify it.
 
@@ -309,5 +309,4 @@ Now all you need to do is create a new file management task that uses the same s
 
 ## Next steps
 
-You might be wondering: [What’s the difference between Windows Server FCI and the Azure Information Protection scanner?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner) 
-
+You might be wondering: [What’s the difference between Windows Server FCI and the Azure Information Protection scanner?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)

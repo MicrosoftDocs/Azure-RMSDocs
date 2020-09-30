@@ -80,7 +80,7 @@ If you have AD RMS and want to migrate to Azure Information Protection, see [Mig
 
 ## Should you deploy the Azure Information Protection client?
 
-Deploy the Azure Information Protection client if you are not using [sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) in Microsoft 365 but instead, using Azure Information Protection labels that you download from Azure, and any of the following applies:
+Deploy the Azure Information Protection client if you are not using [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in Microsoft 365 but instead, using Azure Information Protection labels that you download from Azure, and any of the following applies:
 
 - You want to classify (and optionally, protect) documents and email messages by selecting labels from within your Office applications (Word, Excel, PowerPoint, Outlook).
 
