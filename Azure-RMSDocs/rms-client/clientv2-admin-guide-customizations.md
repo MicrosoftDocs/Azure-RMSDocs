@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2020
+ms.date: 10/01/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -1079,7 +1079,7 @@ To migrate your IQP file protection, first enable support in the unified labelin
     
     |Method  |Description  |
     |---------|---------|
-    |**PowerShell**     | 1. Use the [GetAIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet to get labeling status of the files you want to migrate. This cmdlet supports Secure Island IQP labels, and returns details about their labels. </br></br>  2. Use the [SetAIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet with the **RemoveProtection** parameter to remove the IQP protection from your files.  </br></br>3. Use the [SetAIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet again to apply your sensitivity label and protection.    |
+    |**PowerShell**     | 1. Use the [GetAIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet to get the protection status of the files you want to migrate. This cmdlet supports and returns details about Secure Island IQP protection. </br>**Note**: This cmdlet does *not* support labels from custom properties or from a template.</br></br>  2. Use the [SetAIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet with the **RemoveProtection** parameter to remove the IQP protection from your files.  </br></br>3. Use the [SetAIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet again to apply your sensitivity label and protection.    |
     |**File Explorer**     | 1. Right-click the files you want to migrate, and select **Classify and protect**. </br>The Azure Information Protection client opens, showing the file's current label. </br></br>2. Click **Delete label** to remove the legacy label. </br></br>3. Click the new senstivity label you want to apply to the document.      |
     | | |
  
