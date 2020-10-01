@@ -182,7 +182,7 @@ Azure Information Protection has the following additional requirements:
      
     To determine whether your client connection is terminated before it reaches the Azure Rights Management service, use the following PowerShell commands:
 
-    ```ps
+    ```PowerShell
     $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
     $request.GetResponse()
     $request.ServicePoint.Certificate.Issuer

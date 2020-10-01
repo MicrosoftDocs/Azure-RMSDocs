@@ -54,7 +54,7 @@ Perform these steps again as needed when your content changes.
 
     Alternatively, in your PowerShell session, run the following command:
 
-    ```ps
+    ```PowerShell
     Start-AIPScan
     ```
 
@@ -106,7 +106,7 @@ To stop a currently running scan before it's complete, use one of the following 
 
 - **Run a PowerShell command.** Run the following command:
 
-    ```ps
+    ```PowerShell
     Stop-AIPScan 
     ```
 
@@ -166,7 +166,7 @@ If the scanner stops in the middle unexpectedly, and doesn't complete scanning a
 
 If you're having issues with the Azure Information Scanner, verify whether your deployment is healthy using the following PowerShell command:
 
-```ps
+```PowerShell
 Start-AIPScannerDiagnostics
 ```
 

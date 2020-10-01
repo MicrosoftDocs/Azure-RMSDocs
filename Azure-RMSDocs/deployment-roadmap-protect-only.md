@@ -45,7 +45,7 @@ This roadmap is recommended for customers with a subscription that doesn't suppo
 
 Perform the following steps:
 
-1. [Confirm that you have a subscription that includes the AIP protection service](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) [
+1. [Confirm that you have a subscription that includes the AIP protection service](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) 
 1. [Prepare your tenant to use Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
 1. [Install the Azure Information Protection classic and client configure applications and services for Rights Management](#install-the-azure-information-protection-classic-and-client-configure-applications-and-services-for-rights-management)
 1. [Use and monitor your data protection solutions](#use-and-monitor-your-data-protection-solutions)
