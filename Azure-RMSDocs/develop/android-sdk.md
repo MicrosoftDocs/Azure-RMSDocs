@@ -8,7 +8,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
@@ -52,7 +52,7 @@ We recommend the following software on your development system:
 
     This SDK can be used to develop for Android 4.0.3 (API level 15) and later.
 
--   Authentication library: We recommend that you use the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). However, other authentication libraries that support OAuth 2.0 can be used as well.
+-   Authentication library: We recommend that you use the [Azure AD Authentication Library (ADAL)](/previous-versions/azure/jj573266(v=azure.100)). However, other authentication libraries that support OAuth 2.0 can be used as well.
 
     For more information see, [ADAL for Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
@@ -153,4 +153,4 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 [Developer terms and concepts](core-concepts.md)
 
-[Android API Reference](https://msdn.microsoft.com/library/dn758245.aspx)
+[Android API Reference](/previous-versions/windows/desktop/msipcthin2/android)

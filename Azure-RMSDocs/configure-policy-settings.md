@@ -7,7 +7,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
@@ -37,7 +37,7 @@ ms.custom: admin
 > [!NOTE]
 > These instructions apply to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 > 
-> If you are looking for information to configure policy settings for the unified labeling client, see the Microsoft 365 Compliance documentation. For example, [Learn about sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+> If you are looking for information to configure policy settings for the unified labeling client, see the Microsoft 365 Compliance documentation. For example, [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
 
 In addition to the Information Protection bar title and tooltip, there are some settings in the Azure Information Protection policy that you can configure independently from the labels:
 
@@ -117,4 +117,3 @@ When you click **Save**, your changes are automatically available to users and s
 To see how some of these policy settings can work together, try the [Configure Azure Information Protection policy settings that work together](infoprotect-settings-tutorial.md) tutorial.
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.
-

@@ -7,7 +7,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 09/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
@@ -93,7 +93,7 @@ You can change this behavior so that the Azure Information Protection client per
 4. On the **Condition** pane, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own:
     - For **Information Types**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
-        The information types use the Office 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) from the Office 365 documentation.
+        The information types use the Microsoft 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) from the Microsoft 365 documentation.
         
         The list of information types that you can select from the Azure portal is periodically updated to include any new Office DLP additions. However, the list excludes any custom sensitive information types that you have defined and uploaded as a rule package to the Office 365 Security & Compliance Center.
         
@@ -104,7 +104,7 @@ You can change this behavior so that the Azure Information Protection client per
     
     - For **Custom**: Specify a name and phrase to match, which must exclude quotation marks and special characters. Then specify whether to match as a regular expression, use case sensitivity, and the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
-        The regular expressions use the Office 365 regex patterns. To help you specify regular expressions for your custom conditions, see the following specific version of [Perl Regular Expression Syntax](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) from Boost. Custom regexes must be compliant with [.NET documentation](https://docs.microsoft.com/dotnet/standard/base-types/character-escapes-in-regular-expressions#character-escapes-in-net). In addition, the Perl 5 character escape that is used to specify Unicode (the form \x{####…}, where ####… is a series of hexadecimal digits) is **not** supported.
+        The regular expressions use the Office 365 regex patterns. To help you specify regular expressions for your custom conditions, see the following specific version of [Perl Regular Expression Syntax](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) from Boost. Custom regexes must be compliant with [.NET documentation](/dotnet/standard/base-types/character-escapes-in-regular-expressions#character-escapes-in-net). In addition, the Perl 5 character escape that is used to specify Unicode (the form \x{####…}, where ####… is a series of hexadecimal digits) is **not** supported.
         
 5. Decide whether you need to change the **Minimum number of occurrences** and the **Count occurrence with unique value only**, and then select **Save**. 
     

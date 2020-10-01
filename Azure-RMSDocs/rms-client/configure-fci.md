@@ -7,7 +7,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 1/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
@@ -61,7 +61,7 @@ Prerequisites for these instructions:
     
   - You have an internet connection, and you have configured your computer settings if these are required for a proxy server. For example: `netsh winhttp import proxy source=ie`
     
-- You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email addresses. This is required for all users that might need to access files after they are protected by FCI and the Azure Rights Management service. If you do not do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this requirement, see [Preparing users and groups for Azure Information Protection](../prepare.md).
+- You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Microsoft 365, including their email addresses. This is required for all users that might need to access files after they are protected by FCI and the Azure Rights Management service. If you do not do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this requirement, see [Preparing users and groups for Azure Information Protection](../prepare.md).
     
 - This scenario does not support departmental templates so you must either use a template that is not configured for a scope, or use the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet and the *EnableInLegacyApps* parameter.
 
@@ -125,7 +125,7 @@ Note that if you make changes to the Rights Management template that you use for
 
 3.  Sign the script. If you do not sign the script (more secure), you must configure Windows PowerShell on the servers that run it. For example, run a Windows PowerShell session with the **Run as Administrator** option, and type: **Set-ExecutionPolicy RemoteSigned**. However, this configuration lets all unsigned scripts run when they are stored on this server (less secure).
 
-    For more information about signing Windows PowerShell scripts, see [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) in the PowerShell documentation library.
+    For more information about signing Windows PowerShell scripts, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in the PowerShell documentation library.
 
 4.  Save the file locally on each file server that runs File Resource Manager with file classification infrastructure. For example, save the file in **C:\RMS-Protection**. If you use a different path or folder name, choose a path and folder that does not include spaces. Secure this file by using NTFS permissions so that unauthorized users cannot modify it.
 
@@ -309,5 +309,4 @@ Now all you need to do is create a new file management task that uses the same s
 
 ## Next steps
 
-You might be wondering: [What’s the difference between Windows Server FCI and the Azure Information Protection scanner?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner) 
-
+You might be wondering: [What’s the difference between Windows Server FCI and the Azure Information Protection scanner?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)

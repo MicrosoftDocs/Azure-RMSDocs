@@ -8,7 +8,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
@@ -28,7 +28,7 @@ ms.custom: dev
 
 Email notification allows for a protected content owner to be notified when his or her content is accessed.
 
-To setup your email notification for a given license, use [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) with the property type parameter, *dwPropID*, as [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx) and the application data fields formatted as an [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx).
+To setup your email notification for a given license, use [IpcSetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcsetlicenseproperty) with the property type parameter, *dwPropID*, as [IPC\_LI\_APP\_SPECIFIC\_DATA](/previous-versions/windows/desktop/msipc/license-property-types) and the application data fields formatted as an [IPC\_NAME\_VALUE\_LIST](/previous-versions/windows/desktop/msipc/ipc-name-value-list).
 
 **C++**:
 
@@ -63,6 +63,6 @@ The following table contains the application data fields, property name and valu
 
 ## Related topics
 
-- [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
-- [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx)
-- [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx).
+- [IpcSetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcsetlicenseproperty)
+- [IPC\_LI\_APP\_SPECIFIC\_DATA](/previous-versions/windows/desktop/msipc/license-property-types)
+- [IPC\_NAME\_VALUE\_LIST](/previous-versions/windows/desktop/msipc/ipc-name-value-list).

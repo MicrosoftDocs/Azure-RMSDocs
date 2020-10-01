@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -71,7 +71,7 @@ If you have AD RMS and want to migrate to Azure Information Protection, see [Mig
 
 ## Should you deploy the Azure Information Protection unified labeling client?
 
-Deploy the Azure Information Protection unified labeling client if you are using [sensitivity labels in the Office 365 Security & Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels), and any of the following applies:
+Deploy the Azure Information Protection unified labeling client if you are using [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) in Microsoft 365, and any of the following applies:
 
 - You want to classify (and optionally, protect) documents and email messages by selecting labels from within your Office apps (Word, Excel, PowerPoint, Outlook) on Windows computers.
 
@@ -148,7 +148,7 @@ The **Reset Settings** signs out the user, deletes the currently downloaded sens
 
 #### **Client status** section
 
-Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Office 365 or Azure Active Directory. The account must also belong to an Office 365 tenant that is configured for sensitivity labels in your labeling management portal.
+Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Microsoft 365 or Azure Active Directory. The account must also belong to a Microsoft 365 tenant that is configured for sensitivity labels in your labeling management portal.
 
 If you need to sign in as a different user to the one displayed, see the [Sign in as a different user](clientv2-admin-guide-customizations.md#sign-in-as-a-different-user) instructions.
 
@@ -156,11 +156,11 @@ Use the **Version** information to confirm which version of the client is instal
 
 ## Support for multiple languages
 
-The Azure Information Protection unified labeling client supports the same languages that Office 365 supports. For a list of these languages, see the **Office 365, Exchange Online Protection, and Power BI** section from the [International availability](https://products.office.com/business/international-availability) page from Office.
+The Azure Information Protection unified labeling client supports the same languages that Office 365 supports. For a list of these languages, see the [International availability](https://products.office.com/business/international-availability) page from Office.
 
 For these languages, menu options, dialog boxes, and messages from the Azure Information Protection unified labeling client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection unified labeling client for different languages. 
 
-However, label names and descriptions that you specify are not automatically translated when you configure labels in your labeling center. For users to see labels in their preferred language, provide your own translations and configure them for the labels by using by using Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label). Visual markings are not translated and do not support more than one language.
+However, label names and descriptions that you specify are not automatically translated when you configure labels in your labeling center. For users to see labels in their preferred language, provide your own translations and configure them for the labels by using by using Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label). Visual markings are not translated and do not support more than one language.
 
 ## Post installation tasks
 
@@ -291,5 +291,3 @@ If you've already installed the client, see the following for additional informa
 - [File types supported](client-admin-guide-file-types.md)
 
 - [PowerShell commands](client-admin-guide-powershell.md)
-
-

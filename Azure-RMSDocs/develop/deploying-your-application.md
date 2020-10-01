@@ -8,7 +8,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 03/13/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
@@ -92,7 +92,7 @@ You can choose to install the RMS Client 2.1 interactively by starting the RMS C
 -   Download RMS Client 2.1 installer
 -   Integrate the RMS Client 2.1 installer to run with your application installer
 
-An example of integrating the RMS Client 2.1 with your application is the [Rights Protected Folder Explorer](https://technet.microsoft.com/library/rights-protected-folder-explorer(v=ws.10).aspx) package. Try installing it yourself to understand the approach.
+An example of integrating the RMS Client 2.1 with your application is the [Rights Protected Folder Explorer](/previous-versions/orphan-topics/ws.10/hh538204(v=ws.10)) package. Try installing it yourself to understand the approach.
 
 ### Make RMS Client 2.1 a pre-requisite for your application install
 
@@ -119,14 +119,14 @@ In order for your end-user to take advantage of Information Protection services,
 
 -   Download the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=28177) from the Microsoft Download Center.
 -   Ensure that your deployment of a rights-enabled application includes a pre-requisites check for this service selection.
--   For your own testing and for your end-users use of the on-line service see the TechNet topic, [Configuring Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx).
+-   For your own testing and for your end-users use of the on-line service see the TechNet topic, [Configuring Rights Management](../deployment-roadmap.md).
 
-You will also need to use this guide to configure your app - [How to configure your App Service application to use Azure Active Directory login](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication).
+You will also need to use this guide to configure your app - [How to configure your App Service application to use Azure Active Directory login](/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication).
 
 For more on enabling your application to use RMS for Azure Rights Management services see, [Enable your application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## Related topics
 
 * [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=28177)
-* [Configuring Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx)
+* [Configuring Rights Management](../deployment-roadmap.md)
 * [Enable your application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)

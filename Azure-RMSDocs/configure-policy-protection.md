@@ -7,7 +7,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
@@ -63,7 +63,7 @@ For more information about the Azure Rights Management protection and how it wor
 When the label applies protection, a protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following features for protected files: Co-authoring, Office for the web, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP).
 
 > [!TIP]
-> When you [migrate your labels](configure-policy-migrate-labels.md) to unified sensitivity labels and publish them from one of the labeling admin centers such as the Microsoft 365 compliance center, labels that apply protection are then supported for these locations. For more information, see  [Enable sensitivity labels for Office files in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> When you [migrate your labels](configure-policy-migrate-labels.md) to unified sensitivity labels and publish them from one of the labeling admin centers such as the Microsoft 365 compliance center, labels that apply protection are then supported for these locations. For more information, see  [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 Exchange does not have to be configured for Azure Information Protection before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for Azure Information Protection, you do not get the full functionality of using Azure Rights Management protection with Exchange. For example, users cannot view protected emails on mobile phones or with Outlook on the web, protected emails cannot be indexed for search, and you cannot configure Exchange Online DLP for Rights Management protection. To ensure that Exchange can support these additional scenarios, see the following resources:
 
@@ -341,4 +341,4 @@ The label configuration is deceptively simple:
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section. 
 
-Exchange mail flow rules can also apply protection, based on your labels. For more information and examples, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).  
+Exchange mail flow rules can also apply protection, based on your labels. For more information and examples, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).

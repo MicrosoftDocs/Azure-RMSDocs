@@ -138,7 +138,7 @@ To refresh the policy sooner, such as while testing, manually delete the content
 If you've also changed protection settings for your labels, wait an extra 15 minutes from when you saved the updated protection settings before restarting the Azure Information Protection service.
 
 > [!IMPORTANT]
-> If you've upgraded to version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) or later, AIP skips the full rescan for updated settings to ensure consistent performance. If you've upgraded, make sure to [run a full rescan manually](#rescanning-files) as needed. 
+> If you've upgraded to version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) or later, AIP skips the full rescan for updated settings to ensure consistent performance. If you've upgraded, make sure to [run a full rescan manually](#rescanning-files) as needed. 
 >
 > For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On,** make sure to run a full rescan to apply your labels across your content.
 > 
@@ -156,7 +156,7 @@ If the scanner stops in the middle unexpectedly, and doesn't complete scanning a
     > [!NOTE]
     > This file will be zipped if there are multiple logs.
 
-    For more information about how to view the current port range and increase the range, see [Settings that can be Modified to Improve Network Performance](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+    For more information about how to view the current port range and increase the range, see [Settings that can be Modified to Improve Network Performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 - **List view threshold.** For large SharePoint farms, you may need to increase the list view threshold. By default, the list view threshold is set to 5,000.
 

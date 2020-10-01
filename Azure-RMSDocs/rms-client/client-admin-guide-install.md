@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/30/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
@@ -73,7 +73,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
     For Office 2013 and later versions, configure group policy to ensure that the **Microsoft Azure Information Protection** add-in for Office applications is always enabled. Without this configuration, the Microsoft Azure Information Protection add-in can get disabled and users will not be able to label their documents and emails in their Office application.
 
-    - For Outlook: Use the group policy setting documented in [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) from the Office documentation.
+    - For Outlook: Use the group policy setting documented in [System Administrator control over add-ins](/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) from the Office documentation.
 
     - For Word, Excel, and PowerPoint: Use the group policy setting **list of managed add-ins** documented in the Support article [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
 
@@ -85,7 +85,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
         For PowerPoint: `MSIP.PowerPointAddin`
 
-- The AIP client is not supported on machines that have [Exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. Make sure to [disable Exploit protection](../known-issues.md#known-issues-for-installing-the-aip-client) before installing the AIP client.  
+- The AIP client is not supported on machines that have [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. Make sure to [disable Exploit protection](../known-issues.md#known-issues-for-installing-the-aip-client) before installing the AIP client.  
 
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.
@@ -126,7 +126,7 @@ Use the following instructions to install the client when you're not using the M
 
     - **AllowTelemetry=0**: Use this parameter to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**.
 
-1. If you are installing interactively, select the option to install a **demo policy** if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy.
+1. If you are installing interactively, select the option to install a **demo policy** if you cannot connect to Microsoft 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy.
 
 1. To complete the installation:
 
@@ -160,7 +160,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
 ##### To identify the value to specify for the ServiceLocation parameter
 
-1. From a PowerShell session, first run [Connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration).
+1. From a PowerShell session, first run [Connect-AipService](/powershell/module/aipservice/connect-aipservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration).
 
     If you haven't already installed the PowerShell module for the Azure Rights Management service, see [Installing the AIPService PowerShell module](../install-powershell.md).
 

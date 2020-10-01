@@ -14,10 +14,10 @@ ms.author: mbaldwin
 
 Microsoft Information Protection (MIP) is the unification of Microsoft's classification, labeling, and protection services:
 
-- Unified administration is provided across Office 365, Azure Information Protection, Windows Information Protection, and other Microsoft services. 
+- Unified administration is provided across Microsoft 365, Azure Information Protection, Windows Information Protection, and other Microsoft services. 
 - Third parties can use the MIP SDK to integrate with applications, using a standard, consistent data labeling schema and protection service.
 
-* [What is Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/)
+* [What is Office 365 Security and Compliance Center?](/office365/securitycompliance/)
 * [What is Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 * [How does the protection work in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
@@ -41,5 +41,4 @@ The MIP SDK is supported on the following platforms:
 
 ## Next Steps
 
-Now you're ready to get started with the SDK. The first thing you'll need to do is [complete the MIP SDK setup and configuration steps](setup-configure-mip.md). These steps will ensure your Office 365 subscription and client machine are set up correctly.
-
+Now you're ready to get started with the SDK. The first thing you'll need to do is [complete the MIP SDK setup and configuration steps](setup-configure-mip.md). These steps will ensure your Microsoft 365 subscription and client machine are set up correctly.

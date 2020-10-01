@@ -7,7 +7,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 12/11/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
@@ -41,7 +41,7 @@ This topic outlines important changes and features in this new version of the RM
 
 The update for our July release included incrementing the revision of the SDK, now 4.2.5.
 
-- Android SDK: Your app can now **set the logging level on-the-fly** with the Android SDK. For more information, see [How to: Enable error and performance logging](https://docs.microsoft.com/information-protection/develop/enabling-logging)
+- Android SDK: Your app can now **set the logging level on-the-fly** with the Android SDK. For more information, see [How to: Enable error and performance logging](/information-protection/develop/enabling-logging)
 - The iOS SDK does not support logging level.
 - The SDK now returns an error for a NULL access token.
 
@@ -63,29 +63,29 @@ With this release, the RMS SDK for devices is now at version 4.2 and adds:
 
 -   Document tracking, RMS On-line only, for iOS/OS X and Android operating systems.
 
-    For details and usage guidance on iOS/OS X, see the [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) class, which provides tracking information and the additional document tracking registration method on [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). There are similar additions for Android to [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) and [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx).
+    For details and usage guidance on iOS/OS X, see the [MSLicenseMetadata](/previous-versions/windows/desktop/msipcthin2/mslicensemetadata-class-objc) class, which provides tracking information and the additional document tracking registration method on [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc). There are similar additions for Android to [LicenseMetadata](/previous-versions/windows/desktop/msipcthin2/licensemetadata-interface-java) and [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java).
 
     For a detailed description of the document tracking feature, see [How to: Use document tracking](how-to-use-document-tracking.md).
 
 -   A set of synchronous methods that parallel the asynchronous versions for the Android API:
 
-    [CustomProtectedInputStream.create synchronous method](https://msdn.microsoft.com/library/mt631362.aspx)
+    [CustomProtectedInputStream.create synchronous method](/previous-versions/windows/desktop/msipcthin2/customprotectedinputstream-create-synchronous-method-java)
 
-    [CustomProtectedOutputStream.create synchronous method](https://msdn.microsoft.com/library/mt631363.aspx)
+    [CustomProtectedOutputStream.create synchronous method](/previous-versions/windows/desktop/msipcthin2/customprotectedoutputstream-create-synchronous-method)
 
-    [ProtectedFileInputStream.create synchronous method](https://msdn.microsoft.com/library/mt631375.aspx)
+    [ProtectedFileInputStream.create synchronous method](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-create-synchronous-method)
 
-    [ProtectedFileOutputStream.create synchronous method](https://msdn.microsoft.com/library/mt631376.aspx)
+    [ProtectedFileOutputStream.create synchronous method](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-create-synchronous-method-java)
 
-    [TemplateDescriptor.getTemplates synchronous method](https://msdn.microsoft.com/library/mt631380.aspx)
+    [TemplateDescriptor.getTemplates synchronous method](/previous-versions/windows/desktop/msipcthin2/templatedescriptor-gettemplates-synchronous-method-java)
 
-    [UserPolicy.acquire synchronous method](https://msdn.microsoft.com/library/mt631384.aspx)
+    [UserPolicy.acquire synchronous method](/previous-versions/windows/desktop/msipcthin2/userpolicy-acquire-synchronous-method-java)
 
-    [UserPolicy.create (PolicyDescriptor…) synchronous method**](https://msdn.microsoft.com/library/mt631385.aspx)
+    [UserPolicy.create (PolicyDescriptor…) synchronous method**](/previous-versions/windows/desktop/msipcthin2/userpolicy-create-policydescriptor-------synchronous-method-java)
 
-    [UserPolicy.create (TempalteDescriptor…) synchronous method](https://msdn.microsoft.com/library/mt631386.aspx)
+    [UserPolicy.create (TempalteDescriptor…) synchronous method](/previous-versions/windows/desktop/msipcthin2/userpolicy-create-templatedescriptor-------synchronous-method-java)
 
--   A new [ProtectedBuffer](https://msdn.microsoft.com/library/mt631369.aspx) class has been added to the Android API.
+-   A new [ProtectedBuffer](/previous-versions/windows/desktop/msipcthin2/protectedbuffer-class) class has been added to the Android API.
 -   Updates to improve error messaging and troubleshooting experience.
 -   Significant performance improvements for cryptographic operations.
 
@@ -105,7 +105,7 @@ This release adds support for the following updates:
 
     App encrypt and decrypt can operate independently and in parallel.
 
-    For more information, see [MSProtector](https://msdn.microsoft.com/library/mt210993.aspx).
+    For more information, see [MSProtector](/previous-versions/windows/desktop/msipcthin2/msprotector-class-objc).
 
     Log level control settings enabled.
 
@@ -113,7 +113,7 @@ This release adds support for the following updates:
 
     Cache clearing support added.
 
-    For more information, see [MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx).
+    For more information, see [MSProtection:resetStateWithCompletionBlock](/previous-versions/windows/desktop/msipcthin2/msprotection-resetstatewithcompletionblock-method-objc).
 
 ### February 2015 Update - Adds Windows Store application support
 
@@ -129,11 +129,11 @@ The version 4.1 release of the RMS SDK adds the following new features to the Go
 
 -   Android and iOS/OS X SDK API extensions for *user consent* processing, allowing user confirmation of SDK behaviors. Currently, document tracking and accessing unknown AD RMS service URLs are the supported consent types.
 
-    For more information, see as example, the Android API version of [ConsentCallback interface](https://msdn.microsoft.com/library/dn833503.aspx).
+    For more information, see as example, the Android API version of [ConsentCallback interface](/previous-versions/windows/desktop/msipcthin2/consentcallback-interface-java).
 
 -   iOS 8 and OS X 10.10 (Yosemite) are now supported. There have also been a few property name changes required by Xcode 6.
 
-    Example; MSUserPolicy.name changed to [MSUserPolicy.policyName](https://msdn.microsoft.com/library/dn790799.aspx).
+    Example; MSUserPolicy.name changed to [MSUserPolicy.policyName](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-name-property-objc).
 
 ## Release notes
 
@@ -143,7 +143,7 @@ This section outlines information about the current and previous releases of the
 
 -   **AD RMS support** - IT administrators can use RMS enabled apps on mobile devices with the new AD RMS server's mobile device extensions.
 -   **Offline Consumption** - end users can access RMS protected data offline.
--   **Segregated Auth** - developers can use their own authentication library for Azure RMS and AD RMS (or use the recommended [Azure AD Authentication Library (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)).
+-   **Segregated Auth** - developers can use their own authentication library for Azure RMS and AD RMS (or use the recommended [Azure AD Authentication Library (ADAL)](/previous-versions/azure/jj573266(v=azure.100))).
 -   **Segregated UI** - developers can build their user interface to protect and consume RMS protected documents.
 -   **Redesigned API** - developers can now enjoy a straightforward and transparent encryption and decryption API, which provides consistent RMS behaviors and user experience, with minimum effort.
 
@@ -161,9 +161,9 @@ This section outlines information about the current and previous releases of the
 
     **Solution** - Make sure the application does not allow multi-instance calls to the Android API.
 
--   When I use the [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write( byte\[\] array, int offset, int length ) method with a length different from the *array.length* value, I am not able to consume the content later using the SDK.
+-   When I use the [ProtectedFileOutputStream](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-class-java).write( byte\[\] array, int offset, int length ) method with a length different from the *array.length* value, I am not able to consume the content later using the SDK.
 
-    **Solution** - This is a known issue. To mitigate it, either always pass a *byte \[\]* array with the same length value as the length parameter, or use the [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array) method.
+    **Solution** - This is a known issue. To mitigate it, either always pass a *byte \[\]* array with the same length value as the length parameter, or use the [ProtectedFileOutputStream](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-class-java).write(byte\[\] array) method.
 
 **iOS and OS X**
 
@@ -189,8 +189,8 @@ This section outlines information about the current and previous releases of the
 
     The following methods must not be run concurrently. In order to monitor for execution completion, use the completion block approach as noted.
 
-    - [MSProtectedData.protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx)
-    - [MSCustomProtectedData.customProtectedDataWithPolicy](https://msdn.microsoft.com/library/dn758315.aspx)
+    - [MSProtectedData.protectedDataWithProtectedFile](/previous-versions/windows/desktop/msipcthin2/msprotecteddata-protecteddatawithprotectedfile-completionblock-method-objc)
+    - [MSCustomProtectedData.customProtectedDataWithPolicy](/previous-versions/windows/desktop/msipcthin2/mscustomprotecteddata-customprotecteddatawithpolicy-protecteddata-contentstartposition-contentsize-completionblock-method-objc)
 
 
 

@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
@@ -172,7 +172,7 @@ You will also need on these servers, a version 1 of the RMS client (also known a
 
    -   Make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
-3. Enable IRM functionality for Exchange by using the Exchange PowerShell cmdlet [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) and set `InternalLicensingEnabled $true` and `ClientAccessServerEnabled $true`.
+3. Enable IRM functionality for Exchange by using the Exchange PowerShell cmdlet [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) and set `InternalLicensingEnabled $true` and `ClientAccessServerEnabled $true`.
 
 
 ## Configuring a SharePoint server to use the connector
@@ -215,7 +215,7 @@ Servers running SharePoint 2010 must have installed a version of the MSDRM clien
 
     -   If you are using SharePoint 2019, 2016 or SharePoint 2013, make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
-3.  Enable IRM in SharePoint. For more information, see [Configure Information Rights Management (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) in the SharePoint library.
+3.  Enable IRM in SharePoint. For more information, see [Configure Information Rights Management (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/hh545607(v=office.14)) in the SharePoint library.
 
     When you follow these instructions, you must configure SharePoint to use the connector by specifying **Use this RMS server**, and then enter the load-balancing connector URL that you configured. Enter the protocol prefix (HTTP:// or HTTPS://) and the name of the connector that you defined in DNS for the load balanced address of your connector. For example, if your connector name is  https:\//connector.contoso.com, your configuration will look like the following picture:
 
@@ -249,7 +249,7 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
 
     - Make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
-3. Create classification rules and file management tasks to protect documents with RMS Encryption, and then specify an RMS template to automatically apply RMS policies. For more information, see [File Server Resource Manager Overview](https://technet.microsoft.com/library/hh831701.aspx) in the Windows Server documentation library.
+3. Create classification rules and file management tasks to protect documents with RMS Encryption, and then specify an RMS template to automatically apply RMS policies. For more information, see [File Server Resource Manager Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831701(v=ws.11)) in the Windows Server documentation library.
 
 ## Next steps
 Now that the RMS connector is installed and configured, and your servers are configured to use it, IT administrators and users can protect and consume email messages and documents by using the Azure Rights Management service. To make this easy for users, deploy the Azure Information Protection client, which installs an add-on for Office and adds new right-click options to File Explorer. For more information, see the [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md).
@@ -258,4 +258,4 @@ Note that if you configure departmental templates that you want to use with Exch
 
 You can use the [Azure Information Protection deployment roadmap](deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out Azure Rights Management to users and administrators.
 
-To monitor the RMS connector, see [Monitor the Azure Rights Management connector](monitor-rms-connector.md). 
+To monitor the RMS connector, see [Monitor the Azure Rights Management connector](monitor-rms-connector.md).

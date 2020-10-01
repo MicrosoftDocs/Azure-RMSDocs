@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -31,7 +31,7 @@ ms.custom: admin
 >[!NOTE] 
 > If you're using the classic scanner, see [What is the Azure Information Protection classic scanner?](deploy-aip-scanner-classic.md).
 >
-> To scan and label files on cloud repositories, use [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) instead of the scanner.
+> To scan and label files on cloud repositories, use [Cloud App Security](/cloud-app-security/) instead of the scanner.
 
 Use the information in this section to learn about the Azure Information Protection unified labeling scanner, and then how to successfully install, configure, run and if necessary, troubleshoot it.
 
@@ -49,7 +49,7 @@ The following image shows the AIP scanner architecture, where the scanner discov
 
 :::image type="content" source="media/ul-scanner-arch.png" alt-text="Azure Information Protection unified labeling scanner architecture":::
 
-To inspect your files, the scanner uses IFilters installed on the computer. To determine whether the files need labeling, the scanner uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns.
+To inspect your files, the scanner uses IFilters installed on the computer. To determine whether the files need labeling, the scanner uses the Microsoft 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Microsoft 365 regex patterns.
 
 The scanner uses the Azure Information Protection client, and can classify and protect the same types of files as the client. For more information, see [File types supported by the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-file-types.md).
 
@@ -137,4 +137,3 @@ For more information about deploying the scanner, see the following articles:
 - You might be wondering: [What's the difference between Windows Server FCI and the Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 - You can also use PowerShell to interactively classify and protect files from your desktop computer. For more information about this and other scenarios that use PowerShell, see [Using PowerShell with the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-powershell.md).
-

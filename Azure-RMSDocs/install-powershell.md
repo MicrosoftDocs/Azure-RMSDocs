@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
@@ -61,7 +61,7 @@ The AIPService module is on the [PowerShell Gallery](https://www.powershellgalle
 
 ### To install the AIPService module from the PowerShell Gallery
 
-If you're new to the PowerShell Gallery, see [Get Started with the PowerShell Gallery](https://docs.microsoft.com/powershell/scripting/gallery/getting-started). Follow the instructions for the gallery requirements, which include installing the PowerShellGet module and the NuGet provider.
+If you're new to the PowerShell Gallery, see [Get Started with the PowerShell Gallery](/powershell/scripting/gallery/getting-started). Follow the instructions for the gallery requirements, which include installing the PowerShellGet module and the NuGet provider.
 
 To see details about the AIPService module on the PowerShell Gallery, visit the [AIPService page](https://www.powershellgallery.com/packages/AIPService).
 

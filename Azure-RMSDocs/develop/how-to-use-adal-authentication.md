@@ -8,7 +8,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
@@ -58,7 +58,7 @@ This topic contains two approaches to authentication with corresponding code exa
 1. Follow the Azure configuration steps in [Configure Azure RMS for ADAL authentication](adal-auth.md) then return to the following app initialization step.
 2. You are now ready to configure your application to use the internal ADAL authentication provided by the RMS SDK 2.1.
 
-To configure you RMS client, add a call to [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx) right after calling [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) to configure the RMS client. Use the following code snippet as an example.
+To configure you RMS client, add a call to [IpcSetGlobalProperty](/previous-versions/windows/desktop/msipc/ipcsetglobalproperty) right after calling [IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize) to configure the RMS client. Use the following code snippet as an example.
 
 ```cpp
 IpcInitialize();
@@ -120,13 +120,13 @@ HRESULT GetLicenseKey(PCIPC_BUFFER pvLicense, __in LPVOID pContextForAdal, __out
 
 ## Related topics
 
-- [Data types](https://msdn.microsoft.com/library/hh535288.aspx)
-- [Environment properties](https://msdn.microsoft.com/library/hh535247.aspx)
-- [IpcCreateOAuth2Token](https://msdn.microsoft.com/library/mt661866.aspx)
-- [IpcGetKey](https://msdn.microsoft.com/library/hh535263.aspx)
-- [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
-- [IPC_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)
-- [IPC_NAME_VALUE_LIST](https://msdn.microsoft.com/library/hh535277.aspx)
-- [IPC_OAUTH2_CALLBACK_INFO](https://msdn.microsoft.com/library/mt661868.aspx)
-- [IPC_PROMPT_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
-- [IPC_AAD_APPLICATION_ID](https://msdn.microsoft.com/library/mt661867.aspx)
+- [Data types](/previous-versions/windows/desktop/msipc/microsoft-information-protection-and-control-client-data-types)
+- [Environment properties](/previous-versions/windows/desktop/msipc/environment-properties)
+- [IpcCreateOAuth2Token](/previous-versions/windows/desktop/msipc/ipccreateoauth2token)
+- [IpcGetKey](/previous-versions/windows/desktop/msipc/ipcgetkey)
+- [IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize)
+- [IPC_CREDENTIAL](/previous-versions/windows/desktop/msipc/ipc-credential)
+- [IPC_NAME_VALUE_LIST](/previous-versions/windows/desktop/msipc/ipc-name-value-list)
+- [IPC_OAUTH2_CALLBACK_INFO](/previous-versions/windows/desktop/msipc/ipc-oath2-callback-info)
+- [IPC_PROMPT_CTX](/previous-versions/windows/desktop/msipc/ipc-prompt-ctx)
+- [IPC_AAD_APPLICATION_ID](/previous-versions/windows/desktop/msipc/ipc-aad-application-id)

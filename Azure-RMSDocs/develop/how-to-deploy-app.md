@@ -8,7 +8,7 @@ author: kkanakas
 ms.author: kartikka
 manager: barbkess
 ms.date: 02/27/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7

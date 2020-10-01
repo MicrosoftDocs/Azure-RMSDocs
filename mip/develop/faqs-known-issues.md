@@ -44,6 +44,14 @@ This exception results from attempting to protect or label a PDF file that has b
 
 This indicates that you haven't migrated your labels from Azure Information Protection to the unified labeling experience. Follow [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels) to migrate the labels, then create a Label Policy in Office 365 Security and Compliance Center. 
 
+### Error: "NoPolicyException: Label policy did not contain data"
+
+**Question**: Why do I get the following error when trying to read a label or list labels via MIP SDK?
+
+> NoPolicyException: Label policy did not contain data, CorrelationId=GUID, CorrelationId.Description=PolicyProfile, NoPolicyError.Category=SyncFile, NoPolicyError.Category=SyncFile
+
+This indicates that no labeling policy has been published in Microsoft Security and Compliance Center. Follow [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) to configure the labeling policy.
+
 ### Error: "System.ComponentModel.Win32Exception: LoadLibrary failed"
 
 **Question**: Why do I get the following error when using the MIP SDK .NET Wrapper?
@@ -58,10 +66,10 @@ Your application does not have the required runtime, or was not built as Release
 
 > "ProxyAuthenticatonError: Proxy authentication is unsupported"
 
-The MIP SDK doesn't support the use of authenticated proxies. To fix this message, proxy administrators should set the Microsoft Information Protection service endpoints to bypass the proxy. A list of those endpoints are available at the [Office 365 URLs and IP address ranges](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges) page. MIP SDK requires that `*.protection.outlook.com` (row 9) and the Azure Information Protection service endpoints (row 73) bypass proxy authentication.
+The MIP SDK doesn't support the use of authenticated proxies. To fix this message, proxy administrators should set the Microsoft Information Protection service endpoints to bypass the proxy. A list of those endpoints are available at the [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges) page. MIP SDK requires that `*.protection.outlook.com` (row 9) and the Azure Information Protection service endpoints (row 73) bypass proxy authentication.
 
 ### Issues in .NET Core
 
 **Question**: Does the NuGet package work in .NET Core? 
 
-The NuGet package will install to a .NET Core project, but will fail to run. We're working on fixing this for Windows, but don't currently have a timeline to support other platforms. 
+The NuGet package will install to a .NET Core project, but will fail to run. We're working on fixing this for Windows, but don't currently have a timeline to support other platforms.

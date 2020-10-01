@@ -8,7 +8,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
@@ -26,14 +26,14 @@ ms.custom: dev
 
 # How-to: add explicit owner rights
 
-Your application should explicitly add "Owner" rights when creating a license from scratch using  [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx).
+Your application should explicitly add "Owner" rights when creating a license from scratch using  [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch).
 
 ## Prerequisites
 
-When your application is creating a license handle using [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx), it must also grant the owner full rights (permissions) explicitly.
+When your application is creating a license handle using [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch), it must also grant the owner full rights (permissions) explicitly.
 
 > [!NOTE]
-> Setting a user as "owner" using [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) with the **IPC\_LI\_OWNER** property does not grant the owner full permissions.
+> Setting a user as "owner" using [IpcSetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcsetlicenseproperty) with the **IPC\_LI\_OWNER** property does not grant the owner full permissions.
 
 The following example code only represents the steps involved in creating and adding the specific rights to a given license.
 
@@ -41,7 +41,7 @@ The following example code only represents the steps involved in creating and ad
  
 ## Step 1: Example scenario
 
-In this example, needed rights are added to a license created with [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). The example shows the creation and assignment of the rights to the license through a rights list.
+In this example, needed rights are added to a license created with [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch). The example shows the creation and assignment of the rights to the license through a rights list.
 
 The following two rights are added to these users:
 
@@ -113,5 +113,5 @@ if(FAILED(hr))
 ## Related topics
 
 - [Developer notes](developer-notes.md)
-- [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
-- [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
+- [IpcSetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcsetlicenseproperty)
+- [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch)

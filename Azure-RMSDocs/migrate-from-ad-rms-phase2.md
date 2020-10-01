@@ -80,7 +80,7 @@ Your current AD RMS deployment is using one of the following configurations for 
 - Password protected by using an external cryptographic provider.
 
 > [!NOTE]
-> For more information about using hardware security modules with AD RMS, see [Using AD RMS with Hardware Security Modules](https://technet.microsoft.com/library/jj651024.aspx).
+> For more information about using hardware security modules with AD RMS, see [Using AD RMS with Hardware Security Modules](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj651024(v=ws.11)).
 
 The two Azure Information Protection tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**) in Azure Key Vault. When you manage your own Azure Information Protection tenant key, it's sometimes referred to as "bring your own key" (BYOK). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) article.
 
@@ -159,7 +159,7 @@ If your templates in AD RMS used the **ANYONE** group, the closest equivalent gr
 
 When you manage templates and labels in the Azure portal, this group displays as your tenant's domain name in Azure AD. For example, this group might look like the following for Contoso: **contoso.onmicrosoft.com**. To add this group, the option displays **Add \<organization name> - All members**.
 
-If you're not sure whether your AD RMS templates include the ANYONE group, you can use the following sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+If you're not sure whether your AD RMS templates include the ANYONE group, you can use the following sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see [Using Windows PowerShell to Administer AD RMS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee221079(v=ws.10)).
 
 You can easily add external users to templates when you convert these templates to labels in the Azure portal. Then, on the **Add permissions** pane, choose **Enter details** to manually specify the email addresses for these users.
 
