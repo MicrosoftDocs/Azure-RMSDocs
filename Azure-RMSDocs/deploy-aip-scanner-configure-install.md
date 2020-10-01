@@ -167,7 +167,7 @@ If you've [defined a network scan job](#create-a-network-scan-job-public-preview
 
 Repositories where **Public access** is found to have **read** or **read/write** capabilities may have sensitive content that must be secured. If **Public access** is false, the repository not accessible by the public at all.
 
-Public access to a repository is only reported if you've set a weak account in the **StandardDomainsUserAccount** parameter of the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) or [**Set-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscovery) cmdlets.
+Public access to a repository is only reported if you've set a weak account in the **StandardDomainsUserAccount** parameter of the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet.
 
 - The accounts defined in these parameters are used to simulate the access of a weak user to the repository. If the weak user defined there can access the repository, this means that the repository can be accessed publicly. 
 
@@ -303,13 +303,13 @@ To get an Azure AD token:
 
     Run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
     
-    ```ps
+    ```PowerShell
     Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
     ```
         
     For example:
 
-    ```ps
+    ```PowerShell
     $pscreds = Get-Credential CONTOSO\scanner
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
     Acquired application access token on behalf of CONTOSO\scanner.
@@ -348,7 +348,7 @@ To change these settings, edit the content scan job:
     
     Alternatively, run the following command in your PowerShell session:
     
-    ```ps
+    ```PowerShell
     Start-AIPScan
     ```
 
@@ -366,13 +366,13 @@ For a scanner that has access to the internet, this user account is the account 
 
 **Example 1:**  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
 **Example 2:** PowerShell command for the scanner to protect .xml files and .tiff files in addition to Office files and PDF files, where your label policy is named "Scanner":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
 ```
 
