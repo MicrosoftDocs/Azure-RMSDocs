@@ -223,7 +223,7 @@ The scanner can discover and scan all Sharepoint sites and subsites under a spec
 1. Choose the relevant farm and then select **Manage Permissions Policy Levels**.
 1. Select **Site Collection Auditor** in the **Site Collection Permissions** options, then grant **View Application Pages** in the Permissions list, and finally, name the new policy level **AIP scanner site collection auditor and viewer**.
 1. Add your scanner user to the new policy and grant **Site collection** in the Permissions list.   
-1. Add a URL of the SharePoint that hosts sites or subsites that need to be scanned using the scanner repository management procedure at https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner-configure-install#configure-the-scanner-in-the-azure-portal
+1. Add a URL of the SharePoint that hosts sites or subsites that need to be scanned using the scanner repository management procedure at [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
 
 To learn more about how to manage your SharePoint policy levels see, [manage permission policies for a web application](/sharepoint/administration/manage-permission-policies-for-a-web-application).
 

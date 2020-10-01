@@ -196,7 +196,7 @@ Now you've completed the registration of this app with a secret, you're ready to
 
 2. In your PowerShell session, create a variable to store the credentials of the Windows user account that will run non-interactively. For example, if you created a service account for the scanner:
 
-    ```ps
+    ```PowerShell
     $pscreds = Get-Credential "CONTOSO\srv-scanner"
     ```
 
@@ -204,7 +204,7 @@ Now you've completed the registration of this app with a secret, you're ready to
 
 2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. Also specify your app registration values, your tenant ID, and the name of the delegated user account in Azure AD. For example:
     
-    ```ps
+    ```PowerShell
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
     ```
 
@@ -214,7 +214,7 @@ Now you've completed the registration of this app with a secret, you're ready to
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> -online`. For example: 
 
-```ps
+```PowerShell
 Get-Help Set-AIPFileLabel -online
 ```
 
