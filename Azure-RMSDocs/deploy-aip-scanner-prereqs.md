@@ -201,7 +201,7 @@ The default requirements should be suitable for initial testing, so that you can
 
 However, in a production environment, your organization's policies may be different than the default requirements. The scanner can accommodate the following changes with additional configuration:
 
-- [Discover and scan all sites and subsites under a specific URL]([Discover and scan all Sharepoint sites and subsites under a specific URL](#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url)
+- [Discover and scan all sites and subsites under a specific URL](#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url)
 
 - [Restriction: The scanner server cannot have internet connectivity](#restriction-the-scanner-server-cannot-have-internet-connectivity)
 
@@ -218,12 +218,18 @@ However, in a production environment, your organization's policies may be differ
 The scanner can discover and scan all Sharepoint sites and subsites under a specific URL with the following configuration:
 
 1. Start **SharePoint Central Administration**.
+
 1. On the **SharePoint Central Administration** website, in the **Application Management** section, click **Manage web applications**.
+
 1. Click to highlight the web application whose permission policy level you want to manage.
+
 1. Choose the relevant farm and then select **Manage Permissions Policy Levels**.
+
 1. Select **Site Collection Auditor** in the **Site Collection Permissions** options, then grant **View Application Pages** in the Permissions list, and finally, name the new policy level **AIP scanner site collection auditor and viewer**.
+
 1. Add your scanner user to the new policy and grant **Site collection** in the Permissions list.   
-1. Add a URL of the SharePoint that hosts sites or subsites that need to be scanned using the scanner repository management procedure at [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+
+1. Add a URL of the SharePoint that hosts sites or subsites that need to be scanned. For more information, see [Configure the scanner in the Azure portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
 
 To learn more about how to manage your SharePoint policy levels see, [manage permission policies for a web application](/sharepoint/administration/manage-permission-policies-for-a-web-application).
 
