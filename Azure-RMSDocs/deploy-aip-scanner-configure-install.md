@@ -167,12 +167,12 @@ If you've [defined a network scan job](#create-a-network-scan-job-public-preview
 
 Repositories where **Public access** is found to have **read** or **read/write** capabilities may have sensitive content that must be secured. If **Public access** is false, the repository not accessible by the public at all.
 
-Public access to a repository is only reported if you've set a weak account in the **StandardDomainsUserAccount** parameter of the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet.
+Public access to a repository is only reported if you've set a weak account in the **StandardDomainsUserAccount** parameter of the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) or [**Set-MIPNetworkDiscoveryConfiguration**](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration) cmdlets.
 
 - The accounts defined in these parameters are used to simulate the access of a weak user to the repository. If the weak user defined there can access the repository, this means that the repository can be accessed publicly. 
 
 - To ensure that public access is reported correctly, make sure that the user specified in these parameters is a member of the **Domain Users** group only.
-       
+
 ### Create a content scan job
 
 Deep dive into your content to scan specific repositories for sensitive content. 
