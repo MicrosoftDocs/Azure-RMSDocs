@@ -62,7 +62,7 @@ If you want to learn more about this scenario where you manage your tenant key, 
 
 ### Support for Transport Layer Security 1.2
 
-The RMS Connector supports TLS 1.2, If  you would like to set the RMS Connector to use TLS 1.2, see [Enable TLS 1.2](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/reference-connect-tls-enforcement#enable-tls-12)
+The RMS Connector supports TLS 1.2, If  you would like to set the RMS Connector to use TLS 1.2, see [Enable TLS 1.2](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-tls-enforcement#enable-tls-12).
 
 ## Prerequisites for the RMS connector
 Before you install the RMS connector, make sure that the following requirements are in place.
