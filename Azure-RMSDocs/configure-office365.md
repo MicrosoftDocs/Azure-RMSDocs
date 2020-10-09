@@ -85,7 +85,7 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
     Test-IRMConfiguration -Sender <user email address>
     ```
 
-    For example: **Test-IRMConfiguration -Sender  adams@contoso.com**
+    For example: **Test-IRMConfiguration -Sender  adams\@contoso.com**
 
     This command runs a series of checks that includes verifying connectivity to the service, retrieving the configuration, retrieving URIs, licenses, and any templates. In the Windows PowerShell session, you will see the results of each and at the end, if everything passes these checks: **OVERALL RESULT: PASS**
 
