@@ -171,6 +171,10 @@ If you don't have a content scan job yet, perform [Configure initial settings in
 
 When the scan is complete, check the reports in Analytics area of the Azure Information Protection blade in the Azure portal.
 
+For example:
+
+:::image type="content" source="media/qs-tutor/content-scan-job-data-discovery.PNG" alt-text="Scanner results Analytics Data discovery report":::
+
 For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md)
     
 > [!TIP]
