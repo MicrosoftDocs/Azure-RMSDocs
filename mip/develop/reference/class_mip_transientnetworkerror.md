@@ -16,4 +16,4 @@ Transient networking error. Caused by unexpected behavior when making network ca
 --------------------------------|---------------------------------------------
   
 ## Members
-_Not documented yet._
+Not yet documented.

@@ -8,7 +8,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
@@ -44,7 +44,7 @@ Beginning with the [March 2015 update](release-notes-rtm.md), we have incorporat
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (Also known as, Deprecated Algorithms)
 
-The encryption package flags, see [Preferred encryption](https://msdn.microsoft.com/library/dn974065.aspx), can be used in conjunction with the, License Property flag - *IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*.
+The encryption package flags, see [Preferred encryption](/previous-versions/windows/desktop/msipc/preferred-encryption), can be used in conjunction with the, License Property flag - *IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*.
 
 Following are some simple code snippets that demonstrates how to use the new license property.
 

@@ -6,7 +6,7 @@ ms.service: information-protection
 ms.topic: reference
 
 ms.author: mbaldwin
-ms.date: 4/16/2020
+ms.date: 9/22/2020
 ---
 
 # Structures
@@ -323,51 +323,30 @@ typedef struct {
 
 ## mip_cc_document_state
 
-Callback function definition for retrieving document metatdata, filtered by name/prefix
+Callback function definition for retrieving document metatdata, filtered by name/prefix.
+
+| Field | Description |
+|---|---|
+| dataState | State of document data as application interacts with it. |
+| contentMetadataCallback | Document metadata callback. |
+| protectionDescriptor | Protection descriptor if document is currently protected, else null.  |
+| contentFormat | Format of document (file vs. email).  |
+| auditMetadata | Optional application-specific metadata that is used when sending audit reports. Recognized values: 'Sender': Sender email address; 'Recipients': JSON array of email recipients; 'LastModifiedBy': Email address of the user who last modified a document; 'LastModifiedDate': Date a document was last modified  |
+| contentMetadataVersion | Document metadata version, default should be 0.  |
+| contentMetadataVersionFormat | Describes how metadata versioning is processed.  |
 
 ```c
 typedef struct {
-  /**
-   * Human-readable document description visible in tenant audit portal
-   *     Example for a file: [path\filename]
-   *     Example for an email: [Subject:Sender]
-   */
+
   const char* contentId;
-
-  /**
-   * State of document data as application interacts with it
-   */
-  mip_cc_data_state dataState;
-
-  /**
-   * Document metadata callback
-   */
-  mip_cc_metadata_callback contentMetadataCallback;
-
-  /**
-   * Protection descriptor if document is currently protected, else null
-   */
-  mip_cc_protection_descriptor protectionDescriptor;
-
-  /**
-   * Format of document (file vs. email)
-   */
-  mip_cc_content_format contentFormat;
-
-  /**
-   * Optional application-specific metadata that is used when sending audit reports
-   *     Recognized values:
-   *       'Sender': Sender email address
-   *       'Recipients': JSON array of email recipients
-   *       'LastModifiedBy': Email address of the user who last modified a document
-   *       'LastModifiedDate': Date a document was last modified
-   */
-  mip_cc_dictionary auditMetadata;
-  
-  /**
-   * Document metadata version, default should be 0.
-   */
-  unsigned int contentMetadataVersion;
+
+  mip_cc_data_state dataState;
+  mip_cc_metadata_callback contentMetadataCallback;
+  mip_cc_protection_descriptor protectionDescriptor;
+  mip_cc_content_format contentFormat;
+  mip_cc_dictionary auditMetadata;
+  uint32_t contentMetadataVersion;
+  mip_cc_metadata_version_format contentMetadataVersionFormat;
 } mip_cc_document_state;
 
 ```

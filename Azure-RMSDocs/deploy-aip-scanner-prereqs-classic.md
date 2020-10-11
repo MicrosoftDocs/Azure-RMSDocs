@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -104,7 +104,7 @@ To store the scanner configuration data, use an SQL server with the following re
 
 - **Capacity.** For capacity guidance, see [Storage requirements and capacity planning for SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).
 
-- **[Case insensitive collation](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support)**
+- **[Case insensitive collation](/sql/relational-databases/collations/collation-and-unicode-support)**
 
 > [!NOTE]
 > Multiple configuration databases on the same SQL server are supported when you specify a custom cluster (profile) name for the scanner.
@@ -155,7 +155,7 @@ To scan SharePoint document libraries and folders, ensure that your SharePoint s
 
 - **Supported versions.** Supported versions include: SharePoint 2019, SharePoint 2016, SharePoint 2013, and SharePoint 2010. Other versions of SharePoint are not supported for the scanner.
 
-- **Versioning.** When you use [versioning](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning), the scanner inspects and labels the last published version. If the scanner labels a file and [content approval](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) is required, that labeled file must be approved to be available for users.  
+- **Versioning.** When you use [versioning](/sharepoint/governance/versioning-content-approval-and-check-out-planning), the scanner inspects and labels the last published version. If the scanner labels a file and [content approval](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) is required, that labeled file must be approved to be available for users.  
 
 - **Large SharePoint farms.** For large SharePoint farms, check whether you need to increase the list view threshold (by default, 5,000) for the scanner to access all files. For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 
@@ -173,15 +173,15 @@ For more information, see [File types supported by the Azure Information Protect
 
 To scan files, your file paths must have a maximum of 260 characters, unless the scanner is installed on Windows 2016 and the computer is configured to support long paths
 
-Windows 10 and Windows Server 2016 support path lengths greater than 260 characters with the following [group policy setting](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths**
+Windows 10 and Windows Server 2016 support path lengths greater than 260 characters with the following [group policy setting](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10): **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths**
 
-For more information about supporting long file paths, see the [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.
+For more information about supporting long file paths, see the [Maximum Path Length Limitation](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.
 
 ## Usage statistics requirements
 
 Disable usage statistics using one of the following methods:
 
-- Setting the [AllowTelemetry](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-install#to-install-the-azure-information-protection-client-by-using-the-executable-installer) parameter to 0
+- Setting the [AllowTelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer) parameter to 0
 
 - Ensure that the **Help improve Azure Information Protection by sending usage statistics to Microsoft** option remains unselected during the scanner installation process.
 
@@ -310,7 +310,7 @@ If your labels do not have any auto-labeling conditions, plan to use one of the 
 |Option  |Description  |
 |---------|---------|
 |**Discover all info types**     |  In your [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), set the **Info types to be discovered** option to **All**. </br></br>This option sets the content scan job to scan your content for all sensitive information types.      |
-|**Define a default label**     |   Define a default label in your [policy](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), or [repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In this case the scanner applies the default label on all files found.       |
+|**Define a default label**     |   Define a default label in your [policy](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), [content scan job](deploy-aip-scanner-configure-install.md#create-a-content-scan-job), or [repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In this case the scanner applies the default label on all files found.       |
 | | |
 
 ## Next steps

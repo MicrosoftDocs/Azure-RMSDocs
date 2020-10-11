@@ -6,8 +6,8 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/16/2020
-ms.topic: conceptual
+ms.date: 09/17/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -41,7 +41,7 @@ Azure Information Protection provides a client-server solution that helps to pro
 
 All these clients integrate with Office applications but the unified labeling client and the classic client must be installed separately and support additional features and components. For example, these clients include support for File Explorer, so you can classify and protect files outside Office. Additional components include a viewer for protected PDF documents and protected images, and a scanner for on-premises data stores.
 
-The RMS client provides protection only. This client is automatically installed with some applications, such as Office applications, the Azure Information Protection clients, and RMS-enlightened applications from software vendors. However, it can also be [installed by itself](https://www.microsoft.com/download/details.aspx?id=38396), to support [synchronizing files from IRM-protected libraries and OneDrive](https://docs.microsoft.com/onedrive/deploy-on-windows), and for developers who want to integrate rights management protection into line-of-business applications.
+The RMS client provides protection only. This client is automatically installed with some applications, such as Office applications, the Azure Information Protection clients, and RMS-enlightened applications from software vendors. However, it can also be [installed by itself](https://www.microsoft.com/download/details.aspx?id=38396), to support [synchronizing files from IRM-protected libraries and OneDrive](/onedrive/deploy-on-windows), and for developers who want to integrate rights management protection into line-of-business applications.
 
 ## Choose which labeling client to use for Windows computers
 
@@ -78,7 +78,7 @@ For more information, see:
 
 The labeling client that's built in to Microsoft Office:
 
-- Requires a Windows computer with Office 365 applications, minimum version 1910
+- Requires a Windows computer with Microsoft 365 applications, minimum version 1910
 - Enables you to share labels and policy settings that can also be used by macOS, iOS, and Android
 - Supports switching accounts
 - Provides better performance in Office applications
@@ -109,7 +109,7 @@ However, the classic client has different policy settings for macOS, iOS, and An
 
 You can use different clients in the same environment to support different business requirements, as demonstrated in the following deployment example. In a mixed client environment, we recommend you use unified labels so that clients share the same set of labels for ease of administration. New customers have unified labels by default because their tenants are on the unified labeling platform. For more information, see [How can I determine if my tenant is on the unified labeling platform?](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
 
-When you have a Windows computer that runs Office 365 apps that are a minimum version 1910 and one of the Azure Information Protection clients is installed, by default the built-in labeling client is disabled in Office apps. However, you can change this behavior to use the built-in labeling client for just your Office apps. With this configuration, the Azure Information Protection client (classic or unified labeling) remains available for labeling in File Explorer, PowerShell, and the scanner. For instructions to disable the Azure Information Protection client in Office 365 apps, see the section [Office built-in labeling client and the Azure Information Protection client](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#office-built-in-labeling-client-and-the-azure-information-protection-client) from the Microsoft 365 Compliance documentation.
+When you have a Windows computer that runs Microsoft 365 apps that are a minimum version 1910 and one of the Azure Information Protection clients is installed, by default the built-in labeling client is disabled in Office apps. However, you can change this behavior to use the built-in labeling client for just your Office apps. With this configuration, the Azure Information Protection client (classic or unified labeling) remains available for labeling in File Explorer, PowerShell, and the scanner. For instructions to disable the Azure Information Protection client in Microsoft 365 apps, see the section [Office built-in labeling client and the Azure Information Protection client](/microsoft-365/compliance/sensitivity-labels-office-apps#office-built-in-labeling-client-and-the-azure-information-protection-client) from the Microsoft 365 Compliance documentation.
 
 ##### Example deployment strategy:
 
@@ -129,14 +129,13 @@ When you have a Windows computer that runs Office 365 apps that are a minimum ve
 
 Use the following table to help compare which features are supported by the three labeling clients for Windows computers.
 
-To compare the Office built-in sensitivity labeling features across different operating system platforms (Windows, macOS, iOS, and Android) and for the web, see the Microsoft 365 Compliance documentation, [Support for sensitivity label capabilities in apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). This documentation also includes the Office build numbers or Office update channel information for the supported features.
+To compare the Office built-in sensitivity labeling features across different operating system platforms (Windows, macOS, iOS, and Android) and for the web, see the Microsoft 365 Compliance documentation, [Support for sensitivity label capabilities in apps](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). This documentation also includes the Office build numbers or Office update channel information for the supported features.
 
 |Feature|Classic client|Unified labeling client|Office built-in labeling client|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manual labeling:| **Yes** | **Yes** |**Yes** |
 |Default label:| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling: <br />- For Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
-|Recommended or automatic labeling:<br />- For Outlook| **Yes** | **Yes** | No |
+|Recommended or automatic labeling: <br />- For Word, Excel, PowerPoint, Outlook| **Yes** | **Yes** | **Yes** |
 |Mandatory labeling:| **Yes** | **Yes** | No |
 |User-defined permissions for a label: <br />- Do Not Forward for emails| **Yes** | **Yes** | **Yes** |
 |User-defined permissions for a label: <br />- Custom permissions for Word, Excel, PowerPoint| **Yes** | **Yes** | **Yes** |
@@ -153,18 +152,18 @@ To compare the Office built-in sensitivity labeling features across different op
 |Label with File Explorer:| **Yes** | **Yes** | No |
 |A viewer for protected files (text, images, PDF, .pfile):| **Yes** | **Yes** | No|
 |PPDF support for applying labels:| **Yes** | No | No |
-|PowerShell labeling cmdlets:| **Yes** | **Yes** <sup>4</sup> | No |
-|Offline support for protection actions:| **Yes** | **Yes** <sup>5</sup> | **Yes** |
+|PowerShell labeling cmdlets:| **Yes** | **Yes**  | No |
+|Offline support for protection actions:| **Yes** | **Yes** <sup>4</sup> | **Yes** |
 |Manual policy file management for disconnected computers:| **Yes** |**Yes**| No |
 |HYOK support:| **Yes** | No | No |
 |Usage logging in Event Viewer:| **Yes** | No |No |
 |Display the Do Not Forward button in Outlook:| **Yes** | No | No |
-|Track protected documented:| **Yes** | **Yes** <sup>6</sup> | No |
+|Track protected documented:| **Yes** | **Yes** <sup>5</sup> | No |
 |Revoke protected documents:| **Yes** | No | No |
 |Protection-only mode (no labels):| **Yes** | No | No |
 |Support for account switching:| No | No | **Yes** |
 |Support for Remote Desktop Services:| **Yes** | **Yes** | **Yes** |
-|Support for AD RMS:| **Yes** | No <sup>7</sup> | No |
+|Support for AD RMS:| **Yes** | No <sup>6</sup> | No |
 |Remove external content marking in app:| **Yes**| **Yes**| No|
 
 
@@ -180,15 +179,12 @@ These settings, and many more are supported as [advanced settings that you confi
 Supported by File Explorer and PowerShell. In Office apps, users can select **File Info** > **Protect Document** > **Restrict Access**.
 
 <sup>4</sup>
-No support to remove protection from container files (zip).
-
-<sup>5</sup>
 For File Explorer and PowerShell commands, the user must be connected to the internet to protect files.
 
-<sup>6</sup>
+<sup>5</sup>
 The document tracking site that's supported by the classic client isn't supported by the unified labeling client. However, without the need to first register the document for tracking, administrators can use [central reporting](../reports-aip.md) to identify whether protected documented are accessed from Windows computers, and whether access was granted or denied. 
 
-<sup>7</sup>
+<sup>6</sup>
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 
@@ -209,10 +205,10 @@ When the Azure Information Protection client (classic) and the Azure Information
 |Supported cmdlets:| Cmdlets for labeling and cmdlets for protection-only | Cmdlets for labeling:<br /><br /> Set-AIPFileClassification and Set-AIPFileLabel don't support the *Owner* parameter <br /><br /> In addition, there is a single comment of "No label to apply" for all scenarios where a label isn't applied <br /><br /> Set-AIPFileClassification supports the *WhatIf* parameter, so it can be run in discovery mode <br /><br /> Set-AIPFileLabel doesn't support the *EnableTracking* parameter <br /><br /> Get-AIPFileStatus doesn't return label information from other tenants and doesn't display the *RMSIssuedTime* parameter<br /><br />In addition, the *LabelingMethod* parameter for Get-AIPFileStatus displays **Privileged** or **Standard** instead of **Manual** or **Automatic**. For more information, see the [online documentation](/powershell/module/azureinformationprotection/get-aipfilestatus).|
 |Justification prompts (if configured) per action in Office: | Frequency: Per file <br /><br /> Lowering the sensitivity level <br /><br /> Removing a label<br /><br /> Removing protection | Frequency: Per session <br /><br /> Lowering the sensitivity level<br /><br /> Removing a label|
 |Remove applied label actions: | User is prompted to confirm <br /><br />Default label or automatic label (if configured) isn't automatically applied next time the Office app opens the file  <br /><br />| User isn't prompted to confirm<br /><br /> Default label or automatic label (if configured) is automatically applied next time the Office app opens the file|
-|Automatic and recommended labels: | Configured as [label conditions](../configure-policy-classification.md) in the Azure portal with built-in information types and custom conditions that use phrases or regular expressions <br /><br />Configuration options include: <br /><br />- Unique / Not unique count <br /><br /> - Minimum count| Configured in the admin centers with built-in sensitive information types and [custom information types](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Configuration options include:  <br /><br />- Unique count only <br /><br />- Minimum and maximum count <br /><br />- AND and OR support with information types <br /><br />- Keyword dictionary<br /><br />- Customizable confidence level and character proximity|
+|Automatic and recommended labels: | Configured as [label conditions](../configure-policy-classification.md) in the Azure portal with built-in information types and custom conditions that use phrases or regular expressions <br /><br />Configuration options include: <br /><br />- Unique / Not unique count <br /><br /> - Minimum count| Configured in the admin centers with built-in sensitive information types and [custom information types](/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Configuration options include:  <br /><br />- Unique count only <br /><br />- Minimum and maximum count <br /><br />- AND and OR support with information types <br /><br />- Keyword dictionary<br /><br />- Customizable confidence level and character proximity|
 |Order support for sublabels on attachments: | Enabled with an [advanced client setting](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Enabled by default, no configuration required|
 |Change the default protection behavior for file types: | You can use [registry edits](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) to override the defaults of native and generic protection | You can use [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) to change which file types get protected|
-|Automatic rescans | Full rescans are automatically run every time the scanner detects a change in policy or labeling settings | Starting in version [2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview), administrators can choose to skip a full rescan after making changes to policy or content scan job settings. |
+|Automatic rescans | Full rescans are automatically run every time the scanner detects a change in policy or labeling settings | Starting in version [2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), administrators can choose to skip a full rescan after making changes to policy or content scan job settings. |
 |Network discovery |Network discovery features are unavailable for the classic scanner | Administrators can discover additional risky repositories by scanning a specified IP address or range.|
 | | | |
 
@@ -224,8 +220,6 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Custom permissions as a [separate option that users can select in Office apps: Word, Excel, and PowerPoint](client-classify-protect.md#set-custom-permissions-for-a-document)
 
-- [Track and revoke](client-track-revoke.md) options from Office apps and File Explorer
-
 - Information Protection bar title and tooltip
 
 - [Protection-only mode](client-protection-only-mode.md) (no labels) using templates
@@ -235,8 +229,6 @@ Although the Azure Information Protection unified labeling client is still under
 - Display the **Do Not Forward** button in Outlook
 
 - Demo policy
-
-- Confirmation prompt **Do you want to delete this label?** for users when you don't use the policy setting for justification
 
 - Separate PowerShell cmdlets to connect to a Rights Management service
 
@@ -257,4 +249,4 @@ To install and configure the Azure Information Protection clients, use the follo
 
 - [Azure Information Protection unified labeling client](unifiedlabelingclient-version-release-history.md)
 
-For more information about using the built-in labeling client for Office 365 apps, see [Sensitivity labels in Office apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps).
+For more information about using the built-in labeling client for Microsoft 365 apps, see [Sensitivity labels in Office apps](/microsoft-365/compliance/sensitivity-labels-office-apps).

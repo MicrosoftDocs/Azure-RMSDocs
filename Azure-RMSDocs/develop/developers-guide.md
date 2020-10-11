@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 10/11/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
@@ -35,7 +35,7 @@ Service applications provide capabilities to protect information when exporting 
 
 ## PowerShell guides
 
-Used by Azure Rights management administrators, PowerShell cmdlets are also useful for developing and testing your service applications. For more information, see [Using PowerShell with the Azure Information Protection client](/azure/information-protection/rms-client/client-admin-guide-powershell).
+Used by Azure Rights management administrators, PowerShell cmdlets are also useful for developing and testing your service applications. For more information, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md).
 
 ## User applications
 
@@ -80,7 +80,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 
 ### Security and authentication
 
-- [How to configure your app service application to use Azure Active Directory login](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+- [How to configure your app service application to use Azure Active Directory login](/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 - [How to use Azure Active Directory Authentication (ADAL) authentication](how-to-use-adal-authentication.md)
 - [Configuring Azure RMS for authentication (service)](adal-auth.md)
 - [How to set the API security mode (service)](setting-the-api-security-mode-api-mode.md)
@@ -101,7 +101,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 ## Other resources
 
 - [Security best practice guide](security-guidelines.md)
-- [Frequently Asked Questions for Azure Information Protection](/azure/information-protection/faqs)
+- [Frequently Asked Questions for Azure Information Protection](../faqs.md)
 
 ### Support articles
 
@@ -111,28 +111,28 @@ Each of the following topics presents specific guidance for an aspect of impleme
 
 ### Message protocol and file formats
 
-- [Client-to-Server Protocol](https://msdn.microsoft.com/library/cc243191.aspx)
-- [Rights-Managed Email Object Protocol](https://msdn.microsoft.com/library/cc463909(v=EXCHG.80).aspx)
-- [Compound File Binary File Format](https://msdn.microsoft.com/library/dd942138.aspx)
+- [Client-to-Server Protocol](/openspecs/windows_protocols/ms-rmpr/d8ed4b1e-e605-4668-b173-6312cba6977e)
+- [Rights-Managed Email Object Protocol](/openspecs/exchange_server_protocols/ms-oxormms/a121dda4-48f3-41f8-b12f-170f533038bb)
+- [Compound File Binary File Format](/openspecs/windows_protocols/ms-cfb/53989ce4-7b05-4f8d-829b-d08d6148375b)
 
 #### Rights Managed email message
 
-- [.MSG File Format (Part 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
-- [.MSG File Format (Part 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
+- [.MSG File Format (Part 1)](/archive/blogs/openspecification/msg-file-format-part-1)
+- [.MSG File Format (Part 2)](/archive/blogs/openspecification/msg-file-format-rights-managed-email-message-part-2)
 
 ### API reference
 
-- [Windows API Reference](https://msdn.microsoft.com/library/hh535292.aspx)
-  - [Windows SDK Error Codes](https://msdn.microsoft.com/library/hh535248.aspx)
-- [Windows Phone and Windows Store API reference](https://msdn.microsoft.com/library/dn891914.aspx)
-- [iOS/OSX API reference](https://msdn.microsoft.com/library/dn758306.aspx)
-- [Android API reference](https://msdn.microsoft.com/library/dn758245.aspx)
+- [Windows API Reference](/previous-versions/windows/desktop/msipc/msipc-reference)
+  - [Windows SDK Error Codes](/previous-versions/windows/desktop/msipc/error-codes)
+- [Windows Phone and Windows Store API reference](/previous-versions/windows/desktop/msipcthin2/winrt)
+- [iOS/OSX API reference](/previous-versions/windows/desktop/msipcthin2/ios)
+- [Android API reference](/previous-versions/windows/desktop/msipcthin2/android)
 - [Linux API reference](https://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 
 ### Previous versions
 
-- [AD RMS SDK](https://msdn.microsoft.com/library/cc530379.aspx) is the first version of the RMS SDK.
-- [AD RMS Scripting Tool](https://msdn.microsoft.com/library/bb968797.aspx) is an administrative tool for an AD RMS installation.
+- [AD RMS SDK](/previous-versions/windows/desktop/adrms_sdk/active-directory-rights-management-services-sdk-portal) is the first version of the RMS SDK.
+- [AD RMS Scripting Tool](/previous-versions/windows/desktop/adrms_script/adrms-script-portal) is an administrative tool for an AD RMS installation.
 
 ### See also
 

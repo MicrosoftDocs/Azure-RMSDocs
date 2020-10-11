@@ -47,7 +47,7 @@ The Rights Management Services SDK 2.1 includes the following files, install
 |Ipcerror.h|\inc|Contains public error codes exported by RMS SDK 2.1.|
 |Ipcfile.h|\inc|Contains the File API interfaces exported by the RMS SDK 2.1|
 |Msipc.lib|\lib|Library to link with when using the RMS SDK 2.1 to build x86 applications.|
-|Msipc_s.lib|\lib|Provides entry point for [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) for x86 applications.|
+|Msipc_s.lib|\lib|Provides entry point for [IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize) for x86 applications.|
 |Msipc.lib|\lib\x64|Library to link with when using the RMS SDK 2.1 to build x64 applications.|
-|Msipc_s.lib|\lib\x64|Provides entry point for [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) for x64 applications.|
+|Msipc_s.lib|\lib\x64|Provides entry point for [IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize) for x64 applications.|
 |Genmanifest.exe|\tools|Generates a manifest for use during development of an RMS-enabled application.|

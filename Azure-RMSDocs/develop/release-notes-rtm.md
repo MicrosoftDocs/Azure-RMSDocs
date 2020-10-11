@@ -8,7 +8,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 10/18/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
@@ -54,7 +54,7 @@ This article contains important information about this and previous releases of 
 
 ## October 2017 - update
 
-- Addition of two new APIs for environment inintialization and uninitialization. For information, see [IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx) and [IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx).
+- Addition of two new APIs for environment inintialization and uninitialization. For information, see [IpcInitializeEnvironment](/previous-versions/windows/desktop/msipc/microsoft-information-protection-and-control-client-functions) and [IpcUninitializeEnvironment](/previous-versions/windows/desktop/msipc/microsoft-information-protection-and-control-client-functions).
 - Visio file types are now supported. For more information, see [File API configuration](file-api-configuration.md).
 
 ## February 2016 - SDK documentation update
@@ -62,7 +62,7 @@ This article contains important information about this and previous releases of 
 >[!Note]
 > The feature documentation updates in this section apply to the SDK download dated 12/11/2015.
 
-- **Improved authentication flow** - using OAuth2 token-based authentication via the [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/). For more information on this process and the API extensions for it, see [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md).
+- **Improved authentication flow** - using OAuth2 token-based authentication via the [Azure Active Directory Authentication Library (ADAL)](/azure/active-directory/azuread-dev/active-directory-authentication-libraries). For more information on this process and the API extensions for it, see [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md).
 
 - **Update to ADAL** - By updating your application to use ADAL authentication rather than the Microsoft Online Sign-in Assistant, you and your customers will be able to:
 
@@ -85,7 +85,7 @@ This article contains important information about this and previous releases of 
 
 ## May 2015 update
 
--   **Service apps and cloud based RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) needs three pieces of information; symmetric key, **AppPrincipalId**, and **TenantBposId**. The article for this has been updated to provide guidance on processing this information. For this update, see the revised version of [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Service apps and cloud based RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](/previous-versions/windows/desktop/msipc/ipc-credential-symmetric-key) needs three pieces of information; symmetric key, **AppPrincipalId**, and **TenantBposId**. The article for this has been updated to provide guidance on processing this information. For this update, see the revised version of [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## April 2015 update
 
@@ -94,7 +94,7 @@ This article contains important information about this and previous releases of 
 
     **Note**  We will no longer be exposing the **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** flag in our API. This means that future apps will no longer compile if they reference this flag, but apps already built will continue to work since we will honor the flag privately in the API code. Getting the benefit of the old deprecated encryption algorithms flag can still be achieved simply by changing a flag. For more information, see [Working with encryption](working-with-encryption.md).
 
--   **Server Mode Applications**, those using an [API mode values](https://msdn.microsoft.com/library/hh535236.aspx) of **IPC\_API\_MODE\_SERVER**, no longer require an application manifest. You can test your application against a production RMS server and are not required to obtain a production license when switching to production environment. For more information on server mode applications, see [Application types](application-types.md).
+-   **Server Mode Applications**, those using an [API mode values](/previous-versions/windows/desktop/msipc/api-mode-values) of **IPC\_API\_MODE\_SERVER**, no longer require an application manifest. You can test your application against a production RMS server and are not required to obtain a production license when switching to production environment. For more information on server mode applications, see [Application types](application-types.md).
 -   **Logging** is now implemented through both file and Event Tracing for Windows methods.
 -   If you're running on a **Windows 7 SP1 or Windows Server 2008 R2 machine**, see the note following under "Important developer notes".
 
@@ -124,18 +124,18 @@ The File API component of SDK has been extended and offers the following feature
 
     **Note** - Further supporting data types and structures, not listed here, have been added for the File API extensions. All articles that have been updated for this release are marked as **preliminary and subject to change**.
 
-    -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
-    -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
-    -   [IpcfGetFileProperty](https://msdn.microsoft.com/library/dn771749.aspx)
-    -   [IpcfLogicalFileRangeToRawFileRange](https://msdn.microsoft.com/library/dn771750.aspx)
-    -   [IpcfReadFile](https://msdn.microsoft.com/library/dn771753.aspx)
-    -   [IpcfSetEndOfFile](https://msdn.microsoft.com/library/dn771754.aspx)
-    -   [IpcfWriteFile](https://msdn.microsoft.com/library/dn771756.aspx)
+    -   [IpcfOpenFileOnHandle](/previous-versions/windows/desktop/msipc/ipcfopenfileonhandle)
+    -   [IpcfOpenFileOnILockBytes](/previous-versions/windows/desktop/msipc/ipcfopenfileonilockbytes)
+    -   [IpcfGetFileProperty](/previous-versions/windows/desktop/msipc/ipcfgetfileproperty)
+    -   [IpcfLogicalFileRangeToRawFileRange](/previous-versions/windows/desktop/msipc/ipcflogicalfilerangetorawfilerange)
+    -   [IpcfReadFile](/previous-versions/windows/desktop/msipc/ipcfreadfile)
+    -   [IpcfSetEndOfFile](/previous-versions/windows/desktop/msipc/ipcfsetendoffile)
+    -   [IpcfWriteFile](/previous-versions/windows/desktop/msipc/ipcfwritefile)
 
 ## April 2014 update
 
 -   **File API memory usage**, especially for large PFiles has been improved significantly.
--   **Content ID** is now writable via the property **IPC\_LI\_CONTENT\_ID**. For more information, see [License property types](https://msdn.microsoft.com/library/hh535287.aspx).
+-   **Content ID** is now writable via the property **IPC\_LI\_CONTENT\_ID**. For more information, see [License property types](/previous-versions/windows/desktop/msipc/license-property-types).
 -   **Production manifest requirement** - When your RMS enabled application/service is being run in server mode, we will not require a manifest anymore. For more information, see [Application types](application-types.md).
 -   **Documentation updates**
 
@@ -165,17 +165,17 @@ The File API component of SDK has been extended and offers the following feature
 
       - All files, except system files and Office files can be protected using RMS Protected File format (PFile).
 
-    The file API is implemented via the following four new functions: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx), and [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
+    The file API is implemented via the following four new functions: [IpcfDecryptFile](/previous-versions/windows/desktop/msipc/ipcfdecryptfile), [IpcfEncryptFile](/previous-versions/windows/desktop/msipc/ipcfencryptfile), [IpcfGetSerializedLicenseFromFile](/previous-versions/windows/desktop/msipc/ipcfgetserializedlicensefromfile), and [IpcfIsFileEncrypted](/previous-versions/windows/desktop/msipc/ipcfisfileencrypted).
 
-    The File API requires that the Rights Management Service Client 2.1 be installed on the client computer and that the computer have connectivity to an RMS server. For more information on RMS server, RMS client, and their functionality, see the TechNet content for [IT Pro documentation for RMS](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx).
+    The File API requires that the Rights Management Service Client 2.1 be installed on the client computer and that the computer have connectivity to an RMS server. For more information on RMS server, RMS client, and their functionality, see the TechNet content for [IT Pro documentation for RMS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771234(v=ws.10)).
 
 -   **Issue**: When creating a license from scratch, ownership rights must be granted explicitly.
 
-    **Solution**: Your application must explicitly add **Owner** rights to the license owner when creating a license from scratch using [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). For more information, see [Add explicit owner rights](add-explicit-owner-rights.md).
+    **Solution**: Your application must explicitly add **Owner** rights to the license owner when creating a license from scratch using [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch). For more information, see [Add explicit owner rights](add-explicit-owner-rights.md).
 
--   **Issue**: If an application calls [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) or [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) twice for the same window by using its handle, RMS SDK 2.1 will return a failure in the **HRESULT**.
+-   **Issue**: If an application calls [IpcProtectWindow](/previous-versions/windows/desktop/msipc/ipcprotectwindow) or [IpcUnprotectWindow](/previous-versions/windows/desktop/msipc/ipcunprotectwindow) twice for the same window by using its handle, RMS SDK 2.1 will return a failure in the **HRESULT**.
 
-    **Solution**: For specific guidance on this, see the Remarks section in [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) and [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx).
+    **Solution**: For specific guidance on this, see the Remarks section in [IpcProtectWindow](/previous-versions/windows/desktop/msipc/ipcprotectwindow) and [IpcUnprotectWindow](/previous-versions/windows/desktop/msipc/ipcunprotectwindow).
 
 -   **Issue**: When building for multiple architectures, you must use this guidance.
 

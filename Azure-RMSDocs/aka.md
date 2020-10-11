@@ -7,7 +7,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
@@ -74,7 +74,7 @@ Note that you might see or hear references to this technology as **DRM**, which 
 
 As the cloud-based solution that you purchase, yes. Azure Information Protection offers the new capabilities of classification and labeling for an organization's documents and emails, which in turn can apply Rights Management protection. 
 
-However, Azure Rights Management is still used as the protection technology for Azure Information Protection, and for Office 365 services that use this cloud-based Rights Management protection. So in the context of the protection technology that is used by Azure Information Protection, "Azure Rights Management" (Azure RMS) remains a current name.
+However, Azure Rights Management is still used as the protection technology for Azure Information Protection, and for Microsoft  365 services that use this cloud-based Rights Management protection. So in the context of the protection technology that is used by Azure Information Protection, "Azure Rights Management" (Azure RMS) remains a current name.
 
 Similarly, "Active Directory Rights Management Services" (AD RMS) remains a current name for the Windows Server server role, which provides on-premises Rights Management protection. This protection technology can be used with Azure Information Protection and might be suitable for a very small percentage of documents and emails that must be protected by an on-premises key. In this scenario, AD RMS is often referred to as the "hold your own key" or HYOK solution.
 

@@ -7,7 +7,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 09/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -52,11 +52,11 @@ This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protec
 >
 
 > [!TIP]
-> To use cmdlets with path lengths greater than 260 characters, use the following [group policy setting](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) that is available starting Windows 10, version 1607:<br /> **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths** 
+> To use cmdlets with path lengths greater than 260 characters, use the following [group policy setting](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10) that is available starting Windows 10, version 1607:<br /> **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **Enable Win32 long paths** 
 > 
 > For Windows Server 2016, you can use the same group policy setting when you install the latest Administrative Templates (.admx) for Windows 10.
 >
-> For more information, see the [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.
+> For more information, see the [Maximum Path Length Limitation](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) section from the Windows 10 developer documentation.
 
 ### Prerequisites for using the AzureInformationProtection module
 
@@ -196,7 +196,7 @@ Now you've completed the registration of this app with a secret, you're ready to
 
 2. In your PowerShell session, create a variable to store the credentials of the Windows user account that will run non-interactively. For example, if you created a service account for the scanner:
 
-    ```ps
+    ```PowerShell
     $pscreds = Get-Credential "CONTOSO\srv-scanner"
     ```
 
@@ -204,7 +204,7 @@ Now you've completed the registration of this app with a secret, you're ready to
 
 2. Run the Set-AIPAuthentication cmdlet, with the *OnBeHalfOf* parameter, specifying as its value the variable that you just created. Also specify your app registration values, your tenant ID, and the name of the delegated user account in Azure AD. For example:
     
-    ```ps
+    ```PowerShell
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
     ```
 
@@ -214,7 +214,7 @@ Now you've completed the registration of this app with a secret, you're ready to
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> -online`. For example: 
 
-```ps
+```PowerShell
 Get-Help Set-AIPFileLabel -online
 ```
 
