@@ -152,7 +152,7 @@ Continue with [installing the optional Network Discovery service](#install-the-n
 
 ## Install the Network Discovery service
 
-Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) of the AIP unified labeling client, administrators can use the AIP scanner to scan network repositories, and then add any repositories that seem risky to a content scan job.
+Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) of the AIP unified labeling client, administrators can use the AIP scanner to scan network repositories, and then add any repositories that seem risky to a content scan job.
 
 Network scan jobs help you understand *where* your content may be at risk, by attempting to access configured repositories as both an administrator and a public user.
 
@@ -207,7 +207,7 @@ Once you have the scanner and the Network Discovery service installed, you're re
 For more information, see [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md).
 
 > [!TIP]
-> If you've installed [version 2.8.85.0 (public preview)](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview), we recommend that you scan your network to find repositories that may have content at risk. 
+> If you've installed [version 2.8.85.0 (public preview)](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), we recommend that you scan your network to find repositories that may have content at risk. 
 >
 >To scan your risky repositories for sensitive data, and then classify and protect that data from outside users, update your content scan job with the details of the repositories you've found.
 >

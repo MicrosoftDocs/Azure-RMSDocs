@@ -33,13 +33,12 @@ The Azure Information Protection client provides a scanner that enables system a
 In this tutorial, you'll learn how to:
 
 > [!div class="checklist"]
-> * Install the Network Discovery service
 > * Create a network scan job and scan for risky repositories
 > * Add any risky repositories found to a content scan job
 > * Scan your content shares for sensitive content and understand results found
 
 > [!NOTE]
-> Network Discovery is available only starting in version [2.8.85.0 ](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) of the unified labeling scanner, and is in public preview. If you do not have this version of the client and scanner installed, review the [tutorial prerequisites](#tutorial-prerequisites) and then go straight to [Define and run your content scan job](#define-and-run-your-content-scan-job).
+> Network Discovery is available only starting in version [2.8.85.0 ](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) of the unified labeling scanner, and is in public preview. If you do not have this version of the client and scanner installed, review the [tutorial prerequisites](#tutorial-prerequisites) and then go straight to [Define and run your content scan job](#define-and-run-your-content-scan-job).
 > 
 
 **Time required:** You can finish this configuration in less than 15 minutes.
@@ -50,20 +49,20 @@ In this tutorial, you'll learn how to:
 |---------|---------|
 |**A supporting subscription**     |  You'll need an Azure subscription that includes [Azure Information Protection Plan 1 or Plan 2](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
 |**Admin access to the Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with a supported administrator account, and have protection enabled. Supported administrator accounts include: </br></br>- **Compliance administrator**</br>- **Compliance data administrator**</br>- **Security administrator**</br>- **Global administrator**   |
-|**AIP client and scanner**   |   To complete this tutorial, you'll need to have installed the Azure Information Protection unified labeling client and scanner, as well as the Network Discovery service. </br></br>For more information, see: </br></br>- [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md) </br>- [Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-scanner.md) |
+|**AIP client, scanner, and Network Discovery serice**   |   To complete this tutorial, you'll need to have installed the Azure Information Protection unified labeling client and scanner, as well as the Network Discovery service. </br></br>For more information, see: </br></br>- [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md) </br>- [Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-scanner.md) |
 |**A content scan job** | Make sure you have a basic content scan job that you can use for testing. You may have created one when you [installed your scanner](quickstart-install-scanner.md).</br></br>If you need to create one now, you can use the instructions in [Configure Azure Information Protection in the Azure portal](quickstart-install-scanner.md#configure-azure-information-protection-in-the-azure-portal). When you have a basic content scan job, return here to complete this tutorial. |
 |**SQL Server**     | To run the scanner, you'll need SQL Server installed on the scanner machine. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the installation option you want to install. In the installer, select the **Basic** installation type. </br></br>**Note**: We recommend installing SQL Server Enterprise for production environments.       |
 |**Azure Active Directory account**     |  Your domain account must be synchronized to [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). </br></br>If you're not sure about your account, contact one of your system administrators to verify the synch status.       |
 | | | 
 
-When you're ready, continue with [Install the Network Discovery service](#install-the-network-discovery-service).
+When you're ready, continue with [Create a network scan job](#create-a-network-scan-job).
 
 ## Create a network scan job
 
 Create a network scan job to scan a specified IP address or IP range for risky repositories.
 
 > [!NOTE]
-> This feature is available only starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview), and is currently in public preview.
+> This feature is available only starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), and is currently in public preview.
 > 
 
 **To create a network scan job:**
@@ -96,7 +95,7 @@ The grid data is updated as your scan completes. For example:
 :::image type="content" source="media/qs-tutor/scanned-network.png" alt-text="Refreshed network scan jobs":::
 
 > [!TIP]
-> If your network scan job does not run, check to make sure that the [Network Discovery service is installed correctly](#install-the-network-discovery-service) on the scanner machine.
+> If your network scan job does not run, check to make sure that the [Network Discovery service is installed correctly](quickstart-install-scanner.md#install-the-network-discovery-service) on the scanner machine.
 
 Continue with [Add risky repositories to a content scan job](#add-risky-repositories-to-a-content-scan-job).
 
@@ -107,7 +106,7 @@ Once your network scan job is complete, you can check for any risky repositories
 For example, if a repository is found to have both read and write public access, you may want to scan further and confirm that no sensitive data is stored there.
 
 > [!NOTE]
-> This feature is available only starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview), and is currently in public preview.
+> This feature is available only starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), and is currently in public preview.
 > 
 
 **To add risky repositories to your content scan job**:
