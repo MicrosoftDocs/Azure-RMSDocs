@@ -6,7 +6,7 @@ description: A detailed tutorial for using the Azure Information Protection (AIP
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/08/2020
+ms.date: 10/11/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -223,6 +223,14 @@ Continue with [Customize the block message for unlabeled PowerPoint messages](#c
 ## Customize the block message for unlabeled PowerPoint messages
 
 This procedure describes how to customize the message that appears when a user tries to send an unlabeled PowerPoint file to external users.
+
+> [!IMPORTANT]
+> This procedure will override any settings you've already defined using the **OutlookUnlabeledCollaborationAction** advanced property, and is shown for tutorial purposes only.
+>
+> In production, we recommend that you avoid complications by *either* using the **OutlookUnlabeledCollaborationAction** advanced property to define your rules, *or* defining complex rules with a json file as defined below, but not both.
+>
+
+**To define your rule using a json file:**
 
 1. Create a **.json** file, named **OutlookCollaborationRule_1.json**, with the following code:
 

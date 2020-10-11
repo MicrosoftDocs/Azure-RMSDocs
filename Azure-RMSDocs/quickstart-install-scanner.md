@@ -4,7 +4,7 @@ description: Install the Azure Information Protection (AIP) unified labeling sca
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/09/2020
+ms.date: 10/11/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -43,7 +43,7 @@ To install the unified labeling scanner and complete this quickstart, you'll nee
 |**A supporting subscription**     |  You'll need an Azure subscription that includes [Azure Information Protection Plan 1 or Plan 2](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>If you don't have one of these subscriptions, create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
 |**Admin access to the Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with one of the following administrator accounts: </br></br>- **Compliance administrator**</br>- **Compliance data administrator**</br>- **Security administrator**</br>- **Global administrator** |
 |**Client installed**    |   Install the AIP unified labeling client on your computer to access the scanner installation. </br></br>Download and run the **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). </br></br>When the installation is complete, you may be prompted to restart your computer or Office software. Restart as needed to continue. </br></br>For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md).|
-|**SQL Server Express**     | To run the scanner, you'll need SQL Server Express installed on the scanner machine. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the **Express** option. In the installer, select the **Basic** installation type.        |
+|**SQL Server**     | To run the scanner, you'll need SQL Server installed on the scanner machine. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the installation option you want to install. In the installer, select the **Basic** installation type. </br></br>**Note**: We recommend installing SQL Server Enterprise for production environments.       |
 |**Azure Active Directory account**     |  Your domain account must be synchronized to [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). </br></br>If you're not sure about your account, contact one of your system administrators to verify the synch status.     |
 | | |
 
@@ -148,9 +148,61 @@ Once you've [configured basic scanner settings in the Azure portal](#configure-a
 
     :::image type="content" source="media/qs-tutor/qs-post-install-scanner.png" alt-text="Newly installed scanner displayed on the Nodes grid":::
 
+Continue with [installing the optional Network Discovery service](#install-the-network-discovery-service), which enables you to scan your network repositories for content that may be at risk, and then add those repositories to a content scan job.
+
+## Install the Network Discovery service
+
+Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) of the AIP unified labeling client, administrators can use the AIP scanner to scan network repositories, and then add any repositories that seem risky to a content scan job.
+
+Network scan jobs help you understand *where* your content may be at risk, by attempting to access configured repositories as both an administrator and a public user.
+
+For example, if a repository is found to have both read and write public access, you may want to scan further and confirm that no sensitive data is stored there.
+
+**To install the Network Discovery service:**
+
+1. On the scanner machine, open a PowerShell session as an administrator.
+
+1. Define the credentials you want AIP to use when running the Network Discovery service, as well as when simulating admin and public user access. 
+
+    Enter the credentials for each command when prompted using the following syntax: `domain\user`. For example: `emea\msanchez`
+
+    Run: 
+
+    **Credentials to run the Network Discovery service**:
+
+    ``` PowerShell 
+    $serviceacct= Get-Credential 
+    ``` 
+
+    **Credentials to simulate admin access**:
+
+    ``` PowerShell 
+    $shareadminacct= Get-Credential 
+    ``` 
+
+    **Credentials to simulate public user access**:
+
+    ``` PowerShell  
+    $publicaccount= Get-Credential 
+    ``` 
+
+1. To install the Network Discovery service, run:
+
+    ```PowerShell
+    Install-MIPNetworkDiscovery [-ServiceUserCredentials] <PSCredential> [[-StandardDomainsUserAccount] <PSCredential>] [[-ShareAdminUserAccount] <PSCredential>] [-SqlServerInstance] <String> -Cluster <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+
+    For example:
+
+    ```PowerShell
+    Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Quickstart -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount
+ 
+    ```
+
+The system shows a confirmation message when the installation is complete.
+
 ## Next steps
 
-Once you have the scanner installed, you're ready to start scanning. 
+Once you have the scanner and the Network Discovery service installed, you're ready to start scanning. 
 
 For more information, see [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md).
 
