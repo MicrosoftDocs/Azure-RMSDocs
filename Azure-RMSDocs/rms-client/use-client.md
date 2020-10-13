@@ -3,7 +3,7 @@
 
 title: The client for Azure Information Protection - AIP
 description: Microsoft Azure Information Protection provides a client-server solution that helps to protect an organization's data. The client (the Azure Information Protection client or the Rights Management client) is integrated with applications that you run on computers and mobile devices.
-author: mlottner
+author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/17/2020
@@ -189,7 +189,7 @@ The document tracking site that's supported by the classic client isn't supporte
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 <sup>8</sup>
-While the AIP clients support both Microsoft Office 97-2003 file formats, such as **.doc,** as well as Office Open XML formats, such as **.docx,** built-in labeling supports Open XML formats only.
+While the AIP clients support both Microsoft Office 97-2003 file formats, such as **.doc,** as well as Office Open XML formats, such as **.docx,** the built-in labeling supports Open XML formats only.
 
 ### Detailed comparisons for the Azure Information Protection clients
 
