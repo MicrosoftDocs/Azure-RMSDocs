@@ -112,7 +112,7 @@ The following tables list the supported scenarios for protecting and consuming c
 
 |Application  |Protection  |Consumption  |
 |---------|---------|---------|
-|Azure Information Protection client with Office 365 apps, Office 2019, Office 2016, and Office 2013:</br>Word, Excel, PowerPoint, Outlook     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png)        |
+|Azure Information Protection client with Microsoft 365 apps, Office 2019, Office 2016, and Office 2013:</br>Word, Excel, PowerPoint, Outlook     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png)        |
 |Azure Information Protection client with File Explorer     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png) |
 |Azure Information Protection Viewer     |   Not applicable      |  ![yes](media/yes-icon.png)       |
 |Azure Information Protection client with PowerShell labeling cmdlets     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png)        |
