@@ -6,7 +6,7 @@ description: Overview of HYOK (AD RMS) protection with Azure Information Protect
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2020
+ms.date: 10/13/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -86,26 +86,11 @@ To ensure that only users who need to apply HYOK protection see the HYOK-configu
 
 ### HYOK and email support
 
-Note the following limitations carefully when configuring HYOK and email. 
+Microsoft 365 services and other online services can't decrypt HYOK-protected content.
 
-Some of these limitations are directly related to HYOK. Others are a consequence of subsequent key management solutions requiring a connection to the Azure cloud.
+For emails, this loss of functionality includes malware scanners, Encrypt-Only protection, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
 
-Outlook for Microsoft 365 Apps for Enterprise on Windows is the only email client supported for creating and consuming HYOK-protected content. 
-Within Outlook for Microsoft 365 Apps for Enterprise, only label-based or DNF protection is supported. 
- 
-The following are not supported for HYOK-protected content:
-- Encrypt-Only protection.
-- Other email clients, such as Outlook on Mac or Mobile, or Outlook on the Web (OWA).
-- Cross-tenant consumptions.
-- Purely-offline configurations. A connection to Azure is required even though content is encrypted with an offline key, the content itself is not transferred to Azure, and is opaque to Microsoft.
-- Office 365 services, and other online services.
-- Online solutions for malware scanning, data loss prevention (DLP), mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync
- 
-> [!TIP]
-> When HYOK is configured with emails, your users may not understand why some devices aren’t able to open HYOK-protected emails, leading to additional calls to your help desk. 
->
-> Be aware of these severe limitations when configuring HYOK protection with emails.
-> 
+Users may not understand why some devices aren't able to open HYOK-protected emails, leading to additional calls to your help desk. Be aware of these severe limitations when configuring HYOK protection with emails.
 
 ## Supported applications for HYOK
 
@@ -119,35 +104,34 @@ The following tables list the supported scenarios for protecting and consuming c
 - [macOS application support for HYOK](#macos-application-support-for-hyok)
 - [iOS application support for HYOK](#ios-application-support-for-hyok)
 - [Android application support for HYOK](#android-application-support-for-hyok)
-- [Web application support for HYOK](#web-application-support-for-hyok)
-- [Universal application support for HYOK](#universal-application-support-for-hyok)
 
+> [!NOTE]
+> Office Web and Universal applications are not supported for HYOK.
 
 ### Windows application support for HYOK
 
 |Application  |Protection  |Consumption  |
 |---------|---------|---------|
-|Azure Information Protection client with Office 365 apps, Office 2019, Office 2016, and Office 2013:</br>Word, Excel, PowerPoint, Outlook   </br></br>**Important**: See also [HYOK and email support](#hyok-and-email-support).  | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png)        |
+|Azure Information Protection client with Office 365 apps, Office 2019, Office 2016, and Office 2013:</br>Word, Excel, PowerPoint, Outlook     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png)        |
 |Azure Information Protection client with File Explorer     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png) |
 |Azure Information Protection Viewer     |   Not applicable      |  ![yes](media/yes-icon.png)       |
 |Azure Information Protection client with PowerShell labeling cmdlets     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png)        |
 |Azure Information Protection scanner     |![yes](media/yes-icon.png)       |   ![yes](media/yes-icon.png)      |
-|Rights Management sharing app     |  ![no](media/no-icon.png)    |  ![yes](media/yes-icon.png)       |
+| | | |
 
 ### macOS application support for HYOK
 
 |Application|Protection|Consumption|
 |----------------------|----------|-----------|
-|Office for Mac: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)|![yes](media/yes-icon.png)|
-|Office for Mac: Outlook only | ![no](media/no-icon.png)|![no](media/no-icon.png)
-|Rights Management sharing app|![no](media/no-icon.png)| ![yes](media/yes-icon.png)|
+|Office for Mac: </br>Word, Excel, PowerPoint, Outlook|![no](media/no-icon.png)|![yes](media/yes-icon.png)|
+| | | |
 
 ### iOS application support for HYOK
 
 |Application|Protection|Consumption|
 |----------------------|----------|-----------|
 |Office Mobile: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)| ![yes](media/yes-icon.png)|
-|Office Mobile: Outlook only |![no](media/no-icon.png)|![no](media/no-icon.png)|
+|Office Mobile: </br>Outlook only|![no](media/no-icon.png)|![no](media/no-icon.png)|
 |Azure Information Protection Viewer|Not applicable|![yes](media/yes-icon.png)|
 
 ### Android application support for HYOK
@@ -155,21 +139,9 @@ The following tables list the supported scenarios for protecting and consuming c
 |Application|Protection|Consumption|
 |----------------------|----------|-----------|
 |Office Mobile: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)| ![yes](media/yes-icon.png)|
-|Office Mobile: Outlook only |![no](media/no-icon.png)|![no](media/no-icon.png)|
+|Office Mobile: </br>Outlook only|![no](media/no-icon.png)|![no](media/no-icon.png)|
 |Azure Information Protection Viewer|Not applicable| ![yes](media/yes-icon.png)|
 
-### Web application support for HYOK
-
-|Application|Protection|Consumption|
-|----------------------|----------|-----------|
-|Outlook on the web|![no](media/no-icon.png)|![no](media/no-icon.png)|
-|Office for the web: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)|![no](media/no-icon.png)|
-
-### Universal application support for HYOK
-
-|Application|Protection|Consumption|
-|----------------------|----------|-----------|
-|Office Universal apps: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)|![no](media/no-icon.png)|
 
 ## Implementing HYOK
 
