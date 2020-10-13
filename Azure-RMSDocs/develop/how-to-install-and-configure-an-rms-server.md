@@ -8,7 +8,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
@@ -71,7 +71,7 @@ The following steps guide you in setting up your RMS server and include:
    - In server-side discovery, an administrator registers a service connection point (SCP) for the RMS root cluster with Active Directory, and the client queries Active Directory to discover the SCP and establish a connection with the server.
    - In client-side discovery, you configure RMS Service Discovery settings in the registry on the computer where the RMS Client 2.1 is running. These settings point the RMS Client 2.1 to the RMS server to use. When they are present, server-side discovery is not performed.
 
-   To configure client-side discovery, you can set the following registry keys to point to your RMS server. For information about how to configure service-side discovery, see [RMS Client 2.0 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
+   To configure client-side discovery, you can set the following registry keys to point to your RMS server. For information about how to configure service-side discovery, see [RMS Client 2.0 Deployment Notes](../rms-client/client-deployment-notes.md).
 
 4. **EnterpriseCertification**
 

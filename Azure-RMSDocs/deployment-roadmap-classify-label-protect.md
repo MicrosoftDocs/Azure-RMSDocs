@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
@@ -69,13 +69,13 @@ Then, assign licenses from this subscription to each user in your organization w
 > [!IMPORTANT]
 > Do not manually assign user licenses from the free RMS for individuals subscription, and do not use this license to administer the Azure Rights Management service for your organization. 
 >
-> These licenses display as **Rights Management Adhoc** in the Microsoft 365 admin center, and **RIGHTSMANAGEMENT_ADHOC** when you run the Azure AD PowerShell cmdlet, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). 
+> These licenses display as **Rights Management Adhoc** in the Microsoft 365 admin center, and **RIGHTSMANAGEMENT_ADHOC** when you run the Azure AD PowerShell cmdlet, [Get-MsolAccountSku](/previous-versions/azure/dn194118(v=azure.100)). 
 >
 > For more information, see [RMS for individuals and Azure Information Protection](./rms-for-individuals.md).
 > 
 ## Prepare your tenant to use Azure Information Protection
 
-Before you begin using Azure Information Protection, make sure that you have user accounts and groups in Office 365 or Azure Active Directory that AIP can use to authenticate and authorize your users.
+Before you begin using Azure Information Protection, make sure that you have user accounts and groups in Microsoft 365 or Azure Active Directory that AIP can use to authenticate and authorize your users.
 
 If necessary, create these accounts and groups, or synchronize them from your on-premises directory. 
 
@@ -111,7 +111,7 @@ Determine whether you're going to use the AIP classic or the AIP unified labelin
     For more information about how to configure the labels and policy settings, see:
 
     - **Classic client:** [Configuring Azure Information Protection policy](./configure-policy.md)
-    - **Unified labeling client:** [Learn about sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
+    - **Unified labeling client:** [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels)
     
 1. **Deploy your client**
 
@@ -192,12 +192,12 @@ Perform the following steps:
     Use one of the following guides, depending on your client:
 
     - Classic: [How to configure a label for Rights Management protection](./configure-policy-protection.md)
-    - Unified labeling: [Restrict access to content by using encryption in sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
+    - Unified labeling: [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels)
     
     > [!IMPORTANT]
     > Users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). 
     > 
-    > However, until Exchange is configured for IRM or [Office 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in the following list (2 for Exchange Online, and 5 for Exchange on-premises). 
+    > However, until Exchange is configured for IRM or [Microsoft 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in the following list (2 for Exchange Online, and 5 for Exchange on-premises). 
     > 
 
 1. **Configure Office applications and services**
@@ -221,10 +221,10 @@ Perform the following steps:
     - **Classic client:** [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)
     - **Unified labeling client:** [Using PowerShell with the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-powershell.md)
 
-    For cloud-based data stores, use [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security). 
+    For cloud-based data stores, use [Azure Cloud App Security](/cloud-app-security). 
 
     > [!TIP]
-    > While classifying and protecting existing files in bulk is not one of the main use cases for cloud app security, [documented workarounds](https://docs.microsoft.com/cloud-app-security/azip-integration#enable-azure-information-protection) can help you get your files classified and protected.
+    > While classifying and protecting existing files in bulk is not one of the main use cases for cloud app security, [documented workarounds](/cloud-app-security/azip-integration#enable-azure-information-protection) can help you get your files classified and protected.
 
 6. **Deploy the connector for IRM-protected libraries on SharePoint Server, and IRM-protected emails for Exchange on-premises**
     

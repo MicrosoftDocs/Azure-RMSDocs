@@ -7,7 +7,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
@@ -49,7 +49,7 @@ Use the following resources for the classic client:
 > [!TIP]
 > There's also an Azure Information Protection app for iOS and Android. For more information, see [FAQs for Azure Information Protection app for iOS and Android](mobile-app-faq.md )
 > 
-> For Mac computers: Use the RMS sharing app and read the [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](https://technet.microsoft.com/dn451248).
+> For Mac computers: Use the RMS sharing app and read the [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](/previous-versions/msdn10/dn451248(v=msdn.10)).
 
 ## Install instructions
 

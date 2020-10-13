@@ -3,11 +3,11 @@
 
 title: Configure labels for different languages in Azure Information Protection
 description: You can add support for different languages for the labels that users see on the Information Protection bar, and for any templates that users see, by specifying the languages in the Azure Information Protection policy and importing your translations.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
@@ -37,7 +37,7 @@ ms.custom: admin
 > [!NOTE]
 > These instructions apply to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Not sure of the difference between these clients? See this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 > 
-> If you are looking for information to configure different languages for sensitivity labels, use Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
+> If you are looking for information to configure different languages for sensitivity labels, use Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label).
 
 Although the default labels for Azure Information Protection support multiple languages, you must configure support for label names and descriptions that you specify. This configuration requires you to do the following:
 
@@ -122,6 +122,3 @@ In the following scenarios, localized label (and sublabel) names are not used. F
 ## Next steps
 
 For more information about configuring the options that you can make for a label, and other settings for your Azure Information Protection policies, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.
-
-
-

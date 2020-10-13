@@ -8,7 +8,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 03/13/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
@@ -40,9 +40,9 @@ Before you can deploy your application, you must complete an IPIA with the Micro
 ## Implement user authentication for your app
 Each RMS API has a callback that must be implemented in order to enable the user's authentication. The RMS SDK 4.2 will then use your implementation of the callback when you do not provide an access token, when your access token needs to be refreshed or when the access token is expired.
 
-- Android -  [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) and [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx) interfaces.
-- iOS / OS X -  [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) protocol.
--  Windows Phone / Window RT -  [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx) interface.
+- Android -  [AuthenticationRequestCallback](/previous-versions/windows/desktop/msipcthin2/authenticationrequestcallback-interface-java) and [AuthenticationCompletionCallback](/previous-versions/windows/desktop/msipcthin2/authenticationcompletioncallback-interface-java) interfaces.
+- iOS / OS X -  [MSAuthenticationCallback](/previous-versions/windows/desktop/msipcthin2/msauthenticationcallback-protocol-objc) protocol.
+-  Windows Phone / Window RT -  [IAuthenticationCallback](/previous-versions/windows/desktop/msipcthin2/iauthenticationcallback) interface.
 - Linux -  [IAuthenticationCallback](https://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) interface.
 
 ### What library to use for authentication

@@ -3,8 +3,8 @@
 
 title: Migrate AD RMS-Azure Information Protection - phase 4
 description: Phase 4 of migrating from AD RMS to Azure Information Protection, covering steps 8 through 9 from Migrating from AD RMS to Azure Information Protection
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 04/02/2020
 ms.topic: conceptual
@@ -44,13 +44,13 @@ Independently from the Azure Information Protection tenant key topology that you
     
     When this DNS record is in place, users using Outlook on the web and mobile email clients will be able to view AD RMS protected emails in those apps, and Exchange will be able to use the key you imported from AD RMS to decrypt, index, journal, and protect content that has been protected by AD RMS.  
 
-2. Run the Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) command. If you need help running this command, see the step-by-step instructions from [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration).
+2. Run the Exchange Online [Get-IRMConfiguration](/powershell/module/exchange/get-irmconfiguration) command. If you need help running this command, see the step-by-step instructions from [Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration).
     
     From the output, check whether **AzureRMSLicensingEnabled** is set to **True**:
     
     - If AzureRMSLicensingEnabled is set to **True**, no further configuration is needed for this step. 
     
-    - If AzureRMSLicensingEnabled is set **False**, run `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` and then use the verification steps from [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) to confirm that Exchange Online is now ready to use the Azure Rights Management service. 
+    - If AzureRMSLicensingEnabled is set **False**, run `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` and then use the verification steps from [Set up new Microsoft 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) to confirm that Exchange Online is now ready to use the Azure Rights Management service. 
 
 ## Step 9. Configure IRM integration for Exchange Server and SharePoint Server
 
@@ -70,7 +70,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](./
 > [!IMPORTANT]
 > If you haven't yet configured IRM on any of your Exchange servers, do just steps 2 and 6.
 > 
-> Do all these steps if all the licensing URLs of all your AD RMS clusters are not displayed in the *LicensingLocation* parameter when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps).
+> Do all these steps if all the licensing URLs of all your AD RMS clusters are not displayed in the *LicensingLocation* parameter when you run [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration).
 
 1. On each Exchange server, locate the following folder and delete all the entries in that folder: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
 
@@ -85,7 +85,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](./
     Set-IRMConfiguration -LicensingLocation $list
     ```
 
-    Now when you run [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), you should see all your AD RMS cluster licensing URLs and your Azure Rights Management service URL displayed for the *LicensingLocation* parameter.
+    Now when you run [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration), you should see all your AD RMS cluster licensing URLs and your Azure Rights Management service URL displayed for the *LicensingLocation* parameter.
 
 3.  Now disable IRM features for messages that are sent to internal recipients:
 
