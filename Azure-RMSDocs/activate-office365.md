@@ -7,7 +7,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 05/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
@@ -37,7 +37,7 @@ If you have questions about the subscription requirements, or you need help acti
 
 1. When you have confirmed that your organization has a plan that includes Azure Rights Management, go to the [Rights Management page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) in the Microsoft 365 admin center.
     
-    If you are prompted to sign in, use an account that is a global administrator for Office 365.
+    If you are prompted to sign in, use an account that is a global administrator for Microsoft 365.
     
     > [!TIP]
     > For admin center help, see [About the Microsoft 365 admin center](/office365/admin/admin-overview/about-the-admin-center).

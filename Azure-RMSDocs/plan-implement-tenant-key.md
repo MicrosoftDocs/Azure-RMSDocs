@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/14/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
@@ -109,4 +109,4 @@ Use DKE when your organization:
 > DKE is similar to a safety deposit box that requires both a bank key and a customer key to gain access.
 > DKE-protection requires both the Microsoft-held key and the customer-held key to decrypt protected content.
 
-For more information, see [Double key encryption](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 documentation. 
+For more information, see [Double key encryption](/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 documentation.

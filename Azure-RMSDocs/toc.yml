@@ -123,7 +123,7 @@
       items:
       - name: Overview
         href: configure-applications.md
-      - name: Office 365 services
+      - name: Microsoft 365 services
         href: configure-office365.md
       - name: Office apps
         href: configure-office-apps.md
@@ -335,7 +335,7 @@
     - name: Developer's Guide
       href: ./develop/developers-guide.md
     - name: Microsoft Information Protection
-      href: https://aka.ms/mipsdkdocs
+      href: /information-protection/develop/
     - name: Rights Management SDK 4.2
       href: ./develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md
       items:
@@ -486,7 +486,7 @@
   - name: Compliance & supporting information
     href: compliance.md
   - name: PowerShell reference
-    href: https://docs.microsoft.com/powershell/azure/aip/overview?view=azureipps
+    href: /powershell/azure/aip/overview?view=azureipps
   - name: Audit log reference
     href: audit-logs.md
   - name: Terminology

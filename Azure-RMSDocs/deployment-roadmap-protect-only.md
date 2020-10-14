@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
@@ -45,7 +45,7 @@ This roadmap is recommended for customers with a subscription that doesn't suppo
 
 Perform the following steps:
 
-1. [Confirm that you have a subscription that includes the AIP protection service](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) [
+1. [Confirm that you have a subscription that includes the AIP protection service](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) 
 1. [Prepare your tenant to use Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
 1. [Install the Azure Information Protection classic and client configure applications and services for Rights Management](#install-the-azure-information-protection-classic-and-client-configure-applications-and-services-for-rights-management)
 1. [Use and monitor your data protection solutions](#use-and-monitor-your-data-protection-solutions)
@@ -60,7 +60,7 @@ Assign a license from this subscription to each user in your organization who wi
 > [!IMPORTANT]
 > Do not manually assign user licenses from the free RMS for individuals subscription and do not use this license to administer the Azure Rights Management service for your organization. 
 >
-> These licenses display as **Rights Management Adhoc** in the Microsoft 365 admin center, and **RIGHTSMANAGEMENT_ADHOC** when you run the Azure AD PowerShell cmdlet, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). 
+> These licenses display as **Rights Management Adhoc** in the Microsoft 365 admin center, and **RIGHTSMANAGEMENT_ADHOC** when you run the Azure AD PowerShell cmdlet, [Get-MsolAccountSku](/previous-versions/azure/dn194118(v=azure.100)). 
 >
 > For more information about how the RMS for individuals subscription is automatically granted and assigned to users, see [RMS for individuals and Azure Information Protection](./rms-for-individuals.md).
 
@@ -70,7 +70,7 @@ Before you begin using the protection service from Azure Information Protection,
 
 1. **Set up your user accounts and groups for AIP.**
 
-    Make sure that your Office 365 tenant contains the user accounts and groups that will be used by Azure Information Protection to authenticate and authorize users from your organization. If necessary, create these accounts and groups, or synchronize them from your on-premises directory. 
+    Make sure that your Microsoft 365 tenant contains the user accounts and groups that will be used by Azure Information Protection to authenticate and authorize users from your organization. If necessary, create these accounts and groups, or synchronize them from your on-premises directory. 
 
     For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
 

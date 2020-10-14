@@ -34,14 +34,14 @@ The following steps show how to renew the symmetric key.
 
 ## Prerequisites
 
-* Azure Active Directory (Azure AD) PowerShell module must be installed as directed in the [Azure AD Powershell Reference](https://docs.microsoft.com/powershell/msonline/).
+* Azure Active Directory (Azure AD) PowerShell module must be installed as directed in the [Azure AD Powershell Reference](/powershell/msonline/).
 
 
 ## Renewing the symmetric key after expiry
 
-You don't have to create a new service principal when the symmetric key associated with your application has expired. Instead, you can use the [PowerShell commandlets](https://docs.microsoft.com/powershell/module/msonline) provided by Microsoft Online Services (MSol) to issue a new symmetric key for an existing service principal.
+You don't have to create a new service principal when the symmetric key associated with your application has expired. Instead, you can use the [PowerShell commandlets](/powershell/module/msonline) provided by Microsoft Online Services (MSol) to issue a new symmetric key for an existing service principal.
 
-To illustrate this process, let's assume you have already created a new service principal using the [`New-MsolServicePrincipal`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential) command.
+To illustrate this process, let's assume you have already created a new service principal using the [`New-MsolServicePrincipal`](/powershell/msonline/v1/new-msolserviceprincipalcredential) command.
 
 ```
 New-MsolServicePrincipalCredential -ServicePrincipalName "SupportExampleApp"
@@ -67,7 +67,7 @@ EndDate : 3/22/2018 3:27:53 PM
 Usage : Verify
 ```
 
-This symmetric key expires on 3/22/2018 at 3:27:53PM. To use the service principal beyond this time, you need to renew the symmetric key. To do so, use the [`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential) command. 
+This symmetric key expires on 3/22/2018 at 3:27:53PM. To use the service principal beyond this time, you need to renew the symmetric key. To do so, use the [`New-MsolServicePrincipalCredential`](/powershell/msonline/v1/new-msolserviceprincipalcredential) command. 
 
 ```
 New-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963
@@ -78,7 +78,7 @@ This creates a new symmetric key for the specified **AppPrincipalId**.
 ```
 The following symmetric key was created as one was not supplied ON8YYaMYNmwSfMX625Ei4eC6N1zaeCxbc219W090v28-
 ```
-You can use the [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) command to verify that the new symmetric key is associated with the correct service principal as shown. Notice that the command lists all keys that currently associated with the service principal.
+You can use the [`GetMsolServicePrincipalCredential`](/powershell/msonline/v1/get-msolserviceprincipalcredential) command to verify that the new symmetric key is associated with the correct service principal as shown. Notice that the command lists all keys that currently associated with the service principal.
 
 ```
 Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues $true
@@ -100,7 +100,7 @@ Usage : Verify
 
 Once you have verified that the symmetric key is indeed associated with the right service principal, you can update the service principal's authentication parameters with the new key. 
 
-You can then remove the old symmetric key using the [`Remove-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/remove-msolserviceprincipalcredential) command and verify that the key is removed using the `Get-MsolServicePrincipalCredential` command.
+You can then remove the old symmetric key using the [`Remove-MsolServicePrincipalCredential`](/powershell/msonline/v1/remove-msolserviceprincipalcredential) command and verify that the key is removed using the `Get-MsolServicePrincipalCredential` command.
 
 ```
 Remove-MsolServicePrincipalCredential -KeyId acb9ad1b-36ce-4a7d-956c-40e5ac29dcbe -ObjectId 0ee53770-ec86-409e-8939-6d8239880518
@@ -109,4 +109,4 @@ Remove-MsolServicePrincipalCredential -KeyId acb9ad1b-36ce-4a7d-956c-40e5ac29dcb
 ## Related topics
 
 * [How-to: enable your service application to work with cloud-based RMS](how-to-use-file-api-with-aadrm-cloud.md)
-* [Azure Active Directory MSOnline Powershell reference](https://docs.microsoft.com/powershell/msonline/)
+* [Azure Active Directory MSOnline Powershell reference](/powershell/msonline/)

@@ -8,7 +8,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
@@ -104,7 +104,7 @@ Enable automatic logging
 CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 ```
 
-For more information on optional settings, see [CustomerExperienceOptions](https://msdn.microsoft.com/library/microsoft.rightsmanagement.customerexperienceoptions.aspx).
+For more information on optional settings, see [CustomerExperienceOptions](/previous-versions/windows/desktop/msipcthin2/customerexperienceoptions).
 
 Get current logging control flag setting
 

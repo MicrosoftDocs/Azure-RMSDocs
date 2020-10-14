@@ -3,11 +3,11 @@
 
 title: Prepare users and groups for Azure Information Protection
 description: Check that you have the user and group accounts that you need to start classifying, labeling, and protecting your organization's documents and emails.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: batamig
+ms.author: bagol
+manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
@@ -78,15 +78,15 @@ For assigning usage rights and access controls, and configuring the Azure Rights
 
 - To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
 
-- The **Azure AD proxyAddresses** attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox automatically has an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. 
+- The **Azure AD proxyAddresses** attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Microsoft 365 that has an Exchange Online mailbox automatically has an email address that is stored in this attribute. If you assign an alternative email address for a Microsoft 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. 
 
     Azure Information Protection can use any value in this Azure AD proxyAddresses attribute, providing the domain has been added to your tenant (a "verified domain"). For more information about verifying domains:
 
     - For Azure AD: [Add a custom domain name to Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - For Office 365: [Add a domain to Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - For Office 365: [Add a domain to Office 365](/office365/admin/setup/add-domain)
 
-- The **Azure AD userPrincipalName** attribute is used only when an account in your tenant doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
+- The **Azure AD userPrincipalName** attribute is used only when an account in your tenant doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Microsoft 365 that doesn't have a mailbox.
 
 ### Assigning usage rights and access controls to external users
 
@@ -104,7 +104,7 @@ For assigning labels:
 
 - To configure scoped policies that assign additional labels to group members, you can use any type of group in Azure AD that has an email address that contains a verified domain for the user's tenant. A group that has an email address is often referred to as a mail-enabled group.
 
-    For example, you can use a mail-enabled security group, a static distribution group, and an Office 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address. You also cannot use a dynamic distribution list from Exchange Online because this group isn't replicated to Azure AD.
+    For example, you can use a mail-enabled security group, a static distribution group, and a Microsoft 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address. You also cannot use a dynamic distribution list from Exchange Online because this group isn't replicated to Azure AD.
 
 For assigning usage rights and access controls:
 
@@ -132,7 +132,7 @@ From the attributes list for Azure Rights Management, you see that for users, th
 
 You can use Azure AD PowerShell to confirm that users and groups can be used with Azure Information Protection. You can also use PowerShell to confirm the values that can be used to authorize them. 
 
-For example, using the V1 PowerShell module for Azure Active Directory, [MSOnline](/powershell/module/msonline/?view=azureadps-1.0), in a PowerShell session, first connect to the service and supply your global admin credentials:
+For example, using the V1 PowerShell module for Azure Active Directory, [MSOnline](/powershell/module/msonline/), in a PowerShell session, first connect to the service and supply your global admin credentials:
 
 ```ps
 Connect-MsolService
@@ -199,7 +199,7 @@ Get-MsolGroup | select DisplayName, ProxyAddresses
 
 Make sure that the groups you want to use with Azure Information Protection are displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for the Azure Rights Management service.
 
-Then check that the groups contain the users (or other groups) that you want to use for Azure Information Protection. You can use PowerShell to do this (for example, [Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember?view=azureadps-1.0)), or use your management portal.
+Then check that the groups contain the users (or other groups) that you want to use for Azure Information Protection. You can use PowerShell to do this (for example, [Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember)), or use your management portal.
 
 For the two Azure Rights Management service configuration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that can be used to identify these groups. You can also use the Azure portal to find these groups and copy the values for the object ID and the display name:
 

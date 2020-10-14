@@ -7,7 +7,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 07/03/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
@@ -101,5 +101,5 @@ None at this time.
 
 Best practices for implementing applications by using the AIP SDK include the following articles:
 
-- [Threat Models and Mitigations](https://msdn.microsoft.com/library/aa362751.aspx)
-- [Security Attacks](https://msdn.microsoft.com/library/aa362736.aspx)
+- [Threat Models and Mitigations](/previous-versions//aa362751(v=vs.85))
+- [Security Attacks](/previous-versions//aa362736(v=vs.85))

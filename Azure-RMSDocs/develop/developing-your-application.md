@@ -8,7 +8,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 07/03/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
@@ -39,9 +39,9 @@ Getting Azure set up for this app requires you to create a Tenant ID, a Symmetri
 
 ### Azure AD Tenant configuration
 
-To configure the Azure AD environment for Azure Information Protection, follow the guidance in [Activating the protection service from Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
+To configure the Azure AD environment for Azure Information Protection, follow the guidance in [Activating the protection service from Azure Information Protection](/information-protection/deploy-use/activate-service).
 
-Once the service is activated you will need PowerShell components for the next steps. Follow [Administering protection from Azure Information Protection by using PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) to accomplish this.
+Once the service is activated you will need PowerShell components for the next steps. Follow [Administering protection from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell) to accomplish this.
 
 ### Getting your Tenant ID
 

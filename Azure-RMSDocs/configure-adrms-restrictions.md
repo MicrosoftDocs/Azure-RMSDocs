@@ -6,8 +6,8 @@ description: Overview of HYOK (AD RMS) protection with Azure Information Protect
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
-ms.topic: conceptual
+ms.date: 10/13/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
@@ -49,7 +49,7 @@ Cloud-based keys are managed in Azure Key Vault, which provides customers with t
 
 - **Cloud-based authentication** enables easier sharing with partners and users from other organizations. 
 
-- **Tight integration with other Azure and Office 365 services**, such as search, web viewers, pivoted views, anti-malware, eDiscovery, and Delve.
+- **Tight integration with other Azure and Microsoft 365 services**, such as search, web viewers, pivoted views, anti-malware, eDiscovery, and Delve.
 
 - **Document tracking**, **revocation**, and **email notifications** for sensitive documents that you have shared.
 
@@ -86,11 +86,11 @@ To ensure that only users who need to apply HYOK protection see the HYOK-configu
 
 ### HYOK and email support
 
-Office 365 services and other online services can't decrypt HYOK-protected content.
+Microsoft 365 services and other online services can't decrypt HYOK-protected content.
 
-For emails, this loss of functionality includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
+For emails, this loss of functionality includes malware scanners, Encrypt-Only protection, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
 
-Users may not understand why some devices aren't able to open HYOK-protected emails, leading to additional calls to your help desk. To avoid these extra help calls, do not configure HYOK protection for emails.
+Users may not understand why some devices aren't able to open HYOK-protected emails, leading to additional calls to your help desk. Be aware of these severe limitations when configuring HYOK protection with emails.
 
 ## Supported applications for HYOK
 
@@ -104,27 +104,27 @@ The following tables list the supported scenarios for protecting and consuming c
 - [macOS application support for HYOK](#macos-application-support-for-hyok)
 - [iOS application support for HYOK](#ios-application-support-for-hyok)
 - [Android application support for HYOK](#android-application-support-for-hyok)
-- [Web application support for HYOK](#web-application-support-for-hyok)
-- [Universal application support for HYOK](#universal-application-support-for-hyok)
 
+> [!NOTE]
+> Office Web and Universal applications are not supported for HYOK.
 
 ### Windows application support for HYOK
 
 |Application  |Protection  |Consumption  |
 |---------|---------|---------|
-|Azure Information Protection client with Office 365 apps, Office 2019, Office 2016, and Office 2013:</br>Word, Excel, PowerPoint, Outlook     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png)        |
+|Azure Information Protection client with Microsoft 365 apps, Office 2019, Office 2016, and Office 2013:</br>Word, Excel, PowerPoint, Outlook     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png)        |
 |Azure Information Protection client with File Explorer     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png) |
 |Azure Information Protection Viewer     |   Not applicable      |  ![yes](media/yes-icon.png)       |
 |Azure Information Protection client with PowerShell labeling cmdlets     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png)        |
 |Azure Information Protection scanner     |![yes](media/yes-icon.png)       |   ![yes](media/yes-icon.png)      |
-|Rights Management sharing app     |  ![no](media/no-icon.png)    |  ![yes](media/yes-icon.png)       |
+| | | |
 
 ### macOS application support for HYOK
 
 |Application|Protection|Consumption|
 |----------------------|----------|-----------|
 |Office for Mac: </br>Word, Excel, PowerPoint, Outlook|![no](media/no-icon.png)|![yes](media/yes-icon.png)|
-|Rights Management sharing app|![no](media/no-icon.png)| ![yes](media/yes-icon.png)|
+| | | |
 
 ### iOS application support for HYOK
 
@@ -142,18 +142,6 @@ The following tables list the supported scenarios for protecting and consuming c
 |Office Mobile: </br>Outlook only|![no](media/no-icon.png)|![no](media/no-icon.png)|
 |Azure Information Protection Viewer|Not applicable| ![yes](media/yes-icon.png)|
 
-### Web application support for HYOK
-
-|Application|Protection|Consumption|
-|----------------------|----------|-----------|
-|Outlook on the web|![no](media/no-icon.png)|![no](media/no-icon.png)|
-|Office for the web: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)|![no](media/no-icon.png)|
-
-### Universal application support for HYOK
-
-|Application|Protection|Consumption|
-|----------------------|----------|-----------|
-|Office Universal apps: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)|![no](media/no-icon.png)|
 
 ## Implementing HYOK
 
@@ -186,7 +174,7 @@ An AD RMS deployment must meet the following requirements to provide HYOK protec
 > - Configure your AD RMS cluster with a hardware security module (HSM). This helps to ensure that your Server Licensor Certificate (SLC) private key cannot be exposed or stolen if your AD RMS deployment should ever be breached or compromised.
 
 > [!TIP]
-> For deployment information and instructions for AD RMS, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. 
+> For deployment information and instructions for AD RMS, see [Active Directory Rights Management Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831364(v=ws.11)) in the Windows Server library. 
 
 #### AD RMS configuration requirements
 
@@ -195,14 +183,14 @@ To support HYOK, ensure that your AD RMS system has the following configurations
 |Requirement  |Description  |
 |---------|---------|
 |**Windows version**     |At minimum, one of the following Windows versions: </br></br>**Production environments:** Windows Server 2012 R2</br>**Testing/evaluation environments**: Windows Server 2008 R2 with Service Pack 1        |
-|**Topology**     |HYOK requires one of the following topologies: </br>- A single forest, with a single AD RMS cluster </br>- Multiple forests, with AD RMS clusters in each of them. </br></br>**Licensing for multiple forests**</br> If you have multiple forests, each AD RMS cluster shares a licensing URL that points to the same AD RMS cluster. </br>On this AD RMS cluster, import all the trusted user domain (TUD) certificates from all other AD RMS clusters. </br>For more information about this topology, see [Trusted User Domain](https://technet.microsoft.com/library/dd983944(v=ws.10).aspx). </br></br>**Global policy labels for multiple forests**</br>When you have multiple AD RMS clusters in separate forests, delete any labels in the global policy that apply HYOK (AD RMS) protection and configure a [scoped policy](configure-policy-scope.md) for each cluster. <br>Assign users for each cluster to their scoped policy, making sure that you do not use groups that would result in a user being assigned to more than one scoped policy.</br>The result should be that each user has labels for one AD RMS cluster only.          |
-|**Cryptographic mode**     | Your AD RMS must be configured with [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx). </br>Confirm the mode by checking the AD RMS cluster properties, **General** tab.        |
+|**Topology**     |HYOK requires one of the following topologies: </br>- A single forest, with a single AD RMS cluster </br>- Multiple forests, with AD RMS clusters in each of them. </br></br>**Licensing for multiple forests**</br> If you have multiple forests, each AD RMS cluster shares a licensing URL that points to the same AD RMS cluster. </br>On this AD RMS cluster, import all the trusted user domain (TUD) certificates from all other AD RMS clusters. </br>For more information about this topology, see [Trusted User Domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd983944(v=ws.10)). </br></br>**Global policy labels for multiple forests**</br>When you have multiple AD RMS clusters in separate forests, delete any labels in the global policy that apply HYOK (AD RMS) protection and configure a [scoped policy](configure-policy-scope.md) for each cluster. <br>Assign users for each cluster to their scoped policy, making sure that you do not use groups that would result in a user being assigned to more than one scoped policy.</br>The result should be that each user has labels for one AD RMS cluster only.          |
+|**Cryptographic mode**     | Your AD RMS must be configured with [Cryptographic Mode 2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)). </br>Confirm the mode by checking the AD RMS cluster properties, **General** tab.        |
 |**Certification URL configuration**     | Each AD RMS server must be configured for the certification URL. </br>For more information, see [below](#configuring-ad-rms-servers-to-locate-the-certification-url).        |
 |**Service connection points**     | A service connection point (SCP) is not used when you use AD RMS protection with Azure Information Protection. </br></br>**If you have an SCP registered for your AD RMS deployment**, remove it to ensure that [service discovery](./rms-client/client-deployment-notes.md#rms-service-discovery) is successful for Azure Rights Management protection. </br></br>**If you are installing a new AD RMS cluster for HYOK**, do not register the SCP when configuring the first node. For each additional node, make sure that the server is configured for the certification URL before you add the AD RMS role and join the existing cluster.         |
 |**SSL/TLS**     |In production environments, the AD RMS servers must be configured to use SSL/TLS with a valid x.509 certificate that is trusted by the connecting clients. </br></br>This is not required for testing or evaluation purposes.         |
 |**Rights templates**     |You must have rights templates configured for your AD RMS.         |
 |**Exchange IRM**    |Your AD RMS cannot not be configured for Exchange IRM.         |
-|**Mobile devices / Mac computers**     | You must have the [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx) installed and configured.        |
+|**Mobile devices / Mac computers**     | You must have the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)) installed and configured.        |
 
 
 #### Configuring AD RMS servers to locate the certification URL

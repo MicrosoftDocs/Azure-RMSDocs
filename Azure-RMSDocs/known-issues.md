@@ -44,7 +44,7 @@ For more information, see [Admin Guide: File types supported by the Azure Inform
 
 ## Known issues for installing the AIP client
 
-The Azure Information Protection client is not supported on machines where [Exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled.
+The Azure Information Protection client is not supported on machines where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled.
 
 Make sure to disable Exploit protection before installing AIP. 
 
@@ -74,11 +74,12 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 |---------|---------|
 |**Multiple versions of Office**    | The Azure Information Protection clients, including both classic and unified labeling, do not support multiple versions of Office on the same computer, or switching user accounts in Office.       |
 |**Multiple displays** |If you're using multiple displays and have an Office application open: </br></br>- You may experience performance issues in your Office apps.</br>- The Azure Information Protection bar may appear to float in the middle of the Office screen, on one or both displays </br></br>To ensure consistent performance, and that the bar remains in the correct location, open the **Options** dialog for your Office application, and under **General,** select **Optimize for compatibility** instead of **Optimize for best appearance.**    |
-|**IRM support in Office 2016**| The [DRMEncryptProperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) registry setting, which controls metadata encryption in Office 2016, is not supported for Azure Information Protection labels.|
+|**IRM support in Office 2016**| The [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) registry setting, which controls metadata encryption in Office 2016, is not supported for Azure Information Protection labels.|
 |**Content markings in Word**    | Azure Information Protection content [markings](configure-policy-markings.md) may be hidden in Microsoft Word footers, when the footer also contains a table. For more information, see [When visual markings are applied](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**Files attached to emails** |Due to a limitation in recent Windows updates, when [Microsoft Outlook is protected by Azure Rights Management](office-apps-services-support.md), files attached to emails may be locked after opening the file. |
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
 | **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane may cause performance issues. </br></br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. </br></br>**Note:** Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
+|**Send to File Explorer option** |If you choose to right-click on any file in the File Explorer and select **Send to > Mail recipient**, the Outlook message that opens with the file attached may not display the AIP toolbar. </br></br>If this occurs and you need to use the AIP toolbar options, start your email from within Outlook and then browse to and attach the file you want to send.|
 | | |
 
 ## Known issues in policies
@@ -142,4 +143,3 @@ The following additional articles may be helpful in answering questions about kn
 - [Frequently asked questions about data protection in Azure Information Protection](faqs-rms.md)
 - [Frequently asked questions about classification and labeling in Azure Information Protection](faqs-infoprotect.md)
 - [FAQs for Microsoft Azure Information Protection app for iOS and Android](rms-client/mobile-app-faq.md)
-
