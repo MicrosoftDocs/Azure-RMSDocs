@@ -166,6 +166,8 @@ To compare the Office built-in sensitivity labeling features across different op
 |Support for AD RMS:| **Yes** | No <sup>6</sup> | No |
 |Remove external content marking in app:| **Yes**| **Yes**| No|
 |Support for Microsoft Office 97-2003 formats| **Yes** | **Yes** | No <sup>8</sup>|
+|Double Key Encryption:| No | **Yes** | No|
+|Government Community Cloud: | **Yes** | **Yes** | No|
 | | | | |
 
 **Footnotes:**
