@@ -6,7 +6,7 @@ description: Overview of HYOK (AD RMS) protection with Azure Information Protect
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
+ms.date: 10/13/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -88,7 +88,7 @@ To ensure that only users who need to apply HYOK protection see the HYOK-configu
 
 Microsoft 365 services and other online services can't decrypt HYOK-protected content.
 
-For emails, this loss of functionality includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
+For emails, this loss of functionality includes malware scanners, Encrypt-Only protection, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
 
 Users may not understand why some devices aren't able to open HYOK-protected emails, leading to additional calls to your help desk. Be aware of these severe limitations when configuring HYOK protection with emails.
 
@@ -104,9 +104,9 @@ The following tables list the supported scenarios for protecting and consuming c
 - [macOS application support for HYOK](#macos-application-support-for-hyok)
 - [iOS application support for HYOK](#ios-application-support-for-hyok)
 - [Android application support for HYOK](#android-application-support-for-hyok)
-- [Web application support for HYOK](#web-application-support-for-hyok)
-- [Universal application support for HYOK](#universal-application-support-for-hyok)
 
+> [!NOTE]
+> Office Web and Universal applications are not supported for HYOK.
 
 ### Windows application support for HYOK
 
@@ -117,14 +117,14 @@ The following tables list the supported scenarios for protecting and consuming c
 |Azure Information Protection Viewer     |   Not applicable      |  ![yes](media/yes-icon.png)       |
 |Azure Information Protection client with PowerShell labeling cmdlets     | ![yes](media/yes-icon.png)        | ![yes](media/yes-icon.png)        |
 |Azure Information Protection scanner     |![yes](media/yes-icon.png)       |   ![yes](media/yes-icon.png)      |
-|Rights Management sharing app     |  ![no](media/no-icon.png)    |  ![yes](media/yes-icon.png)       |
+| | | |
 
 ### macOS application support for HYOK
 
 |Application|Protection|Consumption|
 |----------------------|----------|-----------|
 |Office for Mac: </br>Word, Excel, PowerPoint, Outlook|![no](media/no-icon.png)|![yes](media/yes-icon.png)|
-|Rights Management sharing app|![no](media/no-icon.png)| ![yes](media/yes-icon.png)|
+| | | |
 
 ### iOS application support for HYOK
 
@@ -142,18 +142,6 @@ The following tables list the supported scenarios for protecting and consuming c
 |Office Mobile: </br>Outlook only|![no](media/no-icon.png)|![no](media/no-icon.png)|
 |Azure Information Protection Viewer|Not applicable| ![yes](media/yes-icon.png)|
 
-### Web application support for HYOK
-
-|Application|Protection|Consumption|
-|----------------------|----------|-----------|
-|Outlook on the web|![no](media/no-icon.png)|![no](media/no-icon.png)|
-|Office for the web: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)|![no](media/no-icon.png)|
-
-### Universal application support for HYOK
-
-|Application|Protection|Consumption|
-|----------------------|----------|-----------|
-|Office Universal apps: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)|![no](media/no-icon.png)|
 
 ## Implementing HYOK
 
