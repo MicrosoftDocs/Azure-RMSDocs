@@ -267,21 +267,23 @@ After you've [configured the Azure Information Protection scanner in the Azure p
  
 1. Open a Windows PowerShell session with the **Run as an administrator** option.
 
-1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner, and the scanner cluster name that you specified in the preceding section: 
+1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner, and the scanner cluster name that you [specified in the preceding section](#create-a-scanner-cluster): 
     
     ```
-    Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
+    Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
     ```
     
-    Examples, using the profile name of **Europe**:
+    Examples, using the scanner cluster name of **Europe**:
     
-    - For a default instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Profile Europe`
+    - For a default instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster Europe`
     
-    - For a named instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Profile Europe`
+    - For a named instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster Europe`
     
-    - For SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Profile Europe`
+    - For SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Europe`
     
-    When you are prompted, provide the credentials for the scanner service account (\<domain\user name>) and password.
+    When you are prompted, provide the Active Directory credentials for the scanner service account.
+
+    Use the following syntax: `\<domain\user name>`. For example: `contoso\scanneraccount`
 
 1. Verify that the service is now installed by using **Administrative Tools** > **Services**. 
     
