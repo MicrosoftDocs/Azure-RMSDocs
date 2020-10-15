@@ -71,7 +71,7 @@ Once you've [installed the AIP mobile app](#download-and-install-the-aip-app-for
 
     For example:
 
-    :::image type="content" source="../media/mobile-viewer-ios.png" alt-text="Share to AIP Viewer in iOS":::
+    :::image type="content" source="../media/ios-share-to-aip-viewer.png" alt-text="Share to AIP Viewer in iOS":::
 
 1. Sign in, or select a certificate as prompted.
 
