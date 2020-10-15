@@ -262,6 +262,8 @@ After you've [configured the Azure Information Protection scanner in the Azure p
 1. Sign in to the Windows Server computer that will run the scanner. Use an account that has local administrator rights and that has permissions to write to the SQL Server master database.
 
     > [!IMPORTANT]
+    > You must have the AIP unified labeling client installed on your machine before installing the scanner. 
+    >
     > For more information, see [Prerequisites for installing and deploying the Azure Information Protection scanner](deploy-aip-scanner-prereqs.md).
     >
  
