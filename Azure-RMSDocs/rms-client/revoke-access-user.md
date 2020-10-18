@@ -41,7 +41,7 @@ To revoke access from Word, Excel, or PowerPoint:
 
 1. Open the protected file whose access you want to revoke. This must be a file where *you* have applied the protection, using your *current* user account.
 
-    > [!NOTE]
+    > [!TIP]
     > If you've only just applied a label and protection, you cannot revoke access in the same session. Reopen the document if you need to revoke access.
 
 1. On the **Home** tab, click the **Sensitivity** button and select **Revoke Access**:
