@@ -6,7 +6,7 @@ description: Describes how end users can use the AIP client to revoke document a
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/22/2020
+ms.date: 10/18/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -41,19 +41,21 @@ To revoke access from Word, Excel, or PowerPoint:
 
 1. Open the protected file whose access you want to revoke. This must be a file where *you* have applied the protection, using your *current* user account.
 
+    > [!NOTE]
+    > If you've only just applied a label and protection, you cannot revoke access in the same session. Reopen the document if you need to revoke access.
+
 1. On the **Home** tab, click the **Sensitivity** button and select **Revoke Access**:
 
     :::image type="content" source="../media/track-revoke-word.png" alt-text="Select Revoke Access from Microsoft Word":::
 
     > [!NOTE]
-    > If you do not see these options, the AIP unified labeling client may not be installed on your machine, or you may need to still restart your Office apps or machine after installation. 
+    > If you do not see these options, you may be viewing an unprotected document, the AIP unified labeling client may not be installed on your machine, or you may need to still restart your Office apps or machine after installation.
     >
     > For more information, see [User Guide: Download and install the Azure Information Protection client](install-client-app.md).
 
 1. In the confirmation message that appears, click **Yes** to continue.
 
 Access is revoked, and other users can no longer access the document.
-
 
 ### Revoking access where the document protection has been changed
 
