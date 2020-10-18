@@ -1383,7 +1383,7 @@ AIP administrators can customize the popup messages that appear to end users in 
 
 **To customize your Outlook popup messages:**
 
-1. Create **.json** files, each with a rule that configures how Outlook displays popup messages to your users. For more information, see [Rule value .json syntax](#rule-value-json-syntax) and [Sample popup customization .json code](#sample-popup-customziation-json-code).
+1. Create **.json** files, each with a rule that configures how Outlook displays popup messages to your users. For more information, see [Rule value .json syntax](#rule-value-json-syntax) and [Sample popup customization .json code](#sample-popup-customization-json-code).
 
 1. Use PowerShell to define advanced settings that control the popup messages you're configuring. Run a separate set of commands for each rule you want to configure.
 
@@ -1403,7 +1403,7 @@ AIP administrators can customize the popup messages that appear to end users in 
     
         `OutlookCollaborationRule_<x>` 
 
-    For more information, see [Ordering your Outlook customization rules](#ordering-your-outlook-customziation-rules) and [Rule value json syntax](#rule-value-json-syntax).
+    For more information, see [Ordering your Outlook customization rules](#ordering-your-outlook-customization-rules) and [Rule value json syntax](#rule-value-json-syntax).
 
    
 > [!TIP]
@@ -1495,7 +1495,7 @@ The following sets of **.json** code show how you can define a variety of rules 
 - [**Example 2**: Block unclassified Office attachments](#example-2-block-unclassified-office-attachments)
 - [**Example 3**: Require the user to accept sending a Confidential email or attachment](#example-3-require-the-user-to-accept-sending-a-confidential-email-or-attachment)
 - [**Example 4**: Warn on mail with no label, and an attachment with a specific label](#example-4-warn-on-mail-with-no-label-and-an-attachment-with-a-specific-label)
-- [**Example 5**: Prompt for a justification, with two predefined options, and an extra free-text option](#example-5-prompt-for-a-justificaiton-with-two-predefined-options-and-an-extra-free-text-option)
+- [**Example 5**: Prompt for a justification, with two predefined options, and an extra free-text option](#example-5-prompt-for-a-justification-with-two-predefined-options-and-an-extra-free-text-option)
 
 #### Example 1: Block Internal emails or attachments
 
