@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
+ms.date: 10/18/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -1033,7 +1033,9 @@ Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=Con
 
 ### Extend your label migration rules to emails
 
-You can use your labelByCustomProperties advanced settings with Outlook emails in addition to Office documents by specifying an additional label policy advanced setting. However, this setting has a known negative impact on the performance of Outlook, so configure this additional setting only when you have a strong business requirement for it and remember to set it to a null string value when you have completed the migration from the other labeling solution.
+You can use the configuration you've defined with the [*labelByCustomProperties*](#migrate-labels-from-secure-islands-and-other-labeling-solutions) advanced setting for Outlook emails, in addition to Office documents, by specifying an additional label policy advanced setting. 
+
+However, this setting has a known negative impact on the performance of Outlook, so configure this additional setting only when you have a strong business requirement for it and remember to set it to a null string value when you have completed the migration from the other labeling solution.
 
 To configure this advanced setting, enter the following strings for the selected label policy:
 
@@ -1049,7 +1051,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="Tr
 
 ### Extend your label migration rules to SharePoint properties
 
-You can use your labelByCustomProperties advanced settings with SharePoint properties that you might expose as columns to users.
+You can use the configuration you've defined with the [*labelByCustomProperties*](#migrate-labels-from-secure-islands-and-other-labeling-solutions) advanced setting for SharePoint properties that you might expose as columns to users by specifying an additional label policy advanced setting.
 
 This setting is supported when you use Word, Excel, and PowerPoint.
 
