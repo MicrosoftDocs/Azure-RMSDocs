@@ -216,7 +216,7 @@ The following fixes were delivered in version 2.8.85.0 of the Azure Information 
 - Fixes for viewing JPEG files in the [AIP Viewer](clientv2-view-use-files.md)
 - Downgrading a label now automatically includes the **ProtectionOwnerBefore** in [audit events](../audit-logs.md#downgrade-label-audit-logs)
 - Change events now include the **LastModifiedDate** in [audit logs](../audit-logs.md#change-protection-audit-logs)
-- Added support for **Proxy.pac** files when [using a proxy](../requirements.md#firewalls-and-network-infrastructure) to acquire a token. To enable this fix, set the new registry key **UseDefaultCredentialsInProxy = 1**.
+- Added support for **Proxy.pac** files when [using a proxy](../requirements.md#firewalls-and-network-infrastructure) to acquire a token. To enable this fix, add a new registry key at **Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\UseDefaultCredentialsInProxy,** and set the value to **1.**
 - Fixes for authenticating when [refreshing policies](../configure-policy.md#making-changes-to-the-policy)
 - Fixes for [automatic content marking](../configure-policy-markings.md) updates for PowerPoint in read-only mode
 - Improvements in popups and error texts
