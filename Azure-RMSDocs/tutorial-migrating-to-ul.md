@@ -292,7 +292,7 @@ The following images show examples of how sensitivity labels can be applied acro
 
 #### Built-in Outlook for the Web
 
-:::image type="content" source="media/qs-tutor/sample-outlook-on-the-web.PNG" alt-text="Sample button for built-in Outlook for the Web"::
+:::image type="content" source="media/qs-tutor/sample-outlook-on-the-web.png" alt-text="Sample button for built-in Outlook on the Web":::
 
 ### What changes for classic client end users?
 
