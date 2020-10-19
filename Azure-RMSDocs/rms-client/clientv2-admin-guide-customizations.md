@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/03/2020
+ms.date: 10/18/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -33,9 +33,11 @@ ms.custom: admin
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection unified labeling client.
+Use the following information for advanced configurations needed for specific scenarios or users when managing the AIP unified labeling client.
 
-These settings require editing the registry or specifying advanced settings. The advanced settings use [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps).
+> [!NOTE]
+> These settings require editing the registry or specifying advanced settings. The advanced settings use [Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell).
+> 
 
 ### How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell
 
@@ -44,7 +46,7 @@ When you use Office 365 Security & Compliance Center PowerShell, you can configu
 - The setting to display the Information Protection bar in Office apps is a ***label policy advanced setting***.
 - The setting to specify a label color is a ***label advanced setting***.
 
-In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Use the following syntax:
+In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell), specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](/powershell/module/microsoft.powershell.core/about/about_hash_tables). Use the following syntax:
 
 For a label policy setting, single string value:
 
@@ -131,7 +133,7 @@ Using one of the admin centers where you manage your sensitivity labels, you can
 
 - **Provide users with a link to a custom help page**
 
-When more than one label policy is configured for a user, each with potentially different policy settings, the last policy setting is applied according to the order of the policies in the admin center. For more information, see [Label policy priority (order matters)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
+When more than one label policy is configured for a user, each with potentially different policy settings, the last policy setting is applied according to the order of the policies in the admin center. For more information, see [Label policy priority (order matters)](/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
 
 Label advanced settings follow the same logic for precedence: When a label is in multiple label policies and that label has advanced settings, the last advanced setting is applied according to the order of the policies in the admin center.
 
@@ -140,7 +142,7 @@ Label policy advanced settings are applied in the reverse order: With one except
 
 #### Available advanced settings for label policies
 
-Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) and [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
+Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/exchange/policy-and-compliance/new-labelpolicy) and [Set-LabelPolicy](/powershell/module/exchange/policy-and-compliance/set-labelpolicy).
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
@@ -149,7 +151,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |AttachmentActionTip|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |DisableMandatoryInOutlook|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
 |EnableAudit|[Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
-|EnableContainerSupport|[Enable removal of protection from PST, rar, 7zip and MSG files](#enable-removal-of-protection-from-compressed-files)
+|EnableContainerSupport|[Enable removal of protection from PST, rar, 7zip, and MSG files](#enable-removal-of-protection-from-compressed-files)
 |EnableCustomPermissions|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -188,7 +190,7 @@ Example PowerShell command to check your label policy settings in effect for a l
 
 #### Available advanced settings for labels
 
-Use the *AdvancedSettings* parameter with [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) and [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
+Use the *AdvancedSettings* parameter with [New-Label](/powershell/module/exchange/policy-and-compliance/new-label) and [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label).
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
@@ -263,7 +265,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnable
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When you configure this setting, the  [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) cmdlet **Set-AIPFileLabel** is enabled to allow removal of protection from PST, rar, 7zip and MSG files.
+When you configure this setting, the  [PowerShell](./clientv2-admin-guide-powershell.md) cmdlet **Set-AIPFileLabel** is enabled to allow removal of protection from PST, rar, 7zip, and MSG files.
 
 - Key: **EnableContainerSupport**
 
@@ -357,7 +359,7 @@ Example 1: PowerShell command to behave like the default behavior where Protect 
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
 ```
 
-Example 2:  PowerShell command to change all PFile extensions from generic protection (dwg.pfile) to native protection (.pdwg) when the files is protected:
+Example 2:  PowerShell command to change all PFile extensions from generic protection (dwg.pfile) to native protection (.pdwg) when the files are protected:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
@@ -404,13 +406,13 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave
 
 This configuration uses policy [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-There are two methods to remove classifications from other labeling solutions. The first method removes any shape from Word documents where the shape name matches the name as defined in the advanced property **WordShapeNameToRemove**, the second method lets you remove or replace text-based headers or footers from Word, Excel and PowerPoint documents as defined in the **RemoveExternalContentMarkingInApp** advanced property. 
+There are two methods to remove classifications from other labeling solutions. The first method removes any shape from Word documents where the shape name matches the name as defined in the advanced property **WordShapeNameToRemove**, the second method lets you remove or replace text-based headers or footers from Word, Excel, and PowerPoint documents as defined in the **RemoveExternalContentMarkingInApp** advanced property. 
 
 ### Use the WordShapeNameToRemove advanced property
 
 *The **WordShapeNameToRemove** advanced property is supported from version 2.6.101.0 and above*
 
-This setting lets you remove or replace shape based labels from Word documents when those visual markings have been applied by another labeling solution. For example, the shape contains the name of an old label that you have now migrated to sensitivity labels to use a new label name and its own shape.
+This setting lets you remove or replace shape-based labels from Word documents when those visual markings have been applied by another labeling solution. For example, the shape contains the name of an old label that you have now migrated to sensitivity labels to use a new label name and its own shape.
 
 To use this advanced property, you'll need to find the shape name in the Word document and then define them in the **WordShapeNameToRemove** advanced property list of shapes. The service will remove any shape in Word that starts with a name defined in list of shapes in this advanced property.
 
@@ -893,6 +895,8 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
 ## Limit CPU consumption
 
+Scanner limits resources consumption to ensure overall machine CPU is never higher than 85 percent. 
+
 Starting from scanner version 2.7.x.x, we recommend limiting CPU consumption using the following **ScannerMaxCPU** and **ScannerMinCPU** advanced settings method. 
 
 > [!IMPORTANT]
@@ -1029,7 +1033,9 @@ Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=Con
 
 ### Extend your label migration rules to emails
 
-You can use your labelByCustomProperties advanced settings with Outlook emails in addition to Office documents by specifying an additional label policy advanced setting. However, this setting has a known negative impact on the performance of Outlook, so configure this additional setting only when you have a strong business requirement for it and remember to set it to a null string value when you have completed the migration from the other labeling solution.
+You can use the configuration you've defined with the [*labelByCustomProperties*](#migrate-labels-from-secure-islands-and-other-labeling-solutions) advanced setting for Outlook emails, in addition to Office documents, by specifying an additional label policy advanced setting. 
+
+However, this setting has a known negative impact on the performance of Outlook, so configure this additional setting only when you have a strong business requirement for it and remember to set it to a null string value when you have completed the migration from the other labeling solution.
 
 To configure this advanced setting, enter the following strings for the selected label policy:
 
@@ -1045,7 +1051,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="Tr
 
 ### Extend your label migration rules to SharePoint properties
 
-You can use your labelByCustomProperties advanced settings with SharePoint properties that you might expose as columns to users.
+You can use the configuration you've defined with the [*labelByCustomProperties*](#migrate-labels-from-secure-islands-and-other-labeling-solutions) advanced setting for SharePoint properties that you might expose as columns to users by specifying an additional label policy advanced setting.
 
 This setting is supported when you use Word, Excel, and PowerPoint.
 
@@ -1128,7 +1134,7 @@ Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertT
 
 This configuration uses label [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-Use these settings only when you have a working [S/MIME deployment](https://docs.microsoft.com/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
+Use these settings only when you have a working [S/MIME deployment](/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
 
 To configure an advanced setting for an S/MIME digital signature, enter the following strings for the selected label:
 
@@ -1218,7 +1224,7 @@ Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
 ## Sign in as a different user
 
-In a production environment, users wouldn't usually need to sign in as a different user when they are using the Azure Information Protection unified labeling client. However, as an administrator, you might need to sign in as a different user during a testing phase. 
+Signing in with multiple users is not supported by AIP in production. This procedure describes how to sign in as a different user for testing purposes only.
 
 You can verify which account you're currently signed in as by using the **Microsoft Azure Information Protection** dialog box: Open an Office application and on the **Home** tab, select the **Sensitivity** button, and then select **Help and feedback**. Your account name is displayed in the **Client status** section.
 
@@ -1260,11 +1266,11 @@ Instructions:
 
 4. From this computer, export the log files.
     
-    For example, run the [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs) cmdlet, or use the **Export Logs** option from the client's [Help and Feedback](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) dialog box. 
+    For example, run the [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) cmdlet, or use the **Export Logs** option from the client's [Help and Feedback](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) dialog box. 
     
     The log files are exported as a single compressed file.
 
-5.  Open the compressed file, and from the MSIP folder, copy any files that have a .xml file name extension.
+5.  Open the compressed file, and from the MSIP folder, copy any files that have an .xml file name extension.
 
 6. Paste these files into the **%localappdata%\Microsoft\MSIP** folder on the disconnected computer.
 
@@ -1333,7 +1339,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 > * FILE_ATTRIBUTE_RECALL_ON_OPEN
 > * FILE_ATTRIBUTE_TEMPORARY
 
-For a list of all file attributes that can be defined in the **ScannerFSAttributesToSkip** advanced setting, see the [Win32 File Attribute Constants](https://docs.microsoft.com/windows/win32/fileio/file-attribute-constants)
+For a list of all file attributes that can be defined in the **ScannerFSAttributesToSkip** advanced setting, see the [Win32 File Attribute Constants](/windows/win32/fileio/file-attribute-constants)
 
 ## Preserve NTFS owners during labeling (public preview)
 
@@ -1354,24 +1360,24 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwne
 
 ## Customize justification prompt texts for modified labels
 
-Customize the justification prompts that are displayed in both Office and the AIP client, when end-users change classification labels on documents and emails.
+Customize the justification prompts that are displayed in both Office and the AIP client, when end users change classification labels on documents and emails.
 
 For example, as an administrator, you may want to remind your users not to add any customer identifying information into this field:
 
 :::image type="content" source="../media/justification-office.png" alt-text="Customized justification prompt text":::
 
-To modify the default **Other** text that's displayed, use the **JustificationTextForUserText** advanced property with the [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) cmdlet. Set the value to the text you want to use instead.
+To modify the default **Other** text that's displayed, use the **JustificationTextForUserText** advanced property with the [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) cmdlet. Set the value to the text you want to use instead.
 
 For example:
 
 ``` PowerShell
 
-[Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
+[Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
 ```
 
 ## Customize Outlook popup messages
 
-AIP administrators can customize the popup messages that appear to end-users in Outlook, such as:
+AIP administrators can customize the popup messages that appear to end users in Outlook, such as:
 
 - Messages for blocked emails
 - Warning messages that prompt users to verify the content that they're sending
@@ -1379,7 +1385,7 @@ AIP administrators can customize the popup messages that appear to end-users in 
 
 **To customize your Outlook popup messages:**
 
-1. Create **.json** files, each with a rule that configures how Outlook displays popup messages to your users. For more information, see [Rule value .json syntax](#rule-value-json-syntax) and [Sample popup customziation .json code](#sample-popup-customziation-json-code).
+1. Create **.json** files, each with a rule that configures how Outlook displays popup messages to your users. For more information, see [Rule value .json syntax](#rule-value-json-syntax) and [Sample popup customization .json code](#sample-popup-customization-json-code).
 
 1. Use PowerShell to define advanced settings that control the popup messages you're configuring. Run a separate set of commands for each rule you want to configure.
 
@@ -1393,20 +1399,20 @@ AIP administrators can customize the popup messages that appear to end-users in 
     ```
     Where: 
 
-    - `<Path to json file>` is the the path to the json file you created. For example: **C:\Users\msanchez\Desktop\ \dlp\OutlookCollaborationRule_1.json**.
+    - `<Path to json file>` is the path to the json file you created. For example: **C:\Users\msanchez\Desktop\ \dlp\OutlookCollaborationRule_1.json**.
     - `<Policy name>` is the name of the policy you want to configure. 
     - `<Key>` is a name for your rule. Use the following syntax, where **<#>** is the serial number for your rule: 
     
         `OutlookCollaborationRule_<x>` 
 
-    For more information, see [Ordering your Outlook customziation rules](#ordering-your-outlook-customziation-rules) and [Rule value json syntax](#rule-value-json-syntax).
+    For more information, see [Ordering your Outlook customization rules](#ordering-your-outlook-customization-rules) and [Rule value json syntax](#rule-value-json-syntax).
 
    
 > [!TIP]
 > For additional organization, name your file with the same string as the key used in your PowerShell command. For example, name your file **OutlookCollaborationRule_1.json,** and then also use **OutlookCollaborationRule_1** as your key.
 > 
 
-### Ordering your Outlook customziation rules
+### Ordering your Outlook customization rules
 
 AIP uses the serial number in the key you enter to determine the order in which the rules are processed. When defining the keys used for each rule, define your more restrictive rules with lower numbers, followed by less restrictive rules with higher numbers.
 
@@ -1422,14 +1428,14 @@ In this scenario, order your **Block Secret** rule key, which is the more specif
 
 ### Rule value .json syntax
 
-Define your rule's json snytax as follows:
+Define your rule's json syntax as follows:
 
 ``` JSON
 "type" : "And",
 "nodes" : []
 ```
 
-You must have at least two nodes, the first representing your rule's condition, and the last represending the rule's action. For more information, see:
+You must have at least two nodes, the first representing your rule's condition, and the last representing the rule's action. For more information, see:
 
 - [Rule condition syntax](#rule-condition-syntax)
 - [Rule action syntax](#rule-action-syntax)
@@ -1483,7 +1489,7 @@ All texts support the following dynamic parameters:
 > Parent-only language names are also supported, such as `en` only.
 > 
 
-### Sample popup customziation .json code
+### Sample popup customization .json code
 
 The following sets of **.json** code show how you can define a variety of rules that control how Outlook displays popup messages for your users.
 
@@ -1491,7 +1497,7 @@ The following sets of **.json** code show how you can define a variety of rules 
 - [**Example 2**: Block unclassified Office attachments](#example-2-block-unclassified-office-attachments)
 - [**Example 3**: Require the user to accept sending a Confidential email or attachment](#example-3-require-the-user-to-accept-sending-a-confidential-email-or-attachment)
 - [**Example 4**: Warn on mail with no label, and an attachment with a specific label](#example-4-warn-on-mail-with-no-label-and-an-attachment-with-a-specific-label)
-- [**Example 5**: Prompt for a justificaiton, with two predefined options, and an extra free-text option](#example-5-prompt-for-a-justificaiton-with-two-predefined-options-and-an-extra-free-text-option)
+- [**Example 5**: Prompt for a justification, with two predefined options, and an extra free-text option](#example-5-prompt-for-a-justification-with-two-predefined-options-and-an-extra-free-text-option)
 
 #### Example 1: Block Internal emails or attachments
 
@@ -1545,7 +1551,7 @@ In this example, **89a453df-5df4-4976-8191-259d0cf9560a** is the ID of the **Int
 
 #### Example 2: Block unclassified Office attachments
 
-The following **.json** code blocks unclassified Office attachments or emails from being sent to external recipeints.
+The following **.json** code blocks unclassified Office attachments or emails from being sent to external recipients.
 
 In the following example, the attachment list that requires labeling is:
 **.doc,.docm,.docx,.dot,.dotm,.dotx,.potm,.potx,.pps,.ppsm,.ppsx,.ppt,.pptm,.pptx,.vdw,.vsd,.vsdm,.vsdx,.vss,.vssm,.vst,.vstm,.vssx,.vstx,.xls,.xlsb,.xlt,.xlsm,.xlsx,.xltm,.xltx**
@@ -1723,7 +1729,7 @@ By default, emails that have labeled attachments do not automatically receive th
 }
 ```
 
-#### Example 5: Prompt for a justificaiton, with two predefined options, and an extra free-text option
+#### Example 5: Prompt for a justification, with two predefined options, and an extra free-text option
 
 The following **.json** code causes Outlook to prompt the user for a justification for their action. The justification text includes two predefined options, as well as a third, free-text option.
 
@@ -1777,7 +1783,7 @@ The following **.json** code causes Outlook to prompt the user for a justificati
 
 By default, the timeout for SharePoint interactions is two minutes, after which the attempted AIP operation fails.
 
-Starting in [version 2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview), AIP administrators can control this timeout using the following advanced properties, using an **hh:mm:ss** syntax to define the timeouts:
+Starting in [version 2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), AIP administrators can control this timeout using the following advanced properties, using an **hh:mm:ss** syntax to define the timeouts:
 
 - **SharepointWebRequestTimeout**. Determines the timeout for all AIP web requests to SharePoint. Default = 2 minutes.
 

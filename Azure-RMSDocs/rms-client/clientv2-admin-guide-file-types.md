@@ -195,9 +195,9 @@ Without any additional configuration, the Azure Information Protection unified l
 |PDF |.pdf|
 |Text|.txt; .xml; .csv|
 
-With additional configuration, other file types can also be inspected. For example, you can [register a custom file name extension to use the existing Windows filter handler for text files](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters), and you can install additional filters from software vendors.
+With additional configuration, other file types can also be inspected. For example, you can [register a custom file name extension to use the existing Windows filter handler for text files](/windows/desktop/search/-search-ifilter-registering-filters), and you can install additional filters from software vendors.
 
-To check what filters are installed, see the [Finding a Filter Handler for a Given File Extension](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension) section from the Windows Search Developer's Guide.
+To check what filters are installed, see the [Finding a Filter Handler for a Given File Extension](/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension) section from the Windows Search Developer's Guide.
 
 The following sections have configuration instructions to inspect .zip files, and .tiff files.
 
@@ -217,7 +217,7 @@ After inspecting the file, the unified labeling client from your PowerShell sess
 
 ### To inspect .tiff files by using OCR
 
-The [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) on the computer running the PowerShell session.
+The [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell command can use optical character recognition (OCR) to inspect TIFF images with a .tiff file name extension when you install the Windows TIFF IFilter feature, and then configure [Windows TIFF IFilter Settings](/previous-versions/windows/it-pro/windows-7/dd744701(v=ws.10)) on the computer running the PowerShell session.
 
 For the scanner: After finding sensitive information, if the .tiff file should be classified and protected with a label, specify this file name extension with the PowerShell advanced setting, **PFileSupportedExtensions**, as described in [Use PowerShell to change which file types are protected](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) from the scanner deployment instructions.
 

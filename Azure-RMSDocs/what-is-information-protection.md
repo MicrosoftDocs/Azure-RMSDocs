@@ -6,7 +6,7 @@ description: Azure Information Protection (AIP) extends the Microsoft Informatio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/14/2020
+ms.date: 10/18/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -33,21 +33,21 @@ search.appverid:
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to find, classify, and protect documents and emails by applying labels to content.
 
-AIP is part of the Microsoft Information Protection (MIP) framework, and extends the labeling and classification functionality provided by Microsoft 365.
+AIP is part of the Microsoft Information Protection (MIP) solution, and extends the labeling and classification functionality provided by Microsoft 365.
 
 :::image type="content" source="media/what-is-mip.png" border="false" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
 
-For more information about the MIP framework and its other elements, see [Microsoft Information Protection in Microsoft 365](https://aka.ms/MIPdocs).
+For more information about the MIP solution and its other elements, see [Microsoft Information Protection in Microsoft 365](https://aka.ms/MIPdocs).
 
 ## Azure Information Protection elements in MIP
 
 Azure Information Protection adds the following elements to the MIP framework:
 
-- **Microsoft Information Protection client:** Extends labeling, classification, and protection capabilities to additional file types, as well as the File Explorer and PowerShell. For example:
+- **Azure Information Protection unified labeling client:** Extends labeling, classification, and protection capabilities to additional file types, as well as the File Explorer and PowerShell. For example:
 
     :::image type="content" source="media/protect-from-file-explorer.png" alt-text="Classify and protect from the File Explorer":::
 
-- **Microsoft Information Protection scanner:** Enables admins to scan their networks and file shares for sensitive content that must be labeled, classified, and/or protected.
+- **Azure Information Protection scanner:** Enables admins to scan their networks and file shares for sensitive content that must be labeled, classified, and/or protected.
 
     For example, find repositories that might have sensitive content at risk:
 
@@ -70,7 +70,7 @@ We recommend migrating to unified labeling to support these features, as well as
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 >
-> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> This time-frame allows all current Azure Information Protection customers to transition to unified labeling using the Microsoft Information Protection Unified Labeling solution. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 ## Next steps
 
@@ -96,7 +96,11 @@ If you're looking to extend your own apps and services with sensitivity labels, 
 
 - **Download the client:** [Azure Information Protection client](https://www.microsoft.com/download/details.aspx?id=53018)
 
-- **Download a customizable PDF guide:** [Azure Information Protection PDF documentation](https://docs.microsoft.com/azure/information-protection/opbuildpdf/toc.pdf?branch=live)
+- **What's New?**:
+
+    - [AIP unified labeling client version history](rms-client/unifiedlabelingclient-version-release-history.md)
+    - [What's new in the Microsoft 365 admin center?](/microsoft-365/admin/whats-new-in-preview)
+    - [What's new in the Sharepoint admin center?](sharepoint/what-s-new-in-admin-center)
 
 - **FAQs:** [Frequently asked questions for Azure Information Protection](faqs.md)
 
@@ -108,14 +112,20 @@ If you're looking to extend your own apps and services with sensitivity labels, 
 
 - **Docs twitter feed:** [https://twitter.com/docsmsft](https://twitter.com/docsmsft)
 
+- **Download a customizable PDF guide:** [Azure Information Protection PDF documentation](https://docs.microsoft.com/azure/information-protection/opbuildpdf/toc.pdf?branch=live)
+
 ### Microsoft Ignite
 
-**[Microsoft Ignite 2020](https://myignite.microsoft.com/home):** Join us for our digital event experience on September 22-24, 2020. Check out the following sessions recommended for you:
+Microsoft Ignite 2020 was held remotely and was a great success! You can view the session recordings at [https://myignite.microsoft.com/sessions](https://myignite.microsoft.com/sessions).
 
-- Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments
+For example:
 
-- Know your data, protect your data and prevent data loss with Microsoft Information Protection
+- [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)
 
-- Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more!
+- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)
 
-- How do Security professionals sleep at night?
+- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)
+
+> [!TIP]
+> If you're looking for information about Microsoft Ignite 2019 in Orlando, check out the recap at our blog: [Microsoft Information Protection - Ignite 2019 recap](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-protection-ignite-2019-recap/ba-p/998174)
+> 

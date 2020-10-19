@@ -1,14 +1,14 @@
 ---
-title: struct mip::ApplicationInfo 
+title: struct ApplicationInfo 
 description: Documents structures associated with the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.date: 09/21/2020
 ---
 
-# struct mip::ApplicationInfo 
+# struct ApplicationInfo 
 A struct that includes application specific information.
   
 ## Summary

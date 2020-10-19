@@ -1,11 +1,11 @@
 ---
 title: class SyncFilePolicyData 
 description: Documents the syncfilepolicydata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class SyncFilePolicyData 
@@ -16,31 +16,31 @@ ms.date: 04/16/2020
 public const LabelGroupData* GetLabelGroupData() const  | _Not yet documented._
 public const std::vector\<std::unique_ptr\<PolicyPackageData\>\>& GetPoliciesPackageData() const  | _Not yet documented._
 public const std::string& GetUpn() const  | _Not yet documented._
-public const std::unordered_map\<std::string, std::string\>& GetClassificationList() const  | _Not yet documented._
+public const std::shared_ptr\<ClassifierUniqueIds\>& GetClassificationList() const  | _Not yet documented._
 public const std::string& GetUserObjectId() const  | _Not yet documented._
 public virtual ~SyncFilePolicyData()  | _Not yet documented._
   
 ## Members
   
 ### GetLabelGroupData function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetPoliciesPackageData function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetUpn function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetClassificationList function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetUserObjectId function
-_Not documented yet._
+Not yet documented.
 
   
 ### ~SyncFilePolicyData function
-_Not documented yet._
+Not yet documented.

@@ -1,14 +1,14 @@
 ---
-title: struct mip::TelemetryConfiguration 
+title: struct TelemetryConfiguration 
 description: Documents structures associated with the Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 10/29/2019
+ms.date: 09/21/2020
 ---
 
-# struct mip::TelemetryConfiguration 
+# struct TelemetryConfiguration 
 Custom telemetry settings (not commonly used)
   
 ## Summary
@@ -24,6 +24,7 @@ public bool isTraceLoggingEnabled  |  If set, telemetry component will write war
 public bool isTelemetryOptedOut  |  If set, only necessary service data telemetry will be sent
 public bool isFastShutdownEnabled  |  If set, No events will be uploaded on shutdown, Audit events will be uploaded immediately upon logging
 public std::map\<std::string, std::string\> customSettings  |  Custom telemetry settings >
+public std::map\<std::string, std::vector\<std::string\>\> maskedProperties  |  Telemetry events/properties which should be masked
   
 ## Members
   
@@ -56,3 +57,6 @@ If set, No events will be uploaded on shutdown, Audit events will be uploaded im
   
 ### customSettings struct member
 Custom telemetry settings >
+  
+### maskedProperties struct member
+Telemetry events/properties which should be masked
