@@ -135,7 +135,7 @@ For example, if your sensitivity label has encryption, you might use the **New-L
 New-Label -Name 'aipscopetest' -Tooltip 'aipscopetest' -Comment 'admin notes' -DisplayName 'aipscopetest' -Identity 'b342447b-eab9-ea11-8360-001a7dda7113' -EncryptionEnabled $true -EncryptionProtectionType 'template' -EncryptionTemplateId 'a32027d7-ea77-4ba8-b2a9-7101a4e44d89' -EncryptionAipTemplateScopes "['allcompany@labelaction.onmicrosoft.com','admin@labelaction.onmicrosoft.com']"
 ```
 
-For more information about working in GCC, GCC-High, and DoD environments, see the [Azure Information Protection Premium Government Service Description](enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description#label-migration). 
+For more information about working in GCC, GCC-High, and DoD environments, see the [Azure Information Protection Premium Government Service Description](/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description#label-migration). 
 ## Copy policies to the unified labeling platform
 
 Copy any policies you have stored in the Azure portal that you want to have available as they are in the unified labeling platform.
