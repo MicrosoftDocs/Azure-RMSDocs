@@ -136,6 +136,7 @@ New-Label -Name 'aipscopetest' -Tooltip 'aipscopetest' -Comment 'admin notes' -D
 ```
 
 For more information about working in GCC, GCC-High, and DoD environments, see the [Azure Information Protection Premium Government Service Description](/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description#label-migration). 
+
 ## Copy policies to the unified labeling platform
 
 Copy any policies you have stored in the Azure portal that you want to have available as they are in the unified labeling platform.
