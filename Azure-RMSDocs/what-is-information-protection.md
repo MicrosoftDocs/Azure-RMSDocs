@@ -6,7 +6,7 @@ description: Azure Information Protection (AIP) is a service that helps organiza
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/23/2020
+ms.date: 10/18/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -190,22 +190,19 @@ For more information, see:
 
 ### Microsoft Ignite
 
-Microsoft Ignite 2019 in Orlando was a great success! There was lots of good information about Azure Information Protection with the latest updates and improvements. If you couldn't join us, sessions are recorded for viewing later.
+Microsoft Ignite 2020 was held remotely and was a great success! You can view the session recordings at [https://myignite.microsoft.com/sessions](https://myignite.microsoft.com/sessions).
 
-See the following list for our top five sessions that we recommend:
+For example:
 
-- [BRK2119 - Secure your sensitive data! Understanding the latest Microsoft Information Protection capabilities](https://myignite.techcommunity.microsoft.com/sessions/81172?source=sessions)
- 
-- [THR3067 - Know your data: Top five tips and tricks to better understand your sensitive data landscape](https://myignite.techcommunity.microsoft.com/sessions/81183)
+- [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)
 
-- [BRK3103 - Protecting sensitive files and data can be hard. Choose the right data protection options that balance security and worker productivity](https://myignite.techcommunity.microsoft.com/sessions/81177?source=sessions)
+- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)
 
-- [BRK2120 - Got Azure Information Protection? Navigating unified labeling, policy configuration, clients, and analytics](https://myignite.techcommunity.microsoft.com/sessions/81178?source=sessions)
+- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)
 
-- [BRK2121 - Extend the power of sensitivity labeling and protection to your own apps and ISV solutions with the Microsoft Information Protection SDK](https://myignite.techcommunity.microsoft.com/sessions/81179?source=sessions)
-
-Latest blog post: [Understand where your sensitive data is located and intelligently protect it with Microsoft 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Understand-where-your-sensitive-data-is-located-and/ba-p/960465)
-
+> [!TIP]
+> If you're looking for information about Microsoft Ignite 2019 in Orlando, check out the recap at our blog: [Microsoft Information Protection - Ignite 2019 recap](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-protection-ignite-2019-recap/ba-p/998174)
+> 
 
 ## Next steps
 
