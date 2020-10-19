@@ -101,7 +101,7 @@ While you migrate, you can continue to use the AIP classic client and the polici
 
     Open your labeling admin center to compare the labels displayed there and in the Azure Information Protection area. The two lists should be identical. For example, when comparing to the Microsoft 365 Security & Compliance Center:
 
-    :::image type="content" source="media/qs-tutor/compare-migrated-labels-small.png" alt-text="Compare migrated labels between the Azure portal and the Security & Compliance Center" lightbox="media/qs-tutor/compare-migrated-labels.png:::
+    :::image type="content" source="media/qs-tutor/compare-migrated-labels-small.png" alt-text="Compare migrated labels between the Azure portal and the Security & Compliance Center" lightbox="media/qs-tutor/compare-migrated-labels.png":::
 
     > [!NOTE]
     > If needed, continue using the labels in both systems until you finish migrating. For more information, see [Synchronizing labeling edits](#synchronizing-labeling-edits).
