@@ -21,7 +21,6 @@ Customer intent: As an administrator, I want to extend Microsoft 365's labeling 
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: contperfq1
-ms.custom: admin
 search.appverid:
 - MET150
 
@@ -100,7 +99,7 @@ If you're looking to extend your own apps and services with sensitivity labels, 
 
     - [AIP unified labeling client version history](rms-client/unifiedlabelingclient-version-release-history.md)
     - [What's new in the Microsoft 365 admin center?](/microsoft-365/admin/whats-new-in-preview)
-    - [What's new in the Sharepoint admin center?](sharepoint/what-s-new-in-admin-center)
+    - [What's new in the Sharepoint admin center?](/sharepoint/what-s-new-in-admin-center)
 
 - **FAQs:** [Frequently asked questions for Azure Information Protection](faqs.md)
 
