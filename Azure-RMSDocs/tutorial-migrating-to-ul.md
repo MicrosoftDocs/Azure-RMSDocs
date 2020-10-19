@@ -28,11 +28,13 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Instructions for: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-To provide a unified and streamlined customer experience, Azure Information Protection's classic client and Label Management in the Azure portal are being deprecated as of March 31, 2021.
-
-This time frame enables all current Azure Information Protection classic client customers to transition to the AIP unified labeling solution, which uses Microsoft Information Protection's Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> [!NOTE]
+> To provide a unified and streamlined customer experience, Azure Information Protection's classic client and Label Management in the Azure portal are being deprecated as of March 31, 2021.
+> 
+> This time frame enables all current Azure Information Protection classic client customers to transition to the AIP unified labeling, which uses Microsoft Information Protection's Unified Labeling solution. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 This tutorial describes how to migrate your organization's Azure Information Protection deployment from the classic client to the unified labeling client.
 
@@ -99,7 +101,7 @@ While you migrate, you can continue to use the AIP classic client and the polici
 
     Open your labeling admin center to compare the labels displayed there and in the Azure Information Protection area. The two lists should be identical. For example, when comparing to the Microsoft 365 Security & Compliance Center:
 
-    :::image type="content" source="media/qs-tutor/compare-migrated-labels.png" alt-text="Compare migrated labels between the Azure portal and the Security & Compliance Center":::
+    :::image type="content" source="media/qs-tutor/compare-migrated-labels-small.png" alt-text="Compare migrated labels between the Azure portal and the Security & Compliance Center" lightbox="media/qs-tutor/compare-migrated-labels.png:::
 
     > [!NOTE]
     > If needed, continue using the labels in both systems until you finish migrating. For more information, see [Synchronizing labeling edits](#synchronizing-labeling-edits).
@@ -108,7 +110,7 @@ Continue with [Copy policies to the unified labeling platform](#copy-policies-to
 
 ### Synchronizing labeling edits
 
-Once you've migrated your labels to your admin center, any edits you continue to make to the migrated labels in the Azure portal are automatically synchronized to the same label in the admin center.
+Once you've migrated your labels to your admin center, any edits you continue to make to the migrated labels in the Azure portal are automatically synchronized to the same label in the admin center for unified labeling.
 
 However, edits made to migrated labels in your admin center are *not* synchronized back to the Azure portal. If you make edits in the admin center and need them updated in the Azure portal, return to the portal to publish the update.
 
@@ -266,13 +268,31 @@ Make sure that you use the **AzInfoProtection_UL** file to deploy the client. If
 
 ### Sample screenshots across various platforms and clients
 
-The following image shows examples of how sensitivity labels can be applied across the built-in labeling solution and the unified labeling client:
-
-:::image type="content" source="media/qs-tutor/aip-client-compare-across-platforms.png" alt-text="Compare AIP client user interface across platforms":::
+The following images show examples of how sensitivity labels can be applied across the built-in labeling solutions and the unified labeling client.
 
 > [!TIP]
 > If you have published your labels and the clients that have built-in support do not show the **Sensitivity** button, review the relevant troubleshooting guide as needed.
 >
+
+#### Windows unified labeling client
+
+:::image type="content" source="media/qs-tutor/sample-aip-client-office.PNG" alt-text="Sample button for the unified labeling client in Microsoft Office":::
+
+#### Windows built-in Microsoft 365
+
+:::image type="content" source="media/qs-tutor/sample-built-in-client-office.PNG" alt-text="Sample Windows built-in Microsoft 365":::
+
+#### MacOS built-in Microsoft 365
+
+#### iPad built-in Microsoft 365
+
+#### Built-in Office for the Web
+
+:::image type="content" source="media/qs-tutor/sample-office-on-the-web.PNG" alt-text="Sample button for built-in Office for the Web":::
+
+#### Built-in Outlook for the Web
+
+:::image type="content" source="media/qs-tutor/sample-outlook-on-the-web.PNG" alt-text="Sample button for built-in Outlook for the Web"::
 
 ### What changes for classic client end users?
 
