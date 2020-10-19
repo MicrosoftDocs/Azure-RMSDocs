@@ -6,7 +6,7 @@ description: A step-by-step tutorial for migrating from the Azure Information Pr
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/09/2020
+ms.date: 10/19/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -122,7 +122,20 @@ However, edits made to migrated labels in your admin center are *not* synchroniz
 
 > [!NOTE]
 > This step is only required if you've made edits to your migrated labels in the unified labeling platform, and need those edits synchronized back with the Azure portal. 
- 
+
+### Migrating labels via PowerShell
+
+You can alternately use PowerShell to migrate your existing labels, such as for a GCC High environment.
+
+Use the [New-Label](/powershell/module/exchange/new-label) cmdlet to migrate your existing sensitivity labels.
+
+For example, if your sensitivity label has encryption, you might use the **New-Label** cmdlet as follows:
+
+```PowerShell
+New-Label -Name 'aipscopetest' -Tooltip 'aipscopetest' -Comment 'admin notes' -DisplayName 'aipscopetest' -Identity 'b342447b-eab9-ea11-8360-001a7dda7113' -EncryptionEnabled $true -EncryptionProtectionType 'template' -EncryptionTemplateId 'a32027d7-ea77-4ba8-b2a9-7101a4e44d89' -EncryptionAipTemplateScopes "['allcompany@labelaction.onmicrosoft.com','admin@labelaction.onmicrosoft.com']"
+```
+
+For more information about working in GCC, GCC-High, and DoD environments, see the [Azure Information Protection Premium Government Service Description](enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description#label-migration). 
 ## Copy policies to the unified labeling platform
 
 Copy any policies you have stored in the Azure portal that you want to have available as they are in the unified labeling platform.
