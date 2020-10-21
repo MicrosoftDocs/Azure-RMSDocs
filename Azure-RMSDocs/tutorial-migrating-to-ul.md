@@ -245,7 +245,6 @@ Users must have a supported client that can connect to your labeling admin cente
 For more information, see:
 - [Non-Windows platforms](#non-windows-platforms)
 - [Windows platforms](#windows-platforms)
-- [Sample screenshots across various platforms and clients](#sample-screenshots-across-various-platforms-and-clients)
 - [What changes for classic client end-users?](#what-changes-for-classic-client-end-users)
 
 ### Non-Windows platforms
@@ -284,26 +283,25 @@ Make sure that you use the **AzInfoProtection_UL** file to deploy the client. If
 
 The main difference for end users who have been using the Azure Information Protection classic client is that the **Protect** button in Office apps is replaced by the **Sensitivity** button. 
 
-:::image type="content" source="media/infoprotect-protectbutton-pulldown.png" alt-text="Protection button in the classic client":::
-
 Once you leverage the additional capabilities supported by sensitivity labels and unified labeling, end users will also see those changes in their Office apps.
 
-### Sample screenshots across clients
+For example:
 
-The following images show how sensitivity labels can be applied in the built-in labeling solutions and the unified labeling client.
+- **Windows AIP unified labeling client**
+
+    :::image type="content" source="media/qs-tutor/sample-aip-client-office.PNG" alt-text="Sample button for the unified labeling client in Microsoft Office":::
+
+- **Windows AIP classic client**
+
+    :::image type="content" source="media/infoprotect-protectbutton-pulldown.png" alt-text="Protection button in the classic client":::
+
+- **Windows built-in labeling client**
+
+    :::image type="content" source="media/qs-tutor/sample-built-in-client-office.PNG" alt-text="Sample Windows built-in Microsoft 365":::
 
 > [!TIP]
 > If you have published your labels and the clients that have built-in support do not show the **Sensitivity** button, review the relevant troubleshooting guide as needed.
 >
-
-#### Windows AIP unified labeling client
-
-:::image type="content" source="media/qs-tutor/sample-aip-client-office.PNG" alt-text="Sample button for the unified labeling client in Microsoft Office":::
-
-#### Windows built-in Microsoft 365
-
-:::image type="content" source="media/qs-tutor/sample-built-in-client-office.PNG" alt-text="Sample Windows built-in Microsoft 365":::
-
  
 ## Next steps
 
