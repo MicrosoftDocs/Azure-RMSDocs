@@ -34,13 +34,15 @@ Use the following information for Phase 3 of migrating from AD RMS to Azure Info
 
 For Windows computers that use Microsoft 365 apps, Office 2019, or Office 2016 click-to-run desktop apps:
 
-- You can reconfigure these clients to use Azure Information Protection by using DNS redirection. This is the preferred method for client migration because it is the simplest. However, this method is restricted to Office 2016 (or later) click-to-run desktop apps for Windows computers.
+- You can use registry edits to migrate clients to use Azure RMS. This method applies to any version of Office for Windows.
+- You can also reconfigure these clients to use Azure Information Protection by using DNS redirection. This is the preferred method for client migration because it is the simplest. However, this method is restricted to Office 2016 (or later) click-to-run desktop apps for Windows computers.
+
 
     This method requires you to create a new SRV record, and set an NTFS deny permission for users on the AD RMS publishing endpoint.
 
-- For Windows computers that don't use Office 2019 or Office 2016 click-to-run:
+For Windows computers that don't use Office 2019 or Office 2016 click-to-run:
 
-    You cannot use DNS redirection and instead, must use registry edits. If you have a mix of Office versions that can and cannot use DNS redirection, you can use this single method for all Windows computers, or a combination of DNS redirection and editing the registry. 
+- You cannot use DNS redirection and instead, must use registry edits. If you have a mix of Office versions that can and cannot use DNS redirection, you can use this single method for all Windows computers, or a combination of DNS redirection and editing the registry.
     
     The registry changes are made easier for you by editing and deploying scripts that you can download. 
 
