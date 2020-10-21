@@ -61,8 +61,12 @@ Access is revoked, and other users can no longer access the document.
 If you do not see the option to **Revoke Access** in the **Sensitivity** menu, you may have one of the following scenarios:
 
 - You might have just applied the protection in this session. If this is the case, close and re-open the document to try again.
+
 - You might be viewing an unprotected document. Revoking access is relevant only for protected documents.
-- You may not have the latest AIP unified labeling client version installed, or you may need to restart your Office apps or machine after installation. For more information, see [User Guide: Download and install the Azure Information Protection client](install-client-app.md).
+
+- You may not have the latest AIP unified labeling client version installed, or you may need to restart your Office apps or machine after installation. 
+
+    For more information, see [User Guide: Download and install the Azure Information Protection client](install-client-app.md).
 
 ## Revoking access where the document protection has been changed on a copy
 
