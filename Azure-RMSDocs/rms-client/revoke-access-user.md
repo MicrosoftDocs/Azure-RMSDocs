@@ -6,7 +6,7 @@ description: Describes how end users can use the AIP client to revoke document a
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/18/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -48,16 +48,24 @@ To revoke access from Word, Excel, or PowerPoint:
 
     :::image type="content" source="../media/track-revoke-word.png" alt-text="Select Revoke Access from Microsoft Word":::
 
-    > [!NOTE]
-    > If you do not see these options, you may be viewing an unprotected document, the AIP unified labeling client may not be installed on your machine, or you may need to still restart your Office apps or machine after installation.
-    >
-    > For more information, see [User Guide: Download and install the Azure Information Protection client](install-client-app.md).
-
 1. In the confirmation message that appears, click **Yes** to continue.
 
 Access is revoked, and other users can no longer access the document.
 
-### Revoking access where the document protection has been changed
+For more information, see:
+
+- [Don't see these options?](#dont-see-these-options)
+- [Revoking access where the document protection has been changed on a copy](#revoking-access-where-the-document-protection-has-been-changed-on-a-copy)
+
+### Don't see these options?
+
+If you do not see the **Sensitivity** button or the option to **Revoke Access,** you may have one of the following scenarios:
+
+- You might have just applied the protection in this session. If this is the case, close and re-open the document to try again.
+- You might be viewing an unprotected document. Revoking access is relevant only for protected documents.
+- You may not have the AIP unified labeling client installed, or you may need to restart your Office apps or machine after installation. For more information, se [User Guide: Download and install the Azure Information Protection client](install-client-app.md).
+
+## Revoking access where the document protection has been changed on a copy
 
 If another user had changed the label or the protection on a copy of the document, access is *not revoked* on that copy of the document. 
 
