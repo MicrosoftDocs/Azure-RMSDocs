@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/21/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -216,7 +216,7 @@ The following fixes were delivered in version 2.8.85.0 of the Azure Information 
 - Fixes for viewing JPEG files in the [AIP Viewer](clientv2-view-use-files.md)
 - Downgrading a label now automatically includes the **ProtectionOwnerBefore** in [audit events](../audit-logs.md#downgrade-label-audit-logs)
 - Change events now include the **LastModifiedDate** in [audit logs](../audit-logs.md#change-protection-audit-logs)
-- Added support for **Proxy.pac** files when [using a proxy](../requirements.md#firewalls-and-network-infrastructure) to acquire a token. To enable this fix, set the new registry key **UseDefaultCredentialsInProxy = 1**.
+- Added support for **Proxy.pac** files when using a proxy to acquire a token. For more information, see [Firewalls and network infrastructure requirements](../requirements.md#firewalls-and-network-infrastructure).
 - Fixes for authenticating when [refreshing policies](../configure-policy.md#making-changes-to-the-policy)
 - Fixes for [automatic content marking](../configure-policy-markings.md) updates for PowerPoint in read-only mode
 - Improvements in popups and error texts
