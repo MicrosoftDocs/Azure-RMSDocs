@@ -49,7 +49,7 @@ To revoke access from Word, Excel, or PowerPoint:
     :::image type="content" source="../media/track-revoke-word.png" alt-text="Select Revoke Access from Microsoft Word":::
 
     > [!NOTE]
-    >     Don't see this option? For more information, see possible scenarios [below](#dont-see-the-revoke-access-option).
+    > Don't see this option? For more information, see possible scenarios [below](#dont-see-the-revoke-access-option).
     >
  
 1. In the confirmation message that appears, click **Yes** to continue.
