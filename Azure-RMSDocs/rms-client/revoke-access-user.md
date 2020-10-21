@@ -48,22 +48,21 @@ To revoke access from Word, Excel, or PowerPoint:
 
     :::image type="content" source="../media/track-revoke-word.png" alt-text="Select Revoke Access from Microsoft Word":::
 
+    > [!NOTE]
+    >     Don't see this option? For more information, see possible scenarios [below](#dont-see-the-revoke-access-option).
+    >
+ 
 1. In the confirmation message that appears, click **Yes** to continue.
 
 Access is revoked, and other users can no longer access the document.
 
-For more information, see:
-
-- [Don't see these options?](#dont-see-these-options)
-- [Revoking access where the document protection has been changed on a copy](#revoking-access-where-the-document-protection-has-been-changed-on-a-copy)
-
-### Don't see these options?
+### Don't see the Revoke Access option?
 
 If you do not see the **Sensitivity** button or the option to **Revoke Access,** you may have one of the following scenarios:
 
 - You might have just applied the protection in this session. If this is the case, close and re-open the document to try again.
 - You might be viewing an unprotected document. Revoking access is relevant only for protected documents.
-- You may not have the AIP unified labeling client installed, or you may need to restart your Office apps or machine after installation. For more information, se [User Guide: Download and install the Azure Information Protection client](install-client-app.md).
+- You may not have the latest AIP unified labeling client version installed, or you may need to restart your Office apps or machine after installation. For more information, se [User Guide: Download and install the Azure Information Protection client](install-client-app.md).
 
 ## Revoking access where the document protection has been changed on a copy
 
