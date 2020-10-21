@@ -280,15 +280,23 @@ Make sure that you use the **AzInfoProtection_UL** file to deploy the client. If
 > Moving forward, we expect to add additional functionality to the built-in labeling capabilities, so that there are fewer and fewer scenarios that require the additional client deployment. 
 > 
 
-### Sample screenshots across various platforms and clients
+### What changes for classic client end users?
 
-The following images show examples of how sensitivity labels can be applied across the built-in labeling solutions and the unified labeling client.
+The main difference for end users who have been using the Azure Information Protection classic client is that the **Protect** button in Office apps is replaced by the **Sensitivity** button. 
+
+:::image type="content" source="media/infoprotect-protectbutton-pulldown.png" alt-text="Protection button in the classic client":::
+
+Once you leverage the additional capabilities supported by sensitivity labels and unified labeling, end users will also see those changes in their Office apps.
+
+### Sample screenshots across clients
+
+The following images show how sensitivity labels can be applied in the built-in labeling solutions and the unified labeling client.
 
 > [!TIP]
 > If you have published your labels and the clients that have built-in support do not show the **Sensitivity** button, review the relevant troubleshooting guide as needed.
 >
 
-#### Windows unified labeling client
+#### Windows AIP unified labeling client
 
 :::image type="content" source="media/qs-tutor/sample-aip-client-office.PNG" alt-text="Sample button for the unified labeling client in Microsoft Office":::
 
@@ -296,23 +304,6 @@ The following images show examples of how sensitivity labels can be applied acro
 
 :::image type="content" source="media/qs-tutor/sample-built-in-client-office.PNG" alt-text="Sample Windows built-in Microsoft 365":::
 
-#### MacOS built-in Microsoft 365
-
-#### iPad built-in Microsoft 365
-
-#### Built-in Office for the Web
-
-:::image type="content" source="media/qs-tutor/sample-office-on-the-web.PNG" alt-text="Sample button for built-in Office for the Web":::
-
-#### Built-in Outlook for the Web
-
-:::image type="content" source="media/qs-tutor/sample-outlook-on-the-web.png" alt-text="Sample button for built-in Outlook on the Web":::
-
-### What changes for classic client end users?
-
-The main difference for end users who have been using the Azure Information Protection classic client is that the **Protect** button in Office apps is replaced by the **Sensitivity** button. 
-
-Once you leverage the additional capabilities supported by sensitivity labels and unified labeling, end users will also see those changes in their Office apps.
  
 ## Next steps
 
