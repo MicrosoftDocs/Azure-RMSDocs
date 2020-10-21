@@ -44,8 +44,8 @@ To install the unified labeling scanner and complete this quickstart, you'll nee
 |**Admin access to the Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with one of the following administrator accounts: </br></br>- **Compliance administrator**</br>- **Compliance data administrator**</br>- **Security administrator**</br>- **Global administrator** |
 |**Client installed**    |   Install the AIP unified labeling client on your computer to access the scanner installation. </br></br>Download and run the **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). </br></br>When the installation is complete, you may be prompted to restart your computer or Office software. Restart as needed to continue. </br></br>For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md).|
 |**SQL Server**     | To run the scanner, you'll need SQL Server installed on the scanner machine. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the installation option you want to install. In the installer, select the **Basic** installation type. </br></br>**Note**: We recommend installing SQL Server Enterprise for production environments.       |
-|**Azure Active Directory account**     |  When working with a standard, cloud-connected environment, your domain account must be synchronized to [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). This isn't necessary if you're working offline. </br></br>If you're not sure about your account, contact one of your system administrators to verify the synch status. For more information, see [Deploying the scanner with alternative configurations](deploy-aip-scanner-prereqs.md#deploying-the-scanner-with-alternative-configurations).  |
-|**Sensitivity labels and a published policy** |You must have created sensitivity labels, and published a policy with at least one label, to the scanner account. </br></br>For more information about creating sensitivity labels and polices, see the [Microsoft 365 documentation for creating and publishing labels](/microsoft-365/compliance/create-sensitivity-labels). |
+|**Azure Active Directory account**     |  When working with a standard, cloud-connected environment, the domain service account you want to use for the scanne must be synchronized to [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). This isn't necessary if you're working offline. </br></br>If you're not sure about your account, contact one of your system administrators to verify the synch status.   |
+|**Sensitivity labels and a published policy** |You must have created sensitivity labels, and published a policy with at least one label to the scanner service account. </br></br>For more information about creating sensitivity labels and polices, see the [Microsoft 365 documentation for creating and publishing labels](/microsoft-365/compliance/create-sensitivity-labels). |
 | | |
 
 Once you've confirmed your prerequisites, [Configure Azure Information Protection in the Azure portal](#configure-azure-information-protection-in-the-azure-portal).
@@ -139,15 +139,51 @@ Once you've [configured basic scanner settings in the Azure portal](#configure-a
     Install-AIPScanner -SqlServerInstance localhost\SQLEXPRESS -Cluster Quickstart
     ```
 
-    When PowerShell prompts you for credentials, enter your username and password. 
+    When PowerShell prompts you for credentials, enter the username and password. 
 
-    For the **User name** field, use the following syntax: `<domain\user name>`. For example: `emea\msanchez`.
+    For the **User name** field, use the following syntax: `<domain\user name>`. For example: `emea\contososcanner`.
 
 1. Go back to the Azure portal. In the **Scanner** menu on the left, select :::image type="icon" source="media/qs-tutor/i-nodes.png" border="false"::: **Nodes**. 
 
     You should now see your scanner added to the grid. For example:
 
     :::image type="content" source="media/qs-tutor/qs-post-install-scanner.png" alt-text="Newly installed scanner displayed on the Nodes grid":::
+
+Continue with [Get an Azure Active directory token for the scanner](#get-an-azure-active-directory-token-for-the-scanner) to enable your scanner service account to run non-interactively.
+
+## Get an Azure Active directory token for the scanner
+
+Perform this procedure when you're working with a standard, cloud-connected environment, to allow the scanner to authenticate to the AIP service, enabling the service to run non-interactively.
+
+For more information, see [How to label files non-interactively for Azure Information Protection](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+
+This procedure is not required if you're working offline only.
+
+**To get an Azure AD token for the scanner:**
+
+1. In the Azure portal, create an Azure AD application to specify an access token for authentication.
+
+1. On your scanner machine, sign in with a scanner service account that's been granted the **Log on locally** right, and start a PowerShell session.
+
+1. Start a PowerShell session, and run the following command, using the values copied from your Azure AD application.
+
+    ```PowerShell
+    Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
+    ```
+
+    For example:
+
+    ```PowerShell
+    $pscreds = Get-Credential CONTOSO\scanner
+    Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+
+    Acquired application access token on behalf of CONTOSO\scanner.
+    ``` 
+
+    > [!TIP]
+    > If your scanner service account cannot be granted the **Log on locally** right for the installation, use the **OnBehalfOf** parameter with **Set-AIPAuthentication,** instead of the **DelegatedUser** parameter.
+
+The scanner now has a token to authenticate to Azure AD. This token is valid for as long as you've configured in Azure Active Directory. You must repeat this procedure when the token expires.
 
 Continue with [installing the optional Network Discovery service](#install-the-network-discovery-service), which enables you to scan your network repositories for content that may be at risk, and then add those repositories to a content scan job.
 

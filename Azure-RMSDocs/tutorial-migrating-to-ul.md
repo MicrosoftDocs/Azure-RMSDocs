@@ -287,17 +287,13 @@ Once you leverage the additional capabilities supported by sensitivity labels an
 
 For example:
 
-- **Windows AIP unified labeling client**
-
-    :::image type="content" source="media/qs-tutor/sample-aip-client-office.PNG" alt-text="Sample button for the unified labeling client in Microsoft Office":::
-
 - **Windows AIP classic client**
 
     :::image type="content" source="media/infoprotect-protectbutton-pulldown.png" alt-text="Protection button in the classic client":::
 
-- **Windows built-in labeling client**
+- **Windows AIP unified labeling client**
 
-    :::image type="content" source="media/qs-tutor/sample-built-in-client-office.PNG" alt-text="Sample Windows built-in Microsoft 365":::
+    :::image type="content" source="media/qs-tutor/sample-aip-client-office.PNG" alt-text="Sample button for the unified labeling client in Microsoft Office":::
 
 > [!TIP]
 > If you have published your labels and the clients that have built-in support do not show the **Sensitivity** button, review the relevant troubleshooting guide as needed.
