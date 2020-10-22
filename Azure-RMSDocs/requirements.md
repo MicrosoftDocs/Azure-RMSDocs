@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/01/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -50,19 +50,19 @@ To verify that your subscription includes the Azure Information Protection featu
 If you have questions about licensing, read through the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing.
 
 > [!TIP]
-> Looking to see if your Office 365 plan or Exchange Online standalone plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
+> Looking to see if your Microsoft 365 plan or Exchange Online standalone plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
 >
-> - [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
+> - [Exchange Online Service Description](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description)
 >
-> - [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
+> - [Office 365 Education](/office365/servicedescriptions/office-365-platform-service-description/office-365-education)
 >
-> - [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
+> - [Office 365 US Government](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/office-365-us-government)
 
 If you have questions about subscriptions or licensing, do not post them on this page. Instead, see if they are answered in the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing. If your question is not answered there, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
 ## Azure Active Directory
 
-To support authentication and authorization for Azure Information Protection, you must have an Azure Active Directory (AD). To use user accounts from your on-premises director (AD DS), you must also configure directory integration.
+To support authentication and authorization for Azure Information Protection, you must have an Azure Active Directory (AD). To use user accounts from your on-premises directory (AD DS), you must also configure directory integration.
 
 - **Single sign-on (SSO)** is supported for Azure Information Protection so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor for how to configure it for Azure AD. WS-Trust is a common requirement for these solutions to support single sign-on. 
 
@@ -109,8 +109,12 @@ For details about support in earlier versions of Windows, contact your Microsoft
 > [!NOTE]
 > When the Azure Information Protection clients protect the data by using the Azure Rights Management service, the data can be consumed by the [same devices](#client-devices) that support the Azure Rights Management service.
 >
+### ARM64 
+
+ARM64 is **not** currently supported. 
 
 ### Virtual machines
+
 If you're working with virtual machines, check whether the software vendor for your virtual desktop solution as additional configurations required for running the Azure Information Protection unified labeling or the Azure Information Protection client. 
 
 For example, for Citrix solutions, you might need to [disable Citrix Application Programming Interface (API) hooks](https://support.citrix.com/article/CTX107825) for Office, the Azure Information Protection unified labeling client, or the Azure Information Protection client. 
@@ -137,11 +141,11 @@ Each Azure Information Protection client has additional prerequisites. For detai
 
 The Azure Information Protection clients can label and protect documents and emails by using Microsoft **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
 
-- **Office apps minimum version 1805**, build 9330.2078 from Office 365 Business or Microsoft 365 Business. 
+- **Office apps minimum version 1805**, build 9330.2078 from Microsoft 365 Apps for Business or Microsoft 365 Business Premium. 
 
-    This edition is supported only when the user is assigned a license for Azure Rights Management, also known as Azure Information Protection for Office 365.
+    This edition is supported only when the user is assigned a license for Azure Rights Management, also known as Azure Information Protection for Microsoft 365.
 
-- **Office 365 ProPlus**
+- **Microsoft 365 Apps for Enterprise**
 
 - **Office Professional Plus 2019**
 
@@ -165,7 +169,7 @@ For more information, see [Applications that support Azure Rights Management dat
 
 ## Firewalls and network infrastructure
 
-If you have a firewalls or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are listed in this Office article: [Office 365 URLs and IP address ranges > Microsoft 365 Common and Office Online](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#microsoft-365-common-and-office-online).
+If you have a firewalls or similar intervening network devices that are configured to allow specific connections, the network connectivity requirements are listed in this Office article: [Microsoft 365 Common and Office Online](/office365/enterprise/urls-and-ip-address-ranges#microsoft-365-common-and-office-online).
 
 Azure Information Protection has the following additional requirements:
 
@@ -173,12 +177,18 @@ Azure Information Protection has the following additional requirements:
 
 - **Web proxies**. If you use a web proxy that requires authentication, you must configure the proxy to use integrated Windows authentication with the user's Active Directory sign in credentials.
 
+    To support **Proxy.pac** files when using a proxy to acquire a token, add the following new registry key:
+
+    - **Path:** `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
+    - **Key:** `UseDefaultCredentialsInProxy`
+    - **Type:** `DWORD`
+    - **Value:** `1`
     
 - **TLS client-to-service connections**. Do not terminate any TLS client-to-service connections, for example to perform packet-level inspection, to the **aadrm.com** URL. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
      
     To determine whether your client connection is terminated before it reaches the Azure Rights Management service, use the following PowerShell commands:
 
-    ```ps
+    ```PowerShell
     $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
     $request.GetResponse()
     $request.ServicePoint.Certificate.Issuer
@@ -262,4 +272,3 @@ The following operating systems support the Azure Rights Management service, whi
 ## Next steps
 
 Once you've reviewed all AIP requirements and confirmed that your system complies, continue with [Preparing users and groups for Azure Information Protection](prepare.md).
-

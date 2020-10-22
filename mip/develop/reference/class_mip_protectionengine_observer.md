@@ -1,11 +1,11 @@
 ---
 title: class ProtectionEngine::Observer 
 description: Documents the protectionengine::observer class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class ProtectionEngine::Observer 
@@ -35,10 +35,10 @@ Parameters:
 * **templateDescriptors**: A reference to the list of templates descriptors 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md)
+* **context**: The same context that was passed to ProtectionEngine::GetTemplatesAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTemplatesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetTemplatesSuccess or ProtectionEngine::Observer::OnGetTemplatesFailure.
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetTemplatesAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetTemplatesSuccess or ProtectionEngine::Observer::OnGetTemplatesFailure
   
 ### OnGetTemplatesFailure function
 Called when retrieving templates generated an error.
@@ -59,10 +59,10 @@ Parameters:
 * **rights**: A reference to the list of rights retrieved 
 
 
-* **context**: The same context that was passed to [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md).
+* **context**: The same context that was passed to ProtectionEngine::GetRightsForLabelIdAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure.
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::GetRightsForLabelIdAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess or ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
   
 ### OnGetRightsForLabelIdFailure function
 Called when retrieving rights for a label ID for the user.
@@ -80,10 +80,10 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when user cert loaded successfully.
 
 Parameters:  
-* **context**: The same context that was passed to ProtectionEngine::LoadUserCert.
+* **context**: The same context that was passed to ProtectionEngine::LoadUserCert
 
 
-An application can pass any type of context (for example, std::promise, std::function) to[ProtectionEngine::LoadUserCertAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnLoadUserCertSuccess](class_mip_protectionengine_observer.md) or [ProtectionEngine::Observer::OnLoadUserCertFailure](class_mip_protectionengine_observer.md)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::LoadUserCertAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnLoadUserCertSuccess or ProtectionEngine::Observer::OnLoadUserCertFailure
   
 ### OnLoadUserCertFailure function
 Called when user cert loaded failed.
@@ -101,10 +101,10 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when registration of content for tracking & revocation is successful.
 
 Parameters:  
-* **context**: The same context that was passed to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync.
+* **context**: The same context that was passed to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationSuccess](class_mip_protectionengine_observer.md) or [ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationFailure](class_mip_protectionengine_observer.md)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RegisterContentForTrackingAndRevocationAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationSuccess or ProtectionEngine::Observer::OnRegisterContentForTrackingAndRevocationFailure
   
 ### OnRegisterContentForTrackingAndRevocationFailure function
 Called when registration of content for tracking & revocation fails.
@@ -122,10 +122,10 @@ An application can pass any type of context (for example, std::promise, std::fun
 Called when revocation of is successful.
 
 Parameters:  
-* **context**: The same context that was passed to ProtectionEngine::RevokeContentAsync.
+* **context**: The same context that was passed to ProtectionEngine::RevokeContentAsync
 
 
-An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RevokeContentAsync and that same context will be forwarded as-is to [ProtectionEngine::Observer::OnRevokeContentSuccess](class_mip_protectionengine_observer.md) or [ProtectionEngine::Observer::OnRevokeContentFailure](class_mip_protectionengine_observer.md)
+An application can pass any type of context (for example, std::promise, std::function) to ProtectionEngine::RevokeContentAsync and that same context will be forwarded as-is to ProtectionEngine::Observer::OnRevokeContentSuccess or ProtectionEngine::Observer::OnRevokeContentFailure
   
 ### OnRevokeContentFailure function
 Called when revocation of content is fails.

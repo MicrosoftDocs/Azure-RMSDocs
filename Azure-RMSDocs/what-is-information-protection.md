@@ -6,7 +6,7 @@ description: Azure Information Protection (AIP) is a service that helps organiza
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/23/2020
+ms.date: 10/18/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -69,7 +69,7 @@ In this example, the label also:
 
 Azure Information Protection uses the [*Azure Rights Management service* (Azure RMS)](what-is-azure-rms.md) to protect your data. 
 
-Azure RMS is integrated with other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory, and can also be used with your own or third-party applications and information protection solutions. Azure RMS works with both on-premises and cloud solutions.
+Azure RMS is integrated with other Microsoft cloud services and applications, such as Microsoft 365 and Azure Active Directory, and can also be used with your own or third-party applications and information protection solutions. Azure RMS works with both on-premises and cloud solutions.
 
 Azure RMS uses encryption, identity, and authorization policies. Similar to AIP labels, protection applied using Azure RMS stays with the documents and emails, regardless of the document or email's location, ensuring that you stay in control of your content even when it's shared with other people.
 
@@ -117,7 +117,7 @@ Additionally, the AIP client enables users to classify and protect additional fi
 The **Classify and protect** menu option works similarly to the Information Protection bar in Office applications, enabling users to select a label or set custom permissions.
 
 > [!TIP]
-> Power users or administrators might find that PowerShell commands are more efficient for managing and setting classification and protection for multiple files. [Relevant PowerShell commands](https://docs.microsoft.com/powershell/module/azureinformationprotection) are included with the client, and can also be installed separately.
+> Power users or administrators might find that PowerShell commands are more efficient for managing and setting classification and protection for multiple files. [Relevant PowerShell commands](/powershell/module/azureinformationprotection) are included with the client, and can also be installed separately.
 
 Users and administrators can use document tracking sites to monitor protected documents, watch who accesses them, and when. If they suspect misuse, they can also revoke access to these documents. For example:
 
@@ -127,7 +127,7 @@ Users and administrators can use document tracking sites to monitor protected do
 
 Using AIP with Exchange Online provides the additional benefit of sending protected emails to any user, with the assurance that they can read it on any device.
 
-For example, you may need to send sensitive information to personal email addresses that use a **Gmail**, **Hotmail**, or **Microsoft** account, or to users who don't have an account in Office 365 or Azure AD. These emails should be encrypted at rest and in transit, and be read only by the original recipients.
+For example, you may need to send sensitive information to personal email addresses that use a **Gmail**, **Hotmail**, or **Microsoft** account, or to users who don't have an account in Microsoft 365 or Azure AD. These emails should be encrypted at rest and in transit, and be read only by the original recipients.
 
 This scenario requires [Office 365 Message Encryption capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipients cannot open the protected email in their native email client, they can use a one-time passcode to read the sensitive information in a browser.
 
@@ -157,7 +157,7 @@ Use one of the following methods to classify and protect existing content:
 
     Alternately, use the scanner to apply a default label to all documents in a data repository without inspecting the file contents. Use the scanner in reporting mode only to discover sensitive information that you might not know you had.
 
-- **Cloud data storage**: Use [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/azip-integration) to apply your labels to documents in Box, SharePoint, and OneDrive. For a tutorial, see [Automatically apply Azure Information Protection classification labels](https://docs.microsoft.com/cloud-app-security/use-case-information-protection) 
+- **Cloud data storage**: Use [Microsoft Cloud App Security](/cloud-app-security/azip-integration) to apply your labels to documents in Box, SharePoint, and OneDrive. For a tutorial, see [Automatically apply Azure Information Protection classification labels](/cloud-app-security/use-case-information-protection) 
 
 ## Latest labeling updates for Microsoft 365
 
@@ -167,8 +167,8 @@ See the latest information about how Azure Information Protection helps you to d
 
 For more information, see:
 
-- [What's new in the Microsoft 365 admin center](https://docs.microsoft.com/microsoft-365/admin/whats-new-in-preview)
-- [What's new in the SharePoint admin center](https://docs.microsoft.com/sharepoint/what-s-new-in-admin-center)
+- [What's new in the Microsoft 365 admin center](/microsoft-365/admin/whats-new-in-preview)
+- [What's new in the SharePoint admin center](/sharepoint/what-s-new-in-admin-center)
 
 ## Additional Azure Information Protection resources
 
@@ -190,22 +190,19 @@ For more information, see:
 
 ### Microsoft Ignite
 
-Microsoft Ignite 2019 in Orlando was a great success! There was lots of good information about Azure Information Protection with the latest updates and improvements. If you couldn't join us, sessions are recorded for viewing later.
+Microsoft Ignite 2020 was held remotely and was a great success! You can view the session recordings at [https://myignite.microsoft.com/sessions](https://myignite.microsoft.com/sessions).
 
-See the following list for our top five sessions that we recommend:
+For example:
 
-- [BRK2119 - Secure your sensitive data! Understanding the latest Microsoft Information Protection capabilities](https://myignite.techcommunity.microsoft.com/sessions/81172?source=sessions)
- 
-- [THR3067 - Know your data: Top five tips and tricks to better understand your sensitive data landscape](https://myignite.techcommunity.microsoft.com/sessions/81183)
+- [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)
 
-- [BRK3103 - Protecting sensitive files and data can be hard. Choose the right data protection options that balance security and worker productivity](https://myignite.techcommunity.microsoft.com/sessions/81177?source=sessions)
+- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)
 
-- [BRK2120 - Got Azure Information Protection? Navigating unified labeling, policy configuration, clients, and analytics](https://myignite.techcommunity.microsoft.com/sessions/81178?source=sessions)
+- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)
 
-- [BRK2121 - Extend the power of sensitivity labeling and protection to your own apps and ISV solutions with the Microsoft Information Protection SDK](https://myignite.techcommunity.microsoft.com/sessions/81179?source=sessions)
-
-Latest blog post: [Understand where your sensitive data is located and intelligently protect it with Microsoft 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Understand-where-your-sensitive-data-is-located-and/ba-p/960465)
-
+> [!TIP]
+> If you're looking for information about Microsoft Ignite 2019 in Orlando, check out the recap at our blog: [Microsoft Information Protection - Ignite 2019 recap](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-protection-ignite-2019-recap/ba-p/998174)
+> 
 
 ## Next steps
 

@@ -37,7 +37,7 @@ MIP SDK applications running on Windows will use WinHTTP to access the network. 
 * Manual static proxy configuration:
   * WinHTTP configured using netsh command
 
-For more on configuring WinHTTP, review the [WinHTTP documentation](https://docs.microsoft.com/windows/win32/winhttp/winhttp-start-page).
+For more on configuring WinHTTP, review the [WinHTTP documentation](/windows/win32/winhttp/winhttp-start-page).
 
 ## Proxies on Other Platforms
 
@@ -45,7 +45,7 @@ MIP SDK doesn't support anything but fully transparent proxies of any type on no
 
 ## Custom HTTP Delegate
 
-The Microsoft Information Protection SDK supports implementation of a custom HTTP delegate that can override the SDK's default HTTP stack. When there are features not present, or a specific HTTP implementation is required, this delegate can be implemented by adding a new class that inherits [`mip::HttpDelegate`](https://docs.microsoft.com/information-protection/develop/reference/class_mip_httpdelegate).
+The Microsoft Information Protection SDK supports implementation of a custom HTTP delegate that can override the SDK's default HTTP stack. When there are features not present, or a specific HTTP implementation is required, this delegate can be implemented by adding a new class that inherits [`mip::HttpDelegate`](./reference/class_mip_httpdelegate.md).
 
 This `mip::HttpDelegate`-derived class is set via `mip::FileProfile::Settings`:
 
@@ -62,11 +62,11 @@ profileSettings.SetHttpDelegate(httpDelegate);
 
 ## Other Workarounds
 
-When a custom HTTP delegate isn't an option, it will be required that you bypass your proxy and allow direct network connectivity for the MIP labeling and protection endpoints, as well as to Azure Active Directory. If [audit logging](https://docs.microsoft.com/azure/information-protection/reports-aip) is desired, the audit logging endpoint is also required.
+When a custom HTTP delegate isn't an option, it will be required that you bypass your proxy and allow direct network connectivity for the MIP labeling and protection endpoints, as well as to Azure Active Directory. If [audit logging](/azure/information-protection/reports-aip) is desired, the audit logging endpoint is also required.
 
 | Endpoint           | Hostname                                                                                                                                                                |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Protection Service | https://api.aadrm.com                                                                                                                                                   |
 | Policy             | https://\*.protection.outlook.com                                                                                                                                       |
 | Audit Logging      | https://\*.events.data.microsoft.com, https://\*.aria.microsoft.com (iOS only)                                                                                          |
-| Authentication     | [Review Azure AD documentation](https://docs.microsoft.com/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
+| Authentication     | [Review Azure AD documentation](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |

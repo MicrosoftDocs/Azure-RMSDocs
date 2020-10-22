@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/08/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -72,11 +72,11 @@ Use the following information to see what's new or changed for a supported relea
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## Version 2.8.85 (Public preview)
+## Version 2.8.85.0
 
-Unified labeling scanner and client version 2.8.85
+Unified labeling scanner and client version 2.8.85.0
 
-**Released** 09/02/2020
+**Released** 09/22/2020
 
 This version includes the following new features, fixes, and enhancements, for the unified labeling scanner and client:
 
@@ -133,7 +133,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 
     For more information, see [Central reporting for Azure Information Protection (public preview)](../reports-aip.md).
 
-1. Enable Network Discovery by running the [**Install-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) PowerShell cmdlet. 
+1. Enable Network Discovery by running the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) PowerShell cmdlet. 
 
     > [!IMPORTANT]
     > When running this cmdlet, make sure to use a weak user as the value for the **StandardDomainsUserAccount** parameter to ensure that any public access to repositories is reported. 
@@ -150,14 +150,14 @@ PowerShell cmdlets added for Network Discovery include:
 
 |Cmdlet  |Description  |
 |---------|---------|
-|[**Get-MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)     |   Gets the current setting for whether the Network Discovery service pulls network scan data from the default, online configuration, or an offline file exported from the Azure portal.      |
-|[**Get-MIPNetworkDiscoveryJobs**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)     |    Gets a list of currently configured network scan jobs.     |
-|[**Get-MIPNetworkDiscoveryStatus**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)     |     Gets the current status of all network scan jobs configured in your tenant.    |
-| [**Import-MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)     |    Imports the configuration for a network scan job from a file.     |
-| [**Install-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)| Installs the Network Discovery service |
-|[**Set-MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)     |   Sets the configuration for whether the Network Discovery service pulls network scan data from the default, online configuration, or an offline file exported from the Azure portal.      |
-|[**Start-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)     |  Runs a specific network scan job immediately.       |
-|[**Uninstall-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  Uninstalls the Network Discovery service.       |
+|[**Get-MIPNetworkDiscoveryConfiguration**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)     |   Gets the current setting for whether the Network Discovery service pulls network scan data from the default, online configuration, or an offline file exported from the Azure portal.      |
+|[**Get-MIPNetworkDiscoveryJobs**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)     |    Gets a list of currently configured network scan jobs.     |
+|[**Get-MIPNetworkDiscoveryStatus**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)     |     Gets the current status of all network scan jobs configured in your tenant.    |
+| [**Import-MIPNetworkDiscoveryConfiguration**](/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)     |    Imports the configuration for a network scan job from a file.     |
+| [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)| Installs the Network Discovery service |
+|[**Set-MIPNetworkDiscoveryConfiguration**](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)     |   Sets the configuration for whether the Network Discovery service pulls network scan data from the default, online configuration, or an offline file exported from the Azure portal.      |
+|[**Start-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)     |  Runs a specific network scan job immediately.       |
+|[**Uninstall-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  Uninstalls the Network Discovery service.       |
 | | |
 
 ### New features for the unified labeling client
@@ -192,7 +192,7 @@ Azure Information Protection now supports Double Key Encryption (DKE) template-b
 For more information, see:
 
 - [Planning and implementing your Azure Information Protection tenant key](../plan-implement-tenant-key.md)
-- [Double Key Encryption](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 docs
+- [Double Key Encryption](/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 docs
 
 ### Fixes and improvements
 
@@ -201,7 +201,7 @@ For more information, see:
 
 #### Azure Information Protection scanner fixed issues
 
-The following fixes were delivered in version 2.8.85 of the Azure Information Protection unified labeling scanner:
+The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling scanner:
 
 - Improvements for [scanning files with long paths](../deploy-aip-scanner-prereqs.md#file-path-requirements)
 - The AIP scanner now scans full [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) environments when there are multiple ContentDatabases.
@@ -210,19 +210,19 @@ The following fixes were delivered in version 2.8.85 of the Azure Information Pr
 
 #### Azure Information Protection client fixed issues
 
-The following fixes were delivered in version 2.8.85 of the Azure Information Protection unified labeling client:
+The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling client:
 
-- A new, narrated indication for any items currently selected from the **Sensitivity** ![columns icon](../media/selected-sensitivity-options.png "columns icon") menu in Office apps. For more information, see the page on [Sensitivity labels in the Microsoft 365 docs](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do).
+- A new, narrated indication for any items currently selected from the **Sensitivity** ![columns icon](../media/selected-sensitivity-options.png "columns icon") menu in Office apps. For more information, see the page on [Sensitivity labels in the Microsoft 365 docs](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do).
 - Fixes for viewing JPEG files in the [AIP Viewer](clientv2-view-use-files.md)
 - Downgrading a label now automatically includes the **ProtectionOwnerBefore** in [audit events](../audit-logs.md#downgrade-label-audit-logs)
 - Change events now include the **LastModifiedDate** in [audit logs](../audit-logs.md#change-protection-audit-logs)
-- Added support for **Proxy.pac** files when [using a proxy](../requirements.md#firewalls-and-network-infrastructure) to acquire a token. To enable this fix, set the new registry key **UseDefaultCredentialsInProxy = 1**.
+- Added support for **Proxy.pac** files when using a proxy to acquire a token. For more information, see [Firewalls and network infrastructure requirements](../requirements.md#firewalls-and-network-infrastructure).
 - Fixes for authenticating when [refreshing policies](../configure-policy.md#making-changes-to-the-policy)
 - Fixes for [automatic content marking](../configure-policy-markings.md) updates for PowerPoint in read-only mode
 - Improvements in popups and error texts
 - Tooltip updates to show the highest [classification for email attachments](../faqs-infoprotect.md#when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling), considering both the classification of the email and the attachment. 
-- Fixes to the **Report an Issue** text when modifying sensitivity labeling policies using the [**Set-LabelPolicy**](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) cmdlet
-- Fixes in errors shown when the [**Set-AipFileLabel**](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet is used with an invalid label ID.
+- Fixes to the **Report an Issue** text when modifying sensitivity labeling policies using the [**Set-LabelPolicy**](/powershell/module/exchange/set-labelpolicy) cmdlet
+- Fixes in errors shown when the [**Set-AipFileLabel**](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet is used with an invalid label ID.
 - Performance fixes for decrypting SMIME emails in Outlook's reading pane. To implement this fix, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property.
 - Fixes for [decrypting PST files](clientv2-admin-guide-file-types.md) that contain password-encrypted files. Decrypting PST files no longer fails if the PST file contains a password-protected file.
 - Removing a protection label that is not included in your scoped policy now removes both the label and protection from the content.
@@ -256,15 +256,15 @@ Unified labeling scanner and client version 2.7.96.0
 
 **New features for the unified labeling scanner:**
 
-- [Use scanner to apply labels based on recommended conditions](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). AIP customers can now choose to implement service side only autolabeling. This feature allows AIP end users to always follow recommendations instead of the previous scenario, which only enabled automatic labeling on the user side.
+- [Use scanner to apply labels based on recommended conditions](../deploy-aip-scanner-prereqs.md). AIP customers can now choose to implement service side only autolabeling. This feature allows AIP end users to always follow recommendations instead of the previous scenario, which only enabled automatic labeling on the user side.
 
-- [Learn which files previously discovered by scanner were deleted from the scanned repository](https://docs.microsoft.com/azure/information-protection/reports-aip) These deleted files were not previously reported in AIP analytics and are now available in the scanner discovery report.
+- [Learn which files previously discovered by scanner were deleted from the scanned repository](../reports-aip.md) These deleted files were not previously reported in AIP analytics and are now available in the scanner discovery report.
 
-- [Get reports from scanner on failures to apply action events](https://docs.microsoft.com/azure/information-protection/reports-aip#friendly-schema-reference-for-event-functions). Use reports to learn about failed action events and discover ways to prevent future occurrences. 
+- [Get reports from scanner on failures to apply action events](../reports-aip.md#friendly-schema-reference-for-event-functions). Use reports to learn about failed action events and discover ways to prevent future occurrences. 
 
-- Introduction of AIP scanner diagnostic analyzer tool for detection and analysis of common scanner errors. To begin using AIP scanner diagnostics, [run the new **Start-AIPScannerDiagnostics** cmdlet](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#troubleshooting-using-scanner-diagnostic-tool). 
+- Introduction of AIP scanner diagnostic analyzer tool for detection and analysis of common scanner errors. To begin using AIP scanner diagnostics, [run the new **Start-AIPScannerDiagnostics** cmdlet](../deploy-aip-scanner-manage.md#troubleshooting-using-the-scanner-diagnostic-tool). 
 
-- You can now manage and limit max CPU consumption on the scanner machine. Learn how to prevent 100% CPU usage and manage your CPU usage using [two new advanced settings **ScannerMaxCPU**, and **ScannerMinCPU**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#limit-cpu-consumption). 
+- You can now manage and limit max CPU consumption on the scanner machine. Learn how to prevent 100% CPU usage and manage your CPU usage using [two new advanced settings **ScannerMaxCPU**, and **ScannerMinCPU**](./clientv2-admin-guide-customizations.md#limit-cpu-consumption). 
 
 - Now you can configure the unified labeling scanner to skip specific files depending on their file attributes. Define the list of file attributes that triggers a file to be skipped using the new **[ScannerFSAttributesToSkip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes)** advanced setting.
 
@@ -274,13 +274,13 @@ Unified labeling scanner and client version 2.7.96.0
     
 - Smoother integration with visual content markings applied by Office. For more information about configuring content markings in Office document, see [How to configure a label for visual markings for Azure Information Protections](../configure-policy-markings.md).
 
-- New **WordShapeNameToRemove** advanced property enables removal of content marking in Word documents made by third-party applications. Learn more about how to [identify existing shape names and define them for removal using **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions).
+- New **WordShapeNameToRemove** advanced property enables removal of content marking in Word documents made by third-party applications. Learn more about how to [identify existing shape names and define them for removal using **WordShapeNameToRemove**](./clientv2-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions).
 
 - Support for **Double Key Encryption (DKE)** (public preview). 
 
     Now you can use the unified labeling client to protect highly sensitive content while maintaining full control of your key. DKE requires two keys to access protected content: one key is stored in Azure, and the other key is held by the customer. 
 
-    For more information about the default, cloud-based tenant root keys, see [Planning and implementing your Azure Information Protection tenant key](../plan-implement-tenant-key.md). For information about implementing Double Key Encryption, see [Double key encryption](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 documentation.
+    For more information about the default, cloud-based tenant root keys, see [Planning and implementing your Azure Information Protection tenant key](../plan-implement-tenant-key.md). For information about implementing Double Key Encryption, see [Double key encryption](/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 documentation.
 
 **New audit logs generated for removed files**
 
@@ -315,7 +315,7 @@ For more requirement details, see [Firewalls and network infrastructure requirem
     
     To view a quickstart for using Azure Information Protection with SharePoint, see [Quickstart: Find what sensitive information you have in files stored on-premises](../quickstart-findsensitiveinfo.md).
         
-- Improved user notifications for missing policies. For more information about label policies for the unified labeling client, see [What label policies can do](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do) in the Microsoft 365 documentation.
+- Improved user notifications for missing policies. For more information about label policies for the unified labeling client, see [What label policies can do](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do) in the Microsoft 365 documentation.
 
 - [Automatic labels](../configure-policy-classification.md) are now applied in Excel for scenarios where a user starts to close a file without saving, just as they are when a user actively saves a file.
 
@@ -323,7 +323,7 @@ For more requirement details, see [Firewalls and network infrastructure requirem
 
 - [Dynamic user variables](../configure-policy-markings.md#using-variables-in-the-text-string) are now displayed in a document's visual markings as expected.
 
-- Issue where only the first page of content of a PDF was being used for applying autoclassification rules is now resolved, and autoclassification based on all content in the PDF now proceeds as expected. For more information about classification and labeling, see the [classification and labeling FAQ](https://docs.microsoft.com/azure/information-protection/faqs-infoprotect). 
+- Issue where only the first page of content of a PDF was being used for applying autoclassification rules is now resolved, and autoclassification based on all content in the PDF now proceeds as expected. For more information about classification and labeling, see the [classification and labeling FAQ](../faqs-infoprotect.md). 
 
 - When multiple Exchange accounts are configured and the Azure Information Protection Outlook client is enabled, mails are sent from the secondary account as expected. For more information about configuring the unified labeling client with Outlook, see [Additional prerequisites for the Azure Information Protection unified labeling client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
@@ -346,22 +346,22 @@ Supported through  12/29/2020
 - General availability version of the [scanner](../deploy-aip-scanner.md), to inspect and label documents in on-premises data stores. 
 
 - [Scanner](../deploy-aip-scanner.md) related:
-    - [Easier SharePoint on-premises and subsite discovery](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories). Setting each specific site is no longer required. 
-    - Advanced property for [SQL chunk sizing](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server) added.
-    - Administrators now have the ability to [stop existing scans and perform a rescan](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan) if a change was made to the default label.
-    - By default, scanner now sets minimal telemetry for faster scans and reduced log size and information types are now cached in the database. Learn more about [scanner optimization](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner). 
+    - [Easier SharePoint on-premises and subsite discovery](../quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories). Setting each specific site is no longer required. 
+    - Advanced property for [SQL chunk sizing](../deploy-aip-scanner-prereqs.md#storage-requirements-and-capacity-planning-for-sql-server) added.
+    - Administrators now have the ability to [stop existing scans and perform a rescan](../deploy-aip-scanner-manage.md#stopping-a-scan) if a change was made to the default label.
+    - By default, scanner now sets minimal telemetry for faster scans and reduced log size and information types are now cached in the database. Learn more about [scanner optimization](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance). 
     - Scanner now supports separate deployments for database and the service, while **Sysadmin** rights are needed only for database deployment.
     - Improvements made to scanner performance. 
 
-- Modification of [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) cmdlet **Set-AIPFileLabel** to enable removal of protection from PST, rar, 7zip, and MSG files. This feature is disabled by default and must be turned on using the [Set-LabelPolicy](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations) cmdlet, as described [here](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-removal-of-protection-from-compressed-files).  
+- Modification of [PowerShell](./clientv2-admin-guide-powershell.md) cmdlet **Set-AIPFileLabel** to enable removal of protection from PST, rar, 7zip, and MSG files. This feature is disabled by default and must be turned on using the [Set-LabelPolicy](./clientv2-admin-guide-customizations.md) cmdlet, as described [here](./clientv2-admin-guide-customizations.md#enable-removal-of-protection-from-compressed-files).  
 
-- Added ability for Azure Information Protection administrators to control when .pfile extensions are used for files. Learn more about [changing protected file types](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#change-which-file-types-to-protect). 
+- Added ability for Azure Information Protection administrators to control when .pfile extensions are used for files. Learn more about [changing protected file types](./clientv2-admin-guide-customizations.md#change-which-file-types-to-protect). 
 
-- Dynamic visual marking support added for applications and variables. Learn more about how to [configure labels for visual markings](https://docs.microsoft.com/azure/information-protection/configure-policy-markings). 
+- Dynamic visual marking support added for applications and variables. Learn more about how to [configure labels for visual markings](../configure-policy-markings.md). 
 
 - Improvements made to [customizable policy tips for automatic and recommended labels](use-client.md).   
 
-- Support added for [offline labeling capability](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#support-for-disconnected-computers) with Office apps in the unified labeling client.
+- Support added for [offline labeling capability](./clientv2-admin-guide-customizations.md#support-for-disconnected-computers) with Office apps in the unified labeling client.
 
 **Fixes:**
 
@@ -382,4 +382,3 @@ For more information about installing and using the unified labeling client:
 - For users: [Download and install the client](install-unifiedlabelingclient-app.md)
 
 - For admins: [Azure Information Protection unified labeling client administrator guide](clientv2-admin-guide.md)
-

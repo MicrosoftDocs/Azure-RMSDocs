@@ -1,11 +1,11 @@
 ---
 title: class LabelGroupData 
 description: Documents the labelgroupdata::undefined class of the Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
+ms.author: mbaldwin
+ms.date: 09/21/2020
 ---
 
 # class LabelGroupData 
@@ -31,6 +31,7 @@ public bool IsMandatory() const  | _Not yet documented._
 public const std::vector\<std::shared_ptr\<ProtectionActionData\>\>& GetProtectionActionData() const  | _Not yet documented._
 public bool IsAuditEnabled() const  | _Not yet documented._
 public bool IsCoauthEnabled() const  | _Not yet documented._
+public bool IsEnhancedClassificationEnabled() const  | _Not yet documented._
 public const std::string& GetAuditWorkspaceId() const  | _Not yet documented._
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  | _Not yet documented._
 public const std::vector\<std::string\>& GetLabelByCustomProperties() const  | _Not yet documented._
@@ -42,100 +43,104 @@ public virtual ~LabelGroupData()  | _Not yet documented._
 ## Members
   
 ### GetLabelId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetLabelGroupData function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetOrder function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetColor function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetName function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetDescription function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetTemplateId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetInvariantName function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetTooltip function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetAutoTooltip function
-_Not documented yet._
+Not yet documented.
 
   
 ### IsEnabled function
-_Not documented yet._
+Not yet documented.
 
   
 ### IsDowngradeJustificationRequired function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetDefaultLabelId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetMoreInfoUrl function
-_Not documented yet._
+Not yet documented.
 
   
 ### IsMandatory function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetProtectionActionData function
-_Not documented yet._
+Not yet documented.
 
   
 ### IsAuditEnabled function
-_Not documented yet._
+Not yet documented.
 
   
 ### IsCoauthEnabled function
-_Not documented yet._
+Not yet documented.
+
+  
+### IsEnhancedClassificationEnabled function
+Not yet documented.
 
   
 ### GetAuditWorkspaceId function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetCustomSettings function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetLabelByCustomProperties function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetCustomPropertiesByLabel function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetParsedCustomPropertiesByLabel function
-_Not documented yet._
+Not yet documented.
 
   
 ### GetLabelByCustomPropertiesSettings function
-_Not documented yet._
+Not yet documented.
 
   
 ### ~LabelGroupData function
-_Not documented yet._
+Not yet documented.

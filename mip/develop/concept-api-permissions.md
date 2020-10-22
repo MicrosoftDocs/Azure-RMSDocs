@@ -9,16 +9,16 @@ ms.service: information-protection
 
 ---
 
-# Required API permissions for Microsoft Information Protection SDK
+# API permissions for the Microsoft Information Protection SDK
 
 The MIP SDK uses two backend Azure services for labeling and protection. In the Azure Active Directory app permissions blade, these services are:
 
 - Azure Rights Management Service
 - Microsoft Information Protection Sync Service
 
-Application permissions must be granted to all APIs when using the MIP SDK for labeling and protection. Various application authentication scenarios necessitate different application permissions. For application authentication scenarios please refer to [Authentication scenarios](https://docs.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios).
+Application permissions must be granted to one or more APIs when using the MIP SDK for labeling and protection. Various application authentication scenarios may require different application permissions. For application authentication scenarios please refer to [Authentication scenarios](/azure/active-directory/develop/authentication-flows-app-scenarios).
 
-Tenant wide admin consent should be granted for application permissions where Admin consent is required as described in [AAD documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
+Tenant-wide admin consent should be granted for application permissions where Administrator consent is required as described in [AAD documentation](/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
 
 ## Application Permissions
 
@@ -58,10 +58,10 @@ Delegated permissions allow an application in Azure Active Directory to perform 
 
 | Service                         | Permission Name         | Description                                      | Admin Consent Required |
 | ------------------------------- | ----------------------- | ------------------------------------------------ | ---------------------- |
-| Azure Rights Management Service | User_Impersonation      | Create and access protected content for the user | No                     |
+| Azure Rights Management Service | user_impersonation      | Create and access protected content for the user | No                     |
 | MIP Sync Service                | UnifiedPolicy.User.Read | Read all unified policies a user has access to   | No                     |
 
-### User_Impersonation
+### user_impersonation
 
 This permission is required when an application must be permitted to user Azure Rights Management Services on behalf of the user. Examples of services that require User_Impersonation rights are applications that need to encrypt, or access content based on user’s label policies to apply labels or encrypt content natively.
   

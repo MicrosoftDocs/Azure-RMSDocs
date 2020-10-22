@@ -129,11 +129,11 @@ Additionally:
 
 ## Enforce protection-only mode when your organization has a mix of licenses
 
-If your organization does not have any licenses for Azure Information Protection, but does have licenses for Office 365 that include the Azure Rights Management service for protecting data, the Azure Information Protection client for Windows automatically runs in [protection-only mode](client-protection-only-mode.md).
+If your organization does not have any licenses for Azure Information Protection, but does have licenses for Microsoft 365 that include the Azure Rights Management service for protecting data, the Azure Information Protection client for Windows automatically runs in [protection-only mode](client-protection-only-mode.md).
 
 However, if your organization has a subscription for Azure Information Protection, by default all Windows computers can download the Azure Information Protection policy. The Azure Information Protection client does not do license checking and enforcement. 
 
-If you have some users who do not have a license for Azure Information Protection but do have a license for Office 365 that includes the Azure Rights Management service, edit the registry on these users' computers to prevent users from running the unlicensed classification and labeling features from Azure Information Protection.
+If you have some users who do not have a license for Azure Information Protection but do have a license for Microsoft 365 that includes the Azure Rights Management service, edit the registry on these users' computers to prevent users from running the unlicensed classification and labeling features from Azure Information Protection.
 
 Locate the following value name and set the value data to **0**:
 
@@ -501,7 +501,7 @@ To configure this advanced setting, enter the following strings:
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
-Use this setting only when you have a working [S/MIME deployment](https://docs.microsoft.com/exchange/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
+Use this setting only when you have a working [S/MIME deployment](/exchange/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from Azure Information Protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
 
 This configuration requires you to specify an advanced client setting named **LabelToSMIME** for each Azure Information Protection label that you want to apply S/MIME protection. Then for each entry, set the value by using the following syntax:
 
@@ -916,7 +916,7 @@ By default, the Azure Information Protection scanner runs with a low integrity l
 
 However, when the service account that runs the scanner has only the rights documented in the [scanner deployment prerequisites](../deploy-aip-scanner-prereqs.md), the low integrity level is not necessary and is not recommended because it negatively affects performance. 
 
-For more information about the Windows integrity levels, see [What is the Windows Integrity Mechanism?](https://msdn.microsoft.com/library/bb625957.aspx)
+For more information about the Windows integrity levels, see [What is the Windows Integrity Mechanism?](/previous-versions/dotnet/articles/bb625957(v=msdn.10))
 
 To configure this advanced setting so that the scanner runs with an integrity level that's automatically assigned by Windows (a standard user account runs with a medium integrity level), enter the following strings:
 
@@ -994,7 +994,7 @@ Outlook Mobile does not support Exchange message classification.
 
 To achieve this solution: 
 
-1. Use the [New-MessageClassification](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/New-MessageClassification) Exchange PowerShell cmdlet to create message classifications with the Name property that maps to your label names in your Azure Information Protection policy. 
+1. Use the [New-MessageClassification](/powershell/module/exchange/policy-and-compliance/New-MessageClassification) Exchange PowerShell cmdlet to create message classifications with the Name property that maps to your label names in your Azure Information Protection policy. 
 
 2. Create an Exchange mail flow rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message properties to set a message header. 
 
@@ -1034,5 +1034,3 @@ Now that you've customized the Azure Information Protection client, see the foll
 - [File types supported](client-admin-guide-file-types.md)
 
 - [PowerShell commands](client-admin-guide-powershell.md)
-
-

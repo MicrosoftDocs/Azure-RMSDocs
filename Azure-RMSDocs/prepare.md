@@ -78,7 +78,7 @@ For assigning usage rights and access controls, and configuring the Azure Rights
 
 - To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
 
-- The **Azure AD proxyAddresses** attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox automatically has an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. 
+- The **Azure AD proxyAddresses** attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Microsoft 365 that has an Exchange Online mailbox automatically has an email address that is stored in this attribute. If you assign an alternative email address for a Microsoft 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. 
 
     Azure Information Protection can use any value in this Azure AD proxyAddresses attribute, providing the domain has been added to your tenant (a "verified domain"). For more information about verifying domains:
 
@@ -86,7 +86,7 @@ For assigning usage rights and access controls, and configuring the Azure Rights
 
     - For Office 365: [Add a domain to Office 365](/office365/admin/setup/add-domain)
 
-- The **Azure AD userPrincipalName** attribute is used only when an account in your tenant doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
+- The **Azure AD userPrincipalName** attribute is used only when an account in your tenant doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Microsoft 365 that doesn't have a mailbox.
 
 ### Assigning usage rights and access controls to external users
 
@@ -104,7 +104,7 @@ For assigning labels:
 
 - To configure scoped policies that assign additional labels to group members, you can use any type of group in Azure AD that has an email address that contains a verified domain for the user's tenant. A group that has an email address is often referred to as a mail-enabled group.
 
-    For example, you can use a mail-enabled security group, a static distribution group, and an Office 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address. You also cannot use a dynamic distribution list from Exchange Online because this group isn't replicated to Azure AD.
+    For example, you can use a mail-enabled security group, a static distribution group, and a Microsoft 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address. You also cannot use a dynamic distribution list from Exchange Online because this group isn't replicated to Azure AD.
 
 For assigning usage rights and access controls:
 

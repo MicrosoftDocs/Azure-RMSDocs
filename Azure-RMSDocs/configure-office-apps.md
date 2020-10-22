@@ -32,15 +32,15 @@ ms.custom: admin
 Use this information to determine what you need to do so that Office apps work with the Azure Rights Management service from Azure Information Protection.
 
 ## Office 365 apps, Office 2019, Office 2016, and Office 2013
-Because these later versions of Office natively support the Azure Rights Management service, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook, and Outlook on the web. All users have to do for these apps on Windows, is sign in to their Office applications with their Office 365 credentials. They can then can protect files and emails, and use files and emails that have been protected by others.
+Because these later versions of Office natively support the Azure Rights Management service, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook, and Outlook on the web. All users have to do for these apps on Windows, is sign in to their Office applications with their Microsoft 365 credentials. They can then can protect files and emails, and use files and emails that have been protected by others.
 
 ### User instructions for Office for Mac
 
 Users who have Office for Mac must first verify their credentials before they can protect content. For example:
 
-1. Open Outlook and create a profile by using your Office 365 work or school account. 
+1. Open Outlook and create a profile by using your Microsoft 365 work or school account. 
 
-2. Create a new message and on the **Options** tab, select **Permissions**, and then select **Verify Credentials**. When prompted, specify your Office 365 work or school account details again, and select **Sign in**.
+2. Create a new message and on the **Options** tab, select **Permissions**, and then select **Verify Credentials**. When prompted, specify your Microsoft 365 work or school account details again, and select **Sign in**.
     
     This action downloads the Azure Rights Management templates and **Verify Credentials** is now replaced with options that include **No Restrictions**, **Do Not Forward**, and any Azure Rights Management templates that are published for your tenant. 
 
@@ -49,7 +49,7 @@ Users who have Office for Mac must first verify their credentials before they ca
 4. To protect an email message or a document: On the **Options** tab, select **Permissions** and choose an option or template that protects your email or document.
 
 ## Office 2010
-For client computers to use the Azure Rights Management service with Office 2010, they must have the Azure Information Protection client (classic). No further configuration is required other than users must sign in with their Office 365 credentials and they can then protect files and use files that have been protected by others.
+For client computers to use the Azure Rights Management service with Office 2010, they must have the Azure Information Protection client (classic). No further configuration is required other than users must sign in with their Microsoft 365 credentials and they can then protect files and use files that have been protected by others.
 
 For more information about the Azure Information Protection client (classic), see [Azure Information Protection client: Installation and configuration for clients](configure-client.md).
 

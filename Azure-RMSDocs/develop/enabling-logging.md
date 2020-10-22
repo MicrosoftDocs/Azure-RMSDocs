@@ -104,7 +104,7 @@ Enable automatic logging
 CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 ```
 
-For more information on optional settings, see [CustomerExperienceOptions](https://msdn.microsoft.com/library/microsoft.rightsmanagement.customerexperienceoptions.aspx).
+For more information on optional settings, see [CustomerExperienceOptions](/previous-versions/windows/desktop/msipcthin2/customerexperienceoptions).
 
 Get current logging control flag setting
 

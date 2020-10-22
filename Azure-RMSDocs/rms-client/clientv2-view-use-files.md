@@ -54,7 +54,7 @@ However, if you have an iOS or Android device, you can use the Azure Information
 
 Before you can view the protected file, the Rights Management service that was used to protect the file must first confirm that you are authorized to view the file. The service does this confirmation by checking your user name and password. In some cases, these credentials might be cached and you do not see a prompt that asks you to sign in. In other cases, you are prompted to supply your credentials.
 
-If your organization does not have a cloud-based account for you to use (for Office 365 or Azure) and does not use an equivalent on-premises version (AD RMS), you have two options:
+If your organization does not have a cloud-based account for you to use (for Microsoft 365 or Azure) and does not use an equivalent on-premises version (AD RMS), you have two options:
 
 - If you were sent a protected email, follow the instructions to sign in with your social identity provider (such as Google for a Gmail account) or apply for a one-time passcode.
 

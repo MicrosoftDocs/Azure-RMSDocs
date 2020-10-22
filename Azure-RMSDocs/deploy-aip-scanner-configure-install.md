@@ -6,7 +6,7 @@ description: Instructions for installing and configuring the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/31/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -97,7 +97,7 @@ To configure your scanner:
 
 ### Create a network scan job (public preview)
 
-Starting in version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview), you can scan your network for risky repositories. Add one or more of the repositories found to a content scan job to scan them for sensitive content.
+Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), you can scan your network for risky repositories. Add one or more of the repositories found to a content scan job to scan them for sensitive content.
 
 > [!NOTE]
 > The **network discovery** interface is currently in gradual deployment and will be available in all regions by September 15, 2020. 
@@ -109,7 +109,7 @@ Starting in version [2.8.85](rms-client/unifiedlabelingclient-version-release-hi
 
 |Prerequisite  |Description  |
 |---------|---------|
-|**Install the Network Discovery service**     |   If you've recently upgraded your scanner, you may need to still install the Network Discovery service. </br></br>Run the [**Install-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet to enable network scan jobs.      |
+|**Install the Network Discovery service**     |   If you've recently upgraded your scanner, you may need to still install the Network Discovery service. </br></br>Run the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet to enable network scan jobs.      |
 |**Azure Information Protection analytics**     | Make sure that you have Azure Information Protection analytics enabled. </br></br>In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview).** </br></br>For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).|
 | | |
 
@@ -167,7 +167,7 @@ If you've [defined a network scan job](#create-a-network-scan-job-public-preview
 
 Repositories where **Public access** is found to have **read** or **read/write** capabilities may have sensitive content that must be secured. If **Public access** is false, the repository not accessible by the public at all.
 
-Public access to a repository is only reported if you've set a weak account in the **StandardDomainsUserAccount** parameter of the [**Install-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) or [**Set-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscovery) cmdlets.
+Public access to a repository is only reported if you've set a weak account in the **StandardDomainsUserAccount** parameter of the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet.
 
 - The accounts defined in these parameters are used to simulate the access of a weak user to the repository. If the weak user defined there can access the repository, this means that the repository can be accessed publicly. 
 
@@ -208,28 +208,37 @@ You may want to do this only after running a network scan job to analyze the rep
         :::image type="content" source="media/scanner-repository-add.png" alt-text="Add data repository for the Azure Information Protection scanner":::
 
     1. On the **Repository** pane, specify the path for the data repository, and then select **Save**.
-
-        For example: 
-
+    
+        
         - For a network share, use `\\Server\Folder`. 
         - For a SharePoint library, use `http://sharepoint.contoso.com/Shared%20Documents/Folder`.
+        - For a local path: `C:\Folder`
+        - For a UNC path: `\\Server\Folder`
 
-        > [!NOTE]
-        > Wildcards are not supported and WebDav locations are not supported.
-        >     
+    > [!NOTE]
+    > Wildcards are not supported and WebDav locations are not supported.
+    >  
+  
+    If you add a SharePoint path for **Shared Documents**:
+    - Specify **Shared Documents** in the path when you want to scan all documents and all folders from Shared Documents. 
+    For example: `http://sp2013/SharedDocuments`
+    - Specify **Documents** in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. 
+    For example: `http://sp2013/Documents/SalesReports`
+    - Or, specify only the **FQDN** of your Sharepoint, for example `http://sp2013` to [discover and scan all SharePoint sites and subsites under a specific URL](deploy-aip-scanner-prereqs.md#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url) and subtitles under this URL. Grant scanner **Site Collector Auditor** rights to enable this. 
+    >
 
-        For the remaining settings on this pane, do not change them for this initial configuration, but keep them as **Content scan job default**. The default setting means that the data repository inherits the settings from the content scan job.
 
-        Use the following syntax when adding SharePoint paths:
+    For the remaining settings on this pane, do not change them for this initial configuration, but keep them as **Content scan job default**. The default setting means that the data repository inherits the settings from the content scan job.
+
+    Use the following syntax when adding SharePoint paths:
     
-        |Path  |Syntax  |
-        |---------|---------|
-        |**Root path**     | `http://<SharePoint server name>` </br></br>Scans all sites, including any site collections allowed for the scanner user. </br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
-        |**Specific SharePoint subsite or collection**     | One of the following: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
-        |**Specific SharePoint library**     | One of the following: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
-        |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
-        | | |
-
+    |Path  |Syntax  |
+    |---------|---------|
+    |**Root path**     | `http://<SharePoint server name>` </br></br>Scans all sites, including any site collections allowed for the scanner user. </br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
+    |**Specific SharePoint subsite or collection**     | One of the following: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
+    |**Specific SharePoint library**     | One of the following: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
+    |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
+    
 
 1. Repeat the previous steps to add as many repositories as needed.
 
@@ -287,20 +296,20 @@ To get an Azure AD token:
 
     Run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
     
-    ```ps
+    ```PowerShell
     Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
     ```
         
     For example:
 
-    ```ps
+    ```PowerShell
     $pscreds = Get-Credential CONTOSO\scanner
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
     Acquired application access token on behalf of CONTOSO\scanner.
     ```
 
 > [!TIP]
-> If your scanner service account cannot be granted the **Log on locally** right for the installation, use the *OnBehalfOf* parameter with [Set-AIPAuthentication](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipauthentication), as described in [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+> If your scanner service account cannot be granted the **Log on locally** right for the installation, use the *OnBehalfOf* parameter with [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), as described in [How to label files non-interactively for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
 The scanner now has a token to authenticate to Azure AD. This token is valid for one year, two years, or never, according to your configuration of the **Web app /API** client secret in Azure AD. 
 
@@ -332,7 +341,7 @@ To change these settings, edit the content scan job:
     
     Alternatively, run the following command in your PowerShell session:
     
-    ```ps
+    ```PowerShell
     Start-AIPScan
     ```
 
@@ -350,13 +359,13 @@ For a scanner that has access to the internet, this user account is the account 
 
 **Example 1:**  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
 **Example 2:** PowerShell command for the scanner to protect .xml files and .tiff files in addition to Office files and PDF files, where your label policy is named "Scanner":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
 ```
 
@@ -455,7 +464,7 @@ Additional factors that affect the scanner performance include:
 |**Load/response times**     |The current load and response times of the data stores that contain the files to scan will also affect scanner performance.         |
 |**Scanner mode** (Discovery / Enforce)    | Discovery mode typically has a higher scanning rate than enforce mode. </br></br>Discovery requires a single file read action, whereas enforce mode requires read and write actions.        |
 |**Policy changes**     |Your scanner performance may be affected if you've made changes to the autolabeling in the label policy. </br></br>Your first scan cycle, when the scanner must inspect every file, will take longer than subsequent scan cycles that by default, inspect only new and changed files. </br></br>If you change the conditions or autolabeling settings, all files are scanned again. For more information, see [Rescanning files](deploy-aip-scanner-manage.md#rescanning-files).|
-|**Regex constructions**    | Scanner performance is affected by how your regex expressions for custom conditions are constructed. </br></br> To avoid heavy memory consumption and the risk of timeouts (15 minutes per file), review your regex expressions for efficient pattern matching. </br></br>For example: </br>- Avoid [greedy quantifiers](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>- Use non-capturing groups such as `(?:expression)` instead of `(expression)`    |
+|**Regex constructions**    | Scanner performance is affected by how your regex expressions for custom conditions are constructed. </br></br> To avoid heavy memory consumption and the risk of timeouts (15 minutes per file), review your regex expressions for efficient pattern matching. </br></br>For example: </br>- Avoid [greedy quantifiers](/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>- Use non-capturing groups such as `(?:expression)` instead of `(expression)`    |
 |**Log level**     |  Log level options include **Debug**, **Info**, **Error** and **Off** for the scanner reports.</br></br>- **Off** results in the best performance </br>- **Debug** considerably slows down the scanner and should be used only for troubleshooting. </br></br>For more information, see the *ReportLevel* parameter for the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.       |
 |**Files being scanned**     |- With the exception of Excel files, Office files are more quickly scanned than PDF files. </br></br>- Unprotected files are quicker to scan than protected files. </br></br>- Large files obviously take longer to scan than small files.         |
 | | |
@@ -476,15 +485,15 @@ Supported cmdlets for the scanner include:
 
 - [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
 
-- [Get-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)
+- [Get-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)
 
-- [Get-MIPNetworkDiscoveryJobs](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)
+- [Get-MIPNetworkDiscoveryJobs](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)
 
-- [Get-MIPNetworkDiscoveryStatus](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
+- [Get-MIPNetworkDiscoveryStatus](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
 
 - [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
-- [Import-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)
+- [Import-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)
 
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
 
@@ -494,19 +503,19 @@ Supported cmdlets for the scanner include:
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
-- [Set-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
+- [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
 
 - [Start-AIPScanDiagnostics](/powershell/module/azureinformationprotection/Start-AIPScannerDiagnostics)
 
-- [Start-MIPNetworkDiscovery](https://docs.microsoft.com/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)
+- [Start-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)
 
 - [Stop-AIPScan](/powershell/module/azureinformationprotection/Stop-AIPScan)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 
-- [Uninstall-MIPNetworkDiscovery](https://docs.microsoft.com/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)
+- [Uninstall-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
 

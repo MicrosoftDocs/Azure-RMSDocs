@@ -1,11 +1,11 @@
 ---
 title: Concepts - Service discovery in the MIP SDK.
 description: This article will help you understand how the MIP SDK implements service discovery
-author: v-anikep
+author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 05/30/2020
-ms.author: pathak-aniket
+ms.author: v-anikep
 ---
 
 # Microsoft Information Protection SDK - Service Discovery
@@ -26,11 +26,11 @@ FileEngine::Settings engineSettings(mip::Identity(mUsername),
 													false);
 ```
 
-The `FileEngine::Settings` object accepts a `mip::Identity` as the first parameter of the constructor. The UPN or email suffix provided via the `mip::Identity` is used first to determine whether the customer has any AD RMS cluster that should be used instead of Azure. This is done by attempting to resolve the **_rmsdisco._http._tcp** DNS SRV record under the domain suffix obtained from the `mip::Identity`. If name resolution fails for this SRV record, the SDK defaults to commercial cloud.
+The `FileEngine::Settings` object accepts a `mip::Identity` as the first parameter of the constructor. The UPN or email suffix provided via the `mip::Identity` is used first to determine whether the enterprise has any Active Directory Rights Management Service (AD RMS) cluster that should be used instead of Azure. This is done by attempting to resolve the **_rmsdisco._http._tcp** DNS SRV record under the domain suffix obtained from the `mip::Identity`. If name resolution fails for this SRV record, the SDK defaults to commercial cloud.
 
 > When an AD RMS cluster is found, the `mip::FileEngine::FileEngineSettings` property `IsProtectionOnlyEngine` must be set to true. The Policy SDK cannot be used in conjuction with AD RMS publishing (Hold Your Own Key).
 
-For example, if the `mip::Identity` is *Bob@contoso.com* the SDK uses the mail address suffix *contoso.com* to generate a DNS query for SRV record. If the AD RMS Mobile Device Extensions (MDE) SRV record for Contoso (**_rmsdisco._http._tcp.contoso.com**) is found, the SDK will attempt to connect to the service referred to by the SRV record. If the Contoso record isn't found, the SDK defaults to the commercial endpoint at https://api.aadrm.com. For additional details on AD RMS configuration and DNS registration, please review the [AD RMS MDE documentation](https://docs.microsoft.com/en-us/information-protection/develop/quick-app-adrms#service-discovery).
+For example, if the `mip::Identity` is *Bob@contoso.com*, the SDK uses the mail address suffix *contoso.com* to generate a DNS query for SRV record. If the AD RMS Mobile Device Extensions (MDE) SRV record for Contoso (**_rmsdisco._http._tcp.contoso.com**) is found, the SDK will attempt to connect to the service referred to by the SRV record. If the Contoso record isn't found, the SDK defaults to the commercial endpoint at https://api.aadrm.com. For additional details on AD RMS configuration and DNS registration, please review the [AD RMS MDE documentation](./quick-app-adrms.md#service-discovery).
 
 ## Service discovery with mip::Cloud
 
@@ -62,4 +62,4 @@ Each can be set on the engine settings object in the relevent engines settings o
 
 ## Protected Content Consumption
 
-When protected content is consumed by the MIP SDK, service discovery is performed based on the licensing endpoint stored in the protected document. The application must still create a file or protection engine relevent to their own identity. When the `mip::FileHandler` object is created, the SDK will parse the license information and connect to the appropriate endpoint. If authentication is required, the user may be prompted to authenticate. 
+When protected content is consumed by the MIP SDK, service discovery is performed based on the licensing endpoint stored in the protected document. The application must still create a file or protection engine relevent to their own identity. When the `mip::FileHandler` object is created, the SDK will parse the license information and connect to the appropriate endpoint. If authentication is required, the user may be prompted to authenticate.
