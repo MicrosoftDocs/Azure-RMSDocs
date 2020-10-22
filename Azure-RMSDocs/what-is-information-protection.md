@@ -82,59 +82,33 @@ For more information, see the [Microsoft Information Protection SDK overview](..
 
 ## Next steps
 
-To get started with AIP, download and install the unified labeling client and scanner.
+**To get started with AIP,** download and install the unified labeling client and scanner.
 
 - [Sign up for a free trial](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)  (Enterprise Mobility + Security E5)
 - [Download the client](https://www.microsoft.com/download/details.aspx?id=53018)
 - [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
 - [Install and configure the on-premises scanner](deploy-aip-scanner-configure-install.md)
 
-Get familiar with AIP using our initial tutorials:
+**Get familiar with AIP** using our initial tutorials:
 
 - [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
 - [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 
-Once you're ready to customize your AIP deployment further, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).
+**When you're ready to customize AIP further**, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).
 
-To get started with the MIP SDK, see [Microsoft Information Protection (MIP) SDK setup and configuration](../mip/develop/setup-configure-mip.md).
+**To get started with the MIP SDK,** see [Microsoft Information Protection (MIP) SDK setup and configuration](../mip/develop/setup-configure-mip.md).
 
-## Additional resources
+### Additional resources
 
-- **Subscription options and pricing:** [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection)
-
-- **FAQs:** [Frequently asked questions for Azure Information Protection](faqs.md)
-
-- **Known issues:** [Known issues - Azure Information Protection](known-issues.md)
-
-- **Support options** [Support options for Azure Information Protection](information-support.md)
-
-- **Yammer:** [Azure Information Protection](https://www.yammer.com/AskIPTeam)
-
-
-### What's New?
-
-In addition to the new AIP features described in the [AIP unified labeling client version history](rms-client/unifiedlabelingclient-version-release-history.md), you may also be interested to read about new AIP-related features for Microsoft 365 and SharePoint.
-
-For more information, see:
-
-- [What's new in the Microsoft 365 admin center?](/microsoft-365/admin/whats-new-in-preview)
-- [What's new in the Sharepoint admin center?](/sharepoint/what-s-new-in-admin-center)
-
-
-### Microsoft Ignite
-
-Microsoft Ignite 2020 was held remotely and was a great success! You can view the session recordings at [https://myignite.microsoft.com/sessions](https://myignite.microsoft.com/sessions).
-
-For example:
-
-- [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)
-- [Be a risk management hero with intelligent data protection and compliance solutions](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87)
-- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)
-- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)
-
-> [!TIP]
-> If you're looking for information about Microsoft Ignite 2019 in Orlando, check out the recap at our blog: [Microsoft Information Protection - Ignite 2019 recap](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-protection-ignite-2019-recap/ba-p/998174)
-> 
+|Resource  |Links and description  |
+|---------|---------|
+|**Subscription options and pricing**     |    [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection)     |
+|**FAQs and known issues**     | [Frequently asked questions for Azure Information Protection](faqs.md) </br> [Known issues - Azure Information Protection](known-issues.md)       |
+|**Support options**     | [Support options for Azure Information Protection](information-support.md)        |
+|**Yammer**     |  [Azure Information Protection](https://www.yammer.com/AskIPTeam)       |
+|**Ignite 2020**     |  - [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)</br>- [Be a risk management hero with intelligent data protection and compliance solutions](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87)</br>- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)</br>- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)       |
+|**What's new?**     | Watch for new features related to AIP in the Microsoft 365 and SharePoint admin centers:   </br>- [What's new in the Microsoft 365 admin center?](/microsoft-365/admin/whats-new-in-preview) </br>- [What's new in the Sharepoint admin center?](/sharepoint/what-s-new-in-admin-center)     |
+|     |         |
 
 ## Azure Information Protection's classic client
 
