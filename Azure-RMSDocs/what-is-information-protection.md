@@ -68,7 +68,7 @@ For more information, see:
 Download the scanner installation together with the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
 
 
-## MIP SDK
+## Microsoft Information Protection SDK
 
 The Microsoft Information Protection SDK extends sensitivity labels to third-party apps and services. Developers can use the SDK to build native support for applying labels and protection to files.
 
@@ -110,7 +110,7 @@ For more information, see the [Microsoft Information Protection SDK overview](..
 |**What's new?**     | Watch for new features related to AIP in the Microsoft 365 and SharePoint admin centers:   </br>- [What's new in the Microsoft 365 admin center?](/microsoft-365/admin/whats-new-in-preview) </br>- [What's new in the Sharepoint admin center?](/sharepoint/what-s-new-in-admin-center)     |
 |     |         |
 
-## Azure Information Protection's classic client
+## AIP's classic client
 
 The Azure Information Protection classic client is the earlier version of AIP, and enables administrators to manage classification labels directly in the Azure portal.
 
