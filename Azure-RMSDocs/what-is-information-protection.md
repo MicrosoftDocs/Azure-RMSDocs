@@ -58,7 +58,7 @@ The on-premises scanner is installed using PowerShell cmdlets provided as part o
 
 For example, use the scanner data shown on the Azure portal to find repositories on your network that might have sensitive content at risk:
 
-:::image type="content" source="media/risky-repos.png" alt-text="Check scanned networks for risky repositories":::
+:::image type="content" source="media/risky-repos-small.png" alt-text="Check scanned networks for risky repositories" lightbox="media/risky-repos.png":::
 
 For more information, see:
 
