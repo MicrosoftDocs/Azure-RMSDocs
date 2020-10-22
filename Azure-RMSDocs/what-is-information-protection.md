@@ -50,7 +50,7 @@ For details about the latest features and public preview version of the unified 
 
 Download the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
     
-### AIP scanner
+### AIP on-premises scanner
 
 The Azure Information Protection on-premises scanner enables administrators to scan their networks and file shares for sensitive content that must be labeled, classified, and/or protected.
 
@@ -60,9 +60,12 @@ For example, use the scanner data shown on the Azure portal to find repositories
 
 :::image type="content" source="media/risky-repos.png" alt-text="Check scanned networks for risky repositories":::
 
-For details about the latest features and public preview version of the on-premises scanner, see [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md).
+For more information, see:
 
-Download the scanner installation together with the client, [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
+- [What is the AIP unified labeling scanner?](deploy-aip-scanner.md)
+- The scanner sections of the [AIP unified labeling client - Version release history](rms-client/unifiedlabelingclient-version-release-history.md)
+
+Download the scanner installation together with the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
 
 
 ### MIP SDK
@@ -83,7 +86,7 @@ To get started with AIP, download and install the unified labeling client and sc
 
 - [Sign up for a free trial](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)  (Enterprise Mobility + Security E5)
 - [Download the client](https://www.microsoft.com/download/details.aspx?id=53018)
-- [Quickstart: Deploy the unified labeling client](quickstart-install-scanner.md)
+- [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
 - [Install and configure the on-premises scanner](deploy-aip-scanner-configure-install.md)
 
 Get familiar with AIP using our initial tutorials:
