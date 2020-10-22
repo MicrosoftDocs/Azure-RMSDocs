@@ -38,7 +38,7 @@ The following image shows the Azure Information Protection additions to MIP, inc
 
 :::image type="content" source="media/what-is-mip.png" border="false" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
 
-### AIP unified labeling client
+## AIP unified labeling client
 
 The Azure Information Protection unified labeling client extends labeling, classification, and protection capabilities to additional file types, as wel as to the File Explorer and PowerShell. 
 
@@ -50,7 +50,7 @@ For details about the latest features and public preview version of the unified 
 
 Download the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
     
-### AIP on-premises scanner
+## AIP on-premises scanner
 
 The Azure Information Protection on-premises scanner enables administrators to scan their networks and file shares for sensitive content that must be labeled, classified, and/or protected.
 
@@ -68,7 +68,7 @@ For more information, see:
 Download the scanner installation together with the client from the [Microsoft Azure Information Protection download page](https://www.microsoft.com/download/details.aspx?id=53018).
 
 
-### MIP SDK
+## MIP SDK
 
 The Microsoft Information Protection SDK extends sensitivity labels to third-party apps and services. Developers can use the SDK to build native support for applying labels and protection to files.
 
