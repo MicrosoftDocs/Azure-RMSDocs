@@ -146,7 +146,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |Central reporting (analytics):| **Yes** | **Yes** | No |
 |Custom permissions set independently from a label:| **Yes** | **Yes** <sup>3</sup>| No |
 |Information Protection bar in Office apps:| **Yes** | **Yes**| No |
-|Visual markings as a label action (header, footer, watermark):| **Yes** | **Yes** | **Yes** <sup>9</sup>|
+|Visual markings as a label action (header, footer, watermark):| **Yes** | **Yes** | **Yes**|
 |Per app visual markings:| **Yes** | **Yes** | No |
 |Dynamic visual markings with variables:| **Yes** | **Yes** | **Yes** <sup>9</sup>|
 |Remove external content marking in app:| **Yes**| **Yes**| No|
