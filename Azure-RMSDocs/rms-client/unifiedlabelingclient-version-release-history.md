@@ -94,7 +94,7 @@ The Azure Information Protection on-premises scanner now supports Azure China en
 
 The [**Set-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery) cmdlet was also added to provide additional support, enabling you to update the installation settings for the Network Discovery service via PowerShell.
 
-For more information about content and network scan jobs, see [Configure the scanner](../deploy-aip-scanner-configure-install.md##configure-the-scanner-in-the-azure-portal).
+For more information about content and network scan jobs, see [Configure the scanner](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
 
 > [!NOTE]
 > Use these PowerShell cmdlets to apply labels on imported policies whenever the scanner server is unable to connect to the internet.
