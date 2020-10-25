@@ -194,7 +194,7 @@ Labeling and protection actions aren't supported. However, for an AD RMS deploym
 While the AIP clients support both Microsoft Office 97-2003 file formats, such as **.doc,** as well as Office Open XML formats, such as **.docx,** the built-in labeling supports Open XML formats only.
 
 <sup>9</sup>
-For more information on support for dynamic content markings in the built-in labeling client, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do).
+For more information on support for dynamic content markings in the built-in labeling client, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables).
 
 ### Detailed comparisons for the Azure Information Protection clients
 
