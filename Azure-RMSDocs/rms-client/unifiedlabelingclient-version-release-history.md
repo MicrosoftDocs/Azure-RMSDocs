@@ -71,6 +71,38 @@ Use the following information to see what's new or changed for a supported relea
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
+## Version 2.8.9.0 (Public preview)
+
+Unified labeling scanner version 2.8.9.0
+
+**Released** 12/02/2020
+
+### Azure China support with content scan job PowerShell cmdlets
+The Azure Information Protection on-premises scanner now supports Azure China environments with new cmdlets that enable you to manage your content scan job via PowerShell.
+
+|Cmdlet  |Description  |
+|---------|---------|
+|**[Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository).**     | Adds a new repository to your content scan job.        |
+|**[Get-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob).**     |      Gets details about your content scan job.   |
+|**[Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository).**     |  Gets details about repositories defined for your content scan job.       |
+|**[Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob).**       |    Deletes your content scan job.     |
+| **[Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository).**    |   Removes a repository from your content scan job.      |
+|**[Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob).**     |   Defines settings for your content scan job.      |
+| 
+**[Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository).**     |   Defines settings for an existing repository in your content scan job.      |
+| | |
+
+The [**Set-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery) cmdlet was also added to provide additional support, enabling you to update the installation settings for the Network Discovery service via PowerShell.
+
+For more information about content and network scan jobs, see [Configure the scanner](../deploy-aip-scanner-configure-install.md##configure-the-scanner-in-the-azure-portal).
+
+> [!NOTE]
+> Use these PowerShell cmdlets to apply labels on imported policies whenever the scanner server is unable to connect to the internet.
+> For more information, see [When the scanner server cannot have internet connectivity](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity). 
+>
+> If you are working in an **Azure China** environment, you *must* use these cmdlets to manage your content scan jobs instead of the Azure portal.
+> For more information about Azure China, see the [Azure China documentation](/azure/china/).
+> 
 
 ## Version 2.8.85.0
 
