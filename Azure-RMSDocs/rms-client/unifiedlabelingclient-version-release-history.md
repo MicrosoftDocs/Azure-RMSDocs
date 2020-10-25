@@ -72,11 +72,11 @@ Use the following information to see what's new or changed for a supported relea
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## Version TBD (Public preview)
+## Version 2.8.9.0 (Public preview)
 
-Unified labeling scanner and client version TBD
+Unified labeling scanner and client version 2.8.9.0
 
-**Release** 11/19/2020
+**Release** 12/16/2020
 
 This version includes the following new features, fixes, and enhancements for the unifed labeling scanner and client:
 
@@ -89,22 +89,7 @@ This version includes the following new features, fixes, and enhancements for th
 
 #### Azure China support with content scan job PowerShell cmdlets
 
-The Azure Information Protection on-premises scanner now supports Azure China environments with new cmdlets that enable you to manage your content scan job via PowerShell.
-
-- **[Add-MIPScannerRepository](/powershell/module/azureinformationprotection/add-mipscannerrepository).** Adds a new repository to your content scan job.
-- **[Get-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-mipscannercontentscanjob).** Gets details about your content scan job.
-- **[Get-MIPScannerRepository](/powershell/module/azureinformationprotection/get-mipscannerrepository).** Gets details about repositories defined for your content scan job.
-- **[Remove-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-mipscannercontentscanjob).** Deletes your content scan job.
-- **[Remove-MIPScannerRepository](/powershell/module/azureinformationprotection/remove-mipscannerrepository).** Removes a repository from your content scan job.
-- **[Set-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-mipscannercontentscanjob).** Defines settings for your content scan job.
-- **[Set-MIPScannerRepository](/powershell/module/azureinformationprotection/set-mipscannerrepository).** Defines settings for an existing repository in your content scan job.
-
-For more information about content scan jobs, see [Create a content scan job](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
-
-> [!IMPORTANT]
-> If you are working in an Azure China environment, you *must* use these cmdlets to manage your content scan jobs instead of the Azure portal.
-> For more information about Azure China, see the [Azure China documentation](/azure/china/).
-> 
+TBD To be merged in after scanner release
 
 ### New features for the unified labeling client
 
@@ -135,8 +120,6 @@ Now, customers can migrate IQP-protected files into the AIP unified labeling cli
 
 For more information, see [Migrate documents with legacy protection](clientv2-admin-guide-customizations.md#migrate-documents-with-legacy-protection).
 
-
-
 ### Fixes and improvements
 
 - [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues)
@@ -150,6 +133,8 @@ For more information, see [Migrate documents with legacy protection](clientv2-ad
 - **Updates to the [order of precedence](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved)** used when more than one label policy is configured for a user, each with conflicting advanced settings. 
 
     In such cases, the advanced settings from the first policy are always applied, according to the order of the policies in the admin center. The exception for the *OutlookDefaultLabel* is now removed.
+
+- Added support for a missing **Extensions** definition when customizing Outlook popup messages. For more information, see [Rule condition syntax](clientv2-admin-guide-customizations.md#rule-condition-syntax)
 
 - **Support for MCE version 15.20.3326.** The Azure Information Protection unified labeling client now supports the latest version of the Microsoft Classification Engine, providing improvements for sensitive information types and accuracy.
 
