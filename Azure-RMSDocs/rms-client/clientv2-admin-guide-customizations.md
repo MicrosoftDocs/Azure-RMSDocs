@@ -691,8 +691,10 @@ When these conditions are met, the user sees a pop-up message with one of the fo
 
 When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
 
+See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
+
 > [!TIP]
-> See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
+> To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy),** also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.
 
 ### To implement the warn, justify, or block pop-up messages for specific labels:
 
@@ -1391,6 +1393,9 @@ AIP administrators can customize the popup messages that appear to end users in 
 - Messages for blocked emails
 - Warning messages that prompt users to verify the content that they're sending
 - Justification messages that request users to justify the content that they're sending
+
+> [!TIP]
+> To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy),** also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.
 
 **To customize your Outlook popup messages:**
 
