@@ -56,7 +56,7 @@ landingContent:
      - linkListType: whats-new
        links:
           - text: Top 5 recommended Ignite sessions
-            url: what-is-information-protection.md#microsoft-ignite
+            url: what-is-information-protection.md#additional-resources
           - text: Latest unified labeling client version
             url: ./rms-client/unifiedlabelingclient-version-release-history.md
 
