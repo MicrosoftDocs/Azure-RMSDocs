@@ -1394,9 +1394,6 @@ AIP administrators can customize the popup messages that appear to end users in 
 - Warning messages that prompt users to verify the content that they're sending
 - Justification messages that request users to justify the content that they're sending
 
-> [!TIP]
-> To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy),** also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.
-
 **To customize your Outlook popup messages:**
 
 1. Create **.json** files, each with a rule that configures how Outlook displays popup messages to your users. For more information, see [Rule value .json syntax](#rule-value-json-syntax) and [Sample popup customization .json code](#sample-popup-customization-json-code).
@@ -1424,6 +1421,8 @@ AIP administrators can customize the popup messages that appear to end users in 
    
 > [!TIP]
 > For additional organization, name your file with the same string as the key used in your PowerShell command. For example, name your file **OutlookCollaborationRule_1.json,** and then also use **OutlookCollaborationRule_1** as your key.
+>
+> To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy),** also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.
 > 
 
 ### Ordering your Outlook customization rules
