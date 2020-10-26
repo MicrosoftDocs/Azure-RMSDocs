@@ -31,7 +31,7 @@ ms.subservice: aiplabels
 
 This tutorial describes how to install the Azure Information Protection (AIP) on-premises scanner. The scanner enables AIP administrators to scan their networks and content shares for sensitive data, and apply classification and protection labels as configured in their organization's policy.
 
-**Time required:** This tutorial should take about 30 minutes.
+**Time required:** You can complete this tutorial in less than 30 minutes..
 
 ## Tutorial prerequisites
 
