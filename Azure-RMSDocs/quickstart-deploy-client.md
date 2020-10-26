@@ -17,7 +17,7 @@ ms.service: information-protection
 #audience:
 #ms.devlang:
 ms.subservice: aiplabels
-#ms.reviewer: eymanor
+#ms.reviewer: elina.kaminsky
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: admin
