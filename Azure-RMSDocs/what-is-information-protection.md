@@ -32,11 +32,13 @@ search.appverid:
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to find, classify, and protect documents and emails by applying labels to content.
 
-AIP is part of the [Microsoft Information Protection (MIP) solution](https://aka.ms/MIPdocs), and extends the labeling and classification functionality provided by Microsoft 365.
+AIP is part of the Microsoft Information Protection (MIP) solution, and extends the labeling and classification functionality provided by Microsoft 365.
 
 The following image shows the Azure Information Protection additions to MIP, including the [unified labeling client](#aip-unified-labeling-client), [scanner](#aip-on-premises-scanner), and [SDK](#microsoft-information-protection-sdk).
 
-:::image type="content" source="media/what-is-mip.png" border="false" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
+:::image type="content" source="media/what-is-mip.png" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
+
+For more information about Microsoft Information Protection, see the [Microsoft 365 documentation](/microsoft-365/compliance/protect-information).
 
 ## AIP unified labeling client
 
