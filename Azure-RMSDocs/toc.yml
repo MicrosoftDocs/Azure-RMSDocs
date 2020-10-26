@@ -21,10 +21,10 @@
   items:
   - name: Deploying the client
     href: quickstart-deploy-client.md
-  - name: Installing the scanner
-    href: quickstart-install-scanner.md
 - name: Tutorials
   items:
+  - name: Installing the scanner
+    href: quickstart-install-scanner.md
   - name: Migrating from the classic client to the unified labeling client
     href: tutorial-migrating-to-ul.md
   - name: Finding your sensitive content

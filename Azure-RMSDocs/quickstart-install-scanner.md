@@ -1,11 +1,11 @@
 ---
-title: Quickstart - Install the Azure Information Protection (AIP) unified labeling scanner
+title: Tutorial - Install the Azure Information Protection (AIP) unified labeling scanner
 description: Install the Azure Information Protection (AIP) unified labeling scanner to find sensitive data stored in your on-premises network shares.
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 10/11/2020
-ms.topic: quickstart
+ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -23,20 +23,19 @@ ms.subservice: aiplabels
 
 ---
 
-# Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner
+# Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions for the [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
+This tutorial describes how to install the Azure Information Protection (AIP) on-premises scanner. The scanner enables AIP administrators to scan their networks and content shares for sensitive data, and apply classification and protection labels as configured in their organization's policy.
 
-This quickstart describes how to install the Azure Information Protection (AIP) on-premises scanner. The scanner enables AIP administrators to scan their networks and content shares for sensitive data, and apply classification and protection labels as configured in their organization's policy.
+**Time required:** This tutorial should take about 30 minutes.
 
-**Time required:** You can finish this quickstart in less than 15 minutes.
+## Tutorial prerequisites
 
-## Quickstart prerequisites
-
-To install the unified labeling scanner and complete this quickstart, you'll need:
+To install the unified labeling scanner and complete this tutorial, you'll need:
 
 |Requirement  |Description  |
 |---------|---------|
@@ -61,7 +60,7 @@ Then, continue with [Configure initial scanner settings in the Azure portal](#co
 
 ### Add Azure Information Protection to the Azure portal
 
-1. Sign in to the [Azure portal](https://portal.azure.com) using a [supporting admin account](#quickstart-prerequisites).
+1. Sign in to the [Azure portal](https://portal.azure.com) using a [supporting admin account](#tutorial-prerequisites).
 
 1. Select **+ Create a resource**. In the search box, search for and then select **Azure Information Protection**. On the Azure Information Protection page, select **Create**, and then **Create** again.
 
@@ -102,7 +101,7 @@ Prepare your initial scanner settings in the Azure portal before you install the
     
     For example:
 
-    :::image type="content" source="media/qs-tutor/qs-add-new-cluster.png" alt-text="Add a new cluster for the quickstart":::
+    :::image type="content" source="media/qs-tutor/qs-add-new-cluster.png" alt-text="Add a new cluster for the tutorial":::
 
 1. Create an initial content scan job. In the **Scanner** menu on the left, select :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Content scan jobs**, and then select :::image type="icon" source="media/i-add.PNG" border="false"::: **Add.**
 
