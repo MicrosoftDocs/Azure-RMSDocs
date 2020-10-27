@@ -38,7 +38,7 @@ The following image shows the Azure Information Protection additions to MIP, inc
 
 :::image type="content" source="media/what-is-mip.png" alt-text="The Azure Information Protection areas of the Microsoft Information Protection framework":::
 
-For more information about Microsoft Information Protection, see the [Microsoft 365 documentation](/microsoft-365/compliance/protect-information).
+Microsoft Information Protection is the common information protection stack that's leveraged by AIP's unified labeling client. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/protect-information).
 
 ## AIP unified labeling client
 
