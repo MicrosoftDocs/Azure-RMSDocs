@@ -78,7 +78,7 @@ Unified labeling scanner and client version 2.8.9.0
 
 **Release** 12/16/2020
 
-This version includes the following new features, fixes, and enhancements for the unifed labeling scanner and client:
+This version includes the following new features, fixes, and enhancements for the unified labeling scanner and client:
 
 - [New features for the unified labeling scanner](#new-features-for-the-unified-labeling-scanner)
 - [New features for the unified labeling client](#new-features-for-the-unified-labeling-client)
@@ -110,15 +110,11 @@ For more information, see:
 - [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
 - [Known issues for tracking and revoking document access](../known-issues.md#tracking-and-revoking-document-access)
 
-### Migrate files protected by Secure Island to unified labeling
+### Open and decrypt files protected by Secure Island with the unified labeling client
 
-Customers who have documents protected by Secure Island can now migrate their protection to sensitivity labels, enabling them to decrypt and open those files with the AIP unified labeling client.
+Customers who have documents protected by Secure Island can now open and decrypt those files using the AIP unified labeling client. 
 
-Until now, AIP support for documents with IQP protection provided by Secure Island included only the ability to migrate labels, and decrypt and open files with the AIP classic client. 
-
-Now, customers can migrate IQP-protected files into the AIP unified labeling client as well.
-
-For more information, see [Migrate documents with legacy protection](clientv2-admin-guide-customizations.md#migrate-documents-with-legacy-protection).
+For more information, see [Open and decrypt documents with IQP protection](clientv2-admin-guide-customizations.md#open-and-decrypt-documents-with-iqp-protection).
 
 ### Fixes and improvements
 

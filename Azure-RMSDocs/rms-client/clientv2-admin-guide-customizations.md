@@ -962,6 +962,9 @@ Specify your choice of a migration rule name. Use a descriptive name that helps 
 
 Note that this setting does not remove the original label from the document or any visual markings in the document that the original label might have applied. To remove headers and footers, see the earlier section, [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions).
 
+> [!TIP]
+> To enable the unified labeling client to support opening and decrypting files with IQP protection without migrating them, see [Open and decrypt documents with IQP protection](#open-and-decrypt-documents-with-iqp-protection).
+
 #### Example 1: One-to-one mapping of the same label name
 
 Requirement: Documents that have a Secure Islands label of "Confidential" should be relabeled as "Confidential" by Azure Information Protection.
@@ -1067,28 +1070,26 @@ Example PowerShell command, where your label policy is named "Global":
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
 ```
-## Migrate documents with legacy protection
+## Open and decrypt documents with IQP protection
 
-If you have documents with IQP protection provided by Secure Island, migrate the protection on your files to sensitivity labels in order to decrypt and open your files using the AIP unified labeling client.
+If you have documents with IQP protection provided by Secure Island, you can configure the unified labeling client to open and decrypt your files without migrating them.
 
-To migrate your IQP file protection, first enable support in the unified labeling client. Then remove the legacy protection from your documents, and apply your sensitivity labels. 
+To configure this advanced setting, enter the following strings for the selected label policy:
 
-**To migrate IQP-protected documents to sensitivity labels:**
+- Key: **EnableIQPFormat**
 
-1.  Enable support for IQP-protection using the unified lableling client's advanced properties. Run:
+- Value: **True**
 
-    ```PowerShell
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableIQPFormat="True"}
-    ```
+Example PowerShell command, where your label policy is named "Global":
 
-1. Use one of the following methods to check the labeling status, remove the legacy label, and apply your sensitivity label:
-    
-    |Method  |Description  |
-    |---------|---------|
-    |**PowerShell**     | 1. Use the [GetAIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet to get the protection status of the files you want to migrate. This cmdlet supports and returns details about Secure Island IQP protection. </br>**Note**: This cmdlet does *not* support labels from custom properties or from a template.</br></br>  2. Use the [SetAIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet with the **RemoveProtection** parameter to remove the IQP protection from your files.  </br></br>3. Use the [SetAIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet again to apply your sensitivity label and protection.    |
-    |**File Explorer**     | 1. Right-click the files you want to migrate, and select **Classify and protect**. </br>The Azure Information Protection client opens, showing the file's current label. </br></br>2. Click **Delete label** to remove the legacy label. </br></br>3. Click the new senstivity label you want to apply to the document.      |
-    | | |
- 
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableIQPFormat="True"}
+```
+
+> [!TIP]
+> If you want to migrate your IQP protection to unified labeling, see [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions).
+
+
 ## Apply a custom property when a label is applied
 
 This configuration uses a label [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
