@@ -1527,7 +1527,9 @@ The following **.json** code will block emails or attachments that are classifie
 
 In this example, **89a453df-5df4-4976-8191-259d0cf9560a** is the ID of the **Internal** label, and internal domains include **contoso.com** and **microsoft.com**.
 
-```powershell
+Since no specific extensions are specified, all supported file types are included.
+
+```PowerShell
 { 	
     "type" : "And", 	
     "nodes" : [ 		
@@ -1578,7 +1580,7 @@ The following **.json** code blocks unclassified Office attachments or emails fr
 In the following example, the attachment list that requires labeling is:
 **.doc,.docm,.docx,.dot,.dotm,.dotx,.potm,.potx,.pps,.ppsm,.ppsx,.ppt,.pptm,.pptx,.vdw,.vsd,.vsdm,.vsdx,.vss,.vssm,.vst,.vstm,.vssx,.vstx,.xls,.xlsb,.xlt,.xlsm,.xlsx,.xltm,.xltx**
 
-```powershell
+```PowerShell
 { 	
     "type" : "And", 	
     "nodes" : [ 		
@@ -1662,7 +1664,9 @@ The following example causes Outlook to display a message that warns the user th
 
 This sort of warning message is technically considered to be a justification, as the user must select **I accept**.
 
-``` powershell
+Since no specific extensions are specified, all supported file types are included.
+
+``` PowerShell
 { 	
     "type" : "And", 	
     "nodes" : [ 		
@@ -1717,11 +1721,11 @@ This sort of warning message is technically considered to be a justification, as
 
 The following **.json code** causes Outlook to warn the user when they are sending an internal email has no label, with an attachment that has a specific label. 
 
-In this example, **bcbef25a-c4db-446b-9496-1b558d9edd0e** is the ID of the attachment's label.
+In this example, **bcbef25a-c4db-446b-9496-1b558d9edd0e** is the ID of the attachment's labell, and the rule applies to .docx, .xlsx, and .pptx files.
 
 By default, emails that have labeled attachments do not automatically receive the same label.
 
-```powershell
+```PowerShell
 { 	
     "type" : "And", 	
     "nodes" : [ 		
@@ -1754,6 +1758,8 @@ By default, emails that have labeled attachments do not automatically receive th
 #### Example 5: Prompt for a justification, with two predefined options, and an extra free-text option
 
 The following **.json** code causes Outlook to prompt the user for a justification for their action. The justification text includes two predefined options, as well as a third, free-text option.
+
+Since no specific extensions are specified, all supported file types are included.
 
 ```PowerShell
 { 	
