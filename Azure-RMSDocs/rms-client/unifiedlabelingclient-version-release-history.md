@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/21/2020
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -118,23 +118,36 @@ For more information, see [Open and decrypt documents with IQP protection](clien
 
 ### Fixes and improvements
 
-- [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues)
-- [Client fixes and improvements](#azure-information-protection-client-fixed-issues)
+- [Authentication](../how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) errors fixed, including errors for dynamic content marking when the AIP service starts after the user authenticates.
 
-#### Azure Information Protection scanner fixed issues
+- Issues fixed for sending [emails with labels but no protection](clientv2-classify.md).
+
+- Outlook Preview mode now generates [audit logs for discovery events](../audit-logs.md#discover-audit-logs)
+
+- Issues fixed for [email classifications based on recommendations in Outlook](clientv2-classify-protect.md#using-office-apps-to-classify-and-protect-your-documents-and-emails). 
+
+- Support for the [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) and [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) settings for contacts in distribution lists. 
+
+    The unified labeling client now block messages for recipients found inside an Outlook distribution list. To enable this support, add the [EnableOutlookDistributionListExpansion](clientv2-admin-guide-customizations.md#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list) advanced setting.
 
 
-#### Azure Information Protection client fixed issues
-
-- **Updates to the [order of precedence](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved)** used when more than one label policy is configured for a user, each with conflicting advanced settings. 
+- Updates to the [order of precedence](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) used when more than one label policy is configured for a user, each with conflicting advanced settings. 
 
     In such cases, the advanced settings from the first policy are always applied, according to the order of the policies in the admin center. The exception for the *OutlookDefaultLabel* is now removed.
 
-- Added support for a missing **Extensions** definition when customizing Outlook popup messages. For more information, see [Rule condition syntax](clientv2-admin-guide-customizations.md#rule-condition-syntax)
+- Issues fixed for [files excluded from labeling and protection](clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection) incorrectly
 
+- Issues fixed for emails that could not open correctly from the [iOS AIP Viewer](mobile-app-faq.md)
+
+- Issues fixed for [**AttachmentAction = Automatic**](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) functionality with multiple emails opened at the same time
+
+- When [configuring customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages), an empty **Extensions** property in the rule now includes all supported file types.
+
+<!--
 - **Support for MCE version 15.20.3326.** The Azure Information Protection unified labeling client now supports the latest version of the Microsoft Classification Engine, providing improvements for sensitive information types and accuracy.
 
     For more information about classification in the Microsoft 365 Security and Compliance Center, see the [Microsoft 365 documentation](/microsoft-365/compliance/data-classification-overview).
+-->
 
 ## Version 2.8.85.0
 

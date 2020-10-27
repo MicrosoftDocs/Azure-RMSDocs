@@ -725,6 +725,10 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedColl
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
 ```
 
+> [!NOTE]
+> To ensure that your block messages are displayed as needed, even for a recipient located inside an Outlook distribution list, make sure to add the [EnableOutlookDistributionListExpansion](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list) advanced setting.
+>
+
 #### To exempt domain names for pop-up messages configured for specific labels
 
 For the labels that you've specified with these pop-up messages, you can exempt specific domain names so that users do not see the messages for recipients who have that domain name included in their email address. In this case, the emails are sent without interruption. To specify multiple domains, add them as a single string, separated by commas.
@@ -762,6 +766,10 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains=
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
+
+> [!NOTE]
+> To ensure that your block messages are displayed as needed, even for a recipient located inside an Outlook distribution list, make sure to add the [EnableOutlookDistributionListExpansion](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list) advanced setting.
+>
 
 ### To implement the warn, justify, or block pop-up messages for emails or attachments that don't have a label:
 
@@ -856,6 +864,28 @@ Example PowerShell command, where your label policy is named "Global":
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
+```
+
+### To implement block messages for recipients inside an Outlook distribution list
+
+By default, the [OutlookBlockTrustedDomains](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) and [OutlookBlockUntrustedCollaborationLabel](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) advanced settings apply only to email outside of a distribution list. 
+
+To extend support for these block messages to recipients inside Outlook distribution lists, create the following advanced setting for the selected policy:
+
+- Key: **EnableOutlookDistributionListExpansion**
+- Value: **true**
+
+This advanced property enables Outlook to expand the distribution list for the purpose of ensuring that a block message appears as needed. The default timeout for expanding the distribution list is 2000 seconds.
+
+To modify this timeout, create the following advanced setting for the selected policy:
+
+- Key: **OutlookGetEmailAddressesTimeOutMSProperty**
+- Value: *Integer, in seconds*
+
+Example PowerShell command, where your label policy is named "Global":
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableOutlookDistributionListExpansion="true"} @{OutlookGetEmailAddressesTimeOutMSProperty="3000"}
 ```
 
 ## Disable sending audit data to Azure Information Protection analytics

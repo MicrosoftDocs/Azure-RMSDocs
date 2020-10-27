@@ -213,7 +213,7 @@ To help prevent users from changing files that are critical for computer operati
 - **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msg,.msp, .msi, .pdb, .jar
 
 
-- **Excluded folders**: 
+- ** folders**: 
     - Windows
     - Program Files (\Program Files and \Program Files (x86))
     - \ProgramData 
