@@ -6,7 +6,7 @@ description: Describes how administrators can track document access for protecte
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/22/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -41,25 +41,23 @@ Administrators can track access for protected documents via PowerShell using the
 
 **To view document access details**:
 
-1. Use PowerShell cmdlets to find the document you want to track, such as by searching by the document name, the user who protected the document, or the time period in which the document was last accessed.
+1. Use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) cmdlet to find the document you want to track, such as by searching by the document name, the user who protected the document, or the time period in which the document was last accessed.
 
     In the cmdlet response, note the **ContentID** returned. You'll use this ContentID to return tracking information.
 
     > [!TIP]
     > Only documents that have been protected and registered for tracking have a ContentID value. If your document has no ContentID, open it to register the file.
 
-1. Run the following command to view tracking data for the selected file:
+    For example, run the following command to view tracking data files protected or accessed by the **test@contoso.com** user:
 
     ```PowerShell
-    TBD
+    PS C:\>$trackingLogs = Get-AipServiceTrackingLog -UserEmail "test@contoso.com"
+    PS C:\>$trackingLogs | Export-Csv 'C:\Temp\TrackingLog.csv' -NoTypeInformation
     ```
-    Tracking data is returned, including the email of the user who attempted access, whether access was granted or denied, the date and time of the attempt, and the domain and the location where the access attempt originated. 
+    Tracking data is returned, including emails of users who attempted access, whether access was granted or denied, the time and date of the attempt, and the domain and location where the access attempt originated.
 
-    For example:
-    
-    ```PowerShell
-    TBD
-    ```
+    In the sample code above, the first command generates the log with tracking data, and saves the result in a variable.
+    The second command then uses the [Export-Csv](powershell/module/microsoft.powershell.utility/export-csv) cmdlet to convert the tracking information into **.csv** format, and saves it to the **C:\Temp\TrackingLog.csv** file.
 
 ### Configure tracking data retention
 
@@ -71,20 +69,28 @@ For example, if an administrator changes the tracking data retention period from
 
 ## Revoke document access from PowerShell
 
-Administrators can revoke access for any protected document stored in their local content shares.
+Administrators can revoke access for any protected document stored in their local content shares, using the [Set-AIPServiceDocumentRevoked](powershell/module/aipservice/set-aipservicedocumentrevoked) cmdlet. 
+
+For example:
+
+```PowerShell
+Set-AipServiceDocumentRevoked -ContentId "<Guid>" -IssuerName "<IssuerName>"
+```
 
 > [!TIP]
 > Users can also revoke access for any documents where they applied protection directly from the **Sensitivity** menu in their Office apps. For more information, see [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
 
 ### Un-revoke access
 
-If you have accidentally revoked access to a specific document, use the same ContentID value to un-revoke the access. 
+If you have accidentally revoked access to a specific document, use the same **ContentID** value with the [Clear-AipServiceDocumentRevoke](powershell/module/aipservice/clear-aipservicedocumentrevoke) cmdlet to un-revoke the access. 
 
-Run the following command:
+For example: 
 
 ```PowerShell
-TBD
+Clear-AipServiceDocumentRevoke -ContentId  "<Guid>" -IssuerName "<IssuerName>"
 ```
+
+Document access is granted to the user you defined in the **IssuerName** parameter.
 
 ## Next steps
 
