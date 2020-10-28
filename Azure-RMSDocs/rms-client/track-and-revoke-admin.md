@@ -6,7 +6,7 @@ description: Describes how administrators can track document access for protecte
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/27/2020
+ms.date: 10/28/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -37,35 +37,34 @@ Registering a document for tracking enables administrators to track access detai
 
 ## Track document access
 
-Administrators can track access for protected documents via PowerShell using the content ID generated for the protected document during registration.
+Administrators can track access for protected documents via PowerShell using the contentID generated for the protected document during registration.
 
 **To view document access details**:
 
-1. Use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) cmdlet to find the document you want to track, such as by searching by the document name, the user who protected the document, or the time period in which the document was last accessed.
+Use one of the following cmdlets to find details for the document you want to track.
 
-    In the cmdlet response, note the **ContentID** returned. You'll use this ContentID to return tracking information.
+- **If you have the contentID for your document,** use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) cmdlet. 
 
-    > [!TIP]
-    > Only documents that have been protected and registered for tracking have a ContentID value. If your document has no ContentID, open it to register the file.
-
-    For example, run the following command to view tracking data files protected or accessed by the **test@contoso.com** user:
-
+    For example:
+    
     ```PowerShell
-    PS C:\>$trackingLogs = Get-AipServiceTrackingLog -UserEmail "test@contoso.com"
-    PS C:\>$trackingLogs | Export-Csv 'C:\Temp\TrackingLog.csv' -NoTypeInformation
+    PS C:\>Get-AipServiceDocumentLog -ContentId c03bf90c-6e40-4f3f-9ba0-2bcd77524b87
     ```
-    Tracking data is returned, including emails of users who attempted access, whether access was granted or denied, the time and date of the attempt, and the domain and location where the access attempt originated.
 
-    In the sample code above, the first command generates the log with tracking data, and saves the result in a variable.
-    The second command then uses the [Export-Csv](powershell/module/microsoft.powershell.utility/export-csv) cmdlet to convert the tracking information into **.csv** format, and saves it to the **C:\Temp\TrackingLog.csv** file.
+- **If you *don't* have the contentID for your document,** use the [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) to search for data using the filename and/or the email address of the user who applied protection.
+    
+    For example;
+        
+    ```PowerShell
+    PS C:\>Get-AipServiceDocumentLog -ContentName "test.docx" -OwnerEmail “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
+    ```
 
-### Configure tracking data retention
+Tracking data is returned, including emails of users who attempted access, whether access was granted or denied, the time and date of the attempt, and the domain and location where the access attempt originated.
 
-Administrators can configure how long tracking data is kept, after which the tracking data is deleted and can no longer be retrieved.
-
-TBD
-
-For example, if an administrator changes the tracking data retention period from 5 months to 2 months, all tracking data from earlier than 2 months ago is deleted.
+> [!TIP]
+> Only documents that have been protected and registered for tracking have a ContentID value. 
+>
+> If your document has no ContentID, open it on a machine with the unified labeling client installed to register the file for tracking.
 
 ## Revoke document access from PowerShell
 
@@ -76,6 +75,10 @@ For example:
 ```PowerShell
 Set-AipServiceDocumentRevoked -ContentId "<Guid>" -IssuerName "<IssuerName>"
 ```
+
+If you don't have the contentID for the document you want to revoke access for, first use the [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) cmdlet to search for your document and return the content ID, using the filename and/or the user who applied protection on the document.
+
+Then, use that contentID value to revoke access as needed.
 
 > [!TIP]
 > Users can also revoke access for any documents where they applied protection directly from the **Sensitivity** menu in their Office apps. For more information, see [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
