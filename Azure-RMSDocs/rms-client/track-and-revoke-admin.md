@@ -68,7 +68,7 @@ Tracking data is returned, including emails of users who attempted access, wheth
 
 ## Revoke document access from PowerShell
 
-Administrators can revoke access for any protected document stored in their local content shares, using the [Set-AIPServiceDocumentRevoked](powershell/module/aipservice/set-aipservicedocumentrevoked) cmdlet. 
+Administrators can revoke access for any protected document stored in their local content shares, using the [Set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) cmdlet. 
 
 For example:
 
@@ -85,7 +85,7 @@ Then, use that contentID value to revoke access as needed.
 
 ### Un-revoke access
 
-If you have accidentally revoked access to a specific document, use the same **ContentID** value with the [Clear-AipServiceDocumentRevoke](powershell/module/aipservice/clear-aipservicedocumentrevoke) cmdlet to un-revoke the access. 
+If you have accidentally revoked access to a specific document, use the same **ContentID** value with the [Clear-AipServiceDocumentRevoke](/powershell/module/aipservice/clear-aipservicedocumentrevoke) cmdlet to un-revoke the access. 
 
 For example: 
 
