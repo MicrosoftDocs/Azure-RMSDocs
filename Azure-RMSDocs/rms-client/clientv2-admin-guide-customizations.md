@@ -153,6 +153,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |EnableContainerSupport|[Enable removal of protection from PST, rar, 7zip, and MSG files](#enable-removal-of-protection-from-compressed-files)
 |EnableCustomPermissions|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
+|EnableIQPFormat| [Enable support for files protected by Secure Islands](#support-for-files-protected-by-secure-islands) |
 |EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |EnableLabelBySharePointProperties|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 |HideBarByDefault|[Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps)|
@@ -981,24 +982,22 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8
 
 If you used Secure Islands to protect documents, you may have protected text and picture files, as well as generically protected files, such as **.ptxt,** **.pjpeg,** or **.pfile** files.
 
-To enable Azure Information Protection to decrypt these files, add the following DWORD value of **EnableIQPFormats** to the following registry path, and set the value data to **1**:
+To enable you to use AIP to view the IQP label, get the protection status, and remove protection, configure the following advanced property for your policy:
 
-|Windows version  |Registry path  |
-|---------|---------|
-|**64-bit**     |  `HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\MSIP`       |
-|**32-bit**     |   `HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\MSIP`      |
+Key: **EnableIQPFormat**
 
-This registry edit enables the following scenarios:
+Value: **True**
 
-- The AIP Viewer can open these protected files.
+Example PowerShell command, where your label policy is named **Global**:
+```powershell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableIQPFormat="True"}
+```
 
-- The AIP on-premises scanner can inspect these protected files for sensitive data.
+- View the IQP label, via the right-click menu
+- Get the protection status, via the right-click menu and PowerShell
+- Remove protection, via the right-click menu and PowerShell
 
-- File Explorer, PowerShell, and the AIP on-premises scanner can label these files.
-
-    This means that you can apply senstivity labels that provide new protection, or to remove existing protection from Secure Islands.
-
-Use the [labeling migration client customization](#migrate-labels-from-secure-islands-and-other-labeling-solutions) to automatically convert the Secure Islands label on these protected files to an Azure Information Protection label.
+To migrate the Secure Islands label on your files to a sensitivity label, see [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions).
 
 ## Migrate labels from Secure Islands and other labeling solutions
 
@@ -1026,9 +1025,6 @@ This configuration requires you to specify an advanced setting named **labelByCu
 Specify your choice of a migration rule name. Use a descriptive name that helps you to identify how one or more labels from your previous labeling solution should be mapped to sensitivity label.
 
 Note that this setting does not remove the original label from the document or any visual markings in the document that the original label might have applied. To remove headers and footers, see the earlier section, [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions).
-
-> [!TIP]
-> To enable the unified labeling client to support opening and decrypting files with IQP protection without migrating them, see [Open and decrypt documents with IQP protection](#open-and-decrypt-documents-with-iqp-protection).
 
 #### Example 1: One-to-one mapping of the same label name
 
@@ -1770,7 +1766,7 @@ Since no specific extensions are specified, all supported file types are include
 
 The following **.json code** causes Outlook to warn the user when they are sending an internal email has no label, with an attachment that has a specific label. 
 
-In this example, **bcbef25a-c4db-446b-9496-1b558d9edd0e** is the ID of the attachment's labell, and the rule applies to .docx, .xlsx, and .pptx files.
+In this example, **bcbef25a-c4db-446b-9496-1b558d9edd0e** is the ID of the attachment's label, and the rule applies to .docx, .xlsx, and .pptx files.
 
 By default, emails that have labeled attachments do not automatically receive the same label.
 
