@@ -112,9 +112,9 @@ For more information, see:
 
 ### Support for files protected by Secure Islands
 
-Customers who have documents protected by Secure Islands, including **.ptxt,** **.pjpeg,** or **.pfile** files, can now enable Azure Information Protection to open these protected files, scan them for sensitive data, and automatically apply labels.
+Customers who have documents protected by Secure Islands, including **.ptxt,** **.pjpeg,** or **.pfile** files, can now enable the AIP unified labeling client to view the IQP label, get the protection status, and remove protection from your files.
 
-For more infomration, see [Support for files protected by Secure Islands](clientv2-admin-guide-customizations.md#support-for-files-protected-by-secure-islands).
+For more information, see [Support for files protected by Secure Islands](clientv2-admin-guide-customizations.md#support-for-files-protected-by-secure-islands).
 
 
 ### Fixes and improvements
