@@ -113,7 +113,7 @@ To check whether this is the cause of the scanner stopping, check for the follow
 
 `Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port`
 
-For more information about how to view the current port range and increase it if needed, see [Settings that can be modified to improve network performance](biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+For more information about how to view the current port range and increase it if needed, see [Settings that can be modified to improve network performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 > [!TIP]
 > For large SharePoint farms, you may need to increase the list view threshold, which has a default of **5,000.**
