@@ -118,7 +118,7 @@ For more information about how to view the current port range and increase it if
 > [!TIP]
 > For large SharePoint farms, you may need to increase the list view threshold, which has a default of **5,000.**
 >
-> For more information, see the [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)
+> For more information, see the [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 >
 
 ### 3. Label files that can't be inspected
