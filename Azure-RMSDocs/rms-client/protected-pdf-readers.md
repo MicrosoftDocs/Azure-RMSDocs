@@ -6,7 +6,7 @@ description: Install a reader for PDF documents that are labeled for classificat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/17/2020
+ms.date: 10/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,7 +29,7 @@ search.appverid:
 
 PDF readers for classified and/or protected PDFs enable you to open encrypted PDFs that contain sensitive information.
 
-Encrypting your PDFs with [Azure Information Protection (AIP)](../what-is-information-protection.md) ensures that unauthorized people cannot read the file's content, and that even authorized people cannot share screens or screenshots that display the content.
+Encrypting your PDFs with [Azure Information Protection (AIP)](../what-is-information-protection.md) ensures that unauthorized people cannot read the file's content.
 
 Protected PDF readers that support Azure Information Protection verify that you've been granted permissions to open the document, and also decrypt the content for you.
 
