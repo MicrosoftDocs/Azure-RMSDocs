@@ -12,7 +12,7 @@ ms.author: mbaldwin
 
 ## MipContext
 
-`MipContext` is the highest level object in the SDK. It's responsible for managing state across all profiles that may be created as part of an application or service. Additionally, it handles releasing MIP SDK resources once the MipContext object has been destroyed.
+`MipContext` is the highest level object in the SDK. It's responsible for managing state across all profiles that may be created as part of an application or service. Additionally, it handles releasing MIP SDK resources once the MipContext object has been destroyed. Only a single `MipContext` per process is permitted. Creating more than one may result in unexpected behavior.
 
 Specifically, `MipContext` sets the following:
 
