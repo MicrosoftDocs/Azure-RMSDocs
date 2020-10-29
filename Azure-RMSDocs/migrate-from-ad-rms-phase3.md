@@ -46,7 +46,7 @@ Reconfigure your Windows computers to use Azure Information Protection using one
 
     For more information, see [Client reconfiguration by using DNS redirection](#client-reconfiguration-by-using-dns-redirection).
 
-- **Registry edits**. Supported for all supported environments, including both:
+- **Registry edits**. Relevant for all supported environments, including both:
 
     - Windows computers that use Office 2016 or later click-to-run desktop apps, as listed above
     - Windows computers that use other apps
