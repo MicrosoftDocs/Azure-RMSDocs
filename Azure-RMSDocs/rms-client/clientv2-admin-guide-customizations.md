@@ -992,10 +992,11 @@ Example PowerShell command, where your label policy is named **Global**:
 ```powershell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableIQPFormat="True"}
 ```
+This advanced property enables you to:
 
-- View the IQP label, via the right-click menu
-- Get the protection status, via the right-click menu and PowerShell
-- Remove protection, via the right-click menu and PowerShell
+- **View the IQP label,** via the right-click menu
+- **Get the protection status,** via the right-click menu and PowerShell
+- **Remove protection,** via the right-click menu and PowerShell
 
 To migrate the Secure Islands label on your files to a sensitivity label, see [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions).
 
