@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/14/2020
+ms.date: 10/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -148,7 +148,8 @@ To compare the Office built-in sensitivity labeling features across different op
 |Information Protection bar in Office apps:| **Yes** | **Yes**| No |
 |Visual markings as a label action (header, footer, watermark):| **Yes** | **Yes** | **Yes**|
 |Per app visual markings:| **Yes** | **Yes** | No |
-|Dynamic visual markings with variables:| **Yes** | **Yes** | No |
+|Dynamic visual markings with variables:| **Yes** | **Yes** | **Yes** <sup>9</sup>|
+|Remove external content marking in app:| **Yes**| **Yes**| No|
 |Label with File Explorer:| **Yes** | **Yes** | No |
 |A viewer for protected files (text, images, PDF, .pfile):| **Yes** | **Yes** | No|
 |PPDF support for applying labels:| **Yes** | No | No |
@@ -164,7 +165,6 @@ To compare the Office built-in sensitivity labeling features across different op
 |Support for account switching:| No | No | **Yes** |
 |Support for Remote Desktop Services:| **Yes** | **Yes** | **Yes** |
 |Support for AD RMS:| **Yes** | No <sup>6</sup> | No |
-|Remove external content marking in app:| **Yes**| **Yes**| No|
 |Support for Microsoft Office 97-2003 formats| **Yes** | **Yes** | No <sup>8</sup>|
 |Double Key Encryption:| No | **Yes** | No|
 |Government Community Cloud: | **Yes** | **Yes** | No|
@@ -192,6 +192,9 @@ Labeling and protection actions aren't supported. However, for an AD RMS deploym
 
 <sup>8</sup>
 While the AIP clients support both Microsoft Office 97-2003 file formats, such as **.doc,** as well as Office Open XML formats, such as **.docx,** the built-in labeling supports Open XML formats only.
+
+<sup>9</sup>
+For more information on support for dynamic content markings in the built-in labeling client, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables).
 
 ### Detailed comparisons for the Azure Information Protection clients
 

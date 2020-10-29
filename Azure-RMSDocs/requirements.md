@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -62,7 +62,7 @@ If you have questions about subscriptions or licensing, do not post them on this
 
 ## Azure Active Directory
 
-To support authentication and authorization for Azure Information Protection, you must have an Azure Active Directory (AD). To use user accounts from your on-premises director (AD DS), you must also configure directory integration.
+To support authentication and authorization for Azure Information Protection, you must have an Azure Active Directory (AD). To use user accounts from your on-premises directory (AD DS), you must also configure directory integration.
 
 - **Single sign-on (SSO)** is supported for Azure Information Protection so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor for how to configure it for Azure AD. WS-Trust is a common requirement for these solutions to support single sign-on. 
 
@@ -177,6 +177,12 @@ Azure Information Protection has the following additional requirements:
 
 - **Web proxies**. If you use a web proxy that requires authentication, you must configure the proxy to use integrated Windows authentication with the user's Active Directory sign in credentials.
 
+    To support **Proxy.pac** files when using a proxy to acquire a token, add the following new registry key:
+
+    - **Path:** `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
+    - **Key:** `UseDefaultCredentialsInProxy`
+    - **Type:** `DWORD`
+    - **Value:** `1`
     
 - **TLS client-to-service connections**. Do not terminate any TLS client-to-service connections, for example to perform packet-level inspection, to the **aadrm.com** URL. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
      

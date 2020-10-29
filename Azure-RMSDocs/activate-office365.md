@@ -3,10 +3,10 @@
 
 title: Activate Azure RMS with the Microsoft 365 admin center - AIP
 description: Activation instructions for the Azure Rights Management service when you use the Microsoft 365 admin center.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 05/04/2020
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -42,7 +42,7 @@ If you have questions about the subscription requirements, or you need help acti
     > [!TIP]
     > For admin center help, see [About the Microsoft 365 admin center](/office365/admin/admin-overview/about-the-admin-center).
     
-    If you prefer to navigate to the **rights management** page from the admin center: **Settings** > **Services & add-ins** > **Microsoft Azure Information Protection** > **Manage Microsoft Azure Information Protection settings**
+    If you prefer to navigate to the **rights management** page from the admin center: **Settings** > **Org settings** > **Services** tab > **Microsoft Azure Information Protection** > **Manage Microsoft Azure Information Protection settings**
 
 2. On the **rights management** page, click **activate**.
 

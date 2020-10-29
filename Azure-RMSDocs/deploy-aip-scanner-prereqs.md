@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.custom: admin
 >[!NOTE]
 > If you're working with the classic scanner, see [Prerequisites for installing and deploying the Azure Information Protection classic scanner](deploy-aip-scanner-prereqs-classic.md).
 
-Before you install the Azure Information Protection scanner, make sure that your system complies with the following requirements:
+Before installing the Azure Information Protection on-premises scanner, make sure that your system complies with basic [Azure Information Protection requirements](requirements.md), as well as the following requirements specific to the scanner:
 
 - [Windows Server requirements](#windows-server-requirements)
 - [Service account requirements](#service-account-requirements)
