@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/18/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -386,10 +386,17 @@ PFile protection is not possible, and the value in **AdditionalPPrefixExtensions
 
 This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When you use the label policy setting of **All documents and emails must have a label**, users are prompted to select a label when they first save an Office document and when they send an email. For documents, users can select **Not now** to temporarily dismiss the prompt to select a label and return to the document. However, they cannot close the saved document without labeling it. 
+When you use the label policy setting of **All documents and emails must have a label**, users are prompted to select a label when they first save an Office document and when they send an email from Outlook.
 
-When you configure this setting, it removes the **Not now** option so that users must select a label when the document is first saved.
+For documents, users can select **Not now** to temporarily dismiss the prompt to select a label and return to the document. However, they cannot close the saved document without labeling it. 
 
+When you configure the **PostponeMandatoryBeforeSave** setting, the **Not now** option is removed, so that users must select a label when the document is first saved.
+
+> [!TIP]
+> The **PostponeMandatoryBeforeSave** setting also ensures that shared documents are labeled before they're sent by email. 
+>
+>By default, even if you have **All documents and emails must have a label** enabled in your policy, users are only promoted to label files attached to emails from within Outlook.  
+> 
 For the selected label policy, specify the following strings:
 
 - Key: **PostponeMandatoryBeforeSave**
@@ -529,9 +536,11 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 Footers in PowerPoint are implemented as shapes. To avoid removing shapes that contain the text that you have specified but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process.
 
-If you do not specify this additional advanced client setting, and PowerPoint is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
+- If you do not specify this additional advanced client setting, and PowerPoint is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
 
-To find the name of the shape that you're using as a header or footer:
+- If this value is specified, only shapes that meet the shape name criteria and also have text that matches the string provided with **ExternalContentMarkingToRemove** will be removed.
+
+**To find the name of the shape that you're using as a header or footer:**
 
 1. In PowerPoint, display the **Selection** pane: **Format** tab > **Arrange** group > **Selection Pane**.
 
@@ -539,7 +548,7 @@ To find the name of the shape that you're using as a header or footer:
 
 Use the name of the shape to specify a string value for the **PowerPointShapeNameToRemove** key. 
 
-Example: The shape name is **fc**. To remove the shape with this name, you specify the value: `fc`.
+**Example:** The shape name is **fc**. To remove the shape with this name, you specify the value: `fc`.
 
 - Key: **PowerPointShapeNameToRemove**
 
@@ -682,8 +691,10 @@ When these conditions are met, the user sees a pop-up message with one of the fo
 
 When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
 
+See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
+
 > [!TIP]
-> See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
+> To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy),** also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.
 
 ### To implement the warn, justify, or block pop-up messages for specific labels:
 
@@ -1410,6 +1421,8 @@ AIP administrators can customize the popup messages that appear to end users in 
    
 > [!TIP]
 > For additional organization, name your file with the same string as the key used in your PowerShell command. For example, name your file **OutlookCollaborationRule_1.json,** and then also use **OutlookCollaborationRule_1** as your key.
+>
+> To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy),** also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.
 > 
 
 ### Ordering your Outlook customization rules

@@ -61,9 +61,25 @@ If your mobile device is managed by Microsoft Intune, you may be able to downloa
 
 For more information, contact your system administrator.
 
-## View protected files on your device
+## iOS: View protected files on your device
 
-1. Once you've [installed the AIP mobile app](#download-and-install-the-aip-app-for-your-device), open a protected email or file. 
+Once you've [installed the AIP mobile app](#download-and-install-the-aip-app-for-your-device), open a protected email or file. 
+
+1. If you are prompted to select an app to open the file, tap the share button to share the file instead.
+
+    Select **Share file via....** and then select **Copy to AIP Viewer.**
+
+    For example:
+
+    :::image type="content" source="../media/ios-share-to-aip-viewer.png" alt-text="Share to AIP Viewer in iOS" border="false":::
+
+1. Sign in, or select a certificate as prompted.
+
+    Once you've been authenticated, the your email or file will open in the AIP Viewer.
+ 
+## Android: View protected files on your device
+
+Once you've [installed the AIP mobile app](#download-and-install-the-aip-app-for-your-device), open a protected email or file. 
 
 1. When prompted to select an app, select the AIP Viewer:
 
@@ -72,7 +88,7 @@ For more information, contact your system administrator.
 1. Sign in, or select a certificate as prompted.
 
     Once you've been authenticated, the your email or file will open in the AIP Viewer.
- 
+
 ## AIP mobile app requirements
 
 The AIP mobile apps for iOS and Android support the following file types and environments:
