@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/26/2020
+ms.date: 10/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -977,6 +977,29 @@ Example PowerShell command, where your label policy is named "Scanner":
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8"}
 ```
 
+## Support for files protected by Secure Islands
+
+If you used Secure Islands to protect documents, you may have protected text and picture files, as well as generically protected files, such as **.ptxt,** **.pjpeg,** or **.pfile** files.
+
+To enable Azure Information Protection to decrypt these files, add the following DWORD value of **EnableIQPFormats** to the following registry path, and set the value data to **1**:
+
+|Windows version  |Registry path  |
+|---------|---------|
+|**64-bit**     |  `HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\MSIP`       |
+|**32-bit**     |   `HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\MSIP`      |
+
+This registry edit enables the following scenarios:
+
+- The AIP Viewer can open these protected files.
+
+- The AIP on-premises scanner can inspect these protected files for sensitive data.
+
+- File Explorer, PowerShell, and the AIP on-premises scanner can label these files.
+
+    This means that you can apply senstivity labels that provide new protection, or to remove existing protection from Secure Islands.
+
+Use the [labeling migration client customization](#migrate-labels-from-secure-islands-and-other-labeling-solutions) to automatically convert the Secure Islands label on these protected files to an Azure Information Protection label.
+
 ## Migrate labels from Secure Islands and other labeling solutions
 
 This configuration uses a label [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
@@ -984,6 +1007,9 @@ This configuration uses a label [advanced setting](#how-to-configure-advanced-se
 This configuration is not compatible with protected PDF files that have a .ppdf file name extension. These files cannot be opened by the client using File Explorer or PowerShell.
 
 For Office documents that are labeled by Secure Islands, you can relabel these documents with a sensitivity label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents. 
+
+> [!NOTE]
+> If you have files other than PDF and Office documents that are protected by Secure Islands, these can be relabeled after you edit the registry as described in the [preceding section](#support-for-files-protected-by-secure-islands). 
 
 As a result of this configuration option, the new sensitivity label is applied by the Azure Information Protection unified labeling client as follows:
 
@@ -1109,25 +1135,6 @@ Example PowerShell command, where your label policy is named "Global":
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
 ```
-## Open and decrypt documents with IQP protection
-
-If you have documents with IQP protection provided by Secure Island, you can configure the unified labeling client to open and decrypt your files without migrating them.
-
-To configure this advanced setting, enter the following strings for the selected label policy:
-
-- Key: **EnableIQPFormat**
-
-- Value: **True**
-
-Example PowerShell command, where your label policy is named "Global":
-
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableIQPFormat="True"}
-```
-
-> [!TIP]
-> If you want to migrate your IQP protection to unified labeling, see [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions).
-
 
 ## Apply a custom property when a label is applied
 

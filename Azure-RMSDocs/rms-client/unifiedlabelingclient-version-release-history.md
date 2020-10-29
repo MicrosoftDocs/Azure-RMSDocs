@@ -94,7 +94,7 @@ TBD To be merged in after scanner release
 ### New features for the unified labeling client
 
 - [Track document access and revoke access](#track-document-access-and-revoke-access)
-- [Migrate files protected by Secure Island to unified labeling](#migrate-files-protected-by-secure-island-to-unified-labeling)
+- [Support for files protected by Secure Islands](#support-for-files-protected-by-secure-islands)
 
 ### Track document access and revoke access
 
@@ -110,11 +110,12 @@ For more information, see:
 - [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
 - [Known issues for tracking and revoking document access](../known-issues.md#tracking-and-revoking-document-access)
 
-### Open and decrypt files protected by Secure Island with the unified labeling client
+### Support for files protected by Secure Islands
 
-Customers who have documents protected by Secure Island can now open and decrypt those files using the AIP unified labeling client. 
+Customers who have documents protected by Secure Islands, including **.ptxt,** **.pjpeg,** or **.pfile** files, can now enable Azure Information Protection to open these protected files, scan them for sensitive data, and automatically apply labels.
 
-For more information, see [Open and decrypt documents with IQP protection](clientv2-admin-guide-customizations.md#open-and-decrypt-documents-with-iqp-protection).
+For more infomration, see [Support for files protected by Secure Islands](clientv2-admin-guide-customizations.md#support-for-files-protected-by-secure-islands).
+
 
 ### Fixes and improvements
 
