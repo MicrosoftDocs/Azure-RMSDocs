@@ -12,9 +12,9 @@ ms.author: mbaldwin
 
 ## MipContext
 
-`MipContext` is the highest level object in the SDK. It's responsible for managing state across all profiles that may be created as part of an application or service. Additionally, it handles releasing MIP SDK resources once the MipContext object has been destroyed.
+`MipContext` is the highest level object in the SDK. It's responsible for managing state across all profiles that may be created as part of an application or service. Additionally, it handles releasing MIP SDK resources once the MipContext object has been destroyed. Only a single `MipContext` per process is permitted. Creating more than one may result in unexpected behavior.
 
-Specifically, `MipContext` sets the following:
+Specifically, `MipContext` provides settings for the following options:
 
 - `mip::ApplicationInfo` across the SDK, used for application ID, version, and application name.
 - The path where MIP state information should be stored, if enabled.
@@ -52,7 +52,7 @@ Creates a new MipContext instance to be used when initializing profiles, with cu
 
 #### `mip::mipContext::Shutdown()`
 
-Releases all MIP resources. Should be called prior to app shutdown. The `MipContext` destructor will also call this when the `MipContext` object is destroyed.
+Releases all MIP resources. Should be called prior to app shutdown. The `MipContext` destructor will also call this function when the `MipContext` object is destroyed.
 
 ## Next Steps
 
