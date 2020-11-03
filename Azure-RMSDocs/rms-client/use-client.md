@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/25/2020
+ms.date: 11/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -228,7 +228,7 @@ Although the Azure Information Protection unified labeling client is still under
 
 - Custom permissions as a [separate option that users can select in Office apps: Word, Excel, and PowerPoint](client-classify-protect.md#set-custom-permissions-for-a-document)
 
-- Information Protection bar title and tooltip
+- The Sensitivity toolbar does not show the **Sensitivity** title, nor a title tooltip. The bar itself is displayed in the unified labeling client.
 
 - [Protection-only mode](client-protection-only-mode.md) (no labels) using templates
 

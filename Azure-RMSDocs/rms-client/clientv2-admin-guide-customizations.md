@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/26/2020
+ms.date: 10/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -135,10 +135,12 @@ Using one of the admin centers where you manage your sensitivity labels, you can
 
 When more than one label policy is configured for a user, each with potentially different policy settings, the last policy setting is applied according to the order of the policies in the admin center. For more information, see [Label policy priority (order matters)](/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
 
-Label advanced settings follow the same logic for precedence: When a label is in multiple label policies and that label has advanced settings, the last advanced setting is applied according to the order of the policies in the admin center.
+Label policy advanced settings are applied using the same logic, using the last policy setting. 
 
-Label policy advanced settings are applied in the reverse order: With one exception, the advanced settings from the first policy are applied, according to the order of the policies in the admin center. The exception is the advanced setting *OutlookDefaultLabel*, which sets a different default label for Outlook. For this label policy advanced setting only, the last setting is applied according to the order of the policies in the admin center.
-
+> [!NOTE]
+> An exception currently exists for the [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) advanced label policy setting, which enables you to set a different default label for Outlook.
+> 
+> If you have conflicts for the OutlookDefaultLabel setting, the configuration is taken from the *first* policy setting, according to the policy order in the admin center.
 
 #### Available advanced settings for label policies
 
