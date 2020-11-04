@@ -112,7 +112,7 @@ For more information about content and network scan jobs, see [Configure the sca
 
 ### Support for NFS repositories in content scan jobs
 
-Now you can add NFS repositories to your content scan jobs, in addition to file shares and SharePoint repositories.
+Now you can add NFS repositories to your content scan jobs, in addition to SMB file shares and SharePoint repositories.
 
 For more information, see [Create a content scan job](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
