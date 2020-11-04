@@ -43,9 +43,9 @@ The AIP scanner runs as a service on Windows Server and lets you discover, class
 
 ## Azure Information Protection unified labeling scanner overview
 
-The AIP scanner can inspect any files that Windows can index. 
+The AIP scanner can inspect any files that Windows can index. If you've configured sensitivity labels in one of the Microsoft 365 labeling admin centers, and have configured them to apply automatic classification, the scanner can label discovered files to apply that classification, and optionally apply or remove protection. 
 
-If you've configured sensitivity labels in one of the Microsoft 365 labeling admin centers, and have configured them to apply automatic classification, the scanner can label discovered files to apply that classification, and optionally apply or remove protection. Supported labeling admin centers include the Microsoft 365 Security Center, the Microsoft 365 Compliance Center, and the Microsoft 365 Security and Compliance Center. For more information, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+Supported labeling admin centers include the Microsoft 365 Security Center, the Microsoft 365 Compliance Center, and the Microsoft 365 Security and Compliance Center. 
 
 The following image shows the AIP scanner architecture, where the scanner discovers files across your on-premises and SharePoint servers.
 
