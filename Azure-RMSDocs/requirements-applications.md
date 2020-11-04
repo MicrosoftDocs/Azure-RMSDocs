@@ -6,7 +6,7 @@ description: Identify the applications and solutions that have native support fo
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -53,8 +53,8 @@ These applications and solutions are known as "RMS-enlighted", and have Rights M
 
 |Type  |Supported applications   |
 |---------|---------|
-|**Word, Excel, PowerPoint**    |  - Microsoft 365 apps<br />- Office 2019 for Mac<br />- Office 2016 for Mac<br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)    |
-|[**Email**](#viewing-protected-content-in-email-clients)   |   - Outlook 2019 for Mac<br />- Outlook 2016 for Mac<br />- [Web browser](#web-browser-support)     |
+|**Word, Excel, PowerPoint**    |  - Microsoft 365 apps, version 16.40 or later <br />- Office 2019 for Mac, version 16.40 or later<br />- Office 2016 for Mac, version 16.16.27 or later<br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)    |
+|[**Email**](#viewing-protected-content-in-email-clients)   |   - Outlook 2019 for Mac, version 16.40 or later<br />- Outlook 2016 for Mac, version 16.16.27 or later<br />- [Web browser](#web-browser-support)     |
 |[**Other file types**](#supported-text-and-image-file-types)    | RMS sharing app (viewing protected text, images, generically protected files)   |
 | | |
 
