@@ -27,7 +27,7 @@
     href: quickstart-install-scanner.md
   - name: Migrating from the classic client to the unified labeling client
     href: tutorial-migrating-to-ul.md
-  - name: Finding your sensitive content
+  - name: Discovering your sensitive content
     href: tutorial-scan-networks-and-content.md
   - name: Preventing oversharing
     href: tutorial-preventing-oversharing.md

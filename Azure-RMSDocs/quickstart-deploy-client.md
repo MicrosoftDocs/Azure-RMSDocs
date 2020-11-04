@@ -6,7 +6,7 @@ description: A quick intro for deploying the Azure Information Protection (AIP) 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/09/2020
+ms.date: 11/04/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -67,7 +67,7 @@ For more information, see: [Options for installing the AIP client](rms-client/cl
 See any of the following quickstarts and tutorials to get started with the Azure Information client:
 
 - [Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-scanner.md)
-- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
+- [Tutorial: Discovering your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
 - [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md) 
 - [Tutorial: Preventing oversharing using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 

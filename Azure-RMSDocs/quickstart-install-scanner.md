@@ -1,10 +1,10 @@
 ---
 title: Tutorial - Install the Azure Information Protection (AIP) unified labeling scanner
-description: Install the Azure Information Protection (AIP) unified labeling scanner to find sensitive data stored in your on-premises network shares.
+description: Install the Azure Information Protection (AIP) unified labeling scanner to discover sensitive data stored in your on-premises network shares.
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/11/2020
+ms.date: 11/04/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -240,10 +240,10 @@ The system shows a confirmation message when the installation is complete.
 
 Once you have the scanner and the Network Discovery service installed, you're ready to start scanning. 
 
-For more information, see [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md).
+For more information, see [Tutorial: Discovering your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md).
 
 > [!TIP]
-> If you've installed [version 2.8.85.0 (public preview)](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), we recommend that you scan your network to find repositories that may have content at risk. 
+> If you've installed [version 2.8.85.0 (public preview)](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), we recommend that you scan your network to discover repositories that may have content at risk. 
 >
 >To scan your risky repositories for sensitive data, and then classify and protect that data from outside users, update your content scan job with the details of the repositories you've found.
 >
