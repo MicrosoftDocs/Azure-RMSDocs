@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/26/2020
+ms.date: 11/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -144,12 +144,15 @@ For more information, see the [Unified labeling client admin guide](./rms-client
 
 ## Label configuration requirements
 
-You must have labels configured that automatically apply classification, and optionally, protection.
+You must have at least one sensitivity label configured in one of the Microsoft 365 labeling admin centers for the scanner account, to apply classification and, optionally, protection.
 
-If you don't have these labels configured, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations).
+Microsoft 365 labeling admin centers include the Microsoft 365 Security Center, the Microsoft 365 Compliance Center, and the Microsoft 365 Security and Compliance Center.
 
-For more information, see:
+If your labels don't have auto-labeling conditions, see the [instructions for alternative configurations](#restriction-your-labels-do-not-have-auto-labeling-conditions) below.
 
+For more information, see the Microsoft 365 documentation:
+
+- [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels)
 - [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically)
 - [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels)
 
