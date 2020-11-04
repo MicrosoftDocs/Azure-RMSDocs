@@ -78,6 +78,11 @@ Unified labeling scanner version 2.8.9.0
 
 **Released** 11/30/2020
 
+The following new features were released for the unified labeling on-premises scanner in version 2.8.9.0:
+
+- [Azure China support with content scan job PowerShell cmdlets](#azure-china-support-with-content-scan-job-powershell-cmdlets)
+- [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs)
+
 ### Azure China support with content scan job PowerShell cmdlets
 The Azure Information Protection on-premises scanner now supports Azure China environments with new cmdlets that enable you to manage your content scan job via PowerShell.
 
@@ -104,6 +109,12 @@ For more information about content and network scan jobs, see [Configure the sca
 > If you are working in an **Azure China** environment, you *must* use these cmdlets to manage your content scan jobs instead of the Azure portal.
 > For more information about Azure China, see the [Azure China documentation](/azure/china/).
 > 
+
+### Support for NFS repositories in content scan jobs
+
+Now you can add NFS repositories to your content scan jobs, in addition to file shares and SharePoint repositories.
+
+For more information, see [Create a content scan job](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
 ### Fixes and improvements
 

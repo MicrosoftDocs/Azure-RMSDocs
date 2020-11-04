@@ -6,7 +6,7 @@ description: Instructions for installing and configuring the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
+ms.date: 11/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -194,7 +194,7 @@ You may want to do this only after running a network scan job to analyze the rep
 
 1. Now that the content scan job is created and saved, you're ready to return to the **Configure repositories** option to specify the data stores to be scanned. 
 
-    Specify UNC paths, and SharePoint Server URLs for SharePoint on-premises document libraries and folders. 
+    Specify UNC paths, NFS repositories, and SharePoint Server URLs for SharePoint on-premises document libraries and folders. 
     
     > [!NOTE]
     > SharePoint Server 2019, SharePoint Server 2016, and SharePoint Server 2013 are supported for SharePoint. SharePoint Server 2010 is also supported when you have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
