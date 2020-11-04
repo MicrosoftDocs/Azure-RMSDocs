@@ -6,7 +6,7 @@ description: Describes how administrators can track document access for protecte
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/01/2020
+ms.date: 11/04/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -53,12 +53,10 @@ Use the following cmdlets to find details for the document you want to track:
     PS C:\>Get-AipServiceDocumentLog -ContentName "test.docx" -OwnerEmail “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
     ```
 
-    The data returned includes the ContentID value for your document.
+    If your document is registered for tracking, the data returned includes the ContentID value for your document.
 
-    > [!TIP]
-    > Only documents that have been protected and registered for tracking have a ContentID value. 
-    >
-    > If your document has no ContentID, open it on a machine with the unified labeling client installed to register the file for tracking.
+    > [!NOTE]
+    > Protected documents are registered for tracking when they are first opened on a machine with the unified labeling client installed.  If the ContentID value is missing for your protected file, open it on a machine with the unified labeling client installed to register the document for tracking.
 
 1. Use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) cmdlet with your document's ContentID to return your tracking data.
 
