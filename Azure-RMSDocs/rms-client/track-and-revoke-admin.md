@@ -52,11 +52,11 @@ Use the following cmdlets to find details for the document you want to track:
     ```PowerShell
     PS C:\>Get-AipServiceDocumentLog -ContentName "test.docx" -OwnerEmail “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
     ```
-
-    If your document is registered for tracking, the data returned includes the ContentID value for your document.
+ 
+    This command returns the ContentID for all matching, protected documents that are registered for tracking.
 
     > [!NOTE]
-    > Protected documents are registered for tracking when they are first opened on a machine with the unified labeling client installed.  If the ContentID value is missing for your protected file, open it on a machine with the unified labeling client installed to register the document for tracking.
+    > Protected documents are registered for tracking when they are first opened on a machine with the unified labeling client installed. If this command does not return the ContentID for your protected file, open it on a machine with the unified labeling client installed to register the document for tracking.
 
 1. Use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) cmdlet with your document's ContentID to return your tracking data.
 
