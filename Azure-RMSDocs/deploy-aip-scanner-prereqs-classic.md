@@ -33,7 +33,7 @@ ms.custom: admin
 > 
 > If you're working with the unified labeling scanner, see [Prerequisites for installing and deploying the Azure Information Protection unified labeling scanner](deploy-aip-scanner-prereqs.md).
 
-Before you install the Azure Information Protection scanner, make sure that your system complies with the following requirements:
+Before installing the Azure Information Protection on-premises scanner, make sure that your system complies with basic [Azure Information Protection requirements](requirements.md), as well as the following requirements specific to the scanner:
 
 - [Windows Server requirements](#windows-server-requirements)
 - [Service account requirements](#service-account-requirements)

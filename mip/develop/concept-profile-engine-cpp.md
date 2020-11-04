@@ -12,7 +12,7 @@ ms.author: mbaldwin
 
 ## Profiles
 
-Where the `MipContext` is the class for storing SDK-specific settings, the profile is the root class for all MIP labeling and protection-specific operations in the MIP SDK. Before using any of the three API sets, the client application must create a profile. Future operations are performed by the profile, or by other objects *added* to the profile.
+Where the `MipContext` is the class for storing SDK-specific settings, the profile is the root class for all MIP labeling and protection-specific operations in the MIP SDK. Before using any of the three API sets, the client application must create a profile. Future operations are performed by the profile, or by other objects *added* to the profile. Only a single profile object per process is recommended. Creating more than one may result in unexpected behavior. 
 
 There are three types of profile in the MIP SDK:
 

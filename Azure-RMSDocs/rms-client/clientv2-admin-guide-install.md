@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/03/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -56,17 +56,17 @@ The following prerequisites for the AIP unified labeling client are in addition 
 
 For Office versions 2013 and later, we recommend that you configure your group policy to ensure that the **Microsoft Azure Information Protection** add-in for Office applications is always enabled.  Without this add-in, users won't be able to label their documents or emails in Office applications.   
 
-- **For Outlook:** Use the group policy setting documented in [System Administrator control over add-ins](/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins).
-- **For Word, Excel, and PowerPoint:** Use the group policy setting **list of managed add-ins** documented in [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). . 
+For Word, Excel, PowerPoint, and Outlook, use the group policy setting **list of managed add-ins** documented in [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). 
 
-    Specify the following programmatic identifiers (ProgID) for AIP, and set the option to **1: The add-in is always enabled**.
+Specify the following programmatic identifiers (ProgID) for AIP, and set the option to **1: The add-in is always enabled**.
 
-    |Application  |ProgID  |
-    |---------|---------|
-    |Word     |     `MSIP.WordAddin`    |
-    |Excel     |  `MSIP.ExcelAddin`       |
-    |PowerPoint     |   `MSIP.PowerPointAddin`      |
-    | | | 
+|Application  |ProgID  |
+|---------|---------|
+|Word     |     `MSIP.WordAddin`    |
+|Excel     |  `MSIP.ExcelAddin`       |
+|PowerPoint     |   `MSIP.PowerPointAddin`      |
+|Outlook | `MSIP.OutlookAddin` |
+| | | 
 
 ## Applications
 
