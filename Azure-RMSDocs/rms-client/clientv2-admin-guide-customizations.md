@@ -999,7 +999,7 @@ This advanced setting enables you to do the following via the File Explorer and 
 - Get the current protection status
 - Remove protection
 
-In PowerShell, use the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet to view template names and protection status, and the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet to remove protection. Once the protection is removed, apply a new sensitivty label as needed, with new protection from AIP.
+In PowerShell, use the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet to view template names and protection status, and the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet to remove protection. Once the protection is removed, apply a new sensitivity label as needed, with new protection from AIP.
 
 To automatically convert the Secure Islands label on your protected file to an Azure Information Protection label, see [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions).
 
