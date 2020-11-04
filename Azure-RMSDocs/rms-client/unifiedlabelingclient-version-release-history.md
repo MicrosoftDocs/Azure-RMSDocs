@@ -71,6 +71,7 @@ Use the following information to see what's new or changed for a supported relea
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
+
 ## Version 2.8.9.0 (Public preview)
 
 Unified labeling scanner version 2.8.9.0
@@ -104,6 +105,17 @@ For more information about content and network scan jobs, see [Configure the sca
 > For more information about Azure China, see the [Azure China documentation](/azure/china/).
 > 
 
+### Fixes and improvements
+
+The following fixes were delivered in version 2.8.9.0 of the Azure Information Protection unified labeling scanner:
+
+- Added support for hyphens (**-**) in [scanner database](../deploy-aip-scanner-prereqs.md) names
+- Updates in reports for when the **[Label files based on content](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** option is set to **Off**
+- [Improved memory consumption](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) for large numbers of information type matches
+- Support for [SharePoint on-premises](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) paths that end in a slash (**/**)
+- Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
+- Support for avoiding a timeout exception when scanning a SharePoint server
+
 ## Version 2.8.85.0
 
 Unified labeling scanner and client version 2.8.85.0
@@ -112,11 +124,11 @@ Unified labeling scanner and client version 2.8.85.0
 
 This version includes the following new features, fixes, and enhancements, for the unified labeling scanner and client:
 
-- [New features for the unified labeling scanner](#new-features-for-the-unified-labeling-scanner)
-- [New features for the unified labeling client](#new-features-for-the-unified-labeling-client)
-- [Fixes and improvements](#fixes-and-improvements)
+- [New features for the unified labeling scanner](#new-features-for-the-unified-labeling-scanner-version-28850)
+- [New features for the unified labeling client](#new-features-for-the-unified-labeling-client-version-28850)
+- [Fixes and improvements](#fixes-and-improvements-version-28850)
 
-### New features for the unified labeling scanner
+### New features for the unified labeling scanner, version 2.8.85.0
 
 - [Optional full rescans for changes detected](#optional-full-rescans-for-changes-detected)
 - [Configure SharePoint timeouts](#configure-sharepoint-timeouts)
@@ -192,7 +204,7 @@ PowerShell cmdlets added for Network Discovery include:
 |[**Uninstall-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  Uninstalls the Network Discovery service.       |
 | | |
 
-### New features for the unified labeling client
+### New features for the unified labeling client, version 2.8.85.0
 
 - [Administrator customizations for AIP popups in Outlook](#administrator-customizations-for-aip-popups-in-outlook) 
 - [Administrator customizations for justification prompts](#administrator-customizations-for-justification-prompts) 
@@ -226,12 +238,12 @@ For more information, see:
 - [Planning and implementing your Azure Information Protection tenant key](../plan-implement-tenant-key.md)
 - [Double Key Encryption](/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 docs
 
-### Fixes and improvements
+### Fixes and improvements, version 2.8.85.0
 
-- [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues)
-- [Client fixes and improvements](#azure-information-protection-client-fixed-issues)
+- [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues-version-28850)
+- [Client fixes and improvements](#azure-information-protection-client-fixed-issues-version-28850)
 
-#### Azure Information Protection scanner fixed issues
+#### Azure Information Protection scanner fixed issues, version 2.8.85.0
 
 The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling scanner:
 
@@ -240,7 +252,7 @@ The following fixes were delivered in version 2.8.85.0 of the Azure Information 
 - The AIP scanner now supports [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) files with a period in the path, but no extension. For example, a file with a path of `https://sharepoint.contoso.com/shared documents/meeting-notes`, with no extension, is now scanned successfully.
 - The AIP scanner now supports [custom sensitive information types](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) that are created in the Microsoft Security and Compliance center, and do not belong to any policy.
 
-#### Azure Information Protection client fixed issues
+#### Azure Information Protection client fixed issues, version 2.8.85.0
 
 The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling client:
 
@@ -336,6 +348,7 @@ Customers that have a TLS setup that does not support TLS 1.2 must move to a set
 For more requirement details, see [Firewalls and network infrastructure requirements](../requirements.md#firewalls-and-network-infrastructure).
 
 **Fixes and improvements** 
+
 - Scanner SQL improvements for:
     - Performance
     - Files with large numbers of information types
