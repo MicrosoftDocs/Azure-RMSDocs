@@ -135,9 +135,7 @@ Using one of the admin centers where you manage your sensitivity labels, you can
 
 When more than one label policy is configured for a user, each with potentially different policy settings, the last policy setting is applied according to the order of the policies in the admin center. For more information, see [Label policy priority (order matters)](/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
 
-Label advanced settings follow the same logic for precedence: When a label is in multiple label policies and that label has advanced settings, the last advanced setting is applied according to the order of the policies in the admin center.
-
-Label policy advanced settings are applied in the reverse order: The advanced settings from the first policy are applied, according to the order of the policies in the admin center. 
+Label policy advanced settings are applied using the same logic, using the last policy setting. 
 
 #### Available advanced settings for label policies
 
