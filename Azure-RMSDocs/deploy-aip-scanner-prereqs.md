@@ -146,15 +146,18 @@ For more information, see the [Unified labeling client admin guide](./rms-client
 
 You must have at least one sensitivity label configured in one of the Microsoft 365 labeling admin centers for the scanner account, to apply classification and, optionally, protection.
 
-Microsoft 365 labeling admin centers include the Microsoft 365 Security Center, the Microsoft 365 Compliance Center, and the Microsoft 365 Security and Compliance Center.
+Microsoft 365 labeling admin centers include the Microsoft 365 Security Center, the Microsoft 365 Compliance Center, and the Microsoft 365 Security and Compliance Center. 
+
+The *scanner account* is the account that you'll specify in the **DelegatedUser** parameter of the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet, run when configuring your scanner. 
 
 If your labels don't have auto-labeling conditions, see the [instructions for alternative configurations](#restriction-your-labels-do-not-have-auto-labeling-conditions) below.
 
-For more information, see the Microsoft 365 documentation:
+For more information, see:
 
 - [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels)
 - [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically)
 - [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels)
+- [Configuring and installing the  Azure Information Protection unified labeling scanner](deploy-aip-scanner-configure-install.md)
 
 ## SharePoint requirements
 
