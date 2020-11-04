@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
+ms.date: 11/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -41,9 +41,11 @@ The AIP scanner runs as a service on Windows Server and lets you discover, class
 
 - **SharePoint document libraries and folder** for SharePoint Server 2019 through SharePoint Server 2013. SharePoint 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
+To classify and protect your files, the scanner uses [sensitivity labels](/microsoft-365/compliance/sensitivity-labels) configured in one of the Microsoft 365 labeling admin centers, including the Microsoft 365 Security Center, the Microsoft 365 Compliance Center, and the Microsoft 365 Security and Compliance Center. 
+
 ## Azure Information Protection unified labeling scanner overview
 
-The AIP scanner can inspect any files that Windows can index. If you've configured labels that apply automatic classification, the scanner can label discovered files to apply that classification, and optionally apply or remove protection.
+The AIP scanner can inspect any files that Windows can index. If you've configured sensitivity labels to apply automatic classification, the scanner can label discovered files to apply that classification, and optionally apply or remove protection. 
 
 The following image shows the AIP scanner architecture, where the scanner discovers files across your on-premises and SharePoint servers.
 
@@ -102,6 +104,24 @@ These additional filters are the same ones used by the operating system for Wind
 For a full list of file types supported for inspection, and additional instructions for configuring filters to include .zip and .tiff files, see [File types supported for inspection](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection).
 
 After inspection, supported file types are labeled using the conditions specified for your labels. If you're using discovery mode, these files can either be reported to contain the conditions specified for your labels, or reported to contain any known sensitive information types.
+
+#### Stopped scanner processes
+
+If the scanner stops and doesn't complete a scan for a large number of files in your repository, you may need to increase the number of dynamic ports for the operating system hosting the files.
+
+For example, server hardening for SharePoint is one reason why the scanner would exceed the number of allowed network connections, and therefore stop.
+
+To check whether this is the cause of the scanner stopping, check for the following error message in the scanner logs at **%localappdata%\Microsoft\MSIP\Logs\MSIPScanner.iplog** (multiple logs are compressed into a zip file):
+
+`Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port`
+
+For more information about how to view the current port range and increase it if needed, see [Settings that can be modified to improve network performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+
+> [!TIP]
+> For large SharePoint farms, you may need to increase the list view threshold, which has a default of **5,000.**
+>
+> For more information, see the [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
+>
 
 ### 3. Label files that can't be inspected
 
