@@ -119,7 +119,7 @@ Publishing policies may take up to 24 hours.
 
 ## AIP-based Conditional Access policies
 
-External users who receive content protected by [Conditional Access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-policy-common) must have an Azure Active Directory (Azure AD) business-to-business (B2B) collaboration guest user account in order to view the content.
+External users who receive content protected by [Conditional Access policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) must have an Azure Active Directory (Azure AD) business-to-business (B2B) collaboration guest user account in order to view the content.
 
 While you can invite external users to activate a guest user account, allowing them to authenticate and pass the conditional access requirements, it may be difficult to ensure that this occurs for all external users required.
 
@@ -133,7 +133,7 @@ We recommend enabling AIP-based conditional access policies for your internal us
  
 You can also entirely disable CA within Azure Information Protection if the functionality is not required for your organization, in order to avoid this potential issue. 
 
-For more information, see the [Conditional Access documentation](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
+For more information, see the [Conditional Access documentation](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
 ## More information
 
