@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/25/2020
+ms.date: 11/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -288,13 +288,14 @@ To support a disconnected computer using PowerShell only, perform the following 
 1. Add your repositories using the [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository) cmdlet, with the path to the repository you want to add.
 
     > [!TIP]
-    > If you want to add a repository to a content scan job that was created via the Azure portal, use the `OverrideContentScanJob On` to edit the settings.
-    > To edit details for a repository you've added via PowerShell, use the [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) command.
+    > To prevent the repository from inheriting settings from your content scan job, add the `OverrideContentScanJob On` parameter, as well as values for additional settings.
+    >
+    > To edit details for an existing repository, use the [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) command.
     >
  
 1. Use the [Get-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob) and [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository) cmdlets to return information about your content scan job's current settings. 
 
-1. Use the [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) command to details for an existing repository.
+1. Use the [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) command to update details for an existing repository.
 
 1. Run your content scan job immediately if needed, using the [Start-AIPScan](/powershell/module/azureinformationprotection/start-aipscan) cmdlet. 
 
@@ -304,16 +305,6 @@ To support a disconnected computer using PowerShell only, perform the following 
 
     - [Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)
     - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
-
-**Manage your network scan jobs using PowerShell only:**
-
-1. Configure the Network Discovery service to pull network scan data from an offline file using the [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration) cmdlet.
-
-1. Create a file to define your network scan job, and import it AIP using the [Import-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration) cmdlet.
-
-1. Run your network scan job immediately if needed, using the [Start-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery) cmdlet.
-
-    Results for offline network scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
 
 ### Restriction: You cannot be granted Sysadmin or databases must be created and configured manually
 

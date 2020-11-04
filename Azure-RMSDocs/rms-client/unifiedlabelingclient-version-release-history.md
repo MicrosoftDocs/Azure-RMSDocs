@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/21/2020
+ms.date: 11/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -75,7 +75,7 @@ This client is replacing the Azure Information Protection client (classic). To c
 
 Unified labeling scanner version 2.8.9.0
 
-**Released** 12/02/2020
+**Released** 11/30/2020
 
 ### Azure China support with content scan job PowerShell cmdlets
 The Azure Information Protection on-premises scanner now supports Azure China environments with new cmdlets that enable you to manage your content scan job via PowerShell.
