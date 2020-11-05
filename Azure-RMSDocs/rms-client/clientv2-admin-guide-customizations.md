@@ -151,7 +151,6 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |EnableContainerSupport|[Enable removal of protection from PST, rar, 7zip, and MSG files](#enable-removal-of-protection-from-compressed-files)
 |EnableCustomPermissions|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
-|EnableIQPFormat| [Enable support for files protected by Secure Islands](#support-for-files-protected-by-secure-islands) |
 |EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |EnableLabelBySharePointProperties|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 |HideBarByDefault|[Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps)|
@@ -983,9 +982,6 @@ This configuration uses a label [advanced setting](#how-to-configure-advanced-se
 This configuration is not compatible with protected PDF files that have a .ppdf file name extension. These files cannot be opened by the client using File Explorer or PowerShell.
 
 For Office documents that are labeled by Secure Islands, you can relabel these documents with a sensitivity label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents. 
-
-> [!NOTE]
-> If you have files other than PDF and Office documents that are protected by Secure Islands, these can be relabeled after you edit the registry as described in the [preceding section](#support-for-files-protected-by-secure-islands). 
 
 As a result of this configuration option, the new sensitivity label is applied by the Azure Information Protection unified labeling client as follows:
 
