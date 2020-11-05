@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/29/2020
+ms.date: 11/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -975,37 +975,6 @@ Example PowerShell command, where your label policy is named "Scanner":
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8"}
 ```
-
-## Support for files protected by Secure Islands
-
-This configuration uses a label [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
-
-If you used Secure Islands to protect documents, you may have protected text and picture files, as well as generically protected files, such as **.ptxt,** **.pjpeg,** or **.pfile** files.
-
-To enable support in AIP for files protected by Secure Islands, configure the following advanced property for your policy:
-
-Key: **EnableIQPFormat**
-
-Value: **True**
-
-Example PowerShell command, where your label policy is named **Global**:
-```powershell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableIQPFormat="True"}
-```
-
-This advanced setting enables you to do the following via the File Explorer and PowerShell:
-
-- View the IQP template name
-- Get the current protection status
-- Remove protection
-
-In PowerShell, use the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet to view template names and protection status, and the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet to remove protection. Once the protection is removed, apply a new sensitivity label as needed, with new protection from AIP.
-
-To automatically convert the Secure Islands label on your protected file to an Azure Information Protection label, see [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions).
-
-> [!NOTE]
-> Support for Secure Islands protection does *not* currently include the AIP unified labeling scanner.
-> 
 
 ## Migrate labels from Secure Islands and other labeling solutions
 

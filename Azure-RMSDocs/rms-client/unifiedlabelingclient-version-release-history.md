@@ -94,7 +94,6 @@ TBD To be merged in after scanner release
 ### New features for the unified labeling client
 
 - [Track document access and revoke access](#track-document-access-and-revoke-access)
-- [Support for files protected by Secure Islands](#support-for-files-protected-by-secure-islands)
 
 ### Track document access and revoke access
 
@@ -109,13 +108,6 @@ For more information, see:
 - [Administrator Guide: Track and revoke document access with Azure Information Protection](track-and-revoke-admin.md)
 - [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
 - [Known issues for tracking and revoking document access](../known-issues.md#tracking-and-revoking-document-access)
-
-### Support for files protected by Secure Islands
-
-Customers who have documents protected by Secure Islands, including **.ptxt,** **.pjpeg,** or **.pfile** files, can now enable the AIP unified labeling client to view the IQP template name, get the protection status, and remove protection from your files, using the File Explorer and PowerShell.
-
-For more information, see [Support for files protected by Secure Islands](clientv2-admin-guide-customizations.md#support-for-files-protected-by-secure-islands).
-
 
 ### Fixes and improvements
 
