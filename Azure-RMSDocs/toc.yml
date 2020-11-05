@@ -202,7 +202,7 @@
     - name: Protected PDF readers
       href: ./rms-client/protected-pdf-readers.md
   - name: How-tos for classic client scenarios
-    items: 
+    items:
       - name: Roadmap for protection only
         href: deployment-roadmap-protect-only.md
       - name: Configure Hold Your Own Key (HYOK) protection 
@@ -251,14 +251,14 @@
         href: configure-exo-rules.md
     - name: Azure Information Protection classic scanner
       items:
-        - name: Overview
-          href: deploy-aip-scanner-classic.md
-        - name: Classic scanner prerequisites
-          href: deploy-aip-scanner-prereqs-classic.md
-        - name: Configure and install the classic scanner
-          href: deploy-aip-scanner-configure-install-classic.md
-        - name: Run the classic scanner
-          href: deploy-aip-scanner-manage-classic.md
+      - name: Overview
+        href: deploy-aip-scanner-classic.md
+      - name: Classic scanner prerequisites
+        href: deploy-aip-scanner-prereqs-classic.md
+      - name: Configure and install the classic scanner
+        href: deploy-aip-scanner-configure-install-classic.md
+      - name: Run the classic scanner
+        href: deploy-aip-scanner-manage-classic.md
     - name: Azure Information Protection classic client
       items:
       - name: Overview

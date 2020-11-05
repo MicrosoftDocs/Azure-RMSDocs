@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Information Protection unified labeling client - Version history & support policy
-description: See the release information for the Azure Information Protection unified labeling client for Windows. 
+description: Find out what's new for the Azure Information Protection (AIP) unified labeling client for Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
