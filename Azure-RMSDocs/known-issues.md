@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/03/2020
+ms.date: 11/05/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -75,7 +75,7 @@ For more information, see [Admin Guide: Using PowerShell with the Azure Informat
 |**Multiple versions of Office**    | The Azure Information Protection clients, including both classic and unified labeling, do not support multiple versions of Office on the same computer, or switching user accounts in Office.       |
 |**Multiple displays** |If you're using multiple displays and have an Office application open: </br></br>- You may experience performance issues in your Office apps.</br>- The Azure Information Protection bar may appear to float in the middle of the Office screen, on one or both displays </br></br>To ensure consistent performance, and that the bar remains in the correct location, open the **Options** dialog for your Office application, and under **General,** select **Optimize for compatibility** instead of **Optimize for best appearance.**    |
 |**IRM support in Office 2016**| The [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) registry setting, which controls metadata encryption in Office 2016, is not supported for Azure Information Protection labels.|
-|**Content markings in Word**    | Azure Information Protection content [markings](configure-policy-markings.md) may be hidden in Microsoft Word footers, when the footer also contains a table. For more information, see [When visual markings are applied](configure-policy-markings.md#when-visual-markings-are-applied). |
+|**Content markings in Word**    | AIP [content markings](configure-policy-markings.md) in Microsoft Word headers or footers may be offset or placed incorrectly, or may be hidden entirely, when that same header or footer also contains a table.<br><br>For more information, see [When visual markings are applied](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**Files attached to emails** |Due to a limitation in recent Windows updates, when [Microsoft Outlook is protected by Azure Rights Management](office-apps-services-support.md), files attached to emails may be locked after opening the file. |
 |**Mail merge**    |  The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.       |
 | **S/MIME emails** | Opening S/MIME emails in Outlook's Reading Pane may cause performance issues. </br></br>To prevent performance issues with S/MIME emails, enable the [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced property. </br></br>**Note:** Enabling this property prevents the AIP bar or the email classification from being displayed in Outlook's Reading Pane. |
