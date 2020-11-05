@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/04/2020
+ms.date: 11/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -125,7 +125,7 @@ The following fixes were delivered in version 2.8.9.0 of the Azure Information P
 - [Improved memory consumption](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) for large numbers of information type matches
 - Support for [SharePoint on-premises](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) paths that end in a slash (**/**)
 - Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
-- Support for avoiding a timeout exception when scanning a SharePoint server
+- Support for [avoiding a timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) when scanning a SharePoint server.
 
 ## Version 2.8.85.0
 
