@@ -1,14 +1,12 @@
 - name: Azure Information Protection Documentation
   href: index.yml
 - name: Overview
+  expanded: true
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
-  - name: What's new in Azure Information Protection?
+  - name: What's new in AIP?
     href: ./rms-client/unifiedlabelingclient-version-release-history.md
-    expanded: true
-  - name: Azure Information Protection rights management
-    href: what-is-azure-rms.md
   - name: AIP requirements
     items:
     - name: Overview
@@ -29,6 +27,8 @@
   items:
   - name: Rights Management protection
     items:
+    - name: Azure Information Protection rights management
+      href: what-is-azure-rms.md
     - name: How Rights Management protection works
       href: how-does-it-work.md
     - name: How applications support Azure Rights Management protection
