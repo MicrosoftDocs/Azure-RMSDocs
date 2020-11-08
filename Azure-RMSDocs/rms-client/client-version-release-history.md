@@ -83,7 +83,7 @@ Use the following information to see what's new or changed for a supported relea
 
 ## Version 1.54.59.0
 
-**Released**: 12/02/2020
+**Released**: 02/12/2020
 
 This version includes fixes only. 
 
