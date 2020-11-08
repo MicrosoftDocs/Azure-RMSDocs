@@ -37,8 +37,6 @@
         href: applications-support.md
       - name: Office applications and services
         href: office-apps-services-support.md
-      - name: File servers that run Windows Server and use File Classification Infrastructure
-        href: file-server-support.md
       - name: Other applications that support the RMS APIs
         href: api-support.md
     - name: RMS for individuals and Azure Information Protection
@@ -47,8 +45,6 @@
       href: compare-on-premise.md
     - name: RMS client deployment notes
       href: ./rms-client/client-deployment-notes.md
-    - name: AIP classic client policies
-      href: overview-policy.md
   - name: Your Azure Information Protection tenant key
     href: plan-implement-tenant-key.md
   - name: Reporting for Azure Information Protection
@@ -206,8 +202,10 @@
       - name: Configure Hold Your Own Key (HYOK) protection 
         href: configure-adrms-restrictions.md
       - name: Configuring the Azure Information Protection policy
-        items:
-        - name: Overview
+        items:    
+        - name: AIP classic client policies
+          href: overview-policy.md
+        - name: Policy configuration overview
           href: configure-policy.md
         - name: The default policy
           href: configure-policy-default.md
@@ -301,7 +299,9 @@
             href: ./rms-client/upgrade-client-app.md
       - name: RMS protection with Windows Server FCI
         items:
-        - name: Overview
+        - name: File servers that run Windows Server and use File Classification Infrastructure
+          href: file-server-support.md
+        - name: Configuring File Classification Infrastructure
           href: ./rms-client/configure-fci.md
         - name: PowerShell script
           href: ./rms-client/fci-script.md

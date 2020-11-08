@@ -3,8 +3,8 @@
 
 title: How Office apps & services support Azure RMS from AIP
 description: How end-user Office applications such as Word and Outlook, and Office services such as Exchange and SharePoint, can use the Azure Rights Management service from AIP to help protect your organization's data.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/31/2020
 ms.topic: conceptual
@@ -27,7 +27,9 @@ ms.custom: admin
 
 # How Office applications and services support Azure Rights Management 
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 End-user Office applications and Office services can use the Azure Rights Management service from Azure Information Protection to help protect your organization’s data. These Office applications are Word, Excel, PowerPoint, and Outlook. The Office services are Exchange and Microsoft SharePoint. The Office configurations that support the Azure Rights Management service often use the term **information rights management (IRM)**.
 

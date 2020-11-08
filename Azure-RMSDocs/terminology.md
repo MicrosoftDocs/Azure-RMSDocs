@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -205,3 +205,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |**unified label**| Also known as *unified sensitivity label*.<br /><br /> A label that can be applied by apps, clients, and services that support the Microsoft Information Protection framework, to apply classification and optionally, protection. </br></br>In Office apps and services, unified labels are implemented as sensitivity labels.|
 |**unprotect**|Remove protection controls from files or email messages, which used encryption, identity, usage rights, and access control policies to help secure your data.|
 |**use license**|A per-document certificate that is granted to a user who opens a file or email message that has been protected by a rights management service. </br></br>This certificate contains that user’s rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document’s policy.|
+
+## Next steps
+
+For more information about AIP names, see [Azure Information Protection - also known as ...](aka.md).

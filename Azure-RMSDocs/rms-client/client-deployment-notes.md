@@ -3,10 +3,10 @@
 
 title: RMS client deployment notes - Azure Information Protection
 description: Information about installation, supported operating systems, registry settings, and service discovery for the Rights Management Service client (RMS client) version 2, also known as the MSIPC client. 
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -26,7 +26,9 @@ ms.custom: admin
 
 # Rights Management Service client deployment notes
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 8, Windows 8.1, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 8, Windows 8.1, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 The Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside those managed boundaries. 
 
@@ -68,6 +70,7 @@ The RMS client is supported with the following operating systems:
 |Windows Server 2012 R2|Windows 8.1|
 |Windows Server 2012|Windows 8|
 |Windows Server 2008 R2|Windows 7 with minimum of SP1|
+| | |
 
 
 ### Which processors or platforms support the  RMS client?
@@ -79,13 +82,13 @@ By default, the RMS client is installed in %ProgramFiles%\Active Directory Right
 ### What files  are associated with the RMS client software?
 The following files  are installed as part of the  RMS client software:
 
--   Msipc.dll
+-   **Msipc.dll**
 
--   Ipcsecproc.dll
+-   **Ipcsecproc.dll**
 
--   Ipcsecproc_ssp.dll
+-   **Ipcsecproc_ssp.dll**
 
--   MSIPCEvents.man
+-   **MSIPCEvents.man**
 
 In addition to these files, the RMS client also installs multilingual user interface (MUI) support files in 44 languages. To verify the languages supported, run the RMS client installation and when the installation is complete, review the contents of the multilingual support folders under the default path.
 
@@ -106,9 +109,10 @@ The RMS client stores licenses on the local disk and also caches some  informati
 
 |Description|Client Mode Paths|Server Mode Paths|
 |---------------|---------------------|---------------------|
-|License store location|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\\*\<SID\>*|
-|Template store location|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\\*\<SID\>*|
-|Registry location|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \\*\<SID*\>|
+|**License store location**|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\\*\<SID\>*|
+|**Template store location**|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\\*\<SID\>*|
+|**Registry location**|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \\*\<SID*\>|
+| | | |
 
 > [!NOTE]
 > *\<SID*> is the secure identifier (SID) for the account under which the server application is running. For example, if the application is running under the built-in Network Service account, replace *\<SID\>* with the value of the well-known SID for that account (S-1-5-20).
@@ -128,6 +132,7 @@ You can use Windows registry keys to set or modify some RMS client configuration
 |                                                               AD RMS only:<br /><br />**To enable support for federated authentication**                                                                |                                                                                                                                                                                                                                                                             If the RMS client computer connects to an AD RMS cluster by using a federated trust, you must configure the federation home realm.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**Value:** The value of this registry entry is the uniform resource identifier (URI) for the federation service (for example, "<http://TreyADFS.trey.net/adfs/services/trust>").<br /><br /> **Note**: It is important that you specify http and not https for this value. In addition, if your 32-bit MSIPC-based application is running on a 64-bit version of Windows, the location is HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Federation. For an example configuration, see [Deploying Active Directory Rights Management Services with Active Directory Federation Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn758110(v=ws.11)).                                                                                                                                                                                                                                                                             |
 |                                        AD RMS only:<br /><br />**To support partner federation servers that require forms-based authentication for user input**                                         |                                                                                                                                                                                                                                                                                                                                                             By default, the RMS client operates in silent mode and user input is not required. Partner federation servers, however, might be configured to require user input such as by way of forms-based authentication. In this case, you must configure the RMS client to ignore silent mode so that the federated authentication form appears in a browser window and the user is promoted for authentication.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_DWORD: EnableBrowser<br /><br />**Note**: If the federation server is configured to use forms-based authentication, this key is required. If the federation server is configured to use integrated Windows authentication, this key is not required.                                                                                                                                                                                                                                                                                                                                                             |
 |                                                                      AD RMS only:<br /><br />**To  block ILS service consumption**                                                                      |                                                                                                                                                                                                                                                                                                                                                                                                                 By default, the RMS client enables consuming content protected by the ILS service but you can configure the client to block this service by setting the following registry key. If this registry key is set to block the ILS service, any attempts to open and consume content protected by the ILS service returns the following error:<br />HRESULT_FROM_WIN32(ERROR_ACCESS_DISABLED_BY_POLICY)<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: **DisablePassportCertification**<br /><br />**Value:** 1 to block ILS consumption, 0 to allow ILS consumption (default)                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| | |
 
 ### Managing template distribution for the RMS client
 Templates make it easy for users and administrators to quickly apply Rights Management protection and the RMS client automatically downloads templates from its RMS servers or service. If you put the templates in the following folder location, the RMS client does not download any templates from its default location and instead, download the templates that you have put in this folder. The RMS client might continue to download templates from other available RMS servers.

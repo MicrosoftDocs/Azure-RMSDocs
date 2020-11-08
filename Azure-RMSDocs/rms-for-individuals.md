@@ -3,10 +3,10 @@
 
 title: RMS for individuals and Azure Information Protection
 description: Information about RMS for individuals, a free self-service subscription for users who have been sent protected files, but these users cannot be authenticated because their IT department does not manage an account for them in Azure. 
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,6 +27,9 @@ ms.custom: admin
 # RMS for individuals and Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
+
 
 RMS for individuals is a free self-service subscription for users who need to open files that have been protected by Azure Information Protection. If these users cannot be authenticated by Azure Active Directory, this free sign-up service can create an account in Azure Active Directory for a user. As a result, these users can now authenticate by using their company email address and then read the protected files on computers or mobile devices.
 

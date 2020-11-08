@@ -6,7 +6,7 @@ description: Information about Azure Rights Management (Azure RMS), the protecti
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/21/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -29,10 +29,11 @@ search.appverid:
 
 # What is Azure Rights Management?
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-
-Azure Rights Management (often abbreviated to Azure RMS) is the protection technology used by [Azure Information Protection](what-is-information-protection.md).
+Azure Rights Management (Azure RMS) is the protection technology used by [Azure Information Protection](what-is-information-protection.md).
 
 Azure RMS is a cloud-based protection service that uses encryption, identity, and authorization policies to help secure files and emails across multiple devices, including phones, tablets, and PCs. Protection settings remain with your data, even when it leaves your organization's boundaries, keeping your content protected both within and outside your organization.
 

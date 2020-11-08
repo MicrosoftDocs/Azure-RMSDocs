@@ -228,25 +228,34 @@ For more information about how to use app, see the [FAQ for Microsoft Azure Info
 
 ## The Azure Information Protection client for Windows
 
-We recommend that you deploy the [Azure Information Protection unified labeling client](./rms-client/aip-clientv2.md).  Download the relevant app from the [Microsoft Azure Information Protection page](https://go.microsoft.com/fwlink/?LinkId=303970). 
+To use Azure Information Protection, you must deploy the AIP client across your system. 
+
+Download the unified labeling client installation from the [Microsoft Azure Information Protection page](https://go.microsoft.com/fwlink/?LinkId=303970). 
 
 For more information, see:
-- [Administrator guide](./rms-client/clientv2-admin-guide.md)
-- [User guide](./rms-client/clientv2-user-guide.md)
 
-### AIP classic client
+- [AIP unified labeling client](./rms-client/aip-clientv2.md)
+- [Unified labeling client administrator guide](./rms-client/clientv2-admin-guide.md)
+- [Unified labeling client user guide](./rms-client/clientv2-user-guide.md)
 
-If you haven't yet upgraded, your system may still have the [Azure Information Protection classic client](./rms-client/aip-client.md) deployed. For more information, see:
+### AIP's classic client
 
-- [Administrator guide](./rms-client/client-admin-guide.md)
-- [User guide](./rms-client/client-user-guide.md)
+If you have not yet upgraded, you may still have the legacy [Azure Information Protection classic client](./rms-client/aip-client.md) deployed.
+
+For more information about deploying and using the classic client, see:
+
+- [AIP classic client](./rms-client/aip-client.md)
+- [Classic client administrator guide](./rms-client/client-admin-guide.md)
+- [Classic client user guide](./rms-client/client-user-guide.md).
 
 > [!NOTE]
->
 > To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 >
 > This time-frame allows all current Azure Information Protection customers to transition to the Microsoft Information Protection unified labeling solution. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
- 
+>
+> 
+>
+
 ## Rights Management sharing app
 
 For Mac computers, the Rights Management sharing app offers a viewer for protected PDF files **(.ppdf),** protected text images, and generically protected files. It can also protect image files, but not other files. To protect Office files on these computers, use Office for Mac or Microsoft 365 Apps for Enterprise. 
