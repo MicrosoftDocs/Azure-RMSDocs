@@ -39,11 +39,6 @@ Before deploying Azure Information Protection, ensure that your system meets the
 - [Applications](#applications)
 - [Firewalls and network infrastructure](#firewalls-and-network-infrastructure)
 
-> [!NOTE]
-> The requirements documented in this section apply to both the AIP unified labeling and classic clients. 
->
-> For any differences in requirements for the classic client, see [Classic client requirements](classic-client-requirements.md). For more information, see this [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
-
 ## Subscription for Azure Information Protection
 
 You must have one of the following, depending on the Azure Information Protection features you'll be using:
