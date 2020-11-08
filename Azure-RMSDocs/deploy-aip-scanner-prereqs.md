@@ -24,14 +24,13 @@ ms.custom: admin
 
 ---
 
-# Prerequisites for installing and deploying the Azure Information Protection unified labeling scanner
+# Requirements for installing and deploying the Azure Information Protection unified labeling scanner
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
+>
+>***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [Classic client scanner prerequisites](deploy-aip-scanner-prereqs-classic.md)*
 
->[!NOTE]
-> If you're working with the classic scanner, see [Prerequisites for installing and deploying the Azure Information Protection classic scanner](deploy-aip-scanner-prereqs-classic.md).
-
-Before installing the Azure Information Protection on-premises scanner, make sure that your system complies with basic [Azure Information Protection requirements](requirements.md), as well as the following requirements specific to the scanner:
+If you're planning on installing the AIP on-premises scanner, make sure that your system complies with basic [Azure Information Protection requirements](requirements.md), as well as the following additional requirements specific to the scanner:
 
 - [Windows Server requirements](#windows-server-requirements)
 - [Service account requirements](#service-account-requirements)

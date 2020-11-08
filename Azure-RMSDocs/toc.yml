@@ -17,8 +17,8 @@
       href: requirements-applications.md
     - name: File types supported
       href: ./rms-client/clientv2-admin-guide-file-types.md
-    - name: Classic client requirements
-      href: requirements-classic.md
+    - name: On-premises scanner requirements
+      href: deploy-aip-scanner-prereqs.md
   - name: AIP is also known as ...
     href: aka.md
 - name: Quickstarts
@@ -127,8 +127,6 @@
       items:
         - name: Overview
           href: deploy-aip-scanner.md
-        - name: Unified labeling scanner prerequisites
-          href: deploy-aip-scanner-prereqs.md
         - name: Configure and install the unifed labeling scanner
           href: deploy-aip-scanner-configure-install.md
         - name: Run the unified labeling scanner
