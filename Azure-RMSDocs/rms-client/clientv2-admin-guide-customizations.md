@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/05/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -1830,7 +1830,9 @@ This value is defined in the **HttpRuntimeSection** class of the `ASP.NET` confi
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />
     ```
 
-1. Restart your SharePoint server, and verify that it loads correctly.
+1. Restart your SharePoint web server and verify that it loads correctly. 
+
+    For example, in Windows Internet Information Servers (IIS) Manager, select your site, and then under **Manage Website**, select **Restart**. 
 
 ## Prevent Outlook performance issues with S/MIME emails
 

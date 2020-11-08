@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/04/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -163,11 +163,13 @@ For more information, see:
 
 To scan SharePoint document libraries and folders, ensure that your SharePoint server complies with the following requirements:
 
-- **Supported versions.** Supported versions include: SharePoint 2019, SharePoint 2016, SharePoint 2013, and SharePoint 2010. Other versions of SharePoint are not supported for the scanner.
-
-- **Versioning.** When you use [versioning](/sharepoint/governance/versioning-content-approval-and-check-out-planning), the scanner inspects and labels the last published version. If the scanner labels a file and [content approval](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) is required, that labeled file must be approved to be available for users.  
-
-- **Large SharePoint farms.** For large SharePoint farms, check whether you need to increase the list view threshold (by default, 5,000) for the scanner to access all files. For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
+|Requirement  |Description  |
+|---------|---------|
+|**Supported versions**     |   Supported versions include: <br>- SharePoint 2019 <br>- SharePoint 2016 <br>- SharePoint 2013 <br>- SharePoint 2010 <br><br>Other versions of SharePoint are not supported for the scanner.      |
+|**Versioning**     |  When you use [versioning](/sharepoint/governance/versioning-content-approval-and-check-out-planning), the scanner inspects and labels the last published version. <br><br>If the scanner labels a file and [content approval](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) is required, that labeled file must be approved to be available for users.       |
+|**Large SharePoint farms** |For large SharePoint farms, check whether you need to increase the list view threshold (by default, 5,000) for the scanner to access all files. <br><br>For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server). |
+|**Long file paths**  |If you have long file paths in SharePoint, ensure that your SharePoint server's [httpRuntime.maxUrlLength](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) value is larger than the default 260 characters. <br><br>For more information, see [Avoid scanner timeouts in SharePoint](rms-client/clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint). | 
+| | |
 
 ## Microsoft Office requirements
 
