@@ -6,7 +6,7 @@ description: Azure Information Protection (AIP) extends the Microsoft Informatio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/04/2020
+ms.date: 11/09/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -80,7 +80,7 @@ For example, you might use the MIP SDK for:
 - A CAD/CAM design application provides native support for Microsoft Information Protection labeling.
 - A cloud access security broker or data loss prevention solution reasons over data encrypted with Azure Information Protection.
 
-For more information, see the [Microsoft Information Protection SDK overview](../mip/develop/overview.md).
+For more information, see the [Microsoft Information Protection SDK overview](/information-protection/develop/overview).
 
 ## Next steps
 
@@ -98,7 +98,7 @@ For more information, see the [Microsoft Information Protection SDK overview](..
 
 **When you're ready to customize AIP further**, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).
 
-**To get started with the MIP SDK,** see [Microsoft Information Protection (MIP) SDK setup and configuration](../mip/develop/setup-configure-mip.md).
+**To get started with the MIP SDK,** see [Microsoft Information Protection (MIP) SDK setup and configuration](/information-protection/develop/setup-configure-mip).
 
 ### Additional resources
 
