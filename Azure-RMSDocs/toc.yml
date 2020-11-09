@@ -17,22 +17,18 @@
 - name: Quickstarts
   expanded: true
   items:
-  - name: Get started in the Azure portal
-    href: quickstart-viewpolicy.md
-  - name: Find what sensitive information you have
-    href: quickstart-findsensitiveinfo.md
-  - name: Configure a label to protect emails - classic client
-    href: quickstart-label-dnf-protectedemail.md
-  - name: Create a new label for specific users - classic client
-    href: quickstart-label-specificusers.md
+  - name: Deploying the client
+    href: quickstart-deploy-client.md
 - name: Tutorials
   items:
-  - name: Edit the policy and create a new label - classic client
-    href: infoprotect-quick-start-tutorial.md
-  - name: Configure policy settings that work together - classic client
-    href: infoprotect-settings-tutorial.md
-  - name: Configure client settings to control oversharing - classic client
-    href: infoprotect-oversharing-tutorial.md
+  - name: Installing the scanner
+    href: tutorial-install-scanner.md
+  - name: Discovering your sensitive content
+    href: tutorial-scan-networks-and-content.md
+  - name: Preventing oversharing
+    href: tutorial-preventing-oversharing.md
+  - name: Migrating from the classic client to the unified labeling client
+    href: tutorial-migrating-to-ul.md
 - name: Concepts
   items:
   - name: AIP classification and protection

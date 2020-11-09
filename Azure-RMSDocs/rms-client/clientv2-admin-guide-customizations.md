@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/29/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -1191,7 +1191,7 @@ Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7
 
 ## Turn on classification to run continuously in the background
 
-This configuration uses a label [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell. This setting is in preview and might change.
+This configuration uses a label [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell. 
 
 When you configure this setting, it changes the default behavior of how the Azure Information Protection unified labeling client applies automatic and recommended labels to documents:
 
@@ -1207,13 +1207,15 @@ To configure this advanced setting, enter the following strings:
 - Key: **RunPolicyInBackground**
 - Value: **True**
 
-
-
 Example PowerShell command: 
 
 ```PowerShell
 Set-LabelPolicy -Identity PolicyName -AdvancedSettings @{RunPolicyInBackground = "true"}
 ```
+
+> [!NOTE]
+> This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
 
 ## Specify a color for the label
 
@@ -1371,6 +1373,10 @@ Sample PowerShell command, when your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
 ```
 
+> [!NOTE]
+> This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
+
 ## Customize justification prompt texts for modified labels
 
 Customize the justification prompts that are displayed in both Office and the AIP client, when end users change classification labels on documents and emails.
@@ -1395,6 +1401,12 @@ AIP administrators can customize the popup messages that appear to end users in 
 - Messages for blocked emails
 - Warning messages that prompt users to verify the content that they're sending
 - Justification messages that request users to justify the content that they're sending
+
+> [!IMPORTANT]
+> This procedure will override any settings you've already defined using the **OutlookUnlabeledCollaborationAction** advanced property.
+>
+> In production, we recommend that you avoid complications by *either* using the **OutlookUnlabeledCollaborationAction** advanced property to define your rules, *or* defining complex rules with a json file as defined below, but not both.
+>
 
 **To customize your Outlook popup messages:**
 
@@ -1467,9 +1479,9 @@ Supported node types include:
 | **Or**	|Performs *or* on all child nodes       |
 | **Not**	| Performs *not* for its own child      |
 | **Except**	| Returns *not* for its own child, causing it to behave as **All**        |
-| **SentTo,** followed by **Domains: listOfDomains**	|Checks one of the following: </br>- If the Parent is **Except,** checks whether **All** of the recipients are in one of the domains</br>- If the Parent is anything else but **Except,** checks whether **Any** of the recipients are in one of the domains.   |
-| **EMailLabel,** followed by label	| One of the following:  </br>- The label ID </br>- null, if not labeled             |
-| **AttachmentLabel,** followed by **Label** and **supportedExtensions**	| One of the following:  </br></br>**true:** </br>- If the Parent is **Except,** checks whether **All** of the attachments with one supported extension exists within the label</br>- 	If the Parent is anything else but **Except,** checks whether **Any** of the attachments with one supported extension exists within the label </br>- If not labeled, and **label = null** </br></br> **false:** For all other cases 
+| **SentTo,** followed by **Domains: listOfDomains**	|Checks one of the following: <br />- If the Parent is **Except,** checks whether **All** of the recipients are in one of the domains<br />- If the Parent is anything else but **Except,** checks whether **Any** of the recipients are in one of the domains.   |
+| **EMailLabel,** followed by label	| One of the following:  <br />- The label ID <br />- null, if not labeled             |
+| **AttachmentLabel,** followed by **Label** and **supportedExtensions**	| One of the following:  <br /><br />**true:** <br />- If the Parent is **Except,** checks whether **All** of the attachments with one supported extension exists within the label<br />- 	If the Parent is anything else but **Except,** checks whether **Any** of the attachments with one supported extension exists within the label <br />- If not labeled, and **label = null** <br /><br /> **false:** For all other cases 
 | | |
 
 #### Rule action syntax
@@ -1478,9 +1490,9 @@ Rule actions can be one of the following:
 
 |Action  |Syntax  |Sample message  |
 |---------|---------|---------|
-|**Block**     |    `Block (List<language, [title, body]>)`     |    ***Email Blocked***</br></br>  *You are about to send content classified as **Secret** to one or more untrusted recipients:*</br>*`rsinclair@contoso.com`*</br></br>*Your organization policy does not allow this action. Consider removing these recipients or replace the content.*|
-|**Warn**     | `Warn (List<language,[title,body]>)`        |  ***Confirmation Required***</br></br>*You are about to send content classified as **General** to one or more untrusted recipients:*</br>*`rsinclair@contoso.com`*</br></br>*Your organization policy requires confirmation for you to send this content.*       |
-|**Justify**     | `Justify (numOfOptions, hasFreeTextOption, List<language, [Title, body, options1,options2….]> )` </br></br>Including up to three options.        |  ***Justification Required*** </br></br>*Your organization policy requires justification for you to send content classified as **General** to untrusted recipients.*</br></br>*- I confirm the recipients are approved for sharing this content*</br>*- My manager approved sharing of this content*</br>*- Other, as explained* |
+|**Block**     |    `Block (List<language, [title, body]>)`     |    ***Email Blocked***<br /><br />  *You are about to send content classified as **Secret** to one or more untrusted recipients:*<br />*`rsinclair@contoso.com`*<br /><br />*Your organization policy does not allow this action. Consider removing these recipients or replace the content.*|
+|**Warn**     | `Warn (List<language,[title,body]>)`        |  ***Confirmation Required***<br /><br />*You are about to send content classified as **General** to one or more untrusted recipients:*<br />*`rsinclair@contoso.com`*<br /><br />*Your organization policy requires confirmation for you to send this content.*       |
+|**Justify**     | `Justify (numOfOptions, hasFreeTextOption, List<language, [Title, body, options1,options2….]> )` <br /><br />Including up to three options.        |  ***Justification Required*** <br /><br />*Your organization policy requires justification for you to send content classified as **General** to untrusted recipients.*<br /><br />*- I confirm the recipients are approved for sharing this content*<br />*- My manager approved sharing of this content*<br />*- Other, as explained* |
 | | | |
 
 ##### Action parameters
