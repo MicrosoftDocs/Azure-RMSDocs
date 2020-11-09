@@ -3,8 +3,8 @@
 
 title: Configure an Azure Information Protection label for protection - AIP
 description: You can protect your most sensitive documents and emails when you configure a label to use Rights Management protection. 
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
 ms.topic: conceptual
@@ -120,7 +120,11 @@ Exchange does not have to be configured for Azure Information Protection before 
        If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the [Do Not Forward](configure-usage-rights.md#do-not-forward-option-for-emails) option.
         
        If you choose the option for Word, Excel, PowerPoint, and File Explorer: When this option is set, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users choose one of the [predefined permissions levels](configure-usage-rights.md#rights-included-in-permissions-levels), browse to or specify the users or groups, and optionally, set an expiry date. Make sure that users have instructions and guidance how to supply these values.
-    
+
+        > [!NOTE]
+        > Azure Information Protection support for setting user-defined permissions is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+        >
+     
    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. Note that this option does not display for new labels, or if you are editing a label that previously used the **Set permissions** option.
     
      To select a predefined template, the template must be published (not archived) and must not be linked already to another label. When you select this option, you can use an **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
