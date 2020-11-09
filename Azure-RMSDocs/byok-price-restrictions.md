@@ -6,7 +6,7 @@ description: Understand details and restrictions when you use customer-managed k
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/21/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -76,11 +76,11 @@ Storing your tenant key in the Azure Key Vault provides the following advantages
 
 |Advantage  |Description  |
 |---------|---------|
-|**Built-in interfaces**| Azure Key Vault supports a number of built-in interfaces for key management, including PowerShell, CLI, REST APIs, and the Azure portal. </br></br>Other services and tools have integrated with Key Vault for optimized capabilities for specific tasks, such as monitoring. </br></br>For example, analyze your key usage logs with Operations Management Suite Log analytics, set alerts when specified criteria are met, and so on.        |
-|**Role separation**| Azure Key Vault provides role separation as a recognized security best practice. </br></br>Role separation ensures that Azure Information Protection administrators can focus on their highest priorities, including managing data classification and protection, as well as encryption keys and policies for specific security or compliance requirements. |
-|**Master key location**| Azure Key Vault is available in a variety of locations, and supports organizations with restrictions where master keys can live. </br></br>For more information, see the [Products available by region](https://azure.microsoft.com/regions/services/) page on the Azure site.|
-|**Separated security domains**|Azure Key Vault uses separate security domains for its data centers in regions such as North America, EMEA (Europe, Middle East and Africa), and Asia. </br></br>Azure Key Vault also uses different instances of Azure, such as Microsoft Azure Germany, and Azure Government. |
-|**Unified experience**| Azure Key Vault also enables security administrators to store, access, and manage certificates and secrets, such as passwords, for other services that use encryption. <br></br>Using Azure Key Vault for your tenant keys provides a seamless user experience for administrators who manage all of these elements.|
+|**Built-in interfaces**| Azure Key Vault supports a number of built-in interfaces for key management, including PowerShell, CLI, REST APIs, and the Azure portal. <br /><br />Other services and tools have integrated with Key Vault for optimized capabilities for specific tasks, such as monitoring. <br /><br />For example, analyze your key usage logs with Operations Management Suite Log analytics, set alerts when specified criteria are met, and so on.        |
+|**Role separation**| Azure Key Vault provides role separation as a recognized security best practice. <br /><br />Role separation ensures that Azure Information Protection administrators can focus on their highest priorities, including managing data classification and protection, as well as encryption keys and policies for specific security or compliance requirements. |
+|**Master key location**| Azure Key Vault is available in a variety of locations, and supports organizations with restrictions where master keys can live. <br /><br />For more information, see the [Products available by region](https://azure.microsoft.com/regions/services/) page on the Azure site.|
+|**Separated security domains**|Azure Key Vault uses separate security domains for its data centers in regions such as North America, EMEA (Europe, Middle East and Africa), and Asia. <br /><br />Azure Key Vault also uses different instances of Azure, such as Microsoft Azure Germany, and Azure Government. |
+|**Unified experience**| Azure Key Vault also enables security administrators to store, access, and manage certificates and secrets, such as passwords, for other services that use encryption. <br><br />Using Azure Key Vault for your tenant keys provides a seamless user experience for administrators who manage all of these elements.|
 
 For the latest updates and to learn how other services use  [Azure Key Vault](/azure/key-vault/general/basic-concepts), visit the [Azure Key Vault team blog](/archive/blogs/kv/).
 
@@ -100,11 +100,11 @@ For more information about key usage logging for BYOK, see [Logging and analyzin
 ## Options for creating and storing your key
 
 > [!NOTE]
-> Azure Information Protection now supports using the Azure Key Vault Managed HSM in public preview, for use with non-production tenants only.
+> The Azure Information Protection Azure Key Vault Managed HSM support, for use with non-production tenants only, is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
 >
 > For more information about the Managed HSM offering, and how to set up a vault and a key, see the [Azure Key Vault documentation](/azure/key-vault/). 
 >
->Additional instructions on granting key authorization are described below.
+> Additional instructions on granting key authorization are described below.
 >
 
 BYOK supports keys that are created either in Azure Key Vault or on-premises.
@@ -155,11 +155,11 @@ BYOK prerequisites vary, depending on your system configuration. Verify that you
 
 |Requirement  |Description  |
 |---------|---------|
-|**Azure subscription**     |Required for all configurations. </br>For more information, see [Verifying that you have a BYOK-compatible Azure subscription](#verifying-that-you-have-a-byok-compatible-azure-subscription).         |
-|**AIPService PowerShell module for Azure Information Protection**|Required for all configurations. </br>For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).|
+|**Azure subscription**     |Required for all configurations. <br />For more information, see [Verifying that you have a BYOK-compatible Azure subscription](#verifying-that-you-have-a-byok-compatible-azure-subscription).         |
+|**AIPService PowerShell module for Azure Information Protection**|Required for all configurations. <br />For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).|
 |**Azure Key Vault prerequisites for BYOK** | If you are using an HSM-protected key that was created on-premises, ensure that you also comply with the [prerequisites for BYOK](/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) listed in the Azure Key Vault documentation.         |
 |**Thales firmware version 11.62**    |You must have a Thales firmware version of 11.62 if you are migrating from AD RMS to Azure Information Protection by using software key to hardware key and are using Thales firmware for your HSM.
-|**Firewall bypass for trusted Microsoft services** |If the key vault that contains your tenant key uses Virtual Network Service Endpoints for Azure Key Vault, you must allow trusted Microsoft services to bypass this firewall. </br>For more information, see [Virtual Network Service Endpoints for Azure Key Vault](/azure/key-vault/general/overview-vnet-service-endpoints).       |
+|**Firewall bypass for trusted Microsoft services** |If the key vault that contains your tenant key uses Virtual Network Service Endpoints for Azure Key Vault, you must allow trusted Microsoft services to bypass this firewall. <br />For more information, see [Virtual Network Service Endpoints for Azure Key Vault](/azure/key-vault/general/overview-vnet-service-endpoints).       |
 
 #### Verifying that you have a BYOK-compatible Azure subscription
 
