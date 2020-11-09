@@ -116,7 +116,7 @@ However, edits made to migrated labels in your admin center are *not* synchroniz
 
 **To publish an updated label in the Azure portal:**
 
-1. On the Azure Information Protection area, under **Manage** on the left, select ***Unified labeling**.
+1. On the Azure Information Protection area, under **Manage** on the left, select **Unified labeling**.
 
 1. Select :::image type="icon" source="media/i-publish.PNG" border="false"::: **Publish**. 
 
@@ -125,7 +125,7 @@ However, edits made to migrated labels in your admin center are *not* synchroniz
 
 ### Migrating labels via PowerShell
 
-You can alternately use PowerShell to migrate your existing labels, such as for a GCC High environment.
+You can also use PowerShell to migrate your existing labels, such as for a GCC High environment.
 
 Use the [New-Label](/powershell/module/exchange/new-label) cmdlet to migrate your existing sensitivity labels.
 
@@ -141,6 +141,8 @@ For more information about working in GCC, GCC-High, and DoD environments, see t
 
 Copy any policies you have stored in the Azure portal that you want to have available as they are in the unified labeling platform.
 
+This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+
 > [!NOTE]
 > Copying policies has certain limitations. You can also start from scratch and create your policies manually in your labeling admin center. For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
 > 
@@ -152,9 +154,9 @@ Copy any policies you have stored in the Azure portal that you want to have avai
     |Consideration  |Description  |
     |---------|---------|
     |**Copying policies copies *all* your policies**     |     Copying policies does not support copying specific policies only - it's all of your policies, or none of them now.   |
-    |**Copying automatically publishes your policies**     |  Copying your policies to the unified labeling client automatically publishes them to all unified labeling-supported clients. </br></br>   **Important:** Do not copy your policies if you don't want to publish them.     |
-    |**Copying overwrites existing policies of the same name**     |   If you have a policy with the same name already existing in your admin center, copying your policies will overwrite any settings defined in that policy.   </br></br>All policies copied from the Azure portal are named with the following syntax: `AIP_<policy name>`.    |
-    |**Some client settings are not copied**     | Some client settings are not copied to the unified labeling platform, and must be configured manually after migrating. </br></br>For more information, see [Configuring advanced labeling settings](#configuring-advanced-labeling-settings)|
+    |**Copying automatically publishes your policies**     |  Copying your policies to the unified labeling client automatically publishes them to all unified labeling-supported clients. <br /><br />   **Important:** Do not copy your policies if you don't want to publish them.     |
+    |**Copying overwrites existing policies of the same name**     |   If you have a policy with the same name already existing in your admin center, copying your policies will overwrite any settings defined in that policy.   <br /><br />All policies copied from the Azure portal are named with the following syntax: `AIP_<policy name>`.    |
+    |**Some client settings are not copied**     | Some client settings are not copied to the unified labeling platform, and must be configured manually after migrating. <br /><br />For more information, see [Configuring advanced labeling settings](#configuring-advanced-labeling-settings)|
     | | |
 
 1. Sign in to the [Azure portal](https://portal.azure.com) as an administrator with one of the following roles:
@@ -165,7 +167,7 @@ Copy any policies you have stored in the Azure portal that you want to have avai
     - **Global administrator**
 
 
-1. On the Azure Information Protection area, under **Manage** on the left, select ***Unified labeling**.
+1. On the Azure Information Protection area, under **Manage** on the left, select **Unified labeling**.
 
 1. Select :::image type="icon" source="media/i-copy-policies.PNG" border="false"::: **Copy policies (preview)**. All of the policies you have stored in the Azure portal are copied to your admin center.
 
@@ -224,7 +226,7 @@ For more information, see:
 
 Unified labeling conditions provide more flexibility and better accuracy than their counterparts that had been created in the Azure portal. 
 
-To leverage all of the labeling condition features available in MIP, create your labeling conditions manually in your labeling admin center. Supported admin centers include:
+To leverage unified labeling condition features, create your labeling conditions manually in your labeling admin center, including:
 
 - The Microsoft 365 compliance center
 - The Microsoft 365 security center
@@ -255,7 +257,7 @@ Office clients with integrated unified labeling capabilities include:
 
 - Office clients for macOS
 - Office for the web (preview)
-- The Outlook Web App </br>
+- The Outlook Web App
 - Outlook for mobile
 
 For more information about unified labeling in these platforms, see the [Apply sensitivity labels to your files and email in Office](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) on the Microsoft Support site. 
@@ -275,13 +277,11 @@ Make sure that you use the **AzInfoProtection_UL** file to deploy the client. If
 
 > [!NOTE]
 > Consider the AIP functionality currently required by your organization when determining when to use built-in labeling and when to use the unified labeling client. 
->
-> Moving forward, we expect to add additional functionality to the built-in labeling capabilities, so that there are fewer and fewer scenarios that require the additional client deployment. 
-> 
+>> 
 
 ### What changes for classic client end users?
 
-The main difference for end users who have been using the Azure Information Protection classic client is that the **Protect** button in Office apps is replaced by the **Sensitivity** button. 
+The main, most visible difference for end users who have been using the Azure Information Protection classic client is that the **Protect** button in Office apps is replaced by the **Sensitivity** button. 
 
 Once you leverage the additional capabilities supported by sensitivity labels and unified labeling, end users will also see those changes in their Office apps.
 

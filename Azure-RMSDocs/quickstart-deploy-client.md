@@ -6,7 +6,7 @@ description: A quick intro for deploying the Azure Information Protection (AIP) 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/04/2020
+ms.date: 11/09/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -56,7 +56,7 @@ AIP provides the following client installation options:
 
 The AIP client installation files are available from the [Microsoft Download site](https://www.microsoft.com/download/details.aspx?id=53018). 
 
-For more information, see: [Options for installing the AIP client](rms-client/clientv2-admin-guide-install.md#options-to-install-the-azure-information-protection-unified-labeling-client-for-users)
+For more information, see [Options for installing the AIP client](rms-client/clientv2-admin-guide-install.md#options-to-install-the-azure-information-protection-unified-labeling-client-for-users).
 
 > [!TIP]
 > To test-run the latest features available for the AIP client, deploy our public preview version on a testing system. For more information, see the AIP unified labeling client [version release history](rms-client/unifiedlabelingclient-version-release-history.md).
@@ -66,10 +66,10 @@ For more information, see: [Options for installing the AIP client](rms-client/cl
 
 See any of the following quickstarts and tutorials to get started with the Azure Information client:
 
-- [Quickstart: Installing the Azure Information Protection (AIP) unified labeling scanner](quickstart-install-scanner.md)
+- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
 - [Tutorial: Discovering your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
-- [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md) 
 - [Tutorial: Preventing oversharing using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+- [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md) 
 
 **See also**:
 

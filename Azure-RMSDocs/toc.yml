@@ -24,13 +24,13 @@
 - name: Tutorials
   items:
   - name: Installing the scanner
-    href: quickstart-install-scanner.md
-  - name: Migrating from the classic client to the unified labeling client
-    href: tutorial-migrating-to-ul.md
+    href: tutorial-install-scanner.md
   - name: Discovering your sensitive content
     href: tutorial-scan-networks-and-content.md
   - name: Preventing oversharing
     href: tutorial-preventing-oversharing.md
+  - name: Migrating from the classic client to the unified labeling client
+    href: tutorial-migrating-to-ul.md
 - name: Concepts
   items:
   - name: Rights Management protection

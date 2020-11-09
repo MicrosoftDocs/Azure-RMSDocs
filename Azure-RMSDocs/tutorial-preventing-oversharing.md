@@ -6,7 +6,7 @@ description: A detailed tutorial for using the Azure Information Protection (AIP
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/11/2020
+ms.date: 11/09/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -32,7 +32,7 @@ ms.custom: admin
 
 As a system admin, you need to ensure that your organization's content remains secure, and is shared only with trusted users. One of the most common ways that users share content inappropriately is by email. Configure your policy to prevent oversharing via Outlook, such as limiting access to specific users only, or allowing users to share content only with trusted external users.
 
-**Time required:** You can complete this tutorial in less than 20 minutes.
+**Time required:** You can complete this tutorial in 30 minutes.
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
@@ -46,9 +46,9 @@ Make sure you have the following system requirements before starting this tutori
 
 |Prerequisites  |Description  |
 |---------|---------|
-|**Machine requirements**     | Make sure that you: </br></br>-Have a Windows computer, with the Azure Information Protection unified labeling client installed. For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md). </br></br>- Have PowerShell installed, and that you can run PowerShell as an administrator. </br></br>- Can sign into Outlook. Be prepared to restart Outlook multiple times during this tutorial.     |
+|**Machine requirements**     | Make sure that you: <br /><br />- Have a Windows computer, with the Azure Information Protection unified labeling client installed. For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md). <br /><br />- Have PowerShell installed, and that you can run PowerShell as an administrator. <br /><br />- Can sign into Outlook. Be prepared to restart Outlook multiple times during this tutorial.     |
 |**Azure Information Protection subscription**     |   You must have an Azure [subscription](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) that includes **Azure Information Protection Plan 2.**      |
-|**Sensitivity labels and a testing policy**     |  A **General** sensitivity label configured in your policy. </br></br>Configure sensitivity labels your labeling admin center, including the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). </br></br>We recommend using a testing policy for this tutorial so that you don't affect your live policy. </br>Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
+|**Sensitivity labels and a testing policy**     |  A **General** sensitivity label configured in your policy. <br /><br />Configure sensitivity labels in your labeling admin center, including the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). <br /><br />We recommend using a testing policy for this tutorial so that you don't affect your live policy. <br />Make sure that you have the name of your policy handy, as well as the GUID for your **General** label.   |
 | | |
 
 Let's get started. 
@@ -61,7 +61,7 @@ The users can choose to heed the warning, and either change the label or the con
 
 1. On the client machine, run PowerShell as an administrator.
 
-1. Run the following command, to define a warning message for the **General** label. 
+1. Run the following command, to define a warning message for the **General** label. When you copy this command, replace **Global** with the name of your policy, and the long string of characters with your own label ID.
 
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
@@ -74,7 +74,7 @@ The users can choose to heed the warning, and either change the label or the con
 
 1. Test your setting in Outlook:
 
-    1. On your client computer, open Outlook, or restart Outlook to pull the updated settings.
+    1. On your client computer, open or restart Outlook to pull the updated settings.
 
     1. Create a new email message, and apply the **General** label. In the message toolbar, select the :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: **Sensitivity** button and then select **General**.
 
@@ -113,7 +113,7 @@ When sending a **General** email internally, the warning message is not displaye
 
 1. Test your setting in Outlook:
 
-    1. On your client computer, open Outlook, or restart Outlook to pull the updated settings.
+    1. On your client computer, open or restart Outlook to pull the updated settings.
 
     1. Create a new email message, and apply the **General** label. In the message toolbar, select the :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: **Sensitivity** button and then select **General**.
 
@@ -135,7 +135,7 @@ This procedure describes how to configure advanced settings so that users must j
 
 1. Test your setting in Outlook:
 
-    1. On your client computer, open Outlook, or restart Outlook to pull the updated settings.
+    1. On your client computer, open or restart Outlook to pull the updated settings.
 
     1. Create a new email message, and make sure that there is no label applied.
     
@@ -174,7 +174,7 @@ For example, you may want to add text there to prompt the user to add specific d
 
 1. Test your setting in Outlook:
 
-    1. On your client computer, open Outlook, or restart Outlook to pull the updated settings.
+    1. On your client computer, open or restart Outlook to pull the updated settings.
 
     1. Create a new email message, and make sure there is no label applied. 
 
@@ -208,7 +208,7 @@ This procedure describes how to block your users from sending unlabeled PowerPoi
 
     1. On your client computer, open PowerPoint and create a new **.pptx** file, making sure to leave the file unlabeled.
 
-    1. Open Outlook, or restart Outlook to pull the updated settings.
+    1. Open or restart Outlook to pull the updated settings.
     
     1. Attach your unlabeled PowerPoint file to a new Outlook message.
 
@@ -297,9 +297,9 @@ This procedure describes how to customize the message that appears when a user t
 
 1. Test your setting in Outlook:
 
-    1. On your client computer, open PowerPoint and create a new .pptx file, making sure to leave the file unlabeled.
+    1. On your client computer, open PowerPoint and create a new **.pptx** file, making sure to leave the file unlabeled.
 
-    1. Open Outlook, or restart Outlook to pull the updated settings.
+    1. Open or restart Outlook to pull the updated settings.
     
     1. Attach your unlabeled PowerPoint file to a new Outlook message.
 
@@ -313,15 +313,13 @@ Continue with [Use Event Log to identify the messages and user actions for the G
 
 ## Use Event Log to identify the messages and user actions for the General label
 
-In this tutorial, you learned how to customize AIP's behavior in Outlook to prevent a few types of oversharing, including warning, justification, and block messages.
+In this tutorial, you learned how to customize AIP's behavior in Outlook to prevent a few types of oversharing, including warning, justification, and block messages. You've also checked the behavior from Outlook on your local client computer.
 
-You've also checked the behavior from Outlook on your local client computer.
-
-Now you can start the Event Viewer to check the logs for the actions that occurred.
+Now you can start the Windows Event Viewer to check the logs for the actions that occurred.
 
 **To check the Event Viewer for AIP logging events:**
 
-On your client machine, open the Event Viewer application, and navigate to **Applications and Services Logs** > **Azure Information Protection**.
+On your client machine, open the Windows Event Viewer application, and navigate to **Applications and Services Logs** > **Azure Information Protection**.
 
 You'll see an information event logged for each test you performed, including details about both the message and user response:
 
@@ -333,7 +331,7 @@ For example:
 
 - [Check the Event log for your warning message tests](#check-the-event-log-for-your-warning-message-tests)
 - [Check the Event log for your justify message tests](#check-the-event-log-for-your-justify-message-tests)
-- - [Check the Event log for your block message tests](#check-the-event-log-for-your-block-message-tests)
+- [Check the Event log for your block message tests](#check-the-event-log-for-your-block-message-tests)
 
 ### Check the Event log for your warning message tests
 
@@ -406,7 +404,7 @@ Action Source:
 
 Once you're finished with this tutorial, you can keep the testing policy for further reference, or delete it to clean up your resources.
 
-Delete your policy in the admin center where it was created, either the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center.
+If you want to delete your policy, do so in the admin center where it was created, either the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center.
 
 For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)
 

@@ -4,7 +4,7 @@ description: Install the Azure Information Protection (AIP) unified labeling sca
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/04/2020
+ms.date: 11/09/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.subservice: aiplabels
 
 This tutorial describes how to install the Azure Information Protection (AIP) on-premises scanner. The scanner enables AIP administrators to scan their networks and content shares for sensitive data, and apply classification and protection labels as configured in their organization's policy.
 
-**Time required:** You can complete this tutorial in less than 30 minutes..
+**Time required:** You can complete this tutorial in 30 minutes..
 
 ## Tutorial prerequisites
 
@@ -39,19 +39,21 @@ To install the unified labeling scanner and complete this tutorial, you'll need:
 
 |Requirement  |Description  |
 |---------|---------|
-|**A supporting subscription**     |  You'll need an Azure subscription that includes [Azure Information Protection Plan 1 or Plan 2](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>If you don't have one of these subscriptions, create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
-|**Admin access to the Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with one of the following administrator accounts: </br></br>- **Compliance administrator**</br>- **Compliance data administrator**</br>- **Security administrator**</br>- **Global administrator** |
-|**Client installed**    |   Install the AIP unified labeling client on your computer to access the scanner installation. </br></br>Download and run the **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). </br></br>When the installation is complete, you may be prompted to restart your computer or Office software. Restart as needed to continue. </br></br>For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md).|
-|**SQL Server**     | To run the scanner, you'll need SQL Server installed on the scanner machine. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the installation option you want to install. In the installer, select the **Basic** installation type. </br></br>**Note**: We recommend installing SQL Server Enterprise for production environments.       |
-|**Azure Active Directory account**     |  When working with a standard, cloud-connected environment, the domain service account you want to use for the scanne must be synchronized to [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). This isn't necessary if you're working offline. </br></br>If you're not sure about your account, contact one of your system administrators to verify the synch status.   |
-|**Sensitivity labels and a published policy** |You must have created sensitivity labels, and published a policy with at least one label to the scanner service account. </br></br>For more information about creating sensitivity labels and polices, see the [Microsoft 365 documentation for creating and publishing labels](/microsoft-365/compliance/create-sensitivity-labels). |
+|**A supporting subscription**     |  You'll need an Azure subscription that includes [Azure Information Protection Plan 1 or Plan 2](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />If you don't have one of these subscriptions, create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
+|**Admin access to the Azure portal** |Make sure that you can sign in to the [Azure portal](https://portal.azure.com/) with one of the following administrator accounts: <br /><br />- **Compliance administrator**<br />- **Compliance data administrator**<br />- **Security administrator**<br />- **Global administrator** |
+|**Client installed**    |   Install the AIP unified labeling client on your computer to access the scanner installation. <br /><br />Download and run the **AzInfoProtection_UL.exe** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). <br /><br />When the installation is complete, you may be prompted to restart your computer or Office software. Restart as needed to continue. <br /><br />For more information, see [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md).|
+|**SQL Server**     | To run the scanner, you'll need SQL Server installed on the scanner machine. <br /><br /> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the installation option you want to install. In the installer, select the **Basic** installation type. <br /><br />**Note**: We recommend installing SQL Server Enterprise for production environments, and Express only for testing environments.       |
+|**Azure Active Directory account**     |  When working with a standard, cloud-connected environment, the domain service account you want to use for the scanner must be synchronized to [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). This isn't necessary if you're working offline. <br /><br />If you're not sure about your account, contact one of your system administrators to verify the synch status.   |
+|**Sensitivity labels and a published policy** |You must have created sensitivity labels, and published a policy with at least one label to your labeling admin center, for the scanner service account. <br /><br />Configure sensitivity labels in your labeling admin center, including the Microsoft 365 compliance center, the Microsoft 365 security center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). |
 | | |
 
 Once you've confirmed your prerequisites, [Configure Azure Information Protection in the Azure portal](#configure-azure-information-protection-in-the-azure-portal).
 
 ## Configure Azure Information Protection in the Azure portal
 
-Azure Information Protection may not be available for you in the Azure portal, or protection may not be currently activated. Do one or both of the following steps, as needed:
+Azure Information Protection may not be available for you in the Azure portal, or protection may not be currently activated. 
+
+Perform one or both of the following steps, as needed:
 
 - [Add Azure Information Protection to the Azure portal](#add-azure-information-protection-to-the-azure-portal)
 - [Confirm that protection is activated](#confirm-that-protection-is-activated)
@@ -67,7 +69,7 @@ Then, continue with [Configure initial scanner settings in the Azure portal](#co
     :::image type="content" source="media/gifs/quickstart-add-aip-to-portal.gif" alt-text="Add Azure Information Protection to your Azure portal":::
 
     > [!TIP]
-    > If this is the first time you're performing this step, you'll see a **Pin to dashboard** ![Pin to dashboard icon](media/qs-tutor/pin-to-dashboard.png "Pin to dashboard icon") icon next to the pane name. Select to create a tile on your dashboard so that you can navigate directly here next time.
+    > If this is the first time you're performing this step, you'll see a **Pin to dashboard** ![Pin to dashboard icon](media/qs-tutor/pin-to-dashboard.png "Pin to dashboard icon") icon next to the pane name. Select the pin icon to create a tile on your dashboard so that you can navigate directly here next time.
 
 Continue with [Confirm that protection is activated](#confirm-that-protection-is-activated).
 
@@ -111,7 +113,7 @@ Prepare your initial scanner settings in the Azure portal before you install the
 
     Save your changes when you're done. 
 
-    This default scan job will scan for all known sensitive information types, and doesn't require you to configure any labels or policy settings.
+    This default scan job will scan for all known sensitive information types.
 
 1. Close the details pane for your content scan job, and return to the :::image type="icon" source="media/i-content-scan-jobs.png" border="false":::  **Content scan jobs** grid. 
 
@@ -154,9 +156,9 @@ Continue with [Get an Azure Active directory token for the scanner](#get-an-azur
 
 Perform this procedure when you're working with a standard, cloud-connected environment, to allow the scanner to authenticate to the AIP service, enabling the service to run non-interactively.
 
-For more information, see [How to label files non-interactively for Azure Information Protection](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
-
 This procedure is not required if you're working offline only.
+
+For more information, see [How to label files non-interactively for Azure Information Protection](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
 **To get an Azure AD token for the scanner:**
 
@@ -193,6 +195,9 @@ Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-
 Network scan jobs help you understand *where* your content may be at risk, by attempting to access configured repositories as both an administrator and a public user.
 
 For example, if a repository is found to have both read and write public access, you may want to scan further and confirm that no sensitive data is stored there.
+
+> [!NOTE]
+> This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 **To install the Network Discovery service:**
 
@@ -243,16 +248,14 @@ Once you have the scanner and the Network Discovery service installed, you're re
 For more information, see [Tutorial: Discovering your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md).
 
 > [!TIP]
-> If you've installed [version 2.8.85.0 (public preview)](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), we recommend that you scan your network to discover repositories that may have content at risk. 
+> If you've installed [version 2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), we recommend that you scan your network to discover repositories that may have content at risk. 
 >
 >To scan your risky repositories for sensitive data, and then classify and protect that data from outside users, update your content scan job with the details of the repositories you've found.
 >
 
 **See also:**
 
-- [Prerequisites for installing and deploying the Azure Information Protection unified labeling scanner](deploy-aip-scanner-prereqs.md)
 - [What is the Azure Information Protection unified labeling scanner?](deploy-aip-scanner.md)
-- [Configuring and installing the Azure Information Protection unified labeling scanner](deploy-aip-scanner-configure-install.md)
-- [Running the Azure Information Protection scanner](deploy-aip-scanner-manage.md)
-- [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md)
+- [Prerequisites for installing and deploying the Azure Information Protection unified labeling scanner](deploy-aip-scanner-prereqs.md)
 - [Tutorial: Preventing oversharing using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+- [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md)
