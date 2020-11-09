@@ -39,16 +39,16 @@ landingContent:
             url: requirements.md
      - linkListType: quickstart
        links:
-          - text: Get started in the Azure portal
-            url: quickstart-viewpolicy.md
-          - text: Find sensitive information
-            url: quickstart-findsensitiveinfo.md
-     - linkListType: deploy
+          - text: Deploy the unified labeling client
+            url: quickstart-deploy-client.md
+     - linkListType: tutorial
        links:
-          - text: Deployment roadmap
-            url: deployment-roadmap.md
-          - text: Common scenarios
-            url: how-to-guides.md
+          - text: Install the scanner
+            url: tutorial-install-scanner.md
+          - text: Scan networks and content
+            url: tutorial-scan-networks-and-content.md
+          - text: Prevent oversharing
+            url: tutorial-preventing-oversharing.md
 
   # Card
   - title: Stay current
@@ -73,10 +73,10 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: "Classic client: Advanced settings"
-            url: ./rms-client/client-admin-guide-customizations.md
           - text: "Unified labeling client: Advanced settings"
             url: ./rms-client/clientv2-admin-guide-customizations.md
+          - text: "Classic client: Advanced settings"
+            url: ./rms-client/client-admin-guide-customizations.md
 
 # Card
   - title: Microsoft Information Protection SDK
@@ -105,8 +105,8 @@ landingContent:
             url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
       - linkListType: how-to-guide
         links:
-          - text: Migrate Azure Information Protection labels
-            url: configure-policy-migrate-labels.md
+          - text: Migrate to the unified labeling client
+            url: tutorial-migrating-to-ul.md
 
   # Card
   - title: Monitor label usage & discover sensitive information
