@@ -28,7 +28,7 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 The Azure Information Protection (AIP) unified labeling client is part of the [Microsoft Information Protection](https://aka.ms/MIPdocs) solution, and  extends the built-in capabilities for sensitivity labeling provided by Microsoft 365. 
 

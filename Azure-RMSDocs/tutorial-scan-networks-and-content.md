@@ -26,7 +26,7 @@ ms.subservice: aiplabels
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection classic or unified labeling clients for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 The Azure Information Protection client provides an on-premises scanner that enables system administrators to scan networks and file shares for sensitive content. 
 
