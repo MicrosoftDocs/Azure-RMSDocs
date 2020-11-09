@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/17/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -51,6 +51,7 @@ Preview versions should not be deployed for end users on production networks. In
 
 |Client version|Date released|
 |--------------|-------------|
+|1.54.33.0 | 10/23/2019|
 |1.53.10|07/15/2019|
 |1.48.204.0|04/16/2019|
 |1.41.51.0|11/27/2018|
@@ -82,7 +83,7 @@ Use the following information to see what's new or changed for a supported relea
 
 ## Version 1.54.59.0
 
-**Released**: 12/02/2020
+**Released**: 02/12/2020
 
 This version includes fixes only. 
 
@@ -95,16 +96,6 @@ This version includes fixes only.
 - Issues surrounding client stability when working with protected PDF files is resolved. 
 
 - Protection labels are now removed as expected if the label is deleted on the email during the email creation process. 
-
-## Version 1.54.33.0
-
-**Released**: 10/23/2019
-
-Supported through 08/12/2020
-
-This version includes the MSIPC version 1.0.4008.0813 of the RMS client.
-
-This release has general fixes for stability and performance.
 
 ## Next steps
 
