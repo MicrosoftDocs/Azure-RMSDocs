@@ -89,10 +89,10 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 - [Sign up for a free trial](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)  (Enterprise Mobility + Security E5)
 - [Download the client](https://www.microsoft.com/download/details.aspx?id=53018)
 - [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
-- [Install and configure the on-premises scanner](deploy-aip-scanner-configure-install.md)
 
 **Get familiar with AIP** using our initial tutorials:
 
+- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
 - [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
 - [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 
