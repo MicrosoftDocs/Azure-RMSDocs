@@ -1473,9 +1473,9 @@ Supported node types include:
 | **Or**	|Performs *or* on all child nodes       |
 | **Not**	| Performs *not* for its own child      |
 | **Except**	| Returns *not* for its own child, causing it to behave as **All**        |
-| **SentTo,** followed by **Domains: listOfDomains**	|Checks one of the following: </br>- If the Parent is **Except,** checks whether **All** of the recipients are in one of the domains</br>- If the Parent is anything else but **Except,** checks whether **Any** of the recipients are in one of the domains.   |
-| **EMailLabel,** followed by label	| One of the following:  </br>- The label ID </br>- null, if not labeled             |
-| **AttachmentLabel,** followed by **Label** and **supportedExtensions**	| One of the following:  </br></br>**true:** </br>- If the Parent is **Except,** checks whether **All** of the attachments with one supported extension exists within the label</br>- 	If the Parent is anything else but **Except,** checks whether **Any** of the attachments with one supported extension exists within the label </br>- If not labeled, and **label = null** </br></br> **false:** For all other cases 
+| **SentTo,** followed by **Domains: listOfDomains**	|Checks one of the following: <br />- If the Parent is **Except,** checks whether **All** of the recipients are in one of the domains<br />- If the Parent is anything else but **Except,** checks whether **Any** of the recipients are in one of the domains.   |
+| **EMailLabel,** followed by label	| One of the following:  <br />- The label ID <br />- null, if not labeled             |
+| **AttachmentLabel,** followed by **Label** and **supportedExtensions**	| One of the following:  <br /><br />**true:** <br />- If the Parent is **Except,** checks whether **All** of the attachments with one supported extension exists within the label<br />- 	If the Parent is anything else but **Except,** checks whether **Any** of the attachments with one supported extension exists within the label <br />- If not labeled, and **label = null** <br /><br /> **false:** For all other cases 
 | | |
 
 #### Rule action syntax
@@ -1484,9 +1484,9 @@ Rule actions can be one of the following:
 
 |Action  |Syntax  |Sample message  |
 |---------|---------|---------|
-|**Block**     |    `Block (List<language, [title, body]>)`     |    ***Email Blocked***</br></br>  *You are about to send content classified as **Secret** to one or more untrusted recipients:*</br>*`rsinclair@contoso.com`*</br></br>*Your organization policy does not allow this action. Consider removing these recipients or replace the content.*|
-|**Warn**     | `Warn (List<language,[title,body]>)`        |  ***Confirmation Required***</br></br>*You are about to send content classified as **General** to one or more untrusted recipients:*</br>*`rsinclair@contoso.com`*</br></br>*Your organization policy requires confirmation for you to send this content.*       |
-|**Justify**     | `Justify (numOfOptions, hasFreeTextOption, List<language, [Title, body, options1,options2….]> )` </br></br>Including up to three options.        |  ***Justification Required*** </br></br>*Your organization policy requires justification for you to send content classified as **General** to untrusted recipients.*</br></br>*- I confirm the recipients are approved for sharing this content*</br>*- My manager approved sharing of this content*</br>*- Other, as explained* |
+|**Block**     |    `Block (List<language, [title, body]>)`     |    ***Email Blocked***<br /><br />  *You are about to send content classified as **Secret** to one or more untrusted recipients:*<br />*`rsinclair@contoso.com`*<br /><br />*Your organization policy does not allow this action. Consider removing these recipients or replace the content.*|
+|**Warn**     | `Warn (List<language,[title,body]>)`        |  ***Confirmation Required***<br /><br />*You are about to send content classified as **General** to one or more untrusted recipients:*<br />*`rsinclair@contoso.com`*<br /><br />*Your organization policy requires confirmation for you to send this content.*       |
+|**Justify**     | `Justify (numOfOptions, hasFreeTextOption, List<language, [Title, body, options1,options2….]> )` <br /><br />Including up to three options.        |  ***Justification Required*** <br /><br />*Your organization policy requires justification for you to send content classified as **General** to untrusted recipients.*<br /><br />*- I confirm the recipients are approved for sharing this content*<br />*- My manager approved sharing of this content*<br />*- Other, as explained* |
 | | | |
 
 ##### Action parameters
