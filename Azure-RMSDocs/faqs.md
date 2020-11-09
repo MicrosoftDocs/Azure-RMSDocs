@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/13/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -299,7 +299,11 @@ Additional information:
 |**MFA and B2B collaboration**     | If you use MFA in your conditional access policies for collaborating with other organizations (B2B), you must use [Azure AD B2B collaboration](/azure/active-directory/b2b/what-is-b2b) and create guest accounts for the users you want to share with in the other organization.        |
 |**Terms of Use prompts**     |  With the Azure AD December 2018 preview release, you can now [prompt users to accept a terms of use](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) before they open a protected document for the first time.       |
 |**Cloud apps**     |  If you use many cloud apps for conditional access, you might not see **Microsoft Azure Information Protection** displayed in the list to select. </br></br>In this case, use the search box at the top of the list. Start typing "Microsoft Azure Information Protection" to filter the available apps. Providing you have a supported subscription, you'll then see **Microsoft Azure Information Protection** to select.        |
+| | |
 
+> [!NOTE]
+> The Azure Information Protection support for conditional access is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
 
 ## I see Azure Information Protection is listed as a security provider for Microsoft Graph Security—how does this work and what alerts will I receive?
 
@@ -310,6 +314,10 @@ Such alerts can help you to detect advanced data-related attacks and insider thr
 The Azure Information Protection alerts can be accessed by [using the Microsoft Graph Security API](/graph/api/resources/security-api-overview), or you can [stream alerts](/graph/security-integration) to SIEM solutions, such as Splunk and IBM Qradar, by using Azure Monitor.
 
 For more information about the Microsoft Graph Security API, see [Microsoft Graph Security API overview](/graph/security-concept-overview).
+
+> [!NOTE]
+> The Azure Information Protection support for Microsoft Graph Security is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
 
 ## What's the difference between Windows Server FCI and the Azure Information Protection scanner?
 

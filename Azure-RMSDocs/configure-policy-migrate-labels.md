@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/25/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -210,9 +210,6 @@ For the labels that successfully migrated, they can now be used by [clients and 
 
 ### Copy policies
 
-> [!NOTE]
-> This option is in preview and subject to change.
-
 After you have migrated your labels, you can select an option to copy policies. If you select this option, a one-time copy of your policies with their [policy settings](configure-policy-settings.md) and any [advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) is sent to the admin center where you manage your labels: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center. 
 
 Successfully copied policies with their settings and labels are then automatically published to the users and groups that were assigned to the policies in the Azure portal. Note that for the Global policy, this means all users. If you're not ready for the migrated labels in the copied policies to be published, after the policies are copied, you can remove the labels from the label policies in your admin labeling center.
@@ -240,6 +237,9 @@ Before you select the **Copy policies (preview)** option on the **Azure Informat
 - Policies copied from Azure Information Protection will not have the same name, they will instead be named with a prefix of **AIP_**. Policy names cannot be subsequently changed. 
 
 For more information about configuring the policy settings, advanced client settings, and label settings for the Azure Information Protection unified labeling client, see [Custom configurations for the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-customizations.md) from the admin guide.
+
+> [!NOTE]
+> Azure Information Protection support for copying policies is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
 
 ### Clients and services that support unified labeling
 

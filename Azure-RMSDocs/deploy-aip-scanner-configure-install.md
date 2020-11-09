@@ -6,7 +6,7 @@ description: Instructions for installing and configuring the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -99,11 +99,12 @@ To configure your scanner:
 
 Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), you can scan your network for risky repositories. Add one or more of the repositories found to a content scan job to scan them for sensitive content.
 
-> [!NOTE]
-> The **network discovery** interface is currently in gradual deployment and will be available in all regions by September 15, 2020. 
-
 - [Network discovery prerequisites](#network-discovery-prerequisites)
 - [Creating a network scan job](#creating-a-network-scan-job)
+
+> [!NOTE]
+> The Azure Information Protection network discovery feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
 
 #### Network discovery prerequisites
 
@@ -144,6 +145,10 @@ Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-
 Repositories found, either by a network scan job, a content scan job, or by user access detected in log files, are aggregated and listed on the **Scanner > Repositories** [repositories icon](media/i-repositories.png "repositories icon") pane.
 
 If you've [defined a network scan job](#create-a-network-scan-job-public-preview) and have set it to run at a specific date and time, wait until it's finished running to check for results. You can also return here after running a [content scan job](#create-a-content-scan-job) to view updated data.
+
+> [!NOTE]
+> The Azure Information Protection **Repositories** feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
 
 1. Under the **Scanner** menu on the left, select **Repositories** ![repositories icon](media/i-repositories.png "repositories icon").
     
