@@ -3,10 +3,10 @@
 
 title: Custom configurations - Azure Information Protection client
 description: Information about customizing the Azure Information Protection client for Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -233,7 +233,7 @@ To configure this advanced setting, enter the following strings:
 
 ## For files protected with custom permissions, always display custom permissions to users in File Explorer
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 When you configure the [policy setting](../configure-policy-settings.md) **Make the custom permissions option available for users** or the equivalent advanced client setting in the previous section, users are not able to see or change custom permissions that are already set in a protected document. 
 
@@ -244,6 +244,10 @@ To configure this advanced setting, enter the following strings:
 - Key: **EnableCustomPermissionsForCustomProtectedFiles**
 
 - Value: **True**
+
+> [!NOTE]
+> This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
 
 ## Permanently hide the Azure Information Protection bar
 
@@ -293,7 +297,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Enable recommended classification in Outlook
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
 When you configure a label for recommended classification, users are prompted to accept or dismiss the recommended label in Word, Excel, and PowerPoint. This setting extends this label recommendation to also display in Outlook.
 
@@ -303,6 +307,9 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
+> [!NOTE]
+> This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
 
 ## Implement pop-up messages in Outlook that warn, justify, or block emails being sent
 
@@ -553,13 +560,13 @@ To configure this advanced setting, enter the following strings:
 
 ## Turn on classification to run continuously in the background
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.  
 
 When you configure this setting, it changes the [default behavior](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) of how the Azure Information Protection client applies automatic and recommended labels to documents: 
 
 - For Word, Excel, and PowerPoint, automatic classification runs continuously in the background.  
 
-The behavior does not change for Outlook.
+- The behavior does not change for Outlook.
 
 When the Azure Information Protection client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in Microsoft SharePoint. Large files also save more quickly because the condition rules have already run. 
 
@@ -570,6 +577,10 @@ To configure this advanced setting, enter the following strings:
 - Key: **RunPolicyInBackground**
 
 - Value: **True**
+
+> [!NOTE]
+> This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
 
 ## Don't protect PDF files by using the ISO standard for PDF encryption
 
@@ -631,8 +642,6 @@ The file retains the .pdf file name extension but is classified as before, and i
 
 ## Support for files protected by Secure Islands
 
-This configuration option is in preview and might change.
-
 If you used Secure Islands to protect documents, you might have protected text and picture files, and generically protected files as a result of this protection. For example, files that have a file name extension of .ptxt, .pjpeg, or .pfile. When you edit the registry as follows, Azure Information Protection can decrypt these files:
 
 
@@ -651,6 +660,10 @@ As a result of this registry edit, the following scenarios are supported:
 - File Explorer, PowerShell, and the Azure Information Protection scanner can label these files. As a result, you can apply an Azure Information Protection label that applies new protection from Azure Information Protection, or that removes the existing protection from Secure Islands.
 
 - You can use the [labeling migration client customization](#migrate-labels-from-secure-islands-and-other-labeling-solutions) to automatically convert the Secure Islands label on these protected files to an Azure Information Protection label.
+
+> [!NOTE]
+> This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
 
 ## Migrate labels from Secure Islands and other labeling solutions
 
@@ -737,7 +750,7 @@ The advanced client setting:
 
 ## Remove headers and footers from other labeling solutions
 
-This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. These settings are in preview and might change.
+This configuration uses multiple [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
 The settings let you remove or replace text-based headers or footers from documents when those visual markings have been applied by another labeling solution. For example, the old footer contains the name of an old label that you have now migrated to Azure Information Protection with a new label name and its own footer.
 
@@ -758,6 +771,10 @@ Examples:
 - To search Word documents and PowerPoint presentations, specify **WP**.
 
 You then need at least one more advanced client setting, **ExternalContentMarkingToRemove**, to specify the contents of the header or footer, and how to remove or replace them.
+
+> [!NOTE]
+> This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
 
 ### How to configure ExternalContentMarkingToRemove
 
