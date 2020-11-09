@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
+ms.date: 11/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.custom: admin
 >[!NOTE]
 > If you're working with the classic scanner, see [Prerequisites for installing and deploying the Azure Information Protection classic scanner](deploy-aip-scanner-prereqs-classic.md).
 
-Before you install the Azure Information Protection scanner, make sure that your system complies with the following requirements:
+Before installing the Azure Information Protection on-premises scanner, make sure that your system complies with basic [Azure Information Protection requirements](requirements.md), as well as the following requirements specific to the scanner:
 
 - [Windows Server requirements](#windows-server-requirements)
 - [Service account requirements](#service-account-requirements)
@@ -144,14 +144,20 @@ For more information, see the [Unified labeling client admin guide](./rms-client
 
 ## Label configuration requirements
 
-You must have labels configured that automatically apply classification, and optionally, protection.
+You must have at least one sensitivity label configured in one of the Microsoft 365 labeling admin centers for the scanner account, to apply classification and, optionally, protection.
 
-If you don't have these labels configured, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations).
+Microsoft 365 labeling admin centers include the Microsoft 365 Security Center, the Microsoft 365 Compliance Center, and the Microsoft 365 Security and Compliance Center. 
+
+The *scanner account* is the account that you'll specify in the **DelegatedUser** parameter of the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet, run when configuring your scanner. 
+
+If your labels don't have auto-labeling conditions, see the [instructions for alternative configurations](#restriction-your-labels-do-not-have-auto-labeling-conditions) below.
 
 For more information, see:
 
+- [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels)
 - [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically)
 - [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels)
+- [Configuring and installing the  Azure Information Protection unified labeling scanner](deploy-aip-scanner-configure-install.md)
 
 ## SharePoint requirements
 

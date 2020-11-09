@@ -29,7 +29,7 @@ ms.custom: dev
 
 On March 3, 2020, an update to the RMS SDK 4.2 for Android, iOS, and OSX was released via Microsoft Download Center. This update is mandatory for all applications that use these RMS SDK platforms today.  
 
-After September 15, 2020, on a date yet to be determined, versions of the RMS SDK released prior to March of 2020 will fail to connect to the Azure Rights Management Service endpoint. Applications consuming RMS SDK 4.2 must update prior to this date. 
+After December 1, 2020, on a date yet to be determined, versions of the RMS SDK released prior to March of 2020 will fail to connect to the Azure Rights Management Service endpoint. Applications consuming RMS SDK 4.2 must update prior to this date. 
 
 ## Reason for Change 
 
@@ -37,16 +37,16 @@ Previous versions of the RMS SDK use certificate pinning to ensure that the RMS-
 
 Modern browsers use certificate transparency logs to verify that certificates have been issued to legitimate domain owners and that those certificates are issued by trusted root certification authorities.  
 
-To better support modern browsers, on September 15, 2020, the Microsoft will update the certificate for `https://api.aadrm.com` to a new certificate issued by a globally trusted root CA that reports issued certificates to certificate transparency logs trusted by modern browsers. Once this change is complete, legacy versions of RMS SDK attempting to perform certificate pinning to the expected root certificate will fail to find that certificate and will fail to connect.  
+To better support modern browsers, on December 1, 2020, Microsoft will update the certificate for `https://api.aadrm.com` to a new certificate issued by a globally trusted root CA that reports issued certificates to certificate transparency logs trusted by modern browsers. Once this change is complete, legacy versions of RMS SDK attempting to perform certificate pinning to the expected root certificate will fail to find that certificate and will fail to connect.  
 
 ## Client Impact 
 
-The following Microsoft applications use the RMS SDKs today. Updates will be made available for these platforms and devices should be updated prior to the September deadline. 
+The following Microsoft applications use the RMS SDKs today. Updates have been made available for these platforms and devices should be updated prior to the December deadline. 
 
-- Office 2019 for Mac 
-- Office 2016 for Mac 
-- Word, Excel, and PowerPoint for iOS 
-- Word, Excel, and PowerPoint for Android 
+- Office Pro Plus/2019 for Mac version 16.40 or later.
+- Office 2016 for Mac version 16.16.27 or later.
+- Word, Excel, and PowerPoint for iOS version 2.40.20071600 or later.
+- Word, Excel, and PowerPoint for Android version 16.0.12827.20140 or later.
 
 Resources 
 
