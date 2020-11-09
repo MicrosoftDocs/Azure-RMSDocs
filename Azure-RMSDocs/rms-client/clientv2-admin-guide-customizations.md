@@ -1402,6 +1402,12 @@ AIP administrators can customize the popup messages that appear to end users in 
 - Warning messages that prompt users to verify the content that they're sending
 - Justification messages that request users to justify the content that they're sending
 
+> [!IMPORTANT]
+> This procedure will override any settings you've already defined using the **OutlookUnlabeledCollaborationAction** advanced property.
+>
+> In production, we recommend that you avoid complications by *either* using the **OutlookUnlabeledCollaborationAction** advanced property to define your rules, *or* defining complex rules with a json file as defined below, but not both.
+>
+
 **To customize your Outlook popup messages:**
 
 1. Create **.json** files, each with a rule that configures how Outlook displays popup messages to your users. For more information, see [Rule value .json syntax](#rule-value-json-syntax) and [Sample popup customization .json code](#sample-popup-customization-json-code).
