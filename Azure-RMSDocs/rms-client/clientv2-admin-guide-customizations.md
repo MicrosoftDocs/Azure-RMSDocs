@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 11/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -316,22 +316,16 @@ Use the following table to identify the string value to specify:
 | String value| Client| Scanner|
 |-------------|-------|--------|
 |\*|Default value: Apply protection to all file types|Apply protection to all file types|
-|\<null value>| Apply protection to Office file types and PDF files| Default value: Apply protection to Office file types and PDF files|
 |ConvertTo-Json(".jpg", ".png")|In addition to Office file types and PDF files, apply protection to the specified file name extensions | In addition to Office file types and PDF files, apply protection to the specified file name extensions
+| | | |
 
-Example 1: PowerShell command for the unified client to protect only Office file types and PDF files, where your label policy is named "Client":
-
-```PowerShell
-Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
-```
-
-Example 2:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
+Example 1:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-Example 3: PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
+Example 2: PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
@@ -375,14 +369,6 @@ Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json
 
 With this setting, the following extensions ( ".txt", ".xml", ".bmp", ".jt", ".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".tif", ".tiff", ".gif") always become P\<EXT>. Notable exclusion is that "ptxt" does not become "txt.pfile". 
 **AdditionalPPrefixExtensions** only works if protection of PFiles with the advanced property - [**PFileSupportedExtension**](#pfilesupportedextension) is enabled. 
-
-For example, in a case where the following command is used:
-
-```PowerShell
-Set-LabelPolicy -AdvancedSettings @{PFileSupportedExtensions=""}
-```
-
-PFile protection is not possible, and the value in **AdditionalPPrefixExtensions** is ignored. 
 
 ## Remove "Not now" for documents when you use mandatory labeling
 
