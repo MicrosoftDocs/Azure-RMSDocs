@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/17/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -45,12 +45,11 @@ For more information, see [Upgrading and maintaining the Azure Information Prote
 
 Each general availability (GA) version of the Azure Information Protection client is supported for up to six months after the release of the subsequent GA version. With the exception of this section, the documentation does not include information about unsupported versions of the client. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
-Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
-
 ##### General availability versions that are no longer supported:
 
 |Client version|Date released|
 |--------------|-------------|
+|1.54.33.0 | 10/23/2019|
 |1.53.10|07/15/2019|
 |1.48.204.0|04/16/2019|
 |1.41.51.0|11/27/2018|
@@ -75,6 +74,8 @@ All client versions from 1.4.21.0 released 03/15/2017 support TLS 1.2. Client ve
 
 Use the following information to see what's new or changed for a supported release of the Azure Information Protection client for Windows. The most current release is listed first.
 
+Noted Azure Information Protection features are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
 >  
@@ -82,7 +83,7 @@ Use the following information to see what's new or changed for a supported relea
 
 ## Version 1.54.59.0
 
-**Released**: 12/02/2020
+**Released**: 02/12/2020
 
 This version includes fixes only. 
 
@@ -95,16 +96,6 @@ This version includes fixes only.
 - Issues surrounding client stability when working with protected PDF files is resolved. 
 
 - Protection labels are now removed as expected if the label is deleted on the email during the email creation process. 
-
-## Version 1.54.33.0
-
-**Released**: 10/23/2019
-
-Supported through 08/12/2020
-
-This version includes the MSIPC version 1.0.4008.0813 of the RMS client.
-
-This release has general fixes for stability and performance.
 
 ## Next steps
 
