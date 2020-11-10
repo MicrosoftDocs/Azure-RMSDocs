@@ -30,7 +30,7 @@ ms.custom: admin
 > *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
 > **To deploy the AIP classic client,** open a support ticket to get download access.
 
@@ -61,7 +61,7 @@ To complete this tutorial, you need:
 
 1. A computer running Windows (minimum of Windows 7 with Service Pack 1), and on this computer, you can sign in to Outlook. Be prepared to restart Outlook multiple times during this tutorial.
 
-1. The Azure Information Protection client (classic) installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
+1. The Azure Information Protection classic client installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
 
 > [!TIP]
 > For a full list of prerequisites to use Azure Information Protection, see [Requirements for Azure Information Protection](requirements.md).

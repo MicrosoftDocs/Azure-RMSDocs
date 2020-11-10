@@ -29,7 +29,7 @@ ms.custom: admin
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Have a question about Azure Information Protection that is specifically about classification and labeling?  See if it's answered here. 
 
@@ -39,7 +39,7 @@ Currently, there are two Azure Information Protection clients for Windows:
 
 - The **Azure Information Protection unified labeling client** that downloads labels and policy settings from one of the following admin centers: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center. This client is now in general availability, and might have a preview version for you to test additional functionality for a future release.
 
-- The **Azure Information Protection client (classic)** that downloads labels and policy settings from the Azure portal. This client builds on previous general availability versions of the client.
+- The **Azure Information Protection classic client** that downloads labels and policy settings from the Azure portal. This client builds on previous general availability versions of the client.
 
 We recommend you test with the unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](configure-policy-migrate-labels.md), use the classic client. For more information, including a feature and functionality comparison table, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
@@ -85,7 +85,7 @@ For examples of using this metadata with Exchange Online mail flow rules, see [C
 
 ## Can I create a document template that automatically includes the classification?
 
-Yes. You can configure a label to [apply a header or footer that includes the label name](configure-policy-markings.md). But if that doesn't meet your requirements, for the Azure Information Protection client (classic) only, you can create a document template that has the formatting you want and add the classification as a field code. 
+Yes. You can configure a label to [apply a header or footer that includes the label name](configure-policy-markings.md). But if that doesn't meet your requirements, for the Azure Information Protection classic client only, you can create a document template that has the formatting you want and add the classification as a field code. 
 
 As an example, you might have a table in your document's header that displays the classification. Or, you use specific wording for an introduction that references the document's classification.
 

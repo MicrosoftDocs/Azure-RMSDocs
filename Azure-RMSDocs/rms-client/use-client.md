@@ -28,12 +28,12 @@ search.appverid:
 >*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 >[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 
 Azure Information Protection provides a client-server solution that helps to protect an organization's documents and emails:
 
-- The client can be the built-in labeling client for Office, the Azure Information Protection unified labeling client for Windows, the Azure Information Protection client (classic) for Windows, or the Rights Management client.
+- The client can be the built-in labeling client for Office, the Azure Information Protection unified labeling client for Windows, the Azure Information Protection classic client for Windows, or the Rights Management client.
     
     These clients are often referred to as the **Office built-in labeling client**, the **unified labeling client**, the **classic client**, and the **RMS client**, respectively. Whichever client you use, it integrates with applications that you run on computers and mobile devices.
 
@@ -54,7 +54,7 @@ Your choice of labeling client for your Windows computers might be influenced by
     - Microsoft 365 security center
     - Microsoft 365 compliance center
 
-- The Azure Information Protection client (classic) downloads label and policy settings from the Azure portal.
+- The Azure Information Protection classic client downloads label and policy settings from the Azure portal.
 
 Because the unified labeling client and the classic client require a separate installation to Office, you must download and install these clients from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). 
 
@@ -198,7 +198,7 @@ For more information on support for dynamic content markings in the built-in lab
 
 ### Detailed comparisons for the Azure Information Protection clients
 
-When the Azure Information Protection client (classic) and the Azure Information Protection unified labeling client both support the same feature, use the following table to help identify some functional differences between the two clients.
+When the Azure Information Protection classic client and the Azure Information Protection unified labeling client both support the same feature, use the following table to help identify some functional differences between the two clients.
 
 |Functionality |Classic client|Unified labeling client|
 |--------------|-----------------------------------|-----------------------------------------------------------|
@@ -245,7 +245,7 @@ Although the Azure Information Protection unified labeling client is still under
 
 ### Parent labels and their sublabels 
 
-The Azure Information Protection client (classic) doesn't support configurations that specify a parent label that has sublabels. These configurations include specifying a default label, and a label for recommended or automatic classification. When a label has sublabels, you can specify one of the sublabels but not the parent label.
+The Azure Information Protection classic client doesn't support configurations that specify a parent label that has sublabels. These configurations include specifying a default label, and a label for recommended or automatic classification. When a label has sublabels, you can specify one of the sublabels but not the parent label.
 
 For parity, the Azure Information Protection unified labeling client also doesn't support applying parent labels that have sublabels, even though you can select these labels in the admin centers. In this scenario, the Azure Information Protection unified labeling client will not apply the parent label.
 
