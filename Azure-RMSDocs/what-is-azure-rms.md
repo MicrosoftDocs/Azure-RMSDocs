@@ -33,6 +33,9 @@ search.appverid:
 >
 >***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
 Azure Rights Management (Azure RMS) is the protection technology used by [Azure Information Protection](what-is-information-protection.md).
 
 Azure RMS is a cloud-based protection service that uses encryption, identity, and authorization policies to help secure files and emails across multiple devices, including phones, tablets, and PCs. Protection settings remain with your data, even when it leaves your organization's boundaries, keeping your content protected both within and outside your organization.
@@ -105,16 +108,20 @@ Azure RMS provides the following features to support IT departments and infrastr
 - [Create simple and flexible policies](#create-simple-and-flexible-policies)
 - [Easy activation](#easy-activation)
 - [Auditing and monitoring services](#auditing-and-monitoring-services)
+- [Ability to scale across your organization](#ability-to-scale-across-your-organization)
+- [Maintain IT control over data](#maintain-it-control-over-data)
+
+> [!NOTE]
+> Organizations always have the choice to stop using the Azure Rights Management service without losing access to content that was previously protected by Azure Rights Management. 
+> 
+> For more information, see  [Decommissioning and deactivating Azure Rights Management](decommission-deactivate.md). 
+> 
 
 #### Create simple and flexible policies
 
 Customized protection templates provide a quick and easy solution for administrators to apply policies, and for users to apply the correct level of protection for each document and restrict access to people inside your organization. 
 
-For example:
-
-- For a company-wide strategy paper to be shared with all employees, apply a read-only policy to all internal employees. 
-
-- For a more sensitive document, such as a financial report, restrict access to executives only.
+For example, for a company-wide strategy paper to be shared with all employees, apply a read-only policy to all internal employees. For a more sensitive document, such as a financial report, restrict access to executives only.
 
 Configure your labeling policies in your labeling admin center:
 
@@ -145,28 +152,23 @@ Azure RMS auditing can provide the following information:
 > For classic client users only, the [document tracking site](./rms-client/client-track-revoke.md) lets users and administrators track, and if necessary, revoke access to protected documents.
 > 
 
-Ability to scale across your organization**. Because Azure Rights Management runs as a cloud service with the Azure elasticity to scale up and out, you don’t have to provision or deploy additional on-premises servers.
+#### Ability to scale across your organization
 
-- **Maintain IT control over data**. Organizations can benefit from IT control features, such as:
+Because Azure Rights Management runs as a cloud service with the Azure elasticity to scale up and out, you don’t have to provision or deploy additional on-premises servers.
 
-    |Feature  |Description  |
-    |---------|---------|
-    |Tenant key management    |   Manage your own tenant key using the “[Bring Your Own Key](plan-implement-tenant-key.md)” (BYOK) solution, storing your tenant key in Hardware Security Modules (HSMs).      |
-    |Auditing and usage logging    |   Use auditing and [usage logging](log-analyze-usage.md) features to analyze for business insights, monitor for abuse, and perform forensic analysis for information leaks.      |
-    |Access delegation     |  Delegate access with the [super user feature](configure-super-users.md), ensuring that IT can always access protected content, even if a document was protected by an employee who then leaves the organization. </br> In comparison, peer-to-peer encryption solutions risk losing access to company data.       |
-    |Active Directory synchronization     |   Synchronize [just the directory attributes that Azure RMS needs](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#azure-rms) to support a common identity for your on-premises Active Directory accounts, by using [a hybrid identity solution](/azure/active-directory/hybrid/), such as Azure AD Connect.      |
-    |Single-sign on     | Enable single-sign on without replicating passwords to the cloud, by using AD FS.        |
-    |Migration from AD RMS |If you've deployed Active Directory Rights Management Services (AD RMS), [migrate to the Azure Rights Management service](migrate-from-ad-rms-to-azure-rms.md) without losing access to data that was previously protected by AD RMS. |
-    | | |
+#### Maintain IT control over data
 
+Organizations can benefit from IT control features, such as:
 
-> [!NOTE]
-> Organizations always have the choice to stop using the Azure Rights Management service without losing access to content that was previously protected by Azure Rights Management. 
-> 
-> For more information, see  [Decommissioning and deactivating Azure Rights Management](decommission-deactivate.md). 
-> 
-
-
+|Feature  |Description  |
+|---------|---------|
+|**Tenant key management**    | Use tenant key management solutions, such as Bring Your Own Key (BYOK) or Double Key Encryption (DKE). <br><br>For more information about, see: <br>- [Planning and implementing your AIP tenant key](plan-implement-tenant-key.md) <br>- [DKE in the Microsoft 365 documentation](/microsoft-365/compliance/double-key-encryption).|
+|**Auditing and usage logging**    |   Use auditing and [usage logging](log-analyze-usage.md) features to analyze for business insights, monitor for abuse, and perform forensic analysis for information leaks.      |
+|**Access delegation**     |  Delegate access with the [super user feature](configure-super-users.md), ensuring that IT can always access protected content, even if a document was protected by an employee who then leaves the organization. </br> In comparison, peer-to-peer encryption solutions risk losing access to company data.       |
+|**Active Directory synchronization**     |   Synchronize [just the directory attributes that Azure RMS needs](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#azure-rms) to support a common identity for your on-premises Active Directory accounts, by using [a hybrid identity solution](/azure/active-directory/hybrid/), such as Azure AD Connect.      |
+|**Single-sign on**     | Enable single-sign on without replicating passwords to the cloud, by using AD FS.        |
+|**Migration from AD RMS** |If you've deployed Active Directory Rights Management Services (AD RMS), [migrate to the Azure Rights Management service](migrate-from-ad-rms-to-azure-rms.md) without losing access to data that was previously protected by AD RMS. |
+| | |
 
 ## Security, compliance, and regulatory requirements
 Azure Rights Management supports the following security, compliance, and regulatory requirements:

@@ -57,6 +57,7 @@ Even if you don't need to know in detail how this technology works, you might be
 |Algorithm: AES<br /><br />Key length: 128 bits and 256 bits [[1]](#footnote-1)|Content protection|
 |Algorithm: RSA<br /><br />Key length: 2048 bits [[2]](#footnote-2)|Key protection|
 |SHA-256|Certificate signing|
+| | |
 
 ###### Footnote 1 
 
@@ -88,6 +89,7 @@ Licenses and certificates that are sent to a Windows device are protected with t
 
 
 ## Walkthrough of how Azure RMS works: First use, content protection, content consumption
+
 To understand in more detail how Azure RMS works, let's walk through a typical flow after the [Azure Rights Management service is activated](activate-service.md) and when a user first uses the Rights Management service on their Windows computer (a process sometimes known as **initializing the user environment** or bootstrapping), **protects content** (a document or email), and then **consumes**  (opens and uses) content that has been protected by somebody else.
 
 After the user environment is initialized, that user can then protect documents or consume protected documents on that computer.
@@ -173,9 +175,14 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 
 To learn more about the Azure Rights Management service, use the other articles in the **Understand & Explore** section, such as [How applications support the Azure Rights Management service](applications-support.md) to learn how your existing applications can integrate with Azure Rights Management to provide an information protection solution. 
 
-Review [Terminology for Azure Information Protection](./terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using the Azure Rights Management service, and be sure to also check [Requirements for Azure Information Protection](requirements.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Edit the policy and create a new label](infoprotect-quick-start-tutorial.md) tutorial.
+Review [Terminology for Azure Information Protection](./terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using the Azure Rights Management service, and be sure to also check [Requirements for Azure Information Protection](requirements.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the quickstart and tutorials:
 
-If you’re ready to start deploying data protection for your organization, use the [Azure Information Protection deployment roadmap](deployment-roadmap.md) for your deployment steps and links for how-to instructions.
+- [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
+- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
+- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
+- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+
+If you’re ready to start deploying data protection for your organization, use the [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md) for your deployment steps and links for how-to instructions.
 
 > [!TIP]
 > For additional information and help, use the resources and links in [Information and support for Azure Information Protection](information-support.md).
