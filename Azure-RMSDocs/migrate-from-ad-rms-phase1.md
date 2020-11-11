@@ -3,11 +3,11 @@
 
 title: Migrate AD RMS-Azure Information Protection - Phase 1
 description: Phase 1 of migrating from AD RMS to Azure Information Protection, covering steps 1 though 3 from Migrating from AD RMS to Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/02/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
@@ -27,13 +27,15 @@ ms.custom: admin
 
 # Migration phase 1 - preparation
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Use the following information for Phase 1 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 1 though 3 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) and prepare your environment for migration without any impact to your users.
 
 ## Step 1: Install the AIPService PowerShell module and identify your tenant URL
 
-Install the AIPService module so that you can configure and manage the service that provides the data protection for Azure Information Protection.
+Install the **AIPService** module so that you can configure and manage the service that provides the data protection for Azure Information Protection.
 
 For instructions, see [Installing the AIPService PowerShell module](./install-powershell.md).
 
@@ -45,13 +47,13 @@ For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 1. Connect to the Azure Rights Management service and when prompted, enter the credentials for your tenant's global administrator:
 
-    ```ps
+    ```PowerShell
     Connect-AipService
     ```
 
 2. Get your tenant's configuration:
 
-    ```ps
+    ```PowerShell
     Get-AipServiceConfiguration
     ```
 
@@ -61,7 +63,7 @@ For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
     You can verify that you have the correct value by running the following PowerShell command:
 
-    ```ps
+    ```PowerShell
     (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
     ```
 
@@ -75,13 +77,13 @@ For most migrations, it is not practical to migrate all clients at once, so you 
 
 2. Configure this group for onboarding controls to allow only people in this group to use Azure Rights Management to protect content. To do this, in a PowerShell session, connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
 
-    ```ps
+    ```PowerShell
     Connect-AipService
     ```
 
     Then configure this group for onboarding controls, substituting your group object ID for the one in this example, and enter **Y** to confirm when you are prompted:
 
-    ```ps
+    ```PowerShell
     Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope WindowsApp
     ```
 
@@ -109,7 +111,7 @@ Make sure that you have your [Azure Rights Management service URL for your tenan
 
 **If you have integrated Exchange Online with AD RMS**: Open an Exchange Online PowerShell session and run the following PowerShell commands either one by one, or in a script:
 
-```ps
+```PowerShell
 $irmConfig = Get-IRMConfiguration
 $list = $irmConfig.LicensingLocation
 $list += "<YourTenantURL>/_wmcs/licensing"
@@ -150,7 +152,7 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 PowerShell commands to run either one by one, or in a script
 
-```ps
+```PowerShell
 $irmConfig = Get-IRMConfiguration
 $list = $irmConfig.LicensingLocation
 $list += "<YourTenantURL>/_wmcs/licensing"
