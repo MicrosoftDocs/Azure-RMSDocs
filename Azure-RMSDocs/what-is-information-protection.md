@@ -42,7 +42,7 @@ Microsoft Information Protection is the common information protection stack that
 
 ## AIP unified labeling client
 
-The Azure Information Protection unified labeling client extends labeling, classification, and protection capabilities to additional file types, as wel as to the File Explorer and PowerShell. 
+The Azure Information Protection unified labeling client extends labeling, classification, and protection capabilities to additional file types, as well as to the File Explorer and PowerShell. 
 
 For example, in the File Explorer, right-click one or more files and select **Classify and protect** to manage the AIP functionality on the selected files.
 
