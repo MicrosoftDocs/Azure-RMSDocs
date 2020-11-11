@@ -6,7 +6,7 @@ description: Learn about the next steps after planning your tenant root key mana
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/21/2020
+ms.date: 11/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -28,17 +28,23 @@ ms.custom: admin
 # Getting started with tenant root keys
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-After planning, creating, and configuring your tenant key as needed, continue with the following steps:
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
+After [planning, creating, and configuring your tenant key](plan-implement-tenant-key.md) as needed, continue with the following steps:
 
 - [Start using your tenant key](#start-using-your-tenant-key)
 - [Consider usage logging](#consider-usage-logging)
 
 For more information about the life-cycle operations supported for your tenant key, see [Operations for your Azure Information Protection tenant key](./operations-tenant-key.md).
 
-> [!TIP]
-> If your organization requires on-premises protection for highly sensitive content, configure either [HYOK protection](configure-adrms-restrictions.md) (classic clients only), or [DKE protection](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) (unified labeling client only).
-> 
+If your organization requires on-premises protection for highly sensitive content, configure [DKE protection](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) (unified labeling client only).
+
+If you need on-premises protection and are using the classic client, configure [HYOK protection](configure-adrms-restrictions.md) instead.
+ 
 
 ## Start using your tenant key
 

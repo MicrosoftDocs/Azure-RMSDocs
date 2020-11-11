@@ -29,7 +29,7 @@ search.appverid:
 # Azure Information Protection (AIP) labeling, classification, and protection
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
+>
 > ***Relevant for**: [Azure Information Protection unified labeling client and classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
