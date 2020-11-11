@@ -97,21 +97,17 @@ The unified labeling client requires a Windows computer, and enables you to shar
 
 ### Azure Information Protection classic client
 
-The classic client:
+Use the classic client only if you haven't yet migrated to unified labeling. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](../tutorial-migrating-to-ul.md).
 
-- Requires a Windows computer
-- Provides access to features not yet available on the unified labeling client, such as holding your own on-premises key (HYOK), and a general availability version of the scanner for on-premises data stores. 
-- Enables you to share labels with macOS, iOS, and Android
+The classic client has different policy settings for macOS, iOS, and Android. So, while you may want to use the additional features, you'll have to work with a separate management portal and user experience to protect content across operating systems.
 
-However, the classic client has different policy settings for macOS, iOS, and Android. So, while you may want to use the additional features, you'll have to work with a separate management portal and user experience to protect content across operating systems.
-
-**Don't use** the classic client if you want newer features available only in the unified labeling client, or to provide a centralized, unified user experience.
+Where possible, we recommend using the unified labeling client instead of the classic client.
 
 ### Using multiple clients in the same environment
 
 You can use different clients in the same environment to support different business requirements, as demonstrated in the following deployment example. In a mixed client environment, we recommend you use unified labels so that clients share the same set of labels for ease of administration. New customers have unified labels by default because their tenants are on the unified labeling platform. For more information, see [How can I determine if my tenant is on the unified labeling platform?](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
 
-When you have a Windows computer that runs Microsoft 365 apps that are a minimum version 1910 and one of the Azure Information Protection clients is installed, by default the built-in labeling client is disabled in Office apps. However, you can change this behavior to use the built-in labeling client for just your Office apps. With this configuration, the Azure Information Protection client (classic or unified labeling) remains available for labeling in File Explorer, PowerShell, and the scanner. For instructions to disable the Azure Information Protection client in Microsoft 365 apps, see the section [Office built-in labeling client and the Azure Information Protection client](/microsoft-365/compliance/sensitivity-labels-office-apps#office-built-in-labeling-client-and-the-azure-information-protection-client) from the Microsoft 365 Compliance documentation.
+When you have a Windows computer that runs Microsoft 365 apps that are a minimum version 1910 and one of the Azure Information Protection clients is installed, by default the built-in labeling client is disabled in Office apps. However, you can change this behavior to use the built-in labeling client for just your Office apps. With this configuration, the Azure Information Protection client remains available for labeling in File Explorer, PowerShell, and the scanner. For instructions to disable the Azure Information Protection client in Microsoft 365 apps, see the section [Office built-in labeling client and the Azure Information Protection client](/microsoft-365/compliance/sensitivity-labels-office-apps#office-built-in-labeling-client-and-the-azure-information-protection-client) from the Microsoft 365 Compliance documentation.
 
 ##### Example deployment strategy:
 
@@ -121,11 +117,11 @@ When you have a Windows computer that runs Microsoft 365 apps that are a minimum
 
 - You also install the unified labeling client for yourself, to test the Azure Information Protection scanner.
 
-- For a subset of users, you deploy the classic client because these users require labels that apply hold your own key (HYOK) protection.
+- For a subset of users, you deploy the classic client because these users require labels that apply hold your own key ([HYOK](../configure-adrms-restrictions.md)) protection.
     
     For these users, they have a slightly different labeling experience when they use this client. For example, they see a **Protect** button rather than a **Sensitivity** button in Office apps. As an admin, you need to manage their labels for HYOK settings and policy settings in a different management center to the labels and settings for the other client platforms.
 
-- You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. For production use, you deploy the classic client on servers to run the Azure Information Protection scanner.
+- You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. For production use, you deploy the unified labeling client on servers to run the [Azure Information Protection scanner](../deploy-aip-scanner.md).
 
 ## Compare the labeling clients for Windows computers
 
@@ -255,7 +251,7 @@ For parity, the Azure Information Protection unified labeling client also doesn'
 
 To install and configure the Azure Information Protection clients, use the following documentation:
 
-- [Azure Information Protection client](AIP-client.md)
+- [Azure Information Protection client](AIP-clientv2.md)
 
 - [Azure Information Protection unified labeling client](unifiedlabelingclient-version-release-history.md)
 
