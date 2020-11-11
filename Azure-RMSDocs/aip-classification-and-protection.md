@@ -32,9 +32,6 @@ search.appverid:
 
 > ***Relevant for**: [Azure Information Protection unified labeling client and classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
-
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to classify and protect documents and emails by applying labels. 
 
 For example, your administrator might configure a label with rules that detect sensitive data, such as credit card information. In this case, any user who saves credit card information in a Word file might see a tooltip at the top of the document with a recommendation to apply the relevant label for this scenario.
@@ -55,7 +52,7 @@ Labeling your content with AIP includes:
 - **Visual markings,** such as headers, footers, or watermarks.
 - **Metadata,** added to files and email headers in clear text. The clear text metadata ensures that other services can identify the classification and take appropriate action
 
-For example, in the image below, labeling has classified an email message as *General*, using the [unified labeling client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
+For example, in the image below, labeling has classified an email message as *General*:
 
 :::image type="content" source="media/example-email-footerv2.png" alt-text="Sample email footer and headers showing Azure Information Protection classification":::
 
@@ -105,7 +102,7 @@ For more information, see [What is Azure Rights Management?](what-is-azure-rms.m
 
 The AIP client installs the Information Protection bar to Office applications and enables end users to integrate AIP with their documents and emails.
 
-For example, in Excel, using the [unified labeling client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
+For example, in Excel:
 
 ![Example of the Azure Information Protection bar in Excel](./media/excelproplus-infoprotect-bar.png)
 
@@ -138,7 +135,7 @@ For example, a Gmail user might see the following prompt in an email message the
 
 For the user sending the email, the actions required are the same as for sending a protected email to a user in their own organization. For example, select the **Do Not Forward** button that the AIP client can add to the Outlook ribbon. 
 
-Alternately, Do Not Forward functionality can be integrated into a label that users can select to apply both classification and protection to that email. For example, in the [unified labeling client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
+Alternately, **Do Not Forward** functionality can be integrated into a label that users can select to apply both classification and protection to that email. For example:
 
 ![Selecting a label configured for Do Not Forward](./media/recipients-only-label2.png)
 
