@@ -74,7 +74,7 @@
       href: deployment-roadmap-classify-label-protect.md
     - name: Configure Bring Your Own Key (BYOK) protection
       href: byok-price-restrictions.md
-      - name: Get started with tenant root keys
+    - name: Get started with tenant root keys
       href: get-started-tenant-root-keys.md
     - name: Operations for your tenant key
       items:
