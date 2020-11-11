@@ -25,7 +25,9 @@ search.appverid:
 
 # The client side of Azure Information Protection
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
@@ -39,24 +41,24 @@ Azure Information Protection provides a client-server solution that helps to pro
 
 - The service resides in the cloud or on-premises. The cloud service is Azure Information Protection, which uses the Azure Rights Management service for the data protection. The on-premises service is Active Directory Rights Management Services, more commonly known as AD RMS. 
 
-All these clients integrate with Office applications but the unified labeling client and the classic client must be installed separately and support additional features and components. For example, these clients include support for File Explorer, so you can classify and protect files outside Office. Additional components include a viewer for protected PDF documents and protected images, and a scanner for on-premises data stores.
+All these clients integrate with Office applications but the unified labeling client and the classic client must be installed separately and support additional features and components. 
+
+For example, these clients include support for File Explorer, so you can classify and protect files outside Office. Additional components include a viewer for protected PDF documents and protected images, and a scanner for on-premises data stores.
 
 The RMS client provides protection only. This client is automatically installed with some applications, such as Office applications, the Azure Information Protection clients, and RMS-enlightened applications from software vendors. However, it can also be [installed by itself](https://www.microsoft.com/download/details.aspx?id=38396), to support [synchronizing files from IRM-protected libraries and OneDrive](/onedrive/deploy-on-windows), and for developers who want to integrate rights management protection into line-of-business applications.
 
 ## Choose which labeling client to use for Windows computers
 
-Where possible, use one of the labeling clients because labels abstract the complexity of applying protection for users, and labels also provide classification so you can track and manage your data.
+Where possible, use one of the labeling clients because labeling makes it simpler for users to apply protection. Additionally, labels provide classification so that you can track and manage your data.
 
-Your choice of labeling client for your Windows computers might be influenced by which management portal you use:
+Some basic differences include:
 
-- The Office built-in labeling client and the Azure Information Protection unified labeling client download labels and policy settings from the following admin centers: 
-    - Office 365 Security & Compliance Center
-    - Microsoft 365 security center
-    - Microsoft 365 compliance center
+|Difference  |Description  |
+|---------|---------|
+|**Where labels and label policies are downloaded from**     |The built-in labeling client and the AIP unified labeling client use one of the following admin centers: <br><br>- Office 365 Security & Compliance Center <br>- Microsoft 365 security center <br>- Microsoft 365 compliance center  <br><br>The Azure Information Protection classic client downloads label and policy settings from the Azure portal.        |
+|**Installation**     | The built-in labeling client does not require a separate installation.<br><br>The AIP clients require a separate installation to Office. Download and install the unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).  <br>If you need to download and install the classic client, contact support and open a ticket to access the installation file.       |
+|     |         |
 
-- The Azure Information Protection classic client downloads label and policy settings from the Azure portal.
-
-Because the unified labeling client and the classic client require a separate installation to Office, you must download and install these clients from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). 
 
 Use the following sections to help you determine which client is best for your organization:
 
@@ -85,13 +87,13 @@ The labeling client that's built in to Microsoft Office:
 - Does not require a separate installation and maintenance
 - Cannot be disabled.
 
-**Don't use** the built-in Office labeling client if you need features provided only by the classic or unified labeling clients, such as the Information Protection bar under the ribbon. This bar provides easier label selection and visibility.
+**Don't use** the built-in Office labeling client if you need features provided only the Azure Information Protection clients, such as the Information Protection bar under the ribbon. This bar provides easier label selection and visibility.
 
 ### Azure Information Protection unified labeling client
 
 The unified labeling client requires a Windows computer, and enables you to share labels and policy settings that can also be used by macOS, iOS, and Android.
 
-**Don't use** the unified labeling client if the current unified labeling features not meet your business requirements, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](../configure-policy-migrate-labels.md).
+**Don't use** the unified labeling client if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](../configure-policy-migrate-labels.md).
 
 ### Azure Information Protection classic client
 

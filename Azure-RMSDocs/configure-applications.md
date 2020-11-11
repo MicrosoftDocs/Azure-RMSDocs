@@ -3,10 +3,10 @@
 
 title: Configuring applications for Azure Rights Management - AIP
 description: Instructions for admins to configure applications and services to support the Azure Rights Management protection service for Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 11/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,14 +27,21 @@ ms.custom: admin
 
 # Configuring applications for Azure Rights Management
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE]
 > This information is for IT administrators and consultants who have deployed Azure Information Protection. If you are looking for user help and information about how to use the Rights Management functionality for a specific application or how to open a file that is rights-protected, use the help and guidance that accompanies your application.
 >
 > For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the Azure Information Protection client for Windows, see the [Azure Information Protection client user guide](./rms-client/client-user-guide.md).
 
-After you have deployed Azure Information Protection for your organization, use the following information to configure applications, the Azure Information Protection client, and services. For example, Office applications such as Word 2019, Word 2016, and Word 2013. Also services such as Exchange Online (transport rules, data loss prevention, do not forward, and message encryption) and Microsoft SharePoint (protected libraries). For information about how these applications and services support the data protection service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
+After you have deployed Azure Information Protection for your organization, use the following information to configure applications, the Azure Information Protection client, and services, such as:
+
+- **Office applications**, such as Word 2019, Word 2016, and Word 2013. 
+- **Services**, such as Exchange Online (transport rules, data loss prevention, do not forward, and message encryption) and Microsoft SharePoint (protected libraries). 
+
+For information about how these applications and services support the data protection service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
 
 > [!IMPORTANT]
 > For information about supported versions and other requirements, see [Requirements for Azure Information Protection](requirements.md).
@@ -58,7 +65,10 @@ To configure on-premises servers such as Exchange Server and SharePoint Server, 
 In addition to these applications and services, there are other applications that support the Rights Management APIs. This category includes line-of-business applications that are written in-house by using the Rights Management SDK, and applications from software vendors that are written by using the Rights Management SDK. For these applications, follow the instructions that are provided with the application.
 
 ## Next steps
-After you’ve configured your applications to support the Azure Rights Management service, use the [Azure Information Protection deployment roadmap](deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out Azure Information Protection to users and administrators. If not, you might find the following operational information useful:
+
+After you’ve configured your applications to support the Azure Rights Management service, use the [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md) to check whether there are other configuration steps that you might want to do before you roll out Azure Information Protection to users and administrators. 
+
+If not, you might find the following operational information useful:
 
 - [Verifying the Azure Rights Management service](verify.md)
 

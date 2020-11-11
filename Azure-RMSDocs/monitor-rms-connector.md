@@ -3,11 +3,11 @@
 
 title: Monitor the Rights Management connector - AIP
 description: Information to help you monitor the connector and your organization's use of the Azure Rights Management service from Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
@@ -27,7 +27,9 @@ ms.custom: admin
 
 # Monitor the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 After you install and configure the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of the Azure Rights Management service from Azure Information Protection.
 
@@ -186,17 +188,17 @@ If you need more detailed logging for diagnosis purposes, you can use [Debugview
 
 1. Locate the web.config file from **%programfiles%\Microsoft Rights Management connector\Web Service**.
 
-2. Locate the following line:
+1. Locate the following line:
 
     ```sh
     <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
     ```
 
-3. Replace that line with the following text:
+1. Replace that line with the following text:
     ```sh
     <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
     ```
 
-4.  Stop and start IIS to activate tracing. 
+1.  Stop and start IIS to activate tracing. 
 
-5.  When you have captured the traces that you need, revert the line in step 3, and stop and start IIS again.
+1.  When you have captured the traces that you need, revert the line in step 3, and stop and start IIS again.
