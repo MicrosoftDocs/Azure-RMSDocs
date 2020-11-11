@@ -42,7 +42,7 @@ Microsoft Information Protection is the common information protection stack that
 
 ## AIP unified labeling client
 
-The Azure Information Protection unified labeling client extends labeling, classification, and protection capabilities to additional file types, as wel as to the File Explorer and PowerShell. 
+The Azure Information Protection unified labeling client extends labeling, classification, and protection capabilities to additional file types, as well as to the File Explorer and PowerShell. 
 
 For example, in the File Explorer, right-click one or more files and select **Classify and protect** to manage the AIP functionality on the selected files.
 
@@ -54,7 +54,7 @@ Download the client from the [Microsoft Azure Information Protection download pa
     
 ## AIP on-premises scanner
 
-The Azure Information Protection on-premises scanner enables administrators to scan their networks and file shares for sensitive content that must be labeled, classified, and/or protected.
+The Azure Information Protection on-premises scanner enables administrators to scan their networks and on-premises file repositories for sensitive content that must be labeled, classified, and/or protected.
 
 The on-premises scanner is installed using PowerShell cmdlets provided as part of the unified labeling client, and can be managed using PowerShell and the Azure Information Protection area in the Azure portal.
 
