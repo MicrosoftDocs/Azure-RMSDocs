@@ -110,7 +110,7 @@ Continue with [Copy policies to the unified labeling platform](#copy-policies-to
 
 ### Synchronizing labeling edits
 
-Once you've migrated your labels to your admin center, any edits you continue to make to the migrated labels in the Azure portal are automatically synchronized to the same label in the admin center for unified labeling.
+Once you've migrated your labels to your labeling admin center, including the Microsoft 365 security center, Microsoft 365 compliance center, or the Microsoft 365 Security & Compliance Center, any edits you continue to make to the migrated labels in the Azure portal are automatically synchronized to the same label in the admin center for unified labeling.
 
 However, edits made to migrated labels in your admin center are *not* synchronized back to the Azure portal. If you make edits in the admin center and need them updated in the Azure portal, return to the portal to publish the update.
 

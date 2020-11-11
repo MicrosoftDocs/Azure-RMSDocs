@@ -41,8 +41,8 @@ To complete this quickstart, you need:
 
 |Requirement  |Description  |
 |---------|---------|
-|**A supporting subscription**     |  You'll need a subscription that includes [**Azure Information Protection Plan 1 or Plan 2**](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
-|**Client installed**    |   You'll need the classic client installed on your computer. </br></br>To deploy the AIP classic client, open a support ticket to get download access.       |
+|**A supporting subscription**     |  You'll need a subscription that includes [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>If you don't have one of these subscriptions, you can create a [free](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) account for your organization.       |
+|**Client installed**    |   You'll need the classic or unified labeling client installed on your computer. </br></br>- To install the unified labeling client, go the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=53018) and download **AzInfoProtection_UL.exe** from the Azure Information Protection page. </br>- To deploy the AIP classic client, open a support ticket to get download access.       |
 |**SQL Server Express**     | You'll need SQL Server Express installed on your computer. </br></br> To install, go to the [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) and select **Download now** under the Express option. In the installer, select the **Basic** installation type.        |
 |**Azure AD**     |  Your domain account must be synchronized to Azure AD. </br></br>If you're not sure about your account, contact one of your system administrators.      |
 |**SharePoint access**     | To enable a SharePoint scan, you'll need access and permissions to your SharePoint policy. |
