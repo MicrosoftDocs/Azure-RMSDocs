@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
@@ -25,7 +25,9 @@ ms.custom: user
 
 # What is the Azure Information Protection app for iOS or Android?
 
-*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 The Azure Information Protection (AIP) mobile app for iOS and Android enable you to view protected email messages,  PDFs, images, and text files, and are useful if your regular apps for these file types do not support protection. 
 
@@ -113,8 +115,8 @@ If you're a system administrator who wants to test the AIP mobile apps for your 
     |File type  |Instructions  |
     |---------|---------|
     |**Email (.rpmsg)**     | Use another device, such as Outlook from a Windows computer, to send yourself a rights-protected email message that you can access from your mobile device.  |
-    |**PDF**     | 1. From a Windows computer, protect a PDF file using the AIP [classic](client-classify-protect.md) or [unified labeling](clientv2-classify-protect.md) client. </br>2. Send yourself the protected PDF, or upload it to a SharePoint protected library and share it to your own email address.        |
-    |**Image (.ptxt, .pjpg, or .ppng)**     | 1. From a Windows computer, protect a text or image file using the AIP [classic](client-classify-protect.md) or [unified labeling](clientv2-classify-protect.md) client. </br></br>2. Send yourself the protected file, or upload it to a SharePoint protected library and share it to your own email address.   |
+    |**PDF**     | 1. From a Windows computer, [protect a PDF](clientv2-classify-protect.md) file using the AIP client. </br>2. Send yourself the protected PDF, or upload it to a SharePoint protected library and share it to your own email address.        |
+    |**Image (.ptxt, .pjpg, or .ppng)**     | 1. From a Windows computer, [protect a text or image file](clientv2-classify-protect.md) using the AIP client. </br></br>2. Send yourself the protected file, or upload it to a SharePoint protected library and share it to your own email address.   |
 | | |
 
 1. Open the protected file on your mobile device using the email attachment or link that you'd sent to yourself.
