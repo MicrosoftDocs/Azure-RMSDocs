@@ -44,7 +44,7 @@ Supported applications include:
 - **Client applications,** such as Office 2019, Office 2016, and Office 2013
 
 > [!TIP]
-> If needed, apply additional security to specific documents using an additional on-premises key. For more information, see [Double Key Encryption (DKE) protection](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) (unified labeling client only).
+> If needed, apply additional security to specific documents using an additional on-premises key. For more information, see [Double Key Encryption (DKE) protection](plan-implement-tenant-key.md#double-key-encryption-dke) (unified labeling client only).
 >
 > If you have the classic client and need additional, on-premises protection, implement [Hold your own key (HYOK) protection](configure-adrms-restrictions.md) protection instead.
 > 

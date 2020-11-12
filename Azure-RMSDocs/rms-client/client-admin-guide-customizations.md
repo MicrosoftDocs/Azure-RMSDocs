@@ -1001,7 +1001,7 @@ Set the logging level to one of the following values:
 
 - **Trace**: Detailed logging (the default setting for clients). For the scanner, this setting has a significant performance impact and should be enabled for the scanner only if requested by Microsoft Support. If you are instructed to set this level of logging for the scanner, remember to set a different value when the relevant logs have been collected.
 
-This advanced client setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md), or change the information that's written to the local [event log](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
+This advanced client setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md), or change the information that's written to the local [event log](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client).
 
 ## Integration with the legacy Exchange message classification
 

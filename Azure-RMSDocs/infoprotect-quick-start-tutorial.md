@@ -291,5 +291,5 @@ Restart Word to download these changes.
 
 For more information about editing the Azure Information Protection policy, see [Configuring Azure Information Protection policy](configure-policy.md).
 
-For more information about where the labeling activity is logged, see [Usage logging for the Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
+For more information about where the labeling activity is logged, see [Usage logging for the Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client).
 
