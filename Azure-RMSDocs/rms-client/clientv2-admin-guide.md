@@ -217,9 +217,9 @@ If you are currently using the Azure Information Protection scanner from the Azu
 
 How to upgrade the scanner depends on the version of the classic client that you are currently running:
 
-- [Upgrade from version 1.48.204.0 and later versions](#upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client)
+- [Upgrade from version 1.48.204.0 and later versions](#upgrade-from-the-azure-information-protection-classic-client-version-1482040-and-later-versions-of-this-client)
 
-- [Upgrade from versions earlier than 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
+- [Upgrade from versions earlier than 1.48.204.0](#upgrade-from-the-azure-information-protection-classic-client-versions-earlier-than-1482040)
 
 The upgrade creates a new database named **AIPScannerUL_\<profile_name>**, and the previous scanner database is retained in case you need it for the previous version. When you are confident you don't need the previous scanner database, you can delete it. Because the upgrade creates a new database, the scanner rescans all files the first time it runs.
 

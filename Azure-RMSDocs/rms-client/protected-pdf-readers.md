@@ -31,6 +31,9 @@ search.appverid:
 >
 >***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
 PDF readers for classified and/or protected PDFs enable you to open encrypted PDFs that contain sensitive information.
 
 Encrypting your PDFs with [Azure Information Protection (AIP)](../what-is-information-protection.md) ensures that unauthorized people cannot read the file's content.
@@ -58,7 +61,11 @@ For instructions, see the following sections:
 
 The PDF readers referenced on this page can all open protected documents that adhere to the ISO standard for PDF encryption. 
 
-This standard is used by default by the AIP client, unless it has been [disabled by an administrator](clientv2-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
+This standard is used by default by the AIP client.
+
+> [!NOTE]
+> **Classic client only:** If you have the AIP classic client, this may have been [disabled by an administrator](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
+> 
 
 ### Viewing protected PDFs in Adobe Acrobat Reader
 

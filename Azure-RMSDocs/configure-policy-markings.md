@@ -114,7 +114,7 @@ You can use the following variables in the text string for your header, footer, 
 >This syntax is case-sensitive.
 
 >[!TIP]
-> You can also use a [field code to insert the label name](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) into a document or template.
+> You can also use a [field code to insert the label name](faqs-classic.md#can-i-create-a-document-template-that-automatically-includes-the-classification) into a document or template.
 
 ## Setting different visual markings for Word, Excel, PowerPoint, and Outlook
 

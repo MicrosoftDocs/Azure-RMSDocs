@@ -49,7 +49,7 @@ Client logs files and currently installed policy file:
 
 - For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**
 
-## Usage logging for the Azure Information Protection client
+## Usage logging for the Azure Information Protection classic client
 
 The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. The events include the following information:
 

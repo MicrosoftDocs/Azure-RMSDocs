@@ -216,7 +216,7 @@ The following Office client suites support protecting files and emails on macOS 
 All editions of Office for Mac 2019 and Office for Mac 2016 support consuming protected content.
 
 > [!TIP]
-> To get started with protecting documents by using Office for Mac, you might find the following FAQ useful: [How do I configure a Mac computer to protect and track documents?](faqs-rms.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
+> If you are using the classic client on a Mac computer, you might find the following FAQ useful: [How do I configure a Mac computer to protect and track documents?](faqs-classic.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
 > 
 ## Azure Information Protection apps for iOS and Android
 

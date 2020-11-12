@@ -41,7 +41,7 @@ After [planning, creating, and configuring your tenant key](plan-implement-tenan
 
 For more information about the life-cycle operations supported for your tenant key, see [Operations for your Azure Information Protection tenant key](./operations-tenant-key.md).
 
-If your organization requires on-premises protection for highly sensitive content, configure [DKE protection](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) (unified labeling client only).
+If your organization requires on-premises protection for highly sensitive content, configure [DKE protection](plan-implement-tenant-key.md#double-key-encryption-dke) (unified labeling client only).
 
 If you need on-premises protection and are using the classic client, configure [HYOK protection](configure-adrms-restrictions.md) instead.
  

@@ -42,7 +42,7 @@ After you migrate your labels, you won't see any difference with the Azure Infor
 
 Before you read the instructions to migrate your labels, you might find the following frequently asked questions useful:
 
-- [What's the difference between labels in Azure Information Protection and labels in Office 365?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
+- [What's the difference between labels in Azure Information Protection and labels in Office 365?](faqs-classic.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
 
 - [When is the right time to migrate my labels?](faqs.md#when-is-the-right-time-to-migrate-my-labels)
 

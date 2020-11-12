@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: FAQs for Azure Information Protection
-description: Some frequently asked questions about Azure Information Protection and its protection service, Azure Rights Management (Azure RMS).
+title: FAQs for the Azure Information Protection classic client
+description: Some frequently asked questions about Azure Information Protection and its protection service, Azure Rights Management (Azure RMS). The FAQs listed here are relevant for the AIP classic client only.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -115,7 +115,7 @@ You can use this same technique to use your labels with Outlook on the web and t
 
 Note that there's no need to do this if you're using Outlook on the web with Exchange Online, because this combination supports built-in labeling when you publish sensitivity labels from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft compliance center.
 
-If you cannot use built-in labeling with Outlook on the web, see the configuration steps for this workaround: [Integration with the legacy Exchange message classification](rms-client/clientv2-admin-guide-customizations.md#integration-with-the-legacy-exchange-message-classification)
+If you cannot use built-in labeling with Outlook on the web, see the configuration steps for this workaround: [Integration with the legacy Exchange message classification](rms-client/client-admin-guide-customizations.md#integration-with-the-legacy-exchange-message-classification)
 
 ## How do I configure a Mac computer to protect and track documents?
 

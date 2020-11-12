@@ -216,7 +216,6 @@ You're now ready to monitor how your organization is using the labels that you'v
 For more information, see the following pages:
 
 - [Central reporting for Azure Information Protection](reports-aip.md) - currently in preview
-- [Local usage logging with Windows event monitor](./rms-client/clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)
 - [Logging and analyzing the protection usage from Azure Information Protection](./log-analyze-usage.md)
 
 ## Administer the protection service for your tenant account as needed
@@ -235,11 +234,11 @@ If you're using the classic client, use the following references instead of thos
 
 - **Configure your policy in the Azure portal.** For more information, see [Configuring Azure Information Protection policy](./configure-policy.md) and [How to configure a label for Rights Management protection](./configure-policy-protection.md).
 
-- **Deploy your client for users** using the [classic client administrator guide](./rms-client/client-admin-guide.md) and [custom configuration instructions for the classic client](rms-client/clientv2-admin-guide-customizations.md).
+- **Deploy your client for users** using the [classic client administrator guide](./rms-client/client-admin-guide.md) and [custom configuration instructions for the classic client](rms-client/client-admin-guide-customizations.md).
 
 - **PowerShell instructions**: [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)
 
-- **Local monitoring:** [Local usage logging with Windows event monitor](./rms-client/clientv2-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)
+- **Local monitoring:** [Local usage logging with Windows event monitor](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client)
 
 > [!TIP]
 > You may also be interested in the [Azure Information Protection deployment roadmap for protection only](deployment-roadmap-protect-only.md), which is supported for the classic client only.
