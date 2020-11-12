@@ -1,10 +1,10 @@
 ---
 # required metadata
 
-title: Use PowerShell with the Azure Information Protection client
-description: Instructions and information for admins to manage the Azure Information Protection client by using PowerShell.
-author: mlottner
-ms.author: mlottner
+title: Use PowerShell with the Azure Information Protection classic client
+description: Instructions and information for admins to manage the Azure Information Protection classic client by using PowerShell.
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/31/2020
 ms.topic: conceptual
@@ -25,16 +25,16 @@ ms.custom: admin
 ---
 
 
-# Admin Guide: Using PowerShell with the Azure Information Protection client
+# Admin Guide: Using PowerShell with the Azure Information Protection classic client
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
+> [!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
-When you install the Azure Information Protection client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
+When you install the Azure Information Protection classic client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 
 The cmdlets are installed with the PowerShell module **AzureInformationProtection**. This module includes all the Rights Management cmdlets from the RMS Protection Tool (no longer supported). There are also cmdlets that use Azure Information Protection for labeling. For example:
 

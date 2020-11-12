@@ -272,6 +272,8 @@
           href: deploy-aip-scanner-configure-install-classic.md
         - name: Run the classic scanner
           href: deploy-aip-scanner-manage-classic.md
+        - name: Azure Information Protection scanner - previous versions
+          href: deploy-aip-scanner-previousversions
       - name: Azure Information Protection classic client
         items:
         - name: Overview

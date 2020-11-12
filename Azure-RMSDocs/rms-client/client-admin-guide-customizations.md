@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Custom configurations - Azure Information Protection client
-description: Information about customizing the Azure Information Protection client for Windows.
+title: Custom configurations - Azure Information Protection classic client
+description: Information about customizing the Azure Information Protection classic client for Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -25,20 +25,20 @@ ms.custom: admin
 
 ---
 
-# Admin Guide: Custom configurations for the Azure Information Protection client
+# Admin Guide: Custom configurations for the Azure Information Protection classic client
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](clientv2-admin-guide-customizations.md).*
 
->[!NOTE] 
+> [!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection client.
 
 Some of these settings require editing the registry and some use advanced settings that you must configure in the Azure portal, and then publish for clients to download.  
 
-### How to configure advanced client configuration settings in the portal
+### How to configure advanced classic client configuration settings in the portal
 
 1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** pane.
 
@@ -54,7 +54,7 @@ Some of these settings require editing the registry and some use advanced settin
 
 6. If you no longer need the setting and want to revert to the default behavior: On the **Advanced settings** pane, select the context menu (**...**) next to the setting you no longer need, and then select **Delete**. Then click **Save and close**.
 
-#### Available advanced client settings
+#### Available advanced classic client settings
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
