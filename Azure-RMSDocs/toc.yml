@@ -473,7 +473,7 @@
     - name: FAQs - data protection
       href: faqs-rms.md
     - name: FAQs - classic client only
-      href: faqs-classic-client.md
+      href: faqs-classic.md
   - name: Known issues
     href: known-issues.md
   - name: Information and support

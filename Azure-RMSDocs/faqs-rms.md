@@ -26,7 +26,9 @@ ms.custom: admin
 
 # Frequently asked questions about data protection in Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For more information, see also the [FAQs for the classic client only](faqs-classic.md).*
 
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
@@ -34,6 +36,7 @@ ms.custom: admin
 Have a question about the data protection service, Azure Rights Management, from Azure Information Protection? See if it's answered here.
 
 ## Do files have to be in the cloud to be protected by Azure Rights Management?
+
 No, this is a common misconception. The Azure Rights Management service (and Microsoft) does not see or store your data as part of the information protection process. Information that you protect is never sent to or stored in Azure unless you explicitly store it in Azure or use another cloud service that stores it in Azure.
 
 For more information, see [How does Azure RMS work? Under the hood](./how-does-it-work.md) to understand how a secret cola formula that is created and stored on-premises is protected by the Azure Rights Management service but remains on-premises.
@@ -149,23 +152,7 @@ For a list of devices that support the Azure Rights Management service, see [Cli
 
 The Azure Rights Management service can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure Rights Management provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 
-For a list of file name extensions that are natively supported by Azure Rights Management, see [File types supported by the Azure Information Protection client](./rms-client/client-admin-guide-file-types.md). File name extensions not listed are supported by using the Azure Information Protection client that automatically applies generic protection to these files.
-
-## How do I configure a Mac computer to protect and track documents?
-
-First, make sure that you have installed Office for Mac by using the software installation link from https://admin.microsoft.com. For full instructions, see [Download and install or reinstall Microsoft 365 or Office 2019 on a PC or Mac](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
-
-Open Outlook and create a profile by using your Microsoft 365 work or school account. Then, create a new message and do the following to configure Office so that it can protect documents and emails by using the Azure Rights Management service:
-
-1. In the new message, on the **Options** tab, click **Permissions**, and then click **Verify Credentials**.
-
-2. When prompted, specify your Microsoft 365 work or school account details again, and select **Sign in**.
-
-    This downloads the Azure Rights Management templates and **Verify Credentials** is now replaced with options that include **No Restrictions**, **Do Not Forward**, and any Azure Rights Management templates that are published for your tenant. You can now cancel this new message.
-
-To protect an email message or a document: On the **Options** tab, click **Permissions** and choose an option or template that protects your email or document.
-
-To track a document after you have protected it: From a Windows computer that has the Azure Information Protection client installed, register the document with the document tracking site by using either an Office application or File Explorer. For instructions, see [Track and revoke your documents](./rms-client/client-track-revoke.md). From your Mac computer, you can now use your web browser to go to the document tracking site (https://track.azurerms.com) to track and revoke this document.
+For a list of file name extensions that are natively supported by Azure Rights Management, see [File types supported by the Azure Information Protection client](./rms-client/clientv2-admin-guide-file-types.md). File name extensions not listed are supported by using the Azure Information Protection client that automatically applies generic protection to these files.
 
 ## When I open an RMS-protected Office document, does the associated temporary file become RMS-protected as well?
 No. In this scenario, the associated temporary file doesn't contain data from the original document but instead, only what the user enters while the file is open. Unlike the original file, the temporary file is obviously not designed for sharing and would remain on the device, protected by local security controls, such as BitLocker and EFS.
@@ -188,16 +175,6 @@ Because Azure Information Protection supports sharing securely with anyone, you 
 
 ## How do we regain access to files that were protected by an employee who has now left the organization?
 Use the [super user feature](configure-super-users.md), which grants the Full Control usage rights to authorized users for all documents and emails that are protected by your tenant. Super users can always read this protected content, and if necessary, remove the protection or reprotect it for different users. This same feature lets authorized services index and inspect files, as needed.
-
-## When I test revocation in the document tracking site, I see a message that says people can still access the document for up to 30 days—is this time period configurable?
-
-Yes. This message reflects the [use license](configure-usage-rights.md#rights-management-use-license) for that specific file.
-
-If you revoke a file, that action can be enforced only when the user authenticates to the Azure Rights Management service. So if a file has a use license validity period of 30 days and the user has already opened the document, that user continues to have access to the document for the duration of the use license. When the use license expires, the user must reauthenticate, at which point the user is denied access because the document is now revoked.
-
-The user who protected the document, the [Rights Management issuer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) is exempt from this revocation and is always able to access their documents.
-
-The default value for the use license validity period for a tenant is 30 days and this setting can be overridden by a more restrictive setting in a label or template. For more information about the use license and how to configure it, see the [Rights Management use license](configure-usage-rights.md#rights-management-use-license) documentation.
 
 ## Can Rights Management prevent screen captures?
 By not granting the **Copy** [usage right](configure-usage-rights.md), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) and Android. However, iOS and Mac devices do not allow any app to prevent screen captures. In addition, browsers on any device cannot prevent screen captures. Browser use includes Outlook on the web and Office for the web.

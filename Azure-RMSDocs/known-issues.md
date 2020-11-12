@@ -25,10 +25,14 @@ ms.custom: admin
 
 # Known issues - Azure Information Protection
 
-Use the lists and tables below to find details about known issues and limitations related to Azure Information Protection features.
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-> [!NOTE]
-> This article refers to known issues in both the classic and unified labeling clients. Not sure of the difference between these clients? See [FAQs](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
+Use the lists and tables below to find details about known issues and limitations related to Azure Information Protection features.
 
 ## Client support for container files, such as .zip files
 
