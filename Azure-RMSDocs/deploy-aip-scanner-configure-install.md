@@ -28,7 +28,7 @@ ms.custom: admin
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 >
->***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic scanner, see [Configuring and installing the Azure Information Protection classic scanner](deploy-aip-scanner-configure-install-classic.md).*
+>***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic scanner, see [Configuring and installing the Azure Information Protection classic scanner](deploy-aip-scanner-configure-install-classic.md).*
 
 Before you start configuring and installing the Azure Information Protection scanner, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md). 
 

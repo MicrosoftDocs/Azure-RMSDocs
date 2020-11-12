@@ -29,7 +29,7 @@ ms.custom: admin
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
->***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 After you install and configure the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of the Azure Rights Management service from Azure Information Protection.
 

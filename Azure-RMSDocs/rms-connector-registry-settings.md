@@ -30,7 +30,7 @@ ms.custom: admin
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
->***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Use the tables in the following sections only if you want to manually add or check registry settings on the servers that run Exchange, SharePoint, or Windows Server. These registry settings configure the servers to use the [RMS connector](deploy-rms-connector.md). The recommended method to configure these servers is to use the server configuration tool for Microsoft RMS connector.
 

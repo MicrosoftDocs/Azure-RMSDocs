@@ -29,7 +29,7 @@ ms.custom: admin
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, 2016, 2012 R2, and Windows Server 2012*
 >
->***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Use the following information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
