@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/04/2020
+ms.date: 11/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
