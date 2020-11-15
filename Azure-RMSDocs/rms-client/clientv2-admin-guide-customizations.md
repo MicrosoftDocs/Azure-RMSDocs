@@ -529,7 +529,7 @@ Footers in PowerPoint are implemented as shapes. To avoid removing shapes that c
 
 - If this value is specified, only shapes that meet the shape name criteria and also have text that matches the string provided with **ExternalContentMarkingToRemove** will be removed.
 
-Additionally, if you have custom layouts configured in PowerPoint, the default behavior is that shapes found inside custom layouts are ignored. To explicitely remove external content markings from inside your custom layouts, set the **RemoveExternalMarkingFromCustomLayouts** advanced property to **true.**
+Additionally, if you have custom layouts configured in PowerPoint, the default behavior is that shapes found inside custom layouts are ignored. To explicitly remove external content markings from inside your custom layouts, set the **RemoveExternalMarkingFromCustomLayouts** advanced property to **true.**
 
 ##### Find the name of the shape that you're using as a header or footer
 
