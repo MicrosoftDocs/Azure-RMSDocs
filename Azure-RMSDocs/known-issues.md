@@ -42,7 +42,7 @@ The Azure Information Protection viewer cannot open attachments in a protected P
 
 For more information, see [Admin Guide: File types supported by the Azure Information Protection client](rms-client/client-admin-guide-file-types.md).
 
-## Known issues for installing the AIP client
+## Known issues for AIP and Exploit Protection
 
 The Azure Information Protection client is not supported on machines that have .NET 2 or 3, where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled.
 
