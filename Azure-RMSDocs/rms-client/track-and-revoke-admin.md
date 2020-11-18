@@ -6,7 +6,7 @@ description: Describes how administrators can track document access for protecte
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/04/2020
+ms.date: 11/18/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -89,12 +89,12 @@ Administrators can revoke access for any protected document stored in their loca
     >
     > If your document has no ContentID, open it on a machine with the unified labeling client installed to register the file for tracking.
 
-1. Use the [Set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) with your docuement's ContentID to revoke access.
+1. Use the [Set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) with your document's ContentID to revoke access.
 
     For example:
 
     ```PowerShell
-    Set-AipServiceDocumentRevoked -ContentId "<Guid>" -IssuerName "<IssuerName>"
+    Set-AipServiceDocumentRevoked -ContentId 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
     ```
 
 > [!TIP]
@@ -107,7 +107,7 @@ If you have accidentally revoked access to a specific document, use the same **C
 For example: 
 
 ```PowerShell
-Clear-AipServiceDocumentRevoke -ContentId  "<Guid>" -IssuerName "<IssuerName>"
+Clear-AipServiceDocumentRevoke -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
 ```
 
 Document access is granted to the user you defined in the **IssuerName** parameter.
