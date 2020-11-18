@@ -10,8 +10,8 @@ metadata:
   ms.service: information-protection
   ms.topic: landing-page # Required
   ms.collection: M365-security-compliance
-  author: mlottner
-  ms.author: mlottner
+  author: batamig
+  ms.author: bagol
   manager: rkarlin
   ms.date: 04/02/2019 #Required; mm/dd/yyyy format.
 
@@ -57,7 +57,7 @@ landingContent:
        links:
           - text: Top 5 recommended Ignite sessions
             url: what-is-information-protection.md#additional-resources
-          - text: Latest unified labeling client version
+          - text: What's new for the AIP unified labeling client
             url: ./rms-client/unifiedlabelingclient-version-release-history.md
 
   # Card
@@ -73,10 +73,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: "Unified labeling client: Advanced settings"
+          - text: Advanced settings for the unified labeling client
             url: ./rms-client/clientv2-admin-guide-customizations.md
-          - text: "Classic client: Advanced settings"
-            url: ./rms-client/client-admin-guide-customizations.md
 
 # Card
   - title: Microsoft Information Protection SDK

@@ -3,8 +3,8 @@
 
 title: Prepare the environment for Azure RMS and AD RMS
 description: Guidance for administrators if you have Azure Rights Management with AD RMS deployed.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
