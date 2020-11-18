@@ -4,8 +4,6 @@
   items:
   - name: What is Azure Information Protection?
     href: what-is-information-protection.md
-  - name: Azure Information Protection rights management
-    href: what-is-azure-rms.md
   - name: AIP requirements
     items:
     - name: Overview
@@ -19,24 +17,24 @@
 - name: Quickstarts
   expanded: true
   items:
-  - name: Get started in the Azure portal
-    href: quickstart-viewpolicy.md
-  - name: Find what sensitive information you have
-    href: quickstart-findsensitiveinfo.md
-  - name: Configure a label to protect emails - classic client
-    href: quickstart-label-dnf-protectedemail.md
-  - name: Create a new label for specific users - classic client
-    href: quickstart-label-specificusers.md
+  - name: Deploying the client
+    href: quickstart-deploy-client.md
 - name: Tutorials
   items:
-  - name: Edit the policy and create a new label - classic client
-    href: infoprotect-quick-start-tutorial.md
-  - name: Configure policy settings that work together - classic client
-    href: infoprotect-settings-tutorial.md
-  - name: Configure client settings to control oversharing - classic client
-    href: infoprotect-oversharing-tutorial.md
+  - name: Installing the scanner
+    href: tutorial-install-scanner.md
+  - name: Discovering your sensitive content
+    href: tutorial-scan-networks-and-content.md
+  - name: Preventing oversharing
+    href: tutorial-preventing-oversharing.md
+  - name: Migrating from the classic client to the unified labeling client
+    href: tutorial-migrating-to-ul.md
 - name: Concepts
   items:
+  - name: AIP classification and protection
+    href: aip-classification-and-protection.md
+  - name: Azure Information Protection rights management
+    href: what-is-azure-rms.md
   - name: Rights Management protection
     items:
     - name: How Rights Management protection works
@@ -127,7 +125,7 @@
       items:
       - name: Overview
         href: configure-applications.md
-      - name: Office 365 services
+      - name: Microsoft 365 services
         href: configure-office365.md
       - name: Office apps
         href: configure-office-apps.md
@@ -339,7 +337,7 @@
     - name: Developer's Guide
       href: ./develop/developers-guide.md
     - name: Microsoft Information Protection
-      href: https://aka.ms/mipsdkdocs
+      href: /information-protection/develop/
     - name: Rights Management SDK 4.2
       href: ./develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md
       items:
@@ -490,7 +488,7 @@
   - name: Compliance & supporting information
     href: compliance.md
   - name: PowerShell reference
-    href: https://docs.microsoft.com/powershell/azure/aip/overview?view=azureipps
+    href: /powershell/azure/aip/overview?view=azureipps
   - name: Audit log reference
     href: audit-logs.md
   - name: Terminology
