@@ -4,7 +4,7 @@ description: The Azure Information Protection security baseline provides procedu
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 11/17/2020
+ms.date: 11/18/2020
 ms.author: mbaldwin
 ms.custom: subject-security-benchmark
 
@@ -26,12 +26,12 @@ To see how Azure Information Protection completely maps to the Azure Security Be
 
 **Guidance**: Use Virtual Network service tags to define network access controls on network security groups or Azure Firewall, which is configured for your Azure Information Protection resources. 
 
-When creating security rules, use service tags in place of specific IP addresses. Specify the service tag name, such as {AzureInformationProtection}, in the appropriate source or destination field of a rule, to allow or deny the traffic for the corresponding service. 
+When creating security rules, use service tags in place of specific IP addresses. Specify the service tag name, such as {AzureInformationProtection}, in the appropriate source or destination field of a rule, to allow or deny the traffic for the corresponding service.
 
 Microsoft manages the address prefixes encompassed by the service tag, and automatically updates the service tag as addresses change.
 
 - [Understand and using Service Tags](https://docs.microsoft.com/azure/virtual-network/service-tags-overview)
- 
+
 - [Azure Information Protection Service Tag](https://docs.microsoft.com/azure/information-protection/requirements#service-tags)
 
 **Azure Security Center monitoring**: Not applicable
@@ -44,34 +44,25 @@ Microsoft manages the address prefixes encompassed by the service tag, and autom
 
 ### IM-1: Standardize Azure Active Directory as the central identity and authentication system
 
-**Guidance**: Azure Information
-Protection is integrated with Azure Active Directory (Azure AD), which is
-Azure's default identity and access management service. Make it a high priority to secure Azure AD in your organization’s cloud security practice. 
+**Guidance**: Azure Information Protection is integrated with Azure Active Directory (Azure AD), which is Azure's default identity and access management service. Make it a high priority to secure Azure AD in your organization’s cloud security practice. 
 
 Review the Azure AD identity secure score to help you assess your identity security posture relative to Microsoft’s best practice recommendations. Use the score to gauge how closely your configuration matches best practice recommendations, and to make improvements in your security posture.
 
-Standardize
-Azure AD to govern your organization’s identity and access management in:
+Standardize Azure AD to govern your organization’s identity and access management in:
 
-- Microsoft Cloud
-resources, such as the Azure portal, Azure Storage, Azure Virtual Machines (Linux and Windows), Azure Key Vault, Platform as a Service (PaaS), and Software as a Service (SaaS) applications
+- Microsoft Cloud resources, such as the Azure portal, Azure Storage, Azure Virtual Machines (Linux and Windows), Azure Key Vault, Platform as a Service (PaaS), and Software as a Service (SaaS) applications
 
-- Your organization's
-resources, such as applications on Azure or your corporate network resources
+- Your organization's resources, such as applications on Azure or your corporate network resources
 
 Azure AD supports external identities to allow users without a Microsoft account to sign-in to their applications and resources with their non-Microsoft accounts.
 
-Tenancy in Azure
-- [Active Directory](https://docs.microsoft.com/azure/active-directory/develop/single-and-multi-tenant-apps)
+- [Tenancy in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/single-and-multi-tenant-apps)
 
-How to create and
-- [configure an Azure AD instance](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
+- [How to create and configure an Azure AD instance](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
 
-Use external
-- [identity providers for application](https://docs.microsoft.com/azure/active-directory/b2b/identity-providers)
+- [Use external identity providers for application](https://docs.microsoft.com/azure/active-directory/b2b/identity-providers)
 
-What is the identity
-- [secure score in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/identity-secure-score)
+- [What is the identity secure score in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/identity-secure-score)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -79,17 +70,9 @@ What is the identity
 
 ### IM-2: Manage application identities securely and automatically
 
-**Guidance**: Azure Information Protection is integrated with Azure
-Active Directory (Azure AD), which is Azure's identity and access
-management service. Azure Rights Management service uses an Azure AD
-application identity while accessing customers’ keys stored with Azure Key
-Vault for Bring Your Own Key (BYOK) scenarios. Authorizing Azure Rights
-Management service to access your keys is achieved through configuring Azure
-Key Vault access policies, which can be done either using the Azure portal or
-using PowerShell.
+**Guidance**: Azure Information Protection is integrated with Azure Active Directory (Azure AD), which is Azure's identity and access management service. Azure Rights Management service uses an Azure AD application identity while accessing customers’ keys stored with Azure Key Vault for Bring Your Own Key (BYOK) scenarios. Authorizing Azure Rights Management service to access your keys is achieved through configuring Azure Key Vault access policies, which can be done either using the Azure portal or using PowerShell.
 
-Authorizing the Azure Rights Management
-- [service for BYOK](https://docs.microsoft.com/azure/information-protection/byok-price-restrictions#authorizing-the-azure-rights-management-service-to-use-your-key)
+- [Authorizing the Azure Rights Management service for BYOK](https://docs.microsoft.com/azure/information-protection/byok-price-restrictions#authorizing-the-azure-rights-management-service-to-use-your-key)
 
 **Azure Security Center monitoring**: Not applicable
 
@@ -114,6 +97,8 @@ Azure Information Protection uses Azure AD to provide identity and access manage
 - Single sign-on is supported for Azure Information Protection, so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor for how to configure it for Azure AD. WS-Trust is a common requirement for these solutions to support single sign-on.
 
 - Multifactor authentication is supported with Azure Information Protection, when you have the required client software and have correctly configured the multi-factor authentication-supporting infrastructure.
+
+For more information, see the following references:
 
 - [Azure Information Protection Authentication through Azure Active Directory](https://docs.microsoft.com/azure/information-protection/requirements)
 
@@ -658,7 +643,7 @@ This strategy should include documented guidance, policy, and standards for the 
 
 -	Appropriate cryptographic standards
 
-More information, is available at the references links. 
+For more information, see the following references:
 
 - [Azure Security Architecture Recommendation - Storage, data, and encryption](https://docs.microsoft.com/azure/architecture/framework/security/storage-data-encryption?toc=/security/compass/toc.json&amp;bc=/security/compass/breadcrumb/toc.json)
 
