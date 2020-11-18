@@ -6,7 +6,7 @@ description: Instructions for installing and configuring the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/16/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -99,18 +99,19 @@ To configure your scanner:
 
 Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), you can scan your network for risky repositories. Add one or more of the repositories found to a content scan job to scan them for sensitive content.
 
-> [!NOTE]
-> The **network discovery** interface is currently in gradual deployment and will be available in all regions by September 15, 2020. 
-
 - [Network discovery prerequisites](#network-discovery-prerequisites)
 - [Creating a network scan job](#creating-a-network-scan-job)
+
+> [!NOTE]
+> The Azure Information Protection network discovery feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
 
 #### Network discovery prerequisites
 
 |Prerequisite  |Description  |
 |---------|---------|
-|**Install the Network Discovery service**     |   If you've recently upgraded your scanner, you may need to still install the Network Discovery service. </br></br>Run the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet to enable network scan jobs.      |
-|**Azure Information Protection analytics**     | Make sure that you have Azure Information Protection analytics enabled. </br></br>In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview).** </br></br>For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).|
+|**Install the Network Discovery service**     |   If you've recently upgraded your scanner, you may need to still install the Network Discovery service. <br /><br />Run the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet to enable network scan jobs.      |
+|**Azure Information Protection analytics**     | Make sure that you have Azure Information Protection analytics enabled. <br /><br />In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview).** <br /><br />For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).|
 | | |
 
 #### Creating a network scan job
@@ -125,10 +126,10 @@ Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-
     |---------|---------|
     |**Network scan job name**     |Enter a meaningful name for this job.  This field is required.       |
     |**Description**     |   Enter a meaningful description.      |
-    |**Select the cluster**     |From the dropdown, select the cluster you want to use to scan the configured network locations.  </br></br>**Tip:** When selecting a cluster, make sure that the nodes in the cluster you assign can access the configured IP ranges via SMB.      |
-    |**Configure IP ranges to discover**     |   Click to define an IP address or range. </br></br>In the **Choose IP ranges** pane, enter an optional name, and then a start IP address and end IP address for your range. </br></br>**Tip:** To scan a specific IP address only, enter the identical IP address in both the **Start IP** and **End IP** fields.      |
-    |**Set schedule**     | Define how often you want this network scan job to run.  </br></br>If you select **Weekly**, the **Run network scan job on** setting appears. Select the days of the week where you want the network scan job to run.       |
-    |**Set start time (UTC)**     |Define the date and time that you want this network scan job to start running. If you've selected to run the job daily, weekly, or monthly, the job will run at the defined time, at the recurrence you've selected. </br></br>**Note**: Be careful when setting the date to any days at the end of the month. If you select **31,** the network scan job will not run in any month that has 30 days or fewer.    |
+    |**Select the cluster**     |From the dropdown, select the cluster you want to use to scan the configured network locations.  <br /><br />**Tip:** When selecting a cluster, make sure that the nodes in the cluster you assign can access the configured IP ranges via SMB.      |
+    |**Configure IP ranges to discover**     |   Click to define an IP address or range. <br /><br />In the **Choose IP ranges** pane, enter an optional name, and then a start IP address and end IP address for your range. <br /><br />**Tip:** To scan a specific IP address only, enter the identical IP address in both the **Start IP** and **End IP** fields.      |
+    |**Set schedule**     | Define how often you want this network scan job to run.  <br /><br />If you select **Weekly**, the **Run network scan job on** setting appears. Select the days of the week where you want the network scan job to run.       |
+    |**Set start time (UTC)**     |Define the date and time that you want this network scan job to start running. If you've selected to run the job daily, weekly, or monthly, the job will run at the defined time, at the recurrence you've selected. <br /><br />**Note**: Be careful when setting the date to any days at the end of the month. If you select **31,** the network scan job will not run in any month that has 30 days or fewer.    |
     | | |
 
 1. Select **Save** ![save icon](media/qs-tutor/save-icon.png "save icon") to save your changes.
@@ -145,6 +146,10 @@ Repositories found, either by a network scan job, a content scan job, or by user
 
 If you've [defined a network scan job](#create-a-network-scan-job-public-preview) and have set it to run at a specific date and time, wait until it's finished running to check for results. You can also return here after running a [content scan job](#create-a-content-scan-job) to view updated data.
 
+> [!NOTE]
+> The Azure Information Protection **Repositories** feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+> 
+
 1. Under the **Scanner** menu on the left, select **Repositories** ![repositories icon](media/i-repositories.png "repositories icon").
     
     The repositories found are shown as follows:
@@ -159,7 +164,7 @@ If you've [defined a network scan job](#create-a-network-scan-job-public-preview
     |![columns icon](media/i-columns.png "columns icon")    | Select **Columns** to change the table columns displayed.        |
     |![refresh icon](media/i-refresh.png "refresh icon")   | If your scanner has recently run network scan results, select **Refresh** to refresh the page.      |
     |![add icon](media/i-add.png "add icon")   | Select one or more repositories listed in the table, and then select **Assign Selected Items** to assign them to a content scan job.          |
-    |**Filter**     |   The filter row shows any filtering criteria currently applied. Select any of the criteria shown to modify its settings, or select **Add Filter** to add new filtering criteria. </br></br>Select **Filter** to apply your changes and refresh the table with the updated filter.       |
+    |**Filter**     |   The filter row shows any filtering criteria currently applied. Select any of the criteria shown to modify its settings, or select **Add Filter** to add new filtering criteria. <br /><br />Select **Filter** to apply your changes and refresh the table with the updated filter.       |
     |![Log Analytics icon](media/i-log-analytics.png "Log Analytics icon") |In the top-right corner of the unmanaged repositories graph, click the **Log Analytics** icon to jump to Log Analytics data for these repositories. |
     | | |
 
@@ -194,9 +199,9 @@ You may want to do this only after running a network scan job to analyze the rep
     
     |Setting  |Description  |
     |---------|---------|
-    |**Content scan job settings**     |    - **Schedule**: Keep the default of **Manual** </br>- **Info types to be discovered**: Change to **Policy only** </br>- **Configure repositories**: Do not configure at this time because the content scan job must first be saved.         |
-    |**Policy enforcement**     | - **Enforce**: Select **Off** </br>- **Label files based on content**: Keep the default of **On** </br>- **Default label**: Keep the default of **Policy default** </br>- **Relabel files**: Keep the default of **Off**        |
-    |**Configure file settings**     | - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On** </br>- **File types to scan**: Keep the default file types for **Exclude** </br>- **Default owner**: Keep the default of **Scanner Account**        |
+    |**Content scan job settings**     |    - **Schedule**: Keep the default of **Manual** <br />- **Info types to be discovered**: Change to **Policy only** <br />- **Configure repositories**: Do not configure at this time because the content scan job must first be saved.         |
+    |**Policy enforcement**     | - **Enforce**: Select **Off** <br />- **Label files based on content**: Keep the default of **On** <br />- **Default label**: Keep the default of **Policy default** <br />- **Relabel files**: Keep the default of **Off**        |
+    |**Configure file settings**     | - **Preserve "Date modified", "Last modified" and "Modified by"**: Keep the default of **On** <br />- **File types to scan**: Keep the default file types for **Exclude** <br />- **Default owner**: Keep the default of **Scanner Account**        |
     | | |
 
 1. Now that the content scan job is created and saved, you're ready to return to the **Configure repositories** option to specify the data stores to be scanned. 
@@ -241,9 +246,9 @@ You may want to do this only after running a network scan job to analyze the rep
     
     |Path  |Syntax  |
     |---------|---------|
-    |**Root path**     | `http://<SharePoint server name>` </br></br>Scans all sites, including any site collections allowed for the scanner user. </br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
-    |**Specific SharePoint subsite or collection**     | One of the following: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
-    |**Specific SharePoint library**     | One of the following: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
+    |**Root path**     | `http://<SharePoint server name>` <br /><br />Scans all sites, including any site collections allowed for the scanner user. <br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover root content        |
+    |**Specific SharePoint subsite or collection**     | One of the following: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
+    |**Specific SharePoint library**     | One of the following: <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
     |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
     
 
@@ -460,10 +465,10 @@ Use the following options and guidance to help you optimize scanner performance:
 
 |Option  |Description  |
 |---------|---------|
-|**Have a high speed and reliable network connection between the scanner computer and the scanned data store**     |  For example, place the scanner computer in the same LAN, or preferably, in the same network segment as the scanned data store. </br></br>The quality of the network connection affects the scanner performance because, to inspect the files, the scanner transfers the contents of the files to the computer running the scanner service. </br></br>Reducing or eliminating  the network hops required for the data to travel also reduces the load on your network.      |
-|**Make sure the scanner computer has available processor resources**     | Inspecting the file contents and encrypting and decrypting files are processor-intensive actions. </br></br>Monitor the typical scanning cycles for your specified data stores to identify whether a lack of processor resources is negatively affecting the scanner performance.        |
-|**Install multiple instances of the scanner** | The Azure Information Protection scanner supports multiple configuration databases on the same SQL server instance when you specify a custom cluster (profile) name for the scanner. </br></br>Multiple scanners can also share the same cluster (profile), resulting in quicker scanning times.|
-|**Check your alternative configuration usage** |The scanner runs more quickly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents. <br/></br>The scanner runs more slowly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.|
+|**Have a high speed and reliable network connection between the scanner computer and the scanned data store**     |  For example, place the scanner computer in the same LAN, or preferably, in the same network segment as the scanned data store. <br /><br />The quality of the network connection affects the scanner performance because, to inspect the files, the scanner transfers the contents of the files to the computer running the scanner service. <br /><br />Reducing or eliminating  the network hops required for the data to travel also reduces the load on your network.      |
+|**Make sure the scanner computer has available processor resources**     | Inspecting the file contents and encrypting and decrypting files are processor-intensive actions. <br /><br />Monitor the typical scanning cycles for your specified data stores to identify whether a lack of processor resources is negatively affecting the scanner performance.        |
+|**Install multiple instances of the scanner** | The Azure Information Protection scanner supports multiple configuration databases on the same SQL server instance when you specify a custom cluster (profile) name for the scanner. <br /><br />Multiple scanners can also share the same cluster (profile), resulting in quicker scanning times.|
+|**Check your alternative configuration usage** |The scanner runs more quickly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents. <br/><br />The scanner runs more slowly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.|
 | | |
 
 
@@ -474,11 +479,11 @@ Additional factors that affect the scanner performance include:
 |Factor  |Description  |
 |---------|---------|
 |**Load/response times**     |The current load and response times of the data stores that contain the files to scan will also affect scanner performance.         |
-|**Scanner mode** (Discovery / Enforce)    | Discovery mode typically has a higher scanning rate than enforce mode. </br></br>Discovery requires a single file read action, whereas enforce mode requires read and write actions.        |
-|**Policy changes**     |Your scanner performance may be affected if you've made changes to the autolabeling in the label policy. </br></br>Your first scan cycle, when the scanner must inspect every file, will take longer than subsequent scan cycles that by default, inspect only new and changed files. </br></br>If you change the conditions or autolabeling settings, all files are scanned again. For more information, see [Rescanning files](deploy-aip-scanner-manage.md#rescanning-files).|
-|**Regex constructions**    | Scanner performance is affected by how your regex expressions for custom conditions are constructed. </br></br> To avoid heavy memory consumption and the risk of timeouts (15 minutes per file), review your regex expressions for efficient pattern matching. </br></br>For example: </br>- Avoid [greedy quantifiers](/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>- Use non-capturing groups such as `(?:expression)` instead of `(expression)`    |
-|**Log level**     |  Log level options include **Debug**, **Info**, **Error** and **Off** for the scanner reports.</br></br>- **Off** results in the best performance </br>- **Debug** considerably slows down the scanner and should be used only for troubleshooting. </br></br>For more information, see the *ReportLevel* parameter for the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.       |
-|**Files being scanned**     |- With the exception of Excel files, Office files are more quickly scanned than PDF files. </br></br>- Unprotected files are quicker to scan than protected files. </br></br>- Large files obviously take longer to scan than small files.         |
+|**Scanner mode** (Discovery / Enforce)    | Discovery mode typically has a higher scanning rate than enforce mode. <br /><br />Discovery requires a single file read action, whereas enforce mode requires read and write actions.        |
+|**Policy changes**     |Your scanner performance may be affected if you've made changes to the autolabeling in the label policy. <br /><br />Your first scan cycle, when the scanner must inspect every file, will take longer than subsequent scan cycles that by default, inspect only new and changed files. <br /><br />If you change the conditions or autolabeling settings, all files are scanned again. For more information, see [Rescanning files](deploy-aip-scanner-manage.md#rescanning-files).|
+|**Regex constructions**    | Scanner performance is affected by how your regex expressions for custom conditions are constructed. <br /><br /> To avoid heavy memory consumption and the risk of timeouts (15 minutes per file), review your regex expressions for efficient pattern matching. <br /><br />For example: <br />- Avoid [greedy quantifiers](/dotnet/standard/base-types/quantifiers-in-regular-expressions) <br />- Use non-capturing groups such as `(?:expression)` instead of `(expression)`    |
+|**Log level**     |  Log level options include **Debug**, **Info**, **Error** and **Off** for the scanner reports.<br /><br />- **Off** results in the best performance <br />- **Debug** considerably slows down the scanner and should be used only for troubleshooting. <br /><br />For more information, see the *ReportLevel* parameter for the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.       |
+|**Files being scanned**     |- With the exception of Excel files, Office files are more quickly scanned than PDF files. <br /><br />- Unprotected files are quicker to scan than protected files. <br /><br />- Large files obviously take longer to scan than small files.         |
 | | |
 
 ## List of cmdlets for the scanner
