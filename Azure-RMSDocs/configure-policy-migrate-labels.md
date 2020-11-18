@@ -6,7 +6,7 @@ description: Migrate Azure Information Protection labels to unified sensitivity 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/25/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -152,8 +152,8 @@ Azure Information Protection clients (classic) can use all label settings listed
 |Cloud-based protection using user-defined permissions for Word, Excel, and PowerPoint |Yes|The admin centers now have a configuration option for user-defined permissions. <br /><br /> If you publish a label with this configuration, check the results of applying the label from the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |HYOK-based protection using user-defined permissions for Outlook (Do Not Forward) |No|No configuration option for HYOK. We do not recommend you publish a label with this configuration. If you do, the results of applying the label are listed in the [following table](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Custom font name, size, and custom font color by RGB code for visual markings (header, footer, watermark)  |Yes|Configuration for visual markings is limited to a list of colors and font sizes. You can publish this label without changes although you cannot see the configured values in the admin centers. <br /><br />To change these options, you can use the Azure portal, or the [**New-Label**](/powershell/module/exchange/new-label) Office 365 Security & Compliance Center cmdlet. For easier administration, consider changing the color to one of the listed options in the admin centers. <br /><br />**Note**: The Security & Compliance Center admin center supports a predefined list of font definitions. Custom fonts and colors are supported only via the [**New-Label**](/powershell/module/exchange/new-label) Office 365 Security & Compliance Center cmdlet.|
-|Variables in visual markings (header, footer) |Yes|This label configuration is supported by the AIP clients and Office built-in labeling for select apps. </br></br>If you are working with built-in labeling using an app that does not support this configuration and publish this label without changes, variables display as text on clients, instead of displaying the dynamic value.</br></br>For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables). |
-|Visual markings per app|Yes|This label configuration is supported only by the AIP clients, and not by Office built-in labeling. </br></br>If you are working with built-in labeling, and publish this label without changes, the visual marking configuration displays as variable text instead of the visual markings you've configured to display in each app.  |
+|Variables in visual markings (header, footer) |Yes|This label configuration is supported by the AIP clients and Office built-in labeling for select apps. <br /><br />If you are working with built-in labeling using an app that does not support this configuration and publish this label without changes, variables display as text on clients, instead of displaying the dynamic value.<br /><br />For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables). |
+|Visual markings per app|Yes|This label configuration is supported only by the AIP clients, and not by Office built-in labeling. <br /><br />If you are working with built-in labeling, and publish this label without changes, the visual marking configuration displays as variable text instead of the visual markings you've configured to display in each app.  |
 |"Just for me" protection |Yes|The admin centers do not let you save encryption settings that you apply now, without specifying any users. In the Azure portal, this configuration results in a label that applies ["Just for me" protection](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection). <br /><br /> As an alternative, create a label that applies encryption and specify a user with any permissions, and then edit the associated protection template by using PowerShell. First, use the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet (see Example 3), and then [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) with the *RightsDefinitions* parameter.|
 |Conditions and associated settings <br /><br /> Includes automatic and recommended labeling, and their tooltips|Not applicable|Reconfigure your conditions by using auto labeling as a separate configuration from label settings.|
 
@@ -210,9 +210,6 @@ For the labels that successfully migrated, they can now be used by [clients and 
 
 ### Copy policies
 
-> [!NOTE]
-> This option is in preview and subject to change.
-
 After you have migrated your labels, you can select an option to copy policies. If you select this option, a one-time copy of your policies with their [policy settings](configure-policy-settings.md) and any [advanced client settings](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) is sent to the admin center where you manage your labels: Office 365 Security & Compliance Center, Microsoft 365 security center, Microsoft 365 compliance center. 
 
 Successfully copied policies with their settings and labels are then automatically published to the users and groups that were assigned to the policies in the Azure portal. Note that for the Global policy, this means all users. If you're not ready for the migrated labels in the copied policies to be published, after the policies are copied, you can remove the labels from the label policies in your admin labeling center.
@@ -240,6 +237,9 @@ Before you select the **Copy policies (preview)** option on the **Azure Informat
 - Policies copied from Azure Information Protection will not have the same name, they will instead be named with a prefix of **AIP_**. Policy names cannot be subsequently changed. 
 
 For more information about configuring the policy settings, advanced client settings, and label settings for the Azure Information Protection unified labeling client, see [Custom configurations for the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-customizations.md) from the admin guide.
+
+> [!NOTE]
+> Azure Information Protection support for copying policies is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
 
 ### Clients and services that support unified labeling
 
