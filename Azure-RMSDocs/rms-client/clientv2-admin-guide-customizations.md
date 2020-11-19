@@ -170,7 +170,10 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PFileSupportedExtensions|[Change which file types to protect](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
+| PowerPointRemoveAllShapesByShapeName|[Remove all shapes of a specific shape name from your headers and footers, isntead of removing shapes by text inside the shape](#powerpointremoveallshapesbyshapename) |
+|PowerPointShapeNameToRemove |[Avoid removing shapes from PowerPoint that contain specified text, and are not headers / footers](#powerpointshapenametoremove) |
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
+| RemoveExternalMarkingFromCustomLayouts|[Explicitly remove external content markings from inside your PowerPoint custom layouts](#removeexternalmarkingfromcustomlayouts) |
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
@@ -178,6 +181,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |SharepointWebRequestTimeout| [Configure SharePoint timeouts](#configure-sharepoint-timeouts)|
 |SharepointFileWebRequestTimeout |[Configure SharePoint timeouts](#configure-sharepoint-timeouts)|
 |UseCopyAndPreserveNTFSOwner | [Preserve NTFS owners during labeling](#preserve-ntfs-owners-during-labeling-public-preview)
+| | |
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
 
