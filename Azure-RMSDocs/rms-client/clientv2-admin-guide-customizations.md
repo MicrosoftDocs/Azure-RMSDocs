@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/15/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -468,19 +468,14 @@ You then need at least one more advanced client setting, **ExternalContentMarkin
 
 ### How to configure ExternalContentMarkingToRemove
 
-When you specify the string value for the **ExternalContentMarkingToRemove** key, you have three options that use regular expressions:
+When you specify the string value for the **ExternalContentMarkingToRemove** key, you have three options that use regular expressions. For each of these scenarios, use the syntax shown in the **Example value** column in the following table:
 
-- Partial match to remove everything in the header or footer.
-
-    Example: Headers or footers contain the string **TEXT TO REMOVE**. You want to completely remove these headers or footers. You specify the value: `*TEXT*`.
-
-- Complete match to remove just specific words in the header or footer.
-
-    Example: Headers or footers contain the string **TEXT TO REMOVE**. You want to remove the word **TEXT** only, which leaves the header or footer string as **TO REMOVE**. You specify the value: `TEXT `.
-
-- Complete match to remove everything in the header or footer.
-
-    Example: Headers or footers have the string **TEXT TO REMOVE**. You want to remove headers or footers that have exactly this string. You specify the value: `^TEXT TO REMOVE$`.
+|Option  |Example description |Example value|
+|---------|---------|---------|
+|**Partial match to remove everything in the header or footer**     | Your headers or footers contain the string **TEXT TO REMOVE**, and you want to completely remove these headers or footers.   |`*TEXT*`  | 
+|**Complete match to remove just specific words in the header or footer**     |    Your headers or footers contain the string **TEXT TO REMOVE**, and you want to remove the word **TEXT** only, leaving the header or footer string as **TO REMOVE**.      |`TEXT ` |
+|**Complete match to remove everything in the header or footer**     |Your headers or footers have the string **TEXT TO REMOVE**. You want to remove headers or footers that have exactly this string.         |`^TEXT TO REMOVE$`|
+|     |         | |
 
 
 The pattern matching for the string that you specify is case-insensitive. The maximum string length is 255 characters, and cannot include white spaces. 
@@ -501,7 +496,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### Multiline headers or footers
 
-If a header or footer text is more than a single line, create a key and value for each line. For example, you have the following footer with two lines:
+If a header or footer text is more than a single line, create a key and value for each line. For example, if you have the following footer with two lines:
 
 **The file is classified as Confidential**
 
@@ -523,7 +518,9 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### Optimization for PowerPoint
 
-Footers in PowerPoint are implemented as shapes. To avoid removing shapes that contain the text that you have specified but are *not* headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process.
+Headers and footers in PowerPoint are implemented as shapes. 
+
+To avoid removing shapes that contain the text that you have specified but are *not* headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process.
 
 - If you do not specify this additional advanced client setting, and PowerPoint is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
 
@@ -531,6 +528,9 @@ Footers in PowerPoint are implemented as shapes. To avoid removing shapes that c
 
 Additionally, if you have custom layouts configured in PowerPoint, the default behavior is that shapes found inside custom layouts are ignored. To explicitly remove external content markings from inside your custom layouts, set the **RemoveExternalMarkingFromCustomLayouts** advanced property to **true.**
 
+> [!NOTE]
+> PowerPoint shape types supported for the advanced client settings described in this section include: **msoTextBox,** **msoTextEffect,** and **msoPlaceholder**
+>
 ##### Find the name of the shape that you're using as a header or footer
 
 1. In PowerPoint, display the **Selection** pane: **Format** tab > **Arrange** group > **Selection Pane**.
