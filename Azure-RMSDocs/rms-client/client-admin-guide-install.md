@@ -85,7 +85,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
         For PowerPoint: `MSIP.PowerPointAddin`
 
-- The AIP client is not supported on machines with .NET versions 2 or 3 that have [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. If your machine has .NET version 2 or 3, make sure to [disable Exploit protection](../known-issues.md#known-issues-for-aip-and-exploit-protection) before installing the AIP client.  
+- The AIP client is not supported on machines with .NET versions 2 or 3 that have [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. If your machine has .NET version 2 or 3 in addition to a .NET 4.x version listed above, make sure to [disable Exploit protection](../known-issues.md#known-issues-for-aip-and-exploit-protection) before installing the AIP client.  
 
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.

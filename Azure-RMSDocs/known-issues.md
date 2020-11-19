@@ -46,7 +46,7 @@ For more information, see [Admin Guide: File types supported by the Azure Inform
 
 The Azure Information Protection client is not supported on machines that have .NET 2 or 3, where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled.
 
-Make sure to disable Exploit protection before installing AIP. 
+If you have a .NET version 2 or 3 in addition to a .NET 4.x version required for your system, make sure to disable Exploit protection before installing AIP. 
 
 To disable Exploit protection via PowerShell, run the following:
 
@@ -54,7 +54,7 @@ To disable Exploit protection via PowerShell, run the following:
 Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
 ```
 
-For more information, see [Azure Information Protection requirements](requirements.md) and [Admin Guide: Install the Azure Information Protection unified labeling client for users](rms-client/clientv2-admin-guide-install.md).
+For more information, see [Additional prerequisites for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
 ## PowerShell support for the Azure Information Protection client
 
