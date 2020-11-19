@@ -88,7 +88,9 @@ To store the scanner configuration data, use an SQL server with the following re
 
 - **A local or remote instance.**
 
-    We recommend hosting the SQL Server and scanner service on different machines, unless you're working with a small deployment. 
+    We recommend hosting the SQL server and the scanner service on different machines, unless you're working with a small deployment. Additionally, we recommend having a dedicated SQL instance that serves the scanner database only, and that is not shared with other applications.
+
+    If you're working on a shared server, make sure that the [recommended number of cores](#windows-server-requirements) are free for the scanner database to work.
 
     SQL Server 2012 is the minimum version for the following editions:
 
