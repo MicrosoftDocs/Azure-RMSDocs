@@ -153,7 +153,7 @@ For more information, see:
 
 To scan SharePoint document libraries and folders, ensure that your SharePoint server complies with the following requirements:
 
-- **Supported versions.** Supported versions include: SharePoint 2019, SharePoint 2016, SharePoint 2013, and SharePoint 2010. Other versions of SharePoint are not supported for the scanner.
+- **Supported versions.** Supported versions include: SharePoint 2019, SharePoint 2016, and SharePoint 2013. Other versions of SharePoint are not supported for the scanner.
 
 - **Versioning.** When you use [versioning](/sharepoint/governance/versioning-content-approval-and-check-out-planning), the scanner inspects and labels the last published version. If the scanner labels a file and [content approval](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) is required, that labeled file must be approved to be available for users.  
 
