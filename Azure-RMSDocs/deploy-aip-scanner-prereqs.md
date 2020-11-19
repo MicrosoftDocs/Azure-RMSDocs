@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/15/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -87,14 +87,16 @@ To store the scanner configuration data, use an SQL server with the following re
 
 - **A local or remote instance.**
 
-    We recommend hosting the SQL Server and scanner service on different machines, unless you're working with a small deployment. 
+    We recommend hosting the SQL server and the scanner service on different machines, unless you're working with a small deployment. Additionally, we recommend having a dedicated SQL instance that serves the scanner database only, and that is not shared with other applications.
 
     If you're working on a shared server, make sure that the [recommended number of cores](#windows-server-requirements) are free for the scanner database to work.
 
     SQL Server 2016 is the minimum version for the following editions:
 
     - SQL Server Enterprise
+
     - SQL Server Standard
+
     - SQL Server Express (recommended for test environments only)
 
 - **An account with Sysadmin role to install the scanner.**
