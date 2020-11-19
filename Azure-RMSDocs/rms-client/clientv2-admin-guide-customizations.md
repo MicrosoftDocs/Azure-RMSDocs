@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/05/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -517,13 +517,54 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### Optimization for PowerPoint
 
-Footers in PowerPoint are implemented as shapes. To avoid removing shapes that contain the text that you have specified but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process.
+Headers and footers in PowerPoint are implemented as shapes. For the **msoTextBox,** **msoTextEffect,** **msoPlaceholder,** and **msoAutoShape** shape types, the following advanced settings provide additional optimizations:
+
+- [PowerPointShapeNameToRemove](#powerpointshapenametoremove)
+- [RemoveExternalMarkingFromCustomLayouts](#removeexternalmarkingfromcustomlayouts)
+- [PowerPointRemoveAllShapesByShapeName](#powerpointremoveallshapesbyshapename)
+
+For more information, see [Find the name of the shape that you're using as a header or footer](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer).
+##### PowerPointShapeNameToRemove
+
+To avoid removing shapes that contain the text that you have specified but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove.** 
+
+We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process. 
 
 - If you do not specify this additional advanced client setting, and PowerPoint is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
 
 - If this value is specified, only shapes that meet the shape name criteria and also have text that matches the string provided with **ExternalContentMarkingToRemove** will be removed.
 
-**To find the name of the shape that you're using as a header or footer:**
+For example:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+```
+
+##### RemoveExternalMarkingFromCustomLayouts
+
+If you have custom layouts configured in PowerPoint, the default behavior is that shapes found inside custom layouts are ignored. 
+
+To explicitly remove external content markings from inside your custom layouts, set the **RemoveExternalMarkingFromCustomLayouts** advanced property to **true.**
+
+For example:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="true"}
+```
+
+##### PowerPointRemoveAllShapesByShapeName
+
+If you want to remove all shapes of a specific shape name from your headers and footers, use the **PowerPointRemoveAllShapesByShapeName** advanced setting, with the name of the shape you want to remove.
+
+Using the **PowerPointRemoveAllShapesByShapeName** setting ignores the text inside your shapes, and instead uses the shape name identify the shapes you want to remove.
+
+For example:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
+```
+
+##### Find the name of the shape that you're using as a header or footer
 
 1. In PowerPoint, display the **Selection** pane: **Format** tab > **Arrange** group > **Selection Pane**.
 

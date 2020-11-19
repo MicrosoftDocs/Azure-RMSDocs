@@ -113,6 +113,8 @@ For more information, see:
 
 - [Authentication](../how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) errors fixed, including errors for dynamic content marking when the AIP service starts after the user authenticates.
 
+- [New advanced client setting](clientv2-admin-guide-customizations.md#powerpointremoveallshapesbyshapename) to remove shapes from PowerPoint headers or footers, by using the shape name instead of the text inside a shape.
+
 - Issues fixed for sending [emails with labels but no protection](clientv2-classify.md).
 
 - Outlook Preview mode now generates [audit logs for discovery events](../audit-logs.md#discover-audit-logs)
@@ -135,12 +137,6 @@ For more information, see:
 - Issues fixed for [**AttachmentAction = Automatic**](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) functionality with multiple emails opened at the same time
 
 - When [configuring customized Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages), an empty **Extensions** property in the rule now includes all supported file types.
-
-<!--
-- **Support for MCE version 15.20.3326.** The Azure Information Protection unified labeling client now supports the latest version of the Microsoft Classification Engine, providing improvements for sensitive information types and accuracy.
-
-    For more information about classification in the Microsoft 365 Security and Compliance Center, see the [Microsoft 365 documentation](/microsoft-365/compliance/data-classification-overview).
--->
 
 ## Version 2.8.85.0
 
