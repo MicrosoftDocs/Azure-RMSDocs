@@ -45,6 +45,9 @@ Microsoft Azure Information Protection generates audit logs at the following act
 * [Remove protection](#remove-protection-audit-logs)
 * [Upgrade label](#upgrade-label-audit-logs)
 
+> [!NOTE]
+> The [AIP Viewer](rms-client/clientv2-view-use-files.md) does not send audit logs. 
+>
 ## Access audit logs
 
 **Access** audit logs are generated for the following activities:
@@ -152,3 +155,7 @@ Microsoft Azure Information Protection generates audit logs at the following act
 | Azure Information Protection:<br />- Classic scanner and client<br />- Unified labeling scanner and client | Windows, SharePoint, One Drive | Office                   | Generated each time a document label is updated with a more sensitive label.                                                                   |
 | Microsoft Defender ATP                                                                            | Windows                        | OS                       | Generated each time a document label is updated with a more sensitive label.                                                                   |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Third-party applications | Generated each time a document label is updated with a more sensitive label.<br>Generated only when supported by the third-party application. |
+
+## Next steps
+
+For more information about audit logging, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).
