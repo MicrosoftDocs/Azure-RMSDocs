@@ -525,7 +525,8 @@ Headers and footers in PowerPoint are implemented as shapes. For the **msoTextBo
 
 - [PowerPointShapeNameToRemove](#powerpointshapenametoremove)
 - [RemoveExternalMarkingFromCustomLayouts](#removeexternalmarkingfromcustomlayouts)
-- [PowerPointRemoveAllShapesByShapeName](#powerpointremoveallshapesbyshapename)
+
+Additionally, the [PowerPointRemoveAllShapesByShapeName](#powerpointremoveallshapesbyshapename) can remove any shape type, based on the shape name.
 
 For more information, see [Find the name of the shape that you're using as a header or footer](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer).
 ##### PowerPointShapeNameToRemove
@@ -555,7 +556,6 @@ For example:
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="true"}
 ```
-
 ##### PowerPointRemoveAllShapesByShapeName
 
 If you want to remove all shapes of a specific shape name from your headers and footers, use the **PowerPointRemoveAllShapesByShapeName** advanced setting, with the name of the shape you want to remove.
