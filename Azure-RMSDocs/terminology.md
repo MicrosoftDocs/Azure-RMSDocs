@@ -48,6 +48,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |**activate**|Enable the Azure Rights Management protection service so that an organization can protect their documents and email. </br></br>This action also enables IRM features in Exchange Online and Microsoft SharePoint.|
 |**Active Directory Rights Management Services**|Frequently abbreviated to *AD RMS*.<br /><br />A Windows Server role that provides rights management protection by using encryption and policy to help secure documents, files, and email.|
 |**AD RMS**|See *Active Directory Rights Management Services*.|
+|**AIP** |See *Azure Information Protection*.|
 |**AIPService**|The current name of the PowerShell module for the protection service, which replaces with the older, AADRM module.|
 |**AzureInformationProtection**|The name of the PowerShell module for the Azure Information Protection classic or unified labeling client.|
 |**Azure Information Protection**|A cloud-based service that uses labels to classify and protect documents and emails. </br></br> Azure Rights Management provides the protection by using encryption, identity, and authorization policies.|

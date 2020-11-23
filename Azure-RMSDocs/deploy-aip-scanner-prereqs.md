@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/04/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -86,12 +86,16 @@ To store the scanner configuration data, use an SQL server with the following re
 
 - **A local or remote instance.**
 
-    We recommend hosting the SQL Server and scanner service on different machines, unless you're working with a small deployment.
+    We recommend hosting the SQL server and the scanner service on different machines, unless you're working with a small deployment. Additionally, we recommend having a dedicated SQL instance that serves the scanner database only, and that is not shared with other applications.
 
-    SQL Server 2012 is the minimum version for the following editions:
+    If you're working on a shared server, make sure that the [recommended number of cores](#windows-server-requirements) are free for the scanner database to work.
+
+    SQL Server 2016 is the minimum version for the following editions:
 
     - SQL Server Enterprise
+
     - SQL Server Standard
+
     - SQL Server Express (recommended for test environments only)
 
 - **An account with Sysadmin role to install the scanner.**
@@ -163,7 +167,7 @@ For more information, see:
 
 To scan SharePoint document libraries and folders, ensure that your SharePoint server complies with the following requirements:
 
-- **Supported versions.** Supported versions include: SharePoint 2019, SharePoint 2016, SharePoint 2013, and SharePoint 2010. Other versions of SharePoint are not supported for the scanner.
+- **Supported versions.** Supported versions include: SharePoint 2019, SharePoint 2016, and SharePoint 2013. Other versions of SharePoint are not supported for the scanner.
 
 - **Versioning.** When you use [versioning](/sharepoint/governance/versioning-content-approval-and-check-out-planning), the scanner inspects and labels the last published version. If the scanner labels a file and [content approval](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) is required, that labeled file must be approved to be available for users.  
 

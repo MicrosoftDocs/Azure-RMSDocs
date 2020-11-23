@@ -145,7 +145,7 @@ To compare the Office built-in sensitivity labeling features across different op
 |Custom permissions set independently from a label:| **Yes** | **Yes** <sup>3</sup>| No |
 |Information Protection bar in Office apps:| **Yes** | **Yes**| No |
 |Visual markings as a label action (header, footer, watermark):| **Yes** | **Yes** | **Yes**|
-|Per app visual markings:| **Yes** | **Yes** | No |
+|Per app visual markings:| **Yes** | **Yes** | **Yes** <sup>9</sup>|
 |Dynamic visual markings with variables:| **Yes** | **Yes** | **Yes** <sup>9</sup>|
 |Remove external content marking in app:| **Yes**| **Yes**| No|
 |Label with File Explorer:| **Yes** | **Yes** | No |
@@ -192,7 +192,7 @@ Labeling and protection actions aren't supported. However, for an AD RMS deploym
 While the AIP clients support both Microsoft Office 97-2003 file formats, such as **.doc,** as well as Office Open XML formats, such as **.docx,** the built-in labeling supports Open XML formats only.
 
 <sup>9</sup>
-For more information on support for dynamic content markings in the built-in labeling client, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables).
+For more information about support for dynamic content markings and per app content markings for the built-in labeling client, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables).
 
 ### Detailed comparisons for the Azure Information Protection clients
 

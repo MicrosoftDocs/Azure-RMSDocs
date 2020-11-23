@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the current version of 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/04/2020
+ms.date: 11/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -151,6 +151,8 @@ For more information about deploying the scanner, see the following articles:
 - [Running scans using the AIP scanner](deploy-aip-scanner-manage.md)
 
 **More information:**
+
+- Check out our blog on best practices for the unified labeling scanner: [Best practices for deploying and using the AIP UL scanner](https://aka.ms/AIPScannerBestPractices)
 
 - Interested in how the Core Services Engineering and Operations team in Microsoft implemented this scanner?  Read the technical case study: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
