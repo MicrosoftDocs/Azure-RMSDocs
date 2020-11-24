@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Azure Information Protection apps for iOS & Android
-description: Learn the basics about the Azure Information Protection (AIP) apps for iOS and Android devices
+title: Azure Information Protection mobile apps for iOS & Android
+description: Learn the basics about the Azure Information Protection (AIP) mobile apps for iOS and Android devices
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/07/2020
+ms.date: 11/24/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.custom: user
 
 *Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-The Azure Information Protection (AIP) mobile app for iOS and Android enable you to view protected email messages,  PDFs, images, and text files, and are useful if your regular apps for these file types do not support protection. 
+The Azure Information Protection (AIP) mobile app for iOS and Android is a viewer app that enables you to view protected email messages, PDFs, images, and text files, and are useful if your regular apps for these file types do not support protection. 
 
 For example, if protected emails show in your regular email mobile app as attachments, you may want to use the AIP mobile app to view that email.
 
