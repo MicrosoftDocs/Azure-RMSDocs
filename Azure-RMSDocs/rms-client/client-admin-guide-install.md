@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/30/2020
+ms.date: 11/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -85,7 +85,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
         For PowerPoint: `MSIP.PowerPointAddin`
 
-- The AIP client is not supported on machines that have [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. Make sure to [disable Exploit protection](../known-issues.md#known-issues-for-installing-the-aip-client) before installing the AIP client.  
+- The AIP client is not supported on machines with .NET versions 2 or 3 that have [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. If your machine has .NET version 2 or 3 in addition to a .NET 4.x version listed above, make sure to [disable Exploit protection](../known-issues.md#known-issues-for-aip-and-exploit-protection) before installing the AIP client.  
 
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.
@@ -96,8 +96,8 @@ Use one of the following options to install the client for users:
 
 |Install option  |Description  |
 |---------|---------|
-|**Run the client executable (.exe)**  </br></br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | We recommend running the .exe version of the client to run the installation interactively or silently.</br></br> Running the .exe file has the most flexibility, and is recommended because it also checks for many of the prerequisites and can also install any prerequisites that are missing. |
-|**Deploy the client's Windows installer (.msi)** </br></br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | The Azure Information Protection client Windows installer is supported for silent installations only that use a central deployment mechanism.</br></br> For example, use the .msi file when deploying with a group policy, Configuration Manager, and Microsoft Intune.</br></br> You must use tis method for Windows 10 PCs that are managed by Intune and mobile device management (MDM) as .exe files are not supported for these computers.</br></br>**Note:** When using the .msi installation, you must manually check for prerequisites and install or uninstall any dependent software required. |
+|**Run the client executable (.exe)**  <br><br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | We recommend running the .exe version of the client to run the installation interactively or silently.<br><br> Running the .exe file has the most flexibility, and is recommended because it also checks for many of the prerequisites and can also install any prerequisites that are missing. |
+|**Deploy the client's Windows installer (.msi)** <br><br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | The Azure Information Protection client Windows installer is supported for silent installations only that use a central deployment mechanism.<br><br> For example, use the .msi file when deploying with a group policy, Configuration Manager, and Microsoft Intune.<br><br> You must use tis method for Windows 10 PCs that are managed by Intune and mobile device management (MDM) as .exe files are not supported for these computers.<br><br>**Note:** When using the .msi installation, you must manually check for prerequisites and install or uninstall any dependent software required. |
 
 After installing the client, perform updates by repeating the same installation method, or use Windows Update to keep the client updated automatically. You are not required to uninstall legacy versions of the client before installing a new version.
 
