@@ -28,11 +28,11 @@ ms.custom: admin
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Instructions for: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 The Azure Information Protection (AIP) unified labeling client is part of the [Microsoft Information Protection](https://aka.ms/MIPdocs) solution, and  extends the built-in capabilities for sensitivity labeling provided by Microsoft 365. 
 
-The client provides end-user support for labeling and protection in the File Explorer and PowerShell. It also enables admins to scan networks and content shares for sensitive content. 
+The client provides end-user support for labeling and protection in the File Explorer and PowerShell, in addition to Office applications. The scanner provided with the unified labeling client enables admins to scan networks and content shares for sensitive content. 
 
 For organizations without an information protection platform, the client provides a viewer for content protected by other organizations using Microsoft Information Protection.
 

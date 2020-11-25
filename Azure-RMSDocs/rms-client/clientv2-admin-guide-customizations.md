@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -176,6 +176,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |PFileSupportedExtensions|[Change which file types to protect](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
+|RemoveExternalMarkingFromCustomLayouts | [Remove external content marking from custom layouts in PowerPoint](#remove-external-content-marking-from-custom-layouts-in-powerpoint)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
@@ -316,22 +317,16 @@ Use the following table to identify the string value to specify:
 | String value| Client| Scanner|
 |-------------|-------|--------|
 |\*|Default value: Apply protection to all file types|Apply protection to all file types|
-|\<null value>| Apply protection to Office file types and PDF files| Default value: Apply protection to Office file types and PDF files|
 |ConvertTo-Json(".jpg", ".png")|In addition to Office file types and PDF files, apply protection to the specified file name extensions | In addition to Office file types and PDF files, apply protection to the specified file name extensions
+| | | |
 
-Example 1: PowerShell command for the unified client to protect only Office file types and PDF files, where your label policy is named "Client":
-
-```PowerShell
-Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
-```
-
-Example 2:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
+Example 1:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-Example 3: PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
+Example 2: PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
@@ -375,14 +370,6 @@ Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json
 
 With this setting, the following extensions ( ".txt", ".xml", ".bmp", ".jt", ".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".tif", ".tiff", ".gif") always become P\<EXT>. Notable exclusion is that "ptxt" does not become "txt.pfile". 
 **AdditionalPPrefixExtensions** only works if protection of PFiles with the advanced property - [**PFileSupportedExtension**](#pfilesupportedextension) is enabled. 
-
-For example, in a case where the following command is used:
-
-```PowerShell
-Set-LabelPolicy -AdvancedSettings @{PFileSupportedExtensions=""}
-```
-
-PFile protection is not possible, and the value in **AdditionalPPrefixExtensions** is ignored. 
 
 ## Remove "Not now" for documents when you use mandatory labeling
 
@@ -481,19 +468,14 @@ You then need at least one more advanced client setting, **ExternalContentMarkin
 
 ### How to configure ExternalContentMarkingToRemove
 
-When you specify the string value for the **ExternalContentMarkingToRemove** key, you have three options that use regular expressions:
+When you specify the string value for the **ExternalContentMarkingToRemove** key, you have three options that use regular expressions. For each of these scenarios, use the syntax shown in the **Example value** column in the following table:
 
-- Partial match to remove everything in the header or footer.
-
-    Example: Headers or footers contain the string **TEXT TO REMOVE**. You want to completely remove these headers or footers. You specify the value: `*TEXT*`.
-
-- Complete match to remove just specific words in the header or footer.
-
-    Example: Headers or footers contain the string **TEXT TO REMOVE**. You want to remove the word **TEXT** only, which leaves the header or footer string as **TO REMOVE**. You specify the value: `TEXT `.
-
-- Complete match to remove everything in the header or footer.
-
-    Example: Headers or footers have the string **TEXT TO REMOVE**. You want to remove headers or footers that have exactly this string. You specify the value: `^TEXT TO REMOVE$`.
+|Option  |Example description |Example value|
+|---------|---------|---------|
+|**Partial match to remove everything in the header or footer**     | Your headers or footers contain the string **TEXT TO REMOVE**, and you want to completely remove these headers or footers.   |`*TEXT*`  | 
+|**Complete match to remove just specific words in the header or footer**     |    Your headers or footers contain the string **TEXT TO REMOVE**, and you want to remove the word **TEXT** only, leaving the header or footer string as **TO REMOVE**.      |`TEXT ` |
+|**Complete match to remove everything in the header or footer**     |Your headers or footers have the string **TEXT TO REMOVE**. You want to remove headers or footers that have exactly this string.         |`^TEXT TO REMOVE$`|
+|     |         | |
 
 
 The pattern matching for the string that you specify is case-insensitive. The maximum string length is 255 characters, and cannot include white spaces. 
@@ -514,7 +496,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### Multiline headers or footers
 
-If a header or footer text is more than a single line, create a key and value for each line. For example, you have the following footer with two lines:
+If a header or footer text is more than a single line, create a key and value for each line. For example, if you have the following footer with two lines:
 
 **The file is classified as Confidential**
 
@@ -536,13 +518,20 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### Optimization for PowerPoint
 
-Footers in PowerPoint are implemented as shapes. To avoid removing shapes that contain the text that you have specified but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process.
+Headers and footers in PowerPoint are implemented as shapes. 
+
+To avoid removing shapes that contain the text that you have specified but are *not* headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process.
 
 - If you do not specify this additional advanced client setting, and PowerPoint is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
 
 - If this value is specified, only shapes that meet the shape name criteria and also have text that matches the string provided with **ExternalContentMarkingToRemove** will be removed.
 
-**To find the name of the shape that you're using as a header or footer:**
+Additionally, if you have custom layouts configured in PowerPoint, the default behavior is that shapes found inside custom layouts are ignored. To explicitly remove external content markings from inside your custom layouts, set the **RemoveExternalMarkingFromCustomLayouts** advanced property to **true.**
+
+> [!NOTE]
+> PowerPoint shape types supported for the advanced client settings described in this section include: **msoTextBox,** **msoTextEffect,** and **msoPlaceholder**
+>
+##### Find the name of the shape that you're using as a header or footer
 
 1. In PowerPoint, display the **Selection** pane: **Format** tab > **Arrange** group > **Selection Pane**.
 
@@ -574,6 +563,22 @@ Example PowerShell command, where your label policy is named "Global":
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
+```
+
+##### Remove external content marking from custom layouts in PowerPoint
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+
+By default, the logic used to remove external content markings ignores custom layouts configured in PowerPoint. To extend this logic to custom layouts, set the **RemoveExternalMarkingFromCustomLayouts** advanced property to **True**.
+
+- Key: **RemoveExternalMarkingFromCustomLayouts**
+
+- Value: **True**
+
+Example PowerShell command, where your label policy is named "Global":
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
 ```
 
 ## Disable custom permissions in File Explorer

@@ -3,10 +3,10 @@
 
 title: Configuring secure document collaboration with Azure Information Protection
 description: End-to-end workflow for collaborating on documents that are protected by Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -143,19 +143,13 @@ In addition, the following scenarios support viewing documents:
 
 |Platforms for viewing and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
 |---------------|----------|-----------|-----------|
-|Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|
-|iOS|Yes [[1]](#footnote-1)|No|
-|Android|Yes [[1]](#footnote-1)|No|
-|MacOS|Yes [[1]](#footnote-1)|No|
+|Windows|Yes [[1]](#footnote-1)|Yes (Microsoft 365 apps only)|
+|iOS|Yes [[1]](#footnote-1)|Yes (version 2.42 and higher) |
+|Android|Yes [[1]](#footnote-1)|Yes (version 16.0.13029 and higher)|
+|MacOS|Yes [[1]](#footnote-1)|Yes (version 16.42 and higher)|
 
 ###### Footnote 1
 Supports user accounts, email-enabled groups, all members. User accounts and email-enabled groups can include guest accounts. All members exclude guest accounts.
-
-###### Footnote 2
-Currently supported by Microsoft 365 apps (Click-to-Run) only.
-
-
-
 
 ## Next steps
 
