@@ -6,7 +6,7 @@ description: Identify the prerequisites required to deploy Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/21/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -50,9 +50,11 @@ To verify that your subscription includes the Azure Information Protection featu
 If you have questions about licensing, read through the [frequently asked questions](https://azure.microsoft.com/pricing/details/information-protection#faq) for licensing.
 
 > [!TIP]
-> Looking to see if your Microsoft 365 plan or Exchange Online standalone plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
+> Looking to see if your plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
 >
 > - [Exchange Online Service Description](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description)
+>
+> - [Microsoft 365 Compliance Licensing Comparison](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-business-service-description)
 >
 > - [Office 365 Education](/office365/servicedescriptions/office-365-platform-service-description/office-365-education)
 >
@@ -222,13 +224,14 @@ For other, non-migration scenarios, where both services are active in the same o
 
 ### Service Tags
 
-Make sure to allow access to all ports for the following Service Tags:
+If you are using an Azure endpoint and an NSG, make sure to allow access to all ports for the following Service Tags:
 
 - **AzureInformationProtection**
 - **AzureActiveDirectory**
 - **AzureFrontDoor.Frontend**
 
-The Azure Information Protection service also depends on two specific IP addresses:
+Additionally, in this case, the Azure Information Protection service also depends on two specific IP addresses:
+
  - **13.107.6.181** 
  - **13.107.9.181**
  - **Port 443**, for HTTPS traffic
