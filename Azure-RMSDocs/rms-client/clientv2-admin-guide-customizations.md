@@ -770,12 +770,14 @@ Example value for multiple domains as a comma-separated string: `contoso.com,fab
     
     - Value: **\<**domain names, comma separated**>**
 
-For example, you have specified the **OutlookBlockUntrustedCollaborationLabel** advanced client setting for the **Confidential \ All Employees** label. You now specify the additional advanced client setting of **OutlookJustifyTrustedDomains** and **contoso.com**. As a result, a user can send an email to john@sales.contoso.com when it is labeled **Confidential \ All Employees** but will be blocked from sending an email with the same label to a Gmail account.
+For example, let's say you have specified the **OutlookBlockUntrustedCollaborationLabel** advanced client setting for the **Confidential \ All Employees** label. 
+
+You now specify the additional advanced client setting of **OutlookBlockTrustedDomains** with **contoso.com.** As a result, a user can send an email to `john@sales.contoso.com` when it is labeled **Confidential \ All Employees**, but will be blocked from sending an email with the same label to a Gmail account.
 
 Example PowerShell commands, where your label policy is named "Global":
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="contoso.com"}
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
