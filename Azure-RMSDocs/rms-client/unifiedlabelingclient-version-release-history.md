@@ -80,13 +80,13 @@ Unified labeling scanner version 2.9.101.0
 
 **Released** 11/30/2020
 
-The following new features were released for the unified labeling on-premises scanner in version 2.9.101.0:
+The following new features were released for the [unified labeling on-premises scanner](../deploy-aip-scanner.md) in version 2.9.101.0:
 
 - [Azure China support with content scan job PowerShell cmdlets](#azure-china-support-with-content-scan-job-powershell-cmdlets)
 - [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs)
 
 ### Azure China support with content scan job PowerShell cmdlets
-The Azure Information Protection on-premises scanner now supports Azure China environments with new cmdlets that enable you to manage your content scan job via PowerShell.
+The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md) now supports Azure China environments with new cmdlets that enable you to manage your content scan job via PowerShell.
 
 |Cmdlet  |Description  |
 |---------|---------|
@@ -119,7 +119,7 @@ For more information, see [Create a content scan job](../deploy-aip-scanner-conf
 
 ### Fixes and improvements
 
-The following fixes were delivered in version 2.9.101.0 of the Azure Information Protection unified labeling scanner:
+The following fixes were delivered in version 2.9.101.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):
 
 - Added support for hyphens (**-**) in [scanner database](../deploy-aip-scanner-prereqs.md) names
 - Updates in reports for when the **[Label files based on content](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** option is set to **Off**
