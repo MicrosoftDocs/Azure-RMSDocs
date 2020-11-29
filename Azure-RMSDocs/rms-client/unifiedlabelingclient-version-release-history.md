@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/05/2020
+ms.date: 11/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -82,11 +82,13 @@ Unified labeling scanner version 2.9.101.0
 
 The following new features were released for the [unified labeling on-premises scanner](../deploy-aip-scanner.md) in version 2.9.101.0:
 
-- [Azure China support with content scan job PowerShell cmdlets](#azure-china-support-with-content-scan-job-powershell-cmdlets)
+- [PowerShell support for disconnected scanner servers](#powershell-support-for-disconnected-scanner-servers)
 - [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs)
 
-### Azure China support with content scan job PowerShell cmdlets
-The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md) now supports Azure China environments with new cmdlets that enable you to manage your content scan job via PowerShell.
+### PowerShell support for disconnected scanner servers
+The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md) now supports managing content scan jobs, for scanner servers that cannot connect to the internet, over PowerShell.
+
+To support disconnected scanner servers, we've added the following new cmdlets:
 
 |Cmdlet  |Description  |
 |---------|---------|
@@ -99,17 +101,10 @@ The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md)
 **[Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)**     |   Defines settings for an existing repository in your content scan job.      |
 | | |
 
+
 The [**Set-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery) cmdlet was also added to provide additional support, enabling you to update the installation settings for the Network Discovery service via PowerShell.
 
-For more information about content and network scan jobs, see [Configure the scanner](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
-
-> [!NOTE]
-> Use these PowerShell cmdlets to apply labels on imported policies whenever the scanner server is unable to connect to the internet.
-> For more information, see [When the scanner server cannot have internet connectivity](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity). 
->
-> If you are working in an **Azure China** environment, you *must* use these cmdlets to manage your content scan jobs instead of the Azure portal.
-> For more information about Azure China, see the [Azure China documentation](/azure/china/).
-> 
+For more information, see [When the scanner server cannot have internet connectivity](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) and [Configure the scanner](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
 
 ### Support for NFS repositories in content scan jobs
 
