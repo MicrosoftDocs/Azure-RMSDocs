@@ -74,13 +74,13 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## Version 2.8.9.0 (Public preview)
+## Version 2.9.101.0 (Public preview)
 
-Unified labeling scanner version 2.8.9.0
+Unified labeling scanner version 2.9.101.0
 
 **Released** 11/30/2020
 
-The following new features were released for the unified labeling on-premises scanner in version 2.8.9.0:
+The following new features were released for the unified labeling on-premises scanner in version 2.9.101.0:
 
 - [Azure China support with content scan job PowerShell cmdlets](#azure-china-support-with-content-scan-job-powershell-cmdlets)
 - [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs)
@@ -120,7 +120,7 @@ For more information, see [Create a content scan job](../deploy-aip-scanner-conf
 
 ### Fixes and improvements
 
-The following fixes were delivered in version 2.8.9.0 of the Azure Information Protection unified labeling scanner:
+The following fixes were delivered in version 2.9.101.0 of the Azure Information Protection unified labeling scanner:
 
 - Added support for hyphens (**-**) in [scanner database](../deploy-aip-scanner-prereqs.md) names
 - Updates in reports for when the **[Label files based on content](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** option is set to **Off**
