@@ -90,14 +90,13 @@ The Azure Information Protection on-premises scanner now supports Azure China en
 
 |Cmdlet  |Description  |
 |---------|---------|
-|**[Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository).**     | Adds a new repository to your content scan job.        |
-|**[Get-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob).**     |      Gets details about your content scan job.   |
-|**[Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository).**     |  Gets details about repositories defined for your content scan job.       |
-|**[Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob).**       |    Deletes your content scan job.     |
-| **[Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository).**    |   Removes a repository from your content scan job.      |
-|**[Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob).**     |   Defines settings for your content scan job.      |
-| 
-**[Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository).**     |   Defines settings for an existing repository in your content scan job.      |
+|**[Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)**     | Adds a new repository to your content scan job.        |
+|**[Get-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)**     |      Gets details about your content scan job.   |
+|**[Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository)**     |  Gets details about repositories defined for your content scan job.       |
+|**[Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)**       |    Deletes your content scan job.     |
+| **[Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)**    |   Removes a repository from your content scan job.      |
+|**[Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob)**     |   Defines settings for your content scan job.      |
+**[Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)**     |   Defines settings for an existing repository in your content scan job.      |
 | | |
 
 The [**Set-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery) cmdlet was also added to provide additional support, enabling you to update the installation settings for the Network Discovery service via PowerShell.
