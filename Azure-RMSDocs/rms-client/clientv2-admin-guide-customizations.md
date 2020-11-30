@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 11/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -1834,6 +1834,24 @@ Starting in [version 2.8.85.0](unifiedlabelingclient-version-release-history.md#
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointFileWebRequestTimeout="00:10:00"}
     ```
+
+### Avoid scanner timeouts in SharePoint
+
+If you have long file paths in SharePoint version 2013 or higher, ensure that your SharePoint server's [httpRuntime.maxUrlLength](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) value is larger than the default 260 characters.
+
+This value is defined in the **HttpRuntimeSection** class of the `ASP.NET` configuration. If you need to update this value, do the following:
+
+1. Back up your **web.config** configuration. 
+
+1. Update the **maxUrlLength** value as needed. For example:
+
+    ```c#
+    <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />
+    ```
+
+1. Restart your SharePoint web server and verify that it loads correctly. 
+
+    For example, in Windows Internet Information Servers (IIS) Manager, select your site, and then under **Manage Website**, select **Restart**. 
 
 ## Prevent Outlook performance issues with S/MIME emails
 
