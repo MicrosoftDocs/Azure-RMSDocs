@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/29/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -84,7 +84,7 @@ The following new features were released for the [unified labeling on-premises s
 
 - [PowerShell support for disconnected scanner servers](#powershell-support-for-disconnected-scanner-servers)
 - [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs)
-
+- [Added support for sensitive information types](#added-support-for-sensitive-information-types)
 ### PowerShell support for disconnected scanner servers
 The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md) now supports managing content scan jobs, for scanner servers that cannot connect to the internet, over PowerShell.
 
@@ -112,6 +112,9 @@ Now you can add NFS repositories to your content scan jobs, in addition to SMB f
 
 For more information, see [Create a content scan job](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
+### Added support for sensitive information types
+We’ve added support for additional sensitive information types in Azure Information Protection, such as **Australia business number,** **Australia company number,** or **Austria identity card.** 
+For more information, see the [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in the Microsoft 365 documentation.
 ### Fixes and improvements
 
 The following fixes were delivered in version 2.9.101.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):
