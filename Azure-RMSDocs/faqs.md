@@ -121,17 +121,9 @@ If you are a user who wants to understand whether you have the classic or the un
     - Versions **1.x** indicate that you have the classic client. Example: **1.54.59.0**
     - Versions **2.x** indicate that you have the unified labeling client. Example: **2.8.85.0**
 
-    For example, in the **Windows Settings > Apps and features** area, scroll down to the **Microsoft Azure Information Protection** application, and check the version number.. 
+    For example, in the **Windows Settings > Apps and features** area, scroll down to the **Microsoft Azure Information Protection** application, and check the version number.
 
-Additioanlly
-Check the version for the 
-
-
-
-Access this dialog using one of the following methods:
-
-- In the File Explorer, right-click a file, files, or folder, select **Classify and protect** > **Help and Feedback**.
-- In Office applications, the classic client has a **Protect** button, and the unified labeling client has a **Sensitivity** button. Select either of these buttons and then select **Help and Feedback**.
+    :::image type="content" source="media/client-about.png" alt-text="Check the Azure Information Protection client version":::
 
 ## When is the right time to migrate my labels?
 

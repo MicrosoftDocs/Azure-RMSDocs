@@ -49,7 +49,7 @@ landingContent:
             url: tutorial-scan-networks-and-content.md
           - text: Prevent oversharing
             url: tutorial-preventing-oversharing.md
-      - linkListType: how-to
+      - linkListType: how-to-guide
         links:
           - text: View protected, non-Office, files
             url: ./rms-client/clientv2-view-use-files.md
