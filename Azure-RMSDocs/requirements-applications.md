@@ -2,7 +2,7 @@
 # required metadata
 
 title: Application support for RMS data protection for Azure Information Protection
-description: Identify the applications and solutions that have native support for the Azure Rights Management (Azure RMS) service. Azure RMS provides data protection for Azure Information Protection (AIP).
+description: Identify the applications and solutions that have built-in support for the Azure Rights Management (Azure RMS) service. Azure RMS provides data protection for Azure Information Protection (AIP).
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -33,7 +33,7 @@ ms.custom: admin
 >***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 
-The applications and solutions listed on this page have native support for the Azure Rights Management (Azure RMS) service, which provides data protection for Azure Information Protection.
+The applications and solutions listed on this page have built-in support for the Azure Rights Management (Azure RMS) service, which provides data protection for Azure Information Protection.
 
 These applications and solutions are known as "RMS-enlighted", and have Rights Management and [usage restrictions](configure-usage-rights.md) tightly integrated using Rights Management APIs.
 

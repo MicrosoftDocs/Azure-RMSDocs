@@ -72,7 +72,7 @@ Use the following lists and tables to identify business requirements or problems
 
 |Feature  |Description  |
 |---------|---------|
-|**Protect multiple file types**     | In early implementations of Rights Management, only Office files could be protected, using native Rights Management protection. </br></br>Azure Information Protection provides support for additional file types. For more information, see [Supported file types](rms-client/clientv2-admin-guide-file-types.md).         |
+|**Protect multiple file types**     | In early implementations of Rights Management, only Office files could be protected, using built-in Rights Management protection. </br></br>Azure Information Protection provides support for additional file types. For more information, see [Supported file types](rms-client/clientv2-admin-guide-file-types.md).         |
 |**Protect files anywhere**. | When a file is [protected](./rms-client/clientv2-classify-protect.md), the protection stays with the file, even if it is saved or copied to storage that is not under the control of IT, such as a cloud storage service.|
 |     |         |
 

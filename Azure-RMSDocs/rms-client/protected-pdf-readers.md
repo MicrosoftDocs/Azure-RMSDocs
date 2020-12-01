@@ -81,7 +81,7 @@ For more information, see the following blog posts:
 
 ## Viewing protected PDFs in Microsoft Edge on Windows or Mac
 
-Microsoft Edge offers native support for viewing PDF files that are classified and protected. Use of Microsoft Edge ensures that users can open protected PDF files seamlessly without the need to install or configure any additional settings or software.
+Microsoft Edge offers built-in support for viewing PDF files that are classified and protected. Use of Microsoft Edge ensures that users can open protected PDF files seamlessly without the need to install or configure any additional settings or software.
 
 Supported versions include:
 

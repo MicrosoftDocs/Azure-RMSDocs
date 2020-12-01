@@ -56,7 +56,7 @@ The Azure Information Protection unified labeling client includes the following:
 
 - Windows File Explorer, right-click options for users to apply classification labels and protection to files.
 
-- A viewer to display protected files when a native application cannot open it.
+- A viewer to display protected files when a built-in application cannot open it.
 
 - A PowerShell module to discover sensitive information in files, and apply or remove classification labels and protection from files. 
     
@@ -81,7 +81,7 @@ Deploy the Azure Information Protection unified labeling client if you are using
 
 - You want to test a service that discovers, classifies (and optionally, protects) files that are stored on-premises.
 
-- You want to view protected documents when a native application to display the file is not installed or cannot open these documents.
+- You want to view protected documents when a built-in application to display the file is not installed or cannot open these documents.
 
 Example showing the Office add-in for the Azure Information Protection unified labeling client, displaying the new **Sensitivity** button on the ribbon and the optional Azure Information Protection bar:
 

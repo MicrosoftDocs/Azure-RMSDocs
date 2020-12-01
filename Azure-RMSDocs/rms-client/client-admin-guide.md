@@ -65,7 +65,7 @@ The Azure Information Protection client includes the following:
 
 - Windows File Explorer, right-click options for users to apply classification labels and protection to files.
 
-- A viewer to display protected files when a native application cannot open it.
+- A viewer to display protected files when a built-in application cannot open it.
 
 - A PowerShell module to apply and remove classification labels and protection from files. 
     
@@ -90,7 +90,7 @@ Deploy the Azure Information Protection client if you are not using [sensitivity
 
 - You want to run a service that discovers, classifies (and optionally, protects) files that are stored on-premises.
 
-- You want to view protected documents when a native application to display the file is not installed or cannot open these documents.
+- You want to view protected documents when a built-in application to display the file is not installed or cannot open these documents.
 
 - You want to just protect files by using File Explorer or by using PowerShell commands.
 

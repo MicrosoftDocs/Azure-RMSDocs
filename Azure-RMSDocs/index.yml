@@ -49,14 +49,18 @@ landingContent:
             url: tutorial-scan-networks-and-content.md
           - text: Prevent oversharing
             url: tutorial-preventing-oversharing.md
+      - linkListType: how-to
+        links:
+          - text: View protected, non-Office, files
+            url: ./rms-client/clientv2-view-use-files.md
 
   # Card
   - title: Stay current
     linkLists:
      - linkListType: whats-new
        links:
-          - text: Top 5 recommended Ignite sessions
-            url: what-is-information-protection.md#additional-resources
+          - text: Top recommended Ignite sessions
+            url: what-is-information-protection.md#top-ignite-sessions
           - text: What's new for the AIP unified labeling client
             url: ./rms-client/unifiedlabelingclient-version-release-history.md
 

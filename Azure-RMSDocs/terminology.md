@@ -158,7 +158,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 
 |Term|Definition|
 |--------|--------------|
-|**Office Message Encryption**|Frequently abbreviated to *OME*.<br /><br />The new Office 365 Message Encryption capabilities have native integration with the Azure Rights Management service to provide the same email protection for internal and external users, automatic refresh of templates, and support for the bring your own key (BYOK) scenario. </br></br>The previous OME implementation was designed for external recipients only, required a mail flow rule, and did not support BYOK.|
+|**Office Message Encryption**|Frequently abbreviated to *OME*.<br /><br />The new Office 365 Message Encryption capabilities have built-in integration with the Azure Rights Management service to provide the same email protection for internal and external users, automatic refresh of templates, and support for the bring your own key (BYOK) scenario. </br></br>The previous OME implementation was designed for external recipients only, required a mail flow rule, and did not support BYOK.|
 | | |
 
 ### P

@@ -112,16 +112,21 @@ If you currently have the classic client deployed, we recommend that you upgrade
 - [How to migrate Azure Information Protection labels to unified sensitivity labels](configure-policy-migrate-labels.md)
 ### Identify the client you have installed
 
-If you are a user who wants to understand verify whether you have the classic or unified labeling client installed, select **Help and Feedback** to show the **Microsoft Azure Information Protection** dialog box. 
+If you are a user who wants to understand whether you have the classic or the unified labeling client installed, you can do one of the following:
 
-For example:
+- In your Office apps, check for the **Sensitivity** or **Protect** toolbar button. The unified labeling client shows the **Sensitivity** :::image type="icon" source="media/i-sensitivity.PNG" border="false"::: button, while the classic client shows the **Protect** button. 
 
-:::image type="content" source="media/client-about.png" alt-text="Identify whether you have the classic or unified client installed":::
+- Check the version number for the Azure Information Protection application you have installed.
 
-The version number indicates the client, as follows:
+    - Versions **1.x** indicate that you have the classic client. Example: **1.54.59.0**
+    - Versions **2.x** indicate that you have the unified labeling client. Example: **2.8.85.0**
 
-- Versions **1.x** indicate that you have the classic client. Example: **1.54.59.0**
-- Versions **2.x** indicate that you have the unified labeling client. Example: **2.8.85.0**
+    For example, in the **Windows Settings > Apps and features** area, scroll down to the **Microsoft Azure Information Protection** application, and check the version number.. 
+
+Additioanlly
+Check the version for the 
+
+
 
 Access this dialog using one of the following methods:
 
