@@ -37,7 +37,7 @@ Use the information in this section to learn about the Azure Information Protect
 
 The AIP scanner runs as a service on Windows Server and lets you discover, classify, and protect files on the following data stores:
 
-- **UNC paths** for network shares that use the Server Message Block (SMB) protocol.
+- **UNC paths** for network shares that use the SMB or NFS (Preview) protocols.
 
 - **SharePoint document libraries and folder** for SharePoint Server 2019 through SharePoint Server 2013. SharePoint 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 

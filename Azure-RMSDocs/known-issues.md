@@ -6,7 +6,7 @@ description: Search and browse through known issues and limitations for Azure In
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/05/2020
+ms.date: 11/15/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -46,11 +46,11 @@ The Azure Information Protection viewer cannot open attachments in a protected P
 
 For more information, see [Admin Guide: File types supported by the Azure Information Protection client](rms-client/client-admin-guide-file-types.md).
 
-## Known issues for installing the AIP client
+## Known issues for AIP and Exploit Protection
 
-The Azure Information Protection client is not supported on machines where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled.
+The Azure Information Protection client is not supported on machines that have .NET 2 or 3, where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled.
 
-Make sure to disable Exploit protection before installing AIP. 
+If you have a .NET version 2 or 3 in addition to a .NET 4.x version required for your system, make sure to disable Exploit protection before installing AIP. 
 
 To disable Exploit protection via PowerShell, run the following:
 
@@ -58,7 +58,7 @@ To disable Exploit protection via PowerShell, run the following:
 Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
 ```
 
-For more information, see [Azure Information Protection requirements](requirements.md).
+For more information, see [Additional prerequisites for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
 ## PowerShell support for the Azure Information Protection client
 

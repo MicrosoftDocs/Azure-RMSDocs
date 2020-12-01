@@ -6,8 +6,8 @@ description: Phase 1 of migrating from AD RMS to Azure Information Protection, c
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/11/2020
-ms.topic: how-to
+ms.date: 11/26/2020
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
@@ -35,13 +35,13 @@ Use the following information for Phase 1 of migrating from AD RMS to Azure Info
 
 ## Step 1: Install the AIPService PowerShell module and identify your tenant URL
 
-Install the **AIPService** module so that you can configure and manage the service that provides the data protection for Azure Information Protection.
+Install the **AIPService** module to enable you to configure and manage the service that provides the data protection for Azure Information Protection.
 
 For instructions, see [Installing the AIPService PowerShell module](./install-powershell.md).
 
-To complete some of the migration instructions, you will need to know the Azure Rights Management service URL for your tenant so that you can substitute it for when you see references to *\<Your Tenant URL\>*. Your Azure Rights Management service URL has the following format: **{GUID}.rms.[Region].aadrm.com**.
+To complete some of the migration instructions, you will need to know the Azure Rights Management service URL for your tenant, so that you can substitute it for when you see references to *\<Your Tenant URL\>*. 
 
-For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+Your Azure Rights Management service URL has the following format: **{GUID}.rms.[Region].aadrm.com**. For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 ### To identify your Azure Rights Management service URL
 
@@ -69,34 +69,53 @@ For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 ## Step 2. Prepare for client migration
 
-For most migrations, it is not practical to migrate all clients at once, so you will likely migrate clients in batches. This means that for a period of time, some clients will be using Azure Information Protection and some will still be using AD RMS. To support both pre-migrated and migrated users, use onboarding controls and deploy a pre-migration script. This step is required during the migration process so that users who have not yet migrated can consume content that has been protected by migrated users who are now using Azure Rights Management.
+For most migrations, it is not practical to migrate all clients at once, so you will likely migrate clients in batches. 
 
-1. Create a group, for example, named **AIPMigrated**. This group can be created in Active Directory and synchronized to the cloud, or it can be created in Microsoft 365 or Azure Active Directory. Do not assign any users to this group at this time. At a later step, when users are migrated, you will add them to the group.
+This means that for a period of time, some clients will be using Azure Information Protection and some will still be using AD RMS. To support both pre-migrated and migrated users, use onboarding controls and deploy a pre-migration script. 
 
-    Make a note of this group's object ID. To do this, you can use Azure AD PowerShell—for example, for version 1.0 of the module, use the [Get-MsolGroup](/powershell/msonline/v1/Get-MsolGroup) command. Or you can copy the object ID of the group from the Azure portal.
+> [!NOTE]
+> This step is required during the migration process so that users who have not yet migrated can consume content that has been protected by migrated users who are now using Azure Rights Management.
+> 
 
-2. Configure this group for onboarding controls to allow only people in this group to use Azure Rights Management to protect content. To do this, in a PowerShell session, connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
+**To prepare for client migration**
+
+1. Create a group, for example, named **AIPMigrated**. This group can be created in Active Directory and synchronized to the cloud, or it can be created in Microsoft 365 or Azure Active Directory. 
+
+    Do not assign any users to this group at this time. At a later step, when users are migrated, you will add them to the group.
+
+1. Make a note of this group's object ID using one of the following methods:
+
+    - **Use Azure AD PowerShell.** For example, for version 1.0 of the module, use the [Get-MsolGroup](/powershell/msonline/v1/Get-MsolGroup) command. 
+    - **Copy the object ID** of the group from the Azure portal.
+
+1. Configure this group for onboarding controls to allow only people in this group to use Azure Rights Management to protect content. 
+
+    To do this, in a PowerShell session, connect to the Azure Rights Management service. When prompted, specify your global admin credentials:
 
     ```PowerShell
     Connect-AipService
     ```
 
-    Then configure this group for onboarding controls, substituting your group object ID for the one in this example, and enter **Y** to confirm when you are prompted:
+    Configure this group for onboarding controls, substituting your group object ID for the one in this example. When prompted, enter **Y** to confirm.
 
     ```PowerShell
     Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope WindowsApp
     ```
 
-3. [Download the following file](https://go.microsoft.com/fwlink/?LinkId=524619) that contains client migration scripts:
+1. Download the [**Migration-Scripts.zip**](https://go.microsoft.com/fwlink/?LinkId=524619) file.
 
-    **Migration-Scripts.zip**
+1. Extract the files and follow the instructions in **Prepare-Client.cmd**, so that it contains the server name for your AD RMS cluster extranet licensing URL. To locate this name, do the following:
 
-4. Extract the files and follow the instructions in **Prepare-Client.cmd** so that it contains the server name for your AD RMS cluster extranet licensing URL.
+    1. From the Active Directory Rights Management Services console, click the cluster name. 
 
-    To locate this name: From the Active Directory Rights Management Services console, click the cluster name. From the **Cluster Details** information, copy the server name from the **Licensing** value from the extranet cluster URLs section. For example: **rmscluster.contoso.com**.
+    1. From the **Cluster Details** information, copy the server name from the **Licensing** value from the extranet cluster URLs section. For example: **rmscluster.contoso.com**.
 
     > [!IMPORTANT]
-    > The instructions include replacing example addresses of **adrms.contoso.com** with your AD RMS server addresses. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.
+    > The instructions include replacing example addresses of **adrms.contoso.com** with your AD RMS server addresses. 
+    >
+    > When you do this, be careful that there are no additional spaces before or after your addresses. Extra spaces will break the migration script, and is very hard to identify as the root cause of the problem. 
+    >
+    > Some editing tools automatically add a space after pasting text.
     >
 
 5. Deploy this script to all Windows computers to ensure that when you start to migrate clients, clients yet to be migrated continue to communicate with AD RMS even if they consume content that is protected by migrated clients that are now using the Azure Rights Management service.
@@ -109,61 +128,55 @@ If you are using Exchange on-premises or Exchange online, you might have previou
 
 Make sure that you have your [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) so that you can substitute this value for *&lt;YourTenantURL&gt;* in the following commands.
 
-**If you have integrated Exchange Online with AD RMS**: Open an Exchange Online PowerShell session and run the following PowerShell commands either one by one, or in a script:
+Do one of the following, depending on whether you have integrated Exchange on-premises or Exchange Online with AD RMS:
 
-```PowerShell
-$irmConfig = Get-IRMConfiguration
-$list = $irmConfig.LicensingLocation
-$list += "<YourTenantURL>/_wmcs/licensing"
-Set-IRMConfiguration -LicensingLocation $list
-Set-IRMConfiguration -internallicensingenabled $false
-Set-IRMConfiguration -internallicensingenabled $true 
-```
+- [Integrated Exchange on-premises with AD RMS](#if-you-have-integrated-exchange-on-premises-with-ad-rms)
+- [Integrated Exchange Online with AD RMS](#if-you-have-integrated-exchange-online-with-ad-rms)
+### If you have integrated Exchange Online with AD RMS
 
-**If you have integrated Exchange on-premises with AD RMS**: For each Exchange organization, first add registry values on each Exchange server, and then run PowerShell commands:
+1. Open an Exchange Online PowerShell session.
 
-Registry values for Exchange 2013 and Exchange 2016:
+1. Run the following PowerShell commands either one by one, or in a script:
 
-**Registry path:**
+    ```PowerShell
+    $irmConfig = Get-IRMConfiguration
+    $list = $irmConfig.LicensingLocation
+    $list += "<YourTenantURL>/_wmcs/licensing"
+    Set-IRMConfiguration -LicensingLocation $list
+    Set-IRMConfiguration -internallicensingenabled $false
+    Set-IRMConfiguration -internallicensingenabled $true 
+    ```
 
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
+### If you have integrated Exchange on-premises with AD RMS
 
-**Type:** Reg_SZ
+For each Exchange organization, add registry values on each Exchange server, and then run PowerShell commands:
 
-**Value:** `https://\<Your Tenant URL\>/_wmcs/licensing`
+1. If you have Exchange 2013 or Exchange 2016, add the following registry value:
 
-**Data:** `https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
+    - **Registry path:** `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
 
----
+    - **Type:** Reg_SZ
 
-Registry values For Exchange 2010:
+    - **Value:** `https://\<Your Tenant URL\>/_wmcs/licensing`
 
-**Registry path:**
+    - **Data:** `https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
 
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+1. Run the following PowerShell commands, either one by one, or in a script:
 
-**Type:** Reg_SZ
+    ```PowerShell
+    $irmConfig = Get-IRMConfiguration
+    $list = $irmConfig.LicensingLocation
+    $list += "<YourTenantURL>/_wmcs/licensing"
+    Set-IRMConfiguration -LicensingLocation $list
+    Set-IRMConfiguration -internallicensingenabled $false
+    Set-IRMConfiguration -RefreshServerCertificates
+    Set-IRMConfiguration -internallicensingenabled $true
+    IISReset
+    ```
 
-**Value:** https://\<Your Tenant URL\>/_wmcs/licensing
+After running these commands for Exchange Online or Exchange on-premises, if your Exchange deployment was configured to support content that was protected by AD RMS, it will also support content protected by Azure RMS after the migration. 
 
-**Data:** https://\<AD RMS Extranet Licensing URL>/_wmcs/licensing
-
----
-
-PowerShell commands to run either one by one, or in a script
-
-```PowerShell
-$irmConfig = Get-IRMConfiguration
-$list = $irmConfig.LicensingLocation
-$list += "<YourTenantURL>/_wmcs/licensing"
-Set-IRMConfiguration -LicensingLocation $list
-Set-IRMConfiguration -internallicensingenabled $false
-Set-IRMConfiguration -RefreshServerCertificates
-Set-IRMConfiguration -internallicensingenabled $true
-IISReset
-```
-
-After running these commands for Exchange Online or Exchange on-premises, if your Exchange deployment was configured to support content that was protected by AD RMS, it will also support content protected by Azure RMS after the migration. Your Exchange deployment will continue to use AD RMS to support protected content until a later step in the migration.
+Your Exchange deployment will continue to use AD RMS to support protected content until a later step in the migration.
 
 ## Next steps
 
