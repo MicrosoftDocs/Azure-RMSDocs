@@ -47,7 +47,7 @@ This client is now in general availability, and might have a preview version for
 
 If you still configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](configure-policy-migrate-labels.md), use the **Azure Information Protection classic client** instead.
 
-For more information, including a feature and functionality comparison table, see [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+For more information, including a feature and functionality comparison table, see [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
 
 > [!TIP]
 > The Azure Information Protection client is supported on Windows only. 

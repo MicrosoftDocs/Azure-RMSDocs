@@ -96,7 +96,7 @@ The *unified labeling client* is the most current client with the most recent up
 - Microsoft 365 security center
 - Microsoft 365 compliance center
 
-If you're an admin, learn more in [Choose which Azure Information Protection client to use](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+If you're an admin, learn more in [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
 
 ### Classic client deprecation
 

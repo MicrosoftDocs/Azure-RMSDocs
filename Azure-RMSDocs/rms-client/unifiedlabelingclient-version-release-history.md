@@ -72,7 +72,7 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
+The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
 ## Version 2.9.101.0 (Public preview)
 
@@ -383,7 +383,7 @@ For more requirement details, see [Firewalls and network infrastructure requirem
 
 - When multiple Exchange accounts are configured and the Azure Information Protection Outlook client is enabled, mails are sent from the secondary account as expected. For more information about configuring the unified labeling client with Outlook, see [Additional prerequisites for the Azure Information Protection unified labeling client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
-- When a document with a higher confidentiality label is dragged and dropped into an email, the email now automatically receives the higher confidentiality label as expected. For more information about labeling client features, see the [labeling client comparison table](use-client.md#compare-the-labeling-clients-for-windows-computers).
+- When a document with a higher confidentiality label is dragged and dropped into an email, the email now automatically receives the higher confidentiality label as expected. For more information about labeling client features, see the [labeling client comparison table](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
 - Custom permissions are now applied to emails as expected, when email addresses include both an apostrophe (') and period (.) For more information about configuring the unified labeling client with Outlook, see [Additional prerequisites for the Azure Information Protection unified labeling client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
@@ -431,7 +431,7 @@ Supported through  12/29/2020
 
 ## Next steps
 
-Not sure if unified labeling is the right client to install?  See [Choose which labeling client to use for Windows computers](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+Not sure if unified labeling is the right client to install?  See [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
 
 For more information about installing and using the unified labeling client: 
 

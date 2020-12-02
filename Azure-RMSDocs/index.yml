@@ -103,8 +103,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Choose your labeling client
-            url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
+          - text: Choose your Windows labeling solution
+            url: ./rms-client/use-client.md#choose-your-windows-labeling-solution
       - linkListType: how-to-guide
         links:
           - text: Migrate to the unified labeling client
