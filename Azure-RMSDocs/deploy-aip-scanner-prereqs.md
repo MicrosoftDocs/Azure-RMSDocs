@@ -109,7 +109,7 @@ To store the scanner configuration data, use an SQL server with the following re
 - **[Case insensitive collation](/sql/relational-databases/collations/collation-and-unicode-support)**
 
 > [!NOTE]
-> Multiple configuration databases on the same SQL server are supported when you specify a custom cluster (profile) name for the scanner, or when you use the preview version of the scanner.
+> Multiple configuration databases on the same SQL server are supported when you specify a custom cluster name for the scanner, or when you use the preview version of the scanner.
 >
 ### Storage requirements and capacity planning for SQL Server
 
@@ -336,7 +336,7 @@ Do one of the following, depending on your organization's requirements:
     - User account for the scanner installation
     - User account for scanner configuration
 
-    Typically, you will use the same user account to install and configure the scanner. If you use different accounts, they both require the db_owner role for the scanner configuration database. Create this user and rights as needed. If you specify your own cluster (profile) name, the configuration database is named **AIPScannerUL_<cluster_name>**.
+    Typically, you will use the same user account to install and configure the scanner. If you use different accounts, they both require the db_owner role for the scanner configuration database. Create this user and rights as needed. If you specify your own cluster name, the configuration database is named **AIPScannerUL_<cluster_name>**.
 
 Additionally:
 
