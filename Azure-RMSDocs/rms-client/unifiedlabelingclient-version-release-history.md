@@ -129,6 +129,7 @@ The following fixes were delivered in version 2.9.101.0 of the [Azure Informatio
 
 ### Known issues
 In this public preview version, applying labels with [DKE protection](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) is not supported by the scanner.
+
 ## Version 2.8.85.0
 
 Unified labeling scanner and client version 2.8.85.0
