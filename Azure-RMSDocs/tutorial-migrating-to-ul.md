@@ -71,7 +71,7 @@ While most functionality available for the AIP classic client is also available 
 Review the following articles to understand how the Information Protection features you use may differ when using the unified labeling client:
 
 - [Learn about built-in labeling capabilities in Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
-- [Compare support between the classic and unified labeling clients](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)
+- [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 - [Learn how to manage label settings that are not supported out-of-the-box in the unified labeling admin centers](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-admin-centers)
 
 > [!TIP]

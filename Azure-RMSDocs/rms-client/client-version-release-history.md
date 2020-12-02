@@ -96,7 +96,7 @@ This version includes fixes only.
 
 ## Next steps
 
-Not sure if this is the right client to install?  See [Choose your Windows labeling solution](rms-client/use-client.md#choose-your-windows-labeling-solution).
+Not sure if this is the right client to install?  See [Choose your Windows labeling solution](use-client.md#choose-your-windows-labeling-solution).
 
 For more information about installing and using the client: 
 
