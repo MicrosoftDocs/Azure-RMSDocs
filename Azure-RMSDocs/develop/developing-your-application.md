@@ -54,7 +54,7 @@ Once the service is activated you will need PowerShell components for the next s
 >Record the BPOSId (tenant ID) value. You will need it in future steps.
 
 *Example output*
-![cmdlet output](../media/develop/output-of-Get-AadrmConfiguration.png)
+![Get-AadrmConfiguration cmdlet output](../media/develop/output-of-Get-AadrmConfiguration.png)
 
 - Disconnect from the service: `Disconnect-AipServiceService`
 
@@ -70,12 +70,12 @@ Follow these steps to create a Service Principal:
   > Record the symmetric key and application principal id for future use.
 
 *Example output*
-![cmdlet output](../media/develop/output-of-NewMsolServicePrincipal.png)
+![NewMsolServicePrincipal cmdlet output](../media/develop/output-of-NewMsolServicePrincipal.png)
 
 - Add your application principal id, symmetric key, and tenant ID to the application’s App.config file.
 
 *Example App.config file*
-![cmdlet output](../media/develop/example-App.config-file.png)
+![Example App.config file](../media/develop/example-App.config-file.png)
 
 - The *ClientID* and *RedirectUri*  will be available to you from when you registered your application in Azure. For more information on how to register your application in Azure and to acquire a *ClientID* and *RedirectUri* see, [Configure Azure RMS for ADAL authentication](adal-auth.md).
 
