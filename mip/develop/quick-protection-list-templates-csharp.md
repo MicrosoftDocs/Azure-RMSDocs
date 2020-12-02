@@ -1,6 +1,6 @@
 ---
 title: Quickstart - List protection templates available to authenticated user in a Microsoft Information Protection (MIP) tenant using MIP SDK C# Wrapper
-description: A quickstart showing you how to use the Microsoft Information Protection SDK Protection API C# wrapper to list the protection templates available to a user.
+description: A quickstart showing you how to use the Microsoft Information Protection SDK Protection API C# wrapper to list the protection templates available to a user (C#)
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart

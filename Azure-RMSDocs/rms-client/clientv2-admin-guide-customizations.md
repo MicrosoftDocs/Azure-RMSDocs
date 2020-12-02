@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 11/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -770,12 +770,14 @@ Example value for multiple domains as a comma-separated string: `contoso.com,fab
     
     - Value: **\<**domain names, comma separated**>**
 
-For example, you have specified the **OutlookBlockUntrustedCollaborationLabel** advanced client setting for the **Confidential \ All Employees** label. You now specify the additional advanced client setting of **OutlookJustifyTrustedDomains** and **contoso.com**. As a result, a user can send an email to john@sales.contoso.com when it is labeled **Confidential \ All Employees** but will be blocked from sending an email with the same label to a Gmail account.
+For example, let's say you have specified the **OutlookBlockUntrustedCollaborationLabel** advanced client setting for the **Confidential \ All Employees** label. 
+
+You now specify the additional advanced client setting of **OutlookBlockTrustedDomains** with **contoso.com.** As a result, a user can send an email to `john@sales.contoso.com` when it is labeled **Confidential \ All Employees**, but will be blocked from sending an email with the same label to a Gmail account.
 
 Example PowerShell commands, where your label policy is named "Global":
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="contoso.com"}
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
@@ -1832,6 +1834,24 @@ Starting in [version 2.8.85.0](unifiedlabelingclient-version-release-history.md#
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointFileWebRequestTimeout="00:10:00"}
     ```
+
+### Avoid scanner timeouts in SharePoint
+
+If you have long file paths in SharePoint version 2013 or higher, ensure that your SharePoint server's [httpRuntime.maxUrlLength](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) value is larger than the default 260 characters.
+
+This value is defined in the **HttpRuntimeSection** class of the `ASP.NET` configuration. If you need to update this value, do the following:
+
+1. Back up your **web.config** configuration. 
+
+1. Update the **maxUrlLength** value as needed. For example:
+
+    ```c#
+    <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />
+    ```
+
+1. Restart your SharePoint web server and verify that it loads correctly. 
+
+    For example, in Windows Internet Information Servers (IIS) Manager, select your site, and then under **Manage Website**, select **Restart**. 
 
 ## Prevent Outlook performance issues with S/MIME emails
 

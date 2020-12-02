@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -65,12 +65,67 @@ The date format used on this page is *month/day/year*.
 
 Use the following information to see what's new or changed for a supported release of the Azure Information Protection unified labeling client for Windows. The most current release is listed first. The date format used on this page is *month/day/year*.
 
+The latest version of Azure Information Protection is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
+
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the unified labeling client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version (if available).
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
+
+## Version 2.9.101.0 (Public preview)
+
+Unified labeling scanner version 2.9.101.0
+
+**Released** 11/30/2020
+
+The following new features were released for the [unified labeling on-premises scanner](../deploy-aip-scanner.md) in version 2.9.101.0:
+
+- [PowerShell support for disconnected scanner servers](#powershell-support-for-disconnected-scanner-servers)
+- [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs)
+- [Added support for sensitive information types](#added-support-for-sensitive-information-types)
+### PowerShell support for disconnected scanner servers
+The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md) now supports managing content scan jobs, for scanner servers that cannot connect to the internet, over PowerShell.
+
+To support disconnected scanner servers, we've added the following new cmdlets:
+
+|Cmdlet  |Description  |
+|---------|---------|
+|**[Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)**     | Adds a new repository to your content scan job.        |
+|**[Get-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)**     |      Gets details about your content scan job.   |
+|**[Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository)**     |  Gets details about repositories defined for your content scan job.       |
+|**[Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)**       |    Deletes your content scan job.     |
+| **[Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)**    |   Removes a repository from your content scan job.      |
+|**[Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob)**     |   Defines settings for your content scan job.      |
+**[Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)**     |   Defines settings for an existing repository in your content scan job.      |
+| | |
+
+
+The [**Set-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery) cmdlet was also added to provide additional support, enabling you to update the installation settings for the Network Discovery service via PowerShell.
+
+For more information, see [When the scanner server cannot have internet connectivity](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) and [Configure the scanner](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+
+### Support for NFS repositories in content scan jobs
+
+Now you can add NFS repositories to your content scan jobs, in addition to SMB file shares and SharePoint repositories.
+
+For more information, see [Create a content scan job](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
+
+### Added support for sensitive information types
+We’ve added support for additional sensitive information types in Azure Information Protection, such as **Australia business number,** **Australia company number,** or **Austria identity card.** 
+
+For more information, see the [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in the Microsoft 365 documentation.
+### Fixes and improvements
+
+The following fixes were delivered in version 2.9.101.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):
+
+- Added support for hyphens (**-**) in [scanner database](../deploy-aip-scanner-prereqs.md) names
+- Updates in reports for when the **[Label files based on content](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** option is set to **Off**
+- [Improved memory consumption](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) for large numbers of information type matches
+- Support for [SharePoint on-premises](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) paths that end in a slash (**/**)
+- Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
+- Support for [avoiding a timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) when scanning a SharePoint server.
 
 ## Version 2.8.85.0
 
@@ -80,11 +135,11 @@ Unified labeling scanner and client version 2.8.85.0
 
 This version includes the following new features, fixes, and enhancements, for the unified labeling scanner and client:
 
-- [New features for the unified labeling scanner](#new-features-for-the-unified-labeling-scanner)
-- [New features for the unified labeling client](#new-features-for-the-unified-labeling-client)
-- [Fixes and improvements](#fixes-and-improvements)
+- [New features for the unified labeling scanner](#new-features-for-the-unified-labeling-scanner-version-28850)
+- [New features for the unified labeling client](#new-features-for-the-unified-labeling-client-version-28850)
+- [Fixes and improvements](#fixes-and-improvements-version-28850)
 
-### New features for the unified labeling scanner
+### New features for the unified labeling scanner, version 2.8.85.0
 
 - [Optional full rescans for changes detected](#optional-full-rescans-for-changes-detected)
 - [Configure SharePoint timeouts](#configure-sharepoint-timeouts)
@@ -160,7 +215,7 @@ PowerShell cmdlets added for Network Discovery include:
 |[**Uninstall-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  Uninstalls the Network Discovery service.       |
 | | |
 
-### New features for the unified labeling client
+### New features for the unified labeling client, version 2.8.85.0
 
 - [Administrator customizations for AIP popups in Outlook](#administrator-customizations-for-aip-popups-in-outlook) 
 - [Administrator customizations for justification prompts](#administrator-customizations-for-justification-prompts) 
@@ -194,12 +249,12 @@ For more information, see:
 - [Planning and implementing your Azure Information Protection tenant key](../plan-implement-tenant-key.md)
 - [Double Key Encryption](/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 docs
 
-### Fixes and improvements
+### Fixes and improvements, version 2.8.85.0
 
-- [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues)
-- [Client fixes and improvements](#azure-information-protection-client-fixed-issues)
+- [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues-version-28850)
+- [Client fixes and improvements](#azure-information-protection-client-fixed-issues-version-28850)
 
-#### Azure Information Protection scanner fixed issues
+#### Azure Information Protection scanner fixed issues, version 2.8.85.0
 
 The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling scanner:
 
@@ -208,7 +263,7 @@ The following fixes were delivered in version 2.8.85.0 of the Azure Information 
 - The AIP scanner now supports [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) files with a period in the path, but no extension. For example, a file with a path of `https://sharepoint.contoso.com/shared documents/meeting-notes`, with no extension, is now scanned successfully.
 - The AIP scanner now supports [custom sensitive information types](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) that are created in the Microsoft Security and Compliance center, and do not belong to any policy.
 
-#### Azure Information Protection client fixed issues
+#### Azure Information Protection client fixed issues, version 2.8.85.0
 
 The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling client:
 
@@ -304,6 +359,7 @@ Customers that have a TLS setup that does not support TLS 1.2 must move to a set
 For more requirement details, see [Firewalls and network infrastructure requirements](../requirements.md#firewalls-and-network-infrastructure).
 
 **Fixes and improvements** 
+
 - Scanner SQL improvements for:
     - Performance
     - Files with large numbers of information types

@@ -1,6 +1,6 @@
 ---
 title: struct ApplicationInfo 
-description: Documents structures associated with the Microsoft Information Protection (MIP) SDK.
+description: Documents the ApplicationInfo structure
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
