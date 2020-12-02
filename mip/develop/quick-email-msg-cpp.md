@@ -1,6 +1,6 @@
 ---
 title: File API - Process email .msg files (C++)
-description: This article will help you understand the scenario of how to use MIP SDK file API to process .msg files.
+description: This article will help you understand the scenario of how to use MIP SDK file API to process .msg files (C++).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
