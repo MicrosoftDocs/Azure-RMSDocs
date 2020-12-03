@@ -110,6 +110,16 @@ For more information, see [When the scanner server cannot have internet connecti
 
 Now you can add NFS repositories to your content scan jobs, in addition to SMB file shares and SharePoint repositories.
 
+To support scans on NFS shares, services for NFS must be deployed on the scanner machine:
+
+1. On your machine, navigate to the **Windows Features (Turn Windows features on or off)** settings dialog.
+
+1. Select the following items: 
+
+    - **Services for NFS** 
+        - **Administrative Tools**
+        - **Client for NFS**.
+
 For more information, see [Create a content scan job](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
 ### Added support for sensitive information types
