@@ -1,6 +1,6 @@
 ---
 title: Quickstart - Set and get a sensitivity label on a file using the C++ MIP SDK
-description: A quickstart showing you how to use the Microsoft Information Protection C++ SDK to set and get a sensitivity label on a file.
+description: A quickstart showing you how to use the Microsoft Information Protection C++ SDK to set and get a sensitivity label on a file (C++)
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
