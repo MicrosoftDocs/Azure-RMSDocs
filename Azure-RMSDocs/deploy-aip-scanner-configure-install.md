@@ -6,7 +6,7 @@ description: Instructions for installing and configuring the Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 11/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -206,7 +206,7 @@ You may want to do this only after running a network scan job to analyze the rep
 
 1. Now that the content scan job is created and saved, you're ready to return to the **Configure repositories** option to specify the data stores to be scanned. 
 
-    Specify UNC paths, and SharePoint Server URLs for SharePoint on-premises document libraries and folders. 
+    Specify UNC paths and SharePoint Server URLs for SharePoint on-premises document libraries and folders. 
     
     > [!NOTE]
     > SharePoint Server 2019, SharePoint Server 2016, and SharePoint Server 2013 are supported for SharePoint. SharePoint Server 2010 is also supported when you have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
@@ -250,6 +250,7 @@ You may want to do this only after running a network scan job to analyze the rep
     |**Specific SharePoint subsite or collection**     | One of the following: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Requires [additional permissions](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) to automatically discover site collection content         |
     |**Specific SharePoint library**     | One of the following: <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
     |**Specific SharePoint folder**     | `http://<SharePoint server name>/.../<folder name>`        |
+    | | |
     
 
 1. Repeat the previous steps to add as many repositories as needed.
@@ -490,17 +491,17 @@ Additional factors that affect the scanner performance include:
 
 This section lists PowerShell cmdlets supported for the Azure Information Protection scanner.
 
-> [!NOTE]
-> The Azure Information Protection scanner is configured from the Azure portal. Therefore, cmdlets used in previous versions to configure data repositories and the scanned file types list are now deprecated.
-> 
-
 Supported cmdlets for the scanner include:
 
-- [Add-MIPScannerRepository](/powershell/module/azureinformationprotection/add-mipscannerrepository)
+- [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)
 
 - [Export-AIPLogs](/powershell/module/azureinformationprotection/Export-AIPLogs)
 
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
+
+- [Get-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)
+
+- [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository)
 
 - [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
 
@@ -516,6 +517,8 @@ Supported cmdlets for the scanner include:
 
 - [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
+- [Set-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery)
+
 - [Import-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)
 
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
@@ -530,6 +533,10 @@ Supported cmdlets for the scanner include:
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
+- [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob)
+
+- [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
+
 - [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
 
 - [Set-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-mipscannercontentscanjob)
@@ -543,6 +550,10 @@ Supported cmdlets for the scanner include:
 - [Start-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)
 
 - [Stop-AIPScan](/powershell/module/azureinformationprotection/Stop-AIPScan)
+
+- [Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)
+
+- [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 

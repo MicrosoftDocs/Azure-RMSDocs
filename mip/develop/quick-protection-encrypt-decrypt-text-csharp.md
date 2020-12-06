@@ -1,6 +1,6 @@
 ---
 title: Quickstart - Encrypt/Decrypt text using the C# MIP SDK Protection API
-description: A quickstart showing you how to use the Microsoft Information Protection SDK .NET Wrapper to encrypt and decrypt ad hoc text using a protection template.
+description: A quickstart showing you how to use the Microsoft Information Protection SDK .NET Wrapper to encrypt and decrypt ad hoc text using a protection template (C#)
 services: information-protection
 author: Pathak-Aniket
 ms.service: information-protection

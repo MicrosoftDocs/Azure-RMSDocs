@@ -6,7 +6,7 @@ description: Lists prerequisites for installing and deploying the Azure Informat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/04/2020
+ms.date: 12/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,7 +31,9 @@ ms.custom: admin
 >[!NOTE]
 > If you're working with the classic scanner, see [Prerequisites for installing and deploying the Azure Information Protection classic scanner](deploy-aip-scanner-prereqs-classic.md).
 
-Before installing the Azure Information Protection on-premises scanner, make sure that your system complies with basic [Azure Information Protection requirements](requirements.md), as well as the following requirements specific to the scanner:
+Before installing the Azure Information Protection on-premises scanner, make sure that your system complies with basic [Azure Information Protection requirements](requirements.md).
+
+Additionally, the following requirements are specific for the scanner:
 
 - [Windows Server requirements](#windows-server-requirements)
 - [Service account requirements](#service-account-requirements)
@@ -43,7 +45,7 @@ Before installing the Azure Information Protection on-premises scanner, make sur
 - [File path requirements](#file-path-requirements)
 - [Usage statistics requirements](#usage-statistics-requirements)
 
-If you can't meet all the requirements in the table because they are prohibited by your organization policies, see the [alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.
+If you can't meet all the requirements listed for the scanner because they are prohibited by your organization policies, see the [alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.
 
 When deploying the scanner in production or testing the performance for multiple scanners, see [Storage requirements and capacity planning for SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).
 
@@ -60,7 +62,8 @@ You must have a Windows Server computer to run the scanner, which has the follow
 |**Disk space**     |10-GB free space (average) for temporary files. </br></br>The scanner requires sufficient disk space to create temporary files for each file that it scans, four files per core. </br></br>The recommended disk space of 10 GB allows for 4 core processors scanning 16 files that each have a file size of 625 MB.
 |**Operating system**     |- Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Note:** For testing or evaluation purposes in a non-production environment, you can also use any Windows operating system that is [supported by the Azure Information Protection client](requirements.md#client-devices).
 |**Network connectivity**     | Your scanner computer can be a physical or virtual computer with a fast and reliable network connection to the data stores to be scanned. </br></br> If internet connectivity is not possible because of your organization policies, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations). </br></br>Otherwise, make sure that this computer has internet connectivity that allows the following URLs over HTTPS (port 443):</br><br />-  \*.aadrm.com <br />-  \*.azurerms.com<br />-  \*.informationprotection.azure.com <br /> - informationprotection.hosting.portal.azure.net <br /> - \*.aria.microsoft.com <br />-  \*.protection.outlook.com |
-| ||
+|**NFS shares** |To support scans on NFS shares, services for NFS must be deployed on the scanner machine. <br><br>On your machine, navigate to the **Windows Features (Turn Windows features on or off)** settings dialog, and select the following items: **Services for NFS** > **Administrative Tools** and **Client for NFS**. |
+| | |
 
 ## Service account requirements
 
@@ -87,12 +90,16 @@ To store the scanner configuration data, use an SQL server with the following re
 
 - **A local or remote instance.**
 
-    We recommend hosting the SQL Server and scanner service on different machines, unless you're working with a small deployment.
+    We recommend hosting the SQL server and the scanner service on different machines, unless you're working with a small deployment. Additionally, we recommend having a dedicated SQL instance that serves the scanner database only, and that is not shared with other applications.
 
-    SQL Server 2012 is the minimum version for the following editions:
+    If you're working on a shared server, make sure that the [recommended number of cores](#windows-server-requirements) are free for the scanner database to work.
+
+    SQL Server 2016 is the minimum version for the following editions:
 
     - SQL Server Enterprise
+
     - SQL Server Standard
+
     - SQL Server Express (recommended for test environments only)
 
 - **An account with Sysadmin role to install the scanner.**
@@ -164,11 +171,13 @@ For more information, see:
 
 To scan SharePoint document libraries and folders, ensure that your SharePoint server complies with the following requirements:
 
-- **Supported versions.** Supported versions include: SharePoint 2019, SharePoint 2016, SharePoint 2013, and SharePoint 2010. Other versions of SharePoint are not supported for the scanner.
-
-- **Versioning.** When you use [versioning](/sharepoint/governance/versioning-content-approval-and-check-out-planning), the scanner inspects and labels the last published version. If the scanner labels a file and [content approval](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) is required, that labeled file must be approved to be available for users.  
-
-- **Large SharePoint farms.** For large SharePoint farms, check whether you need to increase the list view threshold (by default, 5,000) for the scanner to access all files. For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
+|Requirement  |Description  |
+|---------|---------|
+|**Supported versions** | Supported versions include: SharePoint 2019, SharePoint 2016, and SharePoint 2013. <br> Other versions of SharePoint are not supported for the scanner.     |
+|**Versioning**     |  When you use [versioning](/sharepoint/governance/versioning-content-approval-and-check-out-planning), the scanner inspects and labels the last published version. <br><br>If the scanner labels a file and [content approval](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) is required, that labeled file must be approved to be available for users.       |
+|**Large SharePoint farms** |For large SharePoint farms, check whether you need to increase the list view threshold (by default, 5,000) for the scanner to access all files. <br><br>For more information, see [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server). |
+|**Long file paths**  |If you have long file paths in SharePoint, ensure that your SharePoint server's [httpRuntime.maxUrlLength](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) value is larger than the default 260 characters. <br><br>For more information, see [Avoid scanner timeouts in SharePoint](rms-client/clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint). | 
+| | |
 
 ## Microsoft Office requirements
 
@@ -244,11 +253,21 @@ To learn more about how to manage your SharePoint policy levels see, [manage per
 
 While the unified labeling client cannot apply protection without an internet connection, the scanner can still apply labels based on imported policies.
 
-To support a disconnected computer, perform the following steps:
+To support a disconnected computer, use one of the following methods:
+
+- [Use the Azure portal](#use-the-azure-portal-with-a-disconnected-computer) (recommended when possible)
+
+- [Use PowerShell](#use-powershell-with-a-disconnected-computer)
+
+#### Use the Azure portal with a disconnected computer
+
+To support a disconnected computer from the Azure portal, perform the following steps:
 
 1.	Configure labels in your policy, and then use the [procedure to support disconnected computers](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) to enable offline classification and labeling.
 
-1. Enable offline management for content scan jobs:
+1. Enable offline management for content and network scan jobs as follows:
+
+    **Enable offline management for content scan jobs:**
 
     1. Set the scanner to function in **offline** mode, using the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet.
 
@@ -260,7 +279,7 @@ To support a disconnected computer, perform the following steps:
     
     Results for offline content scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
     
-1. Enable offline management of network scan jobs:
+    **Enable offline management of network scan jobs:**
 
     1. Set the Network Discovery service to function in offline mode using the [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) cmdlet.
 
@@ -271,6 +290,37 @@ To support a disconnected computer, perform the following steps:
     1.  Import the network scan job using the file that matches our cluster name using the [Import-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) cmdlet.  
     
     Results for offline network scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
+
+#### Use PowerShell with a disconnected computer
+
+To support a disconnected computer using PowerShell only, perform the following steps:
+
+**Manage your content scan jobs using PowerShell only:**
+
+1. Set the scanner to function in **offline** mode, using the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet.
+
+1. Create a new content scan job using the [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) cmdlet, making sure to use the mandatory `-Enforce On` parameter.
+
+1. Add your repositories using the [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository) cmdlet, with the path to the repository you want to add.
+
+    > [!TIP]
+    > To prevent the repository from inheriting settings from your content scan job, add the `OverrideContentScanJob On` parameter, as well as values for additional settings.
+    >
+    > To edit details for an existing repository, use the [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) command.
+    >
+ 
+1. Use the [Get-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob) and [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository) cmdlets to return information about your content scan job's current settings. 
+
+1. Use the [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) command to update details for an existing repository.
+
+1. Run your content scan job immediately if needed, using the [Start-AIPScan](/powershell/module/azureinformationprotection/start-aipscan) cmdlet. 
+
+    Results for offline content scan jobs are located at: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
+
+1. If you need to remove a repository or an entire content scan job, use the following cmdlets:
+
+    - [Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)
+    - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
 ### Restriction: You cannot be granted Sysadmin or databases must be created and configured manually
 
