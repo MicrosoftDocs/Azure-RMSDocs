@@ -707,6 +707,12 @@ See the video [Azure Information Protection Outlook Popup Configuration](https:/
 
 For the selected policy, create one or more of the following advanced settings with the following keys. For the values, specify one or more labels by their GUIDs, each one separated by a comma.
 
+> [!NOTE]
+> The advanced settings in this section are for when a *specific* label is in use.
+> 
+> If you have advanced settings configured for *unlabeled* content, such as with the **[OutlookUnlabeledCollaborationAction](#to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label)** advanced setting, and want to customize your popup messages for unlabeled content, use a json file to define your advanced settings. For more information, see [Customize Outlook popup messages](#customize-outlook-popup-messages).
+> 
+
 Example value for multiple label GUIDs as a comma-separated string: 
 
 ```sh
@@ -749,6 +755,7 @@ For the labels that you've specified with these pop-up messages, you can exempt 
 A typical configuration is to display the pop-up messages only for recipients who are external to your organization or who aren't authorized partners for your organization. In this case, you specify all the email domains that are used by your organization and by your partners.
 
 For the same label policy, create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
+
 
 Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
 
