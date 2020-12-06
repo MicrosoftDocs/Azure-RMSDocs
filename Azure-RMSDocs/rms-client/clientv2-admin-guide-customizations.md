@@ -756,7 +756,6 @@ A typical configuration is to display the pop-up messages only for recipients wh
 
 For the same label policy, create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
 
-
 Example value for multiple domains as a comma-separated string: `contoso.com,fabrikam.com,litware.com`
 
 - Warn messages:
