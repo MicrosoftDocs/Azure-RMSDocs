@@ -184,11 +184,6 @@ Deep dive into your content to scan specific repositories for sensitive content.
 
 You may want to do this only after running a network scan job to analyze the repositories in your network, but can also define your repositories yourself.
 
-> [!IMPORTANT]
-> You can also use PowerShell cmdlets to manage your content scan jobs, such as if you're working in an Azure China environment. 
->
-> For more information, see [Azure China support with content scan job PowerShell cmdlets](rms-client/unifiedlabelingclient-version-release-history.md#azure-china-support-with-content-scan-job-powershell-cmdlets). 
-
 **To create your content scan job on the Azure portal:**
 
 1. Under the **Scanner** menu on the left, select **Content scan jobs**. 

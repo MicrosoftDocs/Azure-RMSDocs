@@ -214,23 +214,26 @@ Unified labeling scanner and client version 2.8.85.0
 
 This version includes the following new features, fixes, and enhancements, for the unified labeling scanner and client:
 
-- [New features for the unified labeling scanner](#new-features-for-the-unified-labeling-scanner-28850)
-- [New features for the unified labeling client](#new-features-for-the-unified-labeling-client-28850)
-- [Fixes and improvements](#fixes-and-improvements-28850)
+- **New features for the scanner**:
 
-### New features for the unified labeling scanner (2.8.85.0)
+    - [Optional full rescans for changes detected](#optional-full-rescans-for-changes-detected)
+    - [Configure SharePoint timeouts](#configure-sharepoint-timeouts)
+    - [Network discovery support](#network-discovery-support)
 
-- [New features for the unified labeling scanner](#new-features-for-the-unified-labeling-scanner-version-28850)
-- [New features for the unified labeling client](#new-features-for-the-unified-labeling-client-version-28850)
-- [Fixes and improvements](#fixes-and-improvements-version-28850)
+- **New features for the client**:
 
-### New features for the unified labeling scanner, version 2.8.85.0
+    - [Administrator customizations for AIP popups in Outlook](#administrator-customizations-for-aip-popups-in-outlook)
+    - [Administrator customizations for justification prompts](#administrator-customizations-for-justification-prompts)
+    - [Audit log updates](#audit-log-updates)
+    - [DKE template-based labeling updates](#dke-template-based-labeling-updates)
 
-- [Optional full rescans for changes detected](#optional-full-rescans-for-changes-detected)
-- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)
-- [Network discovery support](#network-discovery-support)
+- **Fixes and improvements:**
 
-#### Optional full rescans for changes detected
+    - [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues-version-28850)
+    - [Client fixes and improvements](#azure-information-protection-client-fixed-issues-version-28850)
+
+
+### Optional full rescans for changes detected
 
 Administrators can now skip a full rescan after making changes to policies or content scan jobs. Skipping a full rescan applies your changes only on files that have been modified or created since the last scan.
 
@@ -244,7 +247,7 @@ Skip the full, immediate rescan, and return later to [run a full rescan](../depl
 > For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On,** make sure to run a full rescan to apply your labels across your content.
 >
 
-#### Configure SharePoint timeouts
+### Configure SharePoint timeouts
 
 The default timeout for SharePoint interactions has been updated to two minutes, after which the attempted AIP operation fails.
 
@@ -252,7 +255,7 @@ AIP administrators can also now configure SharePoint timeouts, separately for al
 
 For more information, see [Configure SharePoint timeouts](clientv2-admin-guide-customizations.md#configure-sharepoint-timeouts).
 
-#### Network Discovery support
+### Network Discovery support
 
 The unified labeling scanner now includes a new **network discovery** service, which enables you to scan specified IP addresses or ranges for network file shares that may have sensitive content.
 
@@ -284,7 +287,7 @@ The **network discovery** service updates **Repository** reports with a list of 
 
 1. Use the generated reports on the new [**Repositories**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) pane to find additional network file shares that may be at risk. Add any risky file shares to your [content scan jobs](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) to scan the added repositories for sensitive content.
 
-##### Network discovery cmdlets
+#### Network discovery cmdlets
 
 PowerShell cmdlets added for Network Discovery include:
 
@@ -300,32 +303,26 @@ PowerShell cmdlets added for Network Discovery include:
 |[**Uninstall-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  Uninstalls the Network Discovery service.       |
 | | |
 
-### New features for the unified labeling client, version 2.8.85.0
 
-- [Administrator customizations for AIP popups in Outlook](#administrator-customizations-for-aip-popups-in-outlook)
-- [Administrator customizations for justification prompts](#administrator-customizations-for-justification-prompts)
-- [Audit log updates](#audit-log-updates)
-- [DKE template-based labeling updates](#dke-template-based-labeling-updates)
-
-#### Administrator customizations for AIP popups in Outlook
+### Administrator customizations for AIP popups in Outlook
 
 AIP administrators can now customize the popups that appear in Outlook for end-users, such as popups for blocked emails, warning messages, and justification prompts.
 
 For more information, including several sample rules for common use case scenarios, see [Customize Outlook popup messages](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages).
 
-#### Administrator customizations for justification prompts
+### Administrator customizations for justification prompts
 
 AIP administrators can now customize one of the options in the justification prompts that are displayed when end-users change classification labels on documents and emails.
 
 For more information, see [Customize justification prompt texts for modified labels](clientv2-admin-guide-customizations.md#customize-justification-prompt-texts-for-modified-labels).
 
-#### Audit log updates
+### Audit log updates
 
 Audit logs for access events from the unified labeling client are now sent only when users open labeled or protected files, providing a clearer indication of user access.
 
 For more information, see [Access audit logs](../audit-logs.md#access-audit-logs).
 
-#### DKE template-based labeling updates
+### DKE template-based labeling updates
 
 Azure Information Protection now supports Double Key Encryption (DKE) template-based labeling in the scanner, as well as using the File Explorer and PowerShell.
 
@@ -334,12 +331,7 @@ For more information, see:
 - [Planning and implementing your Azure Information Protection tenant key](../plan-implement-tenant-key.md)
 - [Double Key Encryption](/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 docs
 
-### Fixes and improvements, version 2.8.85.0
-
-- [Scanner fixes and improvements](#azure-information-protection-scanner-fixed-issues-version-28850)
-- [Client fixes and improvements](#azure-information-protection-client-fixed-issues-version-28850)
-
-#### Azure Information Protection scanner fixed issues, version 2.8.85.0
+### Azure Information Protection scanner fixed issues, version 2.8.85.0
 
 The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling scanner:
 
@@ -348,7 +340,7 @@ The following fixes were delivered in version 2.8.85.0 of the Azure Information 
 - The AIP scanner now supports [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) files with a period in the path, but no extension. For example, a file with a path of `https://sharepoint.contoso.com/shared documents/meeting-notes`, with no extension, is now scanned successfully.
 - The AIP scanner now supports [custom sensitive information types](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) that are created in the Microsoft Security and Compliance center, and do not belong to any policy.
 
-#### Azure Information Protection client fixed issues, version 2.8.85.0
+### Azure Information Protection client fixed issues, version 2.8.85.0
 
 The following fixes were delivered in version 2.8.85.0 of the Azure Information Protection unified labeling client:
 
@@ -395,7 +387,12 @@ Unified labeling scanner and client version 2.7.96.0
 
 **Released** 06/29/2020
 
-**New features for the unified labeling scanner:**
+- [New features for the unified labeling client, version 2.7.96.0](#new-features-for-the-unified-labeling-client-version-27960)
+- [New features for the unified labeling scanner, version 2.7.96.0](#new-features-for-the-unified-labeling-scanner-version-27960)
+- [New audit logs generated for removed files](#new-audit-logs-generated-for-removed-files)
+- [TLS 1.2 enforcement](#tls-12-enforcement)
+- [Fixes and improvements, version 2.7.96.0](#fixes-and-improvements-version-27960)
+### New features for the unified labeling scanner, version 2.7.96.0
 
 - [Use scanner to apply labels based on recommended conditions](../deploy-aip-scanner-prereqs.md). AIP customers can now choose to implement service side only autolabeling. This feature allows AIP end users to always follow recommendations instead of the previous scenario, which only enabled automatic labeling on the user side.
 
@@ -409,7 +406,7 @@ Unified labeling scanner and client version 2.7.96.0
 
 - Now you can configure the unified labeling scanner to skip specific files depending on their file attributes. Define the list of file attributes that triggers a file to be skipped using the new **[ScannerFSAttributesToSkip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes)** advanced setting.
 
-**New features for the unified labeling client:**
+### New features for the unified labeling client, version 2.7.96.0
 
 - [**Justification popups**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) now appear for changes made to default labels in the unified labeling client.
 
@@ -423,7 +420,7 @@ Unified labeling scanner and client version 2.7.96.0
 
     For more information about the default, cloud-based tenant root keys, see [Planning and implementing your Azure Information Protection tenant key](../plan-implement-tenant-key.md). For information about implementing Double Key Encryption, see [Double key encryption](/microsoft-365/compliance/double-key-encryption) in the Microsoft 365 documentation.
 
-**New audit logs generated for removed files**
+### New audit logs generated for removed files
 
 Audit logs are now generated each time the scanner detects that a file that had previously been scanned is now removed.
 
@@ -437,7 +434,7 @@ For more information, see:
 > If you run the scanner in **Enforce=On** mode, we recommend that upgrade to [Version 2.7.99.0](#version-27990).
 >
 
-**TLS 1.2 enforcement**
+### TLS 1.2 enforcement
 
 Starting with this version of the Azure Information Protection client, only TLS versions 1.2 or later are supported.
 
@@ -445,7 +442,7 @@ Customers that have a TLS setup that does not support TLS 1.2 must move to a set
 
 For more requirement details, see [Firewalls and network infrastructure requirements](../requirements.md#firewalls-and-network-infrastructure).
 
-**Fixes and improvements**
+### Fixes and improvements, version 2.7.96.0
 
 - Scanner SQL improvements for:
     - Performance
@@ -484,7 +481,7 @@ For more requirement details, see [Firewalls and network infrastructure requirem
 
 Supported through  12/29/2020
 
-**New features:**
+### New features, version 2.6.111.0
 
 - General availability version of the [scanner](../deploy-aip-scanner.md), to inspect and label documents in on-premises data stores.
 
@@ -506,7 +503,7 @@ Supported through  12/29/2020
 
 - Support added for [offline labeling capability](./clientv2-admin-guide-customizations.md#support-for-disconnected-computers) with Office apps in the unified labeling client.
 
-**Fixes:**
+### Fixes and improvements, version 2.6.111.0
 
 - In instances where users attempted unsuccessfully to open protected TIFF files, and TIFF files created by RightFax, the TIFF files now open and remain stable as expected.  
 - Previous corruptions of protected txt and PDF files are resolved.
