@@ -141,8 +141,9 @@ For more information, see the [Sensitive information type entity definitions](/m
 The following new features were added for the [unified labeling client](aip-clientv2.md) in version 2.9.101.0:
 
 - [Track document access and revoke access](#track-document-access-and-revoke-access)
+- [Remove external content markings in PowerPoint by shape name](#remove-external-content-markings-in-powerpoint-by-shape-name)
 
-### Track document access and revoke access
+#### Track document access and revoke access
 
 Once you've upgraded to version 2.9.101.0, any documents not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed.
 
@@ -155,6 +156,12 @@ For more information, see:
 - [Administrator Guide: Track and revoke document access with Azure Information Protection](track-and-revoke-admin.md)
 - [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
 - [Known issues for tracking and revoking document access](../known-issues.md#tracking-and-revoking-document-access)
+
+#### Remove external content markings in PowerPoint by shape name
+
+Now you can configure the AIP client to remove external content markings without text in PowerPoint. Instead of using the text inside the shape, remove these shapes by shape name.
+
+For more information, see the documentation on the [PowerPointRemoveAllShapesByShapeName](clientv2-admin-guide-customizations.md#powerpointremoveallshapesbyshapename) advanced client setting.
 
 ### Fixes and improvements
 
