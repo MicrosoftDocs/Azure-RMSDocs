@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/23/2020
+ms.date: 12/07/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -1267,7 +1267,8 @@ When you configure this setting, it changes the default behavior of how the Azur
 For Word, Excel, and PowerPoint, automatic classification runs continuously in the background.
 
 The behavior does not change for Outlook.
-When the Azure Information Protection unified labeling client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint. Large files also save more quickly because the condition rules have already run.
+
+When the Azure Information Protection unified labeling client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for Office documents that are stored in SharePoint or OneDrive, as long as auto-save is turned on. Large files also saved more quickly because the condition rules have already run.
 
 The condition rules do not run in real time as a user types. Instead, they run periodically as a background task if the document is modified.
 
