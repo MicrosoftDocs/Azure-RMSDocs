@@ -201,9 +201,8 @@ The following fixes were delivered in version 2.9.101.0 of the [Azure Informatio
 
 - Issues fixed for custom permissions set via the [File Explorer](clientv2-classify.md#using-file-explorer-to-classify-files) on Office files
 
-<!--
 - [New advanced client setting](clientv2-admin-guide-customizations.md#powerpointremoveallshapesbyshapename) to remove shapes from PowerPoint headers or footers, by using the shape name instead of the text inside a shape.
--->
+
 ### Known issues
 
 In the public preview version of 2.9.101.0, applying labels with [DKE protection](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) is not supported by the scanner.
