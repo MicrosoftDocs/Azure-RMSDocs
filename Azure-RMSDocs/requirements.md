@@ -145,7 +145,6 @@ The Azure Information Protection clients can label and protect documents and ema
 
 - **Office apps**, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), from Microsoft 365 Apps for Business or Microsoft 365 Business Premium, and when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
 
-
 - **Microsoft 365 Apps for Enterprise**
 
 - **Office Professional Plus 2019**
