@@ -130,7 +130,7 @@ For more information, see the [File types supported](./rms-client/client-admin-g
 
 Includes: 
 - Office apps, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), from Microsoft 365 Apps for Business or Microsoft 365 Business Premium, when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
-- Microsoft 365 Apps for Enterprise.
+- Microsoft 365 Apps for Enterprise
 
 ### Viewing protected documents in Office for the web
 
@@ -176,7 +176,7 @@ See also: [Office Applications Service Description](/office365/servicedescriptio
 
 The following Office client suites support protecting files and emails on Windows computers by using the Azure Rights Management service:
 
-- **Office apps**, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), from Microsoft 365 Apps for Business or Microsoft 365 Business Premium, and when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
+- **Office apps**, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), from Microsoft 365 Apps for Business or Microsoft 365 Business Premium, when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
 
 - **Microsoft 365 Apps for Enterprise**
 
