@@ -129,7 +129,7 @@ For more information, see the [File types supported](./rms-client/client-admin-g
 ### Microsoft 365 app support
 
 Includes: 
-- Office apps, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), from Microsoft 365 Apps for Business or Microsoft 365 Business Premium, and when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
+- Office apps, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), from Microsoft 365 Apps for Business or Microsoft 365 Business Premium, when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365)
 - Microsoft 365 Apps for Enterprise.
 
 ### Viewing protected documents in Office for the web
