@@ -90,6 +90,7 @@ This version includes the following new features, fixes, and enhancements for th
 - **New features for the client**:
 
     - [Track document access and revoke access](#track-document-access-and-revoke-access)
+    - [Added support for sensitive information types](#added-support-for-sensitive-information-types)
 
 - **Fixes and improvements:**
 
