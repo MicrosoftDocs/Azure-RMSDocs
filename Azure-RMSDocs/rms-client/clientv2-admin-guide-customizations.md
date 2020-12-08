@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/23/2020
+ms.date: 12/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -27,6 +27,12 @@ ms.custom: admin
 
 # Admin Guide: Custom configurations for the Azure Information Protection unified labeling client
 
+<!-- Notes for contributors: In this file, you can add new settings on at the bottom of the page to simplify the content editing. However, remember to add the xref by setting AND by feature to the reference sections at the top. 
+
+There are two types of reference sections - the legacy table by setting name, and a newer section of reference by feature type. This newer section helps admins understand and configure settings that are relevant to eachother, possibly in a sort of a flow. 
+
+FUTURE task - reorganize this topic by feature type so that admins can read them together. NOT recommended to reorganize this page into sub-pages as there are too many xrefs out there to this page and you'll need a lot of redirects. Additionally, users might just search for their setting or text on a single page. It would help to have related settings documented one right after the other to help with scrolling. -->
+
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
@@ -39,91 +45,112 @@ Use the following information for advanced configurations needed for specific sc
 > These settings require editing the registry or specifying advanced settings. The advanced settings use [Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell).
 > 
 
-### How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell
+## Configuring advanced settings for the client via PowerShell
 
-When you use Office 365 Security & Compliance Center PowerShell, you can configure advanced settings that support customizations for label policies and labels. For example:
+Use the Microsoft 365 Security & Compliance Center PowerShell to configure advanced settings for customizing label policies and labels. 
 
-- The setting to display the Information Protection bar in Office apps is a ***label policy advanced setting***.
-- The setting to specify a label color is a ***label advanced setting***.
+In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell), specify the **AdvancedSettings** parameter with the identity (name or GUID) of the policy or label, with key/value pairs in a [hash table](/powershell/module/microsoft.powershell.core/about/about_hash_tables). 
 
-In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell), specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](/powershell/module/microsoft.powershell.core/about/about_hash_tables). Use the following syntax:
+To remove an advanced setting, use the same **AdvancedSettings** parameter syntax, but specify a null string value. 
 
-For a label policy setting, single string value:
+> [!IMPORTANT]
+> Do not use white spaces in your string values. White strings in these string values will prevent your labels from being applied.
+
+For more information, see:
+
+- [Label policy advanced settings syntax](#label-policy-advanced-settings)
+- [Label advanced settings syntax](#label-advanced-settings)
+- [Examples for setting advanced settings](#examples-for-setting-advanced-settings)
+- [Specifying the identity for the label policy or label](#specifying-the-identity-for-the-label-policy-or-label)
+- [Order of precedence - how conflicting settings are resolved](#order-of-precedence---how-conflicting-settings-are-resolved)
+- [Advanced setting references](#advanced-setting-references)
+### Label policy advanced settings
+
+An example of a label policy advanced setting is the setting to display the Information Protection bar in Office apps.
+
+**For a single string value**, use the following syntax:
 
 ```PowerShell
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
 ```
 
-For label policy settings, multiple string values for the same key:
+**For a multiple string value for the same key**, use the following syntax:
 
 ```PowerShell
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
-For a label setting, single string value:
+### Label advanced settings
+
+An example of a label advanced setting is the setting to specify a label color.
+
+**For a single string value**, use the following syntax:
 
 ```PowerShell
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 ```
 
-For label settings, multiple string values for the same key:
+**For a multiple string value for the same key,** use the following syntax:
 
 ```PowerShell
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
-To remove an advanced setting, use the same syntax but specify a null string value.
+### Examples for setting advanced settings
 
-> [!IMPORTANT]
-> Use of white spaces in the string will prevent application of the labels. 
-
-#### Examples for setting advanced settings
-
-Example 1: Set a label policy advanced setting for a single string value:
+**Example 1:** Set a label policy advanced setting for a single string value:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 ```
 
-Example 2: Set a label advanced setting for a single string value:
+**Example 2:** Set a label advanced setting for a single string value:
 
 ```PowerShell
 Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 ```
 
-Example 3: Set a label advanced setting for multiple string values:
+**Example 3:** Set a label advanced setting for multiple string values:
 
 ```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 ```
 
-Example 4: Remove a label policy advanced setting by specifying a null string value:
+**Example 4:** Remove a label policy advanced setting by specifying a null string value:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
 ```
 
-#### Specifying the identity for the label policy or label
+### Specifying the label policy or label identity
 
-Specifying the label policy name for the PowerShell *Identity* parameter is straightforward because you see only one policy name in the admin center where you manage your label policies. However, for labels, you see both a **Name** and **Display name** in the admin centers. In some cases, the value for both will be the same but they can be different:
+Finding the label policy name for the PowerShell **Identity** parameter is simple because there is only one policy name in the labeling admin center.
 
-- **Name** is the original name of the label and it is unique across all your labels. If you change the name of your label after it is created, this value remains the same. For labels that have been migrated from Azure Information Protection, you might see the label ID of the label from the Azure portal.
+However, for labels, the labeling admin centers show both a **Name** and **Display name** value. In some cases, these values will be the same, but they may be different. To configure advanced settings for labels, use the **Name** value.
 
-- **Display name** is the name of the label that users see and it doesn't have to be unique across all your labels. For example, users see one **All Employees** sublabel for the **Confidential** label, and another **All Employees** sublabel for the **Highly Confidential** label. These sublabels both display the same name, but are not the same label and have different settings.
-
-For configuring your label advanced settings, use the **Name** value. For example, to identify the label in the following picture, you would specify `-Identity "All Company"`:
+For example, to identify the label in the following picture, use the following syntax in your PowerShell command: `-Identity "All Company"`:
 
 ![Use 'Name' rather than 'Display name' to identify a sensitivity label](../media/labelname_scc.png)
 
-If you prefer to specify the label GUID, this value is not displayed in the admin center where you manage your labels. However, you can use the following Office 365 Security & Compliance Center PowerShell command to find this value:
+If you prefer to specify the label **GUID,** this value is *not* shown in the labeling admin center. Use the [Get-Label](/powershell/module/exchange/get-label) command to find this value, as follows:
 
 ```PowerShell
 Get-Label | Format-Table -Property DisplayName, Name, Guid
 ```
 
-#### Order of precedence - how conflicting settings are resolved
+For more information about labeling names and display names:
 
-Using one of the admin centers where you manage your sensitivity labels, you can configure the following label policy settings:
+- **Name** is the original name of the label and it is unique across all your labels. 
+
+    This value remains the same even if you've changed your label name later on. For sensitivity labels that were migrated from Azure Information Protection, you might see original label ID from the Azure portal.
+
+- **Display name** is the name currently displayed to users for the label, and does not need to be unique across all your labels. 
+
+    For example, you might have a display name of **All Employees** for a sublabel under the **Confidential** label, and another display name of  **All Employees** for a sublabel under the **Highly Confidential** label. These sublabels both display the same name, but are not the same label and have different settings.
+
+### Order of precedence - how conflicting settings are resolved
+
+You can use the admin centers to configure the following label policy settings:
 
 - **Apply this label by default to documents and emails**
 
@@ -138,52 +165,121 @@ When more than one label policy is configured for a user, each with potentially 
 Label policy advanced settings are applied using the same logic, using the last policy setting. 
 
 > [!NOTE]
-> An exception currently exists for the [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) advanced label policy setting, which enables you to set a different default label for Outlook.
+> An exception currently exists for the **[OutlookDefaultLabel](#set-a-different-default-label-for-outlook)** advanced label policy setting, which enables you to set a different default label for Outlook.
 > 
-> If you have conflicts for the OutlookDefaultLabel setting, the configuration is taken from the *first* policy setting, according to the policy order in the admin center.
+> If you have conflicts for the **OutlookDefaultLabel** setting, the configuration is taken from the *first* policy setting, according to the policy order in the admin center.
 
-#### Available advanced settings for label policies
+## Advanced setting references
 
-Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/exchange/policy-and-compliance/new-labelpolicy) and [Set-LabelPolicy](/powershell/module/exchange/policy-and-compliance/set-labelpolicy).
+The following sections the available advanced settings for label policies and labels:
+
+- [Advanced setting reference by feature](#advanced-setting-reference-by-feature)
+- [Label policy advanced setting reference](#label-policy-advanced-setting-reference)
+- [Label advanced setting reference](#label-advanced-setting-reference)
+### Advanced setting reference by feature
+
+The following sections list the advanced settings described on this page by product and feature integration:
+
+- [Outlook and emails settings](#outlook-and-emails-settings)
+- [File Explorer settings](#file-explorer-settings)
+- [Performance improvements settings](#performance-improvements-settings)
+- [Settings for integrations with other labeling solutions](#settings-for-integrations-with-other-labeling-solutions)
+- [AIP analytics settings](#aip-analytics-settings)
+- [General settings](#general-settings)
+
+#### Outlook and emails settings
+
+- [Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
+- [Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)
+- [Set a different default label for Outlook](#set-a-different-default-label-for-outlook) 
+- [For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
+- [Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)
+- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)
+- [Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+- [Customize Outlook popup messages](#customize-outlook-popup-messages)
+
+#### File Explorer settings
+
+- [Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)
+- [For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)  
+
+#### Performance improvements settings
+
+- [Limit CPU consumption](#limit-cpu-consumption)
+- [Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)
+- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)
+
+#### Settings for integrations with other labeling solutions
+
+- [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions) 
+- [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions) 
+
+#### AIP analytics settings
+
+- [Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)
+- [Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)
+
+#### General settings
+
+- [Change which file types to protect](#change-which-file-types-to-protect)  
+- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files)
+- [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) 
+- [Add "Report an Issue" for users](#add-report-an-issue-for-users)
+- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied)
+- [Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label)
+- [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)
+- [Specify a color for the label](#specify-a-color-for-the-label)
+- [Support for disconnected computers](#support-for-disconnected-computers)
+- [Change the local logging level](#change-the-local-logging-level)
+- [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes)
+- [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview)
+- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)
+- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)
+
+### Label policy advanced setting reference
+
+Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/exchange/policy-and-compliance/new-labelpolicy) and [Set-LabelPolicy](/powershell/module/exchange/policy-and-compliance/set-labelpolicy) to define the following settings:
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
-|AdditionalPPrefixExtensions|[Support for changing \<EXT>.PFILE to P\<EXT> by using this advanced property](#additionalpprefixextensions)
-|AttachmentAction|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
-|AttachmentActionTip|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
-|DisableMandatoryInOutlook|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
-|EnableAudit|[Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
-|EnableContainerSupport|[Enable removal of protection from PST, rar, 7zip, and MSG files](#enable-removal-of-protection-from-compressed-files)
-|EnableCustomPermissions|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
-|EnableCustomPermissionsForCustomProtectedFiles|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
-|EnableLabelByMailHeader|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
-|EnableLabelBySharePointProperties|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-|HideBarByDefault|[Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps)|
-|JustificationTextForUserText | [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels) |
-|LogMatchedContent|[Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
-|OutlookBlockTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookBlockUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookCollaborationRule| [Customize Outlook popup messages](#customize-outlook-popup-messages)|
-|OutlookDefaultLabel|[Set a different default label for Outlook](#set-a-different-default-label-for-outlook)|
-|OutlookJustifyTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookJustifyUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookRecommendationEnabled|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
-|OutlookOverrideUnlabeledCollaborationExtensions|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookSkipSmimeOnReadingPaneEnabled | [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)|
-|OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookWarnTrustedDomains|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|PFileSupportedExtensions|[Change which file types to protect](#change-which-file-types-to-protect)|
-|PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
-|RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
-|RemoveExternalMarkingFromCustomLayouts | [Remove external content marking from custom layouts in PowerPoint](#remove-external-content-marking-from-custom-layouts-in-powerpoint)|
-|ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
-|RunPolicyInBackground|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)
-|ScannerConcurrencyLevel|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
-|ScannerFSAttributesToSkip | [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes)
-|SharepointWebRequestTimeout| [Configure SharePoint timeouts](#configure-sharepoint-timeouts)|
-|SharepointFileWebRequestTimeout |[Configure SharePoint timeouts](#configure-sharepoint-timeouts)|
-|UseCopyAndPreserveNTFSOwner | [Preserve NTFS owners during labeling](#preserve-ntfs-owners-during-labeling-public-preview)
+|**AdditionalPPrefixExtensions**|[Support for changing \<EXT>.PFILE to P\<EXT> by using this advanced property](#additionalpprefixextensions)
+|**AttachmentAction**|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
+|**AttachmentActionTip**|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
+|**DisableMandatoryInOutlook**|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
+|**EnableAudit**|[Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
+|**EnableContainerSupport**|[Enable removal of protection from PST, rar, 7zip, and MSG files](#enable-removal-of-protection-from-compressed-files)
+|**EnableCustomPermissions**|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
+|**EnableCustomPermissionsForCustomProtectedFiles**|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
+|**EnableLabelByMailHeader**|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|**EnableLabelBySharePointProperties**|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
+|**HideBarByDefault**|[Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps)|
+|**JustificationTextForUserText** | [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels) |
+|**LogMatchedContent**|[Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
+|**OutlookBlockTrustedDomains**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|**OutlookBlockUntrustedCollaborationLabel**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|**OutlookCollaborationRule**| [Customize Outlook popup messages](#customize-outlook-popup-messages)|
+|**OutlookDefaultLabel**|[Set a different default label for Outlook](#set-a-different-default-label-for-outlook)|
+|**OutlookJustifyTrustedDomains**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|**OutlookJustifyUntrustedCollaborationLabel**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|**OutlookRecommendationEnabled**|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
+|**OutlookOverrideUnlabeledCollaborationExtensions**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|**OutlookSkipSmimeOnReadingPaneEnabled** | [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)|
+|**OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|**OutlookWarnTrustedDomains**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|**OutlookWarnUntrustedCollaborationLabel**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|**PFileSupportedExtensions**|[Change which file types to protect](#change-which-file-types-to-protect)|
+|**PostponeMandatoryBeforeSave**|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
+|**RemoveExternalContentMarkingInApp**|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
+|**RemoveExternalMarkingFromCustomLayouts** | [Remove external content marking from custom layouts in PowerPoint](#remove-external-content-marking-from-custom-layouts-in-powerpoint)|
+|**ReportAnIssueLink**|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
+|**RunPolicyInBackground**|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)
+|**ScannerConcurrencyLevel**|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
+|**ScannerFSAttributesToSkip** | [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes)
+|**SharepointWebRequestTimeout**| [Configure SharePoint timeouts](#configure-sharepoint-timeouts)|
+|**SharepointFileWebRequestTimeout** |[Configure SharePoint timeouts](#configure-sharepoint-timeouts)|
+|**UseCopyAndPreserveNTFSOwner** | [Preserve NTFS owners during labeling](#preserve-ntfs-owners-during-labeling-public-preview)
+
+#### Check label policy settings
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
 
@@ -191,18 +287,20 @@ Example PowerShell command to check your label policy settings in effect for a l
 (Get-LabelPolicy -Identity Global).settings
 ```
 
-#### Available advanced settings for labels
+### Label advanced setting reference
 
 Use the *AdvancedSettings* parameter with [New-Label](/powershell/module/exchange/policy-and-compliance/new-label) and [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label).
 
 |Setting|Scenario and instructions|
 |----------------|---------------|
-|color|[Specify a color for the label](#specify-a-color-for-the-label)|
-|customPropertiesByLabel|[Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied)|
-|DefaultSubLabelId|[Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label) 
-|labelByCustomProperties|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
-|SMimeEncrypt|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
-|SMimeSign|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
+|**color**|[Specify a color for the label](#specify-a-color-for-the-label)|
+|**customPropertiesByLabel**|[Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied)|
+|**DefaultSubLabelId**|[Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label) 
+|**labelByCustomProperties**|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|**SMimeEncrypt**|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
+|**SMimeSign**|[Configure a label to apply S/MIME protection in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
+
+#### Check label settings
 
 Example PowerShell command to check your label settings in effect for a label named "Public":
 
@@ -690,6 +788,14 @@ When you create and configure the following advanced client settings, users see 
 
 When these conditions are met, the user sees a pop-up message with one of the following actions:
 
+|Column1  |Column2  |
+|---------|---------|
+|Row1     |         |
+|Row2     |         |
+|Row3     |         |
+|Row4     |         |
+
+
 - **Warn**: The user can confirm and send, or cancel.
 
 - **Justify**: The user is prompted for justification (predefined options or free-form).  The user can then send or cancel the email. The justification text is written to the email x-header, so that it can be read by other systems. For example, data loss prevention (DLP) services.
@@ -703,7 +809,7 @@ See the video [Azure Information Protection Outlook Popup Configuration](https:/
 > [!TIP]
 > To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy),** also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.
 
-### To implement the warn, justify, or block pop-up messages for specific labels:
+### To implement the warn, justify, or block pop-up messages for specific labels
 
 For the selected policy, create one or more of the following advanced settings with the following keys. For the values, specify one or more labels by their GUIDs, each one separated by a comma.
 
@@ -782,7 +888,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains=
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
 
-### To implement the warn, justify, or block pop-up messages for emails or attachments that don't have a label:
+### To implement the warn, justify, or block pop-up messages for emails or attachments that don't have a label
 
 For the same label policy, create the following advanced client setting with one of the following values:
 
