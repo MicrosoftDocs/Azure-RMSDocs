@@ -31,7 +31,7 @@ ms.custom: user
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-If you've upgraded to [version 2.9.101.0](unifiedlabelingclient-version-release-history.md#version-291010-public-preview) of the AIP unified labeling client, any protected documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client.
+If you've upgraded to [version 2.9.101.0](unifiedlabelingclient-version-release-history.md#version-291010-public-preview) or later, any protected documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client.
 
 Registering a document for tracking enables administrators to track access details, including successful access events and denied attempts, as well as revoke access if needed.
 
@@ -43,7 +43,7 @@ Administrators can track access for protected documents via PowerShell using the
 
 Use the following cmdlets to find details for the document you want to track:
 
-1. Find the ContentID value for the document you want to track.
+1. Find the **ContentID** value for the document you want to track.
     
     Use the [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) to search for a document using the filename and/or the email address of the user who applied protection.
     
@@ -53,12 +53,12 @@ Use the following cmdlets to find details for the document you want to track:
     PS C:\>Get-AipServiceDocumentLog -ContentName "test.docx" -OwnerEmail “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
     ```
  
-    This command returns the ContentID for all matching, protected documents that are registered for tracking.
+    This command returns the **ContentID** for all matching, protected documents that are registered for tracking.
 
     > [!NOTE]
     > Protected documents are registered for tracking when they are first opened on a machine with the unified labeling client installed. If this command does not return the ContentID for your protected file, open it on a machine with the unified labeling client installed to register the document for tracking.
 
-1. Use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) cmdlet with your document's ContentID to return your tracking data.
+1. Use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) cmdlet with your document's **ContentID** to return your tracking data.
 
     For example:
     
