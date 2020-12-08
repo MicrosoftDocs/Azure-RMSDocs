@@ -37,9 +37,9 @@
     href: tutorial-migrating-to-ul.md
 - name: Concepts
   items:
-  - name: Azure Information Protection classification and protection
+  - name: AIP classification and protection
     href: aip-classification-and-protection.md
-  - name: Azure Information Protection rights management protection
+  - name: Azure Rights Management
     items:
     - name: Overview
       href: what-is-azure-rms.md
