@@ -138,7 +138,7 @@ The following fixes were delivered in version 2.9.101.0 of the [Azure Informatio
 - Support for [avoiding a timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) when scanning a SharePoint server.
 
 ### Known issues
-In this public preview version, applying labels with [DKE protection](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) is not supported by the scanner.
+In this public preview version, applying labels with [DKE protection](../plan-implement-tenant-key.md#double-key-encryption-dke) is not supported by the scanner.
 
 ## Version 2.8.85.0
 
