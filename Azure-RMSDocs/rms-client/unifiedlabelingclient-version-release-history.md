@@ -6,7 +6,7 @@ description: See the release information for the Azure Information Protection un
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/29/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -84,7 +84,7 @@ The following new features were released for the [unified labeling on-premises s
 
 - [PowerShell support for disconnected scanner servers](#powershell-support-for-disconnected-scanner-servers)
 - [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs)
-
+- [Added support for sensitive information types](#added-support-for-sensitive-information-types)
 ### PowerShell support for disconnected scanner servers
 The [Azure Information Protection on-premises scanner](../deploy-aip-scanner.md) now supports managing content scan jobs, for scanner servers that cannot connect to the internet, over PowerShell.
 
@@ -110,8 +110,22 @@ For more information, see [When the scanner server cannot have internet connecti
 
 Now you can add NFS repositories to your content scan jobs, in addition to SMB file shares and SharePoint repositories.
 
+To support scans on NFS shares, services for NFS must be deployed on the scanner machine:
+
+1. On your machine, navigate to the **Windows Features (Turn Windows features on or off)** settings dialog.
+
+1. Select the following items: 
+
+    - **Services for NFS** 
+        - **Administrative Tools**
+        - **Client for NFS**.
+
 For more information, see [Create a content scan job](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
+### Added support for sensitive information types
+We’ve added support for additional sensitive information types in Azure Information Protection, such as **Australia business number,** **Australia company number,** or **Austria identity card.** 
+
+For more information, see the [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in the Microsoft 365 documentation.
 ### Fixes and improvements
 
 The following fixes were delivered in version 2.9.101.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):
@@ -122,6 +136,9 @@ The following fixes were delivered in version 2.9.101.0 of the [Azure Informatio
 - Support for [SharePoint on-premises](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) paths that end in a slash (**/**)
 - Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
 - Support for [avoiding a timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) when scanning a SharePoint server.
+
+### Known issues
+In this public preview version, applying labels with [DKE protection](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) is not supported by the scanner.
 
 ## Version 2.8.85.0
 
