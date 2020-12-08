@@ -739,6 +739,12 @@ See the video [Azure Information Protection Outlook Popup Configuration](https:/
 
 For the selected policy, create one or more of the following advanced settings with the following keys. For the values, specify one or more labels by their GUIDs, each one separated by a comma.
 
+> [!NOTE]
+> The advanced settings in this section are for when a *specific* label is in use.
+> 
+> If you have advanced settings configured for *unlabeled* content, such as with the **[OutlookUnlabeledCollaborationAction](#to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label)** advanced setting, and want to customize your popup messages for unlabeled content, use a json file to define your advanced settings. For more information, see [Customize Outlook popup messages](#customize-outlook-popup-messages).
+> 
+
 Example value for multiple label GUIDs as a comma-separated string: 
 
 ```sh

@@ -3,10 +3,10 @@
 
 title: FAQs for Azure RMS - AIP
 description: Some frequently asked questions about the data protection service, Azure Rights Management (Azure RMS), from Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -189,6 +189,7 @@ Because Azure Information Protection supports sharing securely with anyone, you 
 ## How do we regain access to files that were protected by an employee who has now left the organization?
 Use the [super user feature](configure-super-users.md), which grants the Full Control usage rights to authorized users for all documents and emails that are protected by your tenant. Super users can always read this protected content, and if necessary, remove the protection or reprotect it for different users. This same feature lets authorized services index and inspect files, as needed.
 
+If your content is stored in SharePoint or OneDrive, admins can run the [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) cmdlet, to remove both the sensitivity label and the encryption. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
 ## When I test revocation in the document tracking site, I see a message that says people can still access the document for up to 30 days—is this time period configurable?
 
 Yes. This message reflects the [use license](configure-usage-rights.md#rights-management-use-license) for that specific file.
