@@ -29,14 +29,11 @@ landingContent:
             url: what-is-information-protection.md
           - text: Frequently asked questions
             url: faqs.md
+          - text: Requirements
+            url: requirements.md
 
   # Card
   - title: Get started
-    linkLists:
-     - linkListType: overview
-       links:
-          - text: Requirements
-            url: requirements.md
      - linkListType: quickstart
        links:
           - text: Deploy the unified labeling client
