@@ -131,7 +131,7 @@
       href: configure-usage-rights.md
     - name: Configuring super users for discovery services or data recovery
       href: configure-super-users.md
-    - name: Azure Information Protection unified labeling scanner
+    - name: Deploying the on-premises unified labeling scanner
       items:
         - name: Overview
           href: deploy-aip-scanner.md
@@ -175,36 +175,32 @@
     items:
     - name: Overview
       href: ./rms-client/use-client.md
-    - name: Azure Information Protection unified labeling client
+    - name: Unified labeling client admin guide
       items:
       - name: Overview
-        href: ./rms-client/aip-clientv2.md
-      - name: Admin guide
-        items:
-        - name: Overview
-          href: ./rms-client/clientv2-admin-guide.md
-        - name: Install the client for users
-          href: ./rms-client/clientv2-admin-guide-install.md
-        - name: Customizations
-          href: ./rms-client/clientv2-admin-guide-customizations.md
-        - name: Client files and usage logging
-          href: ./rms-client/clientv2-admin-guide-files-and-logging.md
-        - name: PowerShell commands
-          href: ./rms-client/clientv2-admin-guide-powershell.md
-      - name: User guide
-        items:
-        - name: Overview
-          href: ./rms-client/clientv2-user-guide.md
-        - name: Download and install the client
-          href: ./rms-client/install-unifiedlabelingclient-app.md
-        - name: Classify a file or email
-          href: ./rms-client/clientv2-classify.md
-        - name: Classify and protect a file or email
-          href: ./rms-client/clientv2-classify-protect.md
-        - name: Open files that have been protected
-          href: ./rms-client/clientv2-view-use-files.md
-        - name: Remove labels and protection
-          href: ./rms-client/clientv2-remove-label-protection.md
+        href: ./rms-client/clientv2-admin-guide.md
+      - name: Install the client for users
+        href: ./rms-client/clientv2-admin-guide-install.md
+      - name: Customizations
+        href: ./rms-client/clientv2-admin-guide-customizations.md
+      - name: Client files and usage logging
+        href: ./rms-client/clientv2-admin-guide-files-and-logging.md
+      - name: PowerShell commands
+        href: ./rms-client/clientv2-admin-guide-powershell.md
+    - name: Unified labeling client user guide
+      items:
+      - name: Overview
+        href: ./rms-client/clientv2-user-guide.md
+      - name: Download and install the client
+        href: ./rms-client/install-unifiedlabelingclient-app.md
+      - name: Classify a file or email
+        href: ./rms-client/clientv2-classify.md
+      - name: Classify and protect a file or email
+        href: ./rms-client/clientv2-classify-protect.md
+      - name: Open files that have been protected
+        href: ./rms-client/clientv2-view-use-files.md
+      - name: Remove labels and protection
+        href: ./rms-client/clientv2-remove-label-protection.md
     - name: Azure Information Protection apps for iOS and Android
       href: ./rms-client/mobile-app-faq.md
     - name: Protected PDF readers
