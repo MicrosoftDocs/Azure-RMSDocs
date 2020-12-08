@@ -43,7 +43,7 @@ The classic client also supports a document tracking site for users to track and
 
 For an enterprise installation and configuration of the client for Windows, see the following admin guides:
 
-- Unified labeling client: [Azure Information Protection unified labeling client administrator guide](./rms-client/clientv2-admin-guide.md)](./rms-client/client-admin-guide.md)
+- Unified labeling client: [Azure Information Protection unified labeling client administrator guide](./rms-client/clientv2-admin-guide.md)
 
 - Classic client: [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md)
 
