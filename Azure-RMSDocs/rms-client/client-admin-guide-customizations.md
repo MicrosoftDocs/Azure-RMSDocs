@@ -129,7 +129,7 @@ Additionally:
 
 ## Enforce protection-only mode when your organization has a mix of licenses
 
-If your organization does not have any licenses for Azure Information Protection, but does have licenses for Microsoft 365 that include the Azure Rights Management service for protecting data, the Azure Information Protection client for Windows automatically runs in [protection-only mode](client-protection-only-mode.md).
+If your organization does not have any licenses for Azure Information Protection, but does have licenses for Microsoft 365 that include the Azure Rights Management service for protecting data, the AIP classic client automatically runs in [protection-only mode](client-protection-only-mode.md).
 
 However, if your organization has a subscription for Azure Information Protection, by default all Windows computers can download the Azure Information Protection policy. The Azure Information Protection client does not do license checking and enforcement. 
 

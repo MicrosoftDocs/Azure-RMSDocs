@@ -38,7 +38,7 @@ The following sections list additional AIP and Azure AD requirements for specifi
 
 ## Computers running Office 2010
 
-In addition to an Azure AD account, computers running Microsoft 2010 require the Azure Information Protection client for Windows, to authenticate to Azure Information Protection, and its data protection service, Azure Rights Management. 
+In addition to an Azure AD account, computers running Microsoft 2010 require the Azure Information Protection client for Windows to authenticate to Azure Information Protection, and its data protection service, Azure Rights Management. 
 
 If your user accounts are federated (for example, you use AD FS), these computers must use Windows-Integrated Authentication. Forms-based authentication in this scenario fails to authenticate users for Azure Information Protection.
 

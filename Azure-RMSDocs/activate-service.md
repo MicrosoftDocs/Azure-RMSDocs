@@ -34,7 +34,7 @@ ms.custom: admin
 > [!NOTE]
 > This configuration information is for administrators who are responsible for a service that applies to all users in an organization. If you are looking for user help and information to use the Rights Management functionality for a specific application or how to open a file or email that is rights-protected, use the help and guidance that accompanies your application.
 >
-> For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the Azure Information Protection client for Windows, see the [Azure Information Protection client user guide](./rms-client/client-user-guide.md).
+> For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the Azure Information Protection client for Windows, see the [Azure Information Protection client user guide](./rms-client/clientv2-user-guide.md).
 >
 > For technical support and other questions about the service, see the [Support options and community resources](information-support.md#support-options-and-community-resources) information.
 
