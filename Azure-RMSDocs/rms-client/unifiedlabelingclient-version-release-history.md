@@ -6,7 +6,7 @@ description: Find out what's new for the Azure Information Protection (AIP) unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -110,6 +110,16 @@ For more information, see [When the scanner server cannot have internet connecti
 
 Now you can add NFS repositories to your content scan jobs, in addition to SMB file shares and SharePoint repositories.
 
+To support scans on NFS shares, services for NFS must be deployed on the scanner machine:
+
+1. On your machine, navigate to the **Windows Features (Turn Windows features on or off)** settings dialog.
+
+1. Select the following items: 
+
+    - **Services for NFS** 
+        - **Administrative Tools**
+        - **Client for NFS**.
+
 For more information, see [Create a content scan job](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
 ### Added support for sensitive information types
@@ -126,6 +136,9 @@ The following fixes were delivered in version 2.9.101.0 of the [Azure Informatio
 - Support for [SharePoint on-premises](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) paths that end in a slash (**/**)
 - Increased SharePoint scanning [speed](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
 - Support for [avoiding a timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) when scanning a SharePoint server.
+
+### Known issues
+In this public preview version, applying labels with [DKE protection](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) is not supported by the scanner.
 
 ## Version 2.8.85.0
 

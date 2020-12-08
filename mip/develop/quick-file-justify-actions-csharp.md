@@ -1,6 +1,6 @@
 ---
 title: How to - Downgrade/Remove a label that needs a justification (C#)
-description: This article will help you understand the scenario of how to downgrade or remove a label needing justification.
+description: This article will help you understand the scenario of how to downgrade or remove a label needing justification (C#).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart

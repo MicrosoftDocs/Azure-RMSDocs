@@ -126,7 +126,14 @@ A user wants to email some information to specific people in the Marketing depar
 
 When Exchange Online uses the new capabilities for Office 365 Message Encryption, a new email option becomes available: **Encrypt-Only**.
 
-This option is available to tenants who use Exchange Online and can be selected in Outlook on the web, as another rights protection option for a mail flow rule, as an Office 365 DLP action, and from Outlook (minimum version of [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) for Microsoft 365 Apps for Enterprise, and minimum version of 1805 when you have [Microsoft 365 apps that support Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). For more information about the Encrypt-Only option, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
+This option is available to tenants who use Exchange Online and can be selected as follows:
+
+- **In Outlook on the web**
+- **As another rights protection option** for a mail flow rule
+- **As an Office 365 DLP action**
+- **From Outlook,** for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), when you have [Microsoft 365 apps that support Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
+
+For more information about the Encrypt-Only option, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
 
 When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except **Save As, Export** and **Full Control**. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy from the email, print it, and forward it. 
 

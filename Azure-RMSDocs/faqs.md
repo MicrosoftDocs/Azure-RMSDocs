@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/18/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -191,12 +191,9 @@ Additionally, note the following when managing administrative tasks and roles:
 |---------|---------|
 |**Supported account types**     | Microsoft accounts are not supported for delegated administration of Azure Information Protection, even if these accounts are assigned to one of the administrative roles listed.         |
 |**Onboarding controls**     |If you have configured [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this configuration does not affect the ability to administer Azure Information Protection, except the RMS connector. <br /><br />For example, if you have configured onboarding controls so that the ability to protect content is restricted to the *IT department* group, the account used to install and configure the RMS connector must be a member of that group.          |
-|**Removing protection**     |  Administrators cannot automatically remove protection from documents or emails that were protected by Azure Information Protection. <br /><br />Only users who are assigned as super users can do remove protection, and only when the super user feature is enabled. <br /><br />Any user with administrative permissions to Azure Information Protection can enable the super user feature, and assign users as super users, including their own account.<br /><br />These actions are recorded in an administrator log. <br /><br />For more information, see the security best practices section in [Configuring super users for Azure Information Protection and discovery services or data recovery](configure-super-users.md). 
-       |
-|**Migrating to the unified labeling store**      |  If you are migrating your Azure Information Protection labels to the unified labeling store, be sure to read the following section from the label migration documentation: <br />[Administrative roles that support the unified labeling platform](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform).
-       |
+|**Removing protection**     |  Administrators cannot automatically remove protection from documents or emails that were protected by Azure Information Protection. <br /><br />Only users who are assigned as super users can do remove protection, and only when the super user feature is enabled. <br /><br />Any user with administrative permissions to Azure Information Protection can enable the super user feature, and assign users as super users, including their own account.<br /><br />These actions are recorded in an administrator log. <br /><br />For more information, see the security best practices section in [Configuring super users for Azure Information Protection and discovery services or data recovery](configure-super-users.md). <br><br>**Tip:** If your content is stored in SharePoint or OneDrive, admins can run the [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) cmdlet to remove both the sensitivity label and the encryption. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document). |
+|**Migrating to the unified labeling store**      |  If you are migrating your Azure Information Protection labels to the unified labeling store, be sure to read the following section from the label migration documentation: <br />[Administrative roles that support the unified labeling platform](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform). |
 | | |
-
 ### Azure Information Protection administrator
 
 This Azure Active Directory administrator role lets an administrator configure Azure Information Protection but not other services. 

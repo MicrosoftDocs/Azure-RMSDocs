@@ -41,9 +41,9 @@ If you have the AIP classic client installed, you also have a document tracking 
 
 ## The Azure Information Protection client for Windows: Installation and configuration
 
-For an enterprise installation and configuration of the client for Windows, see the [Azure Information Protection unified labeling client administrator guide](./rms-client/clientv2-admin-guide.md)].
+For an enterprise installation and configuration of the client for Windows, see the [Azure Information Protection unified labeling client administrator guide](./rms-client/clientv2-admin-guide.md).
 
-However, if you want to quickly install and test these clients for a single computer, see [Download and install the Azure Information Protection unified labeling client](./rms-client/install-unifiedlabelingclient-app.md).
+If you want to quickly install and test these clients for a single computer, see [Download and install the Azure Information Protection unified labeling client](./rms-client/install-unifiedlabelingclient-app.md).
 
 **Classic client only**: If you have the classic client installed, use these links instead:
 
