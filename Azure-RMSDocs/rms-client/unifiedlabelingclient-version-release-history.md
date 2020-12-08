@@ -93,7 +93,7 @@ This version includes the following new features, fixes, and enhancements for th
 
 - **Fixes and improvements:**
 
-    - [Fixes and improvements for the unifed labeling scannner](#fixes-and-improvements-for-the-unifed-labeling-scannner)
+    - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client)
 
 - **Known issues:** [Known issues in this version](#known-issues)
@@ -177,7 +177,7 @@ The following fixes were delivered in version 2.9.101.0 of the [Azure Informatio
 
 - Support for the [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) and [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) settings for contacts in distribution lists.
 
-- Issues fixed for cache issues after [updating a label policy in Microsoft 365](microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)
+- Issues fixed for cache issues after [updating a label policy in Microsoft 365](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)
 
 <!--
 **TBD 7765917 AIPv2 : MSIPC bootstrapped without UserId which prevents token cache**

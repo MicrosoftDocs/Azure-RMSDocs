@@ -6,7 +6,7 @@ description: Describes how administrators can track document access for protecte
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/18/2020
+ms.date: 12/08/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.custom: user
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-If you've upgraded to [version 2.9.101.0](unifiedlabelingclient-version-release-history.md#version-2.9.101.0-public-preview) of the AIP unified labeling client, any protected documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client.
+If you've upgraded to [version 2.9.101.0](unifiedlabelingclient-version-release-history.md#version-291010-public-preview) of the AIP unified labeling client, any protected documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client.
 
 Registering a document for tracking enables administrators to track access details, including successful access events and denied attempts, as well as revoke access if needed.
 
