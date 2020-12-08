@@ -89,9 +89,9 @@
       items:
       - name: Overview
         href: migrate-from-ad-rms-to-azure-rms.md
-      - name: Preparation
+      - name: Phase 1 - Preparation
         href: migrate-from-ad-rms-phase1.md
-      - name: Server-side configuration
+      - name: Phase 2 - Server-side configuration
         items:
         - name: Overview
           href: migrate-from-ad-rms-phase2.md
@@ -101,12 +101,12 @@
           href: migrate-hsmkey-to-hsmkey.md
         - name: Software key to HSM key
           href: migrate-softwarekey-to-hsmkey.md
-        - name: Client-side configuration
-          href: migrate-from-ad-rms-phase3.md
-        - name: Supporting services configuration
-          href: migrate-from-ad-rms-phase4.md
-        - name: Post migration tasks
-          href: migrate-from-ad-rms-phase5.md
+      - name: Phase 3 - Client-side configuration
+        href: migrate-from-ad-rms-phase3.md
+      - name: PHase 4 - Supporting services configuration
+        href: migrate-from-ad-rms-phase4.md
+      - name: Post migration tasks
+        href: migrate-from-ad-rms-phase5.md
   - name: Configure & use the service
     items:
     - name: Activating protection
