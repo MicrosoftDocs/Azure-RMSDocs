@@ -22,7 +22,6 @@
   - name: AIP is also known as ...
     href: aka.md
 - name: Quickstarts
-  expanded: true
   items:
   - name: Deploying the client
     href: quickstart-deploy-client.md
