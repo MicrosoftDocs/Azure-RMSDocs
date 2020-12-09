@@ -220,7 +220,24 @@ For more information about support for dynamic content markings and per app cont
 
 ### Detailed comparisons for the Azure Information Protection clients
 
-When the Azure Information Protection classic client and the Azure Information Protection unified labeling client both support the same feature, use the following table to help identify some functional differences between the two clients.
+When the Azure Information Protection classic client and the Azure Information Protection unified labeling client both support the same feature, use the following lists to help identify some functional differences between the two clients:
+
+- [Setup](#setup)
+- [Label selection and display when applied in Office apps](#label-selection-and-display-when-applied-in-office-apps)
+- [Manage the Information Protection bar in Office apps](#manage-the-information-protection-bar-in-office-apps)
+- [Label color](#label-color)
+- [Labels support different languages](#labels-support-different-languages)
+- [Policy update](#policy-update)
+- [Supported formats for PDF](#supported-formats-for-pdf)
+- [Generically protected files (.pfile) opened with the viewer](#generically-protected-files-pfile-opened-with-the-viewer)
+- [Supported cmdlets](#supported-cmdlets)
+- [Justification prompts (if configured) per action in Office](#justification-prompts-if-configured-per-action-in-office)
+- [Remove applied label actions](#remove-applied-label-actions)
+- [Automatic and recommended labels](#automatic-and-recommended-labels)
+- [Order support for sublabels on attachments](#order-support-for-sublabels-on-attachments)
+- [Change the default protection behavior for file types](#change-the-default-protection-behavior-for-file-types)
+- [Automatic rescans](#automatic-rescans)
+- [Network discovery](#network-discovery)
 
 For a detailed comparison of behavior differences for specific protection settings, see [Comparing the behavior of protection settings for a label](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
@@ -240,19 +257,19 @@ For a detailed comparison of behavior differences for specific protection settin
 
 - **Unified labeling client**:
 
-    - Users: An option to show or hide the bar from the **Sensitivity** button on the ribbon. 
+    - **Users:** An option to show or hide the bar from the **Sensitivity** button on the ribbon. 
 
         When a user selects to hide the bar, the bar is hidden in that app and also in newly opened apps.
 
-    - Admins: PowerShell setting to manage the bar. 
+    - **Admins:** PowerShell setting to manage the bar. 
 
 - **Classic client**: 
 
-    - Users: An option to show or hide the bar from the **Protect** button on the ribbon. 
+    - **Users:** An option to show or hide the bar from the **Protect** button on the ribbon. 
     
         When a user selects to hide the bar, by default, the bar is hidden in that app but is still automatically displayed in newly opened apps.
 
-    - Admins: Policy settings to automatically show or hide the bar when an app first opens, and control whether the bar automatically remains hidden for newly opened apps after a user selects to hide the bar.
+    - **Admins:** Policy settings to automatically show or hide the bar when an app first opens, and control whether the bar automatically remains hidden for newly opened apps after a user selects to hide the bar.
 
 #### Label color
 
