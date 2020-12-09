@@ -248,27 +248,31 @@ To confirm whether the clients and services you use support unified labeling, re
 
 ##### Clients that currently support unified labeling include:
 
-- The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md). For a comparison of this client with the Azure Information Protection classic client, see [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers).
+- **The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md).** 
 
-- Apps from Office that are in different stages of availability. For more information, see [Support for sensitivity label capabilities in apps](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) from the Microsoft 365 Compliance documentation.
+    For a comparison of this client with the Azure Information Protection classic client, see [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers).
+
+- **Apps from Office that are in different stages of availability.** 
+
+    For more information, see [Support for sensitivity label capabilities in apps](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) from the Microsoft 365 Compliance documentation.
     
-- Apps from software vendors and developers that use the [Microsoft Information Protection SDK](/information-protection/develop/overview).
+- **Apps from software vendors and developers** that use the [Microsoft Information Protection SDK](/information-protection/develop/overview).
 
 ##### Services that currently support unified labeling include:
 
-- [Power BI](/power-bi/admin/service-security-data-protection-overview)
+- **[Power BI](/power-bi/admin/service-security-data-protection-overview)**
 
-- Office Online and Outlook on the web
+- **Office Online and Outlook on the web**
 
     For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
-- Microsoft SharePoint, OneDrive for work or school, OneDrive for home, Teams, and Microsoft 365 groups
+- **Microsoft SharePoint, OneDrive for work or school, OneDrive for home, Teams, and Microsoft 365 groups**
     
     For more information, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/microsoft-365/compliance/sensitivity-labels-teams-groups-sites).
 
-- Microsoft Defender Advanced Threat Protection
+- **Microsoft Defender Advanced Threat Protection**
 
-- Microsoft Cloud App Security
+- **Microsoft Cloud App Security**
     
     This service supports labels both before the migration to the unified labeling store, and after the migration, using the following logic:
     
@@ -276,16 +280,27 @@ To confirm whether the clients and services you use support unified labeling, re
     
     - If the admin centers don't have sensitivity labels, Azure Information Protection labels are retrieved from the Azure portal.
 
-- Services from software vendors and developers that use the [Microsoft Information Protection SDK](/information-protection/develop/overview).
+- **Services from software vendors and developers** that use the [Microsoft Information Protection SDK](/information-protection/develop/overview).
 
 ## Next steps
 
-For additional guidance and tips from our Customer Experience team, see the following resources:
+**Guidance and tips from our Customer Experience team**:
 
 - Blog post: [Understanding Unified Labeling Migration](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)
 
 - Webinar: [Unified labeling recording, deck, and FAQs](https://github.com/nihendle/MIP-Comp/tree/master/MIP/Webinars/Unified%20Labeling%20Migration)
 
-For more information about your migrated labels that can now be configured and published in one of the labeling admin centers, see [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels) and [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).
 
-If you haven't already done so, install the Azure Information Protection unified labeling client. For release information, an admin guide, and user guide, see [Azure Information Protection unified labeling client for Windows](./rms-client/aip-clientv2.md).
+**About sensitivity labels**:
+- [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels)
+- [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).
+
+**Deploy the AIP unified labeling client**:
+
+If you haven't already done so, install the Azure Information Protection unified labeling client. 
+
+For more information, see:
+
+- [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md)
+- [Azure Information Protection unified labeling client administrator guide](rms-client/clientv2-admin-guide.md)
+- [Azure Information Protection unified labeling user guide](rms-client/clientv2-user-guide.md)

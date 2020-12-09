@@ -234,7 +234,7 @@ Download the unified labeling client installation from the [Microsoft Azure Info
 
 For more information, see:
 
-- [AIP unified labeling client](./rms-client/aip-clientv2.md)
+- [The client side of Azure Information Protection](rms-client/use-client.md)
 - [Unified labeling client administrator guide](./rms-client/clientv2-admin-guide.md)
 - [Unified labeling client user guide](./rms-client/clientv2-user-guide.md)
 
