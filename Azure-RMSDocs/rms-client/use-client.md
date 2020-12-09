@@ -238,14 +238,21 @@ For a detailed comparison of behavior differences for specific protection settin
 
 #### Manage the Information Protection bar in Office apps
 
-- **Unified labeling client**: 
+- **Unified labeling client**:
 
-    **For users:** <br />- Option to show or hide the bar from the **Protect** button on the ribbon<br />- When a user selects to hide the bar, by default, the bar is hidden in that app, but continues to automatically display in newly opened apps <br /> **For admins:** <br />- Policy settings to automatically show or hide the bar when an app first opens, and control whether the bar automatically remains hidden for newly opened apps after a user selects to hide the bar
+    - Users: An option to show or hide the bar from the **Sensitivity** button on the ribbon. 
+
+        When a user selects to hide the bar, the bar is hidden in that app and also in newly opened apps.
+
+    - Admins: PowerShell setting to manage the bar. 
 
 - **Classic client**: 
 
-    **For users:** <br />- Option to show or hide the bar from the **Sensitivity** button on the ribbon<br />- When a user selects to hide the bar, the bar is hidden in that app and also in newly opened apps <br />**For admins:** <br />- PowerShell setting to manage the bar
+    - Users: An option to show or hide the bar from the **Protect** button on the ribbon. 
+    
+        When a user selects to hide the bar, by default, the bar is hidden in that app but is still automatically displayed in newly opened apps.
 
+    - Admins: Policy settings to automatically show or hide the bar when an app first opens, and control whether the bar automatically remains hidden for newly opened apps after a user selects to hide the bar.
 
 #### Label color
 
@@ -264,16 +271,46 @@ For a detailed comparison of behavior differences for specific protection settin
 
 #### Policy update
 
-- **Unified labeling client**: When an Office app opens <br /><br /> When you right-click to classify and protect a file or folder <br /><br />When you run the PowerShell cmdlets for labeling and protection<br /><br />Every 4 hours <br /><br />For the scanner: Every 4 hours
+Policies are updated as follows in the AIP clients:
 
-- **Classic client**: When an Office app opens <br /><br /> When you right-click to classify and protect a file or folder <br /><br />When you run the PowerShell cmdlets for labeling and protection<br /><br />Every 24 hours <br /><br />For the scanner: Every hour and when the service starts and the policy is older than one hour
+- **Unified labeling client**: 
+
+    - When an Office app opens
+    - When you right-click to classify and protect a file or folder 
+    - When you run the PowerShell cmdlets for labeling and protection
+    - Every 4 hours 
+    - For the scanner: Every 4 hours
+
+- **Classic client**: 
+
+    - When an Office app opens 
+    - When you right-click to classify and protect a file or folder 
+    - When you run the PowerShell cmdlets for labeling and protection
+    - Every 24 hours 
+    - For the scanner: Every hour and when the service starts and the policy is older than one hour
 
 
 #### Supported formats for PDF
 
-- **Unified labeling client**: Protection: <br /><br /> - ISO standard for PDF encryption <br /><br /> <br /><br /> Consumption: <br /><br /> - ISO standard for PDF encryption <br /><br />- .ppdf<br /><br />- SharePoint IRM protection
+- **Unified labeling client**:  
+    - Protection:
+        - ISO standard for PDF encryption
 
-- **Classic client**: Protection: <br /><br /> - ISO standard for PDF encryption (default) <br /><br /> - .ppdf <br /><br /> Consumption: <br /><br /> - ISO standard for PDF encryption <br /><br />- .ppdf<br /><br />- SharePoint IRM protection
+    - Consumption: 
+        - ISO standard for PDF encryption
+        - .ppdf
+        - SharePoint IRM protection 
+
+- **Classic client**: 
+    - Protection:
+        - ISO standard for PDF encryption (default)
+        - .ppdf 
+    
+    - Consumption:
+        - ISO standard for PDF encryption 
+        - .ppdf
+        - SharePoint IRM protection
+
 
 #### Generically protected files (.pfile) opened with the viewer
 
@@ -283,29 +320,66 @@ For a detailed comparison of behavior differences for specific protection settin
 
 #### Supported cmdlets
 
-- **Unified labeling client**: Cmdlets for labeling:<br /><br /> Set-AIPFileClassification and Set-AIPFileLabel don't support the *Owner* parameter <br /><br /> In addition, there is a single comment of "No label to apply" for all scenarios where a label isn't applied <br /><br /> Set-AIPFileClassification supports the *WhatIf* parameter, so it can be run in discovery mode <br /><br /> Set-AIPFileLabel doesn't support the *EnableTracking* parameter <br /><br /> Get-AIPFileStatus doesn't return label information from other tenants and doesn't display the *RMSIssuedTime* parameter<br /><br />In addition, the *LabelingMethod* parameter for Get-AIPFileStatus displays **Privileged** or **Standard** instead of **Manual** or **Automatic**. For more information, see the [online documentation](/powershell/module/azureinformationprotection/get-aipfilestatus).
+- **Unified labeling client**: Cmdlets for labeling:
 
-- **Classic client**: Cmdlets for labeling and cmdlets for protection-only
+    - [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) and [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) don't support the **Owner** parameter 
+    
+        In addition, there is a single comment of "No label to apply" for all scenarios where a label isn't applied.
+    - [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) supports the **WhatIf** parameter, so it can be run in discovery mode 
+    - [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) doesn't support the **EnableTracking** parameter 
+    - [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) doesn't return label information from other tenants and doesn't display the **RMSIssuedTime** parameter
+    
+        In addition, the *LabelingMethod* parameter for [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) displays **Privileged** or **Standard** instead of **Manual** or **Automatic**. 
+
+- **Classic client**: 
+
+    - Cmdlets for labeling 
+    - Cmdlets for protection-only
 
 
 #### Justification prompts (if configured) per action in Office
 
-- **Unified labeling client**: Frequency: Per session <br /><br /> Lowering the sensitivity level<br /><br /> Removing a label
+- **Unified labeling client**: 
 
-- **Classic client**:  Frequency: Per file <br /><br /> Lowering the sensitivity level <br /><br /> Removing a label<br /><br /> Removing protection 
+    - Frequency: Per session
+    - Lowering the sensitivity level
+    - Removing a label
+
+- **Classic client**:  
+
+    - Frequency: Per file
+    - Lowering the sensitivity level 
+    - Removing a label
+    - Removing protection 
 
 #### Remove applied label actions
 
-- **Unified labeling client**:  User isn't prompted to confirm<br /><br /> Default label or automatic label (if configured) is automatically applied next time the Office app opens the file
+- **Unified labeling client**:  Users are not prompted to confirm. 
 
-- **Classic client**: User is prompted to confirm <br /><br />Default label or automatic label (if configured) isn't automatically applied next time the Office app opens the file  <br /><br />
+    The default label or an automatic label (if configured) is automatically applied next time the Office app opens the file.
+
+- **Classic client**: Users are prompted to confirm.
+
+    The default label or an automatic label (if configured) is not automatically applied next time the Office app opens the file.
 
 
 #### Automatic and recommended labels
 
-- **Unified labeling client**: Configured in the admin centers with built-in sensitive information types and [custom information types](/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Configuration options include:  <br /><br />- Unique count only <br /><br />- Minimum and maximum count <br /><br />- AND and OR support with information types <br /><br />- Keyword dictionary<br /><br />- Customizable confidence level and character proximity
+- **Unified labeling client**: Configured in the admin centers with built-in sensitive information types and [custom information types](/microsoft-365/compliance/create-a-custom-sensitive-information-type).
 
-- **Classic client**: Configured as [label conditions](../configure-policy-classification.md) in the Azure portal with built-in information types and custom conditions that use phrases or regular expressions <br /><br />Configuration options include: <br /><br />- Unique / Not unique count <br /><br /> - Minimum count
+    Configuration options include:
+
+    - Unique count only
+    - Minimum and maximum count
+    - AND and OR support with information types 
+    - Keyword dictionary
+    - Customizable confidence level and character proximity
+
+- **Classic client**: Configured as [label conditions](../configure-policy-classification.md) in the Azure portal with built-in information types and custom conditions that use phrases or regular expressions.
+
+    Configuration options include: 
+    - Unique / Not unique count 
+    - Minimum count
 
 
 #### Order support for sublabels on attachments
