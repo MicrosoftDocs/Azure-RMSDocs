@@ -103,9 +103,9 @@
           href: migrate-softwarekey-to-hsmkey.md
       - name: Phase 3 - Client-side configuration
         href: migrate-from-ad-rms-phase3.md
-      - name: PHase 4 - Supporting services configuration
+      - name: Phase 4 - Supporting services configuration
         href: migrate-from-ad-rms-phase4.md
-      - name: Post migration tasks
+      - name: Phase 5 - Post migration tasks
         href: migrate-from-ad-rms-phase5.md
   - name: Configure & use the service
     items:
