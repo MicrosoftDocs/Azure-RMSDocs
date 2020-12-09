@@ -412,7 +412,7 @@ To use this advanced property, you'll need to find the shape name in the Word do
 
 Avoid removing shapes that contain the text that you wish to ignore, by defining the name of all shapes to remove and  avoid checking the text in all shapes, which is a resource-intensive process.
 
-If you do not specify Word shapes in this additional advanced property setting, and Word is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
+If you do not specify Word shapes in this additional advanced property setting, and Word is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) value. 
 
 To find the name of the shape that you're using and wish to exclude:
 
@@ -462,7 +462,7 @@ Example PowerShell command, where your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
 ```
 
-You then need at least one more advanced client setting, **ExternalContentMarkingToRemove**, to specify the contents of the header or footer, and how to remove or replace them.
+You then need at least one more advanced client setting, [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove), to specify the contents of the header or footer, and how to remove or replace them.
 
 ### How to configure ExternalContentMarkingToRemove
 
@@ -530,9 +530,9 @@ To avoid removing shapes that contain the text that you have specified but are n
 
 We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process. 
 
-- If you do not specify this additional advanced client setting, and PowerPoint is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
+- If you do not specify this additional advanced client setting, and PowerPoint is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) value. 
 
-- If this value is specified, only shapes that meet the shape name criteria and also have text that matches the string provided with **ExternalContentMarkingToRemove** will be removed.
+- If this value is specified, only shapes that meet the shape name criteria and also have text that matches the string provided with [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) will be removed.
 
 For example:
 
@@ -563,6 +563,9 @@ For example:
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
 ```
 
+> [!NOTE]
+> If you are working with custom layouts in PowerPoint, also configure the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) advanced setting to specify how to handle the removal.
+>
 ##### Find the name of the shape that you're using as a header or footer
 
 1. In PowerPoint, display the **Selection** pane: **Format** tab > **Arrange** group > **Selection Pane**.
