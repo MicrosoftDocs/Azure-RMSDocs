@@ -317,23 +317,16 @@ For a detailed comparison of behavior differences for specific protection settin
 
 #### Change the default protection behavior for file types
 
-- **Unified labeling client**: 
+- **Unified labeling client**: You can use [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) to change which file types get protected
 
-- **Classic client**: 
-
-|Functionality |Classic client|Unified labeling client|
-|--------------|-----------------------------------|-----------------------------------------------------------|
-|**Change the default protection behavior for file types** | You can use [registry edits](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) to override the defaults of native and generic protection | You can use [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) to change which file types get protected|
+- **Classic client**: You can use [registry edits](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) to override the defaults of native and generic protection 
 
 #### Automatic rescans
 
-- **Unified labeling client**: 
+- **Unified labeling client**: Starting in version [2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), administrators can choose to skip a full rescan after making changes to policy or content scan job settings.
 
-- **Classic client**: 
+- **Classic client**: Full rescans are automatically run every time the scanner detects a change in policy or labeling settings
 
-|Functionality |Classic client|Unified labeling client|
-|--------------|-----------------------------------|-----------------------------------------------------------|
-|**Automatic rescans** | Full rescans are automatically run every time the scanner detects a change in policy or labeling settings | Starting in version [2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), administrators can choose to skip a full rescan after making changes to policy or content scan job settings. |
 
 #### Network discovery
 
