@@ -36,7 +36,7 @@ In this quickstart, you'll create a new Azure Information Protection label that 
 
 This configuration uses a scoped policy.
 
-**Time required:** You can finish this configuration in less than 10 minutes.
+**Time required**: You can finish this configuration in less than 10 minutes.
 
 ## Prerequisites
 
@@ -104,9 +104,9 @@ Your new label is now published just to the members of the group that you specif
 
 To test this label, you need a minimum of two computers because the Azure Information Protection client does not support multiple users on the same computer:
 
-- **On your first computer,** sign in as a member of the Sales Team group. Open Word and confirm that you can see the new label. If Word is already open, restart it to force a policy refresh.
+- **On your first computer**, sign in as a member of the Sales Team group. Open Word and confirm that you can see the new label. If Word is already open, restart it to force a policy refresh.
 
-- **On your second computer,** sign in as a user who *isn't* a member of the Sales Team group. Open Word and confirm that you can't see the new label. As before, if Word is already open, restart it.
+- **On your second computer**, sign in as a user who *isn't* a member of the Sales Team group. Open Word and confirm that you can't see the new label. As before, if Word is already open, restart it.
 
 ## Clean up resources
 

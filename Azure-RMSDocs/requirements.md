@@ -179,10 +179,10 @@ Azure Information Protection has the following additional requirements:
 
     To support **Proxy.pac** files when using a proxy to acquire a token, add the following new registry key:
 
-    - **Path:** `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
-    - **Key:** `UseDefaultCredentialsInProxy`
-    - **Type:** `DWORD`
-    - **Value:** `1`
+    - **Path**: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
+    - **Key**: `UseDefaultCredentialsInProxy`
+    - **Type**: `DWORD`
+    - **Value**: `1`
     
 - **TLS client-to-service connections**. Do not terminate any TLS client-to-service connections, for example to perform packet-level inspection, to the **aadrm.com** URL. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
      

@@ -115,7 +115,7 @@ For the [first scan cycle](#run-a-discovery-cycle-and-view-reports-for-the-scann
 
 Inspecting all files again is typically useful when you want the reports to include all files, when you have changes that you want to apply across all files, and when the scanner runs in discovery mode.
 
-**To manually run a full rescan:**
+**To manually run a full rescan**:
 
 1. Navigate to the **Azure Information Protection - Content scan jobs** pane in the Azure portal.
 
@@ -139,7 +139,7 @@ If you've also changed protection settings for your labels, wait an extra 15 min
 > [!IMPORTANT]
 > If you've upgraded to version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) or later, AIP skips the full rescan for updated settings to ensure consistent performance. If you've upgraded, make sure to [run a full rescan manually](#rescanning-files) as needed. 
 >
-> For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On,** make sure to run a full rescan to apply your labels across your content.
+> For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
 > 
 
 ## Troubleshooting a stopped scan

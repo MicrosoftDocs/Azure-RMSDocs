@@ -721,7 +721,7 @@ High-level steps:
 
 1. Confirm that the token is now stored in the **%localappdata%\Microsoft\MSIP** folder for the service account profile. This value is protected by the service account.
 
-2. Delete the PowerShell script that contains the token value (for example, **Aipauthentication.ps1).**
+2. Delete the PowerShell script that contains the token value (for example, **Aipauthentication.ps1)**.
 
     Optionally, delete the task. If your token expires, you must repeat this process, in which case it might be more convenient to leave the configured task so that it's ready to rerun when you copy over the new PowerShell script with the new token value.
 

@@ -33,7 +33,7 @@ ms.subservice: aiplabels
 
 In this quickstart, you'll enable SharePoint to allow scanning, and also install and configure the Azure Information Protection scanner to find any sensitive data you have stored in an on-premises data store.
 
-**Time required:** You can finish this configuration in less than 15 minutes.
+**Time required**: You can finish this configuration in less than 15 minutes.
 
 ## Prerequisites
 
@@ -155,7 +155,7 @@ You're now ready to install the scanner with the scanner profile that you've cre
 >
 ## See detailed results
 
-Using File Explorer, locate the scanner reports in **%*localappdata*%\Microsoft\MSIP\Scanner\Reports.** Open the detailed report file that has a **.csv** file format.
+Using File Explorer, locate the scanner reports in **%*localappdata*%\Microsoft\MSIP\Scanner\Reports**. Open the detailed report file that has a **.csv** file format.
 
 In Excel:
 
@@ -201,7 +201,7 @@ This command doesn't remove the following items and you must manually remove the
 
 - The SQL Server database that was created by running the Install-AIPScanner cmdlet when the Azure Information Protection scanner was installed: **AIPScanner_\<profile>**
 
-- The scanner reports located in **%*localappdata*%\Microsoft\MSIP\Scanner\Reports.**
+- The scanner reports located in **%*localappdata*%\Microsoft\MSIP\Scanner\Reports**.
 
 - The **Log on as a service** user right assignment that your domain account was granted for your local computer.
 

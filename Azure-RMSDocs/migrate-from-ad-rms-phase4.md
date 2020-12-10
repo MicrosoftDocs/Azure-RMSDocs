@@ -156,15 +156,15 @@ Do not start step 5 yet from the connector instructions.
 
 For all Exchange servers, add the following registry values to LicenseServerRedirection, depending on your versions of Exchange:
 
-1. For both **Exchange 2013 and Exchange 2016,** add the following registry value:
+1. For both **Exchange 2013 and Exchange 2016**, add the following registry value:
 
-    - **Registry path:** `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
+    - **Registry path**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
 
-    - **Type:** Reg_SZ
+    - **Type**: Reg_SZ
 
-    - **Value:** `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
+    - **Value**: `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
 
-    - **Data:** One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+    - **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
         - `http://\<connector FQDN\>/_wmcs/licensing`
         
@@ -172,13 +172,13 @@ For all Exchange servers, add the following registry values to LicenseServerRedi
 
 1. For Exchange 2013, add the following additional registry value:
 
-    - **Registry path:** `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection` 
+    - **Registry path**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection` 
 
-    - **Type:** Reg_SZ
+    - **Type**: Reg_SZ
 
-    - **Value:** https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
+    - **Value**: https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
 
-    - **Data:** One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+    - **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
         - `http://\<connector FQDN\>/_wmcs/licensing`
 

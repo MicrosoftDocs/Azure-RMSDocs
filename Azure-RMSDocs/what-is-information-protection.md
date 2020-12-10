@@ -86,7 +86,7 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 
 ## Next steps
 
-**To get started with AIP,** download and install the unified labeling client and scanner.
+**To get started with AIP**, download and install the unified labeling client and scanner.
 
 - [Sign up for a free trial](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)  (Enterprise Mobility + Security E5)
 - [Download the client](https://www.microsoft.com/download/details.aspx?id=53018)

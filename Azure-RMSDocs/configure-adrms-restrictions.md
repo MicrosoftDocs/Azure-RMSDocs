@@ -45,7 +45,7 @@ Typically, protecting sensitive documents and emails using Azure Information Pro
 
 Cloud-based keys are managed in Azure Key Vault, which provides customers with the following benefits:
 
-- **No server infrastructure requirements.** Cloud solutions are quicker and more cost-effective to deploy and maintain than on-premises solutions.
+- **No server infrastructure requirements**. Cloud solutions are quicker and more cost-effective to deploy and maintain than on-premises solutions.
 
 - **Cloud-based authentication** enables easier sharing with partners and users from other organizations. 
 
@@ -165,7 +165,7 @@ An AD RMS deployment must meet the following requirements to provide HYOK protec
 |**AD RMS configuration**     |Your AD RMS system must be configured in specific ways to support HYOK. For more information, see [below](#ad-rms-configuration-requirements).          |
 |**Directory synchronization**     |Directory synchronization must be configured between your on-premises Active Directory and the Azure Active Directory. </br></br>Users who will use HYOK protection labels must be configured for single-sign-on.         |
 |**Configuration for explicitly defined trusts**     |If you share HYOK-protected content with others outside your organization, AD RMS must be configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations. </br></br>Do this using trusted user domains (TUDs) or federated trusts that are created using Active Directory Federation Services (AD FS).         |
-|**Microsoft Office supported version**     | Users who are protecting or consuming HYOK-protected content must have: </br></br>- A version of Office that supports Information Rights Management (IRM) </br>- Microsoft Office Professional Plus version 2013 or later with Service Pack 1, running on Windows 7 Service Pack 1 or later. </br>- For the Office 2016 Microsoft Installer (.msi)-based edition, you must have the [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Note:** Office 2010 and Office 2007 are not supported.        |
+|**Microsoft Office supported version**     | Users who are protecting or consuming HYOK-protected content must have: </br></br>- A version of Office that supports Information Rights Management (IRM) </br>- Microsoft Office Professional Plus version 2013 or later with Service Pack 1, running on Windows 7 Service Pack 1 or later. </br>- For the Office 2016 Microsoft Installer (.msi)-based edition, you must have the [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Note**: Office 2010 and Office 2007 are not supported.        |
 
 > [!IMPORTANT]
 > To fulfill the high assurance that HYOK protection offers, we recommend:
@@ -182,7 +182,7 @@ To support HYOK, ensure that your AD RMS system has the following configurations
 
 |Requirement  |Description  |
 |---------|---------|
-|**Windows version**     |At minimum, one of the following Windows versions: </br></br>**Production environments:** Windows Server 2012 R2</br>**Testing/evaluation environments**: Windows Server 2008 R2 with Service Pack 1        |
+|**Windows version**     |At minimum, one of the following Windows versions: </br></br>**Production environments**: Windows Server 2012 R2</br>**Testing/evaluation environments**: Windows Server 2008 R2 with Service Pack 1        |
 |**Topology**     |HYOK requires one of the following topologies: </br>- A single forest, with a single AD RMS cluster </br>- Multiple forests, with AD RMS clusters in each of them. </br></br>**Licensing for multiple forests**</br> If you have multiple forests, each AD RMS cluster shares a licensing URL that points to the same AD RMS cluster. </br>On this AD RMS cluster, import all the trusted user domain (TUD) certificates from all other AD RMS clusters. </br>For more information about this topology, see [Trusted User Domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd983944(v=ws.10)). </br></br>**Global policy labels for multiple forests**</br>When you have multiple AD RMS clusters in separate forests, delete any labels in the global policy that apply HYOK (AD RMS) protection and configure a [scoped policy](configure-policy-scope.md) for each cluster. <br>Assign users for each cluster to their scoped policy, making sure that you do not use groups that would result in a user being assigned to more than one scoped policy.</br>The result should be that each user has labels for one AD RMS cluster only.          |
 |**Cryptographic mode**     | Your AD RMS must be configured with [Cryptographic Mode 2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)). </br>Confirm the mode by checking the AD RMS cluster properties, **General** tab.        |
 |**Certification URL configuration**     | Each AD RMS server must be configured for the certification URL. </br>For more information, see [below](#configuring-ad-rms-servers-to-locate-the-certification-url).        |

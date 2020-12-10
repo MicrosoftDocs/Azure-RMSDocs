@@ -136,7 +136,7 @@ When the key uploads to Azure Key Vault, you see the properties of the key displ
 
 Then use the [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet to authorize the Azure Rights Management service principal to access the key vault. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
 
-For example, if the key vault that you have created for Azure Information Protection is named contosorms-byok-kv, and your resource group is named **contosorms-byok-rg,** run the following command:
+For example, if the key vault that you have created for Azure Information Protection is named contosorms-byok-kv, and your resource group is named **contosorms-byok-rg**, run the following command:
 
 ```sh
 Set-AzKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get

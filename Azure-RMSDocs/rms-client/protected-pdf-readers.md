@@ -64,7 +64,7 @@ The PDF readers referenced on this page can all open protected documents that ad
 This standard is used by default by the AIP client.
 
 > [!NOTE]
-> **Classic client only:** If you have the AIP classic client, this may have been [disabled by an administrator](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
+> **Classic client only**: If you have the AIP classic client, this may have been [disabled by an administrator](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 > 
 
 ### Viewing protected PDFs in Adobe Acrobat Reader
@@ -85,14 +85,14 @@ Microsoft Edge offers built-in support for viewing PDF files that are classified
 
 Supported versions include:
 
-- **Windows:** Windows 10 and previous versions through Windows 8. 
+- **Windows**: Windows 10 and previous versions through Windows 8. 
     
     For more information about earlier versions, see [Support for previous formats](#support-for-previous-formats).
 
-- **Mac:** macOS versions 10.12 and above 
+- **Mac**: macOS versions 10.12 and above 
 
 
-**Instructions:** 
+**Instructions**: 
 
 1. Check which [Microsoft Edge version](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) is installed on your system. 
 1. If the Microsoft Edge version is 83.0.478.37 or above, you can open protected files directly in the Edge browser. 
@@ -105,7 +105,7 @@ Supported versions include:
 
 To open a protected PDF document on your desktop computer, we recommend that you install the relevant [Microsoft Information Protection (MIP) plug-in for Acrobat and Acrobat Reader](https://go.microsoft.com/fwlink/?linkid=2050049) for your operating system.
 
-**Instructions:**
+**Instructions**:
 
 1. If you haven't already, install the Adobe Reader from the [Adobe site](https://www.adobe.com/).
 
@@ -117,11 +117,11 @@ To open a protected PDF document on your desktop computer, we recommend that you
 
     Supported versions include:
 
-    - **Windows:** Windows 10 and previous versions through Windows 8. 
+    - **Windows**: Windows 10 and previous versions through Windows 8. 
     
         For more information about earlier versions, see [Support for previous formats](#support-for-previous-formats).
 
-    - **Mac:** macOS versions 10.12 - 10.14 
+    - **Mac**: macOS versions 10.12 - 10.14 
 
 1. If prompted for admin approval, ask your admin to authorize the plug-in.
 

@@ -100,7 +100,7 @@ The protection can be applied automatically when a user selects a sensitivity la
 
 There are maximum file sizes that the Azure Information Protection unified labeling client supports for protection.
 
-- **For Office files:**
+- **For Office files**:
 
   |                                                     Office application                                                      |                                                Maximum file size supported                                                 |
   |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|

@@ -57,7 +57,7 @@ In addition, if you are not familiar with how AD RMS works, you might find it us
 
 Before you start the migration to Azure Information Protection, make sure that the following prerequisites are in place and that you understand any limitations.
 
-- **A supported RMS deployment:**
+- **A supported RMS deployment**:
     
   - The following releases of AD RMS support a migration to Azure Information Protection:
            
@@ -77,7 +77,7 @@ Before you start the migration to Azure Information Protection, make sure that t
         
     Note: By default, multiple AD RMS clusters migrate to a single tenant for Azure Information Protection. If you want separate tenants for Azure Information Protection, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one tenant.
 
-- **All requirements to run Azure Information Protection, including a subscription for Azure Information Protection (the Azure Rights Management service is not activated):**
+- **All requirements to run Azure Information Protection, including a subscription for Azure Information Protection (the Azure Rights Management service is not activated)**:
 
 	See [Requirements for Azure Information Protection](./requirements.md).
 
@@ -88,7 +88,7 @@ Before you start the migration to Azure Information Protection, make sure that t
 	Although you must have a subscription for Azure Information Protection before you can migrate from AD RMS, we recommend that the Rights Management service for your tenant is not activated before you start the migration. The migration process includes this activation step after you have exported keys and templates from AD RMS and imported them to your tenant for Azure Information Protection. However, if the Rights Management service is already activated, you can still migrate from AD RMS with some additional steps.
 
 
-- **Preparation for Azure Information Protection:**
+- **Preparation for Azure Information Protection**:
 
   - Directory synchronization between your on-premises directory and Azure Active Directory
 

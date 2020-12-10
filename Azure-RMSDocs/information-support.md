@@ -80,9 +80,9 @@ For additional support options, ask your Microsoft contact.
 
 ### Self-help
 
-**Hands-on labs:** See [Azure Information Protection Hands On Lab](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)
+**Hands-on labs**: See [Azure Information Protection Hands On Lab](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)
 
-**On-demand videos:**
+**On-demand videos**:
 
 - Tech Community recorded webinars for [Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014).
 
@@ -90,7 +90,7 @@ For additional support options, ask your Microsoft contact.
 
 - [Recorded sessions from Microsoft Ignite](what-is-information-protection.md#additional-resources)
 
-**Troubleshooting:**
+**Troubleshooting**:
 
 - If you have a question about how something works: Check whether your question is already answered as a [frequently asked question](faqs.md).
 

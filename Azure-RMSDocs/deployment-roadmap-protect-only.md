@@ -70,37 +70,37 @@ Assign a license from this subscription to each user in your organization who wi
 
 Before you begin using the protection service from Azure Information Protection, do the following preparation:
 
-1. **Set up your user accounts and groups for AIP.**
+1. **Set up your user accounts and groups for AIP**
 
     Make sure that your Microsoft 365 tenant contains the user accounts and groups that will be used by Azure Information Protection to authenticate and authorize users from your organization. If necessary, create these accounts and groups, or synchronize them from your on-premises directory. 
 
     For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
 
-1. **Decide how you want to manage your tenant key.**
+1. **Decide how you want to manage your tenant key**
 
     Decide whether you want Microsoft to manage your tenant key (the default), or generate and manage your tenant key yourself (known as bring your own key, or BYOK). For additional security, implement "hold your own key" (HYOK) protection. 
 
     For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
-1. **Install PowerShell for AIP**.
+1. **Install PowerShell for AIP**
 
     Install the PowerShell module for AIPService on at least one computer that has internet access. You can do this step now, or later. 
 
     For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).
 
-1. **AD RMS only: Migrate your data to the cloud**.
+1. **AD RMS only: Migrate your data to the cloud**
 
     If you are currently using AD RMS: Perform a migration to move the keys, templates, and URLs to the cloud. 
 
     For more information, see [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-1. **Activate protection**.
+1. **Activate protection**
 
     Make sure that the protection service is activated so that you can begin to protect documents and emails. If you are deploying in phases, configure user onboarding controls to restrict users' ability to apply protection. 
 
     For more information, see [Activating the protection service from Azure Information Protection](./activate-service.md).
 
-1. **Configure optional features as needed**.
+1. **Configure optional features as needed**
 
     Consider configuring either of the following features, either now or later.
     

@@ -179,7 +179,7 @@ Azure Rights Management supports the following security, compliance, and regula
 
     Azure Rights Management uses separate security worlds for its data centers in North America, EMEA (Europe, Middle East and Africa), and Asia, so your keys can be used only in your region.
 
-- **Certification for the following standards:**
+- **Certification for the following standards**:
 
     -   ISO/IEC 27001:2013 (./includes [ISO/IEC 27018](https://azure.microsoft.com/blog/2015/02/16/azure-first-cloud-computing-platform-to-conform-to-isoiec-27018-only-international-set-of-privacy-controls-in-the-cloud/))
     -   SOC 2 SSAE 16/ISAE 3402 attestations

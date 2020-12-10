@@ -49,7 +49,7 @@ These applications and solutions are known as "RMS-enlighted", and have Rights M
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Microsoft 365 apps](#microsoft-365-app-support) <br />- Office 2010 <br />- Office 2013<br />- Office 2016 <br />- Office 2019 <br />- [Office for the web (viewing protected documents)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
 |[**Email**](#viewing-protected-content-in-email-clients)      |   - Outlook 2010<br />- Outlook 2013<br />- Outlook 2016 <br />- Outlook 2019 <br />- Outlook from Microsoft 365 Apps for Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
-|[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Microsoft 365 apps, Office 2019, and Office 2016: **.vsdm,** **.vsdx,** **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile** <br />- SealPath RMS plugin for AutoCAD: **.dwg**       |
+|[**Other file types**](#supported-text-and-image-file-types)    |  - Visio from Microsoft 365 apps, Office 2019, and Office 2016: **.vsdm**, **.vsdx**, **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Azure Information Protection client for Windows: Text, images, **pfile** <br />- SealPath RMS plugin for AutoCAD: **.dwg**       |
 | | |
 
 ## macOS RMS-enlightened applications
@@ -121,7 +121,7 @@ However, if only the attachment is protected, but not the email message itself, 
 
 ### Supported text and image file types
 
-File types other than Office files and email messages include text and image file types, with extensions such as **.txt,** **.xml,** **.jpg,** and **.jpeg.** 
+File types other than Office files and email messages include text and image file types, with extensions such as **.txt**, **.xml**, **.jpg**, and **.jpeg**. 
 
 These files change their file name extension after they're natively protected by Rights Management, and then become read-only. 
 
@@ -143,7 +143,7 @@ Supported only with Microsoft SharePoint and OneDrive, and the documents are unp
 
 - Web browsers are supported for **Word, Excel, and PowerPoint** files, when the [Office attachments](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) are protected by using [Microsoft 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
-- For **emails,** web browsers are supported only in the following scenarios:
+- For **emails**, web browsers are supported only in the following scenarios:
 
     - If both the sender and the recipient are part of the same organization
     - If the sender or recipient is using Exchange Online
@@ -258,7 +258,7 @@ For more information about deploying and using the classic client, see:
 
 ## Rights Management sharing app
 
-For Mac computers, the Rights Management sharing app offers a viewer for protected PDF files **(.ppdf),** protected text images, and generically protected files. It can also protect image files, but not other files. To protect Office files on these computers, use Office for Mac or Microsoft 365 Apps for Enterprise. 
+For Mac computers, the Rights Management sharing app offers a viewer for protected PDF files (**.ppdf**), protected text images, and generically protected files. It can also protect image files, but not other files. To protect Office files on these computers, use Office for Mac or Microsoft 365 Apps for Enterprise. 
 
 For more information, see the [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](/previous-versions/msdn10/dn451248(v=msdn.10))
 

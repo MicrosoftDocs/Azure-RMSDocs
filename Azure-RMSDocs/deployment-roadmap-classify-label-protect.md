@@ -85,7 +85,7 @@ For more information, see [Preparing users and groups for Azure Information Prot
 
 Perform the following steps:
 
-1. **Scan your files (optional but recommended).**
+1. **Scan your files (optional but recommended)**
 
     [Deploy the Azure Information Protection client](quickstart-deploy-client.md), and then [install](tutorial-install-scanner.md) and [run the scanner](tutorial-scan-networks-and-content.md) to discover the sensitive information you have on your local data stores. 
 
@@ -226,7 +226,7 @@ For more information, see [Administering protection from Azure Information Prote
 
 ## References for classic client environments
 
-**Relevant for:** AIP classic client only
+**Relevant for**: AIP classic client only
 
 If you're using the classic client, use the following references instead of those linked above:
 
@@ -238,7 +238,7 @@ If you're using the classic client, use the following references instead of thos
 
 - **PowerShell instructions**: [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)
 
-- **Local monitoring:** [Local usage logging with Windows event monitor](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client)
+- **Local monitoring**: [Local usage logging with Windows event monitor](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client)
 
 > [!TIP]
 > You may also be interested in the [Azure Information Protection deployment roadmap for protection only](deployment-roadmap-protect-only.md), which is supported for the classic client only.

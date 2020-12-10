@@ -43,7 +43,7 @@ In this tutorial, you'll learn how to:
 > If you do not have this version of the client and scanner installed, review the [tutorial prerequisites](#tutorial-prerequisites) and then go straight to [Define and run your content scan job](#define-and-run-your-content-scan-job).
 
 
-**Time required:** You can finish this configuration in 15 minutes.
+**Time required**: You can finish this configuration in 15 minutes.
 
 ## Tutorial prerequisites
 
@@ -69,7 +69,7 @@ Create a network scan job to scan a specified IP address or IP range for risky r
 > This feature is available only starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), and is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 > 
 
-**To create a network scan job:**
+**To create a network scan job**:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) as a [supported administrator](#tutorial-prerequisites), and navigate to the **Azure Information Protection** area.
         
@@ -182,7 +182,7 @@ For example:
 > [!TIP]
 > If your results are empty and you would like to run a meaningful scan, create a file named **Payment info** in one of the repositories included in your content scan job. Save the file with the following content:
 > 
-> **Credit card:** 2384 2328 5436 3489
+> **Credit card**: 2384 2328 5436 3489
 >
 > Run your scan again to see the difference in the results.
 > 
@@ -196,7 +196,7 @@ Logs are also stored locally in the **%localappdata%\Microsoft\MSIP\Scanner\Repo
 |Type  |Description  |
 |---------|---------|
 |**.txt summary files**     |  Includes the time taken to scan, the number of scanned files, and how many files had a match for the information types.       |
-|**.csv detail files.**     | Contains detailed descriptions for each file scanned. The directory can hold up to 60 reports for each scanning cycle.         |
+|**.csv detail files**     | Contains detailed descriptions for each file scanned. The directory can hold up to 60 reports for each scanning cycle.         |
 |     |         |
 
 ## Next steps
@@ -206,7 +206,7 @@ For additional tutorials, see:
 - [Tutorial: Preventing oversharing using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 - [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md)
 
-**See also:**
+**See also**:
 
 - [What is the Azure Information Protection unified labeling scanner?](deploy-aip-scanner.md)
 - [Prerequisites for installing and deploying the Azure Information Protection unified labeling scanner](deploy-aip-scanner-prereqs.md)

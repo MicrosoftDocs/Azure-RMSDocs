@@ -32,7 +32,7 @@ ms.custom: admin
 >[!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
-> **To deploy the AIP classic client,** open a support ticket to get download access.
+> **To deploy the AIP classic client**, open a support ticket to get download access.
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]

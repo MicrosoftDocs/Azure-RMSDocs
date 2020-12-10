@@ -36,7 +36,7 @@ ms.custom: admin
 
 If the Azure Rights Management service is activated and you are also using AD RMS, this combination isn't compatible. Without additional steps, some computers might automatically start using the Azure Rights Management service and also connect to your AD RMS cluster. This scenario isn't supported and has unreliable results, so it's important that you take additional steps. 
 
-**To check whether you have deployed AD RMS:**
+**To check whether you have deployed AD RMS**:
 
 1. Although optional, most AD RMS deployments publish the service connection point (SCP) to Active Directory so that domain computers can discover the AD RMS cluster. 
     

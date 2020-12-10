@@ -68,7 +68,7 @@ Override the default settings as follows:
 
     To dynamically set the Rights Management owner, use the **-OwnerMail [Source File Owner Email]** parameter and value. This configuration retrieves the user's email address from Active Directory by using the user account name in the file's Owner property.
 
-- **Azure Information Protection scanner:** For newly protected files, set the Rights Management owner to be a single account for all files on a specified data store, by specifying the **-Default owner** setting in the scanner profile. 
+- **Azure Information Protection scanner**: For newly protected files, set the Rights Management owner to be a single account for all files on a specified data store, by specifying the **-Default owner** setting in the scanner profile. 
 
     Dynamically setting the Rights Management owner for each file is not supported, and the Rights Management owner is not changed for previously protected files. 
 

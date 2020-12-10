@@ -58,7 +58,7 @@ The scanner uses the Azure Information Protection client, and can classify and p
 Do any of the following to configure your scans as needed:
 
 - **Run the scanner in discovery mode only** to create reports that check to see what happens when your files are labeled.
-- **Run the scanner to discover files with sensitive information,** without configuring labels that apply automatic classification.
+- **Run the scanner to discover files with sensitive information**, without configuring labels that apply automatic classification.
 - **Run the scanner automatically** to apply labels as configured. 
 - **Define a file types list** to specify specific files to scan or to exclude.
 
@@ -118,7 +118,7 @@ To check whether this is the cause of the scanner stopping, check for the follow
 For more information about how to view the current port range and increase it if needed, see [Settings that can be modified to improve network performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 > [!TIP]
-> For large SharePoint farms, you may need to increase the list view threshold, which has a default of **5,000.**
+> For large SharePoint farms, you may need to increase the list view threshold, which has a default of **5,000**.
 >
 > For more information, see the [Manage large lists and libraries in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 >
@@ -138,7 +138,7 @@ The AIP scanner cannot label files under the following circumstances:
 
     Other types of files can be added for protection when you [change the types of files to protect](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect).
 
-**Example:** After inspecting .txt files, the scanner can't apply a label that's configured for classification only, because the .txt file type doesn't support classification only. 
+**Example**: After inspecting .txt files, the scanner can't apply a label that's configured for classification only, because the .txt file type doesn't support classification only. 
 
 However, if the label is configured for both classification and protection, and the .txt file type is included for the scanner to protect, the scanner can label the file.
 
@@ -150,7 +150,7 @@ For more information about deploying the scanner, see the following articles:
 - [Configuring and installing the AIP scanner](deploy-aip-scanner-configure-install.md)
 - [Running scans using the AIP scanner](deploy-aip-scanner-manage.md)
 
-**More information:**
+**More information**:
 
 - Check out our blog on best practices for the unified labeling scanner: [Best practices for deploying and using the AIP UL scanner](https://aka.ms/AIPScannerBestPractices)
 

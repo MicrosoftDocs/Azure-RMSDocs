@@ -101,7 +101,7 @@ The data protection can be applied automatically when a user selects a label tha
 
 There are maximum file sizes that the Azure Information Protection client supports for protection.
 
-- **For Office files:**
+- **For Office files**:
 
 
   |                                                     Office application                                                      |                                                Maximum file size supported                                                 |

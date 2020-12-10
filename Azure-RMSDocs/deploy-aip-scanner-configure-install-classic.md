@@ -273,10 +273,10 @@ To align the supported file types with the client, where all files are automatic
     ![Editing the registry for the scanner to apply protection](./media/editregistry-scanner.png)
 
     > [!NOTE]
-    > As an image file, TIFF files support native protection and the resulting file name extension is **.ptiff.**
+    > As an image file, TIFF files support native protection and the resulting file name extension is **.ptiff**.
     >
 
-    For files that don't support native protection, specify the file name extension as a new key, and **PFile** for generic protection. The resulting file name extension for the protected file is **.pfile.**
+    For files that don't support native protection, specify the file name extension as a new key, and **PFile** for generic protection. The resulting file name extension for the protected file is **.pfile**.
 
 For a list of text and images file types that similarly support native protection but must be specified in the registry, see [Supported file types for classification and protection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection).
 
@@ -322,8 +322,8 @@ In this configuration, all unlabeled files in the repository are labeled with th
 
 Configure the following settings:
 
-- **Label files based on content:** Set to **Off**
-- **Default label:** Set to **Custom**, and then select the label to use
+- **Label files based on content**: Set to **Off**
+- **Default label**: Set to **Custom**, and then select the label to use
 
 ### Identify all custom conditions and known sensitive information types
 
@@ -350,7 +350,7 @@ Use the following options and guidance to help you optimize scanner performance:
 |**Install multiple instances of the scanner** | The Azure Information Protection scanner supports multiple configuration databases on the same SQL server instance when you specify a custom cluster (profile) name for the scanner. |
 |**Grant specific rights and disable low integrity level**|Confirm that the service account that runs the scanner has only the rights documented in [Service account requirements](deploy-aip-scanner-prereqs.md#service-account-requirements). </br></br>Then, configure the [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) to disable the low integrity level for the scanner.|
 |**Check your alternative configuration usage** |The scanner runs more quickly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents. <br/></br>The scanner runs more slowly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.|
-|**Decrease scanner timeouts** | Decrease the scanner timeouts with [advanced client settings](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner).Decreased scanner timeouts provide better scanning rates and lower memory consumption. </br></br>**Note:** Decreasing scanner timeouts means that some files may be skipped.
+|**Decrease scanner timeouts** | Decrease the scanner timeouts with [advanced client settings](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner).Decreased scanner timeouts provide better scanning rates and lower memory consumption. </br></br>**Note**: Decreasing scanner timeouts means that some files may be skipped.
 | | |
 
 
@@ -406,7 +406,7 @@ Once you've installed and configured your scanner, start [scanning your files](d
 
 See also: [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
-**More information:**
+**More information**:
 
 Interested in how the Core Services Engineering and Operations team in Microsoft implemented this scanner?  Read the technical case study: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 

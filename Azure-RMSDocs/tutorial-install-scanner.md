@@ -31,7 +31,7 @@ ms.subservice: aiplabels
 
 This tutorial describes how to install the Azure Information Protection (AIP) on-premises scanner. The scanner enables AIP administrators to scan their networks and content shares for sensitive data, and apply classification and protection labels as configured in their organization's policy.
 
-**Time required:** You can complete this tutorial in 30 minutes..
+**Time required**: You can complete this tutorial in 30 minutes..
 
 ## Tutorial prerequisites
 
@@ -105,7 +105,7 @@ Prepare your initial scanner settings in the Azure portal before you install the
 
     :::image type="content" source="media/qs-tutor/qs-add-new-cluster.png" alt-text="Add a new cluster for the tutorial":::
 
-1. Create an initial content scan job. In the **Scanner** menu on the left, select :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Content scan jobs**, and then select :::image type="icon" source="media/i-add.PNG" border="false"::: **Add.**
+1. Create an initial content scan job. In the **Scanner** menu on the left, select :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Content scan jobs**, and then select :::image type="icon" source="media/i-add.PNG" border="false"::: **Add**.
 
 1. In the **Add a new content scan job** pane, enter a meaningful name for your content scan job, and an optional description.
 
@@ -117,7 +117,7 @@ Prepare your initial scanner settings in the Azure portal before you install the
 
 1. Close the details pane for your content scan job, and return to the :::image type="icon" source="media/i-content-scan-jobs.png" border="false":::  **Content scan jobs** grid. 
 
-    In the new row that appears for your content scan job, in the **Cluster Name** column, select **+Assign to cluster.** Then, in the **Assign to cluster** pane that appears on the right, select your cluster. 
+    In the new row that appears for your content scan job, in the **Cluster Name** column, select **+Assign to cluster**. Then, in the **Assign to cluster** pane that appears on the right, select your cluster. 
 
     :::image type="content" source="media/qs-tutor/assign-cluster-all.png" alt-text="Assign to cluster":::
 
@@ -160,7 +160,7 @@ This procedure is not required if you're working offline only.
 
 For more information, see [How to label files non-interactively for Azure Information Protection](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
-**To get an Azure AD token for the scanner:**
+**To get an Azure AD token for the scanner**:
 
 1. In the Azure portal, create an Azure AD application to specify an access token for authentication.
 
@@ -182,7 +182,7 @@ For more information, see [How to label files non-interactively for Azure Inform
     ``` 
 
     > [!TIP]
-    > If your scanner service account cannot be granted the **Log on locally** right for the installation, use the **OnBehalfOf** parameter with **Set-AIPAuthentication,** instead of the **DelegatedUser** parameter.
+    > If your scanner service account cannot be granted the **Log on locally** right for the installation, use the **OnBehalfOf** parameter with **Set-AIPAuthentication**, instead of the **DelegatedUser** parameter.
 
 The scanner now has a token to authenticate to Azure AD. This token is valid for as long as you've configured in Azure Active Directory. You must repeat this procedure when the token expires.
 
@@ -199,7 +199,7 @@ For example, if a repository is found to have both read and write public access,
 > [!NOTE]
 > This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-**To install the Network Discovery service:**
+**To install the Network Discovery service**:
 
 1. On the scanner machine, open a PowerShell session as an administrator.
 
@@ -253,7 +253,7 @@ For more information, see [Tutorial: Discovering your sensitive content with the
 >To scan your risky repositories for sensitive data, and then classify and protect that data from outside users, update your content scan job with the details of the repositories you've found.
 >
 
-**See also:**
+**See also**:
 
 - [What is the Azure Information Protection unified labeling scanner?](deploy-aip-scanner.md)
 - [Prerequisites for installing and deploying the Azure Information Protection unified labeling scanner](deploy-aip-scanner-prereqs.md)

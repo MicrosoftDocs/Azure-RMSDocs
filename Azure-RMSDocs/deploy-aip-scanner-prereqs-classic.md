@@ -60,7 +60,7 @@ You must have a Windows Server computer to run the scanner, which has the follow
 |**Processor**     |4 core processors         |
 |**RAM**     |8 GB         |
 |**Disk space**     |10 GB free space (average) for temporary files. </br></br>The scanner requires sufficient disk space to create temporary files for each file that it scans, four files per core. </br></br>The recommended disk space of 10 GB allows for 4 core processors scanning 16 files that each have a file size of 625 MB. 
-|**Operating system**     |- Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Note:** For testing or evaluation purposes in a non-production environment, you can also use any Windows operating system that is [supported by the Azure Information Protection client](requirements.md#client-devices).
+|**Operating system**     |- Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Note**: For testing or evaluation purposes in a non-production environment, you can also use any Windows operating system that is [supported by the Azure Information Protection client](requirements.md#client-devices).
 |**Network connectivity**     | Your scanner computer can be a physical or virtual computer with a fast and reliable network connection to the data stores to be scanned. </br></br> If internet connectivity is not possible because of your organization policies, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations). </br></br>Otherwise, make sure that this computer has internet connectivity that allows the following URLs over HTTPS (port 443):</br><br />-  \*.aadrm.com <br />-  \*.azurerms.com<br />-  \*.informationprotection.azure.com <br /> - informationprotection.hosting.portal.azure.net <br /> - \*.aria.microsoft.com|
 | ||
 
@@ -78,7 +78,7 @@ This service account has the following requirements:
 |---------|---------|
 |**Log on locally** user right assignment     |Required to install and configure the scanner, but not required to run scans.  </br></br>Once you've confirmed that the scanner can discover, classify, and protect files, you can remove this right from the service account.  </br></br>If granting this right even for a short period of time is not possible because of your organization policies, see [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations).         |
 |**Log on as a service** user right assignment.     |  This right is automatically granted to the service account during the scanner installation and this right is required for the installation, configuration, and operation of the scanner.        |
-|**Permissions to the data repositories**     |- **File shares or local files:** Grant **Read**, **Write**, and **Modify** permissions for scanning the files and then applying classification and protection as configured.  <br /><br />- **SharePoint:** Grant **Full Control** permissions for scanning the files and then applying classification and protection as configured.  <br /><br />- **Discovery mode:** To run the scanner in discovery mode only, **Read** permission is sufficient.         |
+|**Permissions to the data repositories**     |- **File shares or local files**: Grant **Read**, **Write**, and **Modify** permissions for scanning the files and then applying classification and protection as configured.  <br /><br />- **SharePoint**: Grant **Full Control** permissions for scanning the files and then applying classification and protection as configured.  <br /><br />- **Discovery mode**: To run the scanner in discovery mode only, **Read** permission is sufficient.         |
 |**For labels that reprotect or remove protection**     | To ensure that the scanner always has access to protected files, make this account a [super user](configure-super-users.md) for Azure Information Protection, and ensure that the super user feature is enabled. </br></br>Additionally, if you've implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) for a phased deployment, make sure that the service account is included in the onboarding controls you've configured.|
 | ||
 
@@ -106,7 +106,7 @@ To store the scanner configuration data, use an SQL server with the following re
 
 - **Capacity.** For capacity guidance, see [Storage requirements and capacity planning for SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).
 
-- **[Case insensitive collation](/sql/relational-databases/collations/collation-and-unicode-support)**
+- **[Case insensitive collation](/sql/relational-databases/collations/collation-and-unicode-support).**
 
 > [!NOTE]
 > Multiple configuration databases on the same SQL server are supported when you specify a custom cluster (profile) name for the scanner.
@@ -232,7 +232,7 @@ Do one of the following, depending on your organization's requirements:
 
     However, the user account that configures the scanner still requires the **db_owner** role for the scanner configuration database. If you only have the Sysadmin role until the scanner installation is complete, [grant the db_owner role to the user account manually](#create-a-user-and-grant-db_owner-rights-manually).
 
-- **You cannot have the Sysadmin role at all**. If you cannot be granted the Sysadmin role even temporarily, you must ask a user with Sysadmin rights to manually create a database before you install the scanner. 
+- **You cannot have the Sysadmin role at all.** If you cannot be granted the Sysadmin role even temporarily, you must ask a user with Sysadmin rights to manually create a database before you install the scanner. 
 
     For this configuration, the **db_owner** role must be assigned to the following accounts: 
 
@@ -301,9 +301,9 @@ If your organization policies prohibit the **Log on locally** right for service 
 
 You can have one account to run the scanner service and use another account to authenticate to Azure Active Directory:
 
-- **For the scanner service account,** use a local Windows account or an Active Directory account.
+- **For the scanner service account**, use a local Windows account or an Active Directory account.
 
-- **For the Azure Active Directory account,** [specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication).
+- **For the Azure Active Directory account**, [specify and use the Token parameter for Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication).
 
 #### Restriction: Your labels do not have auto-labeling conditions
 
@@ -321,7 +321,7 @@ Once you've confirmed that your system complies with the scanner prerequisites, 
 
 For an overview about the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner-classic.md).
 
-**More information:**
+**More information**:
 
 Interested in how the Core Services Engineering and Operations team in Microsoft implemented this scanner?  Read the technical case study: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 

@@ -75,7 +75,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 
 |Term|Definition|
 |--------|--------------|
-|**consume**|**In the context of protection only:** </br>To open a document or email to read or use it when that content has been protected by a rights management service. </br>For a document, consuming includes editing and adding new content to a protected document. For an email message, consuming includes replying to a protected message.<br /><br/>**In the context of labeling (with or without protection):** </br>To read and potentially act on the label information stored in the metadata of files and emails.|
+|**consume**|**In the context of protection only**: </br>To open a document or email to read or use it when that content has been protected by a rights management service. </br>For a document, consuming includes editing and adding new content to a protected document. For an email message, consuming includes replying to a protected message.<br /><br/>**In the context of labeling (with or without protection)**: </br>To read and potentially act on the label information stored in the metadata of files and emails.|
 |**content key**|A unique key that is created by RMS-enlightened applications for each document or email that is protected by using Rights Management and that helps to limit the risk of information disclosure.|
 | | |
 

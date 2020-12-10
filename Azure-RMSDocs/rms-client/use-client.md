@@ -43,7 +43,7 @@ The unified labeling client must be installed separately to Office apps.
 
 The service resides in the cloud or on-premises:
 
-- The cloud service is **Azure Information Protection,** and uses the Azure Rights Managements service for data protection
+- The cloud service is **Azure Information Protection**, and uses the Azure Rights Managements service for data protection
 - The on-premises service is **Active Directory Rights Management Services** (AD RMS)
 
 ## Choose your Windows labeling solution
@@ -192,7 +192,7 @@ For even more details, see also:
 |**Government Community Cloud** | ![yes](../media/yes-icon.png) | ![yes](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
 | | | | |
 
-**Footnotes:**
+**Footnotes**:
 
 <sup>1</sup>
 These settings, and many more are supported as [advanced client settings that you configure in the Azure portal](client-admin-guide-customizations.md#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal).
@@ -213,7 +213,7 @@ The document tracking site that's supported by the classic client isn't supporte
 Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 <sup>8</sup>
-While the AIP clients support both Microsoft Office 97-2003 file formats, such as **.doc,** as well as Office Open XML formats, such as **.docx,** the built-in labeling supports Open XML formats only.
+While the AIP clients support both Microsoft Office 97-2003 file formats, such as **.doc**, as well as Office Open XML formats, such as **.docx**, the built-in labeling supports Open XML formats only.
 
 <sup>9</sup>
 For more information about support for dynamic content markings and per app content markings for the built-in labeling solution, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables).
@@ -227,11 +227,11 @@ When the Azure Information Protection classic client and the Azure Information P
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |**Setup**| Option to install local demo policy | No local demo policy|
 |**Label selection and display when applied in Office apps**|From the **Protect** button on the ribbon <br /><br /> From the Information Protection bar (horizontal bar under the ribbon)|From the **Sensitivity** button on the ribbon<br /><br /> From the Information Protection bar (horizontal bar under the ribbon)|
-|**Manage the Information Protection bar in Office apps**|**For users**:<br />Option to show or hide the bar from the **Protect** button on the ribbon<br /><br>When a user selects to hide the bar, by default, the bar is hidden in that app, but continues to automatically display in newly opened apps <br /><br /> **For admins:** <br />Policy settings to automatically show or hide the bar when an app first opens, and control whether the bar automatically remains hidden for newly opened apps after a user selects to hide the bar|**For users**: <br />Option to show or hide the bar from the **Sensitivity** button on the ribbon. <br><br />When a user selects to hide the bar, the bar is hidden in that app and also in newly opened apps <br /><br />**For admins**: <br />PowerShell setting to manage the bar |
+|**Manage the Information Protection bar in Office apps**|**For users**:<br />Option to show or hide the bar from the **Protect** button on the ribbon<br /><br>When a user selects to hide the bar, by default, the bar is hidden in that app, but continues to automatically display in newly opened apps <br /><br /> **For admins**: <br />Policy settings to automatically show or hide the bar when an app first opens, and control whether the bar automatically remains hidden for newly opened apps after a user selects to hide the bar|**For users**: <br />Option to show or hide the bar from the **Sensitivity** button on the ribbon. <br><br />When a user selects to hide the bar, the bar is hidden in that app and also in newly opened apps <br /><br />**For admins**: <br />PowerShell setting to manage the bar |
 |**Label color**| Configure in the Azure portal | Retained after label migration and configurable with [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
 |**Labels support different languages**| Configure in the Azure portal | Configure by using [Office 365 Security & Compliance PowerShell](/microsoft-365/compliance/create-sensitivity-labels#additional-label-settings-with-office-365-security--compliance-center-powershell)|
 |**Policy update**| - When an Office app opens <br /> - When you right-click to classify and protect a file or folder <br />- When you run the PowerShell cmdlets for labeling and protection<br />- Every 24 hours <br />- For the scanner: Every hour and when the service starts and the policy is older than one hour| - When an Office app opens <br />- When you right-click to classify and protect a file or folder <br />- When you run the PowerShell cmdlets for labeling and protection<br />- Every 4 hours <br />- For the scanner: Every 4 hours|
-|**Supported formats for PDF**| **Protection:** <br /> - ISO standard for PDF encryption (default) <br /> - .ppdf <br /><br> **Consumption:** <br /> - ISO standard for PDF encryption <br />- .ppdf<br />- SharePoint IRM protection| **Protection**: <br /> - ISO standard for PDF encryption <br /> <br /> **Consumption:** <br /> - ISO standard for PDF encryption <br />- .ppdf<br />- SharePoint IRM protection|
+|**Supported formats for PDF**| **Protection**: <br /> - ISO standard for PDF encryption (default) <br /> - .ppdf <br /><br> **Consumption**: <br /> - ISO standard for PDF encryption <br />- .ppdf<br />- SharePoint IRM protection| **Protection**: <br /> - ISO standard for PDF encryption <br /> <br /> **Consumption**: <br /> - ISO standard for PDF encryption <br />- .ppdf<br />- SharePoint IRM protection|
 |**Generically protected files (.pfile) opened with the viewer**| File opens in the original app where it can then be viewed, modified, and saved without protection | File opens in the original app where it can then be viewed and modified, but not saved|
 |**Supported cmdlets**| - Cmdlets for labeling <br> - Cmdlets for protection-only | **Cmdlets for labeling**:<br /> [Set-AIPFileClassification](/powershell/module/azureinformationprotection/get-aipfileclassification) and [Set-AIPFileLabel](/powershell/module/azureinformationprotection/get-aipfilelabel) don't support the **Owner** parameter <br /> In addition, there is a single comment of "No label to apply" for all scenarios where a label isn't applied <br /><br /> [Set-AIPFileClassification](/powershell/module/azureinformationprotection/get-aipfileclassification) supports the **WhatIf** parameter, so it can be run in discovery mode <br /><br /> [Set-AIPFileLabel](/powershell/module/azureinformationprotection/get-aipfilelabel) doesn't support the *EnableTracking* parameter <br /><br /> [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) doesn't return label information from other tenants and doesn't display the **RMSIssuedTime** parameter<br />In addition, the **LabelingMethod** parameter for [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) displays **Privileged** or **Standard**, instead of **Manual** or **Automatic**.|
 |**Justification prompts (if configured) per action in Office** | - Frequency: Per file <br /> - Lowering the sensitivity level <br /> - Removing a label<br /> - Removing protection | - Frequency: Per session <br /> - Lowering the sensitivity level<br />-  Removing a label|

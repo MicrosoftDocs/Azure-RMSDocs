@@ -123,7 +123,7 @@ To support scans on NFS shares, services for NFS must be deployed on the scanner
 For more information, see [Create a content scan job](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
 ### Added support for sensitive information types
-We’ve added support for additional sensitive information types in Azure Information Protection, such as **Australia business number,** **Australia company number,** or **Austria identity card.** 
+We’ve added support for additional sensitive information types in Azure Information Protection, such as **Australia business number**, **Australia company number**, or **Austria identity card**. 
 
 For more information, see the [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in the Microsoft 365 documentation.
 ### Fixes and improvements
@@ -169,7 +169,7 @@ Skip the full, immediate rescan, and return later to [run a full rescan](../depl
 > [!IMPORTANT]
 > Administrators making changes in their policies and content scan jobs must now understand the effects of those changes on the content, and determine whether a full rescan is required.
 > 
-> For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On,** make sure to run a full rescan to apply your labels across your content.
+> For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
 >
 
 #### Configure SharePoint timeouts
@@ -197,7 +197,7 @@ The **network discovery** service updates **Repository** reports with a list of 
     
 1. Make sure that you have Azure Information Protection analytics enabled. 
 
-    In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview).** 
+    In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview)**. 
 
     For more information, see [Central reporting for Azure Information Protection (public preview)](../reports-aip.md).
 
@@ -300,7 +300,7 @@ Unified labeling scanner and client version 2.7.101.0
 
 **Released** 08/23/2020
 
-**Fix:**
+**Fix**:
 
 Fixed issue for PPT, Excel and Word users which resulted in files freezing, crashing, or being forced to repeat save that was related to mandatory labels configured with protection, watermarking, and/or content marking.
 
@@ -310,7 +310,7 @@ Unified labeling scanner and client version 2.7.99.0
 
 **Released** 07/20/2020
 
-**Fixes and improvements:**
+**Fixes and improvements**:
 
 Fixed issues in file labeling actions for **New Label** audit logs.
 
@@ -322,7 +322,7 @@ Unified labeling scanner and client version 2.7.96.0
 
 **Released** 06/29/2020
 
-**New features for the unified labeling scanner:**
+**New features for the unified labeling scanner**:
 
 - [Use scanner to apply labels based on recommended conditions](../deploy-aip-scanner-prereqs.md). AIP customers can now choose to implement service side only autolabeling. This feature allows AIP end users to always follow recommendations instead of the previous scenario, which only enabled automatic labeling on the user side.
 
@@ -336,7 +336,7 @@ Unified labeling scanner and client version 2.7.96.0
 
 - Now you can configure the unified labeling scanner to skip specific files depending on their file attributes. Define the list of file attributes that triggers a file to be skipped using the new **[ScannerFSAttributesToSkip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes)** advanced setting.
 
-**New features for the unified labeling client:**
+**New features for the unified labeling client**:
 
 - [**Justification popups**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) now appear for changes made to default labels in the unified labeling client.
     
@@ -410,7 +410,7 @@ For more requirement details, see [Firewalls and network infrastructure requirem
 
 Supported through  12/29/2020
 
-**New features:**
+**New features**:
 
 - General availability version of the [scanner](../deploy-aip-scanner.md), to inspect and label documents in on-premises data stores. 
 
@@ -432,7 +432,7 @@ Supported through  12/29/2020
 
 - Support added for [offline labeling capability](./clientv2-admin-guide-customizations.md#support-for-disconnected-computers) with Office apps in the unified labeling client.
 
-**Fixes:**
+**Fixes**:
 
 - In instances where users attempted unsuccessfully to open protected TIFF files, and TIFF files created by RightFax, the TIFF files now open and remain stable as expected.  
 - Previous corruptions of protected txt and PDF files are resolved.

@@ -52,8 +52,8 @@ Labels can both [classify](#how-labels-apply-classification-with-aip), and optio
 Labeling your content with AIP includes:
 
 - **Classification** that can be detected regardless of where the data is stored or with whom it's shared.
-- **Visual markings,** such as headers, footers, or watermarks.
-- **Metadata,** added to files and email headers in clear text. The clear text metadata ensures that other services can identify the classification and take appropriate action
+- **Visual markings**, such as headers, footers, or watermarks.
+- **Metadata**, added to files and email headers in clear text. The clear text metadata ensures that other services can identify the classification and take appropriate action
 
 For example, in the image below, labeling has classified an email message as *General*:
 
@@ -61,8 +61,8 @@ For example, in the image below, labeling has classified an email message as *Ge
 
 In this example, the label also:
 
-- **Added a footer of *Sensitivity: General* to the email message.** This footer is a visual indicator for all recipients that it's intended for general business data that should not be sent outside of the organization.
-- **Embedded metadata in the email headers.** Header data enables email services can inspect the label and theoretically create an audit entry or prevent it from being sent outside of the organization.
+- **Added a footer of *Sensitivity: General* to the email message**. This footer is a visual indicator for all recipients that it's intended for general business data that should not be sent outside of the organization.
+- **Embedded metadata in the email headers**. Header data enables email services can inspect the label and theoretically create an audit entry or prevent it from being sent outside of the organization.
 
 Labels can be applied automatically by administrators using rules and conditions, manually by users, or using a combination where administrators define the recommendations shown to users.
 
@@ -76,8 +76,8 @@ Azure RMS uses encryption, identity, and authorization policies. Similar to AIP 
 
 Protection settings can be:
 
-- **Part of your label configuration,** so that users both classify and protect documents and emails simply by applying a label. 
-- **Used on their own,** by applications and services that support protection but not labeling. 
+- **Part of your label configuration**, so that users both classify and protect documents and emails simply by applying a label. 
+- **Used on their own**, by applications and services that support protection but not labeling. 
 
     For applications and services that support protection only, protection settings are used as [Rights Management templates](#rights-management-templates).
 

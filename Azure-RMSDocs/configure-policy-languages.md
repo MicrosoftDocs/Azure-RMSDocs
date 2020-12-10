@@ -92,13 +92,13 @@ You must repeat this procedure if you need to support a new language, create new
 
 When users download an Azure Information Protection policy that supports different languages, the language that users see for their label names and tooltips is determined by the following logic:
 
-**For the labels and tooltips that users see on the Azure Information Protection bar in Office apps:**
+**For the labels and tooltips that users see on the Azure Information Protection bar in Office apps**:
 
 - When there is a direct match for the language of their Office app, label names and descriptions display in that language.
 
 - When there is no match for the language of their Office app, label names and descriptions display in the language you specified by default for all users. This language is typically English, which is the language used in the default policy.
 
-**For the labels and tooltips that users see when they use right-click to classify and protect files or folders:**
+**For the labels and tooltips that users see when they use right-click to classify and protect files or folders**:
 
 - When there is a direct match for the language of their operating system, label names and descriptions display in that language.
 

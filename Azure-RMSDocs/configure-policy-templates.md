@@ -37,11 +37,11 @@ ms.custom: admin
 
 Protection templates, also known as Rights Management templates, are a grouping of administrator-defined protection settings for Azure Information Protection. These settings include your chosen [usage rights](configure-usage-rights.md) for authorized users, and access controls for expiry and offline access. These templates are integrated with the Azure Information Protection policy: 
 
-**When you have a subscription that includes classification, labeling, and protection (Azure Information Protection P1 or P2):**
+**When you have a subscription that includes classification, labeling, and protection (Azure Information Protection P1 or P2)**:
 
 - Templates that are not integrated with your labels for your tenant are displayed in the **Protection templates** section after your labels on the **Azure Information Protection - Labels** pane. To navigate to this pane, select the **Classifications** > **Labels** menu option. You can convert these templates to labels, or you can link to them when you configure protection for your labels. 
 
-**When you have a subscription that includes protection only (a Microsoft 365 subscription that includes the Azure Rights Management service):**
+**When you have a subscription that includes protection only (a Microsoft 365 subscription that includes the Azure Rights Management service)**:
 
 - Templates for your tenant are displayed in the **Protection templates** section on the **Azure Information Protection - Labels** pane. To navigate to this pane, select the **Classifications** > **Labels** menu option. No labels are displayed. You also see configuration settings that are specific to classification and labeling, but these settings either have no effect on your templates or cannot be configured. 
 

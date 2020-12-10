@@ -529,7 +529,7 @@ To avoid removing shapes that contain the text that you have specified but are *
 Additionally, if you have custom layouts configured in PowerPoint, the default behavior is that shapes found inside custom layouts are ignored. To explicitly remove external content markings from inside your custom layouts, set the **RemoveExternalMarkingFromCustomLayouts** advanced property to **true.**
 
 > [!NOTE]
-> PowerPoint shape types supported for the advanced client settings described in this section include: **msoTextBox,** **msoTextEffect,** and **msoPlaceholder**
+> PowerPoint shape types supported for the advanced client settings described in this section include: **msoTextBox**, **msoTextEffect**, and **msoPlaceholder**
 >
 ##### Find the name of the shape that you're using as a header or footer
 
@@ -539,7 +539,7 @@ Additionally, if you have custom layouts configured in PowerPoint, the default b
 
 Use the name of the shape to specify a string value for the **PowerPointShapeNameToRemove** key. 
 
-**Example:** The shape name is **fc**. To remove the shape with this name, you specify the value: `fc`.
+**Example**: The shape name is **fc**. To remove the shape with this name, you specify the value: `fc`.
 
 - Key: **PowerPointShapeNameToRemove**
 
@@ -701,7 +701,7 @@ When the popup-messages are for a specific label, you can configure exceptions f
 See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
 
 > [!TIP]
-> To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy),** also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.
+> To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy)**, also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.
 
 ### To implement the warn, justify, or block pop-up messages for specific labels:
 
@@ -778,7 +778,7 @@ Example value for multiple domains as a comma-separated string: `contoso.com,fab
 
 For example, let's say you have specified the **OutlookBlockUntrustedCollaborationLabel** advanced client setting for the **Confidential \ All Employees** label. 
 
-You now specify the additional advanced client setting of **OutlookBlockTrustedDomains** with **contoso.com.** As a result, a user can send an email to `john@sales.contoso.com` when it is labeled **Confidential \ All Employees**, but will be blocked from sending an email with the same label to a Gmail account.
+You now specify the additional advanced client setting of **OutlookBlockTrustedDomains** with **contoso.com**. As a result, a user can send an email to `john@sales.contoso.com` when it is labeled **Confidential \ All Employees**, but will be blocked from sending an email with the same label to a Gmail account.
 
 Example PowerShell commands, where your label policy is named "Global":
 
@@ -1421,7 +1421,7 @@ AIP administrators can customize the popup messages that appear to end users in 
 > In production, we recommend that you avoid complications by *either* using the **OutlookUnlabeledCollaborationAction** advanced property to define your rules, *or* defining complex rules with a json file as defined below, but not both.
 >
 
-**To customize your Outlook popup messages:**
+**To customize your Outlook popup messages**:
 
 1. Create **.json** files, each with a rule that configures how Outlook displays popup messages to your users. For more information, see [Rule value .json syntax](#rule-value-json-syntax) and [Sample popup customization .json code](#sample-popup-customization-json-code).
 
@@ -1447,9 +1447,9 @@ AIP administrators can customize the popup messages that appear to end users in 
 
    
 > [!TIP]
-> For additional organization, name your file with the same string as the key used in your PowerShell command. For example, name your file **OutlookCollaborationRule_1.json,** and then also use **OutlookCollaborationRule_1** as your key.
+> For additional organization, name your file with the same string as the key used in your PowerShell command. For example, name your file **OutlookCollaborationRule_1.json**, and then also use **OutlookCollaborationRule_1** as your key.
 >
-> To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy),** also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.
+> To ensure that popups are displayed even when documents are shared from outside Outlook **(File > Share > Attach a copy)**, also configure the [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) advanced setting.
 > 
 
 ### Ordering your Outlook customization rules
@@ -1458,7 +1458,7 @@ AIP uses the serial number in the key you enter to determine the order in which 
 
 Once a specific rule match is found, AIP stops processing the rules, and performs the action associated with the matching rule. (**First match - > Exit** logic)
     
-**Example:**
+**Example**:
 
 Say you want to configure all **Internal** emails with a specific **Warning** message, but you don't generally want to block them. However, you do want to block users from sending attachments classified as **Secret**, even as **Internal** emails. 
 
@@ -1492,9 +1492,9 @@ Supported node types include:
 | **Or**	|Performs *or* on all child nodes       |
 | **Not**	| Performs *not* for its own child      |
 | **Except**	| Returns *not* for its own child, causing it to behave as **All**        |
-| **SentTo,** followed by **Domains: listOfDomains**	|Checks one of the following: <br />- If the Parent is **Except,** checks whether **All** of the recipients are in one of the domains<br />- If the Parent is anything else but **Except,** checks whether **Any** of the recipients are in one of the domains.   |
-| **EMailLabel,** followed by label	| One of the following:  <br />- The label ID <br />- null, if not labeled             |
-| **AttachmentLabel,** followed by **Label** and **supportedExtensions**	| One of the following:  <br /><br />**true:** <br />- If the Parent is **Except,** checks whether **All** of the attachments with one supported extension exists within the label<br />- 	If the Parent is anything else but **Except,** checks whether **Any** of the attachments with one supported extension exists within the label <br />- If not labeled, and **label = null** <br /><br /> **false:** For all other cases 
+| **SentTo**, followed by **Domains: listOfDomains**	|Checks one of the following: <br />- If the Parent is **Except**, checks whether **All** of the recipients are in one of the domains<br />- If the Parent is anything else but **Except**, checks whether **Any** of the recipients are in one of the domains.   |
+| **EMailLabel**, followed by label	| One of the following:  <br />- The label ID <br />- null, if not labeled             |
+| **AttachmentLabel**, followed by **Label** and **supportedExtensions**	| One of the following:  <br /><br />**true**: <br />- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br />- 	If the Parent is anything else but **Except,** checks whether **Any** of the attachments with one supported extension exists within the label <br />- If not labeled, and **label = null** <br /><br /> **false**: For all other cases 
 | | |
 
 #### Rule action syntax
@@ -1517,7 +1517,7 @@ All texts support the following dynamic parameters:
 |Parameter  |Description  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | The last match for the **SentTo** conditions       |
-| `${MatchedLabelName}`      | The mail/attachment **Label,** with the localized name from the policy               |
+| `${MatchedLabelName}`      | The mail/attachment **Label**, with the localized name from the policy               |
 | `${MatchedAttachmentName}` | The name of the attachment from the last match for the **AttachmentLabel** condition |
 | | |
 

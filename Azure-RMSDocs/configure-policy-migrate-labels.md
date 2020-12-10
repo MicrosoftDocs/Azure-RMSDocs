@@ -120,7 +120,7 @@ For example, consider the following list of labels:
     - **Secret\HR**
     - **Secret\Finance**
     
-In this list, **Public,** **General,** **Confidential,** and **Secret** are all parent labels, and cannot have duplicate names. Additionally, **Confidential\HR** and **Confidential\Finance** are at the same place in the hierarchy, and also cannot have duplicate names.
+In this list, **Public**, **General**, **Confidential**, and **Secret** are all parent labels, and cannot have duplicate names. Additionally, **Confidential\HR** and **Confidential\Finance** are at the same place in the hierarchy, and also cannot have duplicate names.
 
 However, sub-labels across different parents, such as **Confidential\HR** and **Secret\HR** are not at the same place in the hierarchy, and therefore can have the same individual names. 
 
@@ -248,11 +248,11 @@ To confirm whether the clients and services you use support unified labeling, re
 
 ##### Clients that currently support unified labeling include:
 
-- **The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md).** 
+- **The [Azure Information Protection unified labeling client for Windows](./rms-client/unifiedlabelingclient-version-release-history.md)** 
 
     For a comparison of this client with the Azure Information Protection classic client, see [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-- **Apps from Office that are in different stages of availability.** 
+- **Apps from Office that are in different stages of availability** 
 
     For more information, see [Support for sensitivity label capabilities in apps](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) from the Microsoft 365 Compliance documentation.
     

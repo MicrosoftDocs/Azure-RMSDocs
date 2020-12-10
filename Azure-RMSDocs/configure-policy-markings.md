@@ -134,19 +134,19 @@ ${If.App.<application type>}<your visual markings text> ${If.End}
 
 Examples:
 
-- **Set header text for Word documents only:**
+- **Set header text for Word documents only**:
 
     `${If.App.Word}This Word document is sensitive ${If.End}`
 
     In Word document headers only, the label applies the header text "This Word document is sensitive". No header text is applied to other Office applications.
 
-- **Set footer text for Word, Excel, and Outlook, and different footer text for PowerPoint:**
+- **Set footer text for Word, Excel, and Outlook, and different footer text for PowerPoint**:
 
     `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
 
     In Word, Excel, and Outlook, the label applies the footer text "This content is confidential." In PowerPoint, the label applies the footer text "This presentation is confidential."
 
-- **Set specific watermark text for Word and PowerPoint, and then watermark text for Word, Excel, and PowerPoint:**
+- **Set specific watermark text for Word and PowerPoint, and then watermark text for Word, Excel, and PowerPoint**:
 
     `${If.App.WP}This content is ${If.End}Confidential`
 

@@ -131,7 +131,7 @@ This option is available to tenants who use Exchange Online and can be selected 
 - **In Outlook on the web**
 - **As another rights protection option** for a mail flow rule
 - **As an Office 365 DLP action**
-- **From Outlook,** for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), when you have [Microsoft 365 apps that support Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
+- **From Outlook**, for the versions listed in the [table of supported versions for Microsoft 365 Apps by update channel](/officeupdates/update-history-microsoft365-apps-by-date), when you have [Microsoft 365 apps that support Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
 
 For more information about the Encrypt-Only option, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
 

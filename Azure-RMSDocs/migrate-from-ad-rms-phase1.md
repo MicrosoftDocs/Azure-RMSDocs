@@ -153,13 +153,13 @@ For each Exchange organization, add registry values on each Exchange server, and
 
 1. If you have Exchange 2013 or Exchange 2016, add the following registry value:
 
-    - **Registry path:** `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
+    - **Registry path**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
 
-    - **Type:** Reg_SZ
+    - **Type**: Reg_SZ
 
-    - **Value:** `https://\<Your Tenant URL\>/_wmcs/licensing`
+    - **Value**: `https://\<Your Tenant URL\>/_wmcs/licensing`
 
-    - **Data:** `https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
+    - **Data**: `https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
 
 1. Run the following PowerShell commands, either one by one, or in a script:
 

@@ -37,11 +37,11 @@ BYOK and [usage logging](log-analyze-usage.md) work seamlessly with applications
 
 Supported applications include:
 
-- **Cloud services,** such as Microsoft SharePoint or Microsoft 365
+- **Cloud services**, such as Microsoft SharePoint or Microsoft 365
 
 - **On-premises services** running Exchange and SharePoint applications that use the Azure Rights Management service via the RMS connector
 
-- **Client applications,** such as Office 2019, Office 2016, and Office 2013
+- **Client applications**, such as Office 2019, Office 2016, and Office 2013
 
 > [!TIP]
 > If needed, apply additional security to specific documents using an additional on-premises key. For more information, see [Double Key Encryption (DKE) protection](plan-implement-tenant-key.md#double-key-encryption-dke) (unified labeling client only).
@@ -68,7 +68,7 @@ As different services have varying key management requirements, Microsoft also r
 
 To share an Azure subscription with other services that use Azure Key Vault, make sure that the subscription shares a common set of administrators. Confirming that all administrators who use the subscription have a solid understanding of every key they can access, means they are less likely to misconfigure your keys.
 
-**Example:** Using a shared Azure subscription when the administrators for your Azure Information Protection tenant key are the same individuals that administer your keys for Office 365 Customer Key and CRM online. If the key administrators for these services are different, we recommend using dedicated subscriptions.
+**Example**: Using a shared Azure subscription when the administrators for your Azure Information Protection tenant key are the same individuals that administer your keys for Office 365 Customer Key and CRM online. If the key administrators for these services are different, we recommend using dedicated subscriptions.
 
 ### Benefits of using Azure Key Vault
 
@@ -118,17 +118,17 @@ If you create your key on-premises, you must then transfer or import it into you
 
 Options to create and store your own key:
 
-- **Created in Azure Key Vault.** Create and store your key in Azure Key Vault as an HSM-protected key or a software-protected key.
+- **Created in Azure Key Vault**. Create and store your key in Azure Key Vault as an HSM-protected key or a software-protected key.
 
-- **Created on-premises.** Create your key on-premises and transfer it to Azure Key Vault using one of the following options:
+- **Created on-premises**. Create your key on-premises and transfer it to Azure Key Vault using one of the following options:
 
-    - **HSM-protected key, transferred as an HSM-protected key.** The most typical method chosen.
+    - **HSM-protected key, transferred as an HSM-protected key**. The most typical method chosen.
 
         While this method has the most administrative overhead, it may be required for your organization to follow specific regulations. The HSMs used by Azure Key Vault are FIPS 140-2 Level 2 validated.
 
-    - **Software-protected key that is converted and transferred to Azure Key Vault as an HSM-protected key.** This method is supported only when [migrating from Active Directory Rights Management Services (AD RMS)](migrate-from-ad-rms-to-azure-rms.md).
+    - **Software-protected key that is converted and transferred to Azure Key Vault as an HSM-protected key**. This method is supported only when [migrating from Active Directory Rights Management Services (AD RMS)](migrate-from-ad-rms-to-azure-rms.md).
 
-    - **Created on-premises as a software-protected key and transferred to Azure Key Vault as a software-protected key.** This method requires a .PFX certificate file.
+    - **Created on-premises as a software-protected key and transferred to Azure Key Vault as a software-protected key**. This method requires a .PFX certificate file.
 
 For example, do the following to use a key created on-premises:
 
@@ -291,8 +291,8 @@ The Azure Rights Management service must be authorized to use your key. Azure Ke
 
     The selected template has the following configuration:
 
-    - The **Select principal** value is set to **Microsoft Rights Management Services.**
-    - Selected **key permissions** include **Get,** **Decrypt,** and **Sign.**
+    - The **Select principal** value is set to **Microsoft Rights Management Services**.
+    - Selected **key permissions** include **Get**, **Decrypt**, and **Sign**.
 
 ##### Enabling key authorization using PowerShell
 

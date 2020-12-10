@@ -43,7 +43,7 @@ When you configure and use Azure Information Protection, email addresses and IP 
 
 - Usage logs for the Azure Information Protection clients and RMS client 
 
-**AIP classic client only:**
+**AIP classic client only**:
 
 - The Azure Information Protection policy
 
@@ -137,7 +137,7 @@ You can turn off logging information for the Azure Information Protection client
 
 ### Protection templates
 
-**Relevant for:** AIP classic client only
+**Relevant for**: AIP classic client only
 
 Run the [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate) cmdlet to get a list of protection templates. You can use the template ID to get details of a specific template. The `RightsDefinitions` object displays the personal data, if any. 
 
@@ -171,7 +171,7 @@ LabelId                 :
 
 ### Document tracking logs
 
-**Relevant for:** AIP classic client only
+**Relevant for**: AIP classic client only
 
 Run the [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) cmdlet to retrieve information from the document tracking site about a specific user. To get tracking information associated with the document logs, use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) cmdlet.
 
@@ -280,7 +280,7 @@ When you need update an email address for a delegated administrator:
 
 ### Protection templates
 
-**Relevant for:** Classic client only
+**Relevant for**: Classic client only
 
 Run the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet to update the protection template. Because the personal data is within the `RightsDefinitions` property, you will also need to use the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet to create a rights definitions object with the updated information, and use the rights definitions object with the `Set-AipServiceTemplateProperty` cmdlet.
 

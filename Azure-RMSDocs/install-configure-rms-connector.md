@@ -198,13 +198,13 @@ After the name is created in DNS and is configured for an IP address, configure 
 
 Use the following settings to configure the NLB cluster:
 
--   **Ports:** 80 (for HTTP) or 443 (for HTTPS)
+-   **Ports**: 80 (for HTTP) or 443 (for HTTPS)
 
     For more information about whether to use HTTP or HTTPS, see the next section.
 
--   **Affinity:** None
+-   **Affinity**: None
 
--  **Distribution method:** Equal
+-  **Distribution method**: Equal
 
 This name that you define for the load-balanced system (for the servers running the RMS connector service) is your organization’s RMS connector name that you use later, when you configure the on-premises servers to use Azure RMS.
 

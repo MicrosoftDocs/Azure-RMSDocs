@@ -59,7 +59,7 @@ The scanner uses the Azure Information Protection client, and can classify and p
 Do any of the following to configure your scans as needed:
 
 - **Run the scanner in discovery mode only** to create reports that check to see what happens when your files are labeled.
-- **Run the scanner to discover files with sensitive information,** without configuring labels that apply automatic classification.
+- **Run the scanner to discover files with sensitive information**, without configuring labels that apply automatic classification.
 - **Run the scanner automatically** to apply labels as configured.
 - **Define a file types list** to specify specific files to scan or to exclude.
 
@@ -117,7 +117,7 @@ The AIP scanner cannot label files under the following circumstances:
 
     Other types of files can be added for protection when you [change the types of files to protect](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect).
 
-**Example:** After inspecting .txt files, the scanner can't apply a label that's configured for classification only, because the .txt file type doesn't support classification only.
+**Example**: After inspecting .txt files, the scanner can't apply a label that's configured for classification only, because the .txt file type doesn't support classification only.
 
 However, if the label is configured for both classification and protection, and the .txt file type is included for the scanner to protect, the scanner can label the file.
 
@@ -129,7 +129,7 @@ For more information about deploying the scanner, see the following articles:
 - [Configuring and installing the AIP scanner](deploy-aip-scanner-configure-install.md)
 - [Running scans using the AIP scanner](deploy-aip-scanner-manage.md)
 
-**More information:**
+**More information**:
 
 - Interested in how the Core Services Engineering and Operations team in Microsoft implemented this scanner?  Read the technical case study: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 

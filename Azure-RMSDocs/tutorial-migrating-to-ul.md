@@ -38,7 +38,7 @@ ms.custom: admin
 
 This tutorial describes how to migrate your organization's Azure Information Protection deployment from the classic client, and label/label policy management in the Azure portal, to the unified labeling solution and [Microsoft 365 sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
-**Time required:** The time required to complete a migration depends on how complex your policies are and the AIP features you use. You can continue to work with the classic client while you migrate in the background.
+**Time required**: The time required to complete a migration depends on how complex your policies are and the AIP features you use. You can continue to work with the classic client while you migrate in the background.
 
 This tutorial provides a high-level description of each step, and then references to the relevant section elsewhere in Microsoft documentation for more details.
 
@@ -56,7 +56,7 @@ In addition to the [planned classic client deprecation](https://aka.ms/aipclassi
 
 MIP supports built-in labeling services for many basic information protection features, enabling you to reserve client usage only for extra features not supported by built-in labeling.
 
-- **Lower your maintenance costs,** by deploying and maintaining less additional software
+- **Lower your maintenance costs**, by deploying and maintaining less additional software
 - **Increase Office performance**, without the need for additional add-ins
 - **Streamline your labeling and protection policy management** across AIP, Office 365, and Windows, using your labeling admin center. 
 
@@ -114,7 +114,7 @@ Once you've migrated your labels to your labeling admin center, including the Mi
 
 However, edits made to migrated labels in your admin center are *not* synchronized back to the Azure portal. If you make edits in the admin center and need them updated in the Azure portal, return to the portal to publish the update.
 
-**To publish an updated label in the Azure portal:**
+**To publish an updated label in the Azure portal**:
 
 1. On the Azure Information Protection area, under **Manage** on the left, select **Unified labeling**.
 
@@ -154,7 +154,7 @@ This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](htt
     |Consideration  |Description  |
     |---------|---------|
     |**Copying policies copies *all* your policies**     |     Copying policies does not support copying specific policies only - it's all of your policies, or none of them now.   |
-    |**Copying automatically publishes your policies**     |  Copying your policies to the unified labeling client automatically publishes them to all unified labeling-supported clients. <br /><br />   **Important:** Do not copy your policies if you don't want to publish them.     |
+    |**Copying automatically publishes your policies**     |  Copying your policies to the unified labeling client automatically publishes them to all unified labeling-supported clients. <br /><br />   **Important**: Do not copy your policies if you don't want to publish them.     |
     |**Copying overwrites existing policies of the same name**     |   If you have a policy with the same name already existing in your admin center, copying your policies will overwrite any settings defined in that policy.   <br /><br />All policies copied from the Azure portal are named with the following syntax: `AIP_<policy name>`.    |
     |**Some client settings are not copied**     | Some client settings are not copied to the unified labeling platform, and must be configured manually after migrating. <br /><br />For more information, see [Configuring advanced labeling settings](#configuring-advanced-labeling-settings)|
     | | |

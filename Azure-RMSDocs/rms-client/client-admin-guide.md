@@ -35,7 +35,7 @@ ms.custom: admin
 > [!NOTE] 
 > To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
-> **To deploy the AIP classic client,** open a support ticket to download the installation files.
+> **To deploy the AIP classic client**, open a support ticket to download the installation files.
 
 Use the information in this guide if you are responsible for the Azure Information Protection client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection client user guide](client-user-guide.md). 
 
@@ -259,7 +259,7 @@ If you know that you want move the scanner configuration database for the  GA ve
 
 3. Install the scanner by using [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), specifying the new SQL Server instance and profile name.
 
-4. **Optional:** If you do not want the scanner to rescan all files, export the ScannerFiles table and import it to the new database.
+4. **Optional**: If you do not want the scanner to rescan all files, export the ScannerFiles table and import it to the new database.
 
 ## Uninstalling the Azure Information Protection client
 

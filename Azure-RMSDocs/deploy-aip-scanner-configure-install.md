@@ -110,12 +110,12 @@ Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-
 |Prerequisite  |Description  |
 |---------|---------|
 |**Install the Network Discovery service**     |   If you've recently upgraded your scanner, you may need to still install the Network Discovery service. <br /><br />Run the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet to enable network scan jobs.      |
-|**Azure Information Protection analytics**     | Make sure that you have Azure Information Protection analytics enabled. <br /><br />In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview).** <br /><br />For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).|
+|**Azure Information Protection analytics**     | Make sure that you have Azure Information Protection analytics enabled. <br /><br />In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview)**. <br /><br />For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).|
 | | |
 
 #### Creating a network scan job
 
-1. Log in to the Azure portal, and go to **Azure Information Protection.** Under the **Scanner** menu on the left, select **Network scan jobs (Preview)** ![network scan jobs icon](media/i-network-scan-jobs.png "network scan jobs icon").
+1. Log in to the Azure portal, and go to **Azure Information Protection**. Under the **Scanner** menu on the left, select **Network scan jobs (Preview)** ![network scan jobs icon](media/i-network-scan-jobs.png "network scan jobs icon").
     
 1. On the **Azure Information Protection - Network scan jobs** pane, select **Add** ![add icon](media/i-add.png "add icon").
     
@@ -125,10 +125,10 @@ Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-
     |---------|---------|
     |**Network scan job name**     |Enter a meaningful name for this job.  This field is required.       |
     |**Description**     |   Enter a meaningful description.      |
-    |**Select the cluster**     |From the dropdown, select the cluster you want to use to scan the configured network locations.  <br /><br />**Tip:** When selecting a cluster, make sure that the nodes in the cluster you assign can access the configured IP ranges via SMB.      |
-    |**Configure IP ranges to discover**     |   Click to define an IP address or range. <br /><br />In the **Choose IP ranges** pane, enter an optional name, and then a start IP address and end IP address for your range. <br /><br />**Tip:** To scan a specific IP address only, enter the identical IP address in both the **Start IP** and **End IP** fields.      |
+    |**Select the cluster**     |From the dropdown, select the cluster you want to use to scan the configured network locations.  <br /><br />**Tip**: When selecting a cluster, make sure that the nodes in the cluster you assign can access the configured IP ranges via SMB.      |
+    |**Configure IP ranges to discover**     |   Click to define an IP address or range. <br /><br />In the **Choose IP ranges** pane, enter an optional name, and then a start IP address and end IP address for your range. <br /><br />**Tip**: To scan a specific IP address only, enter the identical IP address in both the **Start IP** and **End IP** fields.      |
     |**Set schedule**     | Define how often you want this network scan job to run.  <br /><br />If you select **Weekly**, the **Run network scan job on** setting appears. Select the days of the week where you want the network scan job to run.       |
-    |**Set start time (UTC)**     |Define the date and time that you want this network scan job to start running. If you've selected to run the job daily, weekly, or monthly, the job will run at the defined time, at the recurrence you've selected. <br /><br />**Note**: Be careful when setting the date to any days at the end of the month. If you select **31,** the network scan job will not run in any month that has 30 days or fewer.    |
+    |**Set start time (UTC)**     |Define the date and time that you want this network scan job to start running. If you've selected to run the job daily, weekly, or monthly, the job will run at the defined time, at the recurrence you've selected. <br /><br />**Note**: Be careful when setting the date to any days at the end of the month. If you select **31**, the network scan job will not run in any month that has 30 days or fewer.    |
     | | |
 
 1. Select **Save** ![save icon](media/qs-tutor/save-icon.png "save icon") to save your changes.
@@ -362,13 +362,13 @@ For a label policy that applies to the user account downloading labels for the s
 
 For a scanner that has access to the internet, this user account is the account that you specify for the *DelegatedUser* parameter with the Set-AIPAuthentication command.
 
-**Example 1:**  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
+**Example 1**:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-**Example 2:** PowerShell command for the scanner to protect .xml files and .tiff files in addition to Office files and PDF files, where your label policy is named "Scanner":
+**Example 2**: PowerShell command for the scanner to protect .xml files and .tiff files in addition to Office files and PDF files, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
@@ -542,7 +542,7 @@ Once you've installed and configured your scanner, start [scanning your files](d
 
 See also: [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
-**More information:**
+**More information**:
 
 - Interested in how the Core Services Engineering and Operations team in Microsoft implemented this scanner?  Read the technical case study: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
