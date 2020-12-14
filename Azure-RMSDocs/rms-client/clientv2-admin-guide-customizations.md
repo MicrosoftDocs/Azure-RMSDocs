@@ -171,9 +171,9 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |PFileSupportedExtensions|[Change which file types to protect](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 | PowerPointRemoveAllShapesByShapeName|[Remove all shapes of a specific shape name from your headers and footers, isntead of removing shapes by text inside the shape](#remove-all-shapes-of-a-specific-shape-name) |
-|PowerPointShapeNameToRemove |[Avoid removing shapes from PowerPoint that contain specified text, and are not headers / footers](#powerpointshapenametoremove) |
+|PowerPointShapeNameToRemove |[Avoid removing shapes from PowerPoint that contain specified text, and are not headers / footers](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) |
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
-| RemoveExternalMarkingFromCustomLayouts|[Explicitly remove external content markings from inside your PowerPoint custom layouts](#removeexternalmarkingfromcustomlayouts) |
+|RemoveExternalMarkingFromCustomLayouts|[Explicitly remove external content markings from inside your PowerPoint custom layouts](#extend-external-marking-removal-to-custom-layouts) |
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
@@ -518,13 +518,13 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 Headers and footers in PowerPoint are implemented as shapes. For the **msoTextBox,** **msoTextEffect,** **msoPlaceholder,** and **msoAutoShape** shape types, the following advanced settings provide additional optimizations:
 
-- [PowerPointShapeNameToRemove](#define-the-powerpoint-shapes-where-you-do-not-want-to-remove-text)
+- [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)
 - [RemoveExternalMarkingFromCustomLayouts](#extend-external-marking-removal-to-custom-layouts)
 
 Additionally, the [PowerPointRemoveAllShapesByShapeName](#remove-all-shapes-of-a-specific-shape-name) can remove any shape type, based on the shape name.
 
 For more information, see [Find the name of the shape that you're using as a header or footer](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer).
-##### Define the PowerPoint shapes where you do not want to remove text
+##### Avoid removing shapes from PowerPoint that contain specified text, and are not headers / footers
 
 To avoid removing shapes that contain the text that you have specified, but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove.** 
 
@@ -571,7 +571,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesBy
 > [!NOTE]
 > Although the settings aren't functionally related, to define the **PowerPointRemoveAllShapesByShapeName** setting, you must curenntly also define the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) setting.
 >
-> We recommend that if you want to define **PowerPointRemoveAllShapesByShapeName**, define both [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) and [PowerPointShapeNameToRemove](#powerpointshapenametoremove).
+> We recommend that if you want to define **PowerPointRemoveAllShapesByShapeName**, define both [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) and [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers).
 >
 
 
