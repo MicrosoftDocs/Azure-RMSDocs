@@ -6,7 +6,7 @@ description: Instructions for troubleshooting your unified labeling on-premises 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/09/2020
+ms.date: 12/14/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -110,7 +110,7 @@ To enable TLS 1.2, see [How to enable TLS 1.2](/mem/configmgr/core/plan-design/s
 
 **Workaround**
 
-Make sure that you've run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) PowerShell cmdlet to set your authentication credentials.
+Make sure that you're authenticating using a token. When you run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) command, make sure you use the token parameter on behalf of the scanner user.
 
 For example:
 
@@ -119,6 +119,8 @@ $pscreds = Get-Credential CONTOSO\scanner
 Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
 Acquired application access token on behalf of CONTOSO\scanner.
 ```
+
+For more information, see [Get an Azure AD token for the scanner](deploy-aip-scanner-configure-install.md#get-an-azure-ad-token-for-the-scanner).
 
 ### Authentication token not accepted
 
@@ -130,7 +132,7 @@ Acquired application access token on behalf of CONTOSO\scanner.
 
 If the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) command failed, make sure to define the permissions correctly in the Azure portal.
 
-<!-- not sure how to do this - set permissions correctly in the azure portal? need to add a link-->
+For more information, see [Create and configure the Azure AD applications for Set-AIPAuthentication](rms-client/clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication).
 
 ### Scanner failed to download the DLP policy
 
@@ -168,20 +170,35 @@ For more information, see [Configuring and installing the  Azure Information Pro
 
 ### Policy doesn't include any automatic labeling condition
 
-If you get errors about your labeling policy missing automatic labeling conditions, you may need to check the settings in your content scan job or your labeling policy.
+If you get errors about your labeling policy missing automatic labeling conditions, you may need to check the settings in your content scan job or your labeling policy, or verify that your policy is accessible.
 
-Try defining the following settings:
-
-- **In your content scan job**, in the Azure portal:
-
-    - [Set the **Info types to be discovered** to **All**](deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) 
-    
-    - [Define a default label to be applied when scanning](#apply-a-default-label-to-all-files-in-a-data-repository)
-    
-- **Labeling policy**, in your labeling admin center, such as the Microsoft 365 Security & Compliance Center:
-
-    - [Define a default sensitivity label](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) 
-    
-    - [Define automatic / recommended labeling rules](/microsoft-365/compliance/apply-sensitivity-label-automatically)
+|Workaround  |Details  |
+|---------|---------|
+|**Check your content scan job settings**     | In the Azure portal, do the following: <br> <br>- [Set the **Info types to be discovered** to **All**](deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types)  <br>- [Define a default label to be applied when scanning](#apply-a-default-label-to-all-files-in-a-data-repository)      |
+|**Check your labeling policy settings**     |  in your labeling admin center, such as the Microsoft 365 Security & Compliance Center, do the following: <br> <br>- [Define a default sensitivity label](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)  <br> - [Define automatic / recommended labeling rules](/microsoft-365/compliance/apply-sensitivity-label-automatically)       |
+|**Verify that your policy is accessible**     | If your settings are defined as expected, the policy file itself may be missing or inaccessible, such as when there's a timeout from the Microsoft 365 Security & Compliance Center. <br>  <br>To verify your policy file, check that the following file exists: **%localappdata%\Microsoft\MSIP\mip\MSIP.Scanner.exe\mip\mip.policies.sqlite3**        |
+| | |
 
 For more information, see [What is the Azure Information Protection unified labeling scanner?](deploy-aip-scanner.md) and [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+
+### Database schema is not up to date
+
+**Error message:**
+
+If you've upgraded your scanner installation but the database schema was not updated in parallel, the following error is shown in the Azure portal: **Error: DB schema is not up to date**
+
+**Workaround**
+
+Run the [Update-AIPScanner](/powershell/module/azureinformationprotection/update-aipscanner) command on one of the nodes in the cluster to ensure that the database is up-to-date.
+
+
+### Scanner diagnostics errors
+
+If you get errors running the [Start-AIPDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) command, make sure that you're using the correct scanner account credentials in the **-OnBehalf** parameter.
+
+For example:
+
+```powershell
+$scanner_account_creds= Get-Credential
+Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
+```
