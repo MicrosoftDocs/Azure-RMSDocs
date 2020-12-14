@@ -202,7 +202,7 @@ The following fixes were delivered in version 2.9.108.0 of the [Azure Informatio
 
 - Issues fixed for custom permissions set via the [File Explorer](clientv2-classify.md#using-file-explorer-to-classify-files) on Office files
 
-- [New advanced client setting](clientv2-admin-guide-customizations.md#powerpointremoveallshapesbyshapename) to remove shapes from PowerPoint headers or footers, by using the shape name instead of the text inside a shape.
+- [New advanced client setting](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) (PowerPointRemoveAllShapesByShapeName) to remove shapes from PowerPoint headers or footers, by using the shape name instead of the text inside a shape.
 
 ### Known issues
 
