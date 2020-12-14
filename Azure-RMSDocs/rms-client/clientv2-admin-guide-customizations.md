@@ -61,7 +61,7 @@ For more information, see:
 - [Label policy advanced settings syntax](#label-policy-advanced-settings)
 - [Label advanced settings syntax](#label-advanced-settings)
 - [Examples for setting advanced settings](#examples-for-setting-advanced-settings)
-- [Specifying the identity for the label policy or label](#specifying-the-identity-for-the-label-policy-or-label)
+- [Specifying the label policy or label identity](#specifying-the-label-policy-or-label-identity)
 - [Order of precedence - how conflicting settings are resolved](#order-of-precedence---how-conflicting-settings-are-resolved)
 - [Advanced setting references](#advanced-setting-references)
 ### Label policy advanced settings
