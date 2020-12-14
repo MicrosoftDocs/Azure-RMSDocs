@@ -155,7 +155,7 @@ This section outlines information about the current and previous releases of the
 
 -   When you use a sample app on an Amazon® Kindle device to view .ptxt attachments, you must first download the file before you view it.
 
-    **Solution** - a known issue that will be addressed later.
+    **Solution** - This is a known issue, and one unlikely to be addressed. We suggest you investigate the [Microsoft Information Protection SDK](/information-protection/develop/) instead.
 
 -   An application that uses the SDK may crash if multi-instance is allowed.
 

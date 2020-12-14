@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -26,10 +26,9 @@ ms.custom: admin
 
 # Configuring and installing the  Azure Information Protection unified labeling scanner
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
-
->[!NOTE] 
-> If you're working with the AIP classic scanner, see [Installing and configuring the Azure Information Protection classic scanner](deploy-aip-scanner-configure-install-classic.md).
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
+>
+>***Relevant for**: [AIP unified labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic scanner, see [Configuring and installing the Azure Information Protection classic scanner](deploy-aip-scanner-configure-install-classic.md).*
 
 Before you start configuring and installing the Azure Information Protection scanner, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md). 
 
@@ -111,12 +110,12 @@ Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-
 |Prerequisite  |Description  |
 |---------|---------|
 |**Install the Network Discovery service**     |   If you've recently upgraded your scanner, you may need to still install the Network Discovery service. <br /><br />Run the [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) cmdlet to enable network scan jobs.      |
-|**Azure Information Protection analytics**     | Make sure that you have Azure Information Protection analytics enabled. <br /><br />In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview).** <br /><br />For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).|
+|**Azure Information Protection analytics**     | Make sure that you have Azure Information Protection analytics enabled. <br /><br />In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview)**. <br /><br />For more information, see [Central reporting for Azure Information Protection (public preview)](reports-aip.md).|
 | | |
 
 #### Creating a network scan job
 
-1. Log in to the Azure portal, and go to **Azure Information Protection.** Under the **Scanner** menu on the left, select **Network scan jobs (Preview)** ![network scan jobs icon](media/i-network-scan-jobs.png "network scan jobs icon").
+1. Log in to the Azure portal, and go to **Azure Information Protection**. Under the **Scanner** menu on the left, select **Network scan jobs (Preview)** ![network scan jobs icon](media/i-network-scan-jobs.png "network scan jobs icon").
     
 1. On the **Azure Information Protection - Network scan jobs** pane, select **Add** ![add icon](media/i-add.png "add icon").
     
@@ -126,10 +125,10 @@ Starting in version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-
     |---------|---------|
     |**Network scan job name**     |Enter a meaningful name for this job.  This field is required.       |
     |**Description**     |   Enter a meaningful description.      |
-    |**Select the cluster**     |From the dropdown, select the cluster you want to use to scan the configured network locations.  <br /><br />**Tip:** When selecting a cluster, make sure that the nodes in the cluster you assign can access the configured IP ranges via SMB.      |
-    |**Configure IP ranges to discover**     |   Click to define an IP address or range. <br /><br />In the **Choose IP ranges** pane, enter an optional name, and then a start IP address and end IP address for your range. <br /><br />**Tip:** To scan a specific IP address only, enter the identical IP address in both the **Start IP** and **End IP** fields.      |
+    |**Select the cluster**     |From the dropdown, select the cluster you want to use to scan the configured network locations.  <br /><br />**Tip**: When selecting a cluster, make sure that the nodes in the cluster you assign can access the configured IP ranges via SMB.      |
+    |**Configure IP ranges to discover**     |   Click to define an IP address or range. <br /><br />In the **Choose IP ranges** pane, enter an optional name, and then a start IP address and end IP address for your range. <br /><br />**Tip**: To scan a specific IP address only, enter the identical IP address in both the **Start IP** and **End IP** fields.      |
     |**Set schedule**     | Define how often you want this network scan job to run.  <br /><br />If you select **Weekly**, the **Run network scan job on** setting appears. Select the days of the week where you want the network scan job to run.       |
-    |**Set start time (UTC)**     |Define the date and time that you want this network scan job to start running. If you've selected to run the job daily, weekly, or monthly, the job will run at the defined time, at the recurrence you've selected. <br /><br />**Note**: Be careful when setting the date to any days at the end of the month. If you select **31,** the network scan job will not run in any month that has 30 days or fewer.    |
+    |**Set start time (UTC)**     |Define the date and time that you want this network scan job to start running. If you've selected to run the job daily, weekly, or monthly, the job will run at the defined time, at the recurrence you've selected. <br /><br />**Note**: Be careful when setting the date to any days at the end of the month. If you select **31**, the network scan job will not run in any month that has 30 days or fewer.    |
     | | |
 
 1. Select **Save** ![save icon](media/qs-tutor/save-icon.png "save icon") to save your changes.
@@ -269,16 +268,16 @@ After you've [configured the Azure Information Protection scanner in the Azure p
 1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner, and the scanner cluster name that you specified in the preceding section: 
     
     ```PowerShell
-    Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
+    Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
     ```
     
     Examples, using the profile name of **Europe**:
     
-    - For a default instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Profile Europe`
+    - For a default instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster Europe`
     
-    - For a named instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Profile Europe`
+    - For a named instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster Europe`
     
-    - For SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Profile Europe`
+    - For SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Europe`
     
     When you are prompted, provide the credentials for the scanner service account (\<domain\user name>) and password.
 
@@ -363,13 +362,13 @@ For a label policy that applies to the user account downloading labels for the s
 
 For a scanner that has access to the internet, this user account is the account that you specify for the *DelegatedUser* parameter with the Set-AIPAuthentication command.
 
-**Example 1:**  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
+**Example 1**:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-**Example 2:** PowerShell command for the scanner to protect .xml files and .tiff files in addition to Office files and PDF files, where your label policy is named "Scanner":
+**Example 2**: PowerShell command for the scanner to protect .xml files and .tiff files in addition to Office files and PDF files, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
@@ -456,7 +455,7 @@ Use the following options and guidance to help you optimize scanner performance:
 |---------|---------|
 |**Have a high speed and reliable network connection between the scanner computer and the scanned data store**     |  For example, place the scanner computer in the same LAN, or preferably, in the same network segment as the scanned data store. <br /><br />The quality of the network connection affects the scanner performance because, to inspect the files, the scanner transfers the contents of the files to the computer running the scanner service. <br /><br />Reducing or eliminating  the network hops required for the data to travel also reduces the load on your network.      |
 |**Make sure the scanner computer has available processor resources**     | Inspecting the file contents and encrypting and decrypting files are processor-intensive actions. <br /><br />Monitor the typical scanning cycles for your specified data stores to identify whether a lack of processor resources is negatively affecting the scanner performance.        |
-|**Install multiple instances of the scanner** | The Azure Information Protection scanner supports multiple configuration databases on the same SQL server instance when you specify a custom cluster (profile) name for the scanner. <br /><br />Multiple scanners can also share the same cluster (profile), resulting in quicker scanning times.|
+|**Install multiple instances of the scanner** | The Azure Information Protection scanner supports multiple configuration databases on the same SQL server instance when you specify a custom cluster name for the scanner. <br /><br />Multiple scanners can also share the same cluster, resulting in quicker scanning times.|
 |**Check your alternative configuration usage** |The scanner runs more quickly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents. <br/><br />The scanner runs more slowly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.|
 | | |
 
@@ -543,10 +542,8 @@ Once you've installed and configured your scanner, start [scanning your files](d
 
 See also: [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
-**More information:**
+**More information**:
 
 - Interested in how the Core Services Engineering and Operations team in Microsoft implemented this scanner?  Read the technical case study: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
-
-- You might be wondering: [What's the difference between Windows Server FCI and the Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 - Use PowerShell to interactively classify and protect files from your desktop computer. For more information about this and other scenarios that use PowerShell, see [Using PowerShell with the Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide-powershell.md).

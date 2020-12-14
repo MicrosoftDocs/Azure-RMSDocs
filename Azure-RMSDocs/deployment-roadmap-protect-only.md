@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
@@ -26,16 +26,18 @@ ms.custom: admin
 
 # Azure Information Protection deployment roadmap for protection only
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 > [!TIP]
 > Alternatively, you may be looking for one of the following articles:
 > - [AIP deployment roadmap for classification, labeling, and protection](deployment-roadmap-classify-label-protect.md)
 > - [How-to guides for common scenarios that use Azure Information Protection](how-to-guides.md)
->- [Azure Information Protection release roadmap](information-support.md#information-about-new-releases-and-updates)
+> - [Azure Information Protection release roadmap](information-support.md#information-about-new-releases-and-updates)
 
 Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization, when you want to implement data protection only.
 
@@ -68,37 +70,37 @@ Assign a license from this subscription to each user in your organization who wi
 
 Before you begin using the protection service from Azure Information Protection, do the following preparation:
 
-1. **Set up your user accounts and groups for AIP.**
+1. **Set up your user accounts and groups for AIP**
 
     Make sure that your Microsoft 365 tenant contains the user accounts and groups that will be used by Azure Information Protection to authenticate and authorize users from your organization. If necessary, create these accounts and groups, or synchronize them from your on-premises directory. 
 
     For more information, see [Preparing users and groups for Azure Information Protection](prepare.md).
 
-1. **Decide how you want to manage your tenant key.**
+1. **Decide how you want to manage your tenant key**
 
     Decide whether you want Microsoft to manage your tenant key (the default), or generate and manage your tenant key yourself (known as bring your own key, or BYOK). For additional security, implement "hold your own key" (HYOK) protection. 
 
     For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
-1. **Install PowerShell for AIP**.
+1. **Install PowerShell for AIP**
 
     Install the PowerShell module for AIPService on at least one computer that has internet access. You can do this step now, or later. 
 
     For more information, see [Installing the AIPService PowerShell module](./install-powershell.md).
 
-1. **AD RMS only: Migrate your data to the cloud**.
+1. **AD RMS only: Migrate your data to the cloud**
 
     If you are currently using AD RMS: Perform a migration to move the keys, templates, and URLs to the cloud. 
 
     For more information, see [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-1. **Activate protection**.
+1. **Activate protection**
 
     Make sure that the protection service is activated so that you can begin to protect documents and emails. If you are deploying in phases, configure user onboarding controls to restrict users' ability to apply protection. 
 
     For more information, see [Activating the protection service from Azure Information Protection](./activate-service.md).
 
-1. **Configure optional features as needed**.
+1. **Configure optional features as needed**
 
     Consider configuring either of the following features, either now or later.
     
@@ -116,7 +118,7 @@ Perform the following steps:
     
     Install the classic client for users to support Office 2010, to protect files other than Office documents and emails, and to track protected documents, and provide user training for this client. 
 
-    For more information, see [Azure Information Protection client for Windows](./rms-client/aip-client.md).
+    For more information, see [Azure Information Protection classic client for Windows](./rms-client/aip-client.md).
 
 2. **Configure Office applications and services**
     

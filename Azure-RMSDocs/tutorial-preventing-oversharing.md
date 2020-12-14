@@ -26,13 +26,13 @@ ms.custom: admin
 
 # Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>**Applies to*: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->*Instructions for: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant for**: [Azure Information Protection unified labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 As a system admin, you need to ensure that your organization's content remains secure, and is shared only with trusted users. One of the most common ways that users share content inappropriately is by email. Configure your policy to prevent oversharing via Outlook, such as limiting access to specific users only, or allowing users to share content only with trusted external users.
 
-**Time required:** You can complete this tutorial in 30 minutes.
+**Time required**: You can complete this tutorial in 30 minutes.
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
@@ -230,7 +230,7 @@ This procedure describes how to customize the message that appears when a user t
 > In production, we recommend that you avoid complications by *either* using the **OutlookUnlabeledCollaborationAction** advanced property to define your rules, *or* defining complex rules with a json file as defined below, but not both.
 >
 
-**To define your rule using a json file:**
+**To define your rule using a json file**:
 
 1. Create a **.json** file, named **OutlookCollaborationRule_1.json**, with the following code:
 
@@ -317,15 +317,15 @@ In this tutorial, you learned how to customize AIP's behavior in Outlook to prev
 
 Now you can start the Windows Event Viewer to check the logs for the actions that occurred.
 
-**To check the Event Viewer for AIP logging events:**
+**To check the Event Viewer for AIP logging events**:
 
 On your client machine, open the Windows Event Viewer application, and navigate to **Applications and Services Logs** > **Azure Information Protection**.
 
 You'll see an information event logged for each test you performed, including details about both the message and user response:
 
-- **Warn messages:** Information ID 301
-- **Justify messages:** Information ID 302
-- **Block messages:** Information ID 303
+- **Warn messages**: Information ID 301
+- **Justify messages**: Information ID 302
+- **Block messages**: Information ID 303
 
 For example:
 
@@ -416,6 +416,6 @@ For quicker testing, this tutorial used an email message to a single recipient, 
 
 Apply the same methods with multiple recipients and labels, or to attachments, where labeling status is sometimes less obvious to users.
 
-For example, you may want to have a popup message appear on email messages labeled **Public,** but have a PowerPoint presentation attached that's labeled **General.**
+For example, you may want to have a popup message appear on email messages labeled **Public**, but have a PowerPoint presentation attached that's labeled **General**.
 
 For more information about advanced properties and Outlook customizations, see [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md).

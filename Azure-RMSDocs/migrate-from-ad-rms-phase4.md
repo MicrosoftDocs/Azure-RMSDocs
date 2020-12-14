@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
@@ -28,8 +28,9 @@ ms.custom: admin
 
 # Migration phase 4 - supporting services configuration
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
-
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Use the following information for Phase 4 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 8 through 9 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -155,15 +156,15 @@ Do not start step 5 yet from the connector instructions.
 
 For all Exchange servers, add the following registry values to LicenseServerRedirection, depending on your versions of Exchange:
 
-1. For both **Exchange 2013 and Exchange 2016,** add the following registry value:
+1. For both **Exchange 2013 and Exchange 2016**, add the following registry value:
 
-    - **Registry path:** `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
+    - **Registry path**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
 
-    - **Type:** Reg_SZ
+    - **Type**: Reg_SZ
 
-    - **Value:** `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
+    - **Value**: `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
 
-    - **Data:** One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+    - **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
         - `http://\<connector FQDN\>/_wmcs/licensing`
         
@@ -171,13 +172,13 @@ For all Exchange servers, add the following registry values to LicenseServerRedi
 
 1. For Exchange 2013, add the following additional registry value:
 
-    - **Registry path:** `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection` 
+    - **Registry path**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection` 
 
-    - **Type:** Reg_SZ
+    - **Type**: Reg_SZ
 
-    - **Value:** https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
+    - **Value**: https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
 
-    - **Data:** One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+    - **Data**: One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
         - `http://\<connector FQDN\>/_wmcs/licensing`
 
