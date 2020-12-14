@@ -26,7 +26,9 @@ ms.custom: admin, has-adal-ref
 
 # Additional Azure AD requirements for Azure Information Protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 An [Azure AD directory is a requirement](requirements.md#azure-active-directory) for using Azure Information protection. Use an account from an Azure AD directory to sign in to the Azure portal, where you can configure Azure Information Protection settings.
 
@@ -36,9 +38,16 @@ The following sections list additional AIP and Azure AD requirements for specifi
 
 ## Computers running Office 2010
 
-In addition to Azure AD account, computers running Microsoft Office 2010 require the [Azure Information Protection unified labeling client](./rms-client/aip-clientv2.md) or [Azure Information Protection classic client](./rms-client/aip-client.md) to authenticate to Azure Information Protection and its data protection service, Azure Rights Management.
+In addition to an Azure AD account, computers running Microsoft 2010 require the Azure Information Protection client for Windows to authenticate to Azure Information Protection, and its data protection service, Azure Rights Management. 
 
 If your user accounts are federated (for example, you use AD FS), these computers must use Windows-Integrated Authentication. Forms-based authentication in this scenario fails to authenticate users for Azure Information Protection.
+
+We recommend that you deploy the Azure Information Protection unified labeling client. If you haven't yet upgraded, your system may still have the [Azure Information Protection classic client](./rms-client/aip-client.md) deployed. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
+
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+>
+> This time-frame allows all current Azure Information Protection customers to transition to the Microsoft Information Protection unified labeling solution. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 ## Support for certificate-based authentication (CBA)
 
@@ -50,7 +59,7 @@ For more information, see [Get started with certificate-based authentication in 
 
 To use multi-factor authentication (MFA) with Azure Information Protection, you must have at least one of the following installed:
 
-- **Microsoft Office,** version 2013 or higher
+- **Microsoft Office**, version 2013 or higher
 - **An AIP client**. No minimum version required. The AIP clients for Windows, as well as the viewer apps for iOS and Android all support MFA.
 - **The Rights Management sharing app for Mac computers**. The RMS sharing apps have supported MFA since the September 2015 release.
 

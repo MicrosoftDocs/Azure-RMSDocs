@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 10/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
@@ -26,6 +26,13 @@ search.appverid:
 ---
 
 # Which PDF readers are supported for protected PDFs?
+
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 PDF readers for classified and/or protected PDFs enable you to open encrypted PDFs that contain sensitive information.
 
@@ -54,7 +61,11 @@ For instructions, see the following sections:
 
 The PDF readers referenced on this page can all open protected documents that adhere to the ISO standard for PDF encryption. 
 
-This standard is used by default by both the AIP classic and unified labeling clients, unless it has been [disabled by an administrator](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
+This standard is used by default by the AIP client.
+
+> [!NOTE]
+> **Classic client only**: If you have the AIP classic client, this may have been [disabled by an administrator](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
+> 
 
 ### Viewing protected PDFs in Adobe Acrobat Reader
 
@@ -70,18 +81,18 @@ For more information, see the following blog posts:
 
 ## Viewing protected PDFs in Microsoft Edge on Windows or Mac
 
-Microsoft Edge offers native support for viewing PDF files that are classified and protected. Use of Microsoft Edge ensures that users can open protected PDF files seamlessly without the need to install or configure any additional settings or software.
+Microsoft Edge offers built-in support for viewing PDF files that are classified and protected. Use of Microsoft Edge ensures that users can open protected PDF files seamlessly without the need to install or configure any additional settings or software.
 
 Supported versions include:
 
-- **Windows:** Windows 10 and previous versions through Windows 8. 
+- **Windows**: Windows 10 and previous versions through Windows 8. 
     
     For more information about earlier versions, see [Support for previous formats](#support-for-previous-formats).
 
-- **Mac:** macOS versions 10.12 and above 
+- **Mac**: macOS versions 10.12 and above 
 
 
-**Instructions:** 
+**Instructions**: 
 
 1. Check which [Microsoft Edge version](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) is installed on your system. 
 1. If the Microsoft Edge version is 83.0.478.37 or above, you can open protected files directly in the Edge browser. 
@@ -94,7 +105,7 @@ Supported versions include:
 
 To open a protected PDF document on your desktop computer, we recommend that you install the relevant [Microsoft Information Protection (MIP) plug-in for Acrobat and Acrobat Reader](https://go.microsoft.com/fwlink/?linkid=2050049) for your operating system.
 
-**Instructions:**
+**Instructions**:
 
 1. If you haven't already, install the Adobe Reader from the [Adobe site](https://www.adobe.com/).
 
@@ -106,11 +117,11 @@ To open a protected PDF document on your desktop computer, we recommend that you
 
     Supported versions include:
 
-    - **Windows:** Windows 10 and previous versions through Windows 8. 
+    - **Windows**: Windows 10 and previous versions through Windows 8. 
     
         For more information about earlier versions, see [Support for previous formats](#support-for-previous-formats).
 
-    - **Mac:** macOS versions 10.12 - 10.14 
+    - **Mac**: macOS versions 10.12 - 10.14 
 
 1. If prompted for admin approval, ask your admin to authorize the plug-in.
 

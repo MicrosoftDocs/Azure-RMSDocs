@@ -3,11 +3,11 @@
 
 title: Use PowerShell with the Azure Information Protection unified labeling client
 description: Instructions and information for admins to manage the Azure Information Protection unified labeling client by using PowerShell.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -26,11 +26,11 @@ ms.custom: admin
 
 # Admin Guide: Using PowerShell with the Azure Information Protection unified client
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see the [classic client admin guide](client-admin-guide-powershell.md).*
 
 When you install the Azure Information Protection unified labeling client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 
@@ -42,6 +42,7 @@ The cmdlets are installed with the PowerShell module **AzureInformationProtectio
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|For a shared folder, inspect the file contents and then automatically label unlabeled files, according to the conditions that you have specified.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|For a shared folder, apply a specified label to all files that do not have a label.|
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
+| | |
 
 This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
 
@@ -60,13 +61,11 @@ This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protec
 
 ### Prerequisites for using the AzureInformationProtection module
 
-In addition to the prerequisites for installing the AzureInformationProtection module, there are additional prerequisites for when you use the labeling cmdlets for Azure Information Protection:
+In addition to the prerequisites for installing the **AzureInformationProtection** module, there are additional prerequisites for when you use the labeling cmdlets for Azure Information Protection:
 
 1. The Azure Rights Management service must be activated.
 
-2. To remove protection from files for others using your own account: 
-
-    - The super user feature must be enabled for your organization and your account must be configured to be a super user for Azure Rights Management.
+2. To remove protection from files for others using your own account, the super user feature must be enabled for your organization and your account must be configured to be a super user for Azure Rights Management.
 
 #### Prerequisite 1: The Azure Rights Management service must be activated
 

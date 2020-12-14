@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
@@ -27,12 +27,13 @@ ms.custom: admin
 
 # Configuring servers for the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
-
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Use the following information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
-**Prerequisites:** Before you begin, make sure that you have:
+**Prerequisites**: Before you begin, make sure that you have:
     - Installed and configured the RMS connector
     - Checked any [prerequisites](deploy-rms-connector.md#prerequisites-for-the-rms-connector) relevant for the servers that will use the connector.
 
@@ -68,7 +69,7 @@ You must always restart the file server that is configured to use File Classific
 
 Edit your registry settings automatically, by using the server configuration tool for Microsoft RMS connector.
 
-**Advantages include:**
+**Advantages include**:
 
 - No direct editing of the registry. This is automated for you by using a script.
 
@@ -83,7 +84,7 @@ For more information, see [How to use the server configuration tool for Microsof
 
 **Advantages include**: No connectivity to a server running the RMS connector is required.
 
-**Disadvantages include:**
+**Disadvantages include**:
 
 - More administrative overheads that are error-prone.
 
@@ -93,7 +94,7 @@ For more information, see [How to use the server configuration tool for Microsof
 
 ### How to use the server configuration tool for Microsoft RMS connector
 
-1.  If you haven't already downloaded the script for the server configuration tool for Microsoft RMS connector **(GenConnectorConfig.ps1),** download it from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
+1.  If you haven't already downloaded the script for the server configuration tool for Microsoft RMS connector **(GenConnectorConfig.ps1)**, download it from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
 
 2.  Save the **GenConnectorConfig.ps1** file on the computer where you will run the tool. 
 
@@ -220,7 +221,7 @@ Servers running SharePoint 2010 must have installed a version of the MSDRM clien
 
 2.  On the SharePoint servers that communicate with the RMS connector, do one of the following:
 
-    -   **Run the server configuration tool for Microsoft RMS connector.** 
+    -   **Run the server configuration tool for Microsoft RMS connector** 
 
         For more information, see [How to use the server configuration tool for Microsoft RMS connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector).
 
@@ -262,7 +263,7 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
 
 2. On the file servers configured for File Classification Infrastructure and that will communicate with the RMS connector, do one of the following:
 
-    -   **Run the server configuration tool for Microsoft RMS connector.** 
+    -   **Run the server configuration tool for Microsoft RMS connector** 
     
         For more information, see [How to use the server configuration tool for Microsoft RMS connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector).
 
