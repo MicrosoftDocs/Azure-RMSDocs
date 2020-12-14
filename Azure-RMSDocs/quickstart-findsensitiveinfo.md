@@ -4,7 +4,7 @@ description: Use the Azure Information Protection scanner to find what sensitive
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/19/2020
+ms.date: 11/10/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -24,13 +24,16 @@ ms.subservice: aiplabels
 
 # Quickstart: Find what sensitive information you have in files stored on-premises
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection classic or unified labeling clients for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE]
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 In this quickstart, you'll enable SharePoint to allow scanning, and also install and configure the Azure Information Protection scanner to find any sensitive data you have stored in an on-premises data store.
 
-**Time required:** You can finish this configuration in less than 15 minutes.
+**Time required**: You can finish this configuration in less than 15 minutes.
 
 ## Prerequisites
 
@@ -152,7 +155,7 @@ You're now ready to install the scanner with the scanner profile that you've cre
 >
 ## See detailed results
 
-Using File Explorer, locate the scanner reports in **%*localappdata*%\Microsoft\MSIP\Scanner\Reports.** Open the detailed report file that has a **.csv** file format.
+Using File Explorer, locate the scanner reports in **%*localappdata*%\Microsoft\MSIP\Scanner\Reports**. Open the detailed report file that has a **.csv** file format.
 
 In Excel:
 
@@ -196,12 +199,9 @@ Then restart your computer.
 
 This command doesn't remove the following items and you must manually remove them if you don't want them after this quickstart:
 
-- The SQL Server database that was created by running the Install-AIPScanner cmdlet when the Azure Information Protection scanner was installed:
+- The SQL Server database that was created by running the Install-AIPScanner cmdlet when the Azure Information Protection scanner was installed: **AIPScanner_\<profile>**
 
-    - For the classic client: **AIPScanner_\<profile>**
-    - For the unified labeling client: **AIPScannerUL_\<profile_name>**
-
-- The scanner reports located in **%*localappdata*%\Microsoft\MSIP\Scanner\Reports.**
+- The scanner reports located in **%*localappdata*%\Microsoft\MSIP\Scanner\Reports**.
 
 - The **Log on as a service** user right assignment that your domain account was granted for your local computer.
 
@@ -211,12 +211,5 @@ This quickstart includes the minimum configuration so that you can quickly see h
 
 If you want to classify and protect the files that contain sensitive information, you must configure labels for automatic classification and protection:
 
-**For the classic client:**
-
 - [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md)
 - [How to configure a label for Rights Management protection](configure-policy-protection.md)
-
-**For the unified labeling client:**
-
-- [Apply a sensitivity label to content automatically](/microsoft-365/compliance/apply-sensitivity-label-automatically)
-- [Restrict access to content by using encryption in sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels)

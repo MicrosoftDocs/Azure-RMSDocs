@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Information Protection unified labeling client - Version history & support policy
-description: See the release information for the Azure Information Protection unified labeling client for Windows. 
+description: Find out what's new for the Azure Information Protection (AIP) unified labeling client for Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -26,11 +26,11 @@ ms.custom: admin
 
 # Azure Information Protection unified labeling client - Version release history and support policy
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [AIP classic client version release history and support policy](client-version-release-history.md).*
 
 You can download the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
@@ -71,7 +71,7 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
+The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
 ## Version 2.9.101.0 (Public preview)
 
@@ -367,7 +367,7 @@ Unified labeling scanner and client version 2.7.101.0
 
 **Released** 08/23/2020
 
-**Fix:**
+**Fix**:
 
 Fixed issue for PPT, Excel and Word users which resulted in files freezing, crashing, or being forced to repeat save that was related to mandatory labels configured with protection, watermarking, and/or content marking.
 
@@ -377,7 +377,7 @@ Unified labeling scanner and client version 2.7.99.0
 
 **Released** 07/20/2020
 
-**Fixes and improvements:**
+**Fixes and improvements**:
 
 Fixed issues in file labeling actions for **New Label** audit logs.
 
@@ -469,7 +469,7 @@ For more requirement details, see [Firewalls and network infrastructure requirem
 
 - When multiple Exchange accounts are configured and the Azure Information Protection Outlook client is enabled, mails are sent from the secondary account as expected. For more information about configuring the unified labeling client with Outlook, see [Additional prerequisites for the Azure Information Protection unified labeling client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
-- When a document with a higher confidentiality label is dragged and dropped into an email, the email now automatically receives the higher confidentiality label as expected. For more information about labeling client features, see the [labeling client comparison table](use-client.md#compare-the-labeling-clients-for-windows-computers).
+- When a document with a higher confidentiality label is dragged and dropped into an email, the email now automatically receives the higher confidentiality label as expected. For more information about labeling client features, see the [labeling client comparison table](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
 - Custom permissions are now applied to emails as expected, when email addresses include both an apostrophe (') and period (.) For more information about configuring the unified labeling client with Outlook, see [Additional prerequisites for the Azure Information Protection unified labeling client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
@@ -517,7 +517,7 @@ Supported through  12/29/2020
 
 ## Next steps
 
-Not sure if unified labeling is the right client to install?  See [Choose which labeling client to use for Windows computers](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+Not sure if unified labeling is the right client to install?  See [Choose your Windows labeling solution](use-client.md#choose-your-windows-labeling-solution).
 
 For more information about installing and using the unified labeling client:
 

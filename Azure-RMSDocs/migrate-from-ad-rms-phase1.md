@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
@@ -27,7 +27,9 @@ ms.custom: admin
 
 # Migration phase 1 - preparation
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Use the following information for Phase 1 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 1 though 3 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) and prepare your environment for migration without any impact to your users.
 
@@ -151,13 +153,13 @@ For each Exchange organization, add registry values on each Exchange server, and
 
 1. If you have Exchange 2013 or Exchange 2016, add the following registry value:
 
-    - **Registry path:** `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
+    - **Registry path**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
 
-    - **Type:** Reg_SZ
+    - **Type**: Reg_SZ
 
-    - **Value:** `https://\<Your Tenant URL\>/_wmcs/licensing`
+    - **Value**: `https://\<Your Tenant URL\>/_wmcs/licensing`
 
-    - **Data:** `https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
+    - **Data**: `https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
 
 1. Run the following PowerShell commands, either one by one, or in a script:
 

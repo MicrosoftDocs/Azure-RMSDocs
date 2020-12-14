@@ -27,7 +27,9 @@ ms.custom: admin
 
 # Azure Information Protection requirements
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>****Applies to***: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and AIP classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 Before deploying Azure Information Protection, ensure that your system meets the following prerequisites:
 
@@ -41,7 +43,7 @@ Before deploying Azure Information Protection, ensure that your system meets the
 
 You must have one of the following, depending on the Azure Information Protection features you'll be using:
 
-- **An [Azure Information Protection plan](https://azure.microsoft.com/pricing/details/information-protection/)**. Required for classification, labeling, and protection by using the Azure Information Protection scanner or client (classic, or unified labeling)
+- **An [Azure Information Protection plan](https://azure.microsoft.com/pricing/details/information-protection/)**. Required for classification, labeling, and protection by using the Azure Information Protection scanner or client.
 
 - **An [Office 365 plan that includes Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)**. Required for protection only.
 
@@ -90,7 +92,7 @@ User computers or mobile devices must run on an operating system that supports A
 
 ### Supported operating systems for client devices
 
-The following operating systems support both the Azure Information Protection unified labeling and the Azure Information Protection clients: 
+The Azure Information Protection clients for Windows are supported are the following operating systems:
 
 - **Windows 10** (x86, x64). Handwriting is not supported in the Windows 10 RS4 build and later.
  
@@ -103,8 +105,6 @@ The following operating systems support both the Azure Information Protection un
 - **Windows Server 2016**
 
 - **Windows Server 2012 R2** and **Windows Server 2012**
-
-[Both clients](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) let users classify and label their documents and emails.
 
 For details about support in earlier versions of Windows, contact your Microsoft account or support representative.
 
@@ -157,13 +157,13 @@ The Azure Information Protection clients can label and protect documents and ema
 
 Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only, and labels that apply protection are not displayed for users. 
 
-These labels would have otherwise been displayed on the Azure Information Protection bar or in the unified labeling client on the Office ribbon (from the **Protect** button in the classic client or the **Sensitivity** button in the unified labeling client). 
+Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client, or the **Protect** button in the classic client.
 
 For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
 
 ### Office features and capabilities not supported
 
-- The Azure Information Protection clients, including both classic and unified labeling, do not support multiple versions of Office on the same computer, or switching user accounts in Office.
+- The Azure Information Protection clients for Windows do not support multiple versions of Office on the same computer, or switching user accounts in Office.
 
 - The Office [mail merge](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) feature is not supported with any Azure Information Protection feature.
 
@@ -179,10 +179,10 @@ Azure Information Protection has the following additional requirements:
 
     To support **Proxy.pac** files when using a proxy to acquire a token, add the following new registry key:
 
-    - **Path:** `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
-    - **Key:** `UseDefaultCredentialsInProxy`
-    - **Type:** `DWORD`
-    - **Value:** `1`
+    - **Path**: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
+    - **Key**: `UseDefaultCredentialsInProxy`
+    - **Type**: `DWORD`
+    - **Value**: `1`
     
 - **TLS client-to-service connections**. Do not terminate any TLS client-to-service connections, for example to perform packet-level inspection, to the **aadrm.com** URL. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
      
