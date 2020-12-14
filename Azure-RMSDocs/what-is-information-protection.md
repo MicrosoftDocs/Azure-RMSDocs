@@ -28,7 +28,9 @@ search.appverid:
 
 # What is Azure Information Protection?
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to discover, classify, and protect documents and emails by applying labels to content.
 
@@ -72,19 +74,19 @@ Download the scanner installation together with the client from the [Microsoft A
 
 ## Microsoft Information Protection SDK
 
-The Microsoft Information Protection SDK extends sensitivity labels to third-party apps and services. Developers can use the SDK to build native support for applying labels and protection to files.
+The Microsoft Information Protection SDK extends sensitivity labels to third-party apps and services. Developers can use the SDK to build built-in support for applying labels and protection to files.
 
 For example, you might use the MIP SDK for:
 
 - A line-of-business application that applies classification labels to files on export.
-- A CAD/CAM design application provides native support for Microsoft Information Protection labeling.
+- A CAD/CAM design application provides built-in support for Microsoft Information Protection labeling.
 - A cloud access security broker or data loss prevention solution reasons over data encrypted with Azure Information Protection.
 
 For more information, see the [Microsoft Information Protection SDK overview](/information-protection/develop/overview).
 
 ## Next steps
 
-**To get started with AIP,** download and install the unified labeling client and scanner.
+**To get started with AIP**, download and install the unified labeling client and scanner.
 
 - [Sign up for a free trial](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)  (Enterprise Mobility + Security E5)
 - [Download the client](https://www.microsoft.com/download/details.aspx?id=53018)
@@ -108,10 +110,20 @@ For more information, see the [Microsoft Information Protection SDK overview](/i
 |**FAQs and known issues**     | [Frequently asked questions for Azure Information Protection](faqs.md) </br> [Known issues - Azure Information Protection](known-issues.md)       |
 |**Support options**     | [Support options for Azure Information Protection](information-support.md)        |
 |**Yammer**     |  [Azure Information Protection](https://www.yammer.com/AskIPTeam)       |
-|**Ignite 2020**     |  - [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)</br>- [Be a risk management hero with intelligent data protection and compliance solutions](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87)</br>- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)</br>- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)       |
 |**What's new?**     | Watch for new features related to AIP in the Microsoft 365 and SharePoint admin centers:   </br>- [What's new in the Microsoft 365 admin center?](/microsoft-365/admin/whats-new-in-preview) </br>- [What's new in the Sharepoint admin center?](/sharepoint/what-s-new-in-admin-center)     |
 |     |         |
 
+#### Top Ignite sessions
+
+See the following recorded sessions from Ignite 2020:
+
+- [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)
+
+- [Be a risk management hero with intelligent data protection and compliance solutions](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87)
+
+- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)
+
+- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)
 ## AIP's classic client
 
 The Azure Information Protection classic client is the earlier version of AIP, and enables administrators to manage classification labels directly in the Azure portal.
@@ -121,6 +133,6 @@ AIP labels managed in the Azure portal are *not* supported by the unified labeli
 We recommend migrating to unified labeling to support these features, as well as SharePoint, Microsoft 365 apps, Outlook for the web and mobile devices, PowerBI data protection, and more. For more information, see [Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client](tutorial-migrating-to-ul.md).
 
 >[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 >
 > This time-frame allows all current Azure Information Protection customers to transition to unified labeling using the Microsoft Information Protection Unified Labeling solution. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).

@@ -26,14 +26,14 @@ ms.custom: admin
 
 # Tutorial: Configure Azure Information Protection policy settings and create a new label
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
-> **To deploy the AIP classic client,** open a support ticket to get download access.
+> **To deploy the AIP classic client**, open a support ticket to get download access.
 
 > [!TIP]
 > If are using a different labeling client to the classic client, see the [Microsoft 365 Compliance documentation](/microsoft-365/compliance/sensitivity-labels)  for equivalent instructions to this tutorial.
@@ -63,7 +63,7 @@ To complete this tutorial, you need:
     
     These steps are covered in the [Quickstart: Add Azure Information Protection to the Azure portal and view the policy](quickstart-viewpolicy.md).
 
-3. The Azure Information Protection client (classic) installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
+3. The Azure Information Protection classic client installed on your Windows computer (minimum of Windows 7 with Service Pack 1). 
 
 4. You're signed in to Office apps from one of the following categories:
     
@@ -291,5 +291,5 @@ Restart Word to download these changes.
 
 For more information about editing the Azure Information Protection policy, see [Configuring Azure Information Protection policy](configure-policy.md).
 
-For more information about where the labeling activity is logged, see [Usage logging for the Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
+For more information about where the labeling activity is logged, see [Usage logging for the Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client).
 
