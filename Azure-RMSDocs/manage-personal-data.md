@@ -26,11 +26,14 @@ ms.custom: admin
 
 # Manage personal data for Azure Information Protection
 
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
 When you configure and use Azure Information Protection, email addresses and IP addresses are stored and used by the Azure Information Protection service. This personal data can be found in the following items:
-
-- The Azure Information Protection policy
-
-- Templates for the protection service
 
 - Super users and delegated administrators for the protection service 
 
@@ -38,54 +41,33 @@ When you configure and use Azure Information Protection, email addresses and IP 
 
 - Usage logs for the protection service
 
-- Document tracking logs
-
 - Usage logs for the Azure Information Protection clients and RMS client 
 
+**AIP classic client only**:
+
+- The Azure Information Protection policy
+
+- Templates for the protection service
+
+- Document tracking logs
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-intro-sentence.md)]
 
-
 ## Viewing personal data that Azure Information Protection uses
 
-Using the Azure portal, an administrator can specify email addresses for scoped policies and for protection settings within a label configuration. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
+- **Unified labeling client**:
 
-For labels that are configured to apply protection from the Azure Rights Management service, email address can also be found in protection templates, by using PowerShell cmdlets from the [AIPService module](/powershell/module/aipservice). This PowerShell module also lets an administrator specify users by email address to be a [super user](configure-super-users.md), or an administrator for the Azure Rights Management service. 
+    For the unified labeling client, sensitivity labels and label policies are configured in the Microsoft 365 security center, Microsoft 365 compliance center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
 
-When Azure Information Protection is used to classify and protect documents and emails, email addresses and the users' IP addresses might be saved in log files.
+- **Classic client**:
 
+    For the classic client, use the Azure portal to specify email addresses for scoped policies and for protection settings within a label configuration. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
 
-### Protection templates
+    For labels that are configured to apply protection from the Azure Rights Management service, email address can also be found in protection templates, by using PowerShell cmdlets from the [AIPService module](/powershell/module/aipservice). This PowerShell module also lets an administrator specify users by email address to be a [super user](configure-super-users.md), or an administrator for the Azure Rights Management service. 
 
-Run the [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate) cmdlet to get a list of protection templates. You can use the template ID to get details of a specific template. The `RightsDefinitions` object displays the personal data, if any. 
-
-Example:
-```
-PS C:\Users> Get-AipServiceTemplate -TemplateId fcdbbc36-1f48-48ca-887f-265ee1268f51 | select *
-
-
-TemplateId              : fcdbbc36-1f48-48ca-887f-265ee1268f51
-Names                   : {1033 -> Confidential}
-Descriptions            : {1033 -> This data includes sensitive business information. Exposing this data to
-                          unauthorized users may cause damage to the business. Examples for Confidential information
-                          are employee information, individual customer projects or contracts and sales account data.}
-Status                  : Archived
-RightsDefinitions       : {admin@aip500.onmicrosoft.com -> VIEW, VIEWRIGHTSDATA, EDIT, DOCEDIT, PRINT, EXTRACT,
-                          REPLY, REPLYALL, FORWARD, EXPORT, EDITRIGHTSDATA, OBJMODEL, OWNER,
-                          AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@aip500.onmicrosoft.com -> VIEW,
-                          VIEWRIGHTSDATA, EDIT, DOCEDIT, PRINT, EXTRACT, REPLY, REPLYALL, FORWARD, EXPORT,
-                          EDITRIGHTSDATA, OBJMODEL, OWNER, admin2@aip500.onmicrosoft.com -> VIEW, VIEWRIGHTSDATA, EDIT,
-                          DOCEDIT, PRINT, EXTRACT, REPLY, REPLYALL, FORWARD, EXPORT, EDITRIGHTSDATA, OBJMODEL, OWNER}
-ContentExpirationDate   : 1/1/0001 12:00:00 AM
-ContentValidityDuration : 0
-ContentExpirationOption : Never
-LicenseValidityDuration : 7
-ReadOnly                : False
-LastModifiedTimeStamp   : 1/26/2018 6:17:00 PM
-ScopedIdentities        : {}
-EnableInLegacyApps      : False
-LabelId                 :
-```
+> [!NOTE]
+> When Azure Information Protection is used to classify and protect documents and emails, email addresses and the users' IP addresses might be saved in log files.
+> 
 
 ### Super users and delegated administrators for the protection service
 
@@ -97,7 +79,7 @@ Run the [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesu
 Run the [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) cmdlet to get a log of admin actions for the protection service (Azure Rights Management) from Azure Information Protection. This log includes personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
 
 For example:
-```
+```PowerShell
 PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
 ```
@@ -106,7 +88,7 @@ The Rights Management administration log was successfully generated and can be f
 Run the [Get-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog) cmdlet to retrieve a log of end-user actions that use the protection service from Azure Information Protection. The log could include personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
 
 For example:
-```
+```PowerShell
 PS C:\Users> Get-AipServiceUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
 Downloading the log for 2018-04-01.
@@ -133,12 +115,68 @@ Downloading the log for 2018-04-24.
 Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018-04-24.log.
 ```   
 
+### Usage logs for the Azure Information Protection clients and RMS client
+
+When labels and protection are applied to documents and emails, email addresses and IP addresses can be stored in log files on a user's computer in the following locations:
+
+- For the Azure Information Protection unified labeling and classic clients: **%localappdata%\Microsoft\MSIP\Logs**
+
+- For the RMS client: **%localappdata%\Microsoft\MSIPC\msip\Logs**
+
+In addition, the Azure Information Protection client logs this personal data to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**.
+
+When the Azure Information Protection client runs the scanner, personal data is saved to **%localappdata%\Microsoft\MSIP\Scanner\Reports** on the Windows Server computer that runs the scanner.
+
+You can turn off logging information for the Azure Information Protection client and the scanner by using the following configurations:
+
+- For the Azure Information Protection client: Create an [advanced client setting](./rms-client/clientv2-admin-guide-customizations.md#change-the-local-logging-level) that configures the **LogLevel** to **Off**.
+
+- For the Azure Information Protection scanner: Use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the *ReportLevel* parameter to **Off**.
+
+[!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
+
+### Protection templates
+
+**Relevant for**: AIP classic client only
+
+Run the [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate) cmdlet to get a list of protection templates. You can use the template ID to get details of a specific template. The `RightsDefinitions` object displays the personal data, if any. 
+
+Example:
+```PowerShell
+PS C:\Users> Get-AipServiceTemplate -TemplateId fcdbbc36-1f48-48ca-887f-265ee1268f51 | select *
+
+
+TemplateId              : fcdbbc36-1f48-48ca-887f-265ee1268f51
+Names                   : {1033 -> Confidential}
+Descriptions            : {1033 -> This data includes sensitive business information. Exposing this data to
+                          unauthorized users may cause damage to the business. Examples for Confidential information
+                          are employee information, individual customer projects or contracts and sales account data.}
+Status                  : Archived
+RightsDefinitions       : {admin@aip500.onmicrosoft.com -> VIEW, VIEWRIGHTSDATA, EDIT, DOCEDIT, PRINT, EXTRACT,
+                          REPLY, REPLYALL, FORWARD, EXPORT, EDITRIGHTSDATA, OBJMODEL, OWNER,
+                          AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@aip500.onmicrosoft.com -> VIEW,
+                          VIEWRIGHTSDATA, EDIT, DOCEDIT, PRINT, EXTRACT, REPLY, REPLYALL, FORWARD, EXPORT,
+                          EDITRIGHTSDATA, OBJMODEL, OWNER, admin2@aip500.onmicrosoft.com -> VIEW, VIEWRIGHTSDATA, EDIT,
+                          DOCEDIT, PRINT, EXTRACT, REPLY, REPLYALL, FORWARD, EXPORT, EDITRIGHTSDATA, OBJMODEL, OWNER}
+ContentExpirationDate   : 1/1/0001 12:00:00 AM
+ContentValidityDuration : 0
+ContentExpirationOption : Never
+LicenseValidityDuration : 7
+ReadOnly                : False
+LastModifiedTimeStamp   : 1/26/2018 6:17:00 PM
+ScopedIdentities        : {}
+EnableInLegacyApps      : False
+LabelId                 :
+```
+
 ### Document tracking logs
+
+**Relevant for**: AIP classic client only
 
 Run the [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) cmdlet to retrieve information from the document tracking site about a specific user. To get tracking information associated with the document logs, use the [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) cmdlet.
 
 For example:
-```
+```PowerShell
 PS C:\Users> Get-AipServiceDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
 
@@ -192,27 +230,8 @@ IsHiddenInfo         : False
 
 There is no search by ObjectID. However, you are not restricted by the `-UserEmail` parameter and the email address you provide doesn't need to be part of your tenant. If the email address provided is stored anywhere in the document tracking logs, the document tracking entry is returned in the cmdlet output.
 
-### Usage logs for the Azure Information Protection clients and RMS client
-
-When labels and protection are applied to documents and emails, email addresses and IP addresses can be stored in log files on a user's computer in the following locations:
-
-- For the Azure Information Protection unified labeling client and the Azure Information Protection client: %localappdata%\Microsoft\MSIP\Logs
-
-- For the RMS client: %localappdata%\Microsoft\MSIPC\msip\Logs
-
-In addition, the Azure Information Protection client logs this personal data to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**.
-
-When the Azure Information Protection client runs the scanner, personal data is saved to %localappdata%\Microsoft\MSIP\Scanner\Reports on the Windows Server computer that runs the scanner.
-
-You can turn off logging information for the Azure Information Protection client and the scanner by using the following configurations:
-
-- For the Azure Information Protection client: Create an [advanced client setting](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) that configures the **LogLevel** to **Off**.
-
-- For the Azure Information Protection scanner: Use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet to set the *ReportLevel* parameter to **Off**.
-
-[!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
-
 ## Securing and controlling access to personal information
+
 Personal data that you view and specify in the Azure portal is accessible only to users who have been assigned one of the following [administrator roles from Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
 - **Azure Information Protection administrator**
@@ -233,15 +252,17 @@ Personal data that you view and specify by using the AIPService module (or the o
 
 ## Updating personal data
 
-You can update email addresses for scoped policies and protection settings in the Azure Information Protection policy. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
+**Unified labeling client**:
+
+For the unified labeling client, sensitivity labels and label policies are configured in the Microsoft 365 security center, Microsoft 365 compliance center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+
+**Classic client**:
+
+For the classic client, you can update email addresses for scoped policies and protection settings in the Azure Information Protection policy. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
 
 For the protection settings, you can update the same information by using PowerShell cmdlets from the [AIPService module](/powershell/module/aipservice).
 
 You cannot update email addresses for the super users and delegated administrators. Instead, remove the specified user account, and add the user account with the updated email address. 
-
-### Protection templates
-
-Run the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet to update the protection template. Because the personal data is within the `RightsDefinitions` property, you will also need to use the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet to create a rights definitions object with the updated information, and use the rights definitions object with the `Set-AipServiceTemplateProperty` cmdlet.
 
 ### Super users and delegated administrators for the protection service
 
@@ -257,8 +278,21 @@ When you need update an email address for a delegated administrator:
 
 2. Use [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Add-AipServiceRoleBasedAdministrator) to add the user and new email address.
 
+### Protection templates
+
+**Relevant for**: Classic client only
+
+Run the [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet to update the protection template. Because the personal data is within the `RightsDefinitions` property, you will also need to use the [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet to create a rights definitions object with the updated information, and use the rights definitions object with the `Set-AipServiceTemplateProperty` cmdlet.
+
 ## Deleting personal data
-You can delete email addresses for scoped policies and protection settings in the Azure Information Protection policy. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
+
+- **Unified labeling client**:
+
+    For the unified labeling client, sensitivity labels and label policies are configured in the Microsoft 365 security center, Microsoft 365 compliance center, or the Microsoft 365 Security & Compliance Center. For more information, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels).
+
+- **Classic client**:
+
+    For the classic client, you can delete email addresses for scoped policies and protection settings in the Azure Information Protection policy. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
 
 For the protection settings, you can delete the same information by using PowerShell cmdlets from the [AIPService module](/powershell/module/aipservice).
 

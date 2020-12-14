@@ -6,8 +6,8 @@ description: Phase 3 of migrating from AD RMS to Azure Information Protection, c
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/29/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
@@ -26,7 +26,9 @@ ms.custom: admin
 ---
 # Migration phase 3 - client-side configuration
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant for**: [AIP unified labeling client and classic client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover step 7 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -89,6 +91,7 @@ This method is suitable only for Windows clients that run Microsoft 365 apps and
     |**Weight**|0|  
     |**Port number**|80|  
     |**Host offering this service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
+    | | |
 
 2. Set a deny permission on the AD RMS publishing endpoint for users running Microsoft 365 apps or Office 2016 (or later):
 

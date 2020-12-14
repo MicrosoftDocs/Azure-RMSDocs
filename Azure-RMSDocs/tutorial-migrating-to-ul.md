@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Tutorial - Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client
+title: Tutorial - Migrating from the Azure Information Protection (AIP) classic client to the unified labeling solution
 description: A step-by-step tutorial for migrating from the Azure Information Protection (AIP) classic client to the unified labeling client.
 author: batamig
 ms.author: bagol
@@ -24,11 +24,11 @@ ms.custom: admin
 
 ---
 
-# Tutorial: Migrating from the Azure Information Protection (AIP) classic client to the unified labeling client
+# Tutorial: Migrating from the Azure Information Protection (AIP) classic client to unified labeling solution
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE]
 > To provide a unified and streamlined customer experience, Azure Information Protection's classic client and Label Management in the Azure portal are being deprecated as of March 31, 2021.
@@ -36,9 +36,9 @@ ms.custom: admin
 > This time frame enables all current Azure Information Protection classic client customers to transition to the AIP unified labeling, which uses Microsoft Information Protection's Unified Labeling solution. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
 
-This tutorial describes how to migrate your organization's Azure Information Protection deployment from the classic client to the unified labeling client.
+This tutorial describes how to migrate your organization's Azure Information Protection deployment from the classic client, and label/label policy management in the Azure portal, to the unified labeling solution and [Microsoft 365 sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
-**Time required:** The time required to complete a migration depends on how complex your policies are and the AIP features you use. You can continue to work with the classic client while you migrate in the background.
+**Time required**: The time required to complete a migration depends on how complex your policies are and the AIP features you use. You can continue to work with the classic client while you migrate in the background.
 
 This tutorial provides a high-level description of each step, and then references to the relevant section elsewhere in Microsoft documentation for more details.
 
@@ -50,13 +50,13 @@ In this tutorial, you'll:
 > * Copy your policies to the unified labeling platform
 > * Deploy the unified labeling client
 
-## Why migrate to the unified labeling platform?
+## Why migrate to the unified labeling solution?
 
-In addition to the [planned classic client deprecation](https://aka.ms/aipclassicsunset), migrating to the unified labeling client enables you to effectively protect sensitive data across your digital estate. Once you've migrated, use Microsoft Information Protection (MIP) in Microsoft 365 cloud services, on-premises, in third-party SaaS applications, and more.
+In addition to the [planned classic client deprecation](https://aka.ms/aipclassicsunset), migrating to the unified labeling solution enables you to effectively protect sensitive data across your digital estate. Once you've migrated, use Microsoft Information Protection (MIP) in Microsoft 365 cloud services, on-premises, in third-party SaaS applications, and more.
 
 MIP supports built-in labeling services for many basic information protection features, enabling you to reserve client usage only for extra features not supported by built-in labeling.
 
-- **Lower your maintenance costs,** by deploying and maintaining less additional software
+- **Lower your maintenance costs**, by deploying and maintaining less additional software
 - **Increase Office performance**, without the need for additional add-ins
 - **Streamline your labeling and protection policy management** across AIP, Office 365, and Windows, using your labeling admin center. 
 
@@ -71,7 +71,7 @@ While most functionality available for the AIP classic client is also available 
 Review the following articles to understand how the Information Protection features you use may differ when using the unified labeling client:
 
 - [Learn about built-in labeling capabilities in Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
-- [Compare support between the classic and unified labeling clients](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)
+- [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 - [Learn how to manage label settings that are not supported out-of-the-box in the unified labeling admin centers](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-admin-centers)
 
 > [!TIP]
@@ -114,7 +114,7 @@ Once you've migrated your labels to your labeling admin center, including the Mi
 
 However, edits made to migrated labels in your admin center are *not* synchronized back to the Azure portal. If you make edits in the admin center and need them updated in the Azure portal, return to the portal to publish the update.
 
-**To publish an updated label in the Azure portal:**
+**To publish an updated label in the Azure portal**:
 
 1. On the Azure Information Protection area, under **Manage** on the left, select **Unified labeling**.
 
@@ -154,7 +154,7 @@ This feature is currently in PREVIEW. The [Azure Preview Supplemental Terms](htt
     |Consideration  |Description  |
     |---------|---------|
     |**Copying policies copies *all* your policies**     |     Copying policies does not support copying specific policies only - it's all of your policies, or none of them now.   |
-    |**Copying automatically publishes your policies**     |  Copying your policies to the unified labeling client automatically publishes them to all unified labeling-supported clients. <br /><br />   **Important:** Do not copy your policies if you don't want to publish them.     |
+    |**Copying automatically publishes your policies**     |  Copying your policies to the unified labeling client automatically publishes them to all unified labeling-supported clients. <br /><br />   **Important**: Do not copy your policies if you don't want to publish them.     |
     |**Copying overwrites existing policies of the same name**     |   If you have a policy with the same name already existing in your admin center, copying your policies will overwrite any settings defined in that policy.   <br /><br />All policies copied from the Azure portal are named with the following syntax: `AIP_<policy name>`.    |
     |**Some client settings are not copied**     | Some client settings are not copied to the unified labeling platform, and must be configured manually after migrating. <br /><br />For more information, see [Configuring advanced labeling settings](#configuring-advanced-labeling-settings)|
     | | |
@@ -268,7 +268,7 @@ For Windows machines with Microsoft 365 Apps for Enterprise, use the built-in la
 
 For more information, see: 
 
-- [Compare the labeling clients for Windows computers](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)
+- [Compare the labeling solutions for Windows computers](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 - [Quickstart: Deploying the Azure Information Protection (AIP) unified labeling client](quickstart-deploy-client.md)
 
 The Azure Information Protection unified labeling client can be downloaded from the [Microsoft Download Center](https://aka.ms/aipclient). 

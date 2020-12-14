@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Information Protection unified labeling client - Version history & support policy
-description: See the release information for the Azure Information Protection unified labeling client for Windows. 
+description: Find out what's new for the Azure Information Protection (AIP) unified labeling client for Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -26,11 +26,11 @@ ms.custom: admin
 
 # Azure Information Protection unified labeling client - Version release history and support policy
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
 >*If you have Windows 7 or Office 2010, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [AIP unified labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the classic client, see [AIP classic client version release history and support policy](client-version-release-history.md).*
 
 You can download the Azure Information Protection unified labeling client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).
 
@@ -72,7 +72,7 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 >  
 > For technical support, see the [Support options and community resources](../information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-This client is replacing the Azure Information Protection client (classic). To compare features and functionality with the classic client, see [Compare the the labeling clients for Windows computers](use-client.md#compare-the-labeling-clients-for-windows-computers).
+The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
 ## Version 2.9.101.0 (Public preview)
 
@@ -123,7 +123,7 @@ To support scans on NFS shares, services for NFS must be deployed on the scanner
 For more information, see [Create a content scan job](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
 ### Added support for sensitive information types
-We’ve added support for additional sensitive information types in Azure Information Protection, such as **Australia business number,** **Australia company number,** or **Austria identity card.** 
+We’ve added support for additional sensitive information types in Azure Information Protection, such as **Australia business number**, **Australia company number**, or **Austria identity card**. 
 
 For more information, see the [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in the Microsoft 365 documentation.
 ### Fixes and improvements
@@ -138,7 +138,7 @@ The following fixes were delivered in version 2.9.101.0 of the [Azure Informatio
 - Support for [avoiding a timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) when scanning a SharePoint server.
 
 ### Known issues
-In this public preview version, applying labels with [DKE protection](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) is not supported by the scanner.
+In this public preview version, applying labels with [DKE protection](../plan-implement-tenant-key.md#double-key-encryption-dke) is not supported by the scanner.
 
 ## Version 2.8.85.0
 
@@ -169,7 +169,7 @@ Skip the full, immediate rescan, and return later to [run a full rescan](../depl
 > [!IMPORTANT]
 > Administrators making changes in their policies and content scan jobs must now understand the effects of those changes on the content, and determine whether a full rescan is required.
 > 
-> For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On,** make sure to run a full rescan to apply your labels across your content.
+> For example, if you’ve changed **Policy enforcement** settings from **Enforce = Off** to **Enforce = On**, make sure to run a full rescan to apply your labels across your content.
 >
 
 #### Configure SharePoint timeouts
@@ -197,7 +197,7 @@ The **network discovery** service updates **Repository** reports with a list of 
     
 1. Make sure that you have Azure Information Protection analytics enabled. 
 
-    In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview).** 
+    In the Azure portal, go to **Azure Information Protection > Manage > Configure analytics (Preview)**. 
 
     For more information, see [Central reporting for Azure Information Protection (public preview)](../reports-aip.md).
 
@@ -300,7 +300,7 @@ Unified labeling scanner and client version 2.7.101.0
 
 **Released** 08/23/2020
 
-**Fix:**
+**Fix**:
 
 Fixed issue for PPT, Excel and Word users which resulted in files freezing, crashing, or being forced to repeat save that was related to mandatory labels configured with protection, watermarking, and/or content marking.
 
@@ -310,7 +310,7 @@ Unified labeling scanner and client version 2.7.99.0
 
 **Released** 07/20/2020
 
-**Fixes and improvements:**
+**Fixes and improvements**:
 
 Fixed issues in file labeling actions for **New Label** audit logs.
 
@@ -322,7 +322,7 @@ Unified labeling scanner and client version 2.7.96.0
 
 **Released** 06/29/2020
 
-**New features for the unified labeling scanner:**
+**New features for the unified labeling scanner**:
 
 - [Use scanner to apply labels based on recommended conditions](../deploy-aip-scanner-prereqs.md). AIP customers can now choose to implement service side only autolabeling. This feature allows AIP end users to always follow recommendations instead of the previous scenario, which only enabled automatic labeling on the user side.
 
@@ -336,7 +336,7 @@ Unified labeling scanner and client version 2.7.96.0
 
 - Now you can configure the unified labeling scanner to skip specific files depending on their file attributes. Define the list of file attributes that triggers a file to be skipped using the new **[ScannerFSAttributesToSkip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes)** advanced setting.
 
-**New features for the unified labeling client:**
+**New features for the unified labeling client**:
 
 - [**Justification popups**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) now appear for changes made to default labels in the unified labeling client.
     
@@ -396,7 +396,7 @@ For more requirement details, see [Firewalls and network infrastructure requirem
 
 - When multiple Exchange accounts are configured and the Azure Information Protection Outlook client is enabled, mails are sent from the secondary account as expected. For more information about configuring the unified labeling client with Outlook, see [Additional prerequisites for the Azure Information Protection unified labeling client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
-- When a document with a higher confidentiality label is dragged and dropped into an email, the email now automatically receives the higher confidentiality label as expected. For more information about labeling client features, see the [labeling client comparison table](use-client.md#compare-the-labeling-clients-for-windows-computers).
+- When a document with a higher confidentiality label is dragged and dropped into an email, the email now automatically receives the higher confidentiality label as expected. For more information about labeling client features, see the [labeling client comparison table](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
 - Custom permissions are now applied to emails as expected, when email addresses include both an apostrophe (') and period (.) For more information about configuring the unified labeling client with Outlook, see [Additional prerequisites for the Azure Information Protection unified labeling client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
@@ -410,7 +410,7 @@ For more requirement details, see [Firewalls and network infrastructure requirem
 
 Supported through  12/29/2020
 
-**New features:**
+**New features**:
 
 - General availability version of the [scanner](../deploy-aip-scanner.md), to inspect and label documents in on-premises data stores. 
 
@@ -432,7 +432,7 @@ Supported through  12/29/2020
 
 - Support added for [offline labeling capability](./clientv2-admin-guide-customizations.md#support-for-disconnected-computers) with Office apps in the unified labeling client.
 
-**Fixes:**
+**Fixes**:
 
 - In instances where users attempted unsuccessfully to open protected TIFF files, and TIFF files created by RightFax, the TIFF files now open and remain stable as expected.  
 - Previous corruptions of protected txt and PDF files are resolved.
@@ -444,7 +444,7 @@ Supported through  12/29/2020
 
 ## Next steps
 
-Not sure if unified labeling is the right client to install?  See [Choose which labeling client to use for Windows computers](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+Not sure if unified labeling is the right client to install?  See [Choose your Windows labeling solution](use-client.md#choose-your-windows-labeling-solution).
 
 For more information about installing and using the unified labeling client: 
 
