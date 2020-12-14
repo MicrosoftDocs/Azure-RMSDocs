@@ -213,7 +213,7 @@
         href: configure-adrms-restrictions.md
       - name: Configuring the Azure Information Protection policy
         items:    
-        - name: AIP classic client policies
+        - name: About the AIP policy
           href: overview-policy.md
         - name: Policy configuration overview
           href: configure-policy.md
