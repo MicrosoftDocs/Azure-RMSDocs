@@ -330,7 +330,7 @@ Unified labeling scanner and client version 2.7.96.0
 
 - [Get reports from scanner on failures to apply action events](../reports-aip.md#friendly-schema-reference-for-event-functions). Use reports to learn about failed action events and discover ways to prevent future occurrences. 
 
-- Introduction of AIP scanner diagnostic analyzer tool for detection and analysis of common scanner errors. To begin using AIP scanner diagnostics, [run the new **Start-AIPScannerDiagnostics** cmdlet](../deploy-aip-scanner-manage.md#troubleshooting-using-the-scanner-diagnostic-tool). 
+- Introduction of AIP scanner diagnostic analyzer tool for detection and analysis of common scanner errors. To begin using AIP scanner diagnostics, [run the **Start-AIPScannerDiagnostics** cmdlet](../deploy-aip-scanner-tsg.md#troubleshooting-using-the-scanner-diagnostic-tool).
 
 - You can now manage and limit max CPU consumption on the scanner machine. Learn how to prevent 100% CPU usage and manage your CPU usage using [two new advanced settings **ScannerMaxCPU**, and **ScannerMinCPU**](./clientv2-admin-guide-customizations.md#limit-cpu-consumption). 
 
