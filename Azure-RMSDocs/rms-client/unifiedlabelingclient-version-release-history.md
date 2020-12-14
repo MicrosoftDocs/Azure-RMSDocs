@@ -73,9 +73,9 @@ The latest version of Azure Information Protection is currently in PREVIEW. The 
 
 The unified labeling client replaces the Azure Information Protection classic client. To compare features and functionality with the classic client, see [Compare the labeling solutions for Windows computers](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## Version 2.9.101.0 (Public preview)
+## Version 2.9.108.0 (Public preview)
 
-Unified labeling scanner and client version 2.9.101.0
+Unified labeling scanner and client version 2.9.108.0
 
 **Release** 12/16/2020
 
@@ -144,7 +144,7 @@ For more information, see the [Sensitive information type entity definitions](/m
 
 ### Track document access and revoke access
 
-Once you've upgraded to version 2.9.101.0, any documents not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed.
+Once you've upgraded to version 2.9.108.0, any documents not yet registered for tracking are registered the next time they're opened on a machine with the AIP unified labeling client installed.
 
 Having your documents registered for tracking enables administrators to use PowerShell to track document access, and revoke access if needed.
 
@@ -158,7 +158,7 @@ For more information, see:
 
 ### Fixes and improvements for the unified labeling scanner
 
-The following fixes were delivered in version 2.9.101.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):
+The following fixes were delivered in version 2.9.108.0 of the [Azure Information Protection unified labeling scanner](../deploy-aip-scanner.md):
 
 - Added support for hyphens (**-**) in [scanner database](../deploy-aip-scanner-prereqs.md) names
 - Updates in reports for when the **[Label files based on content](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** option is set to **Off**
@@ -206,7 +206,7 @@ The following fixes were delivered in version 2.9.101.0 of the [Azure Informatio
 
 ### Known issues
 
-In the public preview version of 2.9.101.0, applying labels with [DKE protection](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) is not supported by the scanner.
+In the public preview version of 2.9.108.0, applying labels with [DKE protection](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) is not supported by the scanner.
 
 ## Version 2.8.85.0
 
