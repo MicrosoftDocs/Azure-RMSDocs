@@ -63,7 +63,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
 - Microsoft Online Services Sign-in Assistant 7.250.4303.0
 
-    Computers running Office 2010 require Microsoft Online Services Sign-in Assistant version 7.250.4303.0. This version is included with the client installation. If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
+    Computers running [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) require Microsoft Online Services Sign-in Assistant version 7.250.4303.0. This version is included with the client installation. If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
 
 - KB 4482887
 
@@ -120,7 +120,7 @@ Use the following instructions to install the client when you're not using the M
 
     Additional parameters that are not listed on the help screen:
 
-    - **ServiceLocation**: Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. [More information](#more-information-about-the-servicelocation-installation-parameter)
+    - **ServiceLocation**: Use this parameter if you are installing the client on computers that run [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) and your users are not local administrators on their computers or you do not want them to be prompted. [More information](#more-information-about-the-servicelocation-installation-parameter)
 
     - **DowngradeDotNetRequirement**: Use this parameter to bypass the requirement for Microsoft Framework .NET version 4.6.2. [More information](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
 
@@ -130,7 +130,7 @@ Use the following instructions to install the client when you're not using the M
 
 1. To complete the installation:
 
-    - If your computer runs Office 2010, restart your computer.
+    - If your computer runs [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support), restart your computer.
 
         If the client was not installed with the ServiceLocation parameter, when you first open one of the Office applications that use the Azure Information Protection bar (for example, Word), you must confirm any prompts to update the registry for this first-time use. [Service discovery](client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys.
 
@@ -146,17 +146,17 @@ Use the following instructions to install the client when you're not using the M
 
 #### More information about the ServiceLocation installation parameter
 
-When you install the client for users who have Office 2010 and they do not have local administrative permissions, specify the ServiceLocation parameter and the URL for your Azure Rights Management service. This parameter and value creates and sets the following registry keys:
+When you install the client for users who have [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) and they do not have local administrative permissions, specify the **ServiceLocation** parameter and the URL for your Azure Rights Management service. This parameter and value creates and sets the following registry keys:
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation
+`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation`
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing`
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing`
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation`
 
-Use the following procedure to identify the value to specify for the ServiceLocation parameter.
+Use the following procedure to identify the value to specify for the **ServiceLocation** parameter.
 
 ##### To identify the value to specify for the ServiceLocation parameter
 
@@ -172,7 +172,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
     The remainin' string is the value to specify for your ServiceLocation parameter.
 
-Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
+Example to install the client silently for [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) and Azure RMS: `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 #### More information about the DowngradeDotNetRequirement installation parameter
 

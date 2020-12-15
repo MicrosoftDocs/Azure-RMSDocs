@@ -31,7 +31,7 @@ ms.custom: user
 >
 > *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-If you've upgraded to [version 2.9.108.0](unifiedlabelingclient-version-release-history.md#version-291080-public-preview) or later, any protected documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client.
+If you've upgraded to [version 2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) or later, any protected documents that are not yet registered for tracking are automatically registered the next time they're opened via the AIP unified labeling client.
 
 Registering a document for tracking enables administrators to track access details, including successful access events and denied attempts, as well as revoke access if needed.
 
@@ -63,7 +63,7 @@ Use the following cmdlets to find details for the document you want to track:
     For example:
     
     ```PowerShell
-    PS C:\>Get-AipServiceDocumentLog -ContentId c03bf90c-6e40-4f3f-9ba0-2bcd77524b87
+    PS C:\>Get-Get-AipServiceTrackingLog -ContentId c03bf90c-6e40-4f3f-9ba0-2bcd77524b87
     ```
 
     Tracking data is returned, including emails of users who attempted access, whether access was granted or denied, the time and date of the attempt, and the domain and location where the access attempt originated.

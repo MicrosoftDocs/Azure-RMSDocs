@@ -74,10 +74,11 @@ To support authentication and authorization for Azure Information Protection, yo
 
 Conditional access is supported in preview for documents protected by Azure Information Protection. For more information, see: [I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-Additional prerequisites are required for specific scenarios, such as when using Office 2010, certificate-based or multi-factor authentication, or when UPN values don't match user email addresses. For more information, see [Additional Azure AD requirements for Azure Information Protection](requirements-azure-ad.md).
+Additional prerequisites are required for specific scenarios, such as when using [Office 2010](known-issues.md#aip-for-windows-and-office-versions-in-extended-support), certificate-based or multi-factor authentication, or when UPN values don't match user email addresses. 
 
 For more information, see:
 
+- [Additional Azure AD requirements for Azure Information Protection](requirements-azure-ad.md).
 - [What is Azure AD Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Integrate on-premises Active Directory domains with Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
