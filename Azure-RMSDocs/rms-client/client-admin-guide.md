@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Azure Information Protection client admin guide
-description: Instructions and information for admins on an enterprise network who are responsible for deploying the Azure Information Protection client for Windows.
+title: Azure Information Protection classic client admin guide
+description: Instructions and information for admins on an enterprise network who are responsible for deploying the Azure Information Protection classic client for Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -26,16 +26,16 @@ ms.custom: admin
 ---
 
 
-# Azure Information Protection client administrator guide
+# Azure Information Protection classic client administrator guide
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see the [unified labeling client admin guide](clientv2-admin-guide.md).*
 
->[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
-> **To deploy the AIP classic client,** open a support ticket to get download access.
+> **To deploy the AIP classic client**, open a support ticket to download the installation files.
 
 Use the information in this guide if you are responsible for the Azure Information Protection client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection client user guide](client-user-guide.md). 
 
@@ -65,7 +65,7 @@ The Azure Information Protection client includes the following:
 
 - Windows File Explorer, right-click options for users to apply classification labels and protection to files.
 
-- A viewer to display protected files when a native application cannot open it.
+- A viewer to display protected files when a built-in application cannot open it.
 
 - A PowerShell module to apply and remove classification labels and protection from files. 
     
@@ -90,7 +90,7 @@ Deploy the Azure Information Protection client if you are not using [sensitivity
 
 - You want to run a service that discovers, classifies (and optionally, protects) files that are stored on-premises.
 
-- You want to view protected documents when a native application to display the file is not installed or cannot open these documents.
+- You want to view protected documents when a built-in application to display the file is not installed or cannot open these documents.
 
 - You want to just protect files by using File Explorer or by using PowerShell commands.
 
@@ -259,7 +259,7 @@ If you know that you want move the scanner configuration database for the  GA ve
 
 3. Install the scanner by using [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), specifying the new SQL Server instance and profile name.
 
-4. **Optional:** If you do not want the scanner to rescan all files, export the ScannerFiles table and import it to the new database.
+4. **Optional**: If you do not want the scanner to rescan all files, export the ScannerFiles table and import it to the new database.
 
 ## Uninstalling the Azure Information Protection client
 
