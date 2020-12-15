@@ -498,7 +498,7 @@ The data sources for investigation include the centralized logging sources that 
 
     - Use Azure virtual machine's snapshot capability to create a snapshot of the running system's disk. 
 
-    - Use the operating system's native memory dump capability to create a snapshot of the running system's memory.
+    - Use the operating system's built-in memory dump capability to create a snapshot of the running system's memory.
 
     - Use the snapshot feature of the Azure services or your software's own capability to create snapshots of the running systems.
 
@@ -637,7 +637,7 @@ This strategy should include documented guidance, policy, and standards for the 
 
 -	Required access control strategy in accordance with organizational data classification
 
--	Use of Azure native and third-party data protection capabilities
+-	Use of Azure built-in and third-party data protection capabilities
 
 -	Data encryption requirements for in-transit and at-rest use cases
 
@@ -774,11 +774,11 @@ This strategy should include documented guidance, policy, and standards for the 
 
 -	Log capture and retention to support threat detection, incident response, and compliance needs
 
--	Centralized visibility of and correlation information about threats, using SIEM, native Azure capabilities, and other sources 
+-	Centralized visibility of and correlation information about threats, using SIEM, built-in Azure capabilities, and other sources 
 
 -	Communication and notification plan with your customers, suppliers, and public parties of interest
 
--	Use of Azure native and third-party platforms for incident handling, such as logging and threat detection, forensics, and attack remediation and eradication
+-	Use of Azure built-in and third-party platforms for incident handling, such as logging and threat detection, forensics, and attack remediation and eradication
 
 -	Processes for handling incidents and post-incident activities, such as lessons learned and evidence retention
 

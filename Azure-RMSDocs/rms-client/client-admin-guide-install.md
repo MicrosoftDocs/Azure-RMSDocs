@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Install the Azure Information Protection client for users
-description: Instructions and information for admins to deploy the Azure Information Protection client for Windows on enterprise networks.
+title: Install the Azure Information Protection classic client for users
+description: Instructions and information for admins to deploy the Azure Information Protection classic client for Windows on enterprise networks.
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
@@ -26,16 +26,16 @@ ms.custom: admin
 ---
 
 
-# Admin Guide: Install the Azure Information Protection client for users
+# Admin Guide: Install the Azure Information Protection classic client for users
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Applies to**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant for**: [Azure Information Protection classic client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE]
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
-> **To deploy the AIP classic client,** open a support ticket to get download access.
+> **To deploy the AIP classic client**, open a support ticket to get download access.
 
 Before you install the Azure Information Protection client on your enterprise network, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../requirements.md).
 
@@ -97,7 +97,7 @@ Use one of the following options to install the client for users:
 |Install option  |Description  |
 |---------|---------|
 |**Run the client executable (.exe)**  <br><br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | We recommend running the .exe version of the client to run the installation interactively or silently.<br><br> Running the .exe file has the most flexibility, and is recommended because it also checks for many of the prerequisites and can also install any prerequisites that are missing. |
-|**Deploy the client's Windows installer (.msi)** <br><br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | The Azure Information Protection client Windows installer is supported for silent installations only that use a central deployment mechanism.<br><br> For example, use the .msi file when deploying with a group policy, Configuration Manager, and Microsoft Intune.<br><br> You must use tis method for Windows 10 PCs that are managed by Intune and mobile device management (MDM) as .exe files are not supported for these computers.<br><br>**Note:** When using the .msi installation, you must manually check for prerequisites and install or uninstall any dependent software required. |
+|**Deploy the client's Windows installer (.msi)** <br><br> [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | The Azure Information Protection client Windows installer is supported for silent installations only that use a central deployment mechanism.<br><br> For example, use the .msi file when deploying with a group policy, Configuration Manager, and Microsoft Intune.<br><br> You must use tis method for Windows 10 PCs that are managed by Intune and mobile device management (MDM) as .exe files are not supported for these computers.<br><br>**Note**: When using the .msi installation, you must manually check for prerequisites and install or uninstall any dependent software required. |
 
 After installing the client, perform updates by repeating the same installation method, or use Windows Update to keep the client updated automatically. You are not required to uninstall legacy versions of the client before installing a new version.
 

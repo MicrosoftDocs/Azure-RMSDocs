@@ -28,10 +28,12 @@ search.appverid:
 
 # Azure Information Protection (AIP) labeling, classification, and protection
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> ***Relevant for**: [Azure Information Protection unified labeling client and classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Azure Information Protection (AIP) is a cloud-based solution that enables organizations to classify and protect documents and emails by applying labels. 
 
@@ -50,17 +52,17 @@ Labels can both [classify](#how-labels-apply-classification-with-aip), and optio
 Labeling your content with AIP includes:
 
 - **Classification** that can be detected regardless of where the data is stored or with whom it's shared.
-- **Visual markings,** such as headers, footers, or watermarks.
-- **Metadata,** added to files and email headers in clear text. The clear text metadata ensures that other services can identify the classification and take appropriate action
+- **Visual markings**, such as headers, footers, or watermarks.
+- **Metadata**, added to files and email headers in clear text. The clear text metadata ensures that other services can identify the classification and take appropriate action
 
-For example, in the image below, labeling has classified an email message as *General*, using the [unified labeling client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
+For example, in the image below, labeling has classified an email message as *General*:
 
 :::image type="content" source="media/example-email-footerv2.png" alt-text="Sample email footer and headers showing Azure Information Protection classification":::
 
 In this example, the label also:
 
-- **Added a footer of *Sensitivity: General* to the email message.** This footer is a visual indicator for all recipients that it's intended for general business data that should not be sent outside of the organization.
-- **Embedded metadata in the email headers.** Header data enables email services can inspect the label and theoretically create an audit entry or prevent it from being sent outside of the organization.
+- **Added a footer of *Sensitivity: General* to the email message**. This footer is a visual indicator for all recipients that it's intended for general business data that should not be sent outside of the organization.
+- **Embedded metadata in the email headers**. Header data enables email services can inspect the label and theoretically create an audit entry or prevent it from being sent outside of the organization.
 
 Labels can be applied automatically by administrators using rules and conditions, manually by users, or using a combination where administrators define the recommendations shown to users.
 
@@ -74,8 +76,8 @@ Azure RMS uses encryption, identity, and authorization policies. Similar to AIP 
 
 Protection settings can be:
 
-- **Part of your label configuration,** so that users both classify and protect documents and emails simply by applying a label. 
-- **Used on their own,** by applications and services that support protection but not labeling. 
+- **Part of your label configuration**, so that users both classify and protect documents and emails simply by applying a label. 
+- **Used on their own**, by applications and services that support protection but not labeling. 
 
     For applications and services that support protection only, protection settings are used as [Rights Management templates](#rights-management-templates).
 
@@ -103,7 +105,7 @@ For more information, see [What is Azure Rights Management?](what-is-azure-rms.m
 
 The AIP client installs the Information Protection bar to Office applications and enables end users to integrate AIP with their documents and emails.
 
-For example, in Excel, using the [unified labeling client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
+For example, in Excel:
 
 ![Example of the Azure Information Protection bar in Excel](./media/excelproplus-infoprotect-bar.png)
 
@@ -128,7 +130,7 @@ Using AIP with Exchange Online provides the additional benefit of sending protec
 
 For example, you may need to send sensitive information to personal email addresses that use a **Gmail**, **Hotmail**, or **Microsoft** account, or to users who don't have an account in Office 365 or Azure AD. These emails should be encrypted at rest and in transit, and be read only by the original recipients.
 
-This scenario requires [Office 365 Message Encryption capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipients cannot open the protected email in their native email client, they can use a one-time passcode to read the sensitive information in a browser.
+This scenario requires [Office 365 Message Encryption capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipients cannot open the protected email in their built-in email client, they can use a one-time passcode to read the sensitive information in a browser.
 
 For example, a Gmail user might see the following prompt in an email message they receive:
 
@@ -136,7 +138,7 @@ For example, a Gmail user might see the following prompt in an email message the
 
 For the user sending the email, the actions required are the same as for sending a protected email to a user in their own organization. For example, select the **Do Not Forward** button that the AIP client can add to the Outlook ribbon. 
 
-Alternately, Do Not Forward functionality can be integrated into a label that users can select to apply both classification and protection to that email. For example, in the [unified labeling client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
+Alternately, **Do Not Forward** functionality can be integrated into a label that users can select to apply both classification and protection to that email. For example:
 
 ![Selecting a label configured for Do Not Forward](./media/recipients-only-label2.png)
 
@@ -161,6 +163,11 @@ Use one of the following methods to classify and protect existing content:
 
 ## Next steps
 
-Configure and see Azure Information Protection for yourself with our [quickstarts](quickstart-viewpolicy.md) and [tutorials](infoprotect-quick-start-tutorial.md). 
+Configure and see Azure Information Protection for yourself with our quickstart and tutorials:
+
+- [Quickstart: Deploy the unified labeling client](quickstart-deploy-client.md)
+- [Tutorial: Installing the Azure Information Protection (AIP) unified labeling scanner](tutorial-install-scanner.md)
+- [Tutorial: Finding your sensitive content with the Azure Information Protection (AIP) scanner](tutorial-scan-networks-and-content.md)
+- [Tutorial: Preventing oversharing in Outlook using Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 
 If you're ready to deploy this service for your organization, head over to the [how-to guides](how-to-guides.md).

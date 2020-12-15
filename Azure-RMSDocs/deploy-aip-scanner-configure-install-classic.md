@@ -7,7 +7,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 06/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 
@@ -26,12 +26,12 @@ ms.custom: admin
 
 # Configuring and installing the Azure Information Protection classic scanner
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
-
->[!NOTE]
-> To provide a unified and streamlined customer experience, **Azure Information Protection client (classic)** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 >
-> If you're using the unified labeling scanner, see [Installing and configuring the Azure Information Protection unified labeling scanner](deploy-aip-scanner-configure-install.md).
+>***Relevant for**: [Azure Information Protection classic client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). For the unified labeling client, see [Installing and configuring the AIP unified labeling scanner](deploy-aip-scanner-configure-install.md).*
+
+> [!NOTE] 
+> To provide a unified and streamlined customer experience, **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 Before you start configuring and installing the Azure Information Protection scanner, verify that your system complies with the [required prerequisites](deploy-aip-scanner-prereqs.md).
 
@@ -158,7 +158,7 @@ After you've [configured the Azure Information Protection scanner in the Azure p
 
 1. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner, and the scanner cluster name that you specified in the preceding section:
 
-    ```ps
+    ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
     ```
 
@@ -192,7 +192,7 @@ To get an Azure AD token:
 
     Run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
 
-    ```ps
+    ```PowerShell
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application> -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application>
     ```
 
@@ -200,7 +200,7 @@ To get an Azure AD token:
 
     For example:
 
-    ```powershell
+    ```PowerShell
     Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
     Acquired application access token on behalf of the user
     ```
@@ -239,7 +239,7 @@ To change these settings, edit the content scan job:
 
     Alternatively, run the following command in your PowerShell session:
 
-    ```ps
+    ```PowerShell
     Start-AIPScan
     ```
 
@@ -273,10 +273,10 @@ To align the supported file types with the client, where all files are automatic
     ![Editing the registry for the scanner to apply protection](./media/editregistry-scanner.png)
 
     > [!NOTE]
-    > As an image file, TIFF files support native protection and the resulting file name extension is **.ptiff.**
+    > As an image file, TIFF files support native protection and the resulting file name extension is **.ptiff**.
     >
 
-    For files that don't support native protection, specify the file name extension as a new key, and **PFile** for generic protection. The resulting file name extension for the protected file is **.pfile.**
+    For files that don't support native protection, specify the file name extension as a new key, and **PFile** for generic protection. The resulting file name extension for the protected file is **.pfile**.
 
 For a list of text and images file types that similarly support native protection but must be specified in the registry, see [Supported file types for classification and protection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection).
 
@@ -322,8 +322,8 @@ In this configuration, all unlabeled files in the repository are labeled with th
 
 Configure the following settings:
 
-- **Label files based on content:** Set to **Off**
-- **Default label:** Set to **Custom**, and then select the label to use
+- **Label files based on content**: Set to **Off**
+- **Default label**: Set to **Custom**, and then select the label to use
 
 ### Identify all custom conditions and known sensitive information types
 
@@ -350,7 +350,7 @@ Use the following options and guidance to help you optimize scanner performance:
 |**Install multiple instances of the scanner** | The Azure Information Protection scanner supports multiple configuration databases on the same SQL server instance when you specify a custom cluster (profile) name for the scanner. |
 |**Grant specific rights and disable low integrity level**|Confirm that the service account that runs the scanner has only the rights documented in [Service account requirements](deploy-aip-scanner-prereqs.md#service-account-requirements). </br></br>Then, configure the [advanced client setting](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) to disable the low integrity level for the scanner.|
 |**Check your alternative configuration usage** |The scanner runs more quickly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents. <br/></br>The scanner runs more slowly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.|
-|**Decrease scanner timeouts** | Decrease the scanner timeouts with [advanced client settings](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner).Decreased scanner timeouts provide better scanning rates and lower memory consumption. </br></br>**Note:** Decreasing scanner timeouts means that some files may be skipped.
+|**Decrease scanner timeouts** | Decrease the scanner timeouts with [advanced client settings](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner).Decreased scanner timeouts provide better scanning rates and lower memory consumption. </br></br>**Note**: Decreasing scanner timeouts means that some files may be skipped.
 | | |
 
 
@@ -406,10 +406,10 @@ Once you've installed and configured your scanner, start [scanning your files](d
 
 See also: [Deploying the Azure Information Protection scanner to automatically classify and protect files](deploy-aip-scanner.md).
 
-**More information:**
+**More information**:
 
 Interested in how the Core Services Engineering and Operations team in Microsoft implemented this scanner?  Read the technical case study: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-You might be wondering: [What's the difference between Windows Server FCI and the Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+You might be wondering: [What's the difference between Windows Server FCI and the Azure Information Protection scanner?](faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 You can also use PowerShell to interactively classify and protect files from your desktop computer. For more information about this and other scenarios that use PowerShell, see [Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md).
