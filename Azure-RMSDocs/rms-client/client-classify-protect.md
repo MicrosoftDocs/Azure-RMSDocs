@@ -93,7 +93,7 @@ Possible reasons:
 
 - If the missing label applies protection, you might have an edition of Office that does not support applying Rights Management protection. To verify, click **Protect** > **Help and Feedback**. In the dialog box, check if you have a message in the **Client status** section that says **This client is not licensed for Office Professional Plus.** 
     
-    You do not need Office Professional Plus if you have Office apps from Microsoft 365 Apps for Business or Microsoft 365 Business Premium when the user is assigned a license for Azure Rights Management(also known as Azure Information Protection for Office 365).
+    You do not need Office Professional Plus if you have Office apps from Microsoft 365 Apps for Business or Microsoft 365 Business Premium when the user is assigned a license for Azure Rights Management (also known as Azure Information Protection for Office 365).
 
 - The label might be in a scoped policy that doesn't include your account. Check with your help desk or administrator.
 
@@ -178,7 +178,7 @@ The admin guide contains a full list of the file types supported and the files a
         
    - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
     
-     Note that if this setting was previously configured by using custom permissions from an Office 2010 app, the specified expiry date does not display in this dialog box but the expiry date is still set. This is a display issue only for when the expiry date was configured in Office 2010. For more information, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+     Note that if this setting was previously configured by using custom permissions from an Office 2010 app, the specified expiry date does not display in this dialog box but the expiry date is still set. This is a display issue only for when the expiry date was configured in Office 2010. For more information, see [AIP for Windows and Office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 
 5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
