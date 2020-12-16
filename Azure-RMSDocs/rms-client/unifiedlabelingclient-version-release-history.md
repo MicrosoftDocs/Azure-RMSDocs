@@ -85,19 +85,17 @@ This version includes the following new features, fixes, and enhancements for th
 
     - [PowerShell support for disconnected scanner servers](#powershell-support-for-disconnected-scanner-servers)
     - [Support for NFS repositories in content scan jobs](#support-for-nfs-repositories-in-content-scan-jobs)
-    - [Added support for additional sensitive information types](#additional-support-for-sensitive-information-types)
+    - [Added support for additional sensitive information types](#added-support-for-additional-sensitive-information-types)
 
 - **New features for the client**:
 
     - [Track document access and revoke access](#track-document-access-and-revoke-access)
-    - [Added support for additional sensitive information types](#additional-support-for-sensitive-information-types)
+    - [Added support for additional sensitive information types](#added-support-for-additional-sensitive-information-types)
 
 - **Fixes and improvements:**
 
     - [Fixes and improvements for the unified labeling scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Fixes and improvements for the unified labeling client](#fixes-and-improvements-for-the-unified-labeling-client)
-
-- **Known issues:** [Known issues in this version](#known-issues)
 
 ### PowerShell support for disconnected scanner servers
 
@@ -154,7 +152,7 @@ For more information, see:
 
 - [Administrator Guide: Track and revoke document access with Azure Information Protection](track-and-revoke-admin.md)
 - [User Guide: Revoke document access with Azure Information Protection](revoke-access-user.md)
-- [Known issues for tracking and revoking document access](../known-issues.md#tracking-and-revoking-document-access)
+- [Known issues for tracking and revoking document access](../known-issues.md#tracking-and-revoking-document-access-public-preview)
 
 ### Fixes and improvements for the unified labeling scanner
 
