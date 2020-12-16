@@ -74,10 +74,11 @@ To support authentication and authorization for Azure Information Protection, yo
 
 Conditional access is supported in preview for documents protected by Azure Information Protection. For more information, see: [I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-Additional prerequisites are required for specific scenarios, such as when using Office 2010, certificate-based or multi-factor authentication, or when UPN values don't match user email addresses. For more information, see [Additional Azure AD requirements for Azure Information Protection](requirements-azure-ad.md).
+Additional prerequisites are required for specific scenarios, such as when using certificate-based or multi-factor authentication, when UPN values don't match user email addresses, or when using [Office 2010](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 For more information, see:
 
+- [Additional Azure AD requirements for Azure Information Protection](requirements-azure-ad.md).
 - [What is Azure AD Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Integrate on-premises Active Directory domains with Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
@@ -159,7 +160,7 @@ Other editions of Office cannot protect documents and emails by using a Rights M
 
 Labels are displayed in a bar displayed at the top of the Office document, accessible from the **Sensitivity** button in the unified labeling client, or the **Protect** button in the classic client.
 
-For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
+For more information, see [Applications that support Azure Rights Management data protection](requirements-applications.md) and [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ### Office features and capabilities not supported
 
