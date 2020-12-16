@@ -42,7 +42,9 @@ In addition to an Azure AD account, computers running Microsoft 2010 require the
 
 If your user accounts are federated (for example, you use AD FS), these computers must use Windows-Integrated Authentication. Forms-based authentication in this scenario fails to authenticate users for Azure Information Protection.
 
-We recommend that you deploy the Azure Information Protection unified labeling client. If you haven't yet upgraded, your system may still have the [Azure Information Protection classic client](./rms-client/aip-client.md) deployed. For more information, see [The client side of Azure Information Protection](rms-client/use-client.md).
+We recommend that you deploy the Azure Information Protection unified labeling client. If you haven't yet upgraded, your system may still have the [Azure Information Protection classic client](./rms-client/aip-client.md) deployed. 
+
+For more information, see [The client side of Azure Information Protection](rms-client/use-client.md) and [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 > [!NOTE]
 > To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
