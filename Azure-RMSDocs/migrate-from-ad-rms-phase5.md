@@ -135,7 +135,7 @@ Finally, if you are using Office 2010 and you have enabled the **AD RMS Rights P
 
 This task is typically enabled by using group policy and supports an AD RMS deployment. You can find this task in the following location: **Microsoft** > **Windows** > **Active Directory Rights Management Services Client**. 
 
-For more information, see [AIP for WIndows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+For more information, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ## Step 12. Rekey your Azure Information Protection tenant key
 

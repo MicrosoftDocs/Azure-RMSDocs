@@ -242,4 +242,4 @@ For example: **https://rmscluster.contoso.com**
 
 ## Next steps
 
-When you're done configuring your system to support HYOK, continue with configuring labels for HYOK protection. FOr more information, see [How to configure a label for Rights Management protection](configure-policy-protection.md).
+When you're done configuring your system to support HYOK, continue with configuring labels for HYOK protection. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection.md).

@@ -135,7 +135,7 @@
       items:
         - name: Overview
           href: deploy-aip-scanner.md
-        - name: Configure and install the unifed labeling scanner
+        - name: Configure and install the unified labeling scanner
           href: deploy-aip-scanner-configure-install.md
         - name: Run the unified labeling scanner
           href: deploy-aip-scanner-manage.md

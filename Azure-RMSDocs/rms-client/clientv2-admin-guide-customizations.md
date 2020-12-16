@@ -179,7 +179,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |OutlookWarnUntrustedCollaborationLabel|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PFileSupportedExtensions|[Change which file types to protect](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
-| PowerPointRemoveAllShapesByShapeName|[Remove all shapes of a specific shape name from your headers and footers, isntead of removing shapes by text inside the shape](#remove-all-shapes-of-a-specific-shape-name) |
+| PowerPointRemoveAllShapesByShapeName|[Remove all shapes of a specific shape name from your headers and footers, instead of removing shapes by text inside the shape](#remove-all-shapes-of-a-specific-shape-name) |
 |PowerPointShapeNameToRemove |[Avoid removing shapes from PowerPoint that contain specified text, and are not headers / footers](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) |
 |RemoveExternalContentMarkingInApp|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
 |RemoveExternalMarkingFromCustomLayouts|[Explicitly remove external content markings from inside your PowerPoint custom layouts](#extend-external-marking-removal-to-custom-layouts) |
