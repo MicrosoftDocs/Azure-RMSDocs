@@ -48,7 +48,7 @@ For more information, see [Admin Guide: File types supported by the Azure Inform
 
 ## Known issues for AIP and Exploit Protection
 
-The Azure Information Protection client is not supported on machines that have .NET 2 or 3, where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled, and will cause Office apps to crash.
+The Azure Information Protection client is not supported on machines that have .NET 2 or 3, where [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) is enabled, and will cause Office apps to behave unexpectedly.
 
 If you have a .NET version 2 or 3 in addition to a .NET 4.x version required for your system, make sure to disable Exploit protection before installing AIP. 
 
@@ -92,19 +92,55 @@ Publishing policies may take up to 24 hours.
 
 ## Known issues in the AIP client
 
-- **Maximum file sizes.** of over 2 GB are supported for protection, but not decryption.
+- [Maximum file sizes](#maximum-file-sizes)
+- [AIP viewer](#aip-viewer)
+- [Tracking and revoking document access](#tracking-and-revoking-document-access-public-preview)
 
-- **AIP viewer.** The AIP viewer displays images in portrait mode, and some wide, landscape-view images may appear to be stretched.
+### Maximum file sizes
 
-    For example, an original image is shown below on the left, with a stretched, portrait version in the AIP viewer on the right. 
+Files of over 2 GB are supported for protection, but not decryption.
+
+### AIP viewer
+
+The AIP viewer displays images in portrait mode, and some wide, landscape-view images may appear to be stretched.
+
+For example, an original image is shown below on the left, with a stretched, portrait version in the AIP viewer on the right. 
     
-    :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Stretched image in client viewer":::
+:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Stretched image in client viewer":::
     
-    For more information, see:
+For more information, see:
 
-    - [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md)
-    - [**Classic client**: View protected files with the Azure Information Protection viewer](rms-client/client-view-use-files.md)
+- [**Classic client**: View protected files with the Azure Information Protection viewer](rms-client/client-view-use-files.md)
+- [**Unified labeling client**: View protected files with the Azure Information Protection viewer](rms-client/clientv2-view-use-files.md)
 
+### Tracking and revoking document access (Public preview)
+
+Tracking and revoking document access using the unified labeling client has the following known issues:
+
+- [Multiple attachments in a protected email](#multiple-attachments-in-a-protected-email)
+- [Documents accessed via SharePoint](#documents-accessed-via-sharepoint)
+
+For more information, see [Administrator Guide: Track and revoke document access with Azure Information Protection](rms-client/track-and-revoke-admin.md) and [User Guide: Revoke document access with Azure Information Protection](rms-client/revoke-access-user.md).
+
+#### Multiple attachments in a protected email
+
+If you attach multiple documents to an email, and then protect the email and send it, each of the attachments get the same ContentID value. 
+
+This ContentID value will be returned only with the first file that had been opened. Searching for the other attachments will not return the ContentID value required to get tracking data.      
+
+Additionally, revoking access for one of the attachments also revokes access for the other attachments in the same protected email.
+
+#### Documents accessed via SharePoint
+    
+- Protected documents that are uploaded to SharePoint lose their ContentID value. 
+
+    This means that data is not tracked, and any access revocation will not apply for the file stored in SharePoint.
+
+- If a user downloads the file from SharePoint and accesses it from their local machine, a new ContentID is applied to the document when they open it locally. 
+    
+    Using the original ContentID value to track data will not include any access performed for the user's downloaded file. Additionally, revoking access based on the original ContentID value will not revoke access for any of the downloaded files.
+
+    In such cases, administrators may be able to locate the downloaded files using PowerShell to find the new ContentID values to track or revoke access.
 
 ## AIP for Windows and Office versions in extended support
 

@@ -6,8 +6,8 @@ description: Information about customizing the Azure Information Protection unif
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/08/2020
-ms.topic: conceptual
+ms.date: 12/14/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -31,7 +31,7 @@ ms.custom: admin
 
 There are two types of reference sections - the legacy table by setting name, and a newer section of reference by feature type. This newer section helps admins understand and configure settings that are relevant to eachother, possibly in a sort of a flow. 
 
-FUTURE task - reorganize this topic by feature type so that admins can read them together. NOT recommended to reorganize this page into sub-pages as there are too many xrefs out there to this page and you'll need a lot of redirects. Additionally, users might just search for their setting or text on a single page. It would help to have related settings documented one right after the other to help with scrolling. -->
+FUTURE task - reorganize this topic by feature type so that admins can read related settings together. NOT recommended to reorganize this page into sub-pages as there are too many xrefs out there to this page and you'll need a lot of redirects. Additionally, users might just search for their setting or text on a single page. It would help to have related settings documented one right after the other to help with scrolling. -->
 
 >***Applies to**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
@@ -162,12 +162,14 @@ You can use the admin centers to configure the following label policy settings:
 
 When more than one label policy is configured for a user, each with potentially different policy settings, the last policy setting is applied according to the order of the policies in the admin center. For more information, see [Label policy priority (order matters)](/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
 
-Label policy advanced settings are applied using the same logic, using the last policy setting. 
+Label policy advanced settings are applied using the same logic, using the last policy setting.
 
 > [!NOTE]
-> An exception currently exists for the **[OutlookDefaultLabel](#set-a-different-default-label-for-outlook)** advanced label policy setting, which enables you to set a different default label for Outlook.
+> In the current GA version, an exception exists for the [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) advanced label policy setting, which enables you to set a different default label for Outlook.
 > 
-> If you have conflicts for the **OutlookDefaultLabel** setting, the configuration is taken from the *first* policy setting, according to the policy order in the admin center.
+> If you have conflicts for the [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) setting, the configuration is taken from the first policy setting, according to the policy order in the admin center. 
+>
+> This exception was removed as part of the [2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) public preview.
 
 ## Advanced setting references
 
@@ -252,6 +254,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**EnableCustomPermissionsForCustomProtectedFiles**|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |**EnableLabelByMailHeader**|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |**EnableLabelBySharePointProperties**|[Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
+| **EnableOutlookDistributionListExpansion** | [Implement block messages for recipients inside an Outlook distribution list](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) |
 |**HideBarByDefault**|[Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps)|
 |**JustificationTextForUserText** | [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels) |
 |**LogMatchedContent**|[Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
@@ -259,6 +262,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**OutlookBlockUntrustedCollaborationLabel**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookCollaborationRule**| [Customize Outlook popup messages](#customize-outlook-popup-messages)|
 |**OutlookDefaultLabel**|[Set a different default label for Outlook](#set-a-different-default-label-for-outlook)|
+|**OutlookGetEmailAddressesTimeOutMSProperty** | [Modify the timeout for expanding a distribution list in Outlook when implementing block messages for recipients in distribution lists](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) |
 |**OutlookJustifyTrustedDomains**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookJustifyUntrustedCollaborationLabel**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookRecommendationEnabled**|[Enable recommended classification in Outlook](#enable-recommended-classification-in-outlook)|
@@ -269,8 +273,10 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**OutlookWarnUntrustedCollaborationLabel**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**PFileSupportedExtensions**|[Change which file types to protect](#change-which-file-types-to-protect)|
 |**PostponeMandatoryBeforeSave**|[Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
+| **PowerPointRemoveAllShapesByShapeName**|[Remove all shapes of a specific shape name from your headers and footers, instead of removing shapes by text inside the shape](#remove-all-shapes-of-a-specific-shape-name) |
+|**PowerPointShapeNameToRemove** |[Avoid removing shapes from PowerPoint that contain specified text, and are not headers / footers](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) |
 |**RemoveExternalContentMarkingInApp**|[Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)|
-|**RemoveExternalMarkingFromCustomLayouts** | [Remove external content marking from custom layouts in PowerPoint](#remove-external-content-marking-from-custom-layouts-in-powerpoint)|
+|**RemoveExternalMarkingFromCustomLayouts**|[Explicitly remove external content markings from inside your PowerPoint custom layouts](#extend-external-marking-removal-to-custom-layouts) |
 |**ReportAnIssueLink**|[Add "Report an Issue" for users](#add-report-an-issue-for-users)|
 |**RunPolicyInBackground**|[Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background)
 |**ScannerConcurrencyLevel**|[Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner)|
@@ -278,8 +284,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**SharepointWebRequestTimeout**| [Configure SharePoint timeouts](#configure-sharepoint-timeouts)|
 |**SharepointFileWebRequestTimeout** |[Configure SharePoint timeouts](#configure-sharepoint-timeouts)|
 |**UseCopyAndPreserveNTFSOwner** | [Preserve NTFS owners during labeling](#preserve-ntfs-owners-during-labeling-public-preview)
-
-#### Check label policy settings
+| | |
 
 Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
 
@@ -522,8 +527,8 @@ To use this advanced property, you'll need to find the shape name in the Word do
 Avoid removing shapes that contain the text that you wish to ignore, by defining the name of all shapes to remove and  avoid checking the text in all shapes, which is a resource-intensive process.
 
 > [!NOTE]
-> If you do not specify Word shapes in this additional advanced property setting, and Word is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
-> 
+> If you do not specify Word shapes in this additional advanced property setting, and Word is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) value. 
+>
 
 **To find the name of the shape that you're using and wish to exclude:**
 
@@ -574,7 +579,7 @@ Example PowerShell command, where your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
 ```
 
-You then need at least one more advanced client setting, **ExternalContentMarkingToRemove**, to specify the contents of the header or footer, and how to remove or replace them.
+You then need at least one more advanced client setting, [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove), to specify the contents of the header or footer, and how to remove or replace them.
 
 ### How to configure ExternalContentMarkingToRemove
 
@@ -633,18 +638,63 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### Optimization for PowerPoint
 
-Headers and footers in PowerPoint are implemented as shapes. 
+Headers and footers in PowerPoint are implemented as shapes. For the **msoTextBox**, **msoTextEffect**, **msoPlaceholder**, and **msoAutoShape** shape types, the following advanced settings provide additional optimizations:
 
-To avoid removing shapes that contain the text that you have specified but are *not* headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove**. We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process.
+- [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)
+- [RemoveExternalMarkingFromCustomLayouts](#extend-external-marking-removal-to-custom-layouts)
 
-- If you do not specify this additional advanced client setting, and PowerPoint is included in the **RemoveExternalContentMarkingInApp** key value, all shapes will be checked for the text that you specify in the **ExternalContentMarkingToRemove** value. 
+Additionally, the [PowerPointRemoveAllShapesByShapeName](#remove-all-shapes-of-a-specific-shape-name) can remove any shape type, based on the shape name.
 
-- If this value is specified, only shapes that meet the shape name criteria and also have text that matches the string provided with **ExternalContentMarkingToRemove** will be removed.
+For more information, see [Find the name of the shape that you're using as a header or footer](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer).
 
-Additionally, if you have custom layouts configured in PowerPoint, the default behavior is that shapes found inside custom layouts are ignored. To explicitly remove external content markings from inside your custom layouts, set the **RemoveExternalMarkingFromCustomLayouts** advanced property to **true.**
+##### Avoid removing shapes from PowerPoint that contain specified text, and are not headers / footers
+
+To avoid removing shapes that contain the text that you have specified, but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove.** 
+
+We also recommend using this setting to avoid checking the text in all shapes, which is a resource-intensive process. 
+
+- If you do not specify this additional advanced client setting, and PowerPoint is included in the [RemoveExternalContentMarkingInApp](#remove-headers-and-footers-from-other-labeling-solutions) key value, all shapes will be checked for the text that you specify in the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) value. 
+
+- If this value is specified, only shapes that meet the shape name criteria and also have text that matches the string provided with [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) will be removed.
+
+For example:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+```
+
+##### Extend external marking removal to custom layouts
+
+This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+
+By default, the logic used to remove external content markings ignores custom layouts configured in PowerPoint. To extend this logic to custom layouts, set the **RemoveExternalMarkingFromCustomLayouts** advanced property to **True**.
+
+- Key: **RemoveExternalMarkingFromCustomLayouts**
+
+- Value: **True**
+
+Example PowerShell command, where your label policy is named "Global":
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
+```
+
+##### Remove all shapes of a specific shape name
+
+If you are using PowerPoint custom layouts, and want to remove all shapes of a specific shape name from your headers and footers, use the **PowerPointRemoveAllShapesByShapeName** advanced setting, with the name of the shape you want to remove.
+
+Using the **PowerPointRemoveAllShapesByShapeName** setting ignores the text inside your shapes, and instead uses the shape name identify the shapes you want to remove.
+
+For example:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
+```
 
 > [!NOTE]
-> PowerPoint shape types supported for the advanced client settings described in this section include: **msoTextBox**, **msoTextEffect**, and **msoPlaceholder**
+> To define the **PowerPointRemoveAllShapesByShapeName** setting, you must currently also define the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) setting, even if you do not need the functionality provided by **ExternalContentMarkingToRemove**.
+>
+> We recommend that if you want to define **PowerPointRemoveAllShapesByShapeName**, define both [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) and [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) to avoid removing more shapes than you intend.
 >
 
 For more information, see:
@@ -868,6 +918,9 @@ For further customization, you can also [exempt domain names for pop-up messages
 >
 >For more information, see [Customize Outlook popup messages](#customize-outlook-popup-messages).
 > 
+> [!TIP]
+> To ensure that your block messages are displayed as needed, even for a recipient located inside an Outlook distribution list, make sure to add the [EnableOutlookDistributionListExpansion](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) advanced setting.
+>
 
 #### To exempt domain names for pop-up messages configured for specific labels
 
@@ -898,6 +951,10 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains=
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
+
+> [!NOTE]
+> To ensure that your block messages are displayed as needed, even for a recipient located inside an Outlook distribution list, make sure to add the [EnableOutlookDistributionListExpansion](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) advanced setting.
+>
 
 ### To implement the warn, justify, or block pop-up messages for emails or attachments that don't have a label
 
@@ -970,6 +1027,28 @@ Example PowerShell command, where your label policy is named "Global":
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
+```
+
+### To implement block messages for recipients inside an Outlook distribution list (Public preview)
+
+By default, the [OutlookBlockTrustedDomains](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) and [OutlookBlockUntrustedCollaborationLabel](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) advanced settings apply only to email outside of a distribution list. 
+
+To extend support for these block messages to recipients inside Outlook distribution lists, set the **EnableOutlookDistributionListExpansion** advanced setting to **true**:
+
+- Key: **EnableOutlookDistributionListExpansion**
+- Value: **true**
+
+This advanced property enables Outlook to expand the distribution list for the purpose of ensuring that a block message appears as needed. The default timeout for expanding the distribution list is **2000** seconds.
+
+To modify this timeout, create the following advanced setting for the selected policy:
+
+- Key: **OutlookGetEmailAddressesTimeOutMSProperty**
+- Value: *Integer, in seconds*
+
+Example PowerShell command, where your label policy is named "Global":
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableOutlookDistributionListExpansion="true"} @{OutlookGetEmailAddressesTimeOutMSProperty="3000"}
 ```
 
 ## Disable sending audit data to Azure Information Protection analytics
@@ -1322,7 +1401,8 @@ When you configure this setting, it changes the default behavior of how the Azur
 For Word, Excel, and PowerPoint, automatic classification runs continuously in the background.
 
 The behavior does not change for Outlook.
-When the Azure Information Protection unified labeling client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint. Large files also save more quickly because the condition rules have already run.
+
+When the Azure Information Protection unified labeling client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for Office documents that are stored in SharePoint or OneDrive, as long as auto-save is turned on. Large files also saved more quickly because the condition rules have already run.
 
 The condition rules do not run in real time as a user types. Instead, they run periodically as a background task if the document is modified.
 
@@ -1604,9 +1684,9 @@ Supported node types include:
 | **Or**	|Performs *or* on all child nodes       |
 | **Not**	| Performs *not* for its own child      |
 | **Except**	| Returns *not* for its own child, causing it to behave as **All**        |
-| **SentTo**, followed by **Domains: listOfDomains**	|Checks one of the following: <br />- If the Parent is **Except**, checks whether **All** of the recipients are in one of the domains<br />- If the Parent is anything else but **Except**, checks whether **Any** of the recipients are in one of the domains.   |
-| **EMailLabel**, followed by label	| One of the following:  <br />- The label ID <br />- null, if not labeled             |
-| **AttachmentLabel**, followed by **Label** and **supportedExtensions**	| One of the following:  <br /><br />**true**: <br />- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br />- 	If the Parent is anything else but **Except,** checks whether **Any** of the attachments with one supported extension exists within the label <br />- If not labeled, and **label = null** <br /><br /> **false**: For all other cases 
+| **SentTo**, followed by **Domains: listOfDomains**	|Checks one of the following: <br>- If the Parent is **Except**, checks whether **All** of the recipients are in one of the domains<br>- If the Parent is anything else but **Except**, checks whether **Any** of the recipients are in one of the domains.   |
+| **EMailLabel**, followed by label	| One of the following:  <br>- The label ID <br>- null, if not labeled             |
+| **AttachmentLabel**, followed by **Label** and supported **Extensions**	| One of the following:  <br><br>**true:** <br>- If the Parent is **Except**, checks whether **All** of the attachments with one supported extension exists within the label<br>- 	If the Parent is anything else but **Except**, checks whether **Any** of the attachments with one supported extension exists within the label <br>- If not labeled, and **label = null** <br><br> **false:** For all other cases <br><br>**Note**: If the **Extensions** property is empty or missing, all supported file types (extensions) are included in the rule.
 | | |
 
 #### Rule action syntax
@@ -1657,7 +1737,9 @@ The following **.json** code will block emails or attachments that are classifie
 
 In this example, **89a453df-5df4-4976-8191-259d0cf9560a** is the ID of the **Internal** label, and internal domains include **contoso.com** and **microsoft.com**.
 
-```powershell
+Since no specific extensions are specified, all supported file types are included.
+
+```PowerShell
 { 	
     "type" : "And", 	
     "nodes" : [ 		
@@ -1708,7 +1790,7 @@ The following **.json** code blocks unclassified Office attachments or emails fr
 In the following example, the attachment list that requires labeling is:
 **.doc,.docm,.docx,.dot,.dotm,.dotx,.potm,.potx,.pps,.ppsm,.ppsx,.ppt,.pptm,.pptx,.vdw,.vsd,.vsdm,.vsdx,.vss,.vssm,.vst,.vstm,.vssx,.vstx,.xls,.xlsb,.xlt,.xlsm,.xlsx,.xltm,.xltx**
 
-```powershell
+```PowerShell
 { 	
     "type" : "And", 	
     "nodes" : [ 		
@@ -1792,7 +1874,9 @@ The following example causes Outlook to display a message that warns the user th
 
 This sort of warning message is technically considered to be a justification, as the user must select **I accept**.
 
-``` powershell
+Since no specific extensions are specified, all supported file types are included.
+
+``` PowerShell
 { 	
     "type" : "And", 	
     "nodes" : [ 		
@@ -1847,11 +1931,11 @@ This sort of warning message is technically considered to be a justification, as
 
 The following **.json code** causes Outlook to warn the user when they are sending an internal email has no label, with an attachment that has a specific label. 
 
-In this example, **bcbef25a-c4db-446b-9496-1b558d9edd0e** is the ID of the attachment's label.
+In this example, **bcbef25a-c4db-446b-9496-1b558d9edd0e** is the ID of the attachment's label, and the rule applies to .docx, .xlsx, and .pptx files.
 
 By default, emails that have labeled attachments do not automatically receive the same label.
 
-```powershell
+```PowerShell
 { 	
     "type" : "And", 	
     "nodes" : [ 		
@@ -1884,6 +1968,8 @@ By default, emails that have labeled attachments do not automatically receive th
 #### Example 5: Prompt for a justification, with two predefined options, and an extra free-text option
 
 The following **.json** code causes Outlook to prompt the user for a justification for their action. The justification text includes two predefined options, as well as a third, free-text option.
+
+Since no specific extensions are specified, all supported file types are included.
 
 ```PowerShell
 { 	
