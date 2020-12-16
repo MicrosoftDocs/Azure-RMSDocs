@@ -35,7 +35,7 @@ Service applications provide capabilities to protect information when exporting 
 
 ## PowerShell guides
 
-Used by Azure Rights management administrators, PowerShell cmdlets are also useful for developing and testing your service applications. For more information, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md).
+Used by Azure Rights management administrators, PowerShell cmdlets are also useful for developing and testing your service applications. For more information, see [Using PowerShell with the Azure Information Protection client](/azure/information-protection/rms-client/client-admin-guide-powershell).
 
 ## User applications
 
@@ -58,11 +58,11 @@ The 4.2 version is REST client based with operating system specific APIs for sev
 
 The following guides lead you through OS specific setup steps for an application development environment using common tools.
 
-[![iOS/OSX setup](../media/develop/ios-icon.png)](ios-sdk.md)
-[![Android setup](../media/develop/android-icon.png)](android-sdk.md)
-[![Windows Phone setup](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
-[![Windows Service setup](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
-[![Linux setup](../media/develop/linux-icon.png)](linux-setup.md)
+[![iOS/OSX setup](./media/ios-icon.png)](ios-sdk.md)
+[![Android setup](./media/android-icon.png)](android-sdk.md)
+[![Windows Phone setup](./media/windows-phone-icon.png)](windows-phone-apps.md)
+[![Windows Service setup](./media/windows-icon.png)](install-the-rms-sdk.md)
+[![Linux setup](./media/linux-icon.png)](linux-setup.md)
 
 
 ## How-tos
@@ -72,7 +72,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 ### General
 
 - [How to enable document tracking and revocation (service)](tracking-content.md)
-- [How to deploy your client](../rms-client/client-deployment-notes.md)
+- [How to deploy your client](/azure/information-protection/rms-client/client-deployment-notes)
 - [How to deploy your service app into a different tenant](how-to-deploy-app.md)
 - [How to install and configure an RMS Server (service)](how-to-install-and-configure-an-rms-server.md)
 - [How to use document tracking (user)](how-to-use-document-tracking.md)
@@ -101,7 +101,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 ## Other resources
 
 - [Security best practice guide](security-guidelines.md)
-- [Frequently Asked Questions for Azure Information Protection](../faqs.md)
+- [Frequently Asked Questions for Azure Information Protection](/azure/information-protection/faqs)
 
 ### Support articles
 
@@ -137,4 +137,4 @@ Each of the following topics presents specific guidance for an aspect of impleme
 ### See also
 
 - [Developer terminology](terms.md)
-- [Terminology for Azure Information Protection - ITPro](../terminology.md)
+- [Terminology for Azure Information Protection - ITPro](/azure/information-protection/terminology)
