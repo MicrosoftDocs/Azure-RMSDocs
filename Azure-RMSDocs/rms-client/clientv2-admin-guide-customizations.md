@@ -533,6 +533,7 @@ Headers and footers in PowerPoint are implemented as shapes. For the **msoTextBo
 Additionally, the [PowerPointRemoveAllShapesByShapeName](#remove-all-shapes-of-a-specific-shape-name) can remove any shape type, based on the shape name.
 
 For more information, see [Find the name of the shape that you're using as a header or footer](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer).
+
 ##### Avoid removing shapes from PowerPoint that contain specified text, and are not headers / footers
 
 To avoid removing shapes that contain the text that you have specified, but are not headers or footers, use an additional advanced client setting named **PowerPointShapeNameToRemove.** 
@@ -578,9 +579,9 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesBy
 ```
 
 > [!NOTE]
-> Although the settings aren't functionally related, to define the **PowerPointRemoveAllShapesByShapeName** setting, you must curenntly also define the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) setting.
+> To define the **PowerPointRemoveAllShapesByShapeName** setting, you must currently also define the [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) setting, even if you do not need the functionality provided by **ExternalContentMarkingToRemove**.
 >
-> We recommend that if you want to define **PowerPointRemoveAllShapesByShapeName**, define both [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) and [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers).
+> We recommend that if you want to define **PowerPointRemoveAllShapesByShapeName**, define both [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) and [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) to avoid removing more shapes than you intend.
 >
 
 
