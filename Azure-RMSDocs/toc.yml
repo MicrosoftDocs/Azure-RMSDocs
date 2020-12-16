@@ -321,12 +321,10 @@
     items:
     - name: Microsoft Information Protection SDK
       href: /information-protection/develop/
-    - name: Rights Management SDK deprecation notice
+    - name: Rights Management SDKs deprecation notice
     - href: ./develop/deprecation-notice.md
-    - name: Rights Management SDK 4.2 (deprecated)
-      href: /previous-versions/azure/rms/overview
-    - name: Rights Management SDK 2.1 (deprecated)
-      href: /previous-versions/azure/rms/ad-rms-overview
+    - name: Rights Management SDKs documentation (deprecated)
+      href: /previous-versions/azure/rms/rights-management-sdks
 
 - name: Resources
   items:
