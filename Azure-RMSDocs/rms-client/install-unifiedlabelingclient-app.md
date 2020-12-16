@@ -49,9 +49,9 @@ Before you install the Azure Information Protection unified labeling client, con
 
 6. Click **Close**. Before you start to use the Azure Information Protection unified labeling client:
 
-    - If your computer runs [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support), restart your computer and then go to the next section for your final step.    
+    - **If your computer runs Office 2010**, restart your computer and then go to the next section for your final step.    
         
-    - For other versions of Office, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.
+    - **For other versions of Office**, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.
 
 ### Installing the Azure Information Protection unified labeling client with Office 2010
 

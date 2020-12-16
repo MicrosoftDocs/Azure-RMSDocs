@@ -115,7 +115,11 @@ Use the following instructions to install the client when you're not using the M
     
     Additional parameters that are not listed on the help screen:
     
-    - **ServiceLocation**: Use this parameter if you are installing the client on computers that run [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) and your users are not local administrators on their computers or you do not want them to be prompted. [More information](#more-information-about-the-servicelocation-installation-parameter) 
+    - **ServiceLocation**: Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. For more information, see:
+
+        - [More information about the **ServiceLocation** installation parameter](#more-information-about-the-servicelocation-installation-parameter) 
+        - [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support)
+
     
     - **AllowTelemetry=0**: Use this parameter to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**. 
 
@@ -180,14 +184,13 @@ If you use Intune for your software deployment method, use these instructions to
     
     |Office version|Operating system|Software|Action|
     |--------------------|--------------|----------------|---------------------|
-    |All versions except Office 365 1902 or later|Windows 10 version 1809 only, operation system builds older than 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Install|
-    |Office 2016|All supported versions|64-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Install|
-    |Office 2013|All supported versions|64-bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32-bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version: 1.0|Install|
-    |[Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
-    |[Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
-    |[Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
-    
-   
+    |**All versions except Office 365 1902 or later**|Windows 10 version 1809 only, operation system builds older than 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Install|
+    |**Office 2016**|All supported versions|64-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Install|
+    |**Office 2013**|All supported versions|64-bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32-bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version: 1.0|Install|
+    |[**Office 2010**](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
+    |[**Office 2010**](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
+    |[**Office 2010**](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
+    | | | | |
 
 1. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection_UL.msi /quiet`.
 

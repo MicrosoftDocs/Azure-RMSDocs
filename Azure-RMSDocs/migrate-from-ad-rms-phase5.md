@@ -63,7 +63,7 @@ If you're using the classic client, use the Azure portal. For more information, 
 
 ### Additional configuration for computers that run Office 2010
 
-If migrated clients run Office 2010, users might experience delays in opening protected content after our AD RMS servers are deprovisioned. Or, users might see messages that they don't have credentials to open protected content. To resolve these problems, create a network redirection for these computers, which redirects the AD RMS URL FQDN to the local IP address of the computer (127.0.0.1). You can do this by configuring the local hosts file on each computer, or by using DNS.
+If migrated clients run Office 2010, users might experience delays in opening protected content after our AD RMS servers are de-provisioned. Or, users might see messages that they don't have credentials to open protected content. To resolve these problems, create a network redirection for these computers, which redirects the AD RMS URL FQDN to the local IP address of the computer (127.0.0.1). You can do this by configuring the local hosts file on each computer, or by using DNS.
 
 Redirection via local hosts file:
 
@@ -77,7 +77,7 @@ Redirection via DNS:
 
 - Create a new host (A) record for your AD RMS URL FQDN, which has the IP address of 127.0.0.1.
 
-For more information, see [AIP for WIndows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+For more information about AIP and Office 2010, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 ## Step 11. Complete client migration tasks
 
 For mobile device clients and Mac computers: Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)).

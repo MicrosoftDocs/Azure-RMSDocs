@@ -568,7 +568,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCu
 
 ##### Remove all shapes of a specific shape name
 
-If you want to remove all shapes of a specific shape name from your headers and footers, use the **PowerPointRemoveAllShapesByShapeName** advanced setting, with the name of the shape you want to remove.
+If you are using PowerPoint custom layouts, and want to remove all shapes of a specific shape name from your headers and footers, use the **PowerPointRemoveAllShapesByShapeName** advanced setting, with the name of the shape you want to remove.
 
 Using the **PowerPointRemoveAllShapesByShapeName** setting ignores the text inside your shapes, and instead uses the shape name identify the shapes you want to remove.
 

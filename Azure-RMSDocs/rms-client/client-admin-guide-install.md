@@ -43,49 +43,56 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
 ## Additional prerequisites for the Azure Information Protection client
 
-- Microsoft .NET Framework 4.6.2
+- **Microsoft .NET Framework 4.6.2**
 
     The full installation of the Azure Information Protection client by default, requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the setup wizard from the executable installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted. Although not recommended, you can bypass this prerequisite when you use the setup wizard by using a [custom installation parameter](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
 
     This prerequisite is not automatically installed when you install the client silently by using the executable installer, Windows Update, or Windows installer. For these scenarios, you must install this prerequisite separately if it is needed, or the install fails. You can download the Microsoft .NET Framework 4.6.2 (Offline Installer) from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53344).
 
-- Microsoft .NET Framework 4.5.2
+- **Microsoft .NET Framework 4.5.2**
 
     If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the executable installer does not download or install it.
 
-- Windows PowerShell minimum version 4.0
+- **Windows PowerShell minimum version 4.0**
 
     The PowerShell module for the client requires a minimum version of 4.0 for Windows PowerShell, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type `$PSVersionTable` in a PowerShell session.
 
-- Screen resolution greater than 800x600
+- **Screen resolution greater than 800x600**
 
     Resolutions 800x600 and lower can't fully display the **Classify and protect - Azure Information Protection** dialog box when you right-click a file or folder in File Explorer.
 
-- Microsoft Online Services Sign-in Assistant 7.250.4303.0
+- **Microsoft Online Services Sign-in Assistant 7.250.4303.0**
 
-    Computers running [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) require Microsoft Online Services Sign-in Assistant version 7.250.4303.0. This version is included with the client installation. If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
+    Computers running Office 2010 require Microsoft Online Services Sign-in Assistant version 7.250.4303.0. This version is included with the client installation. 
 
-- KB 4482887
+    If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
+
+    For more information, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+
+
+- **KB 4482887**
 
     For Windows 10 version 1809 only, operation system builds older than 17763.348, install [March 1, 2019—KB4482887 (OS Build 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) to ensure the Information Protection bar displays correctly in Office applications. This update is not needed if you have Office 365 1902 or later.
 
-- Configure group policy to prevent the Azure Information Protection add-in from being disabled
+- **Configure group policy to prevent the Azure Information Protection add-in from being disabled**
 
     For Office 2013 and later versions, configure group policy to ensure that the **Microsoft Azure Information Protection** add-in for Office applications is always enabled. Without this configuration, the Microsoft Azure Information Protection add-in can get disabled and users will not be able to label their documents and emails in their Office application.
 
-    - For Outlook: Use the group policy setting documented in [System Administrator control over add-ins](/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) from the Office documentation.
+    - **For Outlook:** Use the group policy setting documented in [System Administrator control over add-ins](/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) from the Office documentation.
 
-    - For Word, Excel, and PowerPoint: Use the group policy setting **list of managed add-ins** documented in the Support article [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
+    - **For Word, Excel, and PowerPoint:** Use the group policy setting **list of managed add-ins** documented in the Support article [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
 
         Specify the following programmatic identifiers (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
 
-        For Word: `MSIP.WordAddin`
+        **For Word:** `MSIP.WordAddin`
 
-        For Excel: `MSIP.ExcelAddin`
+        **For Excel:** `MSIP.ExcelAddin`
 
-        For PowerPoint: `MSIP.PowerPointAddin`
+        **For PowerPoint:** `MSIP.PowerPointAddin`
 
-- The AIP client is not supported on machines with .NET versions 2 or 3 that have [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. If your machine has .NET version 2 or 3 in addition to a .NET 4.x version listed above, make sure to [disable Exploit protection](../known-issues.md#known-issues-for-aip-and-exploit-protection) before installing the AIP client.  
+- **Exploit protection.** 
+
+    The AIP client is not supported on machines with .NET versions 2 or 3 that have [Exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) enabled. If your machine has .NET version 2 or 3 in addition to a .NET 4.x version listed above, make sure to [disable Exploit protection](../known-issues.md#known-issues-for-aip-and-exploit-protection) before installing the AIP client.  
 
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.
@@ -120,7 +127,9 @@ Use the following instructions to install the client when you're not using the M
 
     Additional parameters that are not listed on the help screen:
 
-    - **ServiceLocation**: Use this parameter if you are installing the client on computers that run [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) and your users are not local administrators on their computers or you do not want them to be prompted. [More information](#more-information-about-the-servicelocation-installation-parameter)
+    - **ServiceLocation**: Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. 
+    
+        For more information, see [More information about the ServiceLocation installation parameter](#more-information-about-the-servicelocation-installation-parameter) and [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
     - **DowngradeDotNetRequirement**: Use this parameter to bypass the requirement for Microsoft Framework .NET version 4.6.2. [More information](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
 
@@ -130,11 +139,14 @@ Use the following instructions to install the client when you're not using the M
 
 1. To complete the installation:
 
-    - If your computer runs [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support), restart your computer.
+    - **If your computer runs Office 2010**, restart your computer.
 
-        If the client was not installed with the ServiceLocation parameter, when you first open one of the Office applications that use the Azure Information Protection bar (for example, Word), you must confirm any prompts to update the registry for this first-time use. [Service discovery](client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys.
+        If the client was not installed with the **ServiceLocation** parameter, when you first open one of the Office applications that use the Azure Information Protection bar (for example, Word), you must confirm any prompts to update the registry for this first-time use. [Service discovery](client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys.
 
-    - For other versions of Office, restart any Office applications and all instances of File Explorer.
+        For more information, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+
+
+    - **For other versions of Office**, restart any Office applications and all instances of File Explorer.
 
 1. You can confirm that the installation was successful by checking the install log file, which by default is created in the %temp% folder. You can change this location with the **/log** installation parameter.
 
@@ -146,7 +158,7 @@ Use the following instructions to install the client when you're not using the M
 
 #### More information about the ServiceLocation installation parameter
 
-When you install the client for users who have [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) and they do not have local administrative permissions, specify the **ServiceLocation** parameter and the URL for your Azure Rights Management service. This parameter and value creates and sets the following registry keys:
+When you install the client for users who have Office 2010 and they do not have local administrative permissions, specify the **ServiceLocation** parameter and the URL for your Azure Rights Management service. This parameter and value creates and sets the following registry keys:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation`
 
@@ -156,7 +168,9 @@ When you install the client for users who have [Office 2010](../known-issues.md#
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation`
 
-Use the following procedure to identify the value to specify for the **ServiceLocation** parameter.
+Use the [following procedure](#to-identify-the-value-to-specify-for-the-servicelocation-parameter) to identify the value to specify for the **ServiceLocation** parameter.
+
+For more information, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ##### To identify the value to specify for the ServiceLocation parameter
 
@@ -170,9 +184,11 @@ Use the following procedure to identify the value to specify for the **ServiceLo
 
 3. From the value, remove **/_wmcs/licensing** from this string. For example: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
-    The remainin' string is the value to specify for your ServiceLocation parameter.
+    The remaining string is the value to specify for your **ServiceLocation** parameter.
 
-Example to install the client silently for [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) and Azure RMS: `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
+Example to install the client silently for [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) and Azure RMS: 
+
+`AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 #### More information about the DowngradeDotNetRequirement installation parameter
 
@@ -192,17 +208,20 @@ For central deployment, use the following information that is specific to the .m
 
 If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/apps/apps-add).
 
-1. For each computer that runs the .msi file, you must make sure that the following software dependencies are in place. For example, package these with the .msi version of the client or only deploy to computers that meet these dependencies:
+1. For each computer that runs the **.msi** file, you must make sure that the following software dependencies are in place. For example, package these with the **.msi** version of the client or only deploy to computers that meet these dependencies:
     
     |Office version|Operating system|Software|Action|
     |--------------------|--------------|----------------|---------------------|
-    |All versions except Office 365 1902 or later|Windows 10 version 1809 only, operation system builds older than 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Install|
-    |Office 2013|All supported versions|64-bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32-bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version: 1.0|Install|
-    |Office 2010|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
-    |Office 2016|All supported versions|64-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Install|
-    |Office 2010|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
-    |Office 2010|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
-    |Office 2010|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
+    |**All versions except Office 365 1902 or later**|Windows 10 version 1809 only, operation system builds older than 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Install|
+    |**Office 2013**|All supported versions|64-bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32-bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version: 1.0|Install|
+    |**Office 2010**|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
+    |**Office 2016**|All supported versions|64-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32-bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Install|
+    |**Office 2010**|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
+    |**Office 2010**|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
+    |**Office 2010**|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
+    | | | | |
+
+    For more information about AIP and Office 2010, see [AIP for Windows and Office versions in extended support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 1. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).
 
